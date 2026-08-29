@@ -1,4 +1,4 @@
-import { Injectable, UnauthorizedException } from "@nestjs/common";
+import { Injectable, Logger, UnauthorizedException } from "@nestjs/common";
 import { randomUUID } from "crypto";
 import * as argon2 from "argon2";
 import type { Employee } from "@prisma/client";
@@ -49,6 +49,8 @@ const GENERIC_LOGIN_FAILURE_MESSAGE = "Invalid email or password";
 
 @Injectable()
 export class EmployeeAuthService {
+  private readonly logger = new Logger(EmployeeAuthService.name);
+
   constructor(
     private readonly prisma: PrismaService,
     private readonly tokenService: TokenService,
@@ -103,18 +105,46 @@ export class EmployeeAuthService {
    * assume one employee per email across the whole platform), so this
    * looks up by email alone via the RAW (unscoped) `PrismaService` --
    * there is no tenant context yet, which is exactly the case that client
-   * exists for -- and takes the first match. Flagged here rather than
-   * silently assumed: if the platform ever needs multiple organizations
-   * sharing an email, login needs an explicit org selector.
+   * exists for.
+   *
+   * Task 5 review ruling (Important 1): do NOT silently pick "whichever
+   * row Postgres returns first" if more than one organization happens to
+   * have an employee with this email -- that ordering is not guaranteed
+   * stable, so the same credentials could authenticate today and fail
+   * tomorrow, and the losing organization's employee could never log in.
+   * Neither adding an org selector to the login DTO (changes the spec'd
+   * API surface) nor a global unique on `email` (changes the schema,
+   * transcribed from the spec) is in scope here. Instead: fail LOUDLY --
+   * `findMany`, and if more than one row matches, log the collision (both
+   * organization ids, so an operator can actually diagnose it) and throw,
+   * surfacing as a 500 rather than silently authenticating against an
+   * arbitrarily chosen row.
    */
   async login(
     email: string,
     password: string,
     meta: LoginRequestMeta = {},
   ): Promise<EmployeeLoginResult> {
-    const employee = await this.prisma.employee.findFirst({
+    const candidates = await this.prisma.employee.findMany({
       where: { email },
     });
+
+    if (candidates.length > 1) {
+      this.logger.error(
+        `Ambiguous employee login: email "${email}" matches ` +
+          `${candidates.length} Employee rows across organizations ` +
+          `[${candidates.map((c) => c.organizationId).join(", ")}]. ` +
+          "Refusing to authenticate against an arbitrarily chosen row -- " +
+          "this requires operator intervention (duplicate email across " +
+          "tenants).",
+      );
+      throw new Error(
+        `Ambiguous employee login for email "${email}": matches more ` +
+          `than one organization.`,
+      );
+    }
+
+    const employee = candidates[0];
 
     if (!employee) {
       await argon2.verify(await getDummyHash(), password).catch(() => false);

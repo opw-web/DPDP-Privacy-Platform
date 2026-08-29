@@ -1,10 +1,36 @@
 import { Injectable } from "@nestjs/common";
 import * as argon2 from "argon2";
-import type { Employee } from "@prisma/client";
+import type { Prisma } from "@prisma/client";
 import { PrismaService } from "../../common/prisma/prisma.service";
 import { AuditService } from "../../common/audit/audit.service";
 import { CreateEmployeeDto } from "./dto/create-employee.dto";
 import { UpdateEmployeeDto } from "./dto/update-employee.dto";
+
+/**
+ * The ONLY shape of `Employee` this service (or the controller behind it)
+ * ever returns. `passwordHash` is credential material -- it must never
+ * cross the trust boundary in an API response, the same discipline
+ * `AuditService` already enforces for audit metadata and `me()` already
+ * applies by hand-picking its response fields.
+ *
+ * A single shared constant, not four separate inline `select`s, so the
+ * four call sites below cannot drift apart and re-open this hole one at a
+ * time.
+ */
+export const EMPLOYEE_PUBLIC_SELECT = {
+  id: true,
+  email: true,
+  fullName: true,
+  roleId: true,
+  status: true,
+  lastLoginAt: true,
+  createdAt: true,
+  updatedAt: true,
+} satisfies Prisma.EmployeeSelect;
+
+export type PublicEmployee = Prisma.EmployeeGetPayload<{
+  select: typeof EMPLOYEE_PUBLIC_SELECT;
+}>;
 
 @Injectable()
 export class EmployeesService {
@@ -13,14 +39,18 @@ export class EmployeesService {
     private readonly auditService: AuditService,
   ) {}
 
-  async list(): Promise<Employee[]> {
+  async list(): Promise<PublicEmployee[]> {
     return this.prisma.scoped.employee.findMany({
       orderBy: { createdAt: "asc" },
+      select: EMPLOYEE_PUBLIC_SELECT,
     });
   }
 
-  async get(id: string): Promise<Employee> {
-    return this.prisma.scoped.employee.findFirstOrThrow({ where: { id } });
+  async get(id: string): Promise<PublicEmployee> {
+    return this.prisma.scoped.employee.findFirstOrThrow({
+      where: { id },
+      select: EMPLOYEE_PUBLIC_SELECT,
+    });
   }
 
   /**
@@ -33,7 +63,7 @@ export class EmployeesService {
    * belonging to another organization throws P2025 here, never silently
    * attaches.
    */
-  async create(dto: CreateEmployeeDto): Promise<Employee> {
+  async create(dto: CreateEmployeeDto): Promise<PublicEmployee> {
     const role = await this.prisma.scoped.role.findFirstOrThrow({
       where: { id: dto.roleId },
     });
@@ -53,6 +83,7 @@ export class EmployeesService {
           // still requires it at the type level (see
           // tenant-isolation.e2e-spec.ts for the same convention).
         } as never,
+        select: EMPLOYEE_PUBLIC_SELECT,
       });
       await this.auditService.record(tx, {
         action: "EMPLOYEE_CREATED",
@@ -64,7 +95,7 @@ export class EmployeesService {
     });
   }
 
-  async update(id: string, dto: UpdateEmployeeDto): Promise<Employee> {
+  async update(id: string, dto: UpdateEmployeeDto): Promise<PublicEmployee> {
     const existing = await this.prisma.scoped.employee.findFirstOrThrow({
       where: { id },
     });
@@ -91,6 +122,7 @@ export class EmployeesService {
           roleId: newRoleId,
           status: dto.status,
         },
+        select: EMPLOYEE_PUBLIC_SELECT,
       });
 
       if (newRoleId) {
@@ -115,6 +147,16 @@ export class EmployeesService {
     });
   }
 
+  /**
+   * Deliberately writes no audit event: the fixed `AuditAction` union
+   * (Task 4, spec lines 880-891) has no action for "an employee's
+   * password was reset by an admin," and the task-5 review ruled that
+   * inventing one is out of scope here (same "transcribe exactly, don't
+   * invent" discipline as the permission-catalogue and role-permission-
+   * change gaps already flagged elsewhere in this module and in
+   * roles.service.ts). This is a recorded spec gap, not an oversight --
+   * do not "fix" it by adding a new AuditAction name.
+   */
   async resetPassword(id: string, newPassword: string): Promise<void> {
     await this.prisma.scoped.employee.findFirstOrThrow({ where: { id } });
     const passwordHash = await argon2.hash(newPassword, {

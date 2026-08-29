@@ -1,4 +1,4 @@
-import { Injectable } from "@nestjs/common";
+import { BadRequestException, Injectable } from "@nestjs/common";
 import type { Role } from "@prisma/client";
 import { PrismaService } from "../../common/prisma/prisma.service";
 import { AuditService } from "../../common/audit/audit.service";
@@ -23,6 +23,17 @@ export class RolesService {
    * below -- a role id belonging to another organization throws P2025
    * before any write is attempted.
    *
+   * Task 5 review fixes (Minor):
+   *  - `dto.permissionCodes` is validated against the global `Permission`
+   *    catalogue BEFORE the destructive `deleteMany` runs. An unknown code
+   *    used to reach the `RolePermission` FK constraint after the delete
+   *    had already happened -- the transaction still rolled back cleanly,
+   *    but the caller got an unhandled 500 for what is really a 400
+   *    (bad request body), not a server fault.
+   *  - The five seeded system roles (`isSystem: true`) can no longer have
+   *    their permission set rewritten through this endpoint -- the flag
+   *    was seeded but never enforced.
+   *
    * Replaces the role's permission set with exactly `permissionCodes`.
    * `RolePermission` create is looped as single `create` calls, not
    * `createMany`, per tenant.extension.ts's documented caveat: only the
@@ -38,6 +49,28 @@ export class RolesService {
     const role = await this.prisma.scoped.role.findFirstOrThrow({
       where: { id },
     });
+
+    if (role.isSystem) {
+      throw new BadRequestException(
+        `Role "${role.code}" is a system role -- its permission set is fixed by the seed and cannot be edited.`,
+      );
+    }
+
+    if (dto.permissionCodes.length > 0) {
+      const knownPermissions = await this.prisma.permission.findMany({
+        where: { code: { in: dto.permissionCodes } },
+        select: { code: true },
+      });
+      const knownCodes = new Set(knownPermissions.map((p) => p.code));
+      const unknownCodes = dto.permissionCodes.filter(
+        (code) => !knownCodes.has(code),
+      );
+      if (unknownCodes.length > 0) {
+        throw new BadRequestException(
+          `Unknown permission code(s): ${unknownCodes.join(", ")}`,
+        );
+      }
+    }
 
     return this.prisma.scoped.$transaction(async (tx) => {
       await tx.rolePermission.deleteMany({ where: { roleId: role.id } });

@@ -7,7 +7,6 @@ import { AppModule } from "../src/app.module";
 import { PrismaService } from "../src/common/prisma/prisma.service";
 import type { AuditEvent } from "@prisma/client";
 import { runSeed } from "../prisma/seed";
-import { ROLES } from "../prisma/seed/roles";
 import { PERMISSIONS } from "../prisma/seed/permissions";
 
 /**
@@ -328,7 +327,7 @@ describe("Employee auth (e2e)", () => {
     expect(meRes.body.email).toBe(employee.email);
   });
 
-  it("creating an employee with another organization's roleId fails", async () => {
+  it("creating an employee with another organization's roleId fails (with a positive control proving the endpoint itself works)", async () => {
     const orgA = await createOrgWithRoleAndEmployee({
       email: `org-a-${randomUUID()}@example.com`,
       password: "CorrectHorseBattery9!",
@@ -350,6 +349,25 @@ describe("Employee auth (e2e)", () => {
       });
     const accessToken = loginRes.body.accessToken as string;
 
+    // POSITIVE CONTROL (task 5 review, Important 2): without this, a
+    // dead/mis-wired endpoint would make the negative assertion below
+    // pass for the wrong reason -- >=400 and "no row created" both hold
+    // if POST /api/employees is simply broken. Proving orgA's OWN roleId
+    // succeeds first attributes the negative case specifically to the
+    // tenant check, not to endpoint breakage.
+    const ownRoleRes = await request(app.getHttpServer())
+      .post("/api/employees")
+      .set("Authorization", `Bearer ${accessToken}`)
+      .send({
+        email: `same-org-${randomUUID()}@example.com`,
+        fullName: "Should Be Created",
+        roleId: orgA.roleId,
+        password: "SomePassword123!",
+      });
+    expect(ownRoleRes.status).toBe(201);
+    expect(ownRoleRes.body.id).toEqual(expect.any(String));
+    expect(ownRoleRes.body.roleId).toBe(orgA.roleId);
+
     // orgB.roleId belongs to a DIFFERENT organization than the caller's
     // (orgA) -- this must fail (P2025-shaped 4xx/5xx), never silently
     // attach a cross-tenant role.
@@ -369,6 +387,128 @@ describe("Employee auth (e2e)", () => {
       where: { roleId: orgB.roleId, organizationId: orgA.organizationId },
     });
     expect(created).toBeNull();
+  });
+
+  it("employee API responses never contain passwordHash, on both the list and single-get paths", async () => {
+    // Task 5 review CRITICAL fix: list()/get()/create()/update() used to
+    // return the full Prisma Employee row (no `select`), so
+    // GET /api/employees serialized every employee's argon2id hash to
+    // any authenticated caller -- worse, to ANY authenticated employee
+    // today, since @RequirePermission is metadata-only until Task 7.
+    const org = await createOrgWithRoleAndEmployee({
+      email: `no-hash-leak-${randomUUID()}@example.com`,
+      password: "CorrectHorseBattery9!",
+    });
+    const employee = await prisma.employee.findFirstOrThrow({
+      where: { organizationId: org.organizationId },
+    });
+
+    const loginRes = await request(app.getHttpServer())
+      .post("/api/auth/employee/login")
+      .send({ email: employee.email, password: "CorrectHorseBattery9!" });
+    const accessToken = loginRes.body.accessToken as string;
+
+    const listRes = await request(app.getHttpServer())
+      .get("/api/employees")
+      .set("Authorization", `Bearer ${accessToken}`);
+    expect(listRes.status).toBe(200);
+    expect(Array.isArray(listRes.body)).toBe(true);
+    expect(listRes.body.length).toBeGreaterThan(0);
+    for (const row of listRes.body) {
+      expect(row).not.toHaveProperty("passwordHash");
+    }
+
+    const getRes = await request(app.getHttpServer())
+      .get(`/api/employees/${employee.id}`)
+      .set("Authorization", `Bearer ${accessToken}`);
+    expect(getRes.status).toBe(200);
+    expect(getRes.body).not.toHaveProperty("passwordHash");
+    expect(getRes.body.id).toBe(employee.id);
+
+    const createRes = await request(app.getHttpServer())
+      .post("/api/employees")
+      .set("Authorization", `Bearer ${accessToken}`)
+      .send({
+        email: `no-hash-leak-created-${randomUUID()}@example.com`,
+        fullName: "No Hash Leak",
+        roleId: org.roleId,
+        password: "SomePassword123!",
+      });
+    expect(createRes.status).toBe(201);
+    expect(createRes.body).not.toHaveProperty("passwordHash");
+
+    const updateRes = await request(app.getHttpServer())
+      .patch(`/api/employees/${createRes.body.id}`)
+      .set("Authorization", `Bearer ${accessToken}`)
+      .send({ fullName: "No Hash Leak Renamed" });
+    expect(updateRes.status).toBe(200);
+    expect(updateRes.body).not.toHaveProperty("passwordHash");
+  });
+
+  it("ambiguous login (same email in two organizations) fails loudly instead of silently picking one", async () => {
+    // Task 5 review Important 1.
+    const sharedEmail = `ambiguous-${randomUUID()}@example.com`;
+    await createOrgWithRoleAndEmployee({
+      email: sharedEmail,
+      password: "CorrectHorseBattery9!",
+    });
+    await createOrgWithRoleAndEmployee({
+      email: sharedEmail,
+      password: "CorrectHorseBattery9!",
+    });
+
+    const res = await request(app.getHttpServer())
+      .post("/api/auth/employee/login")
+      .send({ email: sharedEmail, password: "CorrectHorseBattery9!" });
+
+    // Not a normal 401 "invalid credentials" -- this is a data-integrity
+    // condition the service refuses to paper over by picking a row.
+    expect(res.status).toBeGreaterThanOrEqual(400);
+    expect(res.status).not.toBe(200);
+  });
+
+  it("PATCH /api/roles/:id/permissions rejects an unknown permission code and refuses to edit a system role", async () => {
+    // Task 5 review Minor fixes.
+    const org = await createOrgWithRoleAndEmployee({
+      email: `roles-minor-${randomUUID()}@example.com`,
+      password: "CorrectHorseBattery9!",
+    });
+    const employee = await prisma.employee.findFirstOrThrow({
+      where: { organizationId: org.organizationId },
+    });
+    const loginRes = await request(app.getHttpServer())
+      .post("/api/auth/employee/login")
+      .send({ email: employee.email, password: "CorrectHorseBattery9!" });
+    const accessToken = loginRes.body.accessToken as string;
+
+    const unknownCodeRes = await request(app.getHttpServer())
+      .patch(`/api/roles/${org.roleId}/permissions`)
+      .set("Authorization", `Bearer ${accessToken}`)
+      .send({ permissionCodes: [`does-not-exist-${randomUUID()}`] });
+    expect(unknownCodeRes.status).toBe(400);
+
+    const { organizationId: seededOrgId } = await runSeed(prisma);
+    const seededAdminRole = await prisma.role.findFirstOrThrow({
+      where: { organizationId: seededOrgId, code: "ADMIN" },
+    });
+    const seededAdminEmployee = await prisma.employee.findFirstOrThrow({
+      where: { organizationId: seededOrgId, roleId: seededAdminRole.id },
+    });
+    const adminLoginRes = await request(app.getHttpServer())
+      .post("/api/auth/employee/login")
+      .send({ email: seededAdminEmployee.email, password: "Password123!" });
+    const adminAccessToken = adminLoginRes.body.accessToken as string;
+
+    const systemRoleRes = await request(app.getHttpServer())
+      .patch(`/api/roles/${seededAdminRole.id}/permissions`)
+      .set("Authorization", `Bearer ${adminAccessToken}`)
+      .send({ permissionCodes: [] });
+    expect(systemRoleRes.status).toBe(400);
+
+    const stillIntact = await prisma.rolePermission.count({
+      where: { roleId: seededAdminRole.id },
+    });
+    expect(stillIntact).toBeGreaterThan(0);
   });
 
   it("seed is idempotent -- running it twice leaves row counts unchanged", async () => {
@@ -408,14 +548,31 @@ describe("Employee auth (e2e)", () => {
     expect(countsAfterSecond).toEqual(countsAfterFirst);
   });
 
-  it("ADMIN holds every permission and AUDITOR holds no write permission of any kind", () => {
-    const allCodes = PERMISSIONS.map((p) => p.code);
-    const admin = ROLES.find((r) => r.code === "ADMIN");
-    const auditor = ROLES.find((r) => r.code === "AUDITOR");
-    expect(admin).toBeDefined();
-    expect(auditor).toBeDefined();
+  it("ADMIN holds every permission and AUDITOR holds no write permission of any kind -- checked against the seeded database, not the seed constants", async () => {
+    // Task 5 review ruling (Important 3): the previous version of this
+    // test was pure-sync over the ROLES/PERMISSIONS constants imported
+    // from prisma/seed/ -- the exact same source of truth as the code
+    // under test. It could not have caught a bug in seedRoles()'s upsert
+    // loop, a silently skipped RolePermission insert, or stale rows left
+    // over from an old catalogue. Runs the real seed and reads the
+    // resulting rows back from Postgres instead.
+    const { organizationId } = await runSeed(prisma);
 
-    expect(new Set(admin?.permissionCodes)).toEqual(new Set(allCodes));
+    const allCodes = PERMISSIONS.map((p) => p.code);
+
+    const adminRole = await prisma.role.findFirstOrThrow({
+      where: { organizationId, code: "ADMIN" },
+      include: { permissions: true },
+    });
+    const auditorRole = await prisma.role.findFirstOrThrow({
+      where: { organizationId, code: "AUDITOR" },
+      include: { permissions: true },
+    });
+
+    const adminCodes = adminRole.permissions.map((p) => p.permissionCode);
+    const auditorCodes = auditorRole.permissions.map((p) => p.permissionCode);
+
+    expect(new Set(adminCodes)).toEqual(new Set(allCodes));
 
     const writePrefixes = [
       "CAN_MANAGE_",
@@ -425,7 +582,7 @@ describe("Employee auth (e2e)", () => {
       "CAN_APPROVE_",
       "CAN_SEND_",
     ];
-    for (const code of auditor?.permissionCodes ?? []) {
+    for (const code of auditorCodes) {
       expect(writePrefixes.some((prefix) => code.startsWith(prefix))).toBe(
         false,
       );
