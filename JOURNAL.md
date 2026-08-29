@@ -91,3 +91,4 @@ automatically by Claude Code hooks. Humans and future sessions read the "Now" bl
 - `23:25` ran `set -e SP=/tmp/claude-1000/-home-linux-Coding-stuff-DPDP-app/6bb1e69f-50ac-480a-8201-13e979eddc65/scratchpad mkdir -p...`
 - `23:26` ran `sg docker -c "docker version --format '{{.Server.Version}}'" 2>&1 | head -3; echo "exit=$?"`
 - `23:26` ran `cd "/home/linux/Coding stuff/DPDP app" && git init -q -b main 2>&1 && cat .gitignore`
+- `23:26` ran `cd "/home/linux/Coding stuff/DPDP app" && cat >> .gitignore <<'EOF' # Node node_modules/ dist/ build/ *.tsbuildinfo n...`
