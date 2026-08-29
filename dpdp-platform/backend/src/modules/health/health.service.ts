@@ -40,6 +40,18 @@ export class HealthService implements OnModuleDestroy {
       maxRetriesPerRequest: 1,
       retryStrategy: () => null,
     });
+
+    // Both clients emit 'error' events outside the promise chain of any
+    // single probe (e.g. an idle pooled connection reset, or a connection
+    // drop between checks). Per Node's EventEmitter contract, an
+    // unhandled 'error' event crashes the process — exactly what this
+    // health check exists to report gracefully instead of triggering.
+    this.pgPool.on("error", (error: Error) => {
+      this.logger.warn(`Postgres pool emitted an error: ${error.message}`);
+    });
+    this.redisClient.on("error", (error: Error) => {
+      this.logger.warn(`Redis client emitted an error: ${error.message}`);
+    });
   }
 
   async checkDatabase(): Promise<boolean> {
