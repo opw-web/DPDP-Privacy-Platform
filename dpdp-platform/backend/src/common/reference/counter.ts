@@ -1,6 +1,20 @@
 import type { ScopedTransactionClient } from "../prisma/scoped-transaction-client";
 
 /**
+ * The counter name `AuditService.record` reserves for itself (spec line
+ * 876: `Counter('AUDIT')`). Exported here -- not redeclared separately in
+ * `audit.service.ts` -- so `AuditService` and `ReferenceService` share the
+ * exact same string and can never drift apart. `ReferenceService.next()`
+ * refuses to allocate from this counter (fix-round-1 Important 4): a
+ * caller doing so outside `AuditService.record` would burn an `AUDIT`
+ * sequence number with no `AuditEvent` row behind it, and do it outside
+ * `record()`'s lock discipline -- producing exactly the Check 17 gap this
+ * task exists to prevent, from a code path Check 17 was never meant to
+ * cover.
+ */
+export const AUDIT_COUNTER_NAME = "AUDIT";
+
+/**
  * Allocates the next value of `Counter(organizationId, name)`, locking the
  * row with `SELECT ... FOR UPDATE` inside the caller's transaction so
  * concurrent allocators for the same `(organizationId, name)` serialize
@@ -52,8 +66,24 @@ export async function allocateCounterValue(
     WHERE "organizationId" = ${organizationId} AND "name" = ${name}
     FOR UPDATE
   `;
-  const current = rows[0]?.value ?? 0n;
-  const next = current + 1n;
+  const row = rows[0];
+  if (row === undefined) {
+    // Cannot happen given the INSERT ... ON CONFLICT DO NOTHING directly
+    // above -- the row is guaranteed to exist by the time this SELECT
+    // runs. If it is ever missing anyway, something is already badly
+    // wrong (a concurrent DELETE this codebase never issues, a
+    // transaction-isolation surprise, etc.), and silently treating it as
+    // "start over at 1" (fix-round-1 Important 3) would hand out
+    // duplicate sequence numbers forever rather than surfacing the bug --
+    // loudly wrong beats silently wrong for a monotonic sequence source.
+    throw new Error(
+      `allocateCounterValue: Counter row (${organizationId}, ${name}) ` +
+        "was not found immediately after being inserted -- this should " +
+        "be impossible and indicates a serious bug in the counter or " +
+        "transaction handling. Refusing to fall back to a start value.",
+    );
+  }
+  const next = row.value + 1n;
 
   await tx.$executeRaw`
     UPDATE "Counter" SET "value" = ${next}

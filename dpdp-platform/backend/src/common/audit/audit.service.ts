@@ -3,11 +3,9 @@ import { createHash } from "crypto";
 import type { AuditEvent } from "@prisma/client";
 import type { ScopedTransactionClient } from "../prisma/scoped-transaction-client";
 import { TenantContext } from "../tenant/tenant-context";
-import { allocateCounterValue } from "../reference/counter";
+import { AUDIT_COUNTER_NAME, allocateCounterValue } from "../reference/counter";
 import { canonicalJson } from "./canonical-json";
 import type { AuditAction } from "./audit-actions";
-
-const AUDIT_COUNTER_NAME = "AUDIT";
 
 export interface AuditRecordInput {
   action: AuditAction;

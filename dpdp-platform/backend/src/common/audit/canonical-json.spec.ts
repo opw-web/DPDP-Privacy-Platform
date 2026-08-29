@@ -55,6 +55,41 @@ describe("canonicalJson", () => {
     expect(canonicalJson(rebuilt)).toBe(first);
   });
 
+  it("serializes a Date the same way JSON.stringify/Prisma would (fix-round-1 Important 1)", () => {
+    const date = new Date("2026-08-30T12:34:56.789Z");
+    expect(canonicalJson(date)).toBe('"2026-08-30T12:34:56.789Z"');
+    // Exactly what JSON.stringify does with a Date -- this is the
+    // contract that matters: canonicalJson must never disagree with how
+    // Prisma serializes the same value into the `metadata` Json column.
+    expect(canonicalJson(date)).toBe(JSON.stringify(date));
+    expect(canonicalJson({ at: date })).toBe(
+      `{"at":${JSON.stringify(date.toISOString())}}`,
+    );
+    // The bug this guards against: a Date has no own enumerable keys, so
+    // treating it as a generic object used to silently produce "{}".
+    expect(canonicalJson({ at: date })).not.toBe('{"at":{}}');
+  });
+
+  it("throws on values with no faithful JSON representation instead of silently miscoding them", () => {
+    expect(() => canonicalJson(new Map([["a", 1]]))).toThrow(/canonicalJson/);
+    expect(() => canonicalJson(new Set([1, 2]))).toThrow(/canonicalJson/);
+    expect(() => canonicalJson(() => {})).toThrow(/canonicalJson/);
+    expect(() => canonicalJson(Symbol("x"))).toThrow(/canonicalJson/);
+    expect(() => canonicalJson(10n)).toThrow(/canonicalJson/);
+
+    class Custom {
+      x = 1;
+    }
+    expect(() => canonicalJson(new Custom())).toThrow(/canonicalJson/);
+
+    // A plain object (including one with a null prototype) is NOT
+    // affected by this guard.
+    expect(canonicalJson({ x: 1 })).toBe('{"x":1}');
+    expect(canonicalJson(Object.assign(Object.create(null), { x: 1 }))).toBe(
+      '{"x":1}',
+    );
+  });
+
   it("handles primitives and null", () => {
     expect(canonicalJson(null)).toBe("null");
     expect(canonicalJson(42)).toBe("42");

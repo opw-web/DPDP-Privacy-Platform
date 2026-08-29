@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import { PrismaService } from "../prisma/prisma.service";
 import { TenantContext } from "../tenant/tenant-context";
-import { allocateCounterValue } from "./counter";
+import { AUDIT_COUNTER_NAME, allocateCounterValue } from "./counter";
 
 const PRINCIPAL_REFERENCE_COUNTER = "PRINCIPAL";
 const PRINCIPAL_REFERENCE_DIGITS = 6;
@@ -23,6 +23,18 @@ export class ReferenceService {
    * want a number, not a write they need to coordinate with.
    */
   async next(name: string): Promise<bigint> {
+    if (name === AUDIT_COUNTER_NAME) {
+      // Reserved for AuditService.record() alone (fix-round-1 Important
+      // 4). Allocating from this counter anywhere else would burn an
+      // AUDIT sequence number with no AuditEvent row behind it -- a gap
+      // Check 17 exists specifically to catch -- and would do so outside
+      // record()'s lock discipline entirely.
+      throw new Error(
+        `ReferenceService.next(): counter name "${AUDIT_COUNTER_NAME}" is ` +
+          "reserved for AuditService.record() and cannot be allocated " +
+          "here.",
+      );
+    }
     const { organizationId } = TenantContext.get();
     return this.prisma.scoped.$transaction((tx) =>
       allocateCounterValue(tx, organizationId, name),
