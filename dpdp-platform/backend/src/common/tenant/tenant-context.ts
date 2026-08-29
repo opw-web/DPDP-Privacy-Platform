@@ -48,6 +48,18 @@ export const TenantContext = {
    * call site remembering to `await` *inside* an async callback -- this
    * detects a thenable result and re-enters the store around awaiting it,
    * so the store is still bound at the moment the query actually runs.
+   *
+   * THE RULE THIS RELIES ON: the thenable must be `fn`'s DIRECT return
+   * value. `run(store, () => prisma.scoped.x.findMany())` is safe.
+   * `run(store, () => ({ q: prisma.scoped.x.findMany() }))` is NOT --
+   * `fn()` returns a plain object, not a thenable, so this detection never
+   * fires, and the lazy query dispatches later with whatever context
+   * happens to be active at that point (usually none, which fails closed
+   * as a thrown "no tenant context" error -- but if that stored thenable
+   * is later awaited inside a *different* tenant's `run()`, it silently
+   * executes under org B's context instead of org A's). Never stash a
+   * Prisma call in a container and await it outside the `run()` that
+   * created it; call it and return/await it directly.
    */
   run<T>(store: TenantStore, fn: () => T): T {
     return storage.run(store, () => {
