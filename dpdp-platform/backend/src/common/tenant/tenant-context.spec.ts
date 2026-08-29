@@ -132,6 +132,7 @@ describe("TenantContext", () => {
         actorType: "PRINCIPAL",
         actorId: "dp-1",
         actorLabel: "Bob",
+        dataPrincipalId: "dp-1",
       },
       () => undefined,
     );

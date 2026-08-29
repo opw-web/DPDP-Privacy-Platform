@@ -9,6 +9,7 @@ import { TokenService, REFRESH_TOKEN_TTL_MS } from "./token.service";
 import { getDummyHash } from "./dummy-hash.util";
 import { rotateRefreshToken } from "./refresh-rotation.util";
 import type { LoginRequestMeta } from "./login-request-meta";
+import type { PrincipalActor } from "../../common/guards/jwt-principal.guard";
 
 /**
  * The ONLY shape of `PrincipalAccount` this service (or the controller
@@ -80,12 +81,14 @@ export class PrincipalAuthService {
     organizationId: string;
     id: string;
     email: string;
+    dataPrincipalId: string;
   }): TenantStore {
     return {
       organizationId: account.organizationId,
       actorType: "PRINCIPAL",
       actorId: account.id,
       actorLabel: account.email,
+      dataPrincipalId: account.dataPrincipalId,
     };
   }
 
@@ -233,11 +236,36 @@ export class PrincipalAuthService {
       "principal-refresh",
     );
     const tokenHash = this.tokenService.hashRefreshToken(refreshTokenRaw);
+
+    // Two things this lookup buys, combined into one query:
+    //   1. `dataPrincipalId` -- required to build a well-typed `PRINCIPAL`
+    //      `TenantStore` (see tenant-context.ts's discriminated union) but
+    //      never carried in the refresh JWT itself. Resolved the same way
+    //      `JwtPrincipalGuard` resolves it: scoped by `(id, organizationId)`
+    //      both taken from the verified, server-signed token.
+    //   2. `status: "ACTIVE"` (task 6 fix-round-1, Important 2) -- a
+    //      `LOCKED` account's existing refresh token must stop working,
+    //      not just be unable to start a NEW session. Filtering it into
+    //      this same lookup means a locked account falls through to the
+    //      existing "Invalid refresh token" 401 below with no new error
+    //      path, exactly like an unrecognized token.
+    const account = await this.prisma.principalAccount.findFirst({
+      where: {
+        id: payload.sub,
+        organizationId: payload.organizationId,
+        status: "ACTIVE",
+      },
+    });
+    if (!account) {
+      throw new UnauthorizedException("Invalid refresh token");
+    }
+
     const store: TenantStore = {
       organizationId: payload.organizationId,
       actorType: "PRINCIPAL",
       actorId: payload.sub,
       actorLabel: payload.actorLabel,
+      dataPrincipalId: account.dataPrincipalId,
     };
 
     const outcome = await TenantContext.run(store, () =>
@@ -248,9 +276,6 @@ export class PrincipalAuthService {
           tokenHash,
           meta,
           issueNewTokenPair: async () => {
-            const account = await tx.principalAccount.findFirstOrThrow({
-              where: { id: payload.sub },
-            });
             const {
               accessToken,
               refreshToken: newRefreshToken,
@@ -292,16 +317,60 @@ export class PrincipalAuthService {
       return;
     }
     const tokenHash = this.tokenService.hashRefreshToken(refreshTokenRaw);
+
+    // `dataPrincipalId` is required to build a well-typed `PRINCIPAL`
+    // `TenantStore` (see tenant-context.ts) even though this method never
+    // filters a query by it -- resolved the same way as `refresh()`
+    // above. Logout stays idempotent: if the account cannot be resolved
+    // (already gone, or the token names an id that never matches), this
+    // silently does nothing, same as an already-revoked/unknown token.
+    const account = await this.prisma.principalAccount.findFirst({
+      where: { id: payload.sub, organizationId: payload.organizationId },
+    });
+    if (!account) {
+      return;
+    }
+
     const store: TenantStore = {
       organizationId: payload.organizationId,
       actorType: "PRINCIPAL",
       actorId: payload.sub,
       actorLabel: payload.actorLabel,
+      dataPrincipalId: account.dataPrincipalId,
     };
     await TenantContext.run(store, () =>
       this.prisma.scoped.refreshToken.updateMany({
         where: { tokenHash, revokedAt: null },
         data: { revokedAt: new Date() },
+      }),
+    );
+  }
+
+  /**
+   * `GET /api/auth/principal/me`'s data access, moved out of the
+   * controller (task 6 fix-round-1, Minor) -- every other read in this
+   * codebase goes through a service, and this is the one place the
+   * `dataPrincipalId`-in-`TenantStore` convention Task 22 must copy is
+   * demonstrated, so the demonstration needs to live in the layer Task 22
+   * will actually be writing in.
+   *
+   * `principal` comes from `@CurrentPrincipal()`, itself populated only by
+   * `JwtPrincipalGuard` after independently verifying `aud: "principal"`
+   * and resolving the `PrincipalAccount` row -- never from a caller-
+   * supplied id.
+   */
+  async me(principal: PrincipalActor): Promise<PublicPrincipalAccount> {
+    const store: TenantStore = {
+      organizationId: principal.organizationId,
+      actorType: "PRINCIPAL",
+      actorId: principal.actorId,
+      actorLabel: principal.actorLabel,
+      dataPrincipalId: principal.dataPrincipalId,
+    };
+    return TenantContext.run(store, () =>
+      this.prisma.scoped.principalAccount.findFirstOrThrow({
+        where: { id: principal.actorId },
+        select: PRINCIPAL_ACCOUNT_PUBLIC_SELECT,
       }),
     );
   }

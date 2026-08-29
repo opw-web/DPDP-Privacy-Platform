@@ -207,7 +207,18 @@ describe("Principal auth (e2e)", () => {
     expect(payload["aud"]).toBe("principal");
     expect(payload["organizationId"]).toBe(organizationId);
     expect(res.body.account.dataPrincipalId).toBe(dataPrincipalId);
-    expect(extractRefreshCookie(res)).toMatch(/^principal_refresh_token=/);
+    const rawCookie = extractRefreshCookie(res);
+    expect(rawCookie).toMatch(/^principal_refresh_token=/);
+
+    // Spec line 696 names these explicitly. Assert the full attribute
+    // string (not just that SOME cookie was set) so a future edit
+    // dropping HttpOnly or loosening SameSite ships red, not green.
+    const setCookieHeader = (
+      res.headers["set-cookie"] as unknown as string[]
+    ).find((c) => c.startsWith("principal_refresh_token="));
+    expect(setCookieHeader).toMatch(/HttpOnly/i);
+    expect(setCookieHeader).toMatch(/SameSite=Lax/i);
+    expect(setCookieHeader).toMatch(/Path=\/api\/auth\/principal/);
   });
 
   it("login writes PRINCIPAL_LOGIN_SUCCEEDED and an INBOUND PORTAL_LOGIN contact event, and updates DataPrincipal contact fields", async () => {
@@ -636,5 +647,148 @@ describe("Principal auth (e2e)", () => {
       .set("Authorization", `Bearer ${loginRes.body.accessToken}`);
     expect(meRes.status).toBe(200);
     expect(meRes.body).not.toHaveProperty("passwordHash");
+  });
+
+  it("Important 2 (fix-round-1): a LOCKED account's existing refresh token stops working (positive control: it works while ACTIVE)", async () => {
+    const { organizationId } = await createOrgWithPrincipalAccount({
+      email: `lock-during-session-${randomUUID()}@example.com`,
+      password: "CorrectHorseBattery9!",
+    });
+    const account = await prisma.principalAccount.findFirstOrThrow({
+      where: { organizationId },
+    });
+
+    const loginRes = await request(app.getHttpServer())
+      .post("/api/auth/principal/login")
+      .send({ email: account.email, password: "CorrectHorseBattery9!" });
+    const cookie = extractRefreshCookie(loginRes);
+
+    // POSITIVE CONTROL: the token still works normally while the account
+    // remains ACTIVE.
+    const controlRes = await request(app.getHttpServer())
+      .post("/api/auth/principal/refresh")
+      .set("Cookie", cookie);
+    expect(controlRes.status).toBe(200);
+    const rotatedCookie = extractRefreshCookie(controlRes);
+
+    // Lock the account directly -- simulating an admin/DPO locking a
+    // compromised or suspended portal account mid-session. No new login
+    // attempt is involved; only the EXISTING, still-unexpired,
+    // never-revoked refresh token is exercised below.
+    await prisma.principalAccount.update({
+      where: { id: account.id },
+      data: { status: "LOCKED" },
+    });
+
+    // NEGATIVE: "cannot log in" without "cannot continue" would be a weak
+    // control for precisely the state LOCKED exists to represent
+    // (compromised/suspended). The still-valid refresh token must now be
+    // rejected.
+    const afterLockRes = await request(app.getHttpServer())
+      .post("/api/auth/principal/refresh")
+      .set("Cookie", rotatedCookie);
+    expect(afterLockRes.status).toBe(401);
+  });
+
+  it("audience-attribution (fix-round-1): an employee token is rejected on /api/auth/principal/me by the aud check itself, not by incidental id/org mismatch", async () => {
+    // Manufactures the one scenario that isolates WHICH mechanism causes
+    // the 401: a PrincipalAccount row deliberately given the SAME id as
+    // an Employee row, in the SAME organization. Employee.id and
+    // PrincipalAccount.id are separate UUID spaces that would essentially
+    // never collide naturally -- this collision is constructed so that a
+    // guard which forgot to check `aud` and only did the
+    // `(id, organizationId)` database lookup would find a REAL row and
+    // succeed. Without this collision, the earlier CRUX test's 401 could
+    // just as well be explained by "the employee's id happens not to
+    // match any PrincipalAccount row" -- a guard bug (skipped aud check)
+    // that this test would not have caught.
+    const organizationId = randomUUID();
+    await prisma.organization.create({
+      data: { id: organizationId, name: `Test Org ${organizationId}` },
+    });
+    createdOrgIds.push(organizationId);
+
+    const permissionCode = `test.principal-auth.attribution.${randomUUID()}`;
+    await prisma.permission.create({
+      data: {
+        code: permissionCode,
+        description: "throwaway test permission",
+        category: "TEST",
+      },
+    });
+    const role = await prisma.role.create({
+      data: {
+        organizationId,
+        code: "TEST_ROLE",
+        name: "Test Role",
+        permissions: { create: [{ permissionCode }] },
+      },
+    });
+    const employeePassword = "CorrectHorseBattery9!";
+    const employee = await prisma.employee.create({
+      data: {
+        organizationId,
+        email: `attribution-employee-${randomUUID()}@example.com`,
+        fullName: "Attribution Employee",
+        roleId: role.id,
+        passwordHash: await argon2.hash(employeePassword, {
+          type: argon2.argon2id,
+        }),
+        status: "ACTIVE",
+      },
+    });
+
+    const dataPrincipal = await prisma.dataPrincipal.create({
+      data: {
+        organizationId,
+        reference: `DP-${randomUUID()}`,
+        displayName: "Attribution Principal",
+      },
+    });
+    const principalPassword = "CorrectHorseBattery9!";
+    // The collision: this row's `id` is set to the EMPLOYEE's id.
+    const principalAccount = await prisma.principalAccount.create({
+      data: {
+        id: employee.id,
+        organizationId,
+        dataPrincipalId: dataPrincipal.id,
+        email: `attribution-principal-${randomUUID()}@example.com`,
+        passwordHash: await argon2.hash(principalPassword, {
+          type: argon2.argon2id,
+        }),
+        status: "ACTIVE",
+      },
+    });
+
+    const employeeLoginRes = await request(app.getHttpServer())
+      .post("/api/auth/employee/login")
+      .send({ email: employee.email, password: employeePassword });
+    const employeeAccessToken = employeeLoginRes.body.accessToken as string;
+    expect(decodeJwtPayload(employeeAccessToken)["sub"]).toBe(
+      principalAccount.id,
+    );
+
+    // POSITIVE CONTROL: the id/org lookup step alone DOES find this exact
+    // row and succeed when the audience is correct -- proving the
+    // negative below is specifically the audience check, not "no such
+    // PrincipalAccount row".
+    const principalLoginRes = await request(app.getHttpServer())
+      .post("/api/auth/principal/login")
+      .send({ email: principalAccount.email, password: principalPassword });
+    const principalAccessToken = principalLoginRes.body.accessToken as string;
+    const controlRes = await request(app.getHttpServer())
+      .get("/api/auth/principal/me")
+      .set("Authorization", `Bearer ${principalAccessToken}`);
+    expect(controlRes.status).toBe(200);
+    expect(controlRes.body.id).toBe(principalAccount.id);
+
+    // NEGATIVE: the employee token names the SAME id in the SAME
+    // organization. If JwtPrincipalGuard's account lookup ran without its
+    // `aud` check, this would ALSO find `principalAccount` and succeed --
+    // it must not.
+    const crossRes = await request(app.getHttpServer())
+      .get("/api/auth/principal/me")
+      .set("Authorization", `Bearer ${employeeAccessToken}`);
+    expect(crossRes.status).toBe(401);
   });
 });

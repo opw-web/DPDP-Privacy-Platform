@@ -15,13 +15,12 @@ import type { Request, Response } from "express";
 import { ConfigService } from "@nestjs/config";
 import { Public } from "../../common/decorators/public.decorator";
 import { CurrentPrincipal } from "../../common/decorators/current-principal.decorator";
-import type { PrincipalActor } from "../../common/guards/jwt-principal.guard";
-import { JwtPrincipalGuard } from "../../common/guards/jwt-principal.guard";
+import {
+  JwtPrincipalGuard,
+  type PrincipalActor,
+} from "../../common/guards/jwt-principal.guard";
 import { PrincipalAuthService } from "./principal-auth.service";
 import { PrincipalLoginDto } from "./dto/principal-login.dto";
-import { PrismaService } from "../../common/prisma/prisma.service";
-import { TenantContext, TenantStore } from "../../common/tenant/tenant-context";
-import { PRINCIPAL_ACCOUNT_PUBLIC_SELECT } from "./principal-auth.service";
 import type { AppConfig } from "../../config/configuration";
 
 const REFRESH_COOKIE_NAME = "principal_refresh_token";
@@ -41,7 +40,6 @@ const REFRESH_COOKIE_NAME = "principal_refresh_token";
 export class PrincipalAuthController {
   constructor(
     private readonly principalAuthService: PrincipalAuthService,
-    private readonly prisma: PrismaService,
     private readonly configService: ConfigService,
   ) {}
 
@@ -130,20 +128,6 @@ export class PrincipalAuthController {
   @UseGuards(JwtPrincipalGuard)
   @Get("me")
   async me(@CurrentPrincipal() principal: PrincipalActor) {
-    const store: TenantStore = {
-      organizationId: principal.organizationId,
-      actorType: "PRINCIPAL",
-      actorId: principal.actorId,
-      actorLabel: principal.actorLabel,
-      dataPrincipalId: principal.dataPrincipalId,
-    };
-    return TenantContext.run(store, async () => {
-      const account =
-        await this.prisma.scoped.principalAccount.findFirstOrThrow({
-          where: { id: principal.actorId },
-          select: PRINCIPAL_ACCOUNT_PUBLIC_SELECT,
-        });
-      return account;
-    });
+    return this.principalAuthService.me(principal);
   }
 }

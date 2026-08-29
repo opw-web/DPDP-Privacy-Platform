@@ -5,25 +5,44 @@ import { AsyncLocalStorage } from "node:async_hooks";
  * within. Every code path that touches a tenant-scoped Prisma model must
  * run inside a context populated with this shape -- there is no default
  * organization and no way to opt out of scoping from inside a service.
+ *
+ * Discriminated on `actorType` (task 6 fix-round-1, Important 1): a
+ * `PRINCIPAL` store REQUIRES `dataPrincipalId`, and `EMPLOYEE`/`SYSTEM`
+ * stores forbid it entirely. Before this, `dataPrincipalId` was an
+ * optional field on one flat interface, documented by prose (in three
+ * places) as "always set when actorType is PRINCIPAL" -- a convention, not
+ * a guarantee. The failure that sets up: an `/api/me/*` handler (task 22)
+ * that forgets to re-run its own `TenantContext.run({ ..., dataPrincipalId
+ * })` and instead inherits `TenantMiddleware`'s context would silently see
+ * `dataPrincipalId: undefined`, and a query written as `where: {
+ * dataPrincipalId: TenantContext.get().dataPrincipalId }` treats `undefined`
+ * as "no filter" in Prisma -- returning every principal's records in the
+ * organization. That is Check 19's exact failure mode, reachable by a
+ * missing line with no typecheck error and no runtime error.
+ *
+ * Making the field structurally required for `PRINCIPAL` does not, by
+ * itself, stop a handler from omitting the `TenantContext.run()` call
+ * altogether -- but it DOES stop every store literal that claims
+ * `actorType: "PRINCIPAL"` from compiling unless `dataPrincipalId` is
+ * supplied at that call site, which is what `TenantMiddleware` was
+ * changed to do too (see that file): there is no longer a code path in
+ * this codebase that can construct a `PRINCIPAL` store without it.
  */
-export interface TenantStore {
-  organizationId: string;
-  actorType: "EMPLOYEE" | "PRINCIPAL" | "SYSTEM";
-  actorId: string | null;
-  actorLabel: string;
-  /**
-   * Set only when `actorType` is `"PRINCIPAL"`: `DataPrincipal.id` for the
-   * account presenting the token. `JwtPrincipalGuard` (task 6) resolves
-   * this from the `PrincipalAccount` row -- it is never carried in the
-   * JWT itself and never caller-suppliable. `/api/me/*` routes (task 22)
-   * read it off `CurrentPrincipal()` and thread it into whichever
-   * `TenantContext.run({ ..., dataPrincipalId })` call scopes their own
-   * query -- this is the field that makes "the subject is resolved from
-   * the token only, never from a request parameter" (spec line 840)
-   * actually enforceable.
-   */
-  dataPrincipalId?: string;
-}
+export type TenantStore =
+  | {
+      actorType: "EMPLOYEE" | "SYSTEM";
+      organizationId: string;
+      actorId: string | null;
+      actorLabel: string;
+      dataPrincipalId?: never;
+    }
+  | {
+      actorType: "PRINCIPAL";
+      organizationId: string;
+      actorId: string | null;
+      actorLabel: string;
+      dataPrincipalId: string;
+    };
 
 const storage = new AsyncLocalStorage<TenantStore>();
 
