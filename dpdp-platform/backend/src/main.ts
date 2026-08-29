@@ -6,6 +6,23 @@ import { Logger } from "nestjs-pino";
 import { AppModule } from "./app.module";
 import type { AppConfig } from "./config/configuration";
 
+// AuditEvent.sequence, Organization.registeredUserCount and Counter.value are
+// Prisma BigInt fields. JSON.stringify() throws on BigInt by default, and
+// every controller response goes through it — so every process that can
+// serialize a Prisma row to JSON needs this shim applied once, globally,
+// before any request is served.
+declare global {
+  interface BigInt {
+    toJSON(): string;
+  }
+}
+// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+(BigInt.prototype as unknown as { toJSON: () => string }).toJSON = function (
+  this: bigint,
+) {
+  return this.toString();
+};
+
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { bufferLogs: true });
   app.useLogger(app.get(Logger));

@@ -5,6 +5,7 @@ import { randomUUID } from "crypto";
 import configuration from "./config/configuration";
 import { validate } from "./config/env.validation";
 import { HealthModule } from "./modules/health/health.module";
+import { PrismaModule } from "./common/prisma/prisma.module";
 
 @Module({
   imports: [
@@ -29,6 +30,7 @@ import { HealthModule } from "./modules/health/health.module";
             : undefined,
       },
     }),
+    PrismaModule,
     HealthModule,
   ],
 })
