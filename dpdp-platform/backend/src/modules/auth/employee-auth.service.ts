@@ -6,6 +6,9 @@ import { PrismaService } from "../../common/prisma/prisma.service";
 import { TenantContext, TenantStore } from "../../common/tenant/tenant-context";
 import { AuditService } from "../../common/audit/audit.service";
 import { TokenService, REFRESH_TOKEN_TTL_MS } from "./token.service";
+import { getDummyHash } from "./dummy-hash.util";
+import { rotateRefreshToken } from "./refresh-rotation.util";
+import type { LoginRequestMeta } from "./login-request-meta";
 
 export interface EmployeeLoginResult {
   accessToken: string;
@@ -21,29 +24,7 @@ export interface EmployeeRefreshResult {
   refreshToken: string;
 }
 
-export interface LoginRequestMeta {
-  ipAddress?: string;
-  userAgent?: string;
-}
-
-/**
- * A hash of a fixed, never-used password, computed once on first use and
- * cached. When a login attempt names an email that matches no employee
- * anywhere, this service still runs `argon2.verify` against this dummy
- * hash before responding -- so an unknown email and a known email with a
- * wrong password take roughly the same amount of work, and the HTTP
- * response (401, identical body) is identical either way. This is the
- * "must not reveal whether the email exists" requirement: the leak vector
- * is the response and its timing, not the (per-tenant, unreadable to an
- * attacker) audit log.
- */
-let dummyHash: Promise<string> | null = null;
-function getDummyHash(): Promise<string> {
-  dummyHash ??= argon2.hash("not-a-real-password-used-only-for-timing", {
-    type: argon2.argon2id,
-  });
-  return dummyHash;
-}
+export type { LoginRequestMeta };
 
 const GENERIC_LOGIN_FAILURE_MESSAGE = "Invalid email or password";
 
@@ -251,69 +232,32 @@ export class EmployeeAuthService {
       actorLabel: payload.actorLabel,
     };
 
-    type Outcome =
-      | { kind: "invalid" }
-      | { kind: "reuse" }
-      | { kind: "expired" }
-      | { kind: "ok"; accessToken: string; refreshToken: string };
-
     const outcome = await TenantContext.run(store, () =>
-      this.prisma.scoped.$transaction(async (tx): Promise<Outcome> => {
-        const existing = await tx.refreshToken.findFirst({
-          where: { tokenHash },
-        });
-        if (!existing) {
-          return { kind: "invalid" };
-        }
-
-        if (existing.revokedAt) {
-          await tx.refreshToken.updateMany({
-            where: {
-              actorType: "EMPLOYEE",
-              actorId: payload.sub,
-              revokedAt: null,
-            },
-            data: { revokedAt: new Date() },
-          });
-          await this.auditService.record(tx, {
-            action: "TOKEN_REUSE_DETECTED",
-            resourceType: "RefreshToken",
-            resourceId: existing.id,
-            metadata: { actorId: payload.sub },
-            ipAddress: meta.ipAddress,
-            userAgent: meta.userAgent,
-          });
-          return { kind: "reuse" };
-        }
-
-        if (existing.expiresAt.getTime() < Date.now()) {
-          return { kind: "expired" };
-        }
-
-        await tx.refreshToken.update({
-          where: { id: existing.id },
-          data: { revokedAt: new Date() },
-        });
-
-        const employee = await tx.employee.findFirstOrThrow({
-          where: { id: payload.sub },
-        });
-        const {
-          accessToken,
-          refreshToken: newRefreshToken,
-          tokenHash: newHash,
-          expiresAt,
-        } = await this.issueTokenPair(employee);
-        await tx.refreshToken.create({
-          data: {
-            actorType: "EMPLOYEE",
-            actorId: employee.id,
-            tokenHash: newHash,
-            expiresAt,
-          } as never,
-        });
-        return { kind: "ok", accessToken, refreshToken: newRefreshToken };
-      }),
+      this.prisma.scoped.$transaction((tx) =>
+        rotateRefreshToken(tx, this.auditService, {
+          actorType: "EMPLOYEE",
+          actorId: payload.sub,
+          tokenHash,
+          meta,
+          issueNewTokenPair: async () => {
+            const employee = await tx.employee.findFirstOrThrow({
+              where: { id: payload.sub },
+            });
+            const {
+              accessToken,
+              refreshToken: newRefreshToken,
+              tokenHash: newHash,
+              expiresAt,
+            } = await this.issueTokenPair(employee);
+            return {
+              accessToken,
+              refreshToken: newRefreshToken,
+              tokenHash: newHash,
+              expiresAt,
+            };
+          },
+        }),
+      ),
     );
 
     if (outcome.kind !== "ok") {

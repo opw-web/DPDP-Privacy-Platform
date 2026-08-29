@@ -11,6 +11,18 @@ export interface TenantStore {
   actorType: "EMPLOYEE" | "PRINCIPAL" | "SYSTEM";
   actorId: string | null;
   actorLabel: string;
+  /**
+   * Set only when `actorType` is `"PRINCIPAL"`: `DataPrincipal.id` for the
+   * account presenting the token. `JwtPrincipalGuard` (task 6) resolves
+   * this from the `PrincipalAccount` row -- it is never carried in the
+   * JWT itself and never caller-suppliable. `/api/me/*` routes (task 22)
+   * read it off `CurrentPrincipal()` and thread it into whichever
+   * `TenantContext.run({ ..., dataPrincipalId })` call scopes their own
+   * query -- this is the field that makes "the subject is resolved from
+   * the token only, never from a request parameter" (spec line 840)
+   * actually enforceable.
+   */
+  dataPrincipalId?: string;
 }
 
 const storage = new AsyncLocalStorage<TenantStore>();
