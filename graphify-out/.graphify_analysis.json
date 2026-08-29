@@ -1,0 +1,269 @@
+{
+  "communities": {
+    "0": [
+      "dpdp_mvp2_compliance_operations_6_developer_evaluation_checklist_beginner_friendly_do_every_step",
+      "dpdp_mvp2_compliance_operations_check_10_consent_evidence_is_complete_and_frozen_cn_09",
+      "dpdp_mvp2_compliance_operations_check_11_legitimate_use_purposes_never_show_a_consent_toggle_lb_06",
+      "dpdp_mvp2_compliance_operations_check_12_a_child_cannot_be_marketed_to_ch_05_the_flagship_prohibition",
+      "dpdp_mvp2_compliance_operations_check_13_a_child_s_consent_requires_a_verified_guardian_ch_01_ch_03",
+      "dpdp_mvp2_compliance_operations_check_14_preview_count_equals_send_count_exactly",
+      "dpdp_mvp2_compliance_operations_check_15_compliance_messages_are_not_consent_filtered",
+      "dpdp_mvp2_compliance_operations_check_16_sending_is_idempotent",
+      "dpdp_mvp2_compliance_operations_check_17_templates_cannot_be_weaponised",
+      "dpdp_mvp2_compliance_operations_check_18_the_breach_clock_starts_at_awareness_br_14",
+      "dpdp_mvp2_compliance_operations_check_19_the_breach_notice_carries_all_six_rule_7_1_elements",
+      "dpdp_mvp2_compliance_operations_check_1_no_legal_number_exists_in_code",
+      "dpdp_mvp2_compliance_operations_check_20_only_affected_people_see_a_breach_notice",
+      "dpdp_mvp2_compliance_operations_check_21_board_delivery_evidence_exists_br_13",
+      "dpdp_mvp2_compliance_operations_check_22_erasure_never_crosses_the_retention_floor_re_07_the_most_dangerous_bug",
+      "dpdp_mvp2_compliance_operations_check_23_the_48_hour_pre_erasure_notice_fires_and_can_be_stopped_re_05",
+      "dpdp_mvp2_compliance_operations_check_24_inactivity_counts_inbound_contact_only_go_09",
+      "dpdp_mvp2_compliance_operations_check_25_the_third_schedule_rule_applies_only_to_third_schedule_classes_re_03",
+      "dpdp_mvp2_compliance_operations_check_26_the_access_report_answers_s_11_in_full_rt_03_rt_04",
+      "dpdp_mvp2_compliance_operations_check_27_every_rights_response_carries_the_dpo_contact_rt_16_rule_9",
+      "dpdp_mvp2_compliance_operations_check_28_non_disclosure_orders_actually_suppress_bd_04",
+      "dpdp_mvp2_compliance_operations_check_29_the_sdf_cycle_is_enforced_sd_02_sd_03_sd_04",
+      "dpdp_mvp2_compliance_operations_check_2_changing_a_rule_does_not_rewrite_history",
+      "dpdp_mvp2_compliance_operations_check_30_the_audit_chain_verifies_and_detects_tampering",
+      "dpdp_mvp2_compliance_operations_check_31_the_evidence_pack_is_complete_ev_01_ev_12",
+      "dpdp_mvp2_compliance_operations_check_32_cross_portal_round_trip_is_immediate",
+      "dpdp_mvp2_compliance_operations_check_33_corrections_still_never_touch_the_source_system",
+      "dpdp_mvp2_compliance_operations_check_34_permissions_hold_on_every_new_endpoint",
+      "dpdp_mvp2_compliance_operations_check_35_tenant_isolation_still_holds_after_all_the_new_tables",
+      "dpdp_mvp2_compliance_operations_check_36_performance_at_realistic_scale",
+      "dpdp_mvp2_compliance_operations_check_3_basis_labels_are_honest",
+      "dpdp_mvp2_compliance_operations_check_4_the_state_machine_refuses_illegal_moves",
+      "dpdp_mvp2_compliance_operations_check_5_warnings_and_overdue_fire_exactly_once",
+      "dpdp_mvp2_compliance_operations_check_6_the_grievance_ceiling_is_enforced_rt_11",
+      "dpdp_mvp2_compliance_operations_check_7_notice_structure_is_enforced_not_suggested_nt_02_nt_07",
+      "dpdp_mvp2_compliance_operations_check_8_missing_consent_is_unknown_never_denied_cn_10",
+      "dpdp_mvp2_compliance_operations_check_9_withdrawal_is_as_easy_as_granting_cn_05"
+    ],
+    "1": [
+      "dpdp_compliance_checklist",
+      "dpdp_compliance_checklist_0_how_to_use_this_document",
+      "dpdp_compliance_checklist_10_retention_and_erasure_section_8_7_8_rule_8_third_schedule",
+      "dpdp_compliance_checklist_11_data_principal_rights_sections_11_14_rule_14",
+      "dpdp_compliance_checklist_12_processors_sharing_and_cross_border",
+      "dpdp_compliance_checklist_13_significant_data_fiduciary_section_10_rule_13",
+      "dpdp_compliance_checklist_14_board_and_government_interaction",
+      "dpdp_compliance_checklist_15_penalties_section_33_and_the_schedule",
+      "dpdp_compliance_checklist_16_the_evidence_pack_what_a_company_must_be_able_to_produce_on_demand",
+      "dpdp_compliance_checklist_17_coverage_summary",
+      "dpdp_compliance_checklist_18_the_ten_things_most_likely_to_go_wrong_in_the_build",
+      "dpdp_compliance_checklist_1_status_of_the_law_as_at_the_time_of_writing_re_verify_before_go_live",
+      "dpdp_compliance_checklist_2_scope_does_the_act_apply",
+      "dpdp_compliance_checklist_3_lawful_basis",
+      "dpdp_compliance_checklist_4_notice",
+      "dpdp_compliance_checklist_5_consent",
+      "dpdp_compliance_checklist_6_children_and_persons_with_disability",
+      "dpdp_compliance_checklist_7_general_obligations_of_the_data_fiduciary_section_8",
+      "dpdp_compliance_checklist_8_reasonable_security_safeguards_rule_6",
+      "dpdp_compliance_checklist_9_1_to_each_affected_data_principal_without_delay",
+      "dpdp_compliance_checklist_9_2_to_the_data_protection_board_two_stages",
+      "dpdp_compliance_checklist_9_personal_data_breach_section_8_6_rule_7",
+      "dpdp_compliance_checklist_dpdp_compliance_checklist",
+      "dpdp_compliance_checklist_every_obligation_the_dpdp_act_2023_and_the_dpdp_rules_2025_place_on_a_business_and_which_part_of_the_platform_serves_it",
+      "dpdp_compliance_checklist_this_document_is_the_objective_specification_mvp_1_and_mvp_2_exist_to_satisfy_the_ids_in_this_file"
+    ],
+    "2": [
+      "dpdp_mvp1_foundation_and_discovery_6_developer_evaluation_checklist_beginner_friendly_do_every_step",
+      "dpdp_mvp1_foundation_and_discovery_check_10_conflicts_are_surfaced_not_silently_resolved_go_03",
+      "dpdp_mvp1_foundation_and_discovery_check_11_purpose_and_lawful_basis_are_never_inferred_lb_02",
+      "dpdp_mvp1_foundation_and_discovery_check_12_the_registers_actually_answer_s_11_1_b_rt_04",
+      "dpdp_mvp1_foundation_and_discovery_check_13_a_processor_cannot_go_live_without_a_contract_go_02",
+      "dpdp_mvp1_foundation_and_discovery_check_14_credentials_are_encrypted_and_never_leave_the_backend",
+      "dpdp_mvp1_foundation_and_discovery_check_15_the_access_log_records_who_looked_at_whom_se_03_se_05",
+      "dpdp_mvp1_foundation_and_discovery_check_16_the_audit_log_cannot_be_edited",
+      "dpdp_mvp1_foundation_and_discovery_check_17_sequence_has_no_gaps",
+      "dpdp_mvp1_foundation_and_discovery_check_18_rbac_is_enforced_server_side",
+      "dpdp_mvp1_foundation_and_discovery_check_19_a_principal_sees_only_her_own_data_idor_test",
+      "dpdp_mvp1_foundation_and_discovery_check_1_tenant_isolation_is_structural",
+      "dpdp_mvp1_foundation_and_discovery_check_20_age_status_is_derived_never_guessed_ch_01",
+      "dpdp_mvp1_foundation_and_discovery_check_21_the_ropa_export_is_real_ev_02",
+      "dpdp_mvp1_foundation_and_discovery_check_22_performance_on_the_demo_dataset",
+      "dpdp_mvp1_foundation_and_discovery_check_23_timezone_correctness",
+      "dpdp_mvp1_foundation_and_discovery_check_24_clean_clone_reproducibility",
+      "dpdp_mvp1_foundation_and_discovery_check_2_the_demo_server_is_genuinely_detachable",
+      "dpdp_mvp1_foundation_and_discovery_check_3_external_access_is_provably_read_only",
+      "dpdp_mvp1_foundation_and_discovery_check_4_sync_is_idempotent",
+      "dpdp_mvp1_foundation_and_discovery_check_5_normalization_handles_ugly_real_world_input",
+      "dpdp_mvp1_foundation_and_discovery_check_6_500_records_become_327_people",
+      "dpdp_mvp1_foundation_and_discovery_check_7_the_rahul_verma_test_catches_over_merging",
+      "dpdp_mvp1_foundation_and_discovery_check_8_aman_merges_across_three_systems_with_visible_lineage",
+      "dpdp_mvp1_foundation_and_discovery_check_9_merges_are_reversible"
+    ],
+    "3": [
+      "dpdp_mvp2_compliance_operations",
+      "dpdp_mvp2_compliance_operations_1_idea_context_read_this_first",
+      "dpdp_mvp2_compliance_operations_2_1_new_packages_everything_from_mvp_1_stays",
+      "dpdp_mvp2_compliance_operations_2_2_new_prisma_models_all_mvp_1_models_unchanged",
+      "dpdp_mvp2_compliance_operations_2_3_raw_sql_follow_up_migration",
+      "dpdp_mvp2_compliance_operations_2_4_seeded_compliance_rules_defaults_for_a_dpo_to_review_not_legal_advice",
+      "dpdp_mvp2_compliance_operations_2_5_background_jobs_added_to_the_mvp_1_bullmq_setup",
+      "dpdp_mvp2_compliance_operations_2_architecture",
+      "dpdp_mvp2_compliance_operations_3_goals",
+      "dpdp_mvp2_compliance_operations_5_tasks_build_in_this_order_do_not_reorder",
+      "dpdp_mvp2_compliance_operations_7_mvp_2_goal_definition_of_done",
+      "dpdp_mvp2_compliance_operations_dpdp_platform_mvp_2_compliance_operations",
+      "dpdp_mvp2_compliance_operations_non_negotiable_rules_carried_from_mvp_1_still_binding",
+      "dpdp_mvp2_compliance_operations_notice_consent_children_rights_retention_breach_evidence",
+      "dpdp_mvp2_compliance_operations_one_new_rule_specific_to_mvp_2",
+      "dpdp_mvp2_compliance_operations_read_dpdp_compliance_checklist_md_alongside_this_every_module_below_names_the_ids_it_satisfies",
+      "dpdp_mvp2_compliance_operations_self_contained_build_document_paste_this_entire_file_as_your_vibe_coding_prompt",
+      "dpdp_mvp2_compliance_operations_the_legal_shape_you_are_encoding_plain_language"
+    ],
+    "4": [
+      "dpdp_mvp2_compliance_operations_4_10_breach_br_01_br_15",
+      "dpdp_mvp2_compliance_operations_4_11_sdf_pack_sd_01_sd_07",
+      "dpdp_mvp2_compliance_operations_4_12_board_and_government_interaction_bd_01_bd_06",
+      "dpdp_mvp2_compliance_operations_4_13_new_api_endpoints",
+      "dpdp_mvp2_compliance_operations_4_14_frontend",
+      "dpdp_mvp2_compliance_operations_4_1_complianceservice_the_engine_everything_calls",
+      "dpdp_mvp2_compliance_operations_4_2_notice_builder_nt_01_nt_10",
+      "dpdp_mvp2_compliance_operations_4_3_consent_cn_01_cn_11",
+      "dpdp_mvp2_compliance_operations_4_4_children_and_persons_with_disability_ch_01_ch_10",
+      "dpdp_mvp2_compliance_operations_4_5_rights_rt_01_rt_16",
+      "dpdp_mvp2_compliance_operations_4_6_retention_and_erasure_re_01_re_09",
+      "dpdp_mvp2_compliance_operations_4_7_audience_builder_exact_dsl",
+      "dpdp_mvp2_compliance_operations_4_8_campaigns_and_delivery",
+      "dpdp_mvp2_compliance_operations_4_9_templates",
+      "dpdp_mvp2_compliance_operations_4_requirements"
+    ],
+    "5": [
+      "dpdp_mvp1_foundation_and_discovery",
+      "dpdp_mvp1_foundation_and_discovery_1_idea_context_read_this_first",
+      "dpdp_mvp1_foundation_and_discovery_3_goals",
+      "dpdp_mvp1_foundation_and_discovery_5_tasks_build_in_this_order_do_not_reorder",
+      "dpdp_mvp1_foundation_and_discovery_7_mvp_1_goal_definition_of_done",
+      "dpdp_mvp1_foundation_and_discovery_dpdp_platform_mvp_1_foundation_discovery_the_record_of_processing",
+      "dpdp_mvp1_foundation_and_discovery_non_negotiable_project_rules_apply_to_both_mvps",
+      "dpdp_mvp1_foundation_and_discovery_read_dpdp_compliance_checklist_md_alongside_this_every_feature_here_exists_to_satisfy_a_checklist_id",
+      "dpdp_mvp1_foundation_and_discovery_self_contained_build_document_paste_this_entire_file_as_your_vibe_coding_prompt",
+      "dpdp_mvp1_foundation_and_discovery_the_dpdp_concepts_you_need_in_plain_language",
+      "dpdp_mvp1_foundation_and_discovery_what_mvp_1_delivers_when_done"
+    ],
+    "6": [
+      "dpdp_mvp1_foundation_and_discovery_2_1_tech_stack_locked_do_not_substitute",
+      "dpdp_mvp1_foundation_and_discovery_2_2_machine_setup_linux_mint_cinnamon_run_these_exactly",
+      "dpdp_mvp1_foundation_and_discovery_2_3_ports_locked",
+      "dpdp_mvp1_foundation_and_discovery_2_4_folder_structure",
+      "dpdp_mvp1_foundation_and_discovery_2_5_database_schema_prisma_source_of_truth",
+      "dpdp_mvp1_foundation_and_discovery_2_6_raw_sql_prisma_cannot_express_second_migration",
+      "dpdp_mvp1_foundation_and_discovery_2_7_docker_compose_yml_and_env",
+      "dpdp_mvp1_foundation_and_discovery_2_8_the_sync_pipeline",
+      "dpdp_mvp1_foundation_and_discovery_2_architecture"
+    ],
+    "7": [
+      "dpdp_mvp1_foundation_and_discovery_4_1_tenancy_auth_and_permissions_se_02_go_04",
+      "dpdp_mvp1_foundation_and_discovery_4_2_connector_layer",
+      "dpdp_mvp1_foundation_and_discovery_4_3_purposes_and_lawful_basis_lb_01_lb_02_cn_02",
+      "dpdp_mvp1_foundation_and_discovery_4_4_normalization_and_identity_resolution_go_03",
+      "dpdp_mvp1_foundation_and_discovery_4_5_api_surface_mvp_1",
+      "dpdp_mvp1_foundation_and_discovery_4_6_frontend_pages_mvp_1",
+      "dpdp_mvp1_foundation_and_discovery_4_7_audit_requirements",
+      "dpdp_mvp1_foundation_and_discovery_4_8_the_demo_company_server",
+      "dpdp_mvp1_foundation_and_discovery_4_requirements"
+    ]
+  },
+  "cohesion": {
+    "0": 0.05405405405405406,
+    "1": 0.08,
+    "2": 0.08,
+    "3": 0.1111111111111111,
+    "4": 0.13333333333333333,
+    "5": 0.18181818181818182,
+    "6": 0.2222222222222222,
+    "7": 0.2222222222222222
+  },
+  "gods": [
+    {
+      "id": "dpdp_mvp2_compliance_operations_6_developer_evaluation_checklist_beginner_friendly_do_every_step",
+      "label": "6. DEVELOPER EVALUATION CHECKLIST (beginner-friendly — do every step)",
+      "degree": 37
+    },
+    {
+      "id": "dpdp_mvp1_foundation_and_discovery_6_developer_evaluation_checklist_beginner_friendly_do_every_step",
+      "label": "6. DEVELOPER EVALUATION CHECKLIST (beginner-friendly — do every step)",
+      "degree": 25
+    },
+    {
+      "id": "dpdp_compliance_checklist_dpdp_compliance_checklist",
+      "label": "DPDP COMPLIANCE CHECKLIST",
+      "degree": 22
+    },
+    {
+      "id": "dpdp_mvp2_compliance_operations_4_requirements",
+      "label": "4. REQUIREMENTS",
+      "degree": 15
+    },
+    {
+      "id": "dpdp_mvp2_compliance_operations_dpdp_platform_mvp_2_compliance_operations",
+      "label": "DPDP PLATFORM — MVP 2: COMPLIANCE OPERATIONS",
+      "degree": 11
+    },
+    {
+      "id": "dpdp_mvp1_foundation_and_discovery_dpdp_platform_mvp_1_foundation_discovery_the_record_of_processing",
+      "label": "DPDP PLATFORM — MVP 1: FOUNDATION, DISCOVERY & THE RECORD OF PROCESSING",
+      "degree": 10
+    },
+    {
+      "id": "dpdp_mvp1_foundation_and_discovery_2_architecture",
+      "label": "2. ARCHITECTURE",
+      "degree": 9
+    },
+    {
+      "id": "dpdp_mvp1_foundation_and_discovery_4_requirements",
+      "label": "4. REQUIREMENTS",
+      "degree": 9
+    },
+    {
+      "id": "dpdp_mvp2_compliance_operations_2_architecture",
+      "label": "2. ARCHITECTURE",
+      "degree": 6
+    },
+    {
+      "id": "dpdp_mvp2_compliance_operations_1_idea_context_read_this_first",
+      "label": "1. IDEA CONTEXT (read this first)",
+      "degree": 4
+    }
+  ],
+  "surprises": [],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `6. DEVELOPER EVALUATION CHECKLIST (beginner-friendly — do every step)` connect `Consent & Breach Checklist` to `MVP2 Compliance Operations`?",
+      "why": "High betweenness centrality (0.167) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `DPDP PLATFORM — MVP 2: COMPLIANCE OPERATIONS` connect `MVP2 Compliance Operations` to `Consent & Breach Checklist`, `Compliance Requirements Spec`?",
+      "why": "High betweenness centrality (0.143) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `DPDP PLATFORM — MVP 1: FOUNDATION, DISCOVERY & THE RECORD OF PROCESSING` connect `MVP1 Foundation & Discovery` to `Access Control & Audit Checks`, `System Architecture Setup`, `MVP1 Requirements Spec`?",
+      "why": "High betweenness centrality (0.092) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `Check 10: Consent evidence is complete and frozen (CN-09)`, `Check 11: Legitimate-use purposes never show a consent toggle (LB-06)`, `Check 12: A child cannot be marketed to (CH-05) — the flagship prohibition` to the rest of the system?",
+      "why": "134 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Consent & Breach Checklist` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `DPDP Compliance Checklist` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.08 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Access Control & Audit Checks` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.08 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

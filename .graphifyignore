@@ -1,0 +1,36 @@
+# Keep the knowledge graph to real source — exclude backups, vendored code,
+# minified/compiled bundles, and generated output.
+**/*.min.js
+**/*.min.css
+**/*_compiled.js
+**/*.bundle.js
+**/dist/
+**/build/
+**/out/
+**/.next/
+**/coverage/
+**/vendor/
+**/__generated__/
+**/*.generated.*
+
+# --- project-specific ---
+**/venv/
+**/__pycache__/
+graphify-out/
+.claude/settings.json
+.claude/settings.local.json
+**/*.lock
+**/package-lock.json
+**/pnpm-lock.yaml
+**/poetry.lock
+**/migrations/versions/
+
+# graphify's own scaffolding — keep the graph about the DPDP app, not its tooling
+build_graph.py
+.claude/graphify/
+GRAPHIFY_SETUP_PROMPT.md
+PROCESS_JOURNAL_SETUP_PROMPT.md
+CLAUDE.md
+JOURNAL.md
+VERIFY_PROMPT.md
+.claude/journal/

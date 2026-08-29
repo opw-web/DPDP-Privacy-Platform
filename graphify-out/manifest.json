@@ -1,0 +1,20 @@
+{
+  "DPDP_COMPLIANCE_CHECKLIST.md": {
+    "mtime": 1788021112.052044,
+    "seen": 1788023726.9559422,
+    "ast_hash": "b0ebb7ebf77745670b484c1fb55a0048",
+    "semantic_hash": ""
+  },
+  "DPDP_MVP1_FOUNDATION_AND_DISCOVERY.md": {
+    "mtime": 1788021114.2749841,
+    "seen": 1788023726.955955,
+    "ast_hash": "e8365a50f03eb565147cd1d7bce935d9",
+    "semantic_hash": ""
+  },
+  "DPDP_MVP2_COMPLIANCE_OPERATIONS.md": {
+    "mtime": 1788021116.935913,
+    "seen": 1788023726.9559586,
+    "ast_hash": "bfd414474aaa729789ef383f35bee0d3",
+    "semantic_hash": ""
+  }
+}

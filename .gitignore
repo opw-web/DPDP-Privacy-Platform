@@ -1,0 +1,36 @@
+# Transient journal state (not history)
+.claude/journal/.turn
+.claude/journal/.session
+.claude/journal/.recap.stamp
+
+# graphify working state
+graphify-out/cache/
+graphify-out/.refresh.lock
+graphify-out/.refresh.stamp
+graphify-out/.graphify_python
+graphify-out/.graphify_root
+graphify-out/.graphify_detect.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Node
+node_modules/
+dist/
+build/
+*.tsbuildinfo
+npm-debug.log*
+
+# Env / secrets
+.env
+.env.local
+.env.*.local
+
+# Databases & volumes
+demo-company-server/data/*.sqlite
+pgdata/
+
+# Superpowers SDD workspace (git-ignored scratch)
+.superpowers/
