@@ -1,12 +1,14 @@
 import { MiddlewareConsumer, Module, NestModule } from "@nestjs/common";
+import { AuthModule } from "../../modules/auth/auth.module";
 import { TenantMiddleware } from "./tenant.middleware";
 
 /**
- * Wires `TenantMiddleware` in front of every route. The middleware itself
- * is a no-op until Task 5 adds JWT verification (see tenant.middleware.ts);
- * this module just owns that plumbing so app.module.ts doesn't have to.
+ * Wires `TenantMiddleware` in front of every route. `TenantMiddleware`
+ * needs `TokenService` (to verify the request's access token), which is
+ * why this module imports `AuthModule` -- `AuthModule` has no dependency
+ * back on `TenantModule`, so this is a one-way edge, not a cycle.
  */
-@Module({})
+@Module({ imports: [AuthModule] })
 export class TenantModule implements NestModule {
   configure(consumer: MiddlewareConsumer): void {
     consumer.apply(TenantMiddleware).forRoutes("*");

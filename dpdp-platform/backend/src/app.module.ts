@@ -1,7 +1,9 @@
-import { Module } from "@nestjs/common";
+import { MiddlewareConsumer, Module, NestModule } from "@nestjs/common";
+import { APP_GUARD } from "@nestjs/core";
 import { ConfigModule } from "@nestjs/config";
 import { LoggerModule } from "nestjs-pino";
 import { randomUUID } from "crypto";
+import cookieParser from "cookie-parser";
 import configuration from "./config/configuration";
 import { validate } from "./config/env.validation";
 import { HealthModule } from "./modules/health/health.module";
@@ -9,6 +11,10 @@ import { PrismaModule } from "./common/prisma/prisma.module";
 import { TenantModule } from "./common/tenant/tenant.module";
 import { AuditModule } from "./common/audit/audit.module";
 import { ReferenceModule } from "./common/reference/reference.module";
+import { AuthModule } from "./modules/auth/auth.module";
+import { OrganizationsModule } from "./modules/organizations/organizations.module";
+import { EmployeesModule } from "./modules/employees/employees.module";
+import { JwtEmployeeGuard } from "./common/guards/jwt-employee.guard";
 
 @Module({
   imports: [
@@ -37,7 +43,19 @@ import { ReferenceModule } from "./common/reference/reference.module";
     TenantModule,
     AuditModule,
     ReferenceModule,
+    AuthModule,
+    OrganizationsModule,
+    EmployeesModule,
     HealthModule,
   ],
+  providers: [{ provide: APP_GUARD, useClass: JwtEmployeeGuard }],
 })
-export class AppModule {}
+export class AppModule implements NestModule {
+  configure(consumer: MiddlewareConsumer): void {
+    // Applied ahead of TenantMiddleware (see TenantModule) so
+    // `req.cookies` is populated before anything tries to read the
+    // employee refresh-token cookie -- Express middleware from multiple
+    // Nest modules runs in the order the modules were imported above.
+    consumer.apply(cookieParser()).forRoutes("*");
+  }
+}
