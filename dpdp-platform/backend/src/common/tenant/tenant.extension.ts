@@ -279,18 +279,64 @@ function organizationCreateBlockedError(operation: string): Error {
  * scoped parent (`roleId` -> Role, `dataSourceId` -> DataSource), and
  * Prisma gives an extension no `where` to inject on create. Rather than
  * trust that foreign id, resolve it through the SCOPED parent delegate --
- * `getScopedClient()[relation]`, not the raw client -- so a foreign id
- * belonging to another organization fails here with P2025 instead of
- * silently attaching a cross-tenant grant/purpose. This only covers the
+ * `getScopedClient()`, not the raw client -- so a foreign id belonging to
+ * another organization fails here with P2025 instead of silently
+ * attaching a cross-tenant grant/purpose. This only covers the
  * flat-scalar-FK shape (`{ roleId: "..." }`); a nested `connect` bypasses
  * it entirely -- see the CONTRACT BOUNDARY note at the top of this file.
+ *
+ * $TRANSACTION AND THE INDIRECT FK CHECK (task 3 review, fix round 2,
+ * Important) -- read this before changing `getScopedClient`:
+ *
+ * `getScopedClient` here is the CLOSURE-CAPTURED, TOP-LEVEL extended
+ * client (see `tenantScopingExtension` at the bottom of this file) --
+ * fixed once, at `$extends()` time. When this function is reached from
+ * the `createMany` case in `runScopedOperation` (i.e. a direct, top-level
+ * `prisma.scoped.rolePermission.createMany(...)` call, or the app calling
+ * `createMany` for an indirect model at all), that is correct: there is
+ * no enclosing transaction to worry about.
+ *
+ * But when the ORIGINAL call was `create` (singular) on an indirect model
+ * and it happened INSIDE an interactive transaction --
+ * `prisma.scoped.$transaction(async (tx) => { await tx.role.create(...);
+ * await tx.rolePermission.create({ data: { roleId: <the role just
+ * created>, permissionCode } }); })` -- using this same top-level client
+ * for the ownership check would run the verification SELECT on a
+ * different connection than `tx`, which cannot see the just-created,
+ * not-yet-committed `Role` row: a spurious P2025 for a perfectly valid
+ * write. Confirmed empirically (a throwaway probe script, not just
+ * reasoning): `Prisma.getExtensionContext(this).$parent` inside a
+ * MODEL-component method correctly differs between a top-level call and a
+ * `tx`-bound call, so for `create` specifically (see the `create`
+ * override in `buildModelOverrides`), the check runs against
+ * `getExtensionContext(this).$parent` -- the ACTUAL acting client for
+ * that invocation, `tx` when inside one -- not this closure.
+ *
+ * `createMany` (multi-row, called directly by the app rather than
+ * internally by `create`) could NOT be given the same fix: `.$extends()`
+ * is explicitly denylisted on an interactive-transaction client (Prisma's
+ * `ITXClientDenyList`), and a model-component override of `createMany`
+ * has no non-recursive way to reach the real underlying `createMany`
+ * (unlike `create`, which can bottom out via the *different* operation
+ * name `createMany` -- there is no third name for `createMany` itself to
+ * fall back to). A `createMany` on an indirect model INSIDE a
+ * transaction, referencing a parent written earlier in that SAME
+ * transaction, therefore still uses this top-level client and can still
+ * throw a spurious P2025. Prefer looping single `create` calls over
+ * `createMany` for indirect models inside a transaction until/unless
+ * Prisma's extension API grows a way to reach the transactional client
+ * from a query-component callback (it does not have one today: verified
+ * empirically that `$allOperations`'s `query` continuation carries no
+ * accessible reference to it).
  */
 async function verifyIndirectForeignKey(
   modelName: string,
   scope: { kind: "indirect"; relations: readonly string[] },
   data: unknown,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  getScopedClient: () => any,
+  getActingClient: () => any,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  getFallbackClient: () => any,
 ): Promise<void> {
   // Every listed relation gets checked, not just the first -- see the
   // DataSourcePurpose comment on INDIRECT_TENANT_SCOPED_MODELS for why a
@@ -313,8 +359,24 @@ async function verifyIndirectForeignKey(
         );
       }
       const delegateName = lowerFirst(targetModel);
+      // `getActingClient()` is `$parent` from the calling model context --
+      // the correct, transaction-bound client when we are inside one. But
+      // see the SUBCLASSED CLIENT CAVEAT note above `verifyIndirectForeignKey`'s
+      // call site: for a NON-transactional top-level call on
+      // `PrismaService.scoped` specifically, `$parent` comes back as a
+      // reduced object with no model delegates at all (confirmed
+      // empirically), so `delegateName` is looked up there first and, if
+      // absent, `getFallbackClient()` (the closure-captured top-level
+      // extended client, always fully formed) is used instead. There is
+      // no transaction to worry about missing in that case, so the
+      // fallback is exactly as correct as fix round 1's original
+      // (non-tx-aware) check was.
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      await (getScopedClient()[delegateName] as any).findFirstOrThrow({
+      const acting = getActingClient();
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const delegate = (acting?.[delegateName] ??
+        getFallbackClient()[delegateName]) as any;
+      await delegate.findFirstOrThrow({
         where: { id: fkValue },
       });
     }),
@@ -382,10 +444,19 @@ async function runScopedOperation(
         throw organizationCreateBlockedError("create");
       }
       if (scope.kind === "indirect") {
+        // Query component: no `this`/model context available here (see
+        // the $TRANSACTION AND THE INDIRECT FK CHECK note above
+        // `verifyIndirectForeignKey`), so acting and fallback are the
+        // same closure-captured top-level client. This path is only
+        // reached for a top-level `prisma.scoped.<model>.create(...)`
+        // call anyway -- `buildModelOverrides` gives indirect models
+        // their own tx-aware `create` override that never falls through
+        // to here.
         await verifyIndirectForeignKey(
           model,
           scope,
           args.data,
+          getScopedClient,
           getScopedClient,
         );
         return query(args as never);
@@ -401,9 +472,27 @@ async function runScopedOperation(
       }
       const rows = Array.isArray(args.data) ? args.data : [args.data];
       if (scope.kind === "indirect") {
+        if (args["__fkAlreadyVerifiedOnTx"]) {
+          // Set only by the tx-aware `create` override below, which has
+          // already verified ownership via the CORRECT (possibly
+          // transaction-bound) acting client. Re-verifying here would use
+          // the top-level, non-transactional client (see the
+          // $TRANSACTION AND THE INDIRECT FK CHECK note above create's
+          // override) and could wrongly reject a row that a concurrent
+          // step of the SAME transaction already wrote but not committed.
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
+          const { __fkAlreadyVerifiedOnTx: _marker, ...rest } = args;
+          return query(rest as never);
+        }
         await Promise.all(
           rows.map((row: unknown) =>
-            verifyIndirectForeignKey(model, scope, row, getScopedClient),
+            verifyIndirectForeignKey(
+              model,
+              scope,
+              row,
+              getScopedClient,
+              getScopedClient,
+            ),
           ),
         );
         return query(args as never);
@@ -456,13 +545,86 @@ async function runScopedOperation(
  * use the interactive `$transaction` form, and must call these methods
  * directly inside that callback, not pre-build them as pending operations.
  */
-function buildModelOverrides(): Record<string, Record<string, unknown>> {
+function buildModelOverrides(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  getScopedClient: () => any,
+): Record<string, Record<string, unknown>> {
   const overrides: Record<string, Record<string, unknown>> = {};
 
   for (const modelName of ALL_SCOPED_MODEL_NAMES) {
     const key = lowerFirst(modelName);
+    const scope = SCOPE_BY_MODEL[modelName];
 
     overrides[key] = {
+      // Only added for indirect models (RolePermission, DataSourcePurpose).
+      // See the $TRANSACTION AND THE INDIRECT FK CHECK note above
+      // `verifyIndirectForeignKey` for why `create` gets this special
+      // handling and `createMany` does not.
+      ...(scope?.kind === "indirect"
+        ? {
+            async create(this: any, args: OperationArgs) {
+              // `this` is bound to whatever client the call was actually
+              // made through -- the top-level scoped client, or `tx` when
+              // called as `tx.<model>.create(...)` inside an interactive
+              // transaction. `$parent` resolves to that SAME acting
+              // client, so the ownership check below runs on `tx` (and
+              // therefore sees rows written earlier in that same
+              // transaction) instead of a separate, non-transactional
+              // connection.
+              //
+              // SUBCLASSED CLIENT CAVEAT, found while testing this fix:
+              // confirmed empirically that `$parent` behaves correctly
+              // (full client, with every model delegate) for a plain
+              // `new PrismaClient().$extends(...)`, in BOTH the
+              // top-level and transactional case. But `PrismaService`
+              // (this codebase's actual base client) EXTENDS
+              // `PrismaClient` as a subclass, and against
+              // `PrismaService.scoped`, `$parent` for a TOP-LEVEL
+              // (non-transactional) call comes back as a reduced object
+              // with no model delegates at all -- while, oddly,
+              // `$parent` for a call made as `tx.<model>.create(...)`
+              // INSIDE an interactive transaction on that same
+              // `PrismaService.scoped` client is fully formed and
+              // correctly transaction-bound. `verifyIndirectForeignKey`
+              // therefore tries `$parent` first and falls back to the
+              // closure-captured top-level client (`getScopedClient`)
+              // only when `$parent` lacks the needed delegate -- which,
+              // per the above, is exactly the case where there is no
+              // transaction to be tx-aware about anyway.
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              const actingClient = (Prisma.getExtensionContext(this) as any)
+                .$parent;
+              await verifyIndirectForeignKey(
+                modelName,
+                scope as { kind: "indirect"; relations: readonly string[] },
+                args.data,
+                () => actingClient,
+                getScopedClient,
+              );
+              // Bottom out via `createMany` -- a DIFFERENT operation name,
+              // not overridden here -- so this reaches the real insert via
+              // the query component instead of recursing into this same
+              // override. The marker tells that component's `createMany`
+              // case the ownership check already ran (correctly, on the
+              // acting client above); skipping it there avoids re-running
+              // it on the wrong (top-level, non-transactional) client.
+              await this.createMany({
+                data: [args.data],
+                __fkAlreadyVerifiedOnTx: true,
+              });
+              const pkWhere = primaryKeyWhereFor(
+                modelName,
+                args.data as Record<string, unknown>,
+              );
+              return this.findFirstOrThrow({
+                where: pkWhere,
+                select: args["select"],
+                include: args["include"],
+              });
+            },
+          }
+        : {}),
+
       async findUnique(this: any, args: OperationArgs) {
         const where = flattenUniqueWhere(args.where as Record<string, unknown>);
         return this.findFirst({ ...args, where });
@@ -481,6 +643,16 @@ function buildModelOverrides(): Record<string, Record<string, unknown>> {
       // for the parallel ruling on upsert).
       async update(this: any, args: OperationArgs) {
         const where = flattenUniqueWhere(args.where as Record<string, unknown>);
+        // Deliberately NOT `{ where, select: args["select"], include: args["include"] }`
+        // here -- checked specifically after the same bug was found in
+        // `delete` (fix round 2 / Critical): passing the caller's
+        // projection into THIS lookup would risk the identical failure
+        // (a `select` omitting the primary key producing an
+        // all-fields-undefined `pkWhere`, collapsing `updateMany` below to
+        // "every row in this org"). This lookup stays projection-free on
+        // purpose; the caller's select/include is applied only to the
+        // final `findFirstOrThrow` return below, never to a lookup that
+        // feeds `primaryKeyWhereFor`.
         const existing = await this.findFirst({ where });
         if (!existing) {
           throw notFoundError(modelName);
@@ -512,17 +684,35 @@ function buildModelOverrides(): Record<string, Record<string, unknown>> {
 
       async delete(this: any, args: OperationArgs) {
         const where = flattenUniqueWhere(args.where as Record<string, unknown>);
-        const existing = await this.findFirst({
-          where,
-          select: args["select"],
-          include: args["include"],
-        });
-        if (!existing) {
+        // Fix round 2 / Critical: the primary-key lookup used to fetch
+        // (and derive pkWhere from) the row using the CALLER's
+        // select/include. A `select` that omits the primary key (e.g.
+        // `select: { displayName: true }`) meant `primaryKeyWhereFor`
+        // built `{ id: undefined }` -- Prisma treats an `undefined` field
+        // as ABSENT, so the deleteMany below collapsed to just the tenant
+        // filter and silently deleted every row of the model for the
+        // current organization. This lookup is now always
+        // projection-free, so pkWhere is always built from real values;
+        // the caller's select/include is applied separately, only to
+        // shape the RETURNED object.
+        const pkRow = await this.findFirst({ where });
+        if (!pkRow) {
           throw notFoundError(modelName);
         }
-        await this.deleteMany({
-          where: primaryKeyWhereFor(modelName, existing),
-        });
+        const pkWhere = primaryKeyWhereFor(modelName, pkRow);
+        const existing =
+          args["select"] || args["include"]
+            ? await this.findFirst({
+                where: pkWhere,
+                select: args["select"],
+                include: args["include"],
+              })
+            : pkRow;
+        if (!existing) {
+          // Race: the row was deleted between the two lookups above.
+          throw notFoundError(modelName);
+        }
+        await this.deleteMany({ where: pkWhere });
         return existing;
       },
 
@@ -580,7 +770,7 @@ export const tenantScopingExtension = Prisma.defineExtension((client) => {
     // shape, so it is cast here rather than fought into the exact generic
     // Prisma expects.
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    model: buildModelOverrides() as any,
+    model: buildModelOverrides(() => extended) as any,
     query: {
       $allModels: {
         async $allOperations({ model, operation, args, query }) {

@@ -394,6 +394,66 @@ describe("Tenant isolation (e2e)", () => {
       expect(stillThere).not.toBeNull();
     });
 
+    it("delete with a `select` that omits the primary key deletes exactly the targeted row, not every row in the org (fix round 2 / Critical)", async () => {
+      // Before this fix, the primary-key lookup used to build the actual
+      // deleteMany `where` reused the CALLER's select/include. A `select`
+      // that omits the primary key (as here) meant that lookup came back
+      // as `{ displayName: "..." }` with no `id` -- `primaryKeyWhereFor`
+      // then produced `{ id: undefined }`, which Prisma treats as "no
+      // filter on id at all", so the deleteMany silently collapsed to
+      // "every DataPrincipal row in this organization". This seeds three
+      // rows, deletes one with a narrow `select`, and asserts the other
+      // two survive.
+      const orgOnly = {
+        organizationId: acmeOrgId,
+        actorType: "EMPLOYEE" as const,
+        actorId: "acme-admin",
+        actorLabel: "Acme Admin",
+      };
+      const [victim, survivorA, survivorB] = await Promise.all([
+        prisma.dataPrincipal.create({
+          data: {
+            organizationId: acmeOrgId,
+            reference: `DP-${randomUUID()}`,
+            displayName: "Victim",
+          },
+        }),
+        prisma.dataPrincipal.create({
+          data: {
+            organizationId: acmeOrgId,
+            reference: `DP-${randomUUID()}`,
+            displayName: "Survivor A",
+          },
+        }),
+        prisma.dataPrincipal.create({
+          data: {
+            organizationId: acmeOrgId,
+            reference: `DP-${randomUUID()}`,
+            displayName: "Survivor B",
+          },
+        }),
+      ]);
+
+      const deleted = await TenantContext.run(orgOnly, () =>
+        prisma.scoped.dataPrincipal.delete({
+          where: { id: victim.id },
+          select: { displayName: true },
+        }),
+      );
+      expect(deleted).toEqual({ displayName: "Victim" });
+
+      const remainingIds = (
+        await prisma.dataPrincipal.findMany({
+          where: { id: { in: [victim.id, survivorA.id, survivorB.id] } },
+        })
+      ).map((r) => r.id);
+      expect(remainingIds.sort()).toEqual([survivorA.id, survivorB.id].sort());
+
+      await prisma.dataPrincipal.deleteMany({
+        where: { id: { in: [survivorA.id, survivorB.id] } },
+      });
+    });
+
     it("a create without an explicit organizationId lands in Acme", async () => {
       const created = await TenantContext.run(acmeCtx, () =>
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -695,6 +755,21 @@ describe("Tenant isolation (e2e)", () => {
     });
 
     it("create with Globex's roleId from Acme's context is rejected (fix round 1 / Critical 2)", async () => {
+      // Fix round 2 test-quality note: this MUST use a permission code
+      // that is NOT already granted to Globex's role. The original
+      // version of this test reused the shared `permissionCode`, which
+      // `beforeAll` had already seeded for BOTH roles -- since
+      // RolePermission's primary key is `[roleId, permissionCode]`, that
+      // combination already existed, so even with the ownership check
+      // reverted the insert still throws (P2002 unique violation, not our
+      // check), and the test passed for the wrong reason. A fresh,
+      // never-granted code means the ONLY thing that can reject this
+      // insert is the FK ownership check.
+      const freshPermissionCode = `test.permission.fresh.${randomUUID()}`;
+      await prisma.permission.create({
+        data: { code: freshPermissionCode, description: "x", category: "TEST" },
+      });
+
       // Before the fix, this silently attached a grant to another
       // tenant's role: `roleId` has no organizationId of its own, so
       // nothing stopped it. Now the extension resolves `roleId` through
@@ -702,21 +777,17 @@ describe("Tenant isolation (e2e)", () => {
       await expect(
         TenantContext.run(acmeCtx, () =>
           prisma.scoped.rolePermission.create({
-            data: { roleId: globexRoleId, permissionCode },
+            data: { roleId: globexRoleId, permissionCode: freshPermissionCode },
           }),
         ),
       ).rejects.toThrow();
 
-      const stillNotThere = await prisma.rolePermission.findFirst({
-        where: { roleId: globexRoleId, permissionCode },
+      const leaked = await prisma.rolePermission.findFirst({
+        where: { roleId: globexRoleId, permissionCode: freshPermissionCode },
       });
-      // The only grant on Globex's role for this code is the one seeded in
-      // beforeAll -- exactly one, not two.
-      const allGlobexGrantsForCode = await prisma.rolePermission.findMany({
-        where: { roleId: globexRoleId, permissionCode },
-      });
-      expect(allGlobexGrantsForCode).toHaveLength(1);
-      expect(stillNotThere).not.toBeNull();
+      expect(leaked).toBeNull();
+
+      await prisma.permission.delete({ where: { code: freshPermissionCode } });
     });
 
     it("createMany with a mix of Acme and Globex roleIds from Acme's context is rejected entirely", async () => {
@@ -745,6 +816,76 @@ describe("Tenant isolation (e2e)", () => {
       expect(acmeGrant).toBeNull();
 
       await prisma.permission.delete({ where: { code: otherPermissionCode } });
+    });
+
+    it("create for a Role seeded earlier in the SAME interactive transaction succeeds (fix round 2 / Important)", async () => {
+      // This is exactly the shape the review named as broken: the FK
+      // ownership check used to run on a separate, non-transactional
+      // connection (the closure-captured top-level client), which cannot
+      // see a row the transaction itself just wrote but not yet
+      // committed -- a fresh Role created earlier in the same
+      // transaction, in this test. Before the fix this threw a spurious
+      // P2025 even though the write is entirely legitimate. Task 5's role
+      // seeding is exactly this shape (seed a Role, then grant it
+      // permissions, in one transaction).
+      const freshPermissionCode = `test.permission.txfix.${randomUUID()}`;
+      await prisma.permission.create({
+        data: { code: freshPermissionCode, description: "x", category: "TEST" },
+      });
+
+      const result = await TenantContext.run(acmeCtx, () =>
+        prisma.scoped.$transaction(async (tx) => {
+          const role = await tx.role.create({
+            data: {
+              code: `TX_FRESH_${randomUUID()}`,
+              name: "Fresh Role",
+            } as never,
+          });
+          const grant = await tx.rolePermission.create({
+            data: { roleId: role.id, permissionCode: freshPermissionCode },
+          });
+          return { role, grant };
+        }),
+      );
+
+      expect(result.grant.roleId).toBe(result.role.id);
+
+      await prisma.rolePermission.deleteMany({
+        where: { roleId: result.role.id },
+      });
+      await prisma.role.delete({ where: { id: result.role.id } });
+      await prisma.permission.delete({ where: { code: freshPermissionCode } });
+    });
+
+    it("create for a Globex role, even inside a transaction, is still rejected", async () => {
+      // Guards against a fix that made the check transaction-aware by
+      // accident dropping it (e.g. always trusting `$parent` without
+      // actually verifying). The acting client inside this transaction is
+      // still Acme's tenant context, so a Globex roleId must still fail.
+      const freshPermissionCode = `test.permission.txfix.cross.${randomUUID()}`;
+      await prisma.permission.create({
+        data: { code: freshPermissionCode, description: "x", category: "TEST" },
+      });
+
+      await expect(
+        TenantContext.run(acmeCtx, () =>
+          prisma.scoped.$transaction(async (tx) => {
+            return tx.rolePermission.create({
+              data: {
+                roleId: globexRoleId,
+                permissionCode: freshPermissionCode,
+              },
+            });
+          }),
+        ),
+      ).rejects.toThrow();
+
+      const leaked = await prisma.rolePermission.findFirst({
+        where: { roleId: globexRoleId, permissionCode: freshPermissionCode },
+      });
+      expect(leaked).toBeNull();
+
+      await prisma.permission.delete({ where: { code: freshPermissionCode } });
     });
   });
 
@@ -805,6 +946,33 @@ describe("Tenant isolation (e2e)", () => {
         where: { dataSourceId: acmeDataSourceId, purposeId: otherPurpose.id },
       });
       await prisma.processingPurpose.delete({ where: { id: otherPurpose.id } });
+    });
+
+    it("create attaching Acme's own purpose to Globex's dataSourceId is rejected (fix round 2: missing direction)", async () => {
+      // The cross-tenant `purposeId` direction is covered above. This
+      // covers the OTHER foreign key on the same join table --
+      // `dataSourceId` -- which is a separate relation
+      // (INDIRECT_TENANT_SCOPED_MODELS lists both `dataSource` and
+      // `purpose` for DataSourcePurpose) and needs its own check, exactly
+      // as the review asked: right after fix round 1 shipped, checking
+      // only `dataSourceId` and missing `purposeId` was the actual bug
+      // that produced this file's own DataSourcePurpose tests -- this
+      // test guards the mirror-image mistake from recurring unnoticed.
+      await expect(
+        TenantContext.run(acmeCtx, () =>
+          prisma.scoped.dataSourcePurpose.create({
+            data: {
+              dataSourceId: globexDataSourceId,
+              purposeId: acmePurposeId,
+            },
+          }),
+        ),
+      ).rejects.toThrow();
+
+      const leaked = await prisma.dataSourcePurpose.findFirst({
+        where: { dataSourceId: globexDataSourceId, purposeId: acmePurposeId },
+      });
+      expect(leaked).toBeNull();
     });
   });
 
