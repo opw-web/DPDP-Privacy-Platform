@@ -1,0 +1,170 @@
+import { Injectable } from "@nestjs/common";
+import type { CanonicalField } from "@prisma/client";
+
+/** The one permission code that lifts masking (spec line 716, SE-01). */
+export const CAN_VIEW_ALL_PERSONAL_DATA = "CAN_VIEW_ALL_PERSONAL_DATA";
+
+/**
+ * Masks personal-data VALUES before they leave the process. SE-01: an
+ * actor holding `CAN_VIEW_PRINCIPALS` without `CAN_VIEW_ALL_PERSONAL_DATA`
+ * (the AUDITOR role, by seeded default) must never receive an unmasked
+ * email or phone number in an API response -- not "the frontend hides
+ * it," an actual different, already-redacted string leaves this process.
+ * There is no server-rendered path and no React component in this
+ * codebase that ever sees the real value for such an actor: masking
+ * happens here, in the service layer that builds the response, never in
+ * the browser.
+ *
+ * Formats are transcribed exactly from spec line 716:
+ *   maskEmail("aman@gmail.com")     -> "am**@gm***.com"
+ *   maskPhone("+919876543210")      -> "+91 98****3210"
+ *
+ * Only `EMAIL` and `PHONE` have a spec-defined masked format. Every other
+ * `CanonicalField` is a documented gap, not an oversight: the spec's one
+ * masking example (line 716) covers exactly these two field types, and
+ * inventing masking rules for the rest (address lines, name, DOB, ...)
+ * without a cited format would be exactly the kind of "invent a rule the
+ * spec doesn't state" this project's other services (audit-actions.ts,
+ * prisma/seed/permissions.ts) explicitly refuse to do elsewhere. Flagged
+ * for the spec owner in the task report; `maskValue()` passes any other
+ * canonical field through unchanged.
+ */
+@Injectable()
+export class MaskingService {
+  /**
+   * `am**@gm***.com` from `aman@gmail.com`: keeps a short, non-identifying
+   * prefix of the local part and of the domain's first label, masks the
+   * rest of each with same-length asterisks, and leaves the domain's
+   * suffix (`.com`, `.co.uk`, ...) fully visible -- exactly the spec
+   * example, character for character.
+   *
+   * Never throws: a non-string, `null`, `undefined`, or empty value is
+   * returned unchanged (there is nothing to mask, and a masking function
+   * that throws on an absent field would turn "no email on file" into a
+   * 500).
+   */
+  maskEmail(value: unknown): unknown {
+    if (typeof value !== "string" || value.length === 0) {
+      return value;
+    }
+    const atIndex = value.lastIndexOf("@");
+    if (atIndex === -1) {
+      // Not a well-formed email -- still mask something rather than
+      // leaking the raw string verbatim.
+      return this.maskSegment(value);
+    }
+    const local = value.slice(0, atIndex);
+    const domain = value.slice(atIndex + 1);
+    return `${this.maskSegment(local)}@${this.maskDomain(domain)}`;
+  }
+
+  /**
+   * `+91 98****3210` from `+919876543210`: the last 10 digits are treated
+   * as the subscriber number (keep first 2, mask the middle, keep last
+   * 4); anything beyond that is the country code, re-emitted as `+<cc> `.
+   * A bare 10-digit number (no country code) is masked the same way with
+   * no `+<cc> ` prefix. Short numbers (6 digits or fewer) fall back to a
+   * shorter keep-prefix-only mask so they are not either fully exposed or
+   * fully starred out.
+   *
+   * Never throws on a non-string, `null`, `undefined`, empty, or
+   * non-numeric value -- returned unchanged.
+   */
+  maskPhone(value: unknown): unknown {
+    if (typeof value !== "string" || value.length === 0) {
+      return value;
+    }
+    const digits = value.replace(/\D/g, "");
+    if (digits.length === 0) {
+      return value;
+    }
+    if (digits.length > 10) {
+      const countryCodeLength = digits.length - 10;
+      const countryCode = digits.slice(0, countryCodeLength);
+      const subscriberNumber = digits.slice(countryCodeLength);
+      return `+${countryCode} ${this.maskDigits(subscriberNumber)}`;
+    }
+    return this.maskDigits(digits);
+  }
+
+  /**
+   * Dispatches to the right mask for a `PrincipalDataField.canonicalField`
+   * value. Fields with no spec-defined mask (everything but `EMAIL` /
+   * `PHONE`) pass through unchanged -- see the class doc comment.
+   */
+  maskValue(canonicalField: CanonicalField | string, value: unknown): unknown {
+    switch (canonicalField) {
+      case "EMAIL":
+        return this.maskEmail(value);
+      case "PHONE":
+        return this.maskPhone(value);
+      default:
+        return value;
+    }
+  }
+
+  /**
+   * The one entry point a controller/service should actually call:
+   * applies `maskValue` only when the actor's permission set lacks
+   * `CAN_VIEW_ALL_PERSONAL_DATA` (SE-01). `actorPermissions` is expected
+   * to be the same per-request-resolved set `PermissionsGuard` attaches
+   * to the request (see `@CurrentActorPermissions()`) -- never a fresh
+   * database read here, and never a role-name check.
+   */
+  maskIfNeeded(
+    actorPermissions: ReadonlySet<string> | readonly string[],
+    canonicalField: CanonicalField | string,
+    value: unknown,
+  ): unknown {
+    const permissions =
+      actorPermissions instanceof Set
+        ? actorPermissions
+        : new Set(actorPermissions);
+    if (permissions.has(CAN_VIEW_ALL_PERSONAL_DATA)) {
+      return value;
+    }
+    return this.maskValue(canonicalField, value);
+  }
+
+  /**
+   * Keeps up to 2 leading characters, masks the rest with same-length
+   * asterisks. For very short segments (length 1), keeps 0 and masks the
+   * single character -- never reveals the whole thing, never keeps more
+   * than it masks for a 1-2 character segment.
+   */
+  private maskSegment(segment: string, maxKeep = 2): string {
+    const length = segment.length;
+    if (length === 0) {
+      return segment;
+    }
+    const keep = Math.min(maxKeep, Math.max(length - 1, 0));
+    return segment.slice(0, keep) + "*".repeat(length - keep);
+  }
+
+  /** Masks only the domain's first label; the rest (`.com`, `.co.uk`, ...) is left visible. */
+  private maskDomain(domain: string): string {
+    const dotIndex = domain.indexOf(".");
+    if (dotIndex === -1) {
+      return this.maskSegment(domain);
+    }
+    const label = domain.slice(0, dotIndex);
+    const suffix = domain.slice(dotIndex); // includes the leading "."
+    return this.maskSegment(label) + suffix;
+  }
+
+  /** Keep first 2 / last 4 digits for a 7+ digit number; shorter numbers keep only a short prefix. */
+  private maskDigits(digits: string): string {
+    const length = digits.length;
+    if (length <= 6) {
+      return this.maskSegment(digits);
+    }
+    const keepStart = 2;
+    const keepEnd = 4;
+    const maskedLength = Math.max(length - keepStart - keepEnd, 0);
+    return (
+      digits.slice(0, keepStart) +
+      "*".repeat(maskedLength) +
+      digits.slice(length - keepEnd)
+    );
+  }
+}

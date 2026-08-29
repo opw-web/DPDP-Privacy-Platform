@@ -27,6 +27,13 @@ describe("Employee auth (e2e)", () => {
     email: string;
     password: string;
     roleCode?: string;
+    // Task 7: PermissionsGuard now enforces @RequirePermission for real,
+    // so a test whose employee needs to reach a permission-gated route
+    // must ask for the exact real permission code(s) here -- a throwaway
+    // permission (below) is no longer enough on its own. Real catalogue
+    // codes are upserted (never re-created) since `Permission` is a
+    // global, not org-scoped, table.
+    permissionCodes?: string[];
   }): Promise<{ organizationId: string; roleId: string; employeeId: string }> {
     const organizationId = randomUUID();
     await prisma.organization.create({
@@ -46,12 +53,30 @@ describe("Employee auth (e2e)", () => {
       },
     });
 
+    const extraPermissionCodes = opts.permissionCodes ?? [];
+    for (const code of extraPermissionCodes) {
+      await prisma.permission.upsert({
+        where: { code },
+        create: {
+          code,
+          description: "test-granted real permission",
+          category: "TEST",
+        },
+        update: {},
+      });
+    }
+
     const role = await prisma.role.create({
       data: {
         organizationId,
         code: opts.roleCode ?? "TEST_ROLE",
         name: "Test Role",
-        permissions: { create: [{ permissionCode }] },
+        permissions: {
+          create: [
+            { permissionCode },
+            ...extraPermissionCodes.map((code) => ({ permissionCode: code })),
+          ],
+        },
       },
     });
 
@@ -331,6 +356,9 @@ describe("Employee auth (e2e)", () => {
     const orgA = await createOrgWithRoleAndEmployee({
       email: `org-a-${randomUUID()}@example.com`,
       password: "CorrectHorseBattery9!",
+      // POST /api/employees is @RequirePermission("CAN_MANAGE_EMPLOYEES")
+      // (Task 7) -- orgA's employee is the one calling it below.
+      permissionCodes: ["CAN_MANAGE_EMPLOYEES"],
     });
     const orgB = await createOrgWithRoleAndEmployee({
       email: `org-b-${randomUUID()}@example.com`,
@@ -398,6 +426,9 @@ describe("Employee auth (e2e)", () => {
     const org = await createOrgWithRoleAndEmployee({
       email: `no-hash-leak-${randomUUID()}@example.com`,
       password: "CorrectHorseBattery9!",
+      // Every /api/employees route this test exercises is
+      // @RequirePermission("CAN_MANAGE_EMPLOYEES") (Task 7).
+      permissionCodes: ["CAN_MANAGE_EMPLOYEES"],
     });
     const employee = await prisma.employee.findFirstOrThrow({
       where: { organizationId: org.organizationId },
@@ -472,6 +503,9 @@ describe("Employee auth (e2e)", () => {
     const org = await createOrgWithRoleAndEmployee({
       email: `roles-minor-${randomUUID()}@example.com`,
       password: "CorrectHorseBattery9!",
+      // PATCH /api/roles/:id/permissions is
+      // @RequirePermission("CAN_MANAGE_EMPLOYEES") (Task 7).
+      permissionCodes: ["CAN_MANAGE_EMPLOYEES"],
     });
     const employee = await prisma.employee.findFirstOrThrow({
       where: { organizationId: org.organizationId },

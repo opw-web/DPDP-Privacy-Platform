@@ -15,6 +15,8 @@ import { AuthModule } from "./modules/auth/auth.module";
 import { OrganizationsModule } from "./modules/organizations/organizations.module";
 import { EmployeesModule } from "./modules/employees/employees.module";
 import { JwtEmployeeGuard } from "./common/guards/jwt-employee.guard";
+import { PermissionsGuard } from "./common/guards/permissions.guard";
+import { MaskingModule } from "./common/masking/masking.module";
 
 @Module({
   imports: [
@@ -46,9 +48,19 @@ import { JwtEmployeeGuard } from "./common/guards/jwt-employee.guard";
     AuthModule,
     OrganizationsModule,
     EmployeesModule,
+    MaskingModule,
     HealthModule,
   ],
-  providers: [{ provide: APP_GUARD, useClass: JwtEmployeeGuard }],
+  providers: [
+    // Order matters: Nest runs multiple APP_GUARD providers in
+    // registration order. JwtEmployeeGuard must run first (it decides
+    // WHETHER the caller is authenticated and populates `request.actor`);
+    // PermissionsGuard runs second and decides WHAT that verified caller
+    // may do, per `@RequirePermission`. Swapping this order would make
+    // PermissionsGuard see requests JwtEmployeeGuard hasn't vetted yet.
+    { provide: APP_GUARD, useClass: JwtEmployeeGuard },
+    { provide: APP_GUARD, useClass: PermissionsGuard },
+  ],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer): void {

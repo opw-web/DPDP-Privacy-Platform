@@ -1,3 +1,5 @@
+import { ACCESS_LOG_RETENTION_FLOOR_DAYS } from "./access-log-retention.constant";
+
 export interface AppConfig {
   port: number;
   nodeEnv: string;
@@ -21,7 +23,8 @@ export default (): { app: AppConfig } => ({
     jwtRefreshSecret: process.env["JWT_REFRESH_SECRET"] ?? "",
     encryptionKey: process.env["ENCRYPTION_KEY"] ?? "",
     accessLogRetentionDays: parseInt(
-      process.env["ACCESS_LOG_RETENTION_DAYS"] ?? "365",
+      process.env["ACCESS_LOG_RETENTION_DAYS"] ??
+        String(ACCESS_LOG_RETENTION_FLOOR_DAYS),
       10,
     ),
   },

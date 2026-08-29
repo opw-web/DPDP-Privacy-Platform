@@ -5,9 +5,11 @@ import {
   IsString,
   Min,
   MinLength,
+  ValidationArguments,
   validateSync,
 } from "class-validator";
 import { plainToInstance, Type } from "class-transformer";
+import { ACCESS_LOG_RETENTION_FLOOR_DAYS } from "./access-log-retention.constant";
 
 class EnvironmentVariables {
   @IsString()
@@ -36,11 +38,20 @@ class EnvironmentVariables {
   })
   ENCRYPTION_KEY!: string;
 
+  // Rule 6(1)(e): access logs must be retained at least one year. The
+  // floor value lives ONLY in `ACCESS_LOG_RETENTION_FLOOR_DAYS` -- this
+  // decorator and the message below both reference it rather than
+  // re-typing `365`. The message is a function (not a static string) so
+  // the thrown error names the ACTUAL configured value, not just the
+  // floor -- required by the task brief and Check 15.
   @Type(() => Number)
   @IsInt()
-  @Min(365, {
-    message:
-      "ACCESS_LOG_RETENTION_DAYS must never be set below the 365 day floor",
+  @Min(ACCESS_LOG_RETENTION_FLOOR_DAYS, {
+    message: (args: ValidationArguments) =>
+      `ACCESS_LOG_RETENTION_DAYS is set to ${String(args.value)} day(s), ` +
+      `which is below the ${ACCESS_LOG_RETENTION_FLOOR_DAYS}-day floor ` +
+      "required by Rule 6(1)(e) of the DPDP Rules (access/visibility " +
+      "records must be retained for at least one year) -- refusing to start.",
   })
   ACCESS_LOG_RETENTION_DAYS!: number;
 
