@@ -6,6 +6,7 @@ import configuration from "./config/configuration";
 import { validate } from "./config/env.validation";
 import { HealthModule } from "./modules/health/health.module";
 import { PrismaModule } from "./common/prisma/prisma.module";
+import { TenantModule } from "./common/tenant/tenant.module";
 
 @Module({
   imports: [
@@ -31,6 +32,7 @@ import { PrismaModule } from "./common/prisma/prisma.module";
       },
     }),
     PrismaModule,
+    TenantModule,
     HealthModule,
   ],
 })
