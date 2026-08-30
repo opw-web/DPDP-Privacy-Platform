@@ -19,6 +19,10 @@ export interface ReplacePurposesResult {
   warnings: MappingWarning[];
 }
 
+export interface DataSourcePurposesResult {
+  purposes: PublicPurpose[];
+}
+
 /**
  * Attaching purposes to a data source: `PUT /api/data-sources/:id/purposes`
  * replaces the ENTIRE `DataSourcePurpose` set for that source (task
@@ -159,5 +163,34 @@ export class SourcePurposesService {
 
       return { purposes: orderedPurposes, warnings };
     });
+  }
+
+  /**
+   * `GET /api/data-sources/:id/purposes`: the purposes CURRENTLY attached
+   * to this source. Never infers one from a mapping's data category
+   * (Check 11 / LB-02, forbidden) -- a purpose is either attached and
+   * stated here, or absent and `purposes` is `[]`.
+   *
+   * Ordered by `code` for a deterministic response -- `DataSourcePurpose`
+   * is a plain join row with no ordering column of its own (unlike
+   * `replace()`'s `orderedPurposes`, which can echo the caller's just-
+   * submitted array order because it is inside the SAME write).
+   */
+  async get(dataSourceId: string): Promise<DataSourcePurposesResult> {
+    const dataSource = await this.prisma.scoped.dataSource.findFirst({
+      where: { id: dataSourceId },
+      select: { id: true },
+    });
+    if (!dataSource) {
+      throw new NotFoundException(`Data source "${dataSourceId}" not found.`);
+    }
+
+    const links = await this.prisma.scoped.dataSourcePurpose.findMany({
+      where: { dataSourceId },
+      include: { purpose: { select: PURPOSE_PUBLIC_SELECT } },
+      orderBy: { purpose: { code: "asc" } },
+    });
+
+    return { purposes: links.map((link) => toPublicPurpose(link.purpose)) };
   }
 }

@@ -196,6 +196,18 @@ describe("Field mappings and purpose attachment (e2e)", () => {
       .send({ purposeIds });
   }
 
+  function getMappings(accessToken: string, dataSourceId: string) {
+    return request(app.getHttpServer())
+      .get(`/api/data-sources/${dataSourceId}/mappings`)
+      .set("Authorization", `Bearer ${accessToken}`);
+  }
+
+  function getPurposes(accessToken: string, dataSourceId: string) {
+    return request(app.getHttpServer())
+      .get(`/api/data-sources/${dataSourceId}/purposes`)
+      .set("Authorization", `Bearer ${accessToken}`);
+  }
+
   beforeAll(async () => {
     const moduleFixture: TestingModule = await Test.createTestingModule({
       imports: [AppModule],
@@ -784,5 +796,186 @@ describe("Field mappings and purpose attachment (e2e)", () => {
     expect(res.body.mappings).toHaveLength(1);
     expect(res.body.mappings[0].canonicalField).toBe("IGNORE");
     expect(res.body.warnings).toEqual([]);
+  });
+
+  it("GET /:id/mappings and GET /:id/purposes return exactly what the corresponding PUT just wrote (round trip)", async () => {
+    const { accessToken } = await createOrgWithBothPermissions();
+    const dataSourceId = await createDataSource(accessToken);
+    const purpose = await createPurpose(accessToken, ["CONTACT"]);
+
+    const putPurposesRes = await putPurposes(accessToken, dataSourceId, [
+      purpose.id,
+    ]);
+    expect(putPurposesRes.status).toBe(200);
+
+    const putMappingsRes = await putMappings(accessToken, dataSourceId, [
+      {
+        sourceField: "email",
+        canonicalField: "EMAIL",
+        dataCategory: "CONTACT",
+      },
+      {
+        sourceField: "fullName",
+        canonicalField: "FULL_NAME",
+        dataCategory: "IDENTITY",
+      },
+    ]);
+    expect(putMappingsRes.status).toBe(200);
+    // Sanity: this PUT genuinely produced a warning (fullName/IDENTITY is
+    // not covered by the CONTACT-only purpose) -- otherwise the equality
+    // assertion below would pass trivially by both sides being [].
+    expect(putMappingsRes.body.warnings).toHaveLength(1);
+
+    const sortByField = (arr: Array<{ sourceField: string }>) =>
+      [...arr].sort((a, b) => a.sourceField.localeCompare(b.sourceField));
+
+    const getMappingsRes = await getMappings(accessToken, dataSourceId);
+    expect(getMappingsRes.status).toBe(200);
+    expect(sortByField(getMappingsRes.body.mappings)).toEqual(
+      sortByField(putMappingsRes.body.mappings),
+    );
+    // The SAME warning the write returned -- not a re-derived
+    // approximation that happens to look similar.
+    expect(getMappingsRes.body.warnings).toEqual(putMappingsRes.body.warnings);
+
+    const getPurposesRes = await getPurposes(accessToken, dataSourceId);
+    expect(getPurposesRes.status).toBe(200);
+    // Response envelope is `{ purposes: [...] }`, matching PUT's shape --
+    // never a bare array.
+    expect(getPurposesRes.body.purposes).toEqual(putPurposesRes.body.purposes);
+    expect(getPurposesRes.body.purposes).toHaveLength(1);
+    expect(getPurposesRes.body.purposes[0].id).toBe(purpose.id);
+    // A freshly created purpose is unreviewed -- the frontend's amber
+    // "Not yet reviewed" chip condition.
+    expect(getPurposesRes.body.purposes[0].isReviewed).toBe(false);
+  });
+
+  it("CN-02 standing property: detaching a purpose (a PUT /purposes with no mapping write at all) makes GET /:id/mappings surface a new warning on a plain read, with no PUT /mappings anywhere in the act phase", async () => {
+    const { accessToken } = await createOrgWithBothPermissions();
+    const dataSourceId = await createDataSource(accessToken);
+    const orderFulfilment = await createPurpose(
+      accessToken,
+      ["CONTACT", "IDENTITY"],
+      { name: "Order Fulfilment" },
+    );
+
+    // Arrange: the purpose covers both mapped categories -> zero warnings.
+    const attachRes = await putPurposes(accessToken, dataSourceId, [
+      orderFulfilment.id,
+    ]);
+    expect(attachRes.status).toBe(200);
+    const mapRes = await putMappings(accessToken, dataSourceId, [
+      {
+        sourceField: "email",
+        canonicalField: "EMAIL",
+        dataCategory: "CONTACT",
+      },
+      {
+        sourceField: "dob",
+        canonicalField: "DATE_OF_BIRTH",
+        dataCategory: "IDENTITY",
+      },
+    ]);
+    expect(mapRes.status).toBe(200);
+    expect(mapRes.body.warnings).toEqual([]);
+
+    // POSITIVE CONTROL: a plain read right now, before anything changes
+    // again, still shows zero warnings.
+    const getBeforeDetach = await getMappings(accessToken, dataSourceId);
+    expect(getBeforeDetach.status).toBe(200);
+    expect(getBeforeDetach.body.warnings).toEqual([]);
+
+    // Detach the purpose entirely. This writes ONLY `DataSourcePurpose` --
+    // not one `SourceFieldMapping` row is touched.
+    const detachRes = await putPurposes(accessToken, dataSourceId, []);
+    expect(detachRes.status).toBe(200);
+
+    // ACT: a plain GET on the mappings route. No `PUT /mappings` happens
+    // anywhere after the initial `mapRes` above, and none between the
+    // detach and this call -- this GET is the ONLY thing that could
+    // surface the new warning. If warnings were computed only at
+    // mapping-write time (or cached from that write) this would still
+    // read back []; CN-02 requires it to reflect the CURRENT state of
+    // (mappings x purposes), recomputed at read time.
+    const getAfterDetach = await getMappings(accessToken, dataSourceId);
+    expect(getAfterDetach.status).toBe(200);
+    // The mapping set itself genuinely did not change.
+    expect(getAfterDetach.body.mappings).toHaveLength(2);
+    expect(getAfterDetach.body.warnings).toHaveLength(2);
+    const warnings = getAfterDetach.body.warnings as Array<{
+      type: string;
+      sourceField: string;
+    }>;
+    expect(warnings.every((w) => w.type === "NO_PURPOSES_ATTACHED")).toBe(true);
+    expect(warnings.map((w) => w.sourceField).sort()).toEqual(["dob", "email"]);
+  });
+
+  it("a caller from another organization never receives this organization's mappings or purposes over GET (404, not a leaked or merged result)", async () => {
+    const { accessToken } = await createOrgWithBothPermissions();
+    const dataSourceId = await createDataSource(accessToken);
+    const purpose = await createPurpose(accessToken, ["CONTACT"]);
+    await putPurposes(accessToken, dataSourceId, [purpose.id]);
+    const mapRes = await putMappings(accessToken, dataSourceId, [
+      {
+        sourceField: "email",
+        canonicalField: "EMAIL",
+        dataCategory: "CONTACT",
+      },
+    ]);
+    expect(mapRes.status).toBe(200);
+
+    // A second org, with its own employee holding the IDENTICAL
+    // permissions and its own, DIFFERENT, non-empty data source/purpose
+    // fixture -- so a 404 below can only mean tenant scoping (never "this
+    // actor lacks the permission" or "the other org has nothing to leak").
+    const other = await createOrgWithBothPermissions();
+    const otherDataSourceId = await createDataSource(other.accessToken);
+    const otherPurpose = await createPurpose(other.accessToken, ["IDENTITY"]);
+    await putPurposes(other.accessToken, otherDataSourceId, [otherPurpose.id]);
+    await putMappings(other.accessToken, otherDataSourceId, [
+      {
+        sourceField: "fullName",
+        canonicalField: "FULL_NAME",
+        dataCategory: "IDENTITY",
+      },
+    ]);
+
+    // NEGATIVE: the intruder's token, pointed at THIS org's data source id.
+    const crossMappingsRes = await getMappings(other.accessToken, dataSourceId);
+    expect(crossMappingsRes.status).toBe(404);
+    const crossPurposesRes = await getPurposes(other.accessToken, dataSourceId);
+    expect(crossPurposesRes.status).toBe(404);
+
+    // POSITIVE CONTROL: the SAME intruder token, against ITS OWN data
+    // source, succeeds and returns ITS OWN, DIFFERENT mapping/purpose --
+    // proving the 404s above are tenant scoping, not a broken route or an
+    // over-broad auth failure that would also block legitimate access.
+    const ownMappingsRes = await getMappings(
+      other.accessToken,
+      otherDataSourceId,
+    );
+    expect(ownMappingsRes.status).toBe(200);
+    expect(ownMappingsRes.body.mappings).toHaveLength(1);
+    expect(ownMappingsRes.body.mappings[0].sourceField).toBe("fullName");
+
+    const ownPurposesRes = await getPurposes(
+      other.accessToken,
+      otherDataSourceId,
+    );
+    expect(ownPurposesRes.status).toBe(200);
+    expect(ownPurposesRes.body.purposes).toHaveLength(1);
+    expect(ownPurposesRes.body.purposes[0].id).toBe(otherPurpose.id);
+
+    // And the legitimate owner's own GET still sees exactly its own
+    // data -- not merged with, or replaced by, the intruder org's fixture.
+    const legitimateMappingsRes = await getMappings(accessToken, dataSourceId);
+    expect(legitimateMappingsRes.status).toBe(200);
+    expect(legitimateMappingsRes.body.mappings).toHaveLength(1);
+    expect(legitimateMappingsRes.body.mappings[0].sourceField).toBe("email");
+
+    const legitimatePurposesRes = await getPurposes(accessToken, dataSourceId);
+    expect(legitimatePurposesRes.status).toBe(200);
+    expect(legitimatePurposesRes.body.purposes).toHaveLength(1);
+    expect(legitimatePurposesRes.body.purposes[0].id).toBe(purpose.id);
   });
 });

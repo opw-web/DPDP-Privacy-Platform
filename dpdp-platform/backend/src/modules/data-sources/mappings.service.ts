@@ -198,4 +198,41 @@ export class MappingsService {
       return { mappings: created, warnings };
     });
   }
+
+  /**
+   * `GET /api/data-sources/:id/mappings`. CN-02 is a STANDING property of
+   * (mappings x purposes), not a write-time event (see `mapping-warnings.ts`'s
+   * doc comment) -- so a plain read must surface the SAME warnings the last
+   * `PUT` would have, computed by the SAME `computeMappingWarnings()`, never
+   * a second, independently-maintained copy of that logic.
+   *
+   * Wrapped in `prisma.scoped.$transaction` -- not because this write
+   * anything, but because `computeMappingWarnings` reads BOTH the mapping
+   * set and the attached-purpose set and needs a single consistent
+   * snapshot of both (the same reason `SourcePurposesService.replace()`
+   * recomputes warnings inside its own transaction), and because it is
+   * typed against `ScopedTransactionClient` -- the interactive-transaction
+   * client -- so every caller composes with it the same way.
+   */
+  async get(dataSourceId: string): Promise<ReplaceMappingsResult> {
+    return this.prisma.scoped.$transaction(async (tx) => {
+      const dataSource = await tx.dataSource.findFirst({
+        where: { id: dataSourceId },
+        select: { id: true },
+      });
+      if (!dataSource) {
+        throw new NotFoundException(`Data source "${dataSourceId}" not found.`);
+      }
+
+      const mappings = await tx.sourceFieldMapping.findMany({
+        where: { dataSourceId },
+        orderBy: { sourceField: "asc" },
+        select: SOURCE_FIELD_MAPPING_PUBLIC_SELECT,
+      });
+
+      const warnings = await computeMappingWarnings(tx, dataSourceId, mappings);
+
+      return { mappings, warnings };
+    });
+  }
 }
