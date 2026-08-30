@@ -97,9 +97,40 @@ export class MeService {
     private readonly recipientsService: PrincipalRecipientsService,
   ) {}
 
-  /** `/me/profile` -- her own profile, values never masked. */
+  /**
+   * `/me/profile` -- her own profile, values never masked, plus
+   * `organizationTimezone`: the IANA zone of her OWN organization,
+   * resolved through `prisma.scoped` from the caller's already-bound
+   * `TenantContext` -- the exact same "no `where: { organizationId }`
+   * written here" shape `getPrivacyContact` below uses, never an id
+   * carried on the request. Global constraint #7 ("timestamptz in UTC
+   * everywhere; convert to the organization's timezone exactly once, at
+   * the render boundary") means every other `/me/*` timestamp is stored
+   * and transmitted in UTC; this is the one field that lets the portal's
+   * shared `<DateTime>` component do that conversion instead of quietly
+   * falling back to a literal `"UTC"` default (task brief).
+   *
+   * `Organization.timezone` is a `NOT NULL` column with a schema default
+   * (`schema.prisma`: `@default("Asia/Kolkata")`), so this is ordinarily
+   * never empty. But `UpdateOrganizationDto.timezone` validates only
+   * `@IsString()` (no `@IsNotEmpty()`), so an employee can still clear it
+   * to `""` from the settings page. Rather than pass that literal
+   * through -- which the portal's `<DateTime>` would treat as an
+   * unrecognised zone and silently mis-render -- an empty string is
+   * normalized to `null` here, matching `getPrivacyContact`'s own
+   * "`null`, never `""`" convention for "not configured".
+   */
   async getProfile(dataPrincipalId: string) {
-    return this.principalsService.getUnmaskedProfile(dataPrincipalId);
+    const profile =
+      await this.principalsService.getUnmaskedProfile(dataPrincipalId);
+    const organization = await this.prisma.scoped.organization.findFirstOrThrow(
+      { select: { timezone: true } },
+    );
+    return {
+      ...profile,
+      organizationTimezone:
+        organization.timezone.trim().length > 0 ? organization.timezone : null,
+    };
   }
 
   /**

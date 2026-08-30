@@ -1,5 +1,10 @@
 import { Controller, Get, UseGuards } from "@nestjs/common";
-import { ApiOkResponse, ApiTags } from "@nestjs/swagger";
+import {
+  ApiExtraModels,
+  ApiOkResponse,
+  ApiTags,
+  getSchemaPath,
+} from "@nestjs/swagger";
 import { Public } from "../../common/decorators/public.decorator";
 import { CurrentPrincipal } from "../../common/decorators/current-principal.decorator";
 import {
@@ -7,6 +12,7 @@ import {
   type PrincipalActor,
 } from "../../common/guards/jwt-principal.guard";
 import { MePrivacyContactDto } from "./dto/me-privacy-contact.dto";
+import { MeProfileTimezoneDto } from "./dto/me-profile-timezone.dto";
 import { MeService } from "./me.service";
 
 /**
@@ -34,8 +40,28 @@ import { MeService } from "./me.service";
 export class MeController {
   constructor(private readonly meService: MeService) {}
 
+  /**
+   * The rest of this shape comes from `PrincipalsService.getUnmaskedProfile`
+   * (owned by the `principals` module, not re-declared here). `@ApiOkResponse`
+   * below documents only the `organizationTimezone` addition -- via `allOf`
+   * against a permissive `additionalProperties: true` object schema -- so
+   * `/api/docs` is accurate about that field without misrepresenting the
+   * response as containing nothing else.
+   */
   @Public()
   @UseGuards(JwtPrincipalGuard)
+  @ApiExtraModels(MeProfileTimezoneDto)
+  @ApiOkResponse({
+    description:
+      "The calling principal's own profile (values never masked), plus " +
+      "organizationTimezone -- see MeProfileTimezoneDto.",
+    schema: {
+      allOf: [
+        { type: "object", additionalProperties: true },
+        { $ref: getSchemaPath(MeProfileTimezoneDto) },
+      ],
+    },
+  })
   @Get("profile")
   profile(@CurrentPrincipal() principal: PrincipalActor) {
     return this.meService.getProfile(principal.dataPrincipalId);

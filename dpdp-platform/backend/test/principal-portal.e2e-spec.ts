@@ -11,6 +11,13 @@ import { PERMISSIONS } from "../prisma/seed/permissions";
 import { MeController } from "../src/modules/principal-portal/me.controller";
 import { PURPOSE_NOT_CONFIGURED } from "../src/modules/principal-portal/me.service";
 
+// Genuinely different IANA zones (neither is the schema's own
+// `Organization.timezone` default of "Asia/Kolkata") so the
+// "/me/profile" timezone tests below would actually fail if the value
+// were hardcoded, defaulted, or cross-wired between organizations.
+const ORG_TIMEZONE = "America/New_York";
+const OTHER_ORG_TIMEZONE = "Europe/London";
+
 /**
  * Task 22 gate: the Data Principal self-service portal API, `/api/me/*`.
  *
@@ -145,9 +152,11 @@ describe("Principal portal API (e2e)", () => {
     priyaPrincipalId: string;
     nehaPrincipalId: string;
     otherOrgPrincipalId: string;
+    emptyTimezoneOrganizationId: string;
     aman: PrincipalSession;
     priya: PrincipalSession;
     otherOrgPrincipal: PrincipalSession;
+    emptyTimezonePrincipal: PrincipalSession;
     employee: EmployeeSession;
     dpoName: string;
     dpoEmail: string;
@@ -158,7 +167,17 @@ describe("Principal portal API (e2e)", () => {
   async function createFixture(): Promise<Fixture> {
     const organizationId = randomUUID();
     const otherOrganizationId = randomUUID();
-    organizationIds.push(organizationId, otherOrganizationId);
+    // A third organization exercising the "timezone cleared to an empty
+    // string" edge case (schema.prisma's Organization.timezone is NOT
+    // NULL with a default, but UpdateOrganizationDto.timezone has no
+    // @IsNotEmpty, so "" is a reachable value) -- kept separate from Org
+    // A/B so it does not disturb their unrelated DPO-published fixtures.
+    const emptyTimezoneOrganizationId = randomUUID();
+    organizationIds.push(
+      organizationId,
+      otherOrganizationId,
+      emptyTimezoneOrganizationId,
+    );
     // Org A publishes a DPO contact (GO-10); Org B deliberately configures
     // neither a DPO nor a responsible person -- the "not published" fixture
     // case, and the organization a cross-tenant read must never fall back to.
@@ -173,10 +192,20 @@ describe("Principal portal API (e2e)", () => {
           dpoName,
           dpoEmail,
           publicPrivacyPageUrl,
+          timezone: ORG_TIMEZONE,
         },
         {
           id: otherOrganizationId,
           name: `Portal Other ${otherOrganizationId}`,
+          timezone: OTHER_ORG_TIMEZONE,
+        },
+        {
+          id: emptyTimezoneOrganizationId,
+          name: `Portal Empty Tz ${emptyTimezoneOrganizationId}`,
+          // Explicit override of the column's own schema default -- the
+          // "cleared to empty" case `/me/profile` must present as `null`,
+          // never as `""`.
+          timezone: "",
         },
       ],
     });
@@ -335,6 +364,15 @@ describe("Principal portal API (e2e)", () => {
       otherOrgPrincipalId,
       `other-${randomUUID()}@portal.example.test`,
     );
+    const emptyTimezonePrincipalId = await createPrincipal(
+      emptyTimezoneOrganizationId,
+      "Empty Timezone Person",
+    );
+    const emptyTimezonePrincipal = await principalSession(
+      emptyTimezoneOrganizationId,
+      emptyTimezonePrincipalId,
+      `empty-tz-${randomUUID()}@portal.example.test`,
+    );
     const employee = await employeeSession(
       organizationId,
       ["CAN_VIEW_PRINCIPALS", "CAN_VIEW_ALL_PERSONAL_DATA"],
@@ -350,9 +388,11 @@ describe("Principal portal API (e2e)", () => {
       priyaPrincipalId,
       nehaPrincipalId,
       otherOrgPrincipalId,
+      emptyTimezoneOrganizationId,
       aman,
       priya,
       otherOrgPrincipal,
+      emptyTimezonePrincipal,
       employee,
       dpoName,
       dpoEmail,
@@ -570,6 +610,34 @@ describe("Principal portal API (e2e)", () => {
         response.body.fields as Array<{ canonicalField: string; value: string }>
       ).find((f) => f.canonicalField === "EMAIL");
       expect(emailField?.value).toBe("aman@example.com");
+    });
+
+    it("carries her own organization's timezone, never the other org's", async () => {
+      const response = await request(app.getHttpServer())
+        .get("/api/me/profile")
+        .set(authed(fixture.aman));
+      expect(response.status).toBe(200);
+      expect(response.body.organizationTimezone).toBe(ORG_TIMEZONE);
+      expect(response.body.organizationTimezone).not.toBe(OTHER_ORG_TIMEZONE);
+    });
+
+    it("gives a principal of a second organization that organization's own, different timezone", async () => {
+      const response = await request(app.getHttpServer())
+        .get("/api/me/profile")
+        .set(authed(fixture.otherOrgPrincipal));
+      expect(response.status).toBe(200);
+      expect(response.body.id).toBe(fixture.otherOrgPrincipalId);
+      expect(response.body.organizationTimezone).toBe(OTHER_ORG_TIMEZONE);
+      expect(response.body.organizationTimezone).not.toBe(ORG_TIMEZONE);
+    });
+
+    it("presents an organization with no timezone configured as null, never an empty string", async () => {
+      const response = await request(app.getHttpServer())
+        .get("/api/me/profile")
+        .set(authed(fixture.emptyTimezonePrincipal));
+      expect(response.status).toBe(200);
+      expect(response.body.organizationTimezone).toBeNull();
+      expect(response.body.organizationTimezone).not.toBe("");
     });
   });
 
