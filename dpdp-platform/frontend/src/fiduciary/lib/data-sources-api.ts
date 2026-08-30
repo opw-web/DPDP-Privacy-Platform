@@ -35,18 +35,19 @@ import { API_BASE, ApiError, employeeTokenStore } from "../../lib/api-client";
  *        now genuinely fetches the standing CN-02 warnings, not just a
  *        same-session cache hit).
  *      - `GET /api/data-sources/:id/purposes` -> the purposes attached to
- *        the source (assumed a bare array, mirroring every other GET
- *        collection route in this codebase -- `GET /purposes`, `GET
- *        /data-sources`, `GET /data-sources/:id/fields` -- none of which
- *        wrap in an object; reconcile at the integration gate if the
- *        backend agent chose `{ purposes: [...] }` instead), each
- *        carrying its own review status for the amber "Not yet reviewed"
- *        chip.
+ *        the source, each carrying its own review status for the amber
+ *        "Not yet reviewed" chip.
  *    Built against those shapes below and in `DataSourceDetailPage.tsx`
  *    -- this frontend was written before either endpoint existed in the
- *    tree, so the exact response shape is the coordinator's word, not
- *    something this task read from committed backend code. Flagged again
- *    in task-24-report.md.
+ *    tree, so the exact response shape was the coordinator's word, not
+ *    something this task read from committed backend code.
+ *
+ *    RECONCILED at the integration gate against the committed
+ *    `DataSourcePurposesResponseDto`: the purposes GET returns an
+ *    ENVELOPE, `{ purposes: [...] }`, not a bare array as assumed above --
+ *    see `DataSourcePurposesResult` below and its one call site in
+ *    `DataSourceDetailPage.tsx`'s `useDataSourcePurposes`. The mappings
+ *    GET's `{ mappings, warnings }` envelope was assumed correctly.
  */
 
 export type AuthType = "BEARER" | "API_KEY_HEADER" | "BASIC" | "NONE";
@@ -194,6 +195,17 @@ export interface AttachedPurpose {
 export interface ReplacePurposesResult {
   purposes: AttachedPurpose[];
   warnings: MappingWarning[];
+}
+
+/**
+ * Response shape for `GET /api/data-sources/:id/purposes`, confirmed
+ * against the committed `DataSourcePurposesResponseDto`
+ * (`backend/src/modules/data-sources/dto/purposes-response.dto.ts`): an
+ * envelope, `{ purposes: [...] }` -- NOT a bare array, despite this file's
+ * concern-2 docstring assuming the latter before that DTO existed.
+ */
+export interface DataSourcePurposesResult {
+  purposes: AttachedPurpose[];
 }
 
 export interface SyncJob {

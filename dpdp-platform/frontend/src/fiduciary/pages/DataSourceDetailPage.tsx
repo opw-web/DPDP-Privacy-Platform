@@ -16,6 +16,7 @@ import {
   mappingsQueryKey,
   purposesQueryKey,
   type AttachedPurpose,
+  type DataSourcePurposesResult,
   type PublicDataSource,
   type PublicDataSourceField,
   type ReplaceMappingsResult,
@@ -57,12 +58,20 @@ function useDataSourceMappings(dataSourceId: string) {
   });
 }
 
-/** Same pattern as `useDataSourceMappings`, for the concurrent `GET .../purposes` addition -- assumed to return a bare array (see `data-sources-api.ts`'s docstring, concern 2). */
+/**
+ * Same pattern as `useDataSourceMappings`, for the concurrent `GET
+ * .../purposes` addition. Confirmed against the committed
+ * `DataSourcePurposesResponseDto`: the response is an envelope,
+ * `{ purposes: [...] }`, not a bare array -- unwrapped with `select`
+ * so every caller of this hook keeps working with a plain
+ * `AttachedPurpose[]`.
+ */
 function useDataSourcePurposes(dataSourceId: string) {
-  return useQuery<AttachedPurpose[]>({
+  return useQuery<DataSourcePurposesResult, unknown, AttachedPurpose[]>({
     queryKey: purposesQueryKey(dataSourceId),
     queryFn: () =>
-      employeeApiClient.get<AttachedPurpose[]>(`/data-sources/${dataSourceId}/purposes`),
+      employeeApiClient.get<DataSourcePurposesResult>(`/data-sources/${dataSourceId}/purposes`),
+    select: (result) => result.purposes,
   });
 }
 

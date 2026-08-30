@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { render, screen } from "@testing-library/react";
+import { cleanup, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -44,6 +44,24 @@ const DATA_SOURCE = {
 const WARNING_MESSAGE =
   'Field "fullName" (FULL_NAME) collects data category IDENTITY, which is not declared as ' +
   "necessary by any of this source's attached purposes (ORDER_FULFILMENT).";
+
+const ORDER_FULFILMENT_PURPOSE = {
+  id: "p1",
+  code: "ORDER_FULFILMENT",
+  name: "Order Fulfilment",
+  description: "Fulfilling customer orders.",
+  lawfulBasis: "CONSENT",
+  legitimateUseLimb: null,
+  basisJustification: "Consent captured at checkout.",
+  dataCategories: ["CONTACT"],
+  goodsOrServicesDescription: null,
+  reviewedByEmployeeId: null,
+  reviewedAt: null,
+  active: true,
+  createdAt: "2026-08-01T00:00:00.000Z",
+  updatedAt: "2026-08-01T00:00:00.000Z",
+  isReviewed: false,
+};
 
 function renderDetailPage() {
   const queryClient = new QueryClient({
@@ -101,6 +119,19 @@ async function loginAndRenderDetailPage() {
         ]),
       );
     }
+    if (url.endsWith("/data-sources/ds1/purposes")) {
+      // The real endpoint's shape (`DataSourcePurposesResponseDto`): an
+      // ENVELOPE, `{ purposes: [...] }` -- not a bare array. This is the
+      // exact wire shape a regression here would get wrong.
+      return Promise.resolve(jsonResponse({ purposes: [ORDER_FULFILMENT_PURPOSE] }));
+    }
+    if (url.endsWith("/purposes")) {
+      // The org-wide purpose register `Step4Purposes` itself reads to
+      // build its checklist -- a genuinely bare array (`GET /purposes`
+      // does not wrap in an envelope), separate from the data-source-
+      // scoped envelope above.
+      return Promise.resolve(jsonResponse([ORDER_FULFILMENT_PURPOSE]));
+    }
     if (url.endsWith("/data-sources/ds1/mappings")) {
       return Promise.resolve(
         jsonResponse({
@@ -143,8 +174,15 @@ async function loginAndRenderDetailPage() {
 
 describe("DataSourceDetailPage -- Field Mapping tab", () => {
   afterEach(async () => {
-    await employeeLogout();
-    vi.restoreAllMocks();
+    // Unmount FIRST: `employeeLogout()` updates the shared auth store,
+    // which `PermissionGate` (via `useSyncExternalStore`) would otherwise
+    // re-render from outside any `act()` scope.
+    cleanup();
+    try {
+      await employeeLogout();
+    } finally {
+      vi.restoreAllMocks();
+    }
   });
 
   it("renders the standing CN-02 warning from a plain GET, with no save action taken", async () => {
@@ -157,5 +195,37 @@ describe("DataSourceDetailPage -- Field Mapping tab", () => {
     expect(await screen.findByRole("note")).toHaveTextContent(/not declared as necessary/i);
     // The warning came from the GET response alone -- "Save mappings" was never clicked.
     expect(screen.getByRole("button", { name: /save mappings/i })).toBeInTheDocument();
+  });
+});
+
+describe("DataSourceDetailPage -- Purposes tab", () => {
+  afterEach(async () => {
+    // Unmount FIRST: `employeeLogout()` updates the shared auth store,
+    // which `PermissionGate` (via `useSyncExternalStore`) would otherwise
+    // re-render from outside any `act()` scope.
+    cleanup();
+    try {
+      await employeeLogout();
+    } finally {
+      vi.restoreAllMocks();
+    }
+  });
+
+  it("unwraps the { purposes: [...] } envelope from GET .../purposes, not a bare array", async () => {
+    const user = userEvent.setup();
+    await loginAndRenderDetailPage();
+
+    expect(await screen.findByText("Marketing DB")).toBeInTheDocument();
+    await user.click(screen.getByRole("tab", { name: /purposes/i }));
+
+    // If the page still treated the response as a bare array, `.map` over
+    // the envelope object would either throw or silently show nothing --
+    // either way the purpose name below would never render.
+    expect(await screen.findByText("Order Fulfilment")).toBeInTheDocument();
+    expect(screen.getByRole("checkbox", { name: /order fulfilment/i })).toBeChecked();
+
+    // isReviewed: false on the wire must render the amber chip directly,
+    // never re-derived from reviewedByEmployeeId.
+    expect(screen.getByText("Not yet reviewed")).toBeInTheDocument();
   });
 });
