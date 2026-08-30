@@ -6,6 +6,8 @@ import { ReferenceService } from "../../common/reference/reference.service";
 import type { NormalizationMapping } from "../normalization/normalization.service";
 import type { MatchResult, RaisedCandidate } from "./matching.service";
 import { verifiedCustomerIdValue } from "./match-rules/customer-id";
+import { AgeService } from "./age.service";
+import { AssemblyService } from "./assembly.service";
 
 export type LinkableNormalizedRecord = {
   id: string;
@@ -50,6 +52,8 @@ export class LinkingService {
   constructor(
     private readonly referenceService: ReferenceService,
     private readonly auditService: AuditService,
+    private readonly assemblyService: AssemblyService,
+    private readonly ageService: AgeService,
   ) {}
 
   private async createCandidate(
@@ -313,6 +317,12 @@ export class LinkingService {
       if (await this.createCandidate(tx, normalizedRecord.id, candidate)) {
         candidatesCreated += 1;
       }
+    }
+    if (linkCreated && dataPrincipalId) {
+      // Derived profile rows are part of the link's transaction and causation;
+      // only the age state has its own mandated audit action.
+      await this.assemblyService.rebuild(tx, dataPrincipalId);
+      await this.ageService.derive(tx, dataPrincipalId);
     }
     return { dataPrincipalId, linkCreated, candidatesCreated };
   }
