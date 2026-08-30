@@ -5,11 +5,10 @@ automatically by Claude Code hooks. Humans and future sessions read the "Now" bl
 
 <!-- journal:pinned:start -->
 ## Now
-## Now
 - **Working on:** Building DPDP MVP 1 via superpowers subagent-driven-development. Opus orchestrates and writes no app code; sonnet subagents implement. Plan: docs/superpowers/plans/2026-08-29-dpdp-mvp1.md (30 tasks). Ledger: .superpowers/sdd/2026-08-29-dpdp-mvp1/progress.md — read it before resuming, it holds every ruling and the Task 3 residual-limitation list.
-- **Next up:** Task 7 review round 1 and round 2 fixes (Dockerfile build integrity, RequirePermission zero-arg gap) are verified and committed (3e90f3e, 16810a0). Move to Task 8.
+- **Next up:** Task 11 (RestApiConnector + GET-only ReadOnlyHttpClient + ConnectorFactory) implemented under dpdp-platform/backend/src/modules/connectors/, 82 unit + 106 e2e green, Check 2 grep clean, demo-company-server removal build-tested. task-11-brief.md was MISSING from .superpowers/sdd/2026-08-29-dpdp-mvp1/ (only tasks 1-10 and 30 have briefs) — proceeded from the inline task description + spec, flagged for the controller. Move to Task 12 (data source CRUD + credential encryption, consumes ConnectorFactory).
 - **Blocked / open questions:** superpowers plugin skills are installed+enabled but not registered in this session; following SKILL.md and its scripts from disk. graphify CLI not on PATH — queries must be run via installed skill/script, not a bare `graphify` command.
-- **Tried and rejected:** git worktree (fresh repo, pure overhead); docker via sudo+piped password (using `sg docker -c` instead); plan-as-table (SDD's task-brief extracts by `### Task N:` headings); $parent identity marker and Symbol-keyed FK marker in the tenant extension (both broke round 2's transaction-awareness — documented in tenant.extension.ts).
+- **Tried and rejected:** git worktree (fresh repo, pure overhead); docker via sudo+piped password (using `sg docker -c` instead); plan-as-table (SDD's task-brief extracts by `### Task N:` headings); $parent identity marker and Symbol-keyed FK marker in the tenant extension (both broke round 2's transaction-awareness — documented in tenant.extension.ts); jest fake timers for the retry-backoff test (mixed with a real local HTTP server, produced a genuine 13s real wait instead of advancing instantly — switched to an injectable sleepFn on ReadOnlyHttpClient instead, see rest-api-connector task).
 <!-- journal:pinned:end -->
 
 ---
@@ -1558,3 +1557,303 @@ automatically by Claude Code hooks. Humans and future sessions read the "Now" bl
 **Why:** <task-notification> <task-id>a51010bb54e42546a</task-id> <tool-use-id>toolu_01DUb4PozZRBK64PPWQXg7nX</tool-use-id> <output-file>/tmp/claude-1000/-home-linux-Coding-stuff-DPDP-app/c934c8d5-01c0-4473-88...
 
 - `05:58` ran `cd "/home/linux/Coding stuff/DPDP app" && HEAD=$(git rev-parse HEAD) && W=.superpowers/sdd/2026-08-29-dpdp-mvp1 && { ...`
+- `05:58` ran `cd "/home/linux/Coding stuff/DPDP app" && git add JOURNAL.md docs/superpowers/plans/2026-08-29-dpdp-mvp1.md && git co...`
+- `05:59` ran `cd "/home/linux/Coding stuff/DPDP app" && wc -l .superpowers/sdd/2026-08-29-dpdp-mvp1/review-task-8.md && sed -n '1,8...`
+- `05:59` ran `cd "/home/linux/Coding stuff/DPDP app" && W=.superpowers/sdd/2026-08-29-dpdp-mvp1 && cat >> "$W/progress.md" <<'EOF' ...`
+- `05:59` ran `cd "/home/linux/Coding stuff/DPDP app" && sed -n '27,28p;184,188p;284,304p;739,748p;801,803p;1056,1060p' DPDP_MVP1_FO...`
+- `05:59` ran `cd "/home/linux/Coding stuff/DPDP app" && sed -n '80,420p' .superpowers/sdd/2026-08-29-dpdp-mvp1/review-task-8.md`
+- `05:59` ran `cd "/home/linux/Coding stuff/DPDP app" && sed -n '420,650p' .superpowers/sdd/2026-08-29-dpdp-mvp1/review-task-8.md`
+- **Recap:** Reviewed Task 8's code review report (review-task-8.md) after completing and committing the purpose register feature (commit 4ffb5be), cross-checking findings against the DPDP MVP1 foundation spec and logging progress.md ruling entries.
+
+### 2026-08-30 05:59 - session `0da7749e`
+
+**Why:** Below is the current 'Now' block of a project journal and the raw event log of the turn that just ended. Reply with ONLY a JSON object, no prose, no markdown fences: {"recap": "<one sentence, past ten...
+
+- `05:59` ran `cd "/home/linux/Coding stuff/DPDP app" && sed -n '650,1000p' .superpowers/sdd/2026-08-29-dpdp-mvp1/review-task-8.md`
+- `05:59` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && grep -rn "canonicalJson" --include=*.ts src/ | head -20`
+- `05:59` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && sed -n '1,120p' src/common/prisma/prisma.service.ts`
+- `05:59` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && sed -n '20,125p' src/common/audit/canonical-json.ts`
+- `05:59` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && grep -n "create\|organizationId\|WRITE\|SCOPED_MODELS...`
+- `05:59` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && grep -rn "processingPurpose" src/common/tenant/*.ts |...`
+- `05:59` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && grep -rn "ProcessingPurpose" src/common/tenant/ | hea...`
+- `06:00` ran `cd "/home/linux/Coding stuff/DPDP app" && grep -rn "as never" dpdp-platform/backend/src/ | head -20`
+- `06:00` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && grep -n "FORBIDDEN\|password\|credential\|secret\|tok...`
+- `06:00` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && grep -n "PURPOSE_" src/common/audit/audit-actions.ts;...`
+- `06:00` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && grep -n "actorType\|principal\|Principal\|aud\|throw"...`
+- `06:00` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && grep -n "validateBasis\|async create\|async update\|a...`
+
+### 2026-08-30 06:01 - session `6bb1e69f`
+
+**Why:** <task-notification> <task-id>ae522821e0eb4636e</task-id> <tool-use-id>toolu_01H5748XHxQ8Yvb5j3djasWM</tool-use-id> <output-file>/tmp/claude-1000/-home-linux-Coding-stuff-DPDP-app/c934c8d5-01c0-4473-88...
+
+- `06:02` ran `cd "/home/linux/Coding stuff/DPDP app" && W=.superpowers/sdd/2026-08-29-dpdp-mvp1 && cat >> "$W/progress.md" <<'EOF' ...`
+- `06:02` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && sed -n '1,80p' src/common/prisma/prisma.service.ts`
+- **Recap:** Cross-checked the Task 8 (purpose register) code review findings in review-task-8.md against the DPDP MVP1 spec sections and codebase (canonicalJson, tenant extension, audit actions, permission checks), logging rulings to progress.md.
+
+### 2026-08-30 06:02 - session `39575894`
+
+**Why:** Below is the current 'Now' block of a project journal and the raw event log of the turn that just ended. Reply with ONLY a JSON object, no prose, no markdown fences: {"recap": "<one sentence, past ten...
+
+- `06:02` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && python3 - <<'PY' import re path = "src/modules/purpos...`
+- `06:02` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && python3 - <<'PY' path = "src/modules/purposes/purpose...`
+- `06:03` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && sed -n '195,260p' src/modules/purposes/purposes.servi...`
+- `06:03` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && python3 - <<'PY' path = "src/modules/purposes/purpose...`
+- `06:03` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && cat -n src/modules/purposes/purposes.service.ts`
+- `06:03` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && grep -n "GET /api/purposes: CAN_VIEW_PRINCIPALS" test...`
+- `06:03` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && sed -n '340,395p' test/purposes.e2e-spec.ts`
+- `06:03` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && python3 - <<'PY' path = "test/purposes.e2e-spec.ts" s...`
+- `06:04` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && cat jest.config.ts && echo --- && sed -n '1,40p' src/...`
+- `06:04` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && cat > src/modules/purposes/purposes.service.spec.ts <...`
+- `06:04` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" &&...`
+- `06:04` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" &&...`
+- `06:04` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" &&...`
+- `06:05` ran `sg docker -c "docker ps --format '{{.Names}}\t{{.Status}}'" 2>&1`
+- `06:05` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" &&...`
+- `06:05` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && cp src/modules/purposes/purposes.service.ts /tmp/purp...`
+- `06:05` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" &&...`
+- `06:06` ran `cp /tmp/purposes.service.ts.bak "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend/src/modules/purposes/purpose...`
+- `06:06` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" &&...`
+- `06:06` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" &&...`
+- `06:07` ran `cd "/home/linux/Coding stuff/DPDP app" && graphify update . 2>&1 | tail -20`
+- `06:07` ran `cd "/home/linux/Coding stuff/DPDP app" && git status --porcelain | grep -v graphify-out`
+- `06:07` ran `cd "/home/linux/Coding stuff/DPDP app" && git status --porcelain -- docs/superpowers/plans/2026-08-29-dpdp-mvp1.md`
+- `06:07` ran `cd "/home/linux/Coding stuff/DPDP app" && git add dpdp-platform/backend/src/modules/purposes/purposes.service.ts dpdp...`
+- `06:07` ran `cd "/home/linux/Coding stuff/DPDP app" && git commit -m "$(cat <<'EOF' fix(purposes): task 8 review fix round 1 -- PA...`
+
+### 2026-08-30 06:07 - session `6bb1e69f`
+
+**Why:** <task-notification> <task-id>a51010bb54e42546a</task-id> <tool-use-id>toolu_01LfutME2hqQSWeuMAdMZMkf</tool-use-id> <output-file>/tmp/claude-1000/-home-linux-Coding-stuff-DPDP-app/c934c8d5-01c0-4473-88...
+
+- `06:08` ran `cd "/home/linux/Coding stuff/DPDP app" && git diff --stat 4ffb5be..HEAD -- dpdp-platform/ && echo "=== new PATCH test...`
+- `06:08` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `06:08` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `06:09` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `06:09` ran `cd "/home/linux/Coding stuff/DPDP app" && W=.superpowers/sdd/2026-08-29-dpdp-mvp1 && cat >> "$W/progress.md" <<'EOF' ...`
+
+### 2026-08-30 06:10 - session `5f878bef`
+
+**Why:** Below is the current 'Now' block of a project journal and the raw event log of the turn that just ended. Reply with ONLY a JSON object, no prose, no markdown fences: {"recap": "<one sentence, past ten...
+
+- `06:10` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && node -v && cd "/home/linux/Coding stuf...`
+- **Recap:** Reconfirmed post-fix that all Task 8 (purpose register) findings were addressed and tests pass, then logged the verification to progress.md.
+- `06:10` ran `cd "/home/linux/Coding stuff/DPDP app" && mkdir -p demo-company-server/src/routes demo-company-server/test demo-compa...`
+- `06:10` wrote `demo-company-server/package.json` (~26 lines)
+- `06:10` wrote `demo-company-server/tsconfig.json` (~19 lines)
+- `06:10` wrote `demo-company-server/.gitignore` (~11 lines)
+- `06:10` wrote `demo-company-server/src/db.ts` (~89 lines)
+- `06:11` edited `demo-company-server/src/db.ts` +7/-2
+- `06:11` wrote `demo-company-server/src/auth.ts` (~39 lines)
+- `06:11` wrote `demo-company-server/src/pagination.ts` (~39 lines)
+- `06:11` wrote `demo-company-server/src/methodGate.ts` (~14 lines)
+- `06:11` wrote `demo-company-server/src/routes/health.ts` (~9 lines)
+- `06:11` wrote `demo-company-server/src/routes/marketing.ts` (~44 lines)
+- `06:11` wrote `demo-company-server/src/routes/sales.ts` (~42 lines)
+- `06:11` wrote `demo-company-server/src/routes/support.ts` (~44 lines)
+- `06:11` wrote `demo-company-server/src/routes/ecommerce.ts` (~43 lines)
+- `06:11` wrote `demo-company-server/src/server.ts` (~47 lines)
+- `06:12` wrote `demo-company-server/test/routes.test.ts` (~191 lines)
+- `06:12` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `06:12` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `06:12` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `06:13` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `06:13` edited `demo-company-server/tsconfig.json` +1/-1
+- `06:13` edited `demo-company-server/tsconfig.json` +1/-1
+- `06:13` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `06:13` ran `cd "/home/linux/Coding stuff/DPDP app" && grep -rn "demo-company-server\|demo_marketing\|localhost:5001" dpdp-platfor...`
+- `06:13` wrote `demo-company-server/Dockerfile` (~23 lines)
+- `06:13` wrote `demo-company-server/docker-compose.yml` (~10 lines)
+- `06:13` edited `demo-company-server/Dockerfile` +1/-1
+- `06:14` wrote `demo-company-server/README.md` (~128 lines)
+- `06:14` ran `cd "/home/linux/Coding stuff/DPDP app/demo-company-server" && ls -la package-lock.json && rm -rf data/*.sqlite* dist ...`
+- `06:14` ran `touch "/home/linux/Coding stuff/DPDP app/demo-company-server/data/.gitkeep"`
+- `06:14` ran `cd "/home/linux/Coding stuff/DPDP app" && git status --porcelain=v1 demo-company-server | head -50`
+- `06:14` ran `cd "/home/linux/Coding stuff/DPDP app" && find demo-company-server -type f -not -path "*/node_modules/*" -not -path "...`
+- `06:14` ran `cd "/home/linux/Coding stuff/DPDP app" && git add demo-company-server && git status --porcelain | head -30`
+- `06:14` ran `cd "/home/linux/Coding stuff/DPDP app" && git diff --cached --name-only`
+- `06:14` ran `cd "/home/linux/Coding stuff/DPDP app" && git commit -m "$(cat <<'EOF' feat(demo): add standalone Fastify demo compan...`
+- `06:15` wrote `.superpowers/sdd/2026-08-29-dpdp-mvp1/task-9-report.md` (~207 lines)
+
+### 2026-08-30 06:15 - session `6bb1e69f`
+
+**Why:** <task-notification> <task-id>a1b2e1e77666c3992</task-id> <tool-use-id>toolu_01F974zobk6nEKHm9SdAZhAp</tool-use-id> <output-file>/tmp/claude-1000/-home-linux-Coding-stuff-DPDP-app/c934c8d5-01c0-4473-88...
+
+- `06:15` ran `cd "/home/linux/Coding stuff/DPDP app" && echo "=== Check 2 grep (platform must not name the demo) ===" && grep -rn "...`
+- `06:15` ran `cd "/home/linux/Coding stuff/DPDP app" && for sys in marketing sales support ecommerce; do echo "--- $sys ---" case $...`
+- `06:15` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `06:16` ran `cd "/home/linux/Coding stuff/DPDP app/demo-company-server" echo "=== non-GET with NO key (405 or 401?) ==="; curl -s ...`
+- `06:16` ran `cd "/home/linux/Coding stuff/DPDP app" && HEAD=$(git rev-parse HEAD) && W=.superpowers/sdd/2026-08-29-dpdp-mvp1 && { ...`
+- `06:16` ran `cd "/home/linux/Coding stuff/DPDP app" && W=.superpowers/sdd/2026-08-29-dpdp-mvp1 && cat >> "$W/progress.md" <<'PEOF'...`
+- **Recap:** Verified the demo-company-server against Task 9 review checks (route isolation, auth key gating, method gating) and logged verification results to progress.md.
+
+### 2026-08-30 06:19 - session `6bb1e69f`
+
+**Why:** <task-notification> <task-id>ab3fe69fff3d89ad4</task-id> <tool-use-id>toolu_01LB93KUTL7Eg7aPkDpPSPty</tool-use-id> <output-file>/tmp/claude-1000/-home-linux-Coding-stuff-DPDP-app/c934c8d5-01c0-4473-88...
+
+- `06:19` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `06:19` ran `cd "/home/linux/Coding stuff/DPDP app" && W=.superpowers/sdd/2026-08-29-dpdp-mvp1 && cat >> "$W/progress.md" <<'PEOF'...`
+- **Recap:** Verified the demo-company-server (Task 9) against route isolation, auth key gating, and method gating checks, then logged both the verification results and a final progress-ledger entry.
+
+### 2026-08-30 06:19 - session `a6122c6a`
+
+**Why:** Below is the current 'Now' block of a project journal and the raw event log of the turn that just ended. Reply with ONLY a JSON object, no prose, no markdown fences: {"recap": "<one sentence, past ten...
+
+- `06:20` edited `demo-company-server/test/routes.test.ts` +65/-3
+- `06:20` edited `demo-company-server/test/routes.test.ts` +184/-16
+- `06:20` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `06:20` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `06:21` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `06:21` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `06:21` ran `cd "/home/linux/Coding stuff/DPDP app/demo-company-server" && grep -n "25\|last page is short\|limit=10" test/routes....`
+- `06:21` edited `demo-company-server/test/routes.test.ts` +5/-4
+- `06:21` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `06:21` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `06:21` ran `cd "/home/linux/Coding stuff/DPDP app" && grep -rn "demo-company-server\|demo_marketing\|localhost:5001" dpdp-platfor...`
+- `06:21` edited `.superpowers/sdd/2026-08-29-dpdp-mvp1/task-9-report.md` +122/-0
+- `06:22` edited `.superpowers/sdd/2026-08-29-dpdp-mvp1/task-9-report.md` +5/-7
+- `06:22` ran `cd "/home/linux/Coding stuff/DPDP app" && git add demo-company-server/test/routes.test.ts && git diff --cached --name...`
+- `06:22` ran `cd "/home/linux/Coding stuff/DPDP app" && git commit -m "$(cat <<'EOF' test(demo): cover updated_since boundary/no-op...`
+
+### 2026-08-30 06:22 - session `6bb1e69f`
+
+**Why:** <task-notification> <task-id>a1b2e1e77666c3992</task-id> <tool-use-id>toolu_018JJjsitt8kA3u2NQ1N7Wda</tool-use-id> <output-file>/tmp/claude-1000/-home-linux-Coding-stuff-DPDP-app/c934c8d5-01c0-4473-88...
+
+- `06:22` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `06:22` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `06:22` ran `cd "/home/linux/Coding stuff/DPDP app" && W=.superpowers/sdd/2026-08-29-dpdp-mvp1 && cat >> "$W/progress.md" <<'PEOF'...`
+- `06:23` ran `F="/home/linux/Coding stuff/DPDP app/DPDP_MVP1_FOUNDATION_AND_DISCOVERY.md"; sed -n '900,957p' "$F"`
+- `06:23` ran `F="/home/linux/Coding stuff/DPDP app/DPDP_MVP1_FOUNDATION_AND_DISCOVERY.md"; echo "=== 1024-1054 ==="; sed -n '1024,1...`
+
+### 2026-08-30 06:23 - session `1e40d603`
+
+**Why:** Below is the current 'Now' block of a project journal and the raw event log of the turn that just ended. Reply with ONLY a JSON object, no prose, no markdown fences: {"recap": "<one sentence, past ten...
+
+- `06:23` ran `cd "/home/linux/Coding stuff/DPDP app" && find demo-company-server -type f -not -path "*/node_modules/*" | sort`
+- `06:23` ran `cd "/home/linux/Coding stuff/DPDP app" && graphify query "demo-company-server schema and db module" 2>&1 | head -100`
+- `06:23` ran `cd "/home/linux/Coding stuff/DPDP app/demo-company-server" && echo "=== db.ts ===" && cat src/db.ts && echo "=== pack...`
+- **Recap:** Verified the demo-company-server (Task 9) against route isolation, auth key gating, and method gating checks, added test coverage for updated_since boundary/no-op behaviour, committed the changes, and logged the final verification results to progress.md.
+- `06:27` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && node -v && cd "/home/linux/Coding stuf...`
+- `06:27` wrote `demo-company-server/src/seed/rng.ts` (~50 lines)
+- `06:27` wrote `demo-company-server/src/seed/match.ts` (~198 lines)
+- `06:28` wrote `demo-company-server/src/seed/personas.ts` (~396 lines)
+- `06:31` wrote `demo-company-server/src/seed/generate.ts` (~523 lines)
+- `06:31` edited `demo-company-server/src/seed/generate.ts` +0/-1
+- `06:31` edited `demo-company-server/src/seed/generate.ts` +1/-1
+- `06:32` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `06:32` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `06:32` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `06:32` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `06:32` wrote `/tmp/claude-1000/-home-linux-Coding-stuff-DPDP-app/6bb1e69f-50ac-480a-8201-13e979eddc65/scratchpad/inspect.ts` (~67 lines)
+- `06:32` wrote `demo-company-server/scratch-inspect.ts` (~60 lines)
+- `06:32` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `06:33` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `06:34` wrote `demo-company-server/test/dataset.test.ts` (~355 lines)
+- `06:34` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `06:34` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `06:34` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `06:35` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+
+**Why:** Your claude.ai usage limit has reset. Continue the task you were working on when the limit was reached; do not repeat work that is already complete.
+
+- `10:01` ran `cd "/home/linux/Coding stuff/DPDP app" && git log --oneline -1 && echo "=== uncommitted ===" && git status --short --...`
+- `10:02` ran `cd "/home/linux/Coding stuff/DPDP app" && W=.superpowers/sdd/2026-08-29-dpdp-mvp1 && cat >> "$W/progress.md" <<'PEOF'...`
+
+### 2026-08-30 10:02 - session `d0a1289b`
+
+**Why:** Below is the current 'Now' block of a project journal and the raw event log of the turn that just ended. Reply with ONLY a JSON object, no prose, no markdown fences: {"recap": "<one sentence, past ten...
+
+- `10:02` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- **Recap:** Continued after a usage limit reset by confirming git state, appending to the SDD progress ledger, then generated the demo-company-server realistic dataset seed (rng, match, personas, generate modules) and wrote dataset tests, running the suite to verify.
+- `10:02` ran `cd "/home/linux/Coding stuff/DPDP app/demo-company-server" && grep -n "rowid" test/dataset.test.ts`
+- `10:02` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `10:03` ran `cd "/home/linux/Coding stuff/DPDP app/demo-company-server" && python3 - <<'EOF' import re path = "test/dataset.test.t...`
+- `10:03` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `10:03` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `10:03` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `10:03` ran `cd "/home/linux/Coding stuff/DPDP app/demo-company-server" && rm -f data/demo.sqlite* && cat .gitignore`
+- `10:03` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `10:03` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `10:03` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `10:03` ran `cd "/home/linux/Coding stuff/DPDP app/demo-company-server" && grep -n "copy-paste\|Persona\|persona" README.md`
+- `10:03` ran `cd "/home/linux/Coding stuff/DPDP app/demo-company-server" && sed -n '1,200p' README.md | tail -60`
+- `10:04` ran `cd "/home/linux/Coding stuff/DPDP app/demo-company-server" && python3 - <<'PYEOF' path = "README.md" s = open(path).r...`
+- `10:04` ran `cd "/home/linux/Coding stuff/DPDP app/demo-company-server" && sed -n '30,45p' README.md && echo ... && sed -n '108,17...`
+- `10:04` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `10:04` ran `cd "/home/linux/Coding stuff/DPDP app" && ls demo-company-server/scratch-inspect.ts 2>/dev/null; git status 2>&1 | he...`
+- `10:04` ran `cd "/home/linux/Coding stuff/DPDP app/demo-company-server" && git rev-parse --show-toplevel && git status --porcelain...`
+- `10:04` ran `cd "/home/linux/Coding stuff/DPDP app/demo-company-server" && git diff --stat -- package.json; ls -la | grep scratch;...`
+- `10:04` ran `cd "/home/linux/Coding stuff/DPDP app/demo-company-server" && git status --porcelain -- data/ ; git ls-files data/ | ...`
+- `10:04` ran `cd "/home/linux/Coding stuff/DPDP app/demo-company-server" && git add src/seed/rng.ts src/seed/personas.ts src/seed/m...`
+- `10:04` ran `cd "/home/linux/Coding stuff/DPDP app" && git commit -m "$(cat <<'EOF' feat(demo): add deterministic 500-record / 327...`
+
+### 2026-08-30 10:06 - session `6bb1e69f`
+
+**Why:** <task-notification> <task-id>a9163e8047f1b2a76</task-id> <tool-use-id>toolu_01QfxNoYLqNfzWZoEZHaAXha</tool-use-id> <output-file>/tmp/claude-1000/-home-linux-Coding-stuff-DPDP-app/c934c8d5-01c0-4473-88...
+
+- `10:06` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `10:06` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `10:07` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `10:07` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && cd "/home/linux/Coding stuff/DPDP app/...`
+- `10:07` ran `cd "/home/linux/Coding stuff/DPDP app" && HEAD=$(git rev-parse HEAD) && W=.superpowers/sdd/2026-08-29-dpdp-mvp1 && { ...`
+- **Recap:** Reviewed the SDD progress ledger and prior task state after the usage-limit reset, confirming Task 9's committed core routes/tests and the yet-to-be-committed dataset generator work.
+
+### 2026-08-30 10:12 - session `6bb1e69f`
+
+**Why:** <task-notification> <task-id>a1f4de65fd25c10bc</task-id> <tool-use-id>toolu_01KoAhBqGtMYDndd3C5rfPT4</tool-use-id> <output-file>/tmp/claude-1000/-home-linux-Coding-stuff-DPDP-app/c934c8d5-01c0-4473-88...
+
+- `10:13` ran `cd "/home/linux/Coding stuff/DPDP app" && W=.superpowers/sdd/2026-08-29-dpdp-mvp1 && cat >> "$W/progress.md" <<'PEOF'...`
+- **Recap:** Appended a progress note to the SDD ledger recording current task state after a background task notification.
+
+### 2026-08-30 10:14 - session `d7aa19b6`
+
+**Why:** Below is the current 'Now' block of a project journal and the raw event log of the turn that just ended. Reply with ONLY a JSON object, no prose, no markdown fences: {"recap": "<one sentence, past ten...
+
+- `10:14` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null && node -v cd "dpdp-platform/backend" && ...`
+- `10:14` ran `cd "dpdp-platform/backend" && find src/modules -maxdepth 1 -type d && echo "---common---" && find src/common -type f ...`
+- `10:14` ran `cd "dpdp-platform/backend" && cat package.json | grep -E "\"axios\"|\"node-fetch\"|\"undici\"|\"got\"|\"@nestjs/axios...`
+- `10:14` ran `cd "dpdp-platform/backend" && sed -n '300,342p' prisma/schema.prisma`
+- `10:15` ran `cd "dpdp-platform/backend" && grep -rn "new Logger\|Logger(" src/common/audit/audit.service.ts src/modules/purposes/*...`
+- `10:15` ran `cd "dpdp-platform/backend" && cat tsconfig.json echo "---git---" cd "/home/linux/Coding stuff/DPDP app" && git -C . s...`
+- `10:16` ran `cd "dpdp-platform/backend" && find src -name "*.ts" | xargs grep -l "createServer\|test-utils\|testUtils\|test-helper...`
+- `10:16` ran `mkdir -p "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend/src/modules/connectors/test-support"`
+- `10:16` wrote `dpdp-platform/backend/src/modules/connectors/connector.interface.ts` (~15 lines)
+- `10:17` wrote `dpdp-platform/backend/src/modules/connectors/read-only-http-client.ts` (~177 lines)
+- `10:17` wrote `dpdp-platform/backend/src/modules/connectors/rest-api-connector.ts` (~200 lines)
+- `10:17` wrote `dpdp-platform/backend/src/modules/connectors/connector-factory.ts` (~47 lines)
+- `10:17` wrote `dpdp-platform/backend/src/modules/connectors/test-support/mock-http-server.ts` (~57 lines)
+- `10:18` edited `dpdp-platform/backend/src/modules/connectors/test-support/mock-http-server.ts` +2/-2
+- `10:19` wrote `dpdp-platform/backend/src/modules/connectors/read-only-http-client.spec.ts` (~163 lines)
+- `10:19` wrote `dpdp-platform/backend/src/modules/connectors/rest-api-connector.spec.ts` (~265 lines)
+- `10:19` wrote `dpdp-platform/backend/src/modules/connectors/connector-factory.spec.ts` (~73 lines)
+- `10:20` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null cd "/home/linux/Coding stuff/DPDP app/dpd...`
+- `10:20` edited `dpdp-platform/backend/src/modules/connectors/read-only-http-client.ts` +1/-1
+- `10:20` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && python3 - <<'EOF' import re path = "src/modules/conne...`
+- `10:20` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null cd "/home/linux/Coding stuff/DPDP app/dpd...`
+- `10:21` edited `dpdp-platform/backend/src/modules/connectors/read-only-http-client.ts` +8/-0
+- `10:21` edited `dpdp-platform/backend/src/modules/connectors/read-only-http-client.ts` +1/-1
+- `10:22` edited `dpdp-platform/backend/src/modules/connectors/read-only-http-client.spec.ts` +49/-28
+- `10:22` edited `dpdp-platform/backend/src/modules/connectors/read-only-http-client.spec.ts` +15/-12
+- `10:22` edited `dpdp-platform/backend/src/modules/connectors/read-only-http-client.spec.ts` +1/-0
+- `10:22` edited `dpdp-platform/backend/src/modules/connectors/rest-api-connector.spec.ts` +6/-0
+- `10:22` edited `dpdp-platform/backend/src/modules/connectors/rest-api-connector.spec.ts` +4/-1
+- `10:22` edited `dpdp-platform/backend/src/modules/connectors/rest-api-connector.spec.ts` +1/-1
+- `10:23` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null cd "/home/linux/Coding stuff/DPDP app/dpd...`
+- `10:23` edited `dpdp-platform/backend/src/modules/connectors/read-only-http-client.spec.ts` +0/-1
+- `10:23` edited `dpdp-platform/backend/src/modules/connectors/test-support/mock-http-server.ts` +1/-0
+- `10:23` edited `dpdp-platform/backend/src/modules/connectors/test-support/mock-http-server.ts` +4/-0
+- `10:23` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && grep -n "probe" src/modules/connectors/rest-api-conne...`
+- `10:24` edited `dpdp-platform/backend/src/modules/connectors/rest-api-connector.spec.ts` +3/-3
+- `10:24` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null cd "/home/linux/Coding stuff/DPDP app/dpd...`
+- `10:24` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null cd "/home/linux/Coding stuff/DPDP app/dpd...`
+- `10:24` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null cd "/home/linux/Coding stuff/DPDP app/dpd...`
+- `10:25` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null cd "/home/linux/Coding stuff/DPDP app/dpd...`
+- `10:25` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null cd "/home/linux/Coding stuff/DPDP app/dpd...`
+- `10:25` ran `cd "/home/linux/Coding stuff/DPDP app" && echo "=== Check 2 grep ===" grep -rn "demo-company-server\|demo_marketing\|...`
+- `10:25` edited `dpdp-platform/backend/src/modules/connectors/test-support/mock-http-server.ts` +3/-3
+- `10:26` ran `cd "/home/linux/Coding stuff/DPDP app" && echo "=== Check 2 grep (re-check) ===" grep -rn "demo-company-server\|demo_...`
+- `10:26` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null cd "/home/linux/Coding stuff/DPDP app/dpd...`
+- `10:26` ran `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 20 >/dev/null cd "/home/linux/Coding stuff/DPDP app" mv...`
+- `10:26` ran `cd "/home/linux/Coding stuff/DPDP app" && git status --short | grep -v "^ M graphify-out\|^ M JOURNAL.md"`
+- `10:26` ran `cd "/home/linux/Coding stuff/DPDP app" && git status --short | grep "^??"`
+- `10:26` ran `cd "/home/linux/Coding stuff/DPDP app" && git log --oneline -5 -- graphify-out | head git log --oneline -3 git show -...`
+- `10:26` ran `cd "/home/linux/Coding stuff/DPDP app" && sed -n '/journal:pinned/,/journal:pinned/p' JOURNAL.md | head -40`
+- `10:27` ran `cd "/home/linux/Coding stuff/DPDP app" && git log --oneline --all | grep -i "feat\|test\|fix" | head -15`
