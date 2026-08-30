@@ -46,7 +46,13 @@ type PurposeRow = Prisma.ProcessingPurposeGetPayload<{
  */
 export type PublicPurpose = PurposeRow & { isReviewed: boolean };
 
-function toPublicPurpose(row: PurposeRow): PublicPurpose {
+/**
+ * Exported (Task 13) so `SourcePurposesService` -- which returns the same
+ * `PublicPurpose` shape after attaching purposes to a data source -- uses
+ * this SAME derivation rather than a second, independently-maintained
+ * copy of "isReviewed = reviewedByEmployeeId !== null".
+ */
+export function toPublicPurpose(row: PurposeRow): PublicPurpose {
   return { ...row, isReviewed: row.reviewedByEmployeeId !== null };
 }
 

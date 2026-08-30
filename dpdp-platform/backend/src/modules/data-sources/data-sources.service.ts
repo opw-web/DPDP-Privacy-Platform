@@ -6,6 +6,8 @@ import {
 } from "@nestjs/common";
 import { Prisma } from "@prisma/client";
 import { PrismaService } from "../../common/prisma/prisma.service";
+import type { TenantScopedPrismaClient } from "../../common/prisma/prisma.service";
+import type { ScopedTransactionClient } from "../../common/prisma/scoped-transaction-client";
 import { AuditService } from "../../common/audit/audit.service";
 import { CryptoService } from "../../common/crypto/crypto.service";
 import {
@@ -568,14 +570,27 @@ export class DataSourcesService {
    * `sampleValue: null`): `updateMany` matches zero rows rather than
    * throwing, since Task 13 may call this for a field discovery that
    * raced ahead of (or never produced) a `DataSourceField` row.
-   * Tenant-scoped via `prisma.scoped` like every other call in this
-   * service.
+   * Tenant-scoped via `prisma.scoped` (the default) like every other call
+   * in this service.
+   *
+   * Task 13 ruling 1: an optional `tx` parameter, defaulting to
+   * `this.prisma.scoped`. `MappingsService.replace()` marks a mapping
+   * `containsPersonalData: true` and this scrub inside the SAME
+   * interactive transaction that writes the mapping -- a rolled-back
+   * mapping that still scrubbed is harmless (a lost sample value, no
+   * privacy loss), but a COMMITTED `containsPersonalData: true` mapping
+   * whose scrub was lost on its own separate connection would leave real
+   * personal data sitting in `sampleValue` (spec line 733). Passing the
+   * caller's `tx` here is what rules out that unsafe direction; every
+   * other call site (none exist yet outside Task 13) keeps getting the
+   * default, non-transactional `prisma.scoped` behaviour unchanged.
    */
   async rescrubFieldSample(
     dataSourceId: string,
     fieldName: string,
+    tx: ScopedTransactionClient | TenantScopedPrismaClient = this.prisma.scoped,
   ): Promise<void> {
-    await this.prisma.scoped.dataSourceField.updateMany({
+    await tx.dataSourceField.updateMany({
       where: { dataSourceId, fieldName },
       data: { sampleValue: null },
     });
