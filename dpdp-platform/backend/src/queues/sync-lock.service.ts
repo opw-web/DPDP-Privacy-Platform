@@ -1,4 +1,4 @@
-import { Injectable, OnModuleDestroy } from "@nestjs/common";
+import { Injectable, Logger, OnModuleDestroy } from "@nestjs/common";
 import { randomUUID } from "crypto";
 import { ConfigService } from "@nestjs/config";
 import Redis from "ioredis";
@@ -87,12 +87,25 @@ export interface SyncLockHandle {
  */
 @Injectable()
 export class SyncLockService implements OnModuleDestroy {
+  private readonly logger = new Logger(SyncLockService.name);
   private readonly redis: Redis;
   private readonly activeHeartbeats = new Set<NodeJS.Timeout>();
 
   constructor(configService: ConfigService) {
     const appConfig = configService.get<AppConfig>("app");
     this.redis = new Redis(toRedisConnectionOptions(appConfig?.redisUrl ?? ""));
+    // Task 18 review round 2, Minor: without a listener, a connection
+    // error here is silently swallowed by ioredis (an EventEmitter with
+    // no 'error' listener does not crash, unlike every other event) --
+    // this codebase's own HealthService adds one for exactly this reason
+    // (see that class). A Redis outage on the lock path should be
+    // visible in logs, not just felt as "syncs mysteriously stopped
+    // running" with zero signal as to why.
+    this.redis.on("error", (error: Error) => {
+      this.logger.warn(
+        `Sync lock Redis client emitted an error: ${error.message}`,
+      );
+    });
   }
 
   /** Whether `dataSourceId` currently has a sync in flight -- used by `SyncQueueService.trigger()` to keep the manual-trigger 409 truthful against BOTH manual and scheduled runs. */
@@ -121,13 +134,25 @@ export class SyncLockService implements OnModuleDestroy {
     }
 
     const heartbeat = setInterval(() => {
-      this.redis.eval(RENEW_SCRIPT, 1, key, token, String(ttlMs)).catch(() => {
-        // A renewal failure (Redis briefly unreachable, or the lock was
-        // somehow already gone) surfaces on its own via the lock simply
-        // expiring -- there is nothing actionable to do from inside a
-        // background timer, and letting this reject unhandled would
-        // crash the process instead.
-      });
+      this.redis
+        .eval(RENEW_SCRIPT, 1, key, token, String(ttlMs))
+        .catch((err: unknown) => {
+          // Task 18 review round 2, Minor: logged, not silently
+          // swallowed -- a renewal failure degrades the very mutex
+          // Critical 1 depends on, and the consequence (the lock simply
+          // expiring, letting a second run start) is exactly the failure
+          // this whole class exists to prevent. There is still nothing
+          // ACTIONABLE to do from inside a background timer (retrying
+          // immediately would just race the same failure again before
+          // the next scheduled tick), so this logs and lets the TTL's
+          // own self-heal behaviour run its course -- but an operator
+          // now has a log line explaining why, instead of zero signal.
+          this.logger.warn(
+            `Failed to renew sync lock for data source "${dataSourceId}": ${
+              err instanceof Error ? err.message : "unknown error"
+            }`,
+          );
+        });
     }, heartbeatIntervalMs);
     // Never keep the Node process alive just to keep ticking a lock
     // heartbeat -- this timer's job is to maintain a lock for an

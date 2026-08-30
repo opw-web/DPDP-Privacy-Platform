@@ -24,15 +24,20 @@ import type { SyncJobData } from "./sync.queue";
  * `SyncPipelineService`'s dependency here directly would otherwise force.
  *
  * `SyncPipelineService.run` never throws for a per-record or FETCH-stage
- * failure -- those are caught internally and turned into a `PARTIAL` or
- * `FAILED` `SyncJob` row plus an `errorLog` entry (see that service's doc
- * comment for the exact rule). If `run` DOES throw here, it is something
- * that happened before or after the pipeline's own try/catch coverage
- * (e.g. the `SyncJob` row itself could not be created) -- logged so it is
- * visible in process logs, then rethrown so BullMQ records the job as
- * failed (visible via `Job.getState()`, and clears the
- * `sync:{dataSourceId}` lock per `SyncQueueService.trigger`'s
- * `removeOnFail` configuration).
+ * failure once a `SyncJob` row exists -- those are caught internally and
+ * turned into a `PARTIAL` or `FAILED` `SyncJob` row plus an `errorLog`
+ * entry (see that service's doc comment for the exact rule). `run` DOES
+ * throw in two cases, both expected: (1) `SyncLockUnavailableError` when
+ * another run genuinely holds this data source's `SyncLockService` mutex
+ * right now (task 18 review round 2, Important 1 -- deliberately BEFORE
+ * any `SyncJob` row is created, so there is nothing to strand), and (2)
+ * a genuinely unexpected failure outside the pipeline's own try/catch
+ * coverage (e.g. the `SyncJob` row itself could not be created). Either
+ * way this logs it so it is visible in process logs, then rethrows so
+ * BullMQ records the job as failed (visible via `Job.getState()`) --
+ * there is no BullMQ-side lock to "clear" here; the actual mutex
+ * (`SyncLockService`) is released inside `SyncPipelineService` itself,
+ * in a `finally` that runs regardless of how this method's `try` exits.
  */
 @Processor(SYNC_QUEUE_NAME, { concurrency: SYNC_WORKER_CONCURRENCY })
 export class SyncProcessor extends WorkerHost {

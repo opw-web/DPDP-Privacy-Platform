@@ -120,31 +120,38 @@ interface RecordContext {
  * directly by tests that want deterministic pipeline behaviour without
  * going through BullMQ.
  *
- * PER-SOURCE LOCK (task 18 review, Critical 1): the very first thing a
- * run does -- manual or scheduled, no distinction, since this is the one
- * code path both kinds of job pass through -- is acquire
- * `SyncLockService`'s Redis mutex for this `dataSourceId`. If that fails
- * (another run genuinely holds it right now), the run is reported
- * `FAILED` with a `SyncLockUnavailableError` in `errorLog` rather than
- * proceeding: this is what makes "one sync per source at a time" true
- * even for two overlapping schedule ticks or a manual trigger racing a
- * scheduled run, neither of which a BullMQ-job-id-keyed check alone can
- * see (see `SyncQueueService.trigger`'s doc comment). The lock is
- * released in a `finally` covering the entire run, so it is freed
- * whether the run succeeds, partially fails, or fails outright.
+ * PER-SOURCE LOCK (task 18 review, Critical 1; reordered in round 2,
+ * Important 1): the very first thing `runInTenantContext` does -- BEFORE
+ * any `SyncJob` row or `SYNC_STARTED` audit exists, manual or scheduled
+ * run, no distinction, since this is the one code path both kinds of job
+ * pass through -- is acquire `SyncLockService`'s Redis mutex for this
+ * `dataSourceId`. If that fails (another run genuinely holds it right
+ * now), this method THROWS `SyncLockUnavailableError` immediately,
+ * before touching Postgres at all: no `SyncJob` row is created, so there
+ * is nothing to strand as a permanently `RUNNING` row, and no
+ * `FAILED`/`SYNC_FAILED` entry is written for what is often just a
+ * healthy overlap (an `EVERY_15_MIN` source whose runs legitimately take
+ * longer than 15 minutes would otherwise paint `GET /api/sync-jobs` red
+ * on every single tick, forever, for a source that is working fine).
+ * Once acquired, the lock is released in a `finally` covering the entire
+ * rest of the run, so it is freed whether the run succeeds, partially
+ * fails, or fails outright -- this is what makes "one sync per source at
+ * a time" true even for two overlapping schedule ticks or a manual
+ * trigger racing a scheduled run, neither of which a BullMQ-job-id-keyed
+ * check alone can see (see `SyncQueueService.trigger`'s doc comment).
  *
  * PARTIAL vs FAILED: a per-record failure (bad/missing key, a matching or
  * linking error for that one record) is caught, logged to `errorLog`, and
  * the loop continues -- the run ends `PARTIAL` if any such failure
- * occurred, `SUCCESS` otherwise. `FAILED` is reserved for a run that
- * could not proceed AT ALL, which this code treats as exactly "zero
- * records were ever read": acquiring the lock, building the connector, or
- * any page's `fetchRecords` call throwing before a single record was
- * read. If the SAME kind of failure happens after some records were
- * already read and persisted from earlier pages, the run is `PARTIAL`
- * instead (task 18 review, Important 6) -- a run that fetched several
- * pages and persisted thousands of records before breaking on a later
- * page plainly did proceed, and reporting it `FAILED` would tell an
+ * occurred, `SUCCESS` otherwise. `FAILED` is reserved for a run that DID
+ * create a `SyncJob` row but could not proceed AT ALL from there, which
+ * this code treats as exactly "zero records were ever read": building
+ * the connector, or any page's `fetchRecords` call, throwing before a
+ * single record was read. If the SAME kind of failure happens after some
+ * records were already read and persisted from earlier pages, the run is
+ * `PARTIAL` instead (task 18 review, Important 6) -- a run that fetched
+ * several pages and persisted thousands of records before breaking on a
+ * later page plainly did proceed, and reporting it `FAILED` would tell an
  * operator reading `GET /api/sync-jobs` that nothing happened when most
  * of it did. Either way, once FETCH fails the loop stops entirely --
  * there is no "skip this page and try the next" for a connector-level
@@ -204,17 +211,30 @@ export class SyncPipelineService {
     dataSourceId: string,
     triggeredBy: string,
   ): Promise<SyncRunSummary> {
-    const syncJobId = await this.startJob(dataSourceId, triggeredBy);
-    const counts = zeroCounts();
-    const errorLog: SyncErrorLogEntry[] = [];
+    // Task 18 review round 2, Important 1: the lock is acquired BEFORE
+    // anything is written to Postgres, not merely inside the run's own
+    // try/finally. If another run genuinely holds this source's lock
+    // right now (manual or scheduled), this run creates NO `SyncJob` row
+    // and NO `SYNC_STARTED` audit at all -- there is nothing to strand
+    // as a permanently `RUNNING` row, and nothing to paint `GET
+    // /api/sync-jobs` red with a `FAILED`/`SYNC_FAILED` entry for a
+    // source that is simply mid-run on an overlapping tick (an
+    // `EVERY_15_MIN` source whose runs legitimately take longer than 15
+    // minutes would otherwise accumulate one of these on every single
+    // overlap, forever, for a source that is working fine). The only
+    // trace of a rejected run is whatever BullMQ itself records for the
+    // job this exception fails (see `SyncProcessor.process`).
     const lock = await this.syncLockService.acquire(dataSourceId);
+    if (!lock) {
+      throw new SyncLockUnavailableError(dataSourceId);
+    }
 
     try {
-      try {
-        if (!lock) {
-          throw new SyncLockUnavailableError(dataSourceId);
-        }
+      const syncJobId = await this.startJob(dataSourceId, triggeredBy);
+      const counts = zeroCounts();
+      const errorLog: SyncErrorLogEntry[] = [];
 
+      try {
         const [dataSourceMeta, organization, mappings, connector] =
           await Promise.all([
             this.prisma.scoped.dataSource.findFirstOrThrow({
@@ -266,7 +286,7 @@ export class SyncPipelineService {
       await this.finalize(syncJobId, dataSourceId, counts, errorLog, status);
       return { syncJobId, status, ...counts };
     } finally {
-      await lock?.release();
+      await lock.release();
     }
   }
 

@@ -3,6 +3,15 @@ import { PrismaService } from "../common/prisma/prisma.service";
 import { SyncQueueService } from "./sync.queue";
 
 /**
+ * Bounds how long application boot will wait for reconciliation before
+ * giving up and letting the rest of the app start anyway (task 18 review
+ * round 2, Important 2). Not a statutory number -- an operational
+ * safety valve -- but named per this codebase's "no bare literals"
+ * convention regardless.
+ */
+export const RECONCILE_BOOT_TIMEOUT_MS = 5_000;
+
+/**
  * Task 18 review, Important 4+5: `DataSource.syncFrequency` (Postgres) is
  * authoritative; the BullMQ job-scheduler set (Redis) is a CACHE derived
  * from it. `DataSourcesService.create`/`update`/`remove` write that cache
@@ -13,6 +22,18 @@ import { SyncQueueService } from "./sync.queue";
  * without AOF/RDB persistence all leave Postgres correct and Redis wrong
  * (or empty) -- invisible to `/health` (which only checks connectivity,
  * not schedule correctness) and, left unreconciled, permanent.
+ *
+ * BIDIRECTIONAL (task 18 review round 2, Important 3): reconciliation
+ * both (a) ensures every current `DataSource` row has the schedule its
+ * `syncFrequency` implies, AND (b) removes any registered scheduler whose
+ * `DataSource` no longer exists at all. (a) alone left a real gap: a data
+ * source deleted during a Redis blip (`DataSourcesService`'s
+ * `removeScheduleBestEffort` swallows that failure, per Important 4+5)
+ * would leave an orphaned scheduler firing forever -- every tick throwing
+ * `NotFoundException` for a row that no longer exists -- with no boot
+ * ever able to notice, since a reconciliation that only ever walks
+ * CURRENT `DataSource` rows never looks at what Redis is doing for a row
+ * that is already gone.
  *
  * Runs once at application boot (`OnModuleInit`), across EVERY
  * organization's data sources -- this is why it reads via the RAW
@@ -34,42 +55,91 @@ export class ScheduleReconciliationService implements OnModuleInit {
   ) {}
 
   /**
-   * Never throws: a reconciliation failure at boot (Postgres or Redis
-   * unreachable) must not prevent the rest of the application from
-   * starting -- the same "self-heals, never a hard failure" property the
-   * lock and the demoted `scheduleSync` call sites all share. The next
-   * successful boot (or a subsequent `create`/`update` PATCH) reconciles
-   * it again.
+   * Never blocks application boot beyond `RECONCILE_BOOT_TIMEOUT_MS`, and
+   * never throws out of boot at all (task 18 review round 2, Important
+   * 2): `reconcile()` calls `SyncQueueService.upsertSchedule`, which
+   * (via BullMQ's `Queue`) issues commands over a connection built with
+   * `maxRetriesPerRequest: null` -- REQUIRED for BullMQ's own
+   * Queue/Worker connections, but it also means that if Redis is
+   * unreachable while Postgres is perfectly healthy, that command never
+   * fails and never times out on its own; it sits in ioredis's offline
+   * command queue forever (confirmed against ioredis's own connection
+   * handling: the queue is only ever flushed once `maxRetriesPerRequest`
+   * is a NUMBER, never for `null`). Without a bound here, `onModuleInit`
+   * -- which Nest's bootstrap sequence AWAITS for every module before the
+   * app can start listening -- would simply never resolve, so `/health`
+   * could never even report the outage. `withTimeout` below races
+   * `reconcile()` against a plain timer: on timeout, boot proceeds
+   * immediately and this warns; `reconcile()`'s promise itself is left
+   * running in the background (harmless -- `upsertSchedule` is
+   * idempotent, so a very-late completion once Redis recovers is a
+   * correct, if delayed, reconciliation, never a duplicate or a stale
+   * overwrite).
    */
   async onModuleInit(): Promise<void> {
     try {
-      await this.reconcile();
+      await this.withTimeout(this.reconcile(), RECONCILE_BOOT_TIMEOUT_MS);
     } catch (err) {
       this.logger.warn(
-        `Sync schedule reconciliation failed at startup -- schedules may ` +
-          `be stale until the next successful boot or data source save: ${
+        "Sync schedule reconciliation did not complete at startup " +
+          `(timed out after ${RECONCILE_BOOT_TIMEOUT_MS}ms, or failed) -- ` +
+          "continuing to boot regardless; schedules may be stale until " +
+          `the next successful reconciliation or data source save: ${
             err instanceof Error ? err.message : "unknown error"
           }`,
       );
     }
   }
 
+  private withTimeout<T>(promise: Promise<T>, timeoutMs: number): Promise<T> {
+    return new Promise<T>((resolve, reject) => {
+      const timer = setTimeout(() => {
+        reject(
+          new Error(
+            `Reconciliation exceeded its ${timeoutMs}ms startup budget`,
+          ),
+        );
+      }, timeoutMs);
+      // Never keep the process alive solely to fire this timeout -- boot
+      // either finishes first (clearing it below) or the timeout itself
+      // decides the race; either way this timer must not block process
+      // exit.
+      timer.unref?.();
+      promise.then(
+        (value) => {
+          clearTimeout(timer);
+          resolve(value);
+        },
+        (err: unknown) => {
+          clearTimeout(timer);
+          reject(err);
+        },
+      );
+    });
+  }
+
   async reconcile(): Promise<void> {
-    const [dataSources, organizations] = await Promise.all([
-      this.prisma.dataSource.findMany({
-        select: { id: true, organizationId: true, syncFrequency: true },
-      }),
-      this.prisma.organization.findMany({
-        select: { id: true, timezone: true },
-      }),
-    ]);
+    const [dataSources, organizations, scheduledDataSourceIds] =
+      await Promise.all([
+        this.prisma.dataSource.findMany({
+          select: { id: true, organizationId: true, syncFrequency: true },
+        }),
+        this.prisma.organization.findMany({
+          select: { id: true, timezone: true },
+        }),
+        this.syncQueueService.listScheduledDataSourceIds(),
+      ]);
     const timezoneByOrganizationId = new Map(
       organizations.map((organization) => [
         organization.id,
         organization.timezone,
       ]),
     );
+    const currentDataSourceIds = new Set(
+      dataSources.map((dataSource) => dataSource.id),
+    );
 
+    // Forward: every CURRENT data source's schedule matches its syncFrequency.
     for (const dataSource of dataSources) {
       const timezone = timezoneByOrganizationId.get(dataSource.organizationId);
       if (timezone === undefined) {
@@ -92,6 +162,23 @@ export class ScheduleReconciliationService implements OnModuleInit {
         this.logger.warn(
           `Failed to reconcile sync schedule for data source ` +
             `"${dataSource.id}": ${
+              err instanceof Error ? err.message : "unknown error"
+            }`,
+        );
+      }
+    }
+
+    // Backward (Important 3): remove any scheduler whose DataSource is GONE.
+    for (const scheduledDataSourceId of scheduledDataSourceIds) {
+      if (currentDataSourceIds.has(scheduledDataSourceId)) {
+        continue;
+      }
+      try {
+        await this.syncQueueService.removeSchedule(scheduledDataSourceId);
+      } catch (err) {
+        this.logger.warn(
+          "Failed to prune an orphaned sync schedule for deleted data " +
+            `source "${scheduledDataSourceId}": ${
               err instanceof Error ? err.message : "unknown error"
             }`,
         );

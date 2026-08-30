@@ -33,14 +33,20 @@ export function syncJobId(dataSourceId: string): string {
 }
 
 /**
- * BullMQ "job scheduler" id for a data source's repeatable sync (distinct
- * namespace from `syncJobId` above -- a job scheduler and an ad-hoc
- * triggered job are different BullMQ entities that happen to run the same
- * queue, and giving them visibly different id shapes keeps that
- * distinction obvious to anyone inspecting Redis or these logs).
+ * BullMQ "job scheduler" id prefix for a data source's repeatable sync
+ * (distinct namespace from `syncJobId` above -- a job scheduler and an
+ * ad-hoc triggered job are different BullMQ entities that happen to run
+ * the same queue, and giving them visibly different id shapes keeps that
+ * distinction obvious to anyone inspecting Redis or these logs). Pulled
+ * out as its own constant (not just inlined in `syncSchedulerId` below)
+ * so `listScheduledDataSourceIds`, further down this same class, can
+ * recover the `dataSourceId` half of an existing scheduler's key -- see
+ * that method's doc comment.
  */
+const SYNC_SCHEDULER_KEY_PREFIX = "sync-schedule:";
+
 function syncSchedulerId(dataSourceId: string): string {
-  return `sync-schedule:${dataSourceId}`;
+  return `${SYNC_SCHEDULER_KEY_PREFIX}${dataSourceId}`;
 }
 
 /** Spec §2.8, transcribed verbatim: the three non-MANUAL sync frequencies and their cron patterns. */
@@ -182,5 +188,29 @@ export class SyncQueueService {
     // here since this codebase never sets one.
     return schedulers.filter((scheduler) => scheduler.key === schedulerId)
       .length;
+  }
+
+  /**
+   * The `dataSourceId` half of every currently-registered repeatable sync
+   * scheduler's key. Task 18 review round 2, Important 3:
+   * `ScheduleReconciliationService` uses this to make reconciliation
+   * BIDIRECTIONAL -- not just "ensure every current `DataSource` has the
+   * schedule its `syncFrequency` implies" (the forward direction this
+   * class already did) but also "remove any schedule whose `DataSource`
+   * no longer exists" (the direction that used to be missing). Without
+   * this, a data source deleted during a Redis blip (which
+   * `DataSourcesService.removeScheduleBestEffort` now swallows, per
+   * Important 4+5) leaves an orphaned scheduler firing forever with no
+   * boot ever able to notice and clean it up.
+   */
+  async listScheduledDataSourceIds(): Promise<string[]> {
+    const schedulers = await this.queue.getJobSchedulers();
+    return schedulers
+      .map((scheduler) => scheduler.key)
+      .filter(
+        (key): key is string =>
+          typeof key === "string" && key.startsWith(SYNC_SCHEDULER_KEY_PREFIX),
+      )
+      .map((key) => key.slice(SYNC_SCHEDULER_KEY_PREFIX.length));
   }
 }

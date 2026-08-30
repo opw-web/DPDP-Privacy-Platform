@@ -23,6 +23,7 @@ import {
 } from "../src/queues/sync.queue";
 import { SyncProcessor } from "../src/queues/sync.processor";
 import { SyncLockService } from "../src/queues/sync-lock.service";
+import { ScheduleReconciliationService } from "../src/queues/schedule-reconciliation.service";
 
 /**
  * Task 18: the full FETCH -> PERSIST -> NORMALIZE -> MATCH -> LINK ->
@@ -42,6 +43,7 @@ describe("Sync pipeline (e2e)", () => {
   let pipeline: SyncPipelineService;
   let syncQueueService: SyncQueueService;
   let syncLockService: SyncLockService;
+  let scheduleReconciliationService: ScheduleReconciliationService;
   let queue: Queue<SyncJobData>;
   let processor: SyncProcessor;
   const prisma = new PrismaService();
@@ -237,6 +239,7 @@ describe("Sync pipeline (e2e)", () => {
     pipeline = app.get(SyncPipelineService);
     syncQueueService = app.get(SyncQueueService);
     syncLockService = app.get(SyncLockService);
+    scheduleReconciliationService = app.get(ScheduleReconciliationService);
     queue = app.get(getQueueToken(SYNC_QUEUE_NAME));
     processor = app.get(SyncProcessor);
   });
@@ -513,6 +516,138 @@ describe("Sync pipeline (e2e)", () => {
     expect(finalStatusAudit).not.toBeNull();
   });
 
+  it("a FETCH failure reached after some records were already read finishes PARTIAL, not FAILED (Important 6 regression)", async () => {
+    // The FETCH-stage catch (sync-pipeline.service.ts) is a DIFFERENT
+    // code path from the per-record catch the "missing external id
+    // field" test above exercises -- that test never reaches this
+    // branch at all. This test forces pagination (pageSize=1) so page 1
+    // succeeds and is durably persisted, then page 2 returns malformed
+    // JSON, which RestApiConnector throws on -- proving the run is
+    // reported PARTIAL (records were read) rather than FAILED (nothing
+    // was read), with the FETCH failure recorded in errorLog.
+    const org = await organization();
+    const server = new MockHttpServer((req, res) => {
+      const url = new URL(req.url ?? "", "http://127.0.0.1");
+      const page = Number(url.searchParams.get("page") ?? "1");
+      res.writeHead(200, { "Content-Type": "application/json" });
+      if (page === 1) {
+        res.end(
+          JSON.stringify({
+            data: [
+              {
+                id: "1",
+                name: "Page One Person",
+                email: "page1@example.test",
+              },
+            ],
+          }),
+        );
+      } else {
+        // Deliberately malformed: RestApiConnector.fetchPage throws
+        // trying to JSON.parse this, and (unlike a non-2xx status) a
+        // 200 response is never retried by ReadOnlyHttpClient -- the
+        // failure is immediate and deterministic.
+        res.end("this is not valid json");
+      }
+    });
+    servers.push(server);
+    const port = await server.listen();
+    const baseUrl = `http://127.0.0.1:${port}/records`;
+    // pageSize=1: page 1 returns exactly 1 record, which RestApiConnector
+    // treats as a FULL page (not short), so it fetches page 2 next.
+    const dataSourceId = await createDataSource(org, baseUrl, 1);
+
+    const summary = await pipeline.run(dataSourceId, "partial-fetch-failure");
+
+    expect(summary.status).toBe("PARTIAL");
+    expect(summary.recordsRead).toBe(1);
+    expect(summary.recordsCreated).toBe(1);
+    expect(summary.recordsFailed).toBe(0);
+
+    const job = await TenantContext.run(tenant(org), () =>
+      prisma.scoped.syncJob.findFirstOrThrow({
+        where: { id: summary.syncJobId },
+      }),
+    );
+    expect(job.status).toBe("PARTIAL");
+    const errorLog = job.errorLog as Array<Record<string, unknown>>;
+    expect(errorLog).toHaveLength(1);
+    expect(errorLog[0]).toMatchObject({ scope: "FETCH" });
+
+    const audits = await TenantContext.run(tenant(org), () =>
+      prisma.scoped.auditEvent.findMany({
+        where: { resourceId: summary.syncJobId },
+        select: { action: true },
+      }),
+    );
+    // PARTIAL uses SYNC_COMPLETED, never SYNC_FAILED -- FAILED is
+    // reserved for zero records read.
+    expect(audits.map((a) => a.action).sort()).toEqual([
+      "SYNC_COMPLETED",
+      "SYNC_STARTED",
+    ]);
+  });
+
+  it("a FETCH failure before any record was read finishes FAILED (Important 6, zero-records branch)", async () => {
+    const org = await organization();
+    // Reuses a real, immediate connector-level failure -- page 1 itself
+    // is malformed, so ZERO records are ever read before the run fails.
+    const server = new MockHttpServer((_req, res) => {
+      res.writeHead(200, { "Content-Type": "application/json" });
+      res.end("this is not valid json either");
+    });
+    servers.push(server);
+    const port = await server.listen();
+    const baseUrl = `http://127.0.0.1:${port}/records`;
+    const dataSourceId = await createDataSource(org, baseUrl);
+
+    const summary = await pipeline.run(dataSourceId, "failed-run");
+
+    expect(summary.status).toBe("FAILED");
+    expect(summary.recordsRead).toBe(0);
+
+    const job = await TenantContext.run(tenant(org), () =>
+      prisma.scoped.syncJob.findFirstOrThrow({
+        where: { id: summary.syncJobId },
+      }),
+    );
+    expect(job.status).toBe("FAILED");
+    expect(job.finishedAt).not.toBeNull();
+
+    // The lock this run held is released -- the source is not wedged.
+    expect(await syncLockService.isLocked(dataSourceId)).toBe(false);
+  });
+
+  it("a run that cannot acquire the lock creates no SyncJob row and no SYNC_STARTED audit (Critical 1 regression N-1)", async () => {
+    // Before round 2's fix, SyncLockService.acquire() ran AFTER
+    // startJob() -- a lock that could not be acquired left a RUNNING
+    // SyncJob row (and its SYNC_STARTED audit) permanently stranded,
+    // with no terminal event ever written for it. Acquiring the lock
+    // FIRST means a rejected run touches Postgres not at all.
+    const org = await organization();
+    const { baseUrl } = await startServer([]);
+    const dataSourceId = await createDataSource(org, baseUrl);
+
+    const heldLock = await syncLockService.acquire(dataSourceId);
+    expect(heldLock).not.toBeNull();
+
+    await expect(pipeline.run(dataSourceId, "blocked-run")).rejects.toThrow(
+      /sync lock/i,
+    );
+
+    const jobs = await TenantContext.run(tenant(org), () =>
+      prisma.scoped.syncJob.findMany({ where: { dataSourceId } }),
+    );
+    expect(jobs).toHaveLength(0);
+
+    const startedAudits = await TenantContext.run(tenant(org), () =>
+      prisma.scoped.auditEvent.count({ where: { action: "SYNC_STARTED" } }),
+    );
+    expect(startedAudits).toBe(0);
+
+    await heldLock?.release();
+  });
+
   it("rejects a caller without CAN_RUN_SYNC with 403, and a second trigger while the first is genuinely ACTIVE with 409", async () => {
     const org = await organization();
     const { baseUrl } = await startServer(
@@ -584,6 +719,16 @@ describe("Sync pipeline (e2e)", () => {
     );
     const dataSourceId = await createDataSource(org, baseUrl);
     const testSchedulerId = `test-scheduled-${dataSourceId}`;
+    // Task 18 review round 2, timing-fragile test fix: created BEFORE
+    // the scheduled run is even armed, not inside the ~1.5s window while
+    // the lock is held. `employeeWithPermissions` does an argon2 hash
+    // plus role/permission/employee inserts plus a login round trip
+    // doing an argon2 verify -- on a loaded machine that can exceed the
+    // mock server's 1500ms delay, letting the scheduled run release the
+    // lock before the manual trigger ever fires and turning the 409
+    // assertion below into a flake (the manual-vs-manual test above hit
+    // exactly this shape of bug once already).
+    const runner = await employeeWithPermissions(org, ["CAN_RUN_SYNC"]);
 
     try {
       // A due repeatable job, fired via BullMQ's OWN scheduler mechanism
@@ -606,7 +751,6 @@ describe("Sync pipeline (e2e)", () => {
       // exists somewhere") before firing the manual trigger.
       await waitUntil(async () => syncLockService.isLocked(dataSourceId), 5000);
 
-      const runner = await employeeWithPermissions(org, ["CAN_RUN_SYNC"]);
       const manualAttempt = await request(app.getHttpServer())
         .post(`/api/data-sources/${dataSourceId}/sync`)
         .set("Authorization", `Bearer ${runner.accessToken}`)
@@ -635,7 +779,13 @@ describe("Sync pipeline (e2e)", () => {
     // once, so the ONLY thing that can ever free this lock is the TTL
     // itself expiring. This exercises the real `SyncLockService.acquire`
     // production code path -- not a hand-crafted Redis key.
-    const shortTtlMs = 300;
+    // Task 18 review round 2: widened from 300ms to ~1s -- a 300ms TTL
+    // left this assertion vulnerable to a GC pause or scheduler jitter
+    // between acquiring the lock and the very next `isLocked` check
+    // below. 1s removes that risk without weakening what the test
+    // proves (the lock still expires and self-heals; only the margin
+    // changed).
+    const shortTtlMs = 1_000;
     const neverFiresWithinThisTestMs = 60_000;
 
     const crashedHandle = await syncLockService.acquire(
@@ -653,7 +803,7 @@ describe("Sync pipeline (e2e)", () => {
     // Wait past the TTL WITHOUT ever calling release() and without the
     // heartbeat ever renewing it -- empirically, not by reasoning about
     // the TTL, prove the lock self-heals.
-    await new Promise((resolve) => setTimeout(resolve, shortTtlMs + 300));
+    await new Promise((resolve) => setTimeout(resolve, shortTtlMs + 500));
 
     expect(await syncLockService.isLocked(dataSourceId)).toBe(false);
 
@@ -759,5 +909,36 @@ describe("Sync pipeline (e2e)", () => {
       .send({ syncFrequency: "MANUAL" });
     expect(toManual.status).toBe(200);
     expect(await syncQueueService.schedulerCount(dataSourceId)).toBe(0);
+  });
+
+  it("reconciliation prunes an orphaned scheduler whose DataSource no longer exists (Important 3 regression N-3)", async () => {
+    const org = await organization();
+    const { baseUrl } = await startServer([]);
+    const dataSourceId = await createDataSource(org, baseUrl);
+    await syncQueueService.upsertSchedule(
+      dataSourceId,
+      "HOURLY",
+      "Asia/Kolkata",
+    );
+    expect(await syncQueueService.schedulerCount(dataSourceId)).toBe(1);
+
+    // Simulate exactly the drift Important 3 exists for: the DataSource
+    // row is gone (e.g. `DELETE /api/data-sources/:id` during a Redis
+    // blip that made `removeScheduleBestEffort` swallow the cleanup
+    // call), but its repeatable scheduler is still registered in Redis.
+    await TenantContext.run(tenant(org), () =>
+      prisma.scoped.dataSource.delete({ where: { id: dataSourceId } }),
+    );
+    expect(await syncQueueService.schedulerCount(dataSourceId)).toBe(1);
+    expect(await syncQueueService.listScheduledDataSourceIds()).toContain(
+      dataSourceId,
+    );
+
+    await scheduleReconciliationService.reconcile();
+
+    expect(await syncQueueService.schedulerCount(dataSourceId)).toBe(0);
+    expect(await syncQueueService.listScheduledDataSourceIds()).not.toContain(
+      dataSourceId,
+    );
   });
 });
