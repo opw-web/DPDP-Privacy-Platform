@@ -50,11 +50,15 @@ describe("MaskingService", () => {
     });
 
     it("passes through non-string input unchanged, without throwing", () => {
-      expect(masking.maskEmail(12345)).toBe(12345);
-      expect(masking.maskEmail(true)).toBe(true);
-      expect(masking.maskEmail({ email: "aman@gmail.com" })).toEqual({
-        email: "aman@gmail.com",
-      });
+      // Cast to simulate an `any`-typed/bad-data call site slipping past
+      // the type system -- Task 7 review Important 2 narrowed the public
+      // signature to `string | null | undefined`, but the runtime guard
+      // must still defend against this.
+      expect(masking.maskEmail(12345 as unknown as string)).toBe(12345);
+      expect(masking.maskEmail(true as unknown as string)).toBe(true);
+      expect(
+        masking.maskEmail({ email: "aman@gmail.com" } as unknown as string),
+      ).toEqual({ email: "aman@gmail.com" });
     });
   });
 
@@ -84,9 +88,14 @@ describe("MaskingService", () => {
     });
 
     it("passes through non-string input unchanged, without throwing", () => {
-      expect(masking.maskPhone(9876543210)).toBe(9876543210);
-      expect(masking.maskPhone(false)).toBe(false);
-      expect(masking.maskPhone(["+919876543210"])).toEqual(["+919876543210"]);
+      // Same defensive-cast rationale as maskEmail's equivalent test.
+      expect(masking.maskPhone(9876543210 as unknown as string)).toBe(
+        9876543210,
+      );
+      expect(masking.maskPhone(false as unknown as string)).toBe(false);
+      expect(masking.maskPhone(["+919876543210"] as unknown as string)).toEqual(
+        ["+919876543210"],
+      );
     });
 
     it("passes through a string with no digits unchanged", () => {
@@ -104,11 +113,40 @@ describe("MaskingService", () => {
       );
     });
 
-    it("passes every other canonical field through unchanged -- no spec-defined mask exists for it", () => {
-      expect(masking.maskValue("FULL_NAME", "Aman Gupta")).toBe("Aman Gupta");
+    // Task 7 review Important 1: masking must fail CLOSED. A canonical
+    // field with no spec-defined format (everything but EMAIL/PHONE) is
+    // masked generically, NOT passed through unmasked -- these two used
+    // to pass through before the fix; they must now come back masked.
+    it("masks every canonical field with no spec-defined format, generically, rather than passing it through unmasked", () => {
+      expect(masking.maskValue("FULL_NAME", "Aman Gupta")).toBe("Am********");
       expect(masking.maskValue("DATE_OF_BIRTH", "1990-01-01")).toBe(
-        "1990-01-01",
+        "19********",
       );
+      expect(masking.maskValue("FULL_NAME", "Aman Gupta")).not.toBe(
+        "Aman Gupta",
+      );
+    });
+
+    // The short, explicit, commented allowlist -- judged genuinely NOT
+    // personal data -- is the only thing exempt from the fail-closed
+    // default above.
+    it("passes through the explicit PASS_THROUGH_FIELDS allowlist unchanged", () => {
+      expect(masking.maskValue("ACCOUNT_STATUS", "active")).toBe("active");
+      expect(masking.maskValue("EXTERNAL_ID", "ext-12345")).toBe("ext-12345");
+      expect(masking.maskValue("CUSTOMER_ID", "cust-98765")).toBe("cust-98765");
+      expect(masking.maskValue("IGNORE", "whatever")).toBe("whatever");
+    });
+
+    // Proves the fail-closed default holds even for a canonical field
+    // that exists in NEITHER special-case list -- including one that
+    // does not exist in the `CanonicalField` enum yet. A field added to
+    // the enum later with no masking rule of its own must come back
+    // masked by default, not unmasked, per Important 1's exact
+    // "AADHAAR_NUMBER" example.
+    it("masks a hypothetical canonical field in neither the EMAIL/PHONE nor the PASS_THROUGH_FIELDS list", () => {
+      const result = masking.maskValue("AADHAAR_NUMBER", "123456789012");
+      expect(result).not.toBe("123456789012");
+      expect(typeof result).toBe("string");
     });
   });
 

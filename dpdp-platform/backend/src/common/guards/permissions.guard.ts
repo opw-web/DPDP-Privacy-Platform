@@ -24,9 +24,15 @@ export type PermissionsRequest = Request & {
 };
 
 /**
- * Enforces `@RequirePermission('CAN_X')` (metadata Task 5 already applies
- * to every route that needs it) against the calling employee's ACTUAL,
- * current role-permission set.
+ * Enforces `@RequirePermission('CAN_X', ...)` (metadata Task 5 already
+ * applies to every route that needs it) against the calling employee's
+ * ACTUAL, current role-permission set.
+ *
+ * Variadic, and OR'd: a route decorated with more than one code (Task 7
+ * review Minor -- the decorator itself documents why OR was chosen over
+ * AND) is reachable if the actor's role holds ANY ONE of the listed
+ * codes. Every route registered so far names exactly one code, so this
+ * only matters for a future multi-code route.
  *
  * Registered globally as the SECOND `APP_GUARD` in `AppModule`, after
  * `JwtEmployeeGuard`. Nest runs multiple `APP_GUARD` providers in
@@ -78,11 +84,11 @@ export class PermissionsGuard implements CanActivate {
   ) {}
 
   async canActivate(context: ExecutionContext): Promise<boolean> {
-    const requiredPermission = this.reflector.getAllAndOverride<
-      string | undefined
+    const requiredPermissions = this.reflector.getAllAndOverride<
+      string[] | undefined
     >(PERMISSION_KEY, [context.getHandler(), context.getClass()]);
 
-    if (!requiredPermission) {
+    if (!requiredPermissions || requiredPermissions.length === 0) {
       return true;
     }
 
@@ -101,9 +107,13 @@ export class PermissionsGuard implements CanActivate {
 
     const permissions = await this.resolvePermissions(request, actor);
 
-    if (!permissions.has(requiredPermission)) {
+    const hasAny = requiredPermissions.some((code) => permissions.has(code));
+    if (!hasAny) {
+      // `.join(" or ")` on a single-element array is just that element,
+      // so this is byte-identical to the original single-code message
+      // for every route registered so far.
       throw new ForbiddenException(
-        `Missing required permission: ${requiredPermission}`,
+        `Missing required permission: ${requiredPermissions.join(" or ")}`,
       );
     }
     return true;

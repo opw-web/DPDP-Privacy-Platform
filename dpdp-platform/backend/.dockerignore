@@ -1,0 +1,13 @@
+# Task 7 review fix (Critical 2): with no .dockerignore, `COPY . .` in
+# backend/Dockerfile smuggled the HOST's node_modules (built against
+# glibc) into a musl (alpine) image, smuggled the host's generated
+# @prisma/client in (masking Critical 3's missing `prisma generate`), and
+# would copy a real .env into the image if one existed on the host.
+node_modules
+dist
+*.tsbuildinfo
+.env
+.env.*
+test
+coverage
+.git

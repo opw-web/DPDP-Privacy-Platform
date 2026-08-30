@@ -55,13 +55,25 @@ describe("Employee auth (e2e)", () => {
 
     const extraPermissionCodes = opts.permissionCodes ?? [];
     for (const code of extraPermissionCodes) {
+      // Task 7 review Minor: source the row from the REAL seed catalogue
+      // instead of fabricating one with `category: "TEST"`. Fabricating
+      // it would (a) permanently pollute the global Permission table
+      // GET /api/permissions serves with a fake category, and (b) mask a
+      // real failure -- if this code were ever removed from
+      // prisma/seed/permissions.ts, a fabricated upsert would keep
+      // silently recreating it and every test using it would stay green
+      // for the wrong reason. Asserting membership first makes that
+      // failure loud instead.
+      const catalogueEntry = PERMISSIONS.find((p) => p.code === code);
+      if (!catalogueEntry) {
+        throw new Error(
+          `Fixture requested permission code "${code}" which is not in ` +
+            "the real seed catalogue (prisma/seed/permissions.ts).",
+        );
+      }
       await prisma.permission.upsert({
         where: { code },
-        create: {
-          code,
-          description: "test-granted real permission",
-          category: "TEST",
-        },
+        create: catalogueEntry,
         update: {},
       });
     }

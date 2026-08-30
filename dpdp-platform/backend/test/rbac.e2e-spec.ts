@@ -5,6 +5,7 @@ import request from "supertest";
 import * as argon2 from "argon2";
 import { AppModule } from "../src/app.module";
 import { PrismaService } from "../src/common/prisma/prisma.service";
+import { PERMISSIONS } from "../prisma/seed/permissions";
 
 /**
  * Task 7 gate (Check 18, spec lines 1102-1109): `PermissionsGuard`
@@ -32,18 +33,25 @@ describe("RBAC enforcement (e2e)", () => {
   // Every permission code used below is a REAL catalogue code
   // (CAN_MANAGE_EMPLOYEES / CAN_CHANGE_ORG_SETTINGS) -- global, not
   // org-scoped, and potentially already referenced by other
-  // organizations' roles (including the demo seed's). Upserted if
-  // missing, like `employee-auth.e2e-spec.ts`'s fixture does, but NEVER
-  // deleted in `afterAll` -- deleting a shared catalogue row would break
+  // organizations' roles (including the demo seed's). Upserted from the
+  // REAL seed catalogue (`prisma/seed/permissions.ts`), never fabricated
+  // with a made-up `category: "TEST"` (Task 7 review Minor) -- a
+  // fabricated row would silently paper over that code going missing
+  // from the real catalogue, and would permanently pollute the global
+  // Permission table `GET /api/permissions` serves. NEVER deleted in
+  // `afterAll` either way -- deleting a shared catalogue row would break
   // every other role/test that also references it via `RolePermission`.
   async function ensurePermission(code: string): Promise<void> {
+    const catalogueEntry = PERMISSIONS.find((p) => p.code === code);
+    if (!catalogueEntry) {
+      throw new Error(
+        `Test requested permission code "${code}" which is not in the ` +
+          "real seed catalogue (prisma/seed/permissions.ts).",
+      );
+    }
     await prisma.permission.upsert({
       where: { code },
-      create: {
-        code,
-        description: `test permission ${code}`,
-        category: "TEST",
-      },
+      create: catalogueEntry,
       update: {},
     });
   }
@@ -185,6 +193,12 @@ describe("RBAC enforcement (e2e)", () => {
       .set("Authorization", `Bearer ${withoutPermission.accessToken}`)
       .send(payload(withoutPermission.roleId));
     expect(deniedRes.status).toBe(403);
+    // Task 7 review Minor: without this, a ForbiddenException thrown by
+    // ANY other layer would satisfy a bare status assertion. The message
+    // comes verbatim from permissions.guard.ts.
+    expect(deniedRes.body.message).toContain(
+      "Missing required permission: CAN_MANAGE_EMPLOYEES",
+    );
   });
 
   it("GET /api/employees: CAN_MANAGE_EMPLOYEES succeeds, no permission gets 403", async () => {
@@ -203,6 +217,9 @@ describe("RBAC enforcement (e2e)", () => {
       .get("/api/employees")
       .set("Authorization", `Bearer ${withoutPermission.accessToken}`);
     expect(deniedRes.status).toBe(403);
+    expect(deniedRes.body.message).toContain(
+      "Missing required permission: CAN_MANAGE_EMPLOYEES",
+    );
   });
 
   it("PATCH /api/employees/:id: CAN_MANAGE_EMPLOYEES succeeds, no permission gets 403 on the identical target/payload", async () => {
@@ -222,6 +239,9 @@ describe("RBAC enforcement (e2e)", () => {
       .set("Authorization", `Bearer ${withoutPermission.accessToken}`)
       .send({ fullName: "Should Not Rename" });
     expect(deniedRes.status).toBe(403);
+    expect(deniedRes.body.message).toContain(
+      "Missing required permission: CAN_MANAGE_EMPLOYEES",
+    );
   });
 
   it("POST /api/employees/:id/reset-password: CAN_MANAGE_EMPLOYEES succeeds, no permission gets 403", async () => {
@@ -241,6 +261,9 @@ describe("RBAC enforcement (e2e)", () => {
       .set("Authorization", `Bearer ${withoutPermission.accessToken}`)
       .send({ newPassword: "BrandNewPassword123!" });
     expect(deniedRes.status).toBe(403);
+    expect(deniedRes.body.message).toContain(
+      "Missing required permission: CAN_MANAGE_EMPLOYEES",
+    );
   });
 
   it("PATCH /api/roles/:id/permissions: CAN_MANAGE_EMPLOYEES succeeds, no permission gets 403 on the identical target/payload", async () => {
@@ -282,6 +305,9 @@ describe("RBAC enforcement (e2e)", () => {
       .set("Authorization", `Bearer ${withoutPermission.accessToken}`)
       .send({ permissionCodes: [] });
     expect(deniedRes.status).toBe(403);
+    expect(deniedRes.body.message).toContain(
+      "Missing required permission: CAN_MANAGE_EMPLOYEES",
+    );
   });
 
   it("PATCH /api/organization: CAN_CHANGE_ORG_SETTINGS succeeds, no permission gets 403 on the identical payload", async () => {
@@ -301,6 +327,9 @@ describe("RBAC enforcement (e2e)", () => {
       .set("Authorization", `Bearer ${withoutPermission.accessToken}`)
       .send({ legalName: "Should Not Rename" });
     expect(deniedRes.status).toBe(403);
+    expect(deniedRes.body.message).toContain(
+      "Missing required permission: CAN_CHANGE_ORG_SETTINGS",
+    );
   });
 
   it("enforcement is by permission code, never by role name: a role literally named 'DPO' with no permissions is denied, a role literally named 'AUDITOR' holding CAN_MANAGE_EMPLOYEES is allowed", async () => {
@@ -325,6 +354,9 @@ describe("RBAC enforcement (e2e)", () => {
       .set("Authorization", `Bearer ${fakeDpoNoPerm.accessToken}`)
       .send(payload(fakeDpoNoPerm.roleId));
     expect(deniedRes.status).toBe(403);
+    expect(deniedRes.body.message).toContain(
+      "Missing required permission: CAN_MANAGE_EMPLOYEES",
+    );
 
     const okRes = await request(app.getHttpServer())
       .post("/api/employees")
@@ -387,6 +419,9 @@ describe("RBAC enforcement (e2e)", () => {
       .get("/api/employees")
       .set("Authorization", `Bearer ${employee.accessToken}`);
     expect(afterRes.status).toBe(403);
+    expect(afterRes.body.message).toContain(
+      "Missing required permission: CAN_MANAGE_EMPLOYEES",
+    );
   });
 
   it("a missing/garbage token still gets 401 before any permission check runs", async () => {

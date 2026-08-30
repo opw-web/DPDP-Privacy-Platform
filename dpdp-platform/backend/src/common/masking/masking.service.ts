@@ -5,11 +5,29 @@ import type { CanonicalField } from "@prisma/client";
 export const CAN_VIEW_ALL_PERSONAL_DATA = "CAN_VIEW_ALL_PERSONAL_DATA";
 
 /**
+ * `CanonicalField` values judged genuinely NOT personal data, and so
+ * deliberately exempt from masking rather than falling through the
+ * generic fallback below. Kept as a short, explicit, commented allowlist
+ * -- not a "everything not EMAIL/PHONE" default -- per Task 7 review
+ * Important 1: the enum is open (a future canonical field like
+ * `AADHAAR_NUMBER` can be added to it at any time), so the safe posture
+ * is failing CLOSED (mask by default) with an explicit opt-out list, not
+ * failing OPEN (pass through by default) with an implicit allowlist nothing
+ * enforces.
+ */
+const PASS_THROUGH_FIELDS: ReadonlySet<string> = new Set([
+  "ACCOUNT_STATUS", // operational status (e.g. "active"/"churned"), not personal data
+  "EXTERNAL_ID", // opaque source-system identifier, not itself personal data
+  "CUSTOMER_ID", // ditto -- an identifier, not a personal-data value
+  "IGNORE", // canonical marker meaning "field mapping intentionally dropped"; never a real value
+]);
+
+/**
  * Masks personal-data VALUES before they leave the process. SE-01: an
  * actor holding `CAN_VIEW_PRINCIPALS` without `CAN_VIEW_ALL_PERSONAL_DATA`
  * (the AUDITOR role, by seeded default) must never receive an unmasked
- * email or phone number in an API response -- not "the frontend hides
- * it," an actual different, already-redacted string leaves this process.
+ * personal-data value in an API response -- not "the frontend hides it,"
+ * an actual different, already-redacted string leaves this process.
  * There is no server-rendered path and no React component in this
  * codebase that ever sees the real value for such an actor: masking
  * happens here, in the service layer that builds the response, never in
@@ -19,15 +37,17 @@ export const CAN_VIEW_ALL_PERSONAL_DATA = "CAN_VIEW_ALL_PERSONAL_DATA";
  *   maskEmail("aman@gmail.com")     -> "am**@gm***.com"
  *   maskPhone("+919876543210")      -> "+91 98****3210"
  *
- * Only `EMAIL` and `PHONE` have a spec-defined masked format. Every other
- * `CanonicalField` is a documented gap, not an oversight: the spec's one
- * masking example (line 716) covers exactly these two field types, and
- * inventing masking rules for the rest (address lines, name, DOB, ...)
- * without a cited format would be exactly the kind of "invent a rule the
- * spec doesn't state" this project's other services (audit-actions.ts,
- * prisma/seed/permissions.ts) explicitly refuse to do elsewhere. Flagged
- * for the spec owner in the task report; `maskValue()` passes any other
- * canonical field through unchanged.
+ * Only `EMAIL` and `PHONE` have a spec-defined masked format (spec line
+ * 716's one masking example). Every other `CanonicalField`, EXCEPT the
+ * short, explicit `PASS_THROUGH_FIELDS` allowlist above, is masked
+ * generically via `maskSegment` -- fail CLOSED, not open (Task 7 review
+ * Important 1). Inventing a spec-shaped format for e.g. full name or
+ * date of birth is still out of scope (same "don't invent what the spec
+ * doesn't state" discipline as `audit-actions.ts` and
+ * `prisma/seed/permissions.ts`), but leaving them unmasked entirely is
+ * not: "what masked means for name/DOB/address" is recorded as a spec
+ * gap for the spec owner, not answered by silently exempting those
+ * fields from masking.
  */
 @Injectable()
 export class MaskingService {
@@ -38,12 +58,15 @@ export class MaskingService {
    * suffix (`.com`, `.co.uk`, ...) fully visible -- exactly the spec
    * example, character for character.
    *
-   * Never throws: a non-string, `null`, `undefined`, or empty value is
-   * returned unchanged (there is nothing to mask, and a masking function
-   * that throws on an absent field would turn "no email on file" into a
-   * 500).
+   * Typed `string | null | undefined -> string | null | undefined`
+   * (Task 7 review Important 2) so the masking guarantee survives into a
+   * response DTO without a cast at the call site -- a cast is exactly
+   * where an unmasked value could be reintroduced by accident. The
+   * runtime still defensively handles a non-string value that reaches
+   * here despite the type (e.g. from an `any`-typed call site, or bad
+   * data) by returning it unchanged rather than throwing.
    */
-  maskEmail(value: unknown): unknown {
+  maskEmail(value: string | null | undefined): string | null | undefined {
     if (typeof value !== "string" || value.length === 0) {
       return value;
     }
@@ -67,10 +90,11 @@ export class MaskingService {
    * shorter keep-prefix-only mask so they are not either fully exposed or
    * fully starred out.
    *
-   * Never throws on a non-string, `null`, `undefined`, empty, or
-   * non-numeric value -- returned unchanged.
+   * Typed `string | null | undefined -> string | null | undefined`, same
+   * rationale as `maskEmail` (Task 7 review Important 2); defensively
+   * returns a non-string value unchanged rather than throwing.
    */
-  maskPhone(value: unknown): unknown {
+  maskPhone(value: string | null | undefined): string | null | undefined {
     if (typeof value !== "string" || value.length === 0) {
       return value;
     }
@@ -89,17 +113,32 @@ export class MaskingService {
 
   /**
    * Dispatches to the right mask for a `PrincipalDataField.canonicalField`
-   * value. Fields with no spec-defined mask (everything but `EMAIL` /
-   * `PHONE`) pass through unchanged -- see the class doc comment.
+   * value. `EMAIL`/`PHONE` use the spec-exact formats above;
+   * `PASS_THROUGH_FIELDS` members are returned unchanged; every other
+   * canonical field -- including any added to the enum later with no
+   * masking rule of its own -- is masked generically via `maskSegment`
+   * (fail CLOSED; Task 7 review Important 1).
+   *
+   * Typed `string | null | undefined -> string | null | undefined`
+   * (Task 7 review Important 2).
    */
-  maskValue(canonicalField: CanonicalField | string, value: unknown): unknown {
+  maskValue(
+    canonicalField: CanonicalField | string,
+    value: string | null | undefined,
+  ): string | null | undefined {
     switch (canonicalField) {
       case "EMAIL":
         return this.maskEmail(value);
       case "PHONE":
         return this.maskPhone(value);
       default:
-        return value;
+        if (PASS_THROUGH_FIELDS.has(canonicalField)) {
+          return value;
+        }
+        if (typeof value !== "string" || value.length === 0) {
+          return value;
+        }
+        return this.maskSegment(value);
     }
   }
 
@@ -114,8 +153,8 @@ export class MaskingService {
   maskIfNeeded(
     actorPermissions: ReadonlySet<string> | readonly string[],
     canonicalField: CanonicalField | string,
-    value: unknown,
-  ): unknown {
+    value: string | null | undefined,
+  ): string | null | undefined {
     const permissions =
       actorPermissions instanceof Set
         ? actorPermissions
