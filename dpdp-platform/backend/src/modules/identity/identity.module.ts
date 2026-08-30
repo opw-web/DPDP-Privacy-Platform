@@ -5,10 +5,29 @@ import { LinkingService } from "./linking.service";
 import { MatchingService } from "./matching.service";
 import { AssemblyService } from "./assembly.service";
 import { AgeService } from "./age.service";
+import { MergeService } from "./merge.service";
+import { CandidatesService } from "./candidates.service";
+import { CandidatesController } from "./candidates.controller";
+import { UnmergeController } from "./unmerge.controller";
 
 @Module({
   imports: [AuditModule, ReferenceModule],
-  providers: [MatchingService, LinkingService, AssemblyService, AgeService],
-  exports: [MatchingService, LinkingService, AssemblyService, AgeService],
+  controllers: [CandidatesController, UnmergeController],
+  providers: [
+    MatchingService,
+    LinkingService,
+    AssemblyService,
+    AgeService,
+    MergeService,
+    CandidatesService,
+  ],
+  exports: [
+    MatchingService,
+    LinkingService,
+    AssemblyService,
+    AgeService,
+    MergeService,
+    CandidatesService,
+  ],
 })
 export class IdentityModule {}

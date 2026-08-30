@@ -4,7 +4,11 @@ import { AuditService } from "../../common/audit/audit.service";
 import type { ScopedTransactionClient } from "../../common/prisma/scoped-transaction-client";
 import { ReferenceService } from "../../common/reference/reference.service";
 import type { NormalizationMapping } from "../normalization/normalization.service";
-import type { MatchResult, RaisedCandidate } from "./matching.service";
+import {
+  conflictCandidateScore,
+  type MatchResult,
+  type RaisedCandidate,
+} from "./matching.service";
 import { verifiedCustomerIdValue } from "./match-rules/customer-id";
 import { AgeService } from "./age.service";
 import { AssemblyService } from "./assembly.service";
@@ -34,7 +38,15 @@ class IdentifierOwnershipConflictError extends Error {
   }
 }
 
-function displayName(record: LinkableNormalizedRecord): string {
+/**
+ * Exported (Task 19) so `MergeService.unmerge()` names a freshly split-off
+ * principal the same way a freshly matched-NEW one is named here -- one
+ * naming rule for "a DataPrincipal row was just created for this one
+ * record", not two that could drift apart.
+ */
+export function initialPrincipalDisplayName(
+  record: LinkableNormalizedRecord,
+): string {
   if (record.fullName) {
     return record.fullName;
   }
@@ -253,12 +265,13 @@ export class LinkingService {
       ),
     );
     let linkCreated = false;
+    let suppressedLinkCandidate: RaisedCandidate | null = null;
     if (!activeLink && result.kind === "NEW") {
       const principal = await tx.dataPrincipal.create({
         data: {
           reference:
             await this.referenceService.nextPrincipalReferenceInTransaction(tx),
-          displayName: displayName(normalizedRecord),
+          displayName: initialPrincipalDisplayName(normalizedRecord),
         } as never,
         select: { id: true, reference: true, displayName: true },
       });
@@ -274,7 +287,38 @@ export class LinkingService {
         },
       });
     } else if (!activeLink && result.kind === "LINK") {
-      dataPrincipalId = result.dataPrincipalId;
+      // Controller ruling (Task 19): a DETACHED link on this exact
+      // (normalizedRecord, dataPrincipal) pair means a human already
+      // decided, via unmerge, that this record does not belong to that
+      // principal. Unmerge deliberately never moves PrincipalIdentifier
+      // ownership (see MergeService.unmerge's doc comment), so a later
+      // resync of this same record can resolve the exact same EXACT/HIGH
+      // signal right back to that principal. Auto-linking here would
+      // silently reverse the human's decision -- the audit trail would
+      // read IDENTITY_DETACHED then IDENTITY_LINKED as though the system
+      // changed its mind on its own. Raise a candidate for human review
+      // instead: the evidence is real, but the decision is not ours.
+      const previouslyDetached = await tx.identityLink.findFirst({
+        where: {
+          normalizedRecordId: normalizedRecord.id,
+          dataPrincipalId: result.dataPrincipalId,
+          status: "DETACHED",
+        },
+        select: { id: true },
+      });
+      if (previouslyDetached) {
+        suppressedLinkCandidate = {
+          dataPrincipalId: result.dataPrincipalId,
+          confidence: result.confidence,
+          score: conflictCandidateScore(result.confidence),
+          evidence: {
+            rule: "DETACHED_LINK_SUPPRESSED",
+            matchedOn: result.matchedOn,
+          },
+        };
+      } else {
+        dataPrincipalId = result.dataPrincipalId;
+      }
     }
 
     if (dataPrincipalId && !activeLink) {
@@ -313,7 +357,10 @@ export class LinkingService {
     }
 
     let candidatesCreated = 0;
-    for (const candidate of this.candidateResults(result)) {
+    const candidatesToRaise = suppressedLinkCandidate
+      ? [suppressedLinkCandidate, ...this.candidateResults(result)]
+      : this.candidateResults(result);
+    for (const candidate of candidatesToRaise) {
       if (await this.createCandidate(tx, normalizedRecord.id, candidate)) {
         candidatesCreated += 1;
       }

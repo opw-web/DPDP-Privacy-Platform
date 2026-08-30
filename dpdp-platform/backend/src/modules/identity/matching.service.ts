@@ -75,7 +75,14 @@ const CONFIDENCE_RANK: Record<"EXACT" | "HIGH", number> = {
   HIGH: 1,
 };
 
-function conflictCandidateScore(confidence: "EXACT" | "HIGH"): number {
+/**
+ * Exported (Task 19) so `LinkingService` can raise a candidate with the
+ * same score convention when it suppresses an auto-link onto a
+ * previously-DETACHED pair -- that case carries the exact same kind of
+ * evidence (a real, resolved identifier match) as a rules 1-3 conflict
+ * candidate, so it deserves the same score, not a second invented scale.
+ */
+export function conflictCandidateScore(confidence: "EXACT" | "HIGH"): number {
   return confidence === "EXACT" ? 0.8 : 0.7;
 }
 
