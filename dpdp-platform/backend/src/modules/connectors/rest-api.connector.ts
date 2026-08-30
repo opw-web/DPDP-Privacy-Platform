@@ -1,10 +1,23 @@
 import { AuthType } from "@prisma/client";
 import type { Connector } from "./connector.interface";
-import { ReadOnlyHttpClient, stripQuery } from "./read-only-http-client";
+import { ReadOnlyHttpClient, stripQuery } from "./http/read-only-http.client";
 
 const MAX_PAGES = 500;
 const DISCOVER_SAMPLE_COUNT = 20;
-const SAMPLE_TRUNCATE_LENGTH = 40;
+/** Exported so Task 12's "re-scrub stored samples when a field is marked containsPersonalData" never re-hardcodes this number. */
+export const SAMPLE_TRUNCATE_LENGTH = 40;
+/**
+ * testConnection() is a connectivity CHECK, not a data read: short timeout,
+ * zero retries (a single fast answer beats a slow, retried one), and it
+ * fetches only `limit=1` record -- never a full page of personal data pulled
+ * into memory just to prove the source is reachable.
+ */
+const TEST_CONNECTION_TIMEOUT_MS = 5_000;
+
+/** Truncates a stringified sample value to the spec's 40-char limit. Exported alongside SAMPLE_TRUNCATE_LENGTH for the same reason. */
+export function truncateSample(value: string): string {
+  return value.slice(0, SAMPLE_TRUNCATE_LENGTH);
+}
 
 export interface RestApiConnectorConfig {
   /** Human-readable data source name, used ONLY to name the source in error messages. */
@@ -16,11 +29,48 @@ export interface RestApiConnectorConfig {
   authType: AuthType;
   /** ALREADY DECRYPTED by the caller (Task 12). This connector never decrypts and never reads a cipher column. */
   credential: string | null;
-  /** MVP1 supports "PAGE" (?page=N&limit=M). */
+  /** MVP1 supports only "PAGE" (?page=N&limit=M) -- any other value throws in the constructor rather than being silently ignored. */
   paginationStyle: string;
   pageSize: number;
   supportsIncremental: boolean;
   incrementalParam?: string | null;
+}
+
+export class UnsupportedPaginationStyleError extends Error {
+  constructor(sourceName: string, style: string) {
+    super(
+      `RestApiConnector for data source "${sourceName}" was configured with ` +
+        `unsupported paginationStyle "${style}" -- MVP1 supports "PAGE" only.`,
+    );
+    this.name = "UnsupportedPaginationStyleError";
+  }
+}
+
+/** Thrown by fetchPage's hard cap. Typed separately from a JSON-parse failure so Task 18 can tell the two apart. */
+export class PageCapExceededError extends Error {
+  constructor(sourceName: string, cap: number) {
+    super(
+      `RestApiConnector for data source "${sourceName}" exceeded the ${cap}-page ` +
+        "hard cap without reaching a short page. Aborting sync.",
+    );
+    this.name = "PageCapExceededError";
+  }
+}
+
+/** Thrown when a pagination cursor cannot be decoded into a valid page number. */
+export class InvalidCursorError extends Error {
+  constructor(sourceName: string, cursor: string) {
+    super(
+      `RestApiConnector for data source "${sourceName}" received an unparseable pagination cursor: ${JSON.stringify(cursor)}`,
+    );
+    this.name = "InvalidCursorError";
+  }
+}
+
+interface DecodedCursor {
+  page: number;
+  /** Present only for a cursor produced mid-incremental-sync; carries the ISO `since` value forward so continuation pages stay filtered. */
+  since?: string;
 }
 
 function isIsoDateString(value: string): boolean {
@@ -41,6 +91,18 @@ function inferType(value: unknown): string {
   if (typeof value === "string")
     return isIsoDateString(value) ? "date" : "string";
   return "string";
+}
+
+/** Objects/arrays are JSON.stringify'd rather than `String()`'d, which would otherwise show a human mapping fields "[object Object]". */
+function stringifyForSample(value: unknown): string {
+  if (typeof value === "object" && value !== null) {
+    try {
+      return JSON.stringify(value);
+    } catch {
+      return String(value);
+    }
+  }
+  return String(value);
 }
 
 function extractRecords(body: unknown, path: string): unknown[] {
@@ -81,6 +143,12 @@ export class RestApiConnector implements Connector {
     config: RestApiConnectorConfig,
     httpClient: ReadOnlyHttpClient = new ReadOnlyHttpClient(),
   ) {
+    if (config.paginationStyle !== "PAGE") {
+      throw new UnsupportedPaginationStyleError(
+        config.name,
+        config.paginationStyle,
+      );
+    }
     this.#config = config;
     this.httpClient = httpClient;
   }
@@ -92,7 +160,7 @@ export class RestApiConnector implements Connector {
   }> {
     const start = Date.now();
     try {
-      await this.fetchPage(1);
+      await this.ping();
       return {
         ok: true,
         message: "Connected successfully.",
@@ -128,7 +196,7 @@ export class RestApiConnector implements Connector {
       for (const record of sample) {
         const value = (record as Record<string, unknown> | null)?.[fieldName];
         if (value !== null && value !== undefined) {
-          sampleValue = String(value).slice(0, SAMPLE_TRUNCATE_LENGTH);
+          sampleValue = truncateSample(stringifyForSample(value));
           inferredType = inferType(value);
           break;
         }
@@ -140,8 +208,12 @@ export class RestApiConnector implements Connector {
   async fetchRecords(
     cursor?: string,
   ): Promise<{ records: unknown[]; nextCursor?: string }> {
-    const page = cursor ? Number.parseInt(cursor, 10) : 1;
-    return this.fetchPage(page);
+    const decoded = this.decodeCursor(cursor);
+    const extraParams =
+      decoded.since && this.#config.incrementalParam
+        ? { [this.#config.incrementalParam]: decoded.since }
+        : {};
+    return this.fetchPage(decoded.page, extraParams, decoded.since);
   }
 
   /**
@@ -153,6 +225,12 @@ export class RestApiConnector implements Connector {
    * the hash is unchanged, so re-fetching everything from a non-incremental
    * source is correct but wasteful -- never incorrect. Callers that care about
    * sync cost should prefer sources where `supportsIncremental` is true.
+   *
+   * When incremental IS supported, the `since` value is embedded into the
+   * returned `nextCursor` (see `encodeCursor`/`decodeCursor`) so that a
+   * continuation call via `fetchRecords(nextCursor)` re-applies the SAME
+   * incremental filter on page 2, 3, ... instead of silently reading the
+   * rest of the source unfiltered.
    */
   async fetchChanges(
     since: Date,
@@ -160,20 +238,56 @@ export class RestApiConnector implements Connector {
     if (!this.#config.supportsIncremental || !this.#config.incrementalParam) {
       return this.fetchRecords();
     }
-    return this.fetchPage(1, {
-      [this.#config.incrementalParam]: since.toISOString(),
-    });
+    const iso = since.toISOString();
+    return this.fetchPage(1, { [this.#config.incrementalParam]: iso }, iso);
   }
 
+  private encodeCursor(page: number, since?: string): string {
+    return since ? JSON.stringify({ page, since }) : String(page);
+  }
+
+  private decodeCursor(cursor?: string): DecodedCursor {
+    if (!cursor) {
+      return { page: 1 };
+    }
+    if (cursor.trim().startsWith("{")) {
+      let parsed: unknown;
+      try {
+        parsed = JSON.parse(cursor);
+      } catch {
+        throw new InvalidCursorError(this.#config.name, cursor);
+      }
+      const record = parsed as { page?: unknown; since?: unknown };
+      const page = Number(record.page);
+      if (!Number.isInteger(page) || page < 1) {
+        throw new InvalidCursorError(this.#config.name, cursor);
+      }
+      const since = typeof record.since === "string" ? record.since : undefined;
+      return { page, since };
+    }
+    const page = Number(cursor);
+    if (!Number.isInteger(page) || page < 1) {
+      throw new InvalidCursorError(this.#config.name, cursor);
+    }
+    return { page };
+  }
+
+  /**
+   * NOTE FOR TASK 18: the 500-page hard cap below is enforced ONLY through
+   * the cursor this method returns/consumes (`page > MAX_PAGES`). If the
+   * sync pipeline ever builds its own page numbers directly, or resets the
+   * cursor on a retried sync instead of resuming it, the cap is bypassed
+   * entirely and becomes a code-review convention again, exactly the
+   * failure mode this connector exists to avoid. Always drive pagination
+   * from the `nextCursor` this connector hands back.
+   */
   private async fetchPage(
     page: number,
     extraParams: Record<string, string> = {},
+    since?: string,
   ): Promise<{ records: unknown[]; nextCursor?: string }> {
     if (page > MAX_PAGES) {
-      throw new Error(
-        `RestApiConnector for data source "${this.#config.name}" exceeded the ` +
-          `${MAX_PAGES}-page hard cap without reaching a short page. Aborting sync.`,
-      );
+      throw new PageCapExceededError(this.#config.name, MAX_PAGES);
     }
 
     const url = this.buildUrl(page, extraParams);
@@ -197,15 +311,34 @@ export class RestApiConnector implements Connector {
     const isShortPage = records.length < this.#config.pageSize;
     return isShortPage
       ? { records }
-      : { records, nextCursor: String(page + 1) };
+      : { records, nextCursor: this.encodeCursor(page + 1, since) };
+  }
+
+  /**
+   * A connectivity check ONLY: `limit=1`, a short 5s deadline, and zero
+   * retries. Unlike a normal sync page fetch, this must never pull a full
+   * page of personal data into memory just to prove the source answers, and
+   * must never make a caller wait out three retries plus backoff (up to
+   * ~13s) on top of its own timeout just to learn "unreachable".
+   */
+  private async ping(): Promise<void> {
+    const url = new URL(this.#config.baseUrl);
+    url.searchParams.set("page", "1");
+    url.searchParams.set("limit", "1");
+    const headers = this.buildAuthHeaders();
+    await this.httpClient.request({
+      method: "GET",
+      url: url.toString(),
+      headers,
+      timeoutMs: TEST_CONNECTION_TIMEOUT_MS,
+      maxRetries: 0,
+    });
   }
 
   private buildUrl(page: number, extraParams: Record<string, string>): string {
     const url = new URL(this.#config.baseUrl);
-    if (this.#config.paginationStyle === "PAGE") {
-      url.searchParams.set("page", String(page));
-      url.searchParams.set("limit", String(this.#config.pageSize));
-    }
+    url.searchParams.set("page", String(page));
+    url.searchParams.set("limit", String(this.#config.pageSize));
     for (const [key, value] of Object.entries(extraParams)) {
       url.searchParams.set(key, value);
     }
@@ -222,6 +355,11 @@ export class RestApiConnector implements Connector {
       case AuthType.BEARER:
         return { Authorization: `Bearer ${credential}` };
       case AuthType.API_KEY_HEADER:
+        // ASSUMPTION, not a spec citation: the DataSource schema has no
+        // column for a per-source header name, so this connector always
+        // sends the key under a fixed "X-Api-Key" header. If a real
+        // integration needs a different header name, the schema needs a
+        // column for it -- this is not something this connector can infer.
         return { "X-Api-Key": credential };
       case AuthType.BASIC:
         return {

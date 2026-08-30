@@ -1,9 +1,10 @@
+import { Injectable } from "@nestjs/common";
 import type { AuthType } from "@prisma/client";
 import type { Connector } from "./connector.interface";
 import {
   RestApiConnector,
   type RestApiConnectorConfig,
-} from "./rest-api-connector";
+} from "./rest-api.connector";
 
 /**
  * The subset of a `DataSource` Prisma row this factory needs. Deliberately
@@ -25,13 +26,18 @@ export interface DataSourceRowForConnector {
 }
 
 /**
- * Builds a `Connector` for a data source. MVP1 has exactly one `systemType` ->
- * `RestApiConnector` mapping; this indirection exists so Task 12 (and later,
- * additional connector types) has one call site to build from instead of
- * reaching into `RestApiConnector` directly.
+ * Builds a `Connector` for a data source. MVP1 ships exactly one
+ * implementation, `RestApiConnector`, and this factory is the single call
+ * site Task 12 (and the sync pipeline) should use instead of constructing
+ * `RestApiConnector` directly, so a future connector type has one place to
+ * be wired in. Note this does NOT currently dispatch on `systemType` --
+ * `DataSourceRowForConnector` doesn't carry it, because there is nothing to
+ * dispatch to yet. A second connector type would need to add `systemType`
+ * (or similar) to this interface and branch on it here.
  */
+@Injectable()
 export class ConnectorFactory {
-  static create(
+  create(
     dataSource: DataSourceRowForConnector,
     decryptedCredential: string | null,
   ): Connector {

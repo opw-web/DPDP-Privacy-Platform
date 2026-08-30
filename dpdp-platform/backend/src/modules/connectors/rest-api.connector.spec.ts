@@ -1,15 +1,13 @@
 import { AuthType } from "@prisma/client";
-import { ReadOnlyHttpClient } from "./read-only-http-client";
+import { ReadOnlyHttpClient } from "./http/read-only-http.client";
 import {
+  InvalidCursorError,
+  PageCapExceededError,
   RestApiConnector,
+  UnsupportedPaginationStyleError,
   type RestApiConnectorConfig,
-} from "./rest-api-connector";
+} from "./rest-api.connector";
 import { MockHttpServer } from "./test-support/mock-http-server";
-
-/** A ReadOnlyHttpClient whose retry backoff resolves instantly, for tests that need to exercise a failure path without waiting out real retry delays. */
-function instantRetryClient(): ReadOnlyHttpClient {
-  return new ReadOnlyHttpClient(() => Promise.resolve());
-}
 
 function baseConfig(
   baseUrl: string,
@@ -37,6 +35,21 @@ describe("RestApiConnector", () => {
 
   afterEach(async () => {
     await server.close();
+  });
+
+  describe("constructor validation", () => {
+    it("throws UnsupportedPaginationStyleError for anything other than PAGE", async () => {
+      server = new MockHttpServer((_req, res) => res.end());
+      port = await server.listen();
+      expect(
+        () =>
+          new RestApiConnector(
+            baseConfig(`http://127.0.0.1:${port}/x`, {
+              paginationStyle: "CURSOR",
+            }),
+          ),
+      ).toThrow(UnsupportedPaginationStyleError);
+    });
   });
 
   describe("discoverSchema", () => {
@@ -99,14 +112,33 @@ describe("RestApiConnector", () => {
       expect(byName.missing?.inferredType).toBe("null");
       expect(byName.missing?.sampleValue).toBeNull();
     });
+
+    it("JSON.stringify's an object/array sample instead of showing '[object Object]'", async () => {
+      const records = [{ address: { city: "Pune", pin: "411001" } }];
+      server = new MockHttpServer((_req, res) => {
+        res.writeHead(200, { "Content-Type": "application/json" });
+        res.end(JSON.stringify({ data: records }));
+      });
+      port = await server.listen();
+      baseUrl = `http://127.0.0.1:${port}/records`;
+
+      const connector = new RestApiConnector(
+        baseConfig(baseUrl, { pageSize: 100 }),
+      );
+      const schema = await connector.discoverSchema();
+      const byName = Object.fromEntries(schema.map((f) => [f.fieldName, f]));
+
+      expect(byName.address?.sampleValue).not.toContain("[object Object]");
+      expect(byName.address?.sampleValue).toContain("Pune");
+    });
   });
 
   describe("pagination", () => {
     it("stops on a short page and exposes nextCursor only while pages are full", async () => {
       const pageSize = 3;
       server = new MockHttpServer((req, res) => {
-        const url = new URL(req.url ?? "", "http://x");
-        const page = Number(url.searchParams.get("page"));
+        const reqUrl = new URL(req.url ?? "", "http://x");
+        const page = Number(reqUrl.searchParams.get("page"));
         const body = page === 1 ? [1, 2, 3] : [4, 5]; // page 2 is short
         res.writeHead(200, { "Content-Type": "application/json" });
         res.end(JSON.stringify({ data: body.map((n) => ({ id: n })) }));
@@ -125,7 +157,7 @@ describe("RestApiConnector", () => {
       expect(page2.nextCursor).toBeUndefined();
     });
 
-    it("allows page 500 but fails loudly, naming the source, at page 501 -- with zero extra requests", async () => {
+    it("allows page 500 but fails loudly with a typed error naming the source, at page 501 -- with zero extra requests", async () => {
       const pageSize = 2;
       server = new MockHttpServer((_req, res) => {
         // Always returns a FULL page, so nothing but the hard cap ever stops it.
@@ -144,14 +176,45 @@ describe("RestApiConnector", () => {
       const requestsAfter500 = server.requestLog.length;
 
       await expect(connector.fetchRecords("501")).rejects.toThrow(
-        /Cap Test Source/,
+        PageCapExceededError,
       );
       await expect(connector.fetchRecords("501")).rejects.toThrow(
-        /500-page hard cap/,
+        /Cap Test Source/,
       );
 
       // The 501st page must be refused WITHOUT making a network call.
       expect(server.requestLog.length).toBe(requestsAfter500);
+    });
+
+    it("rejects an unparseable cursor with InvalidCursorError instead of silently sending page=NaN", async () => {
+      server = new MockHttpServer((_req, res) => {
+        res.writeHead(200, { "Content-Type": "application/json" });
+        res.end(JSON.stringify({ data: [] }));
+      });
+      port = await server.listen();
+      baseUrl = `http://127.0.0.1:${port}/records`;
+      const connector = new RestApiConnector(baseConfig(baseUrl));
+
+      const requestsBefore = server.requestLog.length;
+      await expect(connector.fetchRecords("not-a-number")).rejects.toThrow(
+        InvalidCursorError,
+      );
+      // No network call should be made for a cursor that can't even be decoded.
+      expect(server.requestLog.length).toBe(requestsBefore);
+    });
+
+    it("rejects a garbage JSON-shaped cursor (e.g. from bit-rot) rather than coercing it to NaN", async () => {
+      server = new MockHttpServer((_req, res) => {
+        res.writeHead(200, { "Content-Type": "application/json" });
+        res.end(JSON.stringify({ data: [] }));
+      });
+      port = await server.listen();
+      baseUrl = `http://127.0.0.1:${port}/records`;
+      const connector = new RestApiConnector(baseConfig(baseUrl));
+
+      await expect(connector.fetchRecords('{"page":"abc"}')).rejects.toThrow(
+        InvalidCursorError,
+      );
     });
   });
 
@@ -196,6 +259,51 @@ describe("RestApiConnector", () => {
       expect(server.requestLog[0]?.url).not.toContain("updated_since");
       expect(server.requestLog[0]?.url).toContain("page=1");
     });
+
+    it("keeps the incremental filter applied on page 2+ via the cursor, instead of silently dropping it", async () => {
+      const pageSize = 2;
+      server = new MockHttpServer((req, res) => {
+        const reqUrl = new URL(req.url ?? "", "http://x");
+        const page = Number(reqUrl.searchParams.get("page"));
+        // Full page 1 and 2, short page 3, so a second AND third fetch happen.
+        const body =
+          page === 3
+            ? [{ id: 5 }]
+            : [{ id: page * 10 + 1 }, { id: page * 10 + 2 }];
+        res.writeHead(200, { "Content-Type": "application/json" });
+        res.end(JSON.stringify({ data: body }));
+      });
+      port = await server.listen();
+      baseUrl = `http://127.0.0.1:${port}/records`;
+
+      const connector = new RestApiConnector(
+        baseConfig(baseUrl, {
+          pageSize,
+          supportsIncremental: true,
+          incrementalParam: "updated_since",
+        }),
+      );
+
+      const page1 = await connector.fetchChanges(
+        new Date("2026-01-01T00:00:00.000Z"),
+      );
+      expect(page1.nextCursor).toBeDefined();
+
+      const page2 = await connector.fetchRecords(page1.nextCursor);
+      expect(page2.nextCursor).toBeDefined();
+
+      const page3 = await connector.fetchRecords(page2.nextCursor);
+      expect(page3.nextCursor).toBeUndefined();
+
+      // ALL THREE requests must carry the incremental filter -- this is the
+      // exact bug being fixed: page 2 previously dropped it entirely.
+      for (const entry of server.requestLog) {
+        expect(entry.url).toContain(
+          "updated_since=2026-01-01T00%3A00%3A00.000Z",
+        );
+      }
+      expect(server.requestLog).toHaveLength(3);
+    });
   });
 
   describe("testConnection", () => {
@@ -229,7 +337,7 @@ describe("RestApiConnector", () => {
       expect(result.message).toMatch(/401/);
     });
 
-    it("never throws on connection refused (nothing listening)", async () => {
+    it("never throws on connection refused, and does NOT wait out any retry backoff (fast, no-retry ping)", async () => {
       // Bind and immediately close to get a guaranteed-free port with nothing listening.
       server = new MockHttpServer((_req, res) => res.end());
       const deadPort = await server.listen();
@@ -237,11 +345,32 @@ describe("RestApiConnector", () => {
 
       const connector = new RestApiConnector(
         baseConfig(`http://127.0.0.1:${deadPort}/records`),
-        instantRetryClient(),
       );
+      const start = Date.now();
       const result = await connector.testConnection();
+
       expect(result.ok).toBe(false);
       expect(typeof result.message).toBe("string");
+      // A retried connector (1 + 3 attempts with 1s/3s/9s backoff) would take
+      // >13s here; testConnection's ping path must not retry at all.
+      expect(Date.now() - start).toBeLessThan(2000);
+    });
+
+    it("requests limit=1, not a full page, to avoid pulling real records into memory just to check reachability", async () => {
+      server = new MockHttpServer((_req, res) => {
+        res.writeHead(200, { "Content-Type": "application/json" });
+        res.end(JSON.stringify({ data: [{ id: 1 }] }));
+      });
+      port = await server.listen();
+      baseUrl = `http://127.0.0.1:${port}/records`;
+      const connector = new RestApiConnector(
+        baseConfig(baseUrl, { pageSize: 100 }),
+      );
+
+      await connector.testConnection();
+
+      expect(server.requestLog[0]?.url).toContain("limit=1");
+      expect(server.requestLog[0]?.url).not.toContain("limit=100");
     });
   });
 
@@ -262,12 +391,7 @@ describe("RestApiConnector", () => {
         "Bearer ROTATE_ME_SECRET",
       );
 
-      // Positive control: the credential really is a distinguishable literal
-      // (not e.g. undefined), so the negative checks below are meaningful.
-      expect("ROTATE_ME_SECRET").toHaveLength(16);
-
       expect(JSON.stringify(connector)).not.toContain("ROTATE_ME_SECRET");
-      expect(Object.keys(connector)).not.toContain("credential");
       const result = await connector.testConnection();
       expect(JSON.stringify(result)).not.toContain("ROTATE_ME_SECRET");
       const schema = await connector.discoverSchema();
@@ -304,6 +428,19 @@ describe("RestApiConnector", () => {
       );
       await connector.fetchRecords();
       expect(server.requestLog[0]?.headers.authorization).toBeUndefined();
+    });
+  });
+
+  describe("dependency injection of the HTTP client", () => {
+    it("accepts an injected ReadOnlyHttpClient (used by other tests to skip real retry delays)", async () => {
+      server = new MockHttpServer((_req, res) => res.end());
+      port = await server.listen();
+      const client = new ReadOnlyHttpClient(() => Promise.resolve());
+      const connector = new RestApiConnector(
+        baseConfig(`http://127.0.0.1:${port}/records`),
+        client,
+      );
+      expect(connector).toBeInstanceOf(RestApiConnector);
     });
   });
 });

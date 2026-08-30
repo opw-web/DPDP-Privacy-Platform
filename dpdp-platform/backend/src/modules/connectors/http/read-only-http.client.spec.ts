@@ -1,12 +1,14 @@
 import { Logger } from "@nestjs/common";
 import {
+  defaultSleep,
   ReadOnlyHttpClient,
   ReadOnlyHttpMethodError,
   ReadOnlyHttpStatusError,
+  ReadOnlyHttpTimeoutError,
   RETRY_BACKOFF_MS,
   stripQuery,
-} from "./read-only-http-client";
-import { MockHttpServer, jsonHandler } from "./test-support/mock-http-server";
+} from "./read-only-http.client";
+import { MockHttpServer, jsonHandler } from "../test-support/mock-http-server";
 
 describe("ReadOnlyHttpClient", () => {
   let server: MockHttpServer;
@@ -21,7 +23,6 @@ describe("ReadOnlyHttpClient", () => {
 
   afterEach(async () => {
     await server.close();
-    jest.useRealTimers();
   });
 
   describe("GET-only guard (Check 3)", () => {
@@ -118,6 +119,21 @@ describe("ReadOnlyHttpClient", () => {
       expect(recordedDelays).toEqual([]);
     });
 
+    it("does NOT retry a 301/302 either -- treated like a 4xx, not a transient server error", async () => {
+      server.setHandler((_req, res) => {
+        res.writeHead(302, { Location: "http://elsewhere.example/moved" });
+        res.end();
+      });
+      const client = new ReadOnlyHttpClient(() => Promise.resolve());
+
+      await expect(client.request({ method: "GET", url })).rejects.toThrow(
+        ReadOnlyHttpStatusError,
+      );
+      expect(server.requestLog.filter((r) => r.method === "GET").length).toBe(
+        1,
+      );
+    });
+
     it("control: a 500 without recovery still counts distinctly from a 401 (4 vs 1)", async () => {
       const instantSleep = () => Promise.resolve();
       server.setHandler(jsonHandler(500, { error: "boom" }));
@@ -132,6 +148,17 @@ describe("ReadOnlyHttpClient", () => {
       ).length;
       expect(fiveHundredCount).toBe(4);
       expect(fiveHundredCount).not.toBe(1);
+    });
+
+    it("succeeds without retrying when the first response is 200", async () => {
+      server.setHandler(jsonHandler(200, { data: [] }));
+      const client = new ReadOnlyHttpClient();
+
+      await client.request({ method: "GET", url });
+
+      expect(server.requestLog.filter((r) => r.method === "GET").length).toBe(
+        1,
+      );
     });
 
     it("the recorded delays are the SAME constant production retries use, not a coincidental literal", async () => {
@@ -155,15 +182,49 @@ describe("ReadOnlyHttpClient", () => {
       expect(recordedDelays).toEqual([...RETRY_BACKOFF_MS]);
     });
 
-    it("succeeds without retrying when the first response is 200", async () => {
-      server.setHandler(jsonHandler(200, { data: [] }));
-      const client = new ReadOnlyHttpClient();
+    it("maxRetries: 0 makes exactly one attempt regardless of status", async () => {
+      server.setHandler(jsonHandler(500, { error: "boom" }));
+      const client = new ReadOnlyHttpClient(() => Promise.resolve());
 
-      await client.request({ method: "GET", url });
+      await expect(
+        client.request({ method: "GET", url, maxRetries: 0 }),
+      ).rejects.toThrow(ReadOnlyHttpStatusError);
 
       expect(server.requestLog.filter((r) => r.method === "GET").length).toBe(
         1,
       );
+    });
+  });
+
+  describe("default sleepFn", () => {
+    it("the default sleep function genuinely waits (not a no-op)", async () => {
+      const start = Date.now();
+      await defaultSleep(20);
+      expect(Date.now() - start).toBeGreaterThanOrEqual(15);
+    });
+  });
+
+  describe("overall deadline (not an idle-socket timeout)", () => {
+    it("aborts a response that keeps trickling data past the deadline, even though the socket stays active", async () => {
+      server.setHandler((_req, res) => {
+        res.writeHead(200, { "Content-Type": "application/json" });
+        const interval = setInterval(() => {
+          res.write(" ");
+        }, 30);
+        // Never call res.end(): the connection stays "active" via a steady
+        // trickle for far longer than the deadline below. Clean up on close.
+        res.on("close", () => clearInterval(interval));
+      });
+
+      const client = new ReadOnlyHttpClient(() => Promise.resolve());
+      const start = Date.now();
+
+      await expect(
+        client.request({ method: "GET", url, timeoutMs: 150, maxRetries: 0 }),
+      ).rejects.toThrow(ReadOnlyHttpTimeoutError);
+
+      // Must fail close to the 150ms deadline, not linger for the trickle.
+      expect(Date.now() - start).toBeLessThan(1000);
     });
   });
 

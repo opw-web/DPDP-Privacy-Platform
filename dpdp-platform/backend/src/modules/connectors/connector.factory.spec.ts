@@ -2,16 +2,33 @@ import { AuthType } from "@prisma/client";
 import {
   ConnectorFactory,
   type DataSourceRowForConnector,
-} from "./connector-factory";
-import { RestApiConnector } from "./rest-api-connector";
+} from "./connector.factory";
+import { RestApiConnector } from "./rest-api.connector";
 import { MockHttpServer } from "./test-support/mock-http-server";
 
 describe("ConnectorFactory", () => {
   let server: MockHttpServer;
   let port: number;
+  let factory: ConnectorFactory;
+
+  beforeEach(() => {
+    factory = new ConnectorFactory();
+  });
 
   afterEach(async () => {
-    await server.close();
+    if (server) {
+      await server.close();
+    }
+  });
+
+  it("is injectable (instance method, not static) so Task 12 can use constructor DI instead of jest.spyOn(Class, method)", () => {
+    // A static factory forces callers to reach for jest.spyOn(ConnectorFactory,
+    // 'create') to substitute it in a test -- exactly the "green for the wrong
+    // reason" pattern this project has been burned by before. An instance
+    // method on an @Injectable() class lets Task 12 inject a test double via
+    // its constructor instead.
+    expect(typeof factory.create).toBe("function");
+    expect(typeof ConnectorFactory.prototype.create).toBe("function");
   });
 
   it("builds a RestApiConnector from a data source row + a separately-supplied decrypted credential", async () => {
@@ -33,7 +50,7 @@ describe("ConnectorFactory", () => {
       incrementalParam: null,
     };
 
-    const connector = ConnectorFactory.create(row, "DECRYPTED_TOKEN_VALUE");
+    const connector = factory.create(row, "DECRYPTED_TOKEN_VALUE");
     expect(connector).toBeInstanceOf(RestApiConnector);
 
     const result = await connector.fetchRecords();
@@ -41,11 +58,6 @@ describe("ConnectorFactory", () => {
     expect(server.requestLog[0]?.headers.authorization).toBe(
       "Bearer DECRYPTED_TOKEN_VALUE",
     );
-
-    // The factory's input type structurally excludes credentialCipher -- this
-    // is enforced at compile time (see DataSourceRowForConnector), and the row
-    // object built above proves a real call site never needs to pass it in.
-    expect(Object.keys(row)).not.toContain("credentialCipher");
   });
 
   it("never logs or returns the decrypted credential it was given", async () => {
@@ -67,7 +79,7 @@ describe("ConnectorFactory", () => {
       incrementalParam: null,
     };
 
-    const connector = ConnectorFactory.create(row, "SUPER_SECRET_KEY");
+    const connector = factory.create(row, "SUPER_SECRET_KEY");
     const testResult = await connector.testConnection();
 
     expect(JSON.stringify(testResult)).not.toContain("SUPER_SECRET_KEY");

@@ -15,6 +15,7 @@ import { AuthModule } from "./modules/auth/auth.module";
 import { OrganizationsModule } from "./modules/organizations/organizations.module";
 import { EmployeesModule } from "./modules/employees/employees.module";
 import { PurposesModule } from "./modules/purposes/purposes.module";
+import { ConnectorsModule } from "./modules/connectors/connectors.module";
 import { JwtEmployeeGuard } from "./common/guards/jwt-employee.guard";
 import { PermissionsGuard } from "./common/guards/permissions.guard";
 import { MaskingModule } from "./common/masking/masking.module";
@@ -50,6 +51,7 @@ import { MaskingModule } from "./common/masking/masking.module";
     OrganizationsModule,
     EmployeesModule,
     PurposesModule,
+    ConnectorsModule,
     MaskingModule,
     HealthModule,
   ],
