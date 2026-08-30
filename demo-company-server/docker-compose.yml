@@ -1,0 +1,9 @@
+services:
+  demo-company-server:
+    build: .
+    container_name: demo-company-server
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
