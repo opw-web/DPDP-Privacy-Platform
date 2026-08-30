@@ -57,7 +57,34 @@ describe("CryptoService", () => {
 
     // NEGATIVE: flipping a single byte of ciphertext must make
     // decryption throw -- never silently return corrupted plaintext.
-    expect(() => service.decrypt(tampered)).toThrow();
+    // Minor fix round 1: `toThrow()` alone is vacuous here -- it would
+    // pass just as well if `decrypt()` mistakenly routed EVERY tampered
+    // input through the format check and threw `MalformedCiphertextError`
+    // instead of genuinely failing GCM's auth-tag verification. The
+    // thrown error is captured and asserted NOT to be
+    // `MalformedCiphertextError`, pinning that this failure is the tag
+    // check in `decipher.final()`, not the format guard.
+    let caught: unknown;
+    try {
+      service.decrypt(tampered);
+    } catch (err) {
+      caught = err;
+    }
+    // `caught instanceof Error` is unreliable here: Node's crypto engine
+    // raises this specific failure as a native error constructed in the
+    // host runtime's realm, which is NOT `===` to the `Error` binding
+    // Jest's per-file vm context sees, so a plain `instanceof Error`
+    // check on it is flaky by Jest/Node realm mechanics, not by
+    // anything CryptoService does. Instead: assert it is throwable at
+    // all (truthy, with a string `message`), and -- the actual pin for
+    // this test -- that it is NOT `MalformedCiphertextError`, since
+    // `MalformedCiphertextError` IS defined in this same module/realm
+    // and `instanceof` against it is reliable. Together these rule out
+    // both "nothing was thrown" and "the wrong kind of error was
+    // thrown" (the format guard swallowing a genuine tamper).
+    expect(caught).toBeTruthy();
+    expect(typeof (caught as { message?: unknown }).message).toBe("string");
+    expect(caught).not.toBeInstanceOf(MalformedCiphertextError);
   });
 
   it("rejects a ciphertext string that isn't in the iv.authTag.data format", () => {

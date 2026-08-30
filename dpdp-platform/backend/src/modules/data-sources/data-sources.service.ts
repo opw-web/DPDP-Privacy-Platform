@@ -1,9 +1,10 @@
 import {
   BadRequestException,
+  ConflictException,
   Injectable,
   NotFoundException,
 } from "@nestjs/common";
-import type { Prisma } from "@prisma/client";
+import { Prisma } from "@prisma/client";
 import { PrismaService } from "../../common/prisma/prisma.service";
 import { AuditService } from "../../common/audit/audit.service";
 import { CryptoService } from "../../common/crypto/crypto.service";
@@ -77,6 +78,24 @@ export type PublicDataSourceField = Prisma.DataSourceFieldGetPayload<{
   select: typeof DATA_SOURCE_FIELD_SELECT;
 }>;
 
+/**
+ * `DataSource` has `@@unique([organizationId, name])`. Pre-checked in
+ * both `create()` and `update()` for a clean 409 on the common path, and
+ * re-caught as P2002 below as the race backstop -- same convention as
+ * `purposes.service.ts`'s `duplicateCodeMessage`/`isUniqueConstraintViolation`:
+ * there is no `PrismaClientKnownRequestError` -> HTTP filter in this
+ * codebase, so an uncaught P2002 would otherwise surface as a 500.
+ */
+function duplicateNameMessage(name: string): string {
+  return `A data source named "${name}" already exists in this organization.`;
+}
+
+function isUniqueConstraintViolation(err: unknown): boolean {
+  return (
+    err instanceof Prisma.PrismaClientKnownRequestError && err.code === "P2002"
+  );
+}
+
 export interface TestConnectionResult {
   ok: boolean;
   message: string;
@@ -141,6 +160,14 @@ export class DataSourcesService {
       dto.publiclyAvailableJustification,
     );
 
+    const nameConflict = await this.prisma.scoped.dataSource.findFirst({
+      where: { name: dto.name },
+      select: { id: true },
+    });
+    if (nameConflict) {
+      throw new ConflictException(duplicateNameMessage(dto.name));
+    }
+
     // Encrypted BEFORE the transaction opens, and the plaintext
     // (`dto.credential`) is never referenced again after this block --
     // only `credentialCipher` (opaque ciphertext) and `credentialHint`
@@ -153,32 +180,40 @@ export class DataSourcesService {
     }
 
     return this.prisma.scoped.$transaction(async (tx) => {
-      const created = await tx.dataSource.create({
-        data: {
-          name: dto.name,
-          systemType: dto.systemType,
-          baseUrl: dto.baseUrl,
-          recordsPath: dto.recordsPath,
-          externalIdField: dto.externalIdField,
-          authType: dto.authType ?? "BEARER",
-          credentialCipher,
-          credentialHint,
-          supportsIncremental: dto.supportsIncremental ?? false,
-          incrementalParam: dto.incrementalParam ?? null,
-          paginationStyle: dto.paginationStyle ?? "PAGE",
-          pageSize: dto.pageSize ?? 100,
-          syncFrequency: dto.syncFrequency ?? "MANUAL",
-          containsOnlyPubliclyAvailableData:
-            dto.containsOnlyPubliclyAvailableData ?? false,
-          publiclyAvailableJustification:
-            dto.publiclyAvailableJustification ?? null,
-          hostingCountry: dto.hostingCountry ?? "IN",
-          // organizationId deliberately omitted -- the tenant-scoping
-          // extension supplies it at runtime (same convention as
-          // EmployeesService.create).
-        } as never,
-        select: DATA_SOURCE_PUBLIC_SELECT,
-      });
+      let created: PublicDataSource;
+      try {
+        created = await tx.dataSource.create({
+          data: {
+            name: dto.name,
+            systemType: dto.systemType,
+            baseUrl: dto.baseUrl,
+            recordsPath: dto.recordsPath,
+            externalIdField: dto.externalIdField,
+            authType: dto.authType ?? "BEARER",
+            credentialCipher,
+            credentialHint,
+            supportsIncremental: dto.supportsIncremental ?? false,
+            incrementalParam: dto.incrementalParam ?? null,
+            paginationStyle: dto.paginationStyle ?? "PAGE",
+            pageSize: dto.pageSize ?? 100,
+            syncFrequency: dto.syncFrequency ?? "MANUAL",
+            containsOnlyPubliclyAvailableData:
+              dto.containsOnlyPubliclyAvailableData ?? false,
+            publiclyAvailableJustification:
+              dto.publiclyAvailableJustification ?? null,
+            hostingCountry: dto.hostingCountry ?? "IN",
+            // organizationId deliberately omitted -- the tenant-scoping
+            // extension supplies it at runtime (same convention as
+            // EmployeesService.create).
+          } as never,
+          select: DATA_SOURCE_PUBLIC_SELECT,
+        });
+      } catch (err) {
+        if (isUniqueConstraintViolation(err)) {
+          throw new ConflictException(duplicateNameMessage(dto.name));
+        }
+        throw err;
+      }
 
       await this.auditService.record(tx, {
         action: "DATA_SOURCE_CREATED",
@@ -204,8 +239,17 @@ export class DataSourcesService {
     id: string,
     dto: UpdateDataSourceDto,
   ): Promise<PublicDataSource> {
+    // Minor fix round 1: narrowed to the two fields this method actually
+    // reads. The previous unqualified `findFirst` pulled the FULL row --
+    // `credentialCipher` included -- into memory just to check two
+    // unrelated booleans/strings, an unnecessary widening of the one
+    // column this whole task exists to contain.
     const existing = await this.prisma.scoped.dataSource.findFirst({
       where: { id },
+      select: {
+        containsOnlyPubliclyAvailableData: true,
+        publiclyAvailableJustification: true,
+      },
     });
     if (!existing) {
       throw new NotFoundException(`Data source "${id}" not found.`);
@@ -223,6 +267,16 @@ export class DataSourcesService {
       effectiveJustification,
     );
 
+    if (dto.name !== undefined) {
+      const nameConflict = await this.prisma.scoped.dataSource.findFirst({
+        where: { name: dto.name, id: { not: id } },
+        select: { id: true },
+      });
+      if (nameConflict) {
+        throw new ConflictException(duplicateNameMessage(dto.name));
+      }
+    }
+
     // Credential rotation: a value here means "replace it now." Leaving
     // it out means `credentialCipher`/`credentialHint` stay `undefined`
     // below, which Prisma's `update` treats as "do not touch this
@@ -237,30 +291,62 @@ export class DataSourcesService {
       credentialHint = dto.credential.slice(-4);
     }
 
+    const updateData: Prisma.DataSourceUpdateInput = {
+      name: dto.name,
+      systemType: dto.systemType,
+      baseUrl: dto.baseUrl,
+      recordsPath: dto.recordsPath,
+      externalIdField: dto.externalIdField,
+      authType: dto.authType,
+      credentialCipher,
+      credentialHint,
+      supportsIncremental: dto.supportsIncremental,
+      incrementalParam: dto.incrementalParam,
+      paginationStyle: dto.paginationStyle,
+      pageSize: dto.pageSize,
+      syncFrequency: dto.syncFrequency,
+      containsOnlyPubliclyAvailableData: dto.containsOnlyPubliclyAvailableData,
+      publiclyAvailableJustification: dto.publiclyAvailableJustification,
+      hostingCountry: dto.hostingCountry,
+    };
+    // Bug found while testing `credential: null` (a documented no-op --
+    // see the DTO comment): when EVERY key above is `undefined` (a PATCH
+    // whose only field is `credential: null`, or an empty `{}` body),
+    // the tenant extension's `update()` override degrades to
+    // `updateMany({ where: pkWhere, data: {} })` to stay tenant-safe (see
+    // that file's own comment on why `update` cannot call the real
+    // `update` directly). Verified directly against Postgres: Prisma's
+    // `updateMany` with an all-undefined `data` object returns `{ count:
+    // 0 }` even though the row genuinely exists and matches `where` --
+    // there is nothing to SET, so nothing is reported as touched. The
+    // extension reads `count === 0` as "the row must have been deleted
+    // mid-request" and throws P2025, surfacing here as an uncaught 500.
+    // Detected and routed around a real Prisma `update()`/`updateMany()`
+    // call entirely for this one case, straight to a plain tenant-scoped
+    // read -- correct because there is nothing to write.
+    const hasEffectiveChange = Object.values(updateData).some(
+      (value) => value !== undefined,
+    );
+
     return this.prisma.scoped.$transaction(async (tx) => {
-      const updated = await tx.dataSource.update({
-        where: { id },
-        data: {
-          name: dto.name,
-          systemType: dto.systemType,
-          baseUrl: dto.baseUrl,
-          recordsPath: dto.recordsPath,
-          externalIdField: dto.externalIdField,
-          authType: dto.authType,
-          credentialCipher,
-          credentialHint,
-          supportsIncremental: dto.supportsIncremental,
-          incrementalParam: dto.incrementalParam,
-          paginationStyle: dto.paginationStyle,
-          pageSize: dto.pageSize,
-          syncFrequency: dto.syncFrequency,
-          containsOnlyPubliclyAvailableData:
-            dto.containsOnlyPubliclyAvailableData,
-          publiclyAvailableJustification: dto.publiclyAvailableJustification,
-          hostingCountry: dto.hostingCountry,
-        },
-        select: DATA_SOURCE_PUBLIC_SELECT,
-      });
+      let updated: PublicDataSource;
+      try {
+        updated = hasEffectiveChange
+          ? await tx.dataSource.update({
+              where: { id },
+              data: updateData,
+              select: DATA_SOURCE_PUBLIC_SELECT,
+            })
+          : await tx.dataSource.findFirstOrThrow({
+              where: { id },
+              select: DATA_SOURCE_PUBLIC_SELECT,
+            });
+      } catch (err) {
+        if (isUniqueConstraintViolation(err)) {
+          throw new ConflictException(duplicateNameMessage(dto.name ?? ""));
+        }
+        throw err;
+      }
 
       await this.auditService.record(tx, {
         action: "DATA_SOURCE_UPDATED",
@@ -289,8 +375,12 @@ export class DataSourcesService {
   }
 
   async remove(id: string): Promise<void> {
+    // Same narrowing as `update()`'s `existing` lookup -- only `name` is
+    // used below (for the deletion audit event), so there is no reason
+    // to pull `credentialCipher` into memory here either.
     const existing = await this.prisma.scoped.dataSource.findFirst({
       where: { id },
+      select: { name: true },
     });
     if (!existing) {
       throw new NotFoundException(`Data source "${id}" not found.`);
@@ -329,9 +419,25 @@ export class DataSourcesService {
       throw new NotFoundException(`Data source "${id}" not found.`);
     }
 
-    const credential = row.credentialCipher
-      ? this.cryptoService.decrypt(row.credentialCipher)
-      : null;
+    // Minor fix round 1: a bare 500 here (e.g. after ENCRYPTION_KEY is
+    // rotated without re-entering every credential) gave an operator
+    // nothing to act on. Caught and rethrown naming the data source and
+    // the concrete next step, instead of leaking CryptoService's
+    // internal error verbatim.
+    let credential: string | null = null;
+    if (row.credentialCipher) {
+      try {
+        credential = this.cryptoService.decrypt(row.credentialCipher);
+      } catch (err) {
+        throw new BadRequestException(
+          `Data source "${row.name}" (${id}) has a credential that could ` +
+            "not be decrypted -- this usually means ENCRYPTION_KEY has " +
+            "changed since it was stored. Re-enter its credential via " +
+            "PATCH /api/data-sources/:id before retrying.",
+          { cause: err instanceof Error ? err : undefined },
+        );
+      }
+    }
 
     const dataSourceRow: DataSourceRowForConnector = {
       name: row.name,
@@ -369,14 +475,39 @@ export class DataSourcesService {
    * `DataSourceField` rows (upsert by `[dataSourceId, fieldName]`, so a
    * re-run refreshes `sampleValue`/`inferredType` in place rather than
    * duplicating rows).
+   *
+   * Important fix round 1: a re-run used to overwrite `sampleValue`
+   * unconditionally on the update branch, which silently UNDID
+   * `rescrubFieldSample()` the next time an operator clicked "Discover
+   * schema" -- spec line 733's re-scrub guarantee would otherwise expire
+   * on the very next discovery run. Fixed by consulting
+   * `SourceFieldMapping.containsPersonalData` (Task 13's mapping table,
+   * already in the schema) for this data source BEFORE writing: a field
+   * currently mapped `containsPersonalData: true` gets its
+   * `inferredType` refreshed but its `sampleValue` left exactly as it
+   * is (scrubbed to `null`, or whatever it already was) -- never
+   * re-populated from the live read. A brand-new field on the CREATE
+   * branch can never already be marked personal (no mapping exists yet
+   * for a field discovery has not seen before), so writing its first
+   * sample there is always safe.
    */
   async discoverSchema(id: string): Promise<PublicDataSourceField[]> {
     const connector = await this.buildConnector(id);
     const discovered = await connector.discoverSchema();
 
     return this.prisma.scoped.$transaction(async (tx) => {
+      const personalDataFields = new Set(
+        (
+          await tx.sourceFieldMapping.findMany({
+            where: { dataSourceId: id, containsPersonalData: true },
+            select: { sourceField: true },
+          })
+        ).map((mapping) => mapping.sourceField),
+      );
+
       const rows: PublicDataSourceField[] = [];
       for (const field of discovered) {
+        const isKnownPersonalData = personalDataFields.has(field.fieldName);
         const row = await tx.dataSourceField.upsert({
           where: {
             dataSourceId_fieldName: {
@@ -391,8 +522,13 @@ export class DataSourcesService {
             inferredType: field.inferredType,
           } as never,
           update: {
-            sampleValue: field.sampleValue,
             inferredType: field.inferredType,
+            // `sampleValue` is deliberately OMITTED (not set to
+            // `undefined` via a ternary that still writes the key) for a
+            // field already known to contain personal data -- Prisma
+            // leaves an omitted key untouched, so a prior scrub survives
+            // this re-run.
+            ...(isKnownPersonalData ? {} : { sampleValue: field.sampleValue }),
           },
           select: DATA_SOURCE_FIELD_SELECT,
         });

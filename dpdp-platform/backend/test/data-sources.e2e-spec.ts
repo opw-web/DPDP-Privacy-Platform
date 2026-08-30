@@ -10,6 +10,8 @@ import {
   MockHttpServer,
   jsonHandler,
 } from "../src/modules/connectors/test-support/mock-http-server";
+import { DataSourcesService } from "../src/modules/data-sources/data-sources.service";
+import { TenantContext } from "../src/common/tenant/tenant-context";
 
 /**
  * Task 12 gate (Check 14, spec lines 1073-1076): credentials are
@@ -133,10 +135,16 @@ describe("Data sources (e2e)", () => {
 
   /**
    * Walks a full JSON-decoded response tree and fails if any key is
-   * `credentialCipher` (case-insensitive) OR any string value equals a
-   * known-forbidden literal (the raw cipher pulled straight from
-   * Postgres for the same row). Used on every route that can return a
-   * data source.
+   * `credentialCipher` (case-insensitive) OR any string value CONTAINS a
+   * forbidden literal. Important fix round 1: this used to be checked
+   * with `===` against ONLY the stored ciphertext -- so a regression that
+   * echoed the raw PLAINTEXT credential back to the client (precisely
+   * the Task 5 `passwordHash`-in-response shape this task exists to
+   * avoid), or embedded either secret inside a longer string (an error
+   * message, a URL), would have passed every assertion in this file.
+   * Every call site below now passes BOTH the stored ciphertext AND the
+   * plaintext credential that was actually sent, and the comparison is
+   * `.includes()`, not `===`.
    */
   function assertNoCipherInTree(
     value: unknown,
@@ -152,9 +160,9 @@ describe("Data sources (e2e)", () => {
     }
     if (typeof value === "string") {
       for (const forbidden of forbiddenLiterals) {
-        if (forbidden.length > 0 && value === forbidden) {
+        if (forbidden.length > 0 && value.includes(forbidden)) {
           throw new Error(
-            `Found forbidden ciphertext literal at ${path}: ${value}`,
+            `Found forbidden secret literal "${forbidden}" at ${path}: ${value}`,
           );
         }
       }
@@ -251,16 +259,21 @@ describe("Data sources (e2e)", () => {
     // The stored cipher is unreadable base64, not the plaintext credential.
     expect(cipher).not.toContain(payload.credential);
 
+    // Both secrets are checked at every call site below (Important fix
+    // round 1): the ciphertext AND the plaintext credential that was
+    // actually sent.
+    const forbidden = [cipher as string, payload.credential];
+
     // NEGATIVE, walking the full response tree: no credentialCipher key,
-    // and the real cipher string never appears as a value.
-    assertNoCipherInTree(createRes.body, [cipher as string]);
+    // and neither the cipher nor the plaintext ever appears as a value.
+    assertNoCipherInTree(createRes.body, forbidden);
 
     const detailRes = await request(app.getHttpServer())
       .get(`/api/data-sources/${createRes.body.id}`)
       .set("Authorization", `Bearer ${accessToken}`);
     expect(detailRes.status).toBe(200);
     expect(detailRes.body.credentialHint).toBe("ABCD");
-    assertNoCipherInTree(detailRes.body, [cipher as string]);
+    assertNoCipherInTree(detailRes.body, forbidden);
 
     const listRes = await request(app.getHttpServer())
       .get("/api/data-sources")
@@ -272,15 +285,19 @@ describe("Data sources (e2e)", () => {
     );
     expect(listed).toBeDefined();
     expect(listed?.["credentialHint"]).toBe("ABCD");
-    assertNoCipherInTree(listRes.body, [cipher as string]);
+    assertNoCipherInTree(listRes.body, forbidden);
   });
 
   it("PATCH without a credential leaves the stored cipher byte-for-byte unchanged; PATCH with a credential rotates it and writes DATA_SOURCE_CREDENTIALS_ROTATED", async () => {
     const { accessToken, organizationId } = await createManager();
+    const initialPayload = validPayload();
+    const initialCredential = initialPayload.credential;
+    const newCredential = "brand-new-secret-WXYZ";
+
     const createRes = await request(app.getHttpServer())
       .post("/api/data-sources")
       .set("Authorization", `Bearer ${accessToken}`)
-      .send(validPayload());
+      .send(initialPayload);
     const id = createRes.body.id as string;
     const cipherBeforeAnyPatch = await getStoredCipher(id);
 
@@ -293,15 +310,46 @@ describe("Data sources (e2e)", () => {
     expect(noCredPatch.body.hostingCountry).toBe("SG");
     const cipherAfterNoCredPatch = await getStoredCipher(id);
     expect(cipherAfterNoCredPatch).toBe(cipherBeforeAnyPatch);
+    assertNoCipherInTree(noCredPatch.body, [
+      cipherAfterNoCredPatch as string,
+      initialCredential,
+    ]);
+
+    // Minor fix round 1: `credential: null` must be a no-op (same as
+    // omitting the field entirely), not silently accepted as "clear the
+    // credential" -- and it must NOT throw either. This is only correct
+    // by accident today (falls through the `if (dto.credential)`
+    // truthiness check via `@IsOptional()`), so it is pinned explicitly.
+    const nullCredPatch = await request(app.getHttpServer())
+      .patch(`/api/data-sources/${id}`)
+      .set("Authorization", `Bearer ${accessToken}`)
+      .send({ credential: null });
+    expect(nullCredPatch.status).toBe(200);
+    const cipherAfterNullCredPatch = await getStoredCipher(id);
+    expect(cipherAfterNullCredPatch).toBe(cipherAfterNoCredPatch);
+
+    // Minor fix round 1: `credential: ""` is a validation error (400),
+    // never a silent rotation to an empty credential.
+    const emptyCredPatch = await request(app.getHttpServer())
+      .patch(`/api/data-sources/${id}`)
+      .set("Authorization", `Bearer ${accessToken}`)
+      .send({ credential: "" });
+    expect(emptyCredPatch.status).toBe(400);
+    const cipherAfterEmptyCredPatch = await getStoredCipher(id);
+    expect(cipherAfterEmptyCredPatch).toBe(cipherAfterNoCredPatch);
 
     // POSITIVE CONTROL: sending a new credential DOES change the stored cipher.
     const rotatePatch = await request(app.getHttpServer())
       .patch(`/api/data-sources/${id}`)
       .set("Authorization", `Bearer ${accessToken}`)
-      .send({ credential: "brand-new-secret-WXYZ" });
+      .send({ credential: newCredential });
     expect(rotatePatch.status).toBe(200);
     expect(rotatePatch.body.credentialHint).toBe("WXYZ");
-    assertNoCipherInTree(rotatePatch.body, [cipherAfterNoCredPatch as string]);
+    assertNoCipherInTree(rotatePatch.body, [
+      cipherAfterNoCredPatch as string,
+      initialCredential,
+      newCredential,
+    ]);
     const cipherAfterRotation = await getStoredCipher(id);
     expect(cipherAfterRotation).not.toBe(cipherAfterNoCredPatch);
 
@@ -314,15 +362,15 @@ describe("Data sources (e2e)", () => {
     });
     expect(rotationEvents).toHaveLength(1);
     expect(JSON.stringify(rotationEvents[0]?.metadata)).not.toContain(
-      "brand-new-secret-WXYZ",
+      newCredential,
     );
 
-    // NEGATIVE control on the audit trail: the plain PATCH above did not
-    // also write a rotation event (only the credentialed one did).
+    // NEGATIVE control on the audit trail: the plain PATCHes above did
+    // not also write a rotation event (only the credentialed one did).
     const updateEvents = await prisma.auditEvent.findMany({
       where: { organizationId, action: "DATA_SOURCE_UPDATED", resourceId: id },
     });
-    expect(updateEvents.length).toBeGreaterThanOrEqual(2);
+    expect(updateEvents.length).toBeGreaterThanOrEqual(3);
   });
 
   it("containsOnlyPubliclyAvailableData=true without a justification returns 400 naming the field; supplying one succeeds", async () => {
@@ -378,11 +426,12 @@ describe("Data sources (e2e)", () => {
   it("POST /api/data-sources/:id/test-connection updates status to CONNECTED on success and to ERROR with lastError on failure", async () => {
     const { accessToken } = await createManager();
     const { baseUrl: goodUrl } = await startRecordsServer([{ id: "1" }]);
+    const payload = validPayload({ baseUrl: goodUrl });
 
     const createRes = await request(app.getHttpServer())
       .post("/api/data-sources")
       .set("Authorization", `Bearer ${accessToken}`)
-      .send(validPayload({ baseUrl: goodUrl }));
+      .send(payload);
     const id = createRes.body.id as string;
 
     // POSITIVE CONTROL: a reachable mock server flips status to CONNECTED.
@@ -393,7 +442,10 @@ describe("Data sources (e2e)", () => {
     expect(okRes.body.ok).toBe(true);
     expect(okRes.body.dataSource.status).toBe("CONNECTED");
     expect(okRes.body.dataSource.lastError).toBeNull();
-    assertNoCipherInTree(okRes.body, [(await getStoredCipher(id)) as string]);
+    assertNoCipherInTree(okRes.body, [
+      (await getStoredCipher(id)) as string,
+      payload.credential,
+    ]);
 
     // NEGATIVE: pointing the same data source at a closed port fails and
     // records lastError.
@@ -416,6 +468,11 @@ describe("Data sources (e2e)", () => {
     expect(
       (failRes.body.dataSource.lastError as string).length,
     ).toBeGreaterThan(0);
+    // Minor fix round 1: lastError is a connectivity-failure message
+    // (e.g. ECONNREFUSED) -- it must never carry the credential.
+    expect(failRes.body.dataSource.lastError as string).not.toContain(
+      payload.credential,
+    );
   });
 
   it("POST /api/data-sources/:id/discover-schema persists DataSourceField rows readable via GET /:id/fields", async () => {
@@ -449,6 +506,132 @@ describe("Data sources (e2e)", () => {
       (f) => f["fieldName"] === "email",
     );
     expect(emailField?.["sampleValue"]).toBe("person@example.com");
+  });
+
+  it("creating a second data source with a duplicate name in the same organization returns 409; the same name in a DIFFERENT organization succeeds", async () => {
+    const { accessToken } = await createManager();
+    const name = `Duplicate Source ${randomUUID()}`;
+
+    const firstRes = await request(app.getHttpServer())
+      .post("/api/data-sources")
+      .set("Authorization", `Bearer ${accessToken}`)
+      .send(validPayload({ name }));
+    expect(firstRes.status).toBe(201);
+
+    // NEGATIVE: same org, same name.
+    const duplicateRes = await request(app.getHttpServer())
+      .post("/api/data-sources")
+      .set("Authorization", `Bearer ${accessToken}`)
+      .send(validPayload({ name }));
+    expect(duplicateRes.status).toBe(409);
+    expect(JSON.stringify(duplicateRes.body)).toContain(name);
+
+    // POSITIVE CONTROL: the identical name succeeds in a DIFFERENT
+    // organization -- proving the 409 above is the org-scoped
+    // `@@unique([organizationId, name])` constraint, not some other
+    // validation failure or a globally-unique-name bug.
+    const other = await createManager();
+    const otherOrgRes = await request(app.getHttpServer())
+      .post("/api/data-sources")
+      .set("Authorization", `Bearer ${other.accessToken}`)
+      .send(validPayload({ name }));
+    expect(otherOrgRes.status).toBe(201);
+
+    // PATCH is covered too: renaming a second source onto the first
+    // one's name, in the SAME org, is also a 409.
+    const secondRes = await request(app.getHttpServer())
+      .post("/api/data-sources")
+      .set("Authorization", `Bearer ${accessToken}`)
+      .send(validPayload());
+    const renameConflict = await request(app.getHttpServer())
+      .patch(`/api/data-sources/${secondRes.body.id}`)
+      .set("Authorization", `Bearer ${accessToken}`)
+      .send({ name });
+    expect(renameConflict.status).toBe(409);
+  });
+
+  it("Important fix round 1 regression: a field marked containsPersonalData keeps its scrubbed (null) sample across a re-run of discover-schema", async () => {
+    const { accessToken, organizationId } = await createManager();
+    const { baseUrl } = await startRecordsServer([
+      { id: "1", email: "person@example.com" },
+      { id: "2", email: "other@example.com" },
+    ]);
+
+    const createRes = await request(app.getHttpServer())
+      .post("/api/data-sources")
+      .set("Authorization", `Bearer ${accessToken}`)
+      .send(validPayload({ baseUrl }));
+    const id = createRes.body.id as string;
+
+    // First discovery populates a real sample from the live source.
+    const firstDiscover = await request(app.getHttpServer())
+      .post(`/api/data-sources/${id}/discover-schema`)
+      .set("Authorization", `Bearer ${accessToken}`);
+    expect(firstDiscover.status).toBe(201);
+
+    const beforeScrub = await prisma.dataSourceField.findFirstOrThrow({
+      where: { dataSourceId: id, fieldName: "email" },
+    });
+    expect(beforeScrub.sampleValue).toBe("person@example.com");
+
+    // Task 13's mapping side marks the field personal and calls the
+    // Task 12 scrub contract this service exposes.
+    await prisma.sourceFieldMapping.create({
+      data: {
+        organizationId,
+        dataSourceId: id,
+        sourceField: "email",
+        canonicalField: "EMAIL",
+        containsPersonalData: true,
+      },
+    });
+    // `rescrubFieldSample` is called here directly (Task 13's mapping
+    // endpoint doesn't exist yet), bypassing `TenantMiddleware` entirely --
+    // so this test binds the same `TenantContext.run(...)` a real request
+    // would, exactly like `access-log.e2e-spec.ts` does for the same
+    // no-route-yet reason. Without this wrapper the call throws
+    // `TenantContext.get() called with no tenant context bound` before it
+    // ever reaches the assertion below.
+    const dataSourcesService = app.get(DataSourcesService);
+    await TenantContext.run(
+      {
+        actorType: "EMPLOYEE",
+        organizationId,
+        actorId: null,
+        actorLabel: "test-runner",
+      },
+      () => dataSourcesService.rescrubFieldSample(id, "email"),
+    );
+
+    const afterScrub = await prisma.dataSourceField.findFirstOrThrow({
+      where: { dataSourceId: id, fieldName: "email" },
+    });
+    expect(afterScrub.sampleValue).toBeNull();
+
+    // THE REGRESSION TEST: re-running discover-schema must NOT write the
+    // live sample back over the scrub. This assertion FAILS if the
+    // Important-2 fix (skipping `sampleValue` on discoverSchema's update
+    // branch for a field currently mapped `containsPersonalData: true`)
+    // is reverted back to the unconditional write.
+    const secondDiscover = await request(app.getHttpServer())
+      .post(`/api/data-sources/${id}/discover-schema`)
+      .set("Authorization", `Bearer ${accessToken}`);
+    expect(secondDiscover.status).toBe(201);
+
+    const afterSecondDiscover = await prisma.dataSourceField.findFirstOrThrow({
+      where: { dataSourceId: id, fieldName: "email" },
+    });
+    expect(afterSecondDiscover.sampleValue).toBeNull();
+
+    // POSITIVE CONTROL: a field NOT mapped as personal (`id`) DOES get
+    // its sample refreshed by the very same discover-schema run --
+    // proving the scrub-preservation above is specific to the mapped
+    // field, not "discoverSchema stopped writing samples at all"
+    // masquerading as a pass.
+    const idField = await prisma.dataSourceField.findFirstOrThrow({
+      where: { dataSourceId: id, fieldName: "id" },
+    });
+    expect(idField.sampleValue).toBe("1");
   });
 
   it("DELETE /api/data-sources/:id removes the row and writes DATA_SOURCE_DELETED", async () => {
