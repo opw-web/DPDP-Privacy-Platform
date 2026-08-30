@@ -4,12 +4,25 @@ import {
   Injectable,
   NotFoundException,
 } from "@nestjs/common";
-import { CanonicalField, DataCategory, Prisma } from "@prisma/client";
+import { Prisma } from "@prisma/client";
 import { PrismaService } from "../../common/prisma/prisma.service";
-import type { ScopedTransactionClient } from "../../common/prisma/scoped-transaction-client";
 import { AuditService } from "../../common/audit/audit.service";
 import { DataSourcesService } from "./data-sources.service";
 import { ReplaceMappingsDto } from "./dto/replace-mappings.dto";
+import { computeMappingWarnings } from "./mapping-warnings";
+import type { MappingWarning } from "./mapping-warnings";
+
+// Re-exported for existing/external importers of these types from this
+// file (task 13 review Important-2 moved the implementation to the
+// shared `mapping-warnings.ts` -- `SourcePurposesService` needs the same
+// computation -- but the types are kept importable from here too so
+// nothing that already does `import type { MappingWarning } from
+// "./mappings.service"` breaks).
+export type {
+  MappingWarning,
+  MappingWarningType,
+  MappingWarningPurposeSummary,
+} from "./mapping-warnings";
 
 /**
  * The ONLY shape of `SourceFieldMapping` this service (or the controller
@@ -31,41 +44,6 @@ export const SOURCE_FIELD_MAPPING_PUBLIC_SELECT = {
 export type PublicSourceFieldMapping = Prisma.SourceFieldMappingGetPayload<{
   select: typeof SOURCE_FIELD_MAPPING_PUBLIC_SELECT;
 }>;
-
-/**
- * Distinguishes the two CN-02 warning shapes Ruling 2 requires the Task 24
- * UI to be able to tell apart, because they read very differently to a
- * DPO:
- *
- *  - `NO_PURPOSES_ATTACHED`: this source has zero purposes attached at
- *    all, so the necessary-category union is trivially empty and EVERY
- *    `containsPersonalData` mapping warns. This is legal (spec line
- *    746) -- the UI should say "no purpose configured yet", never imply
- *    the mapping itself is wrong.
- *  - `CATEGORY_OUTSIDE_PURPOSES`: at least one purpose IS attached, but
- *    none of them declares this mapping's `dataCategory` as necessary.
- *    This is the CN-02 minimisation signal proper -- the UI should name
- *    the field, the category, and the purposes that don't cover it.
- */
-export type MappingWarningType =
-  "NO_PURPOSES_ATTACHED" | "CATEGORY_OUTSIDE_PURPOSES";
-
-export interface MappingWarningPurposeSummary {
-  id: string;
-  code: string;
-  name: string;
-  dataCategories: DataCategory[];
-}
-
-export interface MappingWarning {
-  type: MappingWarningType;
-  sourceField: string;
-  canonicalField: CanonicalField;
-  dataCategory: DataCategory;
-  /** Every purpose currently attached to this source -- `[]` for `NO_PURPOSES_ATTACHED`. */
-  attachedPurposes: MappingWarningPurposeSummary[];
-  message: string;
-}
 
 export interface ReplaceMappingsResult {
   mappings: PublicSourceFieldMapping[];
@@ -125,76 +103,6 @@ export class MappingsService {
   }
 
   /**
-   * CN-02: computed against the UNION of `dataCategories` across every
-   * `ProcessingPurpose` CURRENTLY attached to this source (read inside
-   * the same transaction the mapping write just committed to, so this
-   * always reflects the mapping set as just persisted). Only mappings
-   * that actually collect personal data under some category are
-   * considered -- a mapping marked `containsPersonalData: false`, or
-   * `canonicalField: IGNORE` (not carried forward at all per the task
-   * brief), collects nothing, so CN-02 minimisation has nothing to say
-   * about it.
-   */
-  private async computeWarnings(
-    tx: ScopedTransactionClient,
-    dataSourceId: string,
-    mappings: PublicSourceFieldMapping[],
-  ): Promise<MappingWarning[]> {
-    const links = await tx.dataSourcePurpose.findMany({
-      where: { dataSourceId },
-      include: {
-        purpose: {
-          select: { id: true, code: true, name: true, dataCategories: true },
-        },
-      },
-    });
-    const attachedPurposes: MappingWarningPurposeSummary[] = links.map(
-      (link) => link.purpose,
-    );
-    const necessaryCategories = new Set<DataCategory>(
-      attachedPurposes.flatMap((p) => p.dataCategories),
-    );
-
-    const warnings: MappingWarning[] = [];
-    for (const mapping of mappings) {
-      if (
-        !mapping.containsPersonalData ||
-        mapping.canonicalField === "IGNORE"
-      ) {
-        continue;
-      }
-      if (necessaryCategories.has(mapping.dataCategory)) {
-        continue;
-      }
-      const type: MappingWarningType =
-        attachedPurposes.length === 0
-          ? "NO_PURPOSES_ATTACHED"
-          : "CATEGORY_OUTSIDE_PURPOSES";
-      const message =
-        type === "NO_PURPOSES_ATTACHED"
-          ? `Field "${mapping.sourceField}" (${mapping.canonicalField}) ` +
-            `collects data category ${mapping.dataCategory}, but this data ` +
-            "source has no processing purpose attached -- never guess one " +
-            "(spec line 746); a human must attach one via " +
-            "PUT /api/data-sources/:id/purposes."
-          : `Field "${mapping.sourceField}" (${mapping.canonicalField}) ` +
-            `collects data category ${mapping.dataCategory}, which is not ` +
-            "declared as necessary by any of this source's attached " +
-            `purposes (${attachedPurposes.map((p) => p.code).join(", ")}). ` +
-            "This warns -- it does not block; a human decides (CN-02).";
-      warnings.push({
-        type,
-        sourceField: mapping.sourceField,
-        canonicalField: mapping.canonicalField,
-        dataCategory: mapping.dataCategory,
-        attachedPurposes,
-        message,
-      });
-    }
-    return warnings;
-  }
-
-  /**
    * Full-set replacement in one transaction (task brief): the previous
    * `SourceFieldMapping` rows for this source are deleted and the
    * submitted set is inserted in their place. A mid-set failure -- most
@@ -247,6 +155,18 @@ export class MappingsService {
             // very next iteration's unique-constraint violation) undoes
             // this scrub together with the mapping write that triggered
             // it -- never a scrub that commits alone.
+            //
+            // Deliberately UNCONDITIONAL on `canonicalField` -- an
+            // `IGNORE` mapping with `containsPersonalData: true` is
+            // scrubbed here even though `computeMappingWarnings` below
+            // exempts it from CN-02. The two checks answer different
+            // questions on purpose: scrubbing discards a raw sample
+            // nobody will ever read through this mapping (safe in
+            // either direction -- IGNORE or not), while warning about an
+            // IGNORE'd field would falsely claim it is being collected
+            // when the whole point of IGNORE is that it is not carried
+            // forward. Keep this asymmetry; it is the safe direction on
+            // both sides, not an oversight.
             await this.dataSourcesService.rescrubFieldSample(
               dataSourceId,
               row.sourceField,
@@ -273,7 +193,7 @@ export class MappingsService {
         },
       });
 
-      const warnings = await this.computeWarnings(tx, dataSourceId, created);
+      const warnings = await computeMappingWarnings(tx, dataSourceId, created);
 
       return { mappings: created, warnings };
     });

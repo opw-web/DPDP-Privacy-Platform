@@ -504,6 +504,86 @@ describe("Field mappings and purpose attachment (e2e)", () => {
     expect(idFieldAfter.sampleValue).toBe("1");
   });
 
+  it("Ruling 1: the scrub runs INSIDE the mapping write's own transaction -- a rolled-back mapping set leaves the sample UNSCRUBBED, not scrubbed-then-orphaned on its own connection", async () => {
+    const { accessToken } = await createOrgWithBothPermissions();
+    const baseUrl = await startRecordsServer([
+      { id: "1", email: "person@example.com" },
+    ]);
+    const dataSourceId = await createDataSource(accessToken, { baseUrl });
+
+    const discoverRes = await request(app.getHttpServer())
+      .post(`/api/data-sources/${dataSourceId}/discover-schema`)
+      .set("Authorization", `Bearer ${accessToken}`);
+    expect(discoverRes.status).toBe(201);
+
+    const beforeAttempt = await prisma.dataSourceField.findFirstOrThrow({
+      where: { dataSourceId, fieldName: "email" },
+    });
+    expect(beforeAttempt.sampleValue).toBe("person@example.com");
+
+    // A payload that (a) marks the DISCOVERED "email" field
+    // containsPersonalData: true -- which calls `rescrubFieldSample`
+    // INSIDE this same PUT's transaction, on a row `discoverSchema`
+    // above actually created -- and (b) repeats "email" as a
+    // sourceField later in the array, which hits the real
+    // `@@unique([dataSourceId, sourceField])` violation and rolls the
+    // WHOLE transaction back, mapping write and scrub together.
+    const failingRes = await putMappings(accessToken, dataSourceId, [
+      {
+        sourceField: "email",
+        canonicalField: "EMAIL",
+        dataCategory: "CONTACT",
+        containsPersonalData: true,
+      },
+      { sourceField: "id", canonicalField: "IGNORE" },
+      {
+        sourceField: "email",
+        canonicalField: "EMAIL",
+        dataCategory: "CONTACT",
+        containsPersonalData: true,
+      },
+    ]);
+    expect(failingRes.status).toBe(409);
+
+    // THE ASSERTION RULING 1 EXISTS FOR: the scrub must NOT have
+    // survived the rollback. If `rescrubFieldSample` fell back to its
+    // default (non-transactional) `this.prisma.scoped` argument instead
+    // of receiving this write's own `tx`, the scrub would have
+    // committed on its own separate connection the instant it ran --
+    // BEFORE the later duplicate-sourceField row threw -- and
+    // `sampleValue` would now be null even though the mapping write
+    // that triggered it was rolled back. Verified empirically: removing
+    // the third `tx` argument from the `rescrubFieldSample` call in
+    // `mappings.service.ts` makes THIS assertion fail (`sampleValue`
+    // comes back `null`) while every other test in this file still
+    // passes -- confirming this is the one assertion in the suite that
+    // actually exercises Ruling 1, not just the fact that scrubbing
+    // happens at all (see the positive control below for that).
+    const afterFailedAttempt = await prisma.dataSourceField.findFirstOrThrow({
+      where: { dataSourceId, fieldName: "email" },
+    });
+    expect(afterFailedAttempt.sampleValue).toBe("person@example.com");
+
+    // POSITIVE CONTROL: the identical mapping, without the duplicate
+    // sourceField, succeeds AND scrubs -- proving the mechanism fires at
+    // all, so the assertion above demonstrates "rolled back", not
+    // "rescrubFieldSample never ran".
+    const okRes = await putMappings(accessToken, dataSourceId, [
+      {
+        sourceField: "email",
+        canonicalField: "EMAIL",
+        dataCategory: "CONTACT",
+        containsPersonalData: true,
+      },
+      { sourceField: "id", canonicalField: "IGNORE" },
+    ]);
+    expect(okRes.status).toBe(200);
+    const afterSuccess = await prisma.dataSourceField.findFirstOrThrow({
+      where: { dataSourceId, fieldName: "email" },
+    });
+    expect(afterSuccess.sampleValue).toBeNull();
+  });
+
   it("PUT /mappings writes exactly one FIELD_MAPPING_UPDATED audit event per call", async () => {
     const { accessToken, organizationId } =
       await createOrgWithBothPermissions();
@@ -544,21 +624,97 @@ describe("Field mappings and purpose attachment (e2e)", () => {
       purposeA.id,
     ]);
     expect(firstAttach.status).toBe(200);
-    expect(firstAttach.body).toHaveLength(1);
-    expect(firstAttach.body[0].id).toBe(purposeA.id);
+    expect(firstAttach.body.purposes).toHaveLength(1);
+    expect(firstAttach.body.purposes[0].id).toBe(purposeA.id);
 
     // REPLACEMENT: attaching B alone must DETACH A, not add to it.
     const secondAttach = await putPurposes(accessToken, dataSourceId, [
       purposeB.id,
     ]);
     expect(secondAttach.status).toBe(200);
-    expect(secondAttach.body).toHaveLength(1);
-    expect(secondAttach.body[0].id).toBe(purposeB.id);
+    expect(secondAttach.body.purposes).toHaveLength(1);
+    expect(secondAttach.body.purposes[0].id).toBe(purposeB.id);
 
     const links = await prisma.dataSourcePurpose.findMany({
       where: { dataSourceId },
     });
     expect(links.map((l) => l.purposeId)).toEqual([purposeB.id]);
+  });
+
+  it("Important-2: CN-02 is a STANDING property of (mappings x purposes) -- PUT /purposes recomputes warnings against the mapping set as it stands, without a single mapping row changing", async () => {
+    const { accessToken } = await createOrgWithBothPermissions();
+    const dataSourceId = await createDataSource(accessToken);
+    const orderFulfilment = await createPurpose(
+      accessToken,
+      ["CONTACT", "IDENTITY"],
+      { name: "Order Fulfilment" },
+    );
+    const support = await createPurpose(accessToken, ["CONTACT"], {
+      name: "Support",
+    });
+
+    // Attach Order Fulfilment (covers CONTACT + IDENTITY) BEFORE mapping.
+    const initialAttach = await putPurposes(accessToken, dataSourceId, [
+      orderFulfilment.id,
+    ]);
+    expect(initialAttach.status).toBe(200);
+
+    // Map email/CONTACT + dob/IDENTITY -- both covered, so zero warnings.
+    const mapRes = await putMappings(accessToken, dataSourceId, [
+      {
+        sourceField: "email",
+        canonicalField: "EMAIL",
+        dataCategory: "CONTACT",
+      },
+      {
+        sourceField: "dob",
+        canonicalField: "DATE_OF_BIRTH",
+        dataCategory: "IDENTITY",
+      },
+    ]);
+    expect(mapRes.status).toBe(200);
+    expect(mapRes.body.warnings).toEqual([]);
+
+    // DIRECTION 1 (detach): replace Order Fulfilment with Support, which
+    // covers CONTACT but NOT IDENTITY. No `SourceFieldMapping` row is
+    // touched by this call -- yet `dob`/IDENTITY must now warn, because
+    // the purpose that used to cover it is gone.
+    const detachRes = await putPurposes(accessToken, dataSourceId, [
+      support.id,
+    ]);
+    expect(detachRes.status).toBe(200);
+    expect(detachRes.body.warnings).toHaveLength(1);
+    expect(detachRes.body.warnings[0].type).toBe("CATEGORY_OUTSIDE_PURPOSES");
+    expect(detachRes.body.warnings[0].sourceField).toBe("dob");
+    // POSITIVE CONTROL, same response: "email"/CONTACT is still covered
+    // by Support and must NOT appear -- proving this isn't "warn on
+    // everything after any purpose change".
+    expect(
+      (detachRes.body.warnings as Array<{ sourceField: string }>).some(
+        (w) => w.sourceField === "email",
+      ),
+    ).toBe(false);
+
+    // Confirm the underlying mapping set genuinely did not change --
+    // the warning above came from the purpose change alone.
+    const mappingsAfterDetach = await prisma.sourceFieldMapping.findMany({
+      where: { dataSourceId },
+      orderBy: { sourceField: "asc" },
+    });
+    expect(mappingsAfterDetach.map((m) => m.sourceField)).toEqual([
+      "dob",
+      "email",
+    ]);
+
+    // DIRECTION 2 (positive control): re-attaching a purpose that covers
+    // IDENTITY again makes the SAME warning go away, with no mapping
+    // write in between.
+    const reattachRes = await putPurposes(accessToken, dataSourceId, [
+      orderFulfilment.id,
+      support.id,
+    ]);
+    expect(reattachRes.status).toBe(200);
+    expect(reattachRes.body.warnings).toEqual([]);
   });
 
   it("RBAC asymmetry: CAN_MANAGE_DATA_SOURCES alone can write mappings but not purposes; CAN_MANAGE_PURPOSES alone can write purposes but not mappings", async () => {
