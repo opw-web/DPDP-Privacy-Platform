@@ -8,8 +8,10 @@
  * fenced block at lines 880-891 lists 35 distinct names (11 of its 12
  * lines carry 3 names each, one line carries 2 -- 11*3+2=35). Per the task
  * brief's explicit instruction to "transcribe the names exactly" rather
- * than reconcile the count, this union contains all 35 names that actually
- * appear in the block. Flagged for the spec owner; not resolved here.
+ * than reconcile the count, this union originally contained all 35 names
+ * that actually appear in the block. Task 16 adds the single authorized
+ * extension `MATCH_CANDIDATE_CREATED`: candidate creation is a real state
+ * change, and neither CONFIRMED nor REJECTED truthfully describes it.
  */
 export type AuditAction =
   | "EMPLOYEE_LOGIN_SUCCEEDED"
@@ -41,6 +43,7 @@ export type AuditAction =
   | "PRINCIPAL_CREATED"
   | "IDENTITY_LINKED"
   | "IDENTITY_DETACHED"
+  | "MATCH_CANDIDATE_CREATED"
   | "MATCH_CANDIDATE_CONFIRMED"
   | "MATCH_CANDIDATE_REJECTED"
   | "AGE_STATUS_SET"
@@ -48,7 +51,7 @@ export type AuditAction =
   | "EVIDENCE_EXPORTED"
   | "TOKEN_REUSE_DETECTED";
 
-/** All 35 action names as a runtime array, for tests and validation. */
+/** All 36 action names as a runtime array, for tests and validation. */
 export const AUDIT_ACTIONS: readonly AuditAction[] = [
   "EMPLOYEE_LOGIN_SUCCEEDED",
   "EMPLOYEE_LOGIN_FAILED",
@@ -79,6 +82,7 @@ export const AUDIT_ACTIONS: readonly AuditAction[] = [
   "PRINCIPAL_CREATED",
   "IDENTITY_LINKED",
   "IDENTITY_DETACHED",
+  "MATCH_CANDIDATE_CREATED",
   "MATCH_CANDIDATE_CONFIRMED",
   "MATCH_CANDIDATE_REJECTED",
   "AGE_STATUS_SET",

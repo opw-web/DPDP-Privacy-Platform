@@ -21,6 +21,7 @@ import { RegistersModule } from "./modules/registers/registers.module";
 import { JwtEmployeeGuard } from "./common/guards/jwt-employee.guard";
 import { PermissionsGuard } from "./common/guards/permissions.guard";
 import { MaskingModule } from "./common/masking/masking.module";
+import { IdentityModule } from "./modules/identity/identity.module";
 
 @Module({
   imports: [
@@ -56,6 +57,7 @@ import { MaskingModule } from "./common/masking/masking.module";
     ConnectorsModule,
     DataSourcesModule,
     RegistersModule,
+    IdentityModule,
     MaskingModule,
     HealthModule,
   ],

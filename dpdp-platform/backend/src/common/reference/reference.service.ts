@@ -1,5 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { PrismaService } from "../prisma/prisma.service";
+import type { ScopedTransactionClient } from "../prisma/scoped-transaction-client";
 import { TenantContext } from "../tenant/tenant-context";
 import { AUDIT_COUNTER_NAME, allocateCounterValue } from "./counter";
 
@@ -44,6 +45,23 @@ export class ReferenceService {
   /** Allocates and formats the next principal reference as `DP-000123`. */
   async nextPrincipalReference(): Promise<string> {
     const value = await this.next(PRINCIPAL_REFERENCE_COUNTER);
+    return `DP-${value.toString().padStart(PRINCIPAL_REFERENCE_DIGITS, "0")}`;
+  }
+
+  /**
+   * Transaction-compatible counterpart for identity creation. It uses the
+   * same locked Counter allocation as `nextPrincipalReference()`, but lets a
+   * caller keep the principal, identifiers, link and audit events atomic.
+   */
+  async nextPrincipalReferenceInTransaction(
+    tx: ScopedTransactionClient,
+  ): Promise<string> {
+    const { organizationId } = TenantContext.get();
+    const value = await allocateCounterValue(
+      tx,
+      organizationId,
+      PRINCIPAL_REFERENCE_COUNTER,
+    );
     return `DP-${value.toString().padStart(PRINCIPAL_REFERENCE_DIGITS, "0")}`;
   }
 }
