@@ -1,5 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 import { randomUUID } from "crypto";
+import { readFileSync } from "fs";
+import { join } from "path";
 import { Client as PgClient } from "pg";
 
 /**
@@ -180,6 +182,34 @@ describe("Schema constraints and triggers (e2e)", () => {
       } finally {
         await pg.end();
       }
+    });
+  });
+
+  describe("NormalizedRecord tenant nameKey index", () => {
+    it("keeps the checked-in migration SQL and deployed index aligned", async () => {
+      const migrationSql = readFileSync(
+        join(
+          process.cwd(),
+          "prisma/migrations/20260830120000_normalized_record_name_key_index/migration.sql",
+        ),
+        "utf8",
+      );
+      expect(migrationSql).toBe(
+        "-- Supporting-signal matching searches nameKey within a tenant.\n" +
+          'CREATE INDEX "NormalizedRecord_organizationId_nameKey_idx"\n' +
+          '  ON "NormalizedRecord"("organizationId", "nameKey");\n',
+      );
+
+      const indexes = await prisma.$queryRawUnsafe<Array<{ indexdef: string }>>(
+        `SELECT indexdef
+           FROM pg_indexes
+          WHERE schemaname = current_schema()
+            AND indexname = 'NormalizedRecord_organizationId_nameKey_idx'`,
+      );
+      expect(indexes).toHaveLength(1);
+      expect(indexes[0]?.indexdef).toContain(
+        'ON public."NormalizedRecord" USING btree ("organizationId", "nameKey")',
+      );
     });
   });
 });

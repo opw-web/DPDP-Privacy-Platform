@@ -1,10 +1,11 @@
-import { Injectable } from "@nestjs/common";
+import { Injectable, NotFoundException } from "@nestjs/common";
 import { Prisma } from "@prisma/client";
 import { AuditService } from "../../common/audit/audit.service";
 import type { ScopedTransactionClient } from "../../common/prisma/scoped-transaction-client";
 import { ReferenceService } from "../../common/reference/reference.service";
 import type { NormalizationMapping } from "../normalization/normalization.service";
 import type { MatchResult, RaisedCandidate } from "./matching.service";
+import { verifiedCustomerIdValue } from "./match-rules/customer-id";
 
 export type LinkableNormalizedRecord = {
   id: string;
@@ -37,20 +38,6 @@ function displayName(record: LinkableNormalizedRecord): string {
   }
   const name = [record.firstName, record.lastName].filter(Boolean).join(" ");
   return name || "Unnamed principal";
-}
-
-function verifiedCustomerId(
-  record: LinkableNormalizedRecord,
-  mappings: readonly NormalizationMapping[],
-): string | null {
-  return record.customerId &&
-    mappings.some(
-      (mapping) =>
-        mapping.canonicalField === "CUSTOMER_ID" &&
-        mapping.isVerifiedCustomerId === true,
-    )
-    ? record.customerId
-    : null;
 }
 
 /**
@@ -158,7 +145,7 @@ export class LinkingService {
       tx,
       dataPrincipalId,
       "CUSTOMER_ID",
-      verifiedCustomerId(record, mappings),
+      verifiedCustomerIdValue(record.customerId, mappings),
       knownConflictingPrincipalIds,
     );
     await this.attachIdentifier(
@@ -196,6 +183,47 @@ export class LinkingService {
   }
 
   /**
+   * Raw scalar relation fields bypass Prisma extension interception. Verify
+   * every caller-supplied id through this transaction's scoped delegates
+   * before any principal-side row or audit event is written.
+   */
+  private async verifyScopedReferences(
+    tx: ScopedTransactionClient,
+    normalizedRecordId: string,
+    result: MatchResult,
+  ): Promise<void> {
+    const record = await tx.normalizedRecord.findFirst({
+      where: { id: normalizedRecordId },
+      select: { id: true },
+    });
+    if (!record) {
+      throw new NotFoundException(
+        `Normalized record "${normalizedRecordId}" not found.`,
+      );
+    }
+
+    const targetIds = new Set(
+      this.candidateResults(result).map(
+        (candidate) => candidate.dataPrincipalId,
+      ),
+    );
+    if (result.kind === "LINK") {
+      targetIds.add(result.dataPrincipalId);
+    }
+    for (const dataPrincipalId of targetIds) {
+      const principal = await tx.dataPrincipal.findFirst({
+        where: { id: dataPrincipalId },
+        select: { id: true },
+      });
+      if (!principal) {
+        throw new NotFoundException(
+          `Matched data principal "${dataPrincipalId}" not found.`,
+        );
+      }
+    }
+  }
+
+  /**
    * `tx` must be the scoped interactive-transaction client supplied by the
    * sync pipeline. This method intentionally does not open a transaction: all
    * principal/link/candidate state and its audit event(s) commit or roll back
@@ -207,6 +235,8 @@ export class LinkingService {
     result: MatchResult,
     mappings: readonly NormalizationMapping[] = [],
   ): Promise<ApplyMatchResult> {
+    await this.verifyScopedReferences(tx, normalizedRecord.id, result);
+
     const activeLink = await tx.identityLink.findFirst({
       where: { normalizedRecordId: normalizedRecord.id, status: "ACTIVE" },
       select: { dataPrincipalId: true },
@@ -244,19 +274,6 @@ export class LinkingService {
     }
 
     if (dataPrincipalId && !activeLink) {
-      // Resolve through the scoped delegate before writing raw FK ids. This is
-      // required by tenant.extension.ts because nested Prisma relations are
-      // not intercepted by the extension.
-      const principal = await tx.dataPrincipal.findFirst({
-        where: { id: dataPrincipalId },
-        select: { id: true },
-      });
-      if (!principal) {
-        throw new Error(
-          `Matched data principal "${dataPrincipalId}" was not found in this organization.`,
-        );
-      }
-
       await this.attachAvailableIdentifiers(
         tx,
         dataPrincipalId,

@@ -40,6 +40,22 @@ describe("Deterministic identity matching (e2e)", () => {
       isVerifiedCustomerId: false,
     },
   ];
+  const lexicalUnverifiedCustomerMappings: readonly NormalizationMapping[] = [
+    {
+      sourceField: "aCustomerId",
+      canonicalField: "CUSTOMER_ID",
+      dataCategory: "IDENTITY",
+      containsPersonalData: true,
+      isVerifiedCustomerId: false,
+    },
+    {
+      sourceField: "zVerifiedCustomerId",
+      canonicalField: "CUSTOMER_ID",
+      dataCategory: "IDENTITY",
+      containsPersonalData: true,
+      isVerifiedCustomerId: true,
+    },
+  ];
 
   function tenant(organizationId: string): TenantStore {
     return {
@@ -209,6 +225,11 @@ describe("Deterministic identity matching (e2e)", () => {
     await expect(
       TenantContext.run(tenant(org), () =>
         matching.match(unverified, unverifiedCustomerMapping),
+      ),
+    ).resolves.toEqual({ kind: "NEW" });
+    await expect(
+      TenantContext.run(tenant(org), () =>
+        matching.match(unverified, lexicalUnverifiedCustomerMappings),
       ),
     ).resolves.toEqual({ kind: "NEW" });
 
@@ -384,6 +405,165 @@ describe("Deterministic identity matching (e2e)", () => {
         expect.objectContaining({ action: "IDENTITY_LINKED" }),
       ]),
     );
+  });
+
+  it("persists every losing principal for three-way and equal-EXACT conflicts", async () => {
+    const org = await organization();
+    const customer = await principal(org, "A", [
+      { type: "CUSTOMER_ID", value: "C-42" },
+    ]);
+    const email = await principal(org, "B", [
+      { type: "EMAIL", value: "aman@example.test" },
+    ]);
+    const phone = await principal(org, "C", [
+      { type: "PHONE", value: "+919876543210" },
+    ]);
+    const threeWayRecord = await record(org, {
+      customerId: "C-42",
+      emailNormalized: "aman@example.test",
+      phoneNormalized: "+919876543210",
+    });
+    const threeWay = await TenantContext.run(tenant(org), () =>
+      matching.match(threeWayRecord, verifiedCustomerMapping),
+    );
+    expect(threeWay).toMatchObject({
+      kind: "LINK",
+      dataPrincipalId: customer.id,
+      candidates: [
+        expect.objectContaining({ dataPrincipalId: email.id }),
+        expect.objectContaining({ dataPrincipalId: phone.id }),
+      ],
+    });
+    await apply(org, threeWayRecord, threeWay, verifiedCustomerMapping);
+    const threeWayCandidates = await TenantContext.run(tenant(org), () =>
+      prisma.scoped.matchCandidate.findMany({
+        where: { normalizedRecordId: threeWayRecord.id },
+        orderBy: { dataPrincipalId: "asc" },
+        select: { dataPrincipalId: true, evidence: true },
+      }),
+    );
+    expect(
+      threeWayCandidates.map((candidate) => candidate.dataPrincipalId),
+    ).toEqual([email.id, phone.id].sort());
+
+    const equalExactRecord = await record(org, {
+      customerId: "C-42",
+      emailNormalized: "aman@example.test",
+    });
+    const equalExact = await TenantContext.run(tenant(org), () =>
+      matching.match(equalExactRecord, verifiedCustomerMapping),
+    );
+    expect(equalExact).toMatchObject({
+      kind: "LINK",
+      dataPrincipalId: customer.id,
+      candidates: [
+        expect.objectContaining({
+          dataPrincipalId: email.id,
+          confidence: "EXACT",
+          evidence: expect.objectContaining({
+            conflict: "CUSTOMER_ID→A, EMAIL→B",
+          }),
+        }),
+      ],
+    });
+    await apply(org, equalExactRecord, equalExact, verifiedCustomerMapping);
+    await expect(
+      TenantContext.run(tenant(org), () =>
+        prisma.scoped.matchCandidate.findFirst({
+          where: {
+            normalizedRecordId: equalExactRecord.id,
+            dataPrincipalId: email.id,
+          },
+          select: { confidence: true, evidence: true },
+        }),
+      ),
+    ).resolves.toMatchObject({
+      confidence: "EXACT",
+      evidence: expect.objectContaining({
+        conflict: "CUSTOMER_ID→A, EMAIL→B",
+      }),
+    });
+  });
+
+  it("rejects foreign match references before link, candidate, or audit writes", async () => {
+    const orgA = await organization();
+    const orgB = await organization();
+    const foreignPrincipal = await principal(orgA, "FOREIGN", []);
+    const localPrincipal = await principal(orgB, "LOCAL", []);
+    const localRecord = await record(orgB, { fullName: "Local record" });
+    const foreignRecord = await record(orgA, { fullName: "Foreign record" });
+    const auditCount = await TenantContext.run(tenant(orgB), () =>
+      prisma.scoped.auditEvent.count(),
+    );
+
+    await expect(
+      apply(orgB, localRecord, {
+        kind: "LINK",
+        dataPrincipalId: localPrincipal.id,
+        confidence: "EXACT",
+        matchedOn: { rules: ["EMAIL"] },
+        candidates: [
+          {
+            dataPrincipalId: foreignPrincipal.id,
+            confidence: "EXACT",
+            score: 0.8,
+            evidence: { rule: "test" },
+          },
+        ],
+      }),
+    ).rejects.toMatchObject({ status: 404 });
+    await expect(
+      apply(orgB, localRecord, {
+        kind: "CANDIDATE",
+        dataPrincipalId: foreignPrincipal.id,
+        confidence: "POSSIBLE",
+        score: 0.5,
+        evidence: { rule: "test" },
+      }),
+    ).rejects.toMatchObject({ status: 404 });
+    await expect(
+      apply(orgB, foreignRecord, { kind: "NEW" }),
+    ).rejects.toMatchObject({ status: 404 });
+
+    await expect(
+      TenantContext.run(tenant(orgB), () =>
+        prisma.scoped.identityLink.count({
+          where: { normalizedRecordId: localRecord.id },
+        }),
+      ),
+    ).resolves.toBe(0);
+    await expect(
+      TenantContext.run(tenant(orgB), () =>
+        prisma.scoped.matchCandidate.count({
+          where: { normalizedRecordId: localRecord.id },
+        }),
+      ),
+    ).resolves.toBe(0);
+    await expect(
+      TenantContext.run(tenant(orgB), () => prisma.scoped.auditEvent.count()),
+    ).resolves.toBe(auditCount);
+
+    await expect(
+      apply(orgB, localRecord, {
+        kind: "LINK",
+        dataPrincipalId: localPrincipal.id,
+        confidence: "EXACT",
+        matchedOn: { rules: ["EMAIL"] },
+        candidates: [],
+      }),
+    ).resolves.toMatchObject({ linkCreated: true });
+    const candidateRecord = await record(orgB, {
+      fullName: "Candidate record",
+    });
+    await expect(
+      apply(orgB, candidateRecord, {
+        kind: "CANDIDATE",
+        dataPrincipalId: localPrincipal.id,
+        confidence: "POSSIBLE",
+        score: 0.5,
+        evidence: { rule: "test" },
+      }),
+    ).resolves.toMatchObject({ linkCreated: false, candidatesCreated: 1 });
   });
 
   it("keeps identifiers tenant-local and proves Postgres enforces one active link", async () => {

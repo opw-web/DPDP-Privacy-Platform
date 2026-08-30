@@ -539,6 +539,7 @@ model NormalizedRecord {
 
   @@index([organizationId, emailNormalized])
   @@index([organizationId, phoneNormalized])
+  @@index([organizationId, nameKey])
 }
 
 model DataPrincipal {

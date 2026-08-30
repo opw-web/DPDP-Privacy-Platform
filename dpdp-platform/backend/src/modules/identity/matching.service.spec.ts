@@ -94,6 +94,37 @@ describe("MatchingService deterministic rules", () => {
     });
   });
 
+  it("does not trust a verified CUSTOMER_ID mapping when another source mapping can supply the value", async () => {
+    const service = createService({
+      "CUSTOMER_ID:C-42": { id: "principal-a", reference: "DP-000001" },
+    });
+    const record = { ...baseRecord, customerId: "C-42" };
+    const lexicalUnverifiedWinner: readonly NormalizationMapping[] = [
+      {
+        sourceField: "aCustomerId",
+        canonicalField: "CUSTOMER_ID",
+        dataCategory: "IDENTITY",
+        containsPersonalData: true,
+        isVerifiedCustomerId: false,
+      },
+      {
+        sourceField: "zVerifiedCustomerId",
+        canonicalField: "CUSTOMER_ID",
+        dataCategory: "IDENTITY",
+        containsPersonalData: true,
+        isVerifiedCustomerId: true,
+      },
+    ];
+
+    await expect(
+      service.match(record, lexicalUnverifiedWinner),
+    ).resolves.toEqual({ kind: "NEW" });
+    await expect(service.match(record, mappings(true))).resolves.toMatchObject({
+      kind: "LINK",
+      dataPrincipalId: "principal-a",
+    });
+  });
+
   it("rule 2 links on an identical normalized email", async () => {
     const service = createService({
       "EMAIL:aman@example.test": { id: "principal-a", reference: "DP-000001" },
@@ -228,6 +259,54 @@ describe("MatchingService deterministic rules", () => {
         },
         mappings(true),
       ),
-    ).resolves.toMatchObject({ kind: "LINK", dataPrincipalId: "principal-a" });
+    ).resolves.toMatchObject({
+      kind: "LINK",
+      dataPrincipalId: "principal-a",
+      candidates: [
+        expect.objectContaining({
+          dataPrincipalId: "principal-b",
+          confidence: "EXACT",
+          evidence: expect.objectContaining({
+            conflict: "CUSTOMER_ID→A, EMAIL→B",
+          }),
+        }),
+      ],
+    });
+  });
+
+  it("raises one deterministic candidate for each distinct losing principal", async () => {
+    const service = createService({
+      "CUSTOMER_ID:C-42": { id: "principal-a", reference: "A" },
+      "EMAIL:aman@example.test": { id: "principal-b", reference: "B" },
+      "PHONE:+919876543210": { id: "principal-c", reference: "C" },
+    });
+
+    const result = await service.match(
+      {
+        ...baseRecord,
+        customerId: "C-42",
+        emailNormalized: "aman@example.test",
+        phoneNormalized: "+919876543210",
+      },
+      mappings(true),
+    );
+
+    expect(result).toMatchObject({
+      kind: "LINK",
+      dataPrincipalId: "principal-a",
+      candidates: [
+        expect.objectContaining({ dataPrincipalId: "principal-b" }),
+        expect.objectContaining({ dataPrincipalId: "principal-c" }),
+      ],
+    });
+    if (result.kind === "LINK") {
+      expect(
+        result.candidates.map((candidate) => candidate.dataPrincipalId),
+      ).toEqual(["principal-b", "principal-c"]);
+      expect(
+        new Set(result.candidates.map((candidate) => candidate.dataPrincipalId))
+          .size,
+      ).toBe(2);
+    }
   });
 });
