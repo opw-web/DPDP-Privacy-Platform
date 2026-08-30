@@ -1,22 +1,26 @@
 import { Controller, Get, UseGuards } from "@nestjs/common";
-import { ApiTags } from "@nestjs/swagger";
+import { ApiOkResponse, ApiTags } from "@nestjs/swagger";
 import { Public } from "../../common/decorators/public.decorator";
 import { CurrentPrincipal } from "../../common/decorators/current-principal.decorator";
 import {
   JwtPrincipalGuard,
   type PrincipalActor,
 } from "../../common/guards/jwt-principal.guard";
+import { MePrivacyContactDto } from "./dto/me-privacy-contact.dto";
 import { MeService } from "./me.service";
 
 /**
  * `/api/me/*` -- the Data Principal's own portal API (spec line 840):
  * "resolves the principal from the token only. No route under `/api/me`
- * accepts an ID parameter." Every handler below takes ONLY
+ * accepts an ID parameter." Every handler below takes, at most, ONLY
  * `@CurrentPrincipal()` -- there is no `@Param()`, `@Query()`, or `@Body()`
  * anywhere in this file, by construction, not by convention. That absence
  * is asserted mechanically by the route-table test in
  * `test/principal-portal.e2e-spec.ts` (reflecting `ROUTE_ARGS_METADATA`
  * off this class), which fails the build the moment anyone adds one.
+ * `privacyContact()` below takes no parameter at all, which trivially
+ * satisfies the same rule -- it reads a fact about the organization, not
+ * a `@Param()`/`@Query()`/`@Body()` selecting some other principal.
  *
  * Every route is `@Public()` (to dodge the globally-registered
  * `JwtEmployeeGuard`) and independently `@UseGuards(JwtPrincipalGuard)`
@@ -56,5 +60,24 @@ export class MeController {
   @Get("recipients")
   recipients(@CurrentPrincipal() principal: PrincipalActor) {
     return this.meService.getRecipients(principal.dataPrincipalId);
+  }
+
+  /**
+   * The organization's published DPO / responsible-person contact
+   * (GO-10). Takes no `@CurrentPrincipal()` -- unlike every other handler
+   * above, this one selects nothing about the caller; only
+   * `@UseGuards(JwtPrincipalGuard)` matters here, to require a valid
+   * principal-audience token before this route runs. The organization
+   * itself is resolved from that token's already-bound `TenantContext`
+   * inside `MeService.getPrivacyContact`, exactly like
+   * `OrganizationsController.get()` -- never from a path/query/body
+   * parameter, so this still satisfies the file-level rule above.
+   */
+  @Public()
+  @UseGuards(JwtPrincipalGuard)
+  @ApiOkResponse({ type: MePrivacyContactDto })
+  @Get("privacy-contact")
+  privacyContact(): Promise<MePrivacyContactDto> {
+    return this.meService.getPrivacyContact();
   }
 }

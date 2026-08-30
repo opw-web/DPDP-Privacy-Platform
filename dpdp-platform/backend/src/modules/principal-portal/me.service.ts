@@ -5,6 +5,7 @@ import { LineageService } from "../principals/lineage.service";
 import type { ResolvedPrincipalField } from "../principals/lineage.service";
 import { PrincipalRecipientsService } from "../principals/principal-recipients.service";
 import { PrincipalsService } from "../principals/principals.service";
+import { MePrivacyContactDto } from "./dto/me-privacy-contact.dto";
 
 /**
  * Literal text shown wherever a value's contributing source(s) carry no
@@ -52,13 +53,17 @@ export interface MeDataCategoryGroup {
 /**
  * The Data Principal's own read services, `/api/me/*`.
  *
- * Every public method here takes `dataPrincipalId` as its ONLY selector,
- * and every call site in `MeController` supplies it from
- * `@CurrentPrincipal()` -- i.e. from the verified access token via
- * `JwtPrincipalGuard` -- never from a path/query/body parameter. See that
- * controller's file-level docstring and `me.controller.spec-of-intent`
- * (the route-table assertion in `principal-portal.e2e-spec.ts`) for the
- * enforcement of that rule.
+ * Every public method that reads data ABOUT the calling principal takes
+ * `dataPrincipalId` as its ONLY selector, and every call site in
+ * `MeController` supplies it from `@CurrentPrincipal()` -- i.e. from the
+ * verified access token via `JwtPrincipalGuard` -- never from a
+ * path/query/body parameter. See that controller's file-level docstring
+ * and `me.controller.spec-of-intent` (the route-table assertion in
+ * `principal-portal.e2e-spec.ts`) for the enforcement of that rule.
+ * `getPrivacyContact` is the one exception: it reads a fact about the
+ * ORGANIZATION, not the principal, so it takes no selector at all and
+ * relies on `prisma.scoped` resolving the caller's own organization from
+ * `TenantContext` -- see that method's own docstring.
  *
  * DELIBERATELY reuses `PrincipalsService.getUnmaskedProfile`,
  * `LineageService.getResolvedFields` and
@@ -164,6 +169,92 @@ export class MeService {
   /** `/me/recipients` -- RT-04 preview, unchanged from the employee-facing service. */
   async getRecipients(dataPrincipalId: string) {
     return this.recipientsService.listForPrincipal(dataPrincipalId);
+  }
+
+  /**
+   * `/me/privacy-contact` -- the organization's published DPO /
+   * responsible-person contact (GO-10). Unlike every other method on this
+   * class, this one takes NO selector at all: the contact belongs to the
+   * organization, not to the calling principal, and `prisma.scoped` (the
+   * one Prisma client extension that ever applies tenant isolation --
+   * `tenant.extension.ts`) resolves "the organization" from the
+   * `TenantContext` that `TenantMiddleware` already bound from the
+   * caller's own verified token before this handler ever runs. There is
+   * no `where: { organizationId }` written here or anywhere else in this
+   * class -- exactly the same shape as `OrganizationsService.get()`,
+   * which this deliberately mirrors rather than duplicating a second,
+   * hand-rolled tenant filter for the same row.
+   *
+   * Selects only the five columns GO-10 requires be public. Never
+   * `Organization.id`, `legalName`, `grievanceContactEmail`, `settings`,
+   * or any other column on the row -- see `MePrivacyContactDto`'s
+   * docstring for exactly what a member of the public is entitled to see
+   * here and why the rest is withheld.
+   *
+   * Prefers the DPO (`dpoName`/`dpoEmail`/`dpoPhone`) when one is
+   * appointed; falls back to the responsible person
+   * (`responsiblePersonName`/`responsiblePersonEmail`) per the schema's
+   * own documented convention (`schema.prisma`: "used when no DPO is
+   * appointed"). "Appointed" is read off whether a name OR an email is
+   * present for that role -- a partially-filled-in role (e.g. an email
+   * with no name yet) still counts as configured, so it is shown rather
+   * than silently dropped in favour of the "not published" state.
+   *
+   * When neither role has anything configured, returns the explicit
+   * `published: false` shape with every other field `null` -- never an
+   * empty string the UI would render as a blank (task brief). This is a
+   * read of already-public information, not a fact about the calling
+   * principal, so it writes neither a `PrincipalContactEvent` nor an
+   * `AuditEvent`: it is not a state change, and `AuditAction` is a fixed
+   * union with no member for "someone read the published contact" -- see
+   * this module's other docstrings for why this codebase never invents
+   * one.
+   */
+  async getPrivacyContact(): Promise<MePrivacyContactDto> {
+    const organization = await this.prisma.scoped.organization.findFirstOrThrow(
+      {
+        select: {
+          dpoName: true,
+          dpoEmail: true,
+          dpoPhone: true,
+          responsiblePersonName: true,
+          responsiblePersonEmail: true,
+          publicPrivacyPageUrl: true,
+        },
+      },
+    );
+
+    const hasDpo = Boolean(organization.dpoName || organization.dpoEmail);
+    const hasResponsiblePerson = Boolean(
+      organization.responsiblePersonName || organization.responsiblePersonEmail,
+    );
+
+    if (!hasDpo && !hasResponsiblePerson) {
+      return {
+        published: false,
+        contactName: null,
+        contactEmail: null,
+        contactPhone: null,
+        isDpo: null,
+        publicPrivacyPageUrl: null,
+      };
+    }
+
+    return {
+      published: true,
+      contactName:
+        (hasDpo ? organization.dpoName : organization.responsiblePersonName) ??
+        null,
+      contactEmail:
+        (hasDpo
+          ? organization.dpoEmail
+          : organization.responsiblePersonEmail) ?? null,
+      // The schema has no phone field for the responsible person, only
+      // the DPO -- never invented, never borrowed from the other role.
+      contactPhone: hasDpo ? (organization.dpoPhone ?? null) : null,
+      isDpo: hasDpo,
+      publicPrivacyPageUrl: organization.publicPrivacyPageUrl ?? null,
+    };
   }
 
   /**

@@ -149,6 +149,9 @@ describe("Principal portal API (e2e)", () => {
     priya: PrincipalSession;
     otherOrgPrincipal: PrincipalSession;
     employee: EmployeeSession;
+    dpoName: string;
+    dpoEmail: string;
+    publicPrivacyPageUrl: string;
   };
   let fixture: Fixture;
 
@@ -156,9 +159,21 @@ describe("Principal portal API (e2e)", () => {
     const organizationId = randomUUID();
     const otherOrganizationId = randomUUID();
     organizationIds.push(organizationId, otherOrganizationId);
+    // Org A publishes a DPO contact (GO-10); Org B deliberately configures
+    // neither a DPO nor a responsible person -- the "not published" fixture
+    // case, and the organization a cross-tenant read must never fall back to.
+    const dpoName = `Portal DPO ${randomUUID()}`;
+    const dpoEmail = `dpo-${randomUUID()}@portal.example.test`;
+    const publicPrivacyPageUrl = `https://org-${organizationId}.example.test/privacy`;
     await prisma.organization.createMany({
       data: [
-        { id: organizationId, name: `Portal Org ${organizationId}` },
+        {
+          id: organizationId,
+          name: `Portal Org ${organizationId}`,
+          dpoName,
+          dpoEmail,
+          publicPrivacyPageUrl,
+        },
         {
           id: otherOrganizationId,
           name: `Portal Other ${otherOrganizationId}`,
@@ -339,6 +354,9 @@ describe("Principal portal API (e2e)", () => {
       priya,
       otherOrgPrincipal,
       employee,
+      dpoName,
+      dpoEmail,
+      publicPrivacyPageUrl,
     };
   }
 
@@ -421,7 +439,13 @@ describe("Principal portal API (e2e)", () => {
         `${RouteParamtypes.PARAM}:`,
         `${RouteParamtypes.BODY}:`,
       ];
-      const handlerNames = ["profile", "data", "sources", "recipients"];
+      const handlerNames = [
+        "profile",
+        "data",
+        "sources",
+        "recipients",
+        "privacyContact",
+      ];
       expect(handlerNames.length).toBeGreaterThan(0);
       for (const name of handlerNames) {
         const method = (
@@ -454,7 +478,7 @@ describe("Principal portal API (e2e)", () => {
         .map((layer) => layer.route?.path)
         .filter((path): path is string => typeof path === "string")
         .filter((path) => path.startsWith("/api/me"));
-      expect(meRoutes.length).toBeGreaterThanOrEqual(4);
+      expect(meRoutes.length).toBeGreaterThanOrEqual(5);
       for (const path of meRoutes) {
         expect(path.includes(":")).toBe(false);
       }
@@ -482,6 +506,7 @@ describe("Principal portal API (e2e)", () => {
         "/api/me/data",
         "/api/me/sources",
         "/api/me/recipients",
+        "/api/me/privacy-contact",
       ]) {
         const response = await request(app.getHttpServer())
           .get(path)
@@ -618,6 +643,63 @@ describe("Principal portal API (e2e)", () => {
     });
   });
 
+  describe("/me/privacy-contact (GO-10)", () => {
+    it("returns the published DPO contact for the principal's own organization", async () => {
+      const response = await request(app.getHttpServer())
+        .get("/api/me/privacy-contact")
+        .set(authed(fixture.aman));
+      expect(response.status).toBe(200);
+      expect(response.body).toEqual({
+        published: true,
+        contactName: fixture.dpoName,
+        contactEmail: fixture.dpoEmail,
+        contactPhone: null,
+        isDpo: true,
+        publicPrivacyPageUrl: fixture.publicPrivacyPageUrl,
+      });
+    });
+
+    it("never returns another organization's contact to a principal of a different organization (tenant isolation)", async () => {
+      // This is the case that must actually fail if `.scoped` were
+      // bypassed: Org A has a fully published DPO contact and Org B has
+      // none. If this read ever fell back to a hand-written `where` (or
+      // none at all) instead of `prisma.scoped` resolving the CALLER's own
+      // organization from `TenantContext`, both sessions below could
+      // observe the same row -- so Org B's principal seeing Org A's
+      // specific contact values, or the two responses matching each
+      // other, would both be direct evidence of broken tenant isolation.
+      const otherOrgResponse = await request(app.getHttpServer())
+        .get("/api/me/privacy-contact")
+        .set(authed(fixture.otherOrgPrincipal));
+      expect(otherOrgResponse.status).toBe(200);
+      expect(otherOrgResponse.body.contactName).not.toBe(fixture.dpoName);
+      expect(otherOrgResponse.body.contactEmail).not.toBe(fixture.dpoEmail);
+      expect(otherOrgResponse.body.publicPrivacyPageUrl).not.toBe(
+        fixture.publicPrivacyPageUrl,
+      );
+
+      const amanResponse = await request(app.getHttpServer())
+        .get("/api/me/privacy-contact")
+        .set(authed(fixture.aman));
+      expect(amanResponse.body).not.toEqual(otherOrgResponse.body);
+    });
+
+    it("returns an explicit not-published state, never a blank string, when the organization has configured no contact", async () => {
+      const response = await request(app.getHttpServer())
+        .get("/api/me/privacy-contact")
+        .set(authed(fixture.otherOrgPrincipal));
+      expect(response.status).toBe(200);
+      expect(response.body).toEqual({
+        published: false,
+        contactName: null,
+        contactEmail: null,
+        contactPhone: null,
+        isDpo: null,
+        publicPrivacyPageUrl: null,
+      });
+    });
+  });
+
   describe("PrincipalContactEvent / PERSONAL_DATA_VIEWED distinction", () => {
     it("does not write a PrincipalContactEvent or PERSONAL_DATA_VIEWED row for /me/* reads beyond the login event", async () => {
       const contactEventsBefore = await prisma.principalContactEvent.count({
@@ -640,6 +722,7 @@ describe("Principal portal API (e2e)", () => {
         "/api/me/data",
         "/api/me/sources",
         "/api/me/recipients",
+        "/api/me/privacy-contact",
       ]) {
         const response = await request(app.getHttpServer())
           .get(path)
