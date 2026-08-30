@@ -274,14 +274,49 @@ export class CandidatesService {
     return items;
   }
 
-  private async loadPendingCandidate(tx: ScopedTransactionClient, id: string) {
+  /**
+   * Reads the candidate only to establish tenant-local existence and to retain
+   * the identifiers needed by the winning transaction. It must NOT be used as
+   * the decision precondition: two concurrent transactions can both read
+   * PENDING under PostgreSQL's default READ COMMITTED isolation.
+   */
+  private async loadCandidate(tx: ScopedTransactionClient, id: string) {
     const candidate = await tx.matchCandidate.findFirst({ where: { id } });
     if (!candidate) {
       throw new NotFoundException(`Match candidate "${id}" not found.`);
     }
-    if (candidate.status !== "PENDING") {
+    return candidate;
+  }
+
+  /**
+   * Atomically claims a PENDING row for one terminal outcome. `updateMany`
+   * translates to a single tenant-scoped `UPDATE ... WHERE id = ? AND status
+   * = 'PENDING'`; PostgreSQL locks the row while updating it and, after a
+   * concurrent transaction commits, rechecks the predicate. Exactly one
+   * confirmer/rejecter can therefore proceed to links and audit writes.
+   *
+   * This claim and all side effects stay in the caller's interactive
+   * transaction. If a winner's merge/audit fails, its status claim rolls back
+   * too; if a loser observes count zero, it has not touched topology or audit.
+   */
+  private async claimPendingCandidate(
+    tx: ScopedTransactionClient,
+    id: string,
+    status: Extract<CandidateStatus, "CONFIRMED" | "REJECTED">,
+    actor: AccessTokenPayload,
+  ) {
+    const candidate = await this.loadCandidate(tx, id);
+    const claim = await tx.matchCandidate.updateMany({
+      where: { id, status: "PENDING" },
+      data: {
+        status,
+        decidedByEmployeeId: actor.sub,
+        decidedAt: new Date(),
+      },
+    });
+    if (claim.count !== 1) {
       throw new BadRequestException(
-        `Match candidate "${id}" has already been decided (${candidate.status}).`,
+        `Match candidate "${id}" is no longer pending and cannot be decided again.`,
       );
     }
     return candidate;
@@ -297,7 +332,12 @@ export class CandidatesService {
     dataPrincipalId: string;
   }> {
     return this.prisma.scoped.$transaction(async (tx) => {
-      const candidate = await this.loadPendingCandidate(tx, id);
+      const candidate = await this.claimPendingCandidate(
+        tx,
+        id,
+        "CONFIRMED",
+        actor,
+      );
 
       const mergeResult = await this.mergeService.mergeRecordIntoPrincipal(
         tx,
@@ -313,15 +353,6 @@ export class CandidatesService {
         },
       );
 
-      const updated = await tx.matchCandidate.update({
-        where: { id },
-        data: {
-          status: "CONFIRMED",
-          decidedByEmployeeId: actor.sub,
-          decidedAt: new Date(),
-        },
-      });
-
       await this.auditService.record(tx, {
         action: "MATCH_CANDIDATE_CONFIRMED",
         resourceType: "MatchCandidate",
@@ -335,8 +366,8 @@ export class CandidatesService {
       });
 
       return {
-        id: updated.id,
-        status: updated.status,
+        id: candidate.id,
+        status: "CONFIRMED",
         identityLinkId: mergeResult.identityLinkId,
         dataPrincipalId: mergeResult.dataPrincipalId,
       };
@@ -348,16 +379,12 @@ export class CandidatesService {
     actor: AccessTokenPayload,
   ): Promise<{ id: string; status: CandidateStatus }> {
     return this.prisma.scoped.$transaction(async (tx) => {
-      const candidate = await this.loadPendingCandidate(tx, id);
-
-      const updated = await tx.matchCandidate.update({
-        where: { id },
-        data: {
-          status: "REJECTED",
-          decidedByEmployeeId: actor.sub,
-          decidedAt: new Date(),
-        },
-      });
+      const candidate = await this.claimPendingCandidate(
+        tx,
+        id,
+        "REJECTED",
+        actor,
+      );
 
       await this.auditService.record(tx, {
         action: "MATCH_CANDIDATE_REJECTED",
@@ -370,7 +397,7 @@ export class CandidatesService {
         },
       });
 
-      return { id: updated.id, status: updated.status };
+      return { id: candidate.id, status: "REJECTED" };
     });
   }
 }

@@ -12,6 +12,7 @@ import {
   type TenantStore,
 } from "../src/common/tenant/tenant-context";
 import { AssemblyService } from "../src/modules/identity/assembly.service";
+import { CandidatesService } from "../src/modules/identity/candidates.service";
 import { LinkingService } from "../src/modules/identity/linking.service";
 import { MatchingService } from "../src/modules/identity/matching.service";
 import { MergeService } from "../src/modules/identity/merge.service";
@@ -29,6 +30,7 @@ describe("Merge, unmerge and the match-candidate review queue (e2e)", () => {
   let linking: LinkingService;
   let assembly: AssemblyService;
   let mergeService: MergeService;
+  let candidatesService: CandidatesService;
   const prisma = new PrismaService();
   const organizationIds: string[] = [];
 
@@ -259,6 +261,7 @@ describe("Merge, unmerge and the match-candidate review queue (e2e)", () => {
     linking = app.get(LinkingService);
     assembly = app.get(AssemblyService);
     mergeService = app.get(MergeService);
+    candidatesService = app.get(CandidatesService);
   });
 
   afterAll(async () => {
@@ -434,6 +437,26 @@ describe("Merge, unmerge and the match-candidate review queue (e2e)", () => {
         }),
       );
       expect(createdAudit).not.toBeNull();
+      const [detachedAuditCount, createdAuditCount] = await TenantContext.run(
+        tenant(org),
+        () =>
+          Promise.all([
+            prisma.scoped.auditEvent.count({
+              where: {
+                resourceId: supportLink.id,
+                action: "IDENTITY_DETACHED",
+              },
+            }),
+            prisma.scoped.auditEvent.count({
+              where: {
+                resourceId: newPrincipalId,
+                action: "PRINCIPAL_CREATED",
+              },
+            }),
+          ]),
+      );
+      expect(detachedAuditCount).toBe(1);
+      expect(createdAuditCount).toBe(1);
       expect(
         (detachedAudit?.metadata as Record<string, unknown>)[
           "normalizedRecordId"
@@ -499,6 +522,144 @@ describe("Merge, unmerge and the match-candidate review queue (e2e)", () => {
     );
     expect(principalCount).toBe(1);
   });
+
+  it(
+    "returns non-leaking 404s for a wrong unmerge parent and cross-tenant " +
+      "principal/candidate ids without changing either tenant",
+    async () => {
+      const org = await organization();
+      const { accessToken } = await reviewerFor(org);
+      const source = await dataSource(org, `boundary-source-${randomUUID()}`);
+      const owner = await principal(org, "Boundary Owner");
+      const wrongPrincipal = await principal(org, "Wrong Parent");
+      const first = await sourceRecordAndNormalized(org, source, {
+        fullName: "Boundary Owner",
+        emailNormalized: "boundary@example.test",
+      });
+      const second = await sourceRecordAndNormalized(org, source, {
+        fullName: "Boundary Owner",
+        emailNormalized: "boundary@example.test",
+      });
+      await activeLink(org, owner.id, first.normalizedRecord.id);
+      await activeLink(org, owner.id, second.normalizedRecord.id);
+      await rebuild(org, owner.id);
+
+      const wrongParentRes = await request(app.getHttpServer())
+        .post(`/api/principals/${wrongPrincipal.id}/unmerge`)
+        .set("Authorization", `Bearer ${accessToken}`)
+        .send({
+          normalizedRecordId: first.normalizedRecord.id,
+          reason: "test",
+        });
+      expect(wrongParentRes.status).toBe(404);
+      const wrongParentMessage = JSON.stringify(wrongParentRes.body);
+      expect(wrongParentMessage).not.toContain("Boundary Owner");
+      expect(wrongParentMessage).not.toContain("boundary@example.test");
+      const ownLinksAfterWrongParent = await TenantContext.run(
+        tenant(org),
+        () =>
+          prisma.scoped.identityLink.count({
+            where: { dataPrincipalId: owner.id, status: "ACTIVE" },
+          }),
+      );
+      expect(ownLinksAfterWrongParent).toBe(2);
+
+      const otherOrg = await organization();
+      const otherSource = await dataSource(
+        otherOrg,
+        `other-boundary-source-${randomUUID()}`,
+      );
+      const otherPrincipal = await principal(otherOrg, "Other Tenant Person");
+      const otherFirst = await sourceRecordAndNormalized(
+        otherOrg,
+        otherSource,
+        {
+          fullName: "Other Tenant Person",
+          emailNormalized: "other-tenant@example.test",
+        },
+      );
+      const otherSecond = await sourceRecordAndNormalized(
+        otherOrg,
+        otherSource,
+        {
+          fullName: "Other Tenant Person",
+          emailNormalized: "other-tenant@example.test",
+        },
+      );
+      await activeLink(
+        otherOrg,
+        otherPrincipal.id,
+        otherFirst.normalizedRecord.id,
+      );
+      await activeLink(
+        otherOrg,
+        otherPrincipal.id,
+        otherSecond.normalizedRecord.id,
+      );
+      const otherCandidate = await TenantContext.run(tenant(otherOrg), () =>
+        prisma.scoped.matchCandidate.create({
+          data: {
+            normalizedRecordId: otherFirst.normalizedRecord.id,
+            dataPrincipalId: otherPrincipal.id,
+            confidence: "POSSIBLE",
+            score: 0.6,
+            evidence: { rule: "SUPPORTING_SIGNAL" },
+          } as never,
+        }),
+      );
+
+      const [crossUnmerge, crossConfirm, crossReject, ownCandidates] =
+        await Promise.all([
+          request(app.getHttpServer())
+            .post(`/api/principals/${otherPrincipal.id}/unmerge`)
+            .set("Authorization", `Bearer ${accessToken}`)
+            .send({
+              normalizedRecordId: otherFirst.normalizedRecord.id,
+              reason: "test",
+            }),
+          request(app.getHttpServer())
+            .post(`/api/match-candidates/${otherCandidate.id}/confirm`)
+            .set("Authorization", `Bearer ${accessToken}`)
+            .send(),
+          request(app.getHttpServer())
+            .post(`/api/match-candidates/${otherCandidate.id}/reject`)
+            .set("Authorization", `Bearer ${accessToken}`)
+            .send(),
+          request(app.getHttpServer())
+            .get("/api/match-candidates")
+            .set("Authorization", `Bearer ${accessToken}`),
+        ]);
+      for (const response of [crossUnmerge, crossConfirm, crossReject]) {
+        expect(response.status).toBe(404);
+        const message = JSON.stringify(response.body);
+        expect(message).not.toContain("Other Tenant Person");
+        expect(message).not.toContain("other-tenant@example.test");
+      }
+      expect(ownCandidates.status).toBe(200);
+      expect(ownCandidates.body).toEqual([]);
+
+      const [otherLinks, unchangedCandidate, otherAudits] =
+        await TenantContext.run(tenant(otherOrg), () =>
+          Promise.all([
+            prisma.scoped.identityLink.count({
+              where: {
+                dataPrincipalId: otherPrincipal.id,
+                status: "ACTIVE",
+              },
+            }),
+            prisma.scoped.matchCandidate.findFirst({
+              where: { id: otherCandidate.id },
+            }),
+            prisma.scoped.auditEvent.count({
+              where: { resourceId: otherCandidate.id },
+            }),
+          ]),
+        );
+      expect(otherLinks).toBe(2);
+      expect(unchangedCandidate).toMatchObject({ status: "PENDING" });
+      expect(otherAudits).toBe(0);
+    },
+  );
 
   it("confirming a candidate creates exactly one ACTIVE link and rebuilds the principal", async () => {
     const org = await organization();
@@ -579,6 +740,15 @@ describe("Merge, unmerge and the match-candidate review queue (e2e)", () => {
       }),
     );
     expect(audit).not.toBeNull();
+    const auditCount = await TenantContext.run(tenant(org), () =>
+      prisma.scoped.auditEvent.count({
+        where: {
+          resourceId: candidate.id,
+          action: "MATCH_CANDIDATE_CONFIRMED",
+        },
+      }),
+    );
+    expect(auditCount).toBe(1);
   });
 
   it(
@@ -758,6 +928,122 @@ describe("Merge, unmerge and the match-candidate review queue (e2e)", () => {
     expect(historyRes.body).toHaveLength(1);
     expect(historyRes.body[0]).toMatchObject({ status: "REJECTED" });
   });
+
+  it(
+    "atomically permits only one concurrent confirm/reject decision, with one " +
+      "terminal audit and no losing topology write",
+    async () => {
+      const org = await organization();
+      const { accessToken } = await reviewerFor(org);
+      const source = await dataSource(org, `atomic-decision-${randomUUID()}`);
+      const target = await principal(org, "Atomic Target");
+      const row = await sourceRecordAndNormalized(org, source, {
+        fullName: "Atomic Candidate",
+        emailNormalized: "atomic@example.test",
+      });
+      const candidate = await TenantContext.run(tenant(org), () =>
+        prisma.scoped.matchCandidate.create({
+          data: {
+            normalizedRecordId: row.normalizedRecord.id,
+            dataPrincipalId: target.id,
+            confidence: "POSSIBLE",
+            score: 0.6,
+            evidence: { rule: "SUPPORTING_SIGNAL" },
+          } as never,
+        }),
+      );
+
+      // Make this a real TOCTOU test rather than relying on HTTP timing:
+      // both request transactions have completed their non-locking candidate
+      // read before either tries the conditional UPDATE. The old read-then-
+      // update implementation lets both requests through at this point;
+      // the atomic PENDING claim admits exactly one.
+      type CandidateLoader = {
+        loadCandidate: (tx: unknown, id: string) => Promise<unknown>;
+      };
+      const candidateLoader = candidatesService as unknown as CandidateLoader;
+      const originalLoad = candidateLoader.loadCandidate.bind(candidateLoader);
+      let readers = 0;
+      let releaseReaders!: () => void;
+      const bothRead = new Promise<void>((resolve) => {
+        releaseReaders = resolve;
+      });
+      const loadSpy = jest
+        .spyOn(candidateLoader, "loadCandidate")
+        .mockImplementation(async (tx, id) => {
+          const loaded = await originalLoad(tx, id);
+          readers += 1;
+          if (readers === 2) {
+            releaseReaders();
+          }
+          await bothRead;
+          return loaded;
+        });
+
+      let confirmRes: request.Response;
+      let rejectRes: request.Response;
+      try {
+        [confirmRes, rejectRes] = await Promise.all([
+          request(app.getHttpServer())
+            .post(`/api/match-candidates/${candidate.id}/confirm`)
+            .set("Authorization", `Bearer ${accessToken}`)
+            .send(),
+          request(app.getHttpServer())
+            .post(`/api/match-candidates/${candidate.id}/reject`)
+            .set("Authorization", `Bearer ${accessToken}`)
+            .send(),
+        ]);
+      } finally {
+        loadSpy.mockRestore();
+      }
+
+      expect([confirmRes!.status, rejectRes!.status].sort()).toEqual([
+        201, 400,
+      ]);
+      const loser = confirmRes!.status === 400 ? confirmRes! : rejectRes!;
+      expect(JSON.stringify(loser.body)).toContain("no longer pending");
+
+      const [decided, terminalAudits, links] = await TenantContext.run(
+        tenant(org),
+        () =>
+          Promise.all([
+            prisma.scoped.matchCandidate.findFirst({
+              where: { id: candidate.id },
+            }),
+            prisma.scoped.auditEvent.findMany({
+              where: {
+                resourceId: candidate.id,
+                action: {
+                  in: ["MATCH_CANDIDATE_CONFIRMED", "MATCH_CANDIDATE_REJECTED"],
+                },
+              },
+            }),
+            prisma.scoped.identityLink.findMany({
+              where: { normalizedRecordId: row.normalizedRecord.id },
+            }),
+          ]),
+      );
+      expect(decided?.status).toBe(
+        confirmRes!.status === 201 ? "CONFIRMED" : "REJECTED",
+      );
+      expect(terminalAudits).toHaveLength(1);
+      expect(terminalAudits[0]?.action).toBe(
+        confirmRes!.status === 201
+          ? "MATCH_CANDIDATE_CONFIRMED"
+          : "MATCH_CANDIDATE_REJECTED",
+      );
+      if (decided?.status === "CONFIRMED") {
+        expect(links).toHaveLength(1);
+        expect(links[0]).toMatchObject({
+          status: "ACTIVE",
+          dataPrincipalId: target.id,
+        });
+      } else {
+        // A losing confirmer's merge must roll back completely.
+        expect(links).toHaveLength(0);
+      }
+    },
+  );
 
   it("rejecting a candidate prevents it from being re-raised on a later sync", async () => {
     const org = await organization();
