@@ -91,7 +91,8 @@ function jsonValue(value: unknown): string | null {
     return null;
   }
   if (typeof value === "string") {
-    return value.trim() === "" ? null : value;
+    const trimmed = value.trim();
+    return trimmed === "" ? null : trimmed;
   }
   if (typeof value === "number" || typeof value === "boolean") {
     return String(value);
@@ -120,7 +121,8 @@ function normalizedValue(value: string | Date | null): string | null {
     // date, not a locale-dependent timestamp.
     return value.toISOString().slice(0, 10);
   }
-  return value.trim() === "" ? null : value;
+  const trimmed = value.trim();
+  return trimmed === "" ? null : trimmed;
 }
 
 function extrasObject(value: unknown): Record<string, unknown> {
@@ -256,7 +258,21 @@ export function assembleFields(
   );
 }
 
-function displayNameFrom(
+/**
+ * The principal's displayName rule: priority 0 is an explicitly supplied
+ * full name; priority 1 is firstName and lastName composed together,
+ * filtering out whichever part is absent -- so it already degrades
+ * gracefully to a lone firstName or lone lastName. There is deliberately no
+ * separate "firstName only" / "lastName only" priority below that: filtering
+ * absent parts means priority 1 fires in every case either component is
+ * mapped at all, so a dedicated lower-priority rule for a single component
+ * could never out-rank (or even differ in value from) priority 1's result
+ * in that same case -- it would only ever be dead code shadowed by a
+ * higher-priority rule that already produced the identical value. Ties
+ * within a priority resolve via the same newest-record order used for
+ * field selection, never by row-fetch order.
+ */
+export function displayNameFrom(
   records: readonly AssemblyRecord[],
   sourceRecords: ReadonlyMap<string, SourceRecordContext>,
 ): string | null {
@@ -289,15 +305,11 @@ function displayNameFrom(
         });
       }
     };
-    // Profile labels favour a supplied full name, then a single-record
-    // first+last composition, then either component. Newest resolves ties.
     add(0, record.fullName);
     add(
       1,
       [record.firstName, record.lastName].filter(Boolean).join(" ") || null,
     );
-    add(2, record.firstName);
-    add(3, record.lastName);
   }
   return (
     candidates.sort(

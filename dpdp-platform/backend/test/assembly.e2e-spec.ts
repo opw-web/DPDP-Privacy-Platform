@@ -235,9 +235,18 @@ describe("profile assembly and DOB-only age derivation (e2e)", () => {
         support.dataSource.id,
       ].sort(),
     );
-    expect(
-      beforeDetach.filter((field) => field.canonicalField === "CITY"),
-    ).toEqual(
+    // EMAIL is the same value from all three sources, so it must NOT be
+    // flagged as a conflict -- this is the negative control the CITY
+    // assertions below need to mean anything.
+    expect(email).toEqual(expect.objectContaining({ conflict: false }));
+    const cityRows = beforeDetach.filter(
+      (field) => field.canonicalField === "CITY",
+    );
+    // Exactly two CITY rows -- arrayContaining alone would also pass with a
+    // stray third row, which is precisely the kind of assembly bug (e.g.
+    // grouping on the wrong key) this test exists to catch.
+    expect(cityRows).toHaveLength(2);
+    expect(cityRows).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
           value: "Mumbai",
@@ -254,6 +263,41 @@ describe("profile assembly and DOB-only age derivation (e2e)", () => {
     expect(beforeDetach.every((field) => field.sourceIds.length > 0)).toBe(
       true,
     );
+
+    // Brief scenario 6: rebuild run twice (no link change in between)
+    // produces identical rows. This is DB-level persistence idempotency,
+    // distinct from assembleFields' pure-function determinism unit test --
+    // it is the test that would catch a future change of rebuild() from
+    // replace-all to patch-in-place, which would leave stale conflict rows
+    // behind and break GO-03.
+    await TenantContext.run(tenant(org), () =>
+      prisma.scoped.$transaction((tx) => assembly.rebuild(tx, principalRow.id)),
+    );
+    const rebuiltAgain = await TenantContext.run(tenant(org), () =>
+      prisma.scoped.principalDataField.findMany({
+        where: { dataPrincipalId: principalRow.id },
+        orderBy: [{ canonicalField: "asc" }, { value: "asc" }],
+      }),
+    );
+    const comparable = (
+      rows: typeof beforeDetach,
+    ): Array<{
+      canonicalField: string;
+      value: string;
+      dataCategory: string;
+      sourceIds: string[];
+      isPrimary: boolean;
+      conflict: boolean;
+    }> =>
+      rows.map((row) => ({
+        canonicalField: row.canonicalField,
+        value: row.value,
+        dataCategory: row.dataCategory,
+        sourceIds: [...row.sourceIds].sort(),
+        isPrimary: row.isPrimary,
+        conflict: row.conflict,
+      }));
+    expect(comparable(rebuiltAgain)).toEqual(comparable(beforeDetach));
 
     await TenantContext.run(tenant(org), () =>
       prisma.scoped.identityLink.update({
@@ -322,10 +366,20 @@ describe("profile assembly and DOB-only age derivation (e2e)", () => {
         }),
       ),
     ).resolves.toEqual({ ageStatus: "CHILD", ageStatusSource: "DOB_DERIVED" });
-    const ageAudits = await TenantContext.run(tenant(org), () =>
-      prisma.scoped.auditEvent.count({
+    const ageAuditRows = await TenantContext.run(tenant(org), () =>
+      prisma.scoped.auditEvent.findMany({
         where: { subjectPrincipalId: minor.id, action: "AGE_STATUS_SET" },
+        select: { metadata: true },
       }),
+    );
+    // Assert the absolute count, not just "however many there were" -- a
+    // self-referential baseline captured from the same run proves nothing
+    // (deleting the auditService.record call entirely would leave both
+    // counts at 0 and this test would still pass). Also assert the
+    // metadata discriminator the brief requires this write to carry.
+    expect(ageAuditRows).toHaveLength(1);
+    expect(ageAuditRows[0]?.metadata).toEqual(
+      expect.objectContaining({ derivation: "DATE_OF_BIRTH" }),
     );
     await TenantContext.run(tenant(org), () =>
       prisma.scoped.$transaction((tx) => age.derive(tx, minor.id, now)),
@@ -336,7 +390,7 @@ describe("profile assembly and DOB-only age derivation (e2e)", () => {
           where: { subjectPrincipalId: minor.id, action: "AGE_STATUS_SET" },
         }),
       ),
-    ).resolves.toBe(ageAudits);
+    ).resolves.toBe(1);
 
     const adult = await principal(org);
     const adultSource = await source(
@@ -458,5 +512,140 @@ describe("profile assembly and DOB-only age derivation (e2e)", () => {
         }),
       ),
     ).resolves.toEqual({ ageStatus: "CHILD", ageStatusSource: "DOB_DERIVED" });
+  });
+
+  it("never overwrites a manually declared ageStatusSource", async () => {
+    const org = await organization();
+    const dobSource = await source(
+      org,
+      `manual-${randomUUID()}`,
+      [
+        {
+          sourceField: "dob",
+          canonicalField: "DATE_OF_BIRTH",
+          dataCategory: "DEMOGRAPHIC",
+        },
+      ],
+      new Date("2026-01-01T00:00:00.000Z"),
+    );
+    const principalRow = await principal(org);
+    const manualSetAt = new Date("2025-06-01T00:00:00.000Z");
+    // Simulates an employee's manual CAN_MANAGE_CHILD_DATA determination
+    // (Task 19+/MVP 2) -- the write path itself doesn't exist yet, but its
+    // persisted shape does (ageStatusSource is a free-text column today).
+    await TenantContext.run(tenant(org), () =>
+      prisma.scoped.dataPrincipal.update({
+        where: { id: principalRow.id },
+        data: {
+          ageStatus: "ADULT",
+          ageStatusSource: "EMPLOYEE_SET",
+          ageStatusSetAt: manualSetAt,
+        },
+      }),
+    );
+    // A DOB-mapped record that would derive CHILD if considered at all.
+    const record = await normalized(org, dobSource.sourceRecord.id, {
+      dateOfBirth: new Date("2010-01-02T00:00:00.000Z"),
+    });
+    await link(org, principalRow.id, record.id);
+
+    const auditsBefore = await TenantContext.run(tenant(org), () =>
+      prisma.scoped.auditEvent.count({
+        where: {
+          subjectPrincipalId: principalRow.id,
+          action: "AGE_STATUS_SET",
+        },
+      }),
+    );
+    await TenantContext.run(tenant(org), () =>
+      prisma.scoped.$transaction((tx) =>
+        age.derive(tx, principalRow.id, new Date("2026-01-01T00:00:00.000Z")),
+      ),
+    );
+
+    await expect(
+      TenantContext.run(tenant(org), () =>
+        prisma.scoped.dataPrincipal.findFirst({
+          where: { id: principalRow.id },
+          select: {
+            ageStatus: true,
+            ageStatusSource: true,
+            ageStatusSetAt: true,
+          },
+        }),
+      ),
+    ).resolves.toEqual({
+      ageStatus: "ADULT",
+      ageStatusSource: "EMPLOYEE_SET",
+      ageStatusSetAt: manualSetAt,
+    });
+    await expect(
+      TenantContext.run(tenant(org), () =>
+        prisma.scoped.auditEvent.count({
+          where: {
+            subjectPrincipalId: principalRow.id,
+            action: "AGE_STATUS_SET",
+          },
+        }),
+      ),
+    ).resolves.toBe(auditsBefore);
+  });
+
+  it("persists displayName from the highest-priority linked name value, not the newest one", async () => {
+    const org = await organization();
+    const fullNameSource = await source(
+      org,
+      `fullname-${randomUUID()}`,
+      [
+        {
+          sourceField: "name",
+          canonicalField: "FULL_NAME",
+          dataCategory: "IDENTITY",
+        },
+      ],
+      new Date("2026-01-01T00:00:00.000Z"),
+    );
+    const partsSource = await source(
+      org,
+      `parts-${randomUUID()}`,
+      [
+        {
+          sourceField: "first",
+          canonicalField: "FIRST_NAME",
+          dataCategory: "IDENTITY",
+        },
+        {
+          sourceField: "last",
+          canonicalField: "LAST_NAME",
+          dataCategory: "IDENTITY",
+        },
+      ],
+      // Deliberately the NEWER source, to prove priority beats recency.
+      new Date("2026-06-01T00:00:00.000Z"),
+    );
+    const principalRow = await principal(org, "Placeholder");
+    const fullNameRecord = await normalized(
+      org,
+      fullNameSource.sourceRecord.id,
+      { fullName: "Priya Singh" },
+    );
+    const partsRecord = await normalized(org, partsSource.sourceRecord.id, {
+      firstName: "Neha",
+      lastName: "Kapoor",
+    });
+    await link(org, principalRow.id, fullNameRecord.id);
+    await link(org, principalRow.id, partsRecord.id);
+
+    await TenantContext.run(tenant(org), () =>
+      prisma.scoped.$transaction((tx) => assembly.rebuild(tx, principalRow.id)),
+    );
+    await expect(
+      TenantContext.run(tenant(org), () =>
+        prisma.scoped.dataPrincipal.findFirst({
+          where: { id: principalRow.id },
+          select: { displayName: true },
+        }),
+      ),
+    ).resolves.toEqual({ displayName: "Priya Singh" });
   });
 });

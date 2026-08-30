@@ -3,6 +3,9 @@ import type { AgeStatus } from "@prisma/client";
 import { AuditService } from "../../common/audit/audit.service";
 import type { ScopedTransactionClient } from "../../common/prisma/scoped-transaction-client";
 
+/** The only ageStatusSource this service ever writes. */
+const DOB_DERIVED_SOURCE = "DOB_DERIVED";
+
 type DobCandidate = {
   dateOfBirth: Date;
   lastSeenAt: Date;
@@ -18,10 +21,16 @@ function compareNewest(left: DobCandidate, right: DobCandidate): number {
   );
 }
 
+// s.2(f) DPDP Act, 2023 -- a "child" is a person who has not completed the
+// age of eighteen years. This is the statute's definition of a child, not a
+// configurable deadline, and it is the one place a bare number is allowed to
+// appear in this codebase.
+const AGE_OF_MAJORITY_YEARS = 18;
+
 export function ageStatusFor(dateOfBirth: Date, now: Date): "CHILD" | "ADULT" {
   const adulthood = new Date(
     Date.UTC(
-      dateOfBirth.getUTCFullYear() + 18,
+      dateOfBirth.getUTCFullYear() + AGE_OF_MAJORITY_YEARS,
       dateOfBirth.getUTCMonth(),
       dateOfBirth.getUTCDate(),
     ),
@@ -29,7 +38,6 @@ export function ageStatusFor(dateOfBirth: Date, now: Date): "CHILD" | "ADULT" {
   const today = new Date(
     Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()),
   );
-  // 18 is the statute's definition of a child, not a configurable deadline.
   return today < adulthood ? "CHILD" : "ADULT";
 }
 
@@ -56,6 +64,19 @@ export class AgeService {
       throw new NotFoundException(
         `Data principal "${dataPrincipalId}" not found.`,
       );
+    }
+    // A manually declared ageStatusSource (SELF_DECLARED / EMPLOYEE_SET --
+    // Task 19+/MVP 2) is authoritative over anything this method could ever
+    // compute. The brief's contract is "derive... otherwise leave UNKNOWN",
+    // not "overwrite" -- so an unrelated later link change on a DOB-less
+    // source must never silently downgrade an employee's determination back
+    // to a DOB-derived (or UNKNOWN) value. Bail out before doing any of the
+    // batched reads below.
+    if (
+      principal.ageStatusSource !== null &&
+      principal.ageStatusSource !== DOB_DERIVED_SOURCE
+    ) {
+      return;
     }
 
     const links = await tx.identityLink.findMany({
@@ -114,7 +135,7 @@ export class AgeService {
     const nextStatus: AgeStatus = selected
       ? ageStatusFor(selected.dateOfBirth, now)
       : "UNKNOWN";
-    const nextSource = selected ? "DOB_DERIVED" : null;
+    const nextSource = selected ? DOB_DERIVED_SOURCE : null;
     const stateChanged =
       principal.ageStatus !== nextStatus ||
       principal.ageStatusSource !== nextSource ||
