@@ -45,6 +45,18 @@ export class PrismaService
   private readonly logger = new Logger(PrismaService.name);
   private scopedClient?: TenantScopedPrismaClient;
 
+  constructor() {
+    // Opt-in query events keep production logging unchanged while allowing
+    // performance tests to count the exact SQL issued by one endpoint.
+    // Task 20 uses PRISMA_QUERY_LOG=1; it is intentionally not a query
+    // result logger and does not expose bound personal-data parameters.
+    super(
+      process.env["PRISMA_QUERY_LOG"] === "1"
+        ? { log: [{ emit: "event", level: "query" }] }
+        : {},
+    );
+  }
+
   /** The tenant-scoped client. Services inject `PrismaService` and call `.scoped`. */
   get scoped(): TenantScopedPrismaClient {
     this.scopedClient ??= extendWithTenantScoping(this);

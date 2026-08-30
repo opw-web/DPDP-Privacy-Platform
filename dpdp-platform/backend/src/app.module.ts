@@ -23,6 +23,7 @@ import { PermissionsGuard } from "./common/guards/permissions.guard";
 import { MaskingModule } from "./common/masking/masking.module";
 import { IdentityModule } from "./modules/identity/identity.module";
 import { SyncModule } from "./modules/sync/sync.module";
+import { PrincipalsModule } from "./modules/principals/principals.module";
 
 @Module({
   imports: [
@@ -60,6 +61,7 @@ import { SyncModule } from "./modules/sync/sync.module";
     RegistersModule,
     IdentityModule,
     SyncModule,
+    PrincipalsModule,
     MaskingModule,
     HealthModule,
   ],
