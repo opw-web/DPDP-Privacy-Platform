@@ -3,9 +3,9 @@ import {
   IsDateString,
   IsEmail,
   IsEnum,
-  IsOptional,
   IsString,
   MinLength,
+  ValidateIf,
 } from "class-validator";
 import { ApiPropertyOptional } from "@nestjs/swagger";
 import { RecipientType } from "@prisma/client";
@@ -23,73 +23,73 @@ import { RecipientType } from "@prisma/client";
  */
 export class UpdateRecipientDto {
   @ApiPropertyOptional()
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsString()
   @MinLength(1)
   name?: string;
 
   @ApiPropertyOptional({ enum: RecipientType })
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsEnum(RecipientType)
   type?: RecipientType;
 
-  @ApiPropertyOptional()
-  @IsOptional()
+  @ApiPropertyOptional({ nullable: true })
+  @ValidateIf((_object, value) => value !== undefined && value !== null)
   @IsEmail()
-  contactEmail?: string;
+  contactEmail?: string | null;
 
   @ApiPropertyOptional()
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsString()
   country?: string;
 
   @ApiPropertyOptional()
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsBoolean()
   contractExists?: boolean;
 
-  @ApiPropertyOptional()
-  @IsOptional()
+  @ApiPropertyOptional({ nullable: true })
+  @ValidateIf((_object, value) => value !== undefined && value !== null)
   @IsString()
-  contractReference?: string;
+  contractReference?: string | null;
 
-  @ApiPropertyOptional()
-  @IsOptional()
+  @ApiPropertyOptional({ nullable: true })
+  @ValidateIf((_object, value) => value !== undefined && value !== null)
   @IsDateString()
-  contractSignedAt?: string;
+  contractSignedAt?: string | null;
 
-  @ApiPropertyOptional()
-  @IsOptional()
+  @ApiPropertyOptional({ nullable: true })
+  @ValidateIf((_object, value) => value !== undefined && value !== null)
   @IsDateString()
-  contractExpiresAt?: string;
+  contractExpiresAt?: string | null;
 
   @ApiPropertyOptional()
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsBoolean()
   contractHasSecurityClause?: boolean;
 
   @ApiPropertyOptional()
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsBoolean()
   contractHasErasureClause?: boolean;
 
   @ApiPropertyOptional()
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsBoolean()
   contractHasAuditRights?: boolean;
 
   @ApiPropertyOptional()
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsBoolean()
   subProcessorsDisclosed?: boolean;
 
-  @ApiPropertyOptional()
-  @IsOptional()
+  @ApiPropertyOptional({ nullable: true })
+  @ValidateIf((_object, value) => value !== undefined && value !== null)
   @IsString()
-  subProcessorNotes?: string;
+  subProcessorNotes?: string | null;
 
   @ApiPropertyOptional()
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsBoolean()
   active?: boolean;
 }

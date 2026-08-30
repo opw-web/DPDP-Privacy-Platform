@@ -56,7 +56,7 @@ function duplicateNameMessage(purposeId: string, name: string): string {
  * deliberately omits `minimumRetentionValue`/`minimumRetentionUnit`/
  * `preErasureNoticeHours` from the write when the caller does not supply
  * them, letting Postgres's own column defaults apply, rather than this
- * service repeating `1`/`"YEARS"`/`48` as a second, code-level literal.
+ * service repeating those defaults as a second, code-level literal.
  */
 @Injectable()
 export class RetentionService {
@@ -118,8 +118,8 @@ export class RetentionService {
             retentionUnit: dto.retentionUnit,
             legalBasisForRetention: dto.legalBasisForRetention,
             legalBasisType: dto.legalBasisType,
-            // Omitted (not `?? 1`/`?? "YEARS"`/`?? 48`) when the caller
-            // doesn't supply a value -- see the class doc comment above.
+            // Omitted when the caller doesn't supply a value -- see the
+            // class doc comment above.
             ...(dto.minimumRetentionValue !== undefined
               ? { minimumRetentionValue: dto.minimumRetentionValue }
               : {}),
@@ -150,6 +150,7 @@ export class RetentionService {
         resourceType: "RetentionPolicy",
         resourceId: created.id,
         metadata: {
+          change: "CREATED",
           purposeId: created.purposeId,
           name: created.name,
           retentionValue: created.retentionValue,
@@ -161,13 +162,6 @@ export class RetentionService {
     });
   }
 
-  /**
-   * Same flagged gap as `SharingService.update()`/`TransfersService.update()`:
-   * the fixed `AuditAction` union has no `RETENTION_POLICY_UPDATED`, only
-   * `RETENTION_POLICY_CREATED`. This PATCH writes the change but does
-   * not call `AuditService.record()`. Flagged for the spec owner in the
-   * task report.
-   */
   async update(
     id: string,
     dto: UpdateRetentionPolicyDto,
@@ -203,23 +197,34 @@ export class RetentionService {
     }
 
     try {
-      return await this.prisma.scoped.retentionPolicy.update({
-        where: { id },
-        data: {
-          purposeId: dto.purposeId,
-          name: dto.name,
-          triggerType: dto.triggerType,
-          retentionValue: dto.retentionValue,
-          retentionUnit: dto.retentionUnit,
-          legalBasisForRetention: dto.legalBasisForRetention,
-          legalBasisType: dto.legalBasisType,
-          minimumRetentionValue: dto.minimumRetentionValue,
-          minimumRetentionUnit: dto.minimumRetentionUnit,
-          preErasureNoticeHours: dto.preErasureNoticeHours,
-          accountAccessCarveOut: dto.accountAccessCarveOut,
-          active: dto.active,
-        },
-        select: RETENTION_POLICY_PUBLIC_SELECT,
+      return await this.prisma.scoped.$transaction(async (tx) => {
+        const updated = await tx.retentionPolicy.update({
+          where: { id },
+          data: {
+            purposeId: dto.purposeId,
+            name: dto.name,
+            triggerType: dto.triggerType,
+            retentionValue: dto.retentionValue,
+            retentionUnit: dto.retentionUnit,
+            legalBasisForRetention: dto.legalBasisForRetention,
+            legalBasisType: dto.legalBasisType,
+            minimumRetentionValue: dto.minimumRetentionValue,
+            minimumRetentionUnit: dto.minimumRetentionUnit,
+            preErasureNoticeHours: dto.preErasureNoticeHours,
+            accountAccessCarveOut: dto.accountAccessCarveOut,
+            active: dto.active,
+          },
+          select: RETENTION_POLICY_PUBLIC_SELECT,
+        });
+
+        await this.auditService.record(tx, {
+          action: "RETENTION_POLICY_CREATED",
+          resourceType: "RetentionPolicy",
+          resourceId: updated.id,
+          metadata: { change: "UPDATED" },
+        });
+
+        return updated;
       });
     } catch (err) {
       if (isUniqueConstraintViolation(err)) {

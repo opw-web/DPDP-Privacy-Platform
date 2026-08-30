@@ -156,6 +156,7 @@ export class SharingService {
         resourceType: "SharingActivity",
         resourceId: created.id,
         metadata: {
+          change: "CREATED",
           recipientId: created.recipientId,
           purposeId: created.purposeId,
           dataCategories: created.dataCategories,
@@ -166,20 +167,6 @@ export class SharingService {
     });
   }
 
-  /**
-   * Fix-round-1-style note recorded up front rather than after review:
-   * the fixed `AuditAction` union (audit-actions.ts) has no
-   * `SHARING_ACTIVITY_UPDATED` -- only `SHARING_ACTIVITY_CREATED`. Unlike
-   * `SourcePurposesService.replace()` reusing `DATA_SOURCE_UPDATED` (a
-   * generic "this DataSource changed" action that genuinely names the
-   * resource being changed), there is no existing action anywhere in the
-   * union that names `SharingActivity` other than the CREATED one, so
-   * there is nothing defensible to borrow without mislabeling an update
-   * as a creation. Per the task dispatch's explicit instruction not to
-   * invent a new action, this PATCH performs the write but does NOT call
-   * `AuditService.record()`. Flagged for the spec owner in the task
-   * report.
-   */
   async update(
     id: string,
     dto: UpdateSharingActivityDto,
@@ -205,19 +192,35 @@ export class SharingService {
       await this.assertSourceIdsExist(dto.sourceIds);
     }
 
-    return this.prisma.scoped.sharingActivity.update({
-      where: { id },
-      data: {
-        recipientId: dto.recipientId,
-        purposeId: dto.purposeId,
-        dataCategories: dto.dataCategories,
-        description: dto.description,
-        sourceIds: dto.sourceIds,
-        startedAt: dto.startedAt ? new Date(dto.startedAt) : undefined,
-        endedAt: dto.endedAt ? new Date(dto.endedAt) : undefined,
-        active: dto.active,
-      },
-      select: SHARING_ACTIVITY_PUBLIC_SELECT,
+    return this.prisma.scoped.$transaction(async (tx) => {
+      const updated = await tx.sharingActivity.update({
+        where: { id },
+        data: {
+          recipientId: dto.recipientId,
+          purposeId: dto.purposeId,
+          dataCategories: dto.dataCategories,
+          description: dto.description,
+          sourceIds: dto.sourceIds,
+          startedAt: dto.startedAt ? new Date(dto.startedAt) : undefined,
+          endedAt:
+            dto.endedAt === undefined
+              ? undefined
+              : dto.endedAt === null
+                ? null
+                : new Date(dto.endedAt),
+          active: dto.active,
+        },
+        select: SHARING_ACTIVITY_PUBLIC_SELECT,
+      });
+
+      await this.auditService.record(tx, {
+        action: "SHARING_ACTIVITY_CREATED",
+        resourceType: "SharingActivity",
+        resourceId: updated.id,
+        metadata: { change: "UPDATED" },
+      });
+
+      return updated;
     });
   }
 }

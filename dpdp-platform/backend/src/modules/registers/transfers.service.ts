@@ -76,8 +76,24 @@ export class TransfersService {
     }
   }
 
+  private async assertEmployeeExists(employeeId: string): Promise<void> {
+    const employee = await this.prisma.scoped.employee.findFirst({
+      where: { id: employeeId },
+      select: { id: true },
+    });
+    if (!employee) {
+      throw new BadRequestException(`Unknown employee id: ${employeeId}`);
+    }
+  }
+
   async create(dto: CreateTransferDto): Promise<PublicTransfer> {
     await this.assertRecipientExists(dto.recipientId);
+    if (
+      dto.reviewedByEmployeeId !== undefined &&
+      dto.reviewedByEmployeeId !== null
+    ) {
+      await this.assertEmployeeExists(dto.reviewedByEmployeeId);
+    }
 
     return this.prisma.scoped.$transaction(async (tx) => {
       const created = await tx.crossBorderTransfer.create({
@@ -103,6 +119,7 @@ export class TransfersService {
         resourceType: "CrossBorderTransfer",
         resourceId: created.id,
         metadata: {
+          change: "CREATED",
           recipientId: created.recipientId,
           destinationCountry: created.destinationCountry,
         },
@@ -112,14 +129,6 @@ export class TransfersService {
     });
   }
 
-  /**
-   * Same flagged gap as `SharingService.update()`: the fixed
-   * `AuditAction` union has no `TRANSFER_UPDATED`, only
-   * `TRANSFER_CREATED`, and nothing else in the union names
-   * `CrossBorderTransfer`. This PATCH writes the change but does not
-   * call `AuditService.record()`. Flagged for the spec owner in the task
-   * report.
-   */
   async update(id: string, dto: UpdateTransferDto): Promise<PublicTransfer> {
     const existing = await this.prisma.scoped.crossBorderTransfer.findFirst({
       where: { id },
@@ -132,22 +141,44 @@ export class TransfersService {
     if (dto.recipientId !== undefined) {
       await this.assertRecipientExists(dto.recipientId);
     }
+    if (
+      dto.reviewedByEmployeeId !== undefined &&
+      dto.reviewedByEmployeeId !== null
+    ) {
+      await this.assertEmployeeExists(dto.reviewedByEmployeeId);
+    }
 
-    return this.prisma.scoped.crossBorderTransfer.update({
-      where: { id },
-      data: {
-        recipientId: dto.recipientId,
-        destinationCountry: dto.destinationCountry,
-        dataCategories: dto.dataCategories,
-        purposeDescription: dto.purposeDescription,
-        govtRestrictionChecked: dto.govtRestrictionChecked,
-        govtRestrictionNotes: dto.govtRestrictionNotes,
-        sectoralRestrictionNotes: dto.sectoralRestrictionNotes,
-        localisationRequired: dto.localisationRequired,
-        reviewedByEmployeeId: dto.reviewedByEmployeeId,
-        reviewedAt: dto.reviewedAt ? new Date(dto.reviewedAt) : undefined,
-      },
-      select: TRANSFER_PUBLIC_SELECT,
+    return this.prisma.scoped.$transaction(async (tx) => {
+      const updated = await tx.crossBorderTransfer.update({
+        where: { id },
+        data: {
+          recipientId: dto.recipientId,
+          destinationCountry: dto.destinationCountry,
+          dataCategories: dto.dataCategories,
+          purposeDescription: dto.purposeDescription,
+          govtRestrictionChecked: dto.govtRestrictionChecked,
+          govtRestrictionNotes: dto.govtRestrictionNotes,
+          sectoralRestrictionNotes: dto.sectoralRestrictionNotes,
+          localisationRequired: dto.localisationRequired,
+          reviewedByEmployeeId: dto.reviewedByEmployeeId,
+          reviewedAt:
+            dto.reviewedAt === undefined
+              ? undefined
+              : dto.reviewedAt === null
+                ? null
+                : new Date(dto.reviewedAt),
+        },
+        select: TRANSFER_PUBLIC_SELECT,
+      });
+
+      await this.auditService.record(tx, {
+        action: "TRANSFER_CREATED",
+        resourceType: "CrossBorderTransfer",
+        resourceId: updated.id,
+        metadata: { change: "UPDATED" },
+      });
+
+      return updated;
     });
   }
 }

@@ -33,8 +33,7 @@ export const RETENTION_LEGAL_BASIS_TYPES = [
  * deliberately OMITS `minimumRetentionValue`/`minimumRetentionUnit`/
  * `preErasureNoticeHours` from the `create()` payload when the caller
  * does not supply them, so Postgres's own column defaults
- * (`@default(1)`, `@default("YEARS")`, `@default(48)` -- already
- * transcribed into the Prisma schema, not restated here) apply, rather
+ * (already transcribed into the Prisma schema, not restated here) apply, rather
  * than this service repeating those numbers as a second literal
  * fallback.
  */
@@ -88,7 +87,6 @@ export class CreateRetentionPolicyDto {
   minimumRetentionUnit?: string;
 
   @ApiPropertyOptional({
-    default: 48,
     description:
       "RE-05: Rule 8(2), configurable and cited. Defaults per the schema.",
   })

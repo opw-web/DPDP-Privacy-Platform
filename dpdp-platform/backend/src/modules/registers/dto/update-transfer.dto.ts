@@ -3,66 +3,66 @@ import {
   IsBoolean,
   IsDateString,
   IsEnum,
-  IsOptional,
   IsString,
   MinLength,
+  ValidateIf,
 } from "class-validator";
 import { ApiPropertyOptional } from "@nestjs/swagger";
 import { DataCategory } from "@prisma/client";
 
-/** Every field optional (PATCH semantics). Same no-lawfulness-logic rule as `CreateTransferDto`. */
+/** Omitted fields are unchanged; notes and review fields may be cleared with null. */
 export class UpdateTransferDto {
   @ApiPropertyOptional()
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsString()
   @MinLength(1)
   recipientId?: string;
 
   @ApiPropertyOptional()
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsString()
   @MinLength(1)
   destinationCountry?: string;
 
   @ApiPropertyOptional({ enum: DataCategory, isArray: true })
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsArray()
   @IsEnum(DataCategory, { each: true })
   dataCategories?: DataCategory[];
 
   @ApiPropertyOptional()
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsString()
   @MinLength(1)
   purposeDescription?: string;
 
   @ApiPropertyOptional()
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsBoolean()
   govtRestrictionChecked?: boolean;
 
-  @ApiPropertyOptional()
-  @IsOptional()
+  @ApiPropertyOptional({ nullable: true })
+  @ValidateIf((_object, value) => value !== undefined && value !== null)
   @IsString()
-  govtRestrictionNotes?: string;
+  govtRestrictionNotes?: string | null;
+
+  @ApiPropertyOptional({ nullable: true })
+  @ValidateIf((_object, value) => value !== undefined && value !== null)
+  @IsString()
+  sectoralRestrictionNotes?: string | null;
 
   @ApiPropertyOptional()
-  @IsOptional()
-  @IsString()
-  sectoralRestrictionNotes?: string;
-
-  @ApiPropertyOptional()
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsBoolean()
   localisationRequired?: boolean;
 
-  @ApiPropertyOptional()
-  @IsOptional()
+  @ApiPropertyOptional({ nullable: true })
+  @ValidateIf((_object, value) => value !== undefined && value !== null)
   @IsString()
-  reviewedByEmployeeId?: string;
+  reviewedByEmployeeId?: string | null;
 
-  @ApiPropertyOptional()
-  @IsOptional()
+  @ApiPropertyOptional({ nullable: true })
+  @ValidateIf((_object, value) => value !== undefined && value !== null)
   @IsDateString()
-  reviewedAt?: string;
+  reviewedAt?: string | null;
 }

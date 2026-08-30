@@ -2,7 +2,6 @@ import {
   IsBoolean,
   IsDateString,
   IsIn,
-  IsOptional,
   IsString,
   MinLength,
   ValidateIf,
@@ -14,52 +13,49 @@ import {
 } from "./create-security-measure.dto";
 
 /**
- * Every field optional (PATCH semantics). `dataSourceId` additionally
- * accepts an explicit `null` (to turn a source-specific measure into an
- * organization-wide one) -- same `@ValidateIf` pattern as
- * `UpdatePurposeDto.legitimateUseLimb`.
+ * Omitted fields are unchanged. The nullable association, evidence, and
+ * review fields accept explicit null to clear them.
  */
 export class UpdateSecurityMeasureDto {
   @ApiPropertyOptional({ nullable: true })
-  @IsOptional()
-  @ValidateIf((_object, value) => value !== null)
+  @ValidateIf((_object, value) => value !== undefined && value !== null)
   @IsString()
   @MinLength(1)
   dataSourceId?: string | null;
 
   @ApiPropertyOptional({ enum: SECURITY_RULE_REFERENCES })
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsIn(SECURITY_RULE_REFERENCES)
   ruleReference?: string;
 
   @ApiPropertyOptional({ enum: SECURITY_MEASURE_TYPES })
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsIn(SECURITY_MEASURE_TYPES)
   measureType?: string;
 
   @ApiPropertyOptional()
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsBoolean()
   implemented?: boolean;
 
   @ApiPropertyOptional()
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsString()
   @MinLength(1)
   description?: string;
 
-  @ApiPropertyOptional()
-  @IsOptional()
+  @ApiPropertyOptional({ nullable: true })
+  @ValidateIf((_object, value) => value !== undefined && value !== null)
   @IsString()
-  evidenceReference?: string;
+  evidenceReference?: string | null;
 
-  @ApiPropertyOptional()
-  @IsOptional()
+  @ApiPropertyOptional({ nullable: true })
+  @ValidateIf((_object, value) => value !== undefined && value !== null)
   @IsDateString()
-  lastReviewedAt?: string;
+  lastReviewedAt?: string | null;
 
-  @ApiPropertyOptional()
-  @IsOptional()
+  @ApiPropertyOptional({ nullable: true })
+  @ValidateIf((_object, value) => value !== undefined && value !== null)
   @IsString()
-  reviewedByEmployeeId?: string;
+  reviewedByEmployeeId?: string | null;
 }

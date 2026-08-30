@@ -157,7 +157,7 @@ export class RecipientsService {
         action: "RECIPIENT_CREATED",
         resourceType: "DataRecipient",
         resourceId: created.id,
-        metadata: { name: created.name, type: created.type },
+        metadata: { change: "CREATED", name: created.name, type: created.type },
       });
 
       return created;
@@ -205,12 +205,18 @@ export class RecipientsService {
             country: dto.country,
             contractExists: dto.contractExists,
             contractReference: dto.contractReference,
-            contractSignedAt: dto.contractSignedAt
-              ? new Date(dto.contractSignedAt)
-              : undefined,
-            contractExpiresAt: dto.contractExpiresAt
-              ? new Date(dto.contractExpiresAt)
-              : undefined,
+            contractSignedAt:
+              dto.contractSignedAt === undefined
+                ? undefined
+                : dto.contractSignedAt === null
+                  ? null
+                  : new Date(dto.contractSignedAt),
+            contractExpiresAt:
+              dto.contractExpiresAt === undefined
+                ? undefined
+                : dto.contractExpiresAt === null
+                  ? null
+                  : new Date(dto.contractExpiresAt),
             contractHasSecurityClause: dto.contractHasSecurityClause,
             contractHasErasureClause: dto.contractHasErasureClause,
             contractHasAuditRights: dto.contractHasAuditRights,
@@ -231,7 +237,11 @@ export class RecipientsService {
         action: "RECIPIENT_UPDATED",
         resourceType: "DataRecipient",
         resourceId: id,
-        metadata: { name: updated.name, active: updated.active },
+        metadata: {
+          change: "UPDATED",
+          name: updated.name,
+          active: updated.active,
+        },
       });
 
       return updated;

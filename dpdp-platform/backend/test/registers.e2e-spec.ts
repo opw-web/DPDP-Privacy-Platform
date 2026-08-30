@@ -50,7 +50,7 @@ describe("Registers (e2e)", () => {
   async function createEmployeeWithPermissions(
     organizationId: string,
     permissionCodes: string[],
-  ): Promise<{ email: string; accessToken: string }> {
+  ): Promise<{ email: string; accessToken: string; employeeId: string }> {
     for (const code of permissionCodes) {
       await ensurePermission(code);
     }
@@ -72,7 +72,7 @@ describe("Registers (e2e)", () => {
     const passwordHash = await argon2.hash(password, {
       type: argon2.argon2id,
     });
-    await prisma.employee.create({
+    const employee = await prisma.employee.create({
       data: {
         organizationId,
         email,
@@ -90,13 +90,18 @@ describe("Registers (e2e)", () => {
         `Fixture login failed for ${email}: ${JSON.stringify(loginRes.body)}`,
       );
     }
-    return { email, accessToken: loginRes.body.accessToken as string };
+    return {
+      email,
+      accessToken: loginRes.body.accessToken as string,
+      employeeId: employee.id,
+    };
   }
 
   /** One organization with one employee whose role holds every permission these tests need. */
   async function createOrgWithManager(): Promise<{
     organizationId: string;
     accessToken: string;
+    employeeId: string;
   }> {
     const organizationId = randomUUID();
     await prisma.organization.create({
@@ -107,7 +112,7 @@ describe("Registers (e2e)", () => {
     });
     createdOrgIds.push(organizationId);
 
-    const { accessToken } = await createEmployeeWithPermissions(
+    const { accessToken, employeeId } = await createEmployeeWithPermissions(
       organizationId,
       [
         "CAN_MANAGE_REGISTERS",
@@ -116,7 +121,7 @@ describe("Registers (e2e)", () => {
         "CAN_MANAGE_DATA_SOURCES",
       ],
     );
-    return { organizationId, accessToken };
+    return { organizationId, accessToken, employeeId };
   }
 
   function authed(accessToken: string) {
@@ -731,6 +736,37 @@ describe("Registers (e2e)", () => {
       });
       expect(event).not.toBeNull();
     });
+
+    it("PATCH writes an UPDATED-discriminator audit event atomically with the sharing change", async () => {
+      const { accessToken, organizationId } = await createOrgWithManager();
+      const purpose = await createPurpose(accessToken);
+      const recipient = await createRecipient(accessToken);
+      const dataSource = await createDataSource(accessToken);
+      const created = await authed(accessToken).post("/api/registers/sharing", {
+        recipientId: recipient.id,
+        purposeId: purpose.id,
+        dataCategories: ["CONTACT"],
+        description: "Before update.",
+        sourceIds: [dataSource.id],
+        startedAt: new Date().toISOString(),
+      });
+      expect(created.status).toBe(201);
+
+      const patched = await authed(accessToken).patch(
+        `/api/registers/sharing/${created.body.id}`,
+        { description: "After update." },
+      );
+      expect(patched.status).toBe(200);
+      const event = await prisma.auditEvent.findFirst({
+        where: {
+          organizationId,
+          action: "SHARING_ACTIVITY_CREATED",
+          resourceId: created.body.id,
+          metadata: { path: ["change"], equals: "UPDATED" },
+        },
+      });
+      expect(event).not.toBeNull();
+    });
   });
 
   // ───────────────────────── Cross-border transfers ─────────────────────────
@@ -792,6 +828,59 @@ describe("Registers (e2e)", () => {
         purposeDescription: "Known recipient test.",
       });
       expect(okRes.status).toBe(201);
+    });
+
+    it("validates supplied reviewers, clears nullable review fields, and audits PATCH", async () => {
+      const { accessToken, organizationId, employeeId } =
+        await createOrgWithManager();
+      const recipient = await createRecipient(accessToken);
+      const created = await authed(accessToken).post(
+        "/api/registers/transfers",
+        {
+          recipientId: recipient.id,
+          destinationCountry: "US",
+          purposeDescription: "Reviewed transfer.",
+          govtRestrictionNotes: "Checked.",
+          reviewedByEmployeeId: employeeId,
+          reviewedAt: new Date().toISOString(),
+        },
+      );
+      expect(created.status).toBe(201);
+
+      const unknownReviewer = await authed(accessToken).patch(
+        `/api/registers/transfers/${created.body.id}`,
+        { reviewedByEmployeeId: randomUUID() },
+      );
+      expect(unknownReviewer.status).toBe(400);
+
+      const { employeeId: foreignEmployeeId } = await createOrgWithManager();
+      const foreignReviewer = await authed(accessToken).patch(
+        `/api/registers/transfers/${created.body.id}`,
+        { reviewedByEmployeeId: foreignEmployeeId },
+      );
+      expect(foreignReviewer.status).toBe(400);
+
+      const patched = await authed(accessToken).patch(
+        `/api/registers/transfers/${created.body.id}`,
+        {
+          govtRestrictionNotes: null,
+          reviewedByEmployeeId: null,
+          reviewedAt: null,
+        },
+      );
+      expect(patched.status).toBe(200);
+      expect(patched.body.govtRestrictionNotes).toBeNull();
+      expect(patched.body.reviewedByEmployeeId).toBeNull();
+      expect(patched.body.reviewedAt).toBeNull();
+      const event = await prisma.auditEvent.findFirst({
+        where: {
+          organizationId,
+          action: "TRANSFER_CREATED",
+          resourceId: created.body.id,
+          metadata: { path: ["change"], equals: "UPDATED" },
+        },
+      });
+      expect(event).not.toBeNull();
     });
   });
 
@@ -893,6 +982,45 @@ describe("Registers (e2e)", () => {
       });
       expect(event).not.toBeNull();
     });
+
+    it("rejects null for required fields and audits a successful PATCH", async () => {
+      const { accessToken, organizationId } = await createOrgWithManager();
+      const purpose = await createPurpose(accessToken);
+      const created = await authed(accessToken).post(
+        "/api/registers/retention",
+        {
+          purposeId: purpose.id,
+          name: `Patch Policy ${randomUUID()}`,
+          triggerType: "PURPOSE_SERVED",
+          retentionValue: 2,
+          retentionUnit: "YEARS",
+          legalBasisForRetention: "Org policy.",
+          legalBasisType: "ORG_POLICY",
+        },
+      );
+      expect(created.status).toBe(201);
+
+      const nullRequired = await authed(accessToken).patch(
+        `/api/registers/retention/${created.body.id}`,
+        { name: null },
+      );
+      expect(nullRequired.status).toBe(400);
+
+      const patched = await authed(accessToken).patch(
+        `/api/registers/retention/${created.body.id}`,
+        { name: `${created.body.name} Updated` },
+      );
+      expect(patched.status).toBe(200);
+      const event = await prisma.auditEvent.findFirst({
+        where: {
+          organizationId,
+          action: "RETENTION_POLICY_CREATED",
+          resourceId: created.body.id,
+          metadata: { path: ["change"], equals: "UPDATED" },
+        },
+      });
+      expect(event).not.toBeNull();
+    });
   });
 
   // ───────────────────────── Security measures ─────────────────────────
@@ -946,9 +1074,10 @@ describe("Registers (e2e)", () => {
       expect(groupF.implementedCount).toBe(0);
     });
 
-    it("a measure created with no dataSourceId is organization-wide (dataSourceId: null)", async () => {
+    it("explicit null creates an organization-wide measure and clears a source association", async () => {
       const { accessToken } = await createOrgWithManager();
       const res = await authed(accessToken).post("/api/registers/security", {
+        dataSourceId: null,
         ruleReference: "Rule 6(1)(c)",
         measureType: "LOGGING",
         implemented: true,
@@ -956,6 +1085,24 @@ describe("Registers (e2e)", () => {
       });
       expect(res.status).toBe(201);
       expect(res.body.dataSourceId).toBeNull();
+
+      const source = await createDataSource(accessToken);
+      const sourceSpecific = await authed(accessToken).post(
+        "/api/registers/security",
+        {
+          dataSourceId: source.id,
+          ruleReference: "Rule 6(1)(d)",
+          measureType: "ACCESS_CONTROL",
+          description: "Source-specific controls.",
+        },
+      );
+      expect(sourceSpecific.status).toBe(201);
+      const cleared = await authed(accessToken).patch(
+        `/api/registers/security/${sourceSpecific.body.id}`,
+        { dataSourceId: null },
+      );
+      expect(cleared.status).toBe(200);
+      expect(cleared.body.dataSourceId).toBeNull();
     });
 
     it("an unknown ruleReference value returns 400; a valid one succeeds", async () => {
@@ -979,7 +1126,8 @@ describe("Registers (e2e)", () => {
     });
 
     it("POST and PATCH each write a SECURITY_MEASURE_UPDATED audit event", async () => {
-      const { accessToken, organizationId } = await createOrgWithManager();
+      const { accessToken, organizationId, employeeId } =
+        await createOrgWithManager();
 
       const createRes = await authed(accessToken).post(
         "/api/registers/security",
@@ -987,6 +1135,7 @@ describe("Registers (e2e)", () => {
           ruleReference: "Rule 6(1)(g)",
           measureType: "ORG_MEASURE",
           description: "Annual security review.",
+          reviewedByEmployeeId: employeeId,
         },
       );
       expect(createRes.status).toBe(201);
@@ -1016,6 +1165,20 @@ describe("Registers (e2e)", () => {
         },
       });
       expect(eventsAfterPatch.length).toBeGreaterThan(createdEvents.length);
+      const createdEvent = createdEvents.find(
+        (event) => (event.metadata as { change?: string }).change === "CREATED",
+      );
+      const updatedEvent = eventsAfterPatch.find(
+        (event) => (event.metadata as { change?: string }).change === "UPDATED",
+      );
+      expect(createdEvent).toBeDefined();
+      expect(updatedEvent).toBeDefined();
+
+      const badReviewer = await authed(accessToken).patch(
+        `/api/registers/security/${measureId}`,
+        { reviewedByEmployeeId: randomUUID() },
+      );
+      expect(badReviewer.status).toBe(400);
     });
   });
 });

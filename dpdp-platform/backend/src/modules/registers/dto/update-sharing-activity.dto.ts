@@ -4,65 +4,61 @@ import {
   IsBoolean,
   IsDateString,
   IsEnum,
-  IsOptional,
   IsString,
   MinLength,
+  ValidateIf,
 } from "class-validator";
 import { ApiPropertyOptional } from "@nestjs/swagger";
 import { DataCategory } from "@prisma/client";
 
 /**
- * Every field optional (PATCH semantics). `description`, if supplied,
- * still cannot be blank -- `SharingService.update()` re-checks the
- * EFFECTIVE (existing + patch) description is non-blank, the same
- * discipline as `PurposesService.validateBasis()`, so s.11(1)(b)'s
- * requirement cannot be defeated by patching a real description down to
- * whitespace.
+ * Omitted fields are unchanged. `endedAt` is the only nullable field and
+ * accepts explicit null to clear it.
  */
 export class UpdateSharingActivityDto {
   @ApiPropertyOptional()
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsString()
   @MinLength(1)
   recipientId?: string;
 
   @ApiPropertyOptional()
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsString()
   @MinLength(1)
   purposeId?: string;
 
   @ApiPropertyOptional({ enum: DataCategory, isArray: true })
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsArray()
   @IsEnum(DataCategory, { each: true })
   dataCategories?: DataCategory[];
 
   @ApiPropertyOptional()
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsString()
   @MinLength(1)
   description?: string;
 
   @ApiPropertyOptional({ type: [String] })
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsArray()
   @IsString({ each: true })
   @ArrayUnique()
   sourceIds?: string[];
 
   @ApiPropertyOptional()
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsDateString()
   startedAt?: string;
 
-  @ApiPropertyOptional()
-  @IsOptional()
+  @ApiPropertyOptional({ nullable: true })
+  @ValidateIf((_object, value) => value !== undefined && value !== null)
   @IsDateString()
-  endedAt?: string;
+  endedAt?: string | null;
 
   @ApiPropertyOptional()
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsBoolean()
   active?: boolean;
 }

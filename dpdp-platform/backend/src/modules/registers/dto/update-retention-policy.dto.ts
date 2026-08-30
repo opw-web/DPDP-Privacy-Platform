@@ -2,10 +2,10 @@ import {
   IsBoolean,
   IsIn,
   IsInt,
-  IsOptional,
   IsString,
   Min,
   MinLength,
+  ValidateIf,
 } from "class-validator";
 import { ApiPropertyOptional } from "@nestjs/swagger";
 import {
@@ -14,71 +14,71 @@ import {
   RETENTION_UNITS,
 } from "./create-retention-policy.dto";
 
-/** Every field optional (PATCH semantics). Same Global Constraint 4 discipline as `CreateRetentionPolicyDto`. */
+/** Every field is required when supplied: null is not a retention-policy value. */
 export class UpdateRetentionPolicyDto {
   @ApiPropertyOptional()
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsString()
   @MinLength(1)
   purposeId?: string;
 
   @ApiPropertyOptional()
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsString()
   @MinLength(1)
   name?: string;
 
   @ApiPropertyOptional({ enum: RETENTION_TRIGGER_TYPES })
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsIn(RETENTION_TRIGGER_TYPES)
   triggerType?: string;
 
   @ApiPropertyOptional()
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsInt()
   @Min(1)
   retentionValue?: number;
 
   @ApiPropertyOptional({ enum: RETENTION_UNITS })
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsIn(RETENTION_UNITS)
   retentionUnit?: string;
 
   @ApiPropertyOptional()
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsString()
   @MinLength(1)
   legalBasisForRetention?: string;
 
   @ApiPropertyOptional({ enum: RETENTION_LEGAL_BASIS_TYPES })
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsIn(RETENTION_LEGAL_BASIS_TYPES)
   legalBasisType?: string;
 
   @ApiPropertyOptional()
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsInt()
   @Min(1)
   minimumRetentionValue?: number;
 
   @ApiPropertyOptional({ enum: RETENTION_UNITS })
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsIn(RETENTION_UNITS)
   minimumRetentionUnit?: string;
 
   @ApiPropertyOptional()
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsInt()
   @Min(0)
   preErasureNoticeHours?: number;
 
   @ApiPropertyOptional()
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsBoolean()
   accountAccessCarveOut?: boolean;
 
   @ApiPropertyOptional()
-  @IsOptional()
+  @ValidateIf((_object, value) => value !== undefined)
   @IsBoolean()
   active?: boolean;
 }

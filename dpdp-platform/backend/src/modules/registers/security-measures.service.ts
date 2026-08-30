@@ -99,6 +99,16 @@ export class SecurityMeasuresService {
     }
   }
 
+  private async assertEmployeeExists(employeeId: string): Promise<void> {
+    const employee = await this.prisma.scoped.employee.findFirst({
+      where: { id: employeeId },
+      select: { id: true },
+    });
+    if (!employee) {
+      throw new BadRequestException(`Unknown employee id: ${employeeId}`);
+    }
+  }
+
   /**
    * The fixed `AuditAction` union has `SECURITY_MEASURE_UPDATED` but no
    * `SECURITY_MEASURE_CREATED` -- the reverse gap from
@@ -114,8 +124,14 @@ export class SecurityMeasuresService {
    * itself. Flagged for the spec owner in the task report all the same.
    */
   async create(dto: CreateSecurityMeasureDto): Promise<PublicSecurityMeasure> {
-    if (dto.dataSourceId !== undefined) {
+    if (dto.dataSourceId !== undefined && dto.dataSourceId !== null) {
       await this.assertDataSourceExists(dto.dataSourceId);
+    }
+    if (
+      dto.reviewedByEmployeeId !== undefined &&
+      dto.reviewedByEmployeeId !== null
+    ) {
+      await this.assertEmployeeExists(dto.reviewedByEmployeeId);
     }
 
     return this.prisma.scoped.$transaction(async (tx) => {
@@ -142,6 +158,7 @@ export class SecurityMeasuresService {
         resourceType: "SecurityMeasure",
         resourceId: created.id,
         metadata: {
+          change: "CREATED",
           ruleReference: created.ruleReference,
           measureType: created.measureType,
           implemented: created.implemented,
@@ -167,6 +184,12 @@ export class SecurityMeasuresService {
     if (dto.dataSourceId !== undefined && dto.dataSourceId !== null) {
       await this.assertDataSourceExists(dto.dataSourceId);
     }
+    if (
+      dto.reviewedByEmployeeId !== undefined &&
+      dto.reviewedByEmployeeId !== null
+    ) {
+      await this.assertEmployeeExists(dto.reviewedByEmployeeId);
+    }
 
     return this.prisma.scoped.$transaction(async (tx) => {
       const updated = await tx.securityMeasure.update({
@@ -178,9 +201,12 @@ export class SecurityMeasuresService {
           implemented: dto.implemented,
           description: dto.description,
           evidenceReference: dto.evidenceReference,
-          lastReviewedAt: dto.lastReviewedAt
-            ? new Date(dto.lastReviewedAt)
-            : undefined,
+          lastReviewedAt:
+            dto.lastReviewedAt === undefined
+              ? undefined
+              : dto.lastReviewedAt === null
+                ? null
+                : new Date(dto.lastReviewedAt),
           reviewedByEmployeeId: dto.reviewedByEmployeeId,
         },
         select: SECURITY_MEASURE_PUBLIC_SELECT,
@@ -191,6 +217,7 @@ export class SecurityMeasuresService {
         resourceType: "SecurityMeasure",
         resourceId: id,
         metadata: {
+          change: "UPDATED",
           ruleReference: updated.ruleReference,
           implemented: updated.implemented,
         },
