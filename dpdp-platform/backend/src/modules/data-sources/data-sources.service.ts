@@ -15,6 +15,7 @@ import {
   type DataSourceRowForConnector,
 } from "../connectors/connector.factory";
 import type { Connector } from "../connectors/connector.interface";
+import { SyncQueueService } from "../../queues/sync.queue";
 import { CreateDataSourceDto } from "./dto/create-data-source.dto";
 import { UpdateDataSourceDto } from "./dto/update-data-source.dto";
 
@@ -112,7 +113,34 @@ export class DataSourcesService {
     private readonly auditService: AuditService,
     private readonly cryptoService: CryptoService,
     private readonly connectorFactory: ConnectorFactory,
+    private readonly syncQueueService: SyncQueueService,
   ) {}
+
+  /**
+   * Task 18: "repeatable jobs are registered when a source is saved with
+   * a non-MANUAL frequency ... in the organization's timezone." Called
+   * AFTER the owning `create`/`update` transaction has already committed
+   * -- registering a BullMQ schedule cannot itself be part of that
+   * Postgres transaction (Redis has no shared transaction with it), so
+   * this only ever runs once the `DataSource` row's new `syncFrequency`
+   * is durably saved. `SyncQueueService.upsertSchedule` is idempotent
+   * (BullMQ's own replace-by-id `upsertJobScheduler`), so calling this
+   * again with an unchanged frequency is a harmless no-op, not a stacked
+   * duplicate.
+   */
+  private async scheduleSync(
+    dataSourceId: string,
+    syncFrequency: PublicDataSource["syncFrequency"],
+  ): Promise<void> {
+    const organization = await this.prisma.scoped.organization.findFirstOrThrow(
+      { select: { timezone: true } },
+    );
+    await this.syncQueueService.upsertSchedule(
+      dataSourceId,
+      syncFrequency,
+      organization.timezone,
+    );
+  }
 
   async list(): Promise<PublicDataSource[]> {
     return this.prisma.scoped.dataSource.findMany({
@@ -181,7 +209,7 @@ export class DataSourcesService {
       credentialHint = dto.credential.slice(-4);
     }
 
-    return this.prisma.scoped.$transaction(async (tx) => {
+    const created = await this.prisma.scoped.$transaction(async (tx) => {
       let created: PublicDataSource;
       try {
         created = await tx.dataSource.create({
@@ -235,6 +263,13 @@ export class DataSourcesService {
 
       return created;
     });
+
+    // Task 18: a brand-new data source always has SOME effective
+    // syncFrequency (defaulted to MANUAL above), so this always runs --
+    // `scheduleSync` itself is what turns MANUAL into "no schedule
+    // registered" (see `SyncQueueService.upsertSchedule`).
+    await this.scheduleSync(created.id, created.syncFrequency);
+    return created;
   }
 
   async update(
@@ -329,7 +364,7 @@ export class DataSourcesService {
       (value) => value !== undefined,
     );
 
-    return this.prisma.scoped.$transaction(async (tx) => {
+    const updated = await this.prisma.scoped.$transaction(async (tx) => {
       let updated: PublicDataSource;
       try {
         updated = hasEffectiveChange
@@ -373,6 +408,14 @@ export class DataSourcesService {
 
       return updated;
     });
+
+    // Task 18: only touch the BullMQ schedule when this PATCH actually
+    // named `syncFrequency` -- an update to unrelated fields (name,
+    // baseUrl, ...) must leave any existing schedule exactly as it is.
+    if (dto.syncFrequency !== undefined) {
+      await this.scheduleSync(id, updated.syncFrequency);
+    }
+    return updated;
   }
 
   async remove(id: string): Promise<void> {
@@ -396,6 +439,11 @@ export class DataSourcesService {
         metadata: { name: existing.name },
       });
     });
+
+    // Task 18: a deleted data source must not keep firing an orphaned
+    // repeatable sync forever. Best-effort cleanup after the deletion has
+    // committed -- `removeSchedule` is a no-op if no schedule exists.
+    await this.syncQueueService.removeSchedule(id);
   }
 
   /**
