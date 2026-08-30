@@ -10,6 +10,22 @@ import { AppShell } from "./components/shared/AppShell";
 import { PortalShell } from "./principal/components/PortalShell";
 import { LoginPage } from "./fiduciary/pages/LoginPage";
 import { PrincipalLoginPage } from "./principal/pages/PrincipalLoginPage";
+import { DashboardPage } from "./fiduciary/pages/DashboardPage";
+import { DataSourcesPage } from "./fiduciary/pages/DataSourcesPage";
+import { DataSourceNewPage } from "./fiduciary/pages/DataSourceNewPage";
+import { DataSourceDetailPage } from "./fiduciary/pages/DataSourceDetailPage";
+import { PurposesPage } from "./fiduciary/pages/PurposesPage";
+import { RegistersPage } from "./fiduciary/pages/RegistersPage";
+import { PrincipalsPage } from "./fiduciary/pages/PrincipalsPage";
+import { PrincipalDetailPage } from "./fiduciary/pages/PrincipalDetailPage";
+import { ReviewQueuePage } from "./fiduciary/pages/ReviewQueuePage";
+import { EmployeesPage } from "./fiduciary/pages/EmployeesPage";
+import { AuditPage } from "./fiduciary/pages/AuditPage";
+import { SettingsPage } from "./fiduciary/pages/SettingsPage";
+import { MeHomePage } from "./principal/pages/MeHomePage";
+import { MeDataPage } from "./principal/pages/MeDataPage";
+import { MeSourcesPage } from "./principal/pages/MeSourcesPage";
+import { MeRecipientsPage } from "./principal/pages/MeRecipientsPage";
 
 /**
  * `/login`, `/app/*`, `/me/login`, `/me/*` -- two independent route trees,
@@ -21,11 +37,9 @@ import { PrincipalLoginPage } from "./principal/pages/PrincipalLoginPage";
  * the top of the route tree, not both-always-mounted, so visiting `/login`
  * never triggers a principal-session bootstrap and vice versa.
  *
- * Tasks 24-29 extend this file by adding routes *inside* the two empty
- * layout routes below (`<Route element={<AppShell />}>` and
- * `<Route element={<PortalShell />}>`) -- this task deliberately leaves
- * them with no children: the dashboard, data sources, purposes, etc. are
- * later tasks' pages, not this scaffold's.
+ * Tasks 24-29 built the pages nested below inside the two layout routes
+ * (`<Route element={<AppShell />}>` and `<Route element={<PortalShell />}>`)
+ * without touching this file; the integration dispatch wires them in here.
  */
 
 function FullPageLoading() {
@@ -97,7 +111,20 @@ export function AppRouter() {
       >
         <Route path="/login" element={<LoginPage />} />
         <Route path="/app" element={<RequireEmployeeAuth />}>
-          <Route element={<AppShell />}>{/* Tasks 24-29 add nested routes here */}</Route>
+          <Route element={<AppShell />}>
+            <Route index element={<DashboardPage />} />
+            <Route path="data-sources" element={<DataSourcesPage />} />
+            <Route path="data-sources/new" element={<DataSourceNewPage />} />
+            <Route path="data-sources/:id" element={<DataSourceDetailPage />} />
+            <Route path="purposes" element={<PurposesPage />} />
+            <Route path="registers" element={<RegistersPage />} />
+            <Route path="principals" element={<PrincipalsPage />} />
+            <Route path="principals/:id" element={<PrincipalDetailPage />} />
+            <Route path="review" element={<ReviewQueuePage />} />
+            <Route path="employees" element={<EmployeesPage />} />
+            <Route path="audit" element={<AuditPage />} />
+            <Route path="settings" element={<SettingsPage />} />
+          </Route>
         </Route>
       </Route>
 
@@ -110,7 +137,12 @@ export function AppRouter() {
       >
         <Route path="/me/login" element={<PrincipalLoginPage />} />
         <Route path="/me" element={<RequirePrincipalAuth />}>
-          <Route element={<PortalShell />}>{/* Task 29 adds nested routes here */}</Route>
+          <Route element={<PortalShell />}>
+            <Route index element={<MeHomePage />} />
+            <Route path="data" element={<MeDataPage />} />
+            <Route path="sources" element={<MeSourcesPage />} />
+            <Route path="recipients" element={<MeRecipientsPage />} />
+          </Route>
         </Route>
       </Route>
 
