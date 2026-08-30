@@ -1,6 +1,7 @@
 import { Injectable, NotFoundException } from "@nestjs/common";
 import type { Prisma } from "@prisma/client";
 import { PrismaService } from "../../common/prisma/prisma.service";
+import { resolveProvenance } from "./field-provenance";
 
 const PRINCIPAL_FIELD_SELECT = {
   id: true,
@@ -88,29 +89,10 @@ export class LineageService {
       select: { id: true, name: true },
     });
     const sourceById = new Map(sources.map((source) => [source.id, source]));
-
-    return fields.flatMap((field) => {
-      const resolvedSources = field.sourceIds
-        .map((sourceId) => sourceById.get(sourceId))
-        .filter(
-          (source): source is { id: string; name: string } =>
-            source !== undefined,
-        )
-        .sort(
-          (left, right) =>
-            left.name.localeCompare(right.name) ||
-            left.id.localeCompare(right.id),
-        );
-      // A sourceIds array is provenance evidence, not a best-effort hint.
-      // Showing a value after dropping an unknown contributor would claim a
-      // complete lineage we cannot prove.
-      if (
-        resolvedSources.length !== field.sourceIds.length ||
-        resolvedSources.length === 0
-      ) {
-        return [];
-      }
-      return [{ ...field, sources: resolvedSources }];
-    });
+    // A sourceIds array is provenance evidence, not a best-effort hint.
+    // Showing a value after dropping an unknown contributor would claim a
+    // complete lineage we cannot prove -- `resolveProvenance` is the one
+    // shared implementation of that fail-closed rule (see field-provenance.ts).
+    return resolveProvenance(fields, sourceById);
   }
 }

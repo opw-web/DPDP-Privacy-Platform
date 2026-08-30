@@ -1,12 +1,15 @@
 import { Injectable, NotFoundException } from "@nestjs/common";
-import type { AgeStatus, Prisma } from "@prisma/client";
+import { Prisma } from "@prisma/client";
+import type { AgeStatus } from "@prisma/client";
 import { AccessLogService } from "../../common/audit/access-log.service";
 import { MaskingService } from "../../common/masking/masking.service";
 import { PrismaService } from "../../common/prisma/prisma.service";
 import type { ScopedTransactionClient } from "../../common/prisma/scoped-transaction-client";
 import { TenantContext } from "../../common/tenant/tenant-context";
 import { PRINCIPALS_PAGE_SIZE } from "./dto/list-principals.dto";
+import { pickDisplayName, resolveProvenance } from "./field-provenance";
 import type { ResolvedPrincipalField } from "./lineage.service";
+import { buildPrincipalSearchQuery } from "./principal-search-query";
 
 type SearchRow = {
   id: string;
@@ -48,11 +51,18 @@ const PRINCIPAL_DETAIL_SELECT = {
 } satisfies Prisma.DataPrincipalSelect;
 
 /**
- * Principal profile/read service. Search is deliberately raw SQL because
- * each independent `ILIKE '%query%'` branch can use its Task 2 pg_trgm GIN
- * index. The candidate-ID UNION is intentional: an OR/EXISTS query makes
- * PostgreSQL choose a broad plan that can skip those indexes. All input is
- * parameterized and the organization comes only from TenantContext.
+ * Principal profile/read service. Search (`buildPrincipalSearchQuery` in
+ * `./principal-search-query.ts`) is deliberately raw SQL because each
+ * independent `ILIKE '%query%'` branch can use its Task 2 pg_trgm GIN index;
+ * an `OR`/`EXISTS` query makes PostgreSQL choose a broad plan that skips
+ * those indexes, so the two branches are combined with a `UNION` over their
+ * matched ids instead. Each branch's `WHERE` carries its own tenant
+ * predicate (and, for the field-value branch, the canonical-field
+ * restriction) alongside its `ILIKE`, so a candidate set is bounded by the
+ * match, not by tenant size, while the tenant boundary -- which raw SQL
+ * bypasses the Prisma extension for entirely -- stays explicit everywhere.
+ * All input is parameterized and the organization comes only from
+ * TenantContext.
  */
 @Injectable()
 export class PrincipalsService {
@@ -69,87 +79,39 @@ export class PrincipalsService {
     const organizationId = TenantContext.get().organizationId;
     const term = query.q?.trim() ?? "";
     const offset = (query.page - 1) * PRINCIPALS_PAGE_SIZE;
-    const rows =
-      term === ""
-        ? await this.prisma.$queryRaw<SearchRow[]>`
-          SELECT "id", "reference", "ageStatus", "createdAt"
-          FROM "DataPrincipal"
-          WHERE "organizationId" = ${organizationId}
-            AND (${query.ageStatus ?? null}::"AgeStatus" IS NULL OR "ageStatus" = ${query.ageStatus ?? null}::"AgeStatus")
-          ORDER BY "displayName" ASC, "id" ASC
-          OFFSET ${offset}
-          LIMIT ${PRINCIPALS_PAGE_SIZE}
-        `
-        : await this.prisma.$queryRaw<SearchRow[]>`
-          WITH "nameMatches" AS MATERIALIZED (
-            SELECT "id"
-            FROM "DataPrincipal"
-            WHERE "displayName" ILIKE '%' || ${term} || '%'
-          ), "fieldValueMatches" AS MATERIALIZED (
-            SELECT "dataPrincipalId" AS "id"
-            FROM "PrincipalDataField"
-            WHERE "value" ILIKE '%' || ${term} || '%'
-          ), "candidateIds" AS MATERIALIZED (
-            (
-              SELECT "id" FROM "nameMatches"
-              INTERSECT
-              SELECT "id" FROM "DataPrincipal" WHERE "organizationId" = ${organizationId}
-            )
-            UNION
-            (
-              SELECT "id" FROM "fieldValueMatches"
-              INTERSECT
-              SELECT "dataPrincipalId" AS "id"
-              FROM "PrincipalDataField"
-              WHERE "organizationId" = ${organizationId}
-                AND "canonicalField" IN ('EMAIL'::"CanonicalField", 'PHONE'::"CanonicalField", 'CUSTOMER_ID'::"CanonicalField")
-            )
-          )
-          SELECT principal."id", principal."reference", principal."ageStatus", principal."createdAt"
-          FROM "DataPrincipal" AS principal
-          INNER JOIN "candidateIds" AS candidate ON candidate."id" = principal."id"
-          WHERE principal."organizationId" = ${organizationId}
-            AND (${query.ageStatus ?? null}::"AgeStatus" IS NULL OR principal."ageStatus" = ${query.ageStatus ?? null}::"AgeStatus")
-          ORDER BY principal."displayName" ASC, principal."id" ASC
-          OFFSET ${offset}
-          LIMIT ${PRINCIPALS_PAGE_SIZE}
-        `;
+    const rows = await this.prisma.$queryRaw<SearchRow[]>(
+      buildPrincipalSearchQuery({
+        organizationId,
+        term,
+        ageStatus: query.ageStatus ?? null,
+        limit: PRINCIPALS_PAGE_SIZE,
+        offset,
+      }),
+    );
 
     // The top-level list name is itself personal data. It must be derived
     // from an attributable FULL_NAME assembled field, never copied from
     // DataPrincipal.displayName (which deliberately stores no source IDs).
+    // Provenance is resolved BEFORE the tie-break (via `resolveProvenance`
+    // then `pickDisplayName`, both shared with `loadProfile`) so list and
+    // detail cannot disagree about which name wins when a principal carries
+    // more than one primary FULL_NAME field -- see fix round 3, Important 6.
     const fieldRows = rows.length
       ? await this.prisma.scoped.principalDataField.findMany({
-          where: { dataPrincipalId: { in: rows.map((row) => row.id) } },
+          where: {
+            dataPrincipalId: { in: rows.map((row) => row.id) },
+            canonicalField: "FULL_NAME",
+            isPrimary: true,
+          },
           select: {
             dataPrincipalId: true,
-            canonicalField: true,
             value: true,
             sourceIds: true,
-            isPrimary: true,
           },
         })
       : [];
-    const nameFieldByPrincipal = new Map<
-      string,
-      { value: string; sourceIds: string[] }
-    >();
-    for (const field of fieldRows) {
-      if (field.canonicalField !== "FULL_NAME" || !field.isPrimary) {
-        continue;
-      }
-      const current = nameFieldByPrincipal.get(field.dataPrincipalId);
-      if (!current || field.value.localeCompare(current.value) < 0) {
-        nameFieldByPrincipal.set(field.dataPrincipalId, {
-          value: field.value,
-          sourceIds: field.sourceIds,
-        });
-      }
-    }
     const allSourceIds = [
-      ...new Set(
-        [...nameFieldByPrincipal.values()].flatMap((field) => field.sourceIds),
-      ),
+      ...new Set(fieldRows.flatMap((field) => field.sourceIds)),
     ];
     const sources = allSourceIds.length
       ? await this.prisma.scoped.dataSource.findMany({
@@ -158,44 +120,33 @@ export class PrincipalsService {
         })
       : [];
     const sourceById = new Map(sources.map((source) => [source.id, source]));
+    const resolvedNameFields = resolveProvenance(fieldRows, sourceById);
+    const nameFieldsByPrincipal = new Map<
+      string,
+      Array<(typeof resolvedNameFields)[number]>
+    >();
+    for (const field of resolvedNameFields) {
+      const current = nameFieldsByPrincipal.get(field.dataPrincipalId) ?? [];
+      current.push(field);
+      nameFieldsByPrincipal.set(field.dataPrincipalId, current);
+    }
 
-    const items: PrincipalListItem[] = rows.flatMap<PrincipalListItem>(
-      (row) => {
-        const nameField = nameFieldByPrincipal.get(row.id);
-        if (!nameField) {
-          return [{ ...row, displayName: null, sources: [] }];
-        }
-        const sourceIds = nameField.sourceIds;
-        const resolvedSources = sourceIds
-          .map((id) => sourceById.get(id))
-          .filter(
-            (source): source is { id: string; name: string } =>
-              source !== undefined,
-          )
-          .sort(
-            (left, right) =>
-              left.name.localeCompare(right.name) ||
-              left.id.localeCompare(right.id),
-          );
-        if (
-          sourceIds.length === 0 ||
-          resolvedSources.length !== sourceIds.length
-        ) {
-          return [{ ...row, displayName: null, sources: [] }];
-        }
-        return [
-          {
-            ...row,
-            displayName: this.maskingService.maskIfNeeded(
-              permissions,
-              "FULL_NAME",
-              nameField.value,
-            ) as string,
-            sources: resolvedSources,
-          },
-        ];
-      },
-    );
+    const items: PrincipalListItem[] = rows.map((row) => {
+      const chosen = pickDisplayName(nameFieldsByPrincipal.get(row.id) ?? []);
+      if (!chosen) {
+        return { ...row, displayName: null, sources: [] };
+      }
+      return {
+        ...row,
+        displayName:
+          this.maskingService.maskIfNeeded(
+            permissions,
+            "FULL_NAME",
+            chosen.value,
+          ) ?? null,
+        sources: chosen.sources,
+      };
+    });
 
     return { items, page: query.page, pageSize: PRINCIPALS_PAGE_SIZE };
   }
@@ -331,11 +282,15 @@ export class PrincipalsService {
       ],
     });
     const resolvedFields = await this.resolveFieldsInTransaction(tx, fields);
-    const displayNameField = resolvedFields
-      .filter(
+    // resolvedFields is already provenance-filtered (resolveFieldsInTransaction
+    // drops any field with an unresolved source), so filtering to FULL_NAME
+    // candidates here and handing them to the shared tie-break preserves the
+    // "resolve, then pick" order list() now also follows.
+    const displayNameField = pickDisplayName(
+      resolvedFields.filter(
         (field) => field.canonicalField === "FULL_NAME" && field.isPrimary,
-      )
-      .sort((left, right) => left.value.localeCompare(right.value))[0];
+      ),
+    );
     return {
       ...principal,
       // DataPrincipal.displayName has no source IDs, so it must never be
@@ -373,22 +328,6 @@ export class PrincipalsService {
       select: { id: true, name: true },
     });
     const sourceById = new Map(sources.map((source) => [source.id, source]));
-    return fields.flatMap((field) => {
-      const resolvedSources = field.sourceIds
-        .map((sourceId) => sourceById.get(sourceId))
-        .filter(
-          (source): source is { id: string; name: string } =>
-            source !== undefined,
-        )
-        .sort(
-          (left, right) =>
-            left.name.localeCompare(right.name) ||
-            left.id.localeCompare(right.id),
-        );
-      return resolvedSources.length === field.sourceIds.length &&
-        resolvedSources.length > 0
-        ? [{ ...field, sources: resolvedSources }]
-        : [];
-    });
+    return resolveProvenance(fields, sourceById);
   }
 }

@@ -3,10 +3,12 @@ import { INestApplication, ValidationPipe } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
 import * as argon2 from "argon2";
 import request from "supertest";
-import type { Prisma } from "@prisma/client";
+import { Prisma } from "@prisma/client";
 import { AppModule } from "../src/app.module";
 import { PrismaService } from "../src/common/prisma/prisma.service";
 import { PERMISSIONS } from "../prisma/seed/permissions";
+import { PRINCIPALS_PAGE_SIZE } from "../src/modules/principals/dto/list-principals.dto";
+import { buildPrincipalSearchQuery } from "../src/modules/principals/principal-search-query";
 
 /**
  * Task 20 endpoint gate. Fixtures are deliberately assembled directly at
@@ -28,25 +30,41 @@ describe("Principals API (e2e)", () => {
     childPrincipalId: string;
     unattributedNamePrincipalId: string;
     unresolvedNamePrincipalId: string;
+    twoPrimaryNamesPrincipalId: string;
     otherOrganizationPrincipalId: string;
     full: EmployeeSession;
     auditor: EmployeeSession;
   };
   let fixture: Fixture;
 
-  function indexNamesFromPlan(value: unknown): string[] {
+  // Only "Index Scan" / "Index Only Scan" / "Bitmap Index Scan" nodes carry
+  // an "Index Name" in Postgres's EXPLAIN (FORMAT JSON) output, so in
+  // practice this already implied a scan -- but Task 20 fix round 3
+  // (Important 3) asked for the check to say so explicitly, so a future
+  // plan shape that merely *mentions* an index name somewhere else in the
+  // tree (a constraint, a comment-like field) cannot silently satisfy it.
+  const INDEX_SCAN_NODE_TYPES = new Set([
+    "Index Scan",
+    "Index Only Scan",
+    "Bitmap Index Scan",
+  ]);
+
+  function indexScanNames(value: unknown): string[] {
     if (Array.isArray(value)) {
-      return value.flatMap(indexNamesFromPlan);
+      return value.flatMap(indexScanNames);
     }
     if (!value || typeof value !== "object") {
       return [];
     }
     const record = value as Record<string, unknown>;
+    const nodeType =
+      typeof record["Node Type"] === "string" ? record["Node Type"] : "";
+    const isIndexScanNode = INDEX_SCAN_NODE_TYPES.has(nodeType);
     return [
-      ...(typeof record["Index Name"] === "string"
+      ...(isIndexScanNode && typeof record["Index Name"] === "string"
         ? [record["Index Name"]]
         : []),
-      ...Object.values(record).flatMap(indexNamesFromPlan),
+      ...Object.values(record).flatMap(indexScanNames),
     ];
   }
 
@@ -168,6 +186,11 @@ describe("Principals API (e2e)", () => {
       "Unresolved Stored Display Name",
       "ADULT",
     );
+    const twoPrimaryNamesPrincipalId = await createPrincipal(
+      organizationId,
+      "Two Primary Names Filler",
+      "ADULT",
+    );
     const otherOrganizationPrincipalId = await createPrincipal(
       otherOrganizationId,
       "Other Aman",
@@ -241,6 +264,34 @@ describe("Principals API (e2e)", () => {
           value: "Unresolved Field Name",
           dataCategory: "IDENTITY",
           sourceIds: [randomUUID()],
+          isPrimary: true,
+        },
+        // Two primary FULL_NAME rows for the same principal, permitted by
+        // the @@unique([dataPrincipalId, canonicalField, value]) constraint.
+        // "Aarti Rao" sorts alphabetically first but its source is stale;
+        // "Zoya Khan" sorts second but is fully attributable. Task 20 fix
+        // round 3 (Important 6) found list() picked the alphabetically-first
+        // candidate BEFORE checking whether it resolved, while detail
+        // resolved first and picked second -- so list showed null while
+        // detail showed "Zoya Khan" for the same principal. Both paths must
+        // now resolve provenance before the tie-break and agree on
+        // "Zoya Khan".
+        {
+          organizationId,
+          dataPrincipalId: twoPrimaryNamesPrincipalId,
+          canonicalField: "FULL_NAME",
+          value: "Aarti Rao",
+          dataCategory: "IDENTITY",
+          sourceIds: [randomUUID()],
+          isPrimary: true,
+        },
+        {
+          organizationId,
+          dataPrincipalId: twoPrimaryNamesPrincipalId,
+          canonicalField: "FULL_NAME",
+          value: "Zoya Khan",
+          dataCategory: "IDENTITY",
+          sourceIds: [ecommerceId],
           isPrimary: true,
         },
         {
@@ -365,6 +416,7 @@ describe("Principals API (e2e)", () => {
       childPrincipalId,
       unattributedNamePrincipalId,
       unresolvedNamePrincipalId,
+      twoPrimaryNamesPrincipalId,
       otherOrganizationPrincipalId,
       full,
       auditor,
@@ -513,42 +565,27 @@ describe("Principals API (e2e)", () => {
     // before asserting the exact candidate query used by PrincipalsService.
     await prisma.$executeRawUnsafe('ANALYZE "DataPrincipal"');
     await prisma.$executeRawUnsafe('ANALYZE "PrincipalDataField"');
-    const explain = await prisma.$queryRaw<Array<{ "QUERY PLAN": unknown }>>`
-      EXPLAIN (FORMAT JSON, COSTS FALSE)
-      WITH "nameMatches" AS MATERIALIZED (
-        SELECT "id"
-        FROM "DataPrincipal"
-        WHERE "displayName" ILIKE '%' || ${searchTerm} || '%'
-      ), "fieldValueMatches" AS MATERIALIZED (
-        SELECT "dataPrincipalId" AS "id"
-        FROM "PrincipalDataField"
-        WHERE "value" ILIKE '%' || ${searchTerm} || '%'
-      ), "candidateIds" AS MATERIALIZED (
-        (
-          SELECT "id" FROM "nameMatches"
-          INTERSECT
-          SELECT "id" FROM "DataPrincipal" WHERE "organizationId" = ${fixture.organizationId}
-        )
-        UNION
-        (
-          SELECT "id" FROM "fieldValueMatches"
-          INTERSECT
-          SELECT "dataPrincipalId" AS "id"
-          FROM "PrincipalDataField"
-          WHERE "organizationId" = ${fixture.organizationId}
-            AND "canonicalField" IN ('EMAIL'::"CanonicalField", 'PHONE'::"CanonicalField", 'CUSTOMER_ID'::"CanonicalField")
-        )
-      )
-      SELECT principal."id", principal."reference", principal."ageStatus", principal."createdAt"
-      FROM "DataPrincipal" AS principal
-      INNER JOIN "candidateIds" AS candidate ON candidate."id" = principal."id"
-      WHERE principal."organizationId" = ${fixture.organizationId}
-        AND (NULL::"AgeStatus" IS NULL OR principal."ageStatus" = NULL::"AgeStatus")
-      ORDER BY principal."displayName" ASC, principal."id" ASC
-      OFFSET 0
-      LIMIT 50
-    `;
-    const indexes = indexNamesFromPlan(explain[0]?.["QUERY PLAN"]);
+    // Built through the SAME `buildPrincipalSearchQuery` the service calls,
+    // with the SAME arguments an unfiltered, page-1 HTTP request for this
+    // term would produce -- not a hand-copied SQL string. Task 20 fix round
+    // 3 (Important 2) found the previous copy had drifted (LIMIT 50 vs the
+    // service's real PRINCIPALS_PAGE_SIZE of 25, and a literal
+    // `NULL::"AgeStatus"` where the service binds a parameter -- literal vs
+    // parameter is exactly what can change the planner's choice), so it
+    // could stay green after the service's query changed underneath it.
+    // Sharing the builder makes that drift impossible: EXPLAIN-ing its
+    // output is provably EXPLAIN-ing what production runs.
+    const searchQuery = buildPrincipalSearchQuery({
+      organizationId: fixture.organizationId,
+      term: searchTerm,
+      ageStatus: null,
+      limit: PRINCIPALS_PAGE_SIZE,
+      offset: 0,
+    });
+    const explain = await prisma.$queryRaw<Array<{ "QUERY PLAN": unknown }>>(
+      Prisma.sql`EXPLAIN (FORMAT JSON, COSTS FALSE) ${searchQuery}`,
+    );
+    const indexes = indexScanNames(explain[0]?.["QUERY PLAN"]);
     expect(indexes).toContain("principal_name_trgm");
     expect(indexes).toContain("pdf_value_trgm");
 
@@ -565,6 +602,46 @@ describe("Principals API (e2e)", () => {
     expect(elapsedMs).toBeLessThan(300);
   }, 20_000);
 
+  it("does not match a search term against a non-searchable canonical field, even when the same principal also owns a contact identifier", async () => {
+    // fixture.principalId has both an EMAIL field (a searchable canonical
+    // field) and an ADDRESS_LINE1 field containing "42 Unattributable Lane"
+    // (not searchable per the brief -- only EMAIL/PHONE/CUSTOMER_ID are).
+    // Task 20 fix round 3 (Important 1) found the previous query's
+    // canonical-field restriction was never actually tied to the row that
+    // matched: `INTERSECT` combined two independently-computed id sets, so
+    // "any field value matched" INTERSECT "tenant has a contact identifier"
+    // let an address match through as long as the principal also had an
+    // email -- widening the masked-field equality oracle to every canonical
+    // field. This search must return nothing.
+    const response = await request(app.getHttpServer())
+      .get("/api/principals")
+      .query({ q: "Unattributable Lane" })
+      .set(authenticated(fixture.full));
+    expect(response.status).toBe(200);
+    expect(
+      response.body.items.map((item: { id: string }) => item.id),
+    ).not.toContain(fixture.principalId);
+  });
+
+  it("never returns another tenant's principal from the raw-SQL search query", async () => {
+    // otherOrganizationPrincipalId ("Other Aman") lives in a second
+    // organization and would match `q: "Aman"` on name alone. The raw
+    // search query bypasses the Prisma tenant-scoping extension entirely
+    // (see the class doc comment), so its own explicit tenant predicates
+    // are the only thing standing between one org's search and another's
+    // principals -- and, per Task 20 fix round 3 (Important 7), nothing in
+    // this suite asserted that before now. Deleting a tenant predicate from
+    // `buildPrincipalSearchQuery` must fail this test.
+    const response = await request(app.getHttpServer())
+      .get("/api/principals")
+      .query({ q: "Aman" })
+      .set(authenticated(fixture.full));
+    expect(response.status).toBe(200);
+    const ids = response.body.items.map((item: { id: string }) => item.id);
+    expect(ids).toContain(fixture.principalId);
+    expect(ids).not.toContain(fixture.otherOrganizationPrincipalId);
+  });
+
   it("uses an attributable FULL_NAME for list display or emits no name", async () => {
     const response = await request(app.getHttpServer())
       .get("/api/principals")
@@ -578,6 +655,35 @@ describe("Principals API (e2e)", () => {
         sources: [],
       }),
     ]);
+  });
+
+  it("picks the same attributable name on list and detail when a principal has two primary FULL_NAME fields", async () => {
+    // fixture.twoPrimaryNamesPrincipalId carries "Aarti Rao" (alphabetically
+    // first, unattributable source) and "Zoya Khan" (alphabetically second,
+    // fully attributable). Both read paths must filter to provenance-
+    // complete candidates BEFORE the tie-break, so both must land on
+    // "Zoya Khan" -- see Task 20 fix round 3, Important 6.
+    const list = await request(app.getHttpServer())
+      .get("/api/principals")
+      .query({ q: "Two Primary Names Filler" })
+      .set(authenticated(fixture.full));
+    expect(list.status).toBe(200);
+    expect(list.body.items).toEqual([
+      expect.objectContaining({
+        id: fixture.twoPrimaryNamesPrincipalId,
+        displayName: "Zoya Khan",
+        sources: [{ id: expect.any(String), name: "E-commerce" }],
+      }),
+    ]);
+
+    const detail = await request(app.getHttpServer())
+      .get(`/api/principals/${fixture.twoPrimaryNamesPrincipalId}`)
+      .set(authenticated(fixture.full));
+    expect(detail.status).toBe(200);
+    expect(detail.body).toMatchObject({
+      displayName: "Zoya Khan",
+      displayNameSources: [{ id: expect.any(String), name: "E-commerce" }],
+    });
   });
 
   it("never serializes an unproven stored detail display name", async () => {
@@ -781,6 +887,12 @@ describe("Principals API (e2e)", () => {
     const elapsedMs = performance.now() - startedAt;
     captureQueries = false;
     expect(response.status).toBe(200);
+    // `queryCount` only increments through the $on("query") listener, which
+    // fires only if PRISMA_QUERY_LOG=1 was read before PrismaService's
+    // constructor ran. Without this floor, a broken listener leaves
+    // queryCount at 0 forever and `toBeLessThan(15)` passes while proving
+    // nothing was measured -- Task 20 fix round 3, Important 5.
+    expect(queryCount).toBeGreaterThan(0);
     expect(queryCount).toBeLessThan(15);
     // The test database is intentionally not the 500-record demo dataset,
     // so this is evidence the route itself stays comfortably within the
