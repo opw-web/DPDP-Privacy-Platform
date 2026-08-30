@@ -761,8 +761,20 @@ function buildModelOverrides(
           data: args.data,
         });
         if (count === 0) {
-          // Race: the row was deleted between the findFirst above and here.
-          throw notFoundError(modelName);
+          // count === 0 here is ambiguous, NOT necessarily the row being
+          // deleted mid-request: an all-`undefined` `args.data` (an
+          // all-optional PATCH DTO with an empty/no-op body) makes
+          // `updateMany` a no-op, and Prisma reports that no-op as
+          // `count: 0` on a row that demonstrably still exists -- the
+          // `findFirst` above just found it. Disambiguate by re-reading
+          // on the same projection-free `pkWhere`: if the row is still
+          // there, this was a no-op update and we fall through to the
+          // normal return below; only a genuinely missing row (deleted
+          // between the findFirst above and the updateMany) throws.
+          const stillThere = await this.findFirst({ where: pkWhere });
+          if (!stillThere) {
+            throw notFoundError(modelName);
+          }
         }
         return this.findFirstOrThrow({
           where: pkWhere,

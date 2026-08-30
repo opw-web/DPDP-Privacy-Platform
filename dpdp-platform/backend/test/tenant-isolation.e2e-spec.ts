@@ -379,6 +379,95 @@ describe("Tenant isolation (e2e)", () => {
       acmePrincipalReferenceHolder.value = newReference;
     });
 
+    it("a no-op update (empty `data`) on an existing row returns that row instead of throwing (regression: an all-optional PATCH DTO with no changes used to surface as an uncaught P2025/500)", async () => {
+      // `updateMany` reports `count: 0` for a no-op write even though the
+      // row is unquestionably still there -- Prisma cannot tell "matched
+      // zero rows" apart from "matched a row but changed zero fields".
+      // The old code treated any `count === 0` as the row having been
+      // deleted mid-request and threw not-found for this case too. This
+      // is the positive control for the deleted-row-race test below: the
+      // same `count === 0` branch must resolve two different ways
+      // depending on whether the row is genuinely still there.
+      const noOpRow = await prisma.dataPrincipal.create({
+        data: {
+          organizationId: acmeOrgId,
+          reference: `DP-${randomUUID()}`,
+          displayName: "No-op Subject",
+        },
+      });
+
+      const result = await TenantContext.run(acmeCtx, () =>
+        prisma.scoped.dataPrincipal.update({
+          where: { id: noOpRow.id },
+          data: {},
+        }),
+      );
+
+      expect(result.id).toBe(noOpRow.id);
+      expect(result.displayName).toBe("No-op Subject");
+
+      const stillThere = await prisma.dataPrincipal.findUnique({
+        where: { id: noOpRow.id },
+      });
+      expect(stillThere).not.toBeNull();
+
+      await prisma.dataPrincipal.delete({ where: { id: noOpRow.id } });
+    });
+
+    it("update on a row deleted between the findFirst existence check and the updateMany still throws a clean tenant not-found error (real race via the raw client, not a mock of the outcome)", async () => {
+      // This is the invariant the no-op fix above must not weaken: a
+      // GENUINE mid-request deletion must still throw. To exercise the
+      // actual race (not just assert it), the row is deleted for real,
+      // through the raw (unscoped) client, from inside a one-shot spy on
+      // `updateMany` -- i.e. at the exact point between the extension's
+      // `findFirst` existence check and its `updateMany` call. The spy
+      // still calls through to the real `updateMany`, so the zero-count
+      // result driving the assertion is genuine, not asserted from the
+      // test's own setup.
+      const raceVictim = await prisma.dataPrincipal.create({
+        data: {
+          organizationId: acmeOrgId,
+          reference: `DP-${randomUUID()}`,
+          displayName: "Race Victim",
+        },
+      });
+
+      const realUpdateMany = prisma.scoped.dataPrincipal.updateMany.bind(
+        prisma.scoped.dataPrincipal,
+      );
+      const updateManySpy = jest
+        .spyOn(prisma.scoped.dataPrincipal, "updateMany")
+        .mockImplementationOnce((async (args: unknown) => {
+          await prisma.dataPrincipal.delete({ where: { id: raceVictim.id } });
+          return realUpdateMany(args as never);
+        }) as never);
+
+      try {
+        await expect(
+          TenantContext.run(acmeCtx, () =>
+            prisma.scoped.dataPrincipal.update({
+              where: { id: raceVictim.id },
+              data: { displayName: "Should never land" },
+            }),
+          ),
+          // Assert the specific tenant-scoped not-found error (not just
+          // "rejects.toThrow()"), so a "fix" that instead let this fall
+          // through to the final `findFirstOrThrow` -- which would also
+          // reject, but with a raw, untranslated Prisma error -- does not
+          // pass this test by accident.
+        ).rejects.toThrow(
+          /No 'DataPrincipal' record was found for the given tenant-scoped where clause/,
+        );
+      } finally {
+        updateManySpy.mockRestore();
+      }
+
+      const goneForGood = await prisma.dataPrincipal.findUnique({
+        where: { id: raceVictim.id },
+      });
+      expect(goneForGood).toBeNull();
+    });
+
     it("delete targeting Globex's id throws not-found and never deletes the row", async () => {
       await expect(
         TenantContext.run(acmeCtx, () =>

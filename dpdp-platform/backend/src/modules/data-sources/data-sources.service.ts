@@ -309,21 +309,20 @@ export class DataSourcesService {
       publiclyAvailableJustification: dto.publiclyAvailableJustification,
       hostingCountry: dto.hostingCountry,
     };
-    // Bug found while testing `credential: null` (a documented no-op --
-    // see the DTO comment): when EVERY key above is `undefined` (a PATCH
-    // whose only field is `credential: null`, or an empty `{}` body),
-    // the tenant extension's `update()` override degrades to
-    // `updateMany({ where: pkWhere, data: {} })` to stay tenant-safe (see
-    // that file's own comment on why `update` cannot call the real
-    // `update` directly). Verified directly against Postgres: Prisma's
-    // `updateMany` with an all-undefined `data` object returns `{ count:
-    // 0 }` even though the row genuinely exists and matches `where` --
-    // there is nothing to SET, so nothing is reported as touched. The
-    // extension reads `count === 0` as "the row must have been deleted
-    // mid-request" and throws P2025, surfacing here as an uncaught 500.
-    // Detected and routed around a real Prisma `update()`/`updateMany()`
-    // call entirely for this one case, straight to a plain tenant-scoped
-    // read -- correct because there is nothing to write.
+    // Optimisation, not a correctness fix: when EVERY key above is
+    // `undefined` (a PATCH whose only field is `credential: null` -- a
+    // documented no-op, see the DTO comment -- or an empty `{}` body),
+    // there is nothing to SET, so this skips the pointless
+    // `update`/`updateMany` round trip entirely and goes straight to a
+    // plain tenant-scoped read. The tenant extension's `update()`
+    // override (src/common/tenant/tenant.extension.ts) independently
+    // handles this same all-undefined-`data` shape correctly on its own
+    // -- an all-undefined `data` still makes `updateMany` report `{
+    // count: 0 }` on a row that genuinely exists, and the extension
+    // disambiguates that from a real mid-request deletion by re-checking
+    // the row before deciding whether to throw not-found -- so this
+    // short-circuit is redundant with that fix; it is kept purely to
+    // save the round trip for this one route.
     const hasEffectiveChange = Object.values(updateData).some(
       (value) => value !== undefined,
     );
