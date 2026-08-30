@@ -18,7 +18,6 @@ export const CAN_VIEW_ALL_PERSONAL_DATA = "CAN_VIEW_ALL_PERSONAL_DATA";
 const PASS_THROUGH_FIELDS: ReadonlySet<string> = new Set([
   "ACCOUNT_STATUS", // operational status (e.g. "active"/"churned"), not personal data
   "EXTERNAL_ID", // opaque source-system identifier, not itself personal data
-  "CUSTOMER_ID", // ditto -- an identifier, not a personal-data value
   "IGNORE", // canonical marker meaning "field mapping intentionally dropped"; never a real value
 ]);
 
@@ -114,7 +113,8 @@ export class MaskingService {
   /**
    * Dispatches to the right mask for a `PrincipalDataField.canonicalField`
    * value. `EMAIL`/`PHONE` use the spec-exact formats above;
-   * `PASS_THROUGH_FIELDS` members are returned unchanged; every other
+   * `CUSTOMER_ID` uses a stable identifier mask; `PASS_THROUGH_FIELDS`
+   * members are returned unchanged; every other
    * canonical field -- including any added to the enum later with no
    * masking rule of its own -- is masked generically via `maskSegment`
    * (fail CLOSED; Task 7 review Important 1).
@@ -131,6 +131,8 @@ export class MaskingService {
         return this.maskEmail(value);
       case "PHONE":
         return this.maskPhone(value);
+      case "CUSTOMER_ID":
+        return this.maskIdentifier(value);
       default:
         if (PASS_THROUGH_FIELDS.has(canonicalField)) {
           return value;
@@ -205,5 +207,22 @@ export class MaskingService {
       "*".repeat(maskedLength) +
       digits.slice(length - keepEnd)
     );
+  }
+
+  /**
+   * Customer IDs are direct identifiers of a data principal and are used by
+   * the search endpoint. Preserve only two edge characters when practical so
+   * an auditor can distinguish rows without receiving the full identifier.
+   */
+  private maskIdentifier(
+    value: string | null | undefined,
+  ): string | null | undefined {
+    if (typeof value !== "string" || value.length === 0) {
+      return value;
+    }
+    if (value.length <= 4) {
+      return this.maskSegment(value);
+    }
+    return `${value.slice(0, 2)}${"*".repeat(value.length - 4)}${value.slice(-2)}`;
   }
 }

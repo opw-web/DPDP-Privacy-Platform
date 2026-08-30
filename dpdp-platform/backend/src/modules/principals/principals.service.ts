@@ -11,9 +11,13 @@ import type { ResolvedPrincipalField } from "./lineage.service";
 type SearchRow = {
   id: string;
   reference: string;
-  displayName: string;
   ageStatus: AgeStatus;
   createdAt: Date;
+};
+
+type PrincipalListItem = SearchRow & {
+  displayName: string | null;
+  sources: Array<{ id: string; name: string }>;
 };
 
 type PrincipalFieldRow = {
@@ -44,17 +48,12 @@ const PRINCIPAL_DETAIL_SELECT = {
   updatedAt: true,
 } satisfies Prisma.DataPrincipalSelect;
 
-const DISPLAY_NAME_FIELDS: ReadonlySet<string> = new Set([
-  "FULL_NAME",
-  "FIRST_NAME",
-  "LAST_NAME",
-]);
-
 /**
  * Principal profile/read service. Search is deliberately raw SQL because
- * `ILIKE '%query%'` is what lets Postgres use the two pg_trgm GIN indexes
- * created in the Task 2 migration; all input is parameterized, and the
- * organization comes only from TenantContext, never a caller parameter.
+ * each independent `ILIKE '%query%'` branch can use its Task 2 pg_trgm GIN
+ * index. The candidate-ID UNION is intentional: an OR/EXISTS query makes
+ * PostgreSQL choose a broad plan that can skip those indexes. All input is
+ * parameterized and the organization comes only from TenantContext.
  */
 @Injectable()
 export class PrincipalsService {
@@ -71,60 +70,86 @@ export class PrincipalsService {
     const organizationId = TenantContext.get().organizationId;
     const term = query.q?.trim() ?? "";
     const offset = (query.page - 1) * PRINCIPALS_PAGE_SIZE;
-    const rows = await this.prisma.$queryRaw<SearchRow[]>`
-      SELECT "id", "reference", "displayName", "ageStatus", "createdAt"
-      FROM "DataPrincipal"
-      WHERE "organizationId" = ${organizationId}
-        AND (${query.ageStatus ?? null}::"AgeStatus" IS NULL OR "ageStatus" = ${query.ageStatus ?? null}::"AgeStatus")
-        AND (
-          ${term} = ''
-          OR "displayName" ILIKE '%' || ${term} || '%'
-          OR EXISTS (
-            SELECT 1
-            FROM "PrincipalDataField" AS field
-            WHERE field."organizationId" = ${organizationId}
-              AND field."dataPrincipalId" = "DataPrincipal"."id"
-              AND field."canonicalField" IN ('EMAIL'::"CanonicalField", 'PHONE'::"CanonicalField", 'CUSTOMER_ID'::"CanonicalField")
-              AND field."value" ILIKE '%' || ${term} || '%'
+    const rows =
+      term === ""
+        ? await this.prisma.$queryRaw<SearchRow[]>`
+          SELECT "id", "reference", "ageStatus", "createdAt"
+          FROM "DataPrincipal"
+          WHERE "organizationId" = ${organizationId}
+            AND (${query.ageStatus ?? null}::"AgeStatus" IS NULL OR "ageStatus" = ${query.ageStatus ?? null}::"AgeStatus")
+          ORDER BY "displayName" ASC, "id" ASC
+          OFFSET ${offset}
+          LIMIT ${PRINCIPALS_PAGE_SIZE}
+        `
+        : await this.prisma.$queryRaw<SearchRow[]>`
+          WITH "nameMatches" AS MATERIALIZED (
+            SELECT "id"
+            FROM "DataPrincipal"
+            WHERE "displayName" ILIKE '%' || ${term} || '%'
+          ), "fieldValueMatches" AS MATERIALIZED (
+            SELECT "dataPrincipalId" AS "id"
+            FROM "PrincipalDataField"
+            WHERE "value" ILIKE '%' || ${term} || '%'
+          ), "candidateIds" AS MATERIALIZED (
+            (
+              SELECT "id" FROM "nameMatches"
+              INTERSECT
+              SELECT "id" FROM "DataPrincipal" WHERE "organizationId" = ${organizationId}
+            )
+            UNION
+            (
+              SELECT "id" FROM "fieldValueMatches"
+              INTERSECT
+              SELECT "dataPrincipalId" AS "id"
+              FROM "PrincipalDataField"
+              WHERE "organizationId" = ${organizationId}
+                AND "canonicalField" IN ('EMAIL'::"CanonicalField", 'PHONE'::"CanonicalField", 'CUSTOMER_ID'::"CanonicalField")
+            )
           )
-        )
-      ORDER BY "displayName" ASC, "id" ASC
-      OFFSET ${offset}
-      LIMIT ${PRINCIPALS_PAGE_SIZE}
-    `;
+          SELECT principal."id", principal."reference", principal."ageStatus", principal."createdAt"
+          FROM "DataPrincipal" AS principal
+          INNER JOIN "candidateIds" AS candidate ON candidate."id" = principal."id"
+          WHERE principal."organizationId" = ${organizationId}
+            AND (${query.ageStatus ?? null}::"AgeStatus" IS NULL OR principal."ageStatus" = ${query.ageStatus ?? null}::"AgeStatus")
+          ORDER BY principal."displayName" ASC, principal."id" ASC
+          OFFSET ${offset}
+          LIMIT ${PRINCIPALS_PAGE_SIZE}
+        `;
 
-    // Do not emit a displayName with no attributable source. The assembled
-    // profile is the durable source of this association, rather than trying
-    // to re-infer it from a display-name string at response time.
+    // The top-level list name is itself personal data. It must be derived
+    // from an attributable FULL_NAME assembled field, never copied from
+    // DataPrincipal.displayName (which deliberately stores no source IDs).
     const fieldRows = rows.length
       ? await this.prisma.scoped.principalDataField.findMany({
           where: { dataPrincipalId: { in: rows.map((row) => row.id) } },
           select: {
             dataPrincipalId: true,
             canonicalField: true,
+            value: true,
             sourceIds: true,
+            isPrimary: true,
           },
         })
       : [];
-    const sourceIdsByPrincipal = new Map<string, Set<string>>();
+    const nameFieldByPrincipal = new Map<
+      string,
+      { value: string; sourceIds: string[] }
+    >();
     for (const field of fieldRows) {
-      // List renders DataPrincipal.displayName, so its lineage comes only
-      // from assembled name fields. An unresolved source on an unrelated
-      // address/email must suppress that value on detail, not make the
-      // entire, independently-attributed profile disappear from search.
-      if (!DISPLAY_NAME_FIELDS.has(field.canonicalField)) {
+      if (field.canonicalField !== "FULL_NAME" || !field.isPrimary) {
         continue;
       }
-      const sourceIds =
-        sourceIdsByPrincipal.get(field.dataPrincipalId) ?? new Set<string>();
-      field.sourceIds.forEach((sourceId) => sourceIds.add(sourceId));
-      sourceIdsByPrincipal.set(field.dataPrincipalId, sourceIds);
+      const current = nameFieldByPrincipal.get(field.dataPrincipalId);
+      if (!current || field.value.localeCompare(current.value) < 0) {
+        nameFieldByPrincipal.set(field.dataPrincipalId, {
+          value: field.value,
+          sourceIds: field.sourceIds,
+        });
+      }
     }
     const allSourceIds = [
       ...new Set(
-        [...sourceIdsByPrincipal.values()].flatMap((sourceIds) => [
-          ...sourceIds,
-        ]),
+        [...nameFieldByPrincipal.values()].flatMap((field) => field.sourceIds),
       ),
     ];
     const sources = allSourceIds.length
@@ -135,39 +160,43 @@ export class PrincipalsService {
       : [];
     const sourceById = new Map(sources.map((source) => [source.id, source]));
 
-    const items = rows.flatMap((row) => {
-      const sourceIds = [
-        ...(sourceIdsByPrincipal.get(row.id) ?? new Set<string>()),
-      ];
-      const resolvedSources = sourceIds
-        .map((id) => sourceById.get(id))
-        .filter(
-          (source): source is { id: string; name: string } =>
-            source !== undefined,
-        )
-        .sort(
-          (left, right) =>
-            left.name.localeCompare(right.name) ||
-            left.id.localeCompare(right.id),
-        );
-      if (
-        sourceIds.length === 0 ||
-        resolvedSources.length !== sourceIds.length
-      ) {
-        return [];
-      }
-      return [
-        {
-          ...row,
-          displayName: this.maskingService.maskIfNeeded(
-            permissions,
-            "FULL_NAME",
-            row.displayName,
-          ) as string,
-          sources: resolvedSources,
-        },
-      ];
-    });
+    const items: PrincipalListItem[] = rows.flatMap<PrincipalListItem>(
+      (row) => {
+        const nameField = nameFieldByPrincipal.get(row.id);
+        if (!nameField) {
+          return [{ ...row, displayName: null, sources: [] }];
+        }
+        const sourceIds = nameField.sourceIds;
+        const resolvedSources = sourceIds
+          .map((id) => sourceById.get(id))
+          .filter(
+            (source): source is { id: string; name: string } =>
+              source !== undefined,
+          )
+          .sort(
+            (left, right) =>
+              left.name.localeCompare(right.name) ||
+              left.id.localeCompare(right.id),
+          );
+        if (
+          sourceIds.length === 0 ||
+          resolvedSources.length !== sourceIds.length
+        ) {
+          return [{ ...row, displayName: null, sources: [] }];
+        }
+        return [
+          {
+            ...row,
+            displayName: this.maskingService.maskIfNeeded(
+              permissions,
+              "FULL_NAME",
+              nameField.value,
+            ) as string,
+            sources: resolvedSources,
+          },
+        ];
+      },
+    );
 
     return { items, page: query.page, pageSize: PRINCIPALS_PAGE_SIZE };
   }

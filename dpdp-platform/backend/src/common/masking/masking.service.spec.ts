@@ -133,8 +133,14 @@ describe("MaskingService", () => {
     it("passes through the explicit PASS_THROUGH_FIELDS allowlist unchanged", () => {
       expect(masking.maskValue("ACCOUNT_STATUS", "active")).toBe("active");
       expect(masking.maskValue("EXTERNAL_ID", "ext-12345")).toBe("ext-12345");
-      expect(masking.maskValue("CUSTOMER_ID", "cust-98765")).toBe("cust-98765");
       expect(masking.maskValue("IGNORE", "whatever")).toBe("whatever");
+    });
+
+    it("masks CUSTOMER_ID because it identifies the data principal", () => {
+      expect(masking.maskValue("CUSTOMER_ID", "cust-98765")).toBe("cu******65");
+      expect(masking.maskValue("CUSTOMER_ID", "cust-98765")).not.toBe(
+        "cust-98765",
+      );
     });
 
     // Proves the fail-closed default holds even for a canonical field

@@ -23,13 +23,31 @@ describe("Principals API (e2e)", () => {
 
   type EmployeeSession = { accessToken: string };
   type Fixture = {
+    organizationId: string;
     principalId: string;
     childPrincipalId: string;
+    unattributedNamePrincipalId: string;
     otherOrganizationPrincipalId: string;
     full: EmployeeSession;
     auditor: EmployeeSession;
   };
   let fixture: Fixture;
+
+  function indexNamesFromPlan(value: unknown): string[] {
+    if (Array.isArray(value)) {
+      return value.flatMap(indexNamesFromPlan);
+    }
+    if (!value || typeof value !== "object") {
+      return [];
+    }
+    const record = value as Record<string, unknown>;
+    return [
+      ...(typeof record["Index Name"] === "string"
+        ? [record["Index Name"]]
+        : []),
+      ...Object.values(record).flatMap(indexNamesFromPlan),
+    ];
+  }
 
   async function ensurePermission(code: string): Promise<void> {
     const permission = PERMISSIONS.find((row) => row.code === code);
@@ -138,6 +156,11 @@ describe("Principals API (e2e)", () => {
       organizationId,
       "Asha Nair",
       "CHILD",
+    );
+    const unattributedNamePrincipalId = await createPrincipal(
+      organizationId,
+      "Unattributed Display Name",
+      "ADULT",
     );
     const otherOrganizationPrincipalId = await createPrincipal(
       otherOrganizationId,
@@ -257,6 +280,14 @@ describe("Principals API (e2e)", () => {
         contractExists: true,
       },
     });
+    const foreignRecipient = await prisma.dataRecipient.create({
+      data: {
+        organizationId: otherOrganizationId,
+        name: "Foreign recipient",
+        type: "DATA_PROCESSOR",
+        contractExists: true,
+      },
+    });
     const purpose = await prisma.processingPurpose.create({
       data: {
         organizationId,
@@ -287,6 +318,17 @@ describe("Principals API (e2e)", () => {
           sourceIds: [marketingId],
           startedAt: new Date(),
         },
+        // A corrupt scalar FK can be inserted outside the scoped service.
+        // The recipient endpoint must still not serialize Org B's row.
+        {
+          organizationId,
+          recipientId: foreignRecipient.id,
+          purposeId: purpose.id,
+          dataCategories: ["CONTACT"],
+          description: "Corrupt cross-tenant recipient reference",
+          sourceIds: [ecommerceId],
+          startedAt: new Date(),
+        },
       ],
     });
 
@@ -301,8 +343,10 @@ describe("Principals API (e2e)", () => {
       "Auditor",
     );
     return {
+      organizationId,
       principalId,
       childPrincipalId,
+      unattributedNamePrincipalId,
       otherOrganizationPrincipalId,
       full,
       auditor,
@@ -410,6 +454,116 @@ describe("Principals API (e2e)", () => {
     ).toEqual([fixture.childPrincipalId]);
   });
 
+  it("uses both tenant-bound trigram indexes for populated search candidates", async () => {
+    const searchTerm = "zzprincipalsearchneedle";
+    const totalSyntheticPrincipals = 10_000;
+    const syntheticPrincipalIds = Array.from(
+      { length: totalSyntheticPrincipals },
+      () => randomUUID(),
+    );
+    await prisma.dataPrincipal.createMany({
+      data: syntheticPrincipalIds.map((id, index) => ({
+        id,
+        organizationId: fixture.organizationId,
+        reference: `DP-SEARCH-FILLER-${index}-${randomUUID()}`,
+        displayName:
+          index === 0
+            ? `${searchTerm} visible name`
+            : `Synthetic principal ${index} ${randomUUID()}`,
+        ageStatus: "ADULT",
+      })),
+    });
+    const source = await prisma.dataSource.findFirstOrThrow({
+      where: { organizationId: fixture.organizationId },
+      select: { id: true },
+    });
+    await prisma.principalDataField.createMany({
+      data: syntheticPrincipalIds.map((dataPrincipalId, index) => ({
+        organizationId: fixture.organizationId,
+        dataPrincipalId,
+        canonicalField: "EMAIL",
+        value:
+          index === 0
+            ? `${searchTerm}@example.test`
+            : `filler-${index}-${randomUUID()}@example.test`,
+        dataCategory: "CONTACT",
+        sourceIds: [source.id],
+        isPrimary: true,
+      })),
+    });
+    // Make the planner account for this deliberately non-trivial fixture
+    // before asserting the exact candidate query used by PrincipalsService.
+    await prisma.$executeRawUnsafe('ANALYZE "DataPrincipal"');
+    await prisma.$executeRawUnsafe('ANALYZE "PrincipalDataField"');
+    const explain = await prisma.$transaction(async (tx) => {
+      // This controlled planner setting makes the assertion about predicate
+      // compatibility stable across CI hardware. The measured request below
+      // still uses PostgreSQL's normal planner and must meet the SLO.
+      await tx.$executeRawUnsafe("SET LOCAL enable_seqscan = off");
+      return tx.$queryRaw<Array<{ "QUERY PLAN": unknown }>>`
+        EXPLAIN (FORMAT JSON, COSTS FALSE)
+        WITH "nameMatches" AS MATERIALIZED (
+          SELECT "id"
+          FROM "DataPrincipal"
+          WHERE "displayName" ILIKE '%' || ${searchTerm} || '%'
+        ), "fieldValueMatches" AS MATERIALIZED (
+          SELECT "dataPrincipalId" AS "id"
+          FROM "PrincipalDataField"
+          WHERE "value" ILIKE '%' || ${searchTerm} || '%'
+        ), "candidateIds" AS MATERIALIZED (
+          (
+            SELECT "id" FROM "nameMatches"
+            INTERSECT
+            SELECT "id" FROM "DataPrincipal" WHERE "organizationId" = ${fixture.organizationId}
+          )
+          UNION
+          (
+            SELECT "id" FROM "fieldValueMatches"
+            INTERSECT
+            SELECT "dataPrincipalId" AS "id"
+            FROM "PrincipalDataField"
+            WHERE "organizationId" = ${fixture.organizationId}
+              AND "canonicalField" IN ('EMAIL'::"CanonicalField", 'PHONE'::"CanonicalField", 'CUSTOMER_ID'::"CanonicalField")
+          )
+        )
+        SELECT principal."id"
+        FROM "DataPrincipal" AS principal
+        INNER JOIN "candidateIds" AS candidate ON candidate."id" = principal."id"
+        WHERE principal."organizationId" = ${fixture.organizationId}
+      `;
+    });
+    const indexes = indexNamesFromPlan(explain[0]?.["QUERY PLAN"]);
+    expect(indexes).toContain("principal_name_trgm");
+    expect(indexes).toContain("pdf_value_trgm");
+
+    const startedAt = performance.now();
+    const response = await request(app.getHttpServer())
+      .get("/api/principals")
+      .query({ q: searchTerm })
+      .set(authenticated(fixture.full));
+    const elapsedMs = performance.now() - startedAt;
+    expect(response.status).toBe(200);
+    expect(
+      response.body.items.map((item: { id: string }) => item.id),
+    ).toContain(syntheticPrincipalIds[0]);
+    expect(elapsedMs).toBeLessThan(300);
+  });
+
+  it("uses an attributable FULL_NAME for list display or emits no name", async () => {
+    const response = await request(app.getHttpServer())
+      .get("/api/principals")
+      .query({ q: "Unattributed Display" })
+      .set(authenticated(fixture.full));
+    expect(response.status).toBe(200);
+    expect(response.body.items).toEqual([
+      expect.objectContaining({
+        id: fixture.unattributedNamePrincipalId,
+        displayName: null,
+        sources: [],
+      }),
+    ]);
+  });
+
   it("returns complete source names on each detail value and omits unresolved provenance", async () => {
     const before = await prisma.auditEvent.count({
       where: {
@@ -480,6 +634,19 @@ describe("Principals API (e2e)", () => {
         (field: { canonicalField: string }) => field.canonicalField === "PHONE",
       ).value,
     ).not.toBe("+919876543210");
+    expect(
+      detail.body.fields.find(
+        (field: { canonicalField: string }) =>
+          field.canonicalField === "CUSTOMER_ID",
+      ).value,
+    ).not.toBe("cust-aman-44");
+    expect(JSON.stringify(list.body)).not.toContain("cust-aman-44");
+    const customerIdSearch = await request(app.getHttpServer())
+      .get("/api/principals")
+      .query({ q: "cust-aman-44" })
+      .set(authenticated(fixture.auditor));
+    expect(customerIdSearch.status).toBe(200);
+    expect(JSON.stringify(customerIdSearch.body)).not.toContain("cust-aman-44");
   });
 
   it("returns only recipients whose sharing sources intersect the profile's contributing sources", async () => {
