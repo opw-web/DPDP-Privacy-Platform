@@ -162,12 +162,64 @@ export async function claimDemoPrincipalAccounts(
 }
 
 /**
- * Resolves the demo organization and runs the claim. Exported (like
- * `seed.ts`'s `runSeed`) so a caller can invoke it twice in a row and
- * assert the second run creates nothing.
+ * `Organization` (`prisma/schema.prisma`) has exactly one unique column:
+ * `id` (its `@id` primary key). `name` carries no `@unique`/`@@unique`
+ * constraint at all -- nothing in the schema stops two organizations from
+ * sharing "Acme Retail Pvt Ltd", and this is a fix for exactly that: a
+ * name-only lookup that would silently pick one of them (Prisma's
+ * `findFirst` returns AN arbitrary/first-inserted match, not THE demo
+ * org) and claim the five demo accounts in whichever tenant it landed on.
+ *
+ * This script owns no migration -- adding a uniqueness constraint to
+ * `Organization.name` is a schema change outside `prisma/seed-principals.ts`
+ * and `package.json`, the only two files this task may touch (flagged to
+ * the coordinator in the fix report rather than done here). Instead: look
+ * up by name, but treat more than one match as the ambiguity it actually
+ * is and refuse to guess, exactly like the missing-identifier and
+ * `NODE_ENV=production` cases above. A caller who already holds the real
+ * unique key (`Organization.id` -- from `runSeed()`'s own return value,
+ * or a fixture in a test) skips this lookup entirely by passing
+ * `organizationId` to `runSeedPrincipals` directly.
+ */
+async function resolveDemoOrganizationId(
+  prisma: PrismaService,
+): Promise<string> {
+  const organizations = await prisma.organization.findMany({
+    where: { name: DEMO_ORG.name },
+    select: { id: true },
+    orderBy: { createdAt: "asc" },
+  });
+
+  if (organizations.length === 0) {
+    throw new Error(
+      `seed-principals.ts: demo organization "${DEMO_ORG.name}" not found. ` +
+        'Run "npm run seed" (prisma/seed.ts) first.',
+    );
+  }
+  if (organizations.length > 1) {
+    throw new Error(
+      `seed-principals.ts: found ${organizations.length} organizations named ` +
+        `"${DEMO_ORG.name}" -- Organization.name has no uniqueness constraint ` +
+        "(prisma/schema.prisma), so this script refuses to guess which one is " +
+        "the demo org rather than silently claiming accounts in the wrong " +
+        "tenant. Call runSeedPrincipals(prisma, organizationId) with the exact " +
+        "id of the intended organization instead.",
+    );
+  }
+
+  return organizations[0]!.id;
+}
+
+/**
+ * Refuses `NODE_ENV=production`, resolves the demo organization (by its
+ * real unique id, if the caller already has it -- otherwise by the
+ * ambiguity-checked name lookup above), and runs the claim. Exported
+ * (like `seed.ts`'s `runSeed`) so a caller can invoke it twice in a row
+ * and assert the second run creates nothing.
  */
 export async function runSeedPrincipals(
   prisma: PrismaService,
+  organizationId?: string,
 ): Promise<ClaimResult[]> {
   if (process.env["NODE_ENV"] === "production") {
     throw new Error(
@@ -177,18 +229,10 @@ export async function runSeedPrincipals(
     );
   }
 
-  const organization = await prisma.organization.findFirst({
-    where: { name: DEMO_ORG.name },
-    select: { id: true },
-  });
-  if (!organization) {
-    throw new Error(
-      `seed-principals.ts: demo organization "${DEMO_ORG.name}" not found. ` +
-        'Run "npm run seed" (prisma/seed.ts) first.',
-    );
-  }
+  const resolvedOrganizationId =
+    organizationId ?? (await resolveDemoOrganizationId(prisma));
 
-  return claimDemoPrincipalAccounts(prisma, organization.id);
+  return claimDemoPrincipalAccounts(prisma, resolvedOrganizationId);
 }
 
 async function main(): Promise<void> {

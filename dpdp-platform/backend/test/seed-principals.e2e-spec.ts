@@ -6,7 +6,7 @@ import {
   DEMO_PRINCIPALS_TO_CLAIM,
   runSeedPrincipals,
 } from "../prisma/seed-principals";
-import { DEMO_PASSWORD } from "../prisma/seed/demo-org";
+import { DEMO_ORG, DEMO_PASSWORD } from "../prisma/seed/demo-org";
 
 /**
  * Task 29 gate: the account-claiming seed. Talks to the real Postgres
@@ -161,6 +161,46 @@ describe("Account-claiming seed for demo principals (e2e)", () => {
       } else {
         process.env["NODE_ENV"] = originalNodeEnv;
       }
+    }
+  });
+
+  it("refuses to guess the demo organization by name when Organization.name is ambiguous (no uniqueness constraint on it)", async () => {
+    // Organization.name carries no @unique/@@unique in schema.prisma --
+    // two rows sharing DEMO_ORG.name is a state the schema allows, real
+    // or not in this environment already. Adding two more guarantees at
+    // least one ambiguous pair regardless of pre-existing state.
+    const duplicateOrgIds = [randomUUID(), randomUUID()];
+    await prisma.organization.createMany({
+      data: duplicateOrgIds.map((id) => ({ id, name: DEMO_ORG.name })),
+    });
+    try {
+      await expect(runSeedPrincipals(prisma)).rejects.toThrow(
+        /refuses to guess which one is the demo org/i,
+      );
+    } finally {
+      await prisma.organization.deleteMany({
+        where: { id: { in: duplicateOrgIds } },
+      });
+    }
+  });
+
+  it("an explicit organizationId bypasses the ambiguous name lookup entirely", async () => {
+    const duplicateOrgIds = [randomUUID(), randomUUID()];
+    await prisma.organization.createMany({
+      data: duplicateOrgIds.map((id) => ({ id, name: DEMO_ORG.name })),
+    });
+    try {
+      // organizationId supplied directly -> never calls the name-based
+      // resolver, so the ambiguous DEMO_ORG.name rows above are never
+      // consulted and cannot affect the outcome.
+      const results = await runSeedPrincipals(prisma, organizationId);
+      expect(results).toHaveLength(5);
+      // Already claimed by the first test in this file -- idempotent, not re-created.
+      expect(results.every((r) => r.created === false)).toBe(true);
+    } finally {
+      await prisma.organization.deleteMany({
+        where: { id: { in: duplicateOrgIds } },
+      });
     }
   });
 });
