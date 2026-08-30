@@ -9,7 +9,7 @@ import {
   Res,
   UnauthorizedException,
 } from "@nestjs/common";
-import { ApiTags } from "@nestjs/swagger";
+import { ApiOkResponse, ApiTags } from "@nestjs/swagger";
 import type { Request, Response } from "express";
 import { ConfigService } from "@nestjs/config";
 import { Public } from "../../common/decorators/public.decorator";
@@ -17,6 +17,7 @@ import { CurrentActor } from "../../common/decorators/current-actor.decorator";
 import { AccessTokenPayload } from "./token.service";
 import { EmployeeAuthService } from "./employee-auth.service";
 import { EmployeeLoginDto } from "./dto/employee-login.dto";
+import { EmployeeMeResponseDto } from "./dto/employee-me-response.dto";
 import { PrismaService } from "../../common/prisma/prisma.service";
 import { TenantContext, TenantStore } from "../../common/tenant/tenant-context";
 import type { AppConfig } from "../../config/configuration";
@@ -118,7 +119,10 @@ export class EmployeeAuthController {
   }
 
   @Get("me")
-  async me(@CurrentActor() actor: AccessTokenPayload) {
+  @ApiOkResponse({ type: EmployeeMeResponseDto })
+  async me(
+    @CurrentActor() actor: AccessTokenPayload,
+  ): Promise<EmployeeMeResponseDto> {
     const store: TenantStore = {
       organizationId: actor.organizationId,
       actorType: "EMPLOYEE",
@@ -126,9 +130,16 @@ export class EmployeeAuthController {
       actorLabel: actor.actorLabel,
     };
     return TenantContext.run(store, async () => {
+      // Reading your own session is not a state change -- no audit event.
+      //
+      // `role.permissions` is the SAME relation `PermissionsGuard`
+      // (src/common/guards/permissions.guard.ts) reads to resolve the
+      // actor's permission set for every `@RequirePermission('CAN_X')`
+      // route -- reused here rather than duplicated so this response can
+      // never drift from what the guard would actually allow.
       const employee = await this.prisma.scoped.employee.findFirstOrThrow({
         where: { id: actor.sub },
-        include: { role: true },
+        include: { role: { include: { permissions: true } } },
       });
       return {
         id: employee.id,
@@ -141,6 +152,7 @@ export class EmployeeAuthController {
           code: employee.role.code,
           name: employee.role.name,
         },
+        permissions: employee.role.permissions.map((p) => p.permissionCode),
       };
     });
   }

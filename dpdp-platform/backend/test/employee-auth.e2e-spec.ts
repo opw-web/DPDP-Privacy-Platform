@@ -364,6 +364,99 @@ describe("Employee auth (e2e)", () => {
     expect(meRes.body.email).toBe(employee.email);
   });
 
+  it("GET /api/auth/employee/me's permissions field is exactly what PermissionsGuard resolves -- a higher-privileged role is let through a CAN_VIEW_AUDIT_LOG route the response says it holds, a lower-privileged role is rejected by the SAME guard for a code the response correctly omits", async () => {
+    // Task 5 gap this test closes: EmployeeAuthController.me() returned
+    // `role` but no resolved `permissions` array, so the frontend's
+    // `<PermissionGate permission="CAN_X">` had nothing to gate on except
+    // comparing role names -- forbidden project-wide. The fix reuses
+    // PermissionsGuard's own relation (`employee.role.permissions`)
+    // instead of a second, hand-maintained mapping; this test proves that
+    // reuse by checking the response against the REAL guard's decision on
+    // a real `@RequirePermission('CAN_VIEW_AUDIT_LOG')` route
+    // (`GET /api/audit-events`), not just against the DB row in isolation
+    // -- so a future change that lets the two resolutions drift apart
+    // fails here.
+    const higherEmail = `me-perms-higher-${randomUUID()}@example.com`;
+    const higherPassword = "CorrectHorseBattery9!";
+    const { organizationId: higherOrgId } = await createOrgWithRoleAndEmployee(
+      {
+        email: higherEmail,
+        password: higherPassword,
+        permissionCodes: ["CAN_VIEW_AUDIT_LOG"],
+      },
+    );
+
+    const lowerEmail = `me-perms-lower-${randomUUID()}@example.com`;
+    const lowerPassword = "CorrectHorseBattery9!";
+    // No extra permissionCodes: this role holds only the fixture's own
+    // throwaway permission, i.e. strictly fewer real catalogue codes than
+    // the "higher" role above -- in particular, no CAN_VIEW_AUDIT_LOG.
+    const { organizationId: lowerOrgId } = await createOrgWithRoleAndEmployee({
+      email: lowerEmail,
+      password: lowerPassword,
+    });
+
+    async function loginAndFetchMe(
+      email: string,
+      password: string,
+      organizationId: string,
+    ): Promise<{ accessToken: string; permissions: string[] }> {
+      const loginRes = await request(app.getHttpServer())
+        .post("/api/auth/employee/login")
+        .send({ email, password });
+      expect(loginRes.status).toBe(200);
+      const accessToken = loginRes.body.accessToken as string;
+
+      const meRes = await request(app.getHttpServer())
+        .get("/api/auth/employee/me")
+        .set("Authorization", `Bearer ${accessToken}`);
+      expect(meRes.status).toBe(200);
+      expect(Array.isArray(meRes.body.permissions)).toBe(true);
+
+      // Exactness against the database row PermissionsGuard itself reads
+      // (Employee -> Role -> RolePermission): the response must contain
+      // every code the role holds and nothing it doesn't.
+      const dbEmployee = await prisma.employee.findFirstOrThrow({
+        where: { organizationId },
+        include: { role: { include: { permissions: true } } },
+      });
+      const dbCodes = dbEmployee.role.permissions.map((p) => p.permissionCode);
+      expect(new Set(meRes.body.permissions)).toEqual(new Set(dbCodes));
+      expect(meRes.body.permissions).toHaveLength(dbCodes.length);
+
+      return {
+        accessToken,
+        permissions: meRes.body.permissions as string[],
+      };
+    }
+
+    const higher = await loginAndFetchMe(
+      higherEmail,
+      higherPassword,
+      higherOrgId,
+    );
+    const lower = await loginAndFetchMe(lowerEmail, lowerPassword, lowerOrgId);
+
+    expect(higher.permissions).toContain("CAN_VIEW_AUDIT_LOG");
+    expect(lower.permissions).not.toContain("CAN_VIEW_AUDIT_LOG");
+
+    // Now prove it against the ACTUAL guard, not just the DB row: the
+    // higher-privileged employee's token must be let through
+    // `@RequirePermission('CAN_VIEW_AUDIT_LOG')` on a real route, and the
+    // lower-privileged employee's token -- which the /me response above
+    // correctly said lacks that code -- must be rejected by the SAME
+    // guard.
+    const higherAuditRes = await request(app.getHttpServer())
+      .get("/api/audit-events")
+      .set("Authorization", `Bearer ${higher.accessToken}`);
+    expect(higherAuditRes.status).toBe(200);
+
+    const lowerAuditRes = await request(app.getHttpServer())
+      .get("/api/audit-events")
+      .set("Authorization", `Bearer ${lower.accessToken}`);
+    expect(lowerAuditRes.status).toBe(403);
+  });
+
   it("creating an employee with another organization's roleId fails (with a positive control proving the endpoint itself works)", async () => {
     const orgA = await createOrgWithRoleAndEmployee({
       email: `org-a-${randomUUID()}@example.com`,
