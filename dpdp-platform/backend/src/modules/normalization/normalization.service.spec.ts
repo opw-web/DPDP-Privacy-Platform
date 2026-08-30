@@ -77,4 +77,25 @@ describe("NormalizationService", () => {
       phoneNormalized: null,
     });
   });
+
+  it("keeps an impossible date of birth raw while leaving its normalized column null", () => {
+    const result = service.normalize(
+      {
+        id: "source-invalid-dob",
+        rawPayload: { dob: "2024-02-30T00:00:00.000Z" },
+      },
+      [
+        {
+          sourceField: "dob",
+          canonicalField: "DATE_OF_BIRTH",
+          dataCategory: "IDENTITY",
+          containsPersonalData: true,
+          isVerifiedCustomerId: false,
+        },
+      ],
+    );
+
+    expect(result.dateOfBirth).toBeNull();
+    expect(result.extras).toEqual({ dob: "2024-02-30T00:00:00.000Z" });
+  });
 });

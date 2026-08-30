@@ -178,6 +178,13 @@ export class NormalizationService {
           break;
         case "DATE_OF_BIRTH":
           result.dateOfBirth = normalizeDate(value);
+          if (
+            result.dateOfBirth === null &&
+            value !== null &&
+            value !== undefined
+          ) {
+            extras[mapping.sourceField] = copyJson(value);
+          }
           break;
         case "ADDRESS_LINE1":
           result.addressLine1 = nullableString(value);
