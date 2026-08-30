@@ -56,6 +56,16 @@ function isUniqueConstraintViolation(err: unknown): boolean {
   );
 }
 
+/**
+ * Fix round 1, Minor: the 409 conflict message was written out three
+ * times (create's pre-check, create's P2002 catch, update's now-removed
+ * P2002 catch) and had already started to drift in wording between two
+ * of them. One helper, one wording.
+ */
+function duplicateCodeMessage(code: string): string {
+  return `A purpose with code "${code}" already exists in this organization.`;
+}
+
 @Injectable()
 export class PurposesService {
   constructor(
@@ -133,13 +143,19 @@ export class PurposesService {
       where: { code: dto.code },
     });
     if (existing) {
-      throw new ConflictException(
-        `A purpose with code "${dto.code}" already exists in this organization.`,
-      );
+      throw new ConflictException(duplicateCodeMessage(dto.code));
     }
 
+    // Fix round 1, Minor: no `!` here -- `validateBasis()` above already
+    // guarantees LEGITIMATE_USE implies a truthy `dto.legitimateUseLimb`,
+    // but this line does not lean on that ordering. Narrowing on the
+    // truthy check directly keeps the invariant visible at the point
+    // where it is used, rather than hidden behind an assertion someone
+    // could hit by reordering the two statements later.
     const legitimateUseLimb =
-      dto.lawfulBasis === "LEGITIMATE_USE" ? dto.legitimateUseLimb! : null;
+      dto.lawfulBasis === "LEGITIMATE_USE" && dto.legitimateUseLimb
+        ? dto.legitimateUseLimb
+        : null;
 
     return this.prisma.scoped.$transaction(async (tx) => {
       let created: PurposeRow;
@@ -159,9 +175,7 @@ export class PurposesService {
         });
       } catch (err) {
         if (isUniqueConstraintViolation(err)) {
-          throw new ConflictException(
-            `A purpose with code "${dto.code}" already exists in this organization.`,
-          );
+          throw new ConflictException(duplicateCodeMessage(dto.code));
         }
         throw err;
       }
@@ -210,30 +224,27 @@ export class PurposesService {
       effectiveLawfulBasis === "LEGITIMATE_USE" ? effectiveLimb : null;
 
     return this.prisma.scoped.$transaction(async (tx) => {
-      let updated: PurposeRow;
-      try {
-        updated = await tx.processingPurpose.update({
-          where: { id },
-          data: {
-            name: dto.name,
-            description: dto.description,
-            lawfulBasis: dto.lawfulBasis,
-            legitimateUseLimb,
-            basisJustification: dto.basisJustification,
-            dataCategories: dto.dataCategories,
-            goodsOrServicesDescription: dto.goodsOrServicesDescription,
-            active: dto.active,
-          },
-          select: PURPOSE_PUBLIC_SELECT,
-        });
-      } catch (err) {
-        if (isUniqueConstraintViolation(err)) {
-          throw new ConflictException(
-            `A purpose with code "${existing.code}" already exists in this organization.`,
-          );
-        }
-        throw err;
-      }
+      // Fix round 1, Minor: no P2002 catch here. `UpdatePurposeDto` has
+      // no `code` field -- `code` is deliberately NOT patchable, because
+      // changing it would orphan every `DataSourcePurpose` Task 13
+      // attaches by this purpose's current code. With no way to write a
+      // new `code` through this method, this update can never violate
+      // `@@unique([organizationId, code])`, so a P2002 catch here would
+      // be dead code no test could ever exercise honestly.
+      const updated = await tx.processingPurpose.update({
+        where: { id },
+        data: {
+          name: dto.name,
+          description: dto.description,
+          lawfulBasis: dto.lawfulBasis,
+          legitimateUseLimb,
+          basisJustification: dto.basisJustification,
+          dataCategories: dto.dataCategories,
+          goodsOrServicesDescription: dto.goodsOrServicesDescription,
+          active: dto.active,
+        },
+        select: PURPOSE_PUBLIC_SELECT,
+      });
 
       await this.auditService.record(tx, {
         action: "PURPOSE_UPDATED",

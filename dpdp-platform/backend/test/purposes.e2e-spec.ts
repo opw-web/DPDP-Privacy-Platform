@@ -391,4 +391,137 @@ describe("Purposes (e2e)", () => {
       "Missing required permission: CAN_VIEW_PRINCIPALS",
     );
   });
+
+  /**
+   * Fix round 1, Important 1: `update()` had zero test coverage -- the
+   * reviewer's own check was "delete update()'s call to validateBasis()
+   * and all existing tests still pass." These three tests close that.
+   *
+   * Test (a) is the one that matters most: PATCHing an existing
+   * LEGITIMATE_USE purpose to CONSENT without clearing the stored limb.
+   * `PurposesService.update()`'s `effectiveLimb` derivation carries the
+   * EXISTING limb forward when the patch body doesn't mention
+   * `legitimateUseLimb` at all, so `validateBasis()` sees
+   * (CONSENT, EMPLOYMENT) and rejects it -- exactly the transition the
+   * task brief and the review both called out as the case most
+   * implementations miss. If `update()`'s call to `validateBasis()` were
+   * deleted (the reviewer's own test-strength check), Prisma would
+   * happily write `lawfulBasis: CONSENT` while `legitimateUseLimb` stayed
+   * EMPLOYMENT in the database, and this test's 400 assertion would fail
+   * (the request would 200 instead). The positive control in the SAME
+   * test -- the identical PATCH plus an explicit `legitimateUseLimb:
+   * null` -- proves the rule is enforced, not merely that the endpoint
+   * rejects all PATCHes to CONSENT.
+   */
+  it("PATCH to CONSENT with a stored LEGITIMATE_USE limb still attached returns 400 naming legitimateUseLimb; explicitly clearing it succeeds", async () => {
+    const { accessToken } = await createOrgWithManager();
+
+    const createRes = await request(app.getHttpServer())
+      .post("/api/purposes")
+      .set("Authorization", `Bearer ${accessToken}`)
+      .send({
+        ...validPayload({ lawfulBasis: "LEGITIMATE_USE" }),
+        legitimateUseLimb: "EMPLOYMENT",
+      });
+    expect(createRes.status).toBe(201);
+    const purposeId = createRes.body.id as string;
+
+    // NEGATIVE: switch to CONSENT without touching legitimateUseLimb --
+    // the stored EMPLOYMENT limb carries forward into validateBasis().
+    const badRes = await request(app.getHttpServer())
+      .patch(`/api/purposes/${purposeId}`)
+      .set("Authorization", `Bearer ${accessToken}`)
+      .send({ lawfulBasis: "CONSENT" });
+    expect(badRes.status).toBe(400);
+    expect(JSON.stringify(badRes.body)).toContain("legitimateUseLimb");
+
+    // Confirm the rejected PATCH did not partially apply.
+    const unchangedRes = await request(app.getHttpServer())
+      .get("/api/purposes")
+      .set("Authorization", `Bearer ${accessToken}`);
+    const stillLegitimateUse = unchangedRes.body.find(
+      (p: { id: string }) => p.id === purposeId,
+    );
+    expect(stillLegitimateUse.lawfulBasis).toBe("LEGITIMATE_USE");
+    expect(stillLegitimateUse.legitimateUseLimb).toBe("EMPLOYMENT");
+
+    // POSITIVE CONTROL: identical PATCH, limb explicitly cleared.
+    const okRes = await request(app.getHttpServer())
+      .patch(`/api/purposes/${purposeId}`)
+      .set("Authorization", `Bearer ${accessToken}`)
+      .send({ lawfulBasis: "CONSENT", legitimateUseLimb: null });
+    expect(okRes.status).toBe(200);
+    expect(okRes.body.lawfulBasis).toBe("CONSENT");
+    expect(okRes.body.legitimateUseLimb).toBeNull();
+  });
+
+  /**
+   * If `validateBasis()`'s fourth branch (or update()'s call to it) were
+   * removed, this PATCH would 200 and write three spaces as the
+   * justification -- the assertion below would fail on `badRes.status`.
+   */
+  it("PATCH with a blank/whitespace-only basisJustification returns 400 naming basisJustification; a real justification succeeds", async () => {
+    const { accessToken } = await createOrgWithManager();
+
+    const createRes = await request(app.getHttpServer())
+      .post("/api/purposes")
+      .set("Authorization", `Bearer ${accessToken}`)
+      .send(validPayload());
+    expect(createRes.status).toBe(201);
+    const purposeId = createRes.body.id as string;
+
+    // NEGATIVE
+    const badRes = await request(app.getHttpServer())
+      .patch(`/api/purposes/${purposeId}`)
+      .set("Authorization", `Bearer ${accessToken}`)
+      .send({ basisJustification: "   " });
+    expect(badRes.status).toBe(400);
+    expect(JSON.stringify(badRes.body)).toContain("basisJustification");
+
+    // POSITIVE CONTROL: identical PATCH, real justification text.
+    const okRes = await request(app.getHttpServer())
+      .patch(`/api/purposes/${purposeId}`)
+      .set("Authorization", `Bearer ${accessToken}`)
+      .send({
+        basisJustification: "Updated justification, still human-written.",
+      });
+    expect(okRes.status).toBe(200);
+    expect(okRes.body.basisJustification).toBe(
+      "Updated justification, still human-written.",
+    );
+  });
+
+  /**
+   * The requirements name `PURPOSE_UPDATED` explicitly as an audit action
+   * `update()` must write. If the `auditService.record()` call inside
+   * `update()`'s transaction were deleted, `okRes.status` would still be
+   * 200 (the write itself doesn't depend on the audit call succeeding
+   * first) but this test's `auditEvent` lookup would come back `null`.
+   */
+  it("a successful PATCH writes a PURPOSE_UPDATED audit event", async () => {
+    const { accessToken, organizationId } = await createOrgWithManager();
+
+    const createRes = await request(app.getHttpServer())
+      .post("/api/purposes")
+      .set("Authorization", `Bearer ${accessToken}`)
+      .send(validPayload());
+    expect(createRes.status).toBe(201);
+    const purposeId = createRes.body.id as string;
+
+    const updateRes = await request(app.getHttpServer())
+      .patch(`/api/purposes/${purposeId}`)
+      .set("Authorization", `Bearer ${accessToken}`)
+      .send({ name: "Renamed via PATCH" });
+    expect(updateRes.status).toBe(200);
+    expect(updateRes.body.name).toBe("Renamed via PATCH");
+
+    const auditEvent = await prisma.auditEvent.findFirst({
+      where: {
+        organizationId,
+        action: "PURPOSE_UPDATED",
+        resourceId: purposeId,
+      },
+    });
+    expect(auditEvent).not.toBeNull();
+  });
 });
