@@ -1,0 +1,34 @@
+---
+source_file: "dpdp-platform/backend/test/mappings.e2e-spec.ts"
+type: "code"
+community: "mappings.e2e-spec.ts"
+location: "L1"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/mappingse2e-spects
+---
+
+# mappings.e2e-spec.ts
+
+## Connections
+- [[AppModule]] - `imports` [EXTRACTED]
+- [[MockHttpServer]] - `imports` [EXTRACTED]
+- [[PERMISSIONS]] - `imports` [EXTRACTED]
+- [[PrismaService]] - `imports` [EXTRACTED]
+- [[app.module.ts]] - `imports_from` [EXTRACTED]
+- [[createDataSource()_1]] - `contains` [EXTRACTED]
+- [[createEmployee()]] - `contains` [EXTRACTED]
+- [[createOrg()_3]] - `contains` [EXTRACTED]
+- [[createOrgWithBothPermissions()]] - `contains` [EXTRACTED]
+- [[createPurpose()_1]] - `contains` [EXTRACTED]
+- [[ensurePermission()_4]] - `contains` [EXTRACTED]
+- [[jsonHandler()]] - `imports` [EXTRACTED]
+- [[mock-http-server.ts]] - `imports_from` [EXTRACTED]
+- [[permissions.ts]] - `imports_from` [EXTRACTED]
+- [[prisma.service.ts]] - `imports_from` [EXTRACTED]
+- [[putMappings()]] - `contains` [EXTRACTED]
+- [[putPurposes()]] - `contains` [EXTRACTED]
+- [[startRecordsServer()_1]] - `contains` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/mappingse2e-spects

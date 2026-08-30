@@ -1,0 +1,18 @@
+---
+source_file: "dpdp-platform/backend/src/modules/employees/employees.service.ts"
+type: "code"
+community: "EmployeesService"
+location: "L49"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/EmployeesService
+---
+
+# .get()
+
+## Connections
+- [[dot-get()_14]] - `calls` [INFERRED]
+- [[EmployeesService]] - `method` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/EmployeesService

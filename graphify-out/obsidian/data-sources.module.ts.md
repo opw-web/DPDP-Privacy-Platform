@@ -1,0 +1,34 @@
+---
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.module.ts"
+type: "code"
+community: "mappings.service.ts"
+location: "L1"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/mappingsservicets
+---
+
+# data-sources.module.ts
+
+## Connections
+- [[AuditModule]] - `imports` [EXTRACTED]
+- [[ConnectorsModule]] - `imports` [EXTRACTED]
+- [[CryptoModule]] - `imports` [EXTRACTED]
+- [[DataSourcesController]] - `imports` [EXTRACTED]
+- [[DataSourcesModule]] - `contains` [EXTRACTED]
+- [[DataSourcesService]] - `imports` [EXTRACTED]
+- [[MappingsController]] - `imports` [EXTRACTED]
+- [[MappingsService]] - `imports` [EXTRACTED]
+- [[SourcePurposesService]] - `imports` [EXTRACTED]
+- [[app.module.ts]] - `imports_from` [EXTRACTED]
+- [[audit.module.ts]] - `imports_from` [EXTRACTED]
+- [[connectors.module.ts]] - `imports_from` [EXTRACTED]
+- [[crypto.module.ts]] - `imports_from` [EXTRACTED]
+- [[data-sources.controller.ts]] - `imports_from` [EXTRACTED]
+- [[data-sources.service.ts]] - `imports_from` [EXTRACTED]
+- [[mappings.controller.ts]] - `imports_from` [EXTRACTED]
+- [[mappings.service.ts]] - `imports_from` [EXTRACTED]
+- [[source-purposes.service.ts]] - `imports_from` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/mappingsservicets

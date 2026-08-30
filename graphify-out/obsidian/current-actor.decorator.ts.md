@@ -1,0 +1,21 @@
+---
+source_file: "dpdp-platform/backend/src/common/decorators/current-actor.decorator.ts"
+type: "code"
+community: "purposes.service.ts"
+location: "L1"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/purposesservicets
+---
+
+# current-actor.decorator.ts
+
+## Connections
+- [[AccessTokenPayload]] - `imports` [EXTRACTED]
+- [[CurrentActor]] - `contains` [EXTRACTED]
+- [[employee-auth.controller.ts]] - `imports_from` [EXTRACTED]
+- [[purposes.controller.ts]] - `imports_from` [EXTRACTED]
+- [[token.service.ts]] - `imports_from` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/purposesservicets

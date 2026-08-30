@@ -1,0 +1,17 @@
+---
+source_file: "dpdp-platform/backend/src/modules/registers/transfers.service.ts"
+type: "code"
+community: "registers.module.ts"
+location: "L31"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/registersmodulets
+---
+
+# PublicTransfer
+
+## Connections
+- [[transfers.service.ts]] - `contains` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/registersmodulets

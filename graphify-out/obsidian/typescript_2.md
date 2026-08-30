@@ -1,0 +1,18 @@
+---
+source_file: "dpdp-platform/backend/package.json"
+type: "code"
+community: "typescript"
+location: "L69"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/typescript
+---
+
+# typescript
+
+## Connections
+- [[devDependencies_1]] - `contains` [EXTRACTED]
+- [[typescript_3]] - `imports` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/typescript

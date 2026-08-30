@@ -1,17 +1,17 @@
 ---
 source_file: "DPDP_MVP1_FOUNDATION_AND_DISCOVERY.md"
 type: "document"
-community: "MVP1 Foundation & Discovery"
+community: "1. IDEA CONTEXT (read this first)"
 location: "L44"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/MVP1_Foundation__Discovery
+  - community/1_IDEA_CONTEXT_read_this_first
 ---
 
 # What MVP 1 delivers when done
 
 ## Connections
-- [[1. IDEA CONTEXT (read this first)_1]] - `contains` [EXTRACTED]
+- [[1. IDEA CONTEXT (read this first)]] - `contains` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/MVP1_Foundation__Discovery
+#graphify/document #graphify/EXTRACTED #community/1_IDEA_CONTEXT_read_this_first

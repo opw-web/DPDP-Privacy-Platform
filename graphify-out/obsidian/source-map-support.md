@@ -1,0 +1,18 @@
+---
+source_file: "dpdp-platform/backend/package.json"
+type: "code"
+community: "source-map-support"
+location: "L63"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/source-map-support
+---
+
+# source-map-support
+
+## Connections
+- [[devDependencies_1]] - `contains` [EXTRACTED]
+- [[source-map-support_1]] - `imports` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/source-map-support
