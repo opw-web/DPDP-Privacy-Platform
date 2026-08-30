@@ -1,4 +1,8 @@
-import { describeSyncError, MissingRecordKeyError } from "./sync-error";
+import {
+  describeSyncError,
+  MissingRecordKeyError,
+  SyncLockUnavailableError,
+} from "./sync-error";
 
 // Named to match `err.constructor.name`, exactly like the real (private,
 // unexported) `IdentifierOwnershipConflictError` in
@@ -63,5 +67,12 @@ describe("describeSyncError", () => {
       errorClass: "NotFoundException",
       message: err.message,
     });
+  });
+
+  it("keeps the message for SyncLockUnavailableError", () => {
+    const err = new SyncLockUnavailableError("ds-123");
+    const described = describeSyncError(err);
+    expect(described.errorClass).toBe("SyncLockUnavailableError");
+    expect(described.message).toBe(err.message);
   });
 });

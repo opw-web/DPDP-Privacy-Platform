@@ -2,6 +2,7 @@ import { ConflictException, Injectable } from "@nestjs/common";
 import { InjectQueue } from "@nestjs/bullmq";
 import type { Queue } from "bullmq";
 import type { SyncFrequency } from "@prisma/client";
+import { SyncLockService } from "./sync-lock.service";
 
 /** The one BullMQ queue this platform runs (spec §2.8). */
 export const SYNC_QUEUE_NAME = "sync";
@@ -49,15 +50,6 @@ const FREQUENCY_CRON_PATTERNS: Partial<Record<SyncFrequency, string>> = {
   DAILY: "0 2 * * *",
 };
 
-/** A job in one of these BullMQ states is genuinely in flight -- see `trigger()`'s doc comment for the full 409 design. */
-const IN_FLIGHT_JOB_STATES: ReadonlySet<string> = new Set([
-  "waiting",
-  "active",
-  "delayed",
-  "waiting-children",
-  "prioritized",
-]);
-
 /**
  * Wraps the `sync` BullMQ queue: triggering an ad-hoc run (with the
  * per-source 409 lock) and managing each data source's repeatable
@@ -69,60 +61,69 @@ const IN_FLIGHT_JOB_STATES: ReadonlySet<string> = new Set([
 export class SyncQueueService {
   constructor(
     @InjectQueue(SYNC_QUEUE_NAME) private readonly queue: Queue<SyncJobData>,
+    private readonly syncLockService: SyncLockService,
   ) {}
 
   /**
    * Enqueues an ad-hoc sync for `dataSourceId`, or throws `ConflictException`
    * (409) if one is already queued or running.
    *
-   * DETECTING "IN FLIGHT" (task 18 brief's ambiguity to resolve): the
-   * queue is configured (see `QueuesModule`) with `removeOnComplete: true`
-   * and `removeOnFail: true`, so a job's Redis record is deleted the
-   * instant it settles -- a completed or failed run leaves NO job behind
-   * under `syncJobId(dataSourceId)`. That makes "a job exists under this
-   * id" and "a sync for this source is currently queued or running"
-   * effectively the same fact, which is what lets this method answer the
-   * question with a single `getJob` + state check instead of having to
-   * reason about a retained-but-finished job's stale presence.
+   * DETECTING "IN FLIGHT" (task 18 review, Critical 1): a BullMQ job id is
+   * NOT the source of truth here -- `Queue.upsertJobScheduler` mints its
+   * own job ids for repeatable runs (`repeat:{schedulerId}:{millis}`),
+   * entirely unrelated to `syncJobId(dataSourceId)`, so a scheduled run in
+   * progress would be invisible to any check keyed off THIS job id alone.
+   * The real mutex is `SyncLockService`'s Redis lock, acquired by
+   * `SyncPipelineService` at the moment a run actually starts (manual OR
+   * scheduled) -- this method consults that SAME lock, which is what
+   * keeps a manual trigger's 409 truthful against a scheduled run too.
    *
-   * The state check on top of existence is defence in depth for the tiny
-   * window between a job settling and its removal actually completing:
-   * only WAITING/ACTIVE/DELAYED/WAITING-CHILDREN/PRIORITIZED count as
-   * in-flight; a job somehow observed as COMPLETED or FAILED (or
-   * `getState()`'s `"unknown"`) is treated as not-blocking, so a rare
-   * removal-lag race fails open to "let the new sync through" rather than
-   * wedging a source behind a ghost lock forever.
-   *
-   * ACCEPTED RACE: there is a check-then-act gap between this `getJob`
-   * and the `add` below -- two callers racing this method concurrently
-   * could both observe "not found" and both call `add()`. That is safe,
-   * not merely tolerable: BullMQ's job creation for a fixed, explicit
-   * `jobId` is idempotent -- a second `add()` for an id that has just been
-   * created returns a reference to that SAME job rather than creating a
-   * second one, so the pipeline still runs exactly once. The only
-   * user-visible cost of losing this race is that the second caller gets
-   * a 200 instead of the 409 a slightly-later check would have produced --
-   * never a duplicate run. A Redis-side lock (e.g. `SET NX`) would close
-   * this window entirely; not built here as it is unneeded for a
-   * single-employee-triggers-a-button action, and documented here instead
-   * of silently assumed away.
+   * ACCEPTED RACE: there is a check-then-act gap between `isLocked` and
+   * `add` below -- two callers racing this method concurrently could both
+   * observe "not locked" and both enqueue. `SyncPipelineService` itself
+   * re-attempts the lock at the moment it actually starts running (see
+   * that class), so even in that race only ONE of the two enqueued runs
+   * ever executes the pipeline; the other fails fast with a `FAILED`
+   * `SyncJob` row rather than silently double-running. Closing this
+   * narrow window at the HTTP layer too would need a second Redis round
+   * trip with no correctness upside over that ruling; not built here.
    */
   async trigger(dataSourceId: string, triggeredBy: string): Promise<void> {
-    const jobId = syncJobId(dataSourceId);
-    const existing = await this.queue.getJob(jobId);
-    if (existing) {
-      const state = await existing.getState();
-      if (IN_FLIGHT_JOB_STATES.has(state)) {
-        throw new ConflictException(
-          `A sync is already running for data source "${dataSourceId}".`,
-        );
-      }
+    if (await this.syncLockService.isLocked(dataSourceId)) {
+      throw new ConflictException(
+        `A sync is already running for data source "${dataSourceId}".`,
+      );
     }
-    await this.queue.add(
+
+    const jobId = syncJobId(dataSourceId);
+    const added = await this.queue.add(
       SYNC_QUEUE_NAME,
       { dataSourceId, triggeredBy },
       { jobId },
     );
+
+    // Task 18 review, Important 2: `queue.add()` for an EXISTING jobId
+    // does not throw and does not create a second job -- BullMQ's
+    // `addStandardJob` script sees the key already exists and takes its
+    // `handleDuplicatedJob` branch, which returns the SAME jobId as a
+    // normal-looking success WITHOUT enqueueing anything. This is
+    // invisible today only because `removeOnComplete`/`removeOnFail` are
+    // `true` (QueuesModule), so a finished job's key is gone before this
+    // could ever collide -- but that is an operational setting, not a
+    // guarantee this method can rely on staying true forever. A job
+    // OBSERVED as already `completed`/`failed` immediately after `add()`
+    // resolves is exactly that silent-duplicate signature (a genuinely
+    // fresh job cannot realistically finish running -- a full connector
+    // fetch plus DB transactions -- in the microseconds between this
+    // `add()` call and the very next line): treat it as "nothing was
+    // actually enqueued" and report the same 409 a truthful check would
+    // have given.
+    const state = await added.getState();
+    if (state === "completed" || state === "failed") {
+      throw new ConflictException(
+        `A sync is already running for data source "${dataSourceId}".`,
+      );
+    }
   }
 
   /**

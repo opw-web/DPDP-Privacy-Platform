@@ -2,6 +2,7 @@ import {
   BadRequestException,
   ConflictException,
   Injectable,
+  Logger,
   NotFoundException,
 } from "@nestjs/common";
 import { Prisma } from "@prisma/client";
@@ -108,6 +109,8 @@ export interface TestConnectionResult {
 
 @Injectable()
 export class DataSourcesService {
+  private readonly logger = new Logger(DataSourcesService.name);
+
   constructor(
     private readonly prisma: PrismaService,
     private readonly auditService: AuditService,
@@ -127,19 +130,59 @@ export class DataSourcesService {
    * (BullMQ's own replace-by-id `upsertJobScheduler`), so calling this
    * again with an unchanged frequency is a harmless no-op, not a stacked
    * duplicate.
+   *
+   * BEST-EFFORT (task 18 review, Important 4+5): the Postgres write this
+   * always follows has ALREADY committed by the time this runs -- an
+   * unreachable Redis must never turn into a 500 for a data source that
+   * genuinely was created/updated (the client's natural retry on a 500
+   * would then create a DUPLICATE data source on top of the one that
+   * already exists). A failure here is logged and swallowed, never
+   * propagated. This is safe specifically because
+   * `ScheduleReconciliationService` (src/queues/schedule-reconciliation.service.ts)
+   * makes Postgres authoritative and re-derives every data source's
+   * schedule from `syncFrequency` at every application boot -- a
+   * scheduling write lost here is drift that self-heals on the next
+   * restart (or the next successful save of this same data source),
+   * never a silent, permanent divergence.
    */
   private async scheduleSync(
     dataSourceId: string,
     syncFrequency: PublicDataSource["syncFrequency"],
   ): Promise<void> {
-    const organization = await this.prisma.scoped.organization.findFirstOrThrow(
-      { select: { timezone: true } },
-    );
-    await this.syncQueueService.upsertSchedule(
-      dataSourceId,
-      syncFrequency,
-      organization.timezone,
-    );
+    try {
+      const organization =
+        await this.prisma.scoped.organization.findFirstOrThrow({
+          select: { timezone: true },
+        });
+      await this.syncQueueService.upsertSchedule(
+        dataSourceId,
+        syncFrequency,
+        organization.timezone,
+      );
+    } catch (err) {
+      this.logger.warn(
+        `Failed to schedule sync for data source "${dataSourceId}" -- ` +
+          "the data source itself was still saved successfully; the " +
+          "schedule will self-heal on the next application restart or " +
+          `save of this data source: ${
+            err instanceof Error ? err.message : "unknown error"
+          }`,
+      );
+    }
+  }
+
+  /** Best-effort counterpart to `scheduleSync` for `remove()` -- see that method's doc comment for why a Redis failure here must never propagate. */
+  private async removeScheduleBestEffort(dataSourceId: string): Promise<void> {
+    try {
+      await this.syncQueueService.removeSchedule(dataSourceId);
+    } catch (err) {
+      this.logger.warn(
+        `Failed to remove the sync schedule for deleted data source ` +
+          `"${dataSourceId}": ${
+            err instanceof Error ? err.message : "unknown error"
+          }`,
+      );
+    }
   }
 
   async list(): Promise<PublicDataSource[]> {
@@ -442,8 +485,10 @@ export class DataSourcesService {
 
     // Task 18: a deleted data source must not keep firing an orphaned
     // repeatable sync forever. Best-effort cleanup after the deletion has
-    // committed -- `removeSchedule` is a no-op if no schedule exists.
-    await this.syncQueueService.removeSchedule(id);
+    // committed -- see `removeScheduleBestEffort`'s doc comment for why a
+    // Redis failure here must never turn into a 500 for a deletion that
+    // already succeeded.
+    await this.removeScheduleBestEffort(id);
   }
 
   /**

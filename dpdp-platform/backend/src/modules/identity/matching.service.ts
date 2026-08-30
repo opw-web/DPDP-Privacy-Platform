@@ -4,7 +4,7 @@ import type {
   MatchConfidence,
   NormalizedRecord,
 } from "@prisma/client";
-import { PrismaService } from "../../common/prisma/prisma.service";
+import type { ScopedTransactionClient } from "../../common/prisma/scoped-transaction-client";
 import type { NormalizationMapping } from "../normalization/normalization.service";
 import { customerIdSignal } from "./match-rules/customer-id";
 import { emailSignal } from "./match-rules/email";
@@ -95,15 +95,43 @@ function stableSignals(signals: readonly ResolvedSignal[]): ResolvedSignal[] {
  * Purely deterministic identity resolution. Rules 1-3 only use exact,
  * tenant-scoped PrincipalIdentifier lookups. Rule 4 deliberately uses the
  * minimum supporting signal required by the specification and can never link.
+ *
+ * Task 18 fix round 1 (Important 3): every read in this service now takes
+ * the CALLER'S transaction client (`tx`) instead of opening its own reads
+ * on `PrismaService.scoped`. Two independent reasons, not one:
+ *
+ *  1. Pool-exhaustion deadlock: the sync pipeline calls `match()` from
+ *     inside an already-open `prisma.scoped.$transaction(...)` (so that
+ *     `LinkingService.applyMatch`, called immediately after with the same
+ *     `tx`, can write atomically with PERSIST/NORMALIZE). Prisma's
+ *     default pool size is `2 * cpus + 1` -- 5 on a 2-vCPU container,
+ *     exactly this pipeline's configured worker concurrency
+ *     (`SYNC_WORKER_CONCURRENCY`). If `match()` opened a SECOND,
+ *     independent connection (via `this.prisma.scoped`) while the first
+ *     is held open by the surrounding transaction, five concurrent
+ *     record-transactions each hold one pool connection while blocking to
+ *     check out a second -- deadlock until `pool_timeout`, at which point
+ *     every in-flight record fails and the rest of the app starves for
+ *     connections too.
+ *  2. Snapshot consistency: reading through the SAME `tx` that
+ *     `applyMatch` writes through means the match decision and the write
+ *     that acts on it see the same transaction snapshot -- a second,
+ *     independent line of defence (on top of the sync-lock fix for
+ *     Critical 1) against two concurrent runs on one data source each
+ *     deciding "no principal exists yet" from a stale read and creating
+ *     two `DataPrincipal` rows for the same person.
+ *
+ * `MatchingService` therefore has no constructor dependencies at all --
+ * it never opens its own connection or reads outside a caller-supplied
+ * `tx`.
  */
 @Injectable()
 export class MatchingService {
-  constructor(private readonly prisma: PrismaService) {}
-
   private async resolveSignal(
+    tx: ScopedTransactionClient,
     signal: MatchSignal,
   ): Promise<ResolvedSignal | null> {
-    const identifier = await this.prisma.scoped.principalIdentifier.findFirst({
+    const identifier = await tx.principalIdentifier.findFirst({
       where: { type: signal.identifierType, value: signal.value },
       select: { dataPrincipalId: true },
     });
@@ -114,7 +142,7 @@ export class MatchingService {
     // Avoid a nested relation read: the tenant extension's contract makes
     // nested reads unscoped. The second scoped lookup also fails closed if a
     // legacy/bad foreign key ever points outside the current organization.
-    const principal = await this.prisma.scoped.dataPrincipal.findFirst({
+    const principal = await tx.dataPrincipal.findFirst({
       where: { id: identifier.dataPrincipalId },
       select: { id: true, reference: true },
     });
@@ -129,13 +157,14 @@ export class MatchingService {
   }
 
   private async supportingCandidates(
+    tx: ScopedTransactionClient,
     record: MatchableNormalizedRecord,
   ): Promise<RaisedCandidate[]> {
     if (!record.nameKey) {
       return [];
     }
 
-    const sameNameRecords = await this.prisma.scoped.normalizedRecord.findMany({
+    const sameNameRecords = await tx.normalizedRecord.findMany({
       where: { nameKey: record.nameKey, id: { not: record.id } },
       select: {
         id: true,
@@ -149,7 +178,7 @@ export class MatchingService {
       return [];
     }
 
-    const activeLinks = await this.prisma.scoped.identityLink.findMany({
+    const activeLinks = await tx.identityLink.findMany({
       where: {
         normalizedRecordId: {
           in: sameNameRecords.map((candidate) => candidate.id),
@@ -198,6 +227,7 @@ export class MatchingService {
   }
 
   async match(
+    tx: ScopedTransactionClient,
     record: MatchableNormalizedRecord,
     mappings: readonly NormalizationMapping[],
   ): Promise<MatchResult> {
@@ -208,12 +238,12 @@ export class MatchingService {
     ].filter((signal): signal is MatchSignal => signal !== null);
     const resolved = (
       await Promise.all(
-        candidateSignals.map((signal) => this.resolveSignal(signal)),
+        candidateSignals.map((signal) => this.resolveSignal(tx, signal)),
       )
     ).filter((signal): signal is ResolvedSignal => signal !== null);
 
     if (resolved.length === 0) {
-      const candidates = await this.supportingCandidates(record);
+      const candidates = await this.supportingCandidates(tx, record);
       const primary = candidates[0];
       return primary
         ? {

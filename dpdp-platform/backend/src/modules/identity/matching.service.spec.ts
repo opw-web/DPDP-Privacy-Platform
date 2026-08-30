@@ -74,20 +74,22 @@ function createService(
     },
   };
 
-  return new MatchingService({ scoped } as never);
+  return { service: new MatchingService(), tx: scoped as never };
 }
 
 describe("MatchingService deterministic rules", () => {
   it("rule 1 links only a verified CUSTOMER_ID mapping", async () => {
-    const service = createService({
+    const { service, tx } = createService({
       "CUSTOMER_ID:C-42": { id: "principal-a", reference: "DP-000001" },
     });
     const record = { ...baseRecord, customerId: "C-42" };
 
-    await expect(service.match(record, mappings(false))).resolves.toEqual({
+    await expect(service.match(tx, record, mappings(false))).resolves.toEqual({
       kind: "NEW",
     });
-    await expect(service.match(record, mappings(true))).resolves.toMatchObject({
+    await expect(
+      service.match(tx, record, mappings(true)),
+    ).resolves.toMatchObject({
       kind: "LINK",
       dataPrincipalId: "principal-a",
       confidence: "EXACT",
@@ -95,7 +97,7 @@ describe("MatchingService deterministic rules", () => {
   });
 
   it("does not trust a verified CUSTOMER_ID mapping when another source mapping can supply the value", async () => {
-    const service = createService({
+    const { service, tx } = createService({
       "CUSTOMER_ID:C-42": { id: "principal-a", reference: "DP-000001" },
     });
     const record = { ...baseRecord, customerId: "C-42" };
@@ -117,21 +119,24 @@ describe("MatchingService deterministic rules", () => {
     ];
 
     await expect(
-      service.match(record, lexicalUnverifiedWinner),
+      service.match(tx, record, lexicalUnverifiedWinner),
     ).resolves.toEqual({ kind: "NEW" });
-    await expect(service.match(record, mappings(true))).resolves.toMatchObject({
+    await expect(
+      service.match(tx, record, mappings(true)),
+    ).resolves.toMatchObject({
       kind: "LINK",
       dataPrincipalId: "principal-a",
     });
   });
 
   it("rule 2 links on an identical normalized email", async () => {
-    const service = createService({
+    const { service, tx } = createService({
       "EMAIL:aman@example.test": { id: "principal-a", reference: "DP-000001" },
     });
 
     await expect(
       service.match(
+        tx,
         { ...baseRecord, emailNormalized: "aman@example.test" },
         [],
       ),
@@ -143,12 +148,16 @@ describe("MatchingService deterministic rules", () => {
   });
 
   it("rule 3 links on an identical normalized phone with HIGH confidence", async () => {
-    const service = createService({
+    const { service, tx } = createService({
       "PHONE:+919876543210": { id: "principal-a", reference: "DP-000001" },
     });
 
     await expect(
-      service.match({ ...baseRecord, phoneNormalized: "+919876543210" }, []),
+      service.match(
+        tx,
+        { ...baseRecord, phoneNormalized: "+919876543210" },
+        [],
+      ),
     ).resolves.toMatchObject({
       kind: "LINK",
       dataPrincipalId: "principal-a",
@@ -157,7 +166,7 @@ describe("MatchingService deterministic rules", () => {
   });
 
   it("rule 4 raises a possible candidate for matching nameKey and pincode, never a link", async () => {
-    const service = createService(
+    const { service, tx } = createService(
       {
         "EMAIL:existing@example.test": {
           id: "principal-a",
@@ -177,6 +186,7 @@ describe("MatchingService deterministic rules", () => {
     );
 
     const result = await service.match(
+      tx,
       { ...baseRecord, nameKey: "rahul verma", postalCode: "411001" },
       [],
     );
@@ -194,7 +204,7 @@ describe("MatchingService deterministic rules", () => {
   });
 
   it("never merges two people with only the same nameKey", async () => {
-    const service = createService(
+    const { service, tx } = createService(
       {},
       [
         {
@@ -210,6 +220,7 @@ describe("MatchingService deterministic rules", () => {
 
     await expect(
       service.match(
+        tx,
         { ...baseRecord, nameKey: "rahul verma", postalCode: "411001" },
         [],
       ),
@@ -217,13 +228,14 @@ describe("MatchingService deterministic rules", () => {
   });
 
   it("links the higher-confidence exact email and raises a conflict candidate for phone", async () => {
-    const service = createService({
+    const { service, tx } = createService({
       "EMAIL:aman@example.test": { id: "principal-a", reference: "A" },
       "PHONE:+919876543210": { id: "principal-b", reference: "B" },
     });
 
     await expect(
       service.match(
+        tx,
         {
           ...baseRecord,
           emailNormalized: "aman@example.test",
@@ -245,13 +257,14 @@ describe("MatchingService deterministic rules", () => {
   });
 
   it("uses CUSTOMER_ID then EMAIL as a stable tie-break for competing EXACT signals", async () => {
-    const service = createService({
+    const { service, tx } = createService({
       "CUSTOMER_ID:C-42": { id: "principal-a", reference: "A" },
       "EMAIL:aman@example.test": { id: "principal-b", reference: "B" },
     });
 
     await expect(
       service.match(
+        tx,
         {
           ...baseRecord,
           customerId: "C-42",
@@ -275,13 +288,14 @@ describe("MatchingService deterministic rules", () => {
   });
 
   it("raises one deterministic candidate for each distinct losing principal", async () => {
-    const service = createService({
+    const { service, tx } = createService({
       "CUSTOMER_ID:C-42": { id: "principal-a", reference: "A" },
       "EMAIL:aman@example.test": { id: "principal-b", reference: "B" },
       "PHONE:+919876543210": { id: "principal-c", reference: "C" },
     });
 
     const result = await service.match(
+      tx,
       {
         ...baseRecord,
         customerId: "C-42",

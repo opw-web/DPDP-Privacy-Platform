@@ -43,6 +43,9 @@ const MESSAGE_SAFE_ERROR_CLASSES: ReadonlySet<string> = new Set([
   // pipeline's own transaction: message interpolates only an internal
   // UUID (dataPrincipalId/normalizedRecordId), never a person's data.
   "NotFoundException",
+  // This pipeline's own lock guard (task 18 review, Critical 1): names
+  // only the dataSourceId, never a fetched record's field values.
+  "SyncLockUnavailableError",
 ]);
 
 export interface SyncErrorDescription {
@@ -69,5 +72,15 @@ export class MissingRecordKeyError extends Error {
       "Record has no usable value for the data source's configured external id field.",
     );
     this.name = "MissingRecordKeyError";
+  }
+}
+
+/** Thrown when `SyncPipelineService` cannot acquire the per-source sync lock at the moment a run starts -- another run (manual or scheduled) genuinely holds it right now. Treated identically to a FETCH-stage failure: the run could not proceed at all. */
+export class SyncLockUnavailableError extends Error {
+  constructor(dataSourceId: string) {
+    super(
+      `Could not acquire the sync lock for data source "${dataSourceId}" -- another sync is already in progress.`,
+    );
+    this.name = "SyncLockUnavailableError";
   }
 }

@@ -224,12 +224,16 @@ describe("Deterministic identity matching (e2e)", () => {
     });
     await expect(
       TenantContext.run(tenant(org), () =>
-        matching.match(unverified, unverifiedCustomerMapping),
+        matching.match(prisma.scoped, unverified, unverifiedCustomerMapping),
       ),
     ).resolves.toEqual({ kind: "NEW" });
     await expect(
       TenantContext.run(tenant(org), () =>
-        matching.match(unverified, lexicalUnverifiedCustomerMappings),
+        matching.match(
+          prisma.scoped,
+          unverified,
+          lexicalUnverifiedCustomerMappings,
+        ),
       ),
     ).resolves.toEqual({ kind: "NEW" });
 
@@ -239,13 +243,13 @@ describe("Deterministic identity matching (e2e)", () => {
     });
     const phoneRecord = await record(org, { phoneNormalized: "+919876543210" });
     const customerMatch = await TenantContext.run(tenant(org), () =>
-      matching.match(customerRecord, verifiedCustomerMapping),
+      matching.match(prisma.scoped, customerRecord, verifiedCustomerMapping),
     );
     const emailMatch = await TenantContext.run(tenant(org), () =>
-      matching.match(emailRecord, []),
+      matching.match(prisma.scoped, emailRecord, []),
     );
     const phoneMatch = await TenantContext.run(tenant(org), () =>
-      matching.match(phoneRecord, []),
+      matching.match(prisma.scoped, phoneRecord, []),
     );
 
     expect(customerMatch).toMatchObject({
@@ -273,7 +277,7 @@ describe("Deterministic identity matching (e2e)", () => {
       postalCode: "411001",
     });
     const firstResult = await TenantContext.run(tenant(org), () =>
-      matching.match(firstRahul, []),
+      matching.match(prisma.scoped, firstRahul, []),
     );
     const firstApplied = await apply(org, firstRahul, firstResult);
     expect(firstApplied.linkCreated).toBe(true);
@@ -292,7 +296,7 @@ describe("Deterministic identity matching (e2e)", () => {
       postalCode: "411001",
     });
     const candidateResult = await TenantContext.run(tenant(org), () =>
-      matching.match(supportingRahul, []),
+      matching.match(prisma.scoped, supportingRahul, []),
     );
     expect(candidateResult).toMatchObject({
       kind: "CANDIDATE",
@@ -315,7 +319,7 @@ describe("Deterministic identity matching (e2e)", () => {
       postalCode: "560001",
     });
     const secondResult = await TenantContext.run(tenant(org), () =>
-      matching.match(secondRahul, []),
+      matching.match(prisma.scoped, secondRahul, []),
     );
     expect(secondResult).toEqual({ kind: "NEW" });
     await apply(org, secondRahul, secondResult);
@@ -337,7 +341,7 @@ describe("Deterministic identity matching (e2e)", () => {
       phoneNormalized: "+919876543210",
     });
     const result = await TenantContext.run(tenant(org), () =>
-      matching.match(normalized, []),
+      matching.match(prisma.scoped, normalized, []),
     );
     expect(result).toMatchObject({
       kind: "LINK",
@@ -424,7 +428,7 @@ describe("Deterministic identity matching (e2e)", () => {
       phoneNormalized: "+919876543210",
     });
     const threeWay = await TenantContext.run(tenant(org), () =>
-      matching.match(threeWayRecord, verifiedCustomerMapping),
+      matching.match(prisma.scoped, threeWayRecord, verifiedCustomerMapping),
     );
     expect(threeWay).toMatchObject({
       kind: "LINK",
@@ -451,7 +455,7 @@ describe("Deterministic identity matching (e2e)", () => {
       emailNormalized: "aman@example.test",
     });
     const equalExact = await TenantContext.run(tenant(org), () =>
-      matching.match(equalExactRecord, verifiedCustomerMapping),
+      matching.match(prisma.scoped, equalExactRecord, verifiedCustomerMapping),
     );
     expect(equalExact).toMatchObject({
       kind: "LINK",
@@ -576,7 +580,7 @@ describe("Deterministic identity matching (e2e)", () => {
       emailNormalized: "foreign@example.test",
     });
     const result = await TenantContext.run(tenant(orgB), () =>
-      matching.match(normalized, []),
+      matching.match(prisma.scoped, normalized, []),
     );
     expect(result).toEqual({ kind: "NEW" });
     const applied = await apply(orgB, normalized, result);

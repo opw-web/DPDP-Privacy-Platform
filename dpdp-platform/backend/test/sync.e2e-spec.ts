@@ -9,9 +9,7 @@ import { getQueueToken } from "@nestjs/bullmq";
 import { AppModule } from "../src/app.module";
 import { PrismaService } from "../src/common/prisma/prisma.service";
 import { PERMISSIONS } from "../prisma/seed/permissions";
-import {
-  MockHttpServer,
-} from "../src/modules/connectors/test-support/mock-http-server";
+import { MockHttpServer } from "../src/modules/connectors/test-support/mock-http-server";
 import {
   TenantContext,
   type TenantStore,
@@ -24,6 +22,7 @@ import {
   type SyncJobData,
 } from "../src/queues/sync.queue";
 import { SyncProcessor } from "../src/queues/sync.processor";
+import { SyncLockService } from "../src/queues/sync-lock.service";
 
 /**
  * Task 18: the full FETCH -> PERSIST -> NORMALIZE -> MATCH -> LINK ->
@@ -42,6 +41,7 @@ describe("Sync pipeline (e2e)", () => {
   let app: INestApplication;
   let pipeline: SyncPipelineService;
   let syncQueueService: SyncQueueService;
+  let syncLockService: SyncLockService;
   let queue: Queue<SyncJobData>;
   let processor: SyncProcessor;
   const prisma = new PrismaService();
@@ -158,9 +158,21 @@ describe("Sync pipeline (e2e)", () => {
   }
 
   const commonMappings = [
-    { sourceField: "name", canonicalField: "FULL_NAME" as const, dataCategory: "IDENTITY" as const },
-    { sourceField: "email", canonicalField: "EMAIL" as const, dataCategory: "CONTACT" as const },
-    { sourceField: "city", canonicalField: "CITY" as const, dataCategory: "LOCATION" as const },
+    {
+      sourceField: "name",
+      canonicalField: "FULL_NAME" as const,
+      dataCategory: "IDENTITY" as const,
+    },
+    {
+      sourceField: "email",
+      canonicalField: "EMAIL" as const,
+      dataCategory: "CONTACT" as const,
+    },
+    {
+      sourceField: "city",
+      canonicalField: "CITY" as const,
+      dataCategory: "LOCATION" as const,
+    },
   ];
 
   async function createDataSource(
@@ -224,6 +236,7 @@ describe("Sync pipeline (e2e)", () => {
     await prisma.$connect();
     pipeline = app.get(SyncPipelineService);
     syncQueueService = app.get(SyncQueueService);
+    syncLockService = app.get(SyncLockService);
     queue = app.get(getQueueToken(SYNC_QUEUE_NAME));
     processor = app.get(SyncProcessor);
   });
@@ -289,7 +302,12 @@ describe("Sync pipeline (e2e)", () => {
     const org = await organization();
     const { baseUrl } = await startServer([
       { id: "1", name: "Aman Verma", email: "aman@example.test", city: "Pune" },
-      { id: "2", name: "Priya Singh", email: "priya@example.test", city: "Mumbai" },
+      {
+        id: "2",
+        name: "Priya Singh",
+        email: "priya@example.test",
+        city: "Mumbai",
+      },
     ]);
     const dataSourceId = await createDataSource(org, baseUrl);
 
@@ -308,7 +326,9 @@ describe("Sync pipeline (e2e)", () => {
     });
 
     const job = await TenantContext.run(tenant(org), () =>
-      prisma.scoped.syncJob.findFirstOrThrow({ where: { id: summary.syncJobId } }),
+      prisma.scoped.syncJob.findFirstOrThrow({
+        where: { id: summary.syncJobId },
+      }),
     );
     expect(job.status).toBe("SUCCESS");
     expect(job.errorLog).toEqual([]);
@@ -343,7 +363,12 @@ describe("Sync pipeline (e2e)", () => {
     const org = await organization();
     const records = [
       { id: "1", name: "Aman Verma", email: "aman@example.test", city: "Pune" },
-      { id: "2", name: "Priya Singh", email: "priya@example.test", city: "Mumbai" },
+      {
+        id: "2",
+        name: "Priya Singh",
+        email: "priya@example.test",
+        city: "Mumbai",
+      },
     ];
     const { baseUrl } = await startServer(records);
     const dataSourceId = await createDataSource(org, baseUrl);
@@ -408,7 +433,12 @@ describe("Sync pipeline (e2e)", () => {
     await server1.close();
     servers.splice(servers.indexOf(server1), 1);
     const { baseUrl: baseUrl2 } = await startServer([
-      { id: "1", name: "Aman Verma", email: "aman@example.test", city: "Mumbai" },
+      {
+        id: "1",
+        name: "Aman Verma",
+        email: "aman@example.test",
+        city: "Mumbai",
+      },
     ]);
     await TenantContext.run(tenant(org), () =>
       prisma.scoped.dataSource.update({
@@ -439,7 +469,12 @@ describe("Sync pipeline (e2e)", () => {
     const { baseUrl } = await startServer([
       { id: "1", name: "Aman Verma", email: "aman@example.test", city: "Pune" },
       { name: "No Id Person", email: "noid@example.test", city: "Delhi" },
-      { id: "3", name: "Priya Singh", email: "priya@example.test", city: "Mumbai" },
+      {
+        id: "3",
+        name: "Priya Singh",
+        email: "priya@example.test",
+        city: "Mumbai",
+      },
     ]);
     const dataSourceId = await createDataSource(org, baseUrl);
 
@@ -451,7 +486,9 @@ describe("Sync pipeline (e2e)", () => {
     expect(summary.recordsCreated).toBe(2);
 
     const job = await TenantContext.run(tenant(org), () =>
-      prisma.scoped.syncJob.findFirstOrThrow({ where: { id: summary.syncJobId } }),
+      prisma.scoped.syncJob.findFirstOrThrow({
+        where: { id: summary.syncJobId },
+      }),
     );
     expect(job.status).toBe("PARTIAL");
     const errorLog = job.errorLog as Array<Record<string, unknown>>;
@@ -479,7 +516,14 @@ describe("Sync pipeline (e2e)", () => {
   it("rejects a caller without CAN_RUN_SYNC with 403, and a second trigger while the first is genuinely ACTIVE with 409", async () => {
     const org = await organization();
     const { baseUrl } = await startServer(
-      [{ id: "1", name: "Slow Person", email: "slow@example.test", city: "Pune" }],
+      [
+        {
+          id: "1",
+          name: "Slow Person",
+          email: "slow@example.test",
+          city: "Pune",
+        },
+      ],
       1500,
     );
     const dataSourceId = await createDataSource(org, baseUrl);
@@ -499,16 +543,17 @@ describe("Sync pipeline (e2e)", () => {
     expect(first.status).toBe(202);
     expect(first.body).toEqual({ queued: true, dataSourceId });
 
-    // Prove the job is genuinely ACTIVE (being processed by the worker
-    // right now), not merely present-but-unstarted, before firing the
-    // second trigger -- this is what makes the 409 assertion below mean
-    // "rejected a concurrent run in progress" rather than "two adds with
-    // the same jobId happened to collapse".
+    // Prove the run is genuinely IN PROGRESS -- specifically, that
+    // `SyncPipelineService` has acquired the per-source Redis lock, which
+    // is what `trigger()`'s 409 check actually consults (task 18 review,
+    // Critical 1) -- not merely "a BullMQ job exists somewhere". Waiting
+    // on BullMQ's own job state here would race: a job can be `active`
+    // (dequeued, `process()` called) slightly BEFORE
+    // `SyncPipelineService` reaches its lock-acquire call, which is
+    // exactly the gap that made this assertion flaky when it checked
+    // job state instead.
     const jobId = syncJobId(dataSourceId);
-    await waitUntil(async () => {
-      const job = await queue.getJob(jobId);
-      return (await job?.getState()) === "active";
-    }, 5000);
+    await waitUntil(async () => syncLockService.isLocked(dataSourceId), 5000);
 
     const second = await request(app.getHttpServer())
       .post(`/api/data-sources/${dataSourceId}/sync`)
@@ -519,7 +564,10 @@ describe("Sync pipeline (e2e)", () => {
     // Let the first run actually finish before the suite moves on, and
     // confirm the lock clears once it does (queue.getJob returns
     // undefined -- see SyncQueueService's removeOnComplete/removeOnFail).
-    await waitUntil(async () => (await queue.getJob(jobId)) === undefined, 8000);
+    await waitUntil(
+      async () => (await queue.getJob(jobId)) === undefined,
+      8000,
+    );
     await waitUntil(async () => {
       const jobs = await TenantContext.run(tenant(org), () =>
         prisma.scoped.syncJob.findMany({ where: { dataSourceId } }),
@@ -527,6 +575,97 @@ describe("Sync pipeline (e2e)", () => {
       return jobs.length === 1 && jobs[0]?.status !== "RUNNING";
     }, 5000);
   }, 20000);
+
+  it("a genuinely in-flight SCHEDULED run rejects a manual trigger with 409 (Critical 1)", async () => {
+    const org = await organization();
+    const { baseUrl } = await startServer(
+      [{ id: "1", name: "Scheduled Person", email: "scheduled@example.test" }],
+      1500,
+    );
+    const dataSourceId = await createDataSource(org, baseUrl);
+    const testSchedulerId = `test-scheduled-${dataSourceId}`;
+
+    try {
+      // A due repeatable job, fired via BullMQ's OWN scheduler mechanism
+      // (`immediately: true`) -- this produces a `repeat:...` job id,
+      // never `syncJobId(dataSourceId)` ("sync:{id}"). Before the
+      // Critical-1 fix, NOTHING checked this id shape for in-flight
+      // status, so a manual trigger racing this would have sailed
+      // through with 202 and silently double-run the pipeline.
+      await queue.upsertJobScheduler(
+        testSchedulerId,
+        { every: 60_000, immediately: true },
+        {
+          name: SYNC_QUEUE_NAME,
+          data: { dataSourceId, triggeredBy: "SCHEDULE" },
+        },
+      );
+
+      // Prove the scheduled run has genuinely acquired the per-source
+      // lock (SyncPipelineService.run has started, not merely "a job
+      // exists somewhere") before firing the manual trigger.
+      await waitUntil(async () => syncLockService.isLocked(dataSourceId), 5000);
+
+      const runner = await employeeWithPermissions(org, ["CAN_RUN_SYNC"]);
+      const manualAttempt = await request(app.getHttpServer())
+        .post(`/api/data-sources/${dataSourceId}/sync`)
+        .set("Authorization", `Bearer ${runner.accessToken}`)
+        .send();
+      expect(manualAttempt.status).toBe(409);
+
+      // Let the scheduled run finish and confirm the lock actually
+      // clears (the source is not left permanently wedged).
+      await waitUntil(
+        async () => !(await syncLockService.isLocked(dataSourceId)),
+        8000,
+      );
+    } finally {
+      // Stop the `every: 60_000` scheduler so it does not keep firing
+      // sync runs against this test's data source for the rest of the
+      // suite.
+      await queue.removeJobScheduler(testSchedulerId);
+    }
+  }, 20000);
+
+  it("a lock left behind by a killed worker expires on its own and does not wedge the source forever (Critical 1)", async () => {
+    const dataSourceId = randomUUID();
+    // A TTL far shorter than the heartbeat interval simulates a worker
+    // that crashed the instant after acquiring the lock: the heartbeat
+    // that would normally renew it never gets a chance to fire even
+    // once, so the ONLY thing that can ever free this lock is the TTL
+    // itself expiring. This exercises the real `SyncLockService.acquire`
+    // production code path -- not a hand-crafted Redis key.
+    const shortTtlMs = 300;
+    const neverFiresWithinThisTestMs = 60_000;
+
+    const crashedHandle = await syncLockService.acquire(
+      dataSourceId,
+      shortTtlMs,
+      neverFiresWithinThisTestMs,
+    );
+    expect(crashedHandle).not.toBeNull();
+    expect(await syncLockService.isLocked(dataSourceId)).toBe(true);
+
+    // A trigger arriving while the crashed lock is still technically
+    // valid correctly sees the source as busy.
+    await expect(syncLockService.isLocked(dataSourceId)).resolves.toBe(true);
+
+    // Wait past the TTL WITHOUT ever calling release() and without the
+    // heartbeat ever renewing it -- empirically, not by reasoning about
+    // the TTL, prove the lock self-heals.
+    await new Promise((resolve) => setTimeout(resolve, shortTtlMs + 300));
+
+    expect(await syncLockService.isLocked(dataSourceId)).toBe(false);
+
+    // And the source is genuinely usable again: a fresh acquire succeeds.
+    const recovered = await syncLockService.acquire(dataSourceId);
+    expect(recovered).not.toBeNull();
+    await recovered?.release();
+
+    // Cleanup: stop the crashed handle's still-running (but never firing
+    // within this test's window) heartbeat timer.
+    await crashedHandle?.release();
+  });
 
   it("lists and reads back sync jobs via GET /api/sync-jobs, tenant-scoped", async () => {
     const org = await organization();
@@ -543,7 +682,9 @@ describe("Sync pipeline (e2e)", () => {
       .send();
     expect(list.status).toBe(200);
     expect(
-      (list.body as Array<{ id: string }>).some((j) => j.id === summary.syncJobId),
+      (list.body as Array<{ id: string }>).some(
+        (j) => j.id === summary.syncJobId,
+      ),
     ).toBe(true);
 
     const detail = await request(app.getHttpServer())
@@ -551,13 +692,31 @@ describe("Sync pipeline (e2e)", () => {
       .set("Authorization", `Bearer ${reader.accessToken}`)
       .send();
     expect(detail.status).toBe(200);
-    expect(detail.body).toMatchObject({ id: summary.syncJobId, status: "SUCCESS" });
+    expect(detail.body).toMatchObject({
+      id: summary.syncJobId,
+      status: "SUCCESS",
+    });
 
-    const missing = await request(app.getHttpServer())
-      .get(`/api/sync-jobs/${randomUUID()}`)
+    // Task 18 review, Minor 8: a random UUID proves nothing about tenant
+    // scoping (it would 404 even with no scoping at all, since no row
+    // anywhere has that id). The case that actually matters is a REAL
+    // SyncJob belonging to a DIFFERENT organization -- that must also
+    // 404 (never 403, which would disclose that the row exists).
+    const otherOrg = await organization();
+    const { baseUrl: otherBaseUrl } = await startServer([
+      { id: "1", name: "Other Org Person", email: "other@example.test" },
+    ]);
+    const otherDataSourceId = await createDataSource(otherOrg, otherBaseUrl);
+    const otherSummary = await pipeline.run(
+      otherDataSourceId,
+      "other-org-test",
+    );
+
+    const crossOrg = await request(app.getHttpServer())
+      .get(`/api/sync-jobs/${otherSummary.syncJobId}`)
       .set("Authorization", `Bearer ${reader.accessToken}`)
       .send();
-    expect(missing.status).toBe(404);
+    expect(crossOrg.status).toBe(404);
   });
 
   it("changing frequency from HOURLY to DAILY leaves exactly one repeatable job for the data source", async () => {
@@ -588,6 +747,11 @@ describe("Sync pipeline (e2e)", () => {
     );
     expect(thisSourceSchedulers).toHaveLength(1);
     expect(thisSourceSchedulers[0]?.pattern).toBe("0 2 * * *");
+    // Task 18 review, Minor 7: the org timezone is an explicit spec
+    // requirement (Organization.timezone default "Asia/Kolkata") -- a
+    // regression to UTC (or any other zone) must fail this test, not
+    // slip through because only the pattern was checked.
+    expect(thisSourceSchedulers[0]?.tz).toBe("Asia/Kolkata");
 
     const toManual = await request(app.getHttpServer())
       .patch(`/api/data-sources/${dataSourceId}`)

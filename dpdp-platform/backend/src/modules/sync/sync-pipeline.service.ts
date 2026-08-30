@@ -15,7 +15,12 @@ import { LinkingService } from "../identity/linking.service";
 import { AssemblyService } from "../identity/assembly.service";
 import { AgeService } from "../identity/age.service";
 import { hashPayload } from "./payload-hash";
-import { describeSyncError, MissingRecordKeyError } from "./sync-error";
+import {
+  describeSyncError,
+  MissingRecordKeyError,
+  SyncLockUnavailableError,
+} from "./sync-error";
+import { SyncLockService } from "../../queues/sync-lock.service";
 
 /** `TenantContext.actorLabel` for every write this pipeline makes -- never a specific employee, since the run itself is unattended (spec: "runs in a SYSTEM tenant context"). */
 const SYNC_ACTOR_LABEL = "sync-pipeline";
@@ -115,18 +120,36 @@ interface RecordContext {
  * directly by tests that want deterministic pipeline behaviour without
  * going through BullMQ.
  *
+ * PER-SOURCE LOCK (task 18 review, Critical 1): the very first thing a
+ * run does -- manual or scheduled, no distinction, since this is the one
+ * code path both kinds of job pass through -- is acquire
+ * `SyncLockService`'s Redis mutex for this `dataSourceId`. If that fails
+ * (another run genuinely holds it right now), the run is reported
+ * `FAILED` with a `SyncLockUnavailableError` in `errorLog` rather than
+ * proceeding: this is what makes "one sync per source at a time" true
+ * even for two overlapping schedule ticks or a manual trigger racing a
+ * scheduled run, neither of which a BullMQ-job-id-keyed check alone can
+ * see (see `SyncQueueService.trigger`'s doc comment). The lock is
+ * released in a `finally` covering the entire run, so it is freed
+ * whether the run succeeds, partially fails, or fails outright.
+ *
  * PARTIAL vs FAILED: a per-record failure (bad/missing key, a matching or
  * linking error for that one record) is caught, logged to `errorLog`, and
  * the loop continues -- the run ends `PARTIAL` if any such failure
- * occurred, `SUCCESS` otherwise. `FAILED` is reserved for the run being
- * unable to proceed AT ALL: `FETCH` itself (building the connector, or
- * any page's `fetchRecords` call) throwing. Once FETCH fails the loop
- * stops entirely -- there is no "skip this page and try the next" for a
- * connector-level failure, since a failed page also breaks pagination
- * (the next page's cursor is unknown). Whatever records were already
- * durably persisted from earlier, successfully fetched pages keep their
- * counts; the run is still reported FAILED because it did not complete
- * its intended scope.
+ * occurred, `SUCCESS` otherwise. `FAILED` is reserved for a run that
+ * could not proceed AT ALL, which this code treats as exactly "zero
+ * records were ever read": acquiring the lock, building the connector, or
+ * any page's `fetchRecords` call throwing before a single record was
+ * read. If the SAME kind of failure happens after some records were
+ * already read and persisted from earlier pages, the run is `PARTIAL`
+ * instead (task 18 review, Important 6) -- a run that fetched several
+ * pages and persisted thousands of records before breaking on a later
+ * page plainly did proceed, and reporting it `FAILED` would tell an
+ * operator reading `GET /api/sync-jobs` that nothing happened when most
+ * of it did. Either way, once FETCH fails the loop stops entirely --
+ * there is no "skip this page and try the next" for a connector-level
+ * failure, since a failed page also breaks pagination (the next page's
+ * cursor is unknown).
  */
 @Injectable()
 export class SyncPipelineService {
@@ -139,6 +162,7 @@ export class SyncPipelineService {
     private readonly assemblyService: AssemblyService,
     private readonly ageService: AgeService,
     private readonly auditService: AuditService,
+    private readonly syncLockService: SyncLockService,
   ) {}
 
   /**
@@ -183,51 +207,67 @@ export class SyncPipelineService {
     const syncJobId = await this.startJob(dataSourceId, triggeredBy);
     const counts = zeroCounts();
     const errorLog: SyncErrorLogEntry[] = [];
+    const lock = await this.syncLockService.acquire(dataSourceId);
 
     try {
-      const [dataSourceMeta, organization, mappings, connector] =
-        await Promise.all([
-          this.prisma.scoped.dataSource.findFirstOrThrow({
-            where: { id: dataSourceId },
-            select: { externalIdField: true },
-          }),
-          this.prisma.scoped.organization.findFirstOrThrow({
-            select: { country: true },
-          }),
-          this.prisma.scoped.sourceFieldMapping.findMany({
-            where: { dataSourceId },
-          }),
-          this.dataSourcesService.buildConnector(dataSourceId),
-        ]);
-
-      const context: RecordContext = {
-        dataSourceId,
-        externalIdField: dataSourceMeta.externalIdField,
-        organizationCountry: organization.country,
-        mappings,
-      };
-
-      let cursor: string | undefined;
-      do {
-        const page = await connector.fetchRecords(cursor);
-        for (const raw of page.records) {
-          await this.processRecord(context, raw, counts, errorLog);
+      try {
+        if (!lock) {
+          throw new SyncLockUnavailableError(dataSourceId);
         }
-        cursor = page.nextCursor;
-      } while (cursor);
-    } catch (err) {
-      errorLog.push({
-        scope: "FETCH",
-        ...describeSyncError(err),
-        at: new Date().toISOString(),
-      });
-      await this.finalize(syncJobId, dataSourceId, counts, errorLog, "FAILED");
-      return { syncJobId, status: "FAILED", ...counts };
-    }
 
-    const status: SyncStatus = counts.recordsFailed > 0 ? "PARTIAL" : "SUCCESS";
-    await this.finalize(syncJobId, dataSourceId, counts, errorLog, status);
-    return { syncJobId, status, ...counts };
+        const [dataSourceMeta, organization, mappings, connector] =
+          await Promise.all([
+            this.prisma.scoped.dataSource.findFirstOrThrow({
+              where: { id: dataSourceId },
+              select: { externalIdField: true },
+            }),
+            this.prisma.scoped.organization.findFirstOrThrow({
+              select: { country: true },
+            }),
+            this.prisma.scoped.sourceFieldMapping.findMany({
+              where: { dataSourceId },
+            }),
+            this.dataSourcesService.buildConnector(dataSourceId),
+          ]);
+
+        const context: RecordContext = {
+          dataSourceId,
+          externalIdField: dataSourceMeta.externalIdField,
+          organizationCountry: organization.country,
+          mappings,
+        };
+
+        let cursor: string | undefined;
+        do {
+          const page = await connector.fetchRecords(cursor);
+          for (const raw of page.records) {
+            await this.processRecord(context, raw, counts, errorLog);
+          }
+          cursor = page.nextCursor;
+        } while (cursor);
+      } catch (err) {
+        errorLog.push({
+          scope: "FETCH",
+          ...describeSyncError(err),
+          at: new Date().toISOString(),
+        });
+        // Task 18 review, Important 6: FAILED means the run could not
+        // proceed AT ALL. A failure reached after some records were
+        // already read (and durably persisted) is PARTIAL instead --
+        // the run plainly did proceed, just not to completion.
+        const status: SyncStatus =
+          counts.recordsRead === 0 ? "FAILED" : "PARTIAL";
+        await this.finalize(syncJobId, dataSourceId, counts, errorLog, status);
+        return { syncJobId, status, ...counts };
+      }
+
+      const status: SyncStatus =
+        counts.recordsFailed > 0 ? "PARTIAL" : "SUCCESS";
+      await this.finalize(syncJobId, dataSourceId, counts, errorLog, status);
+      return { syncJobId, status, ...counts };
+    } finally {
+      await lock?.release();
+    }
   }
 
   /**
@@ -342,11 +382,22 @@ export class SyncPipelineService {
       update: normalizedFields as never,
     });
 
-    // MATCH (reads current committed state via prisma.scoped, per
-    // MatchingService's existing, already-tested contract -- it does not
-    // take a transaction handle; only LinkingService's WRITES need to
-    // share this record's transaction).
+    // MATCH (task 18 review, Important 3: reads through the SAME `tx` as
+    // the write below now, not a second connection off `prisma.scoped`.
+    // Two reasons, not one: (1) at worker concurrency 5, a second,
+    // independent connection checkout while this record's transaction
+    // already holds one risks exhausting Prisma's connection pool --
+    // "2 * cpus + 1" is 5 on a 2-vCPU container, so five concurrent
+    // record-transactions each holding one connection while blocking on a
+    // second is a deadlock, not a slowdown. (2) reading and writing
+    // through the same transaction means this match sees the exact
+    // snapshot the LINK write below acts on, closing the read-write gap
+    // that would otherwise let two concurrent runs on one data source
+    // both read "no principal with this email" and both create one --
+    // a second, independent line of defence on top of the sync-lock fix
+    // for Critical 1, not a replacement for it).
     const matchResult = await this.matchingService.match(
+      tx,
       normalizedRow,
       context.mappings,
     );
