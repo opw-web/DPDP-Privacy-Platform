@@ -72,4 +72,42 @@ describe("AppRouter route guards", () => {
       expect(String(call[0])).not.toContain("/api/me/");
     }
   });
+
+  it("sends a mistyped /me/... sub-path to the principal login, not the employee /login, and never touches the employee realm", async () => {
+    const fetchMock = unauthenticatedRefresh();
+    const { AppRouter, employeeTokenStore } = await loadRouter();
+
+    renderApp(AppRouter, "/me/this-page-does-not-exist");
+
+    expect(await screen.findByText("Your Privacy Portal")).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /sign in/i })).toBeInTheDocument();
+
+    // The /me/* catch-all sits outside both auth boundaries and redirects
+    // to /me/login, which IS inside PrincipalAuthBoundary -- so that
+    // boundary legitimately bootstraps a principal session once the
+    // redirect lands. A bare "no fetch at all" assertion would be too
+    // strong (and was wrong: it fails against this correct behavior). The
+    // property actually worth protecting is narrower: this path must
+    // never bootstrap the EMPLOYEE realm or touch its token store --
+    // that's the realm-leak this route exists to prevent.
+    for (const call of fetchMock.mock.calls) {
+      expect(String(call[0])).not.toContain("/auth/employee");
+    }
+    expect(employeeTokenStore.get()).toBeNull();
+  });
+
+  it("still runs the principal auth boundary for the real /me/login path (the catch-all doesn't shadow it)", async () => {
+    const fetchMock = unauthenticatedRefresh();
+    const { AppRouter } = await loadRouter();
+
+    renderApp(AppRouter, "/me/login");
+
+    expect(await screen.findByText("Your Privacy Portal")).toBeInTheDocument();
+    // /me/login matches the REAL route (inside PrincipalAuthBoundary,
+    // which always bootstraps on mount), not the plain, unguarded
+    // catch-all -- so exactly one bootstrap call happens, to the
+    // principal refresh endpoint.
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    expect(String(fetchMock.mock.calls[0]?.[0])).toContain("/auth/principal/refresh");
+  });
 });

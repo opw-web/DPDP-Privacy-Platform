@@ -114,6 +114,12 @@ export function AppRouter() {
         </Route>
       </Route>
 
+      {/* A mistyped /me/... sub-path must land a principal on the
+          principal login, not fall through to the employee /login below --
+          this route is more specific than the trailing "*" and only
+          catches /me paths the branch above didn't already match. */}
+      <Route path="/me/*" element={<Navigate to="/me/login" replace />} />
+
       <Route path="/" element={<Navigate to="/login" replace />} />
       <Route path="*" element={<Navigate to="/login" replace />} />
     </Routes>
