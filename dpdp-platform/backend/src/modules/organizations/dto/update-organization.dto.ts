@@ -48,6 +48,7 @@ export class UpdateOrganizationDto {
   @ApiPropertyOptional()
   @IsOptional()
   @IsString()
+  @IsNotEmpty()
   timezone?: string;
 
   @ApiPropertyOptional()

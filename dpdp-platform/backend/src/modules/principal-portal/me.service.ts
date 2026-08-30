@@ -112,13 +112,14 @@ export class MeService {
    *
    * `Organization.timezone` is a `NOT NULL` column with a schema default
    * (`schema.prisma`: `@default("Asia/Kolkata")`), so this is ordinarily
-   * never empty. But `UpdateOrganizationDto.timezone` validates only
-   * `@IsString()` (no `@IsNotEmpty()`), so an employee can still clear it
-   * to `""` from the settings page. Rather than pass that literal
-   * through -- which the portal's `<DateTime>` would treat as an
-   * unrecognised zone and silently mis-render -- an empty string is
-   * normalized to `null` here, matching `getPrivacyContact`'s own
-   * "`null`, never `""`" convention for "not configured".
+   * never empty, and `UpdateOrganizationDto.timezone` now also carries
+   * `@IsNotEmpty()` so a write can no longer clear it to `""` from the
+   * settings page. This normalization stays anyway as the read path's own
+   * defense in depth (e.g. against a row written before that validation
+   * existed) -- an empty string is normalized to `null` here, matching
+   * `getPrivacyContact`'s own "`null`, never `""`" convention for "not
+   * configured", rather than passed through for `<DateTime>` to treat as
+   * an unrecognised zone and silently mis-render.
    */
   async getProfile(dataPrincipalId: string) {
     const profile =
