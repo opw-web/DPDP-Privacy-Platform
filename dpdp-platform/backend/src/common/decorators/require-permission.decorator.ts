@@ -34,7 +34,14 @@ export const PERMISSION_KEY = "requiredPermission";
  * AND-shaped requirement explicitly at its call site rather than
  * overloading this decorator's semantics.
  */
+// `(first: string, ...rest: string[])`, not `(...codes: string[])`: a
+// plain variadic signature lets `@RequirePermission()` -- zero
+// arguments -- type-check and produce `[]` metadata, which
+// `PermissionsGuard` reads as "no permission required" and silently
+// turns the route into an open one. Requiring the first argument makes
+// that a compile error instead (Task 7 re-review Fix 2).
 export const RequirePermission = (
-  ...permissionCodes: string[]
+  first: string,
+  ...rest: string[]
 ): ReturnType<typeof SetMetadata> =>
-  SetMetadata(PERMISSION_KEY, permissionCodes);
+  SetMetadata(PERMISSION_KEY, [first, ...rest]);

@@ -1,22 +1,22 @@
 FROM node:20-alpine AS build
 WORKDIR /app
 
-# argon2 is a real (non-dev) dependency whose bundled prebuilt native
-# binaries were found, while verifying this round's Docker fixes, to
-# segfault on load in this Node/Alpine combination -- confirmed by
-# testing both its musl and glibc prebuilds directly. Forcing a build
-# from source via node-gyp is the reliable path, and IS how this actually
-# gets exercised: argon2.hash()/verify() round-tripped correctly against
-# the source-compiled addon in the same verification.
+# argon2's install script is `node-gyp-build`: it tries to load the
+# resolved prebuilt binding, that load segfaults on this base image, and
+# it FALLS BACK to compiling from source -- nothing here sets
+# --build-from-source or npm_config_build_from_source. The source build
+# then needs python3/make/g++, and node-gyp fetches headers from
+# unofficial-builds.nodejs.org (its musl-path mirror), which times out
+# from this environment. The pre-fetch below (official nodejs.org,
+# generous retry/timeout) plus npm_config_nodedir supplies those headers
+# without relying on that fetch.
 #
-# node-gyp's own header download (from unofficial-builds.nodejs.org) uses
-# a short, non-configurable timeout that this environment's link to that
-# host cannot reliably meet (confirmed: the same download completes fine
-# manually with a generous timeout, in ~20-45s, well past node-gyp's
-# internal cutoff). Headers are fetched once, up front, against the
-# official nodejs.org distribution, with a generous timeout/retry policy,
-# and handed to node-gyp via `--nodedir` (`npm_config_nodedir`) instead of
-# letting node-gyp download them itself.
+# Both halves are load-bearing, tested independently: removing the
+# toolchain -> `npm ci` fails ("gyp ERR! find Python ... You need to
+# install the latest version of Python"). Keeping the toolchain but
+# removing the header pre-fetch -> `npm ci` fails ("GET
+# https://unofficial-builds.nodejs.org/.../node-v20.20.2-headers.tar.gz"
+# -> ETIMEDOUT). Do not remove either without re-proving both stay green.
 RUN apk add --no-cache python3 make g++ curl
 RUN NODE_VERSION="$(node -v | sed 's/^v//')" \
   && mkdir -p /opt/nodedir \
