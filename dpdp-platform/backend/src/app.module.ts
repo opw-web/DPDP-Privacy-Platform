@@ -24,6 +24,9 @@ import { MaskingModule } from "./common/masking/masking.module";
 import { IdentityModule } from "./modules/identity/identity.module";
 import { SyncModule } from "./modules/sync/sync.module";
 import { PrincipalsModule } from "./modules/principals/principals.module";
+import { InventoryModule } from "./modules/inventory/inventory.module";
+import { AuditReadModule } from "./modules/audit/audit-read.module";
+import { PrincipalPortalModule } from "./modules/principal-portal/principal-portal.module";
 
 @Module({
   imports: [
@@ -62,6 +65,9 @@ import { PrincipalsModule } from "./modules/principals/principals.module";
     IdentityModule,
     SyncModule,
     PrincipalsModule,
+    InventoryModule,
+    AuditReadModule,
+    PrincipalPortalModule,
     MaskingModule,
     HealthModule,
   ],
