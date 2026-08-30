@@ -38,7 +38,6 @@ type PrincipalFieldRow = {
 const PRINCIPAL_DETAIL_SELECT = {
   id: true,
   reference: true,
-  displayName: true,
   ageStatus: true,
   ageStatusSource: true,
   ageStatusSetAt: true,
@@ -332,13 +331,24 @@ export class PrincipalsService {
       ],
     });
     const resolvedFields = await this.resolveFieldsInTransaction(tx, fields);
+    const displayNameField = resolvedFields
+      .filter(
+        (field) => field.canonicalField === "FULL_NAME" && field.isPrimary,
+      )
+      .sort((left, right) => left.value.localeCompare(right.value))[0];
     return {
       ...principal,
-      displayName: this.maskingService.maskIfNeeded(
-        permissions,
-        "FULL_NAME",
-        principal.displayName,
-      ),
+      // DataPrincipal.displayName has no source IDs, so it must never be
+      // serialized from detail. The presented name is only a resolved,
+      // primary FULL_NAME value and carries its own complete provenance.
+      displayName: displayNameField
+        ? this.maskingService.maskIfNeeded(
+            permissions,
+            "FULL_NAME",
+            displayNameField.value,
+          )
+        : null,
+      displayNameSources: displayNameField?.sources ?? [],
       fields: resolvedFields.map((field) => ({
         ...field,
         value: this.maskingService.maskIfNeeded(

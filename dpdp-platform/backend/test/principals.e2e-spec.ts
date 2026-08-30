@@ -27,6 +27,7 @@ describe("Principals API (e2e)", () => {
     principalId: string;
     childPrincipalId: string;
     unattributedNamePrincipalId: string;
+    unresolvedNamePrincipalId: string;
     otherOrganizationPrincipalId: string;
     full: EmployeeSession;
     auditor: EmployeeSession;
@@ -162,6 +163,11 @@ describe("Principals API (e2e)", () => {
       "Unattributed Display Name",
       "ADULT",
     );
+    const unresolvedNamePrincipalId = await createPrincipal(
+      organizationId,
+      "Unresolved Stored Display Name",
+      "ADULT",
+    );
     const otherOrganizationPrincipalId = await createPrincipal(
       otherOrganizationId,
       "Other Aman",
@@ -224,6 +230,17 @@ describe("Principals API (e2e)", () => {
           value: "Asha Nair",
           dataCategory: "IDENTITY",
           sourceIds: [ecommerceId],
+          isPrimary: true,
+        },
+        // The durable profile row contains a name, but its provenance is
+        // broken. Detail must not fall back to DataPrincipal.displayName.
+        {
+          organizationId,
+          dataPrincipalId: unresolvedNamePrincipalId,
+          canonicalField: "FULL_NAME",
+          value: "Unresolved Field Name",
+          dataCategory: "IDENTITY",
+          sourceIds: [randomUUID()],
           isPrimary: true,
         },
         {
@@ -347,6 +364,7 @@ describe("Principals API (e2e)", () => {
       principalId,
       childPrincipalId,
       unattributedNamePrincipalId,
+      unresolvedNamePrincipalId,
       otherOrganizationPrincipalId,
       full,
       auditor,
@@ -456,7 +474,7 @@ describe("Principals API (e2e)", () => {
 
   it("uses both tenant-bound trigram indexes for populated search candidates", async () => {
     const searchTerm = "zzprincipalsearchneedle";
-    const totalSyntheticPrincipals = 10_000;
+    const totalSyntheticPrincipals = 50_000;
     const syntheticPrincipalIds = Array.from(
       { length: totalSyntheticPrincipals },
       () => randomUUID(),
@@ -495,43 +513,41 @@ describe("Principals API (e2e)", () => {
     // before asserting the exact candidate query used by PrincipalsService.
     await prisma.$executeRawUnsafe('ANALYZE "DataPrincipal"');
     await prisma.$executeRawUnsafe('ANALYZE "PrincipalDataField"');
-    const explain = await prisma.$transaction(async (tx) => {
-      // This controlled planner setting makes the assertion about predicate
-      // compatibility stable across CI hardware. The measured request below
-      // still uses PostgreSQL's normal planner and must meet the SLO.
-      await tx.$executeRawUnsafe("SET LOCAL enable_seqscan = off");
-      return tx.$queryRaw<Array<{ "QUERY PLAN": unknown }>>`
-        EXPLAIN (FORMAT JSON, COSTS FALSE)
-        WITH "nameMatches" AS MATERIALIZED (
-          SELECT "id"
-          FROM "DataPrincipal"
-          WHERE "displayName" ILIKE '%' || ${searchTerm} || '%'
-        ), "fieldValueMatches" AS MATERIALIZED (
+    const explain = await prisma.$queryRaw<Array<{ "QUERY PLAN": unknown }>>`
+      EXPLAIN (FORMAT JSON, COSTS FALSE)
+      WITH "nameMatches" AS MATERIALIZED (
+        SELECT "id"
+        FROM "DataPrincipal"
+        WHERE "displayName" ILIKE '%' || ${searchTerm} || '%'
+      ), "fieldValueMatches" AS MATERIALIZED (
+        SELECT "dataPrincipalId" AS "id"
+        FROM "PrincipalDataField"
+        WHERE "value" ILIKE '%' || ${searchTerm} || '%'
+      ), "candidateIds" AS MATERIALIZED (
+        (
+          SELECT "id" FROM "nameMatches"
+          INTERSECT
+          SELECT "id" FROM "DataPrincipal" WHERE "organizationId" = ${fixture.organizationId}
+        )
+        UNION
+        (
+          SELECT "id" FROM "fieldValueMatches"
+          INTERSECT
           SELECT "dataPrincipalId" AS "id"
           FROM "PrincipalDataField"
-          WHERE "value" ILIKE '%' || ${searchTerm} || '%'
-        ), "candidateIds" AS MATERIALIZED (
-          (
-            SELECT "id" FROM "nameMatches"
-            INTERSECT
-            SELECT "id" FROM "DataPrincipal" WHERE "organizationId" = ${fixture.organizationId}
-          )
-          UNION
-          (
-            SELECT "id" FROM "fieldValueMatches"
-            INTERSECT
-            SELECT "dataPrincipalId" AS "id"
-            FROM "PrincipalDataField"
-            WHERE "organizationId" = ${fixture.organizationId}
-              AND "canonicalField" IN ('EMAIL'::"CanonicalField", 'PHONE'::"CanonicalField", 'CUSTOMER_ID'::"CanonicalField")
-          )
+          WHERE "organizationId" = ${fixture.organizationId}
+            AND "canonicalField" IN ('EMAIL'::"CanonicalField", 'PHONE'::"CanonicalField", 'CUSTOMER_ID'::"CanonicalField")
         )
-        SELECT principal."id"
-        FROM "DataPrincipal" AS principal
-        INNER JOIN "candidateIds" AS candidate ON candidate."id" = principal."id"
-        WHERE principal."organizationId" = ${fixture.organizationId}
-      `;
-    });
+      )
+      SELECT principal."id", principal."reference", principal."ageStatus", principal."createdAt"
+      FROM "DataPrincipal" AS principal
+      INNER JOIN "candidateIds" AS candidate ON candidate."id" = principal."id"
+      WHERE principal."organizationId" = ${fixture.organizationId}
+        AND (NULL::"AgeStatus" IS NULL OR principal."ageStatus" = NULL::"AgeStatus")
+      ORDER BY principal."displayName" ASC, principal."id" ASC
+      OFFSET 0
+      LIMIT 50
+    `;
     const indexes = indexNamesFromPlan(explain[0]?.["QUERY PLAN"]);
     expect(indexes).toContain("principal_name_trgm");
     expect(indexes).toContain("pdf_value_trgm");
@@ -547,7 +563,7 @@ describe("Principals API (e2e)", () => {
       response.body.items.map((item: { id: string }) => item.id),
     ).toContain(syntheticPrincipalIds[0]);
     expect(elapsedMs).toBeLessThan(300);
-  });
+  }, 20_000);
 
   it("uses an attributable FULL_NAME for list display or emits no name", async () => {
     const response = await request(app.getHttpServer())
@@ -562,6 +578,41 @@ describe("Principals API (e2e)", () => {
         sources: [],
       }),
     ]);
+  });
+
+  it("never serializes an unproven stored detail display name", async () => {
+    const authorized = await request(app.getHttpServer())
+      .get(`/api/principals/${fixture.principalId}`)
+      .set(authenticated(fixture.full));
+    expect(authorized.status).toBe(200);
+    expect(authorized.body).toMatchObject({
+      displayName: "Aman Verma",
+      displayNameSources: [{ id: expect.any(String), name: "E-commerce" }],
+    });
+    const auditor = await request(app.getHttpServer())
+      .get(`/api/principals/${fixture.principalId}`)
+      .set(authenticated(fixture.auditor));
+    expect(auditor.status).toBe(200);
+    expect(auditor.body.displayName).not.toBe("Aman Verma");
+    expect(auditor.body.displayNameSources).toEqual([
+      { id: expect.any(String), name: "E-commerce" },
+    ]);
+
+    const unresolved = await request(app.getHttpServer())
+      .get(`/api/principals/${fixture.unresolvedNamePrincipalId}`)
+      .set(authenticated(fixture.full));
+    expect(unresolved.status).toBe(200);
+    expect(unresolved.body).toMatchObject({
+      id: fixture.unresolvedNamePrincipalId,
+      displayName: null,
+      displayNameSources: [],
+    });
+    expect(JSON.stringify(unresolved.body)).not.toContain(
+      "Unresolved Stored Display Name",
+    );
+    expect(JSON.stringify(unresolved.body)).not.toContain(
+      "Unresolved Field Name",
+    );
   });
 
   it("returns complete source names on each detail value and omits unresolved provenance", async () => {
