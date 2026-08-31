@@ -32,6 +32,10 @@ import { TemplatesModule } from "./modules/messaging/templates/templates.module"
 import { AudienceModule } from "./modules/messaging/audience/audience.module";
 import { NotificationsModule } from "./modules/notifications/notifications.module";
 import { MailModule } from "./common/mail/mail.module";
+import { RequestsModule } from "./modules/requests/requests.module";
+import { NoticesModule } from "./modules/notices/notices.module";
+import { ChildrenModule } from "./modules/children/children.module";
+import { RetentionModule } from "./modules/retention/retention.module";
 
 @Module({
   imports: [
@@ -79,6 +83,10 @@ import { MailModule } from "./common/mail/mail.module";
     AudienceModule,
     MailModule,
     NotificationsModule,
+    RequestsModule,
+    NoticesModule,
+    ChildrenModule,
+    RetentionModule,
     HealthModule,
   ],
   providers: [

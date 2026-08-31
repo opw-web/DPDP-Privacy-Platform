@@ -12,6 +12,46 @@ import { SyncQueueService } from "./sync.queue";
 export const RECONCILE_BOOT_TIMEOUT_MS = 5_000;
 
 /**
+ * Shared boot-safety primitive (task 18 review round 2, Important 2),
+ * factored out so every `onModuleInit` in this codebase that registers a
+ * BullMQ repeatable schedule applies the SAME policy rather than each
+ * inventing its own: races `promise` against a plain timer so an
+ * unreachable Redis at boot can never block application startup beyond
+ * `boundaryMs`. On timeout the original promise is left running in the
+ * background rather than cancelled -- harmless for every caller here,
+ * since each wraps an idempotent BullMQ upsert (a very-late completion
+ * once Redis recovers is a correct, if delayed, registration, never a
+ * duplicate or a stale overwrite).
+ */
+export function withBootTimeout<T>(
+  promise: Promise<T>,
+  boundaryMs: number = RECONCILE_BOOT_TIMEOUT_MS,
+): Promise<T> {
+  return new Promise<T>((resolve, reject) => {
+    const timer = setTimeout(() => {
+      reject(
+        new Error(`Exceeded its ${boundaryMs}ms startup budget`),
+      );
+    }, boundaryMs);
+    // Never keep the process alive solely to fire this timeout -- boot
+    // either finishes first (clearing it below) or the timeout itself
+    // decides the race; either way this timer must not block process
+    // exit.
+    timer.unref?.();
+    promise.then(
+      (value) => {
+        clearTimeout(timer);
+        resolve(value);
+      },
+      (err: unknown) => {
+        clearTimeout(timer);
+        reject(err);
+      },
+    );
+  });
+}
+
+/**
  * Task 18 review, Important 4+5: `DataSource.syncFrequency` (Postgres) is
  * authoritative; the BullMQ job-scheduler set (Redis) is a CACHE derived
  * from it. `DataSourcesService.create`/`update`/`remove` write that cache
@@ -68,7 +108,7 @@ export class ScheduleReconciliationService implements OnModuleInit {
    * is a NUMBER, never for `null`). Without a bound here, `onModuleInit`
    * -- which Nest's bootstrap sequence AWAITS for every module before the
    * app can start listening -- would simply never resolve, so `/health`
-   * could never even report the outage. `withTimeout` below races
+   * could never even report the outage. `withBootTimeout` above races
    * `reconcile()` against a plain timer: on timeout, boot proceeds
    * immediately and this warns; `reconcile()`'s promise itself is left
    * running in the background (harmless -- `upsertSchedule` is
@@ -78,7 +118,7 @@ export class ScheduleReconciliationService implements OnModuleInit {
    */
   async onModuleInit(): Promise<void> {
     try {
-      await this.withTimeout(this.reconcile(), RECONCILE_BOOT_TIMEOUT_MS);
+      await withBootTimeout(this.reconcile(), RECONCILE_BOOT_TIMEOUT_MS);
     } catch (err) {
       this.logger.warn(
         "Sync schedule reconciliation did not complete at startup " +
@@ -89,33 +129,6 @@ export class ScheduleReconciliationService implements OnModuleInit {
           }`,
       );
     }
-  }
-
-  private withTimeout<T>(promise: Promise<T>, timeoutMs: number): Promise<T> {
-    return new Promise<T>((resolve, reject) => {
-      const timer = setTimeout(() => {
-        reject(
-          new Error(
-            `Reconciliation exceeded its ${timeoutMs}ms startup budget`,
-          ),
-        );
-      }, timeoutMs);
-      // Never keep the process alive solely to fire this timeout -- boot
-      // either finishes first (clearing it below) or the timeout itself
-      // decides the race; either way this timer must not block process
-      // exit.
-      timer.unref?.();
-      promise.then(
-        (value) => {
-          clearTimeout(timer);
-          resolve(value);
-        },
-        (err: unknown) => {
-          clearTimeout(timer);
-          reject(err);
-        },
-      );
-    });
   }
 
   async reconcile(): Promise<void> {
