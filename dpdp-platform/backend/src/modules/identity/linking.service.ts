@@ -119,6 +119,7 @@ export class LinkingService {
     type: "CUSTOMER_ID" | "EMAIL" | "PHONE",
     value: string | null,
     knownConflictingPrincipalIds: ReadonlySet<string>,
+    onUnknownConflict: "throw" | "skip",
   ): Promise<void> {
     if (!value) {
       return;
@@ -132,9 +133,29 @@ export class LinkingService {
         // Matching has already preserved this exact conflicting signal as a
         // pending candidate. Leave the identifier with its real owner: moving
         // it would steal an identity, while throwing would make the mandated
-        // exact-vs-high conflict flow unusable. Any ownership surprise that
-        // was NOT represented in MatchResult still fails the transaction.
+        // exact-vs-high conflict flow unusable.
         if (knownConflictingPrincipalIds.has(existing.dataPrincipalId)) {
+          return;
+        }
+        // I-3 (final whole-branch review) re-review: an ownership
+        // surprise NOT represented in MatchResult still fails the
+        // transaction for the FRESHLY-linked case (`onUnknownConflict:
+        // "throw"`, unchanged) -- there, matching was just computed for
+        // exactly this record's identifiers, so any other conflict is a
+        // genuine integrity surprise. It must NOT fail for the
+        // ALREADY-linked resync case (`"skip"`): a DETACHED pair
+        // (`MergeService.unmerge`'s documented invariant -- identifier
+        // ownership deliberately never moves on unmerge) is EXACTLY a
+        // case where an already-linked record's identifiers legitimately
+        // belong to a DIFFERENT principal than its own active link,
+        // forever, and `MatchingService.match` has no notion of DETACHED
+        // links at all, so it cannot have raised that as a candidate.
+        // Treating that expected, permanent state as a hard failure would
+        // turn every future resync of a legitimately-unmerged record into
+        // a failed record on every single sync, rather than the
+        // documented no-op ("reversible identity": a resync must never
+        // silently move a link matching alone would have re-decided).
+        if (onUnknownConflict === "skip") {
           return;
         }
         throw new IdentifierOwnershipConflictError(type, value);
@@ -156,6 +177,7 @@ export class LinkingService {
     record: LinkableNormalizedRecord,
     mappings: readonly NormalizationMapping[],
     knownConflictingPrincipalIds: ReadonlySet<string>,
+    onUnknownConflict: "throw" | "skip",
   ): Promise<void> {
     await this.attachIdentifier(
       tx,
@@ -163,6 +185,7 @@ export class LinkingService {
       "CUSTOMER_ID",
       verifiedCustomerIdValue(record.customerId, mappings),
       knownConflictingPrincipalIds,
+      onUnknownConflict,
     );
     await this.attachIdentifier(
       tx,
@@ -170,6 +193,7 @@ export class LinkingService {
       "EMAIL",
       record.emailNormalized,
       knownConflictingPrincipalIds,
+      onUnknownConflict,
     );
     await this.attachIdentifier(
       tx,
@@ -177,6 +201,7 @@ export class LinkingService {
       "PHONE",
       record.phoneNormalized,
       knownConflictingPrincipalIds,
+      onUnknownConflict,
     );
   }
 
@@ -321,29 +346,52 @@ export class LinkingService {
       }
     }
 
-    // I-3 (final whole-branch review): this used to be guarded on
-    // `!activeLink`, so an identifier that first appears on a RESYNC of an
-    // already-linked record (e.g. a support ticket that only had a phone
-    // number at first sync later gets an email added) was never attached.
-    // The next source's record for that same person would then find the
-    // email unowned and create a duplicate principal -- a silent,
-    // permanent under-merge. `dataPrincipalId` is already correctly set
-    // to `activeLink.dataPrincipalId` for the already-linked case (see
-    // above), so attaching here for EVERY resolved owner -- not just a
-    // freshly-created link -- is a guard change, not new matching logic:
-    // `attachIdentifier` already no-ops on a value this principal already
-    // owns and already handles "someone else owns it" via
-    // `knownConflictingPrincipalIds`, built from this SAME match result
-    // either way. The advisory lock covering these exact signals is
-    // already held for the whole of `applyMatch` by the time this runs
-    // (see `sync-pipeline.service.ts`).
-    if (dataPrincipalId) {
+    // I-3 (final whole-branch review): attaching identifiers used to be
+    // guarded on `!activeLink`, so an identifier that first appears on a
+    // RESYNC of an already-linked record (e.g. a support ticket that only
+    // had a phone number at first sync later gets an email added) was
+    // never attached. The next source's record for that same person would
+    // then find the email unowned and create a duplicate principal -- a
+    // silent, permanent under-merge. Split into two calls rather than one
+    // shared call, because the two cases need DIFFERENT conflict
+    // handling, not just a different `dataPrincipalId`:
+    //
+    //   - Freshly linked (`!activeLink`, unchanged): an unexpected
+    //     ownership conflict here is a genuine surprise -- matching was
+    //     just computed for exactly this record's identifiers -- so it
+    //     still fails the transaction (`onUnknownConflict: "throw"`).
+    //   - Already linked (`activeLink`, the new case): the advisory lock
+    //     covering these exact signals is already held for the whole of
+    //     `applyMatch` (see `sync-pipeline.service.ts`), so a genuinely
+    //     unowned identifier still attaches safely. But an ownership
+    //     conflict here must NOT throw (`onUnknownConflict: "skip"`): a
+    //     DETACHED pair (`MergeService.unmerge` deliberately never moves
+    //     `PrincipalIdentifier` ownership) is exactly a case where an
+    //     already-linked record's identifiers legitimately belong to a
+    //     DIFFERENT principal than its own active link, permanently, and
+    //     `MatchingService.match` has no notion of DETACHED links at all
+    //     -- it cannot have raised that as a candidate. Throwing there
+    //     would turn every future resync of a legitimately-unmerged
+    //     record into a failed record on every sync, instead of the
+    //     documented no-op ("reversible identity": a resync must never
+    //     silently move a link matching alone would have re-decided).
+    if (dataPrincipalId && !activeLink) {
       await this.attachAvailableIdentifiers(
         tx,
         dataPrincipalId,
         normalizedRecord,
         mappings,
         knownConflictingPrincipalIds,
+        "throw",
+      );
+    } else if (dataPrincipalId && activeLink) {
+      await this.attachAvailableIdentifiers(
+        tx,
+        dataPrincipalId,
+        normalizedRecord,
+        mappings,
+        knownConflictingPrincipalIds,
+        "skip",
       );
     }
 
