@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { render, screen } from "@testing-library/react";
+import { cleanup, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -164,8 +164,15 @@ async function loginAndRenderWizard() {
 
 describe("DataSourceNewPage wizard", () => {
   afterEach(async () => {
-    await employeeLogout();
-    vi.restoreAllMocks();
+    // Unmount FIRST: `employeeLogout()` updates the shared auth store,
+    // which `PermissionGate` (via `useSyncExternalStore`) would otherwise
+    // re-render from outside any `act()` scope.
+    cleanup();
+    try {
+      await employeeLogout();
+    } finally {
+      vi.restoreAllMocks();
+    }
   });
 
   it("walks all five steps against a mocked API and reaches the detail page", async () => {

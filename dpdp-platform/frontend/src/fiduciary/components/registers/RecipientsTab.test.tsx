@@ -85,10 +85,13 @@ async function loginAndRender(hooks: RouteHooks = {}) {
 
 describe("RecipientsTab -- s.8(2) processor contract requirement", () => {
   afterEach(async () => {
+    // Unmount FIRST: `employeeLogout()` updates the shared auth store,
+    // which `PermissionGate` (via `useSyncExternalStore`) would otherwise
+    // re-render from outside any `act()` scope.
+    cleanup();
     try {
       await employeeLogout();
     } finally {
-      cleanup();
       vi.restoreAllMocks();
       toastError.mockClear();
       toastSuccess.mockClear();

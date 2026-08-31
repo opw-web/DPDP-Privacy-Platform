@@ -104,10 +104,13 @@ async function loginAndRender(routes: MockRoutes = {}) {
 
 describe("LinkedRecordsPanel unmerge dialog", () => {
   afterEach(async () => {
+    // Unmount FIRST: `employeeLogout()` updates the shared auth store,
+    // which `PermissionGate` (via `useSyncExternalStore`) would otherwise
+    // re-render from outside any `act()` scope.
+    cleanup();
     try {
       await employeeLogout();
     } finally {
-      cleanup();
       vi.restoreAllMocks();
     }
   });

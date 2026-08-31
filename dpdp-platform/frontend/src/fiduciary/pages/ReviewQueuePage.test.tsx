@@ -128,10 +128,13 @@ describe("signalBadgeVariant (the one place agreement becomes a colour)", () => 
 
 describe("ReviewQueuePage", () => {
   afterEach(async () => {
+    // Unmount FIRST: `employeeLogout()` updates the shared auth store,
+    // which `PermissionGate` (via `useSyncExternalStore`) would otherwise
+    // re-render from outside any `act()` scope.
+    cleanup();
     try {
       await employeeLogout();
     } finally {
-      cleanup();
       vi.restoreAllMocks();
     }
   });

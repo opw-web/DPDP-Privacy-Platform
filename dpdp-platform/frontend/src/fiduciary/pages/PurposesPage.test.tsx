@@ -125,10 +125,13 @@ async function loginAndRenderThroughShell() {
 
 describe("PurposesPage, rendered through AppShell", () => {
   afterEach(async () => {
+    // Unmount FIRST: `employeeLogout()` updates the shared auth store,
+    // which `PermissionGate`/`AppShell` (still mounted through the real
+    // shell) would otherwise re-render from outside any `act()` scope.
+    cleanup();
     try {
       await employeeLogout();
     } finally {
-      cleanup();
       vi.restoreAllMocks();
     }
   });
