@@ -10,10 +10,14 @@ import {
 import { DataSourcesService } from "../data-sources/data-sources.service";
 import { NormalizationService } from "../normalization/normalization.service";
 import type { NormalizationMapping } from "../normalization/normalization.service";
-import { MatchingService } from "../identity/matching.service";
+import {
+  buildCandidateSignals,
+  MatchingService,
+} from "../identity/matching.service";
 import { LinkingService } from "../identity/linking.service";
 import { AssemblyService } from "../identity/assembly.service";
 import { AgeService } from "../identity/age.service";
+import { lockIdentifiersForOwnership } from "../identity/identifier-ownership-lock";
 import { hashPayload } from "./payload-hash";
 import {
   describeSyncError,
@@ -401,6 +405,27 @@ export class SyncPipelineService {
       create: normalized as never,
       update: normalizedFields as never,
     });
+
+    // Cross-source identifier-ownership race (MVP1 evaluation Checks 4/6
+    // finding -- see `.superpowers/sdd/2026-08-29-dpdp-mvp1/
+    // concurrent-sync-race-report.md`): `SyncLockService`'s mutex only
+    // ever serializes ONE data source against itself, so two DIFFERENT
+    // sources' concurrent record-transactions could each read "no
+    // principal owns this identifier yet" and both try to claim it --
+    // whichever committed second used to hit the unique constraint and
+    // abort its ENTIRE transaction, silently discarding the
+    // `SourceRecord` just written above. Acquire this record's
+    // identifier-ownership locks -- in `buildCandidateSignals`' fixed
+    // order, so two transactions needing overlapping identifiers never
+    // deadlock waiting on each other in reverse -- BEFORE the MATCH read
+    // below, so a concurrent transaction wanting the same value blocks
+    // here until this one commits or rolls back, then correctly sees the
+    // committed identifier on its own (fresh) read instead of racing to
+    // create a second one. See `identifier-ownership-lock.ts`.
+    await lockIdentifiersForOwnership(
+      tx,
+      buildCandidateSignals(normalizedRow, context.mappings),
+    );
 
     // MATCH (task 18 review, Important 3: reads through the SAME `tx` as
     // the write below now, not a second connection off `prisma.scoped`.

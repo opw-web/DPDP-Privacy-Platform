@@ -35,10 +35,12 @@ export const AUDIT_COUNTER_NAME = "AUDIT";
  * Raw SQL also sits entirely outside the tenant extension's boundary (it
  * intercepts `$allModels.$allOperations` and named model methods, not
  * `$queryRaw`/`$executeRaw`), so `organizationId` is passed explicitly and
- * parameterized here. This is the ONE sanctioned exception to "no service
- * passes organizationId manually" in this codebase -- every other write in
- * this file, and everywhere else, goes through `PrismaService.scoped` and
- * lets the extension inject it.
+ * parameterized here. This is one of two sanctioned exceptions to "no
+ * service passes organizationId manually" in this codebase -- the other is
+ * `identifier-ownership-lock.ts`'s advisory lock, for the same underlying
+ * reason (raw SQL, needs a tenant-scoped key, nothing else can inject it
+ * here). Every other write in this file, and everywhere else, goes
+ * through `PrismaService.scoped` and lets the extension inject it.
  */
 export async function allocateCounterValue(
   tx: ScopedTransactionClient,

@@ -99,6 +99,33 @@ function stableSignals(signals: readonly ResolvedSignal[]): ResolvedSignal[] {
 }
 
 /**
+ * The candidate identity signals for one record, in a FIXED relative
+ * order (CUSTOMER_ID, then EMAIL, then PHONE -- whichever are actually
+ * present): the exact order `match()` resolves them in below, and the
+ * exact order `SyncPipelineService` must acquire this record's
+ * identifier-ownership locks in (`identifier-ownership-lock.ts`) BEFORE
+ * calling `match()`, so that two transactions needing overlapping
+ * identifiers always request them in the same relative order and never
+ * deadlock waiting on each other in reverse. Exported (rather than
+ * inlined in `match()`) so there is exactly one place that decides this
+ * order, and the pipeline's pre-match locking can never drift from what
+ * `match()` itself actually reads.
+ */
+export function buildCandidateSignals(
+  record: Pick<
+    MatchableNormalizedRecord,
+    "customerId" | "emailNormalized" | "phoneNormalized"
+  >,
+  mappings: readonly NormalizationMapping[],
+): MatchSignal[] {
+  return [
+    customerIdSignal(record.customerId, mappings),
+    emailSignal(record.emailNormalized),
+    phoneSignal(record.phoneNormalized),
+  ].filter((signal): signal is MatchSignal => signal !== null);
+}
+
+/**
  * Purely deterministic identity resolution. Rules 1-3 only use exact,
  * tenant-scoped PrincipalIdentifier lookups. Rule 4 deliberately uses the
  * minimum supporting signal required by the specification and can never link.
@@ -127,6 +154,30 @@ function stableSignals(signals: readonly ResolvedSignal[]): ResolvedSignal[] {
  *     Critical 1) against two concurrent runs on one data source each
  *     deciding "no principal exists yet" from a stale read and creating
  *     two `DataPrincipal` rows for the same person.
+ *
+ * MVP1 evaluation Checks 4/6 finding, fixed one layer up in
+ * `SyncPipelineService`: `SyncLockService`'s mutex is keyed
+ * per-`dataSourceId`, so by construction it cannot see two DIFFERENT
+ * sources syncing at once. Two such concurrent per-record transactions
+ * could each reach `resolveSignal` below, both read "no
+ * `PrincipalIdentifier` owns this value yet" under READ COMMITTED, and
+ * both proceed to create a principal and attach the same identifier --
+ * whichever committed second then hit the unique constraint and aborted
+ * its ENTIRE transaction, silently discarding the `SourceRecord` already
+ * written earlier in that same transaction (see
+ * `.superpowers/sdd/2026-08-29-dpdp-mvp1/concurrent-sync-race-report.md`).
+ * `SyncPipelineService.persistAndLink` now acquires a transaction-scoped
+ * Postgres advisory lock (`identifier-ownership-lock.ts`) for each of
+ * `buildCandidateSignals`' identifier values, in that function's fixed
+ * order, BEFORE calling `match()` -- closing the exact window between
+ * "read: does anyone own this" and "write: attach it to me" that the race
+ * lived in, without serializing anything that does not share an
+ * identifier value. The lock lives in the pipeline, not here, because
+ * acquiring it needs `TenantContext` (for a tenant-scoped lock key) and a
+ * real Postgres connection -- both things this class deliberately has
+ * neither of, so its own deterministic-matching tests can construct it
+ * with `new MatchingService()` and a hand-mocked `tx`, with no tenant
+ * context bound at all.
  *
  * `MatchingService` therefore has no constructor dependencies at all --
  * it never opens its own connection or reads outside a caller-supplied
@@ -238,11 +289,7 @@ export class MatchingService {
     record: MatchableNormalizedRecord,
     mappings: readonly NormalizationMapping[],
   ): Promise<MatchResult> {
-    const candidateSignals = [
-      customerIdSignal(record.customerId, mappings),
-      emailSignal(record.emailNormalized),
-      phoneSignal(record.phoneNormalized),
-    ].filter((signal): signal is MatchSignal => signal !== null);
+    const candidateSignals = buildCandidateSignals(record, mappings);
     const resolved = (
       await Promise.all(
         candidateSignals.map((signal) => this.resolveSignal(tx, signal)),

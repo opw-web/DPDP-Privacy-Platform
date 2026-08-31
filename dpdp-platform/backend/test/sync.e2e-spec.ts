@@ -941,4 +941,89 @@ describe("Sync pipeline (e2e)", () => {
       dataSourceId,
     );
   });
+
+  /**
+   * MVP1 evaluation Check 4/6 finding: running two DIFFERENT sources'
+   * syncs concurrently, where a record in each shares the same email
+   * (a normal occurrence -- the same person appearing in two systems),
+   * used to race on `PrincipalIdentifier` ownership. The per-source lock
+   * (`SyncLockService`) only ever serializes a source against itself, so
+   * two concurrent transactions from DIFFERENT sources could each read
+   * "no principal owns this email yet", each create a new principal, and
+   * whichever committed second hit an ownership conflict that aborted
+   * its ENTIRE per-record transaction -- silently discarding a
+   * `SourceRecord` that had already been written earlier in that same
+   * transaction, with no `MatchCandidate` raised to surface it.
+   *
+   * No timing hook is needed to make this reliable: with enough
+   * colliding pairs processed by two genuinely concurrent
+   * `pipeline.run()` calls, real interleaving of their per-record
+   * transactions triggers the race on its own, every run.
+   */
+  it("concurrent syncs across two sources sharing identifiers never drop a record (cross-source identifier-ownership race)", async () => {
+    const org = await organization();
+    const PAIRS = 25;
+    const sourceARecords = Array.from({ length: PAIRS }, (_, i) => ({
+      id: `a-${i}`,
+      name: `Race Person A${i}`,
+      email: `race${i}@example.test`,
+      city: "Pune",
+    }));
+    const sourceBRecords = Array.from({ length: PAIRS }, (_, i) => ({
+      id: `b-${i}`,
+      name: `Race Person B${i}`,
+      email: `race${i}@example.test`,
+      city: "Mumbai",
+    }));
+    const { baseUrl: baseUrlA } = await startServer(sourceARecords);
+    const { baseUrl: baseUrlB } = await startServer(sourceBRecords);
+    const dataSourceA = await createDataSource(org, baseUrlA);
+    const dataSourceB = await createDataSource(org, baseUrlB);
+
+    const [summaryA, summaryB] = await Promise.all([
+      pipeline.run(dataSourceA, "race-A"),
+      pipeline.run(dataSourceB, "race-B"),
+    ]);
+
+    // The pipeline read PAIRS records from each source -- every single one
+    // of those 2*PAIRS records MUST land in SourceRecord. Losing a race for
+    // identifier ownership is never grounds for discarding someone's
+    // personal data.
+    const [sourceCountA, sourceCountB] = await TenantContext.run(
+      tenant(org),
+      () =>
+        Promise.all([
+          prisma.scoped.sourceRecord.count({
+            where: { dataSourceId: dataSourceA },
+          }),
+          prisma.scoped.sourceRecord.count({
+            where: { dataSourceId: dataSourceB },
+          }),
+        ]),
+    );
+    expect(summaryA.recordsRead).toBe(PAIRS);
+    expect(summaryB.recordsRead).toBe(PAIRS);
+    expect(sourceCountA).toBe(PAIRS);
+    expect(sourceCountB).toBe(PAIRS);
+    expect(summaryA.recordsFailed).toBe(0);
+    expect(summaryB.recordsFailed).toBe(0);
+
+    // Not merely "nothing was dropped" -- identity resolution under
+    // concurrency reaches the SAME correct outcome sequential syncing
+    // would: every colliding pair resolves to exactly one shared
+    // principal (25 links total across the pair that created it and the
+    // pair that exact-matched onto it), with zero spurious duplicate
+    // principals and nothing left needing human review.
+    const [principalCount, activeLinkCount, candidateCount] =
+      await TenantContext.run(tenant(org), () =>
+        Promise.all([
+          prisma.scoped.dataPrincipal.count({}),
+          prisma.scoped.identityLink.count({ where: { status: "ACTIVE" } }),
+          prisma.scoped.matchCandidate.count({}),
+        ]),
+      );
+    expect(principalCount).toBe(PAIRS);
+    expect(activeLinkCount).toBe(PAIRS * 2);
+    expect(candidateCount).toBe(0);
+  });
 });
