@@ -1014,6 +1014,66 @@ describe("Sync pipeline (e2e)", () => {
     await crashedHandle?.release();
   });
 
+  it("a lock-release failure does not turn a successful run into a thrown error or a FAILED job (T-2, final whole-branch review)", async () => {
+    // T-2: `release()` is awaited inside `runInTenantContext`'s
+    // `finally`, which is the SOLE exit path out of a run whose
+    // `SyncJob` row may already durably read SUCCESS. Before the fix, a
+    // `finally` block that throws replaces whatever the `try` block was
+    // about to return -- so a Redis blip at exactly the release instant
+    // would make `pipeline.run()` REJECT even though Postgres already
+    // committed SUCCESS, and BullMQ would then record the job FAILED:
+    // two systems of record disagreeing about whether the sync ran.
+    const org = await organization();
+    const { baseUrl } = await startServer([
+      { id: "1", name: "Lock Release Test", email: "lockrelease@example.test" },
+    ]);
+    const dataSourceId = await createDataSource(org, baseUrl);
+
+    const originalAcquire = syncLockService.acquire.bind(syncLockService);
+    const acquireSpy = jest
+      .spyOn(syncLockService, "acquire")
+      .mockImplementation(async (...args) => {
+        const handle = await originalAcquire(...args);
+        if (!handle) {
+          return handle;
+        }
+        // Simulate the exact failure mode: the real lock/heartbeat is
+        // still cleaned up underneath (so this test does not itself
+        // leak a lock or a live heartbeat timer), but the handle
+        // `runInTenantContext` awaits throws, as a genuine Redis EVAL
+        // failure would.
+        return {
+          ...handle,
+          release: async () => {
+            await handle.release();
+            throw new Error("simulated Redis blip during lock release");
+          },
+        };
+      });
+
+    let result: Awaited<ReturnType<typeof pipeline.run>> | undefined;
+    let thrown: unknown;
+    try {
+      result = await pipeline.run(dataSourceId, "t2-lock-release-failure");
+    } catch (err) {
+      thrown = err;
+    } finally {
+      acquireSpy.mockRestore();
+    }
+
+    // The fix, directly: `run()` resolves -- it does not reject just
+    // because releasing the lock afterward failed.
+    expect(thrown).toBeUndefined();
+    expect(result?.status).toBe("SUCCESS");
+
+    // And Postgres's own record of the run agrees -- no contradiction
+    // between what `run()` returned and what was persisted.
+    const job = await TenantContext.run(tenant(org), () =>
+      prisma.scoped.syncJob.findFirstOrThrow({ where: { dataSourceId } }),
+    );
+    expect(job.status).toBe("SUCCESS");
+  });
+
   it("lists and reads back sync jobs via GET /api/sync-jobs, tenant-scoped", async () => {
     const org = await organization();
     const { baseUrl } = await startServer([

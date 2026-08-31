@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from "@nestjs/common";
+import { Injectable, Logger, NotFoundException } from "@nestjs/common";
 import type { Prisma, SyncStatus } from "@prisma/client";
 import { PrismaService } from "../../common/prisma/prisma.service";
 import type { ScopedTransactionClient } from "../../common/prisma/scoped-transaction-client";
@@ -164,6 +164,8 @@ interface RecordContext {
  */
 @Injectable()
 export class SyncPipelineService {
+  private readonly logger = new Logger(SyncPipelineService.name);
+
   constructor(
     private readonly prisma: PrismaService,
     private readonly dataSourcesService: DataSourcesService,
@@ -290,7 +292,35 @@ export class SyncPipelineService {
       await this.finalize(syncJobId, dataSourceId, counts, errorLog, status);
       return { syncJobId, status, ...counts };
     } finally {
-      await lock.release();
+      // T-2 (final whole-branch review, promoted from Minor after the
+      // N-1 lock reorder made this the SOLE exit path out of a run that
+      // may have already `finalize()`d its `SyncJob` row as SUCCESS or
+      // PARTIAL): `release()` awaits a Redis EVAL, which CAN throw (a
+      // Redis blip at exactly this instant). A `finally` block that
+      // throws replaces whatever the `try` block was about to return --
+      // so an unguarded `await lock.release()` here would turn a
+      // genuinely successful run into a THROWN error out of `run()`,
+      // which `SyncProcessor` (BullMQ) then records as a FAILED job,
+      // while Postgres's `SyncJob` row already durably reads SUCCESS.
+      // Two systems of record disagreeing about whether a compliance
+      // sync ran is exactly what an evidence-producing platform cannot
+      // have. A release failure is not actionable here -- the lock's own
+      // TTL still expires on its own either way (same self-heal the
+      // heartbeat's renewal-failure path already relies on) -- so this
+      // logs and lets the run's own already-decided outcome (the
+      // `return` above, or the rethrow from an actual pipeline failure)
+      // stand, instead of overwriting it with a lock-plumbing failure.
+      try {
+        await lock.release();
+      } catch (err) {
+        this.logger.warn(
+          `Failed to release sync lock for data source "${dataSourceId}" ` +
+            "-- the run's own result is unaffected; the lock will self-heal " +
+            `once its TTL expires: ${
+              err instanceof Error ? err.message : "unknown error"
+            }`,
+        );
+      }
     }
   }
 
