@@ -6,6 +6,7 @@ import request from "supertest";
 import * as argon2 from "argon2";
 import type { Queue } from "bullmq";
 import { getQueueToken } from "@nestjs/bullmq";
+import type { CanonicalField, DataCategory } from "@prisma/client";
 import { AppModule } from "../src/app.module";
 import { PrismaService } from "../src/common/prisma/prisma.service";
 import { PERMISSIONS } from "../prisma/seed/permissions";
@@ -177,10 +178,17 @@ describe("Sync pipeline (e2e)", () => {
     },
   ];
 
+  type FieldMapping = {
+    sourceField: string;
+    canonicalField: CanonicalField;
+    dataCategory: DataCategory;
+  };
+
   async function createDataSource(
     organizationId: string,
     baseUrl: string,
     pageSize = 100,
+    mappings: readonly FieldMapping[] = commonMappings,
   ): Promise<string> {
     return TenantContext.run(tenant(organizationId), async () => {
       const dataSource = await prisma.scoped.dataSource.create({
@@ -194,7 +202,7 @@ describe("Sync pipeline (e2e)", () => {
         } as never,
       });
       await Promise.all(
-        commonMappings.map((mapping) =>
+        mappings.map((mapping) =>
           prisma.scoped.sourceFieldMapping.create({
             data: { dataSourceId: dataSource.id, ...mapping } as never,
           }),
@@ -474,6 +482,177 @@ describe("Sync pipeline (e2e)", () => {
       }),
     );
     expect(cityAfter?.value).toBe("Mumbai");
+  });
+
+  it("attaches an identifier that first appears on a RESYNC of an already-linked record, so a later source does not create a duplicate principal (I-3, final whole-branch review)", async () => {
+    // Final whole-branch review, I-3: `attachAvailableIdentifiers` used
+    // to be guarded on `!activeLink`, so an identifier appearing for the
+    // first time on a resync (not the initial sync) was never attached.
+    // This test is exactly the failure scenario the review describes:
+    // a support-system record is first synced with only a phone number,
+    // then a resync adds an email to the SAME record, then a second,
+    // independent source syncs a record keyed only on that email. Before
+    // the fix, the email was never attached to the phone-linked
+    // principal, so the marketing source's sync found it unowned and
+    // created a second `DataPrincipal` for the same person.
+    const org = await organization();
+    const identifierMappings = [
+      {
+        sourceField: "name",
+        canonicalField: "FULL_NAME" as const,
+        dataCategory: "IDENTITY" as const,
+      },
+      {
+        sourceField: "phone",
+        canonicalField: "PHONE" as const,
+        dataCategory: "CONTACT" as const,
+      },
+      {
+        sourceField: "email",
+        canonicalField: "EMAIL" as const,
+        dataCategory: "CONTACT" as const,
+      },
+    ];
+
+    const { server: supportServer, baseUrl: supportBaseUrl } =
+      await startServer([
+        { id: "SUP-1", name: "Neha Gupta", phone: "9876543210" },
+      ]);
+    const supportSourceId = await createDataSource(
+      org,
+      supportBaseUrl,
+      100,
+      identifierMappings,
+    );
+
+    const firstRun = await pipeline.run(supportSourceId, "support-first-run");
+    expect(firstRun.status).toBe("SUCCESS");
+    expect(firstRun.principalsCreated).toBe(1);
+
+    const principal = await TenantContext.run(tenant(org), () =>
+      prisma.scoped.dataPrincipal.findFirstOrThrow({}),
+    );
+    const phoneIdentifierAfterFirstRun = await TenantContext.run(
+      tenant(org),
+      () =>
+        prisma.scoped.principalIdentifier.findFirst({
+          where: { dataPrincipalId: principal.id, type: "PHONE" },
+        }),
+    );
+    expect(phoneIdentifierAfterFirstRun?.value).toBe("+919876543210");
+    const emailIdentifierAfterFirstRun = await TenantContext.run(
+      tenant(org),
+      () =>
+        prisma.scoped.principalIdentifier.findFirst({
+          where: { dataPrincipalId: principal.id, type: "EMAIL" },
+        }),
+    );
+    // Positive control: the email genuinely has no identifier row yet --
+    // it was never present in the payload the first sync read.
+    expect(emailIdentifierAfterFirstRun).toBeNull();
+
+    // The support agent adds Neha's email to the SAME ticket; the next
+    // sync of the SAME external id sees a changed payload and re-runs
+    // NORMALIZE/MATCH/LINK for an already-linked record.
+    await supportServer.close();
+    servers.splice(servers.indexOf(supportServer), 1);
+    const { baseUrl: supportBaseUrl2 } = await startServer([
+      {
+        id: "SUP-1",
+        name: "Neha Gupta",
+        phone: "9876543210",
+        email: "neha@example.test",
+      },
+    ]);
+    await TenantContext.run(tenant(org), () =>
+      prisma.scoped.dataSource.update({
+        where: { id: supportSourceId },
+        data: { baseUrl: supportBaseUrl2 },
+      }),
+    );
+
+    const resync = await pipeline.run(supportSourceId, "support-resync");
+    expect(resync.status).toBe("SUCCESS");
+    expect(resync.recordsUpdated).toBe(1);
+    // Still resolves to the SAME principal -- no new link, no new
+    // principal -- only the identifier set grew.
+    expect(resync.principalsCreated).toBe(0);
+
+    const principalCountAfterResync = await TenantContext.run(tenant(org), () =>
+      prisma.scoped.dataPrincipal.count({}),
+    );
+    expect(principalCountAfterResync).toBe(1);
+
+    // The fix, directly: the EMAIL identifier now exists and is owned by
+    // the SAME principal the phone-only first sync created.
+    const emailIdentifierAfterResync = await TenantContext.run(
+      tenant(org),
+      () =>
+        prisma.scoped.principalIdentifier.findFirst({
+          where: { dataPrincipalId: principal.id, type: "EMAIL" },
+        }),
+    );
+    expect(emailIdentifierAfterResync?.value).toBe("neha@example.test");
+
+    // A second, independent data source (marketing) now syncs a record
+    // for the SAME person, keyed only on that email. Without the fix,
+    // rule 2 (exact email) would find no owner and this would create a
+    // SECOND DataPrincipal for Neha -- the platform's headline "records
+    // become people" promise silently degrading.
+    const { baseUrl: marketingBaseUrl } = await startServer([
+      { id: "MKT-1", name: "Neha G.", email: "neha@example.test" },
+    ]);
+    const marketingSourceId = await createDataSource(
+      org,
+      marketingBaseUrl,
+      100,
+      [
+        {
+          sourceField: "name",
+          canonicalField: "FULL_NAME" as const,
+          dataCategory: "IDENTITY" as const,
+        },
+        {
+          sourceField: "email",
+          canonicalField: "EMAIL" as const,
+          dataCategory: "CONTACT" as const,
+        },
+      ],
+    );
+
+    const marketingRun = await pipeline.run(
+      marketingSourceId,
+      "marketing-first-run",
+    );
+    expect(marketingRun.status).toBe("SUCCESS");
+    // The definitive regression check: no duplicate principal.
+    expect(marketingRun.principalsCreated).toBe(0);
+    expect(marketingRun.principalsLinked).toBe(1);
+
+    const finalPrincipalCount = await TenantContext.run(tenant(org), () =>
+      prisma.scoped.dataPrincipal.count({}),
+    );
+    expect(finalPrincipalCount).toBe(1);
+
+    const marketingSourceRecord = await TenantContext.run(tenant(org), () =>
+      prisma.scoped.sourceRecord.findFirstOrThrow({
+        where: { dataSourceId: marketingSourceId },
+      }),
+    );
+    const marketingNormalizedRecord = await TenantContext.run(tenant(org), () =>
+      prisma.scoped.normalizedRecord.findFirstOrThrow({
+        where: { sourceRecordId: marketingSourceRecord.id },
+      }),
+    );
+    const marketingActiveLink = await TenantContext.run(tenant(org), () =>
+      prisma.scoped.identityLink.findFirstOrThrow({
+        where: {
+          normalizedRecordId: marketingNormalizedRecord.id,
+          status: "ACTIVE",
+        },
+      }),
+    );
+    expect(marketingActiveLink.dataPrincipalId).toBe(principal.id);
   });
 
   it("a record missing its external id field finishes the run PARTIAL with a sanitized errorLog entry", async () => {

@@ -321,7 +321,23 @@ export class LinkingService {
       }
     }
 
-    if (dataPrincipalId && !activeLink) {
+    // I-3 (final whole-branch review): this used to be guarded on
+    // `!activeLink`, so an identifier that first appears on a RESYNC of an
+    // already-linked record (e.g. a support ticket that only had a phone
+    // number at first sync later gets an email added) was never attached.
+    // The next source's record for that same person would then find the
+    // email unowned and create a duplicate principal -- a silent,
+    // permanent under-merge. `dataPrincipalId` is already correctly set
+    // to `activeLink.dataPrincipalId` for the already-linked case (see
+    // above), so attaching here for EVERY resolved owner -- not just a
+    // freshly-created link -- is a guard change, not new matching logic:
+    // `attachIdentifier` already no-ops on a value this principal already
+    // owns and already handles "someone else owns it" via
+    // `knownConflictingPrincipalIds`, built from this SAME match result
+    // either way. The advisory lock covering these exact signals is
+    // already held for the whole of `applyMatch` by the time this runs
+    // (see `sync-pipeline.service.ts`).
+    if (dataPrincipalId) {
       await this.attachAvailableIdentifiers(
         tx,
         dataPrincipalId,
@@ -329,6 +345,9 @@ export class LinkingService {
         mappings,
         knownConflictingPrincipalIds,
       );
+    }
+
+    if (dataPrincipalId && !activeLink) {
       const link = await tx.identityLink.create({
         data: {
           dataPrincipalId,
