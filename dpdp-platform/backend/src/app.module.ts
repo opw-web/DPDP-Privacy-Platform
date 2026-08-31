@@ -36,6 +36,10 @@ import { RequestsModule } from "./modules/requests/requests.module";
 import { NoticesModule } from "./modules/notices/notices.module";
 import { ChildrenModule } from "./modules/children/children.module";
 import { RetentionModule } from "./modules/retention/retention.module";
+import { EvidenceModule } from "./modules/evidence/evidence.module";
+import { ConsentsModule } from "./modules/consents/consents.module";
+import { SdfModule } from "./modules/sdf/sdf.module";
+import { BoardModule } from "./modules/board/board.module";
 
 @Module({
   imports: [
@@ -87,6 +91,18 @@ import { RetentionModule } from "./modules/retention/retention.module";
     NoticesModule,
     ChildrenModule,
     RetentionModule,
+    // Task 12: the s.11 access report, per-principal evidence file, audit
+    // chain verification, and the evidence pack.
+    EvidenceModule,
+    // TEMP-TASK10-VERIFY: added by task 10 to prove ConsentsModule boots
+    // and its routes are reachable, per that task's explicit verification
+    // instructions. Left in place for the wave integrator to normalise.
+    ConsentsModule,
+    // Task 13: the SDF pack (SD-01...SD-07) and the Board/Government
+    // interaction surface (BD-01...BD-06). Registered here by this task
+    // itself per its own verification instructions, and left in place.
+    SdfModule,
+    BoardModule,
     HealthModule,
   ],
   providers: [
