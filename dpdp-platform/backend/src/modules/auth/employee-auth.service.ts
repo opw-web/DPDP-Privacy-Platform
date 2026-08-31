@@ -232,17 +232,30 @@ export class EmployeeAuthService {
       actorLabel: payload.actorLabel,
     };
 
-    const outcome = await TenantContext.run(store, () =>
-      this.prisma.scoped.$transaction((tx) =>
+    // `status: "ACTIVE"` (mirrors `PrincipalAuthService.refresh`'s fix for
+    // the same shape of gap) -- a DISABLED employee's existing refresh
+    // token must stop working, not just be unable to start a NEW session.
+    // Checked before the transaction opens (rather than inside
+    // `issueNewTokenPair`, where `findFirstOrThrow` would throw and roll
+    // back the transaction, including the "invalid"/"reuse" bookkeeping
+    // `rotateRefreshToken` may have already done) so a disabled employee
+    // falls through to the SAME "invalid" outcome -- and therefore the
+    // same "Invalid refresh token" 401 below -- as an unrecognized token,
+    // with no new, distinguishable error path.
+    const outcome = await TenantContext.run(store, async () => {
+      const employee = await this.prisma.scoped.employee.findFirst({
+        where: { id: payload.sub, status: "ACTIVE" },
+      });
+      if (!employee) {
+        return { kind: "invalid" } as const;
+      }
+      return this.prisma.scoped.$transaction((tx) =>
         rotateRefreshToken(tx, this.auditService, {
           actorType: "EMPLOYEE",
           actorId: payload.sub,
           tokenHash,
           meta,
           issueNewTokenPair: async () => {
-            const employee = await tx.employee.findFirstOrThrow({
-              where: { id: payload.sub },
-            });
             const {
               accessToken,
               refreshToken: newRefreshToken,
@@ -257,8 +270,8 @@ export class EmployeeAuthService {
             };
           },
         }),
-      ),
-    );
+      );
+    });
 
     if (outcome.kind !== "ok") {
       throw new UnauthorizedException("Invalid refresh token");

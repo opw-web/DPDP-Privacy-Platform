@@ -581,6 +581,96 @@ describe("Employee auth (e2e)", () => {
     expect(updateRes.body).not.toHaveProperty("passwordHash");
   });
 
+  it("disabling an employee revokes their existing refresh tokens AND the refresh path itself refuses a non-ACTIVE employee (C-1)", async () => {
+    // Final whole-branch review, C-1 (Critical): before this fix, neither
+    // half held -- the refresh path's `findFirstOrThrow` had no `status`
+    // filter, and `update()`'s DISABLED branch never touched
+    // `RefreshToken` rows. Either half alone leaves a hole: fixing only
+    // the lookup leaves an already-issued token racing a still-in-flight
+    // disable; fixing only revocation leaves the lookup able to mint a
+    // BRAND NEW 7-day token for a disabled employee if a refresh lands
+    // between the disable's read and its revocation. Both are asserted
+    // below.
+    const adminEmail = `disable-admin-${randomUUID()}@example.com`;
+    const admin = await createOrgWithRoleAndEmployee({
+      email: adminEmail,
+      password: "CorrectHorseBattery9!",
+      permissionCodes: ["CAN_MANAGE_EMPLOYEES"],
+    });
+    const targetPassword = "CorrectHorseBattery9!";
+    const targetEmail = `disable-target-${randomUUID()}@example.com`;
+    await prisma.employee.create({
+      data: {
+        organizationId: admin.organizationId,
+        email: targetEmail,
+        fullName: "Soon Disabled",
+        roleId: admin.roleId,
+        passwordHash: await argon2.hash(targetPassword, {
+          type: argon2.argon2id,
+        }),
+        status: "ACTIVE",
+      },
+    });
+    const target = await prisma.employee.findFirstOrThrow({
+      where: { organizationId: admin.organizationId, email: targetEmail },
+    });
+
+    const adminLoginRes = await request(app.getHttpServer())
+      .post("/api/auth/employee/login")
+      .send({ email: adminEmail, password: "CorrectHorseBattery9!" });
+    const adminAccessToken = adminLoginRes.body.accessToken as string;
+
+    const targetLoginRes = await request(app.getHttpServer())
+      .post("/api/auth/employee/login")
+      .send({ email: targetEmail, password: targetPassword });
+    expect(targetLoginRes.status).toBe(200);
+    const targetCookie = extractRefreshCookie(targetLoginRes);
+
+    // Positive control: the still-ACTIVE target's refresh token works
+    // before the disable, so the 401 asserted below is attributable to
+    // the disable and not to a broken refresh endpoint.
+    const preDisableRefreshRes = await request(app.getHttpServer())
+      .post("/api/auth/employee/refresh")
+      .set("Cookie", targetCookie);
+    expect(preDisableRefreshRes.status).toBe(200);
+    const rotatedTargetCookie = extractRefreshCookie(preDisableRefreshRes);
+
+    const disableRes = await request(app.getHttpServer())
+      .patch(`/api/employees/${target.id}`)
+      .set("Authorization", `Bearer ${adminAccessToken}`)
+      .send({ status: "DISABLED" });
+    expect(disableRes.status).toBe(200);
+    expect(disableRes.body.status).toBe("DISABLED");
+
+    // Half 1: revocation. The token rotated just before the disable must
+    // now be dead in the database, not merely "would fail a future status
+    // check" -- proves `update()` actively revoked it rather than relying
+    // solely on the refresh-path filter.
+    const activeTokens = await prisma.refreshToken.findMany({
+      where: {
+        organizationId: admin.organizationId,
+        actorType: "EMPLOYEE",
+        actorId: target.id,
+        revokedAt: null,
+      },
+    });
+    expect(activeTokens).toHaveLength(0);
+
+    // Half 2: the refresh path itself refuses a non-ACTIVE employee, with
+    // the SAME "Invalid refresh token" 401 as an unknown/expired token --
+    // no distinguishable error path that would leak account state.
+    const postDisableRefreshRes = await request(app.getHttpServer())
+      .post("/api/auth/employee/refresh")
+      .set("Cookie", rotatedTargetCookie);
+    expect(postDisableRefreshRes.status).toBe(401);
+    // Same "Invalid refresh token" message as the ordinary
+    // rotated-away-old-token 401 asserted elsewhere in this file (see
+    // "refresh rotates the token and the old one then fails") -- no new,
+    // distinguishable error path that would leak "this account exists but
+    // is disabled" to the caller.
+    expect(postDisableRefreshRes.body.message).toBe("Invalid refresh token");
+  });
+
   it("ambiguous login (same email in two organizations) fails loudly instead of silently picking one", async () => {
     // Task 5 review Important 1.
     const sharedEmail = `ambiguous-${randomUUID()}@example.com`;

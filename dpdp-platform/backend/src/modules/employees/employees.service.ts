@@ -135,6 +135,24 @@ export class EmployeesService {
       }
 
       if (becomingDisabled) {
+        // The refresh path (`EmployeeAuthService.refresh`) now refuses a
+        // non-ACTIVE employee, but that only closes the gap for a
+        // refresh that arrives AFTER this transaction commits. Without
+        // this, an already-issued, not-yet-expired `RefreshToken` row
+        // stays usable and a disable that visibly succeeds (this audit
+        // event) would in fact revoke nothing -- C-1. Revoking here too
+        // closes the mid-disable race: a refresh racing this update
+        // either rotates before this commits (and its new token is
+        // caught by the status filter on its NEXT refresh) or after (and
+        // finds no unrevoked token at all).
+        await tx.refreshToken.updateMany({
+          where: {
+            actorType: "EMPLOYEE",
+            actorId: id,
+            revokedAt: null,
+          },
+          data: { revokedAt: new Date() },
+        });
         await this.auditService.record(tx, {
           action: "EMPLOYEE_DISABLED",
           resourceType: "Employee",
