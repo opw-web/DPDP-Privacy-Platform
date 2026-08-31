@@ -182,6 +182,254 @@ describe("Compliance rules (e2e)", () => {
       expect(res.status).toBe(201);
       expect(res.body.deadlineValue).toBe(90);
     });
+
+    /**
+     * Regression coverage for the bug this task fixes: the original
+     * check only ever compared `deadlineUnit === "DAYS"`, so
+     * `{deadlineValue: 6, deadlineUnit: "MONTHS"}` (~180 days) got a
+     * clean 200 through this exact route. Every non-DAYS unit needs a
+     * passing and a failing value against the worst-case day count
+     * (HOURS -> ceil(value/24), MONTHS -> value*31, YEARS ->
+     * value*366), exercised through both POST (create) and PATCH
+     * (update) -- PATCH is how an existing seeded rule (e.g. the
+     * platform's own seeded GRIEVANCE_RESPONSE row) would actually be
+     * changed by an admin with CAN_CHANGE_COMPLIANCE_CONFIG.
+     *
+     * `deadlineValue` is `@IsInt() @Min(1)`, and even the smallest legal
+     * YEARS value (1) is already 366 worst-case days -- over four times
+     * the ceiling. There is no integer YEARS value that could ever pass
+     * for GRIEVANCE_RESPONSE, so the YEARS coverage below is
+     * deliberately failing-only.
+     */
+    function grievancePayload(overrides: {
+      deadlineValue: number;
+      deadlineUnit: "HOURS" | "DAYS" | "MONTHS" | "YEARS";
+    }) {
+      return {
+        ruleCode: "GRIEVANCE_RESPONSE",
+        name: "Grievance response deadline",
+        legalSource:
+          "DPDP Rules, 2025 — Rule 14(3): published period must not exceed ninety days",
+        basis: "STATUTORY" as const,
+        appliesTo: "REQUEST:GRIEVANCE",
+        warningLead: 14,
+        ...overrides,
+      };
+    }
+
+    it("POST rejects 2161 HOURS (91 days worst-case, ceil(2161/24) = 91) with the Rule 14(3) citation", async () => {
+      const grantee = await createOrgWithEmployee(
+        app,
+        prisma,
+        "COMPLIANCE_GRV_HOURS_BAD",
+        ["CAN_CHANGE_COMPLIANCE_CONFIG"],
+      );
+      orgIds.push(grantee.organizationId);
+
+      const res = await request(app.getHttpServer())
+        .post("/api/compliance-rules")
+        .set("Authorization", `Bearer ${grantee.accessToken}`)
+        .send(grievancePayload({ deadlineValue: 2161, deadlineUnit: "HOURS" }));
+
+      expect(res.status).toBe(400);
+      expect(JSON.stringify(res.body)).toContain(GRIEVANCE_CITATION_FRAGMENT);
+    });
+
+    it("POST accepts 2160 HOURS (exactly 90 days worst-case)", async () => {
+      const grantee = await createOrgWithEmployee(
+        app,
+        prisma,
+        "COMPLIANCE_GRV_HOURS_OK",
+        ["CAN_CHANGE_COMPLIANCE_CONFIG"],
+      );
+      orgIds.push(grantee.organizationId);
+
+      const res = await request(app.getHttpServer())
+        .post("/api/compliance-rules")
+        .set("Authorization", `Bearer ${grantee.accessToken}`)
+        .send(grievancePayload({ deadlineValue: 2160, deadlineUnit: "HOURS" }));
+
+      expect(res.status).toBe(201);
+      expect(res.body.deadlineValue).toBe(2160);
+    });
+
+    it("POST rejects 3 MONTHS (93 days worst-case) with the Rule 14(3) citation -- this is the bug's exact shape", async () => {
+      const grantee = await createOrgWithEmployee(
+        app,
+        prisma,
+        "COMPLIANCE_GRV_MONTHS_BAD",
+        ["CAN_CHANGE_COMPLIANCE_CONFIG"],
+      );
+      orgIds.push(grantee.organizationId);
+
+      const res = await request(app.getHttpServer())
+        .post("/api/compliance-rules")
+        .set("Authorization", `Bearer ${grantee.accessToken}`)
+        .send(grievancePayload({ deadlineValue: 3, deadlineUnit: "MONTHS" }));
+
+      expect(res.status).toBe(400);
+      expect(JSON.stringify(res.body)).toContain(GRIEVANCE_CITATION_FRAGMENT);
+    });
+
+    it("POST rejects 6 MONTHS (186 days worst-case) -- the original report's PoC payload", async () => {
+      const grantee = await createOrgWithEmployee(
+        app,
+        prisma,
+        "COMPLIANCE_GRV_MONTHS_POC",
+        ["CAN_CHANGE_COMPLIANCE_CONFIG"],
+      );
+      orgIds.push(grantee.organizationId);
+
+      const res = await request(app.getHttpServer())
+        .post("/api/compliance-rules")
+        .set("Authorization", `Bearer ${grantee.accessToken}`)
+        .send(grievancePayload({ deadlineValue: 6, deadlineUnit: "MONTHS" }));
+
+      expect(res.status).toBe(400);
+      expect(JSON.stringify(res.body)).toContain(GRIEVANCE_CITATION_FRAGMENT);
+    });
+
+    it("POST accepts 2 MONTHS (62 days worst-case)", async () => {
+      const grantee = await createOrgWithEmployee(
+        app,
+        prisma,
+        "COMPLIANCE_GRV_MONTHS_OK",
+        ["CAN_CHANGE_COMPLIANCE_CONFIG"],
+      );
+      orgIds.push(grantee.organizationId);
+
+      const res = await request(app.getHttpServer())
+        .post("/api/compliance-rules")
+        .set("Authorization", `Bearer ${grantee.accessToken}`)
+        .send(grievancePayload({ deadlineValue: 2, deadlineUnit: "MONTHS" }));
+
+      expect(res.status).toBe(201);
+      expect(res.body.deadlineValue).toBe(2);
+    });
+
+    it("POST rejects 1 YEAR (366 days worst-case, the smallest legal YEARS value) with the Rule 14(3) citation", async () => {
+      const grantee = await createOrgWithEmployee(
+        app,
+        prisma,
+        "COMPLIANCE_GRV_YEARS_BAD",
+        ["CAN_CHANGE_COMPLIANCE_CONFIG"],
+      );
+      orgIds.push(grantee.organizationId);
+
+      const res = await request(app.getHttpServer())
+        .post("/api/compliance-rules")
+        .set("Authorization", `Bearer ${grantee.accessToken}`)
+        .send(grievancePayload({ deadlineValue: 1, deadlineUnit: "YEARS" }));
+
+      expect(res.status).toBe(400);
+      expect(JSON.stringify(res.body)).toContain(GRIEVANCE_CITATION_FRAGMENT);
+    });
+
+    it("PATCH: an existing seeded GRIEVANCE_RESPONSE row cannot be moved to 6 MONTHS (186 days worst-case) -- this is the actual reachable path an admin would use", async () => {
+      const grantee = await createOrgWithEmployee(
+        app,
+        prisma,
+        "COMPLIANCE_GRV_PATCH_BAD",
+        ["CAN_CHANGE_COMPLIANCE_CONFIG"],
+      );
+      orgIds.push(grantee.organizationId);
+
+      const now = new Date();
+      const target = await prisma.complianceRule.create({
+        data: {
+          organizationId: grantee.organizationId,
+          ruleCode: "GRIEVANCE_RESPONSE",
+          version: 1,
+          name: "Grievance response deadline",
+          legalSource:
+            "DPDP Rules, 2025 — Rule 14(3): published period must not exceed ninety days",
+          basis: "STATUTORY",
+          appliesTo: "REQUEST:GRIEVANCE",
+          deadlineValue: 60,
+          deadlineUnit: "DAYS",
+          warningLead: 14,
+          effectiveFrom: now,
+        },
+      });
+
+      const res = await request(app.getHttpServer())
+        .patch(`/api/compliance-rules/${target.id}`)
+        .set("Authorization", `Bearer ${grantee.accessToken}`)
+        .send({ deadlineValue: 6, deadlineUnit: "MONTHS" });
+
+      expect(res.status).toBe(400);
+      expect(JSON.stringify(res.body)).toContain(GRIEVANCE_CITATION_FRAGMENT);
+    });
+
+    it("PATCH: an existing seeded GRIEVANCE_RESPONSE row can be moved to 2 MONTHS (62 days worst-case, accepted)", async () => {
+      const grantee = await createOrgWithEmployee(
+        app,
+        prisma,
+        "COMPLIANCE_GRV_PATCH_OK",
+        ["CAN_CHANGE_COMPLIANCE_CONFIG"],
+      );
+      orgIds.push(grantee.organizationId);
+
+      const now = new Date();
+      const target = await prisma.complianceRule.create({
+        data: {
+          organizationId: grantee.organizationId,
+          ruleCode: "GRIEVANCE_RESPONSE",
+          version: 1,
+          name: "Grievance response deadline",
+          legalSource:
+            "DPDP Rules, 2025 — Rule 14(3): published period must not exceed ninety days",
+          basis: "STATUTORY",
+          appliesTo: "REQUEST:GRIEVANCE",
+          deadlineValue: 60,
+          deadlineUnit: "DAYS",
+          warningLead: 14,
+          effectiveFrom: now,
+        },
+      });
+
+      const res = await request(app.getHttpServer())
+        .patch(`/api/compliance-rules/${target.id}`)
+        .set("Authorization", `Bearer ${grantee.accessToken}`)
+        .send({ deadlineValue: 2, deadlineUnit: "MONTHS" });
+
+      expect(res.status).toBe(200);
+      expect(res.body.deadlineValue).toBe(2);
+      expect(res.body.deadlineUnit).toBe("MONTHS");
+    });
+
+    it("the ceiling does not apply to non-GRIEVANCE_RESPONSE rule codes: SDF_ASSESSMENT_CYCLE at 12 MONTHS (372 days worst-case) is accepted on both POST and PATCH", async () => {
+      const grantee = await createOrgWithEmployee(
+        app,
+        prisma,
+        "COMPLIANCE_SDF_12MONTHS",
+        ["CAN_CHANGE_COMPLIANCE_CONFIG"],
+      );
+      orgIds.push(grantee.organizationId);
+
+      const postRes = await request(app.getHttpServer())
+        .post("/api/compliance-rules")
+        .set("Authorization", `Bearer ${grantee.accessToken}`)
+        .send({
+          ruleCode: "SDF_ASSESSMENT_CYCLE",
+          name: "SDF assessment cycle",
+          legalSource: "Company policy",
+          basis: "STATUTORY",
+          appliesTo: "SDF:ASSESSMENT",
+          deadlineValue: 12,
+          deadlineUnit: "MONTHS",
+          warningLead: 30,
+        });
+      expect(postRes.status).toBe(201);
+      expect(postRes.body.deadlineValue).toBe(12);
+
+      const patchRes = await request(app.getHttpServer())
+        .patch(`/api/compliance-rules/${postRes.body.id}`)
+        .set("Authorization", `Bearer ${grantee.accessToken}`)
+        .send({ deadlineValue: 12, deadlineUnit: "MONTHS" });
+      expect(patchRes.status).toBe(200);
+      expect(patchRes.body.deadlineValue).toBe(12);
+    });
   });
 
   describe("Permission enforcement (each 403 carries a positive control on the same route/payload)", () => {

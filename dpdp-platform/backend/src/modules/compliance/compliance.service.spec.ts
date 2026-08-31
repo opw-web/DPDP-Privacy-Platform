@@ -354,4 +354,286 @@ describe("ComplianceService - GRIEVANCE_RESPONSE 90-day ceiling (Check 6)", () =
       }),
     ).resolves.toBeDefined();
   });
+
+  /**
+   * Regression coverage for the bug this task fixes: the original
+   * `validateGrievanceCeiling` only ever compared `deadlineUnit ===
+   * "DAYS"`, so a HOURS/MONTHS/YEARS deadline bypassed Rule 14(3)'s
+   * ceiling entirely (e.g. `{deadlineValue: 6, deadlineUnit: "MONTHS"}`,
+   * ~180 days, returned 200). Every non-DAYS unit now needs its own
+   * passing/failing pair against the worst-case day count
+   * (`worstCaseDeadlineDays`: HOURS -> ceil(value/24), MONTHS ->
+   * value*31, YEARS -> value*366).
+   *
+   * `deadlineValue` is `@IsInt() @Min(1)` at the DTO layer, and even the
+   * smallest legal YEARS value (1) is already 366 worst-case days --
+   * over four times the ceiling. There is therefore no integer YEARS
+   * value that could ever pass this check for GRIEVANCE_RESPONSE; the
+   * YEARS coverage below is deliberately failing-only, and that is the
+   * ceiling working as intended, not a gap in coverage.
+   */
+  describe("create() - every deadlineUnit is checked, not just DAYS", () => {
+    it("HOURS: accepts 2160 hours (exactly 90 days worst-case)", async () => {
+      const { service, findFirst, txComplianceRule } = buildService();
+      findFirst.mockResolvedValue(null);
+      txComplianceRule.create.mockResolvedValue(
+        buildRule({ deadlineValue: 2160, deadlineUnit: "HOURS" }),
+      );
+
+      await expect(
+        service.create({
+          ruleCode: "GRIEVANCE_RESPONSE",
+          name: "Grievance response deadline",
+          legalSource:
+            "DPDP Rules, 2025 — Rule 14(3): published period must not exceed ninety days",
+          basis: "STATUTORY",
+          appliesTo: "REQUEST:GRIEVANCE",
+          deadlineValue: 2160,
+          deadlineUnit: "HOURS",
+          warningLead: 14,
+        }),
+      ).resolves.toBeDefined();
+    });
+
+    it("HOURS: refuses 2161 hours (91 days worst-case, ceil(2161/24) = 91) with the Rule 14(3) citation", async () => {
+      const { service, findFirst } = buildService();
+      findFirst.mockResolvedValue(null);
+
+      await expect(
+        service.create({
+          ruleCode: "GRIEVANCE_RESPONSE",
+          name: "Grievance response deadline",
+          legalSource:
+            "DPDP Rules, 2025 — Rule 14(3): published period must not exceed ninety days",
+          basis: "STATUTORY",
+          appliesTo: "REQUEST:GRIEVANCE",
+          deadlineValue: 2161,
+          deadlineUnit: "HOURS",
+          warningLead: 14,
+        }),
+      ).rejects.toThrow(/Rule 14\(3\)/);
+    });
+
+    it("MONTHS: accepts 2 months (62 days worst-case)", async () => {
+      const { service, findFirst, txComplianceRule } = buildService();
+      findFirst.mockResolvedValue(null);
+      txComplianceRule.create.mockResolvedValue(
+        buildRule({ deadlineValue: 2, deadlineUnit: "MONTHS" }),
+      );
+
+      await expect(
+        service.create({
+          ruleCode: "GRIEVANCE_RESPONSE",
+          name: "Grievance response deadline",
+          legalSource:
+            "DPDP Rules, 2025 — Rule 14(3): published period must not exceed ninety days",
+          basis: "STATUTORY",
+          appliesTo: "REQUEST:GRIEVANCE",
+          deadlineValue: 2,
+          deadlineUnit: "MONTHS",
+          warningLead: 14,
+        }),
+      ).resolves.toBeDefined();
+    });
+
+    it("MONTHS: refuses 3 months (93 days worst-case) with the Rule 14(3) citation -- this is the bug's exact shape (previously only DAYS was checked)", async () => {
+      const { service, findFirst } = buildService();
+      findFirst.mockResolvedValue(null);
+
+      await expect(
+        service.create({
+          ruleCode: "GRIEVANCE_RESPONSE",
+          name: "Grievance response deadline",
+          legalSource:
+            "DPDP Rules, 2025 — Rule 14(3): published period must not exceed ninety days",
+          basis: "STATUTORY",
+          appliesTo: "REQUEST:GRIEVANCE",
+          deadlineValue: 3,
+          deadlineUnit: "MONTHS",
+          warningLead: 14,
+        }),
+      ).rejects.toThrow(/Rule 14\(3\)/);
+    });
+
+    it("MONTHS: refuses 6 months (186 days worst-case) -- the report's original PoC payload", async () => {
+      const { service, findFirst } = buildService();
+      findFirst.mockResolvedValue(null);
+
+      await expect(
+        service.create({
+          ruleCode: "GRIEVANCE_RESPONSE",
+          name: "Grievance response deadline",
+          legalSource:
+            "DPDP Rules, 2025 — Rule 14(3): published period must not exceed ninety days",
+          basis: "STATUTORY",
+          appliesTo: "REQUEST:GRIEVANCE",
+          deadlineValue: 6,
+          deadlineUnit: "MONTHS",
+          warningLead: 14,
+        }),
+      ).rejects.toThrow(/Rule 14\(3\)/);
+    });
+
+    it("YEARS: refuses even the smallest legal value, 1 year (366 days worst-case) with the Rule 14(3) citation", async () => {
+      const { service, findFirst } = buildService();
+      findFirst.mockResolvedValue(null);
+
+      await expect(
+        service.create({
+          ruleCode: "GRIEVANCE_RESPONSE",
+          name: "Grievance response deadline",
+          legalSource:
+            "DPDP Rules, 2025 — Rule 14(3): published period must not exceed ninety days",
+          basis: "STATUTORY",
+          appliesTo: "REQUEST:GRIEVANCE",
+          deadlineValue: 1,
+          deadlineUnit: "YEARS",
+          warningLead: 14,
+        }),
+      ).rejects.toThrow(/Rule 14\(3\)/);
+    });
+  });
+
+  describe("update() (PATCH) - the ceiling is re-checked on the effective merged value, for every unit", () => {
+    it("MONTHS: PATCHing an existing GRIEVANCE_RESPONSE row to 3 months (93 days worst-case) is refused", async () => {
+      const { service, findFirst } = buildService();
+      const v1 = buildRule({
+        id: "rule-1",
+        ruleCode: "GRIEVANCE_RESPONSE",
+        version: 1,
+        deadlineValue: 60,
+        deadlineUnit: "DAYS",
+      });
+      findFirst.mockResolvedValueOnce(v1).mockResolvedValueOnce(v1);
+
+      await expect(
+        service.update("rule-1", { deadlineValue: 3, deadlineUnit: "MONTHS" }),
+      ).rejects.toThrow(/Rule 14\(3\)/);
+    });
+
+    it("HOURS: PATCHing an existing GRIEVANCE_RESPONSE row to 2161 hours (91 days worst-case) is refused", async () => {
+      const { service, findFirst } = buildService();
+      const v1 = buildRule({
+        id: "rule-1",
+        ruleCode: "GRIEVANCE_RESPONSE",
+        version: 1,
+        deadlineValue: 60,
+        deadlineUnit: "DAYS",
+      });
+      findFirst.mockResolvedValueOnce(v1).mockResolvedValueOnce(v1);
+
+      await expect(
+        service.update("rule-1", { deadlineValue: 2161, deadlineUnit: "HOURS" }),
+      ).rejects.toThrow(/Rule 14\(3\)/);
+    });
+
+    it("YEARS: PATCHing an existing GRIEVANCE_RESPONSE row to 1 year (366 days worst-case) is refused", async () => {
+      const { service, findFirst } = buildService();
+      const v1 = buildRule({
+        id: "rule-1",
+        ruleCode: "GRIEVANCE_RESPONSE",
+        version: 1,
+        deadlineValue: 60,
+        deadlineUnit: "DAYS",
+      });
+      findFirst.mockResolvedValueOnce(v1).mockResolvedValueOnce(v1);
+
+      await expect(
+        service.update("rule-1", { deadlineValue: 1, deadlineUnit: "YEARS" }),
+      ).rejects.toThrow(/Rule 14\(3\)/);
+    });
+
+    it("PATCHing deadlineUnit alone (no deadlineValue in the body) re-checks the ceiling against the merged effective value -- 90 DAYS reinterpreted as 90 MONTHS (2790 days worst-case) is refused", async () => {
+      const { service, findFirst } = buildService();
+      const v1 = buildRule({
+        id: "rule-1",
+        ruleCode: "GRIEVANCE_RESPONSE",
+        version: 1,
+        deadlineValue: 90,
+        deadlineUnit: "DAYS",
+      });
+      findFirst.mockResolvedValueOnce(v1).mockResolvedValueOnce(v1);
+
+      await expect(
+        service.update("rule-1", { deadlineUnit: "MONTHS" }),
+      ).rejects.toThrow(/Rule 14\(3\)/);
+    });
+
+    it("MONTHS: PATCHing an existing GRIEVANCE_RESPONSE row to 2 months (62 days worst-case) is accepted", async () => {
+      const { service, findFirst, txComplianceRule } = buildService();
+      const v1 = buildRule({
+        id: "rule-1",
+        ruleCode: "GRIEVANCE_RESPONSE",
+        version: 1,
+        deadlineValue: 60,
+        deadlineUnit: "DAYS",
+      });
+      findFirst.mockResolvedValueOnce(v1).mockResolvedValueOnce(v1);
+      txComplianceRule.create.mockResolvedValue(
+        buildRule({
+          id: "rule-2",
+          ruleCode: "GRIEVANCE_RESPONSE",
+          version: 2,
+          deadlineValue: 2,
+          deadlineUnit: "MONTHS",
+        }),
+      );
+
+      await expect(
+        service.update("rule-1", { deadlineValue: 2, deadlineUnit: "MONTHS" }),
+      ).resolves.toBeDefined();
+    });
+  });
+
+  describe("the ceiling does not apply to non-GRIEVANCE_RESPONSE rule codes", () => {
+    it("create(): SDF_ASSESSMENT_CYCLE at 12 MONTHS (372 days worst-case) is accepted -- it is a legitimate non-grievance rule, not subject to Rule 14(3)", async () => {
+      const { service, findFirst, txComplianceRule } = buildService();
+      findFirst.mockResolvedValue(null);
+      txComplianceRule.create.mockResolvedValue(
+        buildRule({
+          ruleCode: "SDF_ASSESSMENT_CYCLE",
+          deadlineValue: 12,
+          deadlineUnit: "MONTHS",
+        }),
+      );
+
+      await expect(
+        service.create({
+          ruleCode: "SDF_ASSESSMENT_CYCLE",
+          name: "SDF assessment cycle",
+          legalSource: "Company policy",
+          basis: "STATUTORY",
+          appliesTo: "SDF:ASSESSMENT",
+          deadlineValue: 12,
+          deadlineUnit: "MONTHS",
+          warningLead: 30,
+        }),
+      ).resolves.toBeDefined();
+    });
+
+    it("update(): PATCHing SDF_ASSESSMENT_CYCLE to 12 MONTHS is accepted", async () => {
+      const { service, findFirst, txComplianceRule } = buildService();
+      const v1 = buildRule({
+        id: "rule-1",
+        ruleCode: "SDF_ASSESSMENT_CYCLE",
+        version: 1,
+        deadlineValue: 6,
+        deadlineUnit: "MONTHS",
+      });
+      findFirst.mockResolvedValueOnce(v1).mockResolvedValueOnce(v1);
+      txComplianceRule.create.mockResolvedValue(
+        buildRule({
+          id: "rule-2",
+          ruleCode: "SDF_ASSESSMENT_CYCLE",
+          version: 2,
+          deadlineValue: 12,
+          deadlineUnit: "MONTHS",
+        }),
+      );
+
+      await expect(
+        service.update("rule-1", { deadlineValue: 12, deadlineUnit: "MONTHS" }),
+      ).resolves.toBeDefined();
+    });
+  });
 });

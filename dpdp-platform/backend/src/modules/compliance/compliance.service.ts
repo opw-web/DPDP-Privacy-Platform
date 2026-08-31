@@ -149,6 +149,42 @@ function diffRules(
 }
 
 /**
+ * The LONGEST possible day count `value` of `unit` could ever amount to,
+ * for the sole purpose of checking Rule 14(3)'s ninety-day ceiling
+ * (`validateGrievanceCeiling` below) -- deliberately NOT calendar-average
+ * arithmetic. A calendar month is 28-31 days and a calendar year is
+ * 365-366, so a naive per-unit `deadlineValue > 90` check (the original
+ * bug: it only ever looked at `deadlineUnit === "DAYS"`) or even an
+ * average-length conversion (30.44 days/month, 365.25 days/year) both
+ * let some MONTHS/YEARS values silently exceed ninety actual days.
+ * Rounding every unit UP to its longest possible interpretation instead
+ * means a rejection is always safe to appeal (re-express the same period
+ * in DAYS and it may well fit) while an acceptance is never a
+ * contravention. Do not "optimise" this into average month/year
+ * lengths later -- that swap is exactly what would reopen the hole this
+ * function exists to close. HOURS rounds UP to the next whole day
+ * (`ceil`, not `floor`) for the same reason: a 25-hour deadline is
+ * worst-case 2 days, not 1.
+ */
+function worstCaseDeadlineDays(value: number, unit: DeadlineUnit): number {
+  switch (unit) {
+    case "HOURS":
+      return Math.ceil(value / 24);
+    case "DAYS":
+      return value;
+    case "MONTHS":
+      return value * 31;
+    case "YEARS":
+      return value * 366;
+    /* istanbul ignore next -- exhaustive switch over a Prisma enum */
+    default: {
+      const exhaustive: never = unit;
+      throw new Error(`Unknown DeadlineUnit: ${String(exhaustive)}`);
+    }
+  }
+}
+
+/**
  * Adds `value` of `unit` to `from` using calendar-aware `date-fns`
  * arithmetic -- never millisecond multiplication. `addMonths`/`addYears`
  * clip an overflowing day to the last day of the resulting month (a
@@ -270,9 +306,17 @@ export class ComplianceService {
   }
 
   /**
-   * `GRIEVANCE_RESPONSE` refuses a DAYS-unit `deadlineValue` over 90 --
-   * Rule 14(3)'s statutory ceiling. The citation string is included
-   * verbatim in the thrown message so it reaches the HTTP 400 body.
+   * `GRIEVANCE_RESPONSE` refuses ANY `deadlineValue`/`deadlineUnit` pair
+   * whose worst-case day count (`worstCaseDeadlineDays` above) exceeds
+   * 90 -- Rule 14(3)'s statutory ceiling. This is a single check against
+   * a normalised day count, not one branch per unit: the bug this
+   * replaced checked `deadlineUnit === "DAYS"` only, so `{deadlineValue:
+   * 6, deadlineUnit: "MONTHS"}` (~180 days) sailed through with a 200.
+   * Adding HOURS/MONTHS/YEARS branches alongside the DAYS one would
+   * reproduce that shape of bug the next time a unit is added; comparing
+   * one normalised number is not extensible in the same broken way. The
+   * citation string is included verbatim in the thrown message so it
+   * reaches the HTTP 400 body.
    */
   private validateGrievanceCeiling(
     ruleCode: string,
@@ -282,10 +326,12 @@ export class ComplianceService {
     if (ruleCode !== GRIEVANCE_RULE_CODE) {
       return;
     }
-    if (deadlineUnit === "DAYS" && deadlineValue > GRIEVANCE_CEILING_DAYS) {
+    const worstCaseDays = worstCaseDeadlineDays(deadlineValue, deadlineUnit);
+    if (worstCaseDays > GRIEVANCE_CEILING_DAYS) {
       throw new BadRequestException(
-        `A ${GRIEVANCE_RULE_CODE} deadline cannot exceed ${GRIEVANCE_CEILING_DAYS} days ` +
-          `(got ${deadlineValue}). ${GRIEVANCE_CITATION}.`,
+        `A ${GRIEVANCE_RULE_CODE} deadline of ${deadlineValue} ${deadlineUnit} is ` +
+          `at least ${worstCaseDays} days under worst-case calendar arithmetic, which ` +
+          `exceeds the ${GRIEVANCE_CEILING_DAYS}-day ceiling. ${GRIEVANCE_CITATION}.`,
       );
     }
   }
