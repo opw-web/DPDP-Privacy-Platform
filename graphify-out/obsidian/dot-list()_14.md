@@ -1,19 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/sharing.service.ts"
 type: "code"
-community: "RequirePermission"
-location: "L30"
+community: "CreateSharingActivityDto"
+location: "L59"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/CreateSharingActivityDto
 ---
 
 # .list()
 
 ## Connections
-- [[DataSourcesController]] - `method` [EXTRACTED]
-- [[Get_10]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[SharingService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

@@ -12,6 +12,6 @@ tags:
 # seed
 
 ## Connections
-- [[scripts_1]] - `contains` [EXTRACTED]
+- [[scripts_2]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/demo-company-server/packagejson

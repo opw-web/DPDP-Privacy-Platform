@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdateOrganizationDto"
+community: "sync.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateOrganizationDto
+  - community/syncservicets
 ---
 
 # Get
 
 ## Connections
-- [[dot-get()]] - `references` [EXTRACTED]
+- [[dot-get()_3]] - `references` [EXTRACTED]
+- [[dot-list()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateOrganizationDto
+#graphify/code #graphify/EXTRACTED #community/syncservicets

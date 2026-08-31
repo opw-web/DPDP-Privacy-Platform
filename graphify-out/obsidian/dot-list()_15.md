@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
 type: "code"
 community: "RequirePermission"
-location: "L17"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,8 +12,8 @@ tags:
 # .list()
 
 ## Connections
-- [[Get_11]] - `references` [EXTRACTED]
-- [[PurposesController]] - `method` [EXTRACTED]
+- [[DataSourcesController]] - `method` [EXTRACTED]
+- [[Get_12]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/RequirePermission

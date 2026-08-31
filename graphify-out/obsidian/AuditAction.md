@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/audit/audit-actions.ts"
 type: "code"
-community: "audit.service.ts"
-location: "L14"
+community: "tenant-context.ts"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/auditservicets
+  - community/tenant-contextts
 ---
 
 # AuditAction
@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[AuditRecordInput]] - `references` [EXTRACTED]
 - [[audit-actions.ts]] - `contains` [EXTRACTED]
+- [[audit-read.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[audit.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/auditservicets
+#graphify/code #graphify/EXTRACTED #community/tenant-contextts

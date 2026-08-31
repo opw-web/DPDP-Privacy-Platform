@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "eslint-plugin-prettier"
-location: "L58"
+community: "devDependencies"
+location: "L63"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/eslint-plugin-prettier
+  - community/devDependencies
 ---
 
 # eslint-plugin-prettier
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[eslint-plugin-prettier]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/eslint-plugin-prettier
+#graphify/concept #graphify/EXTRACTED #community/devDependencies

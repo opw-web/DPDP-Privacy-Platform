@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "app.module.ts"
+community: "PrismaModule"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/appmodulets
+  - community/PrismaModule
 ---
 
 # Global
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[PrismaModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/appmodulets
+#graphify/code #graphify/EXTRACTED #community/PrismaModule

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "mappings.service.ts"
+community: "HealthService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingsservicets
+  - community/HealthService
 ---
 
 # Module
 
 ## Connections
-- [[DataSourcesModule]] - `references` [EXTRACTED]
+- [[HealthModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/EXTRACTED #community/HealthService

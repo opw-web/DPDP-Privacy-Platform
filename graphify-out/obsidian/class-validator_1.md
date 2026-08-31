@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
 community: "class-validator"
-location: "L33"
+location: "L36"
 tags:
   - graphify/concept
   - graphify/EXTRACTED

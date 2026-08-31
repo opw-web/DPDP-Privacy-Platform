@@ -1,21 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/retention.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/employees.service.ts"
 type: "code"
-community: "retention.service.ts"
-location: "L21"
+community: "employees.controller.ts"
+location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/employeescontrollerts
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_8]] - `calls` [INFERRED]
-- [[Get_7]] - `references` [EXTRACTED]
-- [[Param_5]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[RetentionController]] - `method` [EXTRACTED]
+- [[dot-get()_6]] - `calls` [INFERRED]
+- [[EmployeesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/employeescontrollerts

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "prisma.service.ts"
+community: "AccessTokenPayload"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/AccessTokenPayload
 ---
 
 # Injectable
 
 ## Connections
-- [[ReferenceService]] - `references` [EXTRACTED]
+- [[PermissionsGuard]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

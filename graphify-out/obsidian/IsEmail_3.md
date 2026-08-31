@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Public"
+community: "EmployeeAuthController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/EmployeeAuthController
 ---
 
 # IsEmail
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[EmployeeLoginDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController

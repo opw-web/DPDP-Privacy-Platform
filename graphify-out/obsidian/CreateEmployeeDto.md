@@ -1,25 +1,25 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/employees/dto/create-employee.dto.ts"
 type: "code"
-community: "CreateEmployeeDto"
+community: "employees.controller.ts"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateEmployeeDto
+  - community/employeescontrollerts
 ---
 
 # CreateEmployeeDto
 
 ## Connections
-- [[dot-create()_15]] - `references` [EXTRACTED]
-- [[dot-create()_16]] - `references` [EXTRACTED]
-- [[ApiProperty_13]] - `references` [EXTRACTED]
-- [[IsEmail_5]] - `references` [EXTRACTED]
-- [[IsString_23]] - `references` [EXTRACTED]
-- [[MinLength_20]] - `references` [EXTRACTED]
+- [[dot-create()_5]] - `references` [EXTRACTED]
+- [[dot-create()_6]] - `references` [EXTRACTED]
+- [[ApiProperty_7]] - `references` [EXTRACTED]
+- [[IsEmail_2]] - `references` [EXTRACTED]
+- [[IsString_10]] - `references` [EXTRACTED]
+- [[MinLength_7]] - `references` [EXTRACTED]
 - [[create-employee.dto.ts]] - `contains` [EXTRACTED]
 - [[employees.controller.ts]] - `imports` [EXTRACTED]
 - [[employees.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateEmployeeDto
+#graphify/code #graphify/EXTRACTED #community/employeescontrollerts

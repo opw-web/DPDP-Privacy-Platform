@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/security-measures.service.ts"
 type: "code"
-community: ".record"
+community: "security-measures.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/security-measuresservicets
 ---
 
 # security-measures.service.ts
@@ -17,7 +17,7 @@ tags:
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[PublicSecurityMeasure]] - `contains` [EXTRACTED]
 - [[SECURITY_MEASURE_PUBLIC_SELECT]] - `contains` [EXTRACTED]
-- [[SecurityMeasureGroup]] - `contains` [EXTRACTED]
+- [[SecurityMeasureGroup_2]] - `contains` [EXTRACTED]
 - [[SecurityMeasuresService]] - `contains` [EXTRACTED]
 - [[UpdateSecurityMeasureDto]] - `imports` [EXTRACTED]
 - [[audit.service.ts]] - `imports_from` [EXTRACTED]
@@ -28,4 +28,4 @@ tags:
 - [[security-measures.controller.ts]] - `imports_from` [EXTRACTED]
 - [[update-security-measure.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/security-measuresservicets

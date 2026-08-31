@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/health/health.controller.ts"
 type: "code"
-community: "Public"
+community: "HealthService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/HealthService
 ---
 
 # health.controller.ts
@@ -21,4 +21,4 @@ tags:
 - [[health.service.ts]] - `imports_from` [EXTRACTED]
 - [[public.decorator.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/HealthService

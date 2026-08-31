@@ -1,28 +1,44 @@
 ---
 type: community
-members: 15
+members: 31
 ---
 
 # dependencies
 
-**Members:** 15 nodes
+**Members:** 31 nodes
 
 ## Members
-- [[@nestjsconfig]] - code - dpdp-platform/backend/package.json
-- [[@nestjsconfig_1]] - concept - dpdp-platform/backend/package.json
-- [[@nestjsswagger]] - code - dpdp-platform/backend/package.json
-- [[@nestjsswagger_1]] - concept - dpdp-platform/backend/package.json
-- [[class-transformer]] - code - dpdp-platform/backend/package.json
-- [[class-transformer_1]] - concept - dpdp-platform/backend/package.json
-- [[cookie-parser]] - code - dpdp-platform/backend/package.json
-- [[cookie-parser_1]] - concept - dpdp-platform/backend/package.json
-- [[dependencies_1]] - code - dpdp-platform/backend/package.json
-- [[pg]] - code - dpdp-platform/backend/package.json
-- [[pg_1]] - concept - dpdp-platform/backend/package.json
-- [[pino-http]] - code - dpdp-platform/backend/package.json
-- [[pino-http_1]] - concept - dpdp-platform/backend/package.json
-- [[reflect-metadata]] - code - dpdp-platform/backend/package.json
-- [[reflect-metadata_1]] - concept - dpdp-platform/backend/package.json
+- [[@hookformresolvers]] - code - dpdp-platform/frontend/package.json
+- [[@hookformresolvers_1]] - concept - dpdp-platform/frontend/package.json
+- [[@radix-uireact-label]] - code - dpdp-platform/frontend/package.json
+- [[@radix-uireact-label_1]] - concept - dpdp-platform/frontend/package.json
+- [[@radix-uireact-slot]] - code - dpdp-platform/frontend/package.json
+- [[@radix-uireact-slot_1]] - concept - dpdp-platform/frontend/package.json
+- [[@radix-uireact-tabs]] - code - dpdp-platform/frontend/package.json
+- [[@radix-uireact-tabs_1]] - concept - dpdp-platform/frontend/package.json
+- [[@radix-uireact-tooltip]] - code - dpdp-platform/frontend/package.json
+- [[@radix-uireact-tooltip_1]] - concept - dpdp-platform/frontend/package.json
+- [[@tanstackreact-query]] - code - dpdp-platform/frontend/package.json
+- [[@tanstackreact-query_1]] - concept - dpdp-platform/frontend/package.json
+- [[@tanstackreact-table]] - code - dpdp-platform/frontend/package.json
+- [[@tanstackreact-table_1]] - concept - dpdp-platform/frontend/package.json
+- [[class-variance-authority]] - code - dpdp-platform/frontend/package.json
+- [[class-variance-authority_1]] - concept - dpdp-platform/frontend/package.json
+- [[clsx]] - code - dpdp-platform/frontend/package.json
+- [[clsx_1]] - concept - dpdp-platform/frontend/package.json
+- [[dependencies]] - code - dpdp-platform/frontend/package.json
+- [[lucide-react]] - code - dpdp-platform/frontend/package.json
+- [[lucide-react_1]] - concept - dpdp-platform/frontend/package.json
+- [[papaparse]] - code - dpdp-platform/frontend/package.json
+- [[papaparse_1]] - concept - dpdp-platform/frontend/package.json
+- [[react]] - code - dpdp-platform/frontend/package.json
+- [[react_1]] - concept - dpdp-platform/frontend/package.json
+- [[react-hook-form]] - code - dpdp-platform/frontend/package.json
+- [[react-hook-form_1]] - concept - dpdp-platform/frontend/package.json
+- [[react-router-dom]] - code - dpdp-platform/frontend/package.json
+- [[react-router-dom_1]] - concept - dpdp-platform/frontend/package.json
+- [[tailwind-merge]] - code - dpdp-platform/frontend/package.json
+- [[tailwind-merge_1]] - concept - dpdp-platform/frontend/package.json
 
 ## Live Query (requires Dataview plugin)
 
@@ -32,17 +48,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_backendpackage.json]]
-- 1 edge to [[_COMMUNITY_@nestjscommon]]
-- 1 edge to [[_COMMUNITY_@nestjscore]]
-- 1 edge to [[_COMMUNITY_@nestjsplatform-express]]
-- 1 edge to [[_COMMUNITY_@prismaclient]]
-- 1 edge to [[_COMMUNITY_argon2]]
-- 1 edge to [[_COMMUNITY_class-validator]]
-- 1 edge to [[_COMMUNITY_ioredis]]
-- 1 edge to [[_COMMUNITY_jsonwebtoken]]
-- 1 edge to [[_COMMUNITY_nestjs-pino]]
-- 1 edge to [[_COMMUNITY_rxjs]]
+- 1 edge to [[_COMMUNITY_frontendpackage.json]]
+- 1 edge to [[_COMMUNITY_@radix-uireact-dialog]]
+- 1 edge to [[_COMMUNITY_react-dom]]
+- 1 edge to [[_COMMUNITY_sonner]]
+- 1 edge to [[_COMMUNITY_zod]]
 
 ## Top bridge nodes
-- [[dependencies_1]] - degree 18, connects to 11 communities
+- [[dependencies]] - degree 20, connects to 5 communities

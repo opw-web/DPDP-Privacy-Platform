@@ -1,21 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/recipients.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/sharing.service.ts"
 type: "code"
-community: "recipients.service.ts"
-location: "L26"
+community: "CreateSharingActivityDto"
+location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/CreateSharingActivityDto
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_10]] - `calls` [INFERRED]
-- [[Get_8]] - `references` [EXTRACTED]
-- [[Param_6]] - `references` [EXTRACTED]
-- [[RecipientsController]] - `method` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-get()_8]] - `calls` [INFERRED]
+- [[SharingService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

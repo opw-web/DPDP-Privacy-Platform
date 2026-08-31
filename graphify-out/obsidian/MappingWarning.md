@@ -1,21 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/mapping-warnings.ts"
+source_file: "dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts"
 type: "code"
-community: "mappings.service.ts"
-location: "L29"
+community: "DataSourceDetailPage.tsx"
+location: "L153"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingsservicets
+  - community/DataSourceDetailPagetsx
 ---
 
 # MappingWarning
 
 ## Connections
-- [[ReplaceMappingsResult]] - `references` [EXTRACTED]
-- [[ReplacePurposesResult]] - `references` [EXTRACTED]
-- [[mapping-warnings.ts]] - `contains` [EXTRACTED]
-- [[mappings.service.ts]] - `re_exports` [EXTRACTED]
-- [[source-purposes.service.ts]] - `imports` [EXTRACTED]
+- [[Step3Mapping.test.tsx]] - `imports` [EXTRACTED]
+- [[Step3Mapping.tsx]] - `imports` [EXTRACTED]
+- [[Step3MappingProps]] - `references` [EXTRACTED]
+- [[Step4Purposes.tsx]] - `imports` [EXTRACTED]
+- [[data-sources-api.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/EXTRACTED #community/DataSourceDetailPagetsx

@@ -1,17 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: ".record"
+community: "PrincipalsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/PrincipalsController
 ---
 
 # Param
 
 ## Connections
-- [[dot-get()_13]] - `references` [EXTRACTED]
-- [[dot-update()_6]] - `references` [EXTRACTED]
+- [[dot-detail()]] - `references` [EXTRACTED]
+- [[dot-lineage()]] - `references` [EXTRACTED]
+- [[dot-recipients()_1]] - `references` [EXTRACTED]
+- [[dot-sourceRecords()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/PrincipalsController

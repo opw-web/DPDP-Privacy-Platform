@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-tsconfig.json]] - `extends` [EXTRACTED]
-- [[compilerOptions_2]] - `contains` [EXTRACTED]
+- [[compilerOptions_3]] - `contains` [EXTRACTED]
 - [[exclude]] - `contains` [EXTRACTED]
 - [[extends]] - `contains` [EXTRACTED]
 

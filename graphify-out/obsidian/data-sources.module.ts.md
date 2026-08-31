@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.module.ts"
 type: "code"
-community: "mappings.service.ts"
+community: "app.module.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingsservicets
+  - community/appmodulets
 ---
 
 # data-sources.module.ts
@@ -20,6 +20,7 @@ tags:
 - [[DataSourcesService]] - `imports` [EXTRACTED]
 - [[MappingsController]] - `imports` [EXTRACTED]
 - [[MappingsService]] - `imports` [EXTRACTED]
+- [[QueuesModule]] - `imports` [EXTRACTED]
 - [[SourcePurposesService]] - `imports` [EXTRACTED]
 - [[app.module.ts]] - `imports_from` [EXTRACTED]
 - [[audit.module.ts]] - `imports_from` [EXTRACTED]
@@ -29,6 +30,8 @@ tags:
 - [[data-sources.service.ts]] - `imports_from` [EXTRACTED]
 - [[mappings.controller.ts]] - `imports_from` [EXTRACTED]
 - [[mappings.service.ts]] - `imports_from` [EXTRACTED]
+- [[queues.module.ts]] - `imports_from` [EXTRACTED]
 - [[source-purposes.service.ts]] - `imports_from` [EXTRACTED]
+- [[sync.module.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/EXTRACTED #community/appmodulets

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/config/env.validation.spec.ts"
 type: "code"
-community: "app.module.ts"
+community: "configuration.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/appmodulets
+  - community/configurationts
 ---
 
 # env.validation.spec.ts
@@ -17,4 +17,4 @@ tags:
 - [[env.validation.ts]] - `imports_from` [EXTRACTED]
 - [[validate()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/appmodulets
+#graphify/code #graphify/EXTRACTED #community/configurationts

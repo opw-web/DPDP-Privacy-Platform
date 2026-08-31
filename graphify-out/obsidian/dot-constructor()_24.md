@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/organizations/organizations.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/retention.service.ts"
 type: "code"
 community: "PrismaService"
-location: "L20"
+location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[AuditService]] - `references` [EXTRACTED]
-- [[OrganizationsService]] - `method` [EXTRACTED]
 - [[PrismaService]] - `references` [EXTRACTED]
+- [[RetentionService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PrismaService

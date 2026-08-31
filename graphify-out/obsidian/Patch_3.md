@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: ".record"
+community: "employees.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/employeescontrollerts
 ---
 
 # Patch
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-update()_6]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/employeescontrollerts

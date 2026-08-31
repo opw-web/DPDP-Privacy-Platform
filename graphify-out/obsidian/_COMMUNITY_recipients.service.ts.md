@@ -9,49 +9,49 @@ members: 47
 
 ## Members
 - [[dot-assertProcessorRule()]] - code - dpdp-platform/backend/src/modules/registers/recipients.service.ts
-- [[dot-constructor()_33]] - code - dpdp-platform/backend/src/modules/registers/recipients.controller.ts
-- [[dot-create()_11]] - code - dpdp-platform/backend/src/modules/registers/recipients.controller.ts
-- [[dot-create()_12]] - code - dpdp-platform/backend/src/modules/registers/recipients.service.ts
-- [[dot-get()_9]] - code - dpdp-platform/backend/src/modules/registers/recipients.controller.ts
-- [[dot-get()_10]] - code - dpdp-platform/backend/src/modules/registers/recipients.service.ts
-- [[dot-list()_12]] - code - dpdp-platform/backend/src/modules/registers/recipients.controller.ts
-- [[dot-list()_13]] - code - dpdp-platform/backend/src/modules/registers/recipients.service.ts
-- [[dot-update()_13]] - code - dpdp-platform/backend/src/modules/registers/recipients.controller.ts
-- [[dot-update()_14]] - code - dpdp-platform/backend/src/modules/registers/recipients.service.ts
-- [[ApiProperty_8]] - code
-- [[ApiPropertyOptional_13]] - code
+- [[dot-constructor()_65]] - code - dpdp-platform/backend/src/modules/registers/recipients.controller.ts
+- [[dot-create()_13]] - code - dpdp-platform/backend/src/modules/registers/recipients.controller.ts
+- [[dot-create()_14]] - code - dpdp-platform/backend/src/modules/registers/recipients.service.ts
+- [[dot-get()_14]] - code - dpdp-platform/backend/src/modules/registers/recipients.controller.ts
+- [[dot-get()_15]] - code - dpdp-platform/backend/src/modules/registers/recipients.service.ts
+- [[dot-list()_20]] - code - dpdp-platform/backend/src/modules/registers/recipients.controller.ts
+- [[dot-list()_21]] - code - dpdp-platform/backend/src/modules/registers/recipients.service.ts
+- [[dot-update()_14]] - code - dpdp-platform/backend/src/modules/registers/recipients.controller.ts
+- [[dot-update()_15]] - code - dpdp-platform/backend/src/modules/registers/recipients.service.ts
+- [[ApiProperty_16]] - code
 - [[ApiPropertyOptional_14]] - code
-- [[ApiTags_9]] - code
-- [[Body_7]] - code
-- [[Controller_9]] - code
+- [[ApiPropertyOptional_15]] - code
+- [[ApiTags_16]] - code
+- [[Body_10]] - code
+- [[Controller_16]] - code
 - [[CreateRecipientDto]] - code - dpdp-platform/backend/src/modules/registers/dto/create-recipient.dto.ts
-- [[Get_8]] - code
-- [[Injectable_21]] - code
+- [[Get_17]] - code
+- [[Injectable_36]] - code
+- [[IsBoolean_11]] - code
 - [[IsBoolean_12]] - code
-- [[IsBoolean_13]] - code
 - [[IsDateString_7]] - code
 - [[IsDateString_8]] - code
-- [[IsEmail_1]] - code
-- [[IsEmail_2]] - code
-- [[IsEnum_9]] - code
-- [[IsEnum_10]] - code
-- [[IsOptional_13]] - code
+- [[IsEmail_4]] - code
+- [[IsEmail_5]] - code
+- [[IsEnum_12]] - code
+- [[IsEnum_13]] - code
 - [[IsOptional_14]] - code
-- [[IsString_15]] - code
-- [[IsString_16]] - code
-- [[MinLength_13]] - code
-- [[MinLength_14]] - code
-- [[Param_6]] - code
-- [[Patch_6]] - code
-- [[Post_5]] - code
+- [[IsString_23]] - code
+- [[IsString_24]] - code
+- [[MinLength_17]] - code
+- [[MinLength_18]] - code
+- [[Param_11]] - code
+- [[Patch_8]] - code
+- [[Post_9]] - code
 - [[PublicRecipient]] - code - dpdp-platform/backend/src/modules/registers/recipients.service.ts
 - [[RECIPIENT_PUBLIC_SELECT]] - code - dpdp-platform/backend/src/modules/registers/recipients.service.ts
 - [[RecipientsController]] - code - dpdp-platform/backend/src/modules/registers/recipients.controller.ts
 - [[RecipientsService]] - code - dpdp-platform/backend/src/modules/registers/recipients.service.ts
 - [[UpdateRecipientDto]] - code - dpdp-platform/backend/src/modules/registers/dto/update-recipient.dto.ts
+- [[ValidateIf_4]] - code
 - [[create-recipient.dto.ts]] - code - dpdp-platform/backend/src/modules/registers/dto/create-recipient.dto.ts
-- [[duplicateNameMessage()_2]] - code - dpdp-platform/backend/src/modules/registers/recipients.service.ts
-- [[isUniqueConstraintViolation()_4]] - code - dpdp-platform/backend/src/modules/registers/recipients.service.ts
+- [[duplicateNameMessage()_1]] - code - dpdp-platform/backend/src/modules/registers/recipients.service.ts
+- [[isUniqueConstraintViolation()_3]] - code - dpdp-platform/backend/src/modules/registers/recipients.service.ts
 - [[recipients.controller.ts]] - code - dpdp-platform/backend/src/modules/registers/recipients.controller.ts
 - [[recipients.service.ts]] - code - dpdp-platform/backend/src/modules/registers/recipients.service.ts
 - [[update-recipient.dto.ts]] - code - dpdp-platform/backend/src/modules/registers/dto/update-recipient.dto.ts
@@ -64,17 +64,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 6 edges to [[_COMMUNITY_PrismaService]]
 - 5 edges to [[_COMMUNITY_RequirePermission]]
-- 4 edges to [[_COMMUNITY_registers.module.ts]]
-- 3 edges to [[_COMMUNITY_PrismaService]]
+- 4 edges to [[_COMMUNITY_app.module.ts]]
 - 2 edges to [[_COMMUNITY_dot-record]]
-- 1 edge to [[_COMMUNITY_prisma.service.ts]]
-- 1 edge to [[_COMMUNITY_require-permission.decorator.ts]]
-- 1 edge to [[_COMMUNITY_audit.service.ts]]
 
 ## Top bridge nodes
-- [[recipients.service.ts]] - degree 15, connects to 4 communities
 - [[recipients.controller.ts]] - degree 10, connects to 3 communities
+- [[recipients.service.ts]] - degree 15, connects to 2 communities
 - [[RecipientsService]] - degree 11, connects to 2 communities
 - [[RecipientsController]] - degree 9, connects to 1 community
-- [[dot-update()_13]] - degree 7, connects to 1 community
+- [[dot-update()_14]] - degree 7, connects to 1 community

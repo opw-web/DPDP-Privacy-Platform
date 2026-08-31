@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[InvalidCursorError]] - `imports` [EXTRACTED]
 - [[MockHttpServer]] - `imports` [EXTRACTED]
-- [[PageCapExceededError]] - `imports` [EXTRACTED]
+- [[PageCapExceededError_1]] - `imports` [EXTRACTED]
 - [[ReadOnlyHttpClient]] - `imports` [EXTRACTED]
 - [[RestApiConnector]] - `imports` [EXTRACTED]
 - [[RestApiConnectorConfig]] - `imports` [EXTRACTED]

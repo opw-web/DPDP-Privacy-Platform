@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdateDataSourceDto"
+community: "ListPrincipalsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateDataSourceDto
+  - community/ListPrincipalsDto
 ---
 
 # IsOptional
 
 ## Connections
-- [[UpdateDataSourceDto]] - `references` [EXTRACTED]
+- [[ListPrincipalsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateDataSourceDto
+#graphify/code #graphify/EXTRACTED #community/ListPrincipalsDto

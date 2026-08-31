@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts"
+source_file: "dpdp-platform/backend/src/common/crypto/crypto.service.ts"
 type: "code"
-community: "rest-api.connector.ts"
-location: "L55"
+community: "CryptoService"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rest-apiconnectorts
+  - community/CryptoService
 ---
 
 # .constructor()
 
 ## Connections
-- [[ReadOnlyHttpStatusError]] - `method` [EXTRACTED]
-- [[stripQuery()_1]] - `calls` [EXTRACTED]
+- [[MalformedCiphertextError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts
+#graphify/code #graphify/EXTRACTED #community/CryptoService

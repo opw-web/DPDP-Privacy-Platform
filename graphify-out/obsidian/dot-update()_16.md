@@ -1,12 +1,12 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/employees.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/retention.controller.ts"
 type: "code"
-community: "EmployeesService"
-location: "L34"
+community: "CreateRetentionPolicyDto"
+location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeesService
+  - community/CreateRetentionPolicyDto
 ---
 
 # .update()
@@ -14,10 +14,10 @@ tags:
 ## Connections
 - [[dot-update()_17]] - `calls` [INFERRED]
 - [[Body_12]] - `references` [EXTRACTED]
-- [[EmployeesController]] - `method` [EXTRACTED]
-- [[Param_9]] - `references` [EXTRACTED]
+- [[Param_13]] - `references` [EXTRACTED]
 - [[Patch_9]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[UpdateEmployeeDto]] - `references` [EXTRACTED]
+- [[RetentionController]] - `method` [EXTRACTED]
+- [[UpdateRetentionPolicyDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeesService
+#graphify/code #graphify/EXTRACTED #community/CreateRetentionPolicyDto

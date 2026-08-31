@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/src/common/masking/masking.service.ts"
 type: "code"
 community: "MaskingService"
-location: "L125"
+location: "L133"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[dot-maskEmail()]] - `calls` [EXTRACTED]
+- [[dot-maskIdentifier()]] - `calls` [EXTRACTED]
 - [[dot-maskIfNeeded()]] - `calls` [EXTRACTED]
 - [[dot-maskPhone()]] - `calls` [EXTRACTED]
 - [[dot-maskSegment()]] - `calls` [EXTRACTED]

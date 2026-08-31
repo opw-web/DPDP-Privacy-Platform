@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.ts"
 type: "code"
-community: "purposes.service.ts"
+community: "PrismaService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposesservicets
+  - community/PrismaService
 ---
 
 # purposes.service.ts
@@ -24,7 +24,7 @@ tags:
 - [[audit.service.ts]] - `imports_from` [EXTRACTED]
 - [[create-purpose.dto.ts]] - `imports_from` [EXTRACTED]
 - [[duplicateCodeMessage()]] - `contains` [EXTRACTED]
-- [[isUniqueConstraintViolation()_1]] - `contains` [EXTRACTED]
+- [[isUniqueConstraintViolation()]] - `contains` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[purposes.controller.ts]] - `imports_from` [EXTRACTED]
 - [[purposes.module.ts]] - `imports_from` [EXTRACTED]
@@ -34,4 +34,4 @@ tags:
 - [[token.service.ts]] - `imports_from` [EXTRACTED]
 - [[update-purpose.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposesservicets
+#graphify/code #graphify/EXTRACTED #community/PrismaService

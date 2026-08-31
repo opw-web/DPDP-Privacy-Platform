@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/security-measures.service.ts"
 type: "code"
-community: ".record"
+community: "SecurityMeasuresService"
 location: "L92"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/SecurityMeasuresService
 ---
 
 # .assertDataSourceExists()
 
 ## Connections
-- [[dot-create()_5]] - `calls` [EXTRACTED]
-- [[dot-update()_7]] - `calls` [EXTRACTED]
+- [[dot-create()_2]] - `calls` [EXTRACTED]
+- [[dot-update()_3]] - `calls` [EXTRACTED]
 - [[SecurityMeasuresService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresService

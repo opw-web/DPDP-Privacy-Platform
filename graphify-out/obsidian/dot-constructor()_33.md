@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/recipients.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/principal-portal/me.controller.ts"
 type: "code"
-community: "recipients.service.ts"
-location: "L16"
+community: "Public"
+location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/Public
 ---
 
 # .constructor()
 
 ## Connections
-- [[RecipientsController]] - `method` [EXTRACTED]
-- [[RecipientsService]] - `references` [EXTRACTED]
+- [[MeController]] - `method` [EXTRACTED]
+- [[MeService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/Public

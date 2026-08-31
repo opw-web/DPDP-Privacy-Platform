@@ -1,60 +1,66 @@
 ---
 type: community
-members: 47
+members: 53
 ---
 
 # .record
 
-**Members:** 47 nodes
+**Members:** 53 nodes
 
 ## Members
-- [[dot-assertDataSourceExists()]] - code - dpdp-platform/backend/src/modules/registers/security-measures.service.ts
-- [[dot-constructor()_14]] - code - dpdp-platform/backend/src/modules/registers/security-measures.controller.ts
-- [[dot-create()_4]] - code - dpdp-platform/backend/src/modules/registers/security-measures.controller.ts
-- [[dot-create()_5]] - code - dpdp-platform/backend/src/modules/registers/security-measures.service.ts
-- [[dot-get()_4]] - code - dpdp-platform/backend/src/modules/registers/security-measures.service.ts
-- [[dot-list()_6]] - code - dpdp-platform/backend/src/modules/registers/security-measures.service.ts
+- [[dot-applyMatch()]] - code - dpdp-platform/backend/src/modules/identity/linking.service.ts
+- [[dot-attachAvailableIdentifiers()]] - code - dpdp-platform/backend/src/modules/identity/linking.service.ts
+- [[dot-attachIdentifier()]] - code - dpdp-platform/backend/src/modules/identity/linking.service.ts
+- [[dot-candidateResults()]] - code - dpdp-platform/backend/src/modules/identity/linking.service.ts
+- [[dot-constructor()_50]] - code - dpdp-platform/backend/src/modules/identity/age.service.ts
+- [[dot-constructor()_51]] - code - dpdp-platform/backend/src/modules/identity/linking.service.ts
+- [[dot-constructor()_52]] - code - dpdp-platform/backend/src/modules/identity/linking.service.ts
+- [[dot-constructor()_53]] - code - dpdp-platform/backend/src/modules/sync/sync-pipeline.service.ts
+- [[dot-createCandidate()]] - code - dpdp-platform/backend/src/modules/identity/linking.service.ts
+- [[dot-derive()]] - code - dpdp-platform/backend/src/modules/identity/age.service.ts
+- [[dot-mergeRecordIntoPrincipal()]] - code - dpdp-platform/backend/src/modules/identity/merge.service.ts
+- [[dot-nextPrincipalReferenceInTransaction()]] - code - dpdp-platform/backend/src/common/reference/reference.service.ts
+- [[dot-persistAndLink()]] - code - dpdp-platform/backend/src/modules/sync/sync-pipeline.service.ts
+- [[dot-rebuild()]] - code - dpdp-platform/backend/src/modules/identity/assembly.service.ts
 - [[dot-record()]] - code - dpdp-platform/backend/src/common/audit/audit.service.ts
-- [[dot-update()_6]] - code - dpdp-platform/backend/src/modules/registers/security-measures.controller.ts
-- [[dot-update()_7]] - code - dpdp-platform/backend/src/modules/registers/security-measures.service.ts
-- [[ApiProperty_5]] - code
-- [[ApiPropertyOptional_7]] - code
-- [[ApiPropertyOptional_8]] - code
-- [[ApiTags_6]] - code
-- [[Body_4]] - code
-- [[Controller_6]] - code
-- [[CreateSecurityMeasureDto]] - code - dpdp-platform/backend/src/modules/registers/dto/create-security-measure.dto.ts
-- [[Injectable_14]] - code
-- [[IsBoolean_6]] - code
-- [[IsBoolean_7]] - code
-- [[IsDateString_3]] - code
-- [[IsDateString_4]] - code
-- [[IsIn_1]] - code
-- [[IsIn_2]] - code
-- [[IsOptional_7]] - code
-- [[IsOptional_8]] - code
-- [[IsString_9]] - code
-- [[IsString_10]] - code
-- [[MinLength_7]] - code
-- [[MinLength_8]] - code
-- [[Param_3]] - code
-- [[Patch_3]] - code
-- [[Post_2]] - code
-- [[PublicSecurityMeasure]] - code - dpdp-platform/backend/src/modules/registers/security-measures.service.ts
-- [[SECURITY_MEASURE_PUBLIC_SELECT]] - code - dpdp-platform/backend/src/modules/registers/security-measures.service.ts
-- [[SECURITY_MEASURE_TYPES]] - code - dpdp-platform/backend/src/modules/registers/dto/create-security-measure.dto.ts
-- [[SECURITY_RULE_REFERENCES]] - code - dpdp-platform/backend/src/modules/registers/dto/create-security-measure.dto.ts
-- [[SecurityMeasureGroup]] - code - dpdp-platform/backend/src/modules/registers/security-measures.service.ts
-- [[SecurityMeasuresController]] - code - dpdp-platform/backend/src/modules/registers/security-measures.controller.ts
-- [[SecurityMeasuresService]] - code - dpdp-platform/backend/src/modules/registers/security-measures.service.ts
-- [[UpdateSecurityMeasureDto]] - code - dpdp-platform/backend/src/modules/registers/dto/update-security-measure.dto.ts
-- [[ValidateIf_1]] - code
+- [[dot-unmerge()]] - code - dpdp-platform/backend/src/modules/identity/merge.service.ts
+- [[dot-verifyScopedReferences()]] - code - dpdp-platform/backend/src/modules/identity/linking.service.ts
+- [[AgeService]] - code - dpdp-platform/backend/src/modules/identity/age.service.ts
+- [[ApplyMatchResult]] - code - dpdp-platform/backend/src/modules/identity/linking.service.ts
+- [[AssemblyService]] - code - dpdp-platform/backend/src/modules/identity/assembly.service.ts
+- [[IdentifierLockSignal]] - code - dpdp-platform/backend/src/modules/identity/identifier-ownership-lock.ts
+- [[IdentifierOwnershipConflictError_1]] - code - dpdp-platform/backend/src/modules/identity/linking.service.ts
+- [[Injectable_24]] - code
+- [[Injectable_25]] - code
+- [[Injectable_26]] - code
+- [[Injectable_27]] - code
+- [[LinkableNormalizedRecord]] - code - dpdp-platform/backend/src/modules/identity/linking.service.ts
+- [[LinkingService]] - code - dpdp-platform/backend/src/modules/identity/linking.service.ts
+- [[MatchResult]] - code - dpdp-platform/backend/src/modules/identity/matching.service.ts
+- [[NormalizationMapping]] - code - dpdp-platform/backend/src/modules/normalization/normalization.service.ts
+- [[NormalizationService]] - code - dpdp-platform/backend/src/modules/normalization/normalization.service.ts
+- [[RaisedCandidate]] - code - dpdp-platform/backend/src/modules/identity/matching.service.ts
+- [[RecordContext]] - code - dpdp-platform/backend/src/modules/sync/sync-pipeline.service.ts
+- [[ScopedTransactionClient]] - code - dpdp-platform/backend/src/common/prisma/scoped-transaction-client.ts
+- [[SyncErrorLogEntry]] - code - dpdp-platform/backend/src/modules/sync/sync-pipeline.service.ts
+- [[apply()]] - code - dpdp-platform/backend/test/identity-matching.e2e-spec.ts
 - [[assertNoForbiddenMetadata()]] - code - dpdp-platform/backend/src/common/audit/audit.service.ts
-- [[create-security-measure.dto.ts]] - code - dpdp-platform/backend/src/modules/registers/dto/create-security-measure.dto.ts
-- [[groupByRuleReference()]] - code - dpdp-platform/backend/src/modules/registers/security-measures.service.ts
-- [[security-measures.controller.ts]] - code - dpdp-platform/backend/src/modules/registers/security-measures.controller.ts
-- [[security-measures.service.ts]] - code - dpdp-platform/backend/src/modules/registers/security-measures.service.ts
-- [[update-security-measure.dto.ts]] - code - dpdp-platform/backend/src/modules/registers/dto/update-security-measure.dto.ts
+- [[createSourceRecord()]] - code - dpdp-platform/backend/test/normalization.e2e-spec.ts
+- [[identifier-ownership-lock.ts]] - code - dpdp-platform/backend/src/modules/identity/identifier-ownership-lock.ts
+- [[identity-matching.e2e-spec.ts]] - code - dpdp-platform/backend/test/identity-matching.e2e-spec.ts
+- [[initialPrincipalDisplayName()]] - code - dpdp-platform/backend/src/modules/identity/linking.service.ts
+- [[linking.service.ts]] - code - dpdp-platform/backend/src/modules/identity/linking.service.ts
+- [[lockIdentifiersForOwnership()]] - code - dpdp-platform/backend/src/modules/identity/identifier-ownership-lock.ts
+- [[normalization.e2e-spec.ts]] - code - dpdp-platform/backend/test/normalization.e2e-spec.ts
+- [[normalization.service.spec.ts]] - code - dpdp-platform/backend/src/modules/normalization/normalization.service.spec.ts
+- [[organization()_1]] - code - dpdp-platform/backend/test/identity-matching.e2e-spec.ts
+- [[persist()]] - code - dpdp-platform/backend/test/normalization.e2e-spec.ts
+- [[persistMappings()]] - code - dpdp-platform/backend/test/normalization.e2e-spec.ts
+- [[principal()_1]] - code - dpdp-platform/backend/test/identity-matching.e2e-spec.ts
+- [[record()]] - code - dpdp-platform/backend/test/identity-matching.e2e-spec.ts
+- [[sync-pipeline.service.ts]] - code - dpdp-platform/backend/src/modules/sync/sync-pipeline.service.ts
+- [[tenant()_1]] - code - dpdp-platform/backend/test/identity-matching.e2e-spec.ts
+- [[tenant()_2]] - code - dpdp-platform/backend/test/normalization.e2e-spec.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -64,28 +70,42 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_RequirePermission]]
-- 5 edges to [[_COMMUNITY_registers.module.ts]]
-- 5 edges to [[_COMMUNITY_audit.service.ts]]
-- 4 edges to [[_COMMUNITY_PrismaService]]
-- 3 edges to [[_COMMUNITY_PrincipalAuthService]]
-- 3 edges to [[_COMMUNITY_purposes.service.ts]]
-- 2 edges to [[_COMMUNITY_mappings.service.ts]]
-- 2 edges to [[_COMMUNITY_DataSourcesService]]
+- 34 edges to [[_COMMUNITY_matching.service.ts]]
+- 27 edges to [[_COMMUNITY_merge.service.ts]]
+- 19 edges to [[_COMMUNITY_PrismaService]]
+- 16 edges to [[_COMMUNITY_assembly.service.ts]]
+- 14 edges to [[_COMMUNITY_tenant-context.ts]]
+- 12 edges to [[_COMMUNITY_SyncPipelineService]]
+- 7 edges to [[_COMMUNITY_AccessTokenPayload]]
+- 5 edges to [[_COMMUNITY_DataSourcesService]]
+- 4 edges to [[_COMMUNITY_sync.e2e-spec.ts]]
+- 4 edges to [[_COMMUNITY_audit.e2e-spec.ts]]
+- 3 edges to [[_COMMUNITY_queues.module.ts]]
+- 3 edges to [[_COMMUNITY_principals.service.ts]]
+- 3 edges to [[_COMMUNITY_merge-unmerge.e2e-spec.ts]]
+- 3 edges to [[_COMMUNITY_purposes.controller.ts]]
+- 3 edges to [[_COMMUNITY_app.module.ts]]
+- 2 edges to [[_COMMUNITY_data-sources.service.ts]]
+- 2 edges to [[_COMMUNITY_PrincipalsController]]
+- 2 edges to [[_COMMUNITY_AppModule]]
+- 2 edges to [[_COMMUNITY_SecurityMeasuresService]]
+- 2 edges to [[_COMMUNITY_employees.controller.ts]]
+- 2 edges to [[_COMMUNITY_PrincipalAuthService]]
 - 2 edges to [[_COMMUNITY_recipients.service.ts]]
+- 2 edges to [[_COMMUNITY_CreateRetentionPolicyDto]]
+- 2 edges to [[_COMMUNITY_CreateSharingActivityDto]]
+- 2 edges to [[_COMMUNITY_CreateTransferDto]]
+- 1 edge to [[_COMMUNITY_mapping-warnings.ts]]
+- 1 edge to [[_COMMUNITY_normalization.module.ts]]
 - 1 edge to [[_COMMUNITY_UpdateOrganizationDto]]
-- 1 edge to [[_COMMUNITY_CreateSharingActivityDto]]
-- 1 edge to [[_COMMUNITY_canonicalJson]]
-- 1 edge to [[_COMMUNITY_CreateEmployeeDto]]
-- 1 edge to [[_COMMUNITY_EmployeesService]]
+- 1 edge to [[_COMMUNITY_audit-read.service.ts]]
+- 1 edge to [[_COMMUNITY_mappings.service.ts]]
+- 1 edge to [[_COMMUNITY_SourcePurposesService]]
 - 1 edge to [[_COMMUNITY_UpdateRolePermissionsDto]]
-- 1 edge to [[_COMMUNITY_retention.service.ts]]
-- 1 edge to [[_COMMUNITY_require-permission.decorator.ts]]
-- 1 edge to [[_COMMUNITY_prisma.service.ts]]
 
 ## Top bridge nodes
-- [[dot-record()]] - degree 28, connects to 16 communities
-- [[security-measures.service.ts]] - degree 15, connects to 4 communities
-- [[security-measures.controller.ts]] - degree 10, connects to 3 communities
-- [[SecurityMeasuresService]] - degree 11, connects to 2 communities
-- [[SecurityMeasuresController]] - degree 9, connects to 2 communities
+- [[dot-record()]] - degree 43, connects to 21 communities
+- [[sync-pipeline.service.ts]] - degree 43, connects to 12 communities
+- [[ScopedTransactionClient]] - degree 37, connects to 10 communities
+- [[linking.service.ts]] - degree 29, connects to 5 communities
+- [[identity-matching.e2e-spec.ts]] - degree 19, connects to 5 communities

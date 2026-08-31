@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts"
 type: "code"
-community: "Public"
-location: "L35"
+community: "EmployeeAuthController"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/EmployeeAuthController
 ---
 
 # .isProduction()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[EmployeeAuthController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController

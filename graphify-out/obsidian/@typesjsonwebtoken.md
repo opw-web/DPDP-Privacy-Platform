@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "code"
-community: "@types/jsonwebtoken"
-location: "L50"
+community: "devDependencies"
+location: "L55"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/types/jsonwebtoken
+  - community/devDependencies
 ---
 
 # @types/jsonwebtoken
@@ -15,4 +15,4 @@ tags:
 - [[@typesjsonwebtoken_1]] - `imports` [EXTRACTED]
 - [[devDependencies_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/types/jsonwebtoken
+#graphify/code #graphify/EXTRACTED #community/devDependencies

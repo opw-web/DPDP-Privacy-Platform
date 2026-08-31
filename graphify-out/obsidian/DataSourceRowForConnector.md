@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/connectors/connector.factory.ts"
 type: "code"
-community: "rest-api.connector.ts"
+community: "data-sources.e2e-spec.ts"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rest-apiconnectorts
+  - community/data-sourcese2e-spects
 ---
 
 # DataSourceRowForConnector
@@ -16,4 +16,4 @@ tags:
 - [[connector.factory.ts]] - `contains` [EXTRACTED]
 - [[data-sources.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts
+#graphify/code #graphify/EXTRACTED #community/data-sourcese2e-spects

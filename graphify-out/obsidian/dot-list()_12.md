@@ -1,19 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/recipients.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/principals/principals.service.ts"
 type: "code"
-community: "recipients.service.ts"
-location: "L20"
+community: "principals.service.ts"
+location: "L75"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/principalsservicets
 ---
 
 # .list()
 
 ## Connections
-- [[Get_8]] - `references` [EXTRACTED]
-- [[RecipientsController]] - `method` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-maskIfNeeded()]] - `calls` [INFERRED]
+- [[PrincipalsService]] - `method` [EXTRACTED]
+- [[buildPrincipalSearchQuery()]] - `calls` [EXTRACTED]
+- [[pickDisplayName()]] - `calls` [EXTRACTED]
+- [[resolveProvenance()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

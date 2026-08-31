@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "retention.service.ts"
+community: "employees.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/employeescontrollerts
 ---
 
 # Controller
 
 ## Connections
-- [[RetentionController]] - `references` [EXTRACTED]
+- [[EmployeesController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/employeescontrollerts

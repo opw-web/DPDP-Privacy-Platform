@@ -1,23 +1,23 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.controller.ts"
 type: "code"
-community: "mappings.service.ts"
-location: "L30"
+community: "MappingsController"
+location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingsservicets
+  - community/MappingsController
 ---
 
 # .replaceMappings()
 
 ## Connections
 - [[dot-replace()]] - `calls` [INFERRED]
-- [[Body_2]] - `references` [EXTRACTED]
+- [[Body_1]] - `references` [EXTRACTED]
 - [[MappingsController]] - `method` [EXTRACTED]
-- [[Param_1]] - `references` [EXTRACTED]
+- [[Param]] - `references` [EXTRACTED]
 - [[Put]] - `references` [EXTRACTED]
 - [[ReplaceMappingsDto]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/EXTRACTED #community/MappingsController

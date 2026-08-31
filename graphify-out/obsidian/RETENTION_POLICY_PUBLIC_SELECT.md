@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/retention.service.ts"
 type: "code"
-community: "retention.service.ts"
+community: "PrismaService"
 location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/PrismaService
 ---
 
 # RETENTION_POLICY_PUBLIC_SELECT
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[retention.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/PrismaService

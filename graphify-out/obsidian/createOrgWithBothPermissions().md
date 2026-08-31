@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[createEmployee()]] - `calls` [EXTRACTED]
-- [[createOrg()_3]] - `calls` [EXTRACTED]
+- [[createOrg()_2]] - `calls` [EXTRACTED]
 - [[mappings.e2e-spec.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/mappingse2e-spects

@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/sharing.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/test-support/mock-http-server.ts"
 type: "code"
-community: "CreateSharingActivityDto"
-location: "L11"
+community: "data-sources.e2e-spec.ts"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSharingActivityDto
+  - community/data-sourcese2e-spects
 ---
 
 # .constructor()
 
 ## Connections
-- [[SharingController]] - `method` [EXTRACTED]
-- [[SharingService]] - `references` [EXTRACTED]
+- [[MockHttpServer]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto
+#graphify/code #graphify/EXTRACTED #community/data-sourcese2e-spects

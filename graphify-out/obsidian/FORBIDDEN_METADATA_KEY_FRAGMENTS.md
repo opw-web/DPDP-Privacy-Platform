@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/audit/audit.service.ts"
 type: "code"
-community: "audit.service.ts"
+community: "PrismaService"
 location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/auditservicets
+  - community/PrismaService
 ---
 
 # FORBIDDEN_METADATA_KEY_FRAGMENTS
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[audit.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/auditservicets
+#graphify/code #graphify/EXTRACTED #community/PrismaService

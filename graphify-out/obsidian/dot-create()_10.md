@@ -1,23 +1,25 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/retention.service.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
 type: "code"
-community: "retention.service.ts"
-location: "L96"
+community: "DataSourcesService"
+location: "L230"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/DataSourcesService
 ---
 
 # .create()
 
 ## Connections
-- [[dot-assertPurposeExists()_1]] - `calls` [EXTRACTED]
+- [[dot-assertPubliclyAvailableJustified()]] - `calls` [EXTRACTED]
 - [[dot-create()_9]] - `calls` [INFERRED]
+- [[dot-encrypt()]] - `calls` [INFERRED]
 - [[dot-record()]] - `calls` [INFERRED]
-- [[CreateRetentionPolicyDto]] - `references` [EXTRACTED]
-- [[RetentionService]] - `method` [EXTRACTED]
-- [[duplicateNameMessage()_1]] - `calls` [EXTRACTED]
-- [[isUniqueConstraintViolation()_3]] - `calls` [EXTRACTED]
+- [[dot-scheduleSync()]] - `calls` [EXTRACTED]
+- [[CreateDataSourceDto]] - `references` [EXTRACTED]
+- [[DataSourcesService]] - `method` [EXTRACTED]
+- [[duplicateNameMessage()]] - `calls` [EXTRACTED]
+- [[isUniqueConstraintViolation()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/DataSourcesService

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "TenantModule"
+community: "queues.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TenantModule
+  - community/queuesmodulets
 ---
 
 # Module
 
 ## Connections
-- [[TenantModule]] - `references` [EXTRACTED]
+- [[QueuesModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TenantModule
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
 type: "code"
-community: "Public"
-location: "L41"
+community: "rest-api.connector.ts"
+location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/rest-apiconnectorts
 ---
 
 # .constructor()
 
 ## Connections
-- [[PrincipalAuthController]] - `method` [EXTRACTED]
-- [[PrincipalAuthService]] - `references` [EXTRACTED]
+- [[PageCapExceededError_1]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts

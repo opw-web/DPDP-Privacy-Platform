@@ -1,12 +1,12 @@
 ---
 source_file: "demo-company-server/test/routes.test.ts"
 type: "code"
-community: "server.ts"
+community: "routes.test.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/serverts
+  - community/routestestts
 ---
 
 # routes.test.ts
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[EXPECTED_FIELDS]] - `contains` [EXTRACTED]
 - [[KEYS]] - `contains` [EXTRACTED]
-- [[ROUTES]] - `contains` [EXTRACTED]
+- [[ROUTES_1]] - `contains` [EXTRACTED]
 - [[TEST_DB_PATH]] - `contains` [EXTRACTED]
 - [[buildServer()]] - `imports` [EXTRACTED]
 - [[closeDb()]] - `imports` [EXTRACTED]
@@ -24,4 +24,4 @@ tags:
 - [[{ buildServer }]] - `contains` [EXTRACTED]
 - [[{ openDb, closeDb }]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/serverts
+#graphify/code #graphify/EXTRACTED #community/routestestts

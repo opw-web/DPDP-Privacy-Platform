@@ -1,16 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "purposes.service.ts"
+community: "Public"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposesservicets
+  - community/Public
 ---
 
 # Get
 
 ## Connections
-- [[dot-me()_2]] - `references` [EXTRACTED]
+- [[dot-data()]] - `references` [EXTRACTED]
+- [[dot-privacyContact()]] - `references` [EXTRACTED]
+- [[dot-profile()]] - `references` [EXTRACTED]
+- [[dot-recipients()]] - `references` [EXTRACTED]
+- [[dot-sources()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposesservicets
+#graphify/code #graphify/EXTRACTED #community/Public

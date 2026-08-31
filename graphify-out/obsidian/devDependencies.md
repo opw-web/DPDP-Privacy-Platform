@@ -15,7 +15,7 @@ tags:
 - [[@typesbetter-sqlite3]] - `contains` [EXTRACTED]
 - [[@typesnode]] - `contains` [EXTRACTED]
 - [[demo-company-serverpackage.json]] - `contains` [EXTRACTED]
-- [[ts-node_2]] - `contains` [EXTRACTED]
+- [[ts-node]] - `contains` [EXTRACTED]
 - [[typescript]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/demo-company-server/packagejson

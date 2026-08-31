@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "data-sources.service.ts"
+community: "purposes-response.dto.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesservicets
+  - community/purposes-responsedtots
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateDataSourceDto]] - `references` [EXTRACTED]
+- [[DataSourcePurposeResponseDto]] - `references` [EXTRACTED]
+- [[DataSourcePurposesResponseDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets
+#graphify/code #graphify/EXTRACTED #community/purposes-responsedtots

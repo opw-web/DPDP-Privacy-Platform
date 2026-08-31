@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "employees.module.ts"
+community: "queues.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeesmodulets
+  - community/queuesmodulets
 ---
 
 # Injectable
 
 ## Connections
-- [[RolesService]] - `references` [EXTRACTED]
+- [[SyncLockService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeesmodulets
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

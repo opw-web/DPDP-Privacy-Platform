@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/prisma/seed/demo-org.ts"
 type: "code"
-community: "seed.ts"
+community: "seed-principals.ts"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/seedts
+  - community/seed-principalsts
 ---
 
 # DemoEmployeeSeed
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[demo-org.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/seedts
+#graphify/code #graphify/EXTRACTED #community/seed-principalsts

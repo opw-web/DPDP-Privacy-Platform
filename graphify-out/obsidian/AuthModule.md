@@ -1,20 +1,21 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/auth.module.ts"
 type: "code"
-community: "auth.module.ts"
+community: "app.module.ts"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/authmodulets
+  - community/appmodulets
 ---
 
 # AuthModule
 
 ## Connections
-- [[Module_1]] - `references` [EXTRACTED]
+- [[Module_14]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[auth.module.ts]] - `contains` [EXTRACTED]
+- [[principal-portal.module.ts]] - `imports` [EXTRACTED]
 - [[tenant.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/authmodulets
+#graphify/code #graphify/EXTRACTED #community/appmodulets

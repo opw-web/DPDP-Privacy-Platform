@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "code"
-community: "@typescript-eslint/parser"
-location: "L55"
+community: "devDependencies"
+location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/typescript-eslint/parser
+  - community/devDependencies
 ---
 
 # @typescript-eslint/parser
@@ -15,4 +15,4 @@ tags:
 - [[@typescript-eslintparser_1]] - `imports` [EXTRACTED]
 - [[devDependencies_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/typescript-eslint/parser
+#graphify/code #graphify/EXTRACTED #community/devDependencies

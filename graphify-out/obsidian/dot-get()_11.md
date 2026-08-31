@@ -1,21 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.service.ts"
 type: "code"
-community: "RequirePermission"
-location: "L36"
+community: "mappings.service.ts"
+location: "L217"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/mappingsservicets
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_12]] - `calls` [INFERRED]
-- [[DataSourcesController]] - `method` [EXTRACTED]
-- [[Get_10]] - `references` [EXTRACTED]
-- [[Param_7]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-getMappings()]] - `calls` [INFERRED]
+- [[MappingsService]] - `method` [EXTRACTED]
+- [[computeMappingWarnings()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/mappingsservicets

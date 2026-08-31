@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/prisma/prisma.service.ts"
 type: "code"
-community: "audit.service.ts"
+community: "merge.service.ts"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/auditservicets
+  - community/mergeservicets
 ---
 
 # TenantScopedPrismaClient
@@ -17,4 +17,4 @@ tags:
 - [[prisma.service.ts]] - `contains` [EXTRACTED]
 - [[scoped-transaction-client.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/auditservicets
+#graphify/code #graphify/EXTRACTED #community/mergeservicets

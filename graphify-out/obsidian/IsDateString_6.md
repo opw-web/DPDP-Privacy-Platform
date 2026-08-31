@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "registers.module.ts"
+community: "CreateTransferDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/registersmodulets
+  - community/CreateTransferDto
 ---
 
 # IsDateString
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[UpdateTransferDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/registersmodulets
+#graphify/code #graphify/EXTRACTED #community/CreateTransferDto

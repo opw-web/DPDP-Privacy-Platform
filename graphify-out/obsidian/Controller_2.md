@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdateOrganizationDto"
+community: "InventoryService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateOrganizationDto
+  - community/InventoryService
 ---
 
 # Controller
 
 ## Connections
-- [[OrganizationsController]] - `references` [EXTRACTED]
+- [[InventoryController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateOrganizationDto
+#graphify/code #graphify/EXTRACTED #community/InventoryService

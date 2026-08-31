@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/mapping-warnings.ts"
+source_file: "dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts"
 type: "code"
-community: "mappings.service.ts"
-location: "L19"
+community: "DataSourceDetailPage.tsx"
+location: "L144"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingsservicets
+  - community/DataSourceDetailPagetsx
 ---
 
 # MappingWarningType
 
 ## Connections
-- [[mapping-warnings.ts]] - `contains` [EXTRACTED]
-- [[mappings.service.ts]] - `re_exports` [EXTRACTED]
+- [[data-sources-api.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/EXTRACTED #community/DataSourceDetailPagetsx

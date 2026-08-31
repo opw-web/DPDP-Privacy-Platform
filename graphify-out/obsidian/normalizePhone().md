@@ -1,19 +1,20 @@
 ---
-source_file: "demo-company-server/src/seed/match.ts"
+source_file: "dpdp-platform/backend/src/modules/normalization/normalizers/phone.ts"
 type: "code"
-community: "match.ts"
-location: "L28"
+community: "matching.service.ts"
+location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/matchts
+  - community/matchingservicets
 ---
 
 # normalizePhone()
 
 ## Connections
-- [[dataset.test.ts]] - `imports` [EXTRACTED]
-- [[match.ts]] - `contains` [EXTRACTED]
-- [[simulateMatching()]] - `calls` [EXTRACTED]
+- [[dot-normalize()]] - `calls` [EXTRACTED]
+- [[normalization.service.ts]] - `imports` [EXTRACTED]
+- [[normalizersphone.ts]] - `contains` [EXTRACTED]
+- [[phone.spec.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/matchts
+#graphify/code #graphify/EXTRACTED #community/matchingservicets

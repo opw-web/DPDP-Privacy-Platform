@@ -12,8 +12,8 @@ tags:
 # assertNonBlankDescription()
 
 ## Connections
-- [[dot-create()_1]] - `calls` [EXTRACTED]
-- [[dot-update()_3]] - `calls` [EXTRACTED]
+- [[dot-create()_8]] - `calls` [EXTRACTED]
+- [[dot-update()_9]] - `calls` [EXTRACTED]
 - [[sharing.service.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

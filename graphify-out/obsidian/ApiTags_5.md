@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "purposes.service.ts"
+community: "SecurityMeasuresService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposesservicets
+  - community/SecurityMeasuresService
 ---
 
 # ApiTags
 
 ## Connections
-- [[PurposesController]] - `references` [EXTRACTED]
+- [[SecurityMeasuresController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposesservicets
+#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresService

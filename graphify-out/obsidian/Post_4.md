@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "retention.service.ts"
+community: "AccessTokenPayload"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/AccessTokenPayload
 ---
 
 # Post
 
 ## Connections
-- [[dot-create()_9]] - `references` [EXTRACTED]
+- [[dot-confirm()]] - `references` [EXTRACTED]
+- [[dot-reject()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts"
+source_file: "dpdp-platform/backend/src/common/crypto/crypto.service.ts"
 type: "code"
-community: "rest-api.connector.ts"
-location: "L38"
+community: "CryptoService"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rest-apiconnectorts
+  - community/CryptoService
 ---
 
 # .constructor()
 
 ## Connections
-- [[ReadOnlyHttpMethodError]] - `method` [EXTRACTED]
+- [[InvalidEncryptionKeyError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts
+#graphify/code #graphify/EXTRACTED #community/CryptoService

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Public"
+community: "EmployeeAuthController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/EmployeeAuthController
 ---
 
 # Req
@@ -15,4 +15,4 @@ tags:
 - [[dot-logout()_2]] - `references` [EXTRACTED]
 - [[dot-refresh()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController

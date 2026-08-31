@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "employees.module.ts"
+community: "MappingsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeesmodulets
+  - community/MappingsController
 ---
 
 # Controller
 
 ## Connections
-- [[RolesController]] - `references` [EXTRACTED]
+- [[MappingsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeesmodulets
+#graphify/code #graphify/EXTRACTED #community/MappingsController

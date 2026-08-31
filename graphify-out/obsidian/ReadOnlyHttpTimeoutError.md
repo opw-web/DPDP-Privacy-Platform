@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts"
 type: "code"
-community: "rest-api.connector.ts"
+community: "read-only-http.client.ts"
 location: "L65"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rest-apiconnectorts
+  - community/read-only-httpclientts
 ---
 
 # ReadOnlyHttpTimeoutError
 
 ## Connections
-- [[dot-constructor()_38]] - `method` [EXTRACTED]
+- [[dot-constructor()_63]] - `method` [EXTRACTED]
 - [[dot-performRequest()]] - `calls` [EXTRACTED]
 - [[read-only-http.client.spec.ts]] - `imports` [EXTRACTED]
 - [[read-only-http.client.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts
+#graphify/code #graphify/EXTRACTED #community/read-only-httpclientts

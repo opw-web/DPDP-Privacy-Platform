@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/employees/roles.service.ts"
 type: "rationale"
-community: "employees.module.ts"
+community: "PrismaService"
 location: "L82"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/employeesmodulets
+  - community/PrismaService
 ---
 
 # NOTE: the fixed AuditAction union (Task 4, spec lines 880-891) has
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[roles.service.ts]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/employeesmodulets
+#graphify/rationale #graphify/EXTRACTED #community/PrismaService

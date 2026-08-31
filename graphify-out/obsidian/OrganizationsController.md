@@ -12,11 +12,11 @@ tags:
 # OrganizationsController
 
 ## Connections
-- [[dot-constructor()_3]] - `method` [EXTRACTED]
+- [[dot-constructor()]] - `method` [EXTRACTED]
 - [[dot-get()]] - `method` [EXTRACTED]
 - [[dot-update()]] - `method` [EXTRACTED]
-- [[ApiTags_2]] - `references` [EXTRACTED]
-- [[Controller_2]] - `references` [EXTRACTED]
+- [[ApiTags]] - `references` [EXTRACTED]
+- [[Controller]] - `references` [EXTRACTED]
 - [[organizations.controller.ts]] - `contains` [EXTRACTED]
 - [[organizations.module.ts]] - `imports` [EXTRACTED]
 

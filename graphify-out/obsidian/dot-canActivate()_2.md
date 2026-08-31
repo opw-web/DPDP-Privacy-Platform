@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/common/guards/permissions.guard.ts"
+source_file: "dpdp-platform/backend/src/common/guards/jwt-principal.guard.ts"
 type: "code"
-community: "require-permission.decorator.ts"
-location: "L86"
+community: "TokenService"
+location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/require-permissiondecoratorts
+  - community/TokenService
 ---
 
 # .canActivate()
 
 ## Connections
-- [[dot-resolvePermissions()]] - `calls` [EXTRACTED]
-- [[PermissionsGuard]] - `method` [EXTRACTED]
+- [[dot-verifyAccessToken()]] - `calls` [INFERRED]
+- [[JwtPrincipalGuard]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/require-permissiondecoratorts
+#graphify/code #graphify/EXTRACTED #community/TokenService

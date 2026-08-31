@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[createOrgWithBothPermissions()]] - `calls` [EXTRACTED]
-- [[ensurePermission()_4]] - `calls` [EXTRACTED]
+- [[ensurePermission()_9]] - `calls` [EXTRACTED]
 - [[mappings.e2e-spec.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/mappingse2e-spects

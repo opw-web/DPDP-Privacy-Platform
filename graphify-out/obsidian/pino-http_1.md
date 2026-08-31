@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "dependencies"
-location: "L39"
+community: "pino-http"
+location: "L42"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/pino-http
 ---
 
 # pino-http
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[pino-http]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/dependencies
+#graphify/concept #graphify/EXTRACTED #community/pino-http

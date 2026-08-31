@@ -22,9 +22,9 @@ tags:
 - [[createOrgWithManager()]] - `contains` [EXTRACTED]
 - [[createPurpose()]] - `contains` [EXTRACTED]
 - [[createRecipient()]] - `contains` [EXTRACTED]
-- [[ensurePermission()]] - `contains` [EXTRACTED]
-- [[permissions.ts]] - `imports_from` [EXTRACTED]
+- [[ensurePermission()_3]] - `contains` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[recipientPayload()]] - `contains` [EXTRACTED]
+- [[seedpermissions.ts]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/registerse2e-spects

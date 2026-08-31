@@ -12,7 +12,6 @@ tags:
 # ecommerce.ts
 
 ## Connections
-- [[auth.ts]] - `imports_from` [EXTRACTED]
 - [[db.ts]] - `imports_from` [EXTRACTED]
 - [[ecommerceRoutes()]] - `contains` [EXTRACTED]
 - [[envelope()]] - `imports` [EXTRACTED]
@@ -23,5 +22,6 @@ tags:
 - [[parsePageParams()]] - `imports` [EXTRACTED]
 - [[requireBearer()]] - `imports` [EXTRACTED]
 - [[server.ts]] - `imports_from` [EXTRACTED]
+- [[srcauth.ts]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/serverts

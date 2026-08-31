@@ -12,9 +12,9 @@ tags:
 # JwtEmployeeGuard
 
 ## Connections
-- [[dot-canActivate()]] - `method` [EXTRACTED]
-- [[dot-constructor()_5]] - `method` [EXTRACTED]
-- [[Injectable_4]] - `references` [EXTRACTED]
+- [[dot-canActivate()_1]] - `method` [EXTRACTED]
+- [[dot-constructor()_74]] - `method` [EXTRACTED]
+- [[Injectable_42]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[jwt-employee.guard.ts]] - `contains` [EXTRACTED]
 

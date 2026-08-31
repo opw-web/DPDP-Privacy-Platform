@@ -1,17 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "retention.service.ts"
+community: "PrincipalsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/PrincipalsController
 ---
 
 # Get
 
 ## Connections
-- [[dot-get()_7]] - `references` [EXTRACTED]
-- [[dot-list()_10]] - `references` [EXTRACTED]
+- [[dot-detail()]] - `references` [EXTRACTED]
+- [[dot-lineage()]] - `references` [EXTRACTED]
+- [[dot-list()_5]] - `references` [EXTRACTED]
+- [[dot-recipients()_1]] - `references` [EXTRACTED]
+- [[dot-sourceRecords()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/PrincipalsController

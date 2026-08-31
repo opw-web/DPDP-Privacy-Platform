@@ -14,7 +14,7 @@ members: 9
 - [[createOrgWithManager()]] - code - dpdp-platform/backend/test/registers.e2e-spec.ts
 - [[createPurpose()]] - code - dpdp-platform/backend/test/registers.e2e-spec.ts
 - [[createRecipient()]] - code - dpdp-platform/backend/test/registers.e2e-spec.ts
-- [[ensurePermission()]] - code - dpdp-platform/backend/test/registers.e2e-spec.ts
+- [[ensurePermission()_3]] - code - dpdp-platform/backend/test/registers.e2e-spec.ts
 - [[recipientPayload()]] - code - dpdp-platform/backend/test/registers.e2e-spec.ts
 - [[registers.e2e-spec.ts]] - code - dpdp-platform/backend/test/registers.e2e-spec.ts
 
@@ -26,10 +26,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_app.module.ts]]
-- 2 edges to [[_COMMUNITY_permissions.ts]]
-- 1 edge to [[_COMMUNITY_PrismaService]]
-- 1 edge to [[_COMMUNITY_prisma.service.ts]]
+- 2 edges to [[_COMMUNITY_PrismaService]]
+- 2 edges to [[_COMMUNITY_seedpermissions.ts]]
+- 1 edge to [[_COMMUNITY_AppModule]]
+- 1 edge to [[_COMMUNITY_app.module.ts]]
 
 ## Top bridge nodes
 - [[registers.e2e-spec.ts]] - degree 14, connects to 4 communities

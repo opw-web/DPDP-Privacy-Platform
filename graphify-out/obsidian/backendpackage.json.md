@@ -12,14 +12,14 @@ tags:
 # backend/package.json
 
 ## Connections
-- [[dependencies_1]] - `contains` [EXTRACTED]
-- [[description_1]] - `contains` [EXTRACTED]
+- [[dependencies_2]] - `contains` [EXTRACTED]
+- [[description_2]] - `contains` [EXTRACTED]
 - [[devDependencies_1]] - `contains` [EXTRACTED]
-- [[license]] - `contains` [EXTRACTED]
-- [[name_1]] - `contains` [EXTRACTED]
-- [[prisma_2]] - `contains` [EXTRACTED]
-- [[private_1]] - `contains` [EXTRACTED]
+- [[license_1]] - `contains` [EXTRACTED]
+- [[name_2]] - `contains` [EXTRACTED]
+- [[prisma]] - `contains` [EXTRACTED]
+- [[private_2]] - `contains` [EXTRACTED]
 - [[scripts]] - `contains` [EXTRACTED]
-- [[version_1]] - `contains` [EXTRACTED]
+- [[version_2]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/backend/packagejson

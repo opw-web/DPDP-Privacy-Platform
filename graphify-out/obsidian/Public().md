@@ -13,15 +13,21 @@ tags:
 
 ## Connections
 - [[dot-check()]] - `references` [EXTRACTED]
+- [[dot-data()]] - `references` [EXTRACTED]
 - [[dot-login()_2]] - `references` [EXTRACTED]
 - [[dot-login()_3]] - `references` [EXTRACTED]
 - [[dot-logout()_2]] - `references` [EXTRACTED]
 - [[dot-logout()_3]] - `references` [EXTRACTED]
 - [[dot-me()]] - `references` [EXTRACTED]
+- [[dot-privacyContact()]] - `references` [EXTRACTED]
+- [[dot-profile()]] - `references` [EXTRACTED]
+- [[dot-recipients()]] - `references` [EXTRACTED]
 - [[dot-refresh()_2]] - `references` [EXTRACTED]
 - [[dot-refresh()_3]] - `references` [EXTRACTED]
+- [[dot-sources()]] - `references` [EXTRACTED]
 - [[employee-auth.controller.ts]] - `imports` [EXTRACTED]
 - [[health.controller.ts]] - `imports` [EXTRACTED]
+- [[me.controller.ts]] - `imports` [EXTRACTED]
 - [[principal-auth.controller.ts]] - `imports` [EXTRACTED]
 - [[public.decorator.ts]] - `contains` [EXTRACTED]
 

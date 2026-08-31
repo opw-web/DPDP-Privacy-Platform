@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/rbac.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/registers.e2e-spec.ts"
 type: "code"
-community: "permissions.ts"
-location: "L44"
+community: "registers.e2e-spec.ts"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/permissionsts
+  - community/registerse2e-spects
 ---
 
 # ensurePermission()
 
 ## Connections
-- [[createOrgWithEmployee()]] - `calls` [EXTRACTED]
-- [[rbac.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[createEmployeeWithPermissions()]] - `calls` [EXTRACTED]
+- [[registers.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/permissionsts
+#graphify/code #graphify/EXTRACTED #community/registerse2e-spects

@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "purposes.service.ts"
+community: "SecurityMeasuresService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposesservicets
+  - community/SecurityMeasuresService
 ---
 
 # Param
 
 ## Connections
-- [[dot-review()]] - `references` [EXTRACTED]
-- [[dot-update()_4]] - `references` [EXTRACTED]
+- [[dot-get()_4]] - `references` [EXTRACTED]
+- [[dot-update()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposesservicets
+#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresService

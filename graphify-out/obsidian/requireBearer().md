@@ -12,13 +12,13 @@ tags:
 # requireBearer()
 
 ## Connections
-- [[auth.ts]] - `contains` [EXTRACTED]
 - [[ecommerce.ts]] - `imports` [EXTRACTED]
 - [[ecommerceRoutes()]] - `calls` [EXTRACTED]
 - [[marketing.ts]] - `imports` [EXTRACTED]
 - [[marketingRoutes()]] - `calls` [EXTRACTED]
 - [[sales.ts]] - `imports` [EXTRACTED]
 - [[salesRoutes()]] - `calls` [EXTRACTED]
+- [[srcauth.ts]] - `contains` [EXTRACTED]
 - [[support.ts]] - `imports` [EXTRACTED]
 - [[supportRoutes()]] - `calls` [EXTRACTED]
 

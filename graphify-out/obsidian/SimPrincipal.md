@@ -1,12 +1,12 @@
 ---
 source_file: "demo-company-server/src/seed/match.ts"
 type: "code"
-community: "match.ts"
+community: "dataset.test.ts"
 location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/matchts
+  - community/datasettestts
 ---
 
 # SimPrincipal
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[match.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/matchts
+#graphify/code #graphify/EXTRACTED #community/datasettestts

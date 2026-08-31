@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/tenant-isolation.e2e-spec.ts"
 type: "code"
-community: "prisma.service.ts"
+community: "tenant-context.ts"
 location: "L1070"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/tenant-contextts
 ---
 
 # createIdentityLinkAsAService()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[tenant-isolation.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/tenant-contextts

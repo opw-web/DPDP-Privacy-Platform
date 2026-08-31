@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Public"
+community: "CreateSharingActivityDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/CreateSharingActivityDto
 ---
 
 # Controller
 
 ## Connections
-- [[EmployeeAuthController]] - `references` [EXTRACTED]
+- [[SharingController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

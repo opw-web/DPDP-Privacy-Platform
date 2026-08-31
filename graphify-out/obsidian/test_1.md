@@ -1,12 +1,12 @@
 ---
-source_file: "demo-company-server/package.json"
+source_file: "dpdp-platform/frontend/package.json"
 type: "code"
-community: "demo-company-server/package.json"
+community: "scripts"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/demo-company-server/packagejson
+  - community/scripts
 ---
 
 # test
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[scripts_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/demo-company-server/packagejson
+#graphify/code #graphify/EXTRACTED #community/scripts

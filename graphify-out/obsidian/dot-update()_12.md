@@ -1,22 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/retention.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/transfers.controller.ts"
 type: "code"
-community: "retention.service.ts"
-location: "L173"
+community: "CreateTransferDto"
+location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/CreateTransferDto
 ---
 
 # .update()
 
 ## Connections
-- [[dot-assertPurposeExists()_1]] - `calls` [EXTRACTED]
-- [[dot-update()_11]] - `calls` [INFERRED]
-- [[RetentionService]] - `method` [EXTRACTED]
-- [[UpdateRetentionPolicyDto]] - `references` [EXTRACTED]
-- [[duplicateNameMessage()_1]] - `calls` [EXTRACTED]
-- [[isUniqueConstraintViolation()_3]] - `calls` [EXTRACTED]
+- [[dot-update()_13]] - `calls` [INFERRED]
+- [[Body_9]] - `references` [EXTRACTED]
+- [[Param_10]] - `references` [EXTRACTED]
+- [[Patch_7]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[TransfersController]] - `method` [EXTRACTED]
+- [[UpdateTransferDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/CreateTransferDto

@@ -1,31 +1,23 @@
 ---
 type: community
-members: 18
+members: 10
 ---
 
 # compilerOptions
 
-**Members:** 18 nodes
+**Members:** 10 nodes
 
 ## Members
-- [[ES2020]] - concept - demo-company-server/tsconfig.json
-- [[compilerOptions_1]] - code - demo-company-server/tsconfig.json
-- [[declaration]] - code - demo-company-server/tsconfig.json
-- [[demo-company-servertsconfig.json]] - code - demo-company-server/tsconfig.json
-- [[esModuleInterop]] - code - demo-company-server/tsconfig.json
-- [[forceConsistentCasingInFileNames]] - code - demo-company-server/tsconfig.json
-- [[include]] - code - demo-company-server/tsconfig.json
-- [[lib]] - code - demo-company-server/tsconfig.json
-- [[module_5]] - code - demo-company-server/tsconfig.json
-- [[moduleResolution]] - code - demo-company-server/tsconfig.json
-- [[outDir]] - code - demo-company-server/tsconfig.json
-- [[resolveJsonModule]] - code - demo-company-server/tsconfig.json
-- [[rootDir]] - code - demo-company-server/tsconfig.json
-- [[skipLibCheck]] - code - demo-company-server/tsconfig.json
-- [[sourceMap]] - code - demo-company-server/tsconfig.json
-- [[src.ts]] - concept - demo-company-server/tsconfig.json
-- [[strict]] - code - demo-company-server/tsconfig.json
-- [[target]] - code - demo-company-server/tsconfig.json
+- [[allowSyntheticDefaultImports]] - code - dpdp-platform/frontend/tsconfig.node.json
+- [[compilerOptions_1]] - code - dpdp-platform/frontend/tsconfig.node.json
+- [[composite]] - code - dpdp-platform/frontend/tsconfig.node.json
+- [[include]] - code - dpdp-platform/frontend/tsconfig.node.json
+- [[module_3]] - code - dpdp-platform/frontend/tsconfig.node.json
+- [[moduleResolution]] - code - dpdp-platform/frontend/tsconfig.node.json
+- [[skipLibCheck]] - code - dpdp-platform/frontend/tsconfig.node.json
+- [[strict]] - code - dpdp-platform/frontend/tsconfig.node.json
+- [[tsconfig.node.json]] - code - dpdp-platform/frontend/tsconfig.node.json
+- [[vite.config.ts]] - concept - dpdp-platform/frontend/tsconfig.node.json
 
 ## Live Query (requires Dataview plugin)
 

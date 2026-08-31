@@ -1,17 +1,17 @@
 ---
 source_file: "dpdp-platform/backend/prisma/seed/permissions.ts"
 type: "code"
-community: "permissions.ts"
+community: "seed/permissions.ts"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/permissionsts
+  - community/seed/permissionsts
 ---
 
 # PermissionSeed
 
 ## Connections
-- [[permissions.ts]] - `contains` [EXTRACTED]
+- [[seedpermissions.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/permissionsts
+#graphify/code #graphify/EXTRACTED #community/seed/permissionsts

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/security-measures.controller.ts"
 type: "code"
-community: ".record"
+community: "security-measures.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/security-measuresservicets
 ---
 
 # security-measures.controller.ts
@@ -23,4 +23,4 @@ tags:
 - [[security-measures.service.ts]] - `imports_from` [EXTRACTED]
 - [[update-security-measure.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/security-measuresservicets

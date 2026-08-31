@@ -1,23 +1,24 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/source-purposes.service.ts"
 type: "code"
-community: "mappings.service.ts"
-location: "L31"
+community: "SourcePurposesService"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingsservicets
+  - community/SourcePurposesService
 ---
 
 # SourcePurposesService
 
 ## Connections
-- [[dot-constructor()_9]] - `references` [EXTRACTED]
-- [[dot-constructor()_21]] - `method` [EXTRACTED]
+- [[dot-constructor()_80]] - `references` [EXTRACTED]
+- [[dot-constructor()_15]] - `method` [EXTRACTED]
+- [[dot-get()_18]] - `method` [EXTRACTED]
 - [[dot-replace()_1]] - `method` [EXTRACTED]
-- [[Injectable_10]] - `references` [EXTRACTED]
+- [[Injectable_45]] - `references` [EXTRACTED]
 - [[data-sources.module.ts]] - `imports` [EXTRACTED]
 - [[mappings.controller.ts]] - `imports` [EXTRACTED]
 - [[source-purposes.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/EXTRACTED #community/SourcePurposesService

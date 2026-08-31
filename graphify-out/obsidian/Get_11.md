@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "RequirePermission"
+community: "CreateSharingActivityDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/CreateSharingActivityDto
 ---
 
 # Get
 
 ## Connections
-- [[dot-list()_15]] - `references` [EXTRACTED]
+- [[dot-get()_8]] - `references` [EXTRACTED]
+- [[dot-list()_13]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

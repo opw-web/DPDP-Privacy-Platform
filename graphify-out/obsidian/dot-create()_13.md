@@ -1,20 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/connector.factory.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/recipients.controller.ts"
 type: "code"
-community: "rest-api.connector.ts"
-location: "L40"
+community: "recipients.service.ts"
+location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rest-apiconnectorts
+  - community/recipientsservicets
 ---
 
 # .create()
 
 ## Connections
-- [[dot-buildConnector()]] - `calls` [INFERRED]
-- [[Connector]] - `references` [EXTRACTED]
-- [[ConnectorFactory]] - `method` [EXTRACTED]
-- [[RestApiConnector]] - `calls` [EXTRACTED]
+- [[dot-create()_14]] - `calls` [INFERRED]
+- [[Body_10]] - `references` [EXTRACTED]
+- [[CreateRecipientDto]] - `references` [EXTRACTED]
+- [[Post_9]] - `references` [EXTRACTED]
+- [[RecipientsController]] - `method` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts
+#graphify/code #graphify/EXTRACTED #community/recipientsservicets

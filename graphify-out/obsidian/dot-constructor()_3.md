@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/organizations/organizations.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync-error.ts"
 type: "code"
-community: "UpdateOrganizationDto"
-location: "L10"
+community: "SyncPipelineService"
+location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateOrganizationDto
+  - community/SyncPipelineService
 ---
 
 # .constructor()
 
 ## Connections
-- [[OrganizationsController]] - `method` [EXTRACTED]
-- [[OrganizationsService]] - `references` [EXTRACTED]
+- [[SyncLockUnavailableError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateOrganizationDto
+#graphify/code #graphify/EXTRACTED #community/SyncPipelineService

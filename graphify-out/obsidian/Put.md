@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "mappings.service.ts"
+community: "MappingsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingsservicets
+  - community/MappingsController
 ---
 
 # Put
@@ -14,4 +14,4 @@ tags:
 - [[dot-replaceMappings()]] - `references` [EXTRACTED]
 - [[dot-replacePurposes()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/EXTRACTED #community/MappingsController

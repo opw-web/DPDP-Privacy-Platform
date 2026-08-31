@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/audit/audit.service.ts"
 type: "code"
-community: "audit.service.ts"
+community: "PrismaService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/auditservicets
+  - community/PrismaService
 ---
 
 # audit.service.ts
@@ -21,18 +21,24 @@ tags:
 - [[TenantContext]] - `imports` [EXTRACTED]
 - [[access-log.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[access-log.service.ts]] - `imports_from` [EXTRACTED]
+- [[age.service.ts]] - `imports_from` [EXTRACTED]
 - [[allocateCounterValue()]] - `imports` [EXTRACTED]
 - [[assertNoForbiddenMetadata()]] - `contains` [EXTRACTED]
 - [[audit-actions.ts]] - `imports_from` [EXTRACTED]
+- [[audit-read.e2e-spec.ts]] - `imports_from` [EXTRACTED]
+- [[audit-read.service.ts]] - `imports_from` [EXTRACTED]
 - [[audit.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[audit.module.ts]] - `imports_from` [EXTRACTED]
+- [[candidates.service.ts]] - `imports_from` [EXTRACTED]
 - [[canonical-json.ts]] - `imports_from` [EXTRACTED]
 - [[canonicalJson()]] - `imports` [EXTRACTED]
 - [[counter.ts]] - `imports_from` [EXTRACTED]
 - [[data-sources.service.ts]] - `imports_from` [EXTRACTED]
 - [[employee-auth.service.ts]] - `imports_from` [EXTRACTED]
 - [[employees.service.ts]] - `imports_from` [EXTRACTED]
+- [[linking.service.ts]] - `imports_from` [EXTRACTED]
 - [[mappings.service.ts]] - `imports_from` [EXTRACTED]
+- [[merge.service.ts]] - `imports_from` [EXTRACTED]
 - [[organizations.service.ts]] - `imports_from` [EXTRACTED]
 - [[principal-auth.service.ts]] - `imports_from` [EXTRACTED]
 - [[purposes.service.spec.ts]] - `imports_from` [EXTRACTED]
@@ -41,11 +47,13 @@ tags:
 - [[refresh-rotation.util.ts]] - `imports_from` [EXTRACTED]
 - [[retention.service.ts]] - `imports_from` [EXTRACTED]
 - [[roles.service.ts]] - `imports_from` [EXTRACTED]
+- [[ropa-export.service.ts]] - `imports_from` [EXTRACTED]
 - [[scoped-transaction-client.ts]] - `imports_from` [EXTRACTED]
 - [[security-measures.service.ts]] - `imports_from` [EXTRACTED]
 - [[sharing.service.ts]] - `imports_from` [EXTRACTED]
 - [[source-purposes.service.ts]] - `imports_from` [EXTRACTED]
+- [[sync-pipeline.service.ts]] - `imports_from` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 - [[transfers.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/auditservicets
+#graphify/code #graphify/EXTRACTED #community/PrismaService

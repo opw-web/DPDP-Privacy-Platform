@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
+source_file: "dpdp-platform/backend/src/common/guards/permissions.guard.ts"
 type: "code"
-community: "rest-api.connector.ts"
-location: "L51"
+community: "AccessTokenPayload"
+location: "L81"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rest-apiconnectorts
+  - community/AccessTokenPayload
 ---
 
 # .constructor()
 
 ## Connections
-- [[PageCapExceededError]] - `method` [EXTRACTED]
+- [[PermissionsGuard]] - `method` [EXTRACTED]
+- [[PrismaService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

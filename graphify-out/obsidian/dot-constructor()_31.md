@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/common/reference/reference.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync.controller.ts"
 type: "code"
-community: "prisma.service.ts"
-location: "L17"
+community: "sync.service.ts"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/syncservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[PrismaService]] - `references` [EXTRACTED]
-- [[ReferenceService]] - `method` [EXTRACTED]
+- [[SyncJobsController]] - `method` [EXTRACTED]
+- [[SyncService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/syncservicets

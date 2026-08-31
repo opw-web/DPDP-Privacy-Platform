@@ -1,8 +1,8 @@
 ---
-source_file: "demo-company-server/tsconfig.json"
+source_file: "dpdp-platform/frontend/tsconfig.node.json"
 type: "code"
 community: "compilerOptions"
-location: "L17"
+location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # include
 
 ## Connections
-- [[demo-company-servertsconfig.json]] - `contains` [EXTRACTED]
-- [[src.ts]] - `extends` [EXTRACTED]
+- [[tsconfig.node.json]] - `contains` [EXTRACTED]
+- [[vite.config.ts]] - `extends` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/compilerOptions

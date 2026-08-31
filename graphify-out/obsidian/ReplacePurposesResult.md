@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/source-purposes.service.ts"
+source_file: "dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts"
 type: "code"
-community: "mappings.service.ts"
-location: "L17"
+community: "DataSourceDetailPage.tsx"
+location: "L195"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingsservicets
+  - community/DataSourceDetailPagetsx
 ---
 
 # ReplacePurposesResult
 
 ## Connections
-- [[MappingWarning]] - `references` [EXTRACTED]
-- [[PublicPurpose]] - `references` [EXTRACTED]
-- [[source-purposes.service.ts]] - `contains` [EXTRACTED]
+- [[Step4Purposes.tsx]] - `imports` [EXTRACTED]
+- [[Step4PurposesProps]] - `references` [EXTRACTED]
+- [[data-sources-api.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/EXTRACTED #community/DataSourceDetailPagetsx

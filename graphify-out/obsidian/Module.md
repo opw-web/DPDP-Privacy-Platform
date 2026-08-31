@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "auth.module.ts"
+community: "PrismaModule"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/authmodulets
+  - community/PrismaModule
 ---
 
 # Module
 
 ## Connections
-- [[AuditModule]] - `references` [EXTRACTED]
+- [[PrismaModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/authmodulets
+#graphify/code #graphify/EXTRACTED #community/PrismaModule

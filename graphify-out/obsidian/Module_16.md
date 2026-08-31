@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Public"
+community: "app.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/appmodulets
 ---
 
 # Module
 
 ## Connections
-- [[HealthModule]] - `references` [EXTRACTED]
+- [[EmployeesModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/appmodulets

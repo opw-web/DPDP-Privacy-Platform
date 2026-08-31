@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".record"
+community: "purposes.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/purposescontrollerts
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateSecurityMeasureDto]] - `references` [EXTRACTED]
+- [[CreatePurposeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/purposescontrollerts

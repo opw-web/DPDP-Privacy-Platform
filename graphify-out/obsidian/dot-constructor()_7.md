@@ -1,17 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/auth/token.service.ts"
+source_file: "dpdp-platform/backend/src/queues/sync.queue.ts"
 type: "code"
-community: "TokenService"
-location: "L65"
+community: "queues.module.ts"
+location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TokenService
+  - community/queuesmodulets
 ---
 
 # .constructor()
 
 ## Connections
-- [[TokenService]] - `method` [EXTRACTED]
+- [[InjectQueue]] - `references` [EXTRACTED]
+- [[SyncLockService]] - `references` [EXTRACTED]
+- [[SyncQueueService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TokenService
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

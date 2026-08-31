@@ -19,7 +19,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_dependencies]]
+- 1 edge to [[_COMMUNITY_dependencies_1]]
 
 ## Top bridge nodes
 - [[@prismaclient]] - degree 2, connects to 1 community

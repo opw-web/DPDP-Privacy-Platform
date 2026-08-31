@@ -1,17 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/retention.service.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/candidates.service.ts"
 type: "code"
-community: "retention.service.ts"
-location: "L68"
+community: "AccessTokenPayload"
+location: "L130"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/AccessTokenPayload
 ---
 
 # .list()
 
 ## Connections
-- [[RetentionService]] - `method` [EXTRACTED]
+- [[CandidatesService]] - `method` [EXTRACTED]
+- [[isoDate()]] - `calls` [EXTRACTED]
+- [[recordValueFor()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

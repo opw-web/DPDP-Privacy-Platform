@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "source-map-support"
-location: "L63"
+community: "devDependencies"
+location: "L66"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/source-map-support
+  - community/devDependencies
 ---
 
 # source-map-support
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[source-map-support]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/source-map-support
+#graphify/concept #graphify/EXTRACTED #community/devDependencies

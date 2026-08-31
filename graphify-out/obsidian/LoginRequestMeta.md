@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/login-request-meta.ts"
 type: "code"
-community: "principal-auth.service.ts"
+community: "tenant-context.ts"
 location: "L2"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principal-authservicets
+  - community/tenant-contextts
 ---
 
 # LoginRequestMeta
@@ -21,4 +21,4 @@ tags:
 - [[principal-auth.service.ts]] - `imports` [EXTRACTED]
 - [[refresh-rotation.util.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principal-authservicets
+#graphify/code #graphify/EXTRACTED #community/tenant-contextts

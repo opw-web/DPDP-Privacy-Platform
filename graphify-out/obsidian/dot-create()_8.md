@@ -1,24 +1,24 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/sharing.service.ts"
 type: "code"
-community: "DataSourcesService"
-location: "L159"
+community: "CreateSharingActivityDto"
+location: "L131"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesService
+  - community/CreateSharingActivityDto
 ---
 
 # .create()
 
 ## Connections
-- [[dot-assertPubliclyAvailableJustified()]] - `calls` [EXTRACTED]
-- [[dot-create()_14]] - `calls` [INFERRED]
-- [[dot-encrypt()]] - `calls` [INFERRED]
+- [[dot-assertPurposeExists()]] - `calls` [EXTRACTED]
+- [[dot-assertRecipientExists()]] - `calls` [EXTRACTED]
+- [[dot-assertSourceIdsExist()]] - `calls` [EXTRACTED]
+- [[dot-create()_7]] - `calls` [INFERRED]
 - [[dot-record()]] - `calls` [INFERRED]
-- [[CreateDataSourceDto]] - `references` [EXTRACTED]
-- [[DataSourcesService]] - `method` [EXTRACTED]
-- [[duplicateNameMessage()]] - `calls` [EXTRACTED]
-- [[isUniqueConstraintViolation()_2]] - `calls` [EXTRACTED]
+- [[CreateSharingActivityDto]] - `references` [EXTRACTED]
+- [[SharingService]] - `method` [EXTRACTED]
+- [[assertNonBlankDescription()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesService
+#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

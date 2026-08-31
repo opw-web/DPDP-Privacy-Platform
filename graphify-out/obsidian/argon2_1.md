@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "argon2"
-location: "L31"
+community: "dependencies"
+location: "L33"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/argon2
+  - community/dependencies
 ---
 
 # argon2
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[argon2]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/argon2
+#graphify/concept #graphify/EXTRACTED #community/dependencies

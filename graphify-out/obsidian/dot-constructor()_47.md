@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/principals/lineage.service.ts"
 type: "code"
-community: "RequirePermission"
-location: "L26"
+community: "principals.service.ts"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/principalsservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[DataSourcesController]] - `method` [EXTRACTED]
-- [[DataSourcesService]] - `references` [EXTRACTED]
+- [[LineageService]] - `method` [EXTRACTED]
+- [[PrismaService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/token.service.ts"
 type: "code"
-community: "PrincipalAuthService"
+community: "TokenService"
 location: "L75"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/PrincipalAuthService
+  - community/TokenService
 ---
 
 # .signAccessToken()
@@ -16,4 +16,4 @@ tags:
 - [[dot-issueTokenPair()_1]] - `calls` [INFERRED]
 - [[TokenService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/PrincipalAuthService
+#graphify/code #graphify/INFERRED #community/TokenService

@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-replacePermissions()_1]] - `calls` [INFERRED]
-- [[Body_11]] - `references` [EXTRACTED]
-- [[Param_8]] - `references` [EXTRACTED]
-- [[Patch_8]] - `references` [EXTRACTED]
+- [[Body_7]] - `references` [EXTRACTED]
+- [[Param_9]] - `references` [EXTRACTED]
+- [[Patch_6]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[RolesController]] - `method` [EXTRACTED]
 - [[UpdateRolePermissionsDto]] - `references` [EXTRACTED]

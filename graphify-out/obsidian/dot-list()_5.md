@@ -1,18 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.ts"
+source_file: "dpdp-platform/backend/src/modules/principals/principals.controller.ts"
 type: "code"
-community: "purposes.service.ts"
-location: "L82"
+community: "PrincipalsController"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposesservicets
+  - community/PrincipalsController
 ---
 
 # .list()
 
 ## Connections
-- [[PurposesService]] - `method` [EXTRACTED]
-- [[toPublicPurpose()]] - `indirect_call` [INFERRED]
+- [[CurrentActorPermissions]] - `references` [EXTRACTED]
+- [[Get_7]] - `references` [EXTRACTED]
+- [[ListPrincipalsDto]] - `references` [EXTRACTED]
+- [[PrincipalsController]] - `method` [EXTRACTED]
+- [[Query_1]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposesservicets
+#graphify/code #graphify/EXTRACTED #community/PrincipalsController

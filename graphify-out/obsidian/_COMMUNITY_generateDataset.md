@@ -1,11 +1,11 @@
 ---
 type: community
-members: 11
+members: 12
 ---
 
 # generateDataset
 
-**Members:** 11 nodes
+**Members:** 12 nodes
 
 ## Members
 - [[adultDob()]] - code - demo-company-server/src/seed/generate.ts
@@ -18,6 +18,7 @@ members: 11
 - [[nextEmail()]] - code - demo-company-server/src/seed/generate.ts
 - [[nextPhoneDigits()]] - code - demo-company-server/src/seed/generate.ts
 - [[nextUniqueName()]] - code - demo-company-server/src/seed/generate.ts
+- [[personaToBuilt()]] - code - demo-company-server/src/seed/generate.ts
 - [[phoneVariant()]] - code - demo-company-server/src/seed/generate.ts
 
 ## Live Query (requires Dataview plugin)
@@ -28,11 +29,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_generate.ts]]
+- 4 edges to [[_COMMUNITY_generate.ts]]
 - 2 edges to [[_COMMUNITY_Rng]]
-- 1 edge to [[_COMMUNITY_dataset.test.ts]]
+- 2 edges to [[_COMMUNITY_dataset.test.ts]]
 
 ## Top bridge nodes
 - [[generateDataset()]] - degree 14, connects to 3 communities
 - [[formatDob()]] - degree 4, connects to 1 community
 - [[phoneVariant()]] - degree 3, connects to 1 community
+- [[personaToBuilt()]] - degree 2, connects to 1 community

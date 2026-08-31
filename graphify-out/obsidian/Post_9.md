@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateEmployeeDto"
+community: "recipients.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateEmployeeDto
+  - community/recipientsservicets
 ---
 
 # Post
 
 ## Connections
-- [[dot-create()_15]] - `references` [EXTRACTED]
-- [[dot-resetPassword()]] - `references` [EXTRACTED]
+- [[dot-create()_13]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateEmployeeDto
+#graphify/code #graphify/EXTRACTED #community/recipientsservicets

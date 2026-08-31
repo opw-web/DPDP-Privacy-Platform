@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "code"
-community: "@types/cookie-parser"
-location: "L47"
+community: "devDependencies"
+location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/types/cookie-parser
+  - community/devDependencies
 ---
 
 # @types/cookie-parser
@@ -15,4 +15,4 @@ tags:
 - [[@typescookie-parser_1]] - `imports` [EXTRACTED]
 - [[devDependencies_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/types/cookie-parser
+#graphify/code #graphify/EXTRACTED #community/devDependencies

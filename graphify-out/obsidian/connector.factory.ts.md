@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/connectors/connector.factory.ts"
 type: "code"
-community: "rest-api.connector.ts"
+community: "connector.factory.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rest-apiconnectorts
+  - community/connectorfactoryts
 ---
 
 # connector.factory.ts
@@ -24,4 +24,4 @@ tags:
 - [[data-sources.service.ts]] - `imports_from` [EXTRACTED]
 - [[rest-api.connector.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts
+#graphify/code #graphify/EXTRACTED #community/connectorfactoryts

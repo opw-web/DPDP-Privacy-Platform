@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/employees/roles.controller.ts"
 type: "code"
-community: "employees.module.ts"
+community: "PrismaService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeesmodulets
+  - community/PrismaService
 ---
 
 # roles.controller.ts
@@ -21,4 +21,4 @@ tags:
 - [[roles.service.ts]] - `imports_from` [EXTRACTED]
 - [[update-role-permissions.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeesmodulets
+#graphify/code #graphify/EXTRACTED #community/PrismaService

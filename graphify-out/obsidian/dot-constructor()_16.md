@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/transfers.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/employees.service.ts"
 type: "code"
-community: "registers.module.ts"
-location: "L11"
+community: "PrismaService"
+location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/registersmodulets
+  - community/PrismaService
 ---
 
 # .constructor()
 
 ## Connections
-- [[TransfersController]] - `method` [EXTRACTED]
-- [[TransfersService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[EmployeesService]] - `method` [EXTRACTED]
+- [[PrismaService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/registersmodulets
+#graphify/code #graphify/EXTRACTED #community/PrismaService

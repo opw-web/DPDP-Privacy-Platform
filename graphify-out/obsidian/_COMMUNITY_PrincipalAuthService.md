@@ -1,14 +1,14 @@
 ---
 type: community
-members: 20
+members: 18
 ---
 
 # PrincipalAuthService
 
-**Members:** 20 nodes
+**Members:** 18 nodes
 
 ## Members
-- [[dot-constructor()_8]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts
+- [[dot-constructor()_56]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts
 - [[dot-hashRefreshToken()]] - code - dpdp-platform/backend/src/modules/auth/token.service.ts
 - [[dot-issueTokenPair()]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.service.ts
 - [[dot-issueTokenPair()_1]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.service.ts
@@ -18,16 +18,14 @@ members: 20
 - [[dot-logout()_1]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.service.ts
 - [[dot-refresh()]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.service.ts
 - [[dot-refresh()_1]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.service.ts
-- [[dot-signAccessToken()]] - code - dpdp-platform/backend/src/modules/auth/token.service.ts
 - [[dot-signRefreshToken()]] - code - dpdp-platform/backend/src/modules/auth/token.service.ts
 - [[dot-storeFor()]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.service.ts
 - [[dot-storeFor()_1]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.service.ts
 - [[dot-verifyRefreshToken()]] - code - dpdp-platform/backend/src/modules/auth/token.service.ts
 - [[EmployeeAuthService]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.service.ts
-- [[Injectable_7]] - code
-- [[Injectable_8]] - code
+- [[Injectable_29]] - code
+- [[Injectable_30]] - code
 - [[PrincipalAuthService]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.service.ts
-- [[rotateRefreshToken()]] - code - dpdp-platform/backend/src/modules/auth/refresh-rotation.util.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -37,17 +35,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_principal-auth.service.ts]]
-- 8 edges to [[_COMMUNITY_Public]]
-- 4 edges to [[_COMMUNITY_TokenService]]
-- 4 edges to [[_COMMUNITY_auth.module.ts]]
-- 3 edges to [[_COMMUNITY_prisma.service.ts]]
+- 13 edges to [[_COMMUNITY_tenant-context.ts]]
+- 5 edges to [[_COMMUNITY_TokenService]]
+- 4 edges to [[_COMMUNITY_PrincipalAuthController]]
+- 4 edges to [[_COMMUNITY_EmployeeAuthController]]
 - 3 edges to [[_COMMUNITY_PrismaService]]
-- 3 edges to [[_COMMUNITY_dot-record]]
+- 2 edges to [[_COMMUNITY_app.module.ts]]
+- 2 edges to [[_COMMUNITY_Public]]
+- 2 edges to [[_COMMUNITY_dot-record]]
 
 ## Top bridge nodes
-- [[PrincipalAuthService]] - degree 12, connects to 4 communities
-- [[EmployeeAuthService]] - degree 11, connects to 4 communities
+- [[PrincipalAuthService]] - degree 12, connects to 5 communities
+- [[EmployeeAuthService]] - degree 11, connects to 3 communities
 - [[dot-login()]] - degree 7, connects to 3 communities
 - [[dot-login()_1]] - degree 7, connects to 3 communities
 - [[dot-refresh()]] - degree 7, connects to 2 communities

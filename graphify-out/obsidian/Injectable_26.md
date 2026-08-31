@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EmployeesService"
+community: ".record"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeesService
+  - community/record
 ---
 
 # Injectable
 
 ## Connections
-- [[EmployeesService]] - `references` [EXTRACTED]
+- [[LinkingService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeesService
+#graphify/code #graphify/EXTRACTED #community/record

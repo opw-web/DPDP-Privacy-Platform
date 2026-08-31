@@ -1,23 +1,17 @@
 ---
 type: community
-members: 33
+members: 25
 ---
 
 # server.ts
 
-**Members:** 33 nodes
+**Members:** 25 nodes
 
 ## Members
-- [[EXPECTED_FIELDS]] - code - demo-company-server/test/routes.test.ts
-- [[KEYS]] - code - demo-company-server/test/routes.test.ts
 - [[PageParams]] - code - demo-company-server/src/pagination.ts
-- [[ROUTES]] - code - demo-company-server/test/routes.test.ts
 - [[SYSTEM_KEYS]] - code - demo-company-server/src/auth.ts
 - [[System]] - code - demo-company-server/src/auth.ts
-- [[TEST_DB_PATH]] - code - demo-company-server/test/routes.test.ts
-- [[auth.ts]] - code - demo-company-server/src/auth.ts
 - [[buildServer()]] - code - demo-company-server/src/server.ts
-- [[closeDb()]] - code - demo-company-server/src/db.ts
 - [[db.ts]] - code - demo-company-server/src/db.ts
 - [[ecommerce.ts]] - code - demo-company-server/src/routes/ecommerce.ts
 - [[ecommerceRoutes()]] - code - demo-company-server/src/routes/ecommerce.ts
@@ -32,15 +26,13 @@ members: 33
 - [[pagination.ts]] - code - demo-company-server/src/pagination.ts
 - [[parsePageParams()]] - code - demo-company-server/src/pagination.ts
 - [[requireBearer()]] - code - demo-company-server/src/auth.ts
-- [[routes.test.ts]] - code - demo-company-server/test/routes.test.ts
 - [[sales.ts]] - code - demo-company-server/src/routes/sales.ts
 - [[salesRoutes()]] - code - demo-company-server/src/routes/sales.ts
 - [[server.ts]] - code - demo-company-server/src/server.ts
+- [[srcauth.ts]] - code - demo-company-server/src/auth.ts
 - [[stripQuery()]] - code - demo-company-server/src/pagination.ts
 - [[support.ts]] - code - demo-company-server/src/routes/support.ts
 - [[supportRoutes()]] - code - demo-company-server/src/routes/support.ts
-- [[{ buildServer }]] - code - demo-company-server/test/routes.test.ts
-- [[{ openDb, closeDb }]] - code - demo-company-server/test/routes.test.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -50,10 +42,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_generate.ts]]
+- 5 edges to [[_COMMUNITY_routes.test.ts]]
 - 3 edges to [[_COMMUNITY_dataset.test.ts]]
+- 2 edges to [[_COMMUNITY_generate.ts]]
 
 ## Top bridge nodes
-- [[openDb()]] - degree 13, connects to 2 communities
-- [[db.ts]] - degree 9, connects to 2 communities
-- [[closeDb()]] - degree 4, connects to 2 communities
+- [[openDb()]] - degree 13, connects to 3 communities
+- [[db.ts]] - degree 9, connects to 3 communities
+- [[server.ts]] - degree 14, connects to 1 community
+- [[buildServer()]] - degree 8, connects to 1 community

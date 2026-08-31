@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts"
 type: "code"
-community: "Public"
-location: "L111"
+community: "EmployeeAuthController"
+location: "L112"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/EmployeeAuthController
 ---
 
 # .logout()
@@ -15,10 +15,10 @@ tags:
 - [[dot-clearRefreshCookie()]] - `calls` [EXTRACTED]
 - [[dot-logout()]] - `calls` [INFERRED]
 - [[EmployeeAuthController]] - `method` [EXTRACTED]
-- [[HttpCode]] - `references` [EXTRACTED]
-- [[Post_6]] - `references` [EXTRACTED]
+- [[HttpCode_3]] - `references` [EXTRACTED]
+- [[Post_7]] - `references` [EXTRACTED]
 - [[Public()]] - `references` [EXTRACTED]
 - [[Req]] - `references` [EXTRACTED]
-- [[Res]] - `references` [EXTRACTED]
+- [[Res_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController

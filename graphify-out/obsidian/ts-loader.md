@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "code"
-community: "ts-loader"
-location: "L66"
+community: "devDependencies"
+location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ts-loader
+  - community/devDependencies
 ---
 
 # ts-loader
@@ -15,4 +15,4 @@ tags:
 - [[devDependencies_1]] - `contains` [EXTRACTED]
 - [[ts-loader_1]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ts-loader
+#graphify/code #graphify/EXTRACTED #community/devDependencies

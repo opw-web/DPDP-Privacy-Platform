@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/source-purposes.service.ts"
+source_file: "dpdp-platform/backend/src/modules/principals/principals.service.ts"
 type: "code"
 community: "PrismaService"
-location: "L32"
+location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,8 +12,9 @@ tags:
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
+- [[AccessLogService]] - `references` [EXTRACTED]
+- [[MaskingService]] - `references` [EXTRACTED]
+- [[PrincipalsService]] - `method` [EXTRACTED]
 - [[PrismaService]] - `references` [EXTRACTED]
-- [[SourcePurposesService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PrismaService

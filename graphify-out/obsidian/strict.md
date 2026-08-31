@@ -1,8 +1,8 @@
 ---
-source_file: "demo-company-server/tsconfig.json"
+source_file: "dpdp-platform/frontend/tsconfig.node.json"
 type: "code"
 community: "compilerOptions"
-location: "L9"
+location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/transfers.service.ts"
 type: "code"
-community: "registers.module.ts"
+community: "CreateTransferDto"
 location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/registersmodulets
+  - community/CreateTransferDto
 ---
 
 # .assertRecipientExists()
 
 ## Connections
-- [[dot-create()_7]] - `calls` [EXTRACTED]
-- [[dot-update()_9]] - `calls` [EXTRACTED]
+- [[dot-create()_12]] - `calls` [EXTRACTED]
+- [[dot-update()_13]] - `calls` [EXTRACTED]
 - [[TransfersService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/registersmodulets
+#graphify/code #graphify/EXTRACTED #community/CreateTransferDto

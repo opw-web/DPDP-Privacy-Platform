@@ -1,30 +1,30 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/dto/create-retention-policy.dto.ts"
 type: "code"
-community: "retention.service.ts"
-location: "L41"
+community: "CreateRetentionPolicyDto"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/CreateRetentionPolicyDto
 ---
 
 # CreateRetentionPolicyDto
 
 ## Connections
-- [[dot-create()_9]] - `references` [EXTRACTED]
-- [[dot-create()_10]] - `references` [EXTRACTED]
-- [[ApiProperty_7]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_11]] - `references` [EXTRACTED]
-- [[IsBoolean_10]] - `references` [EXTRACTED]
-- [[IsIn_3]] - `references` [EXTRACTED]
-- [[IsInt_3]] - `references` [EXTRACTED]
-- [[IsOptional_11]] - `references` [EXTRACTED]
-- [[IsString_13]] - `references` [EXTRACTED]
-- [[Min_3]] - `references` [EXTRACTED]
-- [[MinLength_11]] - `references` [EXTRACTED]
+- [[dot-create()_15]] - `references` [EXTRACTED]
+- [[dot-create()_16]] - `references` [EXTRACTED]
+- [[ApiProperty_18]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_16]] - `references` [EXTRACTED]
+- [[IsBoolean_13]] - `references` [EXTRACTED]
+- [[IsIn_4]] - `references` [EXTRACTED]
+- [[IsInt_6]] - `references` [EXTRACTED]
+- [[IsOptional_15]] - `references` [EXTRACTED]
+- [[IsString_26]] - `references` [EXTRACTED]
+- [[Min_6]] - `references` [EXTRACTED]
+- [[MinLength_20]] - `references` [EXTRACTED]
 - [[create-retention-policy.dto.ts]] - `contains` [EXTRACTED]
 - [[retention.controller.ts]] - `imports` [EXTRACTED]
 - [[retention.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/CreateRetentionPolicyDto

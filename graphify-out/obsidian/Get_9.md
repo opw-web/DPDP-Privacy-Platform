@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Public"
+community: "employees.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/employeescontrollerts
 ---
 
 # Get
 
 ## Connections
-- [[dot-check()]] - `references` [EXTRACTED]
+- [[dot-get()_6]] - `references` [EXTRACTED]
+- [[dot-list()_8]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/employeescontrollerts

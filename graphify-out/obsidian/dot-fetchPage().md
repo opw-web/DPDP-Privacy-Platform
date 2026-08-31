@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
 type: "code"
-community: "rest-api.connector.ts"
+community: "RestApiConnector"
 location: "L284"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rest-apiconnectorts
+  - community/RestApiConnector
 ---
 
 # .fetchPage()
@@ -19,9 +19,9 @@ tags:
 - [[dot-fetchChanges()_1]] - `calls` [EXTRACTED]
 - [[dot-fetchRecords()_1]] - `calls` [EXTRACTED]
 - [[dot-request()]] - `calls` [INFERRED]
-- [[PageCapExceededError]] - `calls` [EXTRACTED]
+- [[PageCapExceededError_1]] - `calls` [EXTRACTED]
 - [[RestApiConnector]] - `method` [EXTRACTED]
 - [[extractRecords()]] - `calls` [EXTRACTED]
 - [[stripQuery()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts
+#graphify/code #graphify/EXTRACTED #community/RestApiConnector

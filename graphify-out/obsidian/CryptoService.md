@@ -12,11 +12,11 @@ tags:
 # CryptoService
 
 ## Connections
-- [[dot-constructor()_19]] - `references` [EXTRACTED]
-- [[dot-constructor()_11]] - `method` [EXTRACTED]
+- [[dot-constructor()_13]] - `references` [EXTRACTED]
+- [[dot-constructor()_35]] - `method` [EXTRACTED]
 - [[dot-decrypt()]] - `method` [EXTRACTED]
 - [[dot-encrypt()]] - `method` [EXTRACTED]
-- [[Injectable_13]] - `references` [EXTRACTED]
+- [[Injectable_16]] - `references` [EXTRACTED]
 - [[crypto.module.ts]] - `imports` [EXTRACTED]
 - [[crypto.service.spec.ts]] - `imports` [EXTRACTED]
 - [[crypto.service.ts]] - `contains` [EXTRACTED]

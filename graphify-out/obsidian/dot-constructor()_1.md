@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/permissions.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync-error.ts"
 type: "code"
-community: "PermissionsController"
-location: "L9"
+community: "SyncPipelineService"
+location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PermissionsController
+  - community/SyncPipelineService
 ---
 
 # .constructor()
 
 ## Connections
-- [[PermissionsController]] - `method` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
+- [[MissingRecordKeyError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PermissionsController
+#graphify/code #graphify/EXTRACTED #community/SyncPipelineService

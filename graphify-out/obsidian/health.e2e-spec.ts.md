@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/health.e2e-spec.ts"
 type: "code"
-community: "app.module.ts"
+community: "AppModule"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/appmodulets
+  - community/AppModule
 ---
 
 # health.e2e-spec.ts
@@ -15,4 +15,4 @@ tags:
 - [[AppModule]] - `imports` [EXTRACTED]
 - [[app.module.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/appmodulets
+#graphify/code #graphify/EXTRACTED #community/AppModule

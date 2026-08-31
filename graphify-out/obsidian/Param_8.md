@@ -1,16 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdateRolePermissionsDto"
+community: "RequirePermission"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateRolePermissionsDto
+  - community/RequirePermission
 ---
 
 # Param
 
 ## Connections
-- [[dot-replacePermissions()]] - `references` [EXTRACTED]
+- [[dot-discoverSchema()_2]] - `references` [EXTRACTED]
+- [[dot-get()_10]] - `references` [EXTRACTED]
+- [[dot-listFields()]] - `references` [EXTRACTED]
+- [[dot-remove()]] - `references` [EXTRACTED]
+- [[dot-testConnection()_2]] - `references` [EXTRACTED]
+- [[dot-update()_10]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

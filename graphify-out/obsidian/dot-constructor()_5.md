@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/common/guards/jwt-employee.guard.ts"
+source_file: "dpdp-platform/frontend/src/lib/api-client.ts"
 type: "code"
-community: "TokenService"
+community: "DataSourceDetailPage.tsx"
 location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TokenService
+  - community/DataSourceDetailPagetsx
 ---
 
 # .constructor()
 
 ## Connections
-- [[JwtEmployeeGuard]] - `method` [EXTRACTED]
-- [[TokenService]] - `references` [EXTRACTED]
+- [[ApiError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TokenService
+#graphify/code #graphify/EXTRACTED #community/DataSourceDetailPagetsx

@@ -1,21 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/sharing.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
 type: "code"
-community: "CreateSharingActivityDto"
-location: "L21"
+community: "sync.service.ts"
+location: "L195"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/CreateSharingActivityDto
+  - graphify/INFERRED
+  - community/syncservicets
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_3]] - `calls` [INFERRED]
-- [[Get_4]] - `references` [EXTRACTED]
-- [[Param]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[SharingController]] - `method` [EXTRACTED]
+- [[dot-get()_10]] - `calls` [INFERRED]
+- [[dot-triggerSync()]] - `calls` [INFERRED]
+- [[DataSourcesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto
+#graphify/code #graphify/INFERRED #community/syncservicets

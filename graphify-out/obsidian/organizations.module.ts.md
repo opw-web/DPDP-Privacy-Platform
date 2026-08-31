@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/organizations/organizations.module.ts"
 type: "code"
-community: "UpdateOrganizationDto"
+community: "app.module.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateOrganizationDto
+  - community/appmodulets
 ---
 
 # organizations.module.ts
@@ -21,4 +21,4 @@ tags:
 - [[organizations.controller.ts]] - `imports_from` [EXTRACTED]
 - [[organizations.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateOrganizationDto
+#graphify/code #graphify/EXTRACTED #community/appmodulets

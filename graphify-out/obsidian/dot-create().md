@@ -1,22 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/sharing.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/connector.factory.ts"
 type: "code"
-community: "CreateSharingActivityDto"
-location: "L27"
+community: "connector.factory.ts"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSharingActivityDto
+  - community/connectorfactoryts
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_1]] - `calls` [INFERRED]
-- [[Body_1]] - `references` [EXTRACTED]
-- [[CreateSharingActivityDto]] - `references` [EXTRACTED]
-- [[Post]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[SharingController]] - `method` [EXTRACTED]
+- [[dot-buildConnector()]] - `calls` [INFERRED]
+- [[Connector]] - `references` [EXTRACTED]
+- [[ConnectorFactory]] - `method` [EXTRACTED]
+- [[RestApiConnector]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto
+#graphify/code #graphify/EXTRACTED #community/connectorfactoryts

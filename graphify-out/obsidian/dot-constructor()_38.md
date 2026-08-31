@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts"
+source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
 type: "code"
-community: "rest-api.connector.ts"
-location: "L66"
+community: "purposes.controller.ts"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rest-apiconnectorts
+  - community/purposescontrollerts
 ---
 
 # .constructor()
 
 ## Connections
-- [[ReadOnlyHttpTimeoutError]] - `method` [EXTRACTED]
-- [[stripQuery()_1]] - `calls` [EXTRACTED]
+- [[PurposesController]] - `method` [EXTRACTED]
+- [[PurposesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts
+#graphify/code #graphify/EXTRACTED #community/purposescontrollerts

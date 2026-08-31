@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/purposes.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/data-sources.e2e-spec.ts"
 type: "code"
-community: "permissions.ts"
-location: "L28"
+community: "data-sources.e2e-spec.ts"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/permissionsts
+  - community/data-sourcese2e-spects
 ---
 
 # ensurePermission()
 
 ## Connections
-- [[createOrgWithManager()_1]] - `calls` [EXTRACTED]
-- [[purposes.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[createOrgWithRole()]] - `calls` [EXTRACTED]
+- [[data-sources.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/permissionsts
+#graphify/code #graphify/EXTRACTED #community/data-sourcese2e-spects

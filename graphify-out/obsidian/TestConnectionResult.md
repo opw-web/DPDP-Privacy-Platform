@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/wizard/Step1Connection.tsx"
 type: "code"
-community: "data-sources.service.ts"
-location: "L101"
+community: "DataSourceDetailPage.tsx"
+location: "L59"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesservicets
+  - community/DataSourceDetailPagetsx
 ---
 
 # TestConnectionResult
 
 ## Connections
-- [[data-sources.service.ts]] - `contains` [EXTRACTED]
+- [[PublicDataSource]] - `references` [EXTRACTED]
+- [[Step1Connection.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets
+#graphify/code #graphify/EXTRACTED #community/DataSourceDetailPagetsx

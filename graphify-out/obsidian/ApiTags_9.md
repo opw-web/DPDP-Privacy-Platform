@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "recipients.service.ts"
+community: "AccessTokenPayload"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/AccessTokenPayload
 ---
 
 # ApiTags
 
 ## Connections
-- [[RecipientsController]] - `references` [EXTRACTED]
+- [[CandidatesController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

@@ -1,12 +1,12 @@
 ---
 source_file: "demo-company-server/src/seed/personas.ts"
 type: "code"
-community: "personas.ts"
+community: "generate.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/personasts
+  - community/generatets
 ---
 
 # personas.ts
@@ -23,6 +23,6 @@ tags:
 - [[SupportRecord]] - `contains` [EXTRACTED]
 - [[dataset.test.ts]] - `imports_from` [EXTRACTED]
 - [[generate.ts]] - `imports_from` [EXTRACTED]
-- [[personas_1]] - `contains` [EXTRACTED]
+- [[personas]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/personasts
+#graphify/code #graphify/EXTRACTED #community/generatets

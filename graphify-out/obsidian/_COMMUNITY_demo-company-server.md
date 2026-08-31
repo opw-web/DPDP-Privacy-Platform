@@ -12,7 +12,7 @@ members: 11
 - [[Demo dataset (`npm run seed`)]] - document - demo-company-server/README.md
 - [[Endpoints — copy-paste table]] - document - demo-company-server/README.md
 - [[Field names (deliberately messy — do not fix them)]] - document - demo-company-server/README.md
-- [[Personas]] - document - demo-company-server/README.md
+- [[Personas_1]] - document - demo-company-server/README.md
 - [[README]] - document - demo-company-server/README.md
 - [[Running]] - document - demo-company-server/README.md
 - [[Schema]] - document - demo-company-server/README.md

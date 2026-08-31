@@ -1,25 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
 type: "code"
-community: "DataSourcesService"
-location: "L240"
+community: "RequirePermission"
+location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesService
+  - community/RequirePermission
 ---
 
 # .update()
 
 ## Connections
-- [[dot-assertPubliclyAvailableJustified()]] - `calls` [EXTRACTED]
-- [[dot-encrypt()]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[dot-testConnection()]] - `calls` [EXTRACTED]
-- [[dot-update()_15]] - `calls` [INFERRED]
-- [[DataSourcesService]] - `method` [EXTRACTED]
+- [[dot-update()_11]] - `calls` [INFERRED]
+- [[Body_6]] - `references` [EXTRACTED]
+- [[DataSourcesController]] - `method` [EXTRACTED]
+- [[Param_8]] - `references` [EXTRACTED]
+- [[Patch_5]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 - [[UpdateDataSourceDto]] - `references` [EXTRACTED]
-- [[duplicateNameMessage()]] - `calls` [EXTRACTED]
-- [[isUniqueConstraintViolation()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesService
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

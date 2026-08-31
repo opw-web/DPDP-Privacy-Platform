@@ -1,19 +1,36 @@
 ---
-source_file: "demo-company-server/package.json"
+source_file: "dpdp-platform/frontend/package.json"
 type: "code"
-community: "demo-company-server/package.json"
-location: "L15"
+community: "dependencies"
+location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/demo-company-server/packagejson
+  - community/dependencies
 ---
 
 # dependencies
 
 ## Connections
-- [[better-sqlite3]] - `contains` [EXTRACTED]
-- [[demo-company-serverpackage.json]] - `contains` [EXTRACTED]
-- [[fastify]] - `contains` [EXTRACTED]
+- [[@hookformresolvers]] - `contains` [EXTRACTED]
+- [[@radix-uireact-dialog]] - `contains` [EXTRACTED]
+- [[@radix-uireact-label]] - `contains` [EXTRACTED]
+- [[@radix-uireact-slot]] - `contains` [EXTRACTED]
+- [[@radix-uireact-tabs]] - `contains` [EXTRACTED]
+- [[@radix-uireact-tooltip]] - `contains` [EXTRACTED]
+- [[@tanstackreact-query]] - `contains` [EXTRACTED]
+- [[@tanstackreact-table]] - `contains` [EXTRACTED]
+- [[class-variance-authority]] - `contains` [EXTRACTED]
+- [[clsx]] - `contains` [EXTRACTED]
+- [[frontendpackage.json]] - `contains` [EXTRACTED]
+- [[lucide-react]] - `contains` [EXTRACTED]
+- [[papaparse]] - `contains` [EXTRACTED]
+- [[react]] - `contains` [EXTRACTED]
+- [[react-dom]] - `contains` [EXTRACTED]
+- [[react-hook-form]] - `contains` [EXTRACTED]
+- [[react-router-dom]] - `contains` [EXTRACTED]
+- [[sonner]] - `contains` [EXTRACTED]
+- [[tailwind-merge]] - `contains` [EXTRACTED]
+- [[zod]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/demo-company-server/packagejson
+#graphify/code #graphify/EXTRACTED #community/dependencies

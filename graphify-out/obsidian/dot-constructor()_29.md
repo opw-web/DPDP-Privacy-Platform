@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/sharing.service.ts"
+source_file: "dpdp-platform/backend/src/modules/inventory/inventory.service.ts"
 type: "code"
-community: "PrismaService"
-location: "L54"
+community: "InventoryService"
+location: "L134"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/InventoryService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
+- [[InventoryService]] - `method` [EXTRACTED]
 - [[PrismaService]] - `references` [EXTRACTED]
-- [[SharingService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/InventoryService

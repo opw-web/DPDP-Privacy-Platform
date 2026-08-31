@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts"
 type: "code"
-community: "Public"
+community: "PrincipalAuthController"
 location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/PrincipalAuthController
 ---
 
 # .setRefreshCookie()
@@ -16,4 +16,4 @@ tags:
 - [[dot-refresh()_3]] - `calls` [EXTRACTED]
 - [[PrincipalAuthController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/PrincipalAuthController

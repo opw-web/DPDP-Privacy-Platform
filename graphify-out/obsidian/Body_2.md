@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "mappings.service.ts"
+community: "SecurityMeasuresService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingsservicets
+  - community/SecurityMeasuresService
 ---
 
 # Body
 
 ## Connections
-- [[dot-replaceMappings()]] - `references` [EXTRACTED]
-- [[dot-replacePurposes()]] - `references` [EXTRACTED]
+- [[dot-create()_1]] - `references` [EXTRACTED]
+- [[dot-update()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresService

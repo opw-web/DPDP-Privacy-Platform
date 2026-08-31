@@ -1,17 +1,24 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
+source_file: "dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts"
 type: "code"
-community: "data-sources.service.ts"
-location: "L79"
+community: "DataSourceDetailPage.tsx"
+location: "L137"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesservicets
+  - community/DataSourceDetailPagetsx
 ---
 
 # PublicDataSourceField
 
 ## Connections
-- [[data-sources.service.ts]] - `contains` [EXTRACTED]
+- [[DataSourceDetailPage.tsx]] - `imports` [EXTRACTED]
+- [[DataSourceNewPage.tsx]] - `imports` [EXTRACTED]
+- [[Step2Schema.tsx]] - `imports` [EXTRACTED]
+- [[Step2SchemaProps]] - `references` [EXTRACTED]
+- [[Step3Mapping.test.tsx]] - `imports` [EXTRACTED]
+- [[Step3Mapping.tsx]] - `imports` [EXTRACTED]
+- [[Step3MappingProps]] - `references` [EXTRACTED]
+- [[data-sources-api.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets
+#graphify/code #graphify/EXTRACTED #community/DataSourceDetailPagetsx

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdateOrganizationDto"
+community: "connector.factory.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateOrganizationDto
+  - community/connectorfactoryts
 ---
 
 # Module
 
 ## Connections
-- [[OrganizationsModule]] - `references` [EXTRACTED]
+- [[ConnectorsModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateOrganizationDto
+#graphify/code #graphify/EXTRACTED #community/connectorfactoryts

@@ -44,8 +44,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_prisma.service.ts]]
+- 2 edges to [[_COMMUNITY_PrismaService]]
+- 2 edges to [[_COMMUNITY_tenant-context.ts]]
 
 ## Top bridge nodes
-- [[tenant.extension.ts]] - degree 26, connects to 1 community
+- [[tenant.extension.ts]] - degree 26, connects to 2 communities
 - [[tenantScopingExtension]] - degree 3, connects to 1 community

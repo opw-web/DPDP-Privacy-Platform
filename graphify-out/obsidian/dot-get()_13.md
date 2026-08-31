@@ -1,21 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/security-measures.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/transfers.service.ts"
 type: "code"
-community: "RequirePermission"
-location: "L29"
+community: "CreateTransferDto"
+location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/CreateTransferDto
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_4]] - `calls` [INFERRED]
-- [[Get_12]] - `references` [EXTRACTED]
-- [[Param_3]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[SecurityMeasuresController]] - `method` [EXTRACTED]
+- [[dot-get()_12]] - `calls` [INFERRED]
+- [[TransfersService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/CreateTransferDto

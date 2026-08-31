@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/package.json"
 type: "code"
 community: "devDependencies"
-location: "L43"
+location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -29,14 +29,12 @@ tags:
 - [[eslint-config-prettier]] - `contains` [EXTRACTED]
 - [[eslint-plugin-prettier]] - `contains` [EXTRACTED]
 - [[jest]] - `contains` [EXTRACTED]
-- [[pino-pretty]] - `contains` [EXTRACTED]
 - [[prettier]] - `contains` [EXTRACTED]
-- [[prisma]] - `contains` [EXTRACTED]
 - [[source-map-support]] - `contains` [EXTRACTED]
 - [[supertest]] - `contains` [EXTRACTED]
 - [[ts-jest]] - `contains` [EXTRACTED]
 - [[ts-loader]] - `contains` [EXTRACTED]
-- [[ts-node]] - `contains` [EXTRACTED]
+- [[ts-node_2]] - `contains` [EXTRACTED]
 - [[tsconfig-paths]] - `contains` [EXTRACTED]
 - [[typescript_2]] - `contains` [EXTRACTED]
 

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".record"
+community: "ListAuditEventsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/ListAuditEventsDto
 ---
 
 # IsIn
 
 ## Connections
-- [[CreateSecurityMeasureDto]] - `references` [EXTRACTED]
+- [[ListAuditEventsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/ListAuditEventsDto

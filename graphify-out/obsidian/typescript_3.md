@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "typescript"
-location: "L69"
+community: "devDependencies"
+location: "L72"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/typescript
+  - community/devDependencies
 ---
 
 # typescript
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[typescript_2]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/typescript
+#graphify/concept #graphify/EXTRACTED #community/devDependencies

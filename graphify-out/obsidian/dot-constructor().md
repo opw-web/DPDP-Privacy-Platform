@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/common/guards/jwt-principal.guard.ts"
+source_file: "dpdp-platform/backend/src/modules/organizations/organizations.controller.ts"
 type: "code"
-community: "auth.module.ts"
-location: "L75"
+community: "UpdateOrganizationDto"
+location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/authmodulets
+  - community/UpdateOrganizationDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[JwtPrincipalGuard]] - `method` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
-- [[TokenService]] - `references` [EXTRACTED]
+- [[OrganizationsController]] - `method` [EXTRACTED]
+- [[OrganizationsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/authmodulets
+#graphify/code #graphify/EXTRACTED #community/UpdateOrganizationDto

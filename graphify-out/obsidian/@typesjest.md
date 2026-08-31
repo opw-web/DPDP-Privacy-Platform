@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "code"
-community: "@types/jest"
-location: "L49"
+community: "devDependencies"
+location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/types/jest
+  - community/devDependencies
 ---
 
 # @types/jest
@@ -15,4 +15,4 @@ tags:
 - [[@typesjest_1]] - `imports` [EXTRACTED]
 - [[devDependencies_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/types/jest
+#graphify/code #graphify/EXTRACTED #community/devDependencies

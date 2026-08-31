@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EmployeesService"
+community: "HealthService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeesService
+  - community/HealthService
 ---
 
 # Get
 
 ## Connections
-- [[dot-get()_14]] - `references` [EXTRACTED]
-- [[dot-list()_17]] - `references` [EXTRACTED]
+- [[dot-check()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeesService
+#graphify/code #graphify/EXTRACTED #community/HealthService

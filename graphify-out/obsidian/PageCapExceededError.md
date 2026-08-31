@@ -1,20 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync-error.spec.ts"
 type: "code"
-community: "rest-api.connector.ts"
-location: "L50"
+community: "SyncPipelineService"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rest-apiconnectorts
+  - community/SyncPipelineService
 ---
 
 # PageCapExceededError
 
 ## Connections
-- [[dot-constructor()_40]] - `method` [EXTRACTED]
-- [[dot-fetchPage()]] - `calls` [EXTRACTED]
-- [[rest-api.connector.spec.ts]] - `imports` [EXTRACTED]
-- [[rest-api.connector.ts]] - `contains` [EXTRACTED]
+- [[sync-error.spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts
+#graphify/code #graphify/EXTRACTED #community/SyncPipelineService

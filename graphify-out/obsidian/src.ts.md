@@ -12,6 +12,6 @@ tags:
 # src/**/*.ts
 
 ## Connections
-- [[include]] - `extends` [EXTRACTED]
+- [[include_1]] - `extends` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/compilerOptions

@@ -1,22 +1,24 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/security-measures.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.ts"
 type: "code"
-community: ".record"
-location: "L35"
+community: "purposes.controller.ts"
+location: "L141"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/purposescontrollerts
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_5]] - `calls` [INFERRED]
-- [[Body_4]] - `references` [EXTRACTED]
-- [[CreateSecurityMeasureDto]] - `references` [EXTRACTED]
-- [[Post_2]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[SecurityMeasuresController]] - `method` [EXTRACTED]
+- [[dot-create()_3]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-validateBasis()]] - `calls` [EXTRACTED]
+- [[CreatePurposeDto]] - `references` [EXTRACTED]
+- [[PurposesService]] - `method` [EXTRACTED]
+- [[duplicateCodeMessage()]] - `calls` [EXTRACTED]
+- [[isUniqueConstraintViolation()]] - `calls` [EXTRACTED]
+- [[toPublicPurpose()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/purposescontrollerts

@@ -12,6 +12,6 @@ tags:
 # rootDir
 
 ## Connections
-- [[compilerOptions_2]] - `contains` [EXTRACTED]
+- [[compilerOptions_3]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/exclude

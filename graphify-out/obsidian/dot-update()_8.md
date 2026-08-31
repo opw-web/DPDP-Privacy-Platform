@@ -1,12 +1,12 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/transfers.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/sharing.controller.ts"
 type: "code"
-community: "registers.module.ts"
+community: "CreateSharingActivityDto"
 location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/registersmodulets
+  - community/CreateSharingActivityDto
 ---
 
 # .update()
@@ -14,10 +14,10 @@ tags:
 ## Connections
 - [[dot-update()_9]] - `calls` [INFERRED]
 - [[Body_5]] - `references` [EXTRACTED]
-- [[Param_4]] - `references` [EXTRACTED]
+- [[Param_7]] - `references` [EXTRACTED]
 - [[Patch_4]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[TransfersController]] - `method` [EXTRACTED]
-- [[UpdateTransferDto]] - `references` [EXTRACTED]
+- [[SharingController]] - `method` [EXTRACTED]
+- [[UpdateSharingActivityDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/registersmodulets
+#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

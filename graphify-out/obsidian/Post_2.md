@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: ".record"
+community: "purposes.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/purposescontrollerts
 ---
 
 # Post
 
 ## Connections
-- [[dot-create()_4]] - `references` [EXTRACTED]
+- [[dot-create()_3]] - `references` [EXTRACTED]
+- [[dot-review()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/purposescontrollerts

@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/retention.service.ts"
 type: "code"
-community: "retention.service.ts"
+community: "CreateRetentionPolicyDto"
 location: "L86"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/CreateRetentionPolicyDto
 ---
 
 # .assertPurposeExists()
 
 ## Connections
-- [[dot-create()_10]] - `calls` [EXTRACTED]
-- [[dot-update()_12]] - `calls` [EXTRACTED]
+- [[dot-create()_16]] - `calls` [EXTRACTED]
+- [[dot-update()_17]] - `calls` [EXTRACTED]
 - [[RetentionService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/CreateRetentionPolicyDto

@@ -1,22 +1,28 @@
 ---
 type: community
-members: 10
+members: 16
 ---
 
 # UpdateRolePermissionsDto
 
-**Members:** 10 nodes
+**Members:** 16 nodes
 
 ## Members
+- [[dot-constructor()_59]] - code - dpdp-platform/backend/src/modules/employees/roles.controller.ts
+- [[dot-list()_16]] - code - dpdp-platform/backend/src/modules/employees/roles.controller.ts
 - [[dot-replacePermissions()]] - code - dpdp-platform/backend/src/modules/employees/roles.controller.ts
 - [[dot-replacePermissions()_1]] - code - dpdp-platform/backend/src/modules/employees/roles.service.ts
-- [[ApiProperty_12]] - code
-- [[ArrayUnique_3]] - code
-- [[Body_11]] - code
-- [[IsArray_8]] - code
-- [[IsString_21]] - code
-- [[Param_8]] - code
-- [[Patch_8]] - code
+- [[ApiProperty_11]] - code
+- [[ApiTags_13]] - code
+- [[ArrayUnique_2]] - code
+- [[Body_7]] - code
+- [[Controller_13]] - code
+- [[Get_14]] - code
+- [[IsArray_5]] - code
+- [[IsString_18]] - code
+- [[Param_9]] - code
+- [[Patch_6]] - code
+- [[RolesController]] - code - dpdp-platform/backend/src/modules/employees/roles.controller.ts
 - [[UpdateRolePermissionsDto]] - code - dpdp-platform/backend/src/modules/employees/dto/update-role-permissions.dto.ts
 
 ## Live Query (requires Dataview plugin)
@@ -27,11 +33,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_employees.module.ts]]
+- 6 edges to [[_COMMUNITY_PrismaService]]
+- 2 edges to [[_COMMUNITY_RequirePermission]]
+- 1 edge to [[_COMMUNITY_app.module.ts]]
 - 1 edge to [[_COMMUNITY_dot-record]]
-- 1 edge to [[_COMMUNITY_RequirePermission]]
 
 ## Top bridge nodes
-- [[dot-replacePermissions()]] - degree 7, connects to 2 communities
+- [[RolesController]] - degree 7, connects to 2 communities
 - [[dot-replacePermissions()_1]] - degree 4, connects to 2 communities
 - [[UpdateRolePermissionsDto]] - degree 9, connects to 1 community
+- [[dot-replacePermissions()]] - degree 7, connects to 1 community
+- [[dot-list()_16]] - degree 3, connects to 1 community

@@ -1,19 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.module.ts"
 type: "code"
-community: "mappings.service.ts"
-location: "L17"
+community: "app.module.ts"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingsservicets
+  - community/appmodulets
 ---
 
 # DataSourcesModule
 
 ## Connections
-- [[Module_7]] - `references` [EXTRACTED]
+- [[Module_15]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[data-sources.module.ts]] - `contains` [EXTRACTED]
+- [[sync.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/EXTRACTED #community/appmodulets

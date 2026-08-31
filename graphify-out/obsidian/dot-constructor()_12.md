@@ -1,17 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/common/crypto/crypto.service.ts"
+source_file: "dpdp-platform/backend/src/modules/auth/principal-auth.service.ts"
 type: "code"
-community: "CryptoService"
-location: "L21"
+community: "PrismaService"
+location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CryptoService
+  - community/PrismaService
 ---
 
 # .constructor()
 
 ## Connections
-- [[InvalidEncryptionKeyError]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[PrincipalAuthService]] - `method` [EXTRACTED]
+- [[PrismaService]] - `references` [EXTRACTED]
+- [[TokenService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CryptoService
+#graphify/code #graphify/EXTRACTED #community/PrismaService

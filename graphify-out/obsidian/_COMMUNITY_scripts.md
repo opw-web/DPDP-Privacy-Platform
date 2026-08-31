@@ -1,11 +1,11 @@
 ---
 type: community
-members: 13
+members: 14
 ---
 
 # scripts
 
-**Members:** 13 nodes
+**Members:** 14 nodes
 
 ## Members
 - [[build]] - code - dpdp-platform/backend/package.json
@@ -13,6 +13,7 @@ members: 13
 - [[lint]] - code - dpdp-platform/backend/package.json
 - [[scripts]] - code - dpdp-platform/backend/package.json
 - [[seed]] - code - dpdp-platform/backend/package.json
+- [[seedprincipals]] - code - dpdp-platform/backend/package.json
 - [[start]] - code - dpdp-platform/backend/package.json
 - [[startdebug]] - code - dpdp-platform/backend/package.json
 - [[startdev]] - code - dpdp-platform/backend/package.json
@@ -33,4 +34,4 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_backendpackage.json]]
 
 ## Top bridge nodes
-- [[scripts]] - degree 13, connects to 1 community
+- [[scripts]] - degree 14, connects to 1 community

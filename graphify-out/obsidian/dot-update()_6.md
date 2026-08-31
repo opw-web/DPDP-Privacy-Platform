@@ -1,12 +1,12 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/security-measures.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/employees.controller.ts"
 type: "code"
-community: ".record"
-location: "L41"
+community: "employees.controller.ts"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/employeescontrollerts
 ---
 
 # .update()
@@ -14,10 +14,10 @@ tags:
 ## Connections
 - [[dot-update()_7]] - `calls` [INFERRED]
 - [[Body_4]] - `references` [EXTRACTED]
-- [[Param_3]] - `references` [EXTRACTED]
+- [[EmployeesController]] - `method` [EXTRACTED]
+- [[Param_5]] - `references` [EXTRACTED]
 - [[Patch_3]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[SecurityMeasuresController]] - `method` [EXTRACTED]
-- [[UpdateSecurityMeasureDto]] - `references` [EXTRACTED]
+- [[UpdateEmployeeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/employeescontrollerts

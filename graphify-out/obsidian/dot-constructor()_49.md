@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/employees.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/principals/principals.controller.ts"
 type: "code"
-community: "EmployeesService"
-location: "L12"
+community: "principals.service.ts"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeesService
+  - community/principalsservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[EmployeesController]] - `method` [EXTRACTED]
-- [[EmployeesService]] - `references` [EXTRACTED]
+- [[LineageService]] - `references` [EXTRACTED]
+- [[PrincipalRecipientsService]] - `references` [EXTRACTED]
+- [[PrincipalsController]] - `method` [EXTRACTED]
+- [[PrincipalsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeesService
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

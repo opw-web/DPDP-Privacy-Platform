@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-discoverSchema()_3]] - `calls` [INFERRED]
 - [[DataSourcesController]] - `method` [EXTRACTED]
-- [[Param_7]] - `references` [EXTRACTED]
-- [[Post_8]] - `references` [EXTRACTED]
+- [[Param_8]] - `references` [EXTRACTED]
+- [[Post_6]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/RequirePermission

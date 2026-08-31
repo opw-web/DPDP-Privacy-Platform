@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "MaskingService"
+community: "merge.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MaskingService
+  - community/mergeservicets
 ---
 
 # Module
 
 ## Connections
-- [[MaskingModule]] - `references` [EXTRACTED]
+- [[ReferenceModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MaskingService
+#graphify/code #graphify/EXTRACTED #community/mergeservicets

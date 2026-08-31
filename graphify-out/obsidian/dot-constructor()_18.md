@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/auth/principal-auth.service.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/candidates.service.ts"
 type: "code"
 community: "PrismaService"
-location: "L74"
+location: "L124"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[AuditService]] - `references` [EXTRACTED]
-- [[PrincipalAuthService]] - `method` [EXTRACTED]
+- [[CandidatesService]] - `method` [EXTRACTED]
+- [[MergeService]] - `references` [EXTRACTED]
 - [[PrismaService]] - `references` [EXTRACTED]
-- [[TokenService]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PrismaService

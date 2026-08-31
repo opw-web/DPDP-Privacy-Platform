@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[ES2020]] - `extends` [EXTRACTED]
-- [[compilerOptions_1]] - `contains` [EXTRACTED]
+- [[compilerOptions_2]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/compilerOptions

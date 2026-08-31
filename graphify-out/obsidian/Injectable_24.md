@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "audit.service.ts"
+community: ".record"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/auditservicets
+  - community/record
 ---
 
 # Injectable
 
 ## Connections
-- [[AccessLogService]] - `references` [EXTRACTED]
+- [[AgeService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/auditservicets
+#graphify/code #graphify/EXTRACTED #community/record

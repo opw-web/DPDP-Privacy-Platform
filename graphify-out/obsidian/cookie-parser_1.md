@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "dependencies"
-location: "L34"
+community: "cookie-parser"
+location: "L37"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/cookie-parser
 ---
 
 # cookie-parser
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[cookie-parser]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/dependencies
+#graphify/concept #graphify/EXTRACTED #community/cookie-parser

@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateEmployeeDto"
+community: ".me"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateEmployeeDto
+  - community/me
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateEmployeeDto]] - `references` [EXTRACTED]
+- [[EmployeeMeResponseDto]] - `references` [EXTRACTED]
+- [[EmployeeMeRoleDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateEmployeeDto
+#graphify/code #graphify/EXTRACTED #community/me

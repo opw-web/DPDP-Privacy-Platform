@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdateOrganizationDto"
+community: "matching.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateOrganizationDto
+  - community/matchingservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[OrganizationsService]] - `references` [EXTRACTED]
+- [[MatchingService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateOrganizationDto
+#graphify/code #graphify/EXTRACTED #community/matchingservicets

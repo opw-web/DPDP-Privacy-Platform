@@ -1,20 +1,30 @@
 ---
-source_file: "dpdp-platform/backend/prisma/tsconfig.seed.json"
+source_file: "demo-company-server/tsconfig.json"
 type: "code"
-community: "exclude"
-location: "L3"
+community: "compilerOptions"
+location: "L2"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/exclude
+  - community/compilerOptions
 ---
 
 # compilerOptions
 
 ## Connections
-- [[noEmit]] - `contains` [EXTRACTED]
-- [[outDir_1]] - `contains` [EXTRACTED]
-- [[rootDir_1]] - `contains` [EXTRACTED]
-- [[tsconfig.seed.json]] - `contains` [EXTRACTED]
+- [[declaration]] - `contains` [EXTRACTED]
+- [[demo-company-servertsconfig.json]] - `contains` [EXTRACTED]
+- [[esModuleInterop]] - `contains` [EXTRACTED]
+- [[forceConsistentCasingInFileNames]] - `contains` [EXTRACTED]
+- [[lib]] - `contains` [EXTRACTED]
+- [[module_6]] - `contains` [EXTRACTED]
+- [[moduleResolution_1]] - `contains` [EXTRACTED]
+- [[outDir]] - `contains` [EXTRACTED]
+- [[resolveJsonModule]] - `contains` [EXTRACTED]
+- [[rootDir]] - `contains` [EXTRACTED]
+- [[skipLibCheck_1]] - `contains` [EXTRACTED]
+- [[sourceMap]] - `contains` [EXTRACTED]
+- [[strict_1]] - `contains` [EXTRACTED]
+- [[target]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/exclude
+#graphify/code #graphify/EXTRACTED #community/compilerOptions

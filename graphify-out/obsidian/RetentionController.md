@@ -1,25 +1,25 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/retention.controller.ts"
 type: "code"
-community: "retention.service.ts"
+community: "CreateRetentionPolicyDto"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/CreateRetentionPolicyDto
 ---
 
 # RetentionController
 
 ## Connections
-- [[dot-constructor()_32]] - `method` [EXTRACTED]
-- [[dot-create()_9]] - `method` [EXTRACTED]
-- [[dot-get()_7]] - `method` [EXTRACTED]
-- [[dot-list()_10]] - `method` [EXTRACTED]
-- [[dot-update()_11]] - `method` [EXTRACTED]
-- [[ApiTags_8]] - `references` [EXTRACTED]
-- [[Controller_8]] - `references` [EXTRACTED]
+- [[dot-constructor()_69]] - `method` [EXTRACTED]
+- [[dot-create()_15]] - `method` [EXTRACTED]
+- [[dot-get()_16]] - `method` [EXTRACTED]
+- [[dot-list()_22]] - `method` [EXTRACTED]
+- [[dot-update()_16]] - `method` [EXTRACTED]
+- [[ApiTags_18]] - `references` [EXTRACTED]
+- [[Controller_18]] - `references` [EXTRACTED]
 - [[registers.module.ts]] - `imports` [EXTRACTED]
 - [[retention.controller.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/CreateRetentionPolicyDto

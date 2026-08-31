@@ -17,6 +17,7 @@ tags:
 - [[format]] - `contains` [EXTRACTED]
 - [[lint]] - `contains` [EXTRACTED]
 - [[seed]] - `contains` [EXTRACTED]
+- [[seedprincipals]] - `contains` [EXTRACTED]
 - [[start]] - `contains` [EXTRACTED]
 - [[startdebug]] - `contains` [EXTRACTED]
 - [[startdev]] - `contains` [EXTRACTED]

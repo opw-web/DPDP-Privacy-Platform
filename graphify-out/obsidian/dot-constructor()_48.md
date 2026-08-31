@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/common/guards/permissions.guard.ts"
+source_file: "dpdp-platform/backend/src/modules/principals/principal-recipients.service.ts"
 type: "code"
-community: "require-permission.decorator.ts"
-location: "L81"
+community: "principals.service.ts"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/require-permissiondecoratorts
+  - community/principalsservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[PermissionsGuard]] - `method` [EXTRACTED]
+- [[PrincipalRecipientsService]] - `method` [EXTRACTED]
 - [[PrismaService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/require-permissiondecoratorts
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

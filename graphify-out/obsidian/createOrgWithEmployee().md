@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/test/rbac.e2e-spec.ts"
 type: "code"
-community: "permissions.ts"
+community: "seed/permissions.ts"
 location: "L65"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/permissionsts
+  - community/seed/permissionsts
 ---
 
 # createOrgWithEmployee()
 
 ## Connections
-- [[ensurePermission()_3]] - `calls` [EXTRACTED]
+- [[ensurePermission()_8]] - `calls` [EXTRACTED]
 - [[rbac.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/permissionsts
+#graphify/code #graphify/EXTRACTED #community/seed/permissionsts

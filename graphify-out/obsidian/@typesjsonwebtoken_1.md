@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "@types/jsonwebtoken"
-location: "L50"
+community: "devDependencies"
+location: "L55"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/types/jsonwebtoken
+  - community/devDependencies
 ---
 
 # @types/jsonwebtoken
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[@typesjsonwebtoken]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/types/jsonwebtoken
+#graphify/concept #graphify/EXTRACTED #community/devDependencies

@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/retention.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/recipients.service.ts"
 type: "code"
-community: "retention.service.ts"
-location: "L38"
+community: "recipients.service.ts"
+location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/recipientsservicets
 ---
 
 # isUniqueConstraintViolation()
 
 ## Connections
-- [[dot-create()_10]] - `calls` [EXTRACTED]
-- [[dot-update()_12]] - `calls` [EXTRACTED]
-- [[retention.service.ts]] - `contains` [EXTRACTED]
+- [[dot-create()_14]] - `calls` [EXTRACTED]
+- [[dot-update()_15]] - `calls` [EXTRACTED]
+- [[recipients.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/recipientsservicets

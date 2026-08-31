@@ -1,25 +1,26 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/mapping-warnings.ts"
 type: "code"
-community: "mappings.service.ts"
+community: "mapping-warnings.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingsservicets
+  - community/mapping-warningsts
 ---
 
 # mapping-warnings.ts
 
 ## Connections
 - [[MappingForWarningCheck]] - `contains` [EXTRACTED]
-- [[MappingWarning]] - `contains` [EXTRACTED]
-- [[MappingWarningPurposeSummary]] - `contains` [EXTRACTED]
-- [[MappingWarningType]] - `contains` [EXTRACTED]
+- [[MappingWarning_1]] - `contains` [EXTRACTED]
+- [[MappingWarningPurposeSummary_1]] - `contains` [EXTRACTED]
+- [[MappingWarningType_1]] - `contains` [EXTRACTED]
 - [[ScopedTransactionClient]] - `imports` [EXTRACTED]
 - [[computeMappingWarnings()]] - `contains` [EXTRACTED]
+- [[mapping-warning-response.dto.ts]] - `imports_from` [EXTRACTED]
 - [[mappings.service.ts]] - `re_exports` [EXTRACTED]
 - [[scoped-transaction-client.ts]] - `imports_from` [EXTRACTED]
 - [[source-purposes.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/EXTRACTED #community/mapping-warningsts

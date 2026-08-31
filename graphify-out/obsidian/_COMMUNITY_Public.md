@@ -1,78 +1,54 @@
 ---
 type: community
-members: 65
+members: 41
 ---
 
 # Public
 
-**Members:** 65 nodes
+**Members:** 41 nodes
 
 ## Members
-- [[dot-check()]] - code - dpdp-platform/backend/src/modules/health/health.controller.ts
-- [[dot-checkDatabase()]] - code - dpdp-platform/backend/src/modules/health/health.service.ts
-- [[dot-checkRedis()]] - code - dpdp-platform/backend/src/modules/health/health.service.ts
-- [[dot-clearRefreshCookie()]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts
-- [[dot-clearRefreshCookie()_1]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
-- [[dot-constructor()_43]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
-- [[dot-constructor()_44]] - code - dpdp-platform/backend/src/modules/health/health.controller.ts
-- [[dot-constructor()_45]] - code - dpdp-platform/backend/src/modules/health/health.service.ts
-- [[dot-getHealth()]] - code - dpdp-platform/backend/src/modules/health/health.service.ts
-- [[dot-isProduction()]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts
-- [[dot-isProduction()_1]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
-- [[dot-login()_2]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts
-- [[dot-login()_3]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
-- [[dot-logout()_2]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts
-- [[dot-logout()_3]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
-- [[dot-onModuleDestroy()_1]] - code - dpdp-platform/backend/src/modules/health/health.service.ts
-- [[dot-refresh()_2]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts
-- [[dot-refresh()_3]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
-- [[dot-setRefreshCookie()]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts
-- [[dot-setRefreshCookie()_1]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
-- [[ApiOkResponse]] - code
-- [[ApiProperty_10]] - code
-- [[ApiProperty_11]] - code
-- [[ApiServiceUnavailableResponse]] - code
-- [[ApiTags_10]] - code
-- [[ApiTags_11]] - code
-- [[ApiTags_12]] - code
-- [[Body_8]] - code
-- [[Body_9]] - code
-- [[Controller_10]] - code
-- [[Controller_11]] - code
-- [[Controller_12]] - code
-- [[EmployeeAuthController]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts
-- [[EmployeeLoginDto]] - code - dpdp-platform/backend/src/modules/auth/dto/employee-login.dto.ts
-- [[Get_9]] - code
-- [[HealthController]] - code - dpdp-platform/backend/src/modules/health/health.controller.ts
-- [[HealthModule]] - code - dpdp-platform/backend/src/modules/health/health.module.ts
-- [[HealthService]] - code - dpdp-platform/backend/src/modules/health/health.service.ts
-- [[HealthStatus]] - code - dpdp-platform/backend/src/modules/health/health.service.ts
-- [[HttpCode]] - code
-- [[HttpCode_1]] - code
-- [[HttpCode_2]] - code
-- [[Injectable_23]] - code
-- [[IsEmail_3]] - code
-- [[IsEmail_4]] - code
-- [[IsString_19]] - code
-- [[IsString_20]] - code
-- [[MinLength_17]] - code
-- [[MinLength_18]] - code
-- [[Module_16]] - code
-- [[Post_6]] - code
-- [[Post_7]] - code
-- [[PrincipalAuthController]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
-- [[PrincipalLoginDto]] - code - dpdp-platform/backend/src/modules/auth/dto/principal-login.dto.ts
+- [[dot-constructor()_33]] - code - dpdp-platform/backend/src/modules/principal-portal/me.controller.ts
+- [[dot-data()]] - code - dpdp-platform/backend/src/modules/principal-portal/me.controller.ts
+- [[dot-getData()]] - code - dpdp-platform/backend/src/modules/principal-portal/me.service.ts
+- [[dot-getPrivacyContact()]] - code - dpdp-platform/backend/src/modules/principal-portal/me.service.ts
+- [[dot-getProfile()]] - code - dpdp-platform/backend/src/modules/principal-portal/me.service.ts
+- [[dot-getResolvedFields()]] - code - dpdp-platform/backend/src/modules/principals/lineage.service.ts
+- [[dot-getSources()]] - code - dpdp-platform/backend/src/modules/principal-portal/me.service.ts
+- [[dot-loadPurposeNamesBySource()]] - code - dpdp-platform/backend/src/modules/principal-portal/me.service.ts
+- [[dot-me()]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
+- [[dot-me()_1]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.service.ts
+- [[dot-privacyContact()]] - code - dpdp-platform/backend/src/modules/principal-portal/me.controller.ts
+- [[dot-profile()]] - code - dpdp-platform/backend/src/modules/principal-portal/me.controller.ts
+- [[dot-recipients()]] - code - dpdp-platform/backend/src/modules/principal-portal/me.controller.ts
+- [[dot-resolveFields()]] - code - dpdp-platform/backend/src/modules/principals/lineage.service.ts
+- [[dot-sources()]] - code - dpdp-platform/backend/src/modules/principal-portal/me.controller.ts
+- [[ApiExtraModels]] - code
+- [[ApiOkResponse_1]] - code
+- [[ApiProperty_3]] - code
+- [[ApiProperty_4]] - code
+- [[ApiTags_4]] - code
+- [[Controller_4]] - code
+- [[CurrentPrincipal]] - code - dpdp-platform/backend/src/common/decorators/current-principal.decorator.ts
+- [[Get_4]] - code
+- [[Get_5]] - code
+- [[Injectable_13]] - code
+- [[Injectable_14]] - code
+- [[JwtPrincipalGuard]] - code - dpdp-platform/backend/src/common/guards/jwt-principal.guard.ts
+- [[MeController]] - code - dpdp-platform/backend/src/modules/principal-portal/me.controller.ts
+- [[MePrivacyContactDto]] - code - dpdp-platform/backend/src/modules/principal-portal/dto/me-privacy-contact.dto.ts
+- [[MeProfileTimezoneDto]] - code - dpdp-platform/backend/src/modules/principal-portal/dto/me-profile-timezone.dto.ts
+- [[MeService]] - code - dpdp-platform/backend/src/modules/principal-portal/me.service.ts
+- [[PrincipalActor]] - code - dpdp-platform/backend/src/common/guards/jwt-principal.guard.ts
 - [[Public()]] - code - dpdp-platform/backend/src/common/decorators/public.decorator.ts
-- [[Req]] - code
-- [[Req_1]] - code
-- [[Res]] - code
-- [[Res_1]] - code
-- [[employee-login.dto.ts]] - code - dpdp-platform/backend/src/modules/auth/dto/employee-login.dto.ts
-- [[health.controller.spec.ts]] - code - dpdp-platform/backend/src/modules/health/health.controller.spec.ts
-- [[health.controller.ts]] - code - dpdp-platform/backend/src/modules/health/health.controller.ts
-- [[health.module.ts]] - code - dpdp-platform/backend/src/modules/health/health.module.ts
-- [[health.service.ts]] - code - dpdp-platform/backend/src/modules/health/health.service.ts
-- [[principal-login.dto.ts]] - code - dpdp-platform/backend/src/modules/auth/dto/principal-login.dto.ts
+- [[UseGuards]] - code
+- [[UseGuards_1]] - code
+- [[current-principal.decorator.ts]] - code - dpdp-platform/backend/src/common/decorators/current-principal.decorator.ts
+- [[jwt-principal.guard.ts]] - code - dpdp-platform/backend/src/common/guards/jwt-principal.guard.ts
+- [[me-privacy-contact.dto.ts]] - code - dpdp-platform/backend/src/modules/principal-portal/dto/me-privacy-contact.dto.ts
+- [[me-profile-timezone.dto.ts]] - code - dpdp-platform/backend/src/modules/principal-portal/dto/me-profile-timezone.dto.ts
+- [[me.controller.ts]] - code - dpdp-platform/backend/src/modules/principal-portal/me.controller.ts
+- [[principal-auth.controller.ts]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -82,16 +58,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_PrincipalAuthService]]
-- 8 edges to [[_COMMUNITY_auth.module.ts]]
-- 4 edges to [[_COMMUNITY_app.module.ts]]
-- 4 edges to [[_COMMUNITY_prisma.service.ts]]
-- 2 edges to [[_COMMUNITY_TokenService]]
-- 1 edge to [[_COMMUNITY_purposes.service.ts]]
+- 9 edges to [[_COMMUNITY_principals.service.ts]]
+- 6 edges to [[_COMMUNITY_app.module.ts]]
+- 6 edges to [[_COMMUNITY_TokenService]]
+- 5 edges to [[_COMMUNITY_tenant-context.ts]]
+- 5 edges to [[_COMMUNITY_PrincipalAuthController]]
+- 3 edges to [[_COMMUNITY_PrincipalsController]]
+- 3 edges to [[_COMMUNITY_EmployeeAuthController]]
+- 2 edges to [[_COMMUNITY_PrismaService]]
+- 2 edges to [[_COMMUNITY_PrincipalLoginDto]]
+- 2 edges to [[_COMMUNITY_principal-portal.e2e-spec.ts]]
+- 2 edges to [[_COMMUNITY_PrincipalAuthService]]
+- 2 edges to [[_COMMUNITY_HealthService]]
+- 1 edge to [[_COMMUNITY_queues.module.ts]]
+- 1 edge to [[_COMMUNITY_configuration.ts]]
 
 ## Top bridge nodes
-- [[EmployeeAuthController]] - degree 12, connects to 4 communities
-- [[Public()]] - degree 12, connects to 3 communities
-- [[PrincipalAuthController]] - degree 12, connects to 1 community
-- [[dot-login()_2]] - degree 10, connects to 1 community
-- [[dot-login()_3]] - degree 10, connects to 1 community
+- [[principal-auth.controller.ts]] - degree 15, connects to 8 communities
+- [[Public()]] - degree 18, connects to 5 communities
+- [[me.controller.ts]] - degree 16, connects to 4 communities
+- [[jwt-principal.guard.ts]] - degree 11, connects to 4 communities
+- [[MeService]] - degree 12, connects to 3 communities

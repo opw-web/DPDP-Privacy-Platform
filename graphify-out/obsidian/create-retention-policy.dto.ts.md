@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/dto/create-retention-policy.dto.ts"
 type: "code"
-community: "retention.service.ts"
+community: "CreateRetentionPolicyDto"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/CreateRetentionPolicyDto
 ---
 
 # create-retention-policy.dto.ts
@@ -20,4 +20,4 @@ tags:
 - [[retention.service.ts]] - `imports_from` [EXTRACTED]
 - [[update-retention-policy.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/CreateRetentionPolicyDto

@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "recipients.service.ts"
+community: "UpdateRolePermissionsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/UpdateRolePermissionsDto
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_11]] - `references` [EXTRACTED]
-- [[dot-update()_13]] - `references` [EXTRACTED]
+- [[dot-replacePermissions()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto

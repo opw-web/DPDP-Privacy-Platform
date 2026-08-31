@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/purposes.e2e-spec.ts"
 type: "code"
-community: "permissions.ts"
+community: "seed/permissions.ts"
 location: "L97"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/permissionsts
+  - community/seed/permissionsts
 ---
 
 # validPayload()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[purposes.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/permissionsts
+#graphify/code #graphify/EXTRACTED #community/seed/permissionsts

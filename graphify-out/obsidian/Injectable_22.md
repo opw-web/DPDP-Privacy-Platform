@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "rest-api.connector.ts"
+community: "principals.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rest-apiconnectorts
+  - community/principalsservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[ConnectorFactory]] - `references` [EXTRACTED]
+- [[PrincipalRecipientsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

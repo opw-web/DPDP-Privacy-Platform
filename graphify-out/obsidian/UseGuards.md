@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "auth.module.ts"
+community: "Public"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/authmodulets
+  - community/Public
 ---
 
 # UseGuards
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-me()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/authmodulets
+#graphify/code #graphify/EXTRACTED #community/Public

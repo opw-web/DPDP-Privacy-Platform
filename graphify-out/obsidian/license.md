@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/package.json"
+source_file: "dpdp-platform/frontend/package.json"
 type: "code"
-community: "backend/package.json"
+community: "frontend/package.json"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/backend/packagejson
+  - community/frontend/packagejson
 ---
 
 # license
 
 ## Connections
-- [[backendpackage.json]] - `contains` [EXTRACTED]
+- [[frontendpackage.json]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/backend/packagejson
+#graphify/code #graphify/EXTRACTED #community/frontend/packagejson

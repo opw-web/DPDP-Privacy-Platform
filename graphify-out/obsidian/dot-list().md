@@ -1,19 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/permissions.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/audit/audit-read.service.ts"
 type: "code"
-community: "PermissionsController"
-location: "L19"
+community: "audit-read.service.ts"
+location: "L140"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PermissionsController
+  - community/audit-readservicets
 ---
 
 # .list()
 
 ## Connections
-- [[Get_1]] - `references` [EXTRACTED]
-- [[PermissionsController]] - `method` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-buildWhere()]] - `calls` [EXTRACTED]
+- [[dot-hasFullPersonalDataAccess()]] - `calls` [INFERRED]
+- [[AuditReadService]] - `method` [EXTRACTED]
+- [[ListAuditEventsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PermissionsController
+#graphify/code #graphify/EXTRACTED #community/audit-readservicets

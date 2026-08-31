@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/retention.service.ts"
 type: "code"
-community: "retention.service.ts"
+community: "PrismaService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/PrismaService
 ---
 
 # retention.service.ts
@@ -21,11 +21,11 @@ tags:
 - [[UpdateRetentionPolicyDto]] - `imports` [EXTRACTED]
 - [[audit.service.ts]] - `imports_from` [EXTRACTED]
 - [[create-retention-policy.dto.ts]] - `imports_from` [EXTRACTED]
-- [[duplicateNameMessage()_1]] - `contains` [EXTRACTED]
-- [[isUniqueConstraintViolation()_3]] - `contains` [EXTRACTED]
+- [[duplicateNameMessage()_2]] - `contains` [EXTRACTED]
+- [[isUniqueConstraintViolation()_4]] - `contains` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[registers.module.ts]] - `imports_from` [EXTRACTED]
 - [[retention.controller.ts]] - `imports_from` [EXTRACTED]
 - [[update-retention-policy.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/PrismaService

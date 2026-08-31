@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateSharingActivityDto"
+community: "sync.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSharingActivityDto
+  - community/syncservicets
 ---
 
 # Controller
 
 ## Connections
-- [[SharingController]] - `references` [EXTRACTED]
+- [[SyncController]] - `references` [EXTRACTED]
+- [[SyncJobsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto
+#graphify/code #graphify/EXTRACTED #community/syncservicets

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/audit.e2e-spec.ts"
 type: "code"
-community: "prisma.service.ts"
+community: "audit.e2e-spec.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/audite2e-spects
 ---
 
 # audit.e2e-spec.ts
@@ -24,4 +24,4 @@ tags:
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 - [[verifyChainIntact()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/audite2e-spects

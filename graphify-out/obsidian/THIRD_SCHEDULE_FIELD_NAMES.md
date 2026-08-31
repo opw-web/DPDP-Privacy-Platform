@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/organizations/organizations.service.ts"
 type: "code"
-community: "UpdateOrganizationDto"
+community: "PrismaService"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateOrganizationDto
+  - community/PrismaService
 ---
 
 # THIRD_SCHEDULE_FIELD_NAMES
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[organizations.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateOrganizationDto
+#graphify/code #graphify/EXTRACTED #community/PrismaService

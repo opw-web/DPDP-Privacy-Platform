@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateEmployeeDto"
+community: "recipients.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateEmployeeDto
+  - community/recipientsservicets
 ---
 
 # IsEmail
 
 ## Connections
-- [[CreateEmployeeDto]] - `references` [EXTRACTED]
+- [[UpdateRecipientDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateEmployeeDto
+#graphify/code #graphify/EXTRACTED #community/recipientsservicets

@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
+source_file: "dpdp-platform/backend/src/modules/inventory/ropa-export.service.ts"
 type: "code"
 community: "PrismaService"
-location: "L110"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,9 +13,7 @@ tags:
 
 ## Connections
 - [[AuditService]] - `references` [EXTRACTED]
-- [[ConnectorFactory]] - `references` [EXTRACTED]
-- [[CryptoService]] - `references` [EXTRACTED]
-- [[DataSourcesService]] - `method` [EXTRACTED]
 - [[PrismaService]] - `references` [EXTRACTED]
+- [[RopaExportService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PrismaService

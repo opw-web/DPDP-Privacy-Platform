@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/token.service.ts"
 type: "code"
-community: "principal-auth.service.ts"
+community: "tenant-context.ts"
 location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principal-authservicets
+  - community/tenant-contextts
 ---
 
 # REFRESH_TOKEN_TTL_MS
@@ -16,4 +16,4 @@ tags:
 - [[principal-auth.service.ts]] - `imports` [EXTRACTED]
 - [[token.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principal-authservicets
+#graphify/code #graphify/EXTRACTED #community/tenant-contextts

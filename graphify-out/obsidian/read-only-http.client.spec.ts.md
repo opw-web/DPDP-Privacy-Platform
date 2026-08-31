@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.spec.ts"
 type: "code"
-community: "rest-api.connector.ts"
+community: "read-only-http.client.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rest-apiconnectorts
+  - community/read-only-httpclientts
 ---
 
 # read-only-http.client.spec.ts
@@ -24,4 +24,4 @@ tags:
 - [[read-only-http.client.ts]] - `imports_from` [EXTRACTED]
 - [[stripQuery()_1]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts
+#graphify/code #graphify/EXTRACTED #community/read-only-httpclientts

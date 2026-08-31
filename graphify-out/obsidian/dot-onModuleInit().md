@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/src/common/prisma/prisma.service.ts"
 type: "code"
 community: "PrismaService"
-location: "L54"
+location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED

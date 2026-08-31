@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/health/health.service.ts"
+source_file: "dpdp-platform/backend/src/common/prisma/prisma.service.ts"
 type: "code"
-community: "Public"
-location: "L106"
+community: "PrismaService"
+location: "L82"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/PrismaService
 ---
 
 # .onModuleDestroy()
 
 ## Connections
-- [[HealthService]] - `method` [EXTRACTED]
+- [[PrismaService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/PrismaService

@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts"
+source_file: "dpdp-platform/backend/src/common/audit/access-log.service.ts"
 type: "code"
-community: "PrincipalAuthService"
-location: "L29"
+community: "PrismaService"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalAuthService
+  - community/PrismaService
 ---
 
 # .constructor()
 
 ## Connections
-- [[EmployeeAuthController]] - `method` [EXTRACTED]
-- [[EmployeeAuthService]] - `references` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
+- [[AccessLogService]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalAuthService
+#graphify/code #graphify/EXTRACTED #community/PrismaService

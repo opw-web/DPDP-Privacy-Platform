@@ -15,8 +15,8 @@ tags:
 - [[dot-remove()_1]] - `calls` [INFERRED]
 - [[DataSourcesController]] - `method` [EXTRACTED]
 - [[Delete]] - `references` [EXTRACTED]
-- [[HttpCode_3]] - `references` [EXTRACTED]
-- [[Param_7]] - `references` [EXTRACTED]
+- [[HttpCode_1]] - `references` [EXTRACTED]
+- [[Param_8]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/RequirePermission

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts"
 type: "code"
-community: "auth.module.ts"
+community: "Public"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/authmodulets
+  - community/Public
 ---
 
 # principal-auth.controller.ts
@@ -28,4 +28,4 @@ tags:
 - [[principal-login.dto.ts]] - `imports_from` [EXTRACTED]
 - [[public.decorator.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/authmodulets
+#graphify/code #graphify/EXTRACTED #community/Public

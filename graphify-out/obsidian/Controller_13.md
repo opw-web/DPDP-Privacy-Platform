@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RequirePermission"
+community: "UpdateRolePermissionsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/UpdateRolePermissionsDto
 ---
 
 # Controller
 
 ## Connections
-- [[DataSourcesController]] - `references` [EXTRACTED]
+- [[RolesController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto

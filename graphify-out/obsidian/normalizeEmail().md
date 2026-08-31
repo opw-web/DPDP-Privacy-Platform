@@ -1,19 +1,20 @@
 ---
-source_file: "demo-company-server/src/seed/match.ts"
+source_file: "dpdp-platform/backend/src/modules/normalization/normalizers/email.ts"
 type: "code"
-community: "match.ts"
-location: "L17"
+community: "matching.service.ts"
+location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/matchts
+  - community/matchingservicets
 ---
 
 # normalizeEmail()
 
 ## Connections
-- [[dataset.test.ts]] - `imports` [EXTRACTED]
-- [[match.ts]] - `contains` [EXTRACTED]
-- [[simulateMatching()]] - `calls` [EXTRACTED]
+- [[dot-normalize()]] - `calls` [EXTRACTED]
+- [[email.spec.ts]] - `imports` [EXTRACTED]
+- [[normalization.service.ts]] - `imports` [EXTRACTED]
+- [[normalizersemail.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/matchts
+#graphify/code #graphify/EXTRACTED #community/matchingservicets

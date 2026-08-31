@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "employees.module.ts"
+community: "InventoryService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeesmodulets
+  - community/InventoryService
 ---
 
 # Get
 
 ## Connections
-- [[dot-list()_1]] - `references` [EXTRACTED]
+- [[dot-gaps()]] - `references` [EXTRACTED]
+- [[dot-ropaCsv()]] - `references` [EXTRACTED]
+- [[dot-summary()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeesmodulets
+#graphify/code #graphify/EXTRACTED #community/InventoryService

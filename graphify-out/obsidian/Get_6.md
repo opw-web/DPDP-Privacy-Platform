@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "registers.module.ts"
+community: "SecurityMeasuresService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/registersmodulets
+  - community/SecurityMeasuresService
 ---
 
 # Get
 
 ## Connections
-- [[dot-get()_5]] - `references` [EXTRACTED]
-- [[dot-list()_7]] - `references` [EXTRACTED]
+- [[dot-get()_4]] - `references` [EXTRACTED]
+- [[dot-list()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/registersmodulets
+#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresService

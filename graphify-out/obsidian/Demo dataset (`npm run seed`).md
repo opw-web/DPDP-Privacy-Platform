@@ -12,7 +12,7 @@ tags:
 # Demo dataset (`npm run seed`)
 
 ## Connections
-- [[Personas]] - `contains` [EXTRACTED]
+- [[Personas_1]] - `contains` [EXTRACTED]
 - [[demo-company-server]] - `contains` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/demo-company-server

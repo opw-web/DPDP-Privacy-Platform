@@ -12,6 +12,6 @@ tags:
 # SYSTEM_KEYS
 
 ## Connections
-- [[auth.ts]] - `contains` [EXTRACTED]
+- [[srcauth.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/serverts

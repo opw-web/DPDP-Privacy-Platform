@@ -1,21 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/employees.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/retention.service.ts"
 type: "code"
-community: "EmployeesService"
-location: "L98"
+community: "CreateRetentionPolicyDto"
+location: "L165"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeesService
+  - community/CreateRetentionPolicyDto
 ---
 
 # .update()
 
 ## Connections
+- [[dot-assertPurposeExists()_1]] - `calls` [EXTRACTED]
 - [[dot-record()]] - `calls` [INFERRED]
-- [[dot-resetPassword()_1]] - `calls` [EXTRACTED]
 - [[dot-update()_16]] - `calls` [INFERRED]
-- [[EmployeesService]] - `method` [EXTRACTED]
-- [[UpdateEmployeeDto]] - `references` [EXTRACTED]
+- [[RetentionService]] - `method` [EXTRACTED]
+- [[UpdateRetentionPolicyDto]] - `references` [EXTRACTED]
+- [[duplicateNameMessage()_2]] - `calls` [EXTRACTED]
+- [[isUniqueConstraintViolation()_4]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeesService
+#graphify/code #graphify/EXTRACTED #community/CreateRetentionPolicyDto

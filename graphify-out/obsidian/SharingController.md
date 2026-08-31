@@ -12,13 +12,13 @@ tags:
 # SharingController
 
 ## Connections
-- [[dot-constructor()_4]] - `method` [EXTRACTED]
-- [[dot-create()]] - `method` [EXTRACTED]
-- [[dot-get()_2]] - `method` [EXTRACTED]
-- [[dot-list()_3]] - `method` [EXTRACTED]
-- [[dot-update()_2]] - `method` [EXTRACTED]
-- [[ApiTags_3]] - `references` [EXTRACTED]
-- [[Controller_3]] - `references` [EXTRACTED]
+- [[dot-constructor()_54]] - `method` [EXTRACTED]
+- [[dot-create()_7]] - `method` [EXTRACTED]
+- [[dot-get()_8]] - `method` [EXTRACTED]
+- [[dot-list()_13]] - `method` [EXTRACTED]
+- [[dot-update()_8]] - `method` [EXTRACTED]
+- [[ApiTags_10]] - `references` [EXTRACTED]
+- [[Controller_10]] - `references` [EXTRACTED]
 - [[registers.module.ts]] - `imports` [EXTRACTED]
 - [[sharing.controller.ts]] - `contains` [EXTRACTED]
 

@@ -1,18 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/transfers.service.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/employees.controller.ts"
 type: "code"
-community: "registers.module.ts"
-location: "L57"
+community: "employees.controller.ts"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/registersmodulets
+  - community/employeescontrollerts
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_5]] - `calls` [INFERRED]
-- [[TransfersService]] - `method` [EXTRACTED]
+- [[dot-get()_7]] - `calls` [INFERRED]
+- [[EmployeesController]] - `method` [EXTRACTED]
+- [[Get_9]] - `references` [EXTRACTED]
+- [[Param_5]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/registersmodulets
+#graphify/code #graphify/EXTRACTED #community/employeescontrollerts

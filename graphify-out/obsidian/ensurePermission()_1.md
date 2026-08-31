@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/data-sources.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/principals.e2e-spec.ts"
 type: "code"
-community: "data-sources.e2e-spec.ts"
-location: "L35"
+community: "principals.e2e-spec.ts"
+location: "L71"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcese2e-spects
+  - community/principalse2e-spects
 ---
 
 # ensurePermission()
 
 ## Connections
-- [[createOrgWithRole()]] - `calls` [EXTRACTED]
-- [[data-sources.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[EmployeeSession]] - `calls` [EXTRACTED]
+- [[principals.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcese2e-spects
+#graphify/code #graphify/EXTRACTED #community/principalse2e-spects

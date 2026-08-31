@@ -1,22 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/recipients.service.ts"
 type: "code"
-community: "RequirePermission"
-location: "L42"
+community: "recipients.service.ts"
+location: "L106"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/recipientsservicets
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_8]] - `calls` [INFERRED]
-- [[Body_10]] - `references` [EXTRACTED]
-- [[CreateDataSourceDto]] - `references` [EXTRACTED]
-- [[DataSourcesController]] - `method` [EXTRACTED]
-- [[Post_8]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-assertProcessorRule()]] - `calls` [EXTRACTED]
+- [[dot-create()_13]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
+- [[CreateRecipientDto]] - `references` [EXTRACTED]
+- [[RecipientsService]] - `method` [EXTRACTED]
+- [[duplicateNameMessage()_1]] - `calls` [EXTRACTED]
+- [[isUniqueConstraintViolation()_3]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/recipientsservicets

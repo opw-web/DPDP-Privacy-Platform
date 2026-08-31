@@ -1,22 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/security-measures.service.ts"
 type: "code"
-community: "purposes.service.ts"
-location: "L23"
+community: "SecurityMeasuresService"
+location: "L126"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposesservicets
+  - community/SecurityMeasuresService
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_3]] - `calls` [INFERRED]
-- [[Body_3]] - `references` [EXTRACTED]
-- [[CreatePurposeDto]] - `references` [EXTRACTED]
-- [[Post_1]] - `references` [EXTRACTED]
-- [[PurposesController]] - `method` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-assertDataSourceExists()]] - `calls` [EXTRACTED]
+- [[dot-assertEmployeeExists()]] - `calls` [EXTRACTED]
+- [[dot-create()_1]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
+- [[CreateSecurityMeasureDto]] - `references` [EXTRACTED]
+- [[SecurityMeasuresService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposesservicets
+#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresService

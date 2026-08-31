@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "@nestjs/common"
-location: "L25"
+community: "dependencies"
+location: "L27"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/dependencies
 ---
 
 # @nestjs/common
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[@nestjscommon]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/nestjs/common
+#graphify/concept #graphify/EXTRACTED #community/dependencies

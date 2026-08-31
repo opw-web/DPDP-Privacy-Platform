@@ -1,12 +1,12 @@
 ---
 source_file: "demo-company-server/src/seed/generate.ts"
 type: "code"
-community: "generate.ts"
+community: "dataset.test.ts"
 location: "L414"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/generatets
+  - community/datasettestts
 ---
 
 # toSimRecords()
@@ -16,4 +16,4 @@ tags:
 - [[generate.ts]] - `contains` [EXTRACTED]
 - [[selfCheck()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/generatets
+#graphify/code #graphify/EXTRACTED #community/datasettestts

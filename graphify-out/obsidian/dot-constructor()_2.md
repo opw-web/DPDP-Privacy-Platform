@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/roles.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync-error.spec.ts"
 type: "code"
-community: "employees.module.ts"
-location: "L10"
+community: "SyncPipelineService"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeesmodulets
+  - community/SyncPipelineService
 ---
 
 # .constructor()
 
 ## Connections
-- [[RolesController]] - `method` [EXTRACTED]
-- [[RolesService]] - `references` [EXTRACTED]
+- [[IdentifierOwnershipConflictError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeesmodulets
+#graphify/code #graphify/EXTRACTED #community/SyncPipelineService

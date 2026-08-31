@@ -21,6 +21,12 @@ describe("env.validation -- ACCESS_LOG_RETENTION_DAYS floor", () => {
     PORT: "4000",
     NODE_ENV: "test",
     CORS_ORIGIN: "http://localhost:5173",
+    // MVP 2: required by env.validation.ts's MAIL_* fields, added here so
+    // this fixture stays valid against every other field it does not test.
+    MAIL_TRANSPORT: "console",
+    MAIL_HOST: "localhost",
+    MAIL_PORT: "1025",
+    MAIL_FROM: "Acme Privacy <privacy@acmeretail.demo>",
   };
 
   it("rejects 90 days, naming the variable, the configured value, and the floor", () => {

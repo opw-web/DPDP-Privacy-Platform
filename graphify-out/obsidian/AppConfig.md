@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/config/configuration.ts"
 type: "code"
-community: "app.module.ts"
+community: "queues.module.ts"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/appmodulets
+  - community/queuesmodulets
 ---
 
 # AppConfig
@@ -18,6 +18,8 @@ tags:
 - [[health.service.ts]] - `imports` [EXTRACTED]
 - [[main.ts]] - `imports` [EXTRACTED]
 - [[principal-auth.controller.ts]] - `imports` [EXTRACTED]
+- [[queues.module.ts]] - `imports` [EXTRACTED]
+- [[sync-lock.service.ts]] - `imports` [EXTRACTED]
 - [[token.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/appmodulets
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

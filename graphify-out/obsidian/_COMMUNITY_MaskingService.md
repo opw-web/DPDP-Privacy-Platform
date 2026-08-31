@@ -1,29 +1,24 @@
 ---
 type: community
-members: 16
+members: 11
 ---
 
 # MaskingService
 
-**Members:** 16 nodes
+**Members:** 11 nodes
 
 ## Members
+- [[dot-hasFullPersonalDataAccess()]] - code - dpdp-platform/backend/src/common/masking/masking.service.ts
 - [[dot-maskDigits()]] - code - dpdp-platform/backend/src/common/masking/masking.service.ts
 - [[dot-maskDomain()]] - code - dpdp-platform/backend/src/common/masking/masking.service.ts
 - [[dot-maskEmail()]] - code - dpdp-platform/backend/src/common/masking/masking.service.ts
+- [[dot-maskIdentifier()]] - code - dpdp-platform/backend/src/common/masking/masking.service.ts
 - [[dot-maskIfNeeded()]] - code - dpdp-platform/backend/src/common/masking/masking.service.ts
 - [[dot-maskPhone()]] - code - dpdp-platform/backend/src/common/masking/masking.service.ts
 - [[dot-maskSegment()]] - code - dpdp-platform/backend/src/common/masking/masking.service.ts
 - [[dot-maskValue()]] - code - dpdp-platform/backend/src/common/masking/masking.service.ts
-- [[CAN_VIEW_ALL_PERSONAL_DATA]] - code - dpdp-platform/backend/src/common/masking/masking.service.ts
-- [[Injectable_11]] - code
-- [[MaskingModule]] - code - dpdp-platform/backend/src/common/masking/masking.module.ts
+- [[Injectable_34]] - code
 - [[MaskingService]] - code - dpdp-platform/backend/src/common/masking/masking.service.ts
-- [[Module_8]] - code
-- [[PASS_THROUGH_FIELDS]] - code - dpdp-platform/backend/src/common/masking/masking.service.ts
-- [[masking.module.ts]] - code - dpdp-platform/backend/src/common/masking/masking.module.ts
-- [[masking.service.spec.ts]] - code - dpdp-platform/backend/src/common/masking/masking.service.spec.ts
-- [[masking.service.ts]] - code - dpdp-platform/backend/src/common/masking/masking.service.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -33,8 +28,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_app.module.ts]]
+- 3 edges to [[_COMMUNITY_principals.service.ts]]
+- 2 edges to [[_COMMUNITY_inventory.service.ts]]
+- 2 edges to [[_COMMUNITY_audit-read.service.ts]]
+- 2 edges to [[_COMMUNITY_PrismaService]]
+- 1 edge to [[_COMMUNITY_app.module.ts]]
 
 ## Top bridge nodes
-- [[masking.module.ts]] - degree 4, connects to 1 community
-- [[MaskingModule]] - degree 3, connects to 1 community
+- [[MaskingService]] - degree 17, connects to 5 communities
+- [[dot-maskIfNeeded()]] - degree 5, connects to 1 community
+- [[dot-hasFullPersonalDataAccess()]] - degree 3, connects to 1 community

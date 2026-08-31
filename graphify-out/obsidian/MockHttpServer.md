@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-close()]] - `method` [EXTRACTED]
-- [[dot-constructor()_15]] - `method` [EXTRACTED]
+- [[dot-constructor()_4]] - `method` [EXTRACTED]
 - [[dot-listen()]] - `method` [EXTRACTED]
 - [[dot-setHandler()]] - `method` [EXTRACTED]
 - [[connector.factory.spec.ts]] - `imports` [EXTRACTED]
@@ -24,5 +24,7 @@ tags:
 - [[rest-api.connector.spec.ts]] - `imports` [EXTRACTED]
 - [[startRecordsServer()]] - `calls` [EXTRACTED]
 - [[startRecordsServer()_1]] - `calls` [EXTRACTED]
+- [[startServer()]] - `calls` [EXTRACTED]
+- [[sync.e2e-spec.ts]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/data-sourcese2e-spects

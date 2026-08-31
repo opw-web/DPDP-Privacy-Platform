@@ -1,17 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/employees.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/transfers.controller.ts"
 type: "code"
-community: "EmployeesService"
-location: "L42"
+community: "CreateTransferDto"
+location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeesService
+  - community/CreateTransferDto
 ---
 
 # .list()
 
 ## Connections
-- [[EmployeesService]] - `method` [EXTRACTED]
+- [[Get_16]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[TransfersController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeesService
+#graphify/code #graphify/EXTRACTED #community/CreateTransferDto

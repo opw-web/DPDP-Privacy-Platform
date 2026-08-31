@@ -1,17 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/roles.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync.controller.ts"
 type: "code"
-community: "employees.module.ts"
-location: "L14"
+community: "sync.service.ts"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeesmodulets
+  - community/syncservicets
 ---
 
 # .list()
 
 ## Connections
-- [[RolesService]] - `method` [EXTRACTED]
+- [[dot-listJobs()]] - `calls` [INFERRED]
+- [[Get_3]] - `references` [EXTRACTED]
+- [[ListSyncJobsQueryDto]] - `references` [EXTRACTED]
+- [[Query]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[SyncJobsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeesmodulets
+#graphify/code #graphify/EXTRACTED #community/syncservicets

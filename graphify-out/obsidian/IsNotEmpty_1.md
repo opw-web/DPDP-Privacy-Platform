@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdateOrganizationDto"
+community: "configuration.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateOrganizationDto
+  - community/configurationts
 ---
 
 # IsNotEmpty
 
 ## Connections
-- [[UpdateOrganizationDto]] - `references` [EXTRACTED]
+- [[EnvironmentVariables]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateOrganizationDto
+#graphify/code #graphify/EXTRACTED #community/configurationts

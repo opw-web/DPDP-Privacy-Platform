@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/mappings.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/reference.e2e-spec.ts"
 type: "code"
-community: "mappings.e2e-spec.ts"
-location: "L49"
+community: "merge.service.ts"
+location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingse2e-spects
+  - community/mergeservicets
 ---
 
 # createOrg()
 
 ## Connections
-- [[createOrgWithBothPermissions()]] - `calls` [EXTRACTED]
-- [[mappings.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[reference.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingse2e-spects
+#graphify/code #graphify/EXTRACTED #community/mergeservicets

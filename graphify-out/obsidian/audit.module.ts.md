@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/audit/audit.module.ts"
 type: "code"
-community: "audit.service.ts"
+community: "app.module.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/auditservicets
+  - community/appmodulets
 ---
 
 # audit.module.ts
@@ -17,12 +17,17 @@ tags:
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[access-log.service.ts]] - `imports_from` [EXTRACTED]
 - [[app.module.ts]] - `imports_from` [EXTRACTED]
+- [[audit-read.module.ts]] - `imports_from` [EXTRACTED]
 - [[audit.service.ts]] - `imports_from` [EXTRACTED]
 - [[auth.module.ts]] - `imports_from` [EXTRACTED]
 - [[data-sources.module.ts]] - `imports_from` [EXTRACTED]
 - [[employees.module.ts]] - `imports_from` [EXTRACTED]
+- [[identity.module.ts]] - `imports_from` [EXTRACTED]
+- [[inventory.module.ts]] - `imports_from` [EXTRACTED]
 - [[organizations.module.ts]] - `imports_from` [EXTRACTED]
+- [[principals.module.ts]] - `imports_from` [EXTRACTED]
 - [[purposes.module.ts]] - `imports_from` [EXTRACTED]
 - [[registers.module.ts]] - `imports_from` [EXTRACTED]
+- [[sync.module.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/auditservicets
+#graphify/code #graphify/EXTRACTED #community/appmodulets

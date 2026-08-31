@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/security-measures.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.service.ts"
 type: "code"
-community: ".record"
-location: "L17"
+community: "PrismaService"
+location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/PrismaService
 ---
 
 # .constructor()
 
 ## Connections
-- [[SecurityMeasuresController]] - `method` [EXTRACTED]
-- [[SecurityMeasuresService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[DataSourcesService]] - `references` [EXTRACTED]
+- [[MappingsService]] - `method` [EXTRACTED]
+- [[PrismaService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/PrismaService

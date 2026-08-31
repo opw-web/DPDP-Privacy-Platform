@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/prisma/seed/roles.ts"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/EmployeesPage.test.tsx"
 type: "code"
-community: "permissions.ts"
-location: "L23"
+community: "EmployeesPage.test.tsx"
+location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/permissionsts
+  - community/EmployeesPagetesttsx
 ---
 
 # ROLES
 
 ## Connections
-- [[roles.ts]] - `contains` [EXTRACTED]
-- [[seed.ts]] - `imports` [EXTRACTED]
+- [[EmployeesPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/permissionsts
+#graphify/code #graphify/EXTRACTED #community/EmployeesPagetesttsx

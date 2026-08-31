@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "code"
-community: "supertest"
-location: "L64"
+community: "devDependencies"
+location: "L67"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/supertest
+  - community/devDependencies
 ---
 
 # supertest
@@ -15,4 +15,4 @@ tags:
 - [[devDependencies_1]] - `contains` [EXTRACTED]
 - [[supertest_1]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/supertest
+#graphify/code #graphify/EXTRACTED #community/devDependencies

@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EmployeesService"
+community: "UpdateRolePermissionsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeesService
+  - community/UpdateRolePermissionsDto
 ---
 
 # Param
 
 ## Connections
-- [[dot-get()_14]] - `references` [EXTRACTED]
-- [[dot-resetPassword()]] - `references` [EXTRACTED]
-- [[dot-update()_16]] - `references` [EXTRACTED]
+- [[dot-replacePermissions()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeesService
+#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto

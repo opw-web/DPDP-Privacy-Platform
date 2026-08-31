@@ -1,18 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/retention.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/sharing.controller.ts"
 type: "code"
-community: "retention.service.ts"
-location: "L75"
+community: "CreateSharingActivityDto"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/CreateSharingActivityDto
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_7]] - `calls` [INFERRED]
-- [[RetentionService]] - `method` [EXTRACTED]
+- [[dot-get()_9]] - `calls` [INFERRED]
+- [[Get_11]] - `references` [EXTRACTED]
+- [[Param_7]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[SharingController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

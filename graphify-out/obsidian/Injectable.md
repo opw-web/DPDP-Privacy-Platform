@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "auth.module.ts"
+community: "SyncPipelineService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/authmodulets
+  - community/SyncPipelineService
 ---
 
 # Injectable
 
 ## Connections
-- [[JwtPrincipalGuard]] - `references` [EXTRACTED]
+- [[SyncPipelineService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/authmodulets
+#graphify/code #graphify/EXTRACTED #community/SyncPipelineService

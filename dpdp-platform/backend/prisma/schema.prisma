@@ -1,5 +1,5 @@
 generator client {
-  provider = "prisma-client-js"
+  provider      = "prisma-client-js"
   // Task 7 Docker fix: node:20-alpine ships OpenSSL 3.x (libssl.so.3),
   // not the 1.1.x Prisma's engine auto-detection guesses at generate
   // time when it cannot probe the target system's actual libssl
@@ -173,6 +173,150 @@ enum PrincipalAccountStatus {
   UNCLAIMED
   ACTIVE
   LOCKED
+}
+
+// ─────────────── MVP 2 enums (DPDP_MVP2_COMPLIANCE_OPERATIONS.md §2.2) ───────────────
+enum RuleBasis {
+  STATUTORY
+  SECTORAL
+  ORG_POLICY
+  INTERNAL_TARGET
+}
+
+enum DeadlineUnit {
+  HOURS
+  DAYS
+  MONTHS
+  YEARS
+}
+
+enum NoticeStatus {
+  DRAFT
+  PUBLISHED
+  RETIRED
+}
+
+enum RequestType {
+  ACCESS
+  CORRECTION
+  COMPLETION
+  UPDATE
+  ERASURE
+  CONSENT_WITHDRAWAL
+  GRIEVANCE
+  NOMINATION
+  OTHER
+}
+
+enum RequestStatus {
+  SUBMITTED
+  VERIFICATION_REQUIRED
+  OPEN
+  ASSIGNED
+  IN_PROGRESS
+  WAITING_FOR_PRINCIPAL
+  ESCALATED
+  COMPLETED
+  REJECTED
+  CANCELLED
+}
+
+enum ConsentStatus {
+  GRANTED
+  DENIED
+  WITHDRAWN
+  UNKNOWN
+  NOT_REQUIRED
+}
+
+enum ConsentChannel {
+  PORTAL
+  EMAIL
+  IMPORTED
+  IN_PERSON
+  API
+  CONSENT_MANAGER
+}
+
+enum GuardianKind {
+  PARENT_OF_CHILD
+  LAWFUL_GUARDIAN_OF_PWD
+}
+
+enum GuardianVerification {
+  NONE
+  EXISTING_RELIABLE_DETAILS
+  SELF_PROVIDED_DETAILS
+  VIRTUAL_TOKEN
+  DIGITAL_LOCKER
+  COURT_ORDER
+  DESIGNATED_AUTHORITY
+  LOCAL_LEVEL_COMMITTEE
+}
+
+enum MessageCategory {
+  NOTICE
+  CONSENT_REQUEST
+  COMPLIANCE_NOTICE
+  BREACH_NOTICE
+  REQUEST_UPDATE
+  PRE_ERASURE_NOTICE
+  GENERAL_NOTIFICATION
+  MARKETING
+}
+
+enum CampaignStatus {
+  DRAFT
+  PENDING_APPROVAL
+  APPROVED
+  SENDING
+  SENT
+  FAILED
+  CANCELLED
+}
+
+enum DeliveryStatus {
+  PENDING
+  DELIVERED
+  FAILED
+  SUPPRESSED
+}
+
+enum DeliveryChannel {
+  PORTAL
+  EMAIL
+}
+
+enum BreachStatus {
+  DETECTED
+  INVESTIGATING
+  CONTAINED
+  PRINCIPALS_NOTIFIED
+  BOARD_NOTIFIED
+  CLOSED
+}
+
+enum ObligationStatus {
+  PENDING
+  IN_PROGRESS
+  DONE
+  WAIVED
+  OVERDUE
+}
+
+enum ErasureState {
+  EVALUATED
+  NOTICE_SENT
+  DEFERRED_RETENTION_FLOOR
+  ON_LEGAL_HOLD
+  READY_FOR_ERASURE
+  ERASED
+  CANCELLED
+}
+
+enum SdfAssessmentKind {
+  DPIA
+  AUDIT
 }
 
 // ─────────────── tenancy & people ───────────────
@@ -677,4 +821,525 @@ model Counter {
   value          BigInt @default(0)
 
   @@id([organizationId, name])
+}
+
+// ═══════════════ MVP 2 models (DPDP_MVP2_COMPLIANCE_OPERATIONS.md §2.2) ═══════════════
+// Transcribed verbatim from the spec's fenced code block (lines 82-506),
+// with @db.Timestamptz(6) added to every DateTime field to match MVP 1's
+// convention (the spec block itself does not carry the annotation).
+
+// ─────────────── compliance rules engine ───────────────
+model ComplianceRule {
+  id                   String       @id @default(uuid())
+  organizationId       String
+  ruleCode             String // GRIEVANCE_RESPONSE, BREACH_BOARD_DETAIL, ...
+  version              Int          @default(1)
+  name                 String
+  jurisdiction         String       @default("IN")
+  legalSource          String // "DPDP Rules, 2025 — Rule 14(3)"
+  basis                RuleBasis
+  appliesTo            String // "REQUEST:GRIEVANCE" | "BREACH:BOARD_DETAIL" | ...
+  deadlineValue        Int
+  deadlineUnit         DeadlineUnit
+  warningLead          Int
+  escalateOnBreach     Boolean      @default(false)
+  publishedPeriodText  String? // RT-11: the period the company publishes
+  effectiveFrom        DateTime     @db.Timestamptz(6)
+  effectiveUntil       DateTime?    @db.Timestamptz(6)
+  enabled              Boolean      @default(true)
+  reviewedByEmployeeId String? // null ⇒ "unreviewed" badge everywhere it is used
+  reviewedAt           DateTime?    @db.Timestamptz(6)
+  notes                String?
+  createdAt            DateTime     @default(now()) @db.Timestamptz(6)
+
+  @@unique([organizationId, ruleCode, version])
+  @@index([organizationId, appliesTo, enabled])
+}
+
+// ─────────────── notice (NT-01…NT-10) ───────────────
+model PrivacyNotice {
+  id               String          @id @default(uuid())
+  organizationId   String
+  code             String // ACCOUNT_SIGNUP, MARKETING_OPTIN, LEGACY_CONSENT
+  name             String
+  purposeIds       String[] // purposes this notice covers
+  status           NoticeStatus    @default(DRAFT)
+  currentVersionId String?
+  createdAt        DateTime        @default(now()) @db.Timestamptz(6)
+  versions         NoticeVersion[]
+
+  @@unique([organizationId, code])
+}
+
+model NoticeVersion {
+  id                   String              @id @default(uuid())
+  organizationId       String
+  noticeId             String
+  version              Int
+  // Rule 3(b)(i): itemised description of the personal data
+  itemisedDataFields   Json // [{canonicalField, dataCategory, label}]
+  // Rule 3(b)(ii): purpose + specific description of goods/services or uses enabled
+  purposeStatements    Json // [{purposeId, purposeName, goodsOrServices}]
+  // Rule 3(c): the three links
+  withdrawalUrl        String
+  rightsUrl            String
+  boardComplaintUrl    String
+  bodyMarkdown         String // the standalone notice body
+  contentHash          String // sha256 — what she actually saw  (CN-09)
+  publishedAt          DateTime?           @db.Timestamptz(6)
+  retiredAt            DateTime?           @db.Timestamptz(6)
+  createdByEmployeeId  String
+  approvedByEmployeeId String?
+  notice               PrivacyNotice       @relation(fields: [noticeId], references: [id], onDelete: Cascade)
+  translations         NoticeTranslation[]
+
+  @@unique([noticeId, version])
+}
+
+model NoticeTranslation {
+  // NT-08: English + 22 Eighth Schedule languages
+  id                     String        @id @default(uuid())
+  organizationId         String
+  noticeVersionId        String
+  languageCode           String // en, as, bn, brx, doi, gu, hi, kn, ks, kok, mai,
+  // ml, mni, mr, ne, or, pa, sa, sat, sd, ta, te, ur
+  bodyMarkdown           String
+  translatedByEmployeeId String?
+  noticeVersion          NoticeVersion @relation(fields: [noticeVersionId], references: [id], onDelete: Cascade)
+
+  @@unique([noticeVersionId, languageCode])
+}
+
+// ─────────────── consent (CN-01…CN-11) ───────────────
+model ConsentRecord {
+  // current state: one per (principal, purpose)
+  id                String          @id @default(uuid())
+  organizationId    String
+  dataPrincipalId   String
+  purposeId         String // → MVP 1 ProcessingPurpose, basis must be CONSENT
+  status            ConsentStatus   @default(UNKNOWN)
+  grantedAt         DateTime?       @db.Timestamptz(6)
+  withdrawnAt       DateTime?       @db.Timestamptz(6)
+  deniedAt          DateTime?       @db.Timestamptz(6)
+  channel           ConsentChannel?
+  noticeVersionId   String?
+  noticeContentHash String?
+  givenByGuardianId String? // CH-01: consent given by a parent/guardian
+  consentManagerRef String? // CN-08 stub
+  evidence          Json            @default("{}") // {ip, userAgent, campaignId, sessionRef}
+  updatedAt         DateTime        @updatedAt @db.Timestamptz(6)
+  events            ConsentEvent[]
+
+  @@unique([dataPrincipalId, purposeId])
+  @@index([organizationId, purposeId, status])
+}
+
+model ConsentEvent {
+  // append-only history
+  id                String         @id @default(uuid())
+  organizationId    String
+  consentRecordId   String
+  fromStatus        ConsentStatus?
+  toStatus          ConsentStatus
+  channel           ConsentChannel
+  noticeVersionId   String?
+  noticeContentHash String?
+  evidence          Json           @default("{}")
+  actorType         ActorType
+  actorLabel        String
+  createdAt         DateTime       @default(now()) @db.Timestamptz(6)
+  record            ConsentRecord  @relation(fields: [consentRecordId], references: [id], onDelete: Cascade)
+
+  @@index([consentRecordId, createdAt])
+}
+
+// ─────────────── children & guardians (CH-01…CH-10) ───────────────
+model GuardianRelationship {
+  id                    String               @id @default(uuid())
+  organizationId        String
+  dataPrincipalId       String // the child or person with disability
+  kind                  GuardianKind
+  guardianName          String
+  guardianEmail         String?
+  guardianPhone         String?
+  verification          GuardianVerification @default(NONE)
+  verificationReference String? // token ref, DigiLocker ref, court order number
+  verifiedByEmployeeId  String?
+  verifiedAt            DateTime?            @db.Timestamptz(6)
+  // Rule 11: appointment authority for a person with disability
+  appointingAuthority   String? // COURT | DESIGNATED_AUTHORITY | LOCAL_LEVEL_COMMITTEE
+  appointmentReference  String?
+  active                Boolean              @default(true)
+  createdAt             DateTime             @default(now()) @db.Timestamptz(6)
+
+  @@index([organizationId, dataPrincipalId])
+}
+
+model ChildExemptionClaim {
+  // CH-06, CH-07 — always cites the Schedule row
+  id                   String    @id @default(uuid())
+  organizationId       String
+  purposeId            String
+  schedulePart         String // "Fourth Schedule Part A" | "Part B"
+  scheduleRow          Int
+  conditionText        String // pasted from the Schedule, for the record
+  justification        String
+  claimedByEmployeeId  String
+  claimedAt            DateTime  @default(now()) @db.Timestamptz(6)
+  reviewedByEmployeeId String?
+  reviewedAt           DateTime? @db.Timestamptz(6)
+
+  @@index([organizationId, purposeId])
+}
+
+// ─────────────── rights (RT-01…RT-16) ───────────────
+model PrincipalRequest {
+  id                    String         @id @default(uuid())
+  organizationId        String
+  reference             String // REQ-001028
+  dataPrincipalId       String
+  submittedByGuardianId String? // a guardian may exercise for a child
+  type                  RequestType
+  status                RequestStatus  @default(SUBMITTED)
+  subject               String
+  body                  String
+  requestedChanges      Json           @default("{}") // {"PHONE":{"from":"...","to":"..."}}
+  channel               String         @default("PORTAL")
+  identityVerifiedBy    String? // RT-14: published identifier used
+  identityVerifiedAt    DateTime?      @db.Timestamptz(6)
+  assignedEmployeeId    String?
+  escalatedAt           DateTime?      @db.Timestamptz(6)
+  // deadline SNAPSHOT — copied at creation, never recomputed
+  ruleId                String?
+  ruleCodeSnapshot      String?
+  ruleVersionSnapshot   Int?
+  ruleBasisSnapshot     RuleBasis?
+  legalSourceSnapshot   String?
+  submittedAt           DateTime       @default(now()) @db.Timestamptz(6)
+  dueAt                 DateTime?      @db.Timestamptz(6)
+  warningAt             DateTime?      @db.Timestamptz(6)
+  completedAt           DateTime?      @db.Timestamptz(6)
+  isOverdue             Boolean        @default(false)
+  isFrivolousFlagged    Boolean        @default(false) // RT-15 — flag only, never auto-reject
+  frivolousReason       String?
+  outcomeCode           String? // FULFILLED | PARTIALLY_FULFILLED | REJECTED
+  outcome               String?
+  rejectionReason       String?
+  createdAt             DateTime       @default(now()) @db.Timestamptz(6)
+  updatedAt             DateTime       @updatedAt @db.Timestamptz(6)
+  events                RequestEvent[]
+
+  @@unique([organizationId, reference])
+  @@index([organizationId, status, dueAt])
+  @@index([organizationId, dataPrincipalId])
+}
+
+model RequestEvent {
+  id                 String           @id @default(uuid())
+  organizationId     String
+  requestId          String
+  fromStatus         RequestStatus?
+  toStatus           RequestStatus?
+  actorType          ActorType
+  actorId            String?
+  actorLabel         String
+  note               String?
+  visibleToPrincipal Boolean          @default(false)
+  createdAt          DateTime         @default(now()) @db.Timestamptz(6)
+  request            PrincipalRequest @relation(fields: [requestId], references: [id], onDelete: Cascade)
+
+  @@index([requestId, createdAt])
+}
+
+model Nomination {
+  // RT-13, s.14
+  id                  String   @id @default(uuid())
+  organizationId      String
+  dataPrincipalId     String
+  nomineeName         String
+  nomineeEmail        String?
+  nomineePhone        String?
+  relationship        String
+  scope               String // ALL_RIGHTS | ACCESS_ONLY | ERASURE_ONLY
+  activationCondition String // DEATH | INCAPACITY | BOTH
+  particularsProvided Json     @default("{}") // Rule 14(4) particulars required
+  active              Boolean  @default(true)
+  createdAt           DateTime @default(now()) @db.Timestamptz(6)
+  updatedAt           DateTime @updatedAt @db.Timestamptz(6)
+
+  @@index([organizationId, dataPrincipalId])
+}
+
+// ─────────────── retention & erasure (RE-01…RE-09) ───────────────
+model ErasureTask {
+  id                     String       @id @default(uuid())
+  organizationId         String
+  dataPrincipalId        String
+  retentionPolicyId      String?
+  trigger                String // CONSENT_WITHDRAWN | PURPOSE_SERVED | INACTIVITY | REQUEST
+  state                  ErasureState @default(EVALUATED)
+  evaluatedAt            DateTime     @default(now()) @db.Timestamptz(6)
+  preErasureNoticeDueAt  DateTime?    @db.Timestamptz(6) // RE-05: policy.preErasureNoticeHours before erasureDueAt
+  preErasureNoticeSentAt DateTime?    @db.Timestamptz(6)
+  erasureDueAt           DateTime?    @db.Timestamptz(6)
+  retentionFloorUntil    DateTime?    @db.Timestamptz(6) // RE-06/RE-07: the one-year minimum, never crossed
+  legalHoldId            String?
+  systemChecklist        Json         @default("[]") // [{dataSourceId, done, byEmployeeId, at}]
+  processorChecklist     Json         @default("[]") // RE-02: [{recipientId, confirmed, ref, at}]
+  completedAt            DateTime?    @db.Timestamptz(6)
+  completedByEmployeeId  String?
+  cancelledReason        String?
+  ruleCodeSnapshot       String?
+  ruleVersionSnapshot    Int?
+
+  @@index([organizationId, state, erasureDueAt])
+  @@index([organizationId, dataPrincipalId])
+}
+
+model LegalHold {
+  id                  String    @id @default(uuid())
+  organizationId      String
+  name                String
+  reason              String
+  legalCitation       String
+  scope               Json      @default("{}") // {principalIds?, purposeIds?, categories?}
+  startedAt           DateTime  @default(now()) @db.Timestamptz(6)
+  endsAt              DateTime? @db.Timestamptz(6)
+  createdByEmployeeId String
+
+  @@index([organizationId])
+}
+
+// ─────────────── messaging ───────────────
+model MessageTemplate {
+  id                String          @id @default(uuid())
+  organizationId    String
+  code              String
+  name              String
+  category          MessageCategory
+  subject           String
+  bodyMarkdown      String
+  variables         String[]
+  requiredVariables String[] // render fails if any is missing
+  isSystem          Boolean         @default(false)
+  version           Int             @default(1)
+  createdAt         DateTime        @default(now()) @db.Timestamptz(6)
+  updatedAt         DateTime        @updatedAt @db.Timestamptz(6)
+
+  @@unique([organizationId, code, version])
+}
+
+model MessageCampaign {
+  id                   String              @id @default(uuid())
+  organizationId       String
+  reference            String // CMP-000042
+  name                 String
+  category             MessageCategory
+  templateId           String?
+  subject              String
+  bodyMarkdown         String
+  audienceFilter       Json
+  purposeId            String? // required for CONSENT_REQUEST and MARKETING
+  noticeVersionId      String? // required for CONSENT_REQUEST  (NT-01)
+  breachId             String? // required for BREACH_NOTICE
+  status               CampaignStatus      @default(DRAFT)
+  recipientCount       Int                 @default(0)
+  sentCount            Int                 @default(0)
+  failedCount          Int                 @default(0)
+  suppressedCount      Int                 @default(0)
+  createdByEmployeeId  String
+  approvedByEmployeeId String?
+  approvedAt           DateTime?           @db.Timestamptz(6)
+  sentAt               DateTime?           @db.Timestamptz(6)
+  createdAt            DateTime            @default(now()) @db.Timestamptz(6)
+  recipients           CampaignRecipient[]
+
+  @@unique([organizationId, reference])
+}
+
+model CampaignRecipient {
+  id              String          @id @default(uuid())
+  organizationId  String
+  campaignId      String
+  dataPrincipalId String
+  channel         DeliveryChannel
+  address         String?
+  status          DeliveryStatus  @default(PENDING)
+  suppressReason  String? // NO_CONSENT | CHILD_MARKETING_PROHIBITED |
+  // NO_ADDRESS | DUPLICATE | NON_DISCLOSURE_ORDER
+  renderedSubject String?
+  renderedBody    String? // the evidence artefact
+  sentAt          DateTime?       @db.Timestamptz(6)
+  failureReason   String?
+  campaign        MessageCampaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+
+  @@unique([campaignId, dataPrincipalId, channel])
+  @@index([organizationId, dataPrincipalId])
+}
+
+model Notification {
+  id              String    @id @default(uuid())
+  organizationId  String
+  audience        ActorType
+  employeeId      String?
+  dataPrincipalId String?
+  title           String
+  body            String
+  severity        String    @default("INFO")
+  linkPath        String?
+  campaignId      String?
+  readAt          DateTime? @db.Timestamptz(6)
+  createdAt       DateTime  @default(now()) @db.Timestamptz(6)
+
+  @@index([organizationId, employeeId, readAt])
+  @@index([organizationId, dataPrincipalId, readAt])
+}
+
+// ─────────────── breach (BR-01…BR-15) ───────────────
+model BreachIncident {
+  id                          String                    @id @default(uuid())
+  organizationId              String
+  reference                   String // BR-000003
+  title                       String
+  description                 String
+  occurredAt                  DateTime?                 @db.Timestamptz(6) // when it happened
+  becameAwareAt               DateTime                  @db.Timestamptz(6) // BR-14: the ONLY clock start that matters
+  discoveredByEmployeeId      String
+  affectedSourceIds           String[]
+  dataCategories              DataCategory[]
+  involvesChildren            Boolean                   @default(false) // CH-10 risk flag
+  // Rule 7(1) content, drafted once and reused per recipient
+  natureExtentTiming          String? // BR-02
+  consequences                String? // BR-03
+  mitigationMeasures          String? // BR-04
+  safetyMeasuresForPrincipals String? // BR-05
+  responderContact            String? // BR-06
+  // Rule 7(2)(b) Board detail content
+  boardBroadFacts             String? // BR-09
+  boardMitigation             String? // BR-10
+  boardPerpetratorFindings    String? // BR-11
+  boardRemedialMeasures       String? // BR-12
+  boardExtensionRequestedAt   DateTime?                 @db.Timestamptz(6) // BR-15
+  boardExtensionGrantedUntil  DateTime?                 @db.Timestamptz(6)
+  boardExtensionReference     String?
+  status                      BreachStatus              @default(DETECTED)
+  closedAt                    DateTime?                 @db.Timestamptz(6)
+  closureNote                 String?
+  createdAt                   DateTime                  @default(now()) @db.Timestamptz(6)
+  updatedAt                   DateTime                  @updatedAt @db.Timestamptz(6)
+  obligations                 BreachObligation[]
+  affected                    BreachAffectedPrincipal[]
+
+  @@unique([organizationId, reference])
+  @@index([organizationId, status])
+}
+
+model BreachObligation {
+  // one row per clock — no hard-coded columns
+  id                    String           @id @default(uuid())
+  organizationId        String
+  breachId              String
+  code                  String // BOARD_INITIAL | BOARD_DETAIL | PRINCIPAL_NOTICE |
+  // CERT_IN_INCIDENT
+  ruleCodeSnapshot      String
+  ruleVersionSnapshot   Int
+  legalSourceSnapshot   String
+  basisSnapshot         RuleBasis
+  dueAt                 DateTime         @db.Timestamptz(6)
+  warningAt             DateTime         @db.Timestamptz(6)
+  status                ObligationStatus @default(PENDING)
+  completedAt           DateTime?        @db.Timestamptz(6)
+  completedByEmployeeId String?
+  evidenceReference     String?
+  waiverReason          String?
+  breach                BreachIncident   @relation(fields: [breachId], references: [id], onDelete: Cascade)
+
+  @@unique([breachId, code])
+  @@index([organizationId, status, dueAt])
+}
+
+model BreachAffectedPrincipal {
+  id                  String           @id @default(uuid())
+  organizationId      String
+  breachId            String
+  dataPrincipalId     String
+  notifiedAt          DateTime?        @db.Timestamptz(6)
+  notificationChannel DeliveryChannel?
+  campaignRecipientId String? // BR-13: the delivery evidence
+  addedAt             DateTime         @default(now()) @db.Timestamptz(6)
+  breach              BreachIncident   @relation(fields: [breachId], references: [id], onDelete: Cascade)
+
+  @@unique([breachId, dataPrincipalId])
+  @@index([organizationId, dataPrincipalId])
+}
+
+// ─────────────── SDF pack (SD-01…SD-07) ───────────────
+model SdfAssessment {
+  id                      String            @id @default(uuid())
+  organizationId          String
+  kind                    SdfAssessmentKind // DPIA or AUDIT — Rule 13(1) requires both, yearly
+  cycleStartedAt          DateTime          @db.Timestamptz(6)
+  dueAt                   DateTime          @db.Timestamptz(6)
+  conductedBy             String // independent data auditor / assessor name
+  isIndependent           Boolean           @default(false) // SD-02
+  completedAt             DateTime?         @db.Timestamptz(6)
+  significantObservations String?
+  reportReference         String?
+  furnishedToBoardAt      DateTime?         @db.Timestamptz(6) // SD-04
+  furnishedReference      String?
+  createdAt               DateTime          @default(now()) @db.Timestamptz(6)
+
+  @@index([organizationId, kind, dueAt])
+}
+
+model AlgorithmRegisterEntry {
+  // SD-05, Rule 13(3)
+  id                     String    @id @default(uuid())
+  organizationId         String
+  name                   String
+  description            String
+  operations             String[] // HOSTING DISPLAY UPLOADING MODIFICATION PUBLISHING
+  // TRANSMISSION STORAGE UPDATING SHARING
+  riskAssessment         String?
+  riskToRightsIdentified Boolean   @default(false)
+  mitigations            String?
+  lastReviewedAt         DateTime? @db.Timestamptz(6)
+  reviewedByEmployeeId   String?
+
+  @@index([organizationId])
+}
+
+// ─────────────── Board & Government (BD-01…BD-06) ───────────────
+model InformationRequest {
+  // Rule 23 + Seventh Schedule
+  id                         String    @id @default(uuid())
+  organizationId             String
+  reference                  String
+  requestingBody             String // BOARD | CENTRAL_GOVERNMENT
+  authorisedPersonRef        String // Seventh Schedule authorised person
+  purposeCited               String
+  receivedAt                 DateTime  @db.Timestamptz(6)
+  responseDueAt              DateTime  @db.Timestamptz(6) // "specified period" — per request
+  // Rule 23(2): non-disclosure direction
+  nonDisclosureDirected      Boolean   @default(false)
+  nonDisclosurePermissionRef String?
+  affectedPrincipalIds       String[]
+  respondedAt                DateTime? @db.Timestamptz(6)
+  responseReference          String?
+  createdAt                  DateTime  @default(now()) @db.Timestamptz(6)
+
+  @@unique([organizationId, reference])
+}
+
+model VoluntaryUndertaking {
+  // BD-06, s.32
+  id             String    @id @default(uuid())
+  organizationId String
+  reference      String
+  summary        String
+  acceptedAt     DateTime  @db.Timestamptz(6)
+  commitments    Json      @default("[]") // [{text, dueAt, status}]
+  closedAt       DateTime? @db.Timestamptz(6)
+
+  @@unique([organizationId, reference])
 }

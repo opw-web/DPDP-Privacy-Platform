@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/mappings.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/inventory.e2e-spec.ts"
 type: "code"
-community: "mappings.e2e-spec.ts"
+community: "inventory.e2e-spec.ts"
 location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingse2e-spects
+  - community/inventorye2e-spects
 ---
 
 # ensurePermission()
 
 ## Connections
-- [[createEmployee()]] - `calls` [EXTRACTED]
-- [[mappings.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[EmployeeSession_1]] - `calls` [EXTRACTED]
+- [[inventory.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingse2e-spects
+#graphify/code #graphify/EXTRACTED #community/inventorye2e-spects

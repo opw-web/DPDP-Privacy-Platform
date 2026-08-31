@@ -12,7 +12,18 @@ export interface AppConfig {
   accessLogRetentionDays: number;
 }
 
-export default (): { app: AppConfig } => ({
+/** MVP 2: outbound mail (notices, consent requests, campaigns, breach
+ * notifications) — MAIL_TRANSPORT chooses between real SMTP (MailHog in
+ * dev) and a console-logging transport for environments with no mail
+ * server at all. */
+export interface MailConfig {
+  transport: "smtp" | "console";
+  host: string;
+  port: number;
+  from: string;
+}
+
+export default (): { app: AppConfig; mail: MailConfig } => ({
   app: {
     port: parseInt(process.env["PORT"] ?? "4000", 10),
     nodeEnv: process.env["NODE_ENV"] ?? "development",
@@ -27,5 +38,13 @@ export default (): { app: AppConfig } => ({
         String(ACCESS_LOG_RETENTION_FLOOR_DAYS),
       10,
     ),
+  },
+  mail: {
+    transport: (process.env["MAIL_TRANSPORT"] ?? "console") as
+      | "smtp"
+      | "console",
+    host: process.env["MAIL_HOST"] ?? "",
+    port: parseInt(process.env["MAIL_PORT"] ?? "1025", 10),
+    from: process.env["MAIL_FROM"] ?? "",
   },
 });

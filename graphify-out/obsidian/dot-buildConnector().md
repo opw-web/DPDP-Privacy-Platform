@@ -1,22 +1,23 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
 type: "code"
-community: "rest-api.connector.ts"
-location: "L414"
+community: "connector.factory.ts"
+location: "L507"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rest-apiconnectorts
+  - community/connectorfactoryts
 ---
 
 # .buildConnector()
 
 ## Connections
-- [[dot-create()_13]] - `calls` [INFERRED]
+- [[dot-create()]] - `calls` [INFERRED]
 - [[dot-decrypt()]] - `calls` [INFERRED]
 - [[dot-discoverSchema()_3]] - `calls` [EXTRACTED]
-- [[dot-testConnection()]] - `calls` [EXTRACTED]
+- [[dot-runInTenantContext()]] - `calls` [INFERRED]
+- [[dot-testConnection()_3]] - `calls` [EXTRACTED]
 - [[Connector]] - `references` [EXTRACTED]
 - [[DataSourcesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts
+#graphify/code #graphify/EXTRACTED #community/connectorfactoryts

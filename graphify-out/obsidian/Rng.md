@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-chance()]] - `method` [EXTRACTED]
-- [[dot-constructor()_34]] - `method` [EXTRACTED]
+- [[dot-constructor()_71]] - `method` [EXTRACTED]
 - [[dot-int()]] - `method` [EXTRACTED]
 - [[dot-next()_1]] - `method` [EXTRACTED]
 - [[dot-pick()]] - `method` [EXTRACTED]

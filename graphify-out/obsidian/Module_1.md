@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "auth.module.ts"
+community: "normalization.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/authmodulets
+  - community/normalizationmodulets
 ---
 
 # Module
 
 ## Connections
-- [[AuthModule]] - `references` [EXTRACTED]
+- [[NormalizationModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/authmodulets
+#graphify/code #graphify/EXTRACTED #community/normalizationmodulets

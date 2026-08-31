@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/rbac.e2e-spec.ts"
 type: "code"
-community: "permissions.ts"
+community: "seed/permissions.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/permissionsts
+  - community/seed/permissionsts
 ---
 
 # rbac.e2e-spec.ts
@@ -17,8 +17,8 @@ tags:
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[app.module.ts]] - `imports_from` [EXTRACTED]
 - [[createOrgWithEmployee()]] - `contains` [EXTRACTED]
-- [[ensurePermission()_3]] - `contains` [EXTRACTED]
-- [[permissions.ts]] - `imports_from` [EXTRACTED]
+- [[ensurePermission()_8]] - `contains` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
+- [[seedpermissions.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/permissionsts
+#graphify/code #graphify/EXTRACTED #community/seed/permissionsts

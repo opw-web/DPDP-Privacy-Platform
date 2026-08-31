@@ -1,29 +1,29 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/dto/create-security-measure.dto.ts"
 type: "code"
-community: ".record"
+community: "security-measures.service.ts"
 location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/security-measuresservicets
 ---
 
 # CreateSecurityMeasureDto
 
 ## Connections
-- [[dot-create()_4]] - `references` [EXTRACTED]
-- [[dot-create()_5]] - `references` [EXTRACTED]
-- [[ApiProperty_5]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_7]] - `references` [EXTRACTED]
-- [[IsBoolean_6]] - `references` [EXTRACTED]
+- [[dot-create()_1]] - `references` [EXTRACTED]
+- [[dot-create()_2]] - `references` [EXTRACTED]
+- [[ApiProperty_10]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_10]] - `references` [EXTRACTED]
+- [[IsBoolean_7]] - `references` [EXTRACTED]
 - [[IsDateString_3]] - `references` [EXTRACTED]
-- [[IsIn_1]] - `references` [EXTRACTED]
-- [[IsOptional_7]] - `references` [EXTRACTED]
-- [[IsString_9]] - `references` [EXTRACTED]
-- [[MinLength_7]] - `references` [EXTRACTED]
+- [[IsIn_2]] - `references` [EXTRACTED]
+- [[IsOptional_12]] - `references` [EXTRACTED]
+- [[IsString_16]] - `references` [EXTRACTED]
+- [[MinLength_12]] - `references` [EXTRACTED]
 - [[create-security-measure.dto.ts]] - `contains` [EXTRACTED]
 - [[security-measures.controller.ts]] - `imports` [EXTRACTED]
 - [[security-measures.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/security-measuresservicets

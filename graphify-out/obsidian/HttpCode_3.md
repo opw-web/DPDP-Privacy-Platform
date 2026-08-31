@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "RequirePermission"
+community: "EmployeeAuthController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/EmployeeAuthController
 ---
 
 # HttpCode
 
 ## Connections
-- [[dot-remove()]] - `references` [EXTRACTED]
+- [[dot-login()_2]] - `references` [EXTRACTED]
+- [[dot-logout()_2]] - `references` [EXTRACTED]
+- [[dot-refresh()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController

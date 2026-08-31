@@ -12,8 +12,8 @@ tags:
 # InvalidEncryptionKeyError
 
 ## Connections
-- [[dot-constructor()_11]] - `calls` [EXTRACTED]
-- [[dot-constructor()_12]] - `method` [EXTRACTED]
+- [[dot-constructor()_35]] - `calls` [EXTRACTED]
+- [[dot-constructor()_36]] - `method` [EXTRACTED]
 - [[crypto.service.spec.ts]] - `imports` [EXTRACTED]
 - [[crypto.service.ts]] - `contains` [EXTRACTED]
 

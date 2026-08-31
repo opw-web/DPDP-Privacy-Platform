@@ -1,19 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/security-measures.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/security-measures.controller.ts"
 type: "code"
-community: ".record"
-location: "L81"
+community: "SecurityMeasuresService"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/SecurityMeasuresService
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_13]] - `calls` [INFERRED]
-- [[SecurityMeasuresService]] - `method` [EXTRACTED]
-- [[groupByRuleReference()]] - `calls` [EXTRACTED]
+- [[dot-get()_5]] - `calls` [INFERRED]
+- [[Get_6]] - `references` [EXTRACTED]
+- [[Param_2]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[SecurityMeasuresController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresService

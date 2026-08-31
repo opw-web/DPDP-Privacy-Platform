@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EmployeesService"
+community: "EmployeeAuthController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeesService
+  - community/EmployeeAuthController
 ---
 
 # ApiTags
 
 ## Connections
-- [[EmployeesController]] - `references` [EXTRACTED]
+- [[EmployeeAuthController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeesService
+#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController

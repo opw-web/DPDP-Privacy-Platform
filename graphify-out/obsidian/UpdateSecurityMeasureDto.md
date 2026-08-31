@@ -1,29 +1,28 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/dto/update-security-measure.dto.ts"
 type: "code"
-community: ".record"
-location: "L22"
+community: "security-measures.service.ts"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/security-measuresservicets
 ---
 
 # UpdateSecurityMeasureDto
 
 ## Connections
-- [[dot-update()_6]] - `references` [EXTRACTED]
-- [[dot-update()_7]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_8]] - `references` [EXTRACTED]
-- [[IsBoolean_7]] - `references` [EXTRACTED]
+- [[dot-update()_2]] - `references` [EXTRACTED]
+- [[dot-update()_3]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_11]] - `references` [EXTRACTED]
+- [[IsBoolean_8]] - `references` [EXTRACTED]
 - [[IsDateString_4]] - `references` [EXTRACTED]
-- [[IsIn_2]] - `references` [EXTRACTED]
-- [[IsOptional_8]] - `references` [EXTRACTED]
-- [[IsString_10]] - `references` [EXTRACTED]
-- [[MinLength_8]] - `references` [EXTRACTED]
-- [[ValidateIf_1]] - `references` [EXTRACTED]
+- [[IsIn_3]] - `references` [EXTRACTED]
+- [[IsString_17]] - `references` [EXTRACTED]
+- [[MinLength_13]] - `references` [EXTRACTED]
+- [[ValidateIf_2]] - `references` [EXTRACTED]
 - [[security-measures.controller.ts]] - `imports` [EXTRACTED]
 - [[security-measures.service.ts]] - `imports` [EXTRACTED]
 - [[update-security-measure.dto.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/security-measuresservicets

@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
 community: "nestjs-pino"
-location: "L37"
+location: "L40"
 tags:
   - graphify/concept
   - graphify/EXTRACTED

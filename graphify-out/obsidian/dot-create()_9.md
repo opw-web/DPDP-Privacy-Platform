@@ -1,12 +1,12 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/retention.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
 type: "code"
-community: "retention.service.ts"
-location: "L27"
+community: "RequirePermission"
+location: "L42"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/RequirePermission
 ---
 
 # .create()
@@ -14,9 +14,9 @@ tags:
 ## Connections
 - [[dot-create()_10]] - `calls` [INFERRED]
 - [[Body_6]] - `references` [EXTRACTED]
-- [[CreateRetentionPolicyDto]] - `references` [EXTRACTED]
-- [[Post_4]] - `references` [EXTRACTED]
+- [[CreateDataSourceDto]] - `references` [EXTRACTED]
+- [[DataSourcesController]] - `method` [EXTRACTED]
+- [[Post_6]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[RetentionController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

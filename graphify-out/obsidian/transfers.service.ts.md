@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/transfers.service.ts"
 type: "code"
-community: "registers.module.ts"
+community: "CreateTransferDto"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/registersmodulets
+  - community/CreateTransferDto
 ---
 
 # transfers.service.ts
@@ -26,4 +26,4 @@ tags:
 - [[transfers.controller.ts]] - `imports_from` [EXTRACTED]
 - [[update-transfer.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/registersmodulets
+#graphify/code #graphify/EXTRACTED #community/CreateTransferDto

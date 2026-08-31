@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "ts-loader"
-location: "L66"
+community: "devDependencies"
+location: "L69"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/ts-loader
+  - community/devDependencies
 ---
 
 # ts-loader
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ts-loader]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/ts-loader
+#graphify/concept #graphify/EXTRACTED #community/devDependencies

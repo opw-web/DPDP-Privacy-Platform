@@ -1,19 +1,21 @@
 ---
 source_file: "dpdp-platform/backend/src/common/masking/masking.module.ts"
 type: "code"
-community: "MaskingService"
+community: "app.module.ts"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MaskingService
+  - community/appmodulets
 ---
 
 # MaskingModule
 
 ## Connections
-- [[Module_8]] - `references` [EXTRACTED]
+- [[Module_11]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
+- [[audit-read.module.ts]] - `imports` [EXTRACTED]
 - [[masking.module.ts]] - `contains` [EXTRACTED]
+- [[principals.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MaskingService
+#graphify/code #graphify/EXTRACTED #community/appmodulets

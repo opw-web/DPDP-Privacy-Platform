@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
 community: "@prisma/client"
-location: "L30"
+location: "L32"
 tags:
   - graphify/concept
   - graphify/EXTRACTED

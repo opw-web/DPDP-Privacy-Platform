@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Public"
+community: "HealthService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/HealthService
 ---
 
 # Controller
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[HealthController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/HealthService

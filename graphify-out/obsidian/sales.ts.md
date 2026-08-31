@@ -12,7 +12,6 @@ tags:
 # sales.ts
 
 ## Connections
-- [[auth.ts]] - `imports_from` [EXTRACTED]
 - [[db.ts]] - `imports_from` [EXTRACTED]
 - [[envelope()]] - `imports` [EXTRACTED]
 - [[methodGate.ts]] - `imports_from` [EXTRACTED]
@@ -23,5 +22,6 @@ tags:
 - [[requireBearer()]] - `imports` [EXTRACTED]
 - [[salesRoutes()]] - `contains` [EXTRACTED]
 - [[server.ts]] - `imports_from` [EXTRACTED]
+- [[srcauth.ts]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/serverts

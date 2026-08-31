@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/dto/replace-mappings.dto.ts"
 type: "code"
-community: "mappings.service.ts"
+community: "ReplaceMappingsDto"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingsservicets
+  - community/ReplaceMappingsDto
 ---
 
 # replace-mappings.dto.ts
@@ -17,4 +17,4 @@ tags:
 - [[mappings.controller.ts]] - `imports_from` [EXTRACTED]
 - [[mappings.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/EXTRACTED #community/ReplaceMappingsDto

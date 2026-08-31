@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "rxjs"
-location: "L41"
+community: "dependencies"
+location: "L44"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/rxjs
+  - community/dependencies
 ---
 
 # rxjs
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[rxjs]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/rxjs
+#graphify/concept #graphify/EXTRACTED #community/dependencies

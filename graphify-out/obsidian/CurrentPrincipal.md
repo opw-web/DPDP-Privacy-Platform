@@ -1,19 +1,24 @@
 ---
 source_file: "dpdp-platform/backend/src/common/decorators/current-principal.decorator.ts"
 type: "code"
-community: "auth.module.ts"
+community: "Public"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/authmodulets
+  - community/Public
 ---
 
 # CurrentPrincipal
 
 ## Connections
+- [[dot-data()]] - `references` [EXTRACTED]
 - [[dot-me()]] - `references` [EXTRACTED]
+- [[dot-profile()]] - `references` [EXTRACTED]
+- [[dot-recipients()]] - `references` [EXTRACTED]
+- [[dot-sources()]] - `references` [EXTRACTED]
 - [[current-principal.decorator.ts]] - `contains` [EXTRACTED]
+- [[me.controller.ts]] - `imports` [EXTRACTED]
 - [[principal-auth.controller.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/authmodulets
+#graphify/code #graphify/EXTRACTED #community/Public

@@ -65,6 +65,23 @@ class EnvironmentVariables {
   @IsString()
   @IsNotEmpty()
   CORS_ORIGIN!: string;
+
+  // MVP 2: outbound mail. `smtp` talks to a real server (MailHog in dev);
+  // `console` logs the rendered message instead of sending it.
+  @IsIn(["smtp", "console"])
+  MAIL_TRANSPORT!: string;
+
+  @IsString()
+  @IsNotEmpty()
+  MAIL_HOST!: string;
+
+  @Type(() => Number)
+  @IsInt()
+  MAIL_PORT!: number;
+
+  @IsString()
+  @IsNotEmpty()
+  MAIL_FROM!: string;
 }
 
 export function validate(

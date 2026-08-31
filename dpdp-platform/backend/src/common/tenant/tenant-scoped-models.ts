@@ -49,6 +49,17 @@ import { Prisma } from "@prisma/client";
  *
  * Later tasks that add a model with an organizationId column MUST add its
  * name here. A missed entry is a silent tenant-isolation hole.
+ *
+ * MVP 2 (task 1) adds all 24 new models from
+ * `DPDP_MVP2_COMPLIANCE_OPERATIONS.md` §2.2 below the MVP 1 block. Every
+ * one of them -- including the cascade children `NoticeTranslation`,
+ * `ConsentEvent`, `RequestEvent`, `BreachObligation`,
+ * `BreachAffectedPrincipal` and `CampaignRecipient`, which are only ever
+ * reached in practice through a tenant-scoped parent -- carries its own
+ * `organizationId` column per the spec, so all 24 are DIRECT
+ * `TENANT_SCOPED_MODELS`, not `INDIRECT_TENANT_SCOPED_MODELS`: verified
+ * against the fenced schema block field-by-field, not assumed from the
+ * parent relation.
  */
 export const TENANT_SCOPED_MODELS = [
   "Role",
@@ -75,6 +86,31 @@ export const TENANT_SCOPED_MODELS = [
   "PrincipalContactEvent",
   "AuditEvent",
   "Counter",
+  // ── MVP 2 (task 1) ──
+  "ComplianceRule",
+  "PrivacyNotice",
+  "NoticeVersion",
+  "NoticeTranslation",
+  "ConsentRecord",
+  "ConsentEvent",
+  "GuardianRelationship",
+  "ChildExemptionClaim",
+  "PrincipalRequest",
+  "RequestEvent",
+  "Nomination",
+  "ErasureTask",
+  "LegalHold",
+  "MessageTemplate",
+  "MessageCampaign",
+  "CampaignRecipient",
+  "Notification",
+  "BreachIncident",
+  "BreachObligation",
+  "BreachAffectedPrincipal",
+  "SdfAssessment",
+  "AlgorithmRegisterEntry",
+  "InformationRequest",
+  "VoluntaryUndertaking",
 ] as const satisfies readonly Prisma.ModelName[];
 
 export type TenantScopedModel = (typeof TENANT_SCOPED_MODELS)[number];

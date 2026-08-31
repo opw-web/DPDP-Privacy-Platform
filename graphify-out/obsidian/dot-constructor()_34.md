@@ -1,17 +1,18 @@
 ---
-source_file: "demo-company-server/src/seed/rng.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/security-measures.controller.ts"
 type: "code"
-community: "Rng"
-location: "L10"
+community: "SecurityMeasuresService"
+location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Rng
+  - community/SecurityMeasuresService
 ---
 
 # .constructor()
 
 ## Connections
-- [[Rng]] - `method` [EXTRACTED]
+- [[SecurityMeasuresController]] - `method` [EXTRACTED]
+- [[SecurityMeasuresService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Rng
+#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresService
