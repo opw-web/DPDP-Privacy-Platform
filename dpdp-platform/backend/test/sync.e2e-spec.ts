@@ -244,6 +244,15 @@ describe("Sync pipeline (e2e)", () => {
     processor = app.get(SyncProcessor);
   });
 
+  // Explicit 30000ms hook timeout: Jest's 5000ms default applies to
+  // hooks exactly as it does to tests, and a hook timeout fails the
+  // ENTIRE suite, not just one test. This hook closes the app/worker/
+  // queue (real network round trips) and then runs ~14 sequential
+  // delete queries scoped across every org this file's tests created --
+  // including the identifier-ownership-race test's org, which alone
+  // leaves 50 SourceRecords, 50 NormalizedRecords, 25 DataPrincipals,
+  // 50 IdentityLinks and 25 PrincipalIdentifiers behind. Real headroom
+  // over what that actually costs, not a value tuned to just clear it.
   afterAll(async () => {
     await Promise.all(servers.map((s) => s.close()));
     // Explicit, ordered shutdown of BullMQ's Redis connections so this
@@ -299,7 +308,7 @@ describe("Sync pipeline (e2e)", () => {
       });
     }
     await prisma.$disconnect();
-  });
+  }, 30000);
 
   it("runs a full sync creating source records, normalized records, principals and links with matching counters", async () => {
     const org = await organization();
@@ -703,12 +712,21 @@ describe("Sync pipeline (e2e)", () => {
       async () => (await queue.getJob(jobId)) === undefined,
       8000,
     );
+    // This predicate is already true by the time execution reaches here
+    // in practice: `finalize()` writes the non-RUNNING status BEFORE
+    // `SyncProcessor.process()` resolves, and the wait above already
+    // blocked until that resolution. The 5000 below is `waitUntil`'s own
+    // poll ceiling, not a Jest test/hook timeout -- it happened to be
+    // pinned to the exact same number as Jest's default by coincidence,
+    // not by any shared mechanism. Bumped to match the sibling wait
+    // above (8000) purely to remove that coincidence, not because this
+    // one was observed to need it.
     await waitUntil(async () => {
       const jobs = await TenantContext.run(tenant(org), () =>
         prisma.scoped.syncJob.findMany({ where: { dataSourceId } }),
       );
       return jobs.length === 1 && jobs[0]?.status !== "RUNNING";
-    }, 5000);
+    }, 8000);
   }, 20000);
 
   it("a genuinely in-flight SCHEDULED run rejects a manual trigger with 409 (Critical 1)", async () => {
@@ -959,6 +977,16 @@ describe("Sync pipeline (e2e)", () => {
    * colliding pairs processed by two genuinely concurrent
    * `pipeline.run()` calls, real interleaving of their per-record
    * transactions triggers the race on its own, every run.
+   *
+   * Explicit 20000ms test timeout (this file's own convention for its
+   * other heavy tests, e.g. the two above closing `}, 20000);`):
+   * 50 real record-transactions (25 pairs x 2 sources), each taking an
+   * advisory lock, matching, linking, and -- for the half of each pair
+   * that loses the lock race -- blocking until the winner commits,
+   * measured at ~5.3s on this machine against Jest's 5000ms default,
+   * which fails this test on any run a shade slower and never lets it
+   * reach its own assertions. 20000ms is chosen for real headroom over
+   * that measurement, not merely to clear it.
    */
   it("concurrent syncs across two sources sharing identifiers never drop a record (cross-source identifier-ownership race)", async () => {
     const org = await organization();
@@ -1025,5 +1053,5 @@ describe("Sync pipeline (e2e)", () => {
     expect(principalCount).toBe(PAIRS);
     expect(activeLinkCount).toBe(PAIRS * 2);
     expect(candidateCount).toBe(0);
-  });
+  }, 20000);
 });

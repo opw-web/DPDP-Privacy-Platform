@@ -6,10 +6,10 @@ automatically by Claude Code hooks. Humans and future sessions read the "Now" bl
 <!-- journal:pinned:start -->
 ## Now
 ## Now
-- **Working on:** Nothing in flight. Fixed the concurrent-sync identifier-ownership race (MVP1 evaluation Check 4/6 finding, elevated to a defect): `SyncLockService`'s per-`dataSourceId` lock can't see two *different* sources syncing at once, so two concurrent per-record transactions could each read "no principal owns this identifier yet," both try to claim it, and whichever committed second aborted its ENTIRE transaction -- silently dropping the `SourceRecord` written earlier in that same transaction, with zero `MatchCandidate`s raised. Fixed with a transaction-scoped Postgres advisory lock, keyed per-org per-identifier-value, acquired in `SyncPipelineService.persistAndLink` before `MatchingService.match()` -- serializes only the contended identifier, not whole syncs. New failing-then-passing e2e test in `test/sync.e2e-spec.ts`; failed 5/5 pre-fix, passed 10/10 post-fix. Details in `.superpowers/sdd/2026-08-29-dpdp-mvp1/concurrent-sync-race-report.md`.
-- **Next up:** Check 10's finding that mapping EXTERNAL_ID/PURCHASE_TOTAL/POSTAL_CODE onto shared canonical fields inflates the profile-conflict count 60x past what the demo data intends.
+- **Working on:** Nothing in flight. The concurrent-sync identifier-ownership race is fixed (`2289968`) and its test hardened on top (a transaction-scoped Postgres advisory lock keyed per-org per-identifier-value, acquired in `SyncPipelineService.persistAndLink` before `MatchingService.match()`). Follow-up: the new race test and its `afterAll` hook were flaky against Jest's 5000ms default (no `testTimeout` in `test/jest-e2e.json`) -- gave both explicit timeouts (`20000`/`30000`) with real measured headroom; repo-standard invocation (`--runInBand --forceExit`, no override) now passes 10/10. Recommended (not made -- shared config outside this task's scope) a `testTimeout` floor in `test/jest-e2e.json`: `principals.e2e-spec.ts`'s 50k-row seed hit the identical 5000ms-default flake in the same verification pass. Outcome recorded in `.superpowers/sdd/2026-08-29-dpdp-mvp1/concurrent-sync-race-report.md`.
+- **Next up:** Check 10's finding that mapping EXTERNAL_ID/PURCHASE_TOTAL/POSTAL_CODE onto shared canonical fields inflates the profile-conflict count 60x past what the demo data intends. Separately: consider a `testTimeout` floor in `test/jest-e2e.json` (see above) -- affects every e2e spec, not just sync/identity, so flagged rather than made.
 - **Blocked / open questions:** none. Deferred fixes from earlier tasks remain listed at the end of .superpowers/sdd/2026-08-29-dpdp-mvp1/progress.md (portal-timezone-report.md, task-25/27/28-report.md in the same directory).
-- **Tried and rejected:** six parallel sonnet implementers for earlier tasks (exhausted the rate limit twice; four is the survivable load); leaving `prisma`/`pino-pretty` as devDependencies (the pruned runtime image then can't migrate or start); acquiring the identifier-ownership lock inside `MatchingService.match()` itself (broke its deliberately DI-free, TenantContext-free unit tests -- moved to `SyncPipelineService`, which already runs inside a bound TenantContext); catching the ownership conflict and downgrading it to a MatchCandidate within the same transaction (Postgres poisons a transaction after any statement error -- would need manual SAVEPOINTs); a global cross-source sync lock (fixes it but serializes all four sources against each other even when they share no identifiers).
+- **Tried and rejected:** six parallel sonnet implementers for earlier tasks (exhausted the rate limit twice; four is the survivable load); leaving `prisma`/`pino-pretty` as devDependencies (the pruned runtime image then can't migrate or start); acquiring the identifier-ownership lock inside `MatchingService.match()` itself (broke its deliberately DI-free, TenantContext-free unit tests -- moved to `SyncPipelineService`, which already runs inside a bound TenantContext); catching the ownership conflict and downgrading it to a MatchCandidate within the same transaction (Postgres poisons a transaction after any statement error -- would need manual SAVEPOINTs); a global cross-source sync lock (fixes it but serializes all four sources against each other even when they share no identifiers); verifying the new race test with a `-t` filter instead of the repo's actual `test:e2e` invocation (missed a 5000ms-default timeout flake the real invocation hits every time).
 <!-- journal:pinned:end -->
 
 ---
@@ -1490,3 +1490,51 @@ _Earlier entries archived to .claude/journal/archive/JOURNAL-2026-08.md._
 - `09:25` wrote `.superpowers/sdd/2026-08-29-dpdp-mvp1/concurrent-sync-race-report.md` (~317 lines)
 - `09:25` ran `cd "/home/linux/Coding stuff/DPDP app" && git status --short dpdp-platform/backend/src/modules/sync dpdp-platform/bac...`
 - `09:25` ran `cd "/home/linux/Coding stuff/DPDP app" && git check-ignore -v .superpowers/sdd/2026-08-29-dpdp-mvp1/concurrent-sync-r...`
+- `09:25` ran `cd "/home/linux/Coding stuff/DPDP app" && git add \ dpdp-platform/backend/src/modules/sync/sync-pipeline.service.ts \...`
+- `09:26` ran `cd "/home/linux/Coding stuff/DPDP app" && git commit -m "fix(sync): close cross-source identifier-ownership race that...`
+- `09:26` ran `cd "/home/linux/Coding stuff/DPDP app" && git show --stat HEAD`
+- `09:26` ran `cd "/home/linux/Coding stuff/DPDP app" && git log --oneline -1 && git status --short -- dpdp-platform/backend/src/mod...`
+
+### 2026-08-31 09:26 - session `8899507e`
+
+**Why:** <task-notification> <task-id>a67e55ca3b2a6bec9</task-id> <tool-use-id>toolu_01A6Kdkwxx5B5oqCDgk49Hw5</tool-use-id> <output-file>/tmp/claude-1000/-home-linux-Coding-stuff-DPDP-app/57cc2f7f-8d20-4ae9-8d...
+
+- `09:29` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" &&...`
+- `09:29` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" &&...`
+- `09:30` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" &&...`
+- `09:30` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && grep -n "testTimeout" test/jest-e2e.json package.json...`
+- `09:31` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" &&...`
+- `09:31` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && grep -n "}, [0-9]*);" test/sync.e2e-spec.ts`
+- `09:31` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && sed -n '650,775p' test/sync.e2e-spec.ts`
+- `09:32` ran `cd "/home/linux/Coding stuff/DPDP app/.superpowers/sdd/2026-08-29-dpdp-mvp1" && cat >> progress.md <<'EOF' Concurrent...`
+- `09:32` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && grep -n "afterAll\|beforeAll" test/sync.e2e-spec.ts`
+- `09:32` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && sed -n '224,300p' test/sync.e2e-spec.ts`
+- **Recap:** Verified the concurrent-sync identifier-ownership fix by re-running the sync e2e suite and inspecting test timeouts/lifecycle hooks, and appended the concurrent-sync race outcome to the MVP1 progress notes.
+
+### 2026-08-31 09:32 - session `9dc2cf32`
+
+**Why:** Below is the current 'Now' block of a project journal and the raw event log of the turn that just ended. Reply with ONLY a JSON object, no prose, no markdown fences: {"recap": "<one sentence, past ten...
+
+- `09:32` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && sed -n '600,650p' test/sync.e2e-spec.ts`
+- `09:32` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && awk 'NR==711{print NR": "$0} NR==712{print NR": "$0}'...`
+- `09:32` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && sed -n '695,713p' test/sync.e2e-spec.ts`
+- `09:33` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && grep -n "concurrent syncs across two sources sharing ...`
+- `09:33` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && sed -n '940,1015p' test/sync.e2e-spec.ts`
+- `09:33` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && sed -n '1015,1032p' test/sync.e2e-spec.ts`
+- `09:33` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && python3 - <<'EOF' import re path = "test/sync.e2e-spe...`
+- `09:33` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && python3 - <<'EOF' path = "test/sync.e2e-spec.ts" with...`
+- `09:33` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && grep -n "afterAll(async () => {" test/sync.e2e-spec.ts`
+- `09:33` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && sed -n '296,312p' test/sync.e2e-spec.ts`
+- `09:33` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && python3 - <<'EOF' path = "test/sync.e2e-spec.ts" with...`
+- `09:33` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && python3 - <<'EOF' path = "test/sync.e2e-spec.ts" with...`
+- `09:33` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && python3 - <<'EOF' path = "test/sync.e2e-spec.ts" with...`
+- `09:34` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && grep -n "}, 5000);" test/sync.e2e-spec.ts`
+- `09:34` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && sed -n '700,722p' test/sync.e2e-spec.ts`
+- `09:34` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && python3 - <<'EOF' path = "test/sync.e2e-spec.ts" with...`
+- `09:34` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" &&...`
+- `09:36` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" &&...`
+- `09:38` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" &&...`
+- `09:40` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" &&...`
+- `09:40` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend" && git diff -- test/sync.e2e-spec.ts | head -160`
+- `09:41` ran `cd "/home/linux/Coding stuff/DPDP app" && sed -n '6,13p' JOURNAL.md`
+- `09:41` ran `cd "/home/linux/Coding stuff/DPDP app" && python3 - <<'EOF' path = "JOURNAL.md" with open(path) as f: content = f.rea...`
