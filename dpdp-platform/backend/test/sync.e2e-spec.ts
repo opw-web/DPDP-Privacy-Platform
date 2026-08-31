@@ -1139,6 +1139,59 @@ describe("Sync pipeline (e2e)", () => {
     );
   });
 
+  it("reads the Redis schedule snapshot BEFORE the Postgres data-source snapshot, so a source created in between is never pruned (I-4 / T-1, final whole-branch review)", async () => {
+    // The old code took both snapshots via one `Promise.all`, so a data
+    // source created concurrently with reconciliation could commit to
+    // Postgres AND register its Redis scheduler strictly BETWEEN the two
+    // reads finishing -- the review's exact failure scenario: instance
+    // A's Postgres read misses it, its still-in-flight Redis read
+    // catches it, and the backward pass then PERMANENTLY prunes a live
+    // customer's just-created schedule. This asserts the actual
+    // guarantee the fix makes -- the Postgres read is not even ISSUED
+    // until the Redis read has fully resolved -- by making the Redis
+    // read artificially slow and checking the Postgres call does not
+    // start until that delay has elapsed. The old `Promise.all` code
+    // fires both calls in the same tick, so this fails against it with a
+    // near-zero gap; the fix's sequential `await` cannot start the
+    // Postgres call until the delayed Redis promise settles.
+    const injectedPrisma = app.get(PrismaService);
+    const originalListScheduledDataSourceIds =
+      syncQueueService.listScheduledDataSourceIds.bind(syncQueueService);
+    const originalFindMany = injectedPrisma.dataSource.findMany.bind(
+      injectedPrisma.dataSource,
+    );
+    const artificialDelayMs = 200;
+    const startedAt = Date.now();
+
+    const redisSpy = jest
+      .spyOn(syncQueueService, "listScheduledDataSourceIds")
+      .mockImplementation(async () => {
+        await new Promise((resolve) => setTimeout(resolve, artificialDelayMs));
+        return originalListScheduledDataSourceIds();
+      });
+    let postgresCalledAfterMs: number | null = null;
+    const pgSpy = jest
+      .spyOn(injectedPrisma.dataSource, "findMany")
+      .mockImplementation((...args: Parameters<typeof originalFindMany>) => {
+        postgresCalledAfterMs = Date.now() - startedAt;
+        return originalFindMany(...args);
+      });
+
+    try {
+      await scheduleReconciliationService.reconcile();
+    } finally {
+      redisSpy.mockRestore();
+      pgSpy.mockRestore();
+    }
+
+    if (postgresCalledAfterMs === null) {
+      throw new Error(
+        "prisma.dataSource.findMany was never called by reconcile()",
+      );
+    }
+    expect(postgresCalledAfterMs).toBeGreaterThanOrEqual(artificialDelayMs);
+  });
+
   /**
    * MVP1 evaluation Check 4/6 finding: running two DIFFERENT sources'
    * syncs concurrently, where a record in each shares the same email

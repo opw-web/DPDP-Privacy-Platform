@@ -119,16 +119,35 @@ export class ScheduleReconciliationService implements OnModuleInit {
   }
 
   async reconcile(): Promise<void> {
-    const [dataSources, organizations, scheduledDataSourceIds] =
-      await Promise.all([
-        this.prisma.dataSource.findMany({
-          select: { id: true, organizationId: true, syncFrequency: true },
-        }),
-        this.prisma.organization.findMany({
-          select: { id: true, timezone: true },
-        }),
-        this.syncQueueService.listScheduledDataSourceIds(),
-      ]);
+    // I-4 / T-1 (final whole-branch review, and already flagged
+    // MUST-FIX-BEFORE-MERGE in the triage): the Redis snapshot MUST be
+    // read BEFORE the Postgres snapshot, not concurrently. A data
+    // source's row is always committed to Postgres BEFORE its schedule
+    // is written to Redis (`DataSourcesService.scheduleSync`'s doc
+    // comment: "Called AFTER the owning create/update transaction has
+    // already committed"). Reading Redis first therefore guarantees that
+    // any scheduler this call can see already has its owning row
+    // committed by the time the Postgres read below runs -- so a data
+    // source created concurrently with this reconciliation either (a)
+    // has not registered its scheduler yet, and so is simply absent from
+    // BOTH snapshots this run (a missed orphan-check for it, corrected
+    // next run), or (b) has registered its scheduler AND already
+    // committed its row, so it appears in both. The reverse order (the
+    // old code) could observe the row commit and the Redis write in
+    // between its two reads, wrongly seeing the schedule but not yet the
+    // row, and the backward pass below would then PERMANENTLY prune a
+    // live customer's just-created schedule -- strictly worse than the
+    // stale-Redis-key case this ordering costs (`progress.md:475`).
+    const scheduledDataSourceIds =
+      await this.syncQueueService.listScheduledDataSourceIds();
+    const [dataSources, organizations] = await Promise.all([
+      this.prisma.dataSource.findMany({
+        select: { id: true, organizationId: true, syncFrequency: true },
+      }),
+      this.prisma.organization.findMany({
+        select: { id: true, timezone: true },
+      }),
+    ]);
     const timezoneByOrganizationId = new Map(
       organizations.map((organization) => [
         organization.id,
