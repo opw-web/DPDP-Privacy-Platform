@@ -64,5 +64,18 @@ RUN apk add --no-cache openssl
 COPY --from=build /app/node_modules ./node_modules
 COPY --from=build /app/dist ./dist
 COPY package*.json ./
+# docker-compose.yml's runtime command is `npx prisma migrate deploy &&
+# node dist/main.js`, not just the latter -- `migrate deploy` reads
+# prisma/schema.prisma (to find the datasource) and prisma/migrations/
+# (the migration history to apply) directly off disk, neither of which
+# `nest build` emits into dist/, so without this copy the container
+# exits(1) immediately with "Could not find Prisma Schema" and no
+# migration ever runs. This is the same class of omission `npm prune
+# --omit=dev` above would otherwise reintroduce for the `prisma` CLI
+# itself (previously a devDependency, pruned before this COPY could ever
+# reach it) -- it now lives in "dependencies" in package.json for
+# exactly that reason, so `npx prisma` resolves to the real binary here
+# instead of npm fetching one over the network at container start.
+COPY --from=build /app/prisma ./prisma
 EXPOSE 4000
 CMD ["node", "dist/main.js"]
