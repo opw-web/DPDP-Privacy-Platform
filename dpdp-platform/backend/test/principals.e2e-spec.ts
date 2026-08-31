@@ -600,7 +600,18 @@ describe("Principals API (e2e)", () => {
       response.body.items.map((item: { id: string }) => item.id),
     ).toContain(syntheticPrincipalIds[0]);
     expect(elapsedMs).toBeLessThan(300);
-  }, 20_000);
+    // Measured this test's own body (the two 50k-row `createMany` calls,
+    // both ANALYZEs, the EXPLAIN, and the HTTP round trip) at ~14.4s on an
+    // idle database -- the previous 20_000 budget left under 30% headroom,
+    // and under the full suite's real contention that margin was consumed
+    // outright: observed both a bare Jest timeout AND, once, a genuine
+    // Postgres deadlock (`40P01`) between this test's still-running
+    // `principalDataField.createMany` and `afterAll`'s `deleteMany` for the
+    // same organization, once the timed-out test body kept executing in
+    // the background past its own reported failure (Jest cannot cancel an
+    // in-flight promise). 60_000 gives real measured headroom over the
+    // idle-system baseline rather than nudging the old number.
+  }, 60_000);
 
   it("does not match a search term against a non-searchable canonical field, even when the same principal also owns a contact identifier", async () => {
     // fixture.principalId has both an EMAIL field (a searchable canonical
