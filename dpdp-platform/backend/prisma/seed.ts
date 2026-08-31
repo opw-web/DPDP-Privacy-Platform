@@ -19,6 +19,8 @@ import { PrismaService } from "../src/common/prisma/prisma.service";
 import { PERMISSIONS } from "./seed/permissions";
 import { ROLES } from "./seed/roles";
 import { DEMO_EMPLOYEES, DEMO_ORG, DEMO_PASSWORD } from "./seed/demo-org";
+import { seedComplianceRules } from "./seed/compliance-rules";
+import { seedMessageTemplates } from "./seed/message-templates";
 
 async function seedPermissions(prisma: PrismaService): Promise<void> {
   for (const permission of PERMISSIONS) {
@@ -126,6 +128,8 @@ export async function runSeed(prisma: PrismaService): Promise<{
   const organizationId = await seedOrganization(prisma);
   const roleIdByCode = await seedRoles(prisma, organizationId);
   await seedDemoEmployees(prisma, organizationId, roleIdByCode);
+  await seedComplianceRules(prisma, organizationId);
+  await seedMessageTemplates(prisma, organizationId);
   return { organizationId };
 }
 

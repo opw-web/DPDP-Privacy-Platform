@@ -687,24 +687,32 @@ model NormalizedRecord {
 }
 
 model DataPrincipal {
-  id                         String                  @id @default(uuid())
+  id                         String                    @id @default(uuid())
   organizationId             String
   reference                  String // DP-000123
   displayName                String
   // GO-08 / GO-09 / RE-09 — inbound contact only
-  lastPrincipalContactAt     DateTime?               @db.Timestamptz(6)
+  lastPrincipalContactAt     DateTime?                 @db.Timestamptz(6)
   lastPrincipalContactSource String?
   // CH-01 — declared or derived from DOB; NEVER guessed from behaviour
-  ageStatus                  AgeStatus               @default(UNKNOWN)
+  ageStatus                  AgeStatus                 @default(UNKNOWN)
   ageStatusSource            String? // DOB_DERIVED | SELF_DECLARED | EMPLOYEE_SET
-  ageStatusSetAt             DateTime?               @db.Timestamptz(6)
-  createdAt                  DateTime                @default(now()) @db.Timestamptz(6)
-  updatedAt                  DateTime                @updatedAt @db.Timestamptz(6)
+  ageStatusSetAt             DateTime?                 @db.Timestamptz(6)
+  createdAt                  DateTime                  @default(now()) @db.Timestamptz(6)
+  updatedAt                  DateTime                  @updatedAt @db.Timestamptz(6)
   identifiers                PrincipalIdentifier[]
   links                      IdentityLink[]
   fields                     PrincipalDataField[]
   account                    PrincipalAccount?
   contactEvents              PrincipalContactEvent[]
+  consentRecords             ConsentRecord[]
+  guardianRelationships      GuardianRelationship[]
+  requests                   PrincipalRequest[]
+  nominations                Nomination[]
+  erasureTasks               ErasureTask[]
+  campaignRecipients         CampaignRecipient[]
+  notifications              Notification[]
+  breachAffectations         BreachAffectedPrincipal[]
 
   @@unique([organizationId, reference])
   @@index([organizationId, displayName])
@@ -929,6 +937,7 @@ model ConsentRecord {
   evidence          Json            @default("{}") // {ip, userAgent, campaignId, sessionRef}
   updatedAt         DateTime        @updatedAt @db.Timestamptz(6)
   events            ConsentEvent[]
+  dataPrincipal     DataPrincipal   @relation(fields: [dataPrincipalId], references: [id], onDelete: Restrict)
 
   @@unique([dataPrincipalId, purposeId])
   @@index([organizationId, purposeId, status])
@@ -970,6 +979,7 @@ model GuardianRelationship {
   appointingAuthority   String? // COURT | DESIGNATED_AUTHORITY | LOCAL_LEVEL_COMMITTEE
   appointmentReference  String?
   active                Boolean              @default(true)
+  dataPrincipal         DataPrincipal        @relation(fields: [dataPrincipalId], references: [id], onDelete: Restrict)
   createdAt             DateTime             @default(now()) @db.Timestamptz(6)
 
   @@index([organizationId, dataPrincipalId])
@@ -1028,6 +1038,7 @@ model PrincipalRequest {
   createdAt             DateTime       @default(now()) @db.Timestamptz(6)
   updatedAt             DateTime       @updatedAt @db.Timestamptz(6)
   events                RequestEvent[]
+  dataPrincipal         DataPrincipal  @relation(fields: [dataPrincipalId], references: [id], onDelete: Restrict)
 
   @@unique([organizationId, reference])
   @@index([organizationId, status, dueAt])
@@ -1053,7 +1064,7 @@ model RequestEvent {
 
 model Nomination {
   // RT-13, s.14
-  id                  String   @id @default(uuid())
+  id                  String        @id @default(uuid())
   organizationId      String
   dataPrincipalId     String
   nomineeName         String
@@ -1062,35 +1073,37 @@ model Nomination {
   relationship        String
   scope               String // ALL_RIGHTS | ACCESS_ONLY | ERASURE_ONLY
   activationCondition String // DEATH | INCAPACITY | BOTH
-  particularsProvided Json     @default("{}") // Rule 14(4) particulars required
-  active              Boolean  @default(true)
-  createdAt           DateTime @default(now()) @db.Timestamptz(6)
-  updatedAt           DateTime @updatedAt @db.Timestamptz(6)
+  particularsProvided Json          @default("{}") // Rule 14(4) particulars required
+  active              Boolean       @default(true)
+  createdAt           DateTime      @default(now()) @db.Timestamptz(6)
+  updatedAt           DateTime      @updatedAt @db.Timestamptz(6)
+  dataPrincipal       DataPrincipal @relation(fields: [dataPrincipalId], references: [id], onDelete: Restrict)
 
   @@index([organizationId, dataPrincipalId])
 }
 
 // ─────────────── retention & erasure (RE-01…RE-09) ───────────────
 model ErasureTask {
-  id                     String       @id @default(uuid())
+  id                     String        @id @default(uuid())
   organizationId         String
   dataPrincipalId        String
   retentionPolicyId      String?
   trigger                String // CONSENT_WITHDRAWN | PURPOSE_SERVED | INACTIVITY | REQUEST
-  state                  ErasureState @default(EVALUATED)
-  evaluatedAt            DateTime     @default(now()) @db.Timestamptz(6)
-  preErasureNoticeDueAt  DateTime?    @db.Timestamptz(6) // RE-05: policy.preErasureNoticeHours before erasureDueAt
-  preErasureNoticeSentAt DateTime?    @db.Timestamptz(6)
-  erasureDueAt           DateTime?    @db.Timestamptz(6)
-  retentionFloorUntil    DateTime?    @db.Timestamptz(6) // RE-06/RE-07: the one-year minimum, never crossed
+  state                  ErasureState  @default(EVALUATED)
+  evaluatedAt            DateTime      @default(now()) @db.Timestamptz(6)
+  preErasureNoticeDueAt  DateTime?     @db.Timestamptz(6) // RE-05: policy.preErasureNoticeHours before erasureDueAt
+  preErasureNoticeSentAt DateTime?     @db.Timestamptz(6)
+  erasureDueAt           DateTime?     @db.Timestamptz(6)
+  retentionFloorUntil    DateTime?     @db.Timestamptz(6) // RE-06/RE-07: the one-year minimum, never crossed
   legalHoldId            String?
-  systemChecklist        Json         @default("[]") // [{dataSourceId, done, byEmployeeId, at}]
-  processorChecklist     Json         @default("[]") // RE-02: [{recipientId, confirmed, ref, at}]
-  completedAt            DateTime?    @db.Timestamptz(6)
+  systemChecklist        Json          @default("[]") // [{dataSourceId, done, byEmployeeId, at}]
+  processorChecklist     Json          @default("[]") // RE-02: [{recipientId, confirmed, ref, at}]
+  completedAt            DateTime?     @db.Timestamptz(6)
   completedByEmployeeId  String?
   cancelledReason        String?
   ruleCodeSnapshot       String?
   ruleVersionSnapshot    Int?
+  dataPrincipal          DataPrincipal @relation(fields: [dataPrincipalId], references: [id], onDelete: Restrict)
 
   @@index([organizationId, state, erasureDueAt])
   @@index([organizationId, dataPrincipalId])
@@ -1172,24 +1185,26 @@ model CampaignRecipient {
   sentAt          DateTime?       @db.Timestamptz(6)
   failureReason   String?
   campaign        MessageCampaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  dataPrincipal   DataPrincipal   @relation(fields: [dataPrincipalId], references: [id], onDelete: Restrict)
 
   @@unique([campaignId, dataPrincipalId, channel])
   @@index([organizationId, dataPrincipalId])
 }
 
 model Notification {
-  id              String    @id @default(uuid())
+  id              String         @id @default(uuid())
   organizationId  String
   audience        ActorType
   employeeId      String?
   dataPrincipalId String?
   title           String
   body            String
-  severity        String    @default("INFO")
+  severity        String         @default("INFO")
   linkPath        String?
   campaignId      String?
-  readAt          DateTime? @db.Timestamptz(6)
-  createdAt       DateTime  @default(now()) @db.Timestamptz(6)
+  readAt          DateTime?      @db.Timestamptz(6)
+  createdAt       DateTime       @default(now()) @db.Timestamptz(6)
+  dataPrincipal   DataPrincipal? @relation(fields: [dataPrincipalId], references: [id], onDelete: SetNull)
 
   @@index([organizationId, employeeId, readAt])
   @@index([organizationId, dataPrincipalId, readAt])
@@ -1268,6 +1283,7 @@ model BreachAffectedPrincipal {
   campaignRecipientId String? // BR-13: the delivery evidence
   addedAt             DateTime         @default(now()) @db.Timestamptz(6)
   breach              BreachIncident   @relation(fields: [breachId], references: [id], onDelete: Cascade)
+  dataPrincipal       DataPrincipal    @relation(fields: [dataPrincipalId], references: [id], onDelete: Restrict)
 
   @@unique([breachId, dataPrincipalId])
   @@index([organizationId, dataPrincipalId])

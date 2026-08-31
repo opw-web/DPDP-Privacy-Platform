@@ -17,6 +17,14 @@
  * brief (compliance rules, notices, consent, guardians/children, rights
  * requests, erasure, campaigns, breach, SDF pack, Board/Government) below
  * the MVP 1 block, unchanged and unreordered.
+ *
+ * The Wave 1 integrator adds the single authorized extension
+ * `TEMPLATE_CREATED`: Task 3's `TemplatesService.create()` had reused
+ * `TEMPLATE_UPDATED` with `metadata.op: "created"` because only this file
+ * (integrator-owned) may add a new action name. A template being born and
+ * a template being altered are different events for an auditor reading
+ * the log; reusing the update action to describe a creation is the same
+ * category of defect `MATCH_CANDIDATE_CREATED` fixed above.
  */
 export type AuditAction =
   | "EMPLOYEE_LOGIN_SUCCEEDED"
@@ -87,11 +95,13 @@ export type AuditAction =
   | "ALGORITHM_REGISTER_UPDATED"
   | "INFORMATION_REQUEST_RECORDED"
   | "NON_DISCLOSURE_SUPPRESSION_APPLIED"
-  | "NOMINATION_UPDATED";
+  | "NOMINATION_UPDATED"
+  | "TEMPLATE_CREATED";
 
 /**
  * All action names as a runtime array, for tests and validation: 36 from
- * MVP 1 plus 32 from MVP 2 task 1 (68 total).
+ * MVP 1 plus 32 from MVP 2 task 1 plus the Wave 1 integrator's
+ * `TEMPLATE_CREATED` (69 total).
  */
 export const AUDIT_ACTIONS: readonly AuditAction[] = [
   "EMPLOYEE_LOGIN_SUCCEEDED",
@@ -163,4 +173,5 @@ export const AUDIT_ACTIONS: readonly AuditAction[] = [
   "INFORMATION_REQUEST_RECORDED",
   "NON_DISCLOSURE_SUPPRESSION_APPLIED",
   "NOMINATION_UPDATED",
+  "TEMPLATE_CREATED",
 ];

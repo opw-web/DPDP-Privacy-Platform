@@ -27,6 +27,11 @@ import { PrincipalsModule } from "./modules/principals/principals.module";
 import { InventoryModule } from "./modules/inventory/inventory.module";
 import { AuditReadModule } from "./modules/audit/audit-read.module";
 import { PrincipalPortalModule } from "./modules/principal-portal/principal-portal.module";
+import { ComplianceModule } from "./modules/compliance/compliance.module";
+import { TemplatesModule } from "./modules/messaging/templates/templates.module";
+import { AudienceModule } from "./modules/messaging/audience/audience.module";
+import { NotificationsModule } from "./modules/notifications/notifications.module";
+import { MailModule } from "./common/mail/mail.module";
 
 @Module({
   imports: [
@@ -69,6 +74,11 @@ import { PrincipalPortalModule } from "./modules/principal-portal/principal-port
     AuditReadModule,
     PrincipalPortalModule,
     MaskingModule,
+    ComplianceModule,
+    TemplatesModule,
+    AudienceModule,
+    MailModule,
+    NotificationsModule,
     HealthModule,
   ],
   providers: [
