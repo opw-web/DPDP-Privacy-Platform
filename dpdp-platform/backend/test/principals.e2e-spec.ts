@@ -497,7 +497,13 @@ describe("Principals API (e2e)", () => {
     await app.close();
     await prisma.$disconnect();
     delete process.env["PRISMA_QUERY_LOG"];
-  });
+    // This hook also deletes the 50k DataPrincipal + 50k PrincipalDataField
+    // rows the trigram-search test above creates. Jest's default hook
+    // timeout is the same global testTimeout (15_000ms) as a test's, and
+    // under full-suite CPU contention that cleanup alone can outrun it --
+    // same load-sensitivity as that test's own timeout above, so it gets
+    // the same generous treatment rather than a fixture shrink.
+  }, 120_000);
 
   const authenticated = (session: EmployeeSession) => ({
     Authorization: `Bearer ${session.accessToken}`,
@@ -609,9 +615,14 @@ describe("Principals API (e2e)", () => {
     // `principalDataField.createMany` and `afterAll`'s `deleteMany` for the
     // same organization, once the timed-out test body kept executing in
     // the background past its own reported failure (Jest cannot cancel an
-    // in-flight promise). 60_000 gives real measured headroom over the
-    // idle-system baseline rather than nudging the old number.
-  }, 60_000);
+    // in-flight promise). 60_000 turned out to still be load-sensitive:
+    // under full-suite CPU contention this test alone was observed to take
+    // ~86s (it passes in ~86s run alone, well past 60s), so it needs
+    // headroom well above the idle-system baseline, not just above it.
+    // 180_000 gives that headroom without shrinking the 50k-row fixture or
+    // loosening the sub-300ms query-latency assertion above, both of which
+    // are the actual point of this test.
+  }, 180_000);
 
   it("does not match a search term against a non-searchable canonical field, even when the same principal also owns a contact identifier", async () => {
     // fixture.principalId has both an EMAIL field (a searchable canonical

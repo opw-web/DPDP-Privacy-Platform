@@ -87,6 +87,20 @@ export interface ComplianceDeadlineSnapshot {
 const RETENTION_INACTIVITY_APPLIES_TO = "RETENTION:INACTIVITY";
 
 const GRIEVANCE_RULE_CODE = "GRIEVANCE_RESPONSE";
+// DPDP Rules, 2025 -- Rule 14(3): the published grievance-redressal period
+// must not exceed ninety days. Global Constraint 4 bans bare legal numbers
+// in application code because *deadlines the company operates to* belong in
+// ComplianceRule rows with citations -- those are the company's to set, and
+// an auditor must be able to see their provenance. This number is not one of
+// those: it is a statutory ceiling the company may not exceed, not a
+// configurable deadline, so it does not get a ComplianceRule row -- making
+// it configurable would let a customer edit away the very limit this
+// platform exists to enforce, and would make the spec's Check 6
+// unenforceable. It is structurally identical to
+// `AGE_OF_MAJORITY_YEARS` in `../identity/age.service.ts`, the other
+// sanctioned exception to Global Constraint 4, and is the second (and
+// currently last) place a bare number is allowed to appear in this
+// codebase.
 const GRIEVANCE_CEILING_DAYS = 90;
 const GRIEVANCE_CITATION =
   "DPDP Rules, 2025 — Rule 14(3): published period must not exceed ninety days";

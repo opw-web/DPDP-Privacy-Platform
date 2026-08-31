@@ -38,6 +38,35 @@ describe("MVP 2 schema constraints and triggers (e2e)", () => {
   let app: INestApplication;
   let prisma: PrismaService;
 
+  // DataPrincipal fixtures for the sections below that now need a real
+  // backing row (`prisma/migrations/20260831090000_mvp2_principal_relations`
+  // added real FKs from ConsentRecord/PrincipalRequest/CampaignRecipient/
+  // ErasureTask to DataPrincipal). Two buckets:
+  //  - principalIds: cleaned up in afterAll below, in FK-safe order.
+  //  - principalIdsWithConsentEvidence: backs a ConsentRecord that owns a
+  //    ConsentEvent, and ConsentEvent is delete-protected by the
+  //    consent_event_no_delete trigger (see migration
+  //    20260831080000_mvp2_immutability_triggers_and_erasure_floor). A
+  //    cascade delete of that ConsentRecord would fire that trigger and
+  //    abort, so — same as the four pre-existing orphaned ConsentRecord
+  //    rows the principal_relations migration already accepts as permanent,
+  //    and per that migration's own "a data principal is never destroyed in
+  //    this product" rule — these DataPrincipal rows are intentionally left
+  //    in place rather than force-deleted.
+  const principalIds: string[] = [];
+  const principalIdsWithConsentEvidence: string[] = [];
+
+  async function createPrincipal(organizationId: string): Promise<string> {
+    const principal = await prisma.dataPrincipal.create({
+      data: {
+        organizationId,
+        reference: `DP-${randomUUID()}`,
+        displayName: "Constraint Test Principal",
+      },
+    });
+    return principal.id;
+  }
+
   beforeAll(async () => {
     const testApp = await bootstrapTestApp();
     app = testApp.app;
@@ -45,6 +74,26 @@ describe("MVP 2 schema constraints and triggers (e2e)", () => {
   });
 
   afterAll(async () => {
+    if (principalIds.length) {
+      // Children first (all reference DataPrincipal with ON DELETE
+      // RESTRICT and none of them are delete-protected), then the
+      // DataPrincipal rows themselves. principalRequest.deleteMany also
+      // cascades its RequestEvent children at the DB level (RequestEvent
+      // only carries a no-*update* trigger, so that cascade delete is not
+      // blocked the way ConsentEvent's would be).
+      await prisma.campaignRecipient.deleteMany({
+        where: { dataPrincipalId: { in: principalIds } },
+      });
+      await prisma.erasureTask.deleteMany({
+        where: { dataPrincipalId: { in: principalIds } },
+      });
+      await prisma.principalRequest.deleteMany({
+        where: { dataPrincipalId: { in: principalIds } },
+      });
+      await prisma.dataPrincipal.deleteMany({
+        where: { id: { in: principalIds } },
+      });
+    }
     await app.close();
     await prisma.$disconnect();
   });
@@ -159,10 +208,12 @@ describe("MVP 2 schema constraints and triggers (e2e)", () => {
   describe("(b) a ConsentEvent cannot be UPDATEd (consent_event_no_update, reusing audit_is_immutable())", () => {
     it("rejects UPDATE", async () => {
       const organizationId = randomUUID();
+      const dataPrincipalId = await createPrincipal(organizationId);
+      principalIdsWithConsentEvidence.push(dataPrincipalId);
       const record = await prisma.consentRecord.create({
         data: {
           organizationId,
-          dataPrincipalId: randomUUID(),
+          dataPrincipalId,
           purposeId: randomUUID(),
         },
       });
@@ -189,10 +240,12 @@ describe("MVP 2 schema constraints and triggers (e2e)", () => {
   describe("(c) a ConsentEvent cannot be DELETEd (consent_event_no_delete, reusing audit_is_immutable())", () => {
     it("rejects DELETE", async () => {
       const organizationId = randomUUID();
+      const dataPrincipalId = await createPrincipal(organizationId);
+      principalIdsWithConsentEvidence.push(dataPrincipalId);
       const record = await prisma.consentRecord.create({
         data: {
           organizationId,
-          dataPrincipalId: randomUUID(),
+          dataPrincipalId,
           purposeId: randomUUID(),
         },
       });
@@ -216,11 +269,13 @@ describe("MVP 2 schema constraints and triggers (e2e)", () => {
   describe("(d) a RequestEvent cannot be UPDATEd (request_event_no_update, reusing audit_is_immutable())", () => {
     it("rejects UPDATE", async () => {
       const organizationId = randomUUID();
+      const dataPrincipalId = await createPrincipal(organizationId);
+      principalIds.push(dataPrincipalId);
       const principalRequest = await prisma.principalRequest.create({
         data: {
           organizationId,
           reference: `REQ-${randomUUID()}`,
-          dataPrincipalId: randomUUID(),
+          dataPrincipalId,
           type: "ACCESS",
           subject: "Access request",
           body: "Please provide my data.",
@@ -260,11 +315,13 @@ describe("MVP 2 schema constraints and triggers (e2e)", () => {
           createdByEmployeeId: randomUUID(),
         },
       });
+      const dataPrincipalId = await createPrincipal(organizationId);
+      principalIds.push(dataPrincipalId);
       const recipient = await prisma.campaignRecipient.create({
         data: {
           organizationId,
           campaignId: campaign.id,
-          dataPrincipalId: randomUUID(),
+          dataPrincipalId,
           channel: "EMAIL",
           status: "DELIVERED",
           renderedBody: "Original rendered content",
@@ -293,11 +350,13 @@ describe("MVP 2 schema constraints and triggers (e2e)", () => {
           createdByEmployeeId: randomUUID(),
         },
       });
+      const dataPrincipalId = await createPrincipal(organizationId);
+      principalIds.push(dataPrincipalId);
       const recipient = await prisma.campaignRecipient.create({
         data: {
           organizationId,
           campaignId: campaign.id,
-          dataPrincipalId: randomUUID(),
+          dataPrincipalId,
           channel: "EMAIL",
           status: "PENDING",
           renderedBody: "Draft content",
@@ -335,11 +394,13 @@ describe("MVP 2 schema constraints and triggers (e2e)", () => {
       const organizationId = randomUUID();
       const retentionFloorUntil = new Date("2027-01-01T00:00:00Z");
       const erasureDueAt = new Date("2027-01-01T00:00:00Z"); // exactly at the floor
+      const dataPrincipalId = await createPrincipal(organizationId);
+      principalIds.push(dataPrincipalId);
 
       const task = await prisma.erasureTask.create({
         data: {
           organizationId,
-          dataPrincipalId: randomUUID(),
+          dataPrincipalId,
           trigger: "CONSENT_WITHDRAWN",
           retentionFloorUntil,
           erasureDueAt,
