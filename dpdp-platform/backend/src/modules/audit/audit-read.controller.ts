@@ -1,6 +1,7 @@
 import { Controller, Get, Query, Res } from "@nestjs/common";
 import { ApiTags } from "@nestjs/swagger";
 import type { Response } from "express";
+import { CurrentActorPermissions } from "../../common/decorators/current-actor-permissions.decorator";
 import { RequirePermission } from "../../common/decorators/require-permission.decorator";
 import { AuditReadService } from "./audit-read.service";
 import { AccessLogExportDto } from "./dto/access-log-export.dto";
@@ -19,8 +20,11 @@ export class AuditReadController {
 
   @Get()
   @RequirePermission("CAN_VIEW_AUDIT_LOG")
-  list(@Query() query: ListAuditEventsDto) {
-    return this.auditReadService.list(query);
+  list(
+    @Query() query: ListAuditEventsDto,
+    @CurrentActorPermissions() permissions: ReadonlySet<string>,
+  ) {
+    return this.auditReadService.list(query, permissions);
   }
 
   @Get("access-log.csv")

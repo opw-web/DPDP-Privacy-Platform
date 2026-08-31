@@ -365,6 +365,75 @@ describe("Audit read API (e2e)", () => {
         .set(...authenticated(noPerms));
       expect(response.status).toBe(403);
     });
+
+    it("I-1: withholds metadata from an actor without CAN_VIEW_ALL_PERSONAL_DATA, and returns it to one with that permission", async () => {
+      // Final whole-branch review, I-1: PRINCIPAL_CREATED's metadata
+      // carries a raw displayName (see linking.service.ts), and the
+      // seeded AUDITOR role holds CAN_VIEW_AUDIT_LOG without
+      // CAN_VIEW_ALL_PERSONAL_DATA -- before this fix, that role could
+      // read every principal's unmasked name straight off this endpoint,
+      // one page at a time, defeating the masking `/app/principals/:id`
+      // enforces for the exact same actor.
+      const subjectPrincipalId = randomUUID();
+      await seedEvent(fixture.organizationId, fixture.actorId, {
+        action: "PRINCIPAL_CREATED",
+        resourceType: "DataPrincipal",
+        resourceId: subjectPrincipalId,
+        subjectPrincipalId,
+        metadata: { displayName: "Aman Sharma", reference: "DP-000123" },
+      });
+
+      // `fixture.reader` holds only CAN_VIEW_AUDIT_LOG -- the AUDITOR
+      // shape this finding is about.
+      const readerRes = await request(app.getHttpServer())
+        .get("/api/audit-events")
+        .query({ action: "PRINCIPAL_CREATED", subjectPrincipalId })
+        .set(...authenticated(fixture.reader));
+      expect(readerRes.status).toBe(200);
+      const readerItems = readerRes.body.items as Array<
+        Record<string, unknown>
+      >;
+      expect(readerItems.length).toBeGreaterThan(0);
+      for (const item of readerItems) {
+        expect(item).not.toHaveProperty("metadata");
+        expect(JSON.stringify(item)).not.toContain("Aman Sharma");
+      }
+
+      const fullAccessReader = await employeeSession(
+        fixture.organizationId,
+        ["CAN_VIEW_AUDIT_LOG", "CAN_VIEW_ALL_PERSONAL_DATA"],
+        "Full access reader",
+      );
+      const fullAccessRes = await request(app.getHttpServer())
+        .get("/api/audit-events")
+        .query({ action: "PRINCIPAL_CREATED", subjectPrincipalId })
+        .set(...authenticated(fullAccessReader));
+      expect(fullAccessRes.status).toBe(200);
+      const fullAccessItems = fullAccessRes.body.items as Array<{
+        metadata: Record<string, unknown>;
+      }>;
+      expect(fullAccessItems.length).toBeGreaterThan(0);
+      expect(fullAccessItems[0]?.metadata).toEqual({
+        displayName: "Aman Sharma",
+        reference: "DP-000123",
+      });
+
+      // The stored row itself is untouched by this read-side fix --
+      // AuditService.record() remains the only writer and the table
+      // stays complete for chain verification.
+      const storedEvent = await prisma.auditEvent.findFirst({
+        where: {
+          organizationId: fixture.organizationId,
+          action: "PRINCIPAL_CREATED",
+          subjectPrincipalId,
+        },
+      });
+      expect(
+        (storedEvent?.metadata as Record<string, unknown> | undefined)?.[
+          "displayName"
+        ],
+      ).toBe("Aman Sharma");
+    });
   });
 
   describe("GET /api/audit-events/access-log.csv", () => {

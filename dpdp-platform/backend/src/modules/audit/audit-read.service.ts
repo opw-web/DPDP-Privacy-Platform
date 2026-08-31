@@ -1,6 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import type { Prisma } from "@prisma/client";
 import { AuditService } from "../../common/audit/audit.service";
+import { MaskingService } from "../../common/masking/masking.service";
 import { PrismaService } from "../../common/prisma/prisma.service";
 import { csvDocument } from "../inventory/csv-writer";
 import type { AccessLogExportDto } from "./dto/access-log-export.dto";
@@ -37,8 +38,18 @@ type AuditEventListRow = Prisma.AuditEventGetPayload<{
  * serialized as a decimal string, converted here at the DTO boundary
  * rather than by mutating `BigInt.prototype` globally.
  */
-export type AuditEventListItem = Omit<AuditEventListRow, "sequence"> & {
+/**
+ * `metadata` is omitted from the wire type entirely (rather than typed
+ * `Prisma.JsonValue | undefined`, which would still say "present, but
+ * maybe empty") because `list()` deletes the key outright for an actor
+ * without `CAN_VIEW_ALL_PERSONAL_DATA` -- see the masking note there.
+ */
+export type AuditEventListItem = Omit<
+  AuditEventListRow,
+  "sequence" | "metadata"
+> & {
   sequence: string;
+  metadata?: Prisma.JsonValue;
 };
 
 export interface AuditEventListResult {
@@ -74,6 +85,7 @@ export class AuditReadService {
   constructor(
     private readonly prisma: PrismaService,
     private readonly auditService: AuditService,
+    private readonly maskingService: MaskingService,
   ) {}
 
   private buildWhere(filters: {
@@ -104,9 +116,35 @@ export class AuditReadService {
     };
   }
 
-  async list(query: ListAuditEventsDto): Promise<AuditEventListResult> {
+  /**
+   * I-1 (final whole-branch review): `AuditEvent.metadata` is free-form
+   * JSON and routinely carries personal-data values written by other
+   * modules (e.g. `PRINCIPAL_CREATED`'s `displayName`,
+   * `linking.service.ts`). `CAN_VIEW_AUDIT_LOG` alone -- the only
+   * permission this route requires -- must not double as a masking
+   * bypass for the AUDITOR role, which deliberately holds
+   * `CAN_VIEW_AUDIT_LOG` without `CAN_VIEW_ALL_PERSONAL_DATA`.
+   *
+   * The stored row itself is never touched -- `AuditService.record()`
+   * remains the only writer and the table stays append-only and complete
+   * for chain verification. This gates the *read*: `metadata` is dropped
+   * from the response entirely (not redacted field-by-field) for an
+   * actor lacking `CAN_VIEW_ALL_PERSONAL_DATA`, reusing the same
+   * permission gate `MaskingService` already enforces everywhere else
+   * (`hasFullPersonalDataAccess`) rather than a second, ad hoc check.
+   * Metadata is not keyed by `CanonicalField`, so `maskValue`'s per-field
+   * masking does not apply here -- omitting the field is the smaller,
+   * correct fix the review calls out, and loses nothing an auditor needs
+   * from this list endpoint.
+   */
+  async list(
+    query: ListAuditEventsDto,
+    actorPermissions: ReadonlySet<string>,
+  ): Promise<AuditEventListResult> {
     const where = this.buildWhere(query);
     const offset = (query.page - 1) * AUDIT_EVENTS_PAGE_SIZE;
+    const canViewMetadata =
+      this.maskingService.hasFullPersonalDataAccess(actorPermissions);
 
     const [items, totalCount] = await Promise.all([
       this.prisma.scoped.auditEvent.findMany({
@@ -120,9 +158,10 @@ export class AuditReadService {
     ]);
 
     return {
-      items: items.map((item) => ({
+      items: items.map(({ metadata, ...item }) => ({
         ...item,
         sequence: item.sequence.toString(),
+        ...(canViewMetadata ? { metadata } : {}),
       })),
       page: query.page,
       pageSize: AUDIT_EVENTS_PAGE_SIZE,

@@ -157,14 +157,30 @@ export class MaskingService {
     canonicalField: CanonicalField | string,
     value: string | null | undefined,
   ): string | null | undefined {
+    if (this.hasFullPersonalDataAccess(actorPermissions)) {
+      return value;
+    }
+    return this.maskValue(canonicalField, value);
+  }
+
+  /**
+   * The same SE-01 gate `maskIfNeeded` applies per-value, exposed directly
+   * for call sites that cannot route a value through `maskValue` because
+   * it is not a single `CanonicalField`-keyed string -- e.g. a whole
+   * free-form JSON blob (`AuditEvent.metadata`) that may embed personal
+   * data under any key. Those call sites gate the whole value on this
+   * check rather than reimplementing the permission test inline, so
+   * there is still exactly one place that decides who counts as "can see
+   * unmasked personal data."
+   */
+  hasFullPersonalDataAccess(
+    actorPermissions: ReadonlySet<string> | readonly string[],
+  ): boolean {
     const permissions =
       actorPermissions instanceof Set
         ? actorPermissions
         : new Set(actorPermissions);
-    if (permissions.has(CAN_VIEW_ALL_PERSONAL_DATA)) {
-      return value;
-    }
-    return this.maskValue(canonicalField, value);
+    return permissions.has(CAN_VIEW_ALL_PERSONAL_DATA);
   }
 
   /**
