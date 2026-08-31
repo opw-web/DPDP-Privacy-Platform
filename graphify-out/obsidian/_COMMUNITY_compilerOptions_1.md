@@ -1,0 +1,48 @@
+---
+type: community
+members: 31
+---
+
+# compilerOptions
+
+**Members:** 31 nodes
+
+## Members
+- [[spec.ts]] - concept - dpdp-platform/backend/tsconfig.json
+- [[allowSyntheticDefaultImports]] - code - dpdp-platform/backend/tsconfig.json
+- [[backendtsconfig.json]] - code - dpdp-platform/backend/tsconfig.json
+- [[baseUrl]] - code - dpdp-platform/backend/tsconfig.json
+- [[compilerOptions_3]] - code - dpdp-platform/backend/tsconfig.json
+- [[declaration_1]] - code - dpdp-platform/backend/tsconfig.json
+- [[dist]] - concept - dpdp-platform/backend/tsconfig.json
+- [[emitDecoratorMetadata]] - code - dpdp-platform/backend/tsconfig.json
+- [[esModuleInterop_1]] - code - dpdp-platform/backend/tsconfig.json
+- [[exclude_1]] - code - dpdp-platform/backend/tsconfig.json
+- [[experimentalDecorators]] - code - dpdp-platform/backend/tsconfig.json
+- [[forceConsistentCasingInFileNames_1]] - code - dpdp-platform/backend/tsconfig.json
+- [[incremental]] - code - dpdp-platform/backend/tsconfig.json
+- [[jest.config.ts_1]] - concept - dpdp-platform/backend/tsconfig.json
+- [[module_14]] - code - dpdp-platform/backend/tsconfig.json
+- [[noFallthroughCasesInSwitch]] - code - dpdp-platform/backend/tsconfig.json
+- [[noImplicitAny]] - code - dpdp-platform/backend/tsconfig.json
+- [[noUncheckedIndexedAccess]] - code - dpdp-platform/backend/tsconfig.json
+- [[node_modules]] - concept - dpdp-platform/backend/tsconfig.json
+- [[outDir_2]] - code - dpdp-platform/backend/tsconfig.json
+- [[prisma_3]] - concept - dpdp-platform/backend/tsconfig.json
+- [[removeComments]] - code - dpdp-platform/backend/tsconfig.json
+- [[rootDir_2]] - code - dpdp-platform/backend/tsconfig.json
+- [[skipLibCheck_1]] - code - dpdp-platform/backend/tsconfig.json
+- [[sourceMap_1]] - code - dpdp-platform/backend/tsconfig.json
+- [[strict_1]] - code - dpdp-platform/backend/tsconfig.json
+- [[strictBindCallApply]] - code - dpdp-platform/backend/tsconfig.json
+- [[strictNullChecks]] - code - dpdp-platform/backend/tsconfig.json
+- [[target_1]] - code - dpdp-platform/backend/tsconfig.json
+- [[test_2]] - concept - dpdp-platform/backend/tsconfig.json
+- [[tsBuildInfoFile]] - code - dpdp-platform/backend/tsconfig.json
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/compilerOptions
+SORT file.name ASC
+```

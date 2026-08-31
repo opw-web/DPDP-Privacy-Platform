@@ -1,0 +1,680 @@
+generator client {
+  provider = "prisma-client-js"
+  // Task 7 Docker fix: node:20-alpine ships OpenSSL 3.x (libssl.so.3),
+  // not the 1.1.x Prisma's engine auto-detection guesses at generate
+  // time when it cannot probe the target system's actual libssl
+  // (cross-container generate). Without an explicit binaryTarget here,
+  // `prisma generate` silently produces a `linux-musl` (openssl-1.1.x)
+  // engine that fails to load in the runtime image with "Error loading
+  // shared library libssl.so.1.1: No such file or directory" -- caught
+  // by `PrismaService.onModuleInit`'s startup guard (so the process
+  // does not crash), but the Prisma client can never actually connect,
+  // which is exactly the "uninitialized Prisma client" failure mode
+  // this round's container-build verification exists to catch.
+  // "native" keeps local dev (glibc host) working unchanged.
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─────────────── enums ───────────────
+enum EmployeeStatus {
+  INVITED
+  ACTIVE
+  DISABLED
+}
+
+enum EntityRole {
+  DATA_FIDUCIARY
+  DATA_PROCESSOR
+  BOTH
+}
+
+enum ThirdScheduleClass {
+  NONE
+  ECOMMERCE
+  ONLINE_GAMING
+  SOCIAL_MEDIA
+}
+
+enum LawfulBasis {
+  CONSENT
+  LEGITIMATE_USE
+}
+
+enum LegitimateUseLimb {
+  VOLUNTARY_PROVISION
+  STATE_SUBSIDY_BENEFIT
+  STATE_FUNCTION
+  MEDICAL_EMERGENCY
+  EPIDEMIC_PUBLIC_HEALTH
+  DISASTER_PUBLIC_ORDER
+  EMPLOYMENT
+  SAFEGUARD_EMPLOYER_LOSS
+  OTHER_S7
+}
+
+enum DataSourceStatus {
+  DRAFT
+  CONNECTED
+  ERROR
+  DISABLED
+}
+
+enum AuthType {
+  BEARER
+  API_KEY_HEADER
+  BASIC
+  NONE
+}
+
+enum SyncFrequency {
+  MANUAL
+  EVERY_15_MIN
+  HOURLY
+  DAILY
+}
+
+enum SyncStatus {
+  QUEUED
+  RUNNING
+  SUCCESS
+  PARTIAL
+  FAILED
+}
+
+enum CanonicalField {
+  FULL_NAME
+  FIRST_NAME
+  LAST_NAME
+  EMAIL
+  PHONE
+  DATE_OF_BIRTH
+  GENDER
+  ADDRESS_LINE1
+  ADDRESS_LINE2
+  CITY
+  STATE
+  POSTAL_CODE
+  COUNTRY
+  CUSTOMER_ID
+  ACCOUNT_STATUS
+  LAST_ACTIVITY_AT
+  PURCHASE_TOTAL
+  EXTERNAL_ID
+  IGNORE
+}
+
+enum DataCategory {
+  IDENTITY
+  CONTACT
+  DEMOGRAPHIC
+  FINANCIAL
+  TRANSACTIONAL
+  BEHAVIOURAL
+  LOCATION
+  HEALTH
+  BIOMETRIC
+  GOVT_ID
+  OTHER
+}
+
+enum IdentifierType {
+  EMAIL
+  PHONE
+  CUSTOMER_ID
+}
+
+enum MatchConfidence {
+  EXACT
+  HIGH
+  POSSIBLE
+  UNMATCHED
+}
+
+enum LinkStatus {
+  ACTIVE
+  DETACHED
+}
+
+enum CandidateStatus {
+  PENDING
+  CONFIRMED
+  REJECTED
+}
+
+enum ActorType {
+  EMPLOYEE
+  PRINCIPAL
+  SYSTEM
+}
+
+enum AgeStatus {
+  UNKNOWN
+  ADULT
+  CHILD
+  GUARDIAN_REPRESENTED
+}
+
+enum RecipientType {
+  DATA_PROCESSOR
+  OTHER_DATA_FIDUCIARY
+}
+
+enum ContactDirection {
+  INBOUND
+  OUTBOUND
+}
+
+enum PrincipalAccountStatus {
+  UNCLAIMED
+  ACTIVE
+  LOCKED
+}
+
+// ─────────────── tenancy & people ───────────────
+model Organization {
+  id                         String             @id @default(uuid())
+  name                       String
+  legalName                  String?
+  entityRole                 EntityRole         @default(DATA_FIDUCIARY) // SC-04
+  country                    String             @default("IN")
+  timezone                   String             @default("Asia/Kolkata")
+  offersGoodsServicesInIndia Boolean            @default(true) // SC-02
+  // Rule 9 / s.8(9) published contact — GO-10
+  dpoName                    String?
+  dpoEmail                   String?
+  dpoPhone                   String?
+  dpoIsIndiaBased            Boolean            @default(false) // SD-01
+  responsiblePersonName      String? // used when no DPO is appointed
+  responsiblePersonEmail     String?
+  grievanceContactEmail      String?
+  publicPrivacyPageUrl       String? // where GO-10 / RT-01 details are published
+  // SDF + Third Schedule self-declaration — never inferred by the platform
+  isSignificantDataFiduciary Boolean            @default(false) // SD-07
+  sdfNotifiedAt              DateTime?          @db.Timestamptz(6)
+  sdfNotificationRef         String?
+  thirdScheduleClass         ThirdScheduleClass @default(NONE) // RE-03
+  registeredUserCount        BigInt?
+  classDeclaredByEmployeeId  String?
+  classDeclaredAt            DateTime?          @db.Timestamptz(6)
+  settings                   Json               @default("{}")
+  createdAt                  DateTime           @default(now()) @db.Timestamptz(6)
+  updatedAt                  DateTime           @updatedAt @db.Timestamptz(6)
+}
+
+model Permission {
+  code        String           @id
+  description String
+  category    String
+  roles       RolePermission[]
+}
+
+model Role {
+  id             String           @id @default(uuid())
+  organizationId String
+  code           String
+  name           String
+  isSystem       Boolean          @default(false)
+  permissions    RolePermission[]
+  employees      Employee[]
+
+  @@unique([organizationId, code])
+}
+
+model RolePermission {
+  roleId         String
+  permissionCode String
+  role           Role       @relation(fields: [roleId], references: [id], onDelete: Cascade)
+  permission     Permission @relation(fields: [permissionCode], references: [code])
+
+  @@id([roleId, permissionCode])
+}
+
+model Employee {
+  id             String         @id @default(uuid())
+  organizationId String
+  email          String
+  fullName       String
+  passwordHash   String
+  roleId         String
+  status         EmployeeStatus @default(ACTIVE)
+  lastLoginAt    DateTime?      @db.Timestamptz(6)
+  createdAt      DateTime       @default(now()) @db.Timestamptz(6)
+  updatedAt      DateTime       @updatedAt @db.Timestamptz(6)
+  role           Role           @relation(fields: [roleId], references: [id])
+
+  @@unique([organizationId, email])
+  @@index([organizationId])
+}
+
+model PrincipalAccount {
+  id              String                 @id @default(uuid())
+  organizationId  String
+  dataPrincipalId String                 @unique
+  email           String
+  passwordHash    String?
+  status          PrincipalAccountStatus @default(UNCLAIMED)
+  lastLoginAt     DateTime?              @db.Timestamptz(6)
+  createdAt       DateTime               @default(now()) @db.Timestamptz(6)
+  dataPrincipal   DataPrincipal          @relation(fields: [dataPrincipalId], references: [id])
+
+  @@unique([organizationId, email])
+}
+
+model RefreshToken {
+  id             String    @id @default(uuid())
+  organizationId String
+  actorType      ActorType
+  actorId        String
+  tokenHash      String    @unique
+  expiresAt      DateTime  @db.Timestamptz(6)
+  revokedAt      DateTime? @db.Timestamptz(6)
+  createdAt      DateTime  @default(now()) @db.Timestamptz(6)
+
+  @@index([actorType, actorId])
+}
+
+// ─────────────── purposes and lawful basis (LB-01, LB-02) ───────────────
+model ProcessingPurpose {
+  id                         String              @id @default(uuid())
+  organizationId             String
+  code                       String // ORDER_FULFILMENT, MARKETING_EMAIL, SUPPORT, PAYROLL
+  name                       String
+  description                String // plain language — reused in notices (MVP 2)
+  lawfulBasis                LawfulBasis // REQUIRED. Never defaulted, never inferred.
+  legitimateUseLimb          LegitimateUseLimb? // REQUIRED when basis = LEGITIMATE_USE
+  basisJustification         String // free text written by a human
+  dataCategories             DataCategory[] // CN-02: only what is necessary
+  goodsOrServicesDescription String? // NT-04 input
+  reviewedByEmployeeId       String? // unreviewed ⇒ amber badge everywhere
+  reviewedAt                 DateTime?           @db.Timestamptz(6)
+  active                     Boolean             @default(true)
+  createdAt                  DateTime            @default(now()) @db.Timestamptz(6)
+  updatedAt                  DateTime            @updatedAt @db.Timestamptz(6)
+  sources                    DataSourcePurpose[]
+  sharing                    SharingActivity[]
+  retention                  RetentionPolicy[]
+
+  @@unique([organizationId, code])
+}
+
+// ─────────────── data sources & mapping ───────────────
+model DataSource {
+  id                                String               @id @default(uuid())
+  organizationId                    String
+  name                              String
+  systemType                        String
+  baseUrl                           String
+  recordsPath                       String // JSON path to the array, e.g. "data"
+  externalIdField                   String // that system's primary key field
+  authType                          AuthType             @default(BEARER)
+  credentialCipher                  String? // AES-256-GCM. NEVER returned by any API.
+  credentialHint                    String? // last 4 chars only
+  supportsIncremental               Boolean              @default(false)
+  incrementalParam                  String?
+  paginationStyle                   String               @default("PAGE")
+  pageSize                          Int                  @default(100)
+  syncFrequency                     SyncFrequency        @default(MANUAL)
+  status                            DataSourceStatus     @default(DRAFT)
+  // SC-03: data the Data Principal herself made public is outside the Act
+  containsOnlyPubliclyAvailableData Boolean              @default(false)
+  publiclyAvailableJustification    String?
+  hostingCountry                    String               @default("IN") // CB-01 input
+  lastSyncAt                        DateTime?            @db.Timestamptz(6)
+  lastError                         String?
+  createdAt                         DateTime             @default(now()) @db.Timestamptz(6)
+  updatedAt                         DateTime             @updatedAt @db.Timestamptz(6)
+  fields                            DataSourceField[]
+  mappings                          SourceFieldMapping[]
+  purposes                          DataSourcePurpose[]
+  syncJobs                          SyncJob[]
+  records                           SourceRecord[]
+  securityMeasures                  SecurityMeasure[]
+
+  @@unique([organizationId, name])
+}
+
+model DataSourceField {
+  id             String     @id @default(uuid())
+  organizationId String
+  dataSourceId   String
+  fieldName      String
+  sampleValue    String?
+  inferredType   String
+  dataSource     DataSource @relation(fields: [dataSourceId], references: [id], onDelete: Cascade)
+
+  @@unique([dataSourceId, fieldName])
+}
+
+model SourceFieldMapping {
+  id                   String         @id @default(uuid())
+  organizationId       String
+  dataSourceId         String
+  sourceField          String
+  canonicalField       CanonicalField
+  dataCategory         DataCategory   @default(OTHER)
+  containsPersonalData Boolean        @default(true)
+  isVerifiedCustomerId Boolean        @default(false) // gate for the EXACT match rule
+  dataSource           DataSource     @relation(fields: [dataSourceId], references: [id], onDelete: Cascade)
+
+  @@unique([dataSourceId, sourceField])
+}
+
+model DataSourcePurpose {
+  dataSourceId String
+  purposeId    String
+  dataSource   DataSource        @relation(fields: [dataSourceId], references: [id], onDelete: Cascade)
+  purpose      ProcessingPurpose @relation(fields: [purposeId], references: [id], onDelete: Cascade)
+
+  @@id([dataSourceId, purposeId])
+}
+
+// ─────────────── the registers (EV-02, EV-09) ───────────────
+model DataRecipient {
+  id                        String                @id @default(uuid())
+  organizationId            String
+  name                      String
+  type                      RecipientType // processor vs other fiduciary
+  contactEmail              String?
+  country                   String                @default("IN")
+  // s.8(2): a processor may be engaged ONLY under a valid contract
+  contractExists            Boolean               @default(false)
+  contractReference         String?
+  contractSignedAt          DateTime?             @db.Timestamptz(6)
+  contractExpiresAt         DateTime?             @db.Timestamptz(6)
+  // Rule 6(1)(f): security safeguard provisions in the contract  (PR-02, SE-06)
+  contractHasSecurityClause Boolean               @default(false)
+  contractHasErasureClause  Boolean               @default(false) // s.8(7)(b)
+  contractHasAuditRights    Boolean               @default(false)
+  subProcessorsDisclosed    Boolean               @default(false) // PR-04
+  subProcessorNotes         String?
+  active                    Boolean               @default(true)
+  createdAt                 DateTime              @default(now()) @db.Timestamptz(6)
+  updatedAt                 DateTime              @updatedAt @db.Timestamptz(6)
+  sharing                   SharingActivity[]
+  transfers                 CrossBorderTransfer[]
+
+  @@unique([organizationId, name])
+}
+
+model SharingActivity {
+  id             String            @id @default(uuid())
+  organizationId String
+  recipientId    String
+  purposeId      String
+  dataCategories DataCategory[]
+  description    String // "description of the personal data so shared"
+  sourceIds      String[] // which systems feed this sharing
+  startedAt      DateTime          @db.Timestamptz(6)
+  endedAt        DateTime?         @db.Timestamptz(6)
+  active         Boolean           @default(true)
+  recipient      DataRecipient     @relation(fields: [recipientId], references: [id])
+  purpose        ProcessingPurpose @relation(fields: [purposeId], references: [id])
+
+  @@index([organizationId, recipientId])
+}
+
+model CrossBorderTransfer {
+  id                       String         @id @default(uuid())
+  organizationId           String
+  recipientId              String
+  destinationCountry       String
+  dataCategories           DataCategory[]
+  purposeDescription       String
+  govtRestrictionChecked   Boolean        @default(false) // s.16 / Rule 15
+  govtRestrictionNotes     String?
+  sectoralRestrictionNotes String? // CB-02: RBI/SEBI/IRDAI etc.
+  localisationRequired     Boolean        @default(false) // CB-03 / Rule 13(4)
+  reviewedByEmployeeId     String?
+  reviewedAt               DateTime?      @db.Timestamptz(6)
+  recipient                DataRecipient  @relation(fields: [recipientId], references: [id])
+
+  @@index([organizationId])
+}
+
+model RetentionPolicy {
+  id                     String            @id @default(uuid())
+  organizationId         String
+  purposeId              String
+  name                   String
+  triggerType            String // PURPOSE_SERVED | CONSENT_WITHDRAWN | INACTIVITY | FIXED_PERIOD
+  retentionValue         Int
+  retentionUnit          String // DAYS | MONTHS | YEARS
+  legalBasisForRetention String // statute / sectoral rule / company policy
+  legalBasisType         String // STATUTORY | SECTORAL | ORG_POLICY
+  minimumRetentionValue  Int               @default(1) // RE-06: Rule 8(3) one-year floor
+  minimumRetentionUnit   String            @default("YEARS")
+  preErasureNoticeHours  Int               @default(48) // RE-05: Rule 8(2) — configurable, cited
+  accountAccessCarveOut  Boolean           @default(false) // RE-04: Third Schedule carve-out
+  active                 Boolean           @default(true)
+  purpose                ProcessingPurpose @relation(fields: [purposeId], references: [id])
+
+  @@unique([organizationId, purposeId, name])
+}
+
+model SecurityMeasure {
+  id                   String      @id @default(uuid())
+  organizationId       String
+  dataSourceId         String? // null = organization-wide measure
+  ruleReference        String // "Rule 6(1)(a)" … "Rule 6(1)(g)"
+  measureType          String // ENCRYPTION | MASKING | TOKENISATION |
+  // ACCESS_CONTROL | LOGGING | BACKUP |
+  // CONTRACT_CLAUSE | ORG_MEASURE
+  implemented          Boolean     @default(false)
+  description          String
+  evidenceReference    String?
+  lastReviewedAt       DateTime?   @db.Timestamptz(6)
+  reviewedByEmployeeId String?
+  dataSource           DataSource? @relation(fields: [dataSourceId], references: [id])
+
+  @@index([organizationId, ruleReference])
+}
+
+// ─────────────── sync & the three data layers ───────────────
+model SyncJob {
+  id                String     @id @default(uuid())
+  organizationId    String
+  dataSourceId      String
+  triggeredBy       String
+  startedAt         DateTime   @default(now()) @db.Timestamptz(6)
+  finishedAt        DateTime?  @db.Timestamptz(6)
+  status            SyncStatus @default(QUEUED)
+  recordsRead       Int        @default(0)
+  recordsCreated    Int        @default(0)
+  recordsUpdated    Int        @default(0)
+  recordsSkipped    Int        @default(0)
+  recordsFailed     Int        @default(0)
+  principalsCreated Int        @default(0)
+  principalsLinked  Int        @default(0)
+  candidatesRaised  Int        @default(0)
+  errorLog          Json       @default("[]")
+  dataSource        DataSource @relation(fields: [dataSourceId], references: [id])
+
+  @@index([organizationId, dataSourceId, startedAt])
+}
+
+model SourceRecord {
+  id              String            @id @default(uuid())
+  organizationId  String
+  dataSourceId    String
+  sourceRecordKey String
+  rawPayload      Json
+  payloadHash     String
+  firstSeenAt     DateTime          @default(now()) @db.Timestamptz(6)
+  lastSeenAt      DateTime          @default(now()) @db.Timestamptz(6)
+  normalized      NormalizedRecord?
+  dataSource      DataSource        @relation(fields: [dataSourceId], references: [id])
+
+  @@unique([dataSourceId, sourceRecordKey])
+  @@index([organizationId])
+}
+
+model NormalizedRecord {
+  id              String         @id @default(uuid())
+  organizationId  String
+  sourceRecordId  String         @unique
+  fullName        String?
+  firstName       String?
+  lastName        String?
+  emailRaw        String?
+  emailNormalized String?
+  phoneRaw        String?
+  phoneNormalized String?
+  customerId      String?
+  dateOfBirth     DateTime?      @db.Timestamptz(6)
+  addressLine1    String?
+  city            String?
+  state           String?
+  postalCode      String?
+  country         String?
+  nameKey         String?
+  extras          Json           @default("{}")
+  normalizedAt    DateTime       @default(now()) @db.Timestamptz(6)
+  sourceRecord    SourceRecord   @relation(fields: [sourceRecordId], references: [id], onDelete: Cascade)
+  links           IdentityLink[]
+
+  @@index([organizationId, emailNormalized])
+  @@index([organizationId, phoneNormalized])
+  @@index([organizationId, nameKey])
+}
+
+model DataPrincipal {
+  id                         String                  @id @default(uuid())
+  organizationId             String
+  reference                  String // DP-000123
+  displayName                String
+  // GO-08 / GO-09 / RE-09 — inbound contact only
+  lastPrincipalContactAt     DateTime?               @db.Timestamptz(6)
+  lastPrincipalContactSource String?
+  // CH-01 — declared or derived from DOB; NEVER guessed from behaviour
+  ageStatus                  AgeStatus               @default(UNKNOWN)
+  ageStatusSource            String? // DOB_DERIVED | SELF_DECLARED | EMPLOYEE_SET
+  ageStatusSetAt             DateTime?               @db.Timestamptz(6)
+  createdAt                  DateTime                @default(now()) @db.Timestamptz(6)
+  updatedAt                  DateTime                @updatedAt @db.Timestamptz(6)
+  identifiers                PrincipalIdentifier[]
+  links                      IdentityLink[]
+  fields                     PrincipalDataField[]
+  account                    PrincipalAccount?
+  contactEvents              PrincipalContactEvent[]
+
+  @@unique([organizationId, reference])
+  @@index([organizationId, displayName])
+  @@index([organizationId, ageStatus])
+}
+
+model PrincipalIdentifier {
+  id              String         @id @default(uuid())
+  organizationId  String
+  dataPrincipalId String
+  type            IdentifierType
+  value           String
+  isPrimary       Boolean        @default(false)
+  dataPrincipal   DataPrincipal  @relation(fields: [dataPrincipalId], references: [id], onDelete: Cascade)
+
+  @@unique([organizationId, type, value]) // the engine of deterministic matching
+  @@index([dataPrincipalId])
+}
+
+model IdentityLink {
+  id                 String           @id @default(uuid())
+  organizationId     String
+  dataPrincipalId    String
+  normalizedRecordId String
+  confidence         MatchConfidence
+  matchedOn          Json
+  status             LinkStatus       @default(ACTIVE)
+  linkedByEmployeeId String?
+  detachedAt         DateTime?        @db.Timestamptz(6)
+  detachReason       String?
+  createdAt          DateTime         @default(now()) @db.Timestamptz(6)
+  dataPrincipal      DataPrincipal    @relation(fields: [dataPrincipalId], references: [id])
+  normalizedRecord   NormalizedRecord @relation(fields: [normalizedRecordId], references: [id])
+
+  @@index([dataPrincipalId, status])
+}
+
+model PrincipalDataField {
+  id              String         @id @default(uuid())
+  organizationId  String
+  dataPrincipalId String
+  canonicalField  CanonicalField
+  value           String
+  dataCategory    DataCategory
+  sourceIds       String[] // contributing dataSourceIds
+  isPrimary       Boolean        @default(false)
+  conflict        Boolean        @default(false) // GO-03: accuracy/consistency signal
+  updatedAt       DateTime       @updatedAt @db.Timestamptz(6)
+  dataPrincipal   DataPrincipal  @relation(fields: [dataPrincipalId], references: [id], onDelete: Cascade)
+
+  @@unique([dataPrincipalId, canonicalField, value])
+  @@index([organizationId, dataPrincipalId])
+}
+
+model MatchCandidate {
+  id                  String          @id @default(uuid())
+  organizationId      String
+  normalizedRecordId  String
+  dataPrincipalId     String
+  confidence          MatchConfidence
+  score               Float
+  evidence            Json
+  status              CandidateStatus @default(PENDING)
+  decidedByEmployeeId String?
+  decidedAt           DateTime?       @db.Timestamptz(6)
+  createdAt           DateTime        @default(now()) @db.Timestamptz(6)
+
+  @@unique([normalizedRecordId, dataPrincipalId])
+  @@index([organizationId, status])
+}
+
+model PrincipalContactEvent {
+  id              String           @id @default(uuid())
+  organizationId  String
+  dataPrincipalId String
+  direction       ContactDirection
+  channel         String // PORTAL_LOGIN | REQUEST | CONSENT_ACTION | EMAIL_IN | PHONE | CAMPAIGN_OUT
+  description     String?
+  occurredAt      DateTime         @default(now()) @db.Timestamptz(6)
+  dataPrincipal   DataPrincipal    @relation(fields: [dataPrincipalId], references: [id], onDelete: Cascade)
+
+  @@index([organizationId, dataPrincipalId, occurredAt])
+}
+
+// ─────────────── audit & utility ───────────────
+model AuditEvent {
+  id                 String    @id @default(uuid())
+  organizationId     String
+  sequence           BigInt // per-org monotonic
+  actorType          ActorType
+  actorId            String?
+  actorLabel         String
+  action             String
+  resourceType       String
+  resourceId         String?
+  // SE-03: who looked at WHOSE personal data
+  subjectPrincipalId String?
+  metadata           Json      @default("{}")
+  ipAddress          String?
+  userAgent          String?
+  previousHash       String?
+  hash               String
+  createdAt          DateTime  @default(now()) @db.Timestamptz(6)
+
+  @@unique([organizationId, sequence])
+  @@index([organizationId, createdAt])
+  @@index([organizationId, subjectPrincipalId, createdAt])
+  @@index([organizationId, resourceType, resourceId])
+}
+
+model Counter {
+  organizationId String
+  name           String
+  value          BigInt @default(0)
+
+  @@id([organizationId, name])
+}

@@ -54,7 +54,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_MVP2 Compliance Operations]]
+- 1 edge to [[_COMMUNITY_DPDP PLATFORM — MVP 2 COMPLIANCE OPERATIONS]]
 
 ## Top bridge nodes
 - [[6. DEVELOPER EVALUATION CHECKLIST (beginner-friendly — do every step)]] - degree 37, connects to 1 community

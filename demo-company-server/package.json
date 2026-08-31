@@ -1,0 +1,25 @@
+{
+  "name": "demo-company-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Standalone fake-company server (Acme Retail Pvt Ltd) exposing four unconnected read-only systems for the DPDP platform to discover and sync.",
+  "main": "dist/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "dev": "ts-node src/server.ts",
+    "seed": "ts-node src/seed/generate.ts",
+    "test": "node --test --require ts-node/register test/*.test.ts"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "fastify": "^4.28.1"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/node": "^20.14.15",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}

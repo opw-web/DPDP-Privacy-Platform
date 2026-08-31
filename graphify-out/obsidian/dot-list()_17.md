@@ -1,0 +1,19 @@
+---
+source_file: "dpdp-platform/backend/src/modules/employees/employees.controller.ts"
+type: "code"
+community: "EmployeesService"
+location: "L16"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/EmployeesService
+---
+
+# .list()
+
+## Connections
+- [[EmployeesController]] - `method` [EXTRACTED]
+- [[Get_13]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/EmployeesService
