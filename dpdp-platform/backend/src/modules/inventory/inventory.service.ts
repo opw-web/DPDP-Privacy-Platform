@@ -1,5 +1,20 @@
 import { Injectable } from "@nestjs/common";
+import type { CanonicalField } from "@prisma/client";
 import { PrismaService } from "../../common/prisma/prisma.service";
+import { PASS_THROUGH_FIELDS } from "../../common/masking/masking.service";
+
+/**
+ * `PASS_THROUGH_FIELDS` is typed as `ReadonlySet<string>` in
+ * `masking.service.ts` because its other consumer (`maskValue`) accepts
+ * `CanonicalField | string`. Every member is nonetheless a real
+ * `CanonicalField` enum value (`ACCOUNT_STATUS`, `EXTERNAL_ID`,
+ * `IGNORE`) -- this cast makes that fact usable in a Prisma `notIn`
+ * filter, which needs the narrower enum type, without loosening
+ * `PrincipalDataField.canonicalField`'s own type anywhere.
+ */
+const NON_PERSONAL_DATA_CANONICAL_FIELDS = [
+  ...PASS_THROUGH_FIELDS,
+] as CanonicalField[];
 
 /**
  * The five shortfall counts spec lines 831-835/849 name explicitly. Kept
@@ -12,6 +27,46 @@ import { PrismaService } from "../../common/prisma/prisma.service";
  *   count, consistent with `uniquePrincipalCount` and
  *   `unknownAgeStatusCount` being principal-level too, rather than a raw
  *   conflicting-field count.
+ *
+ *   EXCLUDES `PASS_THROUGH_FIELDS` (final whole-branch review, I-5): the
+ *   evaluation found the raw metric counting 171 principals, of which
+ *   only 12 carried a genuine "same fact, inconsistent value" conflict
+ *   (the demo's deliberately-seeded CITY conflicts) -- 330 of the 770
+ *   underlying rows were `EXTERNAL_ID`, which is *guaranteed* to differ
+ *   across any two source systems by construction (a per-system row
+ *   counter, not a fact about the person at all) rather than a real
+ *   accuracy problem. `assembly.service.ts`'s `conflict` flag itself is
+ *   untouched -- collecting and surfacing every distinct value per field
+ *   is correct and stays correct; this only changes what the DASHBOARD's
+ *   headline number counts as a compliance gap. `PASS_THROUGH_FIELDS` is
+ *   `MaskingService`'s own "not personal data" classification
+ *   (`ACCOUNT_STATUS`, `EXTERNAL_ID`, `IGNORE`) -- reused rather than a
+ *   second list, both because a field that module already judged is not
+ *   personal data cannot be a personal-data accuracy gap under s.8(3),
+ *   and because the two modules previously disagreed about `EXTERNAL_ID`
+ *   specifically (M-4).
+ *
+ *   `PURCHASE_TOTAL` and `POSTAL_CODE` were deliberately left OUT of this
+ *   exclusion despite also being named in the same evaluation finding
+ *   (64 and 60 of the 770 rows respectively). Judgment call: unlike
+ *   `EXTERNAL_ID`, which can NEVER be the same fact across two systems
+ *   (a row identifier has no cross-system meaning by definition, for any
+ *   mapping an admin could choose), `PURCHASE_TOTAL`/`POSTAL_CODE`
+ *   conflicts in the evaluation's demo data were a MAPPING choice --
+ *   Sales' `lifetime_value` and E-commerce's `total_spent` (a running
+ *   order total) were both mapped to the one canonical `PURCHASE_TOTAL`,
+ *   and similarly for `billing_pincode`/`pincode` -> `POSTAL_CODE`. A
+ *   differently (or more carefully) configured organization could map
+ *   these fields so they genuinely represent one fact, in which case a
+ *   conflict IS exactly the s.8(3) accuracy signal this metric exists
+ *   for -- e.g. a stale postal code on file in one system after the
+ *   person moved. There is no way for this code to tell "same fact,
+ *   different systems" apart from "different fact sharing a canonical
+ *   name" for these two fields the way it can for `EXTERNAL_ID`, so
+ *   excluding them platform-wide would silently hide a real accuracy gap
+ *   for any organization that mapped them consistently. That is a data
+ *   governance / field-mapping quality question for the org's admin, not
+ *   one this dashboard metric can resolve on its own.
  * - `unknownAgeStatusCount` (CH-01): `DataPrincipal.ageStatus = UNKNOWN`.
  * - `purposesWithoutReviewedLawfulBasisCount` (LB-02):
  *   `ProcessingPurpose.reviewedAt IS NULL`, across every purpose
@@ -86,7 +141,14 @@ export class InventoryService {
       processorsWithoutContractCount,
     ] = await Promise.all([
       this.prisma.scoped.dataPrincipal.count({
-        where: { fields: { some: { conflict: true } } },
+        where: {
+          fields: {
+            some: {
+              conflict: true,
+              canonicalField: { notIn: NON_PERSONAL_DATA_CANONICAL_FIELDS },
+            },
+          },
+        },
       }),
       this.prisma.scoped.dataPrincipal.count({
         where: { ageStatus: "UNKNOWN" },

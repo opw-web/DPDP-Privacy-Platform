@@ -542,6 +542,116 @@ describe("Inventory API (e2e)", () => {
         .set(...authenticated(noPerms));
       expect(response.status).toBe(403);
     });
+
+    it("I-5 (final whole-branch review): conflictCount excludes an EXTERNAL_ID-only conflict but counts a real personal-data conflict, per field not per principal", async () => {
+      // Pins exactly what the review's fix decided should and should not
+      // count: EXTERNAL_ID is a per-system row identifier, guaranteed to
+      // differ across any two systems by construction -- not the "same
+      // fact, inconsistent value" GO-03 exists to catch -- while CITY/
+      // EMAIL genuinely can be. `assembly.service.ts`'s `conflict` flag
+      // itself is untouched; only the dashboard's aggregate excludes
+      // `MaskingService.PASS_THROUGH_FIELDS`.
+      const organizationId = randomUUID();
+      organizationIds.push(organizationId);
+      await prisma.organization.create({
+        data: { id: organizationId, name: `I-5 ${organizationId}` },
+      });
+
+      // Principal A: conflicts ONLY on EXTERNAL_ID -- must NOT count.
+      const externalIdOnly = await prisma.dataPrincipal.create({
+        data: {
+          organizationId,
+          reference: `DP-${randomUUID()}`,
+          displayName: "External Id Only",
+        },
+      });
+      await prisma.principalDataField.create({
+        data: {
+          organizationId,
+          dataPrincipalId: externalIdOnly.id,
+          canonicalField: "EXTERNAL_ID",
+          value: "100",
+          dataCategory: "IDENTITY",
+          sourceIds: [randomUUID()],
+          conflict: true,
+        },
+      });
+
+      // Principal B: a genuine personal-data conflict (CITY) -- must count.
+      const cityConflict = await prisma.dataPrincipal.create({
+        data: {
+          organizationId,
+          reference: `DP-${randomUUID()}`,
+          displayName: "City Conflict",
+        },
+      });
+      await prisma.principalDataField.create({
+        data: {
+          organizationId,
+          dataPrincipalId: cityConflict.id,
+          canonicalField: "CITY",
+          value: "Pune",
+          dataCategory: "LOCATION",
+          sourceIds: [randomUUID()],
+          conflict: true,
+        },
+      });
+
+      // Principal C: BOTH an EXTERNAL_ID conflict AND a real EMAIL
+      // conflict -- proves the exclusion is per FIELD, not "skip the
+      // whole principal if it has any pass-through conflict at all".
+      const mixed = await prisma.dataPrincipal.create({
+        data: {
+          organizationId,
+          reference: `DP-${randomUUID()}`,
+          displayName: "Mixed",
+        },
+      });
+      await prisma.principalDataField.create({
+        data: {
+          organizationId,
+          dataPrincipalId: mixed.id,
+          canonicalField: "EXTERNAL_ID",
+          value: "200",
+          dataCategory: "IDENTITY",
+          sourceIds: [randomUUID()],
+          conflict: true,
+        },
+      });
+      await prisma.principalDataField.create({
+        data: {
+          organizationId,
+          dataPrincipalId: mixed.id,
+          canonicalField: "EMAIL",
+          value: "mixed@example.test",
+          dataCategory: "CONTACT",
+          sourceIds: [randomUUID()],
+          conflict: true,
+        },
+      });
+
+      const viewer = await employeeSession(
+        organizationId,
+        ["CAN_VIEW_PRINCIPALS"],
+        "I-5 viewer",
+      );
+
+      const summaryResponse = await request(app.getHttpServer())
+        .get("/api/inventory/summary")
+        .set(...authenticated(viewer));
+      expect(summaryResponse.status).toBe(200);
+      // Only cityConflict and mixed count; externalIdOnly does not.
+      expect(summaryResponse.body.conflictCount).toBe(2);
+
+      const gapsResponse = await request(app.getHttpServer())
+        .get("/api/inventory/gaps")
+        .set(...authenticated(viewer));
+      expect(gapsResponse.status).toBe(200);
+      const go03 = (
+        gapsResponse.body as Array<{ code: string; count: number }>
+      ).find((gap) => gap.code === "GO-03");
+      expect(go03?.count).toBe(2);
+    });
   });
 
   describe("GET /api/inventory/gaps", () => {

@@ -14,8 +14,16 @@ export const CAN_VIEW_ALL_PERSONAL_DATA = "CAN_VIEW_ALL_PERSONAL_DATA";
  * is failing CLOSED (mask by default) with an explicit opt-out list, not
  * failing OPEN (pass through by default) with an implicit allowlist nothing
  * enforces.
+ *
+ * Exported (final whole-branch review, I-5/M-4) so
+ * `InventoryService`'s `conflictCount` can exclude these SAME fields from
+ * its dashboard metric: a field this module has already judged is not
+ * personal data cannot be a personal-data ACCURACY gap under s.8(3)
+ * either, so the two modules should not disagree about what
+ * `EXTERNAL_ID` (etc.) is. One classification, two consumers, instead of
+ * a second hand-maintained list that could drift from this one.
  */
-const PASS_THROUGH_FIELDS: ReadonlySet<string> = new Set([
+export const PASS_THROUGH_FIELDS: ReadonlySet<string> = new Set([
   "ACCOUNT_STATUS", // operational status (e.g. "active"/"churned"), not personal data
   "EXTERNAL_ID", // opaque source-system identifier, not itself personal data
   "IGNORE", // canonical marker meaning "field mapping intentionally dropped"; never a real value
