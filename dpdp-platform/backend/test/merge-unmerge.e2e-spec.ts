@@ -67,11 +67,22 @@ describe("Merge, unmerge and the match-candidate review queue (e2e)", () => {
     });
   }
 
-  /** One employee whose role holds CAN_RESOLVE_IDENTITIES, logged in for real. */
+  /**
+   * One employee whose role holds CAN_RESOLVE_IDENTITIES AND
+   * CAN_VIEW_ALL_PERSONAL_DATA, logged in for real. Both codes, matching
+   * every seeded role that holds CAN_RESOLVE_IDENTITIES in production
+   * (ADMIN, DPO, COMPLIANCE_MANAGER) -- I-2 (final whole-branch review):
+   * `GET /api/match-candidates` returns raw personal data, so it now
+   * requires CAN_VIEW_ALL_PERSONAL_DATA in addition, and this fixture
+   * models a reviewer who can actually use the whole queue, not just the
+   * decide-only half. The narrower, CAN_RESOLVE_IDENTITIES-only actor
+   * I-2's fix is actually about is exercised by its own test below.
+   */
   async function reviewerFor(
     organizationId: string,
   ): Promise<{ employeeId: string; accessToken: string }> {
     await ensurePermission("CAN_RESOLVE_IDENTITIES");
+    await ensurePermission("CAN_VIEW_ALL_PERSONAL_DATA");
     const roleName = `REVIEWER_${randomUUID().replace(/-/g, "")}`;
     const role = await prisma.role.create({
       data: {
@@ -79,7 +90,12 @@ describe("Merge, unmerge and the match-candidate review queue (e2e)", () => {
         code: roleName,
         name: roleName,
         isSystem: false,
-        permissions: { create: [{ permissionCode: "CAN_RESOLVE_IDENTITIES" }] },
+        permissions: {
+          create: [
+            { permissionCode: "CAN_RESOLVE_IDENTITIES" },
+            { permissionCode: "CAN_VIEW_ALL_PERSONAL_DATA" },
+          ],
+        },
       },
     });
     const email = `${roleName.toLowerCase()}@example.com`;
@@ -927,6 +943,82 @@ describe("Merge, unmerge and the match-candidate review queue (e2e)", () => {
     expect(historyRes.status).toBe(200);
     expect(historyRes.body).toHaveLength(1);
     expect(historyRes.body[0]).toMatchObject({ status: "REJECTED" });
+  });
+
+  it("I-2: GET /api/match-candidates requires CAN_VIEW_ALL_PERSONAL_DATA in addition to CAN_RESOLVE_IDENTITIES, but confirm/reject do not", async () => {
+    // Final whole-branch review, I-2: the queue returns raw
+    // EMAIL/PHONE/FULL_NAME/DATE_OF_BIRTH with no masking, so an
+    // "Identity Reviewer" role holding CAN_RESOLVE_IDENTITIES without
+    // CAN_VIEW_ALL_PERSONAL_DATA -- a natural least-privilege
+    // configuration the RBAC design explicitly allows an admin to create
+    // -- must not reach the list at all. `confirm`/`reject` return only
+    // ids, never a personal-data value, so they stay reachable with just
+    // CAN_RESOLVE_IDENTITIES: the fix narrows visibility, not the
+    // decide capability itself.
+    await ensurePermission("CAN_RESOLVE_IDENTITIES");
+    await ensurePermission("CAN_VIEW_ALL_PERSONAL_DATA");
+    const org = await organization();
+    const roleName = `RESOLVE_ONLY_${randomUUID().replace(/-/g, "")}`;
+    const role = await prisma.role.create({
+      data: {
+        organizationId: org,
+        code: roleName,
+        name: roleName,
+        isSystem: false,
+        permissions: {
+          create: [{ permissionCode: "CAN_RESOLVE_IDENTITIES" }],
+        },
+      },
+    });
+    const email = `${roleName.toLowerCase()}@example.com`;
+    const password = "CorrectHorseBattery9!";
+    await prisma.employee.create({
+      data: {
+        organizationId: org,
+        email,
+        fullName: "Resolve Only",
+        roleId: role.id,
+        passwordHash: await argon2.hash(password, { type: argon2.argon2id }),
+        status: "ACTIVE",
+      },
+    });
+    const loginRes = await request(app.getHttpServer())
+      .post("/api/auth/employee/login")
+      .send({ email, password });
+    expect(loginRes.status).toBe(200);
+    const resolveOnlyToken = loginRes.body.accessToken as string;
+
+    const source = await dataSource(org, `resolve-only-source-${randomUUID()}`);
+    const target = await principal(org, "Resolve Only Target");
+    const row = await sourceRecordAndNormalized(org, source, {
+      fullName: "Resolve Only Target",
+      emailNormalized: "resolve-only@example.test",
+    });
+    const candidate = await TenantContext.run(tenant(org), () =>
+      prisma.scoped.matchCandidate.create({
+        data: {
+          normalizedRecordId: row.normalizedRecord.id,
+          dataPrincipalId: target.id,
+          confidence: "POSSIBLE",
+          score: 0.6,
+          evidence: { rule: "SUPPORTING_SIGNAL" },
+        } as never,
+      }),
+    );
+
+    const listRes = await request(app.getHttpServer())
+      .get("/api/match-candidates")
+      .set("Authorization", `Bearer ${resolveOnlyToken}`);
+    expect(listRes.status).toBe(403);
+
+    // Positive control: the SAME role/token IS let through the normal
+    // CAN_RESOLVE_IDENTITIES-only gate on the decide routes -- proving
+    // the 403 above is specifically the extra AND-gate on `list`, not a
+    // broken token or a role missing CAN_RESOLVE_IDENTITIES entirely.
+    const confirmRes = await request(app.getHttpServer())
+      .post(`/api/match-candidates/${candidate.id}/confirm`)
+      .set("Authorization", `Bearer ${resolveOnlyToken}`);
+    expect(confirmRes.status).toBe(201);
   });
 
   it(
