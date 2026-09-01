@@ -1,4 +1,10 @@
-import { Controller, Get, UseGuards } from "@nestjs/common";
+import {
+  Controller,
+  Get,
+  Res,
+  StreamableFile,
+  UseGuards,
+} from "@nestjs/common";
 import {
   ApiExtraModels,
   ApiOkResponse,
@@ -14,6 +20,9 @@ import {
 import { MePrivacyContactDto } from "./dto/me-privacy-contact.dto";
 import { MeProfileTimezoneDto } from "./dto/me-profile-timezone.dto";
 import { MeService } from "./me.service";
+import type { Response } from "express";
+import { AccessReportService } from "../evidence/access-report.service";
+import { renderAccessReportPdf } from "../evidence/access-report-render";
 
 /**
  * `/api/me/*` -- the Data Principal's own portal API (spec line 840):
@@ -38,7 +47,10 @@ import { MeService } from "./me.service";
 @ApiTags("me")
 @Controller("me")
 export class MeController {
-  constructor(private readonly meService: MeService) {}
+  constructor(
+    private readonly meService: MeService,
+    private readonly accessReportService: AccessReportService,
+  ) {}
 
   /**
    * The rest of this shape comes from `PrincipalsService.getUnmaskedProfile`
@@ -86,6 +98,27 @@ export class MeController {
   @Get("recipients")
   recipients(@CurrentPrincipal() principal: PrincipalActor) {
     return this.meService.getRecipients(principal.dataPrincipalId);
+  }
+
+  /** RT-03/04: the calling principal's own s.11 report. The principal id
+   * comes only from JwtPrincipalGuard's CurrentPrincipal decorator; there is
+   * intentionally no path/query/body selector on this route. */
+  @Public()
+  @UseGuards(JwtPrincipalGuard)
+  @Get("access-report.pdf")
+  async accessReport(
+    @CurrentPrincipal() principal: PrincipalActor,
+    @Res({ passthrough: true }) response: Response,
+  ): Promise<StreamableFile> {
+    const report = await this.accessReportService.buildReport(
+      principal.dataPrincipalId,
+    );
+    response.setHeader("Content-Type", "application/pdf");
+    response.setHeader(
+      "Content-Disposition",
+      `attachment; filename="${report.principal.reference}-access-report.pdf"`,
+    );
+    return new StreamableFile(await renderAccessReportPdf(report));
   }
 
   /**

@@ -217,11 +217,10 @@ export class MeService {
    * which this deliberately mirrors rather than duplicating a second,
    * hand-rolled tenant filter for the same row.
    *
-   * Selects only the five columns GO-10 requires be public. Never
-   * `Organization.id`, `legalName`, `grievanceContactEmail`, `settings`,
-   * or any other column on the row -- see `MePrivacyContactDto`'s
-   * docstring for exactly what a member of the public is entitled to see
-   * here and why the rest is withheld.
+   * Selects only the explicit portal-safe identity, grievance, contact and
+   * publication columns GO-10 needs. Never serializes the organization row
+   * wholesale, so operational fields (including settings and identifiers)
+   * cannot leak through this endpoint.
    *
    * Prefers the DPO (`dpoName`/`dpoEmail`/`dpoPhone`) when one is
    * appointed; falls back to the responsible person
@@ -246,11 +245,14 @@ export class MeService {
     const organization = await this.prisma.scoped.organization.findFirstOrThrow(
       {
         select: {
+          name: true,
+          legalName: true,
           dpoName: true,
           dpoEmail: true,
           dpoPhone: true,
           responsiblePersonName: true,
           responsiblePersonEmail: true,
+          grievanceContactEmail: true,
           publicPrivacyPageUrl: true,
         },
       },
@@ -263,6 +265,9 @@ export class MeService {
 
     if (!hasDpo && !hasResponsiblePerson) {
       return {
+        organizationName: organization.name,
+        legalName: organization.legalName,
+        grievanceContactEmail: organization.grievanceContactEmail,
         published: false,
         contactName: null,
         contactEmail: null,
@@ -273,6 +278,9 @@ export class MeService {
     }
 
     return {
+      organizationName: organization.name,
+      legalName: organization.legalName,
+      grievanceContactEmail: organization.grievanceContactEmail,
       published: true,
       contactName:
         (hasDpo ? organization.dpoName : organization.responsiblePersonName) ??

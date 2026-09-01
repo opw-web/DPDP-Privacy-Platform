@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateTransferDto"
+community: "ListRequestsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTransferDto
+  - community/ListRequestsDto
 ---
 
 # IsBoolean
 
 ## Connections
-- [[CreateTransferDto]] - `references` [EXTRACTED]
+- [[ListRequestsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTransferDto
+#graphify/code #graphify/EXTRACTED #community/ListRequestsDto

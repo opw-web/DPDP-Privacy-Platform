@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "SecurityMeasuresService"
+community: ".record"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresService
+  - community/record
 ---
 
 # Param
 
 ## Connections
-- [[dot-get()_4]] - `references` [EXTRACTED]
+- [[dot-review()_2]] - `references` [EXTRACTED]
 - [[dot-update()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresService
+#graphify/code #graphify/EXTRACTED #community/record

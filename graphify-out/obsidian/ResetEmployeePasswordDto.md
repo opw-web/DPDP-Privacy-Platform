@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-resetPassword()]] - `references` [EXTRACTED]
-- [[ApiProperty_8]] - `references` [EXTRACTED]
-- [[IsString_11]] - `references` [EXTRACTED]
-- [[MinLength_8]] - `references` [EXTRACTED]
+- [[ApiProperty_28]] - `references` [EXTRACTED]
+- [[IsString_40]] - `references` [EXTRACTED]
+- [[MinLength_31]] - `references` [EXTRACTED]
 - [[employees.controller.ts]] - `imports` [EXTRACTED]
 - [[reset-employee-password.dto.ts]] - `contains` [EXTRACTED]
 

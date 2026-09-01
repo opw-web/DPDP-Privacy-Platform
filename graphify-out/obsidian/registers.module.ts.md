@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/registers.module.ts"
 type: "code"
-community: "app.module.ts"
+community: "registers.module.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/appmodulets
+  - community/registersmodulets
 ---
 
 # registers.module.ts
@@ -16,7 +16,7 @@ tags:
 - [[RecipientsController]] - `imports` [EXTRACTED]
 - [[RecipientsService]] - `imports` [EXTRACTED]
 - [[RegistersModule]] - `contains` [EXTRACTED]
-- [[RetentionController]] - `imports` [EXTRACTED]
+- [[RetentionController_1]] - `imports` [EXTRACTED]
 - [[RetentionService]] - `imports` [EXTRACTED]
 - [[SecurityMeasuresController]] - `imports` [EXTRACTED]
 - [[SecurityMeasuresService]] - `imports` [EXTRACTED]
@@ -28,7 +28,7 @@ tags:
 - [[audit.module.ts]] - `imports_from` [EXTRACTED]
 - [[recipients.controller.ts]] - `imports_from` [EXTRACTED]
 - [[recipients.service.ts]] - `imports_from` [EXTRACTED]
-- [[retention.controller.ts]] - `imports_from` [EXTRACTED]
+- [[registersretention.controller.ts]] - `imports_from` [EXTRACTED]
 - [[retention.service.ts]] - `imports_from` [EXTRACTED]
 - [[security-measures.controller.ts]] - `imports_from` [EXTRACTED]
 - [[security-measures.service.ts]] - `imports_from` [EXTRACTED]
@@ -37,4 +37,4 @@ tags:
 - [[transfers.controller.ts]] - `imports_from` [EXTRACTED]
 - [[transfers.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/appmodulets
+#graphify/code #graphify/EXTRACTED #community/registersmodulets

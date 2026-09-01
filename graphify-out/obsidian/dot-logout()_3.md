@@ -14,11 +14,11 @@ tags:
 ## Connections
 - [[dot-clearRefreshCookie()_1]] - `calls` [EXTRACTED]
 - [[dot-logout()_1]] - `calls` [INFERRED]
-- [[HttpCode_4]] - `references` [EXTRACTED]
-- [[Post_12]] - `references` [EXTRACTED]
+- [[HttpCode_5]] - `references` [EXTRACTED]
+- [[Post_28]] - `references` [EXTRACTED]
 - [[PrincipalAuthController]] - `method` [EXTRACTED]
 - [[Public()]] - `references` [EXTRACTED]
-- [[Req_1]] - `references` [EXTRACTED]
-- [[Res_2]] - `references` [EXTRACTED]
+- [[Req_3]] - `references` [EXTRACTED]
+- [[Res_6]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PrincipalAuthController

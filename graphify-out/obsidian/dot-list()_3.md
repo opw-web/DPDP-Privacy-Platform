@@ -1,19 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/security-measures.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/consents/me-consents.controller.ts"
 type: "code"
-community: "SecurityMeasuresService"
-location: "L23"
+community: ".setStatus"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresService
+  - community/setStatus
 ---
 
 # .list()
 
 ## Connections
-- [[Get_6]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[SecurityMeasuresController]] - `method` [EXTRACTED]
+- [[dot-listForPrincipal()_2]] - `calls` [INFERRED]
+- [[CurrentPrincipal]] - `references` [EXTRACTED]
+- [[Get_2]] - `references` [EXTRACTED]
+- [[MeConsentsController]] - `method` [EXTRACTED]
+- [[PrincipalActor]] - `references` [EXTRACTED]
+- [[Public()]] - `references` [EXTRACTED]
+- [[UseGuards_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresService
+#graphify/code #graphify/EXTRACTED #community/setStatus

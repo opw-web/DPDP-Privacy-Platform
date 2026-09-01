@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "purposes.controller.ts"
+community: ".record"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposescontrollerts
+  - community/record
 ---
 
 # MinLength
 
 ## Connections
-- [[CreatePurposeDto]] - `references` [EXTRACTED]
+- [[UpdatePurposeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposescontrollerts
+#graphify/code #graphify/EXTRACTED #community/record

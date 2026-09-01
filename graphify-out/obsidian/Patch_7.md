@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateTransferDto"
+community: "employees.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTransferDto
+  - community/employeescontrollerts
 ---
 
 # Patch
 
 ## Connections
-- [[dot-update()_12]] - `references` [EXTRACTED]
+- [[dot-update()_13]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTransferDto
+#graphify/code #graphify/EXTRACTED #community/employeescontrollerts

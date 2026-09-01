@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/common/audit/access-log.service.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/guards/jwt-any-actor.guard.ts"
 type: "code"
-community: "PrismaService"
-location: "L50"
+community: "NotificationsService"
+location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/NotificationsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AccessLogService]] - `method` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
+- [[JwtAnyActorGuard]] - `method` [EXTRACTED]
+- [[PrismaService]] - `references` [EXTRACTED]
+- [[TokenService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

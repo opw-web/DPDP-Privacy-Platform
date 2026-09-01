@@ -21,6 +21,7 @@ import { ROLES } from "./seed/roles";
 import { DEMO_EMPLOYEES, DEMO_ORG, DEMO_PASSWORD } from "./seed/demo-org";
 import { seedComplianceRules } from "./seed/compliance-rules";
 import { seedMessageTemplates } from "./seed/message-templates";
+import { seedMvp2Demo } from "./seed/mvp2-demo";
 
 async function seedPermissions(prisma: PrismaService): Promise<void> {
   for (const permission of PERMISSIONS) {
@@ -130,6 +131,10 @@ export async function runSeed(prisma: PrismaService): Promise<{
   await seedDemoEmployees(prisma, organizationId, roleIdByCode);
   await seedComplianceRules(prisma, organizationId);
   await seedMessageTemplates(prisma, organizationId);
+  // Safe before the sync: the notice shells are created now; the guardian
+  // and inactivity policy are completed by rerunning seedMvp2Demo after
+  // the sync has produced child principals and purposes.
+  await seedMvp2Demo(prisma, organizationId);
   return { organizationId };
 }
 

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "purposes.controller.ts"
+community: ".unmerge"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposescontrollerts
+  - community/unmerge
 ---
 
 # IsString
 
 ## Connections
-- [[CreatePurposeDto]] - `references` [EXTRACTED]
+- [[UnmergeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposescontrollerts
+#graphify/code #graphify/EXTRACTED #community/unmerge

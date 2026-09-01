@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "recipients.service.ts"
+community: "AddNoteDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/AddNoteDto
 ---
 
 # IsBoolean
 
 ## Connections
-- [[CreateRecipientDto]] - `references` [EXTRACTED]
+- [[AddNoteDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/AddNoteDto

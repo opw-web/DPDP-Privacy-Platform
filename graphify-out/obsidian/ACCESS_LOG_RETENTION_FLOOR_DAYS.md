@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/config/access-log-retention.constant.ts"
 type: "code"
-community: "configuration.ts"
+community: "EnvironmentVariables"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/configurationts
+  - community/EnvironmentVariables
 ---
 
 # ACCESS_LOG_RETENTION_FLOOR_DAYS
@@ -17,4 +17,4 @@ tags:
 - [[env.validation.spec.ts]] - `imports` [EXTRACTED]
 - [[env.validation.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/configurationts
+#graphify/code #graphify/EXTRACTED #community/EnvironmentVariables

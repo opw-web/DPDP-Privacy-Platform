@@ -1,10 +1,7 @@
-import { Injectable, Logger, OnModuleInit } from "@nestjs/common";
 import { InjectQueue } from "@nestjs/bullmq";
+import { Injectable } from "@nestjs/common";
 import type { Queue } from "bullmq";
-import {
-  RECONCILE_BOOT_TIMEOUT_MS,
-  withBootTimeout,
-} from "./schedule-reconciliation.service";
+import { BootRegistrationRegistry } from "./boot-registration.registry";
 
 /**
  * The two BullMQ queues this task owns (spec lines 583-584): `retention-scan`
@@ -54,65 +51,41 @@ const PRE_ERASURE_NOTICE_CRON = "30 1 * * *";
  * same primitive, same idempotency guarantee as
  * `SyncQueueService.upsertSchedule`.
  *
- * `onModuleInit` bounds the WHOLE of `registerSchedules()` -- both
- * upserts together -- by `RECONCILE_BOOT_TIMEOUT_MS` via
- * `withBootTimeout` (same boot-safety policy `ScheduleReconciliationService`
- * established, task 18 review round 2, Important 2 -- reused here rather
- * than mirrored with a second constant, and applied once per module
- * rather than once per upsert, since Nest awaits each module's
- * `onModuleInit` in turn and this module registers two schedules as one
- * boot-time unit). An unreachable Redis at boot would otherwise leave
- * `upsertJobScheduler` sitting in ioredis's offline command queue forever
+ * Registers itself with `BootRegistrationRegistry` from its constructor
+ * rather than awaiting `registerSchedules()` (both upserts together) in
+ * its own `onModuleInit` (task 18 review round 2, Important 2
+ * established `withBootTimeout` for exactly this per-service case,
+ * applied once per module rather than once per upsert; a later
+ * regression showed that bounding each queue module's `onModuleInit`
+ * INDIVIDUALLY still let worst-case boot time scale linearly with the
+ * number of queue modules, since Nest awaits `onModuleInit` sequentially
+ * across modules -- see `BootRegistrationRegistry`'s doc comment). An
+ * unreachable Redis at boot would otherwise leave `upsertJobScheduler`
+ * sitting in ioredis's offline command queue forever
  * (`maxRetriesPerRequest: null`, required for BullMQ's own connections --
- * see `redis-connection.util.ts`), so `onModuleInit` would never resolve
- * and application boot -- which Nest's bootstrap sequence AWAITS for
- * every module -- would simply hang. On timeout or failure this logs and
+ * see `redis-connection.util.ts`); the registry now bounds this
+ * alongside every other queue module's registration under ONE shared
+ * budget rather than awaiting each in series. On failure this logs and
  * lets boot continue regardless; a schedule that fails to register on a
  * Redis blip is corrected by the next successful boot, never by throwing
  * out of this one.
  */
 @Injectable()
-export class RetentionScanQueueService implements OnModuleInit {
-  private readonly logger = new Logger(RetentionScanQueueService.name);
-
+export class RetentionScanQueueService {
   constructor(
-    @InjectQueue(RETENTION_SCAN_QUEUE_NAME)
-    private readonly retentionScanQueue: Queue<RetentionScanJobData>,
-    @InjectQueue(PRE_ERASURE_NOTICE_QUEUE_NAME)
-    private readonly preErasureNoticeQueue: Queue<PreErasureNoticeJobData>,
-  ) {}
-
-  async onModuleInit(): Promise<void> {
-    try {
-      await withBootTimeout(this.registerSchedules(), RECONCILE_BOOT_TIMEOUT_MS);
-    } catch (err) {
-      this.logger.warn(
-        "retention-scan / pre-erasure-notice repeatable schedules did " +
-          `not register at startup (timed out after ${RECONCILE_BOOT_TIMEOUT_MS}ms, ` +
-          "or failed) -- continuing to boot regardless; the scans will " +
-          "not run on schedule until a future boot successfully " +
-          `registers them: ${err instanceof Error ? err.message : "unknown error"}`,
-      );
-    }
-  }
-
-  async registerSchedules(): Promise<void> {
-    await this.retentionScanQueue.upsertJobScheduler(
-      RETENTION_SCAN_SCHEDULER_ID,
-      { pattern: RETENTION_SCAN_CRON },
-      {
-        name: RETENTION_SCAN_QUEUE_NAME,
-        data: { triggeredBy: RETENTION_SCHEDULE_TRIGGERED_BY },
-      },
-    );
-    await this.preErasureNoticeQueue.upsertJobScheduler(
-      PRE_ERASURE_NOTICE_SCHEDULER_ID,
-      { pattern: PRE_ERASURE_NOTICE_CRON },
-      {
-        name: PRE_ERASURE_NOTICE_QUEUE_NAME,
-        data: { triggeredBy: RETENTION_SCHEDULE_TRIGGERED_BY },
-      },
-    );
-    this.logger.log("retention-scan and pre-erasure-notice repeatable schedules registered.");
+    @InjectQueue(RETENTION_SCAN_QUEUE_NAME) private readonly retentionQueue: Queue<RetentionScanJobData>,
+    @InjectQueue(PRE_ERASURE_NOTICE_QUEUE_NAME) private readonly noticeQueue: Queue<PreErasureNoticeJobData>,
+    bootRegistrations: BootRegistrationRegistry,
+  ) {
+    bootRegistrations.register("retention-scan schedules", () => Promise.all([
+      this.retentionQueue.upsertJobScheduler(
+        RETENTION_SCAN_SCHEDULER_ID, { pattern: RETENTION_SCAN_CRON },
+        { name: RETENTION_SCAN_QUEUE_NAME, data: { triggeredBy: RETENTION_SCHEDULE_TRIGGERED_BY } },
+      ),
+      this.noticeQueue.upsertJobScheduler(
+        PRE_ERASURE_NOTICE_SCHEDULER_ID, { pattern: PRE_ERASURE_NOTICE_CRON },
+        { name: PRE_ERASURE_NOTICE_QUEUE_NAME, data: { triggeredBy: RETENTION_SCHEDULE_TRIGGERED_BY } },
+      ),
+    ]).then(() => undefined));
   }
 }

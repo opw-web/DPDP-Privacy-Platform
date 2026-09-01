@@ -12,14 +12,14 @@ tags:
 # EmployeesController
 
 ## Connections
-- [[dot-constructor()_39]] - `method` [EXTRACTED]
-- [[dot-create()_5]] - `method` [EXTRACTED]
-- [[dot-get()_6]] - `method` [EXTRACTED]
-- [[dot-list()_8]] - `method` [EXTRACTED]
+- [[dot-constructor()_109]] - `method` [EXTRACTED]
+- [[dot-create()_14]] - `method` [EXTRACTED]
+- [[dot-get()_8]] - `method` [EXTRACTED]
+- [[dot-list()_27]] - `method` [EXTRACTED]
 - [[dot-resetPassword()]] - `method` [EXTRACTED]
-- [[dot-update()_6]] - `method` [EXTRACTED]
-- [[ApiTags_8]] - `references` [EXTRACTED]
-- [[Controller_8]] - `references` [EXTRACTED]
+- [[dot-update()_13]] - `method` [EXTRACTED]
+- [[ApiTags_24]] - `references` [EXTRACTED]
+- [[Controller_24]] - `references` [EXTRACTED]
 - [[employees.controller.ts]] - `contains` [EXTRACTED]
 - [[employees.module.ts]] - `imports` [EXTRACTED]
 

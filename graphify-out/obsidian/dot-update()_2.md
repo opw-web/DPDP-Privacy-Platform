@@ -1,12 +1,12 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/security-measures.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
 type: "code"
-community: "SecurityMeasuresService"
-location: "L41"
+community: ".record"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresService
+  - community/record
 ---
 
 # .update()
@@ -16,8 +16,8 @@ tags:
 - [[Body_2]] - `references` [EXTRACTED]
 - [[Param_2]] - `references` [EXTRACTED]
 - [[Patch_1]] - `references` [EXTRACTED]
+- [[PurposesController]] - `method` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[SecurityMeasuresController]] - `method` [EXTRACTED]
-- [[UpdateSecurityMeasureDto]] - `references` [EXTRACTED]
+- [[UpdatePurposeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresService
+#graphify/code #graphify/EXTRACTED #community/record

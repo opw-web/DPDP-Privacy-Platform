@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "code"
-community: "devDependencies"
-location: "L65"
+community: "prettier"
+location: "L71"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/devDependencies
+  - community/prettier
 ---
 
 # prettier
@@ -15,4 +15,4 @@ tags:
 - [[devDependencies_1]] - `contains` [EXTRACTED]
 - [[prettier_1]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/devDependencies
+#graphify/code #graphify/EXTRACTED #community/prettier

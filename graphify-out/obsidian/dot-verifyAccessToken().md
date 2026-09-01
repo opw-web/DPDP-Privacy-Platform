@@ -12,6 +12,7 @@ tags:
 # .verifyAccessToken()
 
 ## Connections
+- [[dot-canActivate()]] - `calls` [INFERRED]
 - [[dot-canActivate()_1]] - `calls` [INFERRED]
 - [[dot-canActivate()_2]] - `calls` [INFERRED]
 - [[TokenService]] - `method` [EXTRACTED]

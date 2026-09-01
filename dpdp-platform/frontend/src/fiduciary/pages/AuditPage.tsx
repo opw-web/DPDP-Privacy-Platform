@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { toast } from "sonner";
-import { Download, History } from "lucide-react";
+import { Download, History, ShieldAlert, ShieldCheck } from "lucide-react";
 import { ApiError, employeeApiClient } from "../../lib/api-client";
 import { PermissionGate } from "../../components/shared/PermissionGate";
 import { Skeleton } from "../../components/shared/Skeleton";
@@ -58,6 +58,39 @@ const AUDIT_ACTION_VALUES = [
   "PERSONAL_DATA_VIEWED",
   "EVIDENCE_EXPORTED",
   "TOKEN_REUSE_DETECTED",
+  "COMPLIANCE_RULE_CHANGED",
+  "COMPLIANCE_RULE_REVIEWED",
+  "NOTICE_PUBLISHED",
+  "NOTICE_VERSION_CREATED",
+  "CONSENT_GRANTED",
+  "CONSENT_WITHDRAWN",
+  "CONSENT_DENIED",
+  "CONSENT_IMPORTED",
+  "GUARDIAN_REGISTERED",
+  "GUARDIAN_VERIFIED",
+  "CHILD_EXEMPTION_CLAIMED",
+  "REQUEST_CREATED",
+  "REQUEST_STATUS_CHANGED",
+  "REQUEST_IDENTITY_VERIFIED",
+  "REQUEST_FLAGGED_FRIVOLOUS",
+  "ACCESS_REPORT_GENERATED",
+  "ERASURE_TASK_CREATED",
+  "ERASURE_TASK_COMPLETED",
+  "LEGAL_HOLD_CREATED",
+  "CAMPAIGN_CREATED",
+  "CAMPAIGN_APPROVED",
+  "CAMPAIGN_SENT",
+  "TEMPLATE_UPDATED",
+  "BREACH_CREATED",
+  "BREACH_OBLIGATION_COMPLETED",
+  "BREACH_EXTENSION_RECORDED",
+  "BREACH_CLOSED",
+  "SDF_ASSESSMENT_COMPLETED",
+  "ALGORITHM_REGISTER_UPDATED",
+  "INFORMATION_REQUEST_RECORDED",
+  "NON_DISCLOSURE_SUPPRESSION_APPLIED",
+  "NOMINATION_UPDATED",
+  "TEMPLATE_CREATED",
 ] as const;
 
 /** Mirrors `AuditEventListResult` (`audit-read.service.ts`) exactly. */
@@ -66,6 +99,14 @@ interface AuditEventListResult {
   page: number;
   pageSize: number;
   totalCount: number;
+}
+
+/** Mirrors `ChainVerificationResult` from the evidence module. */
+export interface ChainVerificationResult {
+  valid: boolean;
+  checkedCount: number;
+  firstBrokenSequence: string | null;
+  reason: string | null;
 }
 
 interface AuditFilters {
@@ -132,6 +173,8 @@ export function AuditPage() {
   const [page, setPage] = useState(1);
   const [accessLogPrincipalId, setAccessLogPrincipalId] = useState("");
   const [isExporting, setIsExporting] = useState(false);
+  const [isVerifying, setIsVerifying] = useState(false);
+  const [chainResult, setChainResult] = useState<ChainVerificationResult | null>(null);
 
   const queryString = useMemo(() => buildQueryString(filters, page), [filters, page]);
 
@@ -167,6 +210,58 @@ export function AuditPage() {
       }
     } finally {
       setIsExporting(false);
+    }
+  }
+
+  async function exportAudit() {
+    setIsExporting(true);
+    try {
+      const blob = await employeeApiClient.getBlob("/audit-events/export.csv");
+      saveBlob(blob, "audit-events-export.csv");
+      toast.success("Audit log exported.");
+    } catch (error) {
+      if (error instanceof ApiError && error.status === 403) {
+        toast.error("You do not have permission to export evidence.");
+      } else {
+        toast.error("Could not export the audit log. Please try again.");
+      }
+    } finally {
+      setIsExporting(false);
+    }
+  }
+
+  async function downloadEvidencePack() {
+    setIsExporting(true);
+    try {
+      const blob = await employeeApiClient.getBlob("/evidence/pack.zip");
+      saveBlob(blob, "evidence-pack.zip");
+      toast.success("Evidence pack downloaded.");
+    } catch (error) {
+      if (error instanceof ApiError && error.status === 403) {
+        toast.error("You do not have permission to export evidence.");
+      } else {
+        toast.error("Could not download the evidence pack. Please try again.");
+      }
+    } finally {
+      setIsExporting(false);
+    }
+  }
+
+  async function verifyChain() {
+    setIsVerifying(true);
+    try {
+      const result = await employeeApiClient.get<ChainVerificationResult>(
+        "/audit-events/verify-chain",
+      );
+      setChainResult(result);
+    } catch (error) {
+      if (error instanceof ApiError && error.status === 403) {
+        toast.error("You do not have permission to verify the audit chain.");
+      } else {
+        toast.error("Could not verify the audit chain. Please try again.");
+      }
+    } finally {
+      setIsVerifying(false);
     }
   }
 
@@ -304,6 +399,71 @@ export function AuditPage() {
               <Download className="h-4 w-4" aria-hidden="true" />
               {isExporting ? "Exporting..." : "Export CSV"}
             </Button>
+            <Button
+              type="button"
+              variant="outline"
+              className="gap-2"
+              disabled={isExporting}
+              onClick={() => {
+                void exportAudit();
+              }}
+            >
+              <Download className="h-4 w-4" aria-hidden="true" />
+              {isExporting ? "Exporting..." : "Download complete audit CSV"}
+            </Button>
+            <Button
+              type="button"
+              variant="outline"
+              className="gap-2"
+              disabled={isExporting}
+              onClick={() => {
+                void downloadEvidencePack();
+              }}
+            >
+              <Download className="h-4 w-4" aria-hidden="true" />
+              {isExporting ? "Exporting..." : "Download evidence pack (ZIP)"}
+            </Button>
+          </CardContent>
+        </Card>
+      </PermissionGate>
+
+      <PermissionGate permission="CAN_VIEW_AUDIT_LOG">
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-base">Hash-chain verification</CardTitle>
+            <CardDescription>
+              Re-walks the append-only audit chain and reports the first broken sequence, if any.
+              A clean result is evidence about the stored log only; it is not a compliance verdict.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-3">
+            <Button
+              type="button"
+              variant="outline"
+              className="gap-2"
+              disabled={isVerifying}
+              onClick={() => {
+                void verifyChain();
+              }}
+            >
+              {chainResult?.valid ? (
+                <ShieldCheck className="h-4 w-4" aria-hidden="true" />
+              ) : (
+                <ShieldAlert className="h-4 w-4" aria-hidden="true" />
+              )}
+              {isVerifying ? "Verifying..." : "Verify hash chain"}
+            </Button>
+            {chainResult ? (
+              chainResult.valid ? (
+                <p role="status" className="text-sm text-emerald-700">
+                  Chain valid: {chainResult.checkedCount.toLocaleString("en-IN")} event(s) checked.
+                </p>
+              ) : (
+                <p role="alert" className="text-sm text-destructive">
+                  Chain broken at sequence {chainResult.firstBrokenSequence ?? "unknown"}. {chainResult.reason ?? "The stored links do not verify."}
+                </p>
+              )
+            ) : null}
           </CardContent>
         </Card>
       </PermissionGate>

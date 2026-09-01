@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "employees.controller.ts"
+community: ".unmerge"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeescontrollerts
+  - community/unmerge
 ---
 
 # Post
 
 ## Connections
-- [[dot-create()_5]] - `references` [EXTRACTED]
-- [[dot-resetPassword()]] - `references` [EXTRACTED]
+- [[dot-unmerge()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeescontrollerts
+#graphify/code #graphify/EXTRACTED #community/unmerge

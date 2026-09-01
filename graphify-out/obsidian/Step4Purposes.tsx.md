@@ -1,0 +1,33 @@
+---
+source_file: "dpdp-platform/frontend/src/fiduciary/components/wizard/Step4Purposes.tsx"
+type: "code"
+community: "DataSourceDetailPage.tsx"
+location: "L1"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/DataSourceDetailPagetsx
+---
+
+# Step4Purposes.tsx
+
+## Connections
+- [[ApiError]] - `imports` [EXTRACTED]
+- [[AttachedPurpose]] - `imports` [EXTRACTED]
+- [[Button]] - `imports` [EXTRACTED]
+- [[DataSourceDetailPage.tsx]] - `imports_from` [EXTRACTED]
+- [[DataSourceNewPage.tsx]] - `imports_from` [EXTRACTED]
+- [[MappingWarning]] - `imports` [EXTRACTED]
+- [[NotReviewedChip()]] - `imports` [EXTRACTED]
+- [[NotReviewedChip.tsx]] - `imports_from` [EXTRACTED]
+- [[ReplacePurposesResult]] - `imports` [EXTRACTED]
+- [[Step4Purposes()]] - `contains` [EXTRACTED]
+- [[Step4PurposesProps]] - `contains` [EXTRACTED]
+- [[api-client.ts]] - `imports_from` [EXTRACTED]
+- [[button.tsx]] - `imports_from` [EXTRACTED]
+- [[cachePurposesResult()]] - `imports` [EXTRACTED]
+- [[data-sources-api.ts]] - `imports_from` [EXTRACTED]
+- [[employeeApiClient]] - `imports` [EXTRACTED]
+- [[employeePut()]] - `imports` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/DataSourceDetailPagetsx

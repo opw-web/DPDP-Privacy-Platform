@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "merge.service.ts"
+community: "app.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mergeservicets
+  - community/appmodulets
 ---
 
 # Module
 
 ## Connections
-- [[ReferenceModule]] - `references` [EXTRACTED]
+- [[AuditReadModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mergeservicets
+#graphify/code #graphify/EXTRACTED #community/appmodulets

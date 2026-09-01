@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdateRolePermissionsDto"
+community: "CreateVoluntaryUndertakingDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateRolePermissionsDto
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # Patch
 
 ## Connections
-- [[dot-replacePermissions()]] - `references` [EXTRACTED]
+- [[dot-update()_11]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

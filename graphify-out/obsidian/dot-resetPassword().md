@@ -13,10 +13,10 @@ tags:
 
 ## Connections
 - [[dot-resetPassword()_1]] - `calls` [INFERRED]
-- [[Body_4]] - `references` [EXTRACTED]
+- [[Body_13]] - `references` [EXTRACTED]
 - [[EmployeesController]] - `method` [EXTRACTED]
-- [[Param_5]] - `references` [EXTRACTED]
-- [[Post_3]] - `references` [EXTRACTED]
+- [[Param_16]] - `references` [EXTRACTED]
+- [[Post_15]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[ResetEmployeePasswordDto]] - `references` [EXTRACTED]
 

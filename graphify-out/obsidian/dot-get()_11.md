@@ -1,19 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts"
 type: "code"
-community: "mappings.service.ts"
-location: "L217"
+community: "CampaignsService"
+location: "L84"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/mappingsservicets
+  - graphify/INFERRED
+  - community/CampaignsService
 ---
 
 # .get()
 
 ## Connections
-- [[dot-getMappings()]] - `calls` [INFERRED]
-- [[MappingsService]] - `method` [EXTRACTED]
-- [[computeMappingWarnings()]] - `calls` [EXTRACTED]
+- [[dot-create()_19]] - `calls` [INFERRED]
+- [[dot-get()_7]] - `calls` [INFERRED]
+- [[dot-send()_7]] - `calls` [INFERRED]
+- [[TemplatesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/INFERRED #community/CampaignsService

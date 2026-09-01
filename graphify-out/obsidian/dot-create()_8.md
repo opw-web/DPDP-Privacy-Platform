@@ -1,24 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/sharing.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts"
 type: "code"
-community: "CreateSharingActivityDto"
-location: "L131"
+community: "TemplatesService"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSharingActivityDto
+  - community/TemplatesService
 ---
 
 # .create()
 
 ## Connections
-- [[dot-assertPurposeExists()]] - `calls` [EXTRACTED]
-- [[dot-assertRecipientExists()]] - `calls` [EXTRACTED]
-- [[dot-assertSourceIdsExist()]] - `calls` [EXTRACTED]
-- [[dot-create()_7]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[CreateSharingActivityDto]] - `references` [EXTRACTED]
-- [[SharingService]] - `method` [EXTRACTED]
-- [[assertNonBlankDescription()]] - `calls` [EXTRACTED]
+- [[dot-create()_9]] - `calls` [INFERRED]
+- [[Body_8]] - `references` [EXTRACTED]
+- [[CreateTemplateDto]] - `references` [EXTRACTED]
+- [[Post_9]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[TemplatesController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

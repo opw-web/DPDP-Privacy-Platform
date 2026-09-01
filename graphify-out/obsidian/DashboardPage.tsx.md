@@ -1,0 +1,33 @@
+---
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/DashboardPage.tsx"
+type: "code"
+community: "DashboardPage.test.tsx"
+location: "L1"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/DashboardPagetesttsx
+---
+
+# DashboardPage.tsx
+
+## Connections
+- [[DashboardPage()]] - `contains` [EXTRACTED]
+- [[DashboardPage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[ExportButtons()]] - `imports` [EXTRACTED]
+- [[ExportButtons.tsx]] - `imports_from` [EXTRACTED]
+- [[GapsPanel()]] - `imports` [EXTRACTED]
+- [[GapsPanel.tsx]] - `imports_from` [EXTRACTED]
+- [[InventoryGap_1]] - `contains` [EXTRACTED]
+- [[InventorySummary_1]] - `contains` [EXTRACTED]
+- [[RecentAuditEvent_1]] - `contains` [EXTRACTED]
+- [[RecentAuditStrip()]] - `imports` [EXTRACTED]
+- [[RecentAuditStrip.tsx]] - `imports_from` [EXTRACTED]
+- [[StatCard()]] - `imports` [EXTRACTED]
+- [[StatCard.tsx]] - `imports_from` [EXTRACTED]
+- [[StatCardSkeleton()]] - `imports` [EXTRACTED]
+- [[api-client.ts]] - `imports_from` [EXTRACTED]
+- [[employeeApiClient]] - `imports` [EXTRACTED]
+- [[router.tsx]] - `imports_from` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/DashboardPagetesttsx

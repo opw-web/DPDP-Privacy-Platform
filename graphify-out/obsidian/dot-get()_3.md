@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[dot-getJob()]] - `calls` [INFERRED]
-- [[Get_3]] - `references` [EXTRACTED]
-- [[Param_1]] - `references` [EXTRACTED]
+- [[Get_8]] - `references` [EXTRACTED]
+- [[Param_5]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[SyncJobsController]] - `method` [EXTRACTED]
 

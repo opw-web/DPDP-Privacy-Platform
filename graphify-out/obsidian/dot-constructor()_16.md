@@ -1,19 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/employees.service.ts"
+source_file: "dpdp-platform/frontend/src/lib/api-client.ts"
 type: "code"
-community: "PrismaService"
-location: "L37"
+community: "DataSourceDetailPage.tsx"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/DataSourceDetailPagetsx
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[EmployeesService]] - `method` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
+- [[ApiError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/DataSourceDetailPagetsx

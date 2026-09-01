@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/organizations/dto/update-organization.dto.ts"
 type: "code"
-community: "PrismaService"
+community: "UpdateOrganizationDto"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/UpdateOrganizationDto
 ---
 
 # update-organization.dto.ts
@@ -16,4 +16,4 @@ tags:
 - [[organizations.controller.ts]] - `imports_from` [EXTRACTED]
 - [[organizations.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/UpdateOrganizationDto

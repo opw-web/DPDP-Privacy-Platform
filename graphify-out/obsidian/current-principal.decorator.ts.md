@@ -15,6 +15,7 @@ tags:
 - [[CurrentPrincipal]] - `contains` [EXTRACTED]
 - [[PrincipalActor]] - `imports` [EXTRACTED]
 - [[jwt-principal.guard.ts]] - `imports_from` [EXTRACTED]
+- [[me-consents.controller.ts]] - `imports_from` [EXTRACTED]
 - [[me.controller.ts]] - `imports_from` [EXTRACTED]
 - [[principal-auth.controller.ts]] - `imports_from` [EXTRACTED]
 

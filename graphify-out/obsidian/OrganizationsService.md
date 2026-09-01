@@ -13,10 +13,10 @@ tags:
 
 ## Connections
 - [[dot-constructor()]] - `references` [EXTRACTED]
-- [[dot-constructor()_20]] - `method` [EXTRACTED]
+- [[dot-constructor()_81]] - `method` [EXTRACTED]
 - [[dot-get()_1]] - `method` [EXTRACTED]
 - [[dot-update()_1]] - `method` [EXTRACTED]
-- [[Injectable_9]] - `references` [EXTRACTED]
+- [[Injectable_41]] - `references` [EXTRACTED]
 - [[organizations.controller.ts]] - `imports` [EXTRACTED]
 - [[organizations.module.ts]] - `imports` [EXTRACTED]
 - [[organizations.service.ts]] - `contains` [EXTRACTED]

@@ -1,23 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.ts"
 type: "code"
-community: "purposes.controller.ts"
-location: "L35"
+community: ".record"
+location: "L277"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposescontrollerts
+  - community/record
 ---
 
 # .review()
 
 ## Connections
-- [[dot-review()_1]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-review()_2]] - `calls` [INFERRED]
+- [[dot-update()_3]] - `calls` [EXTRACTED]
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[CurrentActor]] - `references` [EXTRACTED]
-- [[Param_4]] - `references` [EXTRACTED]
-- [[Post_2]] - `references` [EXTRACTED]
-- [[PurposesController]] - `method` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[PurposesService]] - `method` [EXTRACTED]
+- [[toPublicPurpose()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposescontrollerts
+#graphify/code #graphify/EXTRACTED #community/record

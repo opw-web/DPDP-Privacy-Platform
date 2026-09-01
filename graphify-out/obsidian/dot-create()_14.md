@@ -1,23 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/recipients.service.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/employees.controller.ts"
 type: "code"
-community: "recipients.service.ts"
-location: "L106"
+community: "employees.controller.ts"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/employeescontrollerts
 ---
 
 # .create()
 
 ## Connections
-- [[dot-assertProcessorRule()]] - `calls` [EXTRACTED]
-- [[dot-create()_13]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[CreateRecipientDto]] - `references` [EXTRACTED]
-- [[RecipientsService]] - `method` [EXTRACTED]
-- [[duplicateNameMessage()_1]] - `calls` [EXTRACTED]
-- [[isUniqueConstraintViolation()_3]] - `calls` [EXTRACTED]
+- [[dot-create()_15]] - `calls` [INFERRED]
+- [[Body_13]] - `references` [EXTRACTED]
+- [[CreateEmployeeDto]] - `references` [EXTRACTED]
+- [[EmployeesController]] - `method` [EXTRACTED]
+- [[Post_15]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/employeescontrollerts

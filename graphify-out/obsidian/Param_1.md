@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sync.service.ts"
+community: ".setStatus"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/syncservicets
+  - community/setStatus
 ---
 
 # Param
 
 ## Connections
-- [[dot-get()_3]] - `references` [EXTRACTED]
-- [[dot-trigger()]] - `references` [EXTRACTED]
+- [[dot-setStatus()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/syncservicets
+#graphify/code #graphify/EXTRACTED #community/setStatus

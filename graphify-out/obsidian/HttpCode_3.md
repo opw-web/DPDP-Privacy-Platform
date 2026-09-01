@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EmployeeAuthController"
+community: "HealthService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeeAuthController
+  - community/HealthService
 ---
 
 # HttpCode
 
 ## Connections
-- [[dot-login()_2]] - `references` [EXTRACTED]
-- [[dot-logout()_2]] - `references` [EXTRACTED]
-- [[dot-refresh()_2]] - `references` [EXTRACTED]
+- [[dot-check()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController
+#graphify/code #graphify/EXTRACTED #community/HealthService

@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/providers/smtp.provider.ts"
 type: "code"
-community: "rest-api.connector.ts"
-location: "L51"
+community: "notifications.module.ts"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rest-apiconnectorts
+  - community/notificationsmodulets
 ---
 
 # .constructor()
 
 ## Connections
-- [[PageCapExceededError_1]] - `method` [EXTRACTED]
+- [[MailerService]] - `references` [EXTRACTED]
+- [[SmtpProvider]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts
+#graphify/code #graphify/EXTRACTED #community/notificationsmodulets

@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/common/guards/permissions.guard.ts"
+source_file: "dpdp-platform/backend/src/common/mail/mailer.service.ts"
 type: "code"
-community: "AccessTokenPayload"
-location: "L81"
+community: "notifications.module.ts"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/notificationsmodulets
 ---
 
 # .constructor()
 
 ## Connections
-- [[PermissionsGuard]] - `method` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
+- [[MailerService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/notificationsmodulets

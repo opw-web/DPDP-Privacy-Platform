@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "merge.service.ts"
+community: "guardians.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mergeservicets
+  - community/guardiansservicets
 ---
 
 # Body
 
 ## Connections
-- [[dot-unmerge()_1]] - `references` [EXTRACTED]
+- [[dot-create()_10]] - `references` [EXTRACTED]
+- [[dot-verify()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mergeservicets
+#graphify/code #graphify/EXTRACTED #community/guardiansservicets

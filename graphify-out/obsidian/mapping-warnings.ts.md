@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/mapping-warnings.ts"
 type: "code"
-community: "mapping-warnings.ts"
+community: "mappings.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mapping-warningsts
+  - community/mappingsservicets
 ---
 
 # mapping-warnings.ts
@@ -23,4 +23,4 @@ tags:
 - [[scoped-transaction-client.ts]] - `imports_from` [EXTRACTED]
 - [[source-purposes.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mapping-warningsts
+#graphify/code #graphify/EXTRACTED #community/mappingsservicets

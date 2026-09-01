@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".record"
+community: "MaskingService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/MaskingService
 ---
 
 # Injectable
 
 ## Connections
-- [[AssemblyService]] - `references` [EXTRACTED]
+- [[MaskingService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/MaskingService

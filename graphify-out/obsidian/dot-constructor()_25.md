@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/security-measures.service.ts"
+source_file: "dpdp-platform/backend/src/modules/compliance/compliance.controller.ts"
 type: "code"
-community: "PrismaService"
-location: "L69"
+community: "ComplianceController"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/ComplianceController
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
-- [[SecurityMeasuresService]] - `method` [EXTRACTED]
+- [[ComplianceController]] - `method` [EXTRACTED]
+- [[ComplianceService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/ComplianceController

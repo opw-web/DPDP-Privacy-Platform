@@ -1,22 +1,24 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/employees.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
 type: "code"
-community: "employees.controller.ts"
-location: "L28"
+community: "AccessTokenPayload"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeescontrollerts
+  - community/AccessTokenPayload
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_6]] - `calls` [INFERRED]
-- [[Body_4]] - `references` [EXTRACTED]
-- [[CreateEmployeeDto]] - `references` [EXTRACTED]
-- [[EmployeesController]] - `method` [EXTRACTED]
-- [[Post_3]] - `references` [EXTRACTED]
+- [[dot-create()_19]] - `calls` [INFERRED]
+- [[AccessTokenPayload]] - `references` [EXTRACTED]
+- [[Body_6]] - `references` [EXTRACTED]
+- [[CampaignsController]] - `method` [EXTRACTED]
+- [[CreateCampaignDto]] - `references` [EXTRACTED]
+- [[CurrentActor]] - `references` [EXTRACTED]
+- [[Post_7]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeescontrollerts
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

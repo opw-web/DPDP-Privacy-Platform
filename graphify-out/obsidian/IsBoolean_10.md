@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateTransferDto"
+community: "CreateRetentionPolicyDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTransferDto
+  - community/CreateRetentionPolicyDto
 ---
 
 # IsBoolean
 
 ## Connections
-- [[UpdateTransferDto]] - `references` [EXTRACTED]
+- [[CreateRetentionPolicyDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTransferDto
+#graphify/code #graphify/EXTRACTED #community/CreateRetentionPolicyDto

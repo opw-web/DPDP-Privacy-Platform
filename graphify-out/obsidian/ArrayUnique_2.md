@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdateRolePermissionsDto"
+community: "CreateSharingActivityDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateRolePermissionsDto
+  - community/CreateSharingActivityDto
 ---
 
 # ArrayUnique
 
 ## Connections
-- [[UpdateRolePermissionsDto]] - `references` [EXTRACTED]
+- [[CreateSharingActivityDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto
+#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

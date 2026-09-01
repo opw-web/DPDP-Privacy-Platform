@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "employees.controller.ts"
+community: "UpdateAlgorithmEntryDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeescontrollerts
+  - community/UpdateAlgorithmEntryDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[UpdateEmployeeDto]] - `references` [EXTRACTED]
+- [[UpdateAlgorithmEntryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeescontrollerts
+#graphify/code #graphify/EXTRACTED #community/UpdateAlgorithmEntryDto

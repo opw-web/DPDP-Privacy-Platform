@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Public"
+community: ".record"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/record
 ---
 
 # ApiProperty
 
 ## Connections
-- [[MePrivacyContactDto]] - `references` [EXTRACTED]
+- [[CreatePurposeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/record

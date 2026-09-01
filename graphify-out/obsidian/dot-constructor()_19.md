@@ -1,19 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/inventory/ropa-export.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts"
 type: "code"
-community: "PrismaService"
-location: "L46"
+community: "template-renderer.ts"
+location: "L86"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/template-rendererts
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
-- [[RopaExportService]] - `method` [EXTRACTED]
+- [[MissingRequiredVariableError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/template-rendererts

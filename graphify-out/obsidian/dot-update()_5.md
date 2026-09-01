@@ -1,23 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts"
 type: "code"
-community: "purposes.controller.ts"
-location: "L206"
+community: "SdfController"
+location: "L87"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposescontrollerts
+  - community/SdfController
 ---
 
 # .update()
 
 ## Connections
 - [[dot-record()]] - `calls` [INFERRED]
-- [[dot-review()_1]] - `calls` [EXTRACTED]
-- [[dot-update()_4]] - `calls` [INFERRED]
-- [[dot-validateBasis()]] - `calls` [EXTRACTED]
-- [[PurposesService]] - `method` [EXTRACTED]
-- [[UpdatePurposeDto]] - `references` [EXTRACTED]
-- [[toPublicPurpose()]] - `calls` [EXTRACTED]
+- [[dot-updateAlgorithm()]] - `calls` [INFERRED]
+- [[AlgorithmRegisterService]] - `method` [EXTRACTED]
+- [[UpdateAlgorithmEntryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposescontrollerts
+#graphify/code #graphify/EXTRACTED #community/SdfController

@@ -1,20 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalsController"
+community: "InventoryService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalsController
+  - community/InventoryService
 ---
 
 # Get
 
 ## Connections
-- [[dot-detail()]] - `references` [EXTRACTED]
-- [[dot-lineage()]] - `references` [EXTRACTED]
-- [[dot-list()_5]] - `references` [EXTRACTED]
-- [[dot-recipients()_1]] - `references` [EXTRACTED]
-- [[dot-sourceRecords()]] - `references` [EXTRACTED]
+- [[dot-gaps()]] - `references` [EXTRACTED]
+- [[dot-ropaCsv()]] - `references` [EXTRACTED]
+- [[dot-summary()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalsController
+#graphify/code #graphify/EXTRACTED #community/InventoryService

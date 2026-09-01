@@ -12,7 +12,7 @@ tags:
 # inferType()
 
 ## Connections
-- [[dot-discoverSchema()_1]] - `calls` [EXTRACTED]
+- [[dot-discoverSchema()_2]] - `calls` [EXTRACTED]
 - [[isIsoDateString()]] - `calls` [EXTRACTED]
 - [[rest-api.connector.ts]] - `contains` [EXTRACTED]
 

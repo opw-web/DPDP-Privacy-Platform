@@ -1,19 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/audit/audit-read.service.ts"
 type: "code"
-community: "RequirePermission"
-location: "L30"
+community: "audit-read.service.ts"
+location: "L140"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/audit-readservicets
 ---
 
 # .list()
 
 ## Connections
-- [[DataSourcesController]] - `method` [EXTRACTED]
-- [[Get_12]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-buildWhere()]] - `calls` [EXTRACTED]
+- [[dot-hasFullPersonalDataAccess()]] - `calls` [INFERRED]
+- [[AuditReadService]] - `method` [EXTRACTED]
+- [[ListAuditEventsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/audit-readservicets

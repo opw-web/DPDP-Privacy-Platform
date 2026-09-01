@@ -13,12 +13,12 @@ tags:
 
 ## Connections
 - [[dot-getHealth()]] - `calls` [INFERRED]
-- [[ApiOkResponse_2]] - `references` [EXTRACTED]
+- [[ApiOkResponse_3]] - `references` [EXTRACTED]
 - [[ApiServiceUnavailableResponse]] - `references` [EXTRACTED]
-- [[Get_13]] - `references` [EXTRACTED]
+- [[Get_32]] - `references` [EXTRACTED]
 - [[HealthController]] - `method` [EXTRACTED]
 - [[HealthStatus]] - `references` [EXTRACTED]
-- [[HttpCode_2]] - `references` [EXTRACTED]
+- [[HttpCode_3]] - `references` [EXTRACTED]
 - [[Public()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/HealthService

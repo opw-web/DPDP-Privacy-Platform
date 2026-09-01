@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateRetentionPolicyDto"
+community: "SetMyConsentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateRetentionPolicyDto
+  - community/SetMyConsentDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[CreateRetentionPolicyDto]] - `references` [EXTRACTED]
+- [[SetMyConsentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateRetentionPolicyDto
+#graphify/code #graphify/EXTRACTED #community/SetMyConsentDto

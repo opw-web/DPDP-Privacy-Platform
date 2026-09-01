@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/normalization/normalizers/phone.ts"
 type: "code"
-community: "matching.service.ts"
+community: "normalization.service.ts"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/matchingservicets
+  - community/normalizationservicets
 ---
 
 # normalizePhone()
@@ -17,4 +17,4 @@ tags:
 - [[normalizersphone.ts]] - `contains` [EXTRACTED]
 - [[phone.spec.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/matchingservicets
+#graphify/code #graphify/EXTRACTED #community/normalizationservicets

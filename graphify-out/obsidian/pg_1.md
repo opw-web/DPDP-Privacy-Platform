@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "pg"
-location: "L41"
+community: "dependencies"
+location: "L46"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/pg
+  - community/dependencies
 ---
 
 # pg
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[pg]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/pg
+#graphify/concept #graphify/EXTRACTED #community/dependencies

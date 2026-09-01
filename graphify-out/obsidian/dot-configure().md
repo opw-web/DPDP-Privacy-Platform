@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/tenant/tenant.module.ts"
 type: "code"
-community: "app.module.ts"
+community: "TenantModule"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/appmodulets
+  - community/TenantModule
 ---
 
 # .configure()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[TenantModule]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/appmodulets
+#graphify/code #graphify/EXTRACTED #community/TenantModule

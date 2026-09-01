@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "normalization.module.ts"
+community: "TenantModule"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/normalizationmodulets
+  - community/TenantModule
 ---
 
 # Module
 
 ## Connections
-- [[NormalizationModule]] - `references` [EXTRACTED]
+- [[TenantModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/normalizationmodulets
+#graphify/code #graphify/EXTRACTED #community/TenantModule

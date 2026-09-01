@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "audit-read.service.ts"
+community: "NotificationsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-readservicets
+  - community/NotificationsService
 ---
 
 # Injectable
 
 ## Connections
-- [[AuditReadService]] - `references` [EXTRACTED]
+- [[JwtAnyActorGuard]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-readservicets
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

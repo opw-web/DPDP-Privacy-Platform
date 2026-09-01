@@ -1,11 +1,11 @@
 ---
 type: community
-members: 49
+members: 41
 ---
 
 # devDependencies
 
-**Members:** 49 nodes
+**Members:** 41 nodes
 
 ## Members
 - [[@nestjscli]] - code - dpdp-platform/backend/package.json
@@ -22,8 +22,6 @@ members: 49
 - [[@typesjest_1]] - concept - dpdp-platform/backend/package.json
 - [[@typesjsonwebtoken]] - code - dpdp-platform/backend/package.json
 - [[@typesjsonwebtoken_1]] - concept - dpdp-platform/backend/package.json
-- [[@typesnode_2]] - code - dpdp-platform/backend/package.json
-- [[@typesnode_3]] - concept - dpdp-platform/backend/package.json
 - [[@typespg]] - code - dpdp-platform/backend/package.json
 - [[@typespg_1]] - concept - dpdp-platform/backend/package.json
 - [[@typessupertest]] - code - dpdp-platform/backend/package.json
@@ -41,8 +39,6 @@ members: 49
 - [[eslint-plugin-prettier_1]] - concept - dpdp-platform/backend/package.json
 - [[jest]] - code - dpdp-platform/backend/package.json
 - [[jest_1]] - concept - dpdp-platform/backend/package.json
-- [[prettier]] - code - dpdp-platform/backend/package.json
-- [[prettier_1]] - concept - dpdp-platform/backend/package.json
 - [[source-map-support]] - code - dpdp-platform/backend/package.json
 - [[source-map-support_1]] - concept - dpdp-platform/backend/package.json
 - [[supertest]] - code - dpdp-platform/backend/package.json
@@ -51,10 +47,6 @@ members: 49
 - [[ts-jest_1]] - concept - dpdp-platform/backend/package.json
 - [[ts-loader]] - code - dpdp-platform/backend/package.json
 - [[ts-loader_1]] - concept - dpdp-platform/backend/package.json
-- [[ts-node_2]] - code - dpdp-platform/backend/package.json
-- [[ts-node_3]] - concept - dpdp-platform/backend/package.json
-- [[tsconfig-paths]] - code - dpdp-platform/backend/package.json
-- [[tsconfig-paths_1]] - concept - dpdp-platform/backend/package.json
 - [[typescript_2]] - code - dpdp-platform/backend/package.json
 - [[typescript_3]] - concept - dpdp-platform/backend/package.json
 
@@ -66,7 +58,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 1 edge to [[_COMMUNITY_ts-node]]
+- 1 edge to [[_COMMUNITY_prettier]]
+- 1 edge to [[_COMMUNITY_tsconfig-paths]]
+- 1 edge to [[_COMMUNITY_@typesnode]]
+- 1 edge to [[_COMMUNITY_@typesnodemailer]]
 - 1 edge to [[_COMMUNITY_backendpackage.json]]
 
 ## Top bridge nodes
-- [[devDependencies_1]] - degree 25, connects to 1 community
+- [[devDependencies_1]] - degree 26, connects to 6 communities

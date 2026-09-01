@@ -1,18 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
 type: "code"
-community: "RestApiConnector"
-location: "L156"
+community: "DataSourcesController"
+location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RestApiConnector
+  - community/DataSourcesController
 ---
 
 # .testConnection()
 
 ## Connections
-- [[dot-ping()]] - `calls` [EXTRACTED]
-- [[RestApiConnector]] - `method` [EXTRACTED]
+- [[dot-testConnection()]] - `calls` [INFERRED]
+- [[DataSourcesController]] - `method` [EXTRACTED]
+- [[Param_21]] - `references` [EXTRACTED]
+- [[Post_20]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RestApiConnector
+#graphify/code #graphify/EXTRACTED #community/DataSourcesController

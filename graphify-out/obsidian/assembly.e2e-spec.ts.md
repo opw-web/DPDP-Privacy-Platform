@@ -1,0 +1,35 @@
+---
+source_file: "dpdp-platform/backend/test/assembly.e2e-spec.ts"
+type: "code"
+community: "assembly.service.ts"
+location: "L1"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/assemblyservicets
+---
+
+# assembly.e2e-spec.ts
+
+## Connections
+- [[AgeService]] - `imports` [EXTRACTED]
+- [[AppModule]] - `imports` [EXTRACTED]
+- [[AssemblyService]] - `imports` [EXTRACTED]
+- [[LinkingService]] - `imports` [EXTRACTED]
+- [[PrismaService]] - `imports` [EXTRACTED]
+- [[TenantContext]] - `imports` [EXTRACTED]
+- [[TenantStore]] - `imports` [EXTRACTED]
+- [[age.service.ts]] - `imports_from` [EXTRACTED]
+- [[app.module.ts]] - `imports_from` [EXTRACTED]
+- [[assembly.service.ts]] - `imports_from` [EXTRACTED]
+- [[link()]] - `contains` [EXTRACTED]
+- [[linking.service.ts]] - `imports_from` [EXTRACTED]
+- [[normalized()]] - `contains` [EXTRACTED]
+- [[organization()_3]] - `contains` [EXTRACTED]
+- [[principal()_2]] - `contains` [EXTRACTED]
+- [[prisma.service.ts]] - `imports_from` [EXTRACTED]
+- [[source()]] - `contains` [EXTRACTED]
+- [[tenant()_4]] - `contains` [EXTRACTED]
+- [[tenant-context.ts]] - `imports_from` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/assemblyservicets

@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".me"
+community: "CreateAlgorithmEntryDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/me
+  - community/CreateAlgorithmEntryDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[EmployeeMeResponseDto]] - `references` [EXTRACTED]
-- [[EmployeeMeRoleDto]] - `references` [EXTRACTED]
+- [[CreateAlgorithmEntryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/me
+#graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto

@@ -1,20 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/connector.factory.ts"
+source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
 type: "code"
-community: "connector.factory.ts"
-location: "L40"
+community: ".record"
+location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/connectorfactoryts
+  - community/record
 ---
 
 # .create()
 
 ## Connections
-- [[dot-buildConnector()]] - `calls` [INFERRED]
-- [[Connector]] - `references` [EXTRACTED]
-- [[ConnectorFactory]] - `method` [EXTRACTED]
-- [[RestApiConnector]] - `calls` [EXTRACTED]
+- [[dot-create()_1]] - `calls` [INFERRED]
+- [[Body_2]] - `references` [EXTRACTED]
+- [[CreatePurposeDto]] - `references` [EXTRACTED]
+- [[Post_2]] - `references` [EXTRACTED]
+- [[PurposesController]] - `method` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/connectorfactoryts
+#graphify/code #graphify/EXTRACTED #community/record

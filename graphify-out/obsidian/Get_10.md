@@ -11,6 +11,6 @@ tags:
 # Get
 
 ## Connections
-- [[dot-list()_10]] - `references` [EXTRACTED]
+- [[dot-me()_2]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

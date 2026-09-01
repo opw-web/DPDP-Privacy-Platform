@@ -16,6 +16,7 @@ import { ErasureTaskService } from "./erasure-task.service";
 import { LegalHoldService } from "./legal-hold.service";
 import { RetentionScanService } from "./retention-scan.service";
 import { PreErasureNoticeService } from "./pre-erasure-notice.service";
+import { PurposeServedService } from "./purpose-served.service";
 
 /**
  * Wires the retention feature together: the HTTP surface
@@ -91,10 +92,11 @@ import { PreErasureNoticeService } from "./pre-erasure-notice.service";
     LegalHoldService,
     RetentionScanService,
     PreErasureNoticeService,
+    PurposeServedService,
     RetentionScanQueueService,
     RetentionScanProcessor,
     PreErasureNoticeProcessor,
   ],
-  exports: [ErasureTaskService],
+  exports: [ErasureTaskService, PurposeServedService],
 })
 export class RetentionModule {}

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/refresh-rotation.util.ts"
 type: "code"
-community: "tenant-context.ts"
+community: "employee-auth.service.ts"
 location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tenant-contextts
+  - community/employee-authservicets
 ---
 
 # rotateRefreshToken()
@@ -19,4 +19,4 @@ tags:
 - [[principal-auth.service.ts]] - `imports` [EXTRACTED]
 - [[refresh-rotation.util.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tenant-contextts
+#graphify/code #graphify/EXTRACTED #community/employee-authservicets

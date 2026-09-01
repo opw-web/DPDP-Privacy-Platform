@@ -3,6 +3,7 @@ import { BullModule } from "@nestjs/bullmq";
 import { AuditModule } from "../../common/audit/audit.module";
 import { ComplianceModule } from "../compliance/compliance.module";
 import { NotificationsModule } from "../notifications/notifications.module";
+import { QueuesModule } from "../../queues/queues.module";
 import { SdfController } from "./sdf.controller";
 import { SdfAssessmentService } from "./sdf-assessment.service";
 import { AlgorithmRegisterService } from "./algorithm-register.service";
@@ -36,12 +37,20 @@ import { SdfCycleScanProcessor } from "../../queues/sdf-cycle-scan.processor";
  *
  * Not registered in `app.module.ts` by a prior task -- this task adds it
  * itself per its own verification instructions, and leaves it in place.
+ *
+ * `QueuesModule` is imported (health-degraded boot-time regression fix,
+ * not this task originally) so `SdfCycleScanQueueService` can inject
+ * `BootRegistrationRegistry` -- the shared boot-safety registry every
+ * queue module's schedule-registering service now registers itself with,
+ * instead of each awaiting its own registration in its own
+ * `onModuleInit` (see `BootRegistrationRegistry`'s doc comment).
  */
 @Module({
   imports: [
     AuditModule,
     ComplianceModule,
     NotificationsModule,
+    QueuesModule,
     BullModule.registerQueue({
       name: SDF_CYCLE_SCAN_QUEUE_NAME,
       defaultJobOptions: {

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ListAuditEventsDto"
+community: "CreateRetentionPolicyDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ListAuditEventsDto
+  - community/CreateRetentionPolicyDto
 ---
 
 # Min
 
 ## Connections
-- [[ListAuditEventsDto]] - `references` [EXTRACTED]
+- [[CreateRetentionPolicyDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ListAuditEventsDto
+#graphify/code #graphify/EXTRACTED #community/CreateRetentionPolicyDto

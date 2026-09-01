@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateRetentionPolicyDto"
+community: "RecipientsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateRetentionPolicyDto
+  - community/RecipientsService
 ---
 
 # Patch
 
 ## Connections
-- [[dot-update()_16]] - `references` [EXTRACTED]
+- [[dot-update()_17]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateRetentionPolicyDto
+#graphify/code #graphify/EXTRACTED #community/RecipientsService

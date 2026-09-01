@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateTransferDto"
+community: "RequirePermission"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTransferDto
+  - community/RequirePermission
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_11]] - `references` [EXTRACTED]
-- [[dot-update()_12]] - `references` [EXTRACTED]
+- [[dot-preview()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTransferDto
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

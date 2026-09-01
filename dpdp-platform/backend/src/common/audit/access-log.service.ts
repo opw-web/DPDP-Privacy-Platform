@@ -53,12 +53,34 @@ export class AccessLogService {
     tx: ScopedTransactionClient,
     input: RecordPersonalDataViewedInput,
   ): Promise<void> {
-    await this.auditService.record(tx, {
+    const event = await this.auditService.record(tx, {
       action: "PERSONAL_DATA_VIEWED",
       resourceType: input.resourceType,
       resourceId: input.resourceId,
       subjectPrincipalId: input.subjectPrincipalId,
       metadata: input.context ?? {},
+    });
+
+    // Keep the immutable chain and the purgeable access-log read model in
+    // the caller's transaction. A rollback therefore removes both; a
+    // committed PERSONAL_DATA_VIEWED event can never exist without its
+    // retention-governed projection.
+    await tx.accessLogEntry.create({
+      data: {
+        organizationId: event.organizationId,
+        auditEventId: event.id,
+        sequence: event.sequence,
+        actorType: event.actorType,
+        actorId: event.actorId,
+        actorLabel: event.actorLabel,
+        subjectPrincipalId: event.subjectPrincipalId,
+        resourceType: event.resourceType,
+        resourceId: event.resourceId,
+        metadata: event.metadata as never,
+        ipAddress: event.ipAddress,
+        userAgent: event.userAgent,
+        occurredAt: event.createdAt,
+      },
     });
   }
 }

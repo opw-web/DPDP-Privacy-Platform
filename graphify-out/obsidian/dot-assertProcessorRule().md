@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/recipients.service.ts"
 type: "code"
-community: "recipients.service.ts"
+community: "RecipientsService"
 location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/RecipientsService
 ---
 
 # .assertProcessorRule()
 
 ## Connections
-- [[dot-create()_14]] - `calls` [EXTRACTED]
-- [[dot-update()_15]] - `calls` [EXTRACTED]
+- [[dot-create()_21]] - `calls` [EXTRACTED]
+- [[dot-update()_18]] - `calls` [EXTRACTED]
 - [[RecipientsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/RecipientsService

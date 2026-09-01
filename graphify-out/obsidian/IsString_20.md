@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EmployeeAuthController"
+community: "ListRequestsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeeAuthController
+  - community/ListRequestsDto
 ---
 
 # IsString
 
 ## Connections
-- [[EmployeeLoginDto]] - `references` [EXTRACTED]
+- [[ListRequestsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController
+#graphify/code #graphify/EXTRACTED #community/ListRequestsDto

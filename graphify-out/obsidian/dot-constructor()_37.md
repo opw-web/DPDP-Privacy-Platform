@@ -1,17 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/common/crypto/crypto.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync.service.ts"
 type: "code"
-community: "CryptoService"
-location: "L38"
+community: "sync.service.ts"
+location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CryptoService
+  - community/syncservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[MalformedCiphertextError]] - `method` [EXTRACTED]
+- [[DataSourcesService]] - `references` [EXTRACTED]
+- [[PrismaService]] - `references` [EXTRACTED]
+- [[SyncQueueService]] - `references` [EXTRACTED]
+- [[SyncService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CryptoService
+#graphify/code #graphify/EXTRACTED #community/syncservicets

@@ -11,6 +11,6 @@ tags:
 # Module
 
 ## Connections
-- [[AuditReadModule]] - `references` [EXTRACTED]
+- [[ConsentsModule]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/appmodulets

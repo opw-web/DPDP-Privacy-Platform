@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/connectors/connector.factory.spec.ts"
 type: "code"
-community: "data-sources.e2e-spec.ts"
+community: "connector.factory.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcese2e-spects
+  - community/connectorfactoryts
 ---
 
 # connector.factory.spec.ts
@@ -20,4 +20,4 @@ tags:
 - [[mock-http-server.ts]] - `imports_from` [EXTRACTED]
 - [[rest-api.connector.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcese2e-spects
+#graphify/code #graphify/EXTRACTED #community/connectorfactoryts

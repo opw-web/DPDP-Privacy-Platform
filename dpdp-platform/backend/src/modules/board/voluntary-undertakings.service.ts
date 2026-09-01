@@ -1,5 +1,6 @@
 import { Injectable, NotFoundException } from "@nestjs/common";
 import { Prisma } from "@prisma/client";
+import { AuditService } from "../../common/audit/audit.service";
 import { PrismaService } from "../../common/prisma/prisma.service";
 import { CreateVoluntaryUndertakingDto } from "./dto/create-voluntary-undertaking.dto";
 import { UpdateVoluntaryUndertakingDto } from "./dto/update-voluntary-undertaking.dto";
@@ -27,16 +28,16 @@ export type PublicVoluntaryUndertaking = Prisma.VoluntaryUndertakingGetPayload<{
  * is a dead deliverable; see task-13-report.md "Concerns" for this
  * choice.
  *
- * No dedicated `AuditAction` exists in the catalogue for
- * `VoluntaryUndertaking` (`src/common/audit/audit-actions.ts` has none)
- * -- per the task brief ("if one is absent, do not add it -- report it")
- * this service does not audit-log its writes; same precedent
- * `SdfAssessmentService.create()` already set for the identical
- * situation. See task-13-report.md "Concerns".
+ * Create/update actions are recorded through `AuditService` in the same
+ * transaction as each row mutation, preserving Board accountability even if
+ * an audit append fails.
  */
 @Injectable()
 export class VoluntaryUndertakingsService {
-  constructor(private readonly prisma: PrismaService) {}
+  constructor(
+    private readonly prisma: PrismaService,
+    private readonly auditService: AuditService,
+  ) {}
 
   async list(): Promise<PublicVoluntaryUndertaking[]> {
     return this.prisma.scoped.voluntaryUndertaking.findMany({
@@ -57,16 +58,28 @@ export class VoluntaryUndertakingsService {
   }
 
   async create(dto: CreateVoluntaryUndertakingDto): Promise<PublicVoluntaryUndertaking> {
-    return this.prisma.scoped.voluntaryUndertaking.create({
-      data: {
-        reference: dto.reference,
-        summary: dto.summary,
-        acceptedAt: new Date(dto.acceptedAt),
-        commitments: (dto.commitments ?? []) as unknown as Prisma.InputJsonValue,
-        // organizationId deliberately omitted -- the tenant-scoping
-        // extension supplies it at runtime.
-      } as never,
-      select: VOLUNTARY_UNDERTAKING_PUBLIC_SELECT,
+    return this.prisma.scoped.$transaction(async (tx) => {
+      const created = await tx.voluntaryUndertaking.create({
+        data: {
+          reference: dto.reference,
+          summary: dto.summary,
+          acceptedAt: new Date(dto.acceptedAt),
+          commitments: (dto.commitments ?? []) as unknown as Prisma.InputJsonValue,
+          // organizationId deliberately omitted -- the tenant-scoping
+          // extension supplies it at runtime.
+        } as never,
+        select: VOLUNTARY_UNDERTAKING_PUBLIC_SELECT,
+      });
+      await this.auditService.record(tx, {
+        action: "VOLUNTARY_UNDERTAKING_CREATED",
+        resourceType: "VoluntaryUndertaking",
+        resourceId: created.id,
+        metadata: {
+          reference: created.reference,
+          acceptedAt: created.acceptedAt,
+        },
+      });
+      return created;
     });
   }
 
@@ -75,17 +88,29 @@ export class VoluntaryUndertakingsService {
     if (!existing) {
       throw new NotFoundException(`Voluntary undertaking "${id}" not found.`);
     }
-    return this.prisma.scoped.voluntaryUndertaking.update({
-      where: { id },
-      data: {
-        summary: dto.summary ?? existing.summary,
-        commitments:
-          dto.commitments !== undefined
-            ? (dto.commitments as unknown as Prisma.InputJsonValue)
-            : (existing.commitments as Prisma.InputJsonValue),
-        closedAt: dto.closedAt ? new Date(dto.closedAt) : existing.closedAt,
-      },
-      select: VOLUNTARY_UNDERTAKING_PUBLIC_SELECT,
+    return this.prisma.scoped.$transaction(async (tx) => {
+      const updated = await tx.voluntaryUndertaking.update({
+        where: { id },
+        data: {
+          summary: dto.summary ?? existing.summary,
+          commitments:
+            dto.commitments !== undefined
+              ? (dto.commitments as unknown as Prisma.InputJsonValue)
+              : (existing.commitments as Prisma.InputJsonValue),
+          closedAt: dto.closedAt ? new Date(dto.closedAt) : existing.closedAt,
+        },
+        select: VOLUNTARY_UNDERTAKING_PUBLIC_SELECT,
+      });
+      await this.auditService.record(tx, {
+        action: "VOLUNTARY_UNDERTAKING_UPDATED",
+        resourceType: "VoluntaryUndertaking",
+        resourceId: id,
+        metadata: {
+          reference: updated.reference,
+          closedAt: updated.closedAt,
+        },
+      });
+      return updated;
     });
   }
 }

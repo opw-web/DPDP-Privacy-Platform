@@ -12,8 +12,8 @@ tags:
 # .assertRecipientExists()
 
 ## Connections
-- [[dot-create()_12]] - `calls` [EXTRACTED]
-- [[dot-update()_13]] - `calls` [EXTRACTED]
+- [[dot-create()_32]] - `calls` [EXTRACTED]
+- [[dot-update()_24]] - `calls` [EXTRACTED]
 - [[TransfersService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CreateTransferDto

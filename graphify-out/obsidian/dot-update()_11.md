@@ -1,26 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
+source_file: "dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts"
 type: "code"
-community: "DataSourcesService"
-location: "L318"
+community: "CreateVoluntaryUndertakingDto"
+location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesService
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # .update()
 
 ## Connections
-- [[dot-assertPubliclyAvailableJustified()]] - `calls` [EXTRACTED]
-- [[dot-encrypt()]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[dot-scheduleSync()]] - `calls` [EXTRACTED]
-- [[dot-testConnection()_3]] - `calls` [EXTRACTED]
-- [[dot-update()_10]] - `calls` [INFERRED]
-- [[DataSourcesService]] - `method` [EXTRACTED]
-- [[UpdateDataSourceDto]] - `references` [EXTRACTED]
-- [[duplicateNameMessage()]] - `calls` [EXTRACTED]
-- [[isUniqueConstraintViolation()_2]] - `calls` [EXTRACTED]
+- [[dot-update()_12]] - `calls` [INFERRED]
+- [[Body_12]] - `references` [EXTRACTED]
+- [[Param_15]] - `references` [EXTRACTED]
+- [[Patch_6]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[UpdateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
+- [[VoluntaryUndertakingsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesService
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

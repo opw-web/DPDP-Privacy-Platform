@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "employees.controller.ts"
+community: "SdfController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeescontrollerts
+  - community/SdfController
 ---
 
 # Get
 
 ## Connections
-- [[dot-get()_6]] - `references` [EXTRACTED]
-- [[dot-list()_8]] - `references` [EXTRACTED]
+- [[dot-getGaps()_1]] - `references` [EXTRACTED]
+- [[dot-listAlgorithms()]] - `references` [EXTRACTED]
+- [[dot-listAssessments()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeescontrollerts
+#graphify/code #graphify/EXTRACTED #community/SdfController

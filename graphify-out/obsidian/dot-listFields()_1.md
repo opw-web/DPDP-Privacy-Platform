@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
 type: "code"
-community: "RequirePermission"
+community: "DataSourcesController"
 location: "L635"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/DataSourcesController
 ---
 
 # .listFields()
@@ -15,4 +15,4 @@ tags:
 - [[dot-listFields()]] - `calls` [INFERRED]
 - [[DataSourcesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/DataSourcesController

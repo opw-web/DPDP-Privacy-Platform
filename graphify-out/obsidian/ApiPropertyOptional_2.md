@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "purposes-response.dto.ts"
+community: "requests.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposes-responsedtots
+  - community/requestscontrollerts
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[DataSourcePurposeResponseDto]] - `references` [EXTRACTED]
+- [[AssignRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposes-responsedtots
+#graphify/code #graphify/EXTRACTED #community/requestscontrollerts

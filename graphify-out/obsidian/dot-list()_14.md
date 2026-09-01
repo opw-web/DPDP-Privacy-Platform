@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/sharing.service.ts"
+source_file: "dpdp-platform/backend/src/modules/requests/requests.service.ts"
 type: "code"
-community: "CreateSharingActivityDto"
-location: "L59"
+community: "ListRequestsDto"
+location: "L130"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSharingActivityDto
+  - community/ListRequestsDto
 ---
 
 # .list()
 
 ## Connections
-- [[SharingService]] - `method` [EXTRACTED]
+- [[ListRequestsDto]] - `references` [EXTRACTED]
+- [[RequestsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto
+#graphify/code #graphify/EXTRACTED #community/ListRequestsDto

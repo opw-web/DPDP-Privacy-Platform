@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principal-portal/me.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/inventory/inventory.controller.ts"
 type: "code"
-community: "Public"
-location: "L41"
+community: "InventoryService"
+location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/InventoryService
 ---
 
 # .constructor()
 
 ## Connections
-- [[MeController]] - `method` [EXTRACTED]
-- [[MeService]] - `references` [EXTRACTED]
+- [[InventoryController]] - `method` [EXTRACTED]
+- [[InventoryService]] - `references` [EXTRACTED]
+- [[RopaExportService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/InventoryService

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "purposes.controller.ts"
+community: "UpdateAlgorithmEntryDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposescontrollerts
+  - community/UpdateAlgorithmEntryDto
 ---
 
 # IsBoolean
 
 ## Connections
-- [[UpdatePurposeDto]] - `references` [EXTRACTED]
+- [[UpdateAlgorithmEntryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposescontrollerts
+#graphify/code #graphify/EXTRACTED #community/UpdateAlgorithmEntryDto

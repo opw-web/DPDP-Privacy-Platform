@@ -121,6 +121,15 @@ describe("SDF pack (e2e)", () => {
         .send({ kind: "AUDIT" });
       expect(createRes.status).toBe(201);
       const assessmentId: string = createRes.body.id;
+      const createAudit = await prisma.auditEvent.findFirst({
+        where: {
+          organizationId: org.organizationId,
+          resourceType: "SdfAssessment",
+          resourceId: assessmentId,
+          action: "SDF_ASSESSMENT_CREATED",
+        },
+      });
+      expect(createAudit).not.toBeNull();
 
       // The due date must be the resolved rule's own 12 MONTHS from
       // cycleStartedAt (sdfNotifiedAt), computed via addByDeadlineUnit --
@@ -337,6 +346,16 @@ describe("SDF pack (e2e)", () => {
         where: { organizationId: org.organizationId },
       });
       expect(rows.map((r) => r.kind).sort()).toEqual(["AUDIT", "DPIA"]);
+      const cycleAudits = await prisma.auditEvent.findMany({
+        where: {
+          organizationId: org.organizationId,
+          action: "SDF_ASSESSMENT_CREATED",
+          metadata: { path: ["source"], equals: "sdf-cycle-scan" },
+        },
+      });
+      expect(cycleAudits).toHaveLength(2);
+      expect(cycleAudits.every((audit) => audit.actorType === "SYSTEM")).toBe(true);
+      expect(cycleAudits.every((audit) => audit.actorLabel === TEST_ACTOR_LABEL)).toBe(true);
 
       // Idempotent: running again for the same cycle opens nothing new.
       const secondSummary = await TenantContext.run(systemActorStore(org.organizationId), () =>

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "source-purposes.service.ts"
+community: "campaigns.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/source-purposesservicets
+  - community/campaignsservicets
 ---
 
 # ArrayUnique
 
 ## Connections
-- [[AttachPurposesDto]] - `references` [EXTRACTED]
+- [[CreateCampaignDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/source-purposesservicets
+#graphify/code #graphify/EXTRACTED #community/campaignsservicets

@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/employee-auth.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/principal-auth.e2e-spec.ts"
 type: "code"
-community: "seed.ts"
-location: "L161"
+community: "principal-auth.e2e-spec.ts"
+location: "L171"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/seedts
+  - community/principal-authe2e-spects
 ---
 
 # decodeJwtPayload()
 
 ## Connections
-- [[employee-auth.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[principal-auth.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/seedts
+#graphify/code #graphify/EXTRACTED #community/principal-authe2e-spects

@@ -1,21 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principals/principals.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/security-measures.service.ts"
 type: "code"
-community: "principals.service.ts"
-location: "L75"
+community: "security-measures.service.ts"
+location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principalsservicets
+  - community/security-measuresservicets
 ---
 
 # .list()
 
 ## Connections
-- [[dot-maskIfNeeded()]] - `calls` [INFERRED]
-- [[PrincipalsService]] - `method` [EXTRACTED]
-- [[buildPrincipalSearchQuery()]] - `calls` [EXTRACTED]
-- [[pickDisplayName()]] - `calls` [EXTRACTED]
-- [[resolveProvenance()]] - `calls` [EXTRACTED]
+- [[SecurityMeasuresService]] - `method` [EXTRACTED]
+- [[groupByRuleReference()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principalsservicets
+#graphify/code #graphify/EXTRACTED #community/security-measuresservicets

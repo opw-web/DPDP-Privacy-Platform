@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "configuration.ts"
+community: ".record"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/configurationts
+  - community/record
 ---
 
 # IsString
 
 ## Connections
-- [[EnvironmentVariables]] - `references` [EXTRACTED]
+- [[UpdatePurposeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/configurationts
+#graphify/code #graphify/EXTRACTED #community/record

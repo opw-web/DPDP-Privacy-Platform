@@ -1,20 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/auth/principal-auth.service.ts"
+source_file: "dpdp-platform/backend/src/common/audit/access-log.service.ts"
 type: "code"
-community: "PrismaService"
-location: "L74"
+community: "access-report.service.ts"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/access-reportservicets
 ---
 
 # .constructor()
 
 ## Connections
+- [[AccessLogService]] - `method` [EXTRACTED]
 - [[AuditService]] - `references` [EXTRACTED]
-- [[PrincipalAuthService]] - `method` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
-- [[TokenService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/access-reportservicets

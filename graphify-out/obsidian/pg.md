@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "code"
-community: "pg"
-location: "L41"
+community: "dependencies"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pg
+  - community/dependencies
 ---
 
 # pg
 
 ## Connections
-- [[dependencies_2]] - `contains` [EXTRACTED]
+- [[dependencies_1]] - `contains` [EXTRACTED]
 - [[pg_1]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pg
+#graphify/code #graphify/EXTRACTED #community/dependencies

@@ -1,4 +1,8 @@
-import { BadRequestException, Injectable, NotFoundException } from "@nestjs/common";
+import {
+  BadRequestException,
+  Injectable,
+  NotFoundException,
+} from "@nestjs/common";
 import { Prisma } from "@prisma/client";
 import type { ConsentChannel, ConsentStatus } from "@prisma/client";
 import { PrismaService } from "../../common/prisma/prisma.service";
@@ -38,7 +42,27 @@ export type PublicConsentRecord = Prisma.ConsentRecordGetPayload<{
 
 /** `listForPrincipal`'s row shape: the record plus enough of its purpose to render a toggle (LB-06: never for a LEGITIMATE_USE purpose). */
 export type ConsentRecordWithPurpose = PublicConsentRecord & {
+  /** PrivacyNotice shell id used by the consent action; the record stores
+   * the immutable NoticeVersion id separately for evidence. */
+  noticeId: string | null;
+  /** Most recent consent-request delivery for an UNKNOWN/legacy record.
+   * This is presentation evidence, not consent evidence until she acts. */
+  presentedNoticeId: string | null;
+  presentedNoticeVersionId: string | null;
+  presentedCampaignId: string | null;
   purpose: { id: string; code: string; name: string };
+  events: Array<{
+    id: string;
+    fromStatus: ConsentStatus | null;
+    toStatus: ConsentStatus;
+    channel: ConsentChannel;
+    noticeVersionId: string | null;
+    noticeContentHash: string | null;
+    evidence: Prisma.JsonValue;
+    actorType: string;
+    actorLabel: string;
+    createdAt: Date;
+  }>;
 };
 
 export interface ConsentStatsResponse {
@@ -71,6 +95,7 @@ export interface ApplyStatusChangeInput {
   targetStatus: WritableConsentStatus;
   channel: ConsentChannel;
   noticeId?: string;
+  presentedNoticeVersionId?: string;
   givenByGuardianId?: string;
   ip?: string;
   userAgent?: string;
@@ -115,14 +140,120 @@ export class ConsentsService {
       return [];
     }
     const purposeIds = [...new Set(records.map((r) => r.purposeId))];
-    const purposes = await this.prisma.scoped.processingPurpose.findMany({
-      where: { id: { in: purposeIds }, lawfulBasis: "CONSENT" },
-      select: { id: true, code: true, name: true },
-    });
+    const noticeVersionIds = [
+      ...new Set(
+        records
+          .map((record) => record.noticeVersionId)
+          .filter((id): id is string => Boolean(id)),
+      ),
+    ];
+    const [purposes, events, noticeVersions, presentedDeliveries] = await Promise.all([
+      this.prisma.scoped.processingPurpose.findMany({
+        where: { id: { in: purposeIds }, lawfulBasis: "CONSENT" },
+        select: { id: true, code: true, name: true },
+      }),
+      this.prisma.scoped.consentEvent.findMany({
+        where: { consentRecordId: { in: records.map((record) => record.id) } },
+        orderBy: [{ createdAt: "asc" }, { id: "asc" }],
+        select: {
+          id: true,
+          consentRecordId: true,
+          fromStatus: true,
+          toStatus: true,
+          channel: true,
+          noticeVersionId: true,
+          noticeContentHash: true,
+          evidence: true,
+          actorType: true,
+          actorLabel: true,
+          createdAt: true,
+        },
+      }),
+      noticeVersionIds.length
+        ? this.prisma.scoped.noticeVersion.findMany({
+            where: { id: { in: noticeVersionIds }, publishedAt: { not: null } },
+            select: { id: true, noticeId: true },
+          })
+        : Promise.resolve([] as Array<{ id: string; noticeId: string }>),
+      this.prisma.scoped.campaignRecipient.findMany({
+        where: {
+          dataPrincipalId,
+          status: "DELIVERED",
+          campaign: {
+            category: "CONSENT_REQUEST",
+            purposeId: { in: purposeIds },
+            noticeVersionId: { not: null },
+          },
+        },
+        orderBy: [{ sentAt: "desc" }, { id: "desc" }],
+        select: {
+          campaignId: true,
+          campaign: {
+            select: {
+              purposeId: true,
+              noticeVersionId: true,
+            },
+          },
+        },
+      }),
+    ]);
     const purposeById = new Map(purposes.map((p) => [p.id, p]));
+    const noticeIdByVersion = new Map(
+      noticeVersions.map((version) => [version.id, version.noticeId]),
+    );
+    const presentedVersionIds = [
+      ...new Set(
+        presentedDeliveries
+          .map((delivery) => delivery.campaign.noticeVersionId)
+          .filter((id): id is string => Boolean(id)),
+      ),
+    ];
+    const presentedVersions = presentedVersionIds.length
+      ? await this.prisma.scoped.noticeVersion.findMany({
+          where: { id: { in: presentedVersionIds }, publishedAt: { not: null } },
+          select: { id: true, noticeId: true },
+        })
+      : [];
+    const presentedNoticeIdByVersion = new Map(
+      presentedVersions.map((version) => [version.id, version.noticeId]),
+    );
+    const presentationByPurpose = new Map<
+      string,
+      { campaignId: string; noticeVersionId: string; noticeId: string }
+    >();
+    for (const delivery of presentedDeliveries) {
+      const { purposeId, noticeVersionId } = delivery.campaign;
+      if (!purposeId || !noticeVersionId || presentationByPurpose.has(purposeId)) continue;
+      const presentedNoticeId = presentedNoticeIdByVersion.get(noticeVersionId);
+      if (!presentedNoticeId) continue;
+      presentationByPurpose.set(purposeId, {
+        campaignId: delivery.campaignId,
+        noticeVersionId,
+        noticeId: presentedNoticeId,
+      });
+    }
+    const eventsByRecord = new Map<string, typeof events>();
+    for (const event of events) {
+      const history = eventsByRecord.get(event.consentRecordId) ?? [];
+      history.push(event);
+      eventsByRecord.set(event.consentRecordId, history);
+    }
     return records
       .filter((r) => purposeById.has(r.purposeId))
-      .map((r) => ({ ...r, purpose: purposeById.get(r.purposeId)! }));
+      .map((r) => {
+        const presentation = presentationByPurpose.get(r.purposeId);
+        return {
+          ...r,
+          noticeId: r.noticeVersionId
+            ? (noticeIdByVersion.get(r.noticeVersionId) ?? null)
+            : null,
+          presentedNoticeId: presentation?.noticeId ?? null,
+          presentedNoticeVersionId: presentation?.noticeVersionId ?? null,
+          presentedCampaignId: presentation?.campaignId ?? null,
+          purpose: purposeById.get(r.purposeId)!,
+          events: eventsByRecord.get(r.id) ?? [],
+        };
+      });
   }
 
   /**
@@ -136,7 +267,9 @@ export class ConsentsService {
       select: { id: true, lawfulBasis: true },
     });
     if (!purpose) {
-      throw new NotFoundException(`Processing purpose "${purposeId}" not found.`);
+      throw new NotFoundException(
+        `Processing purpose "${purposeId}" not found.`,
+      );
     }
     if (purpose.lawfulBasis !== "CONSENT") {
       throw new BadRequestException(
@@ -220,12 +353,35 @@ export class ConsentsService {
         : input.status === "DENIED"
           ? "CONSENT_DENIED"
           : "CONSENT_WITHDRAWN";
+    let presentedNoticeVersionId: string | undefined;
+    if (input.status !== "WITHDRAWN" && input.evidence?.campaignId) {
+      const delivery = await this.prisma.scoped.campaignRecipient.findFirst({
+        where: {
+          campaignId: input.evidence.campaignId,
+          dataPrincipalId,
+          status: "DELIVERED",
+          campaign: {
+            category: "CONSENT_REQUEST",
+            purposeId,
+            noticeVersionId: { not: null },
+          },
+        },
+        select: { campaign: { select: { noticeVersionId: true } } },
+      });
+      presentedNoticeVersionId = delivery?.campaign.noticeVersionId ?? undefined;
+      if (!presentedNoticeVersionId) {
+        throw new BadRequestException(
+          "The consent-request campaign is not evidenced as delivered to this principal for this purpose.",
+        );
+      }
+    }
     return this.applyStatusChange({
       dataPrincipalId,
       purposeId,
       targetStatus: input.status,
       channel: "PORTAL",
       noticeId: input.noticeId,
+      presentedNoticeVersionId,
       givenByGuardianId: input.givenByGuardianId,
       ip: meta.ip,
       userAgent: meta.userAgent,
@@ -278,7 +434,9 @@ export class ConsentsService {
       select: { lawfulBasis: true },
     });
     if (!purpose) {
-      throw new NotFoundException(`Processing purpose "${purposeId}" not found.`);
+      throw new NotFoundException(
+        `Processing purpose "${purposeId}" not found.`,
+      );
     }
     if (purpose.lawfulBasis !== "CONSENT") {
       throw new BadRequestException(
@@ -319,6 +477,7 @@ export class ConsentsService {
       targetStatus,
       channel,
       noticeId,
+      presentedNoticeVersionId,
       givenByGuardianId,
       ip,
       userAgent,
@@ -364,7 +523,11 @@ export class ConsentsService {
         );
       }
 
-      const existing = await this.getOrCreateRecord(tx, dataPrincipalId, purposeId);
+      const existing = await this.getOrCreateRecord(
+        tx,
+        dataPrincipalId,
+        purposeId,
+      );
 
       // CN-09: resolve the notice version + content hash to freeze onto
       // this write. Required for GRANTED/DENIED (NT-01: she must have
@@ -374,8 +537,25 @@ export class ConsentsService {
       // taking back what she already saw and agreed to.
       let noticeVersionId: string | null = existing.noticeVersionId;
       let noticeContentHash: string | null = existing.noticeContentHash;
-      if (noticeId) {
-        const published = await this.noticesService.getPublishedVersion(noticeId);
+      if (presentedNoticeVersionId) {
+        const presented = await tx.noticeVersion.findFirst({
+          where: {
+            id: presentedNoticeVersionId,
+            publishedAt: { not: null },
+            ...(noticeId ? { noticeId } : {}),
+          },
+          select: { id: true, contentHash: true },
+        });
+        if (!presented) {
+          throw new BadRequestException(
+            "The delivered consent request does not match the submitted published notice.",
+          );
+        }
+        noticeVersionId = presented.id;
+        noticeContentHash = presented.contentHash;
+      } else if (noticeId) {
+        const published =
+          await this.noticesService.getPublishedVersion(noticeId);
         if (!published) {
           throw new BadRequestException(
             `Notice "${noticeId}" has no currently published version -- ` +

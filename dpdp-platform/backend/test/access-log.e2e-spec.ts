@@ -86,6 +86,13 @@ describe("AccessLogService (e2e)", () => {
     expect(event.subjectPrincipalId).toBe(subjectPrincipalId);
     expect(event.resourceType).toBe("DataPrincipal");
     expect(event.resourceId).toBe(subjectPrincipalId);
+
+    const projections = await prisma.accessLogEntry.findMany({
+      where: { organizationId },
+    });
+    expect(projections).toHaveLength(1);
+    expect(projections[0]?.auditEventId).toBe(event.id);
+    expect(projections[0]?.subjectPrincipalId).toBe(subjectPrincipalId);
   });
 
   it("viewing three different principals writes three distinct events, one per subject -- never one per field", async () => {
@@ -145,6 +152,9 @@ describe("AccessLogService (e2e)", () => {
       where: { organizationId, action: "PERSONAL_DATA_VIEWED" },
     });
     expect(events).toHaveLength(0);
+    expect(
+      await prisma.accessLogEntry.count({ where: { organizationId } }),
+    ).toBe(0);
   });
 
   it("two organizations' access logs never cross", async () => {

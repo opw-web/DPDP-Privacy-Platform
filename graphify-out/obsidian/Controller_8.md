@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "employees.controller.ts"
+community: "sync.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeescontrollerts
+  - community/syncservicets
 ---
 
 # Controller
 
 ## Connections
-- [[EmployeesController]] - `references` [EXTRACTED]
+- [[SyncController]] - `references` [EXTRACTED]
+- [[SyncJobsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeescontrollerts
+#graphify/code #graphify/EXTRACTED #community/syncservicets

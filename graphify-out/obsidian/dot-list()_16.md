@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/roles.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts"
 type: "code"
-community: "UpdateRolePermissionsDto"
-location: "L14"
+community: "TemplatesService"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateRolePermissionsDto
+  - community/TemplatesService
 ---
 
 # .list()
 
 ## Connections
-- [[Get_14]] - `references` [EXTRACTED]
+- [[Get_16]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[RolesController]] - `method` [EXTRACTED]
+- [[TemplatesController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

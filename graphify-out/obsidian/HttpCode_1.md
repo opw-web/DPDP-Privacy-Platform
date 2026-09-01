@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RequirePermission"
+community: "sync.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/syncservicets
 ---
 
 # HttpCode
 
 ## Connections
-- [[dot-remove()]] - `references` [EXTRACTED]
+- [[dot-trigger()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/syncservicets

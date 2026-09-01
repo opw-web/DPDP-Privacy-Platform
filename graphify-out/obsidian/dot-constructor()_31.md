@@ -1,18 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sync/sync.controller.ts"
+source_file: "dpdp-platform/backend/src/queues/schedule-reconciliation.service.ts"
 type: "code"
-community: "sync.service.ts"
-location: "L34"
+community: "SyncQueueService"
+location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/syncservicets
+  - community/SyncQueueService
 ---
 
 # .constructor()
 
 ## Connections
-- [[SyncJobsController]] - `method` [EXTRACTED]
-- [[SyncService]] - `references` [EXTRACTED]
+- [[dot-reconcileAtBoot()]] - `calls` [EXTRACTED]
+- [[dot-register()]] - `calls` [INFERRED]
+- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
+- [[PrismaService]] - `references` [EXTRACTED]
+- [[ScheduleReconciliationService]] - `method` [EXTRACTED]
+- [[SyncQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/syncservicets
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

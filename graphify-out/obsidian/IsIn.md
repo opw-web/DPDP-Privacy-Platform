@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "configuration.ts"
+community: "UpdateAlgorithmEntryDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/configurationts
+  - community/UpdateAlgorithmEntryDto
 ---
 
 # IsIn
 
 ## Connections
-- [[EnvironmentVariables]] - `references` [EXTRACTED]
+- [[UpdateAlgorithmEntryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/configurationts
+#graphify/code #graphify/EXTRACTED #community/UpdateAlgorithmEntryDto

@@ -130,6 +130,8 @@ interface MockRoutes {
   summary?: InventorySummary;
   gaps?: InventoryGap[];
   permissions?: string[];
+  requestStats?: { overdueCount: number };
+  breaches?: Array<{ obligations?: Array<{ status: string }> }>;
   orgTimezone?: string;
   onRopaCsv?: () => Response;
   onAccessLogCsv?: () => Response;
@@ -173,6 +175,12 @@ async function mockRoutesAndLogin(routes: MockRoutes) {
     }
     if (url.endsWith("/inventory/gaps")) {
       return Promise.resolve(jsonResponse(routes.gaps ?? POPULATED_GAPS));
+    }
+    if (url.endsWith("/requests/stats")) {
+      return Promise.resolve(jsonResponse(routes.requestStats ?? { overdueCount: 0 }));
+    }
+    if (url.endsWith("/breaches")) {
+      return Promise.resolve(jsonResponse(routes.breaches ?? []));
     }
     if (url.endsWith("/inventory/ropa.csv")) {
       return Promise.resolve(
@@ -412,6 +420,28 @@ describe("DashboardPage", () => {
 
     expect(await screen.findByText(/no audit activity yet/i)).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /open audit log/i })).toBeInTheDocument();
+  });
+
+  it("renders overdue request and open breach-obligation tiles as operational counts", async () => {
+    const { container } = await loginAndRender({
+      summary: BASE_SUMMARY,
+      gaps: POPULATED_GAPS,
+      permissions: ["CAN_MANAGE_REQUESTS", "CAN_MANAGE_BREACHES"],
+      requestStats: { overdueCount: 4 },
+      breaches: [{ obligations: [{ status: "OPEN" }, { status: "DONE" }] }],
+    });
+
+    expect(await screen.findByText(/overdue rights requests/i)).toBeInTheDocument();
+    expect(screen.getByText(/overdue rights requests/i).closest("a")).toHaveAttribute(
+      "href",
+      "/app/requests?overdue=true",
+    );
+    expect(screen.getByText(/open breach obligations/i)).toBeInTheDocument();
+    expect(screen.getByText(/open breach obligations/i).closest("a")).toHaveAttribute(
+      "href",
+      "/app/breaches",
+    );
+    assertNoComplianceClaim(container);
   });
 
   /**

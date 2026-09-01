@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SecurityMeasuresService"
+community: ".setStatus"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresService
+  - community/setStatus
 ---
 
 # Post
 
 ## Connections
-- [[dot-create()_1]] - `references` [EXTRACTED]
+- [[dot-setStatus()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresService
+#graphify/code #graphify/EXTRACTED #community/setStatus

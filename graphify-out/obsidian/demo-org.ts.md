@@ -12,7 +12,7 @@ tags:
 # demo-org.ts
 
 ## Connections
-- [[DEMO_EMPLOYEES]] - `contains` [EXTRACTED]
+- [[DEMO_EMPLOYEES_1]] - `contains` [EXTRACTED]
 - [[DEMO_ORG]] - `contains` [EXTRACTED]
 - [[DEMO_PASSWORD]] - `contains` [EXTRACTED]
 - [[DemoEmployeeSeed]] - `contains` [EXTRACTED]

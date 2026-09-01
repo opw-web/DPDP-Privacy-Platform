@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sync.queue.ts"
+source_file: "dpdp-platform/backend/src/queues/deadline-scan.processor.ts"
 type: "code"
-community: "queues.module.ts"
-location: "L68"
+community: "DeadlineScanProcessor"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/DeadlineScanProcessor
 ---
 
 # .constructor()
 
 ## Connections
-- [[InjectQueue]] - `references` [EXTRACTED]
-- [[SyncLockService]] - `references` [EXTRACTED]
-- [[SyncQueueService]] - `method` [EXTRACTED]
+- [[DeadlineScanProcessor]] - `method` [EXTRACTED]
+- [[PrismaService]] - `references` [EXTRACTED]
+- [[RequestsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/DeadlineScanProcessor

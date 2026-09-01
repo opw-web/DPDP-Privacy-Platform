@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "purposes.controller.ts"
+community: "AccessTokenPayload"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposescontrollerts
+  - community/AccessTokenPayload
 ---
 
 # IsEnum
 
 ## Connections
-- [[UpdatePurposeDto]] - `references` [EXTRACTED]
+- [[ListMatchCandidatesQueryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposescontrollerts
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

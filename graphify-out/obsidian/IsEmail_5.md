@@ -11,6 +11,6 @@ tags:
 # IsEmail
 
 ## Connections
-- [[UpdateRecipientDto]] - `references` [EXTRACTED]
+- [[CreateRecipientDto]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/recipientsservicets

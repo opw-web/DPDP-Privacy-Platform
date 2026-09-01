@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-check()]] - `method` [EXTRACTED]
-- [[dot-constructor()_57]] - `method` [EXTRACTED]
-- [[ApiTags_12]] - `references` [EXTRACTED]
-- [[Controller_12]] - `references` [EXTRACTED]
+- [[dot-constructor()_121]] - `method` [EXTRACTED]
+- [[ApiTags_32]] - `references` [EXTRACTED]
+- [[Controller_32]] - `references` [EXTRACTED]
 - [[health.controller.spec.ts]] - `imports` [EXTRACTED]
 - [[health.controller.ts]] - `contains` [EXTRACTED]
 - [[health.module.ts]] - `imports` [EXTRACTED]

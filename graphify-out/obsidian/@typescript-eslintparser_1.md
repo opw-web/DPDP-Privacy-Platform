@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
 community: "devDependencies"
-location: "L60"
+location: "L66"
 tags:
   - graphify/concept
   - graphify/EXTRACTED

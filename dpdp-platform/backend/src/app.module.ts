@@ -40,6 +40,8 @@ import { EvidenceModule } from "./modules/evidence/evidence.module";
 import { ConsentsModule } from "./modules/consents/consents.module";
 import { SdfModule } from "./modules/sdf/sdf.module";
 import { BoardModule } from "./modules/board/board.module";
+import { CampaignsModule } from "./modules/messaging/campaigns/campaigns.module";
+import { BreachesModule } from "./modules/breaches/breaches.module";
 
 @Module({
   imports: [
@@ -103,6 +105,11 @@ import { BoardModule } from "./modules/board/board.module";
     // itself per its own verification instructions, and left in place.
     SdfModule,
     BoardModule,
+    // Task 11: campaigns, the eight send guards, and per-recipient
+    // delivery evidence -- the last unfinished backend module. Registered
+    // here per this task's own instructions (leave in place).
+    CampaignsModule,
+    BreachesModule,
     HealthModule,
   ],
   providers: [

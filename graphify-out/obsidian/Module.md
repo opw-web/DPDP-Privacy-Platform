@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PrismaModule"
+community: "sdf.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaModule
+  - community/sdfmodulets
 ---
 
 # Module
 
 ## Connections
-- [[PrismaModule]] - `references` [EXTRACTED]
+- [[SdfModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaModule
+#graphify/code #graphify/EXTRACTED #community/sdfmodulets

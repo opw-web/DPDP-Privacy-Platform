@@ -1,20 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/audit/audit-read.service.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/candidates.service.ts"
 type: "code"
-community: "audit-read.service.ts"
-location: "L140"
+community: "merge-unmerge.e2e-spec.ts"
+location: "L130"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-readservicets
+  - community/merge-unmergee2e-spects
 ---
 
 # .list()
 
 ## Connections
-- [[dot-buildWhere()]] - `calls` [EXTRACTED]
-- [[dot-hasFullPersonalDataAccess()]] - `calls` [INFERRED]
-- [[AuditReadService]] - `method` [EXTRACTED]
-- [[ListAuditEventsDto]] - `references` [EXTRACTED]
+- [[CandidatesService]] - `method` [EXTRACTED]
+- [[isoDate()]] - `calls` [EXTRACTED]
+- [[recordValueFor()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-readservicets
+#graphify/code #graphify/EXTRACTED #community/merge-unmergee2e-spects

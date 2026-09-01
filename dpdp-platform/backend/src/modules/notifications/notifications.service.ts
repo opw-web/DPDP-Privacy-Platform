@@ -1,6 +1,7 @@
 import { Inject, Injectable, NotFoundException } from "@nestjs/common";
 import { Prisma, Notification } from "@prisma/client";
 import { PrismaService } from "../../common/prisma/prisma.service";
+import type { ScopedTransactionClient } from "../../common/prisma/scoped-transaction-client";
 import { EMAIL_PROVIDER } from "./email-provider.factory";
 import type { NotificationCallerActor } from "./guards/jwt-any-actor.guard";
 import type {
@@ -57,7 +58,8 @@ export class NotificationsService {
   constructor(
     private readonly prisma: PrismaService,
     private readonly portalProvider: PortalProvider,
-    @Inject(EMAIL_PROVIDER) private readonly emailProvider: NotificationProvider,
+    @Inject(EMAIL_PROVIDER)
+    private readonly emailProvider: NotificationProvider,
   ) {}
 
   /**
@@ -78,6 +80,60 @@ export class NotificationsService {
    * return value, which only ever carries the portal result.
    */
   async send(input: NotificationSendInput): Promise<Notification> {
+    this.assertValidInput(input);
+
+    const portalResult = await this.portalProvider.send(input);
+
+    await this.deliverEmailBestEffort(input);
+
+    return portalResult.notification!;
+  }
+
+  /**
+   * Persists the portal system-of-record row through a caller-owned
+   * transaction. This is the transactional-outbox seam for workflows
+   * whose state transition and audit event must commit with the portal
+   * notification. External email is deliberately dispatched only after
+   * that transaction commits via `deliverEmailBestEffort()`.
+   */
+  async createPortalInTransaction(
+    tx: ScopedTransactionClient,
+    input: NotificationSendInput,
+  ): Promise<Notification> {
+    this.assertValidInput(input);
+    return tx.notification.create({
+      data: {
+        audience: input.audience,
+        employeeId:
+          input.audience === "EMPLOYEE" ? (input.employeeId ?? null) : null,
+        dataPrincipalId:
+          input.audience === "PRINCIPAL"
+            ? (input.dataPrincipalId ?? null)
+            : null,
+        title: input.title,
+        body: input.body,
+        severity: input.severity ?? "INFO",
+        linkPath: input.linkPath ?? null,
+        campaignId: input.campaignId ?? null,
+      } as never,
+    });
+  }
+
+  /**
+   * Sends only the best-effort external channel after a durable portal
+   * notification has committed. It intentionally retains `send()`'s
+   * historical failure semantics: an SMTP issue never rolls back or
+   * misreports the portal delivery.
+   */
+  async deliverEmailBestEffort(input: NotificationSendInput): Promise<void> {
+    try {
+      await this.emailProvider.send(input);
+    } catch {
+      // Portal delivery is already durable; SMTP failure is non-fatal.
+    }
+  }
+
+  private assertValidInput(input: NotificationSendInput): void {
     if (input.audience === "EMPLOYEE" && !input.employeeId) {
       throw new Error(
         "NotificationsService.send(): employeeId is required when audience is EMPLOYEE",
@@ -88,18 +144,6 @@ export class NotificationsService {
         "NotificationsService.send(): dataPrincipalId is required when audience is PRINCIPAL",
       );
     }
-
-    const portalResult = await this.portalProvider.send(input);
-
-    try {
-      await this.emailProvider.send(input);
-    } catch {
-      // Deliberately swallowed -- see doc comment above. Portal delivery
-      // has already succeeded; an SMTP failure must never appear to undo
-      // or block it.
-    }
-
-    return portalResult.notification!;
   }
 
   async list(
@@ -153,7 +197,9 @@ export class NotificationsService {
    * convention `EmployeeAuthController.me()` documents for reading your
    * own session -- so no `AuditService.record` call anywhere in this
    * file. */
-  async markAllRead(actor: NotificationCallerActor): Promise<{ updated: number }> {
+  async markAllRead(
+    actor: NotificationCallerActor,
+  ): Promise<{ updated: number }> {
     const where = ownershipWhere(actor);
     const result = await this.prisma.scoped.notification.updateMany({
       where: { ...where, readAt: null },

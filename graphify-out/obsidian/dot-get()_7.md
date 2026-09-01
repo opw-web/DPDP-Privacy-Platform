@@ -1,18 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/employees.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts"
 type: "code"
-community: "employees.controller.ts"
-location: "L49"
+community: "TemplatesService"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeescontrollerts
+  - community/TemplatesService
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_6]] - `calls` [INFERRED]
-- [[EmployeesService]] - `method` [EXTRACTED]
+- [[dot-get()_11]] - `calls` [INFERRED]
+- [[Get_16]] - `references` [EXTRACTED]
+- [[Param_10]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[TemplatesController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeescontrollerts
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

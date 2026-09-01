@@ -1,19 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/employees.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts"
 type: "code"
-community: "employees.controller.ts"
-location: "L16"
+community: "SdfController"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeescontrollerts
+  - community/SdfController
 ---
 
 # .list()
 
 ## Connections
-- [[EmployeesController]] - `method` [EXTRACTED]
-- [[Get_9]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[AlgorithmRegisterService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeescontrollerts
+#graphify/code #graphify/EXTRACTED #community/SdfController

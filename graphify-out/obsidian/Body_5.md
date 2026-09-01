@@ -1,17 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateSharingActivityDto"
+community: "SdfController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSharingActivityDto
+  - community/SdfController
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_7]] - `references` [EXTRACTED]
-- [[dot-update()_8]] - `references` [EXTRACTED]
+- [[dot-completeAssessment()]] - `references` [EXTRACTED]
+- [[dot-createAlgorithm()]] - `references` [EXTRACTED]
+- [[dot-createAssessment()]] - `references` [EXTRACTED]
+- [[dot-updateAlgorithm()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto
+#graphify/code #graphify/EXTRACTED #community/SdfController

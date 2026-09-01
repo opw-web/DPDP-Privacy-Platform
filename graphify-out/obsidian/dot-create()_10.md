@@ -1,25 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
+source_file: "dpdp-platform/backend/src/modules/children/guardians.controller.ts"
 type: "code"
-community: "DataSourcesService"
-location: "L230"
+community: "guardians.service.ts"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesService
+  - community/guardiansservicets
 ---
 
 # .create()
 
 ## Connections
-- [[dot-assertPubliclyAvailableJustified()]] - `calls` [EXTRACTED]
-- [[dot-create()_9]] - `calls` [INFERRED]
-- [[dot-encrypt()]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[dot-scheduleSync()]] - `calls` [EXTRACTED]
-- [[CreateDataSourceDto]] - `references` [EXTRACTED]
-- [[DataSourcesService]] - `method` [EXTRACTED]
-- [[duplicateNameMessage()]] - `calls` [EXTRACTED]
-- [[isUniqueConstraintViolation()_2]] - `calls` [EXTRACTED]
+- [[dot-create()_11]] - `calls` [INFERRED]
+- [[Body_11]] - `references` [EXTRACTED]
+- [[CreateGuardianDto]] - `references` [EXTRACTED]
+- [[CurrentActorPermissions]] - `references` [EXTRACTED]
+- [[GuardiansController]] - `method` [EXTRACTED]
+- [[Post_13]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesService
+#graphify/code #graphify/EXTRACTED #community/guardiansservicets

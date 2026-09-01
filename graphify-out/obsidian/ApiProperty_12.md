@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "source-purposes.service.ts"
+community: "CreateSharingActivityDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/source-purposesservicets
+  - community/CreateSharingActivityDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[AttachPurposesDto]] - `references` [EXTRACTED]
+- [[CreateSharingActivityDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/source-purposesservicets
+#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

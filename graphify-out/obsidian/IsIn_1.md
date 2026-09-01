@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ListAuditEventsDto"
+community: "CreateAlgorithmEntryDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ListAuditEventsDto
+  - community/CreateAlgorithmEntryDto
 ---
 
 # IsIn
 
 ## Connections
-- [[ListAuditEventsDto]] - `references` [EXTRACTED]
+- [[CreateAlgorithmEntryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ListAuditEventsDto
+#graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto

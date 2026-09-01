@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "EmployeeAuthController"
+community: "TemplatesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeeAuthController
+  - community/TemplatesService
 ---
 
 # Body
 
 ## Connections
-- [[dot-login()_2]] - `references` [EXTRACTED]
+- [[dot-create()_8]] - `references` [EXTRACTED]
+- [[dot-preview()_1]] - `references` [EXTRACTED]
+- [[dot-update()_9]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

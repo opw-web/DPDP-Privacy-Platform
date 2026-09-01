@@ -74,6 +74,7 @@ export const TENANT_SCOPED_MODELS = [
   "SharingActivity",
   "CrossBorderTransfer",
   "RetentionPolicy",
+  "PurposeServedSignal",
   "SecurityMeasure",
   "SyncJob",
   "SourceRecord",
@@ -85,6 +86,7 @@ export const TENANT_SCOPED_MODELS = [
   "MatchCandidate",
   "PrincipalContactEvent",
   "AuditEvent",
+  "AccessLogEntry",
   "Counter",
   // ── MVP 2 (task 1) ──
   "ComplianceRule",

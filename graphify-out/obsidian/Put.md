@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "MappingsController"
+community: "notices.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MappingsController
+  - community/noticesservicets
 ---
 
 # Put
 
 ## Connections
-- [[dot-replaceMappings()]] - `references` [EXTRACTED]
-- [[dot-replacePurposes()]] - `references` [EXTRACTED]
+- [[dot-upsertTranslation()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MappingsController
+#graphify/code #graphify/EXTRACTED #community/noticesservicets

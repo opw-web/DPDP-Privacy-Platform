@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/main.ts"
 type: "code"
-community: "queues.module.ts"
+community: "main.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/maints
 ---
 
 # main.ts
@@ -19,4 +19,4 @@ tags:
 - [[bootstrap()]] - `contains` [EXTRACTED]
 - [[configuration.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/maints

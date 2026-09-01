@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "employees.controller.ts"
+community: "AccessTokenPayload"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeescontrollerts
+  - community/AccessTokenPayload
 ---
 
 # IsOptional
 
 ## Connections
-- [[UpdateEmployeeDto]] - `references` [EXTRACTED]
+- [[ListMatchCandidatesQueryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeescontrollerts
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

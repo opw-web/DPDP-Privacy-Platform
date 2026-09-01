@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "employees.controller.ts"
+community: "PrincipalLoginDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeescontrollerts
+  - community/PrincipalLoginDto
 ---
 
 # IsEmail
 
 ## Connections
-- [[CreateEmployeeDto]] - `references` [EXTRACTED]
+- [[PrincipalLoginDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeescontrollerts
+#graphify/code #graphify/EXTRACTED #community/PrincipalLoginDto

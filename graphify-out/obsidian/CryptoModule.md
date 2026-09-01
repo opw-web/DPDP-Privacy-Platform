@@ -12,7 +12,7 @@ tags:
 # CryptoModule
 
 ## Connections
-- [[Module_5]] - `references` [EXTRACTED]
+- [[Module_4]] - `references` [EXTRACTED]
 - [[crypto.module.ts]] - `contains` [EXTRACTED]
 - [[data-sources.module.ts]] - `imports` [EXTRACTED]
 

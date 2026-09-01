@@ -71,6 +71,23 @@ const ACCESS_LOG_CSV_HEADER: readonly string[] = [
   "Resource ID",
 ];
 
+const ACCESS_LOG_ENTRY_SELECT = {
+  id: true,
+  auditEventId: true,
+  sequence: true,
+  actorType: true,
+  actorId: true,
+  actorLabel: true,
+  subjectPrincipalId: true,
+  resourceType: true,
+  resourceId: true,
+  occurredAt: true,
+} satisfies Prisma.AccessLogEntrySelect;
+
+type AccessLogEntryRow = Prisma.AccessLogEntryGetPayload<{
+  select: typeof ACCESS_LOG_ENTRY_SELECT;
+}>;
+
 /**
  * `GET /api/audit-events` and `GET /api/audit-events/access-log.csv`
  * (spec lines 833-834). READ-ONLY: neither method here writes an
@@ -170,15 +187,31 @@ export class AuditReadService {
   }
 
   async accessLogCsv(query: AccessLogExportDto): Promise<string> {
-    const where: Prisma.AuditEventWhereInput = {
-      action: "PERSONAL_DATA_VIEWED",
+    const projectionWhere: Prisma.AccessLogEntryWhereInput = {
       ...(query.subjectPrincipalId
         ? { subjectPrincipalId: query.subjectPrincipalId }
         : {}),
     };
+    const projections = await this.prisma.scoped.accessLogEntry.findMany({
+      where: projectionWhere,
+      orderBy: { sequence: "desc" },
+      select: ACCESS_LOG_ENTRY_SELECT,
+    });
 
-    const events = await this.prisma.scoped.auditEvent.findMany({
-      where,
+    // Rows written directly by an older deployment (or by a migration
+    // fixture) have no projection. Keep them visible until the backfill is
+    // run, without duplicating rows that already have one. All normal
+    // application writes use AccessLogService and therefore take the fast
+    // projection path above.
+    const projectedIds = projections.map((entry) => entry.auditEventId);
+    const legacyEvents = await this.prisma.scoped.auditEvent.findMany({
+      where: {
+        action: "PERSONAL_DATA_VIEWED",
+        id: { notIn: projectedIds },
+        ...(query.subjectPrincipalId
+          ? { subjectPrincipalId: query.subjectPrincipalId }
+          : {}),
+      },
       orderBy: { sequence: "desc" },
       select: {
         id: true,
@@ -192,6 +225,21 @@ export class AuditReadService {
         createdAt: true,
       },
     });
+
+    const events = [
+      ...projections.map((entry) => ({
+        id: entry.auditEventId,
+        sequence: entry.sequence,
+        actorType: entry.actorType,
+        actorId: entry.actorId,
+        actorLabel: entry.actorLabel,
+        subjectPrincipalId: entry.subjectPrincipalId,
+        resourceType: entry.resourceType,
+        resourceId: entry.resourceId,
+        createdAt: entry.occurredAt,
+      })),
+      ...legacyEvents,
+    ].sort((a, b) => (a.sequence < b.sequence ? 1 : a.sequence > b.sequence ? -1 : 0));
 
     const rows = events.map((event) => [
       event.id,

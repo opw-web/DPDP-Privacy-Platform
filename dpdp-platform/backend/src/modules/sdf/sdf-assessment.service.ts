@@ -9,10 +9,10 @@ import { CompleteSdfAssessmentDto } from "./dto/complete-sdf-assessment.dto";
 
 /**
  * `ComplianceService.resolveRule`'s lookup key for `SDF_ASSESSMENT_CYCLE`
- * (seeded 12 MONTHS, warn 30 days, STATUTORY, Rule 13(1) --
+ * (seeded annual cycle, statutory warning lead, STATUTORY, Rule 13(1) --
  * `prisma/seed/compliance-rules.ts`). Every cycle-length computation in
- * this module goes through this key -- never a bare `12` (task brief:
- * "Resolve the cycle length from the rule -- never hard-code 12").
+ * this module goes through this key -- never a cycle-length literal (task
+ * brief: "Resolve the cycle length from the rule -- never hard-code it").
  */
 export const SDF_CYCLE_APPLIES_TO = "SDF:DPIA_AUDIT";
 
@@ -149,12 +149,8 @@ export class SdfAssessmentService {
    * accepted from the caller (see `CreateSdfAssessmentDto`'s doc
    * comment).
    *
-   * No dedicated audit action exists for opening/creating an
-   * `SdfAssessment` row (`src/common/audit/audit-actions.ts` has
-   * `SDF_ASSESSMENT_COMPLETED` only) -- per the task brief ("if one is
-   * absent, do not add it -- report it") this method does not audit-log
-   * creation; only `complete()` does, using `SDF_ASSESSMENT_COMPLETED`.
-   * See task-13-report.md "Concerns".
+   * Creation is audited in the same transaction as the assessment row so a
+   * failed audit append can never leave an unaccountable cycle behind.
    */
   async create(dto: CreateSdfAssessmentDto): Promise<PublicSdfAssessment> {
     const org = await this.prisma.scoped.organization.findFirstOrThrow({
@@ -171,18 +167,31 @@ export class SdfAssessmentService {
     const cycleStartedAt = dto.cycleStartedAt ? new Date(dto.cycleStartedAt) : org.sdfNotifiedAt;
     const { dueAt } = await this.resolveCycleDeadline(cycleStartedAt);
 
-    return this.prisma.scoped.sdfAssessment.create({
-      data: {
-        kind: dto.kind,
-        cycleStartedAt,
-        dueAt,
-        conductedBy: dto.conductedBy ?? CONDUCTOR_UNASSIGNED,
-        isIndependent: dto.isIndependent ?? false,
-        // organizationId deliberately omitted -- the tenant-scoping
-        // extension supplies it at runtime (same convention as
-        // RecipientsService.create).
-      } as never,
-      select: SDF_ASSESSMENT_PUBLIC_SELECT,
+    return this.prisma.scoped.$transaction(async (tx) => {
+      const created = await tx.sdfAssessment.create({
+        data: {
+          kind: dto.kind,
+          cycleStartedAt,
+          dueAt,
+          conductedBy: dto.conductedBy ?? CONDUCTOR_UNASSIGNED,
+          isIndependent: dto.isIndependent ?? false,
+          // organizationId deliberately omitted -- the tenant-scoping
+          // extension supplies it at runtime.
+        } as never,
+        select: SDF_ASSESSMENT_PUBLIC_SELECT,
+      });
+      await this.auditService.record(tx, {
+        action: "SDF_ASSESSMENT_CREATED",
+        resourceType: "SdfAssessment",
+        resourceId: created.id,
+        metadata: {
+          kind: created.kind,
+          cycleStartedAt: created.cycleStartedAt,
+          dueAt: created.dueAt,
+          source: "manual",
+        },
+      });
+      return created;
     });
   }
 

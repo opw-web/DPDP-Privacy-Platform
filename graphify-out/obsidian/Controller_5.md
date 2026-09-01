@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SecurityMeasuresService"
+community: "Public"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresService
+  - community/Public
 ---
 
 # Controller
 
 ## Connections
-- [[SecurityMeasuresController]] - `references` [EXTRACTED]
+- [[MeController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresService
+#graphify/code #graphify/EXTRACTED #community/Public

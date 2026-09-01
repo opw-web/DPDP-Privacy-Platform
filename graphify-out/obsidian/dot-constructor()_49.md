@@ -1,20 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principals/principals.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/security-measures.controller.ts"
 type: "code"
-community: "principals.service.ts"
-location: "L13"
+community: "security-measures.service.ts"
+location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principalsservicets
+  - community/security-measuresservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[LineageService]] - `references` [EXTRACTED]
-- [[PrincipalRecipientsService]] - `references` [EXTRACTED]
-- [[PrincipalsController]] - `method` [EXTRACTED]
-- [[PrincipalsService]] - `references` [EXTRACTED]
+- [[SecurityMeasuresController]] - `method` [EXTRACTED]
+- [[SecurityMeasuresService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principalsservicets
+#graphify/code #graphify/EXTRACTED #community/security-measuresservicets

@@ -1,24 +1,25 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
 type: "code"
-community: "purposes.controller.ts"
-location: "L141"
+community: "DataSourcesService"
+location: "L230"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposescontrollerts
+  - community/DataSourcesService
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_3]] - `calls` [INFERRED]
+- [[dot-assertPubliclyAvailableJustified()]] - `calls` [EXTRACTED]
+- [[dot-create()_24]] - `calls` [INFERRED]
+- [[dot-encrypt()]] - `calls` [INFERRED]
 - [[dot-record()]] - `calls` [INFERRED]
-- [[dot-validateBasis()]] - `calls` [EXTRACTED]
-- [[CreatePurposeDto]] - `references` [EXTRACTED]
-- [[PurposesService]] - `method` [EXTRACTED]
-- [[duplicateCodeMessage()]] - `calls` [EXTRACTED]
-- [[isUniqueConstraintViolation()]] - `calls` [EXTRACTED]
-- [[toPublicPurpose()]] - `calls` [EXTRACTED]
+- [[dot-scheduleSync()]] - `calls` [EXTRACTED]
+- [[CreateDataSourceDto]] - `references` [EXTRACTED]
+- [[DataSourcesService]] - `method` [EXTRACTED]
+- [[duplicateNameMessage()]] - `calls` [EXTRACTED]
+- [[isUniqueConstraintViolation()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposescontrollerts
+#graphify/code #graphify/EXTRACTED #community/DataSourcesService

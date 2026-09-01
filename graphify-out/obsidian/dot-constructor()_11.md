@@ -1,20 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.service.ts"
+source_file: "dpdp-platform/backend/src/queues/retention-scan.processor.ts"
 type: "code"
-community: "PrismaService"
-location: "L35"
+community: "retention.module.ts"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/retentionmodulets
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[EmployeeAuthService]] - `method` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
-- [[TokenService]] - `references` [EXTRACTED]
+- [[RetentionScanProcessor]] - `method` [EXTRACTED]
+- [[RetentionScanService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/retentionmodulets

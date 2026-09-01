@@ -11,6 +11,6 @@ tags:
 # IsString
 
 ## Connections
-- [[UpdateSharingActivityDto]] - `references` [EXTRACTED]
+- [[CreateSharingActivityDto]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

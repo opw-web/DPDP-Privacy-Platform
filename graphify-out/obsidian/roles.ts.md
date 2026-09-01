@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[ALL_PERMISSION_CODES]] - `contains` [EXTRACTED]
 - [[PERMISSIONS]] - `imports` [EXTRACTED]
-- [[ROLES_1]] - `contains` [EXTRACTED]
+- [[ROLES_2]] - `contains` [EXTRACTED]
 - [[RoleSeed]] - `contains` [EXTRACTED]
 - [[seed.ts]] - `imports_from` [EXTRACTED]
 - [[seedpermissions.ts]] - `imports_from` [EXTRACTED]

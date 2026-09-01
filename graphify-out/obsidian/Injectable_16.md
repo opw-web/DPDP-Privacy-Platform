@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CryptoService"
+community: "TokenService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CryptoService
+  - community/TokenService
 ---
 
 # Injectable
 
 ## Connections
-- [[CryptoService]] - `references` [EXTRACTED]
+- [[TenantMiddleware]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CryptoService
+#graphify/code #graphify/EXTRACTED #community/TokenService

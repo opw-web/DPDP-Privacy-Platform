@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EmployeeAuthController"
+community: ".setStatus"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeeAuthController
+  - community/setStatus
 ---
 
 # Req
 
 ## Connections
-- [[dot-login()_2]] - `references` [EXTRACTED]
-- [[dot-logout()_2]] - `references` [EXTRACTED]
-- [[dot-refresh()_2]] - `references` [EXTRACTED]
+- [[dot-setStatus()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController
+#graphify/code #graphify/EXTRACTED #community/setStatus

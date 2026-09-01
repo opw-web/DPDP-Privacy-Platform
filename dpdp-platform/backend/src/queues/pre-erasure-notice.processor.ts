@@ -7,7 +7,7 @@ import type { PreErasureNoticeJobData } from "./retention-scan.queue";
 
 /**
  * The BullMQ worker side of the `pre-erasure-notice` queue (RE-05, daily
- * 01:30): sends notices for tasks whose `preErasureNoticeDueAt` has
+ * schedule): sends notices for tasks whose `preErasureNoticeDueAt` has
  * arrived, and cancels tasks whose principal has since made INBOUND
  * contact (see `PreErasureNoticeService`'s own doc comment for exactly
  * what counts). Same `@Processor` + `WorkerHost` shape as

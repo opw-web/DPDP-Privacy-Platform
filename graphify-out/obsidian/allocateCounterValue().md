@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/reference/counter.ts"
 type: "code"
-community: "merge.service.ts"
+community: "audit.service.ts"
 location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mergeservicets
+  - community/auditservicets
 ---
 
 # allocateCounterValue()
@@ -19,4 +19,4 @@ tags:
 - [[counter.ts]] - `contains` [EXTRACTED]
 - [[reference.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mergeservicets
+#graphify/code #graphify/EXTRACTED #community/auditservicets

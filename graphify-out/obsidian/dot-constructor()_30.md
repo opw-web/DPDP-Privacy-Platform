@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sync/sync.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/auth/token.service.ts"
 type: "code"
-community: "sync.service.ts"
-location: "L20"
+community: "TokenService"
+location: "L65"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/syncservicets
+  - community/TokenService
 ---
 
 # .constructor()
 
 ## Connections
-- [[SyncController]] - `method` [EXTRACTED]
-- [[SyncService]] - `references` [EXTRACTED]
+- [[TokenService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/syncservicets
+#graphify/code #graphify/EXTRACTED #community/TokenService

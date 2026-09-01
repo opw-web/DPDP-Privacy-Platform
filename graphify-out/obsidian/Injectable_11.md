@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "InventoryService"
+community: "csvDocument"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/InventoryService
+  - community/csvDocument
 ---
 
 # Injectable
 
 ## Connections
-- [[InventoryService]] - `references` [EXTRACTED]
+- [[EvidencePackService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/InventoryService
+#graphify/code #graphify/EXTRACTED #community/csvDocument

@@ -1,20 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/registers.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/retention.e2e-spec.ts"
 type: "code"
-community: "registers.e2e-spec.ts"
-location: "L127"
+community: "retention.e2e-spec.ts"
+location: "L257"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/registerse2e-spects
+  - community/retentione2e-spects
 ---
 
 # authed()
 
 ## Connections
-- [[createDataSource()]] - `calls` [EXTRACTED]
-- [[createPurpose()]] - `calls` [EXTRACTED]
-- [[createRecipient()]] - `calls` [EXTRACTED]
-- [[registers.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[retention.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/registerse2e-spects
+#graphify/code #graphify/EXTRACTED #community/retentione2e-spects

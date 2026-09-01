@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateSharingActivityDto"
+community: "AccessTokenPayload"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSharingActivityDto
+  - community/AccessTokenPayload
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateSharingActivityDto]] - `references` [EXTRACTED]
+- [[EmployeeMeResponseDto]] - `references` [EXTRACTED]
+- [[EmployeeMeRoleDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

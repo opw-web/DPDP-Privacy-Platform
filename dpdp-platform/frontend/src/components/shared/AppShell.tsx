@@ -2,6 +2,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import {
   Boxes,
+  FileWarning,
   ClipboardCheck,
   Database,
   History,
@@ -11,6 +12,8 @@ import {
   Settings,
   UserCog,
   Users,
+  Send,
+  Workflow,
 } from "lucide-react";
 import { useEmployeeAuth } from "../../lib/auth";
 import { employeeApiClient } from "../../lib/api-client";
@@ -18,6 +21,7 @@ import { OrgTimezoneProvider } from "./DateTime";
 import { TooltipProvider } from "../ui/tooltip";
 import { Button } from "../ui/button";
 import { cn } from "../../lib/utils";
+import { NotificationBell } from "./NotificationBell";
 
 interface OrganizationSummary {
   id: string;
@@ -34,6 +38,18 @@ const NAV_ITEMS: ReadonlyArray<{
   { to: "/app", label: "Dashboard", icon: LayoutDashboard, end: true },
   { to: "/app/data-sources", label: "Data Sources", icon: Database },
   { to: "/app/purposes", label: "Purposes", icon: ScrollText },
+  { to: "/app/requests", label: "Requests", icon: ClipboardCheck },
+  { to: "/app/notices", label: "Notices", icon: ScrollText },
+  { to: "/app/consents", label: "Consents", icon: ClipboardCheck },
+  { to: "/app/children", label: "Children", icon: Users },
+  { to: "/app/retention", label: "Retention", icon: History },
+  { to: "/app/settings/compliance", label: "Compliance rules", icon: Settings },
+  { to: "/app/messaging/templates", label: "Message templates", icon: Send },
+  { to: "/app/messaging/campaigns", label: "Message campaigns", icon: Send },
+  { to: "/app/breaches", label: "Breaches", icon: FileWarning },
+  { to: "/app/sdf", label: "SDF readiness", icon: Workflow },
+  { to: "/app/information-requests", label: "Information requests", icon: ClipboardCheck },
+  { to: "/app/settings/rights", label: "Rights publication", icon: Settings },
   { to: "/app/registers", label: "Registers", icon: Boxes },
   { to: "/app/principals", label: "Principals", icon: Users },
   { to: "/app/review", label: "Review Queue", icon: ClipboardCheck },
@@ -88,6 +104,7 @@ export function AppShell() {
               ))}
             </nav>
             <div className="border-t border-border px-4 py-3">
+              <NotificationBell apiClient={employeeApiClient} className="mb-2" />
               <p className="truncate text-sm font-medium">{employee?.fullName}</p>
               <p className="truncate text-xs text-muted-foreground">{employee?.role.name}</p>
               <Button

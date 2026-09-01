@@ -13,13 +13,16 @@ tags:
 
 ## Connections
 - [[dot-data()]] - `references` [EXTRACTED]
+- [[dot-list()_3]] - `references` [EXTRACTED]
 - [[dot-me()]] - `references` [EXTRACTED]
 - [[dot-me()_1]] - `references` [EXTRACTED]
 - [[dot-profile()]] - `references` [EXTRACTED]
 - [[dot-recipients()]] - `references` [EXTRACTED]
+- [[dot-setStatus()]] - `references` [EXTRACTED]
 - [[dot-sources()]] - `references` [EXTRACTED]
 - [[current-principal.decorator.ts]] - `imports` [EXTRACTED]
 - [[jwt-principal.guard.ts]] - `contains` [EXTRACTED]
+- [[me-consents.controller.ts]] - `imports` [EXTRACTED]
 - [[me.controller.ts]] - `imports` [EXTRACTED]
 - [[principal-auth.controller.ts]] - `imports` [EXTRACTED]
 - [[principal-auth.service.ts]] - `imports` [EXTRACTED]

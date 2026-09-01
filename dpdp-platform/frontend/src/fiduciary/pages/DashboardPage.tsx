@@ -3,10 +3,12 @@ import {
   AlertTriangle,
   Boxes,
   ClipboardCheck,
+  Clock3,
   Database,
   Files,
   ScrollText,
   ShieldQuestion,
+  ShieldAlert,
   UserCheck,
   Users,
 } from "lucide-react";
@@ -15,6 +17,7 @@ import { StatCard, StatCardSkeleton } from "../components/StatCard";
 import { GapsPanel } from "../components/GapsPanel";
 import { ExportButtons } from "../components/ExportButtons";
 import { RecentAuditStrip } from "../components/RecentAuditStrip";
+import { usePermission } from "../../lib/permissions";
 
 /** Mirrors `RecentAuditEvent` in `inventory.service.ts` exactly, with `createdAt` as the ISO string every JSON response actually carries. */
 export interface RecentAuditEvent {
@@ -50,6 +53,18 @@ export interface InventoryGap {
   explanation: string;
 }
 
+interface RequestStats {
+  overdueCount: number;
+}
+
+interface BreachObligation {
+  status: string;
+}
+
+interface DashboardBreach {
+  obligations?: BreachObligation[];
+}
+
 /**
  * `/app` -- the inventory dashboard (spec line 849): the first screen a
  * data fiduciary sees. Shows the nine metrics the spec names explicitly
@@ -62,6 +77,9 @@ export interface InventoryGap {
  * it -- never a verdict rendered client side.
  */
 export function DashboardPage() {
+  const canManageRequests = usePermission("CAN_MANAGE_REQUESTS");
+  const canManageBreaches = usePermission("CAN_MANAGE_BREACHES");
+
   const { data: summary, isLoading: isSummaryLoading } = useQuery({
     queryKey: ["inventory", "summary"],
     queryFn: () => employeeApiClient.get<InventorySummary>("/inventory/summary"),
@@ -71,6 +89,27 @@ export function DashboardPage() {
     queryKey: ["inventory", "gaps"],
     queryFn: () => employeeApiClient.get<InventoryGap[]>("/inventory/gaps"),
   });
+
+  const { data: requestStats, isLoading: isRequestStatsLoading } = useQuery({
+    queryKey: ["requests", "stats"],
+    queryFn: () => employeeApiClient.get<RequestStats>("/requests/stats"),
+    enabled: canManageRequests,
+  });
+
+  const { data: breaches, isLoading: isBreachesLoading } = useQuery({
+    queryKey: ["breaches"],
+    queryFn: () => employeeApiClient.get<DashboardBreach[]>("/breaches"),
+    enabled: canManageBreaches,
+  });
+
+  const openBreachObligationCount = (breaches ?? []).reduce(
+    (count, breach) =>
+      count +
+      (breach.obligations ?? []).filter(
+        (obligation) => !["DONE", "WAIVED"].includes(obligation.status),
+      ).length,
+    0,
+  );
 
   return (
     <div className="space-y-6">
@@ -114,6 +153,24 @@ export function DashboardPage() {
               icon={ShieldQuestion}
               description="s.9 obligations cannot be evidenced without this"
             />
+            {canManageRequests ? (
+              <StatCard
+                label="Overdue rights requests"
+                value={requestStats?.overdueCount ?? 0}
+                to="/app/requests?overdue=true"
+                icon={Clock3}
+                description="Requests flagged overdue by the deadline scanner"
+              />
+            ) : null}
+            {canManageBreaches ? (
+              <StatCard
+                label="Open breach obligations"
+                value={openBreachObligationCount}
+                to="/app/breaches"
+                icon={ShieldAlert}
+                description="Obligations still awaiting completion or waiver"
+              />
+            ) : null}
             <StatCard
               label="Purposes without reviewed basis (LB-02)"
               value={summary.purposesWithoutReviewedLawfulBasisCount}
@@ -129,6 +186,12 @@ export function DashboardPage() {
           </>
         )}
       </section>
+
+      {(canManageRequests || canManageBreaches) && (isRequestStatsLoading || isBreachesLoading) ? (
+        <p className="text-xs text-muted-foreground" role="status">
+          Loading operational counts…
+        </p>
+      ) : null}
 
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <section aria-label="Compliance gaps">

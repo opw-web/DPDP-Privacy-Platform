@@ -1,20 +1,22 @@
 ---
 source_file: "dpdp-platform/backend/src/common/prisma/prisma.service.ts"
 type: "code"
-community: "merge.service.ts"
+community: "ScopedTransactionClient"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mergeservicets
+  - community/ScopedTransactionClient
 ---
 
 # TenantScopedPrismaClient
 
 ## Connections
+- [[dot-assertGuardianConsentEligible()]] - `references` [EXTRACTED]
 - [[dot-rescrubFieldSample()]] - `references` [EXTRACTED]
 - [[data-sources.service.ts]] - `imports` [EXTRACTED]
+- [[guardians.service.ts]] - `imports` [EXTRACTED]
 - [[prisma.service.ts]] - `contains` [EXTRACTED]
 - [[scoped-transaction-client.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mergeservicets
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

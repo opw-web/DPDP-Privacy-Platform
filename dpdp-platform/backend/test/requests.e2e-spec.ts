@@ -62,6 +62,9 @@ describe("Rights requests API and deadline-scan (e2e)", () => {
     if (orgIds.length > 0) {
       // MVP 2 shape `cleanupOrgs` does not know about -- delete first,
       // in FK-safe order, per the harness's own instruction.
+      await prisma.erasureTask.deleteMany({
+        where: { organizationId: { in: orgIds } },
+      });
       await prisma.requestEvent.deleteMany({
         where: { organizationId: { in: orgIds } },
       });
@@ -278,6 +281,138 @@ describe("Rights requests API and deadline-scan (e2e)", () => {
         },
       });
       expect(auditEvents.length).toBe(1);
+    });
+  });
+
+  describe("Request detail and ERASURE completion evidence", () => {
+    it("returns the durable event timeline and assigned employee display", async () => {
+      const grantee = await createOrgWithEmployee(app, prisma, "REQUESTS_DETAIL", [
+        "CAN_MANAGE_REQUESTS",
+      ]);
+      orgIds.push(grantee.organizationId);
+      const client = authed(grantee.accessToken);
+      const dataPrincipalId = await createPrincipal(grantee.organizationId);
+      const req = await createRequest(grantee.organizationId, {
+        dataPrincipalId,
+        type: "ACCESS",
+        subject: "Detail timeline",
+        body: "Please provide my data.",
+      });
+
+      await client.post(`/api/requests/${req.reference}/status`, { status: "OPEN" });
+      const assigned = await client.post(`/api/requests/${req.reference}/assign`, {
+        employeeId: grantee.employeeId,
+      });
+      expect(assigned.status).toBe(201);
+
+      const detail = await client.get(`/api/requests/${req.reference}`);
+      expect(detail.status).toBe(200);
+      expect(detail.body.assignedEmployee).toMatchObject({
+        id: grantee.employeeId,
+        fullName: "REQUESTS_DETAIL",
+        email: grantee.email,
+      });
+      expect(detail.body.events).toEqual(
+        expect.arrayContaining([
+          expect.objectContaining({ toStatus: "SUBMITTED" }),
+          expect.objectContaining({ toStatus: "OPEN" }),
+          expect.objectContaining({ toStatus: "ASSIGNED" }),
+        ]),
+      );
+      expect(detail.body.events).toHaveLength(3);
+    });
+
+    it("blocks absent or invalid holder evidence, then persists valid evidence with a REQUEST task atomically", async () => {
+      const grantee = await createOrgWithEmployee(app, prisma, "REQUESTS_ERASURE", [
+        "CAN_MANAGE_REQUESTS",
+      ]);
+      orgIds.push(grantee.organizationId);
+      const client = authed(grantee.accessToken);
+      const dataPrincipalId = await createPrincipal(grantee.organizationId);
+      const source = await prisma.dataSource.create({
+        data: {
+          organizationId: grantee.organizationId,
+          name: `Erasure source ${randomUUID()}`,
+          systemType: "CRM",
+          baseUrl: "https://example.test/erasure",
+          recordsPath: "data",
+          externalIdField: "id",
+          status: "CONNECTED",
+        },
+      });
+      await prisma.principalDataField.create({
+        data: {
+          organizationId: grantee.organizationId,
+          dataPrincipalId,
+          canonicalField: "PHONE",
+          value: "+91-9999999999",
+          dataCategory: "CONTACT",
+          sourceIds: [source.id],
+        },
+      });
+      const processor = await prisma.dataRecipient.create({
+        data: {
+          organizationId: grantee.organizationId,
+          name: `Erasure processor ${randomUUID()}`,
+          type: "DATA_PROCESSOR",
+          contractExists: true,
+        },
+      });
+      const req = await createRequest(grantee.organizationId, {
+        dataPrincipalId,
+        type: "ERASURE",
+        subject: "Erase my data",
+        body: "Please erase my data.",
+      });
+      await client.post(`/api/requests/${req.reference}/status`, { status: "OPEN" });
+      await client.post(`/api/requests/${req.reference}/status`, { status: "IN_PROGRESS" });
+
+      const eventCountBefore = await prisma.requestEvent.count({ where: { requestId: req.id } });
+      const absent = await client.post(`/api/requests/${req.reference}/status`, {
+        status: "COMPLETED",
+        outcomeCode: "FULFILLED",
+        outcome: "Erasure completed",
+      });
+      expect(absent.status).toBe(400);
+      expect(await prisma.erasureTask.count({ where: { organizationId: grantee.organizationId } })).toBe(0);
+      expect(await prisma.requestEvent.count({ where: { requestId: req.id } })).toBe(eventCountBefore);
+
+      const invalid = await client.post(`/api/requests/${req.reference}/status`, {
+        status: "COMPLETED",
+        outcomeCode: "FULFILLED",
+        outcome: "Erasure completed",
+        systemChecklist: [{ dataSourceId: source.id, done: false }],
+        processorChecklist: [{ recipientId: processor.id, confirmed: true, ref: "PROC-1" }],
+      });
+      expect(invalid.status).toBe(400);
+      expect(await prisma.erasureTask.count({ where: { organizationId: grantee.organizationId } })).toBe(0);
+      expect(await prisma.requestEvent.count({ where: { requestId: req.id } })).toBe(eventCountBefore);
+
+      const valid = await client.post(`/api/requests/${req.reference}/status`, {
+        status: "COMPLETED",
+        outcomeCode: "FULFILLED",
+        outcome: "Erasure completed",
+        systemChecklist: [{ dataSourceId: source.id, done: true }],
+        processorChecklist: [{ recipientId: processor.id, confirmed: true, ref: "PROC-1" }],
+      });
+      expect(valid.status).toBe(201);
+
+      const task = await prisma.erasureTask.findFirst({
+        where: { organizationId: grantee.organizationId },
+      });
+      expect(task?.trigger).toBe("REQUEST");
+      expect(task?.systemChecklist).toEqual([
+        expect.objectContaining({ dataSourceId: source.id, done: true, byEmployeeId: grantee.employeeId }),
+      ]);
+      expect(task?.processorChecklist).toEqual([
+        expect.objectContaining({ recipientId: processor.id, confirmed: true, ref: "PROC-1" }),
+      ]);
+
+      const detail = await client.get(`/api/requests/${req.reference}`);
+      expect(detail.body.events).toEqual(
+        expect.arrayContaining([expect.objectContaining({ toStatus: "COMPLETED" })]),
+      );
+      expect(await prisma.requestEvent.count({ where: { requestId: req.id, toStatus: "COMPLETED" } })).toBe(1);
     });
   });
 

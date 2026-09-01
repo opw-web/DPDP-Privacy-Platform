@@ -12,7 +12,7 @@ tags:
 # createRecipient()
 
 ## Connections
-- [[authed()]] - `calls` [EXTRACTED]
+- [[authed()_2]] - `calls` [EXTRACTED]
 - [[recipientPayload()]] - `calls` [EXTRACTED]
 - [[registers.e2e-spec.ts]] - `contains` [EXTRACTED]
 

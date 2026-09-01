@@ -40,17 +40,38 @@ export interface ComplianceRuleSeed {
   readonly enabled: boolean;
 }
 
+/**
+ * This row is enforcement data, not an organization-configurable rule.
+ * `ComplianceService` deliberately keeps it off the public compliance-rule
+ * surface and refuses every public mutation attempt against its code.  Its
+ * period and citation intentionally live here, with the other seed data,
+ * rather than in application source.
+ */
+export const GRIEVANCE_STATUTORY_BASELINE_RULE_CODE =
+  "GRIEVANCE_STATUTORY_BASELINE";
+
 export const COMPLIANCE_RULE_SEEDS: readonly ComplianceRuleSeed[] = [
   {
+    ruleCode: GRIEVANCE_STATUTORY_BASELINE_RULE_CODE,
+    name: "Statutory grievance response ceiling",
+    appliesTo: "SYSTEM:GRIEVANCE_STATUTORY_BASELINE",
+    deadlineValue: 90,
+    deadlineUnit: "DAYS",
+    warningLead: 0,
+    basis: "STATUTORY",
+    legalSource:
+      "DPDP Rules, 2025 — Rule 14(3): published period must not exceed ninety days",
+    enabled: true,
+  },
+  {
     ruleCode: "GRIEVANCE_RESPONSE",
-    name: "Grievance response deadline",
+    name: "Published grievance response period",
     appliesTo: "REQUEST:GRIEVANCE",
     deadlineValue: 90,
     deadlineUnit: "DAYS",
     warningLead: 14,
-    basis: "STATUTORY",
-    legalSource:
-      "DPDP Rules, 2025 — Rule 14(3): published period must not exceed ninety days",
+    basis: "ORG_POLICY",
+    legalSource: "Organization-published grievance response period",
     enabled: true,
   },
   {
@@ -109,7 +130,8 @@ export const COMPLIANCE_RULE_SEEDS: readonly ComplianceRuleSeed[] = [
     deadlineUnit: "DAYS",
     warningLead: 7,
     basis: "ORG_POLICY",
-    legalSource: "Company service level — the Rules set no separate figure for access",
+    legalSource:
+      "Company service level — the Rules set no separate figure for access",
     enabled: true,
   },
   {
@@ -142,7 +164,8 @@ export const COMPLIANCE_RULE_SEEDS: readonly ComplianceRuleSeed[] = [
     deadlineUnit: "DAYS",
     warningLead: 2,
     basis: "ORG_POLICY",
-    legalSource: "Withdrawal must take effect within a reasonable time (s.6(6))",
+    legalSource:
+      "Withdrawal must take effect within a reasonable time (s.6(6))",
     enabled: true,
   },
   {
@@ -273,4 +296,44 @@ export async function seedComplianceRules(
       update: {},
     });
   }
+}
+
+/** Seeds only the hidden statutory grievance baseline for focused fixtures. */
+export async function seedGrievanceStatutoryBaseline(
+  prisma: PrismaService,
+  organizationId: string,
+  now: Date = new Date(),
+): Promise<void> {
+  const seed = COMPLIANCE_RULE_SEEDS.find(
+    ({ ruleCode }) => ruleCode === GRIEVANCE_STATUTORY_BASELINE_RULE_CODE,
+  );
+  if (!seed) {
+    throw new Error("Grievance statutory baseline seed is missing.");
+  }
+
+  await prisma.complianceRule.upsert({
+    where: {
+      organizationId_ruleCode_version: {
+        organizationId,
+        ruleCode: seed.ruleCode,
+        version: 1,
+      },
+    },
+    create: {
+      organizationId,
+      ruleCode: seed.ruleCode,
+      version: 1,
+      name: seed.name,
+      legalSource: seed.legalSource,
+      basis: seed.basis,
+      appliesTo: seed.appliesTo,
+      deadlineValue: seed.deadlineValue,
+      deadlineUnit: seed.deadlineUnit,
+      warningLead: seed.warningLead,
+      enabled: seed.enabled,
+      effectiveFrom: now,
+      reviewedByEmployeeId: null,
+    },
+    update: {},
+  });
 }

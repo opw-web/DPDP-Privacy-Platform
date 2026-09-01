@@ -36,6 +36,20 @@ function buildService() {
   transaction.mockImplementation(async (cb: (tx: unknown) => unknown) =>
     cb({ complianceRule: txComplianceRule }),
   );
+  const statutoryBaseline = buildRule({
+    id: "grievance-statutory-baseline",
+    ruleCode: "GRIEVANCE_STATUTORY_BASELINE",
+    deadlineValue: 90,
+    deadlineUnit: "DAYS",
+    legalSource:
+      "DPDP Rules, 2025 — Rule 14(3): published period must not exceed ninety days",
+  });
+  findFirst.mockImplementation((args: { where?: { ruleCode?: string } }) => {
+    if (args.where?.ruleCode === "GRIEVANCE_STATUTORY_BASELINE") {
+      return Promise.resolve(statutoryBaseline);
+    }
+    return Promise.resolve(null);
+  });
 
   return {
     service: new ComplianceService(prisma, auditService),
@@ -102,13 +116,19 @@ describe("ComplianceService.resolveRule()", () => {
     organizationFindFirstOrThrow.mockResolvedValueOnce({
       thirdScheduleClass: "NONE",
     });
-    const whenNone = await service.resolveRule("RETENTION:INACTIVITY", new Date());
+    const whenNone = await service.resolveRule(
+      "RETENTION:INACTIVITY",
+      new Date(),
+    );
     expect(whenNone).toBeNull();
 
     organizationFindFirstOrThrow.mockResolvedValueOnce({
       thirdScheduleClass: "ECOMMERCE",
     });
-    const whenSet = await service.resolveRule("RETENTION:INACTIVITY", new Date());
+    const whenSet = await service.resolveRule(
+      "RETENTION:INACTIVITY",
+      new Date(),
+    );
     expect(whenSet).toEqual(retentionRule);
   });
 
@@ -140,7 +160,13 @@ describe("ComplianceService.computeDeadline() - calendar arithmetic via date-fns
     fromArgs: [number, number, number, number, number, number],
     value: number,
     unit: string,
-  ): { year: number; month: number; date: number; hours: number; naiveHours: number } {
+  ): {
+    year: number;
+    month: number;
+    date: number;
+    hours: number;
+    naiveHours: number;
+  } {
     const servicePath = path.join(__dirname, "compliance.service.ts");
     const script = `
       const { addByDeadlineUnit } = require(${JSON.stringify(servicePath)});
@@ -187,7 +213,11 @@ describe("ComplianceService.computeDeadline() - calendar arithmetic via date-fns
   it("a 3-month deadline from 30 November lands on the last day of February (leap year clipping)", () => {
     const { service } = buildService();
     const from = new Date(2027, 10, 30, 9, 0, 0); // 30 November 2027
-    const rule = { deadlineValue: 3, deadlineUnit: "MONTHS", warningLead: 0 } as const;
+    const rule = {
+      deadlineValue: 3,
+      deadlineUnit: "MONTHS",
+      warningLead: 0,
+    } as const;
 
     const { dueAt } = service.computeDeadline(rule, from);
 
@@ -199,7 +229,11 @@ describe("ComplianceService.computeDeadline() - calendar arithmetic via date-fns
   it("warningLead is in hours for an HOURS-unit rule", () => {
     const { service } = buildService();
     const from = new Date(2026, 5, 1, 8, 0, 0);
-    const rule = { deadlineValue: 24, deadlineUnit: "HOURS", warningLead: 6 } as const;
+    const rule = {
+      deadlineValue: 24,
+      deadlineUnit: "HOURS",
+      warningLead: 6,
+    } as const;
 
     const { dueAt, warningAt } = service.computeDeadline(rule, from);
 
@@ -209,11 +243,17 @@ describe("ComplianceService.computeDeadline() - calendar arithmetic via date-fns
   it("warningLead is in days for a YEARS-unit rule (RETENTION_INACTIVITY's 'warn 30 days')", () => {
     const { service } = buildService();
     const from = new Date(2026, 0, 1, 0, 0, 0);
-    const rule = { deadlineValue: 3, deadlineUnit: "YEARS", warningLead: 30 } as const;
+    const rule = {
+      deadlineValue: 3,
+      deadlineUnit: "YEARS",
+      warningLead: 30,
+    } as const;
 
     const { dueAt, warningAt } = service.computeDeadline(rule, from);
 
-    expect(dueAt.getTime() - warningAt.getTime()).toBe(30 * 24 * 60 * 60 * 1000);
+    expect(dueAt.getTime() - warningAt.getTime()).toBe(
+      30 * 24 * 60 * 60 * 1000,
+    );
   });
 });
 
@@ -241,7 +281,8 @@ describe("ComplianceService.snapshotOnto()", () => {
 
 describe("ComplianceService.update() - versioning (Check 2)", () => {
   it("creates version N+1 without ever calling UPDATE on the row in use, and an earlier snapshot is unaffected", async () => {
-    const { service, findFirst, transaction, txComplianceRule } = buildService();
+    const { service, findFirst, transaction, txComplianceRule } =
+      buildService();
 
     const v1 = buildRule({
       id: "rule-1",
@@ -253,9 +294,12 @@ describe("ComplianceService.update() - versioning (Check 2)", () => {
     // A caller (e.g. Task 6) snapshots version 1 onto its own entity
     // BEFORE the edit happens.
     const existingSnapshot: Record<string, unknown> = {};
-    service.snapshotOnto(existingSnapshot, v1, new Date("2026-01-31T00:00:00Z"), new Date(
-      "2026-01-24T00:00:00Z",
-    ));
+    service.snapshotOnto(
+      existingSnapshot,
+      v1,
+      new Date("2026-01-31T00:00:00Z"),
+      new Date("2026-01-24T00:00:00Z"),
+    );
     expect(existingSnapshot["ruleVersion"]).toBe(1);
     expect(existingSnapshot["legalSource"]).toBe("v1 legal source");
 
@@ -311,22 +355,98 @@ describe("ComplianceService.update() - versioning (Check 2)", () => {
 
     findFirst.mockResolvedValueOnce(v1).mockResolvedValueOnce(v2);
 
-    await expect(service.update("rule-1", { name: "New name" })).rejects.toThrow(
-      /not the current version/,
-    );
+    await expect(
+      service.update("rule-1", { name: "New name" }),
+    ).rejects.toThrow(/not the current version/);
   });
 });
 
 describe("ComplianceService - GRIEVANCE_RESPONSE 90-day ceiling (Check 6)", () => {
-  it("create() refuses a 120-day GRIEVANCE_RESPONSE deadline with the Rule 14(3) citation", async () => {
-    const { service, findFirst } = buildService();
-    findFirst.mockResolvedValue(null); // no existing rule with this code
+  it("fails closed when the statutory baseline is missing", async () => {
+    const { service, findFirst, txComplianceRule } = buildService();
+    findFirst.mockResolvedValue(null);
 
     await expect(
       service.create({
         ruleCode: "GRIEVANCE_RESPONSE",
+        name: "Published grievance response period",
+        legalSource: "Organization-published grievance response period",
+        basis: "ORG_POLICY",
+        appliesTo: "REQUEST:GRIEVANCE",
+        deadlineValue: 90,
+        deadlineUnit: "DAYS",
+        warningLead: 14,
+      }),
+    ).rejects.toThrow(/statutory grievance baseline is unavailable/);
+    expect(txComplianceRule.create).not.toHaveBeenCalled();
+  });
+
+  it("fails closed when the statutory baseline is disabled", async () => {
+    const { service, findFirst, txComplianceRule } = buildService();
+    // The production query only selects enabled baselines; a disabled row
+    // therefore presents as absent to the enforcement path.
+    findFirst.mockImplementation((args: { where?: { ruleCode?: string } }) => {
+      if (args.where?.ruleCode === "GRIEVANCE_STATUTORY_BASELINE") {
+        return Promise.resolve(null);
+      }
+      return Promise.resolve(null);
+    });
+
+    await expect(
+      service.create({
+        ruleCode: "GRIEVANCE_RESPONSE",
+        name: "Published grievance response period",
+        legalSource: "Organization-published grievance response period",
+        basis: "ORG_POLICY",
+        appliesTo: "REQUEST:GRIEVANCE",
+        deadlineValue: 90,
+        deadlineUnit: "DAYS",
+        warningLead: 14,
+      }),
+    ).rejects.toThrow(/statutory grievance baseline is unavailable/);
+    expect(txComplianceRule.create).not.toHaveBeenCalled();
+  });
+
+  it("refuses public baseline creation, versioning, and review", async () => {
+    const { service, findFirst, transaction, txComplianceRule } =
+      buildService();
+    const baseline = buildRule({
+      id: "grievance-statutory-baseline",
+      ruleCode: "GRIEVANCE_STATUTORY_BASELINE",
+    });
+
+    await expect(
+      service.create({
+        ruleCode: "GRIEVANCE_STATUTORY_BASELINE",
+        name: "Attempted replacement",
+        legalSource: "Attempted replacement",
+        basis: "STATUTORY",
+        appliesTo: "SYSTEM:GRIEVANCE_STATUTORY_BASELINE",
+        deadlineValue: 1,
+        deadlineUnit: "DAYS",
+        warningLead: 0,
+      }),
+    ).rejects.toThrow(/seed-managed/);
+
+    findFirst.mockResolvedValue(baseline);
+    await expect(
+      service.update(baseline.id, { deadlineValue: 1 }),
+    ).rejects.toThrow(/seed-managed/);
+    await expect(
+      service.review(baseline.id, { sub: "employee-1" } as never),
+    ).rejects.toThrow(/seed-managed/);
+    expect(txComplianceRule.create).not.toHaveBeenCalled();
+    expect(transaction).not.toHaveBeenCalled();
+  });
+
+  it("create() refuses a 120-day GRIEVANCE_RESPONSE deadline with the Rule 14(3) citation", async () => {
+    const { service, findFirst } = buildService();
+    await expect(
+      service.create({
+        ruleCode: "GRIEVANCE_RESPONSE",
         name: "Grievance response deadline",
-        legalSource: "DPDP Rules, 2025 — Rule 14(3): published period must not exceed ninety days",
+        legalSource:
+          "DPDP Rules, 2025 — Rule 14(3): published period must not exceed ninety days",
         basis: "STATUTORY",
         appliesTo: "REQUEST:GRIEVANCE",
         deadlineValue: 120,
@@ -338,14 +458,14 @@ describe("ComplianceService - GRIEVANCE_RESPONSE 90-day ceiling (Check 6)", () =
 
   it("accepts exactly 90 days", async () => {
     const { service, findFirst, txComplianceRule } = buildService();
-    findFirst.mockResolvedValue(null);
     txComplianceRule.create.mockResolvedValue(buildRule({ deadlineValue: 90 }));
 
     await expect(
       service.create({
         ruleCode: "GRIEVANCE_RESPONSE",
         name: "Grievance response deadline",
-        legalSource: "DPDP Rules, 2025 — Rule 14(3): published period must not exceed ninety days",
+        legalSource:
+          "DPDP Rules, 2025 — Rule 14(3): published period must not exceed ninety days",
         basis: "STATUTORY",
         appliesTo: "REQUEST:GRIEVANCE",
         deadlineValue: 90,
@@ -375,7 +495,6 @@ describe("ComplianceService - GRIEVANCE_RESPONSE 90-day ceiling (Check 6)", () =
   describe("create() - every deadlineUnit is checked, not just DAYS", () => {
     it("HOURS: accepts 2160 hours (exactly 90 days worst-case)", async () => {
       const { service, findFirst, txComplianceRule } = buildService();
-      findFirst.mockResolvedValue(null);
       txComplianceRule.create.mockResolvedValue(
         buildRule({ deadlineValue: 2160, deadlineUnit: "HOURS" }),
       );
@@ -397,8 +516,6 @@ describe("ComplianceService - GRIEVANCE_RESPONSE 90-day ceiling (Check 6)", () =
 
     it("HOURS: refuses 2161 hours (91 days worst-case, ceil(2161/24) = 91) with the Rule 14(3) citation", async () => {
       const { service, findFirst } = buildService();
-      findFirst.mockResolvedValue(null);
-
       await expect(
         service.create({
           ruleCode: "GRIEVANCE_RESPONSE",
@@ -416,7 +533,6 @@ describe("ComplianceService - GRIEVANCE_RESPONSE 90-day ceiling (Check 6)", () =
 
     it("MONTHS: accepts 2 months (62 days worst-case)", async () => {
       const { service, findFirst, txComplianceRule } = buildService();
-      findFirst.mockResolvedValue(null);
       txComplianceRule.create.mockResolvedValue(
         buildRule({ deadlineValue: 2, deadlineUnit: "MONTHS" }),
       );
@@ -438,8 +554,6 @@ describe("ComplianceService - GRIEVANCE_RESPONSE 90-day ceiling (Check 6)", () =
 
     it("MONTHS: refuses 3 months (93 days worst-case) with the Rule 14(3) citation -- this is the bug's exact shape (previously only DAYS was checked)", async () => {
       const { service, findFirst } = buildService();
-      findFirst.mockResolvedValue(null);
-
       await expect(
         service.create({
           ruleCode: "GRIEVANCE_RESPONSE",
@@ -457,8 +571,6 @@ describe("ComplianceService - GRIEVANCE_RESPONSE 90-day ceiling (Check 6)", () =
 
     it("MONTHS: refuses 6 months (186 days worst-case) -- the report's original PoC payload", async () => {
       const { service, findFirst } = buildService();
-      findFirst.mockResolvedValue(null);
-
       await expect(
         service.create({
           ruleCode: "GRIEVANCE_RESPONSE",
@@ -476,8 +588,6 @@ describe("ComplianceService - GRIEVANCE_RESPONSE 90-day ceiling (Check 6)", () =
 
     it("YEARS: refuses even the smallest legal value, 1 year (366 days worst-case) with the Rule 14(3) citation", async () => {
       const { service, findFirst } = buildService();
-      findFirst.mockResolvedValue(null);
-
       await expect(
         service.create({
           ruleCode: "GRIEVANCE_RESPONSE",
@@ -523,7 +633,10 @@ describe("ComplianceService - GRIEVANCE_RESPONSE 90-day ceiling (Check 6)", () =
       findFirst.mockResolvedValueOnce(v1).mockResolvedValueOnce(v1);
 
       await expect(
-        service.update("rule-1", { deadlineValue: 2161, deadlineUnit: "HOURS" }),
+        service.update("rule-1", {
+          deadlineValue: 2161,
+          deadlineUnit: "HOURS",
+        }),
       ).rejects.toThrow(/Rule 14\(3\)/);
     });
 
@@ -588,7 +701,6 @@ describe("ComplianceService - GRIEVANCE_RESPONSE 90-day ceiling (Check 6)", () =
   describe("the ceiling does not apply to non-GRIEVANCE_RESPONSE rule codes", () => {
     it("create(): SDF_ASSESSMENT_CYCLE at 12 MONTHS (372 days worst-case) is accepted -- it is a legitimate non-grievance rule, not subject to Rule 14(3)", async () => {
       const { service, findFirst, txComplianceRule } = buildService();
-      findFirst.mockResolvedValue(null);
       txComplianceRule.create.mockResolvedValue(
         buildRule({
           ruleCode: "SDF_ASSESSMENT_CYCLE",

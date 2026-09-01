@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "AccessTokenPayload"
+community: "SdfController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/SdfController
 ---
 
 # Param
 
 ## Connections
-- [[dot-confirm()]] - `references` [EXTRACTED]
-- [[dot-reject()]] - `references` [EXTRACTED]
+- [[dot-completeAssessment()]] - `references` [EXTRACTED]
+- [[dot-updateAlgorithm()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/SdfController

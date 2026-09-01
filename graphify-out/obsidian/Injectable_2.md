@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "matching.service.ts"
+community: "sdf.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/matchingservicets
+  - community/sdfmodulets
 ---
 
 # Injectable
 
 ## Connections
-- [[MatchingService]] - `references` [EXTRACTED]
+- [[SdfCycleScanQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/matchingservicets
+#graphify/code #graphify/EXTRACTED #community/sdfmodulets

@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.ts"
+source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
 type: "code"
-community: "PrismaService"
-location: "L77"
+community: ".record"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/record
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
-- [[PurposesService]] - `method` [EXTRACTED]
+- [[PurposesController]] - `method` [EXTRACTED]
+- [[PurposesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/record

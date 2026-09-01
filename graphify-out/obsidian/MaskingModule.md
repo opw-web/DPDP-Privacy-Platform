@@ -12,9 +12,11 @@ tags:
 # MaskingModule
 
 ## Connections
-- [[Module_11]] - `references` [EXTRACTED]
+- [[Module_6]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
+- [[audience.module.ts]] - `imports` [EXTRACTED]
 - [[audit-read.module.ts]] - `imports` [EXTRACTED]
+- [[children.module.ts]] - `imports` [EXTRACTED]
 - [[masking.module.ts]] - `contains` [EXTRACTED]
 - [[principals.module.ts]] - `imports` [EXTRACTED]
 

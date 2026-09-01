@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ListAuditEventsDto"
+community: "templates.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ListAuditEventsDto
+  - community/templatesservicets
 ---
 
 # IsString
 
 ## Connections
-- [[ListAuditEventsDto]] - `references` [EXTRACTED]
+- [[CreateTemplateDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ListAuditEventsDto
+#graphify/code #graphify/EXTRACTED #community/templatesservicets

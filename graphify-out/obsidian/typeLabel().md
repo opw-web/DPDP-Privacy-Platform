@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/audit/canonical-json.ts"
 type: "code"
-community: "audit.e2e-spec.ts"
+community: "canonicalJson"
 location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audite2e-spects
+  - community/canonicalJson
 ---
 
 # typeLabel()
@@ -15,4 +15,4 @@ tags:
 - [[canonical-json.ts]] - `contains` [EXTRACTED]
 - [[stringify()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audite2e-spects
+#graphify/code #graphify/EXTRACTED #community/canonicalJson

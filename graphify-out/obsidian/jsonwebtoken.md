@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/package.json"
 type: "code"
 community: "jsonwebtoken"
-location: "L39"
+location: "L42"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # jsonwebtoken
 
 ## Connections
-- [[dependencies_2]] - `contains` [EXTRACTED]
+- [[dependencies_1]] - `contains` [EXTRACTED]
 - [[jsonwebtoken_1]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/jsonwebtoken

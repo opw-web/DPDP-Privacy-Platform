@@ -12,7 +12,7 @@ tags:
 # PurposesModule
 
 ## Connections
-- [[Module_22]] - `references` [EXTRACTED]
+- [[Module_27]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[purposes.module.ts]] - `contains` [EXTRACTED]
 

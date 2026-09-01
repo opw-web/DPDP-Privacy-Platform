@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "employees.controller.ts"
+community: "sync.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeescontrollerts
+  - community/syncservicets
 ---
 
 # Param
 
 ## Connections
-- [[dot-get()_6]] - `references` [EXTRACTED]
-- [[dot-resetPassword()]] - `references` [EXTRACTED]
-- [[dot-update()_6]] - `references` [EXTRACTED]
+- [[dot-get()_3]] - `references` [EXTRACTED]
+- [[dot-trigger()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeescontrollerts
+#graphify/code #graphify/EXTRACTED #community/syncservicets

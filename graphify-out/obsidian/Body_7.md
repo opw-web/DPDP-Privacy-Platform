@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdateRolePermissionsDto"
+community: "security-measures.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateRolePermissionsDto
+  - community/security-measuresservicets
 ---
 
 # Body
 
 ## Connections
-- [[dot-replacePermissions()]] - `references` [EXTRACTED]
+- [[dot-create()_6]] - `references` [EXTRACTED]
+- [[dot-update()_7]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto
+#graphify/code #graphify/EXTRACTED #community/security-measuresservicets

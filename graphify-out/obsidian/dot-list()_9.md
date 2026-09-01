@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/employees.service.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
 type: "code"
-community: "employees.controller.ts"
-location: "L42"
+community: "DataSourcesService"
+location: "L188"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeescontrollerts
+  - community/DataSourcesService
 ---
 
 # .list()
 
 ## Connections
-- [[EmployeesService]] - `method` [EXTRACTED]
+- [[DataSourcesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeescontrollerts
+#graphify/code #graphify/EXTRACTED #community/DataSourcesService

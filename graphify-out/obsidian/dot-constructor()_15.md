@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/source-purposes.service.ts"
+source_file: "dpdp-platform/backend/src/queues/campaign-send.queue.ts"
 type: "code"
-community: "PrismaService"
-location: "L36"
+community: "campaign-send.processor.ts"
+location: "L67"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/campaign-sendprocessorts
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
-- [[SourcePurposesService]] - `method` [EXTRACTED]
+- [[CampaignSendQueueService]] - `method` [EXTRACTED]
+- [[InjectQueue_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/campaign-sendprocessorts

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "reflect-metadata"
-location: "L43"
+community: "dependencies"
+location: "L50"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/reflect-metadata
+  - community/dependencies
 ---
 
 # reflect-metadata
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[reflect-metadata]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/reflect-metadata
+#graphify/concept #graphify/EXTRACTED #community/dependencies

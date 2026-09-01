@@ -1,19 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/sharing.service.ts"
+source_file: "dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts"
 type: "code"
-community: "PrismaService"
-location: "L54"
+community: "PDFDocument"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/PDFDocument
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
-- [[SharingService]] - `method` [EXTRACTED]
+- [[PDFDocument]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/PDFDocument

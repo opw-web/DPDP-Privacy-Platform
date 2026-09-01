@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PrismaService"
+community: "RetentionScanService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/RetentionScanService
 ---
 
 # Injectable
 
 ## Connections
-- [[OrganizationsService]] - `references` [EXTRACTED]
+- [[RetentionScanService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/RetentionScanService

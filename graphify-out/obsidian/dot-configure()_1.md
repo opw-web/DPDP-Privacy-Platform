@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/src/app.module.ts"
 type: "code"
 community: "AppModule"
-location: "L86"
+location: "L125"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/common/prisma/prisma.service.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/notifications.controller.ts"
 type: "code"
-community: "PrismaService"
-location: "L48"
+community: "NotificationsService"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/NotificationsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[PrismaService]] - `method` [EXTRACTED]
+- [[NotificationsController]] - `method` [EXTRACTED]
+- [[NotificationsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

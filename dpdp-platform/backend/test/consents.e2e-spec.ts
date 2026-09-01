@@ -237,9 +237,11 @@ describe("Consents API (e2e)", () => {
 
       const purposeId = await createConsentPurpose(organizationId);
       const dataPrincipalId = await createPrincipal(organizationId);
+      const otherPrincipalId = await createPrincipal(organizationId);
       const { noticeId, noticeVersionId, contentHash } =
         await createPublishedNotice(organizationId);
       const token = await principalPortalToken(organizationId, dataPrincipalId);
+      const otherToken = await principalPortalToken(organizationId, otherPrincipalId);
 
       const grantRes = await request(app.getHttpServer())
         .post(`/api/me/consents/${purposeId}`)
@@ -260,6 +262,69 @@ describe("Consents API (e2e)", () => {
       expect(withdrawRes.body.status).toBe("WITHDRAWN");
       expect(withdrawRes.body.noticeVersionId).toBe(noticeVersionId);
       expect(withdrawRes.body.noticeContentHash).toBe(contentHash);
+
+      // The portal history is the same tenant-scoped, token-bound consent
+      // record after withdrawal -- it must not disappear merely because the
+      // current status is no longer GRANTED.  The record and its evidenced
+      // event history are both returned without organizationId.
+      const historyRes = await request(app.getHttpServer())
+        .get("/api/me/consents")
+        .set("Authorization", `Bearer ${token}`);
+      expect(historyRes.status).toBe(200);
+      expect(historyRes.body).toHaveLength(1);
+      const history = historyRes.body[0];
+      expect(history).toEqual(
+        expect.objectContaining({
+          dataPrincipalId,
+          purposeId,
+          status: "WITHDRAWN",
+          noticeId,
+          noticeVersionId,
+          noticeContentHash: contentHash,
+          purpose: expect.objectContaining({
+            id: purposeId,
+            code: expect.any(String),
+            name: "Marketing emails",
+          }),
+          withdrawnAt: expect.any(String),
+          events: expect.any(Array),
+        }),
+      );
+      expect(history.organizationId).toBeUndefined();
+      expect(history.events).toHaveLength(2);
+      expect(history.events[0]).toEqual(
+        expect.objectContaining({
+          toStatus: "GRANTED",
+          channel: "PORTAL",
+          noticeVersionId,
+          noticeContentHash: contentHash,
+          evidence: expect.objectContaining({
+            userAgent: "Consents-E2E-Agent/1.0",
+            ip: expect.any(String),
+          }),
+        }),
+      );
+      expect(history.events[1]).toEqual(
+        expect.objectContaining({
+          fromStatus: "GRANTED",
+          toStatus: "WITHDRAWN",
+          channel: "PORTAL",
+          noticeVersionId,
+          noticeContentHash: contentHash,
+          evidence: expect.objectContaining({
+            userAgent: "Consents-E2E-Agent/1.0",
+            ip: expect.any(String),
+          }),
+        }),
+      );
+
+      // A different principal's token cannot read this history, even in the
+      // same organization; the controller never accepts a principal id.
+      const otherHistoryRes = await request(app.getHttpServer())
+        .get("/api/me/consents")
+        .set("Authorization", `Bearer ${otherToken}`);
+      expect(otherHistoryRes.status).toBe(200);
+      expect(otherHistoryRes.body).toEqual([]);
 
       const record = await prisma.consentRecord.findFirstOrThrow({
         where: { dataPrincipalId, purposeId },
@@ -290,6 +355,103 @@ describe("Consents API (e2e)", () => {
           data: { actorLabel: "Tampered" },
         }),
       ).rejects.toThrow(/rows are immutable/);
+    });
+
+    it("binds an UNKNOWN choice to the exact notice version in its delivered consent request", async () => {
+      const { organizationId } = await createOrgWithEmployee(
+        app,
+        prisma,
+        "CONSENTS_DELIVERED_NOTICE",
+        ["CAN_MANAGE_CONSENTS"],
+      );
+      orgIds.push(organizationId);
+
+      const purposeId = await createConsentPurpose(organizationId);
+      const dataPrincipalId = await createPrincipal(organizationId);
+      const { noticeId, noticeVersionId, contentHash } =
+        await createPublishedNotice(organizationId);
+      await TenantContext.run(systemStore(organizationId), () =>
+        consentBackfillService.runForCurrentOrganization(),
+      );
+      const token = await principalPortalToken(organizationId, dataPrincipalId);
+
+      const campaign = await prisma.messageCampaign.create({
+        data: {
+          organizationId,
+          reference: `CMP-${randomUUID()}`,
+          name: "Consent request with frozen notice",
+          category: "CONSENT_REQUEST",
+          subject: "Your choice",
+          bodyMarkdown: "Please choose.",
+          audienceFilter: { op: "AND", rules: [] },
+          purposeId,
+          noticeVersionId,
+          status: "SENT",
+          recipientCount: 1,
+          sentCount: 1,
+          createdByEmployeeId: randomUUID(),
+          sentAt: new Date(),
+        },
+      });
+      await prisma.campaignRecipient.create({
+        data: {
+          organizationId,
+          campaignId: campaign.id,
+          dataPrincipalId,
+          channel: "PORTAL",
+          status: "DELIVERED",
+          sentAt: new Date(),
+        },
+      });
+
+      // Publish a newer current version after delivery. The decision must
+      // remain attached to the version actually delivered, not this one.
+      const newerVersion = await prisma.noticeVersion.create({
+        data: {
+          organizationId,
+          noticeId,
+          version: 2,
+          itemisedDataFields: [],
+          purposeStatements: [],
+          withdrawalUrl: "https://example.test/withdraw-v2",
+          rightsUrl: "https://example.test/rights-v2",
+          boardComplaintUrl: "https://example.test/board-v2",
+          bodyMarkdown: "Newer notice body.",
+          contentHash: `hash-${randomUUID()}`,
+          publishedAt: new Date(),
+          createdByEmployeeId: randomUUID(),
+        },
+      });
+      await prisma.privacyNotice.update({
+        where: { id: noticeId },
+        data: { currentVersionId: newerVersion.id },
+      });
+
+      const listRes = await request(app.getHttpServer())
+        .get("/api/me/consents")
+        .set("Authorization", `Bearer ${token}`);
+      expect(listRes.status).toBe(200);
+      expect(listRes.body[0]).toEqual(expect.objectContaining({
+        status: "UNKNOWN",
+        noticeId: null,
+        noticeVersionId: null,
+        presentedNoticeId: noticeId,
+        presentedNoticeVersionId: noticeVersionId,
+        presentedCampaignId: campaign.id,
+      }));
+
+      const grantRes = await request(app.getHttpServer())
+        .post(`/api/me/consents/${purposeId}`)
+        .set("Authorization", `Bearer ${token}`)
+        .send({
+          status: "GRANTED",
+          noticeId,
+          evidence: { campaignId: campaign.id },
+        });
+      expect(grantRes.status).toBe(201);
+      expect(grantRes.body.noticeVersionId).toBe(noticeVersionId);
+      expect(grantRes.body.noticeContentHash).toBe(contentHash);
+      expect(grantRes.body.noticeVersionId).not.toBe(newerVersion.id);
     });
   });
 

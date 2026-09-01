@@ -1,0 +1,16 @@
+import { useState } from "react";
+import { useMutation } from "@tanstack/react-query";
+import { useNavigate, useParams } from "react-router-dom";
+import { toast } from "sonner";
+import { employeeApiClient } from "../../lib/api-client";
+import { Button } from "../../components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/card";
+import { MarkdownMessageEditor } from "../components/messaging/MarkdownMessageEditor";
+
+const BREACH_REQUIRED = ["{{breach_description}}", "{{occurred_at}}", "{{data_categories}}", "{{likely_consequences}}", "{{measures_taken}}", "{{responder_contact}}"];
+export function MessagingTemplateEditorPage() {
+  const { templateId } = useParams(); const navigate = useNavigate(); const editing = Boolean(templateId); const [code, setCode] = useState(""); const [name, setName] = useState(""); const [category, setCategory] = useState("GENERAL_NOTIFICATION"); const [subject, setSubject] = useState(""); const [body, setBody] = useState(""); const [ack, setAck] = useState(false);
+  const save = useMutation({ mutationFn: () => editing ? employeeApiClient.patch(`/templates/${templateId}`, { name, subject, bodyMarkdown: body, acknowledgeBreachElementRemoval: ack }) : employeeApiClient.post("/templates", { code, name, category, subject, bodyMarkdown: body }), onSuccess: () => { toast.success("Template saved"); navigate("/app/messaging/templates"); }, onError: (e) => toast.error(e instanceof Error ? e.message : "Could not save template") });
+  const breachMissing = category === "BREACH_NOTICE" && BREACH_REQUIRED.some((token) => !body.includes(token));
+  return <Card><CardHeader><CardTitle>{editing ? "Edit template" : "New message template"}</CardTitle></CardHeader><CardContent className="space-y-4"><div className="grid gap-3 sm:grid-cols-2"><label className="space-y-1 text-sm">Code<input className="flex h-9 w-full rounded-md border px-3" value={code} disabled={editing} onChange={(e) => setCode(e.target.value)} required /></label><label className="space-y-1 text-sm">Name<input className="flex h-9 w-full rounded-md border px-3" value={name} onChange={(e) => setName(e.target.value)} required /></label></div>{!editing ? <label className="space-y-1 text-sm">Category<select className="flex h-9 w-full rounded-md border px-3" value={category} onChange={(e) => setCategory(e.target.value)}><option>GENERAL_NOTIFICATION</option><option>MARKETING</option><option>BREACH_NOTICE</option><option>CONSENT_REQUEST</option></select></label> : null}<MarkdownMessageEditor subject={subject} body={body} onSubjectChange={setSubject} onBodyChange={setBody} />{breachMissing ? <div role="alert" className="border-2 border-destructive bg-destructive/10 p-4 font-semibold text-destructive">Warning: this breach notice is missing one or more mandatory Rule 7(1) elements. Tick the acknowledgement to record that removal before saving.<label className="mt-3 flex gap-2 font-normal"><input type="checkbox" checked={ack} onChange={(e) => setAck(e.target.checked)} />I acknowledge and authorise removal of the mandatory breach placeholders.</label></div> : null}<Button onClick={() => save.mutate()} disabled={save.isPending || (breachMissing && !ack)}>{save.isPending ? "Saving…" : "Save template"}</Button></CardContent></Card>;
+}

@@ -1,17 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/test-support/mock-http-server.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/sdf-cycle-scan.service.ts"
 type: "code"
-community: "data-sources.e2e-spec.ts"
-location: "L26"
+community: "sdf.module.ts"
+location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcese2e-spects
+  - community/sdfmodulets
 ---
 
 # .constructor()
 
 ## Connections
-- [[MockHttpServer]] - `method` [EXTRACTED]
+- [[ComplianceService]] - `references` [EXTRACTED]
+- [[NotificationsService]] - `references` [EXTRACTED]
+- [[PrismaService]] - `references` [EXTRACTED]
+- [[SdfCycleScanService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcese2e-spects
+#graphify/code #graphify/EXTRACTED #community/sdfmodulets

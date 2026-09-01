@@ -355,6 +355,11 @@ export function PrincipalDetailPage() {
             </span>
           </div>
         </CardHeader>
+        <CardContent className="pt-0">
+          <Button variant="outline" size="sm" asChild>
+            <Link to={`/app/principals/${principal.id}/evidence`}>Open evidence file (EV-03)</Link>
+          </Button>
+        </CardContent>
       </Card>
 
       <section aria-label="Contact and profile">

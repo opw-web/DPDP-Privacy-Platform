@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/mappings.e2e-spec.ts"
 type: "code"
-community: "mappings.e2e-spec.ts"
+community: "data-sources.e2e-spec.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingse2e-spects
+  - community/data-sourcese2e-spects
 ---
 
 # mappings.e2e-spec.ts
@@ -19,10 +19,10 @@ tags:
 - [[app.module.ts]] - `imports_from` [EXTRACTED]
 - [[createDataSource()_1]] - `contains` [EXTRACTED]
 - [[createEmployee()]] - `contains` [EXTRACTED]
-- [[createOrg()_2]] - `contains` [EXTRACTED]
+- [[createOrg()_1]] - `contains` [EXTRACTED]
 - [[createOrgWithBothPermissions()]] - `contains` [EXTRACTED]
 - [[createPurpose()_1]] - `contains` [EXTRACTED]
-- [[ensurePermission()_9]] - `contains` [EXTRACTED]
+- [[ensurePermission()_4]] - `contains` [EXTRACTED]
 - [[getMappings()]] - `contains` [EXTRACTED]
 - [[getPurposes()]] - `contains` [EXTRACTED]
 - [[jsonHandler()]] - `imports` [EXTRACTED]
@@ -33,4 +33,4 @@ tags:
 - [[seedpermissions.ts]] - `imports_from` [EXTRACTED]
 - [[startRecordsServer()_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingse2e-spects
+#graphify/code #graphify/EXTRACTED #community/data-sourcese2e-spects

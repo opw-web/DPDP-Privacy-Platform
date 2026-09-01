@@ -1,18 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/candidates.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/notifications.service.ts"
 type: "code"
-community: "AccessTokenPayload"
-location: "L27"
+community: "notifications.module.ts"
+location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/notificationsmodulets
 ---
 
 # .constructor()
 
 ## Connections
-- [[CandidatesController]] - `method` [EXTRACTED]
-- [[CandidatesService]] - `references` [EXTRACTED]
+- [[Inject]] - `references` [EXTRACTED]
+- [[NotificationProvider]] - `references` [EXTRACTED]
+- [[NotificationsService]] - `method` [EXTRACTED]
+- [[PortalProvider]] - `references` [EXTRACTED]
+- [[PrismaService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/notificationsmodulets

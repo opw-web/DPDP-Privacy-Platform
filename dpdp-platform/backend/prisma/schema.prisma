@@ -596,8 +596,28 @@ model RetentionPolicy {
   accountAccessCarveOut  Boolean           @default(false) // RE-04: Third Schedule carve-out
   active                 Boolean           @default(true)
   purpose                ProcessingPurpose @relation(fields: [purposeId], references: [id])
+  purposeServedSignals   PurposeServedSignal[]
 
   @@unique([organizationId, purposeId, name])
+}
+
+// A durable, principal-specific business signal that the purpose governed
+// by a PURPOSE_SERVED retention policy has been fulfilled. It is intentionally
+// not inferred from ProcessingPurpose.active: that flag is organization-wide
+// and cannot safely establish that an individual principal's purpose ended.
+model PurposeServedSignal {
+  id                String          @id @default(uuid())
+  organizationId    String
+  dataPrincipalId   String
+  retentionPolicyId String
+  servedAt          DateTime        @db.Timestamptz(6)
+  scheduledAt       DateTime?       @db.Timestamptz(6)
+  createdAt         DateTime        @default(now()) @db.Timestamptz(6)
+  dataPrincipal     DataPrincipal   @relation(fields: [dataPrincipalId], references: [id], onDelete: Restrict)
+  retentionPolicy   RetentionPolicy @relation(fields: [retentionPolicyId], references: [id], onDelete: Restrict)
+
+  @@unique([organizationId, dataPrincipalId, retentionPolicyId])
+  @@index([organizationId, scheduledAt])
 }
 
 model SecurityMeasure {
@@ -710,6 +730,7 @@ model DataPrincipal {
   requests                   PrincipalRequest[]
   nominations                Nomination[]
   erasureTasks               ErasureTask[]
+  purposeServedSignals       PurposeServedSignal[]
   campaignRecipients         CampaignRecipient[]
   notifications              Notification[]
   breachAffectations         BreachAffectedPrincipal[]
@@ -821,6 +842,29 @@ model AuditEvent {
   @@index([organizationId, createdAt])
   @@index([organizationId, subjectPrincipalId, createdAt])
   @@index([organizationId, resourceType, resourceId])
+}
+
+// SE-03 / Rule 6(1)(e): purgeable access-log projection. AuditEvent remains
+// the immutable, hash-chained evidence record; this copy is the retention
+// governed read/export surface and may be deleted after the legal floor.
+model AccessLogEntry {
+  id                 String    @id @default(uuid())
+  organizationId     String
+  auditEventId       String    @unique
+  sequence           BigInt
+  actorType          ActorType
+  actorId            String?
+  actorLabel         String
+  subjectPrincipalId String?
+  resourceType       String
+  resourceId         String?
+  metadata           Json      @default("{}")
+  ipAddress          String?
+  userAgent          String?
+  occurredAt         DateTime  @db.Timestamptz(6)
+
+  @@index([organizationId, occurredAt])
+  @@index([organizationId, subjectPrincipalId, occurredAt])
 }
 
 model Counter {
@@ -1217,7 +1261,7 @@ model BreachIncident {
   reference                   String // BR-000003
   title                       String
   description                 String
-  occurredAt                  DateTime?                 @db.Timestamptz(6) // when it happened
+  occurredAt                  DateTime                  @db.Timestamptz(6) // when it happened
   becameAwareAt               DateTime                  @db.Timestamptz(6) // BR-14: the ONLY clock start that matters
   discoveredByEmployeeId      String
   affectedSourceIds           String[]

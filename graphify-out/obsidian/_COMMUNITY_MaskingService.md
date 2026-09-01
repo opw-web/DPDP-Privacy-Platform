@@ -17,7 +17,7 @@ members: 11
 - [[dot-maskPhone()]] - code - dpdp-platform/backend/src/common/masking/masking.service.ts
 - [[dot-maskSegment()]] - code - dpdp-platform/backend/src/common/masking/masking.service.ts
 - [[dot-maskValue()]] - code - dpdp-platform/backend/src/common/masking/masking.service.ts
-- [[Injectable_34]] - code
+- [[Injectable_25]] - code
 - [[MaskingService]] - code - dpdp-platform/backend/src/common/masking/masking.service.ts
 
 ## Live Query (requires Dataview plugin)
@@ -28,13 +28,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_principals.service.ts]]
-- 2 edges to [[_COMMUNITY_inventory.service.ts]]
+- 3 edges to [[_COMMUNITY_compile-audience.ts]]
+- 2 edges to [[_COMMUNITY_masking.service.ts]]
 - 2 edges to [[_COMMUNITY_audit-read.service.ts]]
+- 2 edges to [[_COMMUNITY_guardians.service.ts]]
+- 2 edges to [[_COMMUNITY_principals.service.ts]]
 - 2 edges to [[_COMMUNITY_PrismaService]]
 - 1 edge to [[_COMMUNITY_app.module.ts]]
+- 1 edge to [[_COMMUNITY_retention.e2e-spec.ts]]
+- 1 edge to [[_COMMUNITY_access-report.service.ts]]
+- 1 edge to [[_COMMUNITY_PrincipalsService]]
 
 ## Top bridge nodes
-- [[MaskingService]] - degree 17, connects to 5 communities
-- [[dot-maskIfNeeded()]] - degree 5, connects to 1 community
+- [[MaskingService]] - degree 22, connects to 9 communities
+- [[dot-maskIfNeeded()]] - degree 7, connects to 4 communities
 - [[dot-hasFullPersonalDataAccess()]] - degree 3, connects to 1 community

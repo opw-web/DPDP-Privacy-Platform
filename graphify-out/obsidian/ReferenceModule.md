@@ -1,20 +1,23 @@
 ---
 source_file: "dpdp-platform/backend/src/common/reference/reference.module.ts"
 type: "code"
-community: "merge.service.ts"
+community: "app.module.ts"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mergeservicets
+  - community/appmodulets
 ---
 
 # ReferenceModule
 
 ## Connections
-- [[Module_8]] - `references` [EXTRACTED]
+- [[Module_7]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
+- [[board.module.ts]] - `imports` [EXTRACTED]
+- [[campaigns.module.ts]] - `imports` [EXTRACTED]
 - [[identity.module.ts]] - `imports` [EXTRACTED]
 - [[reference.module.ts]] - `contains` [EXTRACTED]
+- [[requests.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mergeservicets
+#graphify/code #graphify/EXTRACTED #community/appmodulets

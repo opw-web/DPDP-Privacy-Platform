@@ -1,17 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateSharingActivityDto"
+community: "AccessTokenPayload"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSharingActivityDto
+  - community/AccessTokenPayload
 ---
 
 # Param
 
 ## Connections
-- [[dot-get()_8]] - `references` [EXTRACTED]
-- [[dot-update()_8]] - `references` [EXTRACTED]
+- [[dot-approve()]] - `references` [EXTRACTED]
+- [[dot-get()_4]] - `references` [EXTRACTED]
+- [[dot-listRecipients()]] - `references` [EXTRACTED]
+- [[dot-send()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

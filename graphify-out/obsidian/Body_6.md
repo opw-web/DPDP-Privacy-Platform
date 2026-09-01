@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RequirePermission"
+community: "AccessTokenPayload"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/AccessTokenPayload
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_9]] - `references` [EXTRACTED]
-- [[dot-update()_10]] - `references` [EXTRACTED]
+- [[dot-create()_5]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

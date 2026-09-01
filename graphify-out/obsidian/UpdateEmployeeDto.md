@@ -12,13 +12,13 @@ tags:
 # UpdateEmployeeDto
 
 ## Connections
-- [[dot-update()_6]] - `references` [EXTRACTED]
-- [[dot-update()_7]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_7]] - `references` [EXTRACTED]
-- [[IsEnum_6]] - `references` [EXTRACTED]
-- [[IsOptional_8]] - `references` [EXTRACTED]
-- [[IsString_12]] - `references` [EXTRACTED]
-- [[MinLength_9]] - `references` [EXTRACTED]
+- [[dot-update()_13]] - `references` [EXTRACTED]
+- [[dot-update()_14]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_31]] - `references` [EXTRACTED]
+- [[IsEnum_15]] - `references` [EXTRACTED]
+- [[IsOptional_35]] - `references` [EXTRACTED]
+- [[IsString_41]] - `references` [EXTRACTED]
+- [[MinLength_32]] - `references` [EXTRACTED]
 - [[employees.controller.ts]] - `imports` [EXTRACTED]
 - [[employees.service.ts]] - `imports` [EXTRACTED]
 - [[update-employee.dto.ts]] - `contains` [EXTRACTED]

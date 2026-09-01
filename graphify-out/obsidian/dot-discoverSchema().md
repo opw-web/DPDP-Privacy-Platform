@@ -1,17 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/connector.interface.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
 type: "code"
-community: "connector.factory.ts"
-location: "L13"
+community: "DataSourcesService"
+location: "L588"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/connectorfactoryts
+  - community/DataSourcesService
 ---
 
 # .discoverSchema()
 
 ## Connections
-- [[Connector]] - `method` [EXTRACTED]
+- [[dot-buildConnector()]] - `calls` [EXTRACTED]
+- [[dot-discoverSchema()_1]] - `calls` [INFERRED]
+- [[DataSourcesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/connectorfactoryts
+#graphify/code #graphify/EXTRACTED #community/DataSourcesService

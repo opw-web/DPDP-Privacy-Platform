@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principals/principal-recipients.service.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/test-support/mock-http-server.ts"
 type: "code"
-community: "principals.service.ts"
-location: "L7"
+community: "data-sources.e2e-spec.ts"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principalsservicets
+  - community/data-sourcese2e-spects
 ---
 
 # .constructor()
 
 ## Connections
-- [[PrincipalRecipientsService]] - `method` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
+- [[MockHttpServer]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principalsservicets
+#graphify/code #graphify/EXTRACTED #community/data-sourcese2e-spects

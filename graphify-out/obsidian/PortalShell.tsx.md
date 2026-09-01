@@ -1,0 +1,31 @@
+---
+source_file: "dpdp-platform/frontend/src/principal/components/PortalShell.tsx"
+type: "code"
+community: "DateTime.tsx"
+location: "L1"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/DateTimetsx
+---
+
+# PortalShell.tsx
+
+## Connections
+- [[Button]] - `imports` [EXTRACTED]
+- [[DateTime.tsx]] - `imports_from` [EXTRACTED]
+- [[MeProfileTimezone]] - `contains` [EXTRACTED]
+- [[NAV_ITEMS_1]] - `contains` [EXTRACTED]
+- [[OrgTimezoneProvider]] - `imports` [EXTRACTED]
+- [[PortalShell()]] - `contains` [EXTRACTED]
+- [[PortalShell.test.tsx]] - `imports_from` [EXTRACTED]
+- [[api-client.ts]] - `imports_from` [EXTRACTED]
+- [[button.tsx]] - `imports_from` [EXTRACTED]
+- [[cn()]] - `imports` [EXTRACTED]
+- [[libauth.ts]] - `imports_from` [EXTRACTED]
+- [[principalApiClient]] - `imports` [EXTRACTED]
+- [[router.tsx]] - `imports_from` [EXTRACTED]
+- [[usePrincipalAuth()]] - `imports` [EXTRACTED]
+- [[utils.ts]] - `imports_from` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/DateTimetsx

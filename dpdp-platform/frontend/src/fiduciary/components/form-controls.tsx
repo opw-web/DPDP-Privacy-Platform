@@ -1,49 +1,25 @@
-import { forwardRef } from "react";
-import type {
-  InputHTMLAttributes,
-  ReactNode,
-  SelectHTMLAttributes,
-  TextareaHTMLAttributes,
-} from "react";
-import { cn } from "../../lib/utils";
+import type { ReactNode } from "react";
 import { Label } from "../../components/ui/label";
+import { Select } from "../../components/ui/select";
+import { Textarea } from "../../components/ui/textarea";
+import { CheckboxOption as PromotedCheckboxOption } from "../../components/ui/checkbox";
 
 /**
- * Small local form primitives shared by every register/purpose form in
- * this task. There is no `<select>`/`<textarea>` in the shared
- * `src/components/ui/` kit yet, so these live here (task directory) per
- * the batch rule: "put a new shared component in your own task's
- * directory; the integrator promotes it later if two tasks converged on
- * it." Styling matches `components/ui/input.tsx` exactly.
+ * Task 16 re-point: `SelectControl`/`TextareaControl`/`CheckboxOption` were
+ * promoted into the shared `components/ui/` kit (`select.tsx`,
+ * `textarea.tsx`, `checkbox.tsx`) as their own task converged with this
+ * one. This file now re-exports the SAME names, built on the promoted
+ * primitives, so every existing importer (`PurposeForm`, `SettingsPage`,
+ * the register tabs, the wizard steps, `SdfDeclarationCard`, `AuditPage`)
+ * needs zero changes -- behaviour-preserving by construction: same DOM,
+ * same classNames, same props, just one implementation instead of two.
+ * `FieldShell` had nowhere else to go (it isn't a primitive, it's a
+ * label+control+hint+error layout) and stays here unchanged.
  */
 
-const controlClassName =
-  "flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50";
-
-export const SelectControl = forwardRef<
-  HTMLSelectElement,
-  SelectHTMLAttributes<HTMLSelectElement>
->(({ className, children, ...props }, ref) => (
-  <select ref={ref} className={cn(controlClassName, className)} {...props}>
-    {children}
-  </select>
-));
-SelectControl.displayName = "SelectControl";
-
-export const TextareaControl = forwardRef<
-  HTMLTextAreaElement,
-  TextareaHTMLAttributes<HTMLTextAreaElement>
->(({ className, ...props }, ref) => (
-  <textarea
-    ref={ref}
-    className={cn(
-      "flex min-h-[4.5rem] w-full rounded-md border border-input bg-background px-3 py-2 text-sm shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50",
-      className,
-    )}
-    {...props}
-  />
-));
-TextareaControl.displayName = "TextareaControl";
+export const SelectControl = Select;
+export const TextareaControl = Textarea;
+export const CheckboxOption = PromotedCheckboxOption;
 
 interface FieldShellProps {
   label: string;
@@ -63,21 +39,3 @@ export function FieldShell({ label, htmlFor, error, hint, children }: FieldShell
     </div>
   );
 }
-
-type CheckboxOptionProps = { id: string; label: string } & InputHTMLAttributes<HTMLInputElement>;
-
-export const CheckboxOption = forwardRef<HTMLInputElement, CheckboxOptionProps>(
-  ({ id, label, className, ...props }, ref) => (
-    <label htmlFor={id} className="flex items-center gap-2 text-sm font-normal">
-      <input
-        id={id}
-        ref={ref}
-        type="checkbox"
-        className={cn("h-4 w-4 rounded border-input", className)}
-        {...props}
-      />
-      {label}
-    </label>
-  ),
-);
-CheckboxOption.displayName = "CheckboxOption";

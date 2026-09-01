@@ -1,10 +1,10 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
-type: "code"
+type: "concept"
 community: "dependencies"
-location: "L45"
+location: "L49"
 tags:
-  - graphify/code
+  - graphify/concept
   - graphify/EXTRACTED
   - community/dependencies
 ---
@@ -12,7 +12,6 @@ tags:
 # prisma
 
 ## Connections
-- [[dependencies_2]] - `contains` [EXTRACTED]
-- [[prisma_2]] - `imports` [EXTRACTED]
+- [[prisma]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dependencies
+#graphify/concept #graphify/EXTRACTED #community/dependencies

@@ -12,7 +12,7 @@ tags:
 # fastify
 
 ## Connections
-- [[dependencies_1]] - `contains` [EXTRACTED]
+- [[dependencies_2]] - `contains` [EXTRACTED]
 - [[fastify_1]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/demo-company-server/packagejson

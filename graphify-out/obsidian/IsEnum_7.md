@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AccessTokenPayload"
+community: "ListRequestsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/ListRequestsDto
 ---
 
 # IsEnum
 
 ## Connections
-- [[ListMatchCandidatesQueryDto]] - `references` [EXTRACTED]
+- [[ListRequestsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/ListRequestsDto

@@ -1,55 +1,16 @@
-import { Injectable, Logger, OnModuleInit } from "@nestjs/common";
+import { Injectable, Logger } from "@nestjs/common";
 import { PrismaService } from "../common/prisma/prisma.service";
 import { SyncQueueService } from "./sync.queue";
+import { BootRegistrationRegistry } from "./boot-registration.registry";
+import { Mvp2ScheduleReconciliationService } from "./mvp2-schedules";
 
-/**
- * Bounds how long application boot will wait for reconciliation before
- * giving up and letting the rest of the app start anyway (task 18 review
- * round 2, Important 2). Not a statutory number -- an operational
- * safety valve -- but named per this codebase's "no bare literals"
- * convention regardless.
- */
-export const RECONCILE_BOOT_TIMEOUT_MS = 5_000;
-
-/**
- * Shared boot-safety primitive (task 18 review round 2, Important 2),
- * factored out so every `onModuleInit` in this codebase that registers a
- * BullMQ repeatable schedule applies the SAME policy rather than each
- * inventing its own: races `promise` against a plain timer so an
- * unreachable Redis at boot can never block application startup beyond
- * `boundaryMs`. On timeout the original promise is left running in the
- * background rather than cancelled -- harmless for every caller here,
- * since each wraps an idempotent BullMQ upsert (a very-late completion
- * once Redis recovers is a correct, if delayed, registration, never a
- * duplicate or a stale overwrite).
- */
-export function withBootTimeout<T>(
-  promise: Promise<T>,
-  boundaryMs: number = RECONCILE_BOOT_TIMEOUT_MS,
-): Promise<T> {
-  return new Promise<T>((resolve, reject) => {
-    const timer = setTimeout(() => {
-      reject(
-        new Error(`Exceeded its ${boundaryMs}ms startup budget`),
-      );
-    }, boundaryMs);
-    // Never keep the process alive solely to fire this timeout -- boot
-    // either finishes first (clearing it below) or the timeout itself
-    // decides the race; either way this timer must not block process
-    // exit.
-    timer.unref?.();
-    promise.then(
-      (value) => {
-        clearTimeout(timer);
-        resolve(value);
-      },
-      (err: unknown) => {
-        clearTimeout(timer);
-        reject(err);
-      },
-    );
-  });
-}
+// `RECONCILE_BOOT_TIMEOUT_MS` / `withBootTimeout` moved to
+// `boot-timeout.util.ts` (still the ONE named boot-safety budget in this
+// codebase) so `BootRegistrationRegistry` can import them without a
+// circular dependency on this file. Re-exported here for backward
+// compatibility with any existing import of either name from this
+// module.
+export { RECONCILE_BOOT_TIMEOUT_MS, withBootTimeout } from "./boot-timeout.util";
 
 /**
  * Task 18 review, Important 4+5: `DataSource.syncFrequency` (Postgres) is
@@ -75,54 +36,72 @@ export function withBootTimeout<T>(
  * CURRENT `DataSource` rows never looks at what Redis is doing for a row
  * that is already gone.
  *
- * Runs once at application boot (`OnModuleInit`), across EVERY
- * organization's data sources -- this is why it reads via the RAW
- * (unscoped) `PrismaService` rather than `prisma.scoped`: there is no
- * single tenant to bind a `TenantContext` to for a startup task that must
- * see every tenant's rows. `DataSource`/`Organization` have no Prisma
- * relation between them (deliberately -- see `tenant.extension.ts`'s doc
- * comment on why a nested relation read would bypass tenant scoping), so
- * the join to each data source's organization timezone happens in
- * application code via a plain id-keyed map instead of a Prisma `include`.
+ * Runs once at application boot, across EVERY organization's data
+ * sources -- this is why it reads via the RAW (unscoped) `PrismaService`
+ * rather than `prisma.scoped`: there is no single tenant to bind a
+ * `TenantContext` to for a startup task that must see every tenant's
+ * rows. `DataSource`/`Organization` have no Prisma relation between them
+ * (deliberately -- see `tenant.extension.ts`'s doc comment on why a
+ * nested relation read would bypass tenant scoping), so the join to each
+ * data source's organization timezone happens in application code via a
+ * plain id-keyed map instead of a Prisma `include`.
+ *
+ * Registers itself with `BootRegistrationRegistry` from its OWN
+ * constructor rather than awaiting `reconcile()` in its own
+ * `onModuleInit` (an earlier version of this class did exactly that,
+ * individually bounded by `withBootTimeout` -- correct in isolation, but
+ * once four more queue modules each did the same thing, Nest's
+ * sequential per-module `onModuleInit` await turned five independently-
+ * bounded budgets into one worst-case boot time that summed all of them).
+ * See `BootRegistrationRegistry`'s doc comment for the shared,
+ * once-only, concurrent budget this class now participates in instead.
  */
 @Injectable()
-export class ScheduleReconciliationService implements OnModuleInit {
+export class ScheduleReconciliationService {
   private readonly logger = new Logger(ScheduleReconciliationService.name);
 
   constructor(
     private readonly prisma: PrismaService,
     private readonly syncQueueService: SyncQueueService,
-  ) {}
+    private readonly mvp2ScheduleReconciliationService: Mvp2ScheduleReconciliationService,
+    bootRegistrations: BootRegistrationRegistry,
+  ) {
+    bootRegistrations.register("Sync schedule reconciliation", () =>
+      this.reconcileAtBoot(),
+    );
+  }
 
   /**
-   * Never blocks application boot beyond `RECONCILE_BOOT_TIMEOUT_MS`, and
-   * never throws out of boot at all (task 18 review round 2, Important
-   * 2): `reconcile()` calls `SyncQueueService.upsertSchedule`, which
-   * (via BullMQ's `Queue`) issues commands over a connection built with
+   * Never throws out of boot (task 18 review round 2, Important 2):
+   * `reconcile()` calls `SyncQueueService.upsertSchedule`, which (via
+   * BullMQ's `Queue`) issues commands over a connection built with
    * `maxRetriesPerRequest: null` -- REQUIRED for BullMQ's own
    * Queue/Worker connections, but it also means that if Redis is
    * unreachable while Postgres is perfectly healthy, that command never
    * fails and never times out on its own; it sits in ioredis's offline
    * command queue forever (confirmed against ioredis's own connection
    * handling: the queue is only ever flushed once `maxRetriesPerRequest`
-   * is a NUMBER, never for `null`). Without a bound here, `onModuleInit`
-   * -- which Nest's bootstrap sequence AWAITS for every module before the
-   * app can start listening -- would simply never resolve, so `/health`
-   * could never even report the outage. `withBootTimeout` above races
-   * `reconcile()` against a plain timer: on timeout, boot proceeds
-   * immediately and this warns; `reconcile()`'s promise itself is left
-   * running in the background (harmless -- `upsertSchedule` is
+   * is a NUMBER, never for `null`). This is exactly why this thunk is
+   * registered with `BootRegistrationRegistry` rather than awaited
+   * directly: that registry races the WHOLE batch of every queue
+   * module's thunk against one shared `RECONCILE_BOOT_TIMEOUT_MS` budget,
+   * so `/health` can always report the outage even if `reconcile()`
+   * itself never settles in time. On failure this warns and lets boot
+   * continue regardless; `reconcile()`'s promise itself is left running
+   * in the background if still pending (harmless -- `upsertSchedule` is
    * idempotent, so a very-late completion once Redis recovers is a
    * correct, if delayed, reconciliation, never a duplicate or a stale
    * overwrite).
    */
-  async onModuleInit(): Promise<void> {
+  private async reconcileAtBoot(): Promise<void> {
     try {
-      await withBootTimeout(this.reconcile(), RECONCILE_BOOT_TIMEOUT_MS);
+      await Promise.all([
+        this.reconcile(),
+        this.mvp2ScheduleReconciliationService.reconcile(),
+      ]);
     } catch (err) {
       this.logger.warn(
-        "Sync schedule reconciliation did not complete at startup " +
-          `(timed out after ${RECONCILE_BOOT_TIMEOUT_MS}ms, or failed) -- ` +
+        "Sync schedule reconciliation did not complete at startup -- " +
           "continuing to boot regardless; schedules may be stale until " +
           `the next successful reconciliation or data source save: ${
             err instanceof Error ? err.message : "unknown error"

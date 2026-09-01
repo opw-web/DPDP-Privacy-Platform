@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/transfers.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/recipients.service.ts"
 type: "code"
-community: "CreateTransferDto"
-location: "L57"
+community: "RecipientsService"
+location: "L67"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTransferDto
+  - community/RecipientsService
 ---
 
 # .get()
 
 ## Connections
 - [[dot-get()_12]] - `calls` [INFERRED]
-- [[TransfersService]] - `method` [EXTRACTED]
+- [[RecipientsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTransferDto
+#graphify/code #graphify/EXTRACTED #community/RecipientsService

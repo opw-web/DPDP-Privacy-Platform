@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "data-sources.service.ts"
+community: "legal-hold.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesservicets
+  - community/legal-holdservicets
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[UpdateDataSourceDto]] - `references` [EXTRACTED]
+- [[CreateLegalHoldDto]] - `references` [EXTRACTED]
+- [[LegalHoldScopeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets
+#graphify/code #graphify/EXTRACTED #community/legal-holdservicets

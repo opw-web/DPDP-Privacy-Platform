@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/audit/audit.service.ts"
 type: "code"
-community: "PrismaService"
+community: "audit.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/auditservicets
 ---
 
 # audit.service.ts
@@ -21,39 +21,61 @@ tags:
 - [[TenantContext]] - `imports` [EXTRACTED]
 - [[access-log.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[access-log.service.ts]] - `imports_from` [EXTRACTED]
+- [[access-report.service.ts]] - `imports_from` [EXTRACTED]
+- [[age-status.service.ts]] - `imports_from` [EXTRACTED]
 - [[age.service.ts]] - `imports_from` [EXTRACTED]
+- [[algorithm-register.service.ts]] - `imports_from` [EXTRACTED]
 - [[allocateCounterValue()]] - `imports` [EXTRACTED]
 - [[assertNoForbiddenMetadata()]] - `contains` [EXTRACTED]
 - [[audit-actions.ts]] - `imports_from` [EXTRACTED]
+- [[audit-export.service.ts]] - `imports_from` [EXTRACTED]
 - [[audit-read.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[audit-read.service.ts]] - `imports_from` [EXTRACTED]
 - [[audit.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[audit.module.ts]] - `imports_from` [EXTRACTED]
+- [[boardnon-disclosure.ts]] - `imports_from` [EXTRACTED]
+- [[campaigns.service.ts]] - `imports_from` [EXTRACTED]
 - [[candidates.service.ts]] - `imports_from` [EXTRACTED]
 - [[canonical-json.ts]] - `imports_from` [EXTRACTED]
 - [[canonicalJson()]] - `imports` [EXTRACTED]
+- [[child-exemptions.service.ts]] - `imports_from` [EXTRACTED]
+- [[compliance.service.spec.ts]] - `imports_from` [EXTRACTED]
+- [[compliance.service.ts]] - `imports_from` [EXTRACTED]
+- [[consents.service.ts]] - `imports_from` [EXTRACTED]
 - [[counter.ts]] - `imports_from` [EXTRACTED]
 - [[data-sources.service.ts]] - `imports_from` [EXTRACTED]
 - [[employee-auth.service.ts]] - `imports_from` [EXTRACTED]
 - [[employees.service.ts]] - `imports_from` [EXTRACTED]
+- [[erasure-task.service.ts]] - `imports_from` [EXTRACTED]
+- [[evidence-pack.service.ts]] - `imports_from` [EXTRACTED]
+- [[evidencenon-disclosure.ts]] - `imports_from` [EXTRACTED]
+- [[guardians.service.ts]] - `imports_from` [EXTRACTED]
+- [[information-requests.service.ts]] - `imports_from` [EXTRACTED]
+- [[legal-hold.service.ts]] - `imports_from` [EXTRACTED]
 - [[linking.service.ts]] - `imports_from` [EXTRACTED]
 - [[mappings.service.ts]] - `imports_from` [EXTRACTED]
 - [[merge.service.ts]] - `imports_from` [EXTRACTED]
+- [[notices.service.ts]] - `imports_from` [EXTRACTED]
 - [[organizations.service.ts]] - `imports_from` [EXTRACTED]
+- [[pre-erasure-notice.service.ts]] - `imports_from` [EXTRACTED]
 - [[principal-auth.service.ts]] - `imports_from` [EXTRACTED]
+- [[principal-evidence.service.ts]] - `imports_from` [EXTRACTED]
 - [[purposes.service.spec.ts]] - `imports_from` [EXTRACTED]
 - [[purposes.service.ts]] - `imports_from` [EXTRACTED]
 - [[recipients.service.ts]] - `imports_from` [EXTRACTED]
 - [[refresh-rotation.util.ts]] - `imports_from` [EXTRACTED]
+- [[requests.service.ts]] - `imports_from` [EXTRACTED]
 - [[retention.service.ts]] - `imports_from` [EXTRACTED]
 - [[roles.service.ts]] - `imports_from` [EXTRACTED]
 - [[ropa-export.service.ts]] - `imports_from` [EXTRACTED]
 - [[scoped-transaction-client.ts]] - `imports_from` [EXTRACTED]
+- [[sdf-assessment.service.ts]] - `imports_from` [EXTRACTED]
 - [[security-measures.service.ts]] - `imports_from` [EXTRACTED]
 - [[sharing.service.ts]] - `imports_from` [EXTRACTED]
 - [[source-purposes.service.ts]] - `imports_from` [EXTRACTED]
 - [[sync-pipeline.service.ts]] - `imports_from` [EXTRACTED]
+- [[templates.service.ts]] - `imports_from` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 - [[transfers.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/auditservicets

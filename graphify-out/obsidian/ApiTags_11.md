@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RequirePermission"
+community: "security-measures.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/security-measuresservicets
 ---
 
 # ApiTags
 
 ## Connections
-- [[DataSourcesController]] - `references` [EXTRACTED]
+- [[SecurityMeasuresController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/security-measuresservicets

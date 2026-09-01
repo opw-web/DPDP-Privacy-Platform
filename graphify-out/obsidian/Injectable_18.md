@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "employees.controller.ts"
+community: "SyncQueueService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeescontrollerts
+  - community/SyncQueueService
 ---
 
 # Injectable
 
 ## Connections
-- [[EmployeesService]] - `references` [EXTRACTED]
+- [[ScheduleReconciliationService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeescontrollerts
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

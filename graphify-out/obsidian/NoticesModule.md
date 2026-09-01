@@ -1,0 +1,21 @@
+---
+source_file: "dpdp-platform/backend/src/modules/notices/notices.module.ts"
+type: "code"
+community: "app.module.ts"
+location: "L19"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/appmodulets
+---
+
+# NoticesModule
+
+## Connections
+- [[Module_22]] - `references` [EXTRACTED]
+- [[app.module.ts]] - `imports` [EXTRACTED]
+- [[campaigns.module.ts]] - `imports` [EXTRACTED]
+- [[consents.module.ts]] - `imports` [EXTRACTED]
+- [[notices.module.ts]] - `contains` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/appmodulets

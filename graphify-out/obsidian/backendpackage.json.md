@@ -12,12 +12,12 @@ tags:
 # backend/package.json
 
 ## Connections
-- [[dependencies_2]] - `contains` [EXTRACTED]
+- [[dependencies_1]] - `contains` [EXTRACTED]
 - [[description_2]] - `contains` [EXTRACTED]
 - [[devDependencies_1]] - `contains` [EXTRACTED]
 - [[license_1]] - `contains` [EXTRACTED]
 - [[name_2]] - `contains` [EXTRACTED]
-- [[prisma]] - `contains` [EXTRACTED]
+- [[prisma_2]] - `contains` [EXTRACTED]
 - [[private_2]] - `contains` [EXTRACTED]
 - [[scripts]] - `contains` [EXTRACTED]
 - [[version_2]] - `contains` [EXTRACTED]

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateSharingActivityDto"
+community: "ListPrincipalsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSharingActivityDto
+  - community/ListPrincipalsDto
 ---
 
 # IsEnum
 
 ## Connections
-- [[CreateSharingActivityDto]] - `references` [EXTRACTED]
+- [[ListPrincipalsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto
+#graphify/code #graphify/EXTRACTED #community/ListPrincipalsDto

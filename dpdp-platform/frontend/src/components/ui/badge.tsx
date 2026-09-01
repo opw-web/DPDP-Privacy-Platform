@@ -13,6 +13,8 @@ const badgeVariants = cva(
         amber: "border-transparent bg-amber/20 text-amber-foreground",
         destructive: "border-transparent bg-destructive/15 text-destructive",
         success: "border-transparent bg-emerald-100 text-emerald-800",
+        /** Task 16 addition: the "<20% of deadline window remaining, not yet past due" band -- distinct from `amber` (50-20%) and `destructive` (past due). Additive only; every existing variant above is untouched. */
+        orange: "border-transparent bg-orange-100 text-orange-800",
       },
     },
     defaultVariants: { variant: "default" },

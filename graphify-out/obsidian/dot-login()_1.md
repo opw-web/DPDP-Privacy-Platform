@@ -1,23 +1,26 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/auth/principal-auth.service.ts"
+source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts"
 type: "code"
-community: "PrincipalAuthService"
-location: "L129"
+community: "EmployeeAuthController"
+location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalAuthService
+  - community/EmployeeAuthController
 ---
 
 # .login()
 
 ## Connections
-- [[dot-issueTokenPair()_1]] - `calls` [EXTRACTED]
-- [[dot-login()_3]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[dot-storeFor()_1]] - `calls` [EXTRACTED]
-- [[LoginRequestMeta]] - `references` [EXTRACTED]
-- [[PrincipalAuthService]] - `method` [EXTRACTED]
-- [[getDummyHash()]] - `calls` [EXTRACTED]
+- [[dot-login()_2]] - `calls` [INFERRED]
+- [[dot-setRefreshCookie()]] - `calls` [EXTRACTED]
+- [[Body_24]] - `references` [EXTRACTED]
+- [[EmployeeAuthController]] - `method` [EXTRACTED]
+- [[EmployeeLoginDto]] - `references` [EXTRACTED]
+- [[HttpCode_4]] - `references` [EXTRACTED]
+- [[Post_25]] - `references` [EXTRACTED]
+- [[Public()]] - `references` [EXTRACTED]
+- [[Req_2]] - `references` [EXTRACTED]
+- [[Res_5]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalAuthService
+#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController

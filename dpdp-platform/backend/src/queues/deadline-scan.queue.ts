@@ -1,10 +1,7 @@
-import { Injectable, Logger, OnModuleInit } from "@nestjs/common";
 import { InjectQueue } from "@nestjs/bullmq";
+import { Injectable } from "@nestjs/common";
 import type { Queue } from "bullmq";
-import {
-  RECONCILE_BOOT_TIMEOUT_MS,
-  withBootTimeout,
-} from "./schedule-reconciliation.service";
+import { BootRegistrationRegistry } from "./boot-registration.registry";
 
 /** The BullMQ queue backing `deadline-scan` (spec §2.5 / line 581: every
  * 15 minutes). Registered by `RequestsModule` via
@@ -44,57 +41,38 @@ export interface DeadlineScanJobData {
  * Registers (once, at boot) the repeatable `deadline-scan` job. There is
  * no per-organization or per-frequency configuration to reconcile here
  * (unlike `SyncQueueService`) -- the cadence is fixed by the spec, so
- * `onModuleInit` simply upserts the one scheduler this process needs.
+ * this simply upserts the one scheduler this process needs.
  * `upsertJobScheduler` on an id that already exists (e.g. a process
  * restart) replaces the prior rule rather than stacking a second one --
  * same BullMQ primitive `SyncQueueService.upsertSchedule` relies on.
  *
- * Bounded by `RECONCILE_BOOT_TIMEOUT_MS` / `withBootTimeout` (same
- * boot-safety policy `ScheduleReconciliationService` established, task
- * 18 review round 2, Important 2 -- reused here rather than mirrored
- * with a second constant): an unreachable Redis at boot would otherwise
- * leave `upsertJobScheduler` sitting in ioredis's offline command queue
- * forever (`maxRetriesPerRequest: null`, required for BullMQ's own
- * connections -- see `redis-connection.util.ts`), so `onModuleInit`
- * would never resolve and application boot -- which Nest's bootstrap
- * sequence AWAITS for every module -- would simply hang. On timeout or
- * failure this logs and lets boot continue regardless; a schedule that
- * fails to register on a Redis blip is corrected by the next successful
- * boot, never by throwing out of this one.
+ * Registers itself with `BootRegistrationRegistry` from its constructor
+ * rather than awaiting its own registration in its own `onModuleInit`
+ * (task 18 review round 2, Important 2 established `withBootTimeout` for
+ * exactly this per-service case; a later regression showed that bounding
+ * each queue module's `onModuleInit` INDIVIDUALLY still let worst-case
+ * boot time scale linearly with the number of queue modules, since Nest
+ * awaits `onModuleInit` sequentially across modules -- see
+ * `BootRegistrationRegistry`'s doc comment). An unreachable Redis at
+ * boot would otherwise leave `upsertJobScheduler` sitting in ioredis's
+ * offline command queue forever (`maxRetriesPerRequest: null`, required
+ * for BullMQ's own connections -- see `redis-connection.util.ts`); the
+ * registry now bounds this alongside every other queue module's
+ * registration under ONE shared budget rather than awaiting each in
+ * series. On failure this logs and lets boot continue regardless; a
+ * schedule that fails to register on a Redis blip is corrected by the
+ * next successful boot, never by throwing out of this one.
  */
 @Injectable()
-export class DeadlineScanQueueService implements OnModuleInit {
-  private readonly logger = new Logger(DeadlineScanQueueService.name);
-
+export class DeadlineScanQueueService {
   constructor(
-    @InjectQueue(DEADLINE_SCAN_QUEUE_NAME)
-    private readonly queue: Queue<DeadlineScanJobData>,
-  ) {}
-
-  async onModuleInit(): Promise<void> {
-    try {
-      await withBootTimeout(
-        this.queue.upsertJobScheduler(
-          DEADLINE_SCAN_SCHEDULER_ID,
-          { pattern: DEADLINE_SCAN_CRON_PATTERN },
-          {
-            name: DEADLINE_SCAN_JOB_NAME,
-            data: { triggeredBy: DEADLINE_SCAN_SCHEDULE_TRIGGERED_BY },
-          },
-        ),
-        RECONCILE_BOOT_TIMEOUT_MS,
-      );
-      this.logger.log(
-        `deadline-scan repeatable schedule registered (${DEADLINE_SCAN_CRON_PATTERN}).`,
-      );
-    } catch (err) {
-      this.logger.warn(
-        "deadline-scan repeatable schedule did not register at startup " +
-          `(timed out after ${RECONCILE_BOOT_TIMEOUT_MS}ms, or failed) -- ` +
-          "continuing to boot regardless; the scan will not run on " +
-          "schedule until a future boot successfully registers it: " +
-          `${err instanceof Error ? err.message : "unknown error"}`,
-      );
-    }
+    @InjectQueue(DEADLINE_SCAN_QUEUE_NAME) private readonly queue: Queue<DeadlineScanJobData>,
+    bootRegistrations: BootRegistrationRegistry,
+  ) {
+    bootRegistrations.register("deadline-scan schedule", () => this.queue.upsertJobScheduler(
+      DEADLINE_SCAN_SCHEDULER_ID,
+      { pattern: DEADLINE_SCAN_CRON_PATTERN },
+      { name: DEADLINE_SCAN_JOB_NAME, data: { triggeredBy: DEADLINE_SCAN_SCHEDULE_TRIGGERED_BY } },
+    ).then(() => undefined));
   }
 }

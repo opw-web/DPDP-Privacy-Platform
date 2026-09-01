@@ -27,6 +27,7 @@
     "node_modules",
     "dist",
     "test",
+    "scripts",
     "prisma",
     "jest.config.ts",
     "**/*spec.ts"

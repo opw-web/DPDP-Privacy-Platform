@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/dto/attach-purposes.dto.ts"
 type: "code"
-community: "source-purposes.service.ts"
+community: "mappings.controller.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/source-purposesservicets
+  - community/mappingscontrollerts
 ---
 
 # attach-purposes.dto.ts
@@ -16,4 +16,4 @@ tags:
 - [[mappings.controller.ts]] - `imports_from` [EXTRACTED]
 - [[source-purposes.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/source-purposesservicets
+#graphify/code #graphify/EXTRACTED #community/mappingscontrollerts

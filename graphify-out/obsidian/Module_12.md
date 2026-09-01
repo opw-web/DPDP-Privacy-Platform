@@ -11,6 +11,6 @@ tags:
 # Module
 
 ## Connections
-- [[TenantModule]] - `references` [EXTRACTED]
+- [[ComplianceModule]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/appmodulets

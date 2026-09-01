@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "purposes.controller.ts"
+community: "sync.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposescontrollerts
+  - community/syncservicets
 ---
 
 # Get
 
 ## Connections
-- [[dot-list()_6]] - `references` [EXTRACTED]
+- [[dot-get()_3]] - `references` [EXTRACTED]
+- [[dot-list()_7]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposescontrollerts
+#graphify/code #graphify/EXTRACTED #community/syncservicets

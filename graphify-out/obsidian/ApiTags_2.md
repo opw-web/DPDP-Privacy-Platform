@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "InventoryService"
+community: ".setStatus"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/InventoryService
+  - community/setStatus
 ---
 
 # ApiTags
 
 ## Connections
-- [[InventoryController]] - `references` [EXTRACTED]
+- [[MeConsentsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/InventoryService
+#graphify/code #graphify/EXTRACTED #community/setStatus

@@ -9,7 +9,7 @@ members: 8
 
 ## Members
 - [[dot-chance()]] - code - demo-company-server/src/seed/rng.ts
-- [[dot-constructor()_71]] - code - demo-company-server/src/seed/rng.ts
+- [[dot-constructor()_139]] - code - demo-company-server/src/seed/rng.ts
 - [[dot-int()]] - code - demo-company-server/src/seed/rng.ts
 - [[dot-next()_1]] - code - demo-company-server/src/seed/rng.ts
 - [[dot-pick()]] - code - demo-company-server/src/seed/rng.ts

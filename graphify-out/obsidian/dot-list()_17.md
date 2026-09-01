@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts"
 type: "code"
-community: "DataSourcesService"
-location: "L188"
+community: "TemplatesService"
+location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesService
+  - community/TemplatesService
 ---
 
 # .list()
 
 ## Connections
-- [[DataSourcesService]] - `method` [EXTRACTED]
+- [[TemplatesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesService
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

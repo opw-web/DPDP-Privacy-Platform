@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Public"
+community: "NotificationsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/NotificationsService
 ---
 
 # UseGuards
 
 ## Connections
-- [[dot-me()]] - `references` [EXTRACTED]
+- [[dot-list()_1]] - `references` [EXTRACTED]
+- [[dot-markAllRead()]] - `references` [EXTRACTED]
+- [[dot-markRead()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

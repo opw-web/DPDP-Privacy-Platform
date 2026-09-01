@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "class-transformer"
+community: "dependencies"
 location: "L35"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/class-transformer
+  - community/dependencies
 ---
 
 # class-transformer
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[class-transformer]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/class-transformer
+#graphify/concept #graphify/EXTRACTED #community/dependencies

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "devDependencies"
-location: "L71"
+community: "tsconfig-paths"
+location: "L77"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/devDependencies
+  - community/tsconfig-paths
 ---
 
 # tsconfig-paths
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[tsconfig-paths]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/devDependencies
+#graphify/concept #graphify/EXTRACTED #community/tsconfig-paths

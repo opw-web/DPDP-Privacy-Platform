@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "purposes.controller.ts"
+community: ".record"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposescontrollerts
+  - community/record
 ---
 
 # ValidateIf
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[UpdatePurposeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposescontrollerts
+#graphify/code #graphify/EXTRACTED #community/record

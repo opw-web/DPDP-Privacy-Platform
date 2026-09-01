@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PrismaService"
+community: "campaign-send.processor.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/campaign-sendprocessorts
 ---
 
 # Injectable
 
 ## Connections
-- [[RopaExportService]] - `references` [EXTRACTED]
+- [[CampaignSendQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/campaign-sendprocessorts

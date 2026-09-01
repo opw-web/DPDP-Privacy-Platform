@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "ReplaceMappingsDto"
+community: "NotificationsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ReplaceMappingsDto
+  - community/NotificationsService
 ---
 
 # ApiProperty
 
 ## Connections
-- [[ReplaceMappingsDto]] - `references` [EXTRACTED]
-- [[SourceFieldMappingDto]] - `references` [EXTRACTED]
+- [[MarkAllReadResponseDto]] - `references` [EXTRACTED]
+- [[NotificationDto]] - `references` [EXTRACTED]
+- [[NotificationListResponseDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ReplaceMappingsDto
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

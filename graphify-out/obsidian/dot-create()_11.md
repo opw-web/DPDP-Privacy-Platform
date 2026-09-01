@@ -1,22 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/transfers.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/children/guardians.service.ts"
 type: "code"
-community: "CreateTransferDto"
-location: "L27"
+community: "guardians.service.ts"
+location: "L167"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTransferDto
+  - community/guardiansservicets
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_12]] - `calls` [INFERRED]
-- [[Body_9]] - `references` [EXTRACTED]
-- [[CreateTransferDto]] - `references` [EXTRACTED]
-- [[Post_8]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[TransfersController]] - `method` [EXTRACTED]
+- [[dot-assertPwdAppointmentValid()]] - `calls` [EXTRACTED]
+- [[dot-create()_10]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-toResponse()]] - `calls` [EXTRACTED]
+- [[CreateGuardianDto]] - `references` [EXTRACTED]
+- [[GuardiansService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTransferDto
+#graphify/code #graphify/EXTRACTED #community/guardiansservicets

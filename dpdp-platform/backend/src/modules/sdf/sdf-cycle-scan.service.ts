@@ -1,6 +1,7 @@
 import { Injectable, Logger } from "@nestjs/common";
 import { SdfAssessmentKind } from "@prisma/client";
 import { PrismaService } from "../../common/prisma/prisma.service";
+import { AuditService } from "../../common/audit/audit.service";
 import { TenantContext, type TenantStore } from "../../common/tenant/tenant-context";
 import { ComplianceService, addByDeadlineUnit } from "../compliance/compliance.service";
 import { NotificationsService } from "../notifications/notifications.service";
@@ -44,6 +45,7 @@ export class SdfCycleScanService {
     private readonly prisma: PrismaService,
     private readonly complianceService: ComplianceService,
     private readonly notificationsService: NotificationsService,
+    private readonly auditService: AuditService,
   ) {}
 
   async runForAllOrganizations(): Promise<void> {
@@ -102,25 +104,44 @@ export class SdfCycleScanService {
 
     let cyclesOpened = 0;
     for (const kind of ASSESSMENT_KINDS) {
-      const existing = await this.prisma.scoped.sdfAssessment.findFirst({
-        where: { kind, cycleStartedAt: cycleStart },
-        select: { id: true },
+      const opened = await this.prisma.scoped.$transaction(async (tx) => {
+        const { organizationId } = TenantContext.get();
+        // SdfAssessment has no uniqueness constraint on cycle/kind. Hold a
+        // transaction-scoped advisory lock so overlapping workers re-check
+        // the row before creating it.
+        const lockKey = `sdf-cycle:${organizationId}:${cycleStart.toISOString()}:${kind}`;
+        await tx.$executeRaw`SELECT pg_advisory_xact_lock(hashtext(${lockKey}))`;
+        const existing = await tx.sdfAssessment.findFirst({
+          where: { kind, cycleStartedAt: cycleStart },
+          select: { id: true },
+        });
+        if (existing) return false;
+        const created = await tx.sdfAssessment.create({
+          data: {
+            kind,
+            cycleStartedAt: cycleStart,
+            dueAt,
+            conductedBy: CONDUCTOR_UNASSIGNED,
+            isIndependent: false,
+            // organizationId deliberately omitted -- the tenant-scoping
+            // extension supplies it at runtime.
+          } as never,
+          select: { id: true, kind: true, cycleStartedAt: true, dueAt: true },
+        });
+        await this.auditService.record(tx, {
+          action: "SDF_ASSESSMENT_CREATED",
+          resourceType: "SdfAssessment",
+          resourceId: created.id,
+          metadata: {
+            kind: created.kind,
+            cycleStartedAt: created.cycleStartedAt,
+            dueAt: created.dueAt,
+            source: "sdf-cycle-scan",
+          },
+        });
+        return true;
       });
-      if (existing) {
-        continue;
-      }
-      await this.prisma.scoped.sdfAssessment.create({
-        data: {
-          kind,
-          cycleStartedAt: cycleStart,
-          dueAt,
-          conductedBy: CONDUCTOR_UNASSIGNED,
-          isIndependent: false,
-          // organizationId deliberately omitted -- the tenant-scoping
-          // extension supplies it at runtime.
-        } as never,
-      });
-      cyclesOpened += 1;
+      if (opened) cyclesOpened += 1;
     }
 
     const warningsSent = await this.sendWarningsIfDue(cycleStart, dueAt, warningAt, now);

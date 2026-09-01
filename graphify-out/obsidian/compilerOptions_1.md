@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[allowSyntheticDefaultImports]] - `contains` [EXTRACTED]
 - [[composite]] - `contains` [EXTRACTED]
-- [[module_3]] - `contains` [EXTRACTED]
+- [[module_2]] - `contains` [EXTRACTED]
 - [[moduleResolution]] - `contains` [EXTRACTED]
 - [[skipLibCheck]] - `contains` [EXTRACTED]
 - [[strict]] - `contains` [EXTRACTED]

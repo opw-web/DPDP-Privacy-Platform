@@ -1,0 +1,51 @@
+import { useMemo, useState } from "react";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { toast } from "sonner";
+import { API_BASE, ApiError, employeeApiClient, employeeTokenStore } from "../../lib/api-client";
+import { Button } from "../../components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../components/ui/card";
+import { Input } from "../../components/ui/input";
+import { Label } from "../../components/ui/label";
+import { Textarea } from "../../components/ui/textarea";
+import { PermissionGate } from "../../components/shared/PermissionGate";
+import { NoticeComposer, type NoticeDraftValues } from "../components/notices/NoticeComposer";
+import { NOTICE_LANGUAGES, type EligibleItemisedField, type NoticeDetail, type NoticePurposeStatement, type NoticeVersion } from "../components/notices/types";
+
+interface Purpose { id: string; name: string; description: string; goodsOrServicesDescription: string | null; }
+function errorMessage(error: unknown, fallback: string) { return error instanceof ApiError && error.message ? error.message : fallback; }
+
+async function putTranslation(path: string, body: unknown) {
+  const response = await fetch(`${API_BASE}${path}`, {
+    method: "PUT", credentials: "include", headers: { "Content-Type": "application/json", Authorization: `Bearer ${employeeTokenStore.get() ?? ""}` }, body: JSON.stringify(body),
+  });
+  if (!response.ok) {
+    let payload: unknown = null;
+    try { payload = await response.json(); } catch { /* response may be empty */ }
+    throw new ApiError(response.status, payload, payload && typeof payload === "object" && "message" in payload && typeof payload.message === "string" ? payload.message : undefined);
+  }
+  return response.json();
+}
+
+/** `/app/notices/new` and `/app/notices/:noticeId`: compose immutable notice versions. */
+export function NoticeBuilderPage() {
+  const { noticeId } = useParams();
+  const navigate = useNavigate();
+  const queryClient = useQueryClient();
+  const [newCode, setNewCode] = useState(""); const [newName, setNewName] = useState(""); const [newPurposeIds, setNewPurposeIds] = useState<string[]>([]);
+  const [translationLanguage, setTranslationLanguage] = useState("hi"); const [translationBody, setTranslationBody] = useState("");
+  const { data: purposes = [] } = useQuery({ queryKey: ["purposes"], queryFn: () => employeeApiClient.get<Purpose[]>("/purposes") });
+  const detail = useQuery({ queryKey: ["notice", noticeId], enabled: Boolean(noticeId), queryFn: () => employeeApiClient.get<NoticeDetail>(`/notices/${noticeId}`) });
+  const fields = useQuery({ queryKey: ["notice-eligible-fields", noticeId], enabled: Boolean(noticeId), queryFn: () => employeeApiClient.get<EligibleItemisedField[]>(`/notices/${noticeId}/eligible-fields`) });
+  const createNotice = useMutation({ mutationFn: () => employeeApiClient.post<{ id: string }>("/notices", { code: newCode.trim(), name: newName.trim(), purposeIds: newPurposeIds }), onSuccess: (notice) => { toast.success("Notice created. Compose its first draft version."); void queryClient.invalidateQueries({ queryKey: ["notices"] }); navigate(`/app/notices/${notice.id}`, { replace: true }); }, onError: (error) => toast.error(errorMessage(error, "Could not create notice.")) });
+  const createVersion = useMutation({ mutationFn: (values: NoticeDraftValues) => employeeApiClient.post<NoticeVersion>(`/notices/${noticeId}/versions`, { bodyMarkdown: values.bodyMarkdown, itemisedDataFields: values.itemisedDataFields.map((field) => ({ sourceFieldMappingId: field.sourceFieldMappingId, label: field.label })), withdrawalUrl: values.withdrawalUrl || undefined, rightsUrl: values.rightsUrl || undefined, boardComplaintUrl: values.boardComplaintUrl || undefined }), onSuccess: () => { toast.success("Draft version saved."); void queryClient.invalidateQueries({ queryKey: ["notice", noticeId] }); }, onError: (error) => toast.error(errorMessage(error, "Could not save draft version.")) });
+  const latest = detail.data?.versions.at(-1);
+  const publish = useMutation({ mutationFn: (version: number) => employeeApiClient.post(`/notices/${noticeId}/versions/${version}/publish`), onSuccess: () => { toast.success("Notice published and frozen."); void queryClient.invalidateQueries({ queryKey: ["notice", noticeId] }); void queryClient.invalidateQueries({ queryKey: ["notices"] }); }, onError: (error) => toast.error(errorMessage(error, "Could not publish notice.")) });
+  const saveTranslation = useMutation({ mutationFn: () => putTranslation(`/notices/${noticeId}/versions/${latest?.version}/translations/${translationLanguage}`, { bodyMarkdown: translationBody }), onSuccess: () => { toast.success("Human-authored translation saved."); setTranslationBody(""); void queryClient.invalidateQueries({ queryKey: ["notice", noticeId] }); }, onError: (error) => toast.error(errorMessage(error, "Could not save translation.")) });
+  const purposeStatements: NoticePurposeStatement[] = useMemo(() => (detail.data?.purposeIds ?? []).map((id) => { const purpose = purposes.find((entry) => entry.id === id); return { purposeId: id, purposeName: purpose?.name ?? id, goodsOrServices: purpose?.goodsOrServicesDescription ?? null }; }), [detail.data?.purposeIds, purposes]);
+
+  if (!noticeId) return <div className="space-y-6"><div><h1 className="text-xl font-semibold">New privacy notice</h1><p className="text-sm text-muted-foreground">Select the purposes the notice will cover. Versioned content comes next.</p></div><Card><CardContent className="p-6"><form className="space-y-4" onSubmit={(event) => { event.preventDefault(); createNotice.mutate(); }}><div className="grid gap-4 md:grid-cols-2"><div className="space-y-1"><Label htmlFor="notice-code">Code</Label><Input id="notice-code" value={newCode} onChange={(event) => setNewCode(event.target.value)} placeholder="MARKETING_OPTIN" required /></div><div className="space-y-1"><Label htmlFor="notice-name">Name</Label><Input id="notice-name" value={newName} onChange={(event) => setNewName(event.target.value)} required /></div></div><fieldset className="space-y-2"><legend className="text-sm font-medium">Purposes covered</legend>{purposes.map((purpose) => <label key={purpose.id} className="flex items-start gap-2 rounded-md border p-3 text-sm"><input type="checkbox" checked={newPurposeIds.includes(purpose.id)} onChange={(event) => setNewPurposeIds((current) => event.target.checked ? [...current, purpose.id] : current.filter((id) => id !== purpose.id))} /><span><span className="font-medium">{purpose.name}</span><span className="block text-muted-foreground">{purpose.description}</span></span></label>)}</fieldset><Button type="submit" disabled={createNotice.isPending || newPurposeIds.length === 0}>{createNotice.isPending ? "Creating…" : "Create notice"}</Button></form></CardContent></Card></div>;
+  if (detail.isLoading) return <p className="text-sm text-muted-foreground">Loading notice…</p>;
+  if (!detail.data) return <p className="text-sm text-destructive">Notice could not be loaded.</p>;
+  return <div className="space-y-6"><div className="flex items-start justify-between"><div><h1 className="text-xl font-semibold">{detail.data.name}</h1><p className="text-sm text-muted-foreground">{detail.data.code}. Saving changes creates a new version; published bodies cannot be edited.</p></div><Button variant="outline" asChild><Link to="/app/notices">All notices</Link></Button></div><PermissionGate permission="CAN_MANAGE_NOTICES" fallback={<p className="rounded-md border p-4 text-sm">You can view this notice, but cannot create or publish versions.</p>}><Card><CardHeader><CardTitle>Compose version {(latest?.version ?? 0) + 1}</CardTitle><CardDescription>Publication checks itemised data, each purpose’s goods/services description, and all three Rule 3(c) links.</CardDescription></CardHeader><CardContent><NoticeComposer eligibleFields={fields.data ?? []} purposeStatements={purposeStatements} onSave={(values) => createVersion.mutate(values)} saving={createVersion.isPending} /></CardContent></Card></PermissionGate>{latest ? <Card><CardHeader><CardTitle>Latest version: {latest.version}</CardTitle><CardDescription>{latest.publishedAt ? "Published versions are immutable." : "This draft can be published once it is complete."}</CardDescription></CardHeader><CardContent className="space-y-4">{latest.publishedAt ? <p className="text-sm">Content hash: <code className="break-all">{latest.contentHash}</code></p> : <PermissionGate permission="CAN_MANAGE_NOTICES"><Button onClick={() => publish.mutate(latest.version)} disabled={publish.isPending}>{publish.isPending ? "Publishing…" : "Publish version"}</Button></PermissionGate>}<div className="border-t pt-4"><h3 className="font-medium">Translations (23 supported language codes)</h3><p className="mt-1 text-sm text-muted-foreground">Translations are written and stored by people; this product does not translate the notice.</p><div className="mt-3 flex flex-wrap gap-2 text-xs">{NOTICE_LANGUAGES.map(([code, name]) => <span key={code} className="rounded border px-2 py-1">{name} ({code}){latest.translations.some((translation) => translation.languageCode === code) ? " ✓" : ""}</span>)}</div><form className="mt-4 space-y-2" onSubmit={(event) => { event.preventDefault(); saveTranslation.mutate(); }}><Label htmlFor="translation-language">Language</Label><select id="translation-language" value={translationLanguage} onChange={(event) => setTranslationLanguage(event.target.value)} className="ml-2 rounded-md border bg-background px-2 py-1 text-sm">{NOTICE_LANGUAGES.filter(([code]) => code !== "en").map(([code, name]) => <option key={code} value={code}>{name}</option>)}</select><Textarea value={translationBody} onChange={(event) => setTranslationBody(event.target.value)} aria-label="Translated notice body" placeholder="Human-authored translation" required /><PermissionGate permission="CAN_MANAGE_NOTICES"><Button type="submit" variant="outline" disabled={saveTranslation.isPending}>{saveTranslation.isPending ? "Saving…" : "Save translation"}</Button></PermissionGate></form></div></CardContent></Card> : null}</div>;
+}

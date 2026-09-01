@@ -1,20 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sync/sync.service.ts"
+source_file: "dpdp-platform/backend/src/queues/sync.queue.ts"
 type: "code"
-community: "sync.service.ts"
-location: "L25"
+community: "SyncQueueService"
+location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/syncservicets
+  - community/SyncQueueService
 ---
 
 # .constructor()
 
 ## Connections
-- [[DataSourcesService]] - `references` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
-- [[SyncQueueService]] - `references` [EXTRACTED]
-- [[SyncService]] - `method` [EXTRACTED]
+- [[InjectQueue_2]] - `references` [EXTRACTED]
+- [[SyncLockService]] - `references` [EXTRACTED]
+- [[SyncQueueService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/syncservicets
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

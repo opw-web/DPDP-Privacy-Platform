@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/access-log.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/retention.e2e-spec.ts"
 type: "code"
-community: "PrismaService"
-location: "L32"
+community: "retention.e2e-spec.ts"
+location: "L116"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/retentione2e-spects
 ---
 
 # createOrg()
 
 ## Connections
-- [[access-log.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[retention.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/retentione2e-spects

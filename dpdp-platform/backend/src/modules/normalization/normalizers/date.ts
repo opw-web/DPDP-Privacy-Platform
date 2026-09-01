@@ -3,10 +3,6 @@ const ISO_DATE_TIME =
   /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2}(?:\.\d+)?)?(?:Z|[+-]\d{2}:?\d{2})$/u;
 
 function isRealCalendarDate(year: number, month: number, day: number): boolean {
-  if (month < 1 || month > 12 || day < 1) {
-    return false;
-  }
-
   const leapYear = year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
   const daysInMonth = [
     31,
@@ -22,6 +18,9 @@ function isRealCalendarDate(year: number, month: number, day: number): boolean {
     30,
     31,
   ];
+  if (month < 1 || month > daysInMonth.length || day < 1) {
+    return false;
+  }
   return day <= (daysInMonth[month - 1] ?? 0);
 }
 

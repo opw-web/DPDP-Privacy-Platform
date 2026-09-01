@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PrismaService"
+community: "retention.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/retentionmodulets
 ---
 
 # Injectable
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
+- [[PreErasureNoticeService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/retentionmodulets

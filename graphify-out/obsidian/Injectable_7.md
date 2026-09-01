@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PrismaService"
+community: "access-report.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/access-reportservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[RolesService]] - `references` [EXTRACTED]
+- [[AccessLogService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/access-reportservicets

@@ -1,0 +1,3254 @@
+{
+  "DPDP_COMPLIANCE_CHECKLIST.md": {
+    "mtime": 1788021112.052044,
+    "seen": 1788023726.9559422,
+    "ast_hash": "b0ebb7ebf77745670b484c1fb55a0048",
+    "semantic_hash": ""
+  },
+  "DPDP_MVP1_FOUNDATION_AND_DISCOVERY.md": {
+    "mtime": 1788021114.2749841,
+    "seen": 1788023726.955955,
+    "ast_hash": "e8365a50f03eb565147cd1d7bce935d9",
+    "semantic_hash": ""
+  },
+  "DPDP_MVP2_COMPLIANCE_OPERATIONS.md": {
+    "mtime": 1788021116.935913,
+    "seen": 1788023726.9559586,
+    "ast_hash": "bfd414474aaa729789ef383f35bee0d3",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-08-29-dpdp-mvp1.md": {
+    "mtime": 1788158752.3258915,
+    "seen": 1788159816.0878177,
+    "ast_hash": "1c0999c0f779c038f33fb36eb2388478",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/docker-compose.yml": {
+    "mtime": 1788158752.3768916,
+    "seen": 1788159816.0878248,
+    "ast_hash": "fa6a8f05f61e8696c2a8b9d694a5e088",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/.eslintrc.cjs": {
+    "mtime": 1788158752.3268914,
+    "seen": 1788159816.0833077,
+    "ast_hash": "e70affed0c24636717f565814daf341c",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/jest.config.ts": {
+    "mtime": 1788158752.3268914,
+    "seen": 1788159816.0833151,
+    "ast_hash": "2482cdf2bf84fc1e9d5d8e5769fe30f3",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/nest-cli.json": {
+    "mtime": 1788158752.3268914,
+    "seen": 1788159816.0833225,
+    "ast_hash": "b6c9c4b64b7092bea720263a47b574cf",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/package.json": {
+    "mtime": 1788163068.7869225,
+    "seen": 1788163373.453436,
+    "ast_hash": "282ce2dee5ae47270a3909e801e2cfcb",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/app.module.ts": {
+    "mtime": 1788205539.1310966,
+    "seen": 1788205836.0688536,
+    "ast_hash": "e66b9023b3ef280a5700d095995865cf",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/config/configuration.ts": {
+    "mtime": 1788162941.6792173,
+    "seen": 1788162966.5610056,
+    "ast_hash": "7815a0e1c984e97fe862c8425d5ecfeb",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/config/env.validation.ts": {
+    "mtime": 1788162948.552313,
+    "seen": 1788162966.5612023,
+    "ast_hash": "4c4ea590afa7de145a8b6bf3b2de1fe2",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/main.ts": {
+    "mtime": 1788158752.340093,
+    "seen": 1788159816.0837696,
+    "ast_hash": "b6a5519d11da39751f10b4a2505bb8b7",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/health/health.controller.ts": {
+    "mtime": 1788158752.3507123,
+    "seen": 1788159816.0842712,
+    "ast_hash": "bd840b41b6ff2884531dab8d2422396f",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/health/health.module.ts": {
+    "mtime": 1788158752.3507123,
+    "seen": 1788159816.0842836,
+    "ast_hash": "a00a8a6a5f4e9cc18f5370ae7648399d",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/health/health.service.ts": {
+    "mtime": 1788158752.3507123,
+    "seen": 1788159816.0842955,
+    "ast_hash": "9c484adab113ac72e8ef588816a4a2ba",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/health.e2e-spec.ts": {
+    "mtime": 1788158752.3718915,
+    "seen": 1788159816.0853248,
+    "ast_hash": "e99ccb4160daedba11485e0c540be6e9",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/jest-e2e.json": {
+    "mtime": 1788158752.3718915,
+    "seen": 1788159816.085359,
+    "ast_hash": "d401f9e77951f325e004988d038965d3",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/tsconfig.json": {
+    "mtime": 1788158752.3768916,
+    "seen": 1788159816.085507,
+    "ast_hash": "c28cebc47c944e119ed03e6007d75d87",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/health/health.controller.spec.ts": {
+    "mtime": 1788158752.3498917,
+    "seen": 1788159816.08426,
+    "ast_hash": "afab44af1249697532ce60f291fdaafb",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/health-degraded.e2e-spec.ts": {
+    "mtime": 1788205560.6261327,
+    "seen": 1788205836.0907948,
+    "ast_hash": "2504fc29594a59417edac8e41fdada4f",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/prisma/prisma.service.ts": {
+    "mtime": 1788158752.3373907,
+    "seen": 1788159816.0835986,
+    "ast_hash": "9d850b801e86212c809a19d0ce947ecb",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/prisma/prisma.module.ts": {
+    "mtime": 1788158752.3368917,
+    "seen": 1788159816.0835898,
+    "ast_hash": "b250f81fdd9523cf43cb2f5586deab10",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/schema-constraints.e2e-spec.ts": {
+    "mtime": 1788158752.3748915,
+    "seen": 1788159816.0854611,
+    "ast_hash": "97cd8ad21cf5691d048bd02f41c727af",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/tenant/tenant-context.ts": {
+    "mtime": 1788158752.3384135,
+    "seen": 1788159816.0836644,
+    "ast_hash": "15af6a2e71cee56488253a7f9a9ca326",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/tenant/tenant-context.spec.ts": {
+    "mtime": 1788158752.3379126,
+    "seen": 1788159816.0836542,
+    "ast_hash": "0dd1dc67b494037ed0e2861bd435edfb",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/tenant/tenant-scoped-models.spec.ts": {
+    "mtime": 1788158752.3384135,
+    "seen": 1788159816.0836759,
+    "ast_hash": "cfe9ec542b79934b901bed890b916667",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/tenant/tenant-scoped-models.ts": {
+    "mtime": 1788162849.9378963,
+    "seen": 1788162966.5599341,
+    "ast_hash": "a2ef84d1de3b05d2fe8bed8bfef7b853",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/tenant/tenant.extension.ts": {
+    "mtime": 1788158752.3388915,
+    "seen": 1788159816.08371,
+    "ast_hash": "1373630dd161e34675af8ee6352bdf84",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/tenant/tenant.middleware.ts": {
+    "mtime": 1788158752.3388915,
+    "seen": 1788159816.083723,
+    "ast_hash": "68707aafbcc649b4abf683bc5f7643cc",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/tenant/tenant.module.ts": {
+    "mtime": 1788158752.3388915,
+    "seen": 1788159816.0837307,
+    "ast_hash": "10b48582982f840001cbee9de816e84b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/tenant-isolation.e2e-spec.ts": {
+    "mtime": 1788158752.3768916,
+    "seen": 1788159816.0854964,
+    "ast_hash": "d71607a35040a8fba942b29df78193ce",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/audit/canonical-json.ts": {
+    "mtime": 1788158752.333986,
+    "seen": 1788159816.0834477,
+    "ast_hash": "22c166255bc22ab4ab1ffaff6e1c829d",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/tenant/tenant.extension.spec.ts": {
+    "mtime": 1788158752.3384135,
+    "seen": 1788159816.0836966,
+    "ast_hash": "2003b6d1da67d7c42bcc18423096e94b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/audit/audit-actions.ts": {
+    "mtime": 1788168703.4134302,
+    "seen": 1788169418.2034972,
+    "ast_hash": "636b84d4f59dace88a574646e6b1b85b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/audit/audit.module.ts": {
+    "mtime": 1788158752.333986,
+    "seen": 1788159816.0834212,
+    "ast_hash": "f6de62e7ab18871439de79e283ed38e7",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/audit/audit.service.ts": {
+    "mtime": 1788158752.333986,
+    "seen": 1788159816.0834284,
+    "ast_hash": "64f042a265d42a275e687e544d8f48bd",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/audit/canonical-json.spec.ts": {
+    "mtime": 1788158752.333986,
+    "seen": 1788159816.0834358,
+    "ast_hash": "ac78aacf144cfc62866b5092dfbe02d7",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/prisma/scoped-transaction-client.ts": {
+    "mtime": 1788158752.3373907,
+    "seen": 1788159816.0836058,
+    "ast_hash": "47edd2d88b6f7496795aa21d9bd982b9",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/reference/counter.ts": {
+    "mtime": 1788158752.3373907,
+    "seen": 1788159816.0836132,
+    "ast_hash": "a64ef54222d64b5e5cb210a47f2796ad",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/reference/reference.module.ts": {
+    "mtime": 1788158752.3379126,
+    "seen": 1788159816.08362,
+    "ast_hash": "5ac9f842ee44aa70cfe1f55efbf075f1",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/reference/reference.service.ts": {
+    "mtime": 1788158752.3379126,
+    "seen": 1788159816.0836365,
+    "ast_hash": "a719f4b360effe9e638350785a5759aa",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/audit.e2e-spec.ts": {
+    "mtime": 1788158752.370944,
+    "seen": 1788159816.0852013,
+    "ast_hash": "afb88bdd79b80140d91a788bb90d6354",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/decorators/public.decorator.ts": {
+    "mtime": 1788158752.335501,
+    "seen": 1788159816.083524,
+    "ast_hash": "5db30650d4af0d0e8184b676ccc738a1",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/reference.e2e-spec.ts": {
+    "mtime": 1788158752.3748915,
+    "seen": 1788159816.0854418,
+    "ast_hash": "87266b29469a3a121378389b95480147",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/decorators/current-actor.decorator.ts": {
+    "mtime": 1788158752.335501,
+    "seen": 1788159816.0835054,
+    "ast_hash": "b06180a5bf72f104ea7773b5e7af011c",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/decorators/require-permission.decorator.ts": {
+    "mtime": 1788158752.335501,
+    "seen": 1788159816.0835319,
+    "ast_hash": "f604dd93aa2f36b5a54f8855d04d67d5",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/guards/jwt-employee.guard.ts": {
+    "mtime": 1788158752.335501,
+    "seen": 1788159816.0835392,
+    "ast_hash": "76e276d84f176ffae64d786c232e4a3c",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/auth/auth.module.ts": {
+    "mtime": 1788158752.341474,
+    "seen": 1788159816.0838306,
+    "ast_hash": "6df1ea704613b6fc883352101c8ce289",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/auth/dto/employee-login.dto.ts": {
+    "mtime": 1788158752.341812,
+    "seen": 1788159816.083844,
+    "ast_hash": "290fb69f76f9ca27f502b37d63d40b55",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts": {
+    "mtime": 1788158752.341968,
+    "seen": 1788159816.0838802,
+    "ast_hash": "2f194652f97f061f95a4ca2be1ec9d7a",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/auth/employee-auth.service.ts": {
+    "mtime": 1788158752.341968,
+    "seen": 1788159816.083888,
+    "ast_hash": "c6d01174f787593c0e9c1661c541a4f7",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/auth/token.service.ts": {
+    "mtime": 1788158752.3428915,
+    "seen": 1788159816.0839298,
+    "ast_hash": "7dc0171a872fd9d6190cd7ee5cc58116",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/organizations/dto/update-organization.dto.ts": {
+    "mtime": 1788158752.359751,
+    "seen": 1788159816.0846186,
+    "ast_hash": "79630f0fe0aab1cb2841ac28230e98c4",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/prisma/seed.ts": {
+    "mtime": 1788168666.1799388,
+    "seen": 1788168699.193391,
+    "ast_hash": "8f699e7122ce168e815ed930f0ca91db",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/prisma/seed/demo-org.ts": {
+    "mtime": 1788158752.3318915,
+    "seen": 1788159816.0833654,
+    "ast_hash": "6bb0a4754500d1da6f3bb7a1897642e4",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/prisma/seed/permissions.ts": {
+    "mtime": 1788158752.3330715,
+    "seen": 1788159816.0833724,
+    "ast_hash": "6cf6c33a12b9b1103afb06c2c28485f8",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/prisma/seed/roles.ts": {
+    "mtime": 1788158752.3330715,
+    "seen": 1788159816.0833814,
+    "ast_hash": "f78f738323c317287985d2d3f66b4ef3",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/employees/dto/create-employee.dto.ts": {
+    "mtime": 1788158752.348786,
+    "seen": 1788159816.0841587,
+    "ast_hash": "7bc17aeb1c2c210ff172a6970c487565",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/employees/dto/reset-employee-password.dto.ts": {
+    "mtime": 1788158752.3489559,
+    "seen": 1788159816.0841663,
+    "ast_hash": "0913428f20e9bc7e4776460b02168bd7",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/employees/dto/update-employee.dto.ts": {
+    "mtime": 1788158752.3489559,
+    "seen": 1788159816.0841732,
+    "ast_hash": "a3a90bbcc4257882472714e67f2ae161",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/employees/dto/update-role-permissions.dto.ts": {
+    "mtime": 1788158752.3489559,
+    "seen": 1788159816.0841806,
+    "ast_hash": "ad4c5ac66f43319f78d1aa89b5d3a7eb",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/employees/employees.controller.ts": {
+    "mtime": 1788158752.3489559,
+    "seen": 1788159816.0841882,
+    "ast_hash": "de3f31e957f18896d5d3ee5e4d6114f6",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/employees/employees.module.ts": {
+    "mtime": 1788158752.3489559,
+    "seen": 1788159816.0841956,
+    "ast_hash": "80511672393d9629881d276eb1eb8f85",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/employees/employees.service.ts": {
+    "mtime": 1788158752.3489559,
+    "seen": 1788159816.0842087,
+    "ast_hash": "482d67e655e96e1d5c6699c8dce25116",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/employees/permissions.controller.ts": {
+    "mtime": 1788158752.3489559,
+    "seen": 1788159816.0842376,
+    "ast_hash": "6f9e89db8cb1bc8b47dc71767bc93e9b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/employees/roles.controller.ts": {
+    "mtime": 1788158752.3489559,
+    "seen": 1788159816.084246,
+    "ast_hash": "9f160f4d3e49d328e1ede64e7026da17",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/employees/roles.service.ts": {
+    "mtime": 1788158752.3498917,
+    "seen": 1788159816.0842528,
+    "ast_hash": "bd66da3fd4bae709d1f9cd4d5b72b531",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/organizations/organizations.controller.ts": {
+    "mtime": 1788158752.359751,
+    "seen": 1788159816.0846274,
+    "ast_hash": "1fb926af422ea92eabf3e84456478645",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/organizations/organizations.module.ts": {
+    "mtime": 1788158752.3598917,
+    "seen": 1788159816.0846407,
+    "ast_hash": "b3dc7f2a8fd283d839195319a47c4071",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/organizations/organizations.service.ts": {
+    "mtime": 1788158752.3598917,
+    "seen": 1788159816.0846531,
+    "ast_hash": "eefff9f581e10aae829465dd7fcd3992",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/prisma/tsconfig.seed.json": {
+    "mtime": 1788158752.3330715,
+    "seen": 1788159816.083391,
+    "ast_hash": "c4b70a487ada9b02b5250dd68199afd1",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/employee-auth.e2e-spec.ts": {
+    "mtime": 1788158752.3718915,
+    "seen": 1788159816.0853033,
+    "ast_hash": "a4c31d5145213422b2502dda4d510d51",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/auth/dummy-hash.util.ts": {
+    "mtime": 1788158752.341968,
+    "seen": 1788159816.0838726,
+    "ast_hash": "a40c0e22df84983616703fdc8acb4c1e",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/decorators/current-principal.decorator.ts": {
+    "mtime": 1788158752.335501,
+    "seen": 1788159816.0835156,
+    "ast_hash": "0e1293af605daa8a1edb222a31c6d24a",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/guards/jwt-principal.guard.ts": {
+    "mtime": 1788158752.3362293,
+    "seen": 1788159816.0835466,
+    "ast_hash": "0ee481b41b20257bf61ca4326d4635ea",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/auth/dto/principal-login.dto.ts": {
+    "mtime": 1788158752.341968,
+    "seen": 1788159816.0838656,
+    "ast_hash": "421107adbd30e9c4d8369c06cb5419de",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/auth/login-request-meta.ts": {
+    "mtime": 1788158752.341968,
+    "seen": 1788159816.083895,
+    "ast_hash": "556dc7ac28575131bb6e98accdc87291",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts": {
+    "mtime": 1788158752.341968,
+    "seen": 1788159816.0839021,
+    "ast_hash": "1c376cdc5c5984e7ac2278a2161cc09e",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/auth/principal-auth.service.ts": {
+    "mtime": 1788158752.341968,
+    "seen": 1788159816.0839097,
+    "ast_hash": "affea9af684dc6a0997632248ae99869",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/auth/refresh-rotation.util.ts": {
+    "mtime": 1788158752.3428915,
+    "seen": 1788159816.0839164,
+    "ast_hash": "c29076de39f4cbf695bec8c069ad6c0f",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/principal-auth.e2e-spec.ts": {
+    "mtime": 1788158752.3738916,
+    "seen": 1788159816.0853984,
+    "ast_hash": "c339536fd4c3419b59d2cd35e4975209",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/config/access-log-retention.constant.ts": {
+    "mtime": 1788158752.3388915,
+    "seen": 1788159816.0837407,
+    "ast_hash": "723770c270819d858b41fd9a0768310d",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/audit/access-log.service.ts": {
+    "mtime": 1788158752.3337529,
+    "seen": 1788159816.0834057,
+    "ast_hash": "3fb3b7ef6af332348ca4d8f4065b1eee",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/decorators/current-actor-permissions.decorator.ts": {
+    "mtime": 1788158752.334957,
+    "seen": 1788159816.0834937,
+    "ast_hash": "d8dd0a99fe9a7b1f8bac370debeb904f",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/guards/permissions.guard.ts": {
+    "mtime": 1788158752.3362293,
+    "seen": 1788159816.083554,
+    "ast_hash": "aa82fd185211235f45216cbf88964334",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/masking/masking.module.ts": {
+    "mtime": 1788158752.3362293,
+    "seen": 1788159816.083561,
+    "ast_hash": "03415b9d2d0d927d2a9c370e662a52f4",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/masking/masking.service.ts": {
+    "mtime": 1788158752.336763,
+    "seen": 1788159816.0835774,
+    "ast_hash": "9346470cbb809406bd03a378db824a3a",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/masking/masking.service.spec.ts": {
+    "mtime": 1788158752.336763,
+    "seen": 1788159816.0835679,
+    "ast_hash": "18e9a61daef4e33b983ea036cac994b6",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/config/env.validation.spec.ts": {
+    "mtime": 1788163288.7136123,
+    "seen": 1788163373.4638665,
+    "ast_hash": "06c40195db5e8fb4f263e97d2d5a037c",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/rbac.e2e-spec.ts": {
+    "mtime": 1788158752.3748915,
+    "seen": 1788159816.0854292,
+    "ast_hash": "0926365ad09ec912c6a850cc54c78f0e",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/access-log.e2e-spec.ts": {
+    "mtime": 1788158752.369951,
+    "seen": 1788159816.0851727,
+    "ast_hash": "d12fe82c816d8503fdbac0f2f0dc194e",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/purposes/dto/create-purpose.dto.ts": {
+    "mtime": 1788158752.3638208,
+    "seen": 1788159816.0847833,
+    "ast_hash": "bcfc90cb45f27c7e194ccc4f7a30cd30",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/purposes/dto/update-purpose.dto.ts": {
+    "mtime": 1788158752.3640635,
+    "seen": 1788159816.0847936,
+    "ast_hash": "ddcaee706724cc1de88294b059970332",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts": {
+    "mtime": 1788158752.3640635,
+    "seen": 1788159816.0848007,
+    "ast_hash": "afa936c8cf5324373c51143e3da243be",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/purposes/purposes.module.ts": {
+    "mtime": 1788158752.3640635,
+    "seen": 1788159816.0848083,
+    "ast_hash": "d7040b76578a4b334413afe7521ebe24",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/purposes/purposes.service.ts": {
+    "mtime": 1788158752.3640635,
+    "seen": 1788159816.0848243,
+    "ast_hash": "67dbca2ababd493021ac7828cc66279c",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/purposes.e2e-spec.ts": {
+    "mtime": 1788158752.3748915,
+    "seen": 1788159816.0854201,
+    "ast_hash": "8618283b3f47f9e01c87713b1cea104a",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/purposes/purposes.service.spec.ts": {
+    "mtime": 1788158752.3640635,
+    "seen": 1788159816.084816,
+    "ast_hash": "38aef448b56e27f31cf00ea36e16c73e",
+    "semantic_hash": ""
+  },
+  "demo-company-server/package.json": {
+    "mtime": 1788158752.3208916,
+    "seen": 1788159816.0830853,
+    "ast_hash": "b4d1155a4629c3ede8603a3b87edb372",
+    "semantic_hash": ""
+  },
+  "demo-company-server/src/auth.ts": {
+    "mtime": 1788158752.3208916,
+    "seen": 1788159816.0831134,
+    "ast_hash": "90db080febfad8c6c2c7a3279c3d11d5",
+    "semantic_hash": ""
+  },
+  "demo-company-server/src/db.ts": {
+    "mtime": 1788158752.321717,
+    "seen": 1788159816.0831296,
+    "ast_hash": "b41d0b407fd98849da5c366d14f53b87",
+    "semantic_hash": ""
+  },
+  "demo-company-server/src/methodGate.ts": {
+    "mtime": 1788158752.321717,
+    "seen": 1788159816.0831428,
+    "ast_hash": "c53b1015e4f3f51e049e8139b6b97f20",
+    "semantic_hash": ""
+  },
+  "demo-company-server/src/pagination.ts": {
+    "mtime": 1788158752.321717,
+    "seen": 1788159816.083157,
+    "ast_hash": "cc91b55acc18328a0b6108e2c69a66bd",
+    "semantic_hash": ""
+  },
+  "demo-company-server/src/routes/ecommerce.ts": {
+    "mtime": 1788158752.3218915,
+    "seen": 1788159816.0831692,
+    "ast_hash": "38462e7047023d6d5179aa5aa92578c8",
+    "semantic_hash": ""
+  },
+  "demo-company-server/src/routes/health.ts": {
+    "mtime": 1788158752.3218915,
+    "seen": 1788159816.0831769,
+    "ast_hash": "badf897203aaf48d1258a3378a4458d2",
+    "semantic_hash": ""
+  },
+  "demo-company-server/src/routes/marketing.ts": {
+    "mtime": 1788158752.3218915,
+    "seen": 1788159816.083187,
+    "ast_hash": "362cb3fca86ec49f2444e9953f9d14b0",
+    "semantic_hash": ""
+  },
+  "demo-company-server/src/routes/sales.ts": {
+    "mtime": 1788158752.3218915,
+    "seen": 1788159816.083195,
+    "ast_hash": "ad5e4bfc4150276a954d94a939146c89",
+    "semantic_hash": ""
+  },
+  "demo-company-server/src/routes/support.ts": {
+    "mtime": 1788158752.3218915,
+    "seen": 1788159816.0832033,
+    "ast_hash": "a4f239fede80d14bdaff590df7936dc7",
+    "semantic_hash": ""
+  },
+  "demo-company-server/src/server.ts": {
+    "mtime": 1788158752.3232105,
+    "seen": 1788159816.0832682,
+    "ast_hash": "36b44eaa1a4a43aa1d63bb6dbec90d03",
+    "semantic_hash": ""
+  },
+  "demo-company-server/test/routes.test.ts": {
+    "mtime": 1788158752.3238916,
+    "seen": 1788159816.0832896,
+    "ast_hash": "6555ad9828165f4231f9f922ebcb2642",
+    "semantic_hash": ""
+  },
+  "demo-company-server/tsconfig.json": {
+    "mtime": 1788158752.3238916,
+    "seen": 1788159816.0832982,
+    "ast_hash": "165085a8c1be5c78b51c44086f1bc7b9",
+    "semantic_hash": ""
+  },
+  "demo-company-server/docker-compose.yml": {
+    "mtime": 1788158752.3198915,
+    "seen": 1788159816.0877964,
+    "ast_hash": "35bae5eca0fffdf6fa03601fa2881fba",
+    "semantic_hash": ""
+  },
+  "demo-company-server/README.md": {
+    "mtime": 1788158752.3198915,
+    "seen": 1788159816.0877829,
+    "ast_hash": "3653794bd19548b6c492a9670a4f2f81",
+    "semantic_hash": ""
+  },
+  "demo-company-server/src/seed/rng.ts": {
+    "mtime": 1788158752.3232105,
+    "seen": 1788159816.0832603,
+    "ast_hash": "102e5c0ee464c267f2376ae0a8064675",
+    "semantic_hash": ""
+  },
+  "demo-company-server/src/seed/generate.ts": {
+    "mtime": 1788158752.3218915,
+    "seen": 1788159816.083236,
+    "ast_hash": "10c640a3bba0a1aa7934fe8b6da569d9",
+    "semantic_hash": ""
+  },
+  "demo-company-server/src/seed/match.ts": {
+    "mtime": 1788158752.3232105,
+    "seen": 1788159816.083246,
+    "ast_hash": "3f8335a9f77a154b41c265cb93034318",
+    "semantic_hash": ""
+  },
+  "demo-company-server/src/seed/personas.ts": {
+    "mtime": 1788158752.3232105,
+    "seen": 1788159816.0832536,
+    "ast_hash": "94c53e1e95f41b13cd7e576bcc7727f6",
+    "semantic_hash": ""
+  },
+  "demo-company-server/test/dataset.test.ts": {
+    "mtime": 1788158752.3238916,
+    "seen": 1788159816.0832765,
+    "ast_hash": "b9b858fbb68b4bcd82b91055b4640a0d",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/connectors/connector.interface.ts": {
+    "mtime": 1788158752.3438916,
+    "seen": 1788159816.0839562,
+    "ast_hash": "4a65c6819bcd742074e1e6299d54aa77",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/connectors/test-support/mock-http-server.ts": {
+    "mtime": 1788158752.3450356,
+    "seen": 1788159816.0840223,
+    "ast_hash": "91e48de1050210ea93822f5aa864e576",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/connectors/connector.factory.spec.ts": {
+    "mtime": 1788158752.3428915,
+    "seen": 1788159816.0839398,
+    "ast_hash": "45d03706b82712cff01db14d39ab2fae",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/connectors/connector.factory.ts": {
+    "mtime": 1788158752.3438916,
+    "seen": 1788159816.0839486,
+    "ast_hash": "0f578f16d883ba9caaa35fa3226f9189",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.spec.ts": {
+    "mtime": 1788158752.3438916,
+    "seen": 1788159816.0839891,
+    "ast_hash": "9c725302d1d56f0463c4f5073e01e21d",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts": {
+    "mtime": 1788158752.3450356,
+    "seen": 1788159816.0839982,
+    "ast_hash": "cc38479639c8cb42dd5b0d473405f12a",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/connectors/rest-api.connector.spec.ts": {
+    "mtime": 1788158752.3450356,
+    "seen": 1788159816.084005,
+    "ast_hash": "dfcbe8e739cf9580a3eef8291dd7ce09",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts": {
+    "mtime": 1788158752.3450356,
+    "seen": 1788159816.0840144,
+    "ast_hash": "5c0137a80c10d383965535244c51eee7",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/connectors/connectors.module.spec.ts": {
+    "mtime": 1788158752.3438916,
+    "seen": 1788159816.0839636,
+    "ast_hash": "787deaf0ebb3ba73ada6ade650aaf5e6",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/connectors/connectors.module.ts": {
+    "mtime": 1788158752.3438916,
+    "seen": 1788159816.0839767,
+    "ast_hash": "0f648c34c1e0529da9e16b32cddd65c4",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/crypto/crypto.service.ts": {
+    "mtime": 1788158752.334957,
+    "seen": 1788159816.0834806,
+    "ast_hash": "b674883904914a98b5bc0a1ffee2c944",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/crypto/crypto.module.ts": {
+    "mtime": 1788158752.333986,
+    "seen": 1788159816.0834603,
+    "ast_hash": "603d83d94b0a559252de4d386a7efc35",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/crypto/crypto.service.spec.ts": {
+    "mtime": 1788158752.334957,
+    "seen": 1788159816.0834696,
+    "ast_hash": "ea8af793b84d229e3b276843f717faa4",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts": {
+    "mtime": 1788158752.3458915,
+    "seen": 1788159816.0840294,
+    "ast_hash": "75ebaa5ea9a585cc0b3325f6ae8abf63",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/data-sources/data-sources.module.ts": {
+    "mtime": 1788158752.3458915,
+    "seen": 1788159816.0840366,
+    "ast_hash": "d20088de90ca20c86717decd096d4f4a",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts": {
+    "mtime": 1788158752.3458915,
+    "seen": 1788159816.0840433,
+    "ast_hash": "d2ca8d1f1c7a17c64e7d375b5fdfbb66",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/data-sources/dto/create-data-source.dto.ts": {
+    "mtime": 1788158752.3470905,
+    "seen": 1788159816.0840576,
+    "ast_hash": "23241cd03e854210dcac46cb9ad1a4c3",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/data-sources/dto/update-data-source.dto.ts": {
+    "mtime": 1788158752.3470905,
+    "seen": 1788159816.0841098,
+    "ast_hash": "2199dea49a8e185ebf267472d2816ec5",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/data-sources.e2e-spec.ts": {
+    "mtime": 1788158752.370944,
+    "seen": 1788159816.0852075,
+    "ast_hash": "a12e3a4b2da33881eb1b52273a8f0210",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/data-sources/dto/attach-purposes.dto.ts": {
+    "mtime": 1788158752.3458915,
+    "seen": 1788159816.0840507,
+    "ast_hash": "313d2c56c1ffc7c6c79649100fac17f1",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/data-sources/dto/replace-mappings.dto.ts": {
+    "mtime": 1788158752.3470905,
+    "seen": 1788159816.084098,
+    "ast_hash": "48962f5781becfbd918197b0fbd01a43",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/data-sources/mappings.controller.ts": {
+    "mtime": 1788158752.3478916,
+    "seen": 1788159816.0841334,
+    "ast_hash": "23df28bf028c3c0e9615215e1a8044a4",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/data-sources/mappings.service.ts": {
+    "mtime": 1788158752.3478916,
+    "seen": 1788159816.0841432,
+    "ast_hash": "01410237b363e2e0f7676428a205c132",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/data-sources/source-purposes.service.ts": {
+    "mtime": 1788158752.3478916,
+    "seen": 1788159816.084151,
+    "ast_hash": "6ece0f2cc3a0e8bb5cd89a41e2478356",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/mappings.e2e-spec.ts": {
+    "mtime": 1788158752.3728917,
+    "seen": 1788159816.0853705,
+    "ast_hash": "29801e77eddb4cc1deba6bc8e2115e32",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/data-sources/mapping-warnings.ts": {
+    "mtime": 1788158752.3470905,
+    "seen": 1788159816.0841234,
+    "ast_hash": "92a0936e9821fc777d082df61938e7f9",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/registers/dto/create-recipient.dto.ts": {
+    "mtime": 1788158752.3651397,
+    "seen": 1788159816.0848339,
+    "ast_hash": "8ada1a75ce65e3dae7bc32e59aed5e20",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/registers/dto/create-retention-policy.dto.ts": {
+    "mtime": 1788158752.3654425,
+    "seen": 1788159816.084843,
+    "ast_hash": "1fb0e7a6cdf33827672b2656ba312935",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/registers/dto/create-sharing-activity.dto.ts": {
+    "mtime": 1788158752.3654425,
+    "seen": 1788159816.0848696,
+    "ast_hash": "b35521883e98aa6b6b743a6f94efccfc",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/registers/dto/create-transfer.dto.ts": {
+    "mtime": 1788158752.3654425,
+    "seen": 1788159816.0848768,
+    "ast_hash": "f228fc8c321bafceacfb3cb0d422debf",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/registers/dto/update-recipient.dto.ts": {
+    "mtime": 1788158752.3654425,
+    "seen": 1788159816.0848837,
+    "ast_hash": "1b1baaa2858f1064acbadb72392bbed8",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/registers/dto/update-retention-policy.dto.ts": {
+    "mtime": 1788158752.3658917,
+    "seen": 1788159816.0848942,
+    "ast_hash": "7fceb0b8aad225a73b1a2831ce5793a7",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/registers/dto/update-sharing-activity.dto.ts": {
+    "mtime": 1788158752.3658917,
+    "seen": 1788159816.0849102,
+    "ast_hash": "4f9a4c090ebd6734f5b8a59e97174229",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/registers/dto/update-transfer.dto.ts": {
+    "mtime": 1788158752.3658917,
+    "seen": 1788159816.0849197,
+    "ast_hash": "18ef048c51fb535cbea603ec07cf14f9",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/registers/recipients.controller.ts": {
+    "mtime": 1788158752.3658917,
+    "seen": 1788159816.0849266,
+    "ast_hash": "1fedf9fe5bf92df3b882ecdc00ffcef1",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/registers/recipients.service.ts": {
+    "mtime": 1788158752.3658917,
+    "seen": 1788159816.0849388,
+    "ast_hash": "be53b3066794244a8a39025bca3c5d3b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/registers/retention.service.ts": {
+    "mtime": 1788158752.3668916,
+    "seen": 1788159816.0849724,
+    "ast_hash": "11faaedd61366fe3f7f175618f895616",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/registers/sharing.controller.ts": {
+    "mtime": 1788158752.3668916,
+    "seen": 1788159816.0850048,
+    "ast_hash": "c54255c102778c3e818fd80b3a091541",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/registers/sharing.service.ts": {
+    "mtime": 1788158752.3668916,
+    "seen": 1788159816.0850122,
+    "ast_hash": "431ceebe23e36395f0abfc7bc908bf2d",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/registers/transfers.controller.ts": {
+    "mtime": 1788158752.3668916,
+    "seen": 1788159816.085019,
+    "ast_hash": "c63408beb6bdf43065ac87e4f71922dd",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/registers/transfers.service.ts": {
+    "mtime": 1788158752.3668916,
+    "seen": 1788159816.0850263,
+    "ast_hash": "9415ec9c3fcfb34c4d0fda9a6c7b2e97",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/registers/dto/create-security-measure.dto.ts": {
+    "mtime": 1788158752.3654425,
+    "seen": 1788159816.0848587,
+    "ast_hash": "4d9221f8a1f0d7ca96a24c8930ebb625",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/registers/dto/update-security-measure.dto.ts": {
+    "mtime": 1788158752.3658917,
+    "seen": 1788159816.0849032,
+    "ast_hash": "93c26e24d299431486a4b94d988f1c45",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/registers/registers.module.ts": {
+    "mtime": 1788158752.3658917,
+    "seen": 1788159816.0849497,
+    "ast_hash": "d8693631c0ce9363a6ee8502ba89541d",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/registers/retention.controller.ts": {
+    "mtime": 1788158752.3658917,
+    "seen": 1788159816.0849583,
+    "ast_hash": "9ca044aaa2802983ca7b136721e4a212",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/registers/security-measures.controller.ts": {
+    "mtime": 1788158752.3668916,
+    "seen": 1788159816.0849862,
+    "ast_hash": "a2df135236e5d9aef92010c6c8dbfa15",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/registers/security-measures.service.ts": {
+    "mtime": 1788158752.3668916,
+    "seen": 1788159816.0849948,
+    "ast_hash": "022b9d56456ef30fc86ffd3bc75a29a1",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/registers.e2e-spec.ts": {
+    "mtime": 1788158752.3748915,
+    "seen": 1788159816.0854511,
+    "ast_hash": "2be30193ba7c580045e8800c1ba8e573",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/identity/age.service.ts": {
+    "mtime": 1788170790.0841942,
+    "seen": 1788170898.2809362,
+    "ast_hash": "b2658070331308f79dd1b12bb122f34b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/identity/assembly.service.spec.ts": {
+    "mtime": 1788158752.3516169,
+    "seen": 1788159816.0843093,
+    "ast_hash": "19b7a5e0a0f9f1b18ffad8564a4df5a7",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/identity/assembly.service.ts": {
+    "mtime": 1788158752.3516169,
+    "seen": 1788159816.0843189,
+    "ast_hash": "b51f4a9b9b4eaba91d8abc3564105e54",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/identity/identity.module.ts": {
+    "mtime": 1788158752.3529263,
+    "seen": 1788159816.0843651,
+    "ast_hash": "e831f9ac0775b222749c759c42b5fcbe",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/identity/linking.service.ts": {
+    "mtime": 1788158752.3529263,
+    "seen": 1788159816.0843768,
+    "ast_hash": "e71c1890fcd38989286d85d8c14869f6",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/identity/match-rules/customer-id.ts": {
+    "mtime": 1788158752.3529263,
+    "seen": 1788159816.084389,
+    "ast_hash": "215900075b24aac76e64d5f467a2cc05",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/identity/match-rules/email.ts": {
+    "mtime": 1788158752.3538916,
+    "seen": 1788159816.0843987,
+    "ast_hash": "ff1d5255deae3f2c03f2e48570b61576",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/identity/match-rules/phone.ts": {
+    "mtime": 1788158752.3538916,
+    "seen": 1788159816.0844092,
+    "ast_hash": "bac56814fdc1ade5b41724e25a09e78b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/identity/match-rules/supporting-signal.ts": {
+    "mtime": 1788158752.3538916,
+    "seen": 1788159816.0844223,
+    "ast_hash": "fe161d8653f42ad548c1615a50d472c6",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/identity/matching.service.spec.ts": {
+    "mtime": 1788158752.3538916,
+    "seen": 1788159816.0844357,
+    "ast_hash": "25974f17f3a76f0a1eaf5d50b38df338",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/identity/matching.service.ts": {
+    "mtime": 1788158752.3538916,
+    "seen": 1788159816.0844436,
+    "ast_hash": "ab514291bdb22b0969b22c1f6a805f84",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/normalization/normalization.module.ts": {
+    "mtime": 1788158752.3568916,
+    "seen": 1788159816.0845218,
+    "ast_hash": "69b4d20724a4b93ed96630fb8cbee4e8",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/normalization/normalization.service.spec.ts": {
+    "mtime": 1788158752.357511,
+    "seen": 1788159816.0845318,
+    "ast_hash": "0ee6e135e8bf1912c70418e19208b4b4",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/normalization/normalization.service.ts": {
+    "mtime": 1788158752.357511,
+    "seen": 1788159816.0845387,
+    "ast_hash": "bb00997f4a1ae1f93f32de20b4ed39ec",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/normalization/normalizers/date.spec.ts": {
+    "mtime": 1788158752.357511,
+    "seen": 1788159816.0845456,
+    "ast_hash": "6d4c1a581be5ab6e0d81b9804c890d14",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/normalization/normalizers/date.ts": {
+    "mtime": 1788158752.3581762,
+    "seen": 1788159816.084553,
+    "ast_hash": "d98819ba52f6bfaca27584eb0f57f6fc",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/normalization/normalizers/email.spec.ts": {
+    "mtime": 1788158752.3581762,
+    "seen": 1788159816.0845644,
+    "ast_hash": "eaae0cc3346f696e22ac403a24b937d3",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/normalization/normalizers/email.ts": {
+    "mtime": 1788158752.3581762,
+    "seen": 1788159816.0845711,
+    "ast_hash": "998896cea469437fe9b6040b2f5d467e",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/normalization/normalizers/name.spec.ts": {
+    "mtime": 1788158752.3581762,
+    "seen": 1788159816.084578,
+    "ast_hash": "8ada35469d067e0e97756c9916c261a6",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/normalization/normalizers/name.ts": {
+    "mtime": 1788158752.3581762,
+    "seen": 1788159816.084588,
+    "ast_hash": "7ed7f74898f51b14cd3d6ee8a0302033",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/normalization/normalizers/phone.spec.ts": {
+    "mtime": 1788158752.3581762,
+    "seen": 1788159816.0845957,
+    "ast_hash": "eaf3a7c08c87163a975982a8f2c3add2",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/normalization/normalizers/phone.ts": {
+    "mtime": 1788158752.3588915,
+    "seen": 1788159816.0846083,
+    "ast_hash": "bced89075f6311af48d5c13c6de512eb",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/assembly.e2e-spec.ts": {
+    "mtime": 1788158752.370944,
+    "seen": 1788159816.085185,
+    "ast_hash": "9d377e3872d920fb91575606959bfba5",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/identity-matching.e2e-spec.ts": {
+    "mtime": 1788158752.3718915,
+    "seen": 1788159816.0853362,
+    "ast_hash": "b7c12c3d0b0c1680768429526396051b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/normalization.e2e-spec.ts": {
+    "mtime": 1788158752.3728917,
+    "seen": 1788159816.0853846,
+    "ast_hash": "5f13ef685de8008ce521faaa26bda2e5",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/sync/payload-hash.ts": {
+    "mtime": 1788158752.3685763,
+    "seen": 1788159816.0850499,
+    "ast_hash": "9d35bade9a84de75eaab02d788f027c9",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/sync/payload-hash.spec.ts": {
+    "mtime": 1788158752.3685763,
+    "seen": 1788159816.0850406,
+    "ast_hash": "c0f7b09128fcc6e2f14d54ab8a4b0c5e",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/sync/sync-error.spec.ts": {
+    "mtime": 1788158752.3685763,
+    "seen": 1788159816.085061,
+    "ast_hash": "e53fa7031dac7f1263a808a6bc819942",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/sync/sync-error.ts": {
+    "mtime": 1788158752.3685763,
+    "seen": 1788159816.0850704,
+    "ast_hash": "c735f708802350a37acef019fd51ab89",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/sync/sync-pipeline.service.ts": {
+    "mtime": 1788158752.3688915,
+    "seen": 1788159816.0850825,
+    "ast_hash": "dfbb012519e984e51ea7422adb68e484",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/queues/queues.module.ts": {
+    "mtime": 1788205295.6758966,
+    "seen": 1788205300.2575643,
+    "ast_hash": "59f9ed8640cae94b4cd69e0bc93b82eb",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/queues/sync.processor.ts": {
+    "mtime": 1788158752.369951,
+    "seen": 1788159816.0851557,
+    "ast_hash": "a53693cbcbe5bbfefed093af0cdde374",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/queues/sync.queue.ts": {
+    "mtime": 1788158752.369951,
+    "seen": 1788159816.0851626,
+    "ast_hash": "88fc58b07307efea9a56f9a25aa3d618",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/sync/dto/list-sync-jobs.dto.ts": {
+    "mtime": 1788158752.3685763,
+    "seen": 1788159816.0850337,
+    "ast_hash": "c803bdfb072b5564b70ab90b23a4df52",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/sync/sync.controller.ts": {
+    "mtime": 1788158752.3688915,
+    "seen": 1788159816.0850952,
+    "ast_hash": "167975e987a4bd02f644663173c3b7d0",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/sync/sync.module.ts": {
+    "mtime": 1788158752.3688915,
+    "seen": 1788159816.0851066,
+    "ast_hash": "9b4b4956da33f68607002be8bf270c37",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/sync/sync.service.ts": {
+    "mtime": 1788158752.3688915,
+    "seen": 1788159816.0851169,
+    "ast_hash": "ebc670a0f501e9586c743f11dda51122",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/sync.e2e-spec.ts": {
+    "mtime": 1788158752.3758917,
+    "seen": 1788159816.085488,
+    "ast_hash": "25a2afb54c321470097cbb60d7cc596c",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/queues/redis-connection.util.ts": {
+    "mtime": 1788158752.369951,
+    "seen": 1788159816.0851347,
+    "ast_hash": "165a75a1547829f62eab42de0339eea7",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/queues/schedule-reconciliation.service.ts": {
+    "mtime": 1788205333.4880562,
+    "seen": 1788205496.586619,
+    "ast_hash": "3618a3ebc06179667cc2e80ee1b416cc",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/queues/sync-lock.service.ts": {
+    "mtime": 1788158752.369951,
+    "seen": 1788159816.0851488,
+    "ast_hash": "abee1663d05cdc3a45e89bb21ea73bf1",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/identity/candidates.controller.ts": {
+    "mtime": 1788158752.3518915,
+    "seen": 1788159816.0843265,
+    "ast_hash": "4a85a2e587b8beea76e6f22eb3aaab53",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/identity/candidates.service.ts": {
+    "mtime": 1788158752.3518915,
+    "seen": 1788159816.0843337,
+    "ast_hash": "fd8694352c5831cd6901618169d76202",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/identity/dto/list-match-candidates.dto.ts": {
+    "mtime": 1788158752.3518915,
+    "seen": 1788159816.084341,
+    "ast_hash": "1c2857e6a6dae61fa3ea1199ef20428c",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/identity/dto/unmerge.dto.ts": {
+    "mtime": 1788158752.3529263,
+    "seen": 1788159816.0843492,
+    "ast_hash": "5ade8410498c07d7dfe27a4e490bd0c3",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/identity/merge.service.ts": {
+    "mtime": 1788158752.3548915,
+    "seen": 1788159816.0844536,
+    "ast_hash": "39260139cb1045ccaf152df90dda89d5",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/identity/unmerge.controller.ts": {
+    "mtime": 1788158752.3548915,
+    "seen": 1788159816.0844605,
+    "ast_hash": "34905d5b8356c5938c7933c3ab2275cd",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/merge-unmerge.e2e-spec.ts": {
+    "mtime": 1788158752.3728917,
+    "seen": 1788159816.0853777,
+    "ast_hash": "a51690d1d47b679abc18b707f32afee0",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/principals/dto/list-principals.dto.ts": {
+    "mtime": 1788158752.362117,
+    "seen": 1788159816.0847015,
+    "ast_hash": "363d270d257e827e0df19c3086900873",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/principals/lineage.service.ts": {
+    "mtime": 1788158752.362117,
+    "seen": 1788159816.0847156,
+    "ast_hash": "fbf0d98d8b5bfaffc3a4ce395992fd30",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/principals/principal-recipients.service.ts": {
+    "mtime": 1788158752.362117,
+    "seen": 1788159816.084728,
+    "ast_hash": "72f6f354087be69940bb7d90e7156dc1",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/principals/principals.controller.ts": {
+    "mtime": 1788158752.362117,
+    "seen": 1788159816.0847473,
+    "ast_hash": "13481d6d596a6f8a9a454f65e577e070",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/principals/principals.module.ts": {
+    "mtime": 1788158752.3628917,
+    "seen": 1788159816.0847607,
+    "ast_hash": "ee81a4978ff7b5c9d50d10d9d51344dd",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/principals/principals.service.ts": {
+    "mtime": 1788158752.3628917,
+    "seen": 1788159816.0847738,
+    "ast_hash": "15c1751cebd15f3efb6edfe9551ccf63",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/principals.e2e-spec.ts": {
+    "mtime": 1788171718.0287359,
+    "seen": 1788178369.5133636,
+    "ast_hash": "7a3bdc8cd54f291f2364fad0d61e1b4b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/inventory/csv-writer.ts": {
+    "mtime": 1788158752.3560262,
+    "seen": 1788159816.0844762,
+    "ast_hash": "34bb2b93bb59d4ec763edc5ffc8aa4c2",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/audit/audit-read.controller.ts": {
+    "mtime": 1788158752.3407183,
+    "seen": 1788159816.0837781,
+    "ast_hash": "6644cfa32cd9a40160d7046a5c30bf49",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/audit/audit-read.module.ts": {
+    "mtime": 1788158752.3409054,
+    "seen": 1788159816.083786,
+    "ast_hash": "6077096abfccd25514b0e8dd324ea568",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/audit/audit-read.service.ts": {
+    "mtime": 1788158752.3409054,
+    "seen": 1788159816.0837986,
+    "ast_hash": "59d4621c5832912934bd8ee60b79fc1d",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/audit/dto/access-log-export.dto.ts": {
+    "mtime": 1788158752.3409054,
+    "seen": 1788159816.0838106,
+    "ast_hash": "7b8b9d82583fbcf12f48b2e647242b86",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/audit/dto/list-audit-events.dto.ts": {
+    "mtime": 1788158752.341474,
+    "seen": 1788159816.0838192,
+    "ast_hash": "5cd26f1c89b465a545c22d8bc5c6dd99",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/inventory/csv-writer.spec.ts": {
+    "mtime": 1788158752.3548915,
+    "seen": 1788159816.0844684,
+    "ast_hash": "d2c85b61cc5d6a3e1515e2faf9589403",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/inventory/inventory.controller.ts": {
+    "mtime": 1788158752.3560262,
+    "seen": 1788159816.0844834,
+    "ast_hash": "185cf0b624a89146fb398ce8f785219b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/inventory/inventory.module.ts": {
+    "mtime": 1788158752.3560262,
+    "seen": 1788159816.0844903,
+    "ast_hash": "7c0413b1da2db98864b68ae0129bac86",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/inventory/inventory.service.ts": {
+    "mtime": 1788158752.3560262,
+    "seen": 1788159816.0844972,
+    "ast_hash": "c175617c3c5a779d20cb9f9a9dccd115",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/inventory/ropa-export.service.ts": {
+    "mtime": 1788158752.3560262,
+    "seen": 1788159816.0845106,
+    "ast_hash": "edcb3cf41126af38fb3ec0773736411c",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/principal-portal/me.controller.ts": {
+    "mtime": 1788158752.3609653,
+    "seen": 1788159816.0846796,
+    "ast_hash": "76f0b57458fa3f03d6948771a016daac",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/principal-portal/me.service.ts": {
+    "mtime": 1788158752.3609653,
+    "seen": 1788159816.0846865,
+    "ast_hash": "f303e242e778ddd4ca422d9e35f0337b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/principal-portal/principal-portal.module.ts": {
+    "mtime": 1788158752.3609653,
+    "seen": 1788159816.0846937,
+    "ast_hash": "4f675a910a3bbddc08d4d85ffb6ba83a",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/inventory.e2e-spec.ts": {
+    "mtime": 1788158752.3718915,
+    "seen": 1788159816.0853496,
+    "ast_hash": "e687b70eae8f32259d60cee1061ee929",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/principals/field-provenance.ts": {
+    "mtime": 1788158752.362117,
+    "seen": 1788159816.0847085,
+    "ast_hash": "8ef178b8638e2eedab975bff4a332e11",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/principals/principal-search-query.ts": {
+    "mtime": 1788158752.362117,
+    "seen": 1788159816.0847385,
+    "ast_hash": "5df99f6d1aa94039319952b7f17e64ae",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/audit-read.e2e-spec.ts": {
+    "mtime": 1788158752.370944,
+    "seen": 1788159816.0851939,
+    "ast_hash": "2cbd7390a8a8b13cc893a64e1a85e71b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/principal-portal.e2e-spec.ts": {
+    "mtime": 1788196439.0291646,
+    "seen": 1788196669.5308592,
+    "ast_hash": "170e9cd85f07f840b1692c6a8ba898eb",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/eslint.config.js": {
+    "mtime": 1788158752.3768916,
+    "seen": 1788159816.085514,
+    "ast_hash": "f579d8225c251a7773f54631aefb9bcb",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/package.json": {
+    "mtime": 1788163130.373705,
+    "seen": 1788163373.5054255,
+    "ast_hash": "d6086d0ae6057b3e49555a98b31f11e8",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/postcss.config.js": {
+    "mtime": 1788158752.3788917,
+    "seen": 1788159816.0855289,
+    "ast_hash": "c735540bb63936a123bc867d950c9f69",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/vite-env.d.ts": {
+    "mtime": 1788158752.3948917,
+    "seen": 1788159816.0865378,
+    "ast_hash": "15b24161077fde72dde019b24a1f7292",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/tailwind.config.js": {
+    "mtime": 1788158752.3948917,
+    "seen": 1788159816.0865455,
+    "ast_hash": "20be6f00ca4c202a2c39d0ad0c078ba6",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/tsconfig.json": {
+    "mtime": 1788158752.3948917,
+    "seen": 1788159816.0865533,
+    "ast_hash": "8ae1ecd885a5b9323cd5fcdf6b215918",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/tsconfig.node.json": {
+    "mtime": 1788158752.3948917,
+    "seen": 1788159816.0865664,
+    "ast_hash": "df562a73dce2f53f022bc93ee20099c2",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/vite.config.ts": {
+    "mtime": 1788158752.3948917,
+    "seen": 1788159816.086581,
+    "ast_hash": "423db02f48bbd47fb93590bbc1da04e6",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/index.html": {
+    "mtime": 1788158752.3768916,
+    "seen": 1788159816.087832,
+    "ast_hash": "c5c069beca439e29589eb599de96cc5d",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/shared/DataTable.tsx": {
+    "mtime": 1788158752.3799317,
+    "seen": 1788159816.0855513,
+    "ast_hash": "a727421afa4fe53c97609374baafec3a",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/shared/DateTime.tsx": {
+    "mtime": 1788158752.3799317,
+    "seen": 1788159816.0855708,
+    "ast_hash": "f3de5ac76026a8cc5e193e897529210a",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/shared/EmptyState.tsx": {
+    "mtime": 1788158752.3799317,
+    "seen": 1788159816.0855906,
+    "ast_hash": "e4b964c3c7fc4cbc5a97a69e2e5347d7",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/shared/PermissionGate.tsx": {
+    "mtime": 1788158752.3799317,
+    "seen": 1788159816.0856044,
+    "ast_hash": "04960bc9662aa1de4135558c834d4323",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/shared/Skeleton.tsx": {
+    "mtime": 1788158752.3799317,
+    "seen": 1788159816.0856152,
+    "ast_hash": "d7b8360c03af977f5759785606154818",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/shared/SourceChip.tsx": {
+    "mtime": 1788158752.3799317,
+    "seen": 1788159816.0856273,
+    "ast_hash": "c74d86267ca71666499c6a644d36986c",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/ui/badge.tsx": {
+    "mtime": 1788205440.1991818,
+    "seen": 1788205496.5930665,
+    "ast_hash": "088b397ebe0cc0762ec12adcb7ad8904",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/ui/button.tsx": {
+    "mtime": 1788158752.3811634,
+    "seen": 1788159816.0856464,
+    "ast_hash": "676935e7f85054389ea95b632a3b29cd",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/ui/card.tsx": {
+    "mtime": 1788158752.3811634,
+    "seen": 1788159816.085654,
+    "ast_hash": "c713c5410725db690e5f0059a3da3454",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/ui/input.tsx": {
+    "mtime": 1788158752.3811634,
+    "seen": 1788159816.085664,
+    "ast_hash": "4e0b3b4ee639af45404eda2f22494b7b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/ui/label.tsx": {
+    "mtime": 1788158752.3811634,
+    "seen": 1788159816.085671,
+    "ast_hash": "9c29d014511ac39812bf75402835c6eb",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/ui/table.tsx": {
+    "mtime": 1788158752.3811634,
+    "seen": 1788159816.0856779,
+    "ast_hash": "1878ea735eb8ec759a23ebc6a6bb07ba",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/ui/tooltip.tsx": {
+    "mtime": 1788158752.3811634,
+    "seen": 1788159816.0856922,
+    "ast_hash": "d3569d489edfc140b0ebf9c4bd016432",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/lib/api-client.ts": {
+    "mtime": 1788158752.3913956,
+    "seen": 1788159816.086282,
+    "ast_hash": "57506fc8121fe0b4e8e896b7b0e9d2ee",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/lib/auth.ts": {
+    "mtime": 1788205550.922562,
+    "seen": 1788205836.097496,
+    "ast_hash": "14336503da5288144d30dc9ad1e084fd",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/lib/format.ts": {
+    "mtime": 1788205487.658603,
+    "seen": 1788205496.6008234,
+    "ast_hash": "795915b029e1b239354101355ce74e6c",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/lib/permissions.ts": {
+    "mtime": 1788158752.3913956,
+    "seen": 1788159816.0863266,
+    "ast_hash": "84d11a7f23850306798b9b7abb705fcb",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/lib/query-client.ts": {
+    "mtime": 1788158752.3913956,
+    "seen": 1788159816.0863347,
+    "ast_hash": "2cd819efdfe7b4d2628ca64b98eab32c",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/lib/utils.ts": {
+    "mtime": 1788158752.3918917,
+    "seen": 1788159816.086342,
+    "ast_hash": "90acb97effbb3cde46b017b39f73f61f",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/shared/AppShell.tsx": {
+    "mtime": 1788158752.379723,
+    "seen": 1788159816.0855367,
+    "ast_hash": "8392bb27ee7241aafcd5350d7843e95f",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/pages/LoginPage.tsx": {
+    "mtime": 1788158752.3888917,
+    "seen": 1788159816.086118,
+    "ast_hash": "043408ee5adc00aea4acde49f405d7e4",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/main.tsx": {
+    "mtime": 1788158752.3918917,
+    "seen": 1788159816.0863495,
+    "ast_hash": "a3b5489cbfb0684f60290ed8ca73a1d5",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/principal/components/PortalShell.tsx": {
+    "mtime": 1788158752.3926377,
+    "seen": 1788159816.0863864,
+    "ast_hash": "a62b8b4af23f1d4761de212e4bceab1a",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/principal/pages/PrincipalLoginPage.tsx": {
+    "mtime": 1788158752.3938916,
+    "seen": 1788159816.086495,
+    "ast_hash": "748ec98cee3c9eae307d72a828f8be24",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/router.tsx": {
+    "mtime": 1788158752.3938916,
+    "seen": 1788159816.0865197,
+    "ast_hash": "74ca545bf49f93c75fa60a433391a524",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/test/setup.ts": {
+    "mtime": 1788158752.3948917,
+    "seen": 1788159816.0865283,
+    "ast_hash": "3709e3aa95abf0544678f0f2d9b46702",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/lib/api-client.test.ts": {
+    "mtime": 1788158752.3908916,
+    "seen": 1788159816.0862741,
+    "ast_hash": "c12ca098fde4432ca7a674c2cecb93a7",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/lib/format.test.ts": {
+    "mtime": 1788158752.3913956,
+    "seen": 1788159816.0863001,
+    "ast_hash": "7396a4c3b5c8b9c8dece6fc297555928",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/pages/LoginPage.test.tsx": {
+    "mtime": 1788158752.3888917,
+    "seen": 1788159816.0861104,
+    "ast_hash": "7c65b60cb681ca55118e765e9e4977ff",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/lib/permissions.test.ts": {
+    "mtime": 1788158752.3913956,
+    "seen": 1788159816.0863178,
+    "ast_hash": "53c87fbff46e8fac77a3af3a22296933",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/principal/pages/PrincipalLoginPage.test.tsx": {
+    "mtime": 1788158752.3938916,
+    "seen": 1788159816.0864863,
+    "ast_hash": "e8a6ba874051d3dac9ce80ac100d46d0",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/router.test.tsx": {
+    "mtime": 1788158752.3938916,
+    "seen": 1788159816.0865061,
+    "ast_hash": "ef0bd50fe673d66ca5ad5d5219b57b5b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/shared/DataTable.test.tsx": {
+    "mtime": 1788158752.3799317,
+    "seen": 1788159816.0855443,
+    "ast_hash": "092eb59ad7e59df5f7793055333b5e1b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/shared/EmptyState.test.tsx": {
+    "mtime": 1788158752.3799317,
+    "seen": 1788159816.0855813,
+    "ast_hash": "4b9f8e73c3e231e9502ae7548c297044",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/shared/PermissionGate.test.tsx": {
+    "mtime": 1788158752.3799317,
+    "seen": 1788159816.0855975,
+    "ast_hash": "4ada84b8596fdc6d48503e3048c2941b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/auth/dto/employee-me-response.dto.ts": {
+    "mtime": 1788158752.341968,
+    "seen": 1788159816.0838547,
+    "ast_hash": "9fe4abaec9f54a23d26ac04b7d78d0bf",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/ExportButtons.tsx": {
+    "mtime": 1788158752.3820968,
+    "seen": 1788159816.0857303,
+    "ast_hash": "29e750e336f7a9938ecc37917d5af542",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/GapsPanel.tsx": {
+    "mtime": 1788158752.3820968,
+    "seen": 1788159816.0857403,
+    "ast_hash": "879a5f9fe742c25e1ad2705d193615fd",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/RecentAuditStrip.tsx": {
+    "mtime": 1788158752.3828917,
+    "seen": 1788159816.0858202,
+    "ast_hash": "0a0fe91ef42771ed6ab32f5f3f02c941",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/StatCard.tsx": {
+    "mtime": 1788158752.3838916,
+    "seen": 1788159816.0858412,
+    "ast_hash": "d1da82056a46e38f1aacee1aefdd6c56",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/shared/DateTime.test.tsx": {
+    "mtime": 1788158752.3799317,
+    "seen": 1788159816.0855582,
+    "ast_hash": "4bf7728febce42ea27677448d16cd172",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/ui/tabs.tsx": {
+    "mtime": 1788158752.3811634,
+    "seen": 1788159816.0856848,
+    "ast_hash": "7eeb6493fe855560511f64ff75f9fba8",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/CandidateComparison.tsx": {
+    "mtime": 1788158752.3820968,
+    "seen": 1788159816.0857072,
+    "ast_hash": "8c242527f6c3dadff19158979a2c79cd",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/ConflictBadge.tsx": {
+    "mtime": 1788158752.3820968,
+    "seen": 1788159816.0857189,
+    "ast_hash": "8dd686f20366ad8402578db0d171cfd8",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/LineageChip.tsx": {
+    "mtime": 1788158752.3820968,
+    "seen": 1788159816.0857508,
+    "ast_hash": "6f29578f76a39d712f4d875f6adb31f6",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/NotReviewedChip.tsx": {
+    "mtime": 1788158752.3828917,
+    "seen": 1788159816.0857973,
+    "ast_hash": "e5c32ac18e9708415ca2f1033b22209b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/PurposeForm.tsx": {
+    "mtime": 1788158752.3828917,
+    "seen": 1788159816.085813,
+    "ast_hash": "7478e5fad6823898941af657167af83a",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/form-controls.tsx": {
+    "mtime": 1788205448.33872,
+    "seen": 1788205496.5952263,
+    "ast_hash": "6d0b84040218dd133230a1da1d757307",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts": {
+    "mtime": 1788158752.3871603,
+    "seen": 1788159816.0859947,
+    "ast_hash": "87551790b270ec553cb938526a9591a8",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/pages/DashboardPage.test.tsx": {
+    "mtime": 1788158752.3875115,
+    "seen": 1788159816.0860205,
+    "ast_hash": "e567ac42b6a0a523f6b7e2045ef5957b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/pages/DashboardPage.tsx": {
+    "mtime": 1788158752.3875115,
+    "seen": 1788159816.0860329,
+    "ast_hash": "4bd5e8f64416c08b706543444717d5ef",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/pages/EmployeesPage.tsx": {
+    "mtime": 1788158752.3878915,
+    "seen": 1788159816.0861027,
+    "ast_hash": "e877c7576a9c8f013694d1f8a31116e4",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/pages/PurposesPage.tsx": {
+    "mtime": 1788158752.3898916,
+    "seen": 1788159816.0861685,
+    "ast_hash": "1f5ef4923fee8c6300359d17116dcf0b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/pages/RegistersPage.tsx": {
+    "mtime": 1788158752.3898916,
+    "seen": 1788159816.0861769,
+    "ast_hash": "7ee85889c5576f508b926c7240c10983",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/prisma/seed-principals.ts": {
+    "mtime": 1788158752.3318915,
+    "seen": 1788159816.083344,
+    "ast_hash": "29dd84df8eed32fb5b246292886d334c",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/LinkedRecordsPanel.tsx": {
+    "mtime": 1788158752.3820968,
+    "seen": 1788159816.0857785,
+    "ast_hash": "bba036e37a68e4b51249e5340b69635c",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.tsx": {
+    "mtime": 1788158752.3848927,
+    "seen": 1788159816.0858808,
+    "ast_hash": "6fbe1bf2b0db846a7cead435f371ce33",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/principal/components/ComingSoonSlot.tsx": {
+    "mtime": 1788158752.3924904,
+    "seen": 1788159816.0863645,
+    "ast_hash": "46f04659a0e28dccb228b79e760fb5c5",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts": {
+    "mtime": 1788158752.3859758,
+    "seen": 1788159816.0859878,
+    "ast_hash": "7ca5b56d5a5f2dcc1b69f1e0893c73b9",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.tsx": {
+    "mtime": 1788158752.3888917,
+    "seen": 1788159816.0861316,
+    "ast_hash": "0be6c979448dc990ed6dcd2fbab0ff66",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/pages/PrincipalsPage.tsx": {
+    "mtime": 1788158752.3888917,
+    "seen": 1788159816.0861475,
+    "ast_hash": "a97494ba5117939a8bd917f9f3d53511",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/principal/components/ValueCard.tsx": {
+    "mtime": 1788158752.3926377,
+    "seen": 1788159816.086399,
+    "ast_hash": "f3fdacbc8cda6c7d539fa4f03d8b91f1",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/principal/pages/MeDataPage.test.tsx": {
+    "mtime": 1788158752.3926377,
+    "seen": 1788159816.086414,
+    "ast_hash": "3e24332dabc8af9dd3a8e7e4a837aaf8",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/principal/pages/MeDataPage.tsx": {
+    "mtime": 1788158752.3928916,
+    "seen": 1788159816.086427,
+    "ast_hash": "f7113217fcb0b0e0f966fcdd064036b7",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/principal/pages/MeHomePage.test.tsx": {
+    "mtime": 1788158752.3928916,
+    "seen": 1788159816.086438,
+    "ast_hash": "093f871aea37ebb2ab39ba3173ec14e5",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/principal/pages/MeHomePage.tsx": {
+    "mtime": 1788158752.3928916,
+    "seen": 1788159816.0864475,
+    "ast_hash": "b9233990add40d72f0a60d51cbffc7a2",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/principal/pages/MeRecipientsPage.tsx": {
+    "mtime": 1788158752.3928916,
+    "seen": 1788159816.086463,
+    "ast_hash": "6c9ba4c05c0ef289f72bd04259fd1036",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/principal/pages/MeSourcesPage.tsx": {
+    "mtime": 1788158752.3938916,
+    "seen": 1788159816.0864787,
+    "ast_hash": "3f1026fba2dca92c5e439ef5bf5f28ef",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/LinkedRecordsPanel.test.tsx": {
+    "mtime": 1788158752.3820968,
+    "seen": 1788159816.0857656,
+    "ast_hash": "c542a65bbaf655b1869a9d6ce9f16bd4",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/wizard/Step1Connection.tsx": {
+    "mtime": 1788158752.3859758,
+    "seen": 1788159816.0859416,
+    "ast_hash": "15e9665d4471fa7cd43a7fe9eb2f9f94",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/wizard/Step2Schema.tsx": {
+    "mtime": 1788158752.3859758,
+    "seen": 1788159816.0859492,
+    "ast_hash": "6376b207534563fe1e14c85b505b1cbe",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/wizard/Step3Mapping.tsx": {
+    "mtime": 1788158752.3859758,
+    "seen": 1788159816.0859656,
+    "ast_hash": "6a2e8362eec83d55d3d9a4d4fd748f14",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/wizard/Step4Purposes.tsx": {
+    "mtime": 1788158752.3859758,
+    "seen": 1788159816.085973,
+    "ast_hash": "9c814ce06fd521634cdfdf29b874e004",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.test.tsx": {
+    "mtime": 1788158752.3888917,
+    "seen": 1788159816.0861247,
+    "ast_hash": "4d93e29b873e1b1f17c9f12479cd7641",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/pages/PrincipalsPage.test.tsx": {
+    "mtime": 1788158752.3888917,
+    "seen": 1788159816.0861385,
+    "ast_hash": "5a42fd0c2b66e43a17569aa7f8dffd46",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/pages/ReviewQueuePage.test.tsx": {
+    "mtime": 1788158752.3898916,
+    "seen": 1788159816.0862026,
+    "ast_hash": "f0fcdc128e47174f46a104ccabaebe09",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/pages/ReviewQueuePage.tsx": {
+    "mtime": 1788158752.3898916,
+    "seen": 1788159816.086233,
+    "ast_hash": "6e816775d310b08dcce0158ded1e8a88",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/principal/pages/MeRecipientsPage.test.tsx": {
+    "mtime": 1788158752.3928916,
+    "seen": 1788159816.0864549,
+    "ast_hash": "461f43539d2f733d916635f1c082e4c2",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/principal/pages/MeSourcesPage.test.tsx": {
+    "mtime": 1788158752.3928916,
+    "seen": 1788159816.086471,
+    "ast_hash": "c5b339946ed1440d23895082115c05cd",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/seed-principals.e2e-spec.ts": {
+    "mtime": 1788158752.3758917,
+    "seen": 1788159816.0854745,
+    "ast_hash": "08901a7902c78e4a8b2b05af2ba3e6a4",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/SyncHistoryTable.tsx": {
+    "mtime": 1788158752.3838916,
+    "seen": 1788159816.0858529,
+    "ast_hash": "035295c1bd4c476e98e704e3b55c7e55",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/wizard/Step5Declarations.tsx": {
+    "mtime": 1788158752.3859758,
+    "seen": 1788159816.0859807,
+    "ast_hash": "793beb4b2e10abac0d2834196e114478",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/pages/DataSourceDetailPage.tsx": {
+    "mtime": 1788158752.3878915,
+    "seen": 1788159816.0860522,
+    "ast_hash": "2b31038d75d9cd4690609eb2386870d6",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/pages/DataSourceNewPage.tsx": {
+    "mtime": 1788158752.3878915,
+    "seen": 1788159816.0860775,
+    "ast_hash": "afb1eaba18be218ca28b28e17a9fc86b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/pages/DataSourcesPage.tsx": {
+    "mtime": 1788158752.3878915,
+    "seen": 1788159816.086086,
+    "ast_hash": "3064c4be4ea8bcfda5c96ea353307f4b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/principal-portal/dto/me-privacy-contact.dto.ts": {
+    "mtime": 1788158752.3607123,
+    "seen": 1788159816.084662,
+    "ast_hash": "f58574b0767e62fbec11321057084ecd",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/wizard/Step1Connection.test.tsx": {
+    "mtime": 1788158752.3848927,
+    "seen": 1788159816.0859349,
+    "ast_hash": "9c805f8f9190319c2b4ad0b61106c08d",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/wizard/Step3Mapping.test.tsx": {
+    "mtime": 1788158752.3859758,
+    "seen": 1788159816.0859587,
+    "ast_hash": "bcb1e22cf6dbf3b2749db32812383470",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/pages/DataSourceNewPage.test.tsx": {
+    "mtime": 1788158752.3878915,
+    "seen": 1788159816.0860648,
+    "ast_hash": "ce89a023711308d4cc523dd4a84b7750",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/data-sources/dto/mapping-warning-response.dto.ts": {
+    "mtime": 1788158752.3470905,
+    "seen": 1788159816.084065,
+    "ast_hash": "3d9a55ae0421515b9b146b50e62ad607",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/data-sources/dto/mappings-response.dto.ts": {
+    "mtime": 1788158752.3470905,
+    "seen": 1788159816.0840778,
+    "ast_hash": "be3c841b6b1632498721e5993bec0f26",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/data-sources/dto/purposes-response.dto.ts": {
+    "mtime": 1788158752.3470905,
+    "seen": 1788159816.084089,
+    "ast_hash": "0cad62ab8f4d68730615a74da14f74a9",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/pages/DataSourceDetailPage.test.tsx": {
+    "mtime": 1788158752.3875115,
+    "seen": 1788159816.0860417,
+    "ast_hash": "88b1ba4ea2b31340ab3af686575ae37b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/principal/components/PortalShell.test.tsx": {
+    "mtime": 1788158752.3926377,
+    "seen": 1788159816.0863767,
+    "ast_hash": "b7ae0e086b60c923e262794287b39249",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/principal-portal/dto/me-profile-timezone.dto.ts": {
+    "mtime": 1788158752.3609653,
+    "seen": 1788159816.0846722,
+    "ast_hash": "a02eaa5c9bc752cfe7abd7a2e0ee4a32",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/registers/RetentionTab.tsx": {
+    "mtime": 1788158752.3848927,
+    "seen": 1788159816.0858886,
+    "ast_hash": "3b694ad25012071b4d4b864b8b406655",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/registers/SecurityMeasuresTab.tsx": {
+    "mtime": 1788158752.3848927,
+    "seen": 1788159816.0858994,
+    "ast_hash": "ec05f8587f921ce5de12a64e1125304c",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/registers/SharingTab.tsx": {
+    "mtime": 1788158752.3848927,
+    "seen": 1788159816.085912,
+    "ast_hash": "97cd01fc33c83b71b331fdc0b360e140",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/registers/TransfersTab.tsx": {
+    "mtime": 1788158752.3848927,
+    "seen": 1788159816.0859241,
+    "ast_hash": "e526a25d4e4aac50d37187359c59c75b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/AuditEventRow.tsx": {
+    "mtime": 1788158752.3819242,
+    "seen": 1788159816.0857,
+    "ast_hash": "5434968007fd844209341842917a9424",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/NotReviewedChip.test.tsx": {
+    "mtime": 1788158752.3828917,
+    "seen": 1788159816.085788,
+    "ast_hash": "c5c5f568614f0a510f1be68c5a180c54",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/PurposeForm.test.tsx": {
+    "mtime": 1788158752.3828917,
+    "seen": 1788159816.0858054,
+    "ast_hash": "f8bba44b8f414aa4d3a39517dca09b56",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.tsx": {
+    "mtime": 1788158752.3828917,
+    "seen": 1788159816.085834,
+    "ast_hash": "04b14bf40d28cba933c5129f7f12fb9f",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.test.tsx": {
+    "mtime": 1788158752.3838916,
+    "seen": 1788159816.0858736,
+    "ast_hash": "312f7aca52135d055fd9e757dcc3263f",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/pages/AuditPage.tsx": {
+    "mtime": 1788158752.3875115,
+    "seen": 1788159816.0860083,
+    "ast_hash": "1d8c225119d62c609f7fbc88756bd48b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/pages/PurposesPage.test.tsx": {
+    "mtime": 1788158752.3888917,
+    "seen": 1788159816.0861604,
+    "ast_hash": "1ee7255b90b79ee791d979c51771a9ac",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.tsx": {
+    "mtime": 1788158752.3898916,
+    "seen": 1788159816.0862658,
+    "ast_hash": "31e0d115c002e642629fa9917cf61c5c",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.test.tsx": {
+    "mtime": 1788158752.3828917,
+    "seen": 1788159816.0858269,
+    "ast_hash": "33c9a9f08b5add51afe4abc13f7193d5",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/pages/AuditPage.test.tsx": {
+    "mtime": 1788158752.3871603,
+    "seen": 1788159816.0860014,
+    "ast_hash": "d049bf76742a10318deef8a56e8fcc1c",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/pages/EmployeesPage.test.tsx": {
+    "mtime": 1788158752.3878915,
+    "seen": 1788159816.0860958,
+    "ast_hash": "9b21a4d2c6f86737d3ceec2cc8dea0a3",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.test.tsx": {
+    "mtime": 1788158752.3898916,
+    "seen": 1788159816.086251,
+    "ast_hash": "05b5e85a764bd0454af282bcba5cf369",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/organizations.e2e-spec.ts": {
+    "mtime": 1788158752.3728917,
+    "seen": 1788159816.0853918,
+    "ast_hash": "91ece0b477676d1eec6596a1b596b9fb",
+    "semantic_hash": ""
+  },
+  "scripts/evaluate-mvp1.sh": {
+    "mtime": 1788158752.608892,
+    "seen": 1788159816.086591,
+    "ast_hash": "0e459963b63840cb8b2d492d2a3be1b7",
+    "semantic_hash": ""
+  },
+  "docs/EVALUATION_MVP1.md": {
+    "mtime": 1788158752.3248916,
+    "seen": 1788159816.0878065,
+    "ast_hash": "b1d22f1a07906097771044e820f9cc7b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/identity/identifier-ownership-lock.ts": {
+    "mtime": 1788158752.3529263,
+    "seen": 1788159816.0843577,
+    "ast_hash": "e07b5fc50c2a713e2beeb549e6ca2d22",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-08-31-dpdp-mvp2.md": {
+    "mtime": 1788162229.767862,
+    "seen": 1788162538.3480399,
+    "ast_hash": "c63b4a09414e2d6510c8ff52d5b4468b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/mvp2-schema-constraints.e2e-spec.ts": {
+    "mtime": 1788170703.066772,
+    "seen": 1788170898.3159604,
+    "ast_hash": "cce4b8159f0588f58288a2097a0158af",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/support/e2e-harness.ts": {
+    "mtime": 1788163413.4903142,
+    "seen": 1788163549.0853808,
+    "ast_hash": "270db78c32f020225f384e76f3965ee9",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/messaging/templates/whitelisted-variables.ts": {
+    "mtime": 1788164740.8283398,
+    "seen": 1788164787.2142816,
+    "ast_hash": "243f54fba279b23161855c2a8df45de3",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/prisma/seed/compliance-rules.ts": {
+    "mtime": 1788164922.4692752,
+    "seen": 1788164991.1707103,
+    "ast_hash": "0670a6dbb6349efc25d81723da3fa93f",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/mail/mail.module.ts": {
+    "mtime": 1788164803.247652,
+    "seen": 1788164991.1806517,
+    "ast_hash": "34913c663d8ebd31404211f420514f60",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/common/mail/mailer.service.ts": {
+    "mtime": 1788164796.0036151,
+    "seen": 1788164991.1806648,
+    "ast_hash": "c1de54654df6bca37911cfe50deed613",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/compliance/compliance.controller.ts": {
+    "mtime": 1788164885.256077,
+    "seen": 1788164991.1989424,
+    "ast_hash": "cb9fe2649ee5b542bb4e6069b8d1d701",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/compliance/compliance.module.ts": {
+    "mtime": 1788164887.9120913,
+    "seen": 1788164991.1989539,
+    "ast_hash": "8b7ced26423a679fca9dc316416d84d4",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/compliance/compliance.service.ts": {
+    "mtime": 1788178625.5367024,
+    "seen": 1788178769.7898805,
+    "ast_hash": "f94e76045e85198162f4a251b55d56c4",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/compliance/dto/create-compliance-rule.dto.ts": {
+    "mtime": 1788164872.696011,
+    "seen": 1788164991.198972,
+    "ast_hash": "c9d39c13f944e1cacad0f7c377e6c502",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/compliance/dto/update-compliance-rule.dto.ts": {
+    "mtime": 1788164879.2430453,
+    "seen": 1788164991.19898,
+    "ast_hash": "60798ea62e6f1028465a3ffa5c7e07a4",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/messaging/templates/dto/create-template.dto.ts": {
+    "mtime": 1788164817.005722,
+    "seen": 1788164991.2245767,
+    "ast_hash": "b6fdd98f2c8f02544875aa4c60aafeef",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/messaging/templates/dto/preview-template.dto.ts": {
+    "mtime": 1788164836.3868217,
+    "seen": 1788164991.2245836,
+    "ast_hash": "4489d80302375f21dc1bfd9d7473e057",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/messaging/templates/dto/update-template.dto.ts": {
+    "mtime": 1788164826.7097719,
+    "seen": 1788164991.2245889,
+    "ast_hash": "1651cfb656982f50a0b4b879b705bae5",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts": {
+    "mtime": 1788166608.7783732,
+    "seen": 1788166626.847005,
+    "ast_hash": "5dcaff8454eb9420ec2d60e01da186d9",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts": {
+    "mtime": 1788164899.399152,
+    "seen": 1788164991.2245996,
+    "ast_hash": "ba1cc04286622f606418272721f60d7a",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/messaging/templates/templates.module.ts": {
+    "mtime": 1788164914.4662323,
+    "seen": 1788164991.2246037,
+    "ast_hash": "2d9e2485c1620e9118ee6dcdf0b7bc63",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts": {
+    "mtime": 1788168710.2153351,
+    "seen": 1788169418.2851746,
+    "ast_hash": "445988ff793fb85569bac2f0d94edc00",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/notifications/decorators/current-notification-actor.decorator.ts": {
+    "mtime": 1788164885.233077,
+    "seen": 1788164991.227601,
+    "ast_hash": "fda8e13d6adf8ce0935f5c0697d83695",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/notifications/dto/notification.dto.ts": {
+    "mtime": 1788164895.8801334,
+    "seen": 1788164991.227607,
+    "ast_hash": "9fdd84fd085a9aa273cc2741952e1000",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/notifications/email-provider.factory.spec.ts": {
+    "mtime": 1788164863.7699642,
+    "seen": 1788164991.2276115,
+    "ast_hash": "ba2fcaa8df60feec3bc9ca85f8a7bb0e",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/notifications/email-provider.factory.ts": {
+    "mtime": 1788164856.3869257,
+    "seen": 1788164991.227617,
+    "ast_hash": "20dc461e0a8d43d2f27d1a4438f97ec4",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/notifications/guards/jwt-any-actor.guard.ts": {
+    "mtime": 1788164879.345046,
+    "seen": 1788164991.2276216,
+    "ast_hash": "d5b9db2efc1c850b1fb8dfcb6ec10aba",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/notifications/notification-provider.interface.ts": {
+    "mtime": 1788164824.2507594,
+    "seen": 1788164991.2276266,
+    "ast_hash": "5725969e6f044b4f725c61eaeda2f7ac",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/notifications/notifications.service.ts": {
+    "mtime": 1788164920.4902644,
+    "seen": 1788164991.2276313,
+    "ast_hash": "861f9cdd148eddfc2ec83691c7d4abf7",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/notifications/providers/console.provider.ts": {
+    "mtime": 1788164848.6738856,
+    "seen": 1788164991.2276373,
+    "ast_hash": "0cd0e7a1f347de3e789c241014d178d1",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/notifications/providers/portal.provider.ts": {
+    "mtime": 1788166682.5386443,
+    "seen": 1788166914.864743,
+    "ast_hash": "b2953feb275a4fe6e2137650499eff4c",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/notifications/providers/smtp.provider.ts": {
+    "mtime": 1788164842.6728544,
+    "seen": 1788164991.227646,
+    "ast_hash": "0856a9699efe4c8a87f3b61b1616af38",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/prisma/seed/message-templates.ts": {
+    "mtime": 1788164968.0235214,
+    "seen": 1788166009.2058532,
+    "ast_hash": "22e684da2b3b0c21ffe7ad0a8861a51d",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/compliance/compliance.service.spec.ts": {
+    "mtime": 1788178671.2484941,
+    "seen": 1788178769.7898583,
+    "ast_hash": "910034c3e25cf824d8f9454e0cbff9d5",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/notifications/notifications.controller.ts": {
+    "mtime": 1788164934.9683423,
+    "seen": 1788166009.245672,
+    "ast_hash": "bd8ad0ed6aa3ffcdf3ccc062d86570da",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/notifications/notifications.module.ts": {
+    "mtime": 1788164946.2984035,
+    "seen": 1788166009.2456799,
+    "ast_hash": "8aac07d545f7e6f6eb0bfeb9c23920f5",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/messaging/audience/audience-filter.error.ts": {
+    "mtime": 1788166850.8267694,
+    "seen": 1788166914.857583,
+    "ast_hash": "4322f57e5979de2024e404fe6e2aa2e5",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/messaging/audience/audience-filter.types.ts": {
+    "mtime": 1788166861.8752785,
+    "seen": 1788167193.8592975,
+    "ast_hash": "ceaa5779c7c5e554bbbba178f76e626a",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/messaging/audience/compile-audience.ts": {
+    "mtime": 1788166995.6655407,
+    "seen": 1788167193.8593154,
+    "ast_hash": "53ae30d2a1eee269e05477f34e3400ba",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/compliance-rules.e2e-spec.ts": {
+    "mtime": 1788178863.8549073,
+    "seen": 1788179027.9957168,
+    "ast_hash": "987d13850ee20cbd77be2fa261773430",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/templates.e2e-spec.ts": {
+    "mtime": 1788168019.4753022,
+    "seen": 1788168034.9182587,
+    "ast_hash": "07ef64809dbea40aabb209794958c3bc",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/messaging/audience/audience.controller.ts": {
+    "mtime": 1788167169.891538,
+    "seen": 1788167550.8461852,
+    "ast_hash": "5cbaab2e6baf8dcf7509b3a349cb0594",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/messaging/audience/audience.module.ts": {
+    "mtime": 1788167187.892839,
+    "seen": 1788167550.8461993,
+    "ast_hash": "976ee77dac02e7ee0b8c5a47648e676b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/messaging/audience/audience.service.ts": {
+    "mtime": 1788167282.6142223,
+    "seen": 1788167550.84621,
+    "ast_hash": "702f978e3e656ac8020007210a7c490b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/messaging/audience/dto/preview-audience.dto.ts": {
+    "mtime": 1788167086.7328234,
+    "seen": 1788167550.8468826,
+    "ast_hash": "178df20819475080799d2b2d0258689a",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/notifications.e2e-spec.ts": {
+    "mtime": 1788168751.4607441,
+    "seen": 1788169418.3578405,
+    "ast_hash": "0aa042d34c680bbf8d02e99bbc259ffc",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/messaging/audience/compile-audience.spec.ts": {
+    "mtime": 1788167456.9370112,
+    "seen": 1788167854.4410326,
+    "ast_hash": "e07c15cef0064176c1499d5547a5cc5d",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/audiences.e2e-spec.ts": {
+    "mtime": 1788167793.646014,
+    "seen": 1788168034.8997376,
+    "ast_hash": "f52d12a0ec4e9c4675b604b764e10d9f",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/children/appointing-authority.ts": {
+    "mtime": 1788178356.2954912,
+    "seen": 1788178369.5021927,
+    "ast_hash": "a95d0674e3c6e2d40c975764ee996cd6",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/children/age-status.controller.ts": {
+    "mtime": 1788178525.2683182,
+    "seen": 1788178556.8756006,
+    "ast_hash": "d965863980ad48e7f867881c55b199e8",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/children/age-status.service.ts": {
+    "mtime": 1788178492.5407708,
+    "seen": 1788178556.875603,
+    "ast_hash": "719c94f8d39c552f165c986459bcccc0",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/children/child-exemptions.controller.ts": {
+    "mtime": 1788178533.3747115,
+    "seen": 1788178556.87567,
+    "ast_hash": "e90c80f64f7dfca4eafd5ccdf5e6433e",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/children/child-exemptions.service.ts": {
+    "mtime": 1788178507.7404807,
+    "seen": 1788178556.8756716,
+    "ast_hash": "dbabfb0e0500876a63bda04875af0c32",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/children/children.module.ts": {
+    "mtime": 1788178539.1469936,
+    "seen": 1788178556.8756728,
+    "ast_hash": "e688a8d9508a84e7598c5a88dbd93ebf",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/children/dto/create-exemption-claim.dto.ts": {
+    "mtime": 1788178390.8735833,
+    "seen": 1788178556.8756738,
+    "ast_hash": "1c8e897e27884db4feb6fc41077221aa",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/children/dto/create-guardian.dto.ts": {
+    "mtime": 1788178365.4717586,
+    "seen": 1788178556.875675,
+    "ast_hash": "1c5e699fd3fe7eac9f372d4ca188153b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/children/dto/list-exemption-claims.dto.ts": {
+    "mtime": 1788178396.3507757,
+    "seen": 1788178556.875676,
+    "ast_hash": "9ff076bc8577ef226032dc3649beda40",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/children/dto/list-guardians.dto.ts": {
+    "mtime": 1788178375.339065,
+    "seen": 1788178556.875677,
+    "ast_hash": "5f420e6e83ce9611c593edd07369fed0",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/children/dto/set-age-status.dto.ts": {
+    "mtime": 1788178381.3452604,
+    "seen": 1788178556.8756783,
+    "ast_hash": "811ef674d89e9d496c614a376466f180",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/children/dto/verify-guardian.dto.ts": {
+    "mtime": 1788178372.6130545,
+    "seen": 1788178556.8756795,
+    "ast_hash": "8c404e3bd03e087bb4c9a3176830d6b8",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/children/guardians.controller.ts": {
+    "mtime": 1788178515.2098353,
+    "seen": 1788178556.8756804,
+    "ast_hash": "1d1003cab3c56b8318555026aed92940",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/children/guardians.service.ts": {
+    "mtime": 1788178471.0687973,
+    "seen": 1788178556.8756816,
+    "ast_hash": "6e29ea0c2cf57a0e9ffd112a5fadca8c",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/notices/dto/create-notice-version.dto.ts": {
+    "mtime": 1788178388.7595103,
+    "seen": 1788178556.881595,
+    "ast_hash": "d48cc755264eda4cf61de7a8c47d1bcc",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/notices/dto/create-notice.dto.ts": {
+    "mtime": 1788178373.8570178,
+    "seen": 1788178556.8815966,
+    "ast_hash": "4ccdc315b2e9c17b28b2773f2de68a58",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/notices/dto/upsert-translation.dto.ts": {
+    "mtime": 1788178393.1646633,
+    "seen": 1788178556.881598,
+    "ast_hash": "7a6c188385418a90d0a9c64ebabb26d3",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/notices/languages.ts": {
+    "mtime": 1788178363.778708,
+    "seen": 1788178556.8815994,
+    "ast_hash": "b25bbea57db0b4f1272e457a0c9d6fa4",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/notices/notices.controller.ts": {
+    "mtime": 1788178517.3689384,
+    "seen": 1788178556.8816006,
+    "ast_hash": "b7d49572c8d9bdb2b481e9c9bd85916b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/notices/notices.module.ts": {
+    "mtime": 1788178521.3541296,
+    "seen": 1788178556.8816018,
+    "ast_hash": "7098dc9d8a00261e20ddcbd8bdde53ae",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/notices/notices.service.ts": {
+    "mtime": 1788178777.9579716,
+    "seen": 1788179027.9210038,
+    "ast_hash": "f607a14a50bd1ea31647f14fb93e0d9a",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/requests/dto/add-note.dto.ts": {
+    "mtime": 1788178693.302249,
+    "seen": 1788178769.8216374,
+    "ast_hash": "4194ead2a5c85f3c8cd7e9c9b46ea2f8",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/requests/dto/assign-request.dto.ts": {
+    "mtime": 1788178690.015423,
+    "seen": 1788178769.8216417,
+    "ast_hash": "3bd4a39cd5e4ae0369ac421d5e296611",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/requests/dto/change-status.dto.ts": {
+    "mtime": 1788187961.1606252,
+    "seen": 1788188082.8489103,
+    "ast_hash": "ae1f5165f641874ae0a06518f11439bf",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/requests/dto/escalate-request.dto.ts": {
+    "mtime": 1788178691.142363,
+    "seen": 1788178769.821647,
+    "ast_hash": "14ade3d99b8584ca371832e3c8740e73",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/requests/dto/flag-frivolous.dto.ts": {
+    "mtime": 1788178698.1939971,
+    "seen": 1788178769.8216503,
+    "ast_hash": "f46a786de6dd492fadbefcff2cd1c16b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/requests/dto/list-requests.dto.ts": {
+    "mtime": 1788178706.8715708,
+    "seen": 1788178769.8216527,
+    "ast_hash": "bb42140bba960c4e8c4c1ba6ad03c652",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/requests/dto/verify-identity.dto.ts": {
+    "mtime": 1788178696.5580804,
+    "seen": 1788178769.8216555,
+    "ast_hash": "3eea7aa4c4f3cff213bf3d0bda7dc467",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/requests/requests.constants.ts": {
+    "mtime": 1788178727.3166664,
+    "seen": 1788178769.8216584,
+    "ast_hash": "fb2fe5cf20e47d535b07a13913cd945b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/notices.e2e-spec.ts": {
+    "mtime": 1788178710.608395,
+    "seen": 1788178769.8257186,
+    "ast_hash": "d1e6f3fd1cb495f6d3166e215e6174ac",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/requests/requests.controller.ts": {
+    "mtime": 1788178901.3773875,
+    "seen": 1788179027.9882908,
+    "ast_hash": "13843edfdec764fe76563713b5d56ae8",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/requests/requests.service.ts": {
+    "mtime": 1788189472.4157705,
+    "seen": 1788189475.1040144,
+    "ast_hash": "7794f7b4feb072b3c9452d6a5ee83a4e",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/queues/deadline-scan.queue.ts": {
+    "mtime": 1788205352.8836858,
+    "seen": 1788205496.5860345,
+    "ast_hash": "4bc4e4e652ee1b12d36fcccad28882bf",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/children.e2e-spec.ts": {
+    "mtime": 1788179071.8900552,
+    "seen": 1788179255.2383246,
+    "ast_hash": "71c6f3521cd819e105a2896e09aadafb",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/requests/requests.module.ts": {
+    "mtime": 1788205429.35081,
+    "seen": 1788205496.5802643,
+    "ast_hash": "30979f1ba5b12bfc64818205d32ea4d1",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/retention/checklist.types.ts": {
+    "mtime": 1788178942.1724637,
+    "seen": 1788179255.2347758,
+    "ast_hash": "041b2acf0b3c1106b8a9b32272634cf0",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/retention/dto/cancel-erasure-task.dto.ts": {
+    "mtime": 1788179041.2705257,
+    "seen": 1788179255.2347786,
+    "ast_hash": "682459faf21839be51a1c9c5a847c430",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/retention/dto/complete-erasure-task.dto.ts": {
+    "mtime": 1788179037.6524687,
+    "seen": 1788179255.2347817,
+    "ast_hash": "6a92b178a1c28d6c3b7f756d83059ee6",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/retention/dto/create-legal-hold.dto.ts": {
+    "mtime": 1788179047.9496343,
+    "seen": 1788179255.2347844,
+    "ast_hash": "14d7c79d01c61fed62d973a2be727856",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/retention/erasure-task.service.ts": {
+    "mtime": 1788179028.9713368,
+    "seen": 1788179255.2347863,
+    "ast_hash": "afe5a01faa29841b6a7440d45ae286c3",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/retention/legal-hold-scope.util.ts": {
+    "mtime": 1788178933.438427,
+    "seen": 1788179255.2347884,
+    "ast_hash": "136a756b0c1a7d0ca60643bb3e6b3adc",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/retention/legal-hold.service.ts": {
+    "mtime": 1788179061.6148684,
+    "seen": 1788179255.2347906,
+    "ast_hash": "8aba7678805be5103269b5b1f9a2e321",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/retention/pre-erasure-notice.service.ts": {
+    "mtime": 1788179116.7819674,
+    "seen": 1788179255.234793,
+    "ast_hash": "b5e4a3130dcc9c5e9bc305ee277e7aa1",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/retention/retention-dates.util.ts": {
+    "mtime": 1788178923.6953988,
+    "seen": 1788179255.234795,
+    "ast_hash": "c522f46e1471f85cc3bca2df6af1aef7",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/retention/retention-scan.service.ts": {
+    "mtime": 1788179094.6204982,
+    "seen": 1788179255.234797,
+    "ast_hash": "ade3b630405cd8b3fe511a723374b096",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/queues/deadline-scan.processor.ts": {
+    "mtime": 1788178931.5984206,
+    "seen": 1788179255.2365184,
+    "ast_hash": "afd9daf274a112409cd4f057fb9bc0c9",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/retention/retention.controller.ts": {
+    "mtime": 1788179128.1552215,
+    "seen": 1788179393.3701296,
+    "ast_hash": "cd1c61ac23c0ba21a06bed55ad876842",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/retention/retention.module.ts": {
+    "mtime": 1788188091.866628,
+    "seen": 1788188413.1691628,
+    "ast_hash": "ae51cf1d46a25081e2a6b5370a688e0c",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/queues/pre-erasure-notice.processor.ts": {
+    "mtime": 1788179161.1720057,
+    "seen": 1788179393.370889,
+    "ast_hash": "6a49dd108ad9bd89efe438c70d977e49",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/queues/retention-scan.processor.ts": {
+    "mtime": 1788179153.5518188,
+    "seen": 1788179393.371015,
+    "ast_hash": "38b748a28679528846851542fe0786c9",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/queues/retention-scan.queue.ts": {
+    "mtime": 1788205391.7831047,
+    "seen": 1788205496.5866144,
+    "ast_hash": "2e63ec517b26e271d36f26abe713bcf0",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/requests.e2e-spec.ts": {
+    "mtime": 1788187858.5924115,
+    "seen": 1788187879.343333,
+    "ast_hash": "2e2d2069892e66012ce1bf16ff6ecdbd",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/retention.e2e-spec.ts": {
+    "mtime": 1788188394.311334,
+    "seen": 1788188413.171761,
+    "ast_hash": "21cd009a916151263f4e99024ae079d0",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/sdf/dto/create-sdf-assessment.dto.ts": {
+    "mtime": 1788190523.9259229,
+    "seen": 1788190539.0647652,
+    "ast_hash": "21dbebcf3d29e81a83b899506319dbf4",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/consents/consent-backfill.service.ts": {
+    "mtime": 1788190672.3868458,
+    "seen": 1788196006.2088559,
+    "ast_hash": "149ab800b1ad30d27d7bb983b96b34c8",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/consents/consents.controller.ts": {
+    "mtime": 1788195985.9885054,
+    "seen": 1788196006.2088583,
+    "ast_hash": "774bf0e0bcf372ab8529d2e5107bcdb4",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/consents/consents.service.ts": {
+    "mtime": 1788190614.3321118,
+    "seen": 1788196006.2088602,
+    "ast_hash": "4937d319a5631bd4ab52d02231f70a96",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/consents/dto/import-consent.dto.ts": {
+    "mtime": 1788190537.9531114,
+    "seen": 1788196006.2088616,
+    "ast_hash": "b0b7022ee91556c49127be82e78f66a7",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/consents/dto/set-my-consent.dto.ts": {
+    "mtime": 1788190544.4971988,
+    "seen": 1788196006.2088628,
+    "ast_hash": "85f507e5832c80a26d9dd129df103619",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/evidence/access-report.service.ts": {
+    "mtime": 1788196158.5306432,
+    "seen": 1788196197.1998372,
+    "ast_hash": "2df941a01ccf30a972560e9c7b7212f1",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/evidence/non-disclosure.ts": {
+    "mtime": 1788190612.789092,
+    "seen": 1788196006.210342,
+    "ast_hash": "758018291040332813a1e389c5e097ef",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/evidence/pdf-utils.ts": {
+    "mtime": 1788190598.434907,
+    "seen": 1788196006.2103434,
+    "ast_hash": "5003d4139cc860ef1a3792c051e9da1d",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts": {
+    "mtime": 1788190593.3528411,
+    "seen": 1788196006.2103446,
+    "ast_hash": "8e25ec43d4169aa9ebee65b343cfba9e",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/evidence/zip-writer.ts": {
+    "mtime": 1788190551.34829,
+    "seen": 1788196006.2103524,
+    "ast_hash": "a18dd502d514f25057c417070f4b62c7",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts": {
+    "mtime": 1788190603.3619707,
+    "seen": 1788196006.2190957,
+    "ast_hash": "7e76e145c5b78d371b94b417ca6c6fde",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/sdf/dto/algorithm-operations.ts": {
+    "mtime": 1788190537.8001091,
+    "seen": 1788196006.219098,
+    "ast_hash": "533083e363a1eff7a434b5cae32649a9",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/sdf/dto/complete-sdf-assessment.dto.ts": {
+    "mtime": 1788190532.4780378,
+    "seen": 1788196006.2190998,
+    "ast_hash": "720bf28e8c766e9a714dbfef0620f1f5",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/sdf/dto/create-algorithm-entry.dto.ts": {
+    "mtime": 1788190543.84819,
+    "seen": 1788196006.2191007,
+    "ast_hash": "879ef39e103805adc36548703a279bc4",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/sdf/dto/update-algorithm-entry.dto.ts": {
+    "mtime": 1788190550.1302738,
+    "seen": 1788196006.2191718,
+    "ast_hash": "9e95629004740beaf3fe58d82691f702",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/sdf/sdf-assessment.service.ts": {
+    "mtime": 1788190588.486778,
+    "seen": 1788196006.2191732,
+    "ast_hash": "4dbcf524d4d94fbf4379b8d8504d2d1e",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/sdf/sdf-cycle-scan.service.ts": {
+    "mtime": 1788190640.5314457,
+    "seen": 1788196006.2191744,
+    "ast_hash": "ed6ccf1fc051d95a56c3c09ec9c22db0",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/sdf/sdf-gaps.service.ts": {
+    "mtime": 1788190616.285137,
+    "seen": 1788196006.2191753,
+    "ast_hash": "5966bd7ca909eb6c443ccb0d6690df29",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/sdf/sdf.controller.ts": {
+    "mtime": 1788190659.6686869,
+    "seen": 1788196006.2191765,
+    "ast_hash": "8923417bbdf653e21b522e49c32bff27",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/queues/sdf-cycle-scan.queue.ts": {
+    "mtime": 1788205369.6665456,
+    "seen": 1788205496.5866952,
+    "ast_hash": "3fa0ba3753f5337848de9f0e601a640f",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/consents/consents.module.ts": {
+    "mtime": 1788196364.2680137,
+    "seen": 1788196382.243441,
+    "ast_hash": "98b9acaebda1c8effdc77aa0fe7f65af",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/consents/me-consents.controller.ts": {
+    "mtime": 1788195996.616709,
+    "seen": 1788196197.1983287,
+    "ast_hash": "7b3b54bba4865766cf19ad449b91c295",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/evidence/access-report-render.ts": {
+    "mtime": 1788196181.5730383,
+    "seen": 1788196197.1998348,
+    "ast_hash": "e2ef140ab64d92604aa0dd67d1192f94",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/queues/consent-backfill.processor.ts": {
+    "mtime": 1788196022.5451994,
+    "seen": 1788196197.2100308,
+    "ast_hash": "efab0fe36e1599a643bcb7b30427f339",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/queues/consent-backfill.queue.ts": {
+    "mtime": 1788205412.8677938,
+    "seen": 1788205496.5856214,
+    "ast_hash": "e30aaf0ccf140ed6cb70abdb734a10aa",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/evidence/audit-chain.service.ts": {
+    "mtime": 1788196469.7716284,
+    "seen": 1788196669.5180237,
+    "ast_hash": "577760d8493450ffa89537757aa95726",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/evidence/audit-events-evidence.controller.ts": {
+    "mtime": 1788196212.6675637,
+    "seen": 1788196382.2474732,
+    "ast_hash": "2acaf218d610c1e69f60c7a1313e26fa",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/evidence/audit-export.service.ts": {
+    "mtime": 1788196205.175438,
+    "seen": 1788196382.2474759,
+    "ast_hash": "5873d433d3f5b77e9fc6419098353858",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/evidence/pack-letterhead.ts": {
+    "mtime": 1788196351.8638196,
+    "seen": 1788196382.2476218,
+    "ast_hash": "b2db4c7d974eac36d430afb0dff0de06",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/evidence/principal-evidence-render.ts": {
+    "mtime": 1788196264.1064146,
+    "seen": 1788196382.2479153,
+    "ast_hash": "3c6936f78b5039f4879044191c2dc8b0",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/evidence/principal-evidence.controller.ts": {
+    "mtime": 1788197045.105646,
+    "seen": 1788197054.3040667,
+    "ast_hash": "f776f562566241eff29c661356800e69",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/evidence/principal-evidence.service.ts": {
+    "mtime": 1788196252.592226,
+    "seen": 1788196382.2479227,
+    "ast_hash": "9a8f24773b6cb314777c967236c35f8c",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/consents.e2e-spec.ts": {
+    "mtime": 1788196331.5354989,
+    "seen": 1788196382.2714932,
+    "ast_hash": "eef8895bf2bd2d06d9b6b017947a2c52",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/evidence/evidence-pack.controller.ts": {
+    "mtime": 1788197052.1707392,
+    "seen": 1788197054.3036442,
+    "ast_hash": "b42954990dadffef7bf4339f1da585d5",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/evidence/evidence-pack.service.ts": {
+    "mtime": 1788196408.6767013,
+    "seen": 1788196669.518152,
+    "ast_hash": "d60c8c9a7b138584cf1f7548d9b41559",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/evidence/evidence.module.ts": {
+    "mtime": 1788196432.662068,
+    "seen": 1788196669.5181534,
+    "ast_hash": "4df228f4b378b419acb23969a7299014",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/evidence.e2e-spec.ts": {
+    "mtime": 1788197056.1707919,
+    "seen": 1788197560.8758175,
+    "ast_hash": "4b57a0a91efc8a6763f94ebf117f841b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/queues/sdf-cycle-scan.processor.ts": {
+    "mtime": 1788197544.726288,
+    "seen": 1788197560.8750794,
+    "ast_hash": "0e5a8b35b17fe096990d7b77df4239c8",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/board/board.module.ts": {
+    "mtime": 1788197667.5869567,
+    "seen": 1788197827.3609004,
+    "ast_hash": "1cdb89f44f3f444b7ea2c69357eccb18",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/board/dto/create-information-request.dto.ts": {
+    "mtime": 1788197572.669427,
+    "seen": 1788197827.3609025,
+    "ast_hash": "2726386bbb007a333591bd3243baddc5",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/board/dto/create-voluntary-undertaking.dto.ts": {
+    "mtime": 1788197589.1755128,
+    "seen": 1788197827.3609045,
+    "ast_hash": "4da33394777b37771682a93d4176726e",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/board/dto/requesting-body.ts": {
+    "mtime": 1788197562.222374,
+    "seen": 1788197827.3609066,
+    "ast_hash": "091a1d0e371fdcd49032c208e6ee83e5",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/board/dto/undertaking-commitment.dto.ts": {
+    "mtime": 1788197584.2554867,
+    "seen": 1788197827.360908,
+    "ast_hash": "b53b3a047ea0eb294454fb6c21d7a7af",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/board/dto/update-information-request.dto.ts": {
+    "mtime": 1788197579.3184612,
+    "seen": 1788197827.3609092,
+    "ast_hash": "1e848ad94d8e2f0c448370511bb74b9f",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/board/dto/update-voluntary-undertaking.dto.ts": {
+    "mtime": 1788197591.6145256,
+    "seen": 1788197827.360912,
+    "ast_hash": "e4c3192abd02e3f5b00549ec35d3ccab",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/board/information-requests.controller.ts": {
+    "mtime": 1788197657.064894,
+    "seen": 1788197827.3609138,
+    "ast_hash": "76155a9d93334bc8f371da515de612ea",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/board/information-requests.service.ts": {
+    "mtime": 1788197637.4087791,
+    "seen": 1788197827.3609154,
+    "ast_hash": "b8e954a7683cf3892a9d806081739950",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/board/non-disclosure.ts": {
+    "mtime": 1788197609.6956232,
+    "seen": 1788197827.3609173,
+    "ast_hash": "02114040c30775bffe873c9eca92ab10",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts": {
+    "mtime": 1788197663.0439296,
+    "seen": 1788197827.3609185,
+    "ast_hash": "362759a3f3a32cdeafec5a9b0a935f00",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/board/voluntary-undertakings.service.ts": {
+    "mtime": 1788197650.9678578,
+    "seen": 1788197827.36092,
+    "ast_hash": "3aa9e1ec73b3b14f8dad4b39a4664934",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/sdf/sdf.module.ts": {
+    "mtime": 1788205436.2764072,
+    "seen": 1788205496.5839698,
+    "ast_hash": "7a65369777e69e50ac121ba22b76d485",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/sdf.e2e-spec.ts": {
+    "mtime": 1788197970.0461097,
+    "seen": 1788198045.0599346,
+    "ast_hash": "2d0de548d1ec54ca5981119ab16d7667",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/test/information-requests.e2e-spec.ts": {
+    "mtime": 1788197904.4755948,
+    "seen": 1788198045.0589604,
+    "ast_hash": "cd8197cd08069059d43685337b3043ae",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/queues/boot-timeout.util.ts": {
+    "mtime": 1788205268.2121081,
+    "seen": 1788205300.2572217,
+    "ast_hash": "0ec2ce5ec4d4eabdcffc2b1e1d9e1997",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.service.ts": {
+    "mtime": 1788205389.8122303,
+    "seen": 1788205496.570382,
+    "ast_hash": "34bb8c4fb8ccf45dbc039198cb92cda2",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/messaging/campaigns/dto/create-campaign.dto.ts": {
+    "mtime": 1788205330.5387,
+    "seen": 1788205496.5704072,
+    "ast_hash": "9a2484322c7f7b5914e7b32358dbefed",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/queues/boot-registration.registry.ts": {
+    "mtime": 1788205503.8977807,
+    "seen": 1788205836.0891912,
+    "ast_hash": "fdb90e3dd49612c3268dfb49d244c051",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/queues/campaign-send.queue.ts": {
+    "mtime": 1788205330.54455,
+    "seen": 1788205496.5853379,
+    "ast_hash": "6b12878ac8dde0c59d231ac759a6c64e",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/ui/checkbox.tsx": {
+    "mtime": 1788205425.176056,
+    "seen": 1788205496.593341,
+    "ast_hash": "ee1f8e09f33557c5db904ac4edd2e062",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/ui/dialog.tsx": {
+    "mtime": 1788205435.6204453,
+    "seen": 1788205496.5933578,
+    "ast_hash": "1c11b071b6763539aeb9358092451f16",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/ui/select.tsx": {
+    "mtime": 1788205418.1374755,
+    "seen": 1788205496.5936365,
+    "ast_hash": "4d281a1b26d8669345aa8a02c7c6ce2d",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/ui/textarea.tsx": {
+    "mtime": 1788205421.2612884,
+    "seen": 1788205496.5938008,
+    "ast_hash": "37cbcc6d0fe99f2e160a93e2675b3a90",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts": {
+    "mtime": 1788205496.0821726,
+    "seen": 1788205836.0807526,
+    "ast_hash": "04c27c83ae736e8f8bb529e31fa8e972",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.module.ts": {
+    "mtime": 1788205532.486404,
+    "seen": 1788205836.0807548,
+    "ast_hash": "fe1e6dc8aa7f9da11194ea91098eec42",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/backend/src/queues/campaign-send.processor.ts": {
+    "mtime": 1788205516.3081722,
+    "seen": 1788205836.0892534,
+    "ast_hash": "235796c15a8c61f673dd0b2b32c6269f",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/shared/ConfirmDialog.tsx": {
+    "mtime": 1788205536.2412298,
+    "seen": 1788205836.0925155,
+    "ast_hash": "e910fe45d6003351249aca3c89cfac0a",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/shared/DeadlinePill.test.tsx": {
+    "mtime": 1788205564.3479705,
+    "seen": 1788205836.0927596,
+    "ast_hash": "c7f53dd110e02676d418bafa25e85007",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/shared/DeadlinePill.tsx": {
+    "mtime": 1788205498.1230698,
+    "seen": 1788205836.0927613,
+    "ast_hash": "c8091f941ba38c8365c3e2aa6cc75806",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/shared/LanguageSelector.tsx": {
+    "mtime": 1788205543.8978786,
+    "seen": 1788205836.092884,
+    "ast_hash": "07a70509e22b0561ba2e6609f3fd130c",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/shared/NotificationBell.test.tsx": {
+    "mtime": 1788205798.6841362,
+    "seen": 1788205836.092886,
+    "ast_hash": "d55284b9338cd105d5f3a25a22a5073b",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/shared/NotificationBell.tsx": {
+    "mtime": 1788205528.0976098,
+    "seen": 1788205836.0928876,
+    "ast_hash": "910cdfcafcad34309f827f2b30412063",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/shared/RuleBasisChip.test.tsx": {
+    "mtime": 1788205570.9716852,
+    "seen": 1788205836.0930092,
+    "ast_hash": "e1810745eab4f31813e25893761767d6",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/shared/RuleBasisChip.tsx": {
+    "mtime": 1788205507.3936076,
+    "seen": 1788205836.0930107,
+    "ast_hash": "8f028f707b1000a9e7d61dd5c3d49c93",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/shared/UnreviewedRuleChip.test.tsx": {
+    "mtime": 1788205574.2275465,
+    "seen": 1788205836.0931313,
+    "ast_hash": "511c7a8b7be6112c702f7ed107f59076",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/components/shared/UnreviewedRuleChip.tsx": {
+    "mtime": 1788205510.8794365,
+    "seen": 1788205836.0931327,
+    "ast_hash": "e277a71085b48c7119369e8e51d9018e",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/hooks/useCountdown.test.ts": {
+    "mtime": 1788205792.5342903,
+    "seen": 1788205836.0973747,
+    "ast_hash": "1129a97275ff7d88b11cfaf4ab384d1e",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/hooks/useCountdown.ts": {
+    "mtime": 1788205458.5261538,
+    "seen": 1788205836.097377,
+    "ast_hash": "5e12f7218277ce880404828236e9a0b5",
+    "semantic_hash": ""
+  },
+  "dpdp-platform/frontend/src/lib/mvp2-api.ts": {
+    "mtime": 1788205475.540236,
+    "seen": 1788205836.0976102,
+    "ast_hash": "91d462bcb9548dffff6130cad50f044b",
+    "semantic_hash": ""
+  }
+}

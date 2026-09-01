@@ -1,22 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/recipients.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/board/voluntary-undertakings.service.ts"
 type: "code"
-community: "recipients.service.ts"
-location: "L32"
+community: "CreateVoluntaryUndertakingDto"
+location: "L59"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_14]] - `calls` [INFERRED]
-- [[Body_10]] - `references` [EXTRACTED]
-- [[CreateRecipientDto]] - `references` [EXTRACTED]
-- [[Post_9]] - `references` [EXTRACTED]
-- [[RecipientsController]] - `method` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-create()_12]] - `calls` [INFERRED]
+- [[CreateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
+- [[VoluntaryUndertakingsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

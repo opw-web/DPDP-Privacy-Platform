@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/prisma/seed.ts"
+source_file: "dpdp-platform/backend/prisma/seed-principals.ts"
 type: "code"
-community: "seed.ts"
-location: "L132"
+community: "seed-principals.ts"
+location: "L238"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/seedts
+  - community/seed-principalsts
 ---
 
 # main()
 
 ## Connections
 - [[PrismaService]] - `calls` [EXTRACTED]
-- [[runSeed()]] - `calls` [EXTRACTED]
-- [[seed.ts]] - `contains` [EXTRACTED]
+- [[runSeedPrincipals()]] - `calls` [EXTRACTED]
+- [[seed-principals.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/seedts
+#graphify/code #graphify/EXTRACTED #community/seed-principalsts

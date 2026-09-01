@@ -1,21 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/recipients.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.service.ts"
 type: "code"
-community: "recipients.service.ts"
-location: "L26"
+community: "mappings.service.ts"
+location: "L217"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/mappingsservicets
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_15]] - `calls` [INFERRED]
-- [[Get_17]] - `references` [EXTRACTED]
-- [[Param_11]] - `references` [EXTRACTED]
-- [[RecipientsController]] - `method` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-getMappings()]] - `calls` [INFERRED]
+- [[MappingsService]] - `method` [EXTRACTED]
+- [[computeMappingWarnings()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/mappingsservicets

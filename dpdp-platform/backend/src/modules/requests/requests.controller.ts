@@ -1,6 +1,18 @@
-import { Body, Controller, Get, Param, Post, Query } from "@nestjs/common";
+import {
+  Body,
+  Controller,
+  Get,
+  Param,
+  Post,
+  Query,
+  Res,
+  StreamableFile,
+} from "@nestjs/common";
 import { ApiTags } from "@nestjs/swagger";
+import type { Response } from "express";
 import { RequirePermission } from "../../common/decorators/require-permission.decorator";
+import { AccessReportService } from "../evidence/access-report.service";
+import { renderAccessReportPdf } from "../evidence/access-report-render";
 import { RequestsService } from "./requests.service";
 import { ListRequestsDto } from "./dto/list-requests.dto";
 import { AssignRequestDto } from "./dto/assign-request.dto";
@@ -23,8 +35,9 @@ import { FlagFrivolousDto } from "./dto/flag-frivolous.dto";
  *   POST /api/requests/:ref/verify-identity
  *   POST /api/requests/:ref/flag-frivolous
  *
- * `GET /api/requests/:ref/access-report.pdf` is Task 12's (RT-03/04) --
- * deliberately not implemented here. There is no `POST /api/requests`
+ * `GET /api/requests/:ref/access-report.pdf` serves Task 12's s.11 report
+ * (RT-03/04), using the request's tenant-scoped principal ownership. There
+ * is no `POST /api/requests`
  * creation route: the spec's endpoint table names none, and
  * `RequestsService.create()` is exported for the principal-portal task to
  * call instead (see that method's doc comment). `stats` is declared
@@ -34,7 +47,10 @@ import { FlagFrivolousDto } from "./dto/flag-frivolous.dto";
 @ApiTags("requests")
 @Controller("requests")
 export class RequestsController {
-  constructor(private readonly requestsService: RequestsService) {}
+  constructor(
+    private readonly requestsService: RequestsService,
+    private readonly accessReportService: AccessReportService,
+  ) {}
 
   @Get()
   @RequirePermission("CAN_MANAGE_REQUESTS")
@@ -52,6 +68,27 @@ export class RequestsController {
   @RequirePermission("CAN_MANAGE_REQUESTS")
   getByReference(@Param("ref") ref: string) {
     return this.requestsService.getByReference(ref);
+  }
+
+  @Get(":ref/access-report.pdf")
+  @RequirePermission("CAN_MANAGE_REQUESTS")
+  async accessReport(
+    @Param("ref") ref: string,
+    @Res({ passthrough: true }) response: Response,
+  ): Promise<StreamableFile> {
+    // getByReference is tenant-scoped, so a reference from another
+    // organisation is indistinguishable from a missing request. The report
+    // service then applies the same tenant scope and non-disclosure filter.
+    const request = await this.requestsService.getByReference(ref);
+    const report = await this.accessReportService.buildReport(
+      request.dataPrincipalId,
+    );
+    response.setHeader("Content-Type", "application/pdf");
+    response.setHeader(
+      "Content-Disposition",
+      `attachment; filename="${ref}-access-report.pdf"`,
+    );
+    return new StreamableFile(await renderAccessReportPdf(report));
   }
 
   @Post(":ref/assign")

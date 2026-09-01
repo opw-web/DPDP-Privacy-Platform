@@ -5,10 +5,13 @@ import { PrismaService } from "../src/common/prisma/prisma.service";
 import { RuleBasis } from "@prisma/client";
 import {
   bootstrapTestApp,
-  createOrgWithEmployee,
+  createOrgWithEmployee as createOrgWithEmployeeFixture,
   cleanupOrgs,
 } from "./support/e2e-harness";
-import { seedComplianceRules } from "../prisma/seed/compliance-rules";
+const {
+  seedComplianceRules,
+  seedGrievanceStatutoryBaseline,
+}: typeof import("../prisma/seed/compliance-rules") = require("../prisma/seed/compliance-rules.ts");
 
 /**
  * Task 2 e2e coverage per the task brief:
@@ -31,7 +34,7 @@ import { seedComplianceRules } from "../prisma/seed/compliance-rules";
  * brief calls for.
  */
 const EXPECTED_BASIS_BY_RULE_CODE: Record<string, RuleBasis> = {
-  GRIEVANCE_RESPONSE: "STATUTORY",
+  GRIEVANCE_RESPONSE: "ORG_POLICY",
   BREACH_PRINCIPAL_NOTICE: "INTERNAL_TARGET",
   BREACH_BOARD_INITIAL: "INTERNAL_TARGET",
   BREACH_BOARD_DETAIL: "STATUTORY",
@@ -50,6 +53,14 @@ const EXPECTED_BASIS_BY_RULE_CODE: Record<string, RuleBasis> = {
 };
 
 const GRIEVANCE_CITATION_FRAGMENT = "Rule 14(3)";
+
+async function createOrgWithEmployee(
+  ...args: Parameters<typeof createOrgWithEmployeeFixture>
+) {
+  const org = await createOrgWithEmployeeFixture(...args);
+  await seedGrievanceStatutoryBaseline(args[1], org.organizationId);
+  return org;
+}
 
 // `bootstrapTestApp()` compiles the entire real `AppModule` -- in this
 // environment that alone can exceed `jest-e2e.json`'s default 15s
@@ -83,12 +94,33 @@ describe("Compliance rules (e2e)", () => {
 
   describe("Check 3: seeded rule set bases match the spec table; no ORG_POLICY/INTERNAL_TARGET row is labelled STATUTORY", () => {
     it("GET /api/compliance-rules returns every seeded rule with the exact spec-table basis", async () => {
-      const reader = await createOrgWithEmployee(app, prisma, "COMPLIANCE_READER", [
-        "CAN_VIEW_AUDIT_LOG",
-      ]);
+      const reader = await createOrgWithEmployee(
+        app,
+        prisma,
+        "COMPLIANCE_READER",
+        ["CAN_VIEW_AUDIT_LOG"],
+      );
       orgIds.push(reader.organizationId);
 
       await seedComplianceRules(prisma, reader.organizationId);
+      // Seed data is deployment-time configuration: running the seed again
+      // must neither duplicate nor overwrite the immutable statutory input.
+      await seedComplianceRules(prisma, reader.organizationId);
+      const statutoryBaselines = await prisma.complianceRule.findMany({
+        where: {
+          organizationId: reader.organizationId,
+          ruleCode: "GRIEVANCE_STATUTORY_BASELINE",
+        },
+      });
+      expect(statutoryBaselines).toHaveLength(1);
+      expect(statutoryBaselines[0]).toMatchObject({
+        version: 1,
+        basis: "STATUTORY",
+        deadlineValue: 90,
+        deadlineUnit: "DAYS",
+        enabled: true,
+        legalSource: expect.stringContaining(GRIEVANCE_CITATION_FRAGMENT),
+      });
 
       const res = await request(app.getHttpServer())
         .get("/api/compliance-rules")
@@ -106,6 +138,7 @@ describe("Compliance rules (e2e)", () => {
       const ruleCodesReturned = rows.map((r) => r.ruleCode).sort();
       const expectedRuleCodes = Object.keys(EXPECTED_BASIS_BY_RULE_CODE).sort();
       expect(ruleCodesReturned).toEqual(expectedRuleCodes);
+      expect(ruleCodesReturned).not.toContain("GRIEVANCE_STATUTORY_BASELINE");
 
       for (const row of rows) {
         expect(row.basis).toBe(EXPECTED_BASIS_BY_RULE_CODE[row.ruleCode]);
@@ -119,7 +152,10 @@ describe("Compliance rules (e2e)", () => {
       // ORG_POLICY or INTERNAL_TARGET labelled STATUTORY.
       for (const row of rows) {
         const expectedBasis = EXPECTED_BASIS_BY_RULE_CODE[row.ruleCode];
-        if (expectedBasis === "ORG_POLICY" || expectedBasis === "INTERNAL_TARGET") {
+        if (
+          expectedBasis === "ORG_POLICY" ||
+          expectedBasis === "INTERNAL_TARGET"
+        ) {
           expect(row.basis).not.toBe("STATUTORY");
         }
       }
@@ -181,6 +217,144 @@ describe("Compliance rules (e2e)", () => {
 
       expect(res.status).toBe(201);
       expect(res.body.deadlineValue).toBe(90);
+    });
+
+    it("fails closed when the statutory baseline is missing", async () => {
+      const grantee = await createOrgWithEmployee(
+        app,
+        prisma,
+        "GRV_BASE_MISSING",
+        ["CAN_CHANGE_COMPLIANCE_CONFIG"],
+      );
+      orgIds.push(grantee.organizationId);
+      await prisma.complianceRule.deleteMany({
+        where: {
+          organizationId: grantee.organizationId,
+          ruleCode: "GRIEVANCE_STATUTORY_BASELINE",
+        },
+      });
+
+      const res = await request(app.getHttpServer())
+        .post("/api/compliance-rules")
+        .set("Authorization", `Bearer ${grantee.accessToken}`)
+        .send({
+          ruleCode: "GRIEVANCE_RESPONSE",
+          name: "Published grievance response period",
+          legalSource: "Organization-published grievance response period",
+          basis: "ORG_POLICY",
+          appliesTo: "REQUEST:GRIEVANCE",
+          deadlineValue: 90,
+          deadlineUnit: "DAYS",
+          warningLead: 14,
+        });
+
+      expect(res.status).toBe(400);
+      expect(JSON.stringify(res.body)).toContain(
+        "statutory grievance baseline is unavailable",
+      );
+    });
+
+    it("fails closed when the statutory baseline is disabled", async () => {
+      const grantee = await createOrgWithEmployee(
+        app,
+        prisma,
+        "GRV_BASE_DISABLED",
+        ["CAN_CHANGE_COMPLIANCE_CONFIG"],
+      );
+      orgIds.push(grantee.organizationId);
+      await prisma.complianceRule.updateMany({
+        where: {
+          organizationId: grantee.organizationId,
+          ruleCode: "GRIEVANCE_STATUTORY_BASELINE",
+        },
+        data: { enabled: false },
+      });
+
+      const res = await request(app.getHttpServer())
+        .post("/api/compliance-rules")
+        .set("Authorization", `Bearer ${grantee.accessToken}`)
+        .send({
+          ruleCode: "GRIEVANCE_RESPONSE",
+          name: "Published grievance response period",
+          legalSource: "Organization-published grievance response period",
+          basis: "ORG_POLICY",
+          appliesTo: "REQUEST:GRIEVANCE",
+          deadlineValue: 90,
+          deadlineUnit: "DAYS",
+          warningLead: 14,
+        });
+
+      expect(res.status).toBe(400);
+      expect(JSON.stringify(res.body)).toContain(
+        "statutory grievance baseline is unavailable",
+      );
+    });
+
+    it("keeps the statutory baseline off every public read and mutation route", async () => {
+      const grantee = await createOrgWithEmployee(
+        app,
+        prisma,
+        "GRV_BASE_LOCKED",
+        ["CAN_CHANGE_COMPLIANCE_CONFIG", "CAN_VIEW_AUDIT_LOG"],
+      );
+      orgIds.push(grantee.organizationId);
+      const baseline = await prisma.complianceRule.findFirstOrThrow({
+        where: {
+          organizationId: grantee.organizationId,
+          ruleCode: "GRIEVANCE_STATUTORY_BASELINE",
+        },
+      });
+
+      const list = await request(app.getHttpServer())
+        .get("/api/compliance-rules")
+        .set("Authorization", `Bearer ${grantee.accessToken}`);
+      expect(list.status).toBe(200);
+      expect(
+        (list.body as Array<{ ruleCode: string }>).map((rule) => rule.ruleCode),
+      ).not.toContain("GRIEVANCE_STATUTORY_BASELINE");
+
+      const get = await request(app.getHttpServer())
+        .get(`/api/compliance-rules/${baseline.id}`)
+        .set("Authorization", `Bearer ${grantee.accessToken}`);
+      expect(get.status).toBe(404);
+
+      const create = await request(app.getHttpServer())
+        .post("/api/compliance-rules")
+        .set("Authorization", `Bearer ${grantee.accessToken}`)
+        .send({
+          ruleCode: "GRIEVANCE_STATUTORY_BASELINE",
+          name: "Attempted replacement",
+          legalSource: "Attempted replacement",
+          basis: "STATUTORY",
+          appliesTo: "SYSTEM:GRIEVANCE_STATUTORY_BASELINE",
+          deadlineValue: 1,
+          deadlineUnit: "DAYS",
+          warningLead: 0,
+        });
+      expect(create.status).toBe(400);
+      expect(JSON.stringify(create.body)).toContain("seed-managed");
+
+      const patch = await request(app.getHttpServer())
+        .patch(`/api/compliance-rules/${baseline.id}`)
+        .set("Authorization", `Bearer ${grantee.accessToken}`)
+        .send({ enabled: false });
+
+      expect(patch.status).toBe(400);
+      expect(JSON.stringify(patch.body)).toContain("seed-managed");
+
+      const review = await request(app.getHttpServer())
+        .post(`/api/compliance-rules/${baseline.id}/review`)
+        .set("Authorization", `Bearer ${grantee.accessToken}`);
+      expect(review.status).toBe(400);
+      expect(JSON.stringify(review.body)).toContain("seed-managed");
+      expect(
+        await prisma.complianceRule.count({
+          where: {
+            organizationId: grantee.organizationId,
+            ruleCode: "GRIEVANCE_STATUTORY_BASELINE",
+          },
+        }),
+      ).toBe(1);
     });
 
     /**
@@ -437,7 +611,8 @@ describe("Compliance rules (e2e)", () => {
       return {
         ruleCode,
         name: "Access request response",
-        legalSource: "Company service level — the Rules set no separate figure for access",
+        legalSource:
+          "Company service level — the Rules set no separate figure for access",
         basis: "ORG_POLICY" as const,
         appliesTo: "REQUEST:ACCESS",
         deadlineValue: 30,
@@ -459,7 +634,10 @@ describe("Compliance rules (e2e)", () => {
         "COMPLIANCE_NOPERM_POST",
         [],
       );
-      orgIds.push(withPermission.organizationId, withoutPermission.organizationId);
+      orgIds.push(
+        withPermission.organizationId,
+        withoutPermission.organizationId,
+      );
 
       const okRes = await request(app.getHttpServer())
         .post("/api/compliance-rules")
@@ -490,7 +668,10 @@ describe("Compliance rules (e2e)", () => {
         "COMPLIANCE_NOPERM_PATCH",
         [],
       );
-      orgIds.push(withPermission.organizationId, withoutPermission.organizationId);
+      orgIds.push(
+        withPermission.organizationId,
+        withoutPermission.organizationId,
+      );
 
       // Each org gets its own target row to PATCH -- seeded directly via
       // Prisma (bypassing the API) so this test does not also depend on
@@ -550,10 +731,12 @@ describe("Compliance rules (e2e)", () => {
 
   describe("Rule versioning end to end: editing never mutates the row in use", () => {
     it("PATCH creates version 2; the version-1 row is unchanged and still fetchable by id", async () => {
-      const admin = await createOrgWithEmployee(app, prisma, "COMPLIANCE_ADMIN_VERSION", [
-        "CAN_CHANGE_COMPLIANCE_CONFIG",
-        "CAN_VIEW_AUDIT_LOG",
-      ]);
+      const admin = await createOrgWithEmployee(
+        app,
+        prisma,
+        "COMPLIANCE_ADMIN_VERSION",
+        ["CAN_CHANGE_COMPLIANCE_CONFIG", "CAN_VIEW_AUDIT_LOG"],
+      );
       orgIds.push(admin.organizationId);
 
       const createRes = await request(app.getHttpServer())
@@ -584,12 +767,14 @@ describe("Compliance rules (e2e)", () => {
       const listRes = await request(app.getHttpServer())
         .get("/api/compliance-rules")
         .set("Authorization", `Bearer ${admin.accessToken}`);
-      const returned = (listRes.body as Array<{ id: string; version: number }>).find(
-        (r) => r.id === v2Id,
-      );
+      const returned = (
+        listRes.body as Array<{ id: string; version: number }>
+      ).find((r) => r.id === v2Id);
       expect(returned).toBeDefined();
       expect(returned?.version).toBe(2);
-      const stale = (listRes.body as Array<{ id: string }>).find((r) => r.id === v1Id);
+      const stale = (listRes.body as Array<{ id: string }>).find(
+        (r) => r.id === v1Id,
+      );
       expect(stale).toBeUndefined();
     });
 

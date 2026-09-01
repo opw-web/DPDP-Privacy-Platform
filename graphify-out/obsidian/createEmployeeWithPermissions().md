@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/registers.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/retention.e2e-spec.ts"
 type: "code"
-community: "registers.e2e-spec.ts"
-location: "L50"
+community: "retention.e2e-spec.ts"
+location: "L216"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/registerse2e-spects
+  - community/retentione2e-spects
 ---
 
 # createEmployeeWithPermissions()
 
 ## Connections
-- [[createOrgWithManager()]] - `calls` [EXTRACTED]
-- [[ensurePermission()_3]] - `calls` [EXTRACTED]
-- [[registers.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[ensurePermission()_1]] - `calls` [EXTRACTED]
+- [[retention.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/registerse2e-spects
+#graphify/code #graphify/EXTRACTED #community/retentione2e-spects

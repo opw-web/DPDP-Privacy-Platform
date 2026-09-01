@@ -1,21 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "RequirePermission"
+community: "security-measures.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/security-measuresservicets
 ---
 
 # Param
 
 ## Connections
-- [[dot-discoverSchema()_2]] - `references` [EXTRACTED]
-- [[dot-get()_10]] - `references` [EXTRACTED]
-- [[dot-listFields()]] - `references` [EXTRACTED]
-- [[dot-remove()]] - `references` [EXTRACTED]
-- [[dot-testConnection()_2]] - `references` [EXTRACTED]
-- [[dot-update()_10]] - `references` [EXTRACTED]
+- [[dot-get()_5]] - `references` [EXTRACTED]
+- [[dot-update()_7]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/security-measuresservicets

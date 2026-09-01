@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "recipients.service.ts"
+community: "TemplatesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/TemplatesService
 ---
 
 # Post
 
 ## Connections
-- [[dot-create()_13]] - `references` [EXTRACTED]
+- [[dot-create()_8]] - `references` [EXTRACTED]
+- [[dot-preview()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

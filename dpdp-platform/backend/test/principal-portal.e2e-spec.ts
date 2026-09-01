@@ -145,7 +145,9 @@ describe("Principal portal API (e2e)", () => {
 
   type Fixture = {
     organizationId: string;
+    organizationName: string;
     otherOrganizationId: string;
+    otherOrganizationName: string;
     ecommerceSourceId: string;
     marketingSourceId: string;
     amanPrincipalId: string;
@@ -381,7 +383,9 @@ describe("Principal portal API (e2e)", () => {
 
     return {
       organizationId,
+      organizationName: `Portal Org ${organizationId}`,
       otherOrganizationId,
+      otherOrganizationName: `Portal Other ${otherOrganizationId}`,
       ecommerceSourceId,
       marketingSourceId,
       amanPrincipalId,
@@ -510,7 +514,24 @@ describe("Principal portal API (e2e)", () => {
       }
     });
 
-    it("registers no /api/me route with a path parameter in the Express router", async () => {
+    it("registers no /api/me route with a path parameter that could select a person", async () => {
+      // Task 10 (`/api/me/consents/:purposeId`, spec line 894) added this
+      // codebase's first /api/me path PARAMETER. It is deliberately
+      // allowed here, narrowly: `:purposeId` names a RESOURCE (which
+      // consent purpose the decision concerns), never a person -- the
+      // handler behind it (`MeConsentsController.setStatus`) resolves
+      // `dataPrincipalId` exclusively from `@CurrentPrincipal()`, never
+      // from this parameter (see that controller's own doc comment). The
+      // assertion below is narrowed from "no /api/me route may carry a
+      // colon at all" to an explicit allowlist of resource-id parameter
+      // NAMES, so a future route that adds, say, `:dataPrincipalId` or a
+      // bare `:id` to a /me/* path -- which WOULD let a caller select
+      // whose data is read or written -- still fails this test.
+      const ALLOWED_RESOURCE_PARAM_NAMES = new Set([
+        "purposeId",
+        "reference",
+        "id",
+      ]);
       const httpAdapter = app.getHttpAdapter().getInstance() as {
         _router: { stack: Array<{ route?: { path?: string } }> };
       };
@@ -520,7 +541,13 @@ describe("Principal portal API (e2e)", () => {
         .filter((path) => path.startsWith("/api/me"));
       expect(meRoutes.length).toBeGreaterThanOrEqual(5);
       for (const path of meRoutes) {
-        expect(path.includes(":")).toBe(false);
+        const paramNames = path
+          .split("/")
+          .filter((segment) => segment.startsWith(":"))
+          .map((segment) => segment.slice(1));
+        for (const paramName of paramNames) {
+          expect(ALLOWED_RESOURCE_PARAM_NAMES.has(paramName)).toBe(true);
+        }
       }
     });
   });
@@ -718,6 +745,9 @@ describe("Principal portal API (e2e)", () => {
         .set(authed(fixture.aman));
       expect(response.status).toBe(200);
       expect(response.body).toEqual({
+        organizationName: fixture.organizationName,
+        legalName: null,
+        grievanceContactEmail: null,
         published: true,
         contactName: fixture.dpoName,
         contactEmail: fixture.dpoEmail,
@@ -758,6 +788,9 @@ describe("Principal portal API (e2e)", () => {
         .set(authed(fixture.otherOrgPrincipal));
       expect(response.status).toBe(200);
       expect(response.body).toEqual({
+        organizationName: fixture.otherOrganizationName,
+        legalName: null,
+        grievanceContactEmail: null,
         published: false,
         contactName: null,
         contactEmail: null,

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "@prisma/client"
+community: "dependencies"
 location: "L32"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/dependencies
 ---
 
 # @prisma/client
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[@prismaclient]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/prisma/client
+#graphify/concept #graphify/EXTRACTED #community/dependencies

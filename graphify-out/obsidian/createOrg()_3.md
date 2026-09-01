@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/reference.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/access-log.e2e-spec.ts"
 type: "code"
-community: "merge.service.ts"
-location: "L23"
+community: "prisma.service.ts"
+location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mergeservicets
+  - community/prismaservicets
 ---
 
 # createOrg()
 
 ## Connections
-- [[reference.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[access-log.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mergeservicets
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

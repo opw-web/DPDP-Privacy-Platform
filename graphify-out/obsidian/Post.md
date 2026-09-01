@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "sync.service.ts"
+community: "NotificationsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/syncservicets
+  - community/NotificationsService
 ---
 
 # Post
 
 ## Connections
-- [[dot-trigger()]] - `references` [EXTRACTED]
+- [[dot-markAllRead()]] - `references` [EXTRACTED]
+- [[dot-markRead()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/syncservicets
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "principals.service.ts"
+community: "SdfController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principalsservicets
+  - community/SdfController
 ---
 
 # Injectable
 
 ## Connections
-- [[PrincipalRecipientsService]] - `references` [EXTRACTED]
+- [[AlgorithmRegisterService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principalsservicets
+#graphify/code #graphify/EXTRACTED #community/SdfController

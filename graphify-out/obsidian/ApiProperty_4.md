@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Public"
+community: ".unmerge"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/unmerge
 ---
 
 # ApiProperty
 
 ## Connections
-- [[MeProfileTimezoneDto]] - `references` [EXTRACTED]
+- [[UnmergeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/unmerge

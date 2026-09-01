@@ -172,6 +172,13 @@ function createApiClient(config: ApiClientConfig) {
         opts,
       ),
 
+    put: <T>(path: string, body?: unknown, opts?: RequestOptions): Promise<T> =>
+      requestJson<T>(
+        path,
+        { method: "PUT", body: body !== undefined ? JSON.stringify(body) : undefined },
+        opts,
+      ),
+
     patch: <T>(path: string, body?: unknown, opts?: RequestOptions): Promise<T> =>
       requestJson<T>(
         path,

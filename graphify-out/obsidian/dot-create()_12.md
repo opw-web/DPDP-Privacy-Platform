@@ -1,22 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/transfers.service.ts"
+source_file: "dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts"
 type: "code"
-community: "CreateTransferDto"
-location: "L89"
+community: "CreateVoluntaryUndertakingDto"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTransferDto
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # .create()
 
 ## Connections
-- [[dot-assertEmployeeExists()_1]] - `calls` [EXTRACTED]
-- [[dot-assertRecipientExists()_1]] - `calls` [EXTRACTED]
-- [[dot-create()_11]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[CreateTransferDto]] - `references` [EXTRACTED]
-- [[TransfersService]] - `method` [EXTRACTED]
+- [[dot-create()_13]] - `calls` [INFERRED]
+- [[Body_12]] - `references` [EXTRACTED]
+- [[CreateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
+- [[Post_14]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[VoluntaryUndertakingsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTransferDto
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

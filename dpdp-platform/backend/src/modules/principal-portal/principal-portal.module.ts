@@ -1,8 +1,15 @@
 import { Module } from "@nestjs/common";
 import { AuthModule } from "../auth/auth.module";
 import { PrincipalsModule } from "../principals/principals.module";
+import { EvidenceModule } from "../evidence/evidence.module";
+import { RequestsModule } from "../requests/requests.module";
+import { NoticesModule } from "../notices/notices.module";
+import { NotificationsModule } from "../notifications/notifications.module";
+import { AuditModule } from "../../common/audit/audit.module";
 import { MeController } from "./me.controller";
+import { MeRightsController } from "./me-rights.controller";
 import { MeService } from "./me.service";
+import { MeRightsService } from "./me-rights.service";
 
 /**
  * Task 22: the Data Principal self-service portal API (`/api/me/*`).
@@ -42,8 +49,16 @@ import { MeService } from "./me.service";
  * was built without that call in the first place.
  */
 @Module({
-  imports: [AuthModule, PrincipalsModule],
-  controllers: [MeController],
-  providers: [MeService],
+  imports: [
+    AuthModule,
+    PrincipalsModule,
+    EvidenceModule,
+    RequestsModule,
+    NoticesModule,
+    NotificationsModule,
+    AuditModule,
+  ],
+  controllers: [MeController, MeRightsController],
+  providers: [MeService, MeRightsService],
 })
 export class PrincipalPortalModule {}

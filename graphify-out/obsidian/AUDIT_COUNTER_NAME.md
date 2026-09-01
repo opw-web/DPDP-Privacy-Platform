@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/reference/counter.ts"
 type: "code"
-community: "merge.service.ts"
+community: "audit.service.ts"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mergeservicets
+  - community/auditservicets
 ---
 
 # AUDIT_COUNTER_NAME
@@ -17,4 +17,4 @@ tags:
 - [[reference.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[reference.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mergeservicets
+#graphify/code #graphify/EXTRACTED #community/auditservicets

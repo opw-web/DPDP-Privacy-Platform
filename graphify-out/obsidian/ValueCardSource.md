@@ -1,0 +1,19 @@
+---
+source_file: "dpdp-platform/frontend/src/principal/components/ValueCard.tsx"
+type: "code"
+community: "card.tsx"
+location: "L42"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/cardtsx
+---
+
+# ValueCardSource
+
+## Connections
+- [[MeDataPage.tsx]] - `imports` [EXTRACTED]
+- [[MeDataValueDto]] - `references` [EXTRACTED]
+- [[ValueCard.tsx]] - `contains` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/cardtsx

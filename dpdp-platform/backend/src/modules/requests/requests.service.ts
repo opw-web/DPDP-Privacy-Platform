@@ -16,6 +16,13 @@ import { ComplianceService } from "../compliance/compliance.service";
 import type { ComplianceDeadlineSnapshot } from "../compliance/compliance.service";
 import { NotificationsService } from "../notifications/notifications.service";
 import { ErasureTaskService } from "../retention/erasure-task.service";
+import type {
+  ErasureChecklistSubmission,
+} from "../retention/erasure-task.service";
+import type {
+  ProcessorChecklistEntry,
+  SystemChecklistEntry,
+} from "../retention/checklist.types";
 import { ChangeStatusDto } from "./dto/change-status.dto";
 import { AddNoteDto } from "./dto/add-note.dto";
 import { EscalateRequestDto } from "./dto/escalate-request.dto";
@@ -76,6 +83,33 @@ export const REQUEST_PUBLIC_SELECT = {
 export type PublicRequest = Prisma.PrincipalRequestGetPayload<{
   select: typeof REQUEST_PUBLIC_SELECT;
 }>;
+
+export const REQUEST_EVENT_PUBLIC_SELECT = {
+  id: true,
+  fromStatus: true,
+  toStatus: true,
+  actorType: true,
+  actorId: true,
+  actorLabel: true,
+  note: true,
+  visibleToPrincipal: true,
+  createdAt: true,
+} satisfies Prisma.RequestEventSelect;
+
+export type PublicRequestEvent = Prisma.RequestEventGetPayload<{
+  select: typeof REQUEST_EVENT_PUBLIC_SELECT;
+}>;
+
+export interface PublicAssignedEmployee {
+  id: string;
+  fullName: string;
+  email: string;
+}
+
+export type PublicRequestDetail = PublicRequest & {
+  events: PublicRequestEvent[];
+  assignedEmployee: PublicAssignedEmployee | null;
+};
 
 /** Full row shape this service operates on internally (adds `status`
  * transition context beyond what `REQUEST_PUBLIC_SELECT` needs to expose,
@@ -141,7 +175,7 @@ export class RequestsService {
     });
   }
 
-  async getByReference(ref: string): Promise<PublicRequest> {
+  async getByReference(ref: string): Promise<PublicRequestDetail> {
     const row = await this.prisma.scoped.principalRequest.findFirst({
       where: { reference: ref },
       select: REQUEST_PUBLIC_SELECT,
@@ -149,7 +183,26 @@ export class RequestsService {
     if (!row) {
       throw new NotFoundException(`Request "${ref}" not found.`);
     }
-    return row;
+
+    // PrincipalRequest intentionally stores the employee id as a scalar (the
+    // schema has no relation for it), so load the display projection
+    // explicitly. Both queries are tenant-scoped; an id from another tenant
+    // therefore cannot leak an employee name into this detail response.
+    const [events, assignedEmployee] = await Promise.all([
+      this.prisma.scoped.requestEvent.findMany({
+        where: { requestId: row.id },
+        orderBy: [{ createdAt: "asc" }, { id: "asc" }],
+        select: REQUEST_EVENT_PUBLIC_SELECT,
+      }),
+      row.assignedEmployeeId
+        ? this.prisma.scoped.employee.findFirst({
+            where: { id: row.assignedEmployeeId },
+            select: { id: true, fullName: true, email: true },
+          })
+        : Promise.resolve(null),
+    ]);
+
+    return { ...row, events, assignedEmployee };
   }
 
   async stats(): Promise<RequestStats> {
@@ -410,6 +463,7 @@ export class RequestsService {
     // 4. COMPLETED: outcomeCode and non-empty outcome.
     let outcomeCode: string | undefined;
     let outcome: string | undefined;
+    let erasureChecklist: ErasureChecklistSubmission | undefined;
     if (dto.status === "COMPLETED") {
       const code = (dto.outcomeCode ?? "").trim();
       const text = (dto.outcome ?? "").trim();
@@ -421,6 +475,33 @@ export class RequestsService {
       }
       outcomeCode = code;
       outcome = text;
+
+      if (existing.type === "ERASURE") {
+        const systemTicks = dto.systemChecklist;
+        const processorTicks = dto.processorChecklist;
+        if (!systemTicks || !processorTicks || systemTicks.length + processorTicks.length === 0) {
+          throw new BadRequestException(
+            "Completing an ERASURE request requires evidence for every source system and registered processor.",
+          );
+        }
+
+        const actorId = TenantContext.get().actorId;
+        const at = new Date().toISOString();
+        erasureChecklist = {
+          systemChecklist: systemTicks.map<SystemChecklistEntry>((item) => ({
+            dataSourceId: item.dataSourceId,
+            done: item.done,
+            byEmployeeId: actorId,
+            at,
+          })),
+          processorChecklist: processorTicks.map<ProcessorChecklistEntry>((item) => ({
+            recipientId: item.recipientId,
+            confirmed: item.confirmed,
+            ref: item.ref ?? null,
+            at,
+          })),
+        };
+      }
     }
 
     const patch: Prisma.PrincipalRequestUpdateInput = {};
@@ -464,6 +545,7 @@ export class RequestsService {
         await this.erasureTaskService.createFromTrigger(tx, {
           trigger: "REQUEST",
           dataPrincipalId: existing.dataPrincipalId,
+          checklist: erasureChecklist,
         });
       }
 

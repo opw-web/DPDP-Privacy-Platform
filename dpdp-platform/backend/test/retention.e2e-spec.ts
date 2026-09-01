@@ -3,6 +3,7 @@ import { INestApplication } from "@nestjs/common";
 import request from "supertest";
 import * as argon2 from "argon2";
 import { PrismaService } from "../src/common/prisma/prisma.service";
+import { AuditService } from "../src/common/audit/audit.service";
 import { TenantContext } from "../src/common/tenant/tenant-context";
 import type { TenantStore } from "../src/common/tenant/tenant-context";
 import {
@@ -18,6 +19,7 @@ import {
   PreErasureNoticeService,
   type PreErasureNoticeSummary,
 } from "../src/modules/retention/pre-erasure-notice.service";
+import { PurposeServedService } from "../src/modules/retention/purpose-served.service";
 import { addByDeadlineUnit } from "../src/modules/compliance/compliance.service";
 import {
   bootstrapTestApp,
@@ -64,6 +66,8 @@ describe("Retention: erasure tasks, the floor, legal holds and the retention job
   let erasureTaskService: ErasureTaskService;
   let retentionScanService: RetentionScanService;
   let preErasureNoticeService: PreErasureNoticeService;
+  let purposeServedService: PurposeServedService;
+  let auditService: AuditService;
   const orgIds: string[] = [];
 
   beforeAll(async () => {
@@ -72,6 +76,8 @@ describe("Retention: erasure tasks, the floor, legal holds and the retention job
     erasureTaskService = app.get(ErasureTaskService);
     retentionScanService = app.get(RetentionScanService);
     preErasureNoticeService = app.get(PreErasureNoticeService);
+    purposeServedService = app.get(PurposeServedService);
+    auditService = app.get(AuditService);
   });
 
   afterAll(async () => {
@@ -81,6 +87,15 @@ describe("Retention: erasure tasks, the floor, legal holds and the retention job
       // onDelete: Restrict FK to DataPrincipal), before `cleanupOrgs`
       // removes the organizations themselves.
       await prisma.erasureTask.deleteMany({
+        where: { organizationId: { in: orgIds } },
+      });
+      await prisma.purposeServedSignal.deleteMany({
+        where: { organizationId: { in: orgIds } },
+      });
+      await prisma.retentionPolicy.deleteMany({
+        where: { organizationId: { in: orgIds } },
+      });
+      await prisma.processingPurpose.deleteMany({
         where: { organizationId: { in: orgIds } },
       });
       await prisma.legalHold.deleteMany({
@@ -116,7 +131,10 @@ describe("Retention: erasure tasks, the floor, legal holds and the retention job
   async function createOrg(): Promise<string> {
     const organizationId = randomUUID();
     await prisma.organization.create({
-      data: { id: organizationId, name: `Retention Test Org ${organizationId}` },
+      data: {
+        id: organizationId,
+        name: `Retention Test Org ${organizationId}`,
+      },
     });
     orgIds.push(organizationId);
     return organizationId;
@@ -190,11 +208,15 @@ describe("Retention: erasure tasks, the floor, legal holds and the retention job
     input: CreateFromTriggerInput,
   ): Promise<PublicErasureTask> {
     return TenantContext.run(systemActorStore(organizationId), () =>
-      appPrisma.scoped.$transaction((tx) => erasureTaskService.createFromTrigger(tx, input)),
+      appPrisma.scoped.$transaction((tx) =>
+        erasureTaskService.createFromTrigger(tx, input),
+      ),
     );
   }
 
-  async function runRetentionScan(organizationId: string): Promise<RetentionScanSummary> {
+  async function runRetentionScan(
+    organizationId: string,
+  ): Promise<RetentionScanSummary> {
     return TenantContext.run(systemActorStore(organizationId), () =>
       retentionScanService.runForCurrentOrganization(),
     );
@@ -249,7 +271,9 @@ describe("Retention: erasure tasks, the floor, legal holds and the retention job
       .post("/api/auth/employee/login")
       .send({ email, password });
     if (loginRes.status !== 200) {
-      throw new Error(`Fixture login failed for ${email}: ${JSON.stringify(loginRes.body)}`);
+      throw new Error(
+        `Fixture login failed for ${email}: ${JSON.stringify(loginRes.body)}`,
+      );
     }
     return { email, accessToken: loginRes.body.accessToken as string };
   }
@@ -257,7 +281,9 @@ describe("Retention: erasure tasks, the floor, legal holds and the retention job
   function authed(token: string) {
     return {
       get: (path: string) =>
-        request(app.getHttpServer()).get(path).set("Authorization", `Bearer ${token}`),
+        request(app.getHttpServer())
+          .get(path)
+          .set("Authorization", `Bearer ${token}`),
       post: (path: string, body?: object) =>
         request(app.getHttpServer())
           .post(path)
@@ -372,7 +398,11 @@ describe("Retention: erasure tasks, the floor, legal holds and the retention job
       expect(task.erasureDueAt).not.toBeNull();
       expect(task.preErasureNoticeDueAt).not.toBeNull();
 
-      const expectedNoticeDueAt = addByDeadlineUnit(task.erasureDueAt as Date, -5, "DAYS");
+      const expectedNoticeDueAt = addByDeadlineUnit(
+        task.erasureDueAt as Date,
+        -5,
+        "DAYS",
+      );
       expect((task.preErasureNoticeDueAt as Date).toISOString()).toBe(
         expectedNoticeDueAt.toISOString(),
       );
@@ -380,10 +410,24 @@ describe("Retention: erasure tasks, the floor, legal holds and the retention job
       // retentionPolicyId => immediate), so preErasureNoticeDueAt (5 days
       // earlier) is already in the past -- the job picks it up on the
       // very next run, no need to fabricate elapsed time.
-      expect((task.preErasureNoticeDueAt as Date).getTime()).toBeLessThan(Date.now());
+      expect((task.preErasureNoticeDueAt as Date).getTime()).toBeLessThan(
+        Date.now(),
+      );
 
       const summary1 = await runPreErasureNotice(organizationId);
       expect(summary1.noticesSent).toBe(1);
+      // A retry/racing worker sees the CAS precondition no longer true and
+      // neither sends a duplicate portal notice nor appends another audit.
+      const retry = await runPreErasureNotice(organizationId);
+      expect(retry.noticesSent).toBe(0);
+      const noticeAudits = await prisma.auditEvent.count({
+        where: {
+          organizationId,
+          resourceId: task.id,
+          action: "ERASURE_TASK_PRE_ERASURE_NOTICE_SENT",
+        },
+      });
+      expect(noticeAudits).toBe(1);
 
       const notification = await prisma.notification.findFirst({
         where: { organizationId, dataPrincipalId, audience: "PRINCIPAL" },
@@ -407,10 +451,18 @@ describe("Retention: erasure tasks, the floor, legal holds and the retention job
       // endpoint (principal-auth.service.ts writes the INBOUND
       // PrincipalContactEvent this depends on).
       const password = "CorrectHorseBattery9!";
-      const passwordHash = await argon2.hash(password, { type: argon2.argon2id });
+      const passwordHash = await argon2.hash(password, {
+        type: argon2.argon2id,
+      });
       const email = `principal-${randomUUID()}@example.com`;
       await prisma.principalAccount.create({
-        data: { organizationId, dataPrincipalId, email, passwordHash, status: "ACTIVE" },
+        data: {
+          organizationId,
+          dataPrincipalId,
+          email,
+          passwordHash,
+          status: "ACTIVE",
+        },
       });
 
       const beforeLogin = await prisma.dataPrincipal.findUniqueOrThrow({
@@ -437,6 +489,53 @@ describe("Retention: erasure tasks, the floor, legal holds and the retention job
         where: { id: dataPrincipalId },
       });
       expect(principalAfterLogin.lastPrincipalContactAt).not.toBeNull();
+    });
+
+    it("rolls back the portal notification and task transition if their audit append fails", async () => {
+      const organizationId = await createOrg();
+      const dataPrincipalId = await createPrincipal(organizationId);
+      await createComplianceRule(organizationId, {
+        ruleCode: "RETENTION_PRE_ERASURE_NOTICE_AUDIT_ROLLBACK",
+        appliesTo: "RETENTION:PRE_ERASURE_NOTICE",
+        deadlineValue: 5,
+        deadlineUnit: "DAYS",
+      });
+      const task = await createTask(organizationId, {
+        trigger: "CONSENT_WITHDRAWN",
+        dataPrincipalId,
+      });
+
+      const originalRecord = auditService.record.bind(auditService);
+      const auditSpy = jest
+        .spyOn(auditService, "record")
+        .mockImplementation(async (tx, input) => {
+          if (input.action === "ERASURE_TASK_PRE_ERASURE_NOTICE_SENT") {
+            throw new Error("intentional pre-erasure audit failure");
+          }
+          return originalRecord(tx, input);
+        });
+      try {
+        await expect(runPreErasureNotice(organizationId)).rejects.toThrow(
+          "intentional pre-erasure audit failure",
+        );
+      } finally {
+        auditSpy.mockRestore();
+      }
+
+      const taskAfter = await prisma.erasureTask.findUniqueOrThrow({
+        where: { id: task.id },
+      });
+      expect(taskAfter.state).toBe("EVALUATED");
+      expect(taskAfter.preErasureNoticeSentAt).toBeNull();
+      expect(
+        await prisma.notification.count({
+          where: {
+            organizationId,
+            dataPrincipalId,
+            title: "Your data is scheduled for erasure",
+          },
+        }),
+      ).toBe(0);
     });
   });
 
@@ -478,9 +577,10 @@ describe("Retention: erasure tasks, the floor, legal holds and the retention job
         },
       });
 
-      const principalAfterOutbound = await prisma.dataPrincipal.findUniqueOrThrow({
-        where: { id: dataPrincipalId },
-      });
+      const principalAfterOutbound =
+        await prisma.dataPrincipal.findUniqueOrThrow({
+          where: { id: dataPrincipalId },
+        });
       expect(principalAfterOutbound.lastPrincipalContactAt).toBeNull();
 
       const summary = await runRetentionScan(organizationId);
@@ -542,15 +642,83 @@ describe("Retention: erasure tasks, the floor, legal holds and the retention job
     });
   });
 
+  describe("PURPOSE_SERVED consumes an explicit principal signal exactly once", () => {
+    it("uses the business servedAt timestamp and atomically marks the signal scheduled", async () => {
+      const organizationId = await createOrg();
+      const dataPrincipalId = await createPrincipal(organizationId);
+      const purpose = await prisma.processingPurpose.create({
+        data: {
+          organizationId,
+          code: `PURPOSE_${randomUUID()}`,
+          name: "Completed order",
+          description: "Order fulfilment",
+          lawfulBasis: "CONSENT",
+          basisJustification: "Test fixture",
+          dataCategories: ["IDENTITY"],
+        },
+      });
+      const policy = await prisma.retentionPolicy.create({
+        data: {
+          organizationId,
+          purposeId: purpose.id,
+          name: "Completed order retention",
+          triggerType: "PURPOSE_SERVED",
+          retentionValue: 2,
+          retentionUnit: "DAYS",
+          legalBasisForRetention: "Test policy",
+          legalBasisType: "ORG_POLICY",
+        },
+      });
+      const servedAt = new Date(Date.now() - 3 * 24 * 60 * 60 * 1000);
+
+      const signal = await TenantContext.run(
+        systemActorStore(organizationId),
+        () =>
+          appPrisma.scoped.$transaction((tx) =>
+            purposeServedService.record(tx, {
+              dataPrincipalId,
+              retentionPolicyId: policy.id,
+              servedAt,
+            }),
+          ),
+      );
+      expect(signal.scheduledAt).toBeNull();
+      const first = await runRetentionScan(organizationId);
+      expect(first.purposeServedTasksCreated).toBe(1);
+
+      const task = await prisma.erasureTask.findFirstOrThrow({
+        where: { organizationId, dataPrincipalId, trigger: "PURPOSE_SERVED" },
+      });
+      expect(task.erasureDueAt?.toISOString()).toBe(
+        addByDeadlineUnit(servedAt, 2, "DAYS").toISOString(),
+      );
+      const consumed = await prisma.purposeServedSignal.findUniqueOrThrow({
+        where: { id: signal.id },
+      });
+      expect(consumed.scheduledAt).not.toBeNull();
+
+      const second = await runRetentionScan(organizationId);
+      expect(second.purposeServedTasksCreated).toBe(0);
+      expect(
+        await prisma.erasureTask.count({
+          where: { organizationId, dataPrincipalId, trigger: "PURPOSE_SERVED" },
+        }),
+      ).toBe(1);
+    });
+  });
+
   // -------------------------------------------------------------------
   // Legal holds
   // -------------------------------------------------------------------
 
   describe("A legal hold moves an open task to ON_LEGAL_HOLD and its citation is retrievable", () => {
     it("POST /api/retention/legal-holds applies immediately to an open task; the citation is visible on the task and on the hold itself", async () => {
-      const grantee = await createOrgWithEmployee(app, prisma, "RETENTION_HOLD_MGR", [
-        "CAN_MANAGE_RETENTION",
-      ]);
+      const grantee = await createOrgWithEmployee(
+        app,
+        prisma,
+        "RETENTION_HOLD_MGR",
+        ["CAN_MANAGE_RETENTION"],
+      );
       orgIds.push(grantee.organizationId);
       const client = authed(grantee.accessToken);
       const dataPrincipalId = await createPrincipal(grantee.organizationId);
@@ -562,6 +730,17 @@ describe("Retention: erasure tasks, the floor, legal holds and the retention job
         dataPrincipalId,
       });
       expect(task.state).toBe("EVALUATED");
+      // READY_FOR_ERASURE is still an open task: a hold created at this
+      // point must take effect immediately, not wait for the nightly scan.
+      const readyPrincipalId = await createPrincipal(grantee.organizationId);
+      const readyTask = await createTask(grantee.organizationId, {
+        trigger: "CONSENT_WITHDRAWN",
+        dataPrincipalId: readyPrincipalId,
+      });
+      await prisma.erasureTask.update({
+        where: { id: readyTask.id },
+        data: { state: "READY_FOR_ERASURE" },
+      });
 
       const holdRes = await client.post("/api/retention/legal-holds", {
         name: "Board Inquiry Hold",
@@ -579,13 +758,60 @@ describe("Retention: erasure tasks, the floor, legal holds and the retention job
       });
       expect(taskAfter.state).toBe("ON_LEGAL_HOLD");
       expect(taskAfter.legalHoldId).toBe(holdRes.body.id);
+      const readyTaskAfter = await prisma.erasureTask.findUniqueOrThrow({
+        where: { id: readyTask.id },
+      });
+      expect(readyTaskAfter.state).toBe("ON_LEGAL_HOLD");
+      expect(
+        await prisma.auditEvent.count({
+          where: {
+            organizationId: grantee.organizationId,
+            resourceId: task.id,
+            action: "ERASURE_TASK_LEGAL_HOLD_APPLIED",
+            metadata: { path: ["source"], equals: "legal-hold-create" },
+          },
+        }),
+      ).toBe(1);
+      expect(
+        await prisma.auditEvent.count({
+          where: {
+            organizationId: grantee.organizationId,
+            resourceId: readyTask.id,
+            action: "ERASURE_TASK_LEGAL_HOLD_APPLIED",
+            metadata: { path: ["fromState"], equals: "READY_FOR_ERASURE" },
+          },
+        }),
+      ).toBe(1);
 
       const listRes = await client.get("/api/retention/legal-holds");
       expect(listRes.status).toBe(200);
-      const found = (listRes.body as Array<{ id: string; legalCitation: string }>).find(
-        (h) => h.id === holdRes.body.id,
-      );
+      const found = (
+        listRes.body as Array<{ id: string; legalCitation: string }>
+      ).find((h) => h.id === holdRes.body.id);
       expect(found?.legalCitation).toBe("DPB Order No. 2026/TEST-001");
+    });
+
+    it("rejects category-scoped holds explicitly because tasks cannot represent category scope", async () => {
+      const grantee = await createOrgWithEmployee(
+        app,
+        prisma,
+        "RETENTION_CATEGORY_SCOPE",
+        ["CAN_MANAGE_RETENTION"],
+      );
+      orgIds.push(grantee.organizationId);
+      const response = await authed(grantee.accessToken).post(
+        "/api/retention/legal-holds",
+        {
+          name: "Unsupported category hold",
+          reason: "Category support is intentionally not enabled in this model",
+          legalCitation: "DPB Test Order",
+          scope: { categories: ["HEALTH"] },
+        },
+      );
+      expect(response.status).toBe(400);
+      expect(response.body.message).toContain(
+        "Category-scoped legal holds are not supported",
+      );
     });
   });
 
@@ -595,9 +821,12 @@ describe("Retention: erasure tasks, the floor, legal holds and the retention job
 
   describe("Permission boundary: completing a task requires CAN_APPROVE_ERASURE, not CAN_MANAGE_RETENTION", () => {
     it("403s for an actor holding only CAN_MANAGE_RETENTION, with a positive control on the same route and payload", async () => {
-      const org = await createOrgWithEmployee(app, prisma, "RETENTION_ONLY_MGR", [
-        "CAN_MANAGE_RETENTION",
-      ]);
+      const org = await createOrgWithEmployee(
+        app,
+        prisma,
+        "RETENTION_ONLY_MGR",
+        ["CAN_MANAGE_RETENTION"],
+      );
       orgIds.push(org.organizationId);
       const approver = await createEmployeeWithPermissions(org.organizationId, [
         "CAN_APPROVE_ERASURE",

@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "code"
-community: "reflect-metadata"
-location: "L43"
+community: "dependencies"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/reflect-metadata
+  - community/dependencies
 ---
 
 # reflect-metadata
 
 ## Connections
-- [[dependencies_2]] - `contains` [EXTRACTED]
+- [[dependencies_1]] - `contains` [EXTRACTED]
 - [[reflect-metadata_1]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/reflect-metadata
+#graphify/code #graphify/EXTRACTED #community/dependencies

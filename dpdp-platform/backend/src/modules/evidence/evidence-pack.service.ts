@@ -7,13 +7,8 @@ import { csvDocument } from "../inventory/csv-writer";
 import { AuditExportService } from "./audit-export.service";
 import { withCsvLetterhead } from "./pack-letterhead";
 import { buildZip, type ZipEntryInput } from "./zip-writer";
-
-const DEADLINE_UNIT_TO_DAYS: Record<string, number> = {
-  HOURS: 1 / 24,
-  DAYS: 1,
-  MONTHS: 30,
-  YEARS: 365,
-};
+import { addByDeadlineUnit } from "../compliance/compliance.service";
+import { formatEvidenceTimestamp } from "./evidence-timestamp";
 
 /**
  * `GET /api/evidence/pack.zip` (spec line 890, checklist section 16).
@@ -398,9 +393,6 @@ export class EvidencePackService {
       }),
     ]);
 
-    const deadlineDays = rule
-      ? rule.deadlineValue * (DEADLINE_UNIT_TO_DAYS[rule.deadlineUnit] ?? 0)
-      : null;
     const publishedPeriod = rule?.publishedPeriodText ?? "";
 
     const rows = grievances.map((grievance) => {
@@ -409,9 +401,14 @@ export class EvidencePackService {
           (1000 * 60 * 60 * 24)
         : null;
       const withinPeriod =
-        responseDays === null || deadlineDays === null
+        grievance.completedAt === null || rule === null
           ? ""
-          : responseDays <= deadlineDays
+          : grievance.completedAt <=
+              addByDeadlineUnit(
+                grievance.submittedAt,
+                rule.deadlineValue,
+                rule.deadlineUnit,
+              )
             ? "YES"
             : "NO";
 
@@ -468,7 +465,7 @@ export class EvidencePackService {
         breach.reference,
         breach.title,
         breach.status,
-        breach.occurredAt?.toISOString() ?? "",
+        formatEvidenceTimestamp(breach.occurredAt),
         breach.becameAwareAt.toISOString(),
         boardInitial ? `${boardInitial.status} (due ${boardInitial.dueAt.toISOString()})` : "",
         boardDetail ? `${boardDetail.status} (due ${boardDetail.dueAt.toISOString()})` : "",
@@ -611,7 +608,7 @@ export class EvidencePackService {
     );
   }
 
-  /** EV-11: DPIA and audit records for SDFs, with the 12-month clock. */
+  /** EV-11: DPIA and audit records for SDFs, with the annual clock. */
   private async buildSdfRecordsCsv(): Promise<string> {
     const assessments = await this.prisma.scoped.sdfAssessment.findMany({
       orderBy: { cycleStartedAt: "desc" },

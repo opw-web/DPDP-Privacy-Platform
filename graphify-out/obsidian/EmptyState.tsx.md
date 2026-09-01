@@ -1,0 +1,34 @@
+---
+source_file: "dpdp-platform/frontend/src/components/shared/EmptyState.tsx"
+type: "code"
+community: "SecurityMeasuresTab.tsx"
+location: "L1"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/SecurityMeasuresTabtsx
+---
+
+# EmptyState.tsx
+
+## Connections
+- [[AuditPage.tsx]] - `imports_from` [EXTRACTED]
+- [[Button]] - `imports` [EXTRACTED]
+- [[DataSourceDetailPage.tsx]] - `imports_from` [EXTRACTED]
+- [[DataTable.tsx]] - `imports_from` [EXTRACTED]
+- [[EmptyState()]] - `contains` [EXTRACTED]
+- [[EmptyState.test.tsx]] - `imports_from` [EXTRACTED]
+- [[EmptyStateAction]] - `contains` [EXTRACTED]
+- [[EmptyStateProps]] - `contains` [EXTRACTED]
+- [[GapsPanel.tsx]] - `imports_from` [EXTRACTED]
+- [[LinkedRecordsPanel.tsx]] - `imports_from` [EXTRACTED]
+- [[MeDataPage.tsx]] - `imports_from` [EXTRACTED]
+- [[MeRecipientsPage.tsx]] - `imports_from` [EXTRACTED]
+- [[MeSourcesPage.tsx]] - `imports_from` [EXTRACTED]
+- [[PrincipalDetailPage.tsx]] - `imports_from` [EXTRACTED]
+- [[RecentAuditStrip.tsx]] - `imports_from` [EXTRACTED]
+- [[ReviewQueuePage.tsx]] - `imports_from` [EXTRACTED]
+- [[SecurityMeasuresTab.tsx]] - `imports_from` [EXTRACTED]
+- [[button.tsx]] - `imports_from` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx

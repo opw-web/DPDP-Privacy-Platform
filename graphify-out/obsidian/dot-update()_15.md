@@ -1,23 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/recipients.service.ts"
+source_file: "dpdp-platform/backend/src/modules/board/information-requests.controller.ts"
 type: "code"
-community: "recipients.service.ts"
-location: "L167"
+community: "CreateInformationRequestDto"
+location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/CreateInformationRequestDto
 ---
 
 # .update()
 
 ## Connections
-- [[dot-assertProcessorRule()]] - `calls` [EXTRACTED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[dot-update()_14]] - `calls` [INFERRED]
-- [[RecipientsService]] - `method` [EXTRACTED]
-- [[UpdateRecipientDto]] - `references` [EXTRACTED]
-- [[duplicateNameMessage()_1]] - `calls` [EXTRACTED]
-- [[isUniqueConstraintViolation()_3]] - `calls` [EXTRACTED]
+- [[dot-update()_16]] - `calls` [INFERRED]
+- [[Body_14]] - `references` [EXTRACTED]
+- [[InformationRequestsController]] - `method` [EXTRACTED]
+- [[Param_17]] - `references` [EXTRACTED]
+- [[Patch_8]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[UpdateInformationRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

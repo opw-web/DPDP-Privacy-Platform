@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalAuthController"
+community: "ConsentsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalAuthController
+  - community/ConsentsService
 ---
 
 # Req
 
 ## Connections
-- [[dot-login()_3]] - `references` [EXTRACTED]
-- [[dot-logout()_3]] - `references` [EXTRACTED]
-- [[dot-refresh()_3]] - `references` [EXTRACTED]
+- [[dot-recordImportedConsent()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalAuthController
+#graphify/code #graphify/EXTRACTED #community/ConsentsService

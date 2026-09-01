@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/src/app.module.ts"
 type: "code"
 community: "AppModule"
-location: "L85"
+location: "L124"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,11 +13,12 @@ tags:
 
 ## Connections
 - [[dot-configure()_1]] - `method` [EXTRACTED]
-- [[Module_25]] - `references` [EXTRACTED]
+- [[Module_37]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `contains` [EXTRACTED]
 - [[assembly.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[audit-read.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[data-sources.e2e-spec.ts]] - `imports` [EXTRACTED]
+- [[e2e-harness.ts]] - `imports` [EXTRACTED]
 - [[employee-auth.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[health-degraded.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[health.e2e-spec.ts]] - `imports` [EXTRACTED]

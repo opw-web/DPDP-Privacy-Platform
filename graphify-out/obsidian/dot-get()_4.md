@@ -1,21 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/security-measures.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
 type: "code"
-community: "SecurityMeasuresService"
-location: "L29"
+community: "AccessTokenPayload"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresService
+  - community/AccessTokenPayload
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_5]] - `calls` [INFERRED]
-- [[Get_6]] - `references` [EXTRACTED]
-- [[Param_2]] - `references` [EXTRACTED]
+- [[dot-get()_10]] - `calls` [INFERRED]
+- [[CampaignsController]] - `method` [EXTRACTED]
+- [[Get_11]] - `references` [EXTRACTED]
+- [[Param_7]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[SecurityMeasuresController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresService
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

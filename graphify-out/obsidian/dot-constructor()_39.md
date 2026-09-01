@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/employees.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/sdf-gaps.service.ts"
 type: "code"
-community: "employees.controller.ts"
-location: "L12"
+community: "SdfController"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeescontrollerts
+  - community/SdfController
 ---
 
 # .constructor()
 
 ## Connections
-- [[EmployeesController]] - `method` [EXTRACTED]
-- [[EmployeesService]] - `references` [EXTRACTED]
+- [[ComplianceService]] - `references` [EXTRACTED]
+- [[PrismaService]] - `references` [EXTRACTED]
+- [[SdfGapsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeescontrollerts
+#graphify/code #graphify/EXTRACTED #community/SdfController

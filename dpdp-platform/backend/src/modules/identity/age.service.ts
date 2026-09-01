@@ -25,8 +25,8 @@ function compareNewest(left: DobCandidate, right: DobCandidate): number {
 // age of eighteen years. This is the statute's definition of a child, not a
 // configurable deadline, and it is one of two places a bare number is
 // allowed to appear in this codebase. The other is
-// `GRIEVANCE_CEILING_DAYS` in `../compliance/compliance.service.ts`
-// (Rule 14(3)'s ninety-day grievance-redressal ceiling) -- both are
+// the seeded `GRIEVANCE_RESPONSE` rule in `../compliance/compliance.service.ts`
+// (the statutory grievance-redressal ceiling) -- both are
 // statutory bounds the company cannot edit away, not deadlines the company
 // operates to, which is why Global Constraint 4's "no bare legal numbers"
 // rule (deadlines belong in ComplianceRule rows with citations) does not

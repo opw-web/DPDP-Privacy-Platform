@@ -198,6 +198,64 @@ describe("Information requests / Board & Government interaction (e2e)", () => {
   });
 
   describe("CRUD", () => {
+    it("rejects unknown and cross-tenant affected principal ids without creating a request", async () => {
+      const org = await createOrgWithEmployee(app, prisma, "BOARD_MGR_BAD_PRINCIPAL", [
+        "CAN_CHANGE_COMPLIANCE_CONFIG",
+      ]);
+      orgIds.push(org.organizationId);
+      const foreignOrg = await createOrgWithEmployee(app, prisma, "BOARD_MGR_FOREIGN", []);
+      orgIds.push(foreignOrg.organizationId);
+      const foreignPrincipalId = await createPrincipal(foreignOrg.organizationId);
+      const payload = {
+        requestingBody: "BOARD",
+        authorisedPersonRef: "Authorised Officer Ref Invalid",
+        purposeCited: "Integrity of a test investigation",
+        receivedAt: new Date().toISOString(),
+        responseDueAt: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(),
+      };
+
+      for (const affectedPrincipalIds of [[randomUUID()], [foreignPrincipalId]]) {
+        // eslint-disable-next-line no-await-in-loop
+        const response = await request(app.getHttpServer())
+          .post("/api/information-requests")
+          .set("Authorization", `Bearer ${org.accessToken}`)
+          .send({ ...payload, affectedPrincipalIds });
+        expect(response.status).toBe(400);
+        expect(response.body.message).toContain("unknown principal");
+      }
+      expect(await prisma.informationRequest.count({ where: { organizationId: org.organizationId } })).toBe(0);
+    });
+
+    it("rejects an update that introduces an unknown affected principal and leaves the row unchanged", async () => {
+      const org = await createOrgWithEmployee(app, prisma, "BOARD_MGR_BAD_PATCH", [
+        "CAN_CHANGE_COMPLIANCE_CONFIG",
+      ]);
+      orgIds.push(org.organizationId);
+      const principalId = await createPrincipal(org.organizationId);
+      const createRes = await request(app.getHttpServer())
+        .post("/api/information-requests")
+        .set("Authorization", `Bearer ${org.accessToken}`)
+        .send({
+          requestingBody: "BOARD",
+          authorisedPersonRef: "Authorised Officer Ref Patch",
+          purposeCited: "A documented Board purpose",
+          receivedAt: new Date().toISOString(),
+          responseDueAt: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(),
+          affectedPrincipalIds: [principalId],
+        });
+      expect(createRes.status).toBe(201);
+      const response = await request(app.getHttpServer())
+        .patch(`/api/information-requests/${createRes.body.id}`)
+        .set("Authorization", `Bearer ${org.accessToken}`)
+        .send({ affectedPrincipalIds: [randomUUID()] });
+      expect(response.status).toBe(400);
+      expect(response.body.message).toContain("unknown principal");
+      const unchanged = await prisma.informationRequest.findUniqueOrThrow({
+        where: { id: createRes.body.id },
+      });
+      expect(unchanged.affectedPrincipalIds).toEqual([principalId]);
+    });
+
     it("PATCH records what was furnished in response", async () => {
       const org = await createOrgWithEmployee(app, prisma, "BOARD_MGR_PATCH", [
         "CAN_CHANGE_COMPLIANCE_CONFIG",
@@ -286,6 +344,15 @@ describe("Information requests / Board & Government interaction (e2e)", () => {
         });
       expect(createRes.status).toBe(201);
       expect(createRes.body.commitments).toHaveLength(1);
+      const createAudit = await prisma.auditEvent.findFirst({
+        where: {
+          organizationId: org.organizationId,
+          resourceType: "VoluntaryUndertaking",
+          resourceId: createRes.body.id,
+          action: "VOLUNTARY_UNDERTAKING_CREATED",
+        },
+      });
+      expect(createAudit).not.toBeNull();
 
       const closeRes = await request(app.getHttpServer())
         .patch(`/api/voluntary-undertakings/${createRes.body.id}`)
@@ -293,6 +360,15 @@ describe("Information requests / Board & Government interaction (e2e)", () => {
         .send({ closedAt: new Date().toISOString() });
       expect(closeRes.status).toBe(200);
       expect(closeRes.body.closedAt).not.toBeNull();
+      const updateAudit = await prisma.auditEvent.findFirst({
+        where: {
+          organizationId: org.organizationId,
+          resourceType: "VoluntaryUndertaking",
+          resourceId: createRes.body.id,
+          action: "VOLUNTARY_UNDERTAKING_UPDATED",
+        },
+      });
+      expect(updateAudit).not.toBeNull();
     });
   });
 });

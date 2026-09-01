@@ -6,12 +6,18 @@ import { principalApiClient } from "../../lib/api-client";
 import { OrgTimezoneProvider } from "../../components/shared/DateTime";
 import { Button } from "../../components/ui/button";
 import { cn } from "../../lib/utils";
+import { NotificationBell } from "../../components/shared/NotificationBell";
 
 const NAV_ITEMS: ReadonlyArray<{ to: string; label: string; end?: boolean }> = [
   { to: "/me", label: "Home", end: true },
   { to: "/me/data", label: "Your data" },
   { to: "/me/sources", label: "Where it came from" },
   { to: "/me/recipients", label: "Who it's shared with" },
+  { to: "/me/consents", label: "Permissions" },
+  { to: "/me/requests", label: "Requests" },
+  { to: "/me/messages", label: "Messages" },
+  { to: "/me/privacy", label: "Privacy information" },
+  { to: "/me/nomination", label: "Nomination" },
 ];
 
 /**
@@ -58,6 +64,7 @@ export function PortalShell() {
           <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4">
             <p className="text-xl font-semibold">Your Privacy Portal</p>
             <div className="flex items-center gap-4">
+              <NotificationBell apiClient={principalApiClient} />
               <span className="text-sm text-muted-foreground">{principal?.email}</span>
               <Button
                 variant="ghost"

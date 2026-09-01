@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/prisma/seed.ts"
 type: "code"
 community: "seed.ts"
-location: "L122"
+location: "L124"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,9 +13,11 @@ tags:
 
 ## Connections
 - [[employee-auth.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[main()]] - `calls` [EXTRACTED]
+- [[main()_1]] - `calls` [EXTRACTED]
 - [[seed.ts]] - `contains` [EXTRACTED]
+- [[seedComplianceRules()]] - `calls` [EXTRACTED]
 - [[seedDemoEmployees()]] - `calls` [EXTRACTED]
+- [[seedMessageTemplates()]] - `calls` [EXTRACTED]
 - [[seedOrganization()]] - `calls` [EXTRACTED]
 - [[seedPermissions()]] - `calls` [EXTRACTED]
 - [[seedRoles()]] - `calls` [EXTRACTED]

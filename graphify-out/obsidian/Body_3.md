@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "purposes.controller.ts"
+community: ".unmerge"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposescontrollerts
+  - community/unmerge
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_3]] - `references` [EXTRACTED]
-- [[dot-update()_4]] - `references` [EXTRACTED]
+- [[dot-unmerge()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposescontrollerts
+#graphify/code #graphify/EXTRACTED #community/unmerge

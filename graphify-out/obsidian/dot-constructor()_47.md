@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principals/lineage.service.ts"
+source_file: "dpdp-platform/backend/src/modules/principals/principals.controller.ts"
 type: "code"
-community: "principals.service.ts"
-location: "L34"
+community: "LineageService"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principalsservicets
+  - community/LineageService
 ---
 
 # .constructor()
 
 ## Connections
-- [[LineageService]] - `method` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
+- [[LineageService]] - `references` [EXTRACTED]
+- [[PrincipalRecipientsService]] - `references` [EXTRACTED]
+- [[PrincipalsController]] - `method` [EXTRACTED]
+- [[PrincipalsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principalsservicets
+#graphify/code #graphify/EXTRACTED #community/LineageService

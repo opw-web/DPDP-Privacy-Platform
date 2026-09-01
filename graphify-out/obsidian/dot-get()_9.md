@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/sharing.service.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/employees.service.ts"
 type: "code"
-community: "CreateSharingActivityDto"
-location: "L66"
+community: "employees.controller.ts"
+location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSharingActivityDto
+  - community/employeescontrollerts
 ---
 
 # .get()
 
 ## Connections
 - [[dot-get()_8]] - `calls` [INFERRED]
-- [[SharingService]] - `method` [EXTRACTED]
+- [[EmployeesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto
+#graphify/code #graphify/EXTRACTED #community/employeescontrollerts

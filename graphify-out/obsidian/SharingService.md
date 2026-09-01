@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/sharing.service.ts"
 type: "code"
-community: "CreateSharingActivityDto"
+community: "SharingService"
 location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSharingActivityDto
+  - community/SharingService
 ---
 
 # SharingService
@@ -15,15 +15,15 @@ tags:
 - [[dot-assertPurposeExists()]] - `method` [EXTRACTED]
 - [[dot-assertRecipientExists()]] - `method` [EXTRACTED]
 - [[dot-assertSourceIdsExist()]] - `method` [EXTRACTED]
-- [[dot-constructor()_54]] - `references` [EXTRACTED]
-- [[dot-constructor()_26]] - `method` [EXTRACTED]
-- [[dot-create()_8]] - `method` [EXTRACTED]
-- [[dot-get()_9]] - `method` [EXTRACTED]
-- [[dot-list()_14]] - `method` [EXTRACTED]
-- [[dot-update()_9]] - `method` [EXTRACTED]
-- [[Injectable_28]] - `references` [EXTRACTED]
+- [[dot-constructor()_113]] - `references` [EXTRACTED]
+- [[dot-constructor()_86]] - `method` [EXTRACTED]
+- [[dot-create()_23]] - `method` [EXTRACTED]
+- [[dot-get()_16]] - `method` [EXTRACTED]
+- [[dot-list()_36]] - `method` [EXTRACTED]
+- [[dot-update()_20]] - `method` [EXTRACTED]
+- [[Injectable_58]] - `references` [EXTRACTED]
 - [[registers.module.ts]] - `imports` [EXTRACTED]
 - [[sharing.controller.ts]] - `imports` [EXTRACTED]
 - [[sharing.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto
+#graphify/code #graphify/EXTRACTED #community/SharingService

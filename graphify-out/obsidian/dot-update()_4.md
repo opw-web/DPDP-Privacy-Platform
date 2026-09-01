@@ -1,23 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/compliance/compliance.controller.ts"
 type: "code"
-community: "purposes.controller.ts"
-location: "L29"
+community: "ComplianceController"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposescontrollerts
+  - community/ComplianceController
 ---
 
 # .update()
 
 ## Connections
-- [[dot-update()_5]] - `calls` [INFERRED]
-- [[Body_3]] - `references` [EXTRACTED]
+- [[dot-update()_22]] - `calls` [INFERRED]
+- [[Body_4]] - `references` [EXTRACTED]
+- [[ComplianceController]] - `method` [EXTRACTED]
 - [[Param_4]] - `references` [EXTRACTED]
 - [[Patch_2]] - `references` [EXTRACTED]
-- [[PurposesController]] - `method` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[UpdatePurposeDto]] - `references` [EXTRACTED]
+- [[UpdateComplianceRuleDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposescontrollerts
+#graphify/code #graphify/EXTRACTED #community/ComplianceController

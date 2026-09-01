@@ -10,7 +10,10 @@ import { PrismaService } from "../../common/prisma/prisma.service";
 import type { ScopedTransactionClient } from "../../common/prisma/scoped-transaction-client";
 import { AuditService } from "../../common/audit/audit.service";
 import type { AccessTokenPayload } from "../auth/token.service";
-import { ComplianceService, addByDeadlineUnit } from "../compliance/compliance.service";
+import {
+  ComplianceService,
+  addByDeadlineUnit,
+} from "../compliance/compliance.service";
 import { addByRetentionUnit } from "./retention-dates.util";
 import { legalHoldCovers, type LegalHoldScope } from "./legal-hold-scope.util";
 import type {
@@ -38,7 +41,10 @@ const LOG_RETENTION_MINIMUM_APPLIES_TO = "RETENTION:LOG_FLOOR";
  * task-9-report.md -- a DPO reviewing a real deployment may want this
  * list configurable rather than hard-coded.
  */
-const ACCOUNT_ACCESS_CANONICAL_FIELDS: readonly string[] = ["EMAIL", "CUSTOMER_ID"];
+const ACCOUNT_ACCESS_CANONICAL_FIELDS: readonly string[] = [
+  "EMAIL",
+  "CUSTOMER_ID",
+];
 
 /** The ONLY shape an `ErasureTask` row is ever returned in from this service. `organizationId` deliberately absent, same discipline as every other register in this codebase. */
 export const ERASURE_TASK_PUBLIC_SELECT = {
@@ -68,10 +74,7 @@ export type PublicErasureTask = Prisma.ErasureTaskGetPayload<{
 
 /** `ErasureTask.trigger` -- a plain `String` column in the schema (not a Prisma enum), spec line 308, transcribed verbatim. */
 export type ErasureTrigger =
-  | "CONSENT_WITHDRAWN"
-  | "PURPOSE_SERVED"
-  | "INACTIVITY"
-  | "REQUEST";
+  "CONSENT_WITHDRAWN" | "PURPOSE_SERVED" | "INACTIVITY" | "REQUEST";
 
 /**
  * The published, exact input shape of `createFromTrigger` (see that
@@ -82,6 +85,21 @@ export interface CreateFromTriggerInput {
   trigger: ErasureTrigger;
   dataPrincipalId: string;
   retentionPolicyId?: string;
+  /** For policy signals, the business event time (not scanner time). */
+  triggeredAt?: Date;
+  /** Optional final holder evidence supplied by a completed ERASURE request. */
+  checklist?: ErasureChecklistSubmission;
+}
+
+/**
+ * Full holder evidence is passed through the request transaction to this
+ * service, which remains the single writer of ErasureTask rows. The request
+ * DTO only accepts ids/ticks; employee attribution and timestamps are added
+ * by RequestsService before this shape reaches the writer.
+ */
+export interface ErasureChecklistSubmission {
+  systemChecklist: SystemChecklistEntry[];
+  processorChecklist: ProcessorChecklistEntry[];
 }
 
 const TERMINAL_STATES: readonly ErasureState[] = ["ERASED", "CANCELLED"];
@@ -169,7 +187,13 @@ export class ErasureTaskService {
     tx: ScopedTransactionClient,
     input: CreateFromTriggerInput,
   ): Promise<PublicErasureTask> {
-    const { trigger, dataPrincipalId, retentionPolicyId } = input;
+    const {
+      trigger,
+      dataPrincipalId,
+      retentionPolicyId,
+      checklist,
+      triggeredAt,
+    } = input;
     const now = new Date();
 
     const principal = await tx.dataPrincipal.findFirst({
@@ -177,7 +201,9 @@ export class ErasureTaskService {
       select: { id: true },
     });
     if (!principal) {
-      throw new NotFoundException(`Data principal "${dataPrincipalId}" not found.`);
+      throw new NotFoundException(
+        `Data principal "${dataPrincipalId}" not found.`,
+      );
     }
 
     let policy: {
@@ -226,7 +252,7 @@ export class ErasureTaskService {
       ).dueAt;
     } else if (policy) {
       candidateErasureDueAt = addByRetentionUnit(
-        now,
+        triggeredAt ?? now,
         policy.retentionValue,
         policy.retentionUnit,
       );
@@ -235,13 +261,17 @@ export class ErasureTaskService {
     }
 
     // ── RE-06/RE-07: the floor, never a literal ──
-    const lastProcessingAt = await this.resolveLastProcessingAt(tx, dataPrincipalId);
+    const lastProcessingAt = await this.resolveLastProcessingAt(
+      tx,
+      dataPrincipalId,
+    );
     const floorRule = await this.complianceService.resolveRule(
       LOG_RETENTION_MINIMUM_APPLIES_TO,
       now,
     );
     const retentionFloorUntil = floorRule
-      ? this.complianceService.computeDeadline(floorRule, lastProcessingAt).dueAt
+      ? this.complianceService.computeDeadline(floorRule, lastProcessingAt)
+          .dueAt
       : null;
 
     let erasureDueAt = candidateErasureDueAt;
@@ -282,11 +312,14 @@ export class ErasureTaskService {
       }
     }
 
-    const { systemChecklist, processorChecklist } = await this.buildChecklists(
+    const generatedChecklists = await this.buildChecklists(
       tx,
       dataPrincipalId,
       policy?.accountAccessCarveOut ?? false,
     );
+    const { systemChecklist, processorChecklist } = checklist
+      ? this.mergeCompletionChecklist(generatedChecklists, checklist)
+      : generatedChecklists;
 
     const created = await tx.erasureTask.create({
       data: {
@@ -300,7 +333,8 @@ export class ErasureTaskService {
         retentionFloorUntil,
         legalHoldId,
         systemChecklist: systemChecklist as unknown as Prisma.InputJsonValue,
-        processorChecklist: processorChecklist as unknown as Prisma.InputJsonValue,
+        processorChecklist:
+          processorChecklist as unknown as Prisma.InputJsonValue,
         ruleCodeSnapshot: floorRule?.ruleCode ?? null,
         ruleVersionSnapshot: floorRule?.version ?? null,
         // organizationId deliberately omitted -- the tenant-scoping
@@ -325,6 +359,106 @@ export class ErasureTaskService {
     });
 
     return created;
+  }
+
+  /**
+   * Validates request completion evidence against the holders discovered in
+   * the same transaction. This prevents an employee from satisfying the
+   * requirement with an arbitrary id, silently omitting a current holder, or
+   * marking an account-access carve-out as actionable. The generated entries
+   * are retained so excluded fields remain visible in the durable evidence.
+   */
+  private mergeCompletionChecklist(
+    expected: {
+      systemChecklist: SystemChecklistEntry[];
+      processorChecklist: ProcessorChecklistEntry[];
+    },
+    submitted: ErasureChecklistSubmission,
+  ): {
+    systemChecklist: SystemChecklistEntry[];
+    processorChecklist: ProcessorChecklistEntry[];
+  } {
+    const systemIds = new Set<string>();
+    for (const item of submitted.systemChecklist) {
+      if (systemIds.has(item.dataSourceId)) {
+        throw new BadRequestException(
+          `System checklist item for data source "${item.dataSourceId}" was submitted more than once.`,
+        );
+      }
+      systemIds.add(item.dataSourceId);
+    }
+    const expectedSystemIds = new Set(
+      expected.systemChecklist.map((item) => item.dataSourceId),
+    );
+    for (const id of systemIds) {
+      if (!expectedSystemIds.has(id)) {
+        throw new BadRequestException(
+          `System checklist contains unknown data source "${id}".`,
+        );
+      }
+    }
+
+    const mergedSystemChecklist = expected.systemChecklist.map((entry) => {
+      if (entry.excluded) return entry;
+      const submittedEntry = submitted.systemChecklist.find(
+        (item) => item.dataSourceId === entry.dataSourceId,
+      );
+      if (!submittedEntry || !submittedEntry.done) {
+        throw new BadRequestException(
+          `System checklist item for data source "${entry.dataSourceId}" is not ticked complete.`,
+        );
+      }
+      return {
+        ...entry,
+        done: true,
+        byEmployeeId: submittedEntry.byEmployeeId,
+        at: submittedEntry.at,
+      };
+    });
+
+    const processorIds = new Set<string>();
+    for (const item of submitted.processorChecklist) {
+      if (processorIds.has(item.recipientId)) {
+        throw new BadRequestException(
+          `Processor checklist item for recipient "${item.recipientId}" was submitted more than once.`,
+        );
+      }
+      processorIds.add(item.recipientId);
+    }
+    const expectedProcessorIds = new Set(
+      expected.processorChecklist.map((item) => item.recipientId),
+    );
+    for (const id of processorIds) {
+      if (!expectedProcessorIds.has(id)) {
+        throw new BadRequestException(
+          `Processor checklist contains unknown recipient "${id}".`,
+        );
+      }
+    }
+
+    const mergedProcessorChecklist = expected.processorChecklist.map(
+      (entry) => {
+        const submittedEntry = submitted.processorChecklist.find(
+          (item) => item.recipientId === entry.recipientId,
+        );
+        if (!submittedEntry || !submittedEntry.confirmed) {
+          throw new BadRequestException(
+            `Processor checklist item for recipient "${entry.recipientId}" is not confirmed.`,
+          );
+        }
+        return {
+          ...entry,
+          confirmed: true,
+          ref: submittedEntry.ref,
+          at: submittedEntry.at,
+        };
+      },
+    );
+
+    return {
+      systemChecklist: mergedSystemChecklist,
+      processorChecklist: mergedProcessorChecklist,
+    };
   }
 
   async list(state?: ErasureState): Promise<PublicErasureTask[]> {
@@ -438,7 +572,8 @@ export class ErasureTaskService {
           state: "ERASED",
           completedAt: now,
           completedByEmployeeId: actor.sub,
-          systemChecklist: mergedSystemChecklist as unknown as Prisma.InputJsonValue,
+          systemChecklist:
+            mergedSystemChecklist as unknown as Prisma.InputJsonValue,
           processorChecklist:
             mergedProcessorChecklist as unknown as Prisma.InputJsonValue,
         },
@@ -460,15 +595,9 @@ export class ErasureTaskService {
   /**
    * `CAN_MANAGE_RETENTION` cancels a task with a recorded reason.
    *
-   * No dedicated `ERASURE_TASK_CANCELLED` audit action exists in
-   * `audit-actions.ts` (only `ERASURE_TASK_CREATED`/`ERASURE_TASK_COMPLETED`/
-   * `LEGAL_HOLD_CREATED` are defined for this module, and the task brief
-   * for this file forbids adding a new one). This reuses
-   * `ERASURE_TASK_COMPLETED` with `metadata.change: "CANCELLED"` -- the
-   * SAME reuse-with-a-`change`-tag convention `RetentionService.update()`
-   * (MVP 1, `registers/retention.service.ts`) already established by
-   * reusing `RETENTION_POLICY_CREATED` for updates. Reported as a gap in
-   * task-9-report.md.
+   * Cancellation carries its own audit action. It is a terminal state but
+   * not an erasure completion, so an auditor must never need to infer that
+   * distinction from mutable metadata.
    */
   async cancel(
     id: string,
@@ -495,12 +624,13 @@ export class ErasureTaskService {
       });
 
       await this.auditService.record(tx, {
-        action: "ERASURE_TASK_COMPLETED",
+        action: "ERASURE_TASK_CANCELLED",
         resourceType: "ErasureTask",
         resourceId: id,
         subjectPrincipalId: updated.dataPrincipalId,
         metadata: {
-          change: "CANCELLED",
+          fromState: existing.state,
+          toState: "CANCELLED",
           reason: dto.reason,
           cancelledByEmployeeId: actor.sub,
         },
@@ -656,12 +786,14 @@ export class ErasureTaskService {
       where: { active: true, type: "DATA_PROCESSOR" },
       select: { id: true },
     });
-    const processorChecklist: ProcessorChecklistEntry[] = processors.map((p) => ({
-      recipientId: p.id,
-      confirmed: false,
-      ref: null,
-      at: null,
-    }));
+    const processorChecklist: ProcessorChecklistEntry[] = processors.map(
+      (p) => ({
+        recipientId: p.id,
+        confirmed: false,
+        ref: null,
+        at: null,
+      }),
+    );
 
     return { systemChecklist, processorChecklist };
   }

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ListAuditEventsDto"
+community: "UpdateComplianceRuleDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ListAuditEventsDto
+  - community/UpdateComplianceRuleDto
 ---
 
 # IsOptional
 
 ## Connections
-- [[ListAuditEventsDto]] - `references` [EXTRACTED]
+- [[UpdateComplianceRuleDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ListAuditEventsDto
+#graphify/code #graphify/EXTRACTED #community/UpdateComplianceRuleDto

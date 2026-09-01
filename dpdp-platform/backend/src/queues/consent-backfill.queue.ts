@@ -1,10 +1,7 @@
-import { Injectable, Logger, OnModuleInit } from "@nestjs/common";
 import { InjectQueue } from "@nestjs/bullmq";
+import { Injectable } from "@nestjs/common";
 import type { Queue } from "bullmq";
-import {
-  RECONCILE_BOOT_TIMEOUT_MS,
-  withBootTimeout,
-} from "./schedule-reconciliation.service";
+import { BootRegistrationRegistry } from "./boot-registration.registry";
 
 /**
  * The `consent-backfill` BullMQ queue (spec §4.3, task 10 brief):
@@ -53,47 +50,30 @@ const CONSENT_BACKFILL_CRON = "0 * * * *";
  * restart -- same primitive `RetentionScanQueueService`/`SyncQueueService`
  * use.
  *
- * `onModuleInit` bounds the upsert by `RECONCILE_BOOT_TIMEOUT_MS` via the
- * SHARED `withBootTimeout` helper (task 18 review round 2, Important 2;
- * reused here per this task's explicit instruction, not reimplemented) --
- * an unreachable Redis at boot would otherwise leave
- * `upsertJobScheduler` sitting in ioredis's offline command queue forever
- * (`maxRetriesPerRequest: null`, required for BullMQ's own connections),
- * hanging `onModuleInit` and, with it, application boot. On timeout or
- * failure this logs and lets boot continue regardless.
+ * Registers itself with `BootRegistrationRegistry` from its constructor
+ * rather than awaiting its own registration in its own `onModuleInit`
+ * (task 18 review round 2, Important 2 established `withBootTimeout` for
+ * exactly this per-service case; a later regression showed that bounding
+ * each queue module's `onModuleInit` INDIVIDUALLY still let worst-case
+ * boot time scale linearly with the number of queue modules, since Nest
+ * awaits `onModuleInit` sequentially across modules -- see
+ * `BootRegistrationRegistry`'s doc comment): an unreachable Redis at
+ * boot would otherwise leave `upsertJobScheduler` sitting in ioredis's
+ * offline command queue forever (`maxRetriesPerRequest: null`, required
+ * for BullMQ's own connections); the registry now bounds this alongside
+ * every other queue module's registration under ONE shared budget rather
+ * than awaiting each in series. On failure this logs and lets boot
+ * continue regardless.
  */
 @Injectable()
-export class ConsentBackfillQueueService implements OnModuleInit {
-  private readonly logger = new Logger(ConsentBackfillQueueService.name);
-
+export class ConsentBackfillQueueService {
   constructor(
-    @InjectQueue(CONSENT_BACKFILL_QUEUE_NAME)
-    private readonly consentBackfillQueue: Queue<ConsentBackfillJobData>,
-  ) {}
-
-  async onModuleInit(): Promise<void> {
-    try {
-      await withBootTimeout(this.registerSchedule(), RECONCILE_BOOT_TIMEOUT_MS);
-    } catch (err) {
-      this.logger.warn(
-        "consent-backfill repeatable schedule did not register at " +
-          `startup (timed out after ${RECONCILE_BOOT_TIMEOUT_MS}ms, or ` +
-          "failed) -- continuing to boot regardless; the sweep will not " +
-          "run on schedule until a future boot successfully registers " +
-          `it: ${err instanceof Error ? err.message : "unknown error"}`,
-      );
-    }
-  }
-
-  async registerSchedule(): Promise<void> {
-    await this.consentBackfillQueue.upsertJobScheduler(
-      CONSENT_BACKFILL_SCHEDULER_ID,
-      { pattern: CONSENT_BACKFILL_CRON },
-      {
-        name: CONSENT_BACKFILL_QUEUE_NAME,
-        data: { triggeredBy: CONSENT_BACKFILL_SCHEDULE_TRIGGERED_BY },
-      },
-    );
-    this.logger.log("consent-backfill repeatable schedule registered.");
+    @InjectQueue(CONSENT_BACKFILL_QUEUE_NAME) private readonly queue: Queue<ConsentBackfillJobData>,
+    bootRegistrations: BootRegistrationRegistry,
+  ) {
+    bootRegistrations.register("consent-backfill schedule", () => this.queue.upsertJobScheduler(
+      CONSENT_BACKFILL_SCHEDULER_ID, { pattern: CONSENT_BACKFILL_CRON },
+      { name: CONSENT_BACKFILL_QUEUE_NAME, data: { triggeredBy: CONSENT_BACKFILL_SCHEDULE_TRIGGERED_BY } },
+    ).then(() => undefined));
   }
 }

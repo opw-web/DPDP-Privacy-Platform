@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateRetentionPolicyDto"
+community: "data-sources.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateRetentionPolicyDto
+  - community/data-sourcesservicets
 ---
 
 # IsBoolean
 
 ## Connections
-- [[CreateRetentionPolicyDto]] - `references` [EXTRACTED]
+- [[CreateDataSourceDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateRetentionPolicyDto
+#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets

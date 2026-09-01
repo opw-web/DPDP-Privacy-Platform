@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/masking/masking.service.ts"
 type: "code"
-community: "inventory.service.ts"
+community: "masking.service.ts"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/inventoryservicets
+  - community/maskingservicets
 ---
 
 # PASS_THROUGH_FIELDS
@@ -15,4 +15,4 @@ tags:
 - [[inventory.service.ts]] - `imports` [EXTRACTED]
 - [[masking.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/inventoryservicets
+#graphify/code #graphify/EXTRACTED #community/maskingservicets

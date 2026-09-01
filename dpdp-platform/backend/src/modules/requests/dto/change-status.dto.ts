@@ -1,10 +1,46 @@
 import { ApiProperty, ApiPropertyOptional } from "@nestjs/swagger";
-import { IsBoolean, IsEnum, IsIn, IsOptional, IsString } from "class-validator";
+import { Type } from "class-transformer";
+import {
+  IsArray,
+  IsBoolean,
+  IsEnum,
+  IsIn,
+  IsOptional,
+  IsString,
+  ValidateNested,
+} from "class-validator";
 import { RequestStatus } from "@prisma/client";
 import {
   ERASURE_STATUTORY_GROUNDS,
   type ErasureStatutoryGround,
 } from "../requests.constants";
+
+/** The holder evidence submitted with an ERASURE completion. */
+export class ErasureSystemChecklistDto {
+  @ApiProperty()
+  @IsString()
+  dataSourceId!: string;
+
+  @ApiProperty()
+  @IsBoolean()
+  done!: boolean;
+}
+
+/** The registered-processor evidence submitted with an ERASURE completion. */
+export class ErasureProcessorChecklistDto {
+  @ApiProperty()
+  @IsString()
+  recipientId!: string;
+
+  @ApiProperty()
+  @IsBoolean()
+  confirmed!: boolean;
+
+  @ApiPropertyOptional({ description: "The processor's ticket or confirmation reference." })
+  @IsOptional()
+  @IsString()
+  ref?: string;
+}
 
 /**
  * `POST /api/requests/:ref/status` -- the single endpoint that drives
@@ -79,4 +115,18 @@ export class ChangeStatusDto {
   @IsOptional()
   @IsBoolean()
   visibleToPrincipal?: boolean;
+
+  @ApiPropertyOptional({ type: [ErasureSystemChecklistDto] })
+  @IsOptional()
+  @IsArray()
+  @ValidateNested({ each: true })
+  @Type(() => ErasureSystemChecklistDto)
+  systemChecklist?: ErasureSystemChecklistDto[];
+
+  @ApiPropertyOptional({ type: [ErasureProcessorChecklistDto] })
+  @IsOptional()
+  @IsArray()
+  @ValidateNested({ each: true })
+  @Type(() => ErasureProcessorChecklistDto)
+  processorChecklist?: ErasureProcessorChecklistDto[];
 }

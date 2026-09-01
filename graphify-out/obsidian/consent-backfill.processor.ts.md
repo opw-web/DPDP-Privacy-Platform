@@ -1,0 +1,23 @@
+---
+source_file: "dpdp-platform/backend/src/queues/consent-backfill.processor.ts"
+type: "code"
+community: "ConsentBackfillService"
+location: "L1"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/ConsentBackfillService
+---
+
+# consent-backfill.processor.ts
+
+## Connections
+- [[CONSENT_BACKFILL_QUEUE_NAME]] - `imports` [EXTRACTED]
+- [[ConsentBackfillJobData]] - `imports` [EXTRACTED]
+- [[ConsentBackfillProcessor]] - `contains` [EXTRACTED]
+- [[ConsentBackfillService]] - `imports` [EXTRACTED]
+- [[consent-backfill.queue.ts]] - `imports_from` [EXTRACTED]
+- [[consent-backfill.service.ts]] - `imports_from` [EXTRACTED]
+- [[consents.module.ts]] - `imports_from` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/ConsentBackfillService

@@ -1,23 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts"
 type: "code"
-community: "RequirePermission"
-location: "L48"
+community: "TemplatesService"
+location: "L207"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/TemplatesService
 ---
 
 # .update()
 
 ## Connections
-- [[dot-update()_11]] - `calls` [INFERRED]
-- [[Body_6]] - `references` [EXTRACTED]
-- [[DataSourcesController]] - `method` [EXTRACTED]
-- [[Param_8]] - `references` [EXTRACTED]
-- [[Patch_5]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[UpdateDataSourceDto]] - `references` [EXTRACTED]
+- [[dot-extractAndValidateVariables()]] - `calls` [EXTRACTED]
+- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-update()_9]] - `calls` [INFERRED]
+- [[dot-validateRequiredSubsetOfReferenced()]] - `calls` [EXTRACTED]
+- [[TemplatesService]] - `method` [EXTRACTED]
+- [[UpdateTemplateDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

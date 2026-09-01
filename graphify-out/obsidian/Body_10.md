@@ -1,17 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "recipients.service.ts"
+community: "RequestsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/RequestsController
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_13]] - `references` [EXTRACTED]
-- [[dot-update()_14]] - `references` [EXTRACTED]
+- [[dot-addNote()]] - `references` [EXTRACTED]
+- [[dot-assign()]] - `references` [EXTRACTED]
+- [[dot-changeStatus()]] - `references` [EXTRACTED]
+- [[dot-escalate()]] - `references` [EXTRACTED]
+- [[dot-flagFrivolous()]] - `references` [EXTRACTED]
+- [[dot-verifyIdentity()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/RequestsController

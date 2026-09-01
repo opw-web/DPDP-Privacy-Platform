@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "InventoryService"
+community: ".setStatus"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/InventoryService
+  - community/setStatus
 ---
 
 # Get
 
 ## Connections
-- [[dot-gaps()]] - `references` [EXTRACTED]
-- [[dot-ropaCsv()]] - `references` [EXTRACTED]
-- [[dot-summary()]] - `references` [EXTRACTED]
+- [[dot-list()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/InventoryService
+#graphify/code #graphify/EXTRACTED #community/setStatus

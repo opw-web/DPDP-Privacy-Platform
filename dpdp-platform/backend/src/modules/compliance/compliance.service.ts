@@ -4,7 +4,14 @@ import {
   Injectable,
   NotFoundException,
 } from "@nestjs/common";
-import { addDays, addHours, addMonths, addYears, subDays, subHours } from "date-fns";
+import {
+  addDays,
+  addHours,
+  addMonths,
+  addYears,
+  subDays,
+  subHours,
+} from "date-fns";
 import { Prisma } from "@prisma/client";
 import type { ComplianceRule, DeadlineUnit, RuleBasis } from "@prisma/client";
 import { PrismaService } from "../../common/prisma/prisma.service";
@@ -87,23 +94,13 @@ export interface ComplianceDeadlineSnapshot {
 const RETENTION_INACTIVITY_APPLIES_TO = "RETENTION:INACTIVITY";
 
 const GRIEVANCE_RULE_CODE = "GRIEVANCE_RESPONSE";
-// DPDP Rules, 2025 -- Rule 14(3): the published grievance-redressal period
-// must not exceed ninety days. Global Constraint 4 bans bare legal numbers
-// in application code because *deadlines the company operates to* belong in
-// ComplianceRule rows with citations -- those are the company's to set, and
-// an auditor must be able to see their provenance. This number is not one of
-// those: it is a statutory ceiling the company may not exceed, not a
-// configurable deadline, so it does not get a ComplianceRule row -- making
-// it configurable would let a customer edit away the very limit this
-// platform exists to enforce, and would make the spec's Check 6
-// unenforceable. It is structurally identical to
-// `AGE_OF_MAJORITY_YEARS` in `../identity/age.service.ts`, the other
-// sanctioned exception to Global Constraint 4, and is the second (and
-// currently last) place a bare number is allowed to appear in this
-// codebase.
-const GRIEVANCE_CEILING_DAYS = 90;
-const GRIEVANCE_CITATION =
-  "DPDP Rules, 2025 — Rule 14(3): published period must not exceed ninety days";
+
+/**
+ * Seed-only statutory enforcement data. This is intentionally distinct from
+ * the organization-published grievance rule, which remains versioned and
+ * editable subject to this baseline.
+ */
+const GRIEVANCE_STATUTORY_BASELINE_RULE_CODE = "GRIEVANCE_STATUTORY_BASELINE";
 
 /**
  * Fields compared for the `COMPLIANCE_RULE_CHANGED` audit event's
@@ -150,21 +147,21 @@ function diffRules(
 
 /**
  * The LONGEST possible day count `value` of `unit` could ever amount to,
- * for the sole purpose of checking Rule 14(3)'s ninety-day ceiling
+ * for the sole purpose of checking the statutory grievance ceiling
  * (`validateGrievanceCeiling` below) -- deliberately NOT calendar-average
- * arithmetic. A calendar month is 28-31 days and a calendar year is
- * 365-366, so a naive per-unit `deadlineValue > 90` check (the original
+ * arithmetic. Calendar months and years vary in length, so a naive
+ * per-unit check (the original
  * bug: it only ever looked at `deadlineUnit === "DAYS"`) or even an
- * average-length conversion (30.44 days/month, 365.25 days/year) both
- * let some MONTHS/YEARS values silently exceed ninety actual days.
+ * average-length conversion can let some MONTHS/YEARS values silently
+ * exceed the statutory period.
  * Rounding every unit UP to its longest possible interpretation instead
  * means a rejection is always safe to appeal (re-express the same period
  * in DAYS and it may well fit) while an acceptance is never a
  * contravention. Do not "optimise" this into average month/year
  * lengths later -- that swap is exactly what would reopen the hole this
  * function exists to close. HOURS rounds UP to the next whole day
- * (`ceil`, not `floor`) for the same reason: a 25-hour deadline is
- * worst-case 2 days, not 1.
+ * (`ceil`, not `floor`) for the same reason: a deadline spanning a partial
+ * day must round up rather than down.
  */
 function worstCaseDeadlineDays(value: number, unit: DeadlineUnit): number {
   switch (unit) {
@@ -188,7 +185,7 @@ function worstCaseDeadlineDays(value: number, unit: DeadlineUnit): number {
  * Adds `value` of `unit` to `from` using calendar-aware `date-fns`
  * arithmetic -- never millisecond multiplication. `addMonths`/`addYears`
  * clip an overflowing day to the last day of the resulting month (a
- * 3-month deadline from 30 November lands on 28/29 February), and
+ * month-based deadline from the end of a month clips to the final day), and
  * `addHours`/`addDays` operate on the local calendar so a 1-day deadline
  * across a DST boundary keeps the same wall-clock time the next day
  * rather than drifting by the lost/gained hour.
@@ -234,9 +231,11 @@ export class ComplianceService {
    * to `null` unless the organization's `thirdScheduleClass` is set --
    * the three-year inactivity rule applies only to Third Schedule
    * classes. This lives here, not in any caller, so every future
-   * consumer of this lookup key inherits the guard for free.
    */
-  async resolveRule(appliesTo: string, at: Date): Promise<ComplianceRule | null> {
+  async resolveRule(
+    appliesTo: string,
+    at: Date,
+  ): Promise<ComplianceRule | null> {
     const rows = await this.prisma.scoped.complianceRule.findMany({
       where: {
         appliesTo,
@@ -263,20 +262,27 @@ export class ComplianceService {
 
   /**
    * Pure calendar-time computation, no I/O. `warningLead`'s unit is
-   * `deadlineUnit` itself for HOURS-unit rules (a 24-HOURS rule's "warn
-   * 6" means 6 hours before `dueAt`) and DAYS for every other unit
+   * `deadlineUnit` itself for HOURS-unit rules (an hours-denominated rule's
+   * warning lead means hours before `dueAt`) and DAYS for every other unit
    * (DAYS/MONTHS/YEARS) -- matching every row of the spec's seed table
-   * exactly, including the two MONTHS/YEARS rules that spell out "warn
-   * 30 days" explicitly because a months-or-years-denominated warning
+   * exactly, including the two MONTHS/YEARS rules that spell out a
+   * day-based warning explicitly because a months-or-years-denominated warning
    * lead would be nonsensical. The schema carries no separate
    * `warningLeadUnit` column, so this mapping is the interpretation this
    * service commits to; see task-2-report.md for the full reasoning.
    */
   computeDeadline(
-    rule: Pick<ComplianceRule, "deadlineValue" | "deadlineUnit" | "warningLead">,
+    rule: Pick<
+      ComplianceRule,
+      "deadlineValue" | "deadlineUnit" | "warningLead"
+    >,
     from: Date,
   ): { dueAt: Date; warningAt: Date } {
-    const dueAt = addByDeadlineUnit(from, rule.deadlineValue, rule.deadlineUnit);
+    const dueAt = addByDeadlineUnit(
+      from,
+      rule.deadlineValue,
+      rule.deadlineUnit,
+    );
     const warningAt =
       rule.deadlineUnit === "HOURS"
         ? subHours(dueAt, rule.warningLead)
@@ -292,7 +298,10 @@ export class ComplianceService {
    */
   snapshotOnto(
     entity: Partial<ComplianceDeadlineSnapshot>,
-    rule: Pick<ComplianceRule, "id" | "ruleCode" | "version" | "basis" | "legalSource">,
+    rule: Pick<
+      ComplianceRule,
+      "id" | "ruleCode" | "version" | "basis" | "legalSource"
+    >,
     dueAt: Date,
     warningAt: Date,
   ): void {
@@ -306,32 +315,42 @@ export class ComplianceService {
   }
 
   /**
-   * `GRIEVANCE_RESPONSE` refuses ANY `deadlineValue`/`deadlineUnit` pair
-   * whose worst-case day count (`worstCaseDeadlineDays` above) exceeds
-   * 90 -- Rule 14(3)'s statutory ceiling. This is a single check against
-   * a normalised day count, not one branch per unit: the bug this
-   * replaced checked `deadlineUnit === "DAYS"` only, so `{deadlineValue:
-   * 6, deadlineUnit: "MONTHS"}` (~180 days) sailed through with a 200.
-   * Adding HOURS/MONTHS/YEARS branches alongside the DAYS one would
-   * reproduce that shape of bug the next time a unit is added; comparing
-   * one normalised number is not extensible in the same broken way. The
-   * citation string is included verbatim in the thrown message so it
-   * reaches the HTTP 400 body.
+   * The published grievance rule is bounded by a separate, seed-only
+   * statutory baseline. A missing or disabled baseline is an unsafe
+   * configuration, so validation fails closed rather than accepting an
+   * unbounded published period. Both values are normalised through one
+   * calendar-safe conversion before comparison.
    */
-  private validateGrievanceCeiling(
+  private async validateGrievanceCeiling(
     ruleCode: string,
     deadlineValue: number,
     deadlineUnit: DeadlineUnit,
-  ): void {
+  ): Promise<void> {
     if (ruleCode !== GRIEVANCE_RULE_CODE) {
       return;
     }
+    const ceilingRule = await this.prisma.scoped.complianceRule.findFirst({
+      where: {
+        ruleCode: GRIEVANCE_STATUTORY_BASELINE_RULE_CODE,
+        enabled: true,
+      },
+      select: { deadlineValue: true, deadlineUnit: true, legalSource: true },
+    });
+    if (!ceilingRule) {
+      throw new BadRequestException(
+        "The statutory grievance baseline is unavailable; the published grievance period cannot be changed.",
+      );
+    }
     const worstCaseDays = worstCaseDeadlineDays(deadlineValue, deadlineUnit);
-    if (worstCaseDays > GRIEVANCE_CEILING_DAYS) {
+    const ceilingDays = worstCaseDeadlineDays(
+      ceilingRule.deadlineValue,
+      ceilingRule.deadlineUnit,
+    );
+    if (worstCaseDays > ceilingDays) {
       throw new BadRequestException(
         `A ${GRIEVANCE_RULE_CODE} deadline of ${deadlineValue} ${deadlineUnit} is ` +
           `at least ${worstCaseDays} days under worst-case calendar arithmetic, which ` +
-          `exceeds the ${GRIEVANCE_CEILING_DAYS}-day ceiling. ${GRIEVANCE_CITATION}.`,
+          `exceeds the configured statutory ceiling. ${ceilingRule.legalSource}.`,
       );
     }
   }
@@ -339,6 +358,7 @@ export class ComplianceService {
   /** Latest version of every `ruleCode` in the organization, regardless of `enabled`. */
   async list(): Promise<PublicComplianceRule[]> {
     const rows = await this.prisma.scoped.complianceRule.findMany({
+      where: { ruleCode: { not: GRIEVANCE_STATUTORY_BASELINE_RULE_CODE } },
       orderBy: [{ ruleCode: "asc" }, { version: "desc" }],
       select: COMPLIANCE_RULE_PUBLIC_SELECT,
     });
@@ -359,12 +379,24 @@ export class ComplianceService {
     if (!row) {
       throw new NotFoundException(`Compliance rule "${id}" not found.`);
     }
+    if (row.ruleCode === GRIEVANCE_STATUTORY_BASELINE_RULE_CODE) {
+      throw new NotFoundException(`Compliance rule "${id}" not found.`);
+    }
     return toPublicComplianceRule(row);
   }
 
   /** Creates version 1 of a brand-new `ruleCode`. */
   async create(dto: CreateComplianceRuleDto): Promise<PublicComplianceRule> {
-    this.validateGrievanceCeiling(dto.ruleCode, dto.deadlineValue, dto.deadlineUnit);
+    if (dto.ruleCode === GRIEVANCE_STATUTORY_BASELINE_RULE_CODE) {
+      throw new BadRequestException(
+        "The statutory grievance baseline is seed-managed.",
+      );
+    }
+    await this.validateGrievanceCeiling(
+      dto.ruleCode,
+      dto.deadlineValue,
+      dto.deadlineUnit,
+    );
 
     const existing = await this.prisma.scoped.complianceRule.findFirst({
       where: { ruleCode: dto.ruleCode },
@@ -391,8 +423,12 @@ export class ComplianceService {
           warningLead: dto.warningLead,
           escalateOnBreach: dto.escalateOnBreach ?? false,
           publishedPeriodText: dto.publishedPeriodText ?? null,
-          effectiveFrom: dto.effectiveFrom ? new Date(dto.effectiveFrom) : new Date(),
-          effectiveUntil: dto.effectiveUntil ? new Date(dto.effectiveUntil) : null,
+          effectiveFrom: dto.effectiveFrom
+            ? new Date(dto.effectiveFrom)
+            : new Date(),
+          effectiveUntil: dto.effectiveUntil
+            ? new Date(dto.effectiveUntil)
+            : null,
           enabled: dto.enabled ?? true,
           reviewedByEmployeeId: null,
           reviewedAt: null,
@@ -430,12 +466,20 @@ export class ComplianceService {
    * (`reviewedByEmployeeId: null`) regardless of the edited row's review
    * state -- a changed rule needs the DPO's eyes again.
    */
-  async update(id: string, dto: UpdateComplianceRuleDto): Promise<PublicComplianceRule> {
+  async update(
+    id: string,
+    dto: UpdateComplianceRuleDto,
+  ): Promise<PublicComplianceRule> {
     const target = await this.prisma.scoped.complianceRule.findFirst({
       where: { id },
     });
     if (!target) {
       throw new NotFoundException(`Compliance rule "${id}" not found.`);
+    }
+    if (target.ruleCode === GRIEVANCE_STATUTORY_BASELINE_RULE_CODE) {
+      throw new BadRequestException(
+        "The statutory grievance baseline is seed-managed.",
+      );
     }
 
     const latest = await this.prisma.scoped.complianceRule.findFirst({
@@ -463,13 +507,15 @@ export class ComplianceService {
         dto.publishedPeriodText !== undefined
           ? dto.publishedPeriodText
           : target.publishedPeriodText,
-      effectiveFrom: dto.effectiveFrom ? new Date(dto.effectiveFrom) : new Date(),
+      effectiveFrom: dto.effectiveFrom
+        ? new Date(dto.effectiveFrom)
+        : new Date(),
       effectiveUntil: dto.effectiveUntil ? new Date(dto.effectiveUntil) : null,
       enabled: dto.enabled ?? target.enabled,
       notes: dto.notes !== undefined ? dto.notes : target.notes,
     };
 
-    this.validateGrievanceCeiling(
+    await this.validateGrievanceCeiling(
       target.ruleCode,
       effective.deadlineValue,
       effective.deadlineUnit,
@@ -513,12 +559,20 @@ export class ComplianceService {
    * `reviewedByEmployeeId`/`reviewedAt` come only from the verified actor
    * and the server clock, never the request body.
    */
-  async review(id: string, actor: AccessTokenPayload): Promise<PublicComplianceRule> {
+  async review(
+    id: string,
+    actor: AccessTokenPayload,
+  ): Promise<PublicComplianceRule> {
     const existing = await this.prisma.scoped.complianceRule.findFirst({
       where: { id },
     });
     if (!existing) {
       throw new NotFoundException(`Compliance rule "${id}" not found.`);
+    }
+    if (existing.ruleCode === GRIEVANCE_STATUTORY_BASELINE_RULE_CODE) {
+      throw new BadRequestException(
+        "The statutory grievance baseline is seed-managed.",
+      );
     }
 
     return this.prisma.scoped.$transaction(async (tx) => {

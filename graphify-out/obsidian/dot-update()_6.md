@@ -1,23 +1,26 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/employees.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
 type: "code"
-community: "employees.controller.ts"
-location: "L34"
+community: "DataSourcesService"
+location: "L318"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeescontrollerts
+  - community/DataSourcesService
 ---
 
 # .update()
 
 ## Connections
-- [[dot-update()_7]] - `calls` [INFERRED]
-- [[Body_4]] - `references` [EXTRACTED]
-- [[EmployeesController]] - `method` [EXTRACTED]
-- [[Param_5]] - `references` [EXTRACTED]
-- [[Patch_3]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[UpdateEmployeeDto]] - `references` [EXTRACTED]
+- [[dot-assertPubliclyAvailableJustified()]] - `calls` [EXTRACTED]
+- [[dot-encrypt()]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-scheduleSync()]] - `calls` [EXTRACTED]
+- [[dot-testConnection()]] - `calls` [EXTRACTED]
+- [[dot-update()_21]] - `calls` [INFERRED]
+- [[DataSourcesService]] - `method` [EXTRACTED]
+- [[UpdateDataSourceDto]] - `references` [EXTRACTED]
+- [[duplicateNameMessage()]] - `calls` [EXTRACTED]
+- [[isUniqueConstraintViolation()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeescontrollerts
+#graphify/code #graphify/EXTRACTED #community/DataSourcesService

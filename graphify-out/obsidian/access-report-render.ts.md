@@ -1,0 +1,29 @@
+---
+source_file: "dpdp-platform/backend/src/modules/evidence/access-report-render.ts"
+type: "code"
+community: "access-report-render.ts"
+location: "L1"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/access-report-renderts
+---
+
+# access-report-render.ts
+
+## Connections
+- [[ACCESS_REPORT_CSV_HEADER]] - `contains` [EXTRACTED]
+- [[AccessReportData]] - `imports` [EXTRACTED]
+- [[access-report.service.ts]] - `imports_from` [EXTRACTED]
+- [[csv-writer.ts]] - `re_exports` [EXTRACTED]
+- [[csvDocument()]] - `imports` [EXTRACTED]
+- [[csvRow()]] - `imports` [EXTRACTED]
+- [[pdf-utils.ts]] - `imports_from` [EXTRACTED]
+- [[renderAccessReportCsv()]] - `contains` [EXTRACTED]
+- [[renderAccessReportPdf()]] - `contains` [EXTRACTED]
+- [[renderPdf()]] - `imports` [EXTRACTED]
+- [[writePdfLetterhead()]] - `imports` [EXTRACTED]
+- [[writePdfLine()]] - `imports` [EXTRACTED]
+- [[writePdfSectionHeading()]] - `imports` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/access-report-renderts

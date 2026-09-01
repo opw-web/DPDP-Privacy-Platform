@@ -14,7 +14,7 @@ import { DeadlineUnit, RuleBasis } from "@prisma/client";
 /**
  * These decorators are the first line of defence only.
  * `ComplianceService.create()`/`update()` re-derive and re-check the
- * GRIEVANCE_RESPONSE 90-day ceiling independently against the actual
+ * statutory grievance-response ceiling independently against the actual
  * effective values about to be written, same discipline as
  * `CreatePurposeDto`/`PurposesService.validateBasis()`.
  */
@@ -42,7 +42,7 @@ export class CreateComplianceRuleDto {
 
   @ApiProperty({
     description:
-      'The citation transcribed verbatim, e.g. "DPDP Rules, 2025 — Rule 14(3): ...".',
+      "The legal authority or organization policy source for this published rule.",
   })
   @IsString()
   @MinLength(1)
@@ -90,7 +90,8 @@ export class CreateComplianceRuleDto {
   escalateOnBreach?: boolean;
 
   @ApiPropertyOptional({
-    description: "RT-11: the period the company publishes, if different wording is needed.",
+    description:
+      "RT-11: the period the company publishes, if different wording is needed.",
   })
   @IsOptional()
   @IsString()
@@ -101,7 +102,9 @@ export class CreateComplianceRuleDto {
   @IsDateString()
   effectiveFrom?: string;
 
-  @ApiPropertyOptional({ description: "ISO date-time. Defaults to open-ended (null)." })
+  @ApiPropertyOptional({
+    description: "ISO date-time. Defaults to open-ended (null).",
+  })
   @IsOptional()
   @IsDateString()
   effectiveUntil?: string;

@@ -1,21 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/employees.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/security-measures.service.ts"
 type: "code"
-community: "employees.controller.ts"
-location: "L22"
+community: "security-measures.service.ts"
+location: "L81"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeescontrollerts
+  - community/security-measuresservicets
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_7]] - `calls` [INFERRED]
-- [[EmployeesController]] - `method` [EXTRACTED]
-- [[Get_9]] - `references` [EXTRACTED]
-- [[Param_5]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-get()_5]] - `calls` [INFERRED]
+- [[SecurityMeasuresService]] - `method` [EXTRACTED]
+- [[groupByRuleReference()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeescontrollerts
+#graphify/code #graphify/EXTRACTED #community/security-measuresservicets

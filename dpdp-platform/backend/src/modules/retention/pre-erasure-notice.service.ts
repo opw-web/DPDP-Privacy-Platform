@@ -1,8 +1,13 @@
 import { Injectable, Logger } from "@nestjs/common";
 import { PrismaService } from "../../common/prisma/prisma.service";
 import { AuditService } from "../../common/audit/audit.service";
-import { TenantContext, type TenantStore } from "../../common/tenant/tenant-context";
+import {
+  TenantContext,
+  type TenantStore,
+} from "../../common/tenant/tenant-context";
 import { NotificationsService } from "../notifications/notifications.service";
+import type { NotificationSendInput } from "../notifications/notification-provider.interface";
+import { lockRetentionWorkflow } from "./retention-transaction-lock.util";
 
 const PRE_ERASURE_NOTICE_ACTOR_LABEL = "pre-erasure-notice";
 
@@ -19,7 +24,9 @@ export interface PreErasureNoticeSummary {
  * vary per task.
  */
 function buildPreErasureNoticeBody(erasureDueAt: Date | null): string {
-  const dateText = erasureDueAt ? erasureDueAt.toISOString() : "the scheduled date";
+  const dateText = erasureDueAt
+    ? erasureDueAt.toISOString()
+    : "the scheduled date";
   return (
     `Your personal data is scheduled to be erased on ${dateText} because it is ` +
     "no longer required for the purpose it was collected for. Under Rule 8(2) of " +
@@ -66,7 +73,9 @@ export class PreErasureNoticeService {
   ) {}
 
   async runForAllOrganizations(): Promise<void> {
-    const orgs = await this.prisma.organization.findMany({ select: { id: true } });
+    const orgs = await this.prisma.organization.findMany({
+      select: { id: true },
+    });
     for (const org of orgs) {
       const store: TenantStore = {
         organizationId: org.id,
@@ -88,7 +97,7 @@ export class PreErasureNoticeService {
   /** Must be called inside a bound `TenantContext`. */
   async runForCurrentOrganization(): Promise<PreErasureNoticeSummary> {
     const now = new Date();
-    const tasksCancelled = await this.cancelOnContact(now);
+    const tasksCancelled = await this.cancelOnContact();
     const noticesSent = await this.sendDueNotices(now);
     return { noticesSent, tasksCancelled };
   }
@@ -103,24 +112,72 @@ export class PreErasureNoticeService {
       select: { id: true, dataPrincipalId: true, erasureDueAt: true },
     });
 
+    let sent = 0;
     for (const task of due) {
-      await this.notificationsService.send({
-        audience: "PRINCIPAL",
-        dataPrincipalId: task.dataPrincipalId,
-        title: "Your data is scheduled for erasure",
-        body: buildPreErasureNoticeBody(task.erasureDueAt),
-        severity: "WARNING",
-        linkPath: "/me",
-      });
-      await this.prisma.scoped.erasureTask.update({
-        where: { id: task.id },
-        data: { state: "NOTICE_SENT", preErasureNoticeSentAt: now },
-      });
+      // Keep the advisory lock until the durable portal notification,
+      // audited CAS transition and transaction commit. External email is
+      // dispatched only after that commit, so rollback can never leave a
+      // delivered message whose task/audit evidence did not persist.
+      const committedNotification = await this.prisma.scoped.$transaction(
+        async (tx) => {
+          await lockRetentionWorkflow(tx, `erasure-task:${task.id}`);
+          const current = await tx.erasureTask.findFirst({
+            where: {
+              id: task.id,
+              state: "EVALUATED",
+              preErasureNoticeDueAt: { lte: now },
+              preErasureNoticeSentAt: null,
+            },
+            select: { dataPrincipalId: true, erasureDueAt: true },
+          });
+          if (!current) return false;
+
+          const notificationInput: NotificationSendInput = {
+            audience: "PRINCIPAL",
+            dataPrincipalId: current.dataPrincipalId,
+            title: "Your data is scheduled for erasure",
+            body: buildPreErasureNoticeBody(current.erasureDueAt),
+            severity: "WARNING",
+            linkPath: "/me",
+          };
+          await this.notificationsService.createPortalInTransaction(
+            tx,
+            notificationInput,
+          );
+          const result = await tx.erasureTask.updateMany({
+            where: {
+              id: task.id,
+              state: "EVALUATED",
+              preErasureNoticeSentAt: null,
+            },
+            data: { state: "NOTICE_SENT", preErasureNoticeSentAt: now },
+          });
+          if (result.count !== 1) return false;
+          await this.auditService.record(tx, {
+            action: "ERASURE_TASK_PRE_ERASURE_NOTICE_SENT",
+            resourceType: "ErasureTask",
+            resourceId: task.id,
+            subjectPrincipalId: current.dataPrincipalId,
+            metadata: {
+              fromState: "EVALUATED",
+              toState: "NOTICE_SENT",
+            },
+          });
+          return notificationInput;
+        },
+      );
+      if (!committedNotification) {
+        continue;
+      }
+      await this.notificationsService.deliverEmailBestEffort(
+        committedNotification,
+      );
+      sent += 1;
     }
-    return due.length;
+    return sent;
   }
 
-  private async cancelOnContact(now: Date): Promise<number> {
+  private async cancelOnContact(): Promise<number> {
     const noticed = await this.prisma.scoped.erasureTask.findMany({
       where: { state: "NOTICE_SENT" },
       select: { id: true, dataPrincipalId: true, preErasureNoticeSentAt: true },
@@ -145,20 +202,41 @@ export class PreErasureNoticeService {
       }
 
       const reason = buildCancellationReason(contact.channel);
-      await this.prisma.scoped.$transaction(async (tx) => {
-        await tx.erasureTask.update({
-          where: { id: task.id },
+      const transitioned = await this.prisma.scoped.$transaction(async (tx) => {
+        await lockRetentionWorkflow(tx, `erasure-task:${task.id}`);
+        const current = await tx.erasureTask.findFirst({
+          where: {
+            id: task.id,
+            state: "NOTICE_SENT",
+            preErasureNoticeSentAt: task.preErasureNoticeSentAt,
+          },
+          select: { dataPrincipalId: true },
+        });
+        if (!current) return false;
+        const result = await tx.erasureTask.updateMany({
+          where: {
+            id: task.id,
+            state: "NOTICE_SENT",
+            preErasureNoticeSentAt: task.preErasureNoticeSentAt,
+          },
           data: { state: "CANCELLED", cancelledReason: reason },
         });
+        if (result.count !== 1) return false;
         await this.auditService.record(tx, {
-          action: "ERASURE_TASK_COMPLETED",
+          action: "ERASURE_TASK_CANCELLED",
           resourceType: "ErasureTask",
           resourceId: task.id,
           subjectPrincipalId: task.dataPrincipalId,
-          metadata: { change: "CANCELLED", reason, channel: contact.channel },
+          metadata: {
+            fromState: "NOTICE_SENT",
+            toState: "CANCELLED",
+            reason,
+            channel: contact.channel,
+          },
         });
+        return true;
       });
-      cancelled += 1;
+      if (transitioned) cancelled += 1;
     }
     return cancelled;
   }

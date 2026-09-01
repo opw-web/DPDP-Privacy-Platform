@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "source-purposes.service.ts"
+community: "EnvironmentVariables"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/source-purposesservicets
+  - community/EnvironmentVariables
 ---
 
 # IsString
 
 ## Connections
-- [[AttachPurposesDto]] - `references` [EXTRACTED]
+- [[EnvironmentVariables]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/source-purposesservicets
+#graphify/code #graphify/EXTRACTED #community/EnvironmentVariables

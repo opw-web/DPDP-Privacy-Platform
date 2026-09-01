@@ -1,0 +1,24 @@
+---
+source_file: "dpdp-platform/backend/src/queues/queues.module.ts"
+type: "code"
+community: "app.module.ts"
+location: "L71"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/appmodulets
+---
+
+# QueuesModule
+
+## Connections
+- [[Module_31]] - `references` [EXTRACTED]
+- [[consents.module.ts]] - `imports` [EXTRACTED]
+- [[data-sources.module.ts]] - `imports` [EXTRACTED]
+- [[queues.module.ts]] - `contains` [EXTRACTED]
+- [[requests.module.ts]] - `imports` [EXTRACTED]
+- [[retention.module.ts]] - `imports` [EXTRACTED]
+- [[sdf.module.ts]] - `imports` [EXTRACTED]
+- [[sync.module.ts]] - `imports` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/appmodulets

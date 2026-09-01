@@ -12,7 +12,7 @@ tags:
 # MalformedCiphertextError
 
 ## Connections
-- [[dot-constructor()_37]] - `method` [EXTRACTED]
+- [[dot-constructor()_55]] - `method` [EXTRACTED]
 - [[dot-decrypt()]] - `calls` [EXTRACTED]
 - [[crypto.service.spec.ts]] - `imports` [EXTRACTED]
 - [[crypto.service.ts]] - `contains` [EXTRACTED]

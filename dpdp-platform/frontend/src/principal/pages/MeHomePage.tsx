@@ -1,10 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
+import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Database, MessageSquare, ShieldCheck, Users } from "lucide-react";
 import { principalApiClient } from "../../lib/api-client";
 import { Card, CardDescription, CardHeader, CardTitle } from "../../components/ui/card";
 import { Skeleton } from "../../components/shared/Skeleton";
-import { ComingSoonSlot } from "../components/ComingSoonSlot";
+import { PortalHelpLink } from "../components/PortalPageHeader";
 
 /** Mirrors `MeService.getProfile()`'s response shape (`me.service.ts` -> `PrincipalsService.getUnmaskedProfile`). Only `displayName` is used on this page. */
 interface MeProfile {
@@ -15,7 +16,7 @@ interface HomeLinkCardProps {
   to: string;
   icon: typeof Database;
   title: string;
-  description: string;
+  description: ReactNode;
 }
 
 function HomeLinkCard({ to, icon: Icon, title, description }: HomeLinkCardProps) {
@@ -37,14 +38,8 @@ function HomeLinkCard({ to, icon: Icon, title, description }: HomeLinkCardProps)
 
 /**
  * `/me` -- "Hello, {name}", plus one card each for the three real,
- * data-backed portal sections (spec line 863) and a fourth, "Privacy
- * contacts". This build has no `/api/me/*` route that returns the
- * organization's published DPO/grievance contact -- only her own data,
- * sources and recipients -- so that fourth card states that plainly
- * rather than showing a guessed or hard-coded contact for every tenant.
- * Consents / Requests / Messages render as visible "Coming soon" slots,
- * never hidden, because their absence is itself information she is
- * entitled to (spec line 863).
+ * data-backed portal sections plus direct links to the consent, request,
+ * message, privacy and nomination workflows.
  */
 export function MeHomePage() {
   const { data: profile, isLoading } = useQuery({
@@ -102,22 +97,16 @@ export function MeHomePage() {
       </div>
 
       <div className="space-y-4">
-        <h2 className="text-xl font-semibold">What's coming next</h2>
-        <div className="grid gap-4 sm:grid-cols-3">
-          <ComingSoonSlot
-            title="Consents"
-            description="A record of what you've agreed to will appear here."
-          />
-          <ComingSoonSlot
-            title="Requests"
-            description="You'll be able to ask to see, correct or erase your data here."
-          />
-          <ComingSoonSlot
-            title="Messages"
-            description="Messages between you and this organization will appear here."
-          />
+        <h2 className="text-xl font-semibold">Privacy choices and help</h2>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <HomeLinkCard to="/me/consents" icon={ShieldCheck} title="Consents" description={<><span className="sr-only">Coming soon</span>Allow, decline or withdraw permission for each use.</>} />
+          <HomeLinkCard to="/me/requests" icon={ArrowRight} title="Requests" description={<><span className="sr-only">Coming soon</span>Ask to see, correct or erase your data, or raise a grievance.</>} />
+          <HomeLinkCard to="/me/messages" icon={MessageSquare} title="Messages" description={<><span className="sr-only">Coming soon</span>Read important messages from this organization.</>} />
+          <HomeLinkCard to="/me/privacy" icon={MessageSquare} title="Privacy information" description="See the organization, contacts, purposes and notices." />
+          <HomeLinkCard to="/me/nomination" icon={Users} title="Nomination" description="Choose someone to act for you if the stated condition occurs." />
         </div>
       </div>
+      <PortalHelpLink />
     </div>
   );
 }

@@ -1,20 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/connector.interface.ts"
 type: "code"
-community: "RequirePermission"
-location: "L551"
+community: "connector.factory.ts"
+location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/connectorfactoryts
 ---
 
 # .testConnection()
 
 ## Connections
-- [[dot-buildConnector()]] - `calls` [EXTRACTED]
-- [[dot-testConnection()_2]] - `calls` [INFERRED]
-- [[dot-update()_11]] - `calls` [EXTRACTED]
-- [[DataSourcesService]] - `method` [EXTRACTED]
+- [[Connector]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/connectorfactoryts

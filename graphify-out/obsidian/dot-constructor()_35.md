@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/common/crypto/crypto.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync.controller.ts"
 type: "code"
-community: "CryptoService"
-location: "L70"
+community: "sync.service.ts"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CryptoService
+  - community/syncservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[CryptoService]] - `method` [EXTRACTED]
-- [[InvalidEncryptionKeyError]] - `calls` [EXTRACTED]
+- [[SyncController]] - `method` [EXTRACTED]
+- [[SyncService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CryptoService
+#graphify/code #graphify/EXTRACTED #community/syncservicets

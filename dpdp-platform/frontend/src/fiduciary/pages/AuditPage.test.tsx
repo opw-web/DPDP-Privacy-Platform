@@ -43,6 +43,12 @@ const AUDIT_EVENT: AuditEventListItem = {
 interface MockRoutes {
   events?: AuditEventListItem[];
   permissions?: string[];
+  chainResult?: {
+    valid: boolean;
+    checkedCount: number;
+    firstBrokenSequence: string | null;
+    reason: string | null;
+  };
 }
 
 async function loginAndRenderThroughShell(routes: MockRoutes = {}) {
@@ -89,6 +95,26 @@ async function loginAndRenderThroughShell(routes: MockRoutes = {}) {
           status: 200,
           headers: { "Content-Type": "text/csv; charset=utf-8" },
         }),
+      );
+    }
+    if (url.endsWith("/audit-events/export.csv")) {
+      return Promise.resolve(
+        new Response("Event ID,Sequence\r\n", {
+          status: 200,
+          headers: { "Content-Type": "text/csv; charset=utf-8" },
+        }),
+      );
+    }
+    if (url.endsWith("/audit-events/verify-chain")) {
+      return Promise.resolve(
+        jsonResponse(
+          routes.chainResult ?? {
+            valid: true,
+            checkedCount: events.length,
+            firstBrokenSequence: null,
+            reason: null,
+          },
+        ),
       );
     }
     throw new Error(`Unexpected fetch to ${url}`);
@@ -220,5 +246,29 @@ describe("AuditPage", () => {
       await screen.findByText(/no audit events have been recorded for this organization yet/i),
     ).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /go to dashboard/i })).toHaveAttribute("href", "/app");
+  });
+
+  it("renders a valid chain result after verification", async () => {
+    await loginAndRenderThroughShell({
+      chainResult: { valid: true, checkedCount: 42, firstBrokenSequence: null, reason: null },
+    });
+    const user = userEvent.setup();
+    await user.click(await screen.findByRole("button", { name: /verify hash chain/i }));
+    expect(await screen.findByRole("status")).toHaveTextContent("Chain valid: 42 event(s) checked.");
+  });
+
+  it("renders the first broken sequence and reason after a failed verification", async () => {
+    await loginAndRenderThroughShell({
+      chainResult: {
+        valid: false,
+        checkedCount: 10,
+        firstBrokenSequence: "7",
+        reason: "stored hash does not match the recomputed hash",
+      },
+    });
+    const user = userEvent.setup();
+    await user.click(await screen.findByRole("button", { name: /verify hash chain/i }));
+    expect(await screen.findByRole("alert")).toHaveTextContent(/chain broken at sequence 7/i);
+    expect(screen.getByRole("alert")).toHaveTextContent(/stored hash does not match/i);
   });
 });

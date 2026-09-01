@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
 type: "code"
-community: "merge.service.ts"
+community: "ScopedTransactionClient"
 location: "L681"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mergeservicets
+  - community/ScopedTransactionClient
 ---
 
 # .rescrubFieldSample()
@@ -17,4 +17,4 @@ tags:
 - [[ScopedTransactionClient]] - `references` [EXTRACTED]
 - [[TenantScopedPrismaClient]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mergeservicets
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

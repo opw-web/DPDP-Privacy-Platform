@@ -7,12 +7,10 @@ import { ApiProperty } from "@nestjs/swagger";
  * always the CALLER's own organization, never one selected by an id in
  * the request.
  *
- * Deliberately exposes ONLY what GO-10 requires be public: a name, a way
- * to reach that person, and where the organization has published this
- * (`publicPrivacyPageUrl`). It never returns `Organization.id`,
- * `legalName`, `grievanceContactEmail`, `settings`, or anything else on
- * the row -- `MeService.getPrivacyContact` selects exactly the five
- * source columns this DTO is built from, nothing wider.
+ * Deliberately exposes only the portal-safe organization identity, grievance
+ * channel, privacy contact, and publication URL. It never returns
+ * `Organization.id`, `settings`, or any other operational columns. The
+ * service selects these explicit fields rather than serializing the row.
  *
  * `published: false` is a first-class state, not an absence encoded as
  * `""`: when the organization has configured neither a DPO nor a
@@ -22,6 +20,23 @@ import { ApiProperty } from "@nestjs/swagger";
  * empty string the UI would render as a blank").
  */
 export class MePrivacyContactDto {
+  @ApiProperty({ description: "The organization's public display name." })
+  organizationName!: string;
+
+  @ApiProperty({
+    nullable: true,
+    type: String,
+    description: "The organization's legal name, when configured.",
+  })
+  legalName!: string | null;
+
+  @ApiProperty({
+    nullable: true,
+    type: String,
+    description: "The published grievance contact email, when configured.",
+  })
+  grievanceContactEmail!: string | null;
+
   @ApiProperty({
     description:
       "Whether the organization has published a DPO or responsible-person " +

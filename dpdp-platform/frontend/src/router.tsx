@@ -26,6 +26,33 @@ import { MeHomePage } from "./principal/pages/MeHomePage";
 import { MeDataPage } from "./principal/pages/MeDataPage";
 import { MeSourcesPage } from "./principal/pages/MeSourcesPage";
 import { MeRecipientsPage } from "./principal/pages/MeRecipientsPage";
+import { MeConsentsPage } from "./principal/pages/MeConsentsPage";
+import { MeRequestsPage } from "./principal/pages/MeRequestsPage";
+import { MeRequestDetailPage } from "./principal/pages/MeRequestDetailPage";
+import { MeMessagesPage } from "./principal/pages/MeMessagesPage";
+import { MePrivacyPage } from "./principal/pages/MePrivacyPage";
+import { MeNominationPage } from "./principal/pages/MeNominationPage";
+import { RequestsPage } from "./fiduciary/pages/RequestsPage";
+import { RequestDetailPage } from "./fiduciary/pages/RequestDetailPage";
+import { SettingsRightsPage } from "./fiduciary/pages/SettingsRightsPage";
+import { NoticesPage } from "./fiduciary/pages/NoticesPage";
+import { NoticeBuilderPage } from "./fiduciary/pages/NoticeBuilderPage";
+import { ConsentsPage } from "./fiduciary/pages/ConsentsPage";
+import { SettingsCompliancePage } from "./fiduciary/pages/SettingsCompliancePage";
+import { ChildrenPage } from "./fiduciary/pages/ChildrenPage";
+import { RetentionPage } from "./fiduciary/pages/RetentionPage";
+import { PrincipalEvidencePage } from "./fiduciary/pages/PrincipalEvidencePage";
+import { MessagingTemplatesPage } from "./fiduciary/pages/MessagingTemplatesPage";
+import { MessagingTemplateEditorPage } from "./fiduciary/pages/MessagingTemplateEditorPage";
+import { MessagingCampaignsPage } from "./fiduciary/pages/MessagingCampaignsPage";
+import { MessagingCampaignBuilderPage } from "./fiduciary/pages/MessagingCampaignBuilderPage";
+import { MessagingCampaignDetailPage } from "./fiduciary/pages/MessagingCampaignDetailPage";
+import { BreachesPage } from "./fiduciary/pages/BreachesPage";
+import { BreachWizardPage } from "./fiduciary/pages/BreachWizardPage";
+import { BreachDetailPage } from "./fiduciary/pages/BreachDetailPage";
+import { SdfPage } from "./fiduciary/pages/SdfPage";
+import { SdfGapsPage } from "./fiduciary/pages/SdfGapsPage";
+import { InformationRequestsPage } from "./fiduciary/pages/InformationRequestsPage";
 
 /**
  * `/login`, `/app/*`, `/me/login`, `/me/*` -- two independent route trees,
@@ -117,13 +144,36 @@ export function AppRouter() {
             <Route path="data-sources/new" element={<DataSourceNewPage />} />
             <Route path="data-sources/:id" element={<DataSourceDetailPage />} />
             <Route path="purposes" element={<PurposesPage />} />
+            <Route path="requests" element={<RequestsPage />} />
+            <Route path="requests/:ref" element={<RequestDetailPage />} />
+            <Route path="notices" element={<NoticesPage />} />
+            <Route path="notices/new" element={<NoticeBuilderPage />} />
+            <Route path="notices/:noticeId" element={<NoticeBuilderPage />} />
+            <Route path="consents" element={<ConsentsPage />} />
+            <Route path="children" element={<ChildrenPage />} />
+            <Route path="retention" element={<RetentionPage />} />
             <Route path="registers" element={<RegistersPage />} />
             <Route path="principals" element={<PrincipalsPage />} />
             <Route path="principals/:id" element={<PrincipalDetailPage />} />
+            <Route path="principals/:id/evidence" element={<PrincipalEvidencePage />} />
             <Route path="review" element={<ReviewQueuePage />} />
             <Route path="employees" element={<EmployeesPage />} />
             <Route path="audit" element={<AuditPage />} />
             <Route path="settings" element={<SettingsPage />} />
+            <Route path="settings/rights" element={<SettingsRightsPage />} />
+            <Route path="settings/compliance" element={<SettingsCompliancePage />} />
+            <Route path="messaging/templates" element={<MessagingTemplatesPage />} />
+            <Route path="messaging/templates/new" element={<MessagingTemplateEditorPage />} />
+            <Route path="messaging/templates/:templateId" element={<MessagingTemplateEditorPage />} />
+            <Route path="messaging/campaigns" element={<MessagingCampaignsPage />} />
+            <Route path="messaging/campaigns/new" element={<MessagingCampaignBuilderPage />} />
+            <Route path="messaging/campaigns/:campaignId" element={<MessagingCampaignDetailPage />} />
+            <Route path="breaches" element={<BreachesPage />} />
+            <Route path="breaches/new" element={<BreachWizardPage />} />
+            <Route path="breaches/:breachId" element={<BreachDetailPage />} />
+            <Route path="sdf" element={<SdfPage />} />
+            <Route path="sdf/gaps" element={<SdfGapsPage />} />
+            <Route path="information-requests" element={<InformationRequestsPage />} />
           </Route>
         </Route>
       </Route>
@@ -142,6 +192,12 @@ export function AppRouter() {
             <Route path="data" element={<MeDataPage />} />
             <Route path="sources" element={<MeSourcesPage />} />
             <Route path="recipients" element={<MeRecipientsPage />} />
+            <Route path="consents" element={<MeConsentsPage />} />
+            <Route path="requests" element={<MeRequestsPage />} />
+            <Route path="requests/:ref" element={<MeRequestDetailPage />} />
+            <Route path="messages" element={<MeMessagesPage />} />
+            <Route path="privacy" element={<MePrivacyPage />} />
+            <Route path="nomination" element={<MeNominationPage />} />
           </Route>
         </Route>
       </Route>

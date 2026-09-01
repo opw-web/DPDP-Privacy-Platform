@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "MappingsController"
+community: "NotificationsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MappingsController
+  - community/NotificationsService
 ---
 
 # ApiOkResponse
 
 ## Connections
-- [[dot-getMappings()]] - `references` [EXTRACTED]
-- [[dot-getPurposes()]] - `references` [EXTRACTED]
+- [[dot-list()_1]] - `references` [EXTRACTED]
+- [[dot-markAllRead()]] - `references` [EXTRACTED]
+- [[dot-markRead()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MappingsController
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

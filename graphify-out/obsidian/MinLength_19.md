@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "merge.service.ts"
+community: "compile-audience.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mergeservicets
+  - community/compile-audiencets
 ---
 
 # MinLength
 
 ## Connections
-- [[UnmergeDto]] - `references` [EXTRACTED]
+- [[PreviewAudienceDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mergeservicets
+#graphify/code #graphify/EXTRACTED #community/compile-audiencets

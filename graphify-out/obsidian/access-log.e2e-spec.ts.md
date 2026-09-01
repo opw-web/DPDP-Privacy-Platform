@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/access-log.e2e-spec.ts"
 type: "code"
-community: "PrismaService"
+community: "prisma.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/prismaservicets
 ---
 
 # access-log.e2e-spec.ts
@@ -19,8 +19,8 @@ tags:
 - [[TenantStore]] - `imports` [EXTRACTED]
 - [[access-log.service.ts]] - `imports_from` [EXTRACTED]
 - [[audit.service.ts]] - `imports_from` [EXTRACTED]
-- [[createOrg()]] - `contains` [EXTRACTED]
+- [[createOrg()_3]] - `contains` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

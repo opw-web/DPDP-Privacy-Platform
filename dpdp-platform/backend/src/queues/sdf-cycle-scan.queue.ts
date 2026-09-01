@@ -1,10 +1,7 @@
-import { Injectable, Logger, OnModuleInit } from "@nestjs/common";
 import { InjectQueue } from "@nestjs/bullmq";
+import { Injectable } from "@nestjs/common";
 import type { Queue } from "bullmq";
-import {
-  RECONCILE_BOOT_TIMEOUT_MS,
-  withBootTimeout,
-} from "./schedule-reconciliation.service";
+import { BootRegistrationRegistry } from "./boot-registration.registry";
 
 /**
  * The BullMQ queue backing `sdf-cycle-scan` (spec line 587: daily
@@ -41,51 +38,32 @@ export interface SdfCycleScanJobData {
 
 /**
  * Registers (idempotently) the one fixed nightly schedule at module
- * bootstrap, bounded by `RECONCILE_BOOT_TIMEOUT_MS` via `withBootTimeout`
- * -- same boot-safety policy `ScheduleReconciliationService` established
- * (task 18 review round 2, Important 2), reused rather than mirrored: an
+ * bootstrap. Registers itself with `BootRegistrationRegistry` from its
+ * constructor rather than awaiting its own registration in its own
+ * `onModuleInit` (task 18 review round 2, Important 2 established
+ * `withBootTimeout` for exactly this per-service case; a later
+ * regression showed that bounding each queue module's `onModuleInit`
+ * INDIVIDUALLY still let worst-case boot time scale linearly with the
+ * number of queue modules, since Nest awaits `onModuleInit` sequentially
+ * across modules -- see `BootRegistrationRegistry`'s doc comment): an
  * unreachable Redis at boot would otherwise leave `upsertJobScheduler`
  * sitting in ioredis's offline command queue forever
- * (`maxRetriesPerRequest: null`, required for BullMQ's own connections),
- * so `onModuleInit` -- which Nest's bootstrap AWAITS for every module --
- * would simply hang. On timeout or failure this logs and lets boot
- * continue regardless; a schedule that fails to register on a Redis blip
- * is corrected by the next successful boot, never by throwing out of
- * this one.
+ * (`maxRetriesPerRequest: null`, required for BullMQ's own connections);
+ * the registry now bounds this alongside every other queue module's
+ * registration under ONE shared budget rather than awaiting each in
+ * series. On failure this logs and lets boot continue regardless; a
+ * schedule that fails to register on a Redis blip is corrected by the
+ * next successful boot, never by throwing out of this one.
  */
 @Injectable()
-export class SdfCycleScanQueueService implements OnModuleInit {
-  private readonly logger = new Logger(SdfCycleScanQueueService.name);
-
+export class SdfCycleScanQueueService {
   constructor(
-    @InjectQueue(SDF_CYCLE_SCAN_QUEUE_NAME)
-    private readonly queue: Queue<SdfCycleScanJobData>,
-  ) {}
-
-  async onModuleInit(): Promise<void> {
-    try {
-      await withBootTimeout(
-        this.queue.upsertJobScheduler(
-          SDF_CYCLE_SCAN_SCHEDULER_ID,
-          { pattern: SDF_CYCLE_SCAN_CRON_PATTERN },
-          {
-            name: SDF_CYCLE_SCAN_JOB_NAME,
-            data: { triggeredBy: SDF_CYCLE_SCAN_SCHEDULE_TRIGGERED_BY },
-          },
-        ),
-        RECONCILE_BOOT_TIMEOUT_MS,
-      );
-      this.logger.log(
-        `sdf-cycle-scan repeatable schedule registered (${SDF_CYCLE_SCAN_CRON_PATTERN}).`,
-      );
-    } catch (err) {
-      this.logger.warn(
-        "sdf-cycle-scan repeatable schedule did not register at startup " +
-          `(timed out after ${RECONCILE_BOOT_TIMEOUT_MS}ms, or failed) -- ` +
-          "continuing to boot regardless; the scan will not run on " +
-          "schedule until a future boot successfully registers it: " +
-          `${err instanceof Error ? err.message : "unknown error"}`,
-      );
-    }
+    @InjectQueue(SDF_CYCLE_SCAN_QUEUE_NAME) private readonly queue: Queue<SdfCycleScanJobData>,
+    bootRegistrations: BootRegistrationRegistry,
+  ) {
+    bootRegistrations.register("sdf-cycle-scan schedule", () => this.queue.upsertJobScheduler(
+      SDF_CYCLE_SCAN_SCHEDULER_ID, { pattern: SDF_CYCLE_SCAN_CRON_PATTERN },
+      { name: SDF_CYCLE_SCAN_JOB_NAME, data: { triggeredBy: SDF_CYCLE_SCAN_SCHEDULE_TRIGGERED_BY } },
+    ).then(() => undefined));
   }
 }

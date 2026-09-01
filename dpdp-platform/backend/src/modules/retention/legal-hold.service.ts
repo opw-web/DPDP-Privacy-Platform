@@ -1,10 +1,11 @@
-import { Injectable } from "@nestjs/common";
+import { BadRequestException, Injectable } from "@nestjs/common";
 import { Prisma } from "@prisma/client";
 import { PrismaService } from "../../common/prisma/prisma.service";
 import { AuditService } from "../../common/audit/audit.service";
 import type { AccessTokenPayload } from "../auth/token.service";
 import { legalHoldCovers, type LegalHoldScope } from "./legal-hold-scope.util";
 import { CreateLegalHoldDto } from "./dto/create-legal-hold.dto";
+import { lockRetentionWorkflow } from "./retention-transaction-lock.util";
 
 /** The ONLY shape a `LegalHold` row is ever returned in from this service. `organizationId` deliberately absent, same discipline as elsewhere. */
 export const LEGAL_HOLD_PUBLIC_SELECT = {
@@ -26,6 +27,7 @@ const OPEN_ERASURE_TASK_STATES = [
   "EVALUATED",
   "NOTICE_SENT",
   "DEFERRED_RETENTION_FLOOR",
+  "READY_FOR_ERASURE",
 ] as const;
 
 @Injectable()
@@ -51,7 +53,20 @@ export class LegalHoldService {
    * tasks created or holds narrowed/widened after this call -- see
    * `RetentionScanService.applyLegalHolds`).
    */
-  async create(dto: CreateLegalHoldDto, actor: AccessTokenPayload): Promise<PublicLegalHold> {
+  async create(
+    dto: CreateLegalHoldDto,
+    actor: AccessTokenPayload,
+  ): Promise<PublicLegalHold> {
+    // Category-scoped holds are not representable by ErasureTask: its
+    // checklist is source/processor based while categories live on
+    // PrincipalDataField. Silently accepting `categories` would create a
+    // hold that appears valid but protects nothing. Reject it explicitly
+    // until a category-aware task model exists.
+    if (dto.scope?.categories && dto.scope.categories.length > 0) {
+      throw new BadRequestException(
+        "Category-scoped legal holds are not supported; scope by principalIds or purposeIds.",
+      );
+    }
     return this.prisma.scoped.$transaction(async (tx) => {
       const now = new Date();
       const scope = (dto.scope ?? {}) as Prisma.InputJsonValue;
@@ -83,23 +98,59 @@ export class LegalHoldService {
 
       const openTasks = await tx.erasureTask.findMany({
         where: { state: { in: [...OPEN_ERASURE_TASK_STATES] } },
-        select: { id: true, dataPrincipalId: true, retentionPolicyId: true },
+        select: { id: true },
       });
       for (const task of openTasks) {
-        const purposeId = task.retentionPolicyId
-          ? (
+        // The create request and a background scan can otherwise observe
+        // the same task concurrently. Serialize each task transition and
+        // re-read its current state under the same lock before both the
+        // conditional write and its audit record.
+        await lockRetentionWorkflow(tx, `erasure-task:${task.id}`);
+        const current = await tx.erasureTask.findFirst({
+          where: { id: task.id, state: { in: [...OPEN_ERASURE_TASK_STATES] } },
+          select: {
+            id: true,
+            dataPrincipalId: true,
+            retentionPolicyId: true,
+            state: true,
+          },
+        });
+        if (!current) {
+          continue;
+        }
+        const purposeId = current.retentionPolicyId
+          ? ((
               await tx.retentionPolicy.findFirst({
-                where: { id: task.retentionPolicyId },
+                where: { id: current.retentionPolicyId },
                 select: { purposeId: true },
               })
-            )?.purposeId ?? null
+            )?.purposeId ?? null)
           : null;
         if (
-          legalHoldCovers(created.scope as LegalHoldScope, task.dataPrincipalId, purposeId)
+          legalHoldCovers(
+            created.scope as LegalHoldScope,
+            current.dataPrincipalId,
+            purposeId,
+          )
         ) {
-          await tx.erasureTask.update({
-            where: { id: task.id },
+          const applied = await tx.erasureTask.updateMany({
+            where: { id: current.id, state: current.state },
             data: { state: "ON_LEGAL_HOLD", legalHoldId: created.id },
+          });
+          if (applied.count !== 1) {
+            continue;
+          }
+          await this.auditService.record(tx, {
+            action: "ERASURE_TASK_LEGAL_HOLD_APPLIED",
+            resourceType: "ErasureTask",
+            resourceId: current.id,
+            subjectPrincipalId: current.dataPrincipalId,
+            metadata: {
+              fromState: current.state,
+              toState: "ON_LEGAL_HOLD",
+              legalHoldId: created.id,
+              source: "legal-hold-create",
+            },
           });
         }
       }

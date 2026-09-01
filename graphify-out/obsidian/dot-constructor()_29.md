@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/inventory/inventory.service.ts"
+source_file: "dpdp-platform/backend/src/common/tenant/tenant.middleware.ts"
 type: "code"
-community: "InventoryService"
-location: "L134"
+community: "TokenService"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/InventoryService
+  - community/TokenService
 ---
 
 # .constructor()
 
 ## Connections
-- [[InventoryService]] - `method` [EXTRACTED]
 - [[PrismaService]] - `references` [EXTRACTED]
+- [[TenantMiddleware]] - `method` [EXTRACTED]
+- [[TokenService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/InventoryService
+#graphify/code #graphify/EXTRACTED #community/TokenService

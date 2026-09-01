@@ -1,24 +1,24 @@
 ---
 source_file: "dpdp-platform/backend/src/config/env.validation.ts"
 type: "code"
-community: "configuration.ts"
+community: "EnvironmentVariables"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/configurationts
+  - community/EnvironmentVariables
 ---
 
 # EnvironmentVariables
 
 ## Connections
-- [[IsIn]] - `references` [EXTRACTED]
-- [[IsInt_2]] - `references` [EXTRACTED]
+- [[IsIn_4]] - `references` [EXTRACTED]
+- [[IsInt_3]] - `references` [EXTRACTED]
 - [[IsNotEmpty_1]] - `references` [EXTRACTED]
-- [[IsString_5]] - `references` [EXTRACTED]
-- [[Min_2]] - `references` [EXTRACTED]
-- [[MinLength_2]] - `references` [EXTRACTED]
+- [[IsString_19]] - `references` [EXTRACTED]
+- [[Min_3]] - `references` [EXTRACTED]
+- [[MinLength_16]] - `references` [EXTRACTED]
 - [[Type_3]] - `references` [EXTRACTED]
 - [[env.validation.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/configurationts
+#graphify/code #graphify/EXTRACTED #community/EnvironmentVariables

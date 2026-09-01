@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/config/configuration.ts"
 type: "code"
-community: "queues.module.ts"
+community: "AccessTokenPayload"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/AccessTokenPayload
 ---
 
 # AppConfig
@@ -22,4 +22,4 @@ tags:
 - [[sync-lock.service.ts]] - `imports` [EXTRACTED]
 - [[token.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

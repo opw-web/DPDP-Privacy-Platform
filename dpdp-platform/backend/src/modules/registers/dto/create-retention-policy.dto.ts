@@ -74,7 +74,7 @@ export class CreateRetentionPolicyDto {
 
   @ApiPropertyOptional({
     default: 1,
-    description: "RE-06: Rule 8(3) one-year floor. Defaults per the schema.",
+    description: "RE-06: Rule Eight, subsection three, one-year floor. Defaults per the schema.",
   })
   @IsOptional()
   @IsInt()

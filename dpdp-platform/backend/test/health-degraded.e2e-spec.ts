@@ -54,16 +54,18 @@ describe("Health (e2e) - degraded datastores", () => {
       }),
     );
     await app.init();
-    // A generous but still finite timeout (default 15000ms is too tight):
-    // Postgres being unreachable makes ScheduleReconciliationService's own
-    // Postgres read fail fast, but Redis being unreachable independently
-    // bounds EACH of DeadlineScanQueueService's and RetentionScanQueueService's
-    // `onModuleInit` at up to `RECONCILE_BOOT_TIMEOUT_MS` (5s) apiece --
-    // both MVP 2 additions, both registered in their own Nest module, and
-    // Nest awaits every module's `onModuleInit` in sequence, not in
-    // parallel -- so this hook's worst case is roughly two back-to-back
-    // 5s timeouts plus normal startup overhead.
-  }, 20000);
+    // Every queue module's schedule registration (ScheduleReconciliationService,
+    // DeadlineScanQueueService, RetentionScanQueueService, ConsentBackfillQueueService,
+    // SdfCycleScanQueueService) now registers a thunk with BootRegistrationRegistry
+    // from its own constructor instead of awaiting its own registration in its own
+    // `onModuleInit`; that registry runs every thunk CONCURRENTLY, once, under ONE
+    // shared RECONCILE_BOOT_TIMEOUT_MS (5s) budget -- so worst-case boot is O(1) in
+    // the number of registered queues, not O(n) (see BootRegistrationRegistry's doc
+    // comment). 10s gives ~2x headroom over that single 5s budget plus normal
+    // startup overhead, while still failing fast on a genuine hang -- well under the
+    // old 20s, which merely accommodated the previous O(n) regression rather than
+    // catching one.
+  }, 10000);
 
   afterAll(async () => {
     await closeQueueAndWorker(app);
@@ -86,25 +88,33 @@ describe("Health (e2e) - degraded datastores", () => {
 
 /**
  * Task 18 review round 2, Important 2: distinct from the describe block
- * above (both datastores down, where Prisma rejects fast for
- * `ScheduleReconciliationService`'s own read) -- here Postgres is
- * genuinely healthy and ONLY Redis is unreachable. Before this round's
- * fix, `ScheduleReconciliationService.onModuleInit` awaited
+ * above (both datastores down) -- here Postgres is genuinely healthy and
+ * ONLY Redis is unreachable. Before that round's fix,
+ * `ScheduleReconciliationService.onModuleInit` awaited
  * `SyncQueueService.upsertSchedule` on a BullMQ connection built with
  * `maxRetriesPerRequest: null`, which (confirmed against ioredis's own
  * connection handling) never times out and never flushes its offline
  * command queue for that option -- so `onModuleInit` never resolved,
  * Nest's bootstrap sequence never finished awaiting it, and the process
- * never reached `app.listen()` at all: `/health` could not even be
- * asked the question. MVP 2 later added two more `onModuleInit`s with
- * the identical failure mode (`DeadlineScanQueueService`,
- * `RetentionScanQueueService`) -- each now bounded the same way, by the
- * same `RECONCILE_BOOT_TIMEOUT_MS` / `withBootTimeout` this service
- * established. Because Nest awaits every module's `onModuleInit` in
- * sequence rather than in parallel, this hook's worst case is now
- * roughly THREE back-to-back 5s timeouts (reconciliation, deadline-scan,
- * retention-scan+pre-erasure-notice combined) plus normal startup
- * overhead, not one -- hence the explicit, longer hook timeout below.
+ * never reached `app.listen()` at all: `/health` could not even be asked
+ * the question.
+ *
+ * MVP 2 went on to add four more queue modules with the identical
+ * failure mode (`DeadlineScanQueueService`, `RetentionScanQueueService`,
+ * `ConsentBackfillQueueService`, `SdfCycleScanQueueService`). Bounding
+ * each one's `onModuleInit` individually with `withBootTimeout` fixed
+ * each in isolation but reintroduced the same class of bug one level up:
+ * Nest awaits every module's `onModuleInit` SEQUENTIALLY, so five
+ * independently-bounded 5s budgets in series made worst-case boot 25-30s
+ * -- exceeding this hook's old, already-generous 25000ms timeout. The
+ * fix (`BootRegistrationRegistry`) makes every queue module register a
+ * thunk from its own CONSTRUCTOR instead, and runs all of them
+ * CONCURRENTLY, once, under ONE shared `RECONCILE_BOOT_TIMEOUT_MS`
+ * budget -- worst-case boot is now O(1) in the number of registered
+ * queues, not O(n). 10s below gives ~2x headroom over that single 5s
+ * budget plus normal startup overhead, while still being tight enough to
+ * fail on a genuine hang rather than merely accommodate one, unlike the
+ * old value.
  */
 describe("Health (e2e) - Redis down, Postgres up (boot must not hang)", () => {
   let app: INestApplication;
@@ -127,14 +137,16 @@ describe("Health (e2e) - Redis down, Postgres up (boot must not hang)", () => {
       }),
     );
     // A generous but still FINITE timeout: this is the empirical proof
-    // that boot completes at all. Before the fix, this hook would hang
-    // until Jest's own hook-timeout error fired; after the fix it
-    // resolves within roughly three sequential `RECONCILE_BOOT_TIMEOUT_MS`
-    // (5s) windows -- one per `onModuleInit` this Redis outage bounds
-    // (`ScheduleReconciliationService`, `DeadlineScanQueueService`,
-    // `RetentionScanQueueService`) -- plus normal startup overhead.
+    // that boot completes at all. After the fix, this hook resolves
+    // within roughly ONE `RECONCILE_BOOT_TIMEOUT_MS` (5s) window --
+    // shared, concurrently, by every queue module's registration thunk
+    // via `BootRegistrationRegistry` -- plus normal startup overhead, not
+    // one 5s window per queue module in series. 10s gives ~2x headroom
+    // over that single shared budget while staying well under the old
+    // 25000ms, which merely accommodated the previous O(n) regression
+    // (five sequential 5s stages) rather than catching a genuine hang.
     await app.init();
-  }, 25000);
+  }, 10000);
 
   afterAll(async () => {
     await closeQueueAndWorker(app);

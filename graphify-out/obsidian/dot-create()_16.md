@@ -1,23 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/retention.service.ts"
+source_file: "dpdp-platform/backend/src/modules/board/information-requests.controller.ts"
 type: "code"
-community: "CreateRetentionPolicyDto"
-location: "L96"
+community: "CreateInformationRequestDto"
+location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateRetentionPolicyDto
+  - community/CreateInformationRequestDto
 ---
 
 # .create()
 
 ## Connections
-- [[dot-assertPurposeExists()_1]] - `calls` [EXTRACTED]
-- [[dot-create()_15]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[CreateRetentionPolicyDto]] - `references` [EXTRACTED]
-- [[RetentionService]] - `method` [EXTRACTED]
-- [[duplicateNameMessage()_2]] - `calls` [EXTRACTED]
-- [[isUniqueConstraintViolation()_4]] - `calls` [EXTRACTED]
+- [[dot-create()_17]] - `calls` [INFERRED]
+- [[Body_14]] - `references` [EXTRACTED]
+- [[CreateInformationRequestDto]] - `references` [EXTRACTED]
+- [[InformationRequestsController]] - `method` [EXTRACTED]
+- [[Post_16]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateRetentionPolicyDto
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

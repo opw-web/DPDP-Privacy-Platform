@@ -2,7 +2,8 @@ import { BadRequestException, Injectable, NotFoundException } from "@nestjs/comm
 import { Prisma } from "@prisma/client";
 import { PrismaService } from "../../common/prisma/prisma.service";
 import { AuditService } from "../../common/audit/audit.service";
-import { ReferenceService } from "../../common/reference/reference.service";
+import { allocateCounterValue } from "../../common/reference/counter";
+import { TenantContext } from "../../common/tenant/tenant-context";
 import { CreateInformationRequestDto } from "./dto/create-information-request.dto";
 import { UpdateInformationRequestDto } from "./dto/update-information-request.dto";
 
@@ -60,7 +61,6 @@ export class InformationRequestsService {
   constructor(
     private readonly prisma: PrismaService,
     private readonly auditService: AuditService,
-    private readonly referenceService: ReferenceService,
   ) {}
 
   async list(): Promise<PublicInformationRequest[]> {
@@ -100,14 +100,45 @@ export class InformationRequestsService {
     }
   }
 
+  /**
+   * `affectedPrincipalIds` is intentionally a scalar array in the schema,
+   * so the service must enforce the referential/tenant invariant before it
+   * can be used for non-disclosure suppression. The scoped delegate filters
+   * by the current organization; an unknown or foreign id therefore gets
+   * the same generic 400 and is never persisted.
+   */
+  private assertAffectedPrincipals(
+    ids: readonly string[],
+    rows: readonly { id: string }[],
+  ): void {
+    if (ids.length === 0) return;
+    const found = new Set(rows.map((row) => row.id));
+    const invalid = ids.filter((id) => !found.has(id));
+    if (invalid.length > 0) {
+      throw new BadRequestException(
+        "affectedPrincipalIds contains an unknown principal for the current organization.",
+      );
+    }
+  }
+
   async create(dto: CreateInformationRequestDto): Promise<PublicInformationRequest> {
     const nonDisclosureDirected = dto.nonDisclosureDirected ?? false;
     this.assertDirectionHasAuthorisation(nonDisclosureDirected, dto.nonDisclosurePermissionRef);
 
-    const referenceValue = await this.referenceService.next(INFO_REQUEST_REFERENCE_COUNTER);
-    const reference = `IR-${referenceValue.toString().padStart(INFO_REQUEST_REFERENCE_DIGITS, "0")}`;
+    const affectedPrincipalIds = dto.affectedPrincipalIds ?? [];
 
     return this.prisma.scoped.$transaction(async (tx) => {
+      const principalRowsInTransaction = await tx.dataPrincipal.findMany({
+        where: { id: { in: [...affectedPrincipalIds] } },
+        select: { id: true },
+      });
+      this.assertAffectedPrincipals(affectedPrincipalIds, principalRowsInTransaction);
+      const referenceValue = await allocateCounterValue(
+        tx,
+        TenantContext.get().organizationId,
+        INFO_REQUEST_REFERENCE_COUNTER,
+      );
+      const reference = `IR-${referenceValue.toString().padStart(INFO_REQUEST_REFERENCE_DIGITS, "0")}`;
       const created = await tx.informationRequest.create({
         data: {
           reference,
@@ -118,7 +149,7 @@ export class InformationRequestsService {
           responseDueAt: new Date(dto.responseDueAt),
           nonDisclosureDirected,
           nonDisclosurePermissionRef: dto.nonDisclosurePermissionRef ?? null,
-          affectedPrincipalIds: dto.affectedPrincipalIds ?? [],
+          affectedPrincipalIds,
           // organizationId deliberately omitted -- the tenant-scoping
           // extension supplies it at runtime (same convention as
           // RecipientsService.create).
@@ -161,7 +192,20 @@ export class InformationRequestsService {
       effectiveNonDisclosurePermissionRef,
     );
 
+    const affectedPrincipalIds =
+      dto.affectedPrincipalIds ?? existing.affectedPrincipalIds;
+    const principalRows = await this.prisma.scoped.dataPrincipal.findMany({
+      where: { id: { in: [...affectedPrincipalIds] } },
+      select: { id: true },
+    });
+    this.assertAffectedPrincipals(affectedPrincipalIds, principalRows);
+
     return this.prisma.scoped.$transaction(async (tx) => {
+      const principalRowsInTransaction = await tx.dataPrincipal.findMany({
+        where: { id: { in: [...affectedPrincipalIds] } },
+        select: { id: true },
+      });
+      this.assertAffectedPrincipals(affectedPrincipalIds, principalRowsInTransaction);
       const updated = await tx.informationRequest.update({
         where: { id },
         data: {
@@ -172,7 +216,7 @@ export class InformationRequestsService {
           responseDueAt: dto.responseDueAt ? new Date(dto.responseDueAt) : existing.responseDueAt,
           nonDisclosureDirected: effectiveNonDisclosureDirected,
           nonDisclosurePermissionRef: effectiveNonDisclosurePermissionRef,
-          affectedPrincipalIds: dto.affectedPrincipalIds ?? existing.affectedPrincipalIds,
+          affectedPrincipalIds,
           respondedAt: dto.respondedAt ? new Date(dto.respondedAt) : existing.respondedAt,
           responseReference:
             dto.responseReference !== undefined ? dto.responseReference : existing.responseReference,

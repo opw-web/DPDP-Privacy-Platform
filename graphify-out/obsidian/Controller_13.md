@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdateRolePermissionsDto"
+community: "canonicalJson"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateRolePermissionsDto
+  - community/canonicalJson
 ---
 
 # Controller
 
 ## Connections
-- [[RolesController]] - `references` [EXTRACTED]
+- [[AuditEventsEvidenceController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto
+#graphify/code #graphify/EXTRACTED #community/canonicalJson

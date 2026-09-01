@@ -12,8 +12,8 @@ tags:
 # .assertPubliclyAvailableJustified()
 
 ## Connections
-- [[dot-create()_10]] - `calls` [EXTRACTED]
-- [[dot-update()_11]] - `calls` [EXTRACTED]
+- [[dot-create()_4]] - `calls` [EXTRACTED]
+- [[dot-update()_6]] - `calls` [EXTRACTED]
 - [[DataSourcesService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/DataSourcesService

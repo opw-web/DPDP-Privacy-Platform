@@ -19,16 +19,14 @@ export interface EmployeeSummary {
 /**
  * Mirrors `EmployeeAuthController.me()`'s response shape exactly.
  *
- * `permissions` is NOT currently returned by that endpoint -- today's
- * backend resolves `CAN_*` permissions per-request, server-side only
- * (`PermissionsGuard`), and never exposes the actor's own resolved set to
- * the client. It is kept here, defaulted to `[]`, so `PermissionGate`
- * (lib/permissions.ts) has a stable, forward-compatible field to read: the
- * moment a future backend change adds `permissions: string[]` to this
- * response, it flows straight through with no frontend change. Until then
- * every `PermissionGate` is closed (fails safe -- cosmetic-only, the server
- * remains the real enforcement point either way). See the task report for
- * the flagged backend follow-up.
+ * `permissions` IS returned by that endpoint -- `employee-auth.controller.ts`
+ * (`me()`, ~line 155) maps `employee.role.permissions` into the response.
+ * `raw.permissions ?? []` below is just a defensive default for the field
+ * being optional on the wire (e.g. a role with zero permissions, or an
+ * older cached response shape), not a statement that the backend omits
+ * it. `PermissionGate` (lib/permissions.ts) reads this resolved set
+ * directly; it is cosmetic-only either way -- the server remains the real
+ * enforcement point via `PermissionsGuard` + `@RequirePermission()`.
  */
 export interface EmployeeSession extends EmployeeSummary {
   organizationId: string;

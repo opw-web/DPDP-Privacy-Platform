@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-close()]] - `method` [EXTRACTED]
-- [[dot-constructor()_4]] - `method` [EXTRACTED]
+- [[dot-constructor()_48]] - `method` [EXTRACTED]
 - [[dot-listen()]] - `method` [EXTRACTED]
 - [[dot-setHandler()]] - `method` [EXTRACTED]
 - [[connector.factory.spec.ts]] - `imports` [EXTRACTED]

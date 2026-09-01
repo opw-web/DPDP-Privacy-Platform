@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/lib/api-client.ts"
+source_file: "dpdp-platform/backend/src/queues/sdf-cycle-scan.processor.ts"
 type: "code"
-community: "DataSourceDetailPage.tsx"
-location: "L30"
+community: "sdf.module.ts"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourceDetailPagetsx
+  - community/sdfmodulets
 ---
 
 # .constructor()
 
 ## Connections
-- [[ApiError]] - `method` [EXTRACTED]
+- [[SdfCycleScanProcessor]] - `method` [EXTRACTED]
+- [[SdfCycleScanService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourceDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/sdfmodulets

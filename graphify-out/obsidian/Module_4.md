@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "connector.factory.ts"
+community: "CryptoService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/connectorfactoryts
+  - community/CryptoService
 ---
 
 # Module
 
 ## Connections
-- [[ConnectorsModule]] - `references` [EXTRACTED]
+- [[CryptoModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/connectorfactoryts
+#graphify/code #graphify/EXTRACTED #community/CryptoService

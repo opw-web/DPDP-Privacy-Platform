@@ -62,7 +62,23 @@ export class AuditChainService {
     });
 
     let expectedPreviousHash: string | null = null;
+    let expectedSequence = BigInt(1);
     for (const event of events) {
+      // A valid hash chain must begin at sequence 1 and advance without
+      // gaps. Checking this independently of previousHash matters because
+      // a database operator could remove a row and repair the following
+      // row's previousHash/hash while triggers are disabled.
+      if (event.sequence !== expectedSequence) {
+        return {
+          valid: false,
+          checkedCount: events.length,
+          firstBrokenSequence: event.sequence.toString(),
+          reason:
+            event.sequence < expectedSequence
+              ? "audit sequence is out of order or duplicated"
+              : "audit sequence is not contiguous from sequence 1",
+        };
+      }
       if (event.previousHash !== expectedPreviousHash) {
         return {
           valid: false,
@@ -94,6 +110,7 @@ export class AuditChainService {
       }
 
       expectedPreviousHash = event.hash;
+      expectedSequence += BigInt(1);
     }
 
     return {

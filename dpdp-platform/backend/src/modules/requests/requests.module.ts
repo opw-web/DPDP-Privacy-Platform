@@ -5,6 +5,8 @@ import { ReferenceModule } from "../../common/reference/reference.module";
 import { ComplianceModule } from "../compliance/compliance.module";
 import { NotificationsModule } from "../notifications/notifications.module";
 import { RetentionModule } from "../retention/retention.module";
+import { EvidenceModule } from "../evidence/evidence.module";
+import { QueuesModule } from "../../queues/queues.module";
 import { RequestsController } from "./requests.controller";
 import { RequestsService } from "./requests.service";
 import { DeadlineScanQueueService, DEADLINE_SCAN_QUEUE_NAME } from "../../queues/deadline-scan.queue";
@@ -34,6 +36,15 @@ import { DeadlineScanProcessor } from "../../queues/deadline-scan.processor";
  * concurrent edit by three other live implementers and is reserved for
  * the wave integrator) -- once it is, no further queue wiring is needed:
  * this module registers its own queue and worker completely.
+ *
+ * `QueuesModule` is imported (health-degraded boot-time regression fix,
+ * not this task originally) so `DeadlineScanQueueService` can inject
+ * `BootRegistrationRegistry` -- the shared boot-safety registry every
+ * queue module's schedule-registering service now registers itself with,
+ * instead of each awaiting its own registration in its own
+ * `onModuleInit` (see `BootRegistrationRegistry`'s doc comment).
+ * `RetentionModule` (imported above) does not re-export it, so it must
+ * be imported here directly.
  */
 @Module({
   imports: [
@@ -42,6 +53,8 @@ import { DeadlineScanProcessor } from "../../queues/deadline-scan.processor";
     ComplianceModule,
     NotificationsModule,
     RetentionModule,
+    EvidenceModule,
+    QueuesModule,
     BullModule.registerQueue({
       name: DEADLINE_SCAN_QUEUE_NAME,
       defaultJobOptions: {

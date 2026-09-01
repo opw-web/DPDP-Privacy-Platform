@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts"
 type: "code"
-community: "tenant-context.ts"
+community: "AccessTokenPayload"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tenant-contextts
+  - community/AccessTokenPayload
 ---
 
 # employee-auth.controller.ts
@@ -34,4 +34,4 @@ tags:
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 - [[token.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tenant-contextts
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

@@ -1,19 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/organizations/organizations.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts"
 type: "code"
-community: "PrismaService"
-location: "L20"
+community: "template-renderer.ts"
+location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/template-rendererts
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[OrganizationsService]] - `method` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
+- [[TemplateRenderError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/template-rendererts
