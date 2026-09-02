@@ -1,29 +1,84 @@
-import { useMutation, useQuery } from "@tanstack/react-query";
-import { toast } from "sonner";
+import { useMemo } from "react";
+import { useQuery } from "@tanstack/react-query";
 import { employeeApiClient } from "../../lib/api-client";
-import { Badge } from "../../components/ui/badge";
-import { Button } from "../../components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "../../components/ui/card";
+import { RuleBasisChip } from "../../components/shared/RuleBasisChip";
+import { UnreviewedRuleChip } from "../../components/shared/UnreviewedRuleChip";
+import { AlgorithmRegisterPanel } from "../components/sdf/AlgorithmRegisterPanel";
+import { AssessmentRow, type AssessmentRowData } from "../components/sdf/AssessmentRow";
+import { SdfGapsSection } from "../components/sdf/SdfGapsSection";
+import { findSdfCycleRule, type ComplianceRuleSummary, type SdfGapsData } from "../components/sdf/types";
 
-interface Assessment { id: string; kind: string; dueAt: string; completedAt: string | null; isIndependent: boolean; }
-interface SdfData { organization: { isSignificantDataFiduciary: boolean }; assessments: Assessment[]; }
+interface SdfData { organization: { isSignificantDataFiduciary: boolean }; assessments: AssessmentRowData[]; }
 
-export function canCompleteAudit(assessment: Pick<Assessment, "kind" | "isIndependent">): boolean {
+export function canCompleteAudit(assessment: Pick<AssessmentRowData, "kind" | "isIndependent">): boolean {
   return assessment.kind !== "AUDIT" || assessment.isIndependent;
 }
 
 export function SdfPage() {
   const query = useQuery({ queryKey: ["sdf"], queryFn: () => employeeApiClient.get<SdfData>("/sdf/assessments") });
-  const complete = useMutation({
-    mutationFn: (id: string) => employeeApiClient.post(`/sdf/assessments/${id}/complete`),
-    onSuccess: () => { toast.success("Assessment marked complete."); void query.refetch(); },
-    onError: (error) => toast.error(error instanceof Error ? error.message : "Could not complete assessment."),
+  const rulesQuery = useQuery({
+    queryKey: ["compliance-rules"],
+    queryFn: () => employeeApiClient.get<ComplianceRuleSummary[]>("/compliance-rules"),
   });
+  const gapsQuery = useQuery({
+    queryKey: ["sdf-gaps"],
+    queryFn: () => employeeApiClient.get<SdfGapsData>("/sdf/gaps"),
+  });
+
+  const cycleRule = findSdfCycleRule(rulesQuery.data);
+  const unreviewedAlgorithmIds = useMemo(
+    () => new Set((gapsQuery.data?.unreviewedAlgorithms ?? []).map((entry) => entry.id)),
+    [gapsQuery.data],
+  );
+
   if (!query.data) return <p>Loading SDF readiness…</p>;
   const data = query.data;
-  return <div className="space-y-6">
-    <div><h1 className="text-xl font-semibold">SDF readiness</h1><p className="text-sm text-muted-foreground">Cycles are calculated from the configured compliance rule and returned due dates.</p></div>
-    {!data.organization.isSignificantDataFiduciary ? <Card><CardContent className="p-6"><h2 className="font-semibold">Not currently a Significant Data Fiduciary</h2><p className="text-sm text-muted-foreground">Readiness view is available while your declaration is pending.</p></CardContent></Card> : null}
-    <Card><CardHeader><CardTitle>Assessment cycle</CardTitle></CardHeader><CardContent className="space-y-3">{data.assessments.map((assessment) => { const dueAt = new Date(assessment.dueAt); const days = Math.ceil((dueAt.getTime() - Date.now()) / 86_400_000); const auditBlocked = !canCompleteAudit(assessment); return <div key={assessment.id} className="rounded border p-3"><div className="flex justify-between"><span className="font-medium">{assessment.kind}</span><Badge>{assessment.completedAt ? "Complete" : "Open"}</Badge></div><p className="text-sm">Due {dueAt.toLocaleDateString()} · {days} days remaining</p>{days <= 30 && !assessment.completedAt ? <p className="font-semibold text-destructive">Warning: cycle due within 30 days.</p> : null}{auditBlocked ? <p className="text-sm text-destructive">Independent auditor required before completion.</p> : null}{!assessment.completedAt ? <Button className="mt-2" size="sm" disabled={auditBlocked || complete.isPending} onClick={() => complete.mutate(assessment.id)}>Mark complete</Button> : null}</div>; })}</CardContent></Card>
-  </div>;
+
+  return (
+    <div className="space-y-6">
+      <div>
+        <h1 className="text-xl font-semibold">SDF readiness</h1>
+        <p className="text-sm text-muted-foreground">Cycles are calculated from the configured compliance rule and returned due dates -- never a hard-coded figure.</p>
+      </div>
+
+      {!data.organization.isSignificantDataFiduciary ? (
+        <Card>
+          <CardContent className="p-6">
+            <h2 className="font-semibold">Not currently a Significant Data Fiduciary</h2>
+            <p className="text-sm text-muted-foreground">Readiness view is available while your declaration is pending.</p>
+          </CardContent>
+        </Card>
+      ) : null}
+
+      <Card>
+        <CardHeader>
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <CardTitle>Assessment cycle</CardTitle>
+              <CardDescription>DPIA and audit, once every cycle (SD-02, SD-04).</CardDescription>
+            </div>
+            {cycleRule ? (
+              <div className="flex items-center gap-2">
+                <RuleBasisChip basis={cycleRule.basis} citation={cycleRule.legalSource} />
+                <UnreviewedRuleChip isReviewed={cycleRule.isReviewed} />
+              </div>
+            ) : null}
+          </div>
+        </CardHeader>
+        <CardContent className="space-y-3">
+          {data.assessments.length === 0 ? (
+            <p className="text-sm text-muted-foreground">No assessment cycle has been opened yet.</p>
+          ) : null}
+          {data.assessments.map((assessment) => (
+            <AssessmentRow key={assessment.id} assessment={assessment} canCompleteAudit={canCompleteAudit} />
+          ))}
+        </CardContent>
+      </Card>
+
+      <AlgorithmRegisterPanel unreviewedIds={unreviewedAlgorithmIds} cycleRule={cycleRule} />
+
+      <SdfGapsSection gaps={gapsQuery.data} isLoading={gapsQuery.isLoading} cycleRule={cycleRule} showLinkToFullRegister />
+    </div>
+  );
 }
