@@ -1,5 +1,12 @@
 import { describe, expect, it } from "vitest";
-import { buildCampaignPayload, campaignConfirmationText, consentRequestSubmissionBlocked, marketingSubmissionBlocked } from "./MessagingCampaignBuilderPage";
+import {
+  buildCampaignPayload,
+  campaignConfirmationText,
+  consentRequestSubmissionBlocked,
+  marketingSubmissionBlocked,
+  pickDefaultBreachTemplate,
+  type CampaignTemplate,
+} from "./MessagingCampaignBuilderPage";
 
 describe("campaign guardrails", () => {
   it("blocks MARKETING without a purpose, while other categories may omit it", () => {
@@ -53,3 +60,31 @@ describe("campaign guardrails", () => {
     expect(payload).not.toHaveProperty("audienceFilter");
   });
 });
+
+describe("BREACH_NOTICE template pre-fill (spec step 23: review a PRE-FILLED notice)", () => {
+  const template = (over: Partial<CampaignTemplate>): CampaignTemplate => ({
+    id: "tpl-1",
+    code: "SOME_OTHER_CODE",
+    name: "Some other template",
+    category: "BREACH_NOTICE",
+    subject: "s",
+    bodyMarkdown: "b",
+    ...over,
+  });
+
+  it("prefers the seeded BREACH_NOTIFICATION template when present", () => {
+    const notification = template({ id: "tpl-seed", code: "BREACH_NOTIFICATION" });
+    const other = template({ id: "tpl-other" });
+    expect(pickDefaultBreachTemplate([other, notification])).toBe(notification);
+  });
+
+  it("falls back to the first BREACH_NOTICE template when no BREACH_NOTIFICATION-coded one exists", () => {
+    const custom = template({ id: "tpl-custom" });
+    expect(pickDefaultBreachTemplate([custom])).toBe(custom);
+  });
+
+  it("returns undefined when the org has no BREACH_NOTICE template at all", () => {
+    expect(pickDefaultBreachTemplate([])).toBeUndefined();
+  });
+});
+

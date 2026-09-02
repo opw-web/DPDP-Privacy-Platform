@@ -2,12 +2,25 @@ import { afterEach, describe, expect, it } from "vitest";
 import { cleanup, render, screen } from "@testing-library/react";
 import { countdown } from "../components/breaches/BreachObligationCard";
 import {
+  buildAffectedPreviewPayload,
   buildBreachPayload,
   hasRequiredAffectedSources,
   hasRequiredBreachTimes,
+  missingRule71NarrativeLabels,
+  RULE_7_1_ELEMENTS,
+  type BreachWizardValues,
 } from "./BreachWizardPage";
-import { originalBoardDetailDueAt } from "./BreachDetailPage";
+import { buildExtensionPayload, originalBoardDetailDueAt } from "./BreachDetailPage";
 import { BreachObligationCard } from "../components/breaches/BreachObligationCard";
+
+const BASE_WIZARD_VALUES: BreachWizardValues = {
+  title: "Marketing database exposure",
+  description: "A compromised export was discovered.",
+  occurredAt: "2026-08-27T22:00",
+  becameAwareAt: "2026-09-01T16:00",
+  affectedSourceIds: ["marketing-source"],
+  dataCategories: ["CONTACT"],
+};
 
 afterEach(() => cleanup());
 
@@ -65,5 +78,96 @@ describe("breach operations", () => {
       { id: "1", code: "BOARD_INITIAL", legalSourceSnapshot: "s.8(6)", basisSnapshot: "STATUTORY", dueAt: "2026-08-03T00:00:00Z", status: "OPEN", evidenceReference: null },
       { id: "2", code: "BOARD_DETAIL", legalSourceSnapshot: "s.8(6)", basisSnapshot: "STATUTORY", dueAt: "2026-08-10T00:00:00Z", status: "OPEN", evidenceReference: null },
     ])).toBe("2026-08-10T00:00:00Z");
+  });
+
+  // Defect 2 (wizard steps 4-8): affected-principal preview, the five
+  // Rule 7(1) narrative fields, and the six-element pre-fill review.
+  it("previews affected principals from the selected data sources by default", () => {
+    expect(buildAffectedPreviewPayload("sources", ["source-a", "source-b"], "")).toEqual({
+      sourceIds: ["source-a", "source-b"],
+    });
+  });
+
+  it("previews affected principals from a manual/CSV list when that mode is chosen", () => {
+    expect(buildAffectedPreviewPayload("manual", ["source-a"], "dp-1\ndp-2")).toEqual({
+      csv: "dp-1\ndp-2",
+    });
+  });
+
+  it("names all six Rule 7(1) elements, breach reference first", () => {
+    expect(RULE_7_1_ELEMENTS.map((element) => element.key)).toEqual([
+      "reference",
+      "natureExtentTiming",
+      "consequences",
+      "mitigationMeasures",
+      "safetyMeasuresForPrincipals",
+      "responderContact",
+    ]);
+  });
+
+  it("flags every one of the five narrative elements as missing on a bare breach", () => {
+    expect(missingRule71NarrativeLabels(BASE_WIZARD_VALUES)).toHaveLength(5);
+  });
+
+  it("clears a narrative element from the missing list once it is filled in", () => {
+    const missing = missingRule71NarrativeLabels({
+      ...BASE_WIZARD_VALUES,
+      natureExtentTiming: "A misconfigured export exposed contact records.",
+    });
+    expect(missing).toHaveLength(4);
+    expect(missing).not.toContain("Nature, extent and timing of the breach");
+  });
+
+  it("reports no missing elements once all five narrative fields are set", () => {
+    expect(
+      missingRule71NarrativeLabels({
+        ...BASE_WIZARD_VALUES,
+        natureExtentTiming: "x",
+        consequences: "x",
+        mitigationMeasures: "x",
+        safetyMeasuresForPrincipals: "x",
+        responderContact: "x",
+      }),
+    ).toEqual([]);
+  });
+
+  it("carries the narrative fields, board fields, and manual affected-principal CSV into the create payload", () => {
+    const payload = buildBreachPayload({
+      ...BASE_WIZARD_VALUES,
+      affectedPrincipalsCsv: "dp-1\ndp-2",
+      natureExtentTiming: "  A misconfigured export.  ",
+      consequences: "",
+      mitigationMeasures: "Access revoked.",
+      safetyMeasuresForPrincipals: undefined,
+      responderContact: "dpo@acmeretail.demo",
+      boardBroadFacts: "  Full account for the Board.  ",
+    });
+    expect(payload.csv).toBe("dp-1\ndp-2");
+    expect(payload.natureExtentTiming).toBe("A misconfigured export.");
+    expect(payload.consequences).toBeUndefined();
+    expect(payload.mitigationMeasures).toBe("Access revoked.");
+    expect(payload.safetyMeasuresForPrincipals).toBeUndefined();
+    expect(payload.responderContact).toBe("dpo@acmeretail.demo");
+    expect(payload.boardBroadFacts).toBe("Full account for the Board.");
+  });
+
+  it("omits csv from the create payload when the sources-only selection mode is used", () => {
+    const payload = buildBreachPayload(BASE_WIZARD_VALUES);
+    expect(payload.csv).toBeUndefined();
+  });
+
+  // Defect 4: the extension form must send requestedAt -- ExtensionDto
+  // requires it and the backend 400s on every submission without it.
+  it("includes requestedAt in the extension payload, per ExtensionDto", () => {
+    const payload = buildExtensionPayload(
+      "2026-09-01T09:00",
+      "2026-09-08T12:00",
+      "BOARD-EXT-2026-0001",
+    );
+    expect(payload).toEqual({
+      requestedAt: new Date("2026-09-01T09:00").toISOString(),
+      grantedUntil: new Date("2026-09-08T12:00").toISOString(),
+      reference: "BOARD-EXT-2026-0001",
+    });
   });
 });

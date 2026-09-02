@@ -489,6 +489,98 @@ describe("Campaigns API (e2e)", () => {
       expect(bap1?.notifiedAt).not.toBeNull();
       expect(bap1?.campaignRecipientId).not.toBeNull();
     });
+
+    it("Defect 3 regression: a BREACH_NOTICE campaign built ad-hoc (no templateId, so requiredVariables defaults to []) refuses to send while the breach's Rule 7(1) narrative fields are NULL -- naming the missing element -- and delivers nothing; sending succeeds once the fields are filled in (positive control)", async () => {
+      const { organizationId, creator, approver } = await setupOrg();
+      const breachId = await createBreach(organizationId, creator.employeeId);
+      const affected = await createPrincipal(organizationId);
+      await markAffected(organizationId, breachId, affected);
+
+      // The breach record's Rule 7(1) narrative fields are NULL -- exactly
+      // the incident: `createBreach` above never sets
+      // natureExtentTiming/consequences/mitigationMeasures/
+      // safetyMeasuresForPrincipals/responderContact.
+      const stillNull = await prisma.breachIncident.findUniqueOrThrow({
+        where: { id: breachId },
+      });
+      expect(stillNull.natureExtentTiming).toBeNull();
+      expect(stillNull.consequences).toBeNull();
+
+      // Mirrors the real MessagingCampaignBuilderPage payload: free-text
+      // subject/bodyMarkdown, no `templateId`, no `requiredVariables` --
+      // the shape that let the render's required-variable check be
+      // silently skipped before this fix.
+      const bodyMarkdown = [
+        "Nature, extent and timing: {{breach_nature_extent_timing}}",
+        "Consequences: {{breach_consequences}}",
+        "Mitigation: {{breach_mitigation}}",
+        "Safety measures: {{breach_safety_measures}}",
+        "Contact: {{breach_responder_contact}}",
+        "Reference: {{breach_reference}}",
+      ].join("\n");
+      const createRes = await authed(creator.accessToken).post("/api/campaigns", {
+        name: "Breach notice with missing narrative",
+        category: "BREACH_NOTICE",
+        subject: "Data breach notice ({{breach_reference}})",
+        bodyMarkdown,
+        breachId,
+      });
+      expect(createRes.status).toBe(201);
+      const campaignId = createRes.body.id;
+      expect(createRes.body.status).toBe("PENDING_APPROVAL");
+
+      const approveRes = await authed(approver.accessToken).post(
+        `/api/campaigns/${campaignId}/approve`,
+      );
+      expect(approveRes.status).toBe(201);
+
+      // The send must refuse -- not silently print blanks and report
+      // success.
+      const sendRes = await authed(creator.accessToken).post(`/api/campaigns/${campaignId}/send`);
+      expect(sendRes.status).toBe(400);
+      expect(sendRes.body.message).toContain("Required variable");
+      // The operator must learn WHICH element is missing, not just that
+      // the render failed.
+      expect(sendRes.body.message).toMatch(
+        /breach_nature_extent_timing|breach_consequences|breach_mitigation|breach_safety_measures|breach_responder_contact/,
+      );
+
+      // BR-13/guard: nothing was delivered, and the campaign was not
+      // silently advanced past APPROVED -- a failed render must not
+      // leave a half-populated (or fully blank) recipient row behind.
+      const recipients = await getRecipients(creator.accessToken, campaignId);
+      expect(recipients).toHaveLength(0);
+      const staleCampaign = await prisma.messageCampaign.findUniqueOrThrow({
+        where: { id: campaignId },
+      });
+      expect(staleCampaign.status).toBe("APPROVED");
+      expect(staleCampaign.sentAt).toBeNull();
+
+      // POSITIVE CONTROL: once the breach record carries all five Rule
+      // 7(1) narrative fields, the identical campaign sends and delivers.
+      await prisma.breachIncident.update({
+        where: { id: breachId },
+        data: {
+          natureExtentTiming: "A misconfigured backup exposed records for 3 days.",
+          consequences: "Your contact details may have been viewed by an unauthorised party.",
+          mitigationMeasures: "The backup was secured and access logs were reviewed.",
+          safetyMeasuresForPrincipals: "Watch for phishing attempts referencing this incident.",
+          responderContact: "breach-response@example.test",
+        },
+      });
+      const retrySendRes = await authed(creator.accessToken).post(
+        `/api/campaigns/${campaignId}/send`,
+      );
+      expect(retrySendRes.status).toBe(201);
+
+      await waitUntil(async () => {
+        const rows = await getRecipients(creator.accessToken, campaignId);
+        return rows.length === 1 && rows.every((r) => r.status === "DELIVERED");
+      });
+      const delivered = await getRecipients(creator.accessToken, campaignId);
+      expect(delivered).toHaveLength(1);
+      expect(delivered[0]!.status).toBe("DELIVERED");
+    });
   });
 
   // ─────────────────────────── guard 4 ───────────────────────────

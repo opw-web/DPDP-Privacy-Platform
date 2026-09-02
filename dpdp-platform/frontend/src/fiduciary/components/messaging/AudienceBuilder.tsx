@@ -24,7 +24,23 @@ export function audienceRuleForField(field: AudienceField): AudienceRule {
 /** Builds the exact, validated audience DSL accepted by POST /audiences/preview and POST /campaigns. */
 export function buildAndAudienceFilter(rules: AudienceRule[]): AudienceFilter { return { op: "AND", rules }; }
 
-/** Audience preview is a first-class step: its count is the exact send set. */
+/**
+ * `preview.total` is the raw filter match count BEFORE child/consent
+ * suppression is applied at send time -- it is not who gets contacted.
+ * `suppressedByConsent` and `suppressedAsChild` are independent counts
+ * against the same matched set (a principal can appear in both), so this
+ * subtracts each once: the result can only ever UNDERSTATE the true
+ * contactable count (by the size of any overlap), never overstate it --
+ * the safe direction for a compliance tool to be wrong in, if it must be.
+ */
+export function contactablePreviewCount(preview: AudiencePreview): number {
+  return Math.max(preview.total - preview.suppressedByConsent - preview.suppressedAsChild, 0);
+}
+export function suppressedPreviewCount(preview: AudiencePreview): number {
+  return preview.total - contactablePreviewCount(preview);
+}
+
+/** Audience preview is a first-class step: `total` is who MATCHES the filter, not who gets contacted -- child/consent suppression still applies at send time, so the panel below shows contactable and suppressed counts distinctly. */
 export function AudienceBuilder({ onPreview, onChange }: { onPreview?: (preview: AudiencePreview, filter: AudienceFilter) => void; onChange?: (filter: AudienceFilter) => void }) {
   const [rules, setRules] = useState<AudienceRule[]>([DEFAULT_RULE]); const [preview, setPreview] = useState<AudiencePreview | null>(null);
   const filter = buildAndAudienceFilter(rules);
@@ -44,6 +60,6 @@ export function AudienceBuilder({ onPreview, onChange }: { onPreview?: (preview:
     </div>)}</div>
     <div className="flex flex-wrap gap-2"><Button type="button" variant="outline" onClick={() => replaceRules([...rules, DEFAULT_RULE])}>Add rule</Button><Button type="button" variant="outline" onClick={() => void runPreview()} disabled={previewBlocked}>Preview audience</Button></div>
     {previewBlocked ? <p role="alert" className="text-sm text-destructive">Complete each audience rule before previewing.</p> : null}
-    {preview ? <div role="status" className="space-y-3 rounded-md border bg-muted/30 p-4"><p className="text-lg font-semibold">{preview.total} people will be contacted</p><p className="font-medium text-destructive">The previewed count is exactly who gets contacted.</p><dl className="grid grid-cols-2 gap-2 text-sm sm:grid-cols-5"><div><dt className="text-muted-foreground">With email</dt><dd>{preview.withEmail}</dd></div><div><dt className="text-muted-foreground">Portal only</dt><dd>{preview.portalOnly}</dd></div><div><dt className="text-muted-foreground">Consent suppressed</dt><dd>{preview.suppressedByConsent}</dd></div><div><dt className="text-muted-foreground">Child suppressed</dt><dd>{preview.suppressedAsChild}</dd></div><div><dt className="text-muted-foreground">Sample</dt><dd>{preview.sample.join(", ") || "—"}</dd></div></dl></div> : null}
+    {preview ? <div role="status" className="space-y-3 rounded-md border bg-muted/30 p-4"><p className="text-lg font-semibold">{preview.total} people match this audience</p><p className="font-medium">{contactablePreviewCount(preview)} contactable · {suppressedPreviewCount(preview)} will be suppressed before sending</p><dl className="grid grid-cols-2 gap-2 text-sm sm:grid-cols-4 lg:grid-cols-7"><div><dt className="text-muted-foreground">Contactable</dt><dd className="font-semibold">{contactablePreviewCount(preview)}</dd></div><div><dt className="text-muted-foreground">Suppressed</dt><dd className="font-semibold text-destructive">{suppressedPreviewCount(preview)}</dd></div><div><dt className="text-muted-foreground">With email</dt><dd>{preview.withEmail}</dd></div><div><dt className="text-muted-foreground">Portal only</dt><dd>{preview.portalOnly}</dd></div><div><dt className="text-muted-foreground">Consent suppressed</dt><dd>{preview.suppressedByConsent}</dd></div><div><dt className="text-muted-foreground">Child suppressed</dt><dd>{preview.suppressedAsChild}</dd></div><div><dt className="text-muted-foreground">Sample</dt><dd>{preview.sample.join(", ") || "—"}</dd></div></dl></div> : null}
   </CardContent></Card>;
 }

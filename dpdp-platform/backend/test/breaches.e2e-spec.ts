@@ -315,6 +315,71 @@ describe("Breach workflow (BR-01…BR-15)", () => {
     ).toBe(f.principalIds.length);
   });
 
+  it("Defect 3 regression: notifyPrincipals surfaces a render failure (missing Rule 7(1) narrative field) to the caller instead of swallowing it and reporting success, and delivers nothing", async () => {
+    const f = await fixture();
+    const breach = await TenantContext.run(f.store, () =>
+      service.create(
+        {
+          title: "Breach with missing narrative",
+          description: "A test incident",
+          occurredAt: new Date().toISOString(),
+          becameAwareAt: new Date().toISOString(),
+          affectedSourceIds: ["source-1"],
+          dataCategories: ["IDENTITY"],
+          affectedPrincipalIds: f.principalIds,
+        },
+        f.actor,
+      ),
+    );
+    await prisma.breachIncident.update({
+      where: { id: breach.id },
+      data: { status: "CONTAINED" },
+    });
+    // The campaign body declares the Rule 7(1) placeholders (as the real
+    // BREACH_NOTIFICATION template does), but the breach record's
+    // narrative fields are NULL -- `service.create` above never set them.
+    const campaign = await prisma.messageCampaign.create({
+      data: {
+        organizationId: f.organizationId,
+        reference: `CMP-${randomUUID()}`,
+        name: "Breach notice with missing narrative",
+        category: "BREACH_NOTICE",
+        subject: "Data breach notice ({{breach_reference}})",
+        bodyMarkdown: [
+          "Nature, extent and timing: {{breach_nature_extent_timing}}",
+          "Consequences: {{breach_consequences}}",
+          "Mitigation: {{breach_mitigation}}",
+          "Safety measures: {{breach_safety_measures}}",
+          "Contact: {{breach_responder_contact}}",
+        ].join("\n"),
+        audienceFilter: {},
+        breachId: breach.id,
+        status: "APPROVED",
+        createdByEmployeeId: f.actor.sub,
+        approvedByEmployeeId: "another-employee",
+        approvedAt: new Date(),
+      },
+    });
+
+    // The failure must reach the caller -- not be swallowed into the
+    // "best-effort, the clock will retry" catch, which would report 200
+    // PRINCIPALS_NOTIFIED while nothing was ever queued for delivery.
+    await expect(
+      TenantContext.run(f.store, () =>
+        service.notifyPrincipals(breach.id, f.actor),
+      ),
+    ).rejects.toThrow(/Required variable/);
+
+    // Nothing was delivered.
+    expect(
+      await prisma.campaignRecipient.count({ where: { campaignId: campaign.id } }),
+    ).toBe(0);
+    const staleCampaign = await prisma.messageCampaign.findUniqueOrThrow({
+      where: { id: campaign.id },
+    });
+    expect(staleCampaign.status).toBe("APPROVED");
+  });
+
   it("Check 21: detailed Board report exposes CampaignRecipient delivery status counts and filing boundary", async () => {
     const f = await fixture();
     const breach = await TenantContext.run(f.store, () =>

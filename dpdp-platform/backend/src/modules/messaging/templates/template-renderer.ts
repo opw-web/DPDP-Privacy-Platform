@@ -1,5 +1,6 @@
 import Handlebars from "handlebars";
 import {
+  BREACH_NOTIFICATION_REQUIRED_ELEMENTS,
   TemplateVariableName,
   isWhitelistedTemplateVariable,
 } from "./whitelisted-variables";
@@ -241,14 +242,33 @@ function renderSource(
  *     syntax other than plain escaped `{{variable_name}}` references.
  *   - `UnknownTemplateVariableError` -- subject or body references a
  *     `{{name}}` outside `TEMPLATE_VARIABLE_WHITELIST`.
- *   - `MissingRequiredVariableError` -- a name in `requiredVariables` has
- *     no non-empty-string value in `variables` (`undefined`, `null`, or
- *     an empty/whitespace-only string all count as missing).
+ *   - `MissingRequiredVariableError` -- a name in the EFFECTIVE required
+ *     set (see below) has no non-empty-string value in `variables`
+ *     (`undefined`, `null`, or an empty/whitespace-only string all count
+ *     as missing).
  *
- * A referenced variable that is whitelisted but NOT required and has no
- * value renders as an empty string -- only REQUIRED variables fail the
- * render (spec: "a missing required value fails the render rather than
- * printing an empty string").
+ * The effective required set is `requiredVariables` UNION whichever of
+ * `BREACH_NOTIFICATION_REQUIRED_ELEMENTS` (the six Rule 7(1)/breach-
+ * reference placeholders -- `whitelisted-variables.ts`) the subject or
+ * body actually reference. This is deliberately NOT "every referenced
+ * variable is required": a referenced variable outside that six-name set
+ * that is whitelisted but not listed in `requiredVariables` still renders
+ * as an empty string, exactly as before -- e.g. `{{portal_link}}` or
+ * `{{withdrawal_url}}` are legitimately optional on templates that
+ * reference them defensively. The six breach elements are different:
+ * they are named explicitly and unconditionally by spec §4.9, so a
+ * template that declares one is never allowed to render it blank, no
+ * matter what its own `requiredVariables` array says. This closes a real
+ * incident: a BREACH_NOTICE campaign created with ad-hoc subject/body
+ * text (no `templateId`) got `requiredVariables: []` -- nothing wired
+ * `dto.requiredVariables` from the campaign-builder UI -- so this
+ * function's required-check never ran at all, and a breach record with
+ * NULL narrative fields rendered and sent 114 legally defective notices
+ * with no error anywhere. Enforcing "declared implies required" for
+ * these six names here, in the renderer itself, closes the gap for every
+ * current and future caller (ad-hoc campaign text, an edited template, a
+ * template a future task adds) rather than relying on every call site to
+ * separately remember to populate `requiredVariables` correctly.
  */
 export function renderMessageTemplate(
   input: RenderTemplateInput,
@@ -256,11 +276,21 @@ export function renderMessageTemplate(
   // Parsing (and therefore whitelist/syntax validation) happens for both
   // subject and body before any required-variable check, so an unknown
   // variable or disallowed syntax is reported before a missing-required
-  // error would otherwise mask it.
-  renderSource(input.subjectSource, {});
-  renderSource(input.bodySource, {});
+  // error would otherwise mask it. The returned `referenced` sets also
+  // drive the breach-element enforcement below.
+  const subjectCheck = renderSource(input.subjectSource, {});
+  const bodyCheck = renderSource(input.bodySource, {});
+  const referenced = new Set<TemplateVariableName>([
+    ...subjectCheck.referenced,
+    ...bodyCheck.referenced,
+  ]);
 
-  for (const required of input.requiredVariables) {
+  const effectiveRequired = new Set<string>(input.requiredVariables);
+  for (const element of BREACH_NOTIFICATION_REQUIRED_ELEMENTS) {
+    if (referenced.has(element)) effectiveRequired.add(element);
+  }
+
+  for (const required of effectiveRequired) {
     const value = input.variables[required as TemplateVariableName];
     if (value === undefined || value === null || value.trim().length === 0) {
       throw new MissingRequiredVariableError(required);

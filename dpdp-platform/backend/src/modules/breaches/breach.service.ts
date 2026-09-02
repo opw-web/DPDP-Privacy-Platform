@@ -1,6 +1,7 @@
 import {
   BadRequestException,
   ConflictException,
+  HttpException,
   Injectable,
   NotFoundException,
 } from "@nestjs/common";
@@ -631,12 +632,34 @@ export class BreachService {
     // re-enqueue it. The stable breach/campaign job id prevents duplicate
     // dispatches while the recipient-level campaign jobs provide the next
     // layer of delivery deduplication.
+    //
+    // That "best-effort, swallow and let the clock retry" rule applies
+    // ONLY to infra failures (Redis down, provider timeout) that a later
+    // retry can plausibly fix. `CampaignsService.send()` -> render can
+    // instead throw an `HttpException` (`BadRequestException` for a
+    // `MissingRequiredVariableError`/`UnknownTemplateVariableError`/
+    // `DisallowedTemplateSyntaxError`/`MissingOrganizationContactError`,
+    // `ForbiddenException`/`ConflictException` for a guard) BEFORE any
+    // recipient row is written or any provider is called -- that is not
+    // a transient condition a retry will ever clear on its own, and
+    // swallowing it here is exactly the defect this fix closes: the
+    // caller of this endpoint would see 200 PRINCIPALS_NOTIFIED while
+    // zero notices were ever queued, and every later retry (this
+    // request's own second attempt, and the five-minute clock
+    // reconciler) would keep failing the same way, silently, forever.
+    // Rethrow it so the employee who triggered notification learns
+    // immediately, with the same message a direct `POST
+    // /campaigns/:id/send` would give ("Required variable ... has no
+    // value."), that nothing was sent and why -- they can fix the
+    // breach record (or template) and retry from a PRINCIPALS_NOTIFIED
+    // breach without re-running the state transition above.
     try {
       // Stage immediately for the normal request path. This only writes the
       // campaign's durable recipient outbox and hands it to its existing
       // sender; it does not perform recipient/provider I/O in this request.
       await this.dispatchPrincipalNoticeCampaign(campaign.id);
-    } catch {
+    } catch (err) {
+      if (err instanceof HttpException) throw err;
       // A failed staging attempt leaves the Postgres intent above intact. The
       // stable-id dispatch job below (and clock reconciliation) retries it.
     }
