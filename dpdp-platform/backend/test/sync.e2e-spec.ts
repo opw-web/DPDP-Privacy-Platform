@@ -379,6 +379,93 @@ describe("Sync pipeline (e2e)", () => {
     ]);
   });
 
+  it(
+    "a rule-4 POSSIBLE supporting-signal match (same nameKey + postal " +
+      "code, no shared email/phone -- the demo dataset's own " +
+      "'possible-duplicate pair' shape) still creates its OWN principal " +
+      "and is NOT silently merged into the other one (Section 7 Step 6)",
+    async () => {
+      const org = await organization();
+      const postalMappings = [
+        ...commonMappings,
+        {
+          sourceField: "pincode",
+          canonicalField: "POSTAL_CODE" as const,
+          dataCategory: "LOCATION" as const,
+        },
+      ];
+      const { baseUrl: firstBaseUrl } = await startServer([
+        {
+          id: "1",
+          name: "Vikram Nair",
+          email: "vikram.n@example.test",
+          city: "Delhi",
+          pincode: "110001",
+        },
+      ]);
+      const firstSourceId = await createDataSource(
+        org,
+        firstBaseUrl,
+        100,
+        postalMappings,
+      );
+      const first = await pipeline.run(firstSourceId, "first-run");
+      expect(first.status).toBe("SUCCESS");
+      expect(first).toMatchObject({
+        principalsCreated: 1,
+        principalsLinked: 0,
+        candidatesRaised: 0,
+      });
+
+      const { baseUrl: secondBaseUrl } = await startServer([
+        {
+          id: "1",
+          name: "Vikram Nair",
+          email: "vikram.nair@example.test",
+          city: "Delhi",
+          pincode: "110001",
+        },
+      ]);
+      const secondSourceId = await createDataSource(
+        org,
+        secondBaseUrl,
+        100,
+        postalMappings,
+      );
+      const second = await pipeline.run(secondSourceId, "second-run");
+      expect(second.status).toBe("SUCCESS");
+      // The bug this test guards (Section 7 Step 6): a POSSIBLE candidate
+      // used to leave this record with NO principal at all, so
+      // `principalsCreated` stayed 0 and `principalsLinked` incorrectly
+      // absorbed it -- undercounting the true number of distinct people by
+      // exactly the number of pending review pairs (327 -> 323 on the demo
+      // dataset's 4 pairs). Rule 5 ("otherwise -> new DataPrincipal")
+      // applies regardless of rule 4 raising a candidate: the ambiguous
+      // record gets its OWN new principal, kept apart from the first one,
+      // while the possible match is queued for human review.
+      expect(second).toMatchObject({
+        principalsCreated: 1,
+        principalsLinked: 0,
+        candidatesRaised: 1,
+      });
+
+      const [principalCount, activeLinkCount, pendingCandidateCount] =
+        await TenantContext.run(tenant(org), () =>
+          Promise.all([
+            prisma.scoped.dataPrincipal.count({}),
+            prisma.scoped.identityLink.count({ where: { status: "ACTIVE" } }),
+            prisma.scoped.matchCandidate.count({ where: { status: "PENDING" } }),
+          ]),
+        );
+      // Two SEPARATE principals -- never silently merged into one on a
+      // machine's guess -- each with its own active link, plus exactly one
+      // pending pair awaiting a human decision.
+      expect(principalCount).toBe(2);
+      expect(activeLinkCount).toBe(2);
+      expect(pendingCandidateCount).toBe(1);
+    },
+  );
+
   it("re-running the same sync changes no counts and reports recordsCreated: 0 with recordsSkipped ≈ recordsRead", async () => {
     const org = await organization();
     const records = [

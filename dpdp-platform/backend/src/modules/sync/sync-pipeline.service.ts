@@ -489,7 +489,13 @@ export class SyncPipelineService {
     if (applied.linkCreated) {
       // ASSEMBLE + AGE already ran inside `applyMatch` for a newly
       // created link (LinkingService's own, Task 17-reviewed contract).
-      if (matchResult.kind === "NEW") {
+      // Use `applied.principalCreated`, not `matchResult.kind === "NEW"`:
+      // a CANDIDATE result (rule 4's POSSIBLE supporting-signal match)
+      // also creates a brand-new principal now (spec 4.4 rule 5 applies
+      // regardless of rule 4 raising a candidate) -- counting that as
+      // "linked" would undercount `principalsCreated` by exactly the
+      // number of pending review candidates.
+      if (applied.principalCreated) {
         counts.principalsCreated += 1;
       } else {
         counts.principalsLinked += 1;

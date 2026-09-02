@@ -61,14 +61,22 @@ export class MergeService {
 
   /**
    * Re-parents the record's ACTIVE `IdentityLink` onto `targetDataPrincipalId`
-   * (creating one if the record currently has none -- the common case for a
-   * POSSIBLE supporting-signal candidate, which `LinkingService.applyMatch`
-   * deliberately never auto-links). If the record was already linked to a
-   * DIFFERENT principal (the rules 1-3 conflict-candidate case: the record
-   * auto-linked to the higher-confidence winner while a candidate was raised
-   * against the loser), confirming that candidate moves the SAME link row
-   * rather than detaching-and-recreating -- literally "re-parenting", not
-   * "unmerge then merge". Both the old and new principal's profiles are
+   * (creating one if the record currently has none at all -- an edge case,
+   * e.g. a DETACHED-suppressed record that has never resynced since; see
+   * `LinkingService.applyMatch`). The common case for BOTH a rules-1-3
+   * conflict candidate (record auto-linked to the higher-confidence winner,
+   * candidate raised against the loser) and a rule-4 POSSIBLE
+   * supporting-signal candidate (record given its own new principal per
+   * spec 4.4 rule 5, candidate raised against the OTHER, similar-looking
+   * principal -- see `LinkingService.applyMatch`'s `result.kind ===
+   * "CANDIDATE"` branch) is that the record IS already linked, just to a
+   * DIFFERENT principal than the one being confirmed: this re-parents that
+   * SAME link row rather than detaching-and-recreating -- literally
+   * "re-parenting", not "unmerge then merge". Confirming a rule-4 candidate
+   * this way can leave the record's original (solo) principal with zero
+   * active links -- nothing in the schema forbids that state, but it is a
+   * newly-reachable one worth knowing about when reading principal counts
+   * after a confirm. Both the old and new principal's profiles are
    * rebuilt when a re-parent actually changes ownership.
    */
   async mergeRecordIntoPrincipal(

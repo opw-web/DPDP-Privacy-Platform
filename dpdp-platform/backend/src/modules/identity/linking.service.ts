@@ -26,6 +26,16 @@ export type LinkableNormalizedRecord = {
 export interface ApplyMatchResult {
   dataPrincipalId: string | null;
   linkCreated: boolean;
+  /**
+   * True exactly when this call created a brand-new `DataPrincipal` row
+   * (spec 4.4 rule 5: "Otherwise UNMATCHED -> new DataPrincipal", which
+   * applies whenever rules 1-3 found no exact identifier match --
+   * regardless of whether rule 4 ALSO raised a POSSIBLE candidate).
+   * Callers must use this flag, not `matchResult.kind === "NEW"`, to
+   * decide whether a principal was freshly created: a CANDIDATE result
+   * creates one too (see the `result.kind === "CANDIDATE"` branch below).
+   */
+  principalCreated: boolean;
   candidatesCreated: number;
 }
 
@@ -290,8 +300,22 @@ export class LinkingService {
       ),
     );
     let linkCreated = false;
+    let principalCreated = false;
     let suppressedLinkCandidate: RaisedCandidate | null = null;
-    if (!activeLink && result.kind === "NEW") {
+    // Spec 4.4 rule 5 ("Otherwise UNMATCHED -> new DataPrincipal") applies
+    // whenever rules 1-3 found no exact identifier match for this record --
+    // that is exactly `MatchingService.match`'s "NEW" and "CANDIDATE" kinds
+    // (a CANDIDATE result is rule 4's POSSIBLE supporting-signal match,
+    // which raises a MatchCandidate for human review but, per spec, "Do not
+    // link" -- it does not suppress rule 5). Both kinds therefore get their
+    // OWN new principal here: this is what keeps a person whose only
+    // evidence is an ambiguous name/pincode match SEPARATE from the
+    // candidate's target principal (the same "kept apart by default"
+    // guarantee already given to the two Rahul Vermas), rather than leaving
+    // the record in limbo with no principal at all until a human reviews
+    // it. The pending MatchCandidate raised below is what lets a reviewer
+    // merge the two later via confirm -- never an automatic decision.
+    if (!activeLink && (result.kind === "NEW" || result.kind === "CANDIDATE")) {
       const principal = await tx.dataPrincipal.create({
         data: {
           reference:
@@ -301,6 +325,7 @@ export class LinkingService {
         select: { id: true, reference: true, displayName: true },
       });
       dataPrincipalId = principal.id;
+      principalCreated = true;
       await this.auditService.record(tx, {
         action: "PRINCIPAL_CREATED",
         resourceType: "DataPrincipal",
@@ -438,6 +463,6 @@ export class LinkingService {
       await this.assemblyService.rebuild(tx, dataPrincipalId);
       await this.ageService.derive(tx, dataPrincipalId);
     }
-    return { dataPrincipalId, linkCreated, candidatesCreated };
+    return { dataPrincipalId, linkCreated, principalCreated, candidatesCreated };
   }
 }

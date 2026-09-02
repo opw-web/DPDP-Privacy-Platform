@@ -269,64 +269,102 @@ describe("Deterministic identity matching (e2e)", () => {
     });
   });
 
-  it("raises only a POSSIBLE supporting candidate and preserves both Rahul Vermas as separate principals", async () => {
-    const org = await organization();
-    const firstRahul = await record(org, {
-      fullName: "Rahul Verma",
-      nameKey: "rahul verma",
-      postalCode: "411001",
-    });
-    const firstResult = await TenantContext.run(tenant(org), () =>
-      matching.match(prisma.scoped, firstRahul, []),
-    );
-    const firstApplied = await apply(org, firstRahul, firstResult);
-    expect(firstApplied.linkCreated).toBe(true);
-    await expect(
-      TenantContext.run(tenant(org), () =>
-        prisma.scoped.sourceRecord.findFirst({
-          where: { id: firstRahul.sourceRecordId },
-          select: { rawPayload: true },
-        }),
-      ),
-    ).resolves.toEqual({ rawPayload: { immutable: "source payload" } });
+  it(
+    "raises a POSSIBLE supporting candidate but still gives the ambiguous " +
+      "record its own separate principal (spec 4.4 rule 5 applies " +
+      "regardless of rule 4), and preserves both Rahul Vermas as separate " +
+      "principals",
+    async () => {
+      const org = await organization();
+      const firstRahul = await record(org, {
+        fullName: "Rahul Verma",
+        nameKey: "rahul verma",
+        postalCode: "411001",
+      });
+      const firstResult = await TenantContext.run(tenant(org), () =>
+        matching.match(prisma.scoped, firstRahul, []),
+      );
+      const firstApplied = await apply(org, firstRahul, firstResult);
+      expect(firstApplied.linkCreated).toBe(true);
+      await expect(
+        TenantContext.run(tenant(org), () =>
+          prisma.scoped.sourceRecord.findFirst({
+            where: { id: firstRahul.sourceRecordId },
+            select: { rawPayload: true },
+          }),
+        ),
+      ).resolves.toEqual({ rawPayload: { immutable: "source payload" } });
 
-    const supportingRahul = await record(org, {
-      fullName: "Rahul Verma",
-      nameKey: "rahul verma",
-      postalCode: "411001",
-    });
-    const candidateResult = await TenantContext.run(tenant(org), () =>
-      matching.match(prisma.scoped, supportingRahul, []),
-    );
-    expect(candidateResult).toMatchObject({
-      kind: "CANDIDATE",
-      confidence: "POSSIBLE",
-    });
-    const candidateApplied = await apply(org, supportingRahul, candidateResult);
-    expect(candidateApplied.linkCreated).toBe(false);
-    expect(candidateApplied.candidatesCreated).toBe(1);
-    await expect(
-      TenantContext.run(tenant(org), () =>
-        prisma.scoped.identityLink.count({
-          where: { normalizedRecordId: supportingRahul.id, status: "ACTIVE" },
-        }),
-      ),
-    ).resolves.toBe(0);
+      const supportingRahul = await record(org, {
+        fullName: "Rahul Verma",
+        nameKey: "rahul verma",
+        postalCode: "411001",
+      });
+      const candidateResult = await TenantContext.run(tenant(org), () =>
+        matching.match(prisma.scoped, supportingRahul, []),
+      );
+      expect(candidateResult).toMatchObject({
+        kind: "CANDIDATE",
+        confidence: "POSSIBLE",
+        dataPrincipalId: firstApplied.dataPrincipalId,
+      });
+      const candidateApplied = await apply(
+        org,
+        supportingRahul,
+        candidateResult,
+      );
+      // Rule 4 ("Do not link") only forbids auto-linking to the candidate
+      // TARGET (firstRahul's principal). Rule 5 ("Otherwise -> new
+      // DataPrincipal") still applies: the record must not be left with no
+      // identity at all while it awaits human review -- that is what
+      // previously undercounted the demo dataset's principal total by
+      // exactly its number of pending review pairs (Section 7 Step 6).
+      expect(candidateApplied.linkCreated).toBe(true);
+      expect(candidateApplied.principalCreated).toBe(true);
+      expect(candidateApplied.dataPrincipalId).not.toBe(
+        firstApplied.dataPrincipalId,
+      );
+      expect(candidateApplied.candidatesCreated).toBe(1);
+      await expect(
+        TenantContext.run(tenant(org), () =>
+          prisma.scoped.identityLink.findFirst({
+            where: { normalizedRecordId: supportingRahul.id, status: "ACTIVE" },
+            select: { dataPrincipalId: true },
+          }),
+        ),
+      ).resolves.toEqual({ dataPrincipalId: candidateApplied.dataPrincipalId });
+      // The possible-duplicate pairing is preserved for a human to decide,
+      // pointing at firstRahul's (the OTHER, similar-looking) principal.
+      await expect(
+        TenantContext.run(tenant(org), () =>
+          prisma.scoped.matchCandidate.findFirst({
+            where: {
+              normalizedRecordId: supportingRahul.id,
+              dataPrincipalId: firstApplied.dataPrincipalId ?? undefined,
+            },
+            select: { status: true, confidence: true },
+          }),
+        ),
+      ).resolves.toEqual({ status: "PENDING", confidence: "POSSIBLE" });
 
-    const secondRahul = await record(org, {
-      fullName: "Rahul Verma",
-      nameKey: "rahul verma",
-      postalCode: "560001",
-    });
-    const secondResult = await TenantContext.run(tenant(org), () =>
-      matching.match(prisma.scoped, secondRahul, []),
-    );
-    expect(secondResult).toEqual({ kind: "NEW" });
-    await apply(org, secondRahul, secondResult);
-    await expect(
-      TenantContext.run(tenant(org), () => prisma.scoped.dataPrincipal.count()),
-    ).resolves.toBe(2);
-  });
+      const secondRahul = await record(org, {
+        fullName: "Rahul Verma",
+        nameKey: "rahul verma",
+        postalCode: "560001",
+      });
+      const secondResult = await TenantContext.run(tenant(org), () =>
+        matching.match(prisma.scoped, secondRahul, []),
+      );
+      expect(secondResult).toEqual({ kind: "NEW" });
+      await apply(org, secondRahul, secondResult);
+      // Three distinct principals: firstRahul, supportingRahul (kept apart
+      // pending review, NOT merged) and secondRahul (the genuinely
+      // different, no-shared-signal Rahul Verma).
+      await expect(
+        TenantContext.run(tenant(org), () => prisma.scoped.dataPrincipal.count()),
+      ).resolves.toBe(3);
+    },
+  );
 
   it("links the exact email principal, records the phone conflict candidate, and is idempotent", async () => {
     const org = await organization();
@@ -559,6 +597,12 @@ describe("Deterministic identity matching (e2e)", () => {
     const candidateRecord = await record(orgB, {
       fullName: "Candidate record",
     });
+    // A CANDIDATE result still gets its OWN new principal (spec 4.4 rule 5
+    // applies regardless of rule 4's "do not link" against the candidate
+    // target) -- it must not be left with no principal while pending
+    // review. See the Rahul Verma candidate test above for the full
+    // "kept apart" assertion; this call only needs to prove `applyMatch`
+    // does not silently link the ambiguous record onto `localPrincipal`.
     await expect(
       apply(orgB, candidateRecord, {
         kind: "CANDIDATE",
@@ -567,7 +611,19 @@ describe("Deterministic identity matching (e2e)", () => {
         score: 0.5,
         evidence: { rule: "test" },
       }),
-    ).resolves.toMatchObject({ linkCreated: false, candidatesCreated: 1 });
+    ).resolves.toMatchObject({
+      linkCreated: true,
+      principalCreated: true,
+      candidatesCreated: 1,
+    });
+    await expect(
+      TenantContext.run(tenant(orgB), () =>
+        prisma.scoped.identityLink.findFirst({
+          where: { normalizedRecordId: candidateRecord.id, status: "ACTIVE" },
+          select: { dataPrincipalId: true },
+        }),
+      ),
+    ).resolves.not.toMatchObject({ dataPrincipalId: localPrincipal.id });
   });
 
   it("keeps identifiers tenant-local and proves Postgres enforces one active link", async () => {
