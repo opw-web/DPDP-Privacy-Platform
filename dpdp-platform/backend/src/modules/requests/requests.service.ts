@@ -142,6 +142,12 @@ export interface DeadlineScanOrgResult {
   escalated: number;
 }
 
+/** The exact, tenant-scoped holder ids an ERASURE completion must confirm. */
+export interface ErasureCompletionHolders {
+  systemChecklist: Array<{ dataSourceId: string }>;
+  processorChecklist: Array<{ recipientId: string }>;
+}
+
 function transitionTargets(status: RequestStatus): readonly RequestStatus[] {
   return TRANSITIONS[status] ?? [];
 }
@@ -203,6 +209,28 @@ export class RequestsService {
     ]);
 
     return { ...row, events, assignedEmployee };
+  }
+
+  /**
+   * Returns the current ERASURE holder set only after tenant-scoped request
+   * ownership and request type have been established. The retention service
+   * remains the sole builder so this read and completion-time validation use
+   * the same source and active-processor semantics.
+   */
+  async getErasureCompletionHolders(ref: string): Promise<ErasureCompletionHolders> {
+    const request = await this.loadByReferenceOrThrow(ref);
+    if (request.type !== "ERASURE") {
+      throw new BadRequestException(
+        "Erasure completion holders are available only for ERASURE requests.",
+      );
+    }
+    const checklists = await this.erasureTaskService.buildRequestCompletionChecklists(
+      request.dataPrincipalId,
+    );
+    return {
+      systemChecklist: checklists.systemChecklist.map(({ dataSourceId }) => ({ dataSourceId })),
+      processorChecklist: checklists.processorChecklist.map(({ recipientId }) => ({ recipientId })),
+    };
   }
 
   async stats(): Promise<RequestStats> {

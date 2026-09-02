@@ -340,6 +340,17 @@ describe("Rights requests API and deadline-scan (e2e)", () => {
           status: "CONNECTED",
         },
       });
+      const secondSource = await prisma.dataSource.create({
+        data: {
+          organizationId: grantee.organizationId,
+          name: `Erasure source two ${randomUUID()}`,
+          systemType: "CRM",
+          baseUrl: "https://example.test/erasure-two",
+          recordsPath: "data",
+          externalIdField: "id",
+          status: "CONNECTED",
+        },
+      });
       await prisma.principalDataField.create({
         data: {
           organizationId: grantee.organizationId,
@@ -347,7 +358,17 @@ describe("Rights requests API and deadline-scan (e2e)", () => {
           canonicalField: "PHONE",
           value: "+91-9999999999",
           dataCategory: "CONTACT",
-          sourceIds: [source.id],
+          sourceIds: [source.id, source.id],
+        },
+      });
+      await prisma.principalDataField.create({
+        data: {
+          organizationId: grantee.organizationId,
+          dataPrincipalId,
+          canonicalField: "EMAIL",
+          value: "erasure@example.test",
+          dataCategory: "CONTACT",
+          sourceIds: [source.id, secondSource.id, secondSource.id],
         },
       });
       const processor = await prisma.dataRecipient.create({
@@ -358,12 +379,41 @@ describe("Rights requests API and deadline-scan (e2e)", () => {
           contractExists: true,
         },
       });
+      await prisma.dataRecipient.create({
+        data: {
+          organizationId: grantee.organizationId,
+          name: `Inactive erasure processor ${randomUUID()}`,
+          type: "DATA_PROCESSOR",
+          active: false,
+        },
+      });
+      await prisma.dataRecipient.create({
+        data: {
+          organizationId: grantee.organizationId,
+          name: `Other fiduciary ${randomUUID()}`,
+          type: "OTHER_DATA_FIDUCIARY",
+          active: true,
+        },
+      });
       const req = await createRequest(grantee.organizationId, {
         dataPrincipalId,
         type: "ERASURE",
         subject: "Erase my data",
         body: "Please erase my data.",
       });
+      const holders = await client.get(`/api/requests/${req.reference}/erasure-completion-holders`);
+      expect(holders.status).toBe(200);
+      expect(holders.body).toEqual({
+        systemChecklist: expect.arrayContaining([
+          { dataSourceId: source.id },
+          { dataSourceId: secondSource.id },
+        ]),
+        processorChecklist: [{ recipientId: processor.id }],
+      });
+      expect(holders.body.systemChecklist).toHaveLength(2);
+      // The processor has no SharingActivity at all: active registered
+      // processors are required holders independently of overlap/activity.
+      expect(holders.body.processorChecklist).toHaveLength(1);
       await client.post(`/api/requests/${req.reference}/status`, { status: "OPEN" });
       await client.post(`/api/requests/${req.reference}/status`, { status: "IN_PROGRESS" });
 
@@ -381,7 +431,7 @@ describe("Rights requests API and deadline-scan (e2e)", () => {
         status: "COMPLETED",
         outcomeCode: "FULFILLED",
         outcome: "Erasure completed",
-        systemChecklist: [{ dataSourceId: source.id, done: false }],
+        systemChecklist: [{ dataSourceId: source.id, done: false }, { dataSourceId: secondSource.id, done: true }],
         processorChecklist: [{ recipientId: processor.id, confirmed: true, ref: "PROC-1" }],
       });
       expect(invalid.status).toBe(400);
@@ -392,7 +442,7 @@ describe("Rights requests API and deadline-scan (e2e)", () => {
         status: "COMPLETED",
         outcomeCode: "FULFILLED",
         outcome: "Erasure completed",
-        systemChecklist: [{ dataSourceId: source.id, done: true }],
+        systemChecklist: [{ dataSourceId: source.id, done: true }, { dataSourceId: secondSource.id, done: true }],
         processorChecklist: [{ recipientId: processor.id, confirmed: true, ref: "PROC-1" }],
       });
       expect(valid.status).toBe(201);
@@ -403,6 +453,7 @@ describe("Rights requests API and deadline-scan (e2e)", () => {
       expect(task?.trigger).toBe("REQUEST");
       expect(task?.systemChecklist).toEqual([
         expect.objectContaining({ dataSourceId: source.id, done: true, byEmployeeId: grantee.employeeId }),
+        expect.objectContaining({ dataSourceId: secondSource.id, done: true, byEmployeeId: grantee.employeeId }),
       ]);
       expect(task?.processorChecklist).toEqual([
         expect.objectContaining({ recipientId: processor.id, confirmed: true, ref: "PROC-1" }),
@@ -413,6 +464,34 @@ describe("Rights requests API and deadline-scan (e2e)", () => {
         expect.arrayContaining([expect.objectContaining({ toStatus: "COMPLETED" })]),
       );
       expect(await prisma.requestEvent.count({ where: { requestId: req.id, toStatus: "COMPLETED" } })).toBe(1);
+    });
+
+    it("protects the authoritative holder route by permission, tenant ownership, and ERASURE type", async () => {
+      const grantee = await createOrgWithEmployee(app, prisma, "REQUESTS_HOLDERS", [
+        "CAN_MANAGE_REQUESTS",
+      ]);
+      const otherTenant = await createOrgWithEmployee(app, prisma, "REQUESTS_HOLDERS_OTHER", [
+        "CAN_MANAGE_REQUESTS",
+      ]);
+      const noPermission = await createOrgWithEmployee(app, prisma, "REQUESTS_HOLDERS_DENIED", []);
+      orgIds.push(grantee.organizationId, otherTenant.organizationId, noPermission.organizationId);
+      const principalId = await createPrincipal(grantee.organizationId);
+      const accessRequest = await createRequest(grantee.organizationId, {
+        dataPrincipalId: principalId,
+        type: "ACCESS",
+        subject: "Access holder route",
+        body: "Please provide my data.",
+      });
+      const erasureRequest = await createRequest(grantee.organizationId, {
+        dataPrincipalId: principalId,
+        type: "ERASURE",
+        subject: "Erasure holder route",
+        body: "Please erase my data.",
+      });
+
+      expect((await authed(grantee.accessToken).get(`/api/requests/${accessRequest.reference}/erasure-completion-holders`)).status).toBe(400);
+      expect((await authed(otherTenant.accessToken).get(`/api/requests/${erasureRequest.reference}/erasure-completion-holders`)).status).toBe(404);
+      expect((await authed(noPermission.accessToken).get(`/api/requests/${erasureRequest.reference}/erasure-completion-holders`)).status).toBe(403);
     });
   });
 

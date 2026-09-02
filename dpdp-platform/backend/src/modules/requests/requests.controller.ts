@@ -27,6 +27,7 @@ import { FlagFrivolousDto } from "./dto/flag-frivolous.dto";
  *
  *   GET  /api/requests?status=&type=&assignee=&overdue=
  *   GET  /api/requests/stats
+ *   GET  /api/requests/:ref/erasure-completion-holders
  *   GET  /api/requests/:ref
  *   POST /api/requests/:ref/assign
  *   POST /api/requests/:ref/status
@@ -62,6 +63,12 @@ export class RequestsController {
   @RequirePermission("CAN_MANAGE_REQUESTS")
   stats() {
     return this.requestsService.stats();
+  }
+
+  @Get(":ref/erasure-completion-holders")
+  @RequirePermission("CAN_MANAGE_REQUESTS")
+  erasureCompletionHolders(@Param("ref") ref: string) {
+    return this.requestsService.getErasureCompletionHolders(ref);
   }
 
   @Get(":ref")

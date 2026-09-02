@@ -11,11 +11,16 @@ import { Textarea } from "../../../components/ui/textarea";
 import { humanizeEnum } from "../../lib/enum-options";
 import { REQUEST_TRANSITIONS, type RequestRecord, type RequestStatus } from "./types";
 
+export interface ErasureCompletionEvidence {
+  systemChecklist: Array<{ dataSourceId: string; done: true }>;
+  processorChecklist: Array<{ recipientId: string; confirmed: true; ref?: string }>;
+}
+
 function message(error: unknown) { return error instanceof ApiError && error.message ? error.message : "Could not update this request."; }
-export function RequestWorkPanel({ request, completionAllowed }: { request: RequestRecord; completionAllowed: boolean }) {
+export function RequestWorkPanel({ request, completionAllowed, erasureCompletionEvidence }: { request: RequestRecord; completionAllowed: boolean; erasureCompletionEvidence?: ErasureCompletionEvidence }) {
   const client = useQueryClient(); const [target, setTarget] = useState<RequestStatus | "">(REQUEST_TRANSITIONS[request.status][0] ?? ""); const [outcomeCode, setOutcomeCode] = useState(""); const [outcome, setOutcome] = useState(""); const [rejectionReason, setRejectionReason] = useState(""); const [statutoryGround, setStatutoryGround] = useState(""); const [statusNote, setStatusNote] = useState(""); const [requestNote, setRequestNote] = useState(""); const [visibleToPrincipal, setVisibleToPrincipal] = useState(false); const [assignee, setAssignee] = useState(""); const [addedNotes, setAddedNotes] = useState<Array<{ note: string; visibleToPrincipal: boolean }>>([]);
   const refresh = () => void client.invalidateQueries({ queryKey: ["request", request.reference] });
-  const statusChange = useMutation({ mutationFn: () => employeeApiClient.post(`/requests/${request.reference}/status`, { status: target, ...(target === "COMPLETED" ? { outcomeCode, outcome } : {}), ...(target === "REJECTED" ? { rejectionReason, ...(request.type === "ERASURE" ? { statutoryGround } : {}) } : {}), note: statusNote || undefined }), onSuccess: () => { toast.success("Request status updated."); refresh(); }, onError: (error) => toast.error(message(error)) });
+  const statusChange = useMutation({ mutationFn: () => employeeApiClient.post(`/requests/${request.reference}/status`, { status: target, ...(target === "COMPLETED" ? { outcomeCode, outcome, ...(request.type === "ERASURE" && erasureCompletionEvidence ? erasureCompletionEvidence : {}) } : {}), ...(target === "REJECTED" ? { rejectionReason, ...(request.type === "ERASURE" ? { statutoryGround } : {}) } : {}), note: statusNote || undefined }), onSuccess: () => { toast.success("Request status updated."); refresh(); }, onError: (error) => toast.error(message(error)) });
   const assign = useMutation({ mutationFn: () => employeeApiClient.post(`/requests/${request.reference}/assign`, { employeeId: assignee }), onSuccess: () => { toast.success("Request assigned."); refresh(); }, onError: (error) => toast.error(message(error)) });
   const addNote = useMutation({ mutationFn: () => employeeApiClient.post(`/requests/${request.reference}/note`, { note: requestNote, visibleToPrincipal }), onSuccess: () => { setAddedNotes((current) => [...current, { note: requestNote, visibleToPrincipal }]); setRequestNote(""); toast.success(visibleToPrincipal ? "Principal-visible note added." : "Internal note added."); setVisibleToPrincipal(false); refresh(); }, onError: (error) => toast.error(message(error)) });
   const targets = REQUEST_TRANSITIONS[request.status];

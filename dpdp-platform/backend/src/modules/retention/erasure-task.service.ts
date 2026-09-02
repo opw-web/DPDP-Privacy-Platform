@@ -113,6 +113,24 @@ export class ErasureTaskService {
   ) {}
 
   /**
+   * The authoritative current holder set for completing a REQUEST-triggered
+   * ERASURE request. This deliberately reuses the same builder used when an
+   * `ErasureTask` is created, so the employee UI cannot drift from the set
+   * that completion validation will enforce. REQUEST triggers do not carry a
+   * retention policy, therefore no account-access carve-out applies here.
+   */
+  async buildRequestCompletionChecklists(
+    dataPrincipalId: string,
+  ): Promise<{
+    systemChecklist: SystemChecklistEntry[];
+    processorChecklist: ProcessorChecklistEntry[];
+  }> {
+    return this.prisma.scoped.$transaction((tx) =>
+      this.buildChecklists(tx, dataPrincipalId, false),
+    );
+  }
+
+  /**
    * THE single writer of `ErasureTask` rows in this codebase (Global
    * Constraint / task brief: "the single writer of `ErasureTask` rows").
    * `tx` is the CALLER's own transaction (`ScopedTransactionClient`, from
