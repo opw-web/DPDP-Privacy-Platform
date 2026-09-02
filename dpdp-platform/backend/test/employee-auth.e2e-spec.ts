@@ -754,7 +754,21 @@ describe("Employee auth (e2e)", () => {
       employees: await prisma.employee.count({
         where: { organizationId: first.organizationId },
       }),
-      organizations: await prisma.organization.count(),
+      // Scoped to the seed's own organization, like every other count
+      // above -- NOT a bare `prisma.organization.count()`. This suite
+      // runs concurrently with every other e2e suite against one shared
+      // Postgres database (the default, non-runInBand jest invocation),
+      // and every other suite creates its own Organization fixture, so a
+      // global count is never stable regardless of whether THIS seed is
+      // idempotent -- it was failing on contention alone (observed:
+      // 150 -> 151 between the two `runSeed` calls, from an unrelated
+      // suite's fixture landing in that window), not on a real bug. The
+      // actual claim this test makes -- "the SAME org row is not
+      // duplicated by a second seed run" -- is fully captured by this
+      // count staying 1 both times.
+      organizations: await prisma.organization.count({
+        where: { id: first.organizationId },
+      }),
     };
 
     const second = await runSeed(prisma);
@@ -771,7 +785,9 @@ describe("Employee auth (e2e)", () => {
       employees: await prisma.employee.count({
         where: { organizationId: first.organizationId },
       }),
-      organizations: await prisma.organization.count(),
+      organizations: await prisma.organization.count({
+        where: { id: first.organizationId },
+      }),
     };
 
     expect(countsAfterSecond).toEqual(countsAfterFirst);

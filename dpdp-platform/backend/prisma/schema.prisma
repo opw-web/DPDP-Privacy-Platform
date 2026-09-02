@@ -581,7 +581,7 @@ model CrossBorderTransfer {
 }
 
 model RetentionPolicy {
-  id                     String            @id @default(uuid())
+  id                     String                @id @default(uuid())
   organizationId         String
   purposeId              String
   name                   String
@@ -590,12 +590,12 @@ model RetentionPolicy {
   retentionUnit          String // DAYS | MONTHS | YEARS
   legalBasisForRetention String // statute / sectoral rule / company policy
   legalBasisType         String // STATUTORY | SECTORAL | ORG_POLICY
-  minimumRetentionValue  Int               @default(1) // RE-06: Rule 8(3) one-year floor
-  minimumRetentionUnit   String            @default("YEARS")
-  preErasureNoticeHours  Int               @default(48) // RE-05: Rule 8(2) — configurable, cited
-  accountAccessCarveOut  Boolean           @default(false) // RE-04: Third Schedule carve-out
-  active                 Boolean           @default(true)
-  purpose                ProcessingPurpose @relation(fields: [purposeId], references: [id])
+  minimumRetentionValue  Int                   @default(1) // RE-06: Rule 8(3) one-year floor
+  minimumRetentionUnit   String                @default("YEARS")
+  preErasureNoticeHours  Int                   @default(48) // RE-05: Rule 8(2) — configurable, cited
+  accountAccessCarveOut  Boolean               @default(false) // RE-04: Third Schedule carve-out
+  active                 Boolean               @default(true)
+  purpose                ProcessingPurpose     @relation(fields: [purposeId], references: [id])
   purposeServedSignals   PurposeServedSignal[]
 
   @@unique([organizationId, purposeId, name])
@@ -618,6 +618,12 @@ model PurposeServedSignal {
 
   @@unique([organizationId, dataPrincipalId, retentionPolicyId])
   @@index([organizationId, scheduledAt])
+  // Leading-column index for the `onDelete: Restrict` FK check: without
+  // it Postgres has no usable index (the unique constraint above puts
+  // organizationId first), so deleting a DataPrincipal seq-scans this
+  // table once per row deleted -- see the sibling note on
+  // GuardianRelationship for the full story and the measured fix.
+  @@index([dataPrincipalId])
 }
 
 model SecurityMeasure {
@@ -816,6 +822,10 @@ model PrincipalContactEvent {
   dataPrincipal   DataPrincipal    @relation(fields: [dataPrincipalId], references: [id], onDelete: Cascade)
 
   @@index([organizationId, dataPrincipalId, occurredAt])
+  // Leading-column index for the CASCADE delete: dataPrincipalId is not
+  // the first column above, so deleting a DataPrincipal seq-scans this
+  // table to find its contact events -- see GuardianRelationship's note.
+  @@index([dataPrincipalId])
 }
 
 // ─────────────── audit & utility ───────────────
@@ -1027,6 +1037,22 @@ model GuardianRelationship {
   createdAt             DateTime             @default(now()) @db.Timestamptz(6)
 
   @@index([organizationId, dataPrincipalId])
+  // Leading-column index for the `onDelete: Restrict` FK check Postgres
+  // runs on every DataPrincipal delete ("does any row reference this
+  // principal?"). The compound index above puts organizationId first,
+  // so it cannot serve that single-column lookup and Postgres falls back
+  // to a sequential scan of this table ONCE PER DELETED PRINCIPAL --
+  // Task 20 fix round 4: measured directly against the live e2e
+  // database (~9k accumulated rows from other suites) this made a
+  // 50,000-row DataPrincipal delete take ~7s per 2,000 rows (~175s for
+  // the full batch) with plain EXPLAIN confirming "Seq Scan" on every
+  // one of the nine FK-constrained tables below; adding this index on
+  // all nine dropped the same 50,000-row delete to ~6.7s end to end.
+  // This is not just a test-fixture concern: any real erasure/deletion
+  // of a DataPrincipal in production pays the same seq-scan cost as
+  // these tables grow, so it belongs on the column regardless of what
+  // exercises it.
+  @@index([dataPrincipalId])
 }
 
 model ChildExemptionClaim {
@@ -1087,6 +1113,9 @@ model PrincipalRequest {
   @@unique([organizationId, reference])
   @@index([organizationId, status, dueAt])
   @@index([organizationId, dataPrincipalId])
+  // Leading-column index for the `onDelete: Restrict` FK check -- see
+  // the note on GuardianRelationship's identical index.
+  @@index([dataPrincipalId])
 }
 
 model RequestEvent {
@@ -1124,6 +1153,9 @@ model Nomination {
   dataPrincipal       DataPrincipal @relation(fields: [dataPrincipalId], references: [id], onDelete: Restrict)
 
   @@index([organizationId, dataPrincipalId])
+  // Leading-column index for the `onDelete: Restrict` FK check -- see
+  // the note on GuardianRelationship's identical index.
+  @@index([dataPrincipalId])
 }
 
 // ─────────────── retention & erasure (RE-01…RE-09) ───────────────
@@ -1151,6 +1183,9 @@ model ErasureTask {
 
   @@index([organizationId, state, erasureDueAt])
   @@index([organizationId, dataPrincipalId])
+  // Leading-column index for the `onDelete: Restrict` FK check -- see
+  // the note on GuardianRelationship's identical index.
+  @@index([dataPrincipalId])
 }
 
 model LegalHold {
@@ -1233,6 +1268,9 @@ model CampaignRecipient {
 
   @@unique([campaignId, dataPrincipalId, channel])
   @@index([organizationId, dataPrincipalId])
+  // Leading-column index for the `onDelete: Restrict` FK check -- see
+  // the note on GuardianRelationship's identical index.
+  @@index([dataPrincipalId])
 }
 
 model Notification {
@@ -1252,6 +1290,9 @@ model Notification {
 
   @@index([organizationId, employeeId, readAt])
   @@index([organizationId, dataPrincipalId, readAt])
+  // Leading-column index for the `onDelete: SetNull` FK action Postgres
+  // runs on every DataPrincipal delete -- see GuardianRelationship's note.
+  @@index([dataPrincipalId])
 }
 
 // ─────────────── breach (BR-01…BR-15) ───────────────
@@ -1339,6 +1380,9 @@ model BreachAffectedPrincipal {
 
   @@unique([breachId, dataPrincipalId])
   @@index([organizationId, dataPrincipalId])
+  // Leading-column index for the `onDelete: Restrict` FK check -- see
+  // the note on GuardianRelationship's identical index.
+  @@index([dataPrincipalId])
 }
 
 // ─────────────── SDF pack (SD-01…SD-07) ───────────────
