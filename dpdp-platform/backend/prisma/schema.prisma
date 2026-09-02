@@ -1305,6 +1305,14 @@ model BreachObligation {
   legalSourceSnapshot   String
   basisSnapshot         RuleBasis
   dueAt                 DateTime         @db.Timestamptz(6)
+  // Set once, the first time an extension moves `dueAt` off its
+  // rule-computed value; never overwritten by a later extension, so this
+  // stays the true original even after a second or third extension. Null
+  // means this clock has never been extended. Do not derive this from the
+  // audit log -- it is a first-class field precisely so the display does
+  // not depend on an append-only log surviving retention or a renamed
+  // action.
+  originalDueAt         DateTime?        @db.Timestamptz(6)
   warningAt             DateTime         @db.Timestamptz(6)
   status                ObligationStatus @default(PENDING)
   completedAt           DateTime?        @db.Timestamptz(6)

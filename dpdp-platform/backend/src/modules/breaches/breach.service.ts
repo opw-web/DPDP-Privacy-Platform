@@ -76,6 +76,7 @@ const BREACH_PUBLIC_SELECT = {
       legalSourceSnapshot: true,
       basisSnapshot: true,
       dueAt: true,
+      originalDueAt: true,
       warningAt: true,
       status: true,
       completedAt: true,
@@ -516,9 +517,14 @@ export class BreachService {
           boardExtensionReference: dto.reference,
         },
       });
+      // `originalDueAt` is set only the first time this clock is extended.
+      // A second (or third) extension must not overwrite it with the
+      // previous extended date -- the ORIGINAL stays the original, not the
+      // most recent "previous" value.
+      const originalDueAt = detail.originalDueAt ?? detail.dueAt;
       await tx.breachObligation.update({
         where: { id: detail.id },
-        data: { dueAt: grantedUntil },
+        data: { dueAt: grantedUntil, originalDueAt },
       });
       await this.auditService.record(tx, {
         action: "BREACH_EXTENSION_RECORDED",
@@ -526,7 +532,8 @@ export class BreachService {
         resourceId: id,
         metadata: {
           code: "BOARD_DETAIL",
-          originalDueAt: detail.dueAt.toISOString(),
+          originalDueAt: originalDueAt.toISOString(),
+          previousDueAt: detail.dueAt.toISOString(),
           grantedUntil: grantedUntil.toISOString(),
           reference: dto.reference,
           actor: actor.sub,

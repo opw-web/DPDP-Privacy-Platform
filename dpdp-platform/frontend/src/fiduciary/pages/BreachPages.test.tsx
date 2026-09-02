@@ -73,10 +73,21 @@ describe("breach operations", () => {
     expect(screen.getAllByText(/remaining|Overdue/)).toHaveLength(3);
   });
 
-  it("keeps the original BOARD_DETAIL date available when an extension is recorded", () => {
+  it("falls back to dueAt for the original BOARD_DETAIL date when the clock has never been extended", () => {
     expect(originalBoardDetailDueAt([
-      { id: "1", code: "BOARD_INITIAL", legalSourceSnapshot: "s.8(6)", basisSnapshot: "STATUTORY", dueAt: "2026-08-03T00:00:00Z", status: "OPEN", evidenceReference: null },
-      { id: "2", code: "BOARD_DETAIL", legalSourceSnapshot: "s.8(6)", basisSnapshot: "STATUTORY", dueAt: "2026-08-10T00:00:00Z", status: "OPEN", evidenceReference: null },
+      { id: "1", code: "BOARD_INITIAL", legalSourceSnapshot: "s.8(6)", basisSnapshot: "STATUTORY", dueAt: "2026-08-03T00:00:00Z", status: "OPEN", evidenceReference: null, originalDueAt: null },
+      { id: "2", code: "BOARD_DETAIL", legalSourceSnapshot: "s.8(6)", basisSnapshot: "STATUTORY", dueAt: "2026-08-10T00:00:00Z", status: "OPEN", evidenceReference: null, originalDueAt: null },
+    ])).toBe("2026-08-10T00:00:00Z");
+  });
+
+  // D8 regression: dueAt is overwritten in place when an extension is
+  // recorded, so reading it back as "the original" would silently return
+  // the NEW date. The true original must come from originalDueAt, which
+  // stays fixed even though dueAt has moved.
+  it("D8 regression: returns the true original BOARD_DETAIL date, not the current (extended) dueAt", () => {
+    expect(originalBoardDetailDueAt([
+      { id: "1", code: "BOARD_INITIAL", legalSourceSnapshot: "s.8(6)", basisSnapshot: "STATUTORY", dueAt: "2026-08-03T00:00:00Z", status: "OPEN", evidenceReference: null, originalDueAt: null },
+      { id: "2", code: "BOARD_DETAIL", legalSourceSnapshot: "s.8(6)", basisSnapshot: "STATUTORY", dueAt: "2026-08-20T00:00:00Z", status: "OPEN", evidenceReference: null, originalDueAt: "2026-08-10T00:00:00Z" },
     ])).toBe("2026-08-10T00:00:00Z");
   });
 

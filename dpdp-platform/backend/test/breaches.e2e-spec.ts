@@ -437,4 +437,214 @@ describe("Breach workflow (BR-01…BR-15)", () => {
     expect(pdf.length).toBeGreaterThan(100);
     expect(report.breach.reference).toMatch(/^BR-/);
   });
+
+  // D8: recordExtension moves the BOARD_DETAIL clock in place, so the true
+  // pre-extension due date must survive as its own field -- not be
+  // overwritten, and not be reconstructable only from the audit log.
+  describe("D8: recordExtension preserves the true original BOARD_DETAIL due date", () => {
+    async function fixtureWithBoardInitial() {
+      const f = await fixture();
+      // A second obligation clock (BOARD_INITIAL) so we can assert an
+      // extension moves ONLY BOARD_DETAIL's dueAt and leaves every other
+      // clock -- and its originalDueAt -- untouched.
+      await prisma.complianceRule.create({
+        data: {
+          organizationId: f.organizationId,
+          ruleCode: "BREACH_BOARD_INITIAL",
+          version: 1,
+          name: "Board initial",
+          legalSource: "Rule 7(2)(a)",
+          basis: "STATUTORY",
+          appliesTo: "BREACH:BOARD_INITIAL",
+          deadlineValue: 6,
+          deadlineUnit: "HOURS",
+          warningLead: 2,
+          effectiveFrom: new Date(Date.now() - 24 * 60 * 60 * 1000),
+        },
+      });
+      return f;
+    }
+
+    async function obligations(breachId: string) {
+      return prisma.breachObligation.findMany({
+        where: { breachId },
+        orderBy: { code: "asc" },
+      });
+    }
+
+    it("keeps the original BOARD_DETAIL due date distinct from the new one after a single extension, and moves only that clock", async () => {
+      const f = await fixtureWithBoardInitial();
+      const becameAwareAt = new Date(Date.now() - 6 * 60 * 60 * 1000);
+      const breach = await TenantContext.run(f.store, () =>
+        service.create(
+          {
+            title: "Extension breach",
+            description: "A test incident",
+            occurredAt: new Date(Date.now() - 7 * 60 * 60 * 1000).toISOString(),
+            becameAwareAt: becameAwareAt.toISOString(),
+            affectedSourceIds: ["source-1"],
+            dataCategories: ["IDENTITY"],
+            affectedPrincipalIds: f.principalIds,
+          },
+          f.actor,
+        ),
+      );
+      const before = await obligations(breach.id);
+      const detailBefore = before.find((o) => o.code === "BOARD_DETAIL")!;
+      const initialBefore = before.find((o) => o.code === "BOARD_INITIAL")!;
+      expect(detailBefore.originalDueAt).toBeNull();
+
+      const grantedUntil = new Date(
+        detailBefore.dueAt.getTime() + 48 * 60 * 60 * 1000,
+      );
+      await TenantContext.run(f.store, () =>
+        service.recordExtension(
+          breach.id,
+          {
+            requestedAt: new Date().toISOString(),
+            grantedUntil: grantedUntil.toISOString(),
+            reference: "BOARD-EXT-1",
+          },
+          f.actor,
+        ),
+      );
+
+      const after = await obligations(breach.id);
+      const detailAfter = after.find((o) => o.code === "BOARD_DETAIL")!;
+      const initialAfter = after.find((o) => o.code === "BOARD_INITIAL")!;
+
+      // The clock moved.
+      expect(detailAfter.dueAt.getTime()).toBe(grantedUntil.getTime());
+      // The original survives as its own field, distinct from the new due date.
+      expect(detailAfter.originalDueAt).not.toBeNull();
+      expect(detailAfter.originalDueAt!.getTime()).toBe(
+        detailBefore.dueAt.getTime(),
+      );
+      expect(detailAfter.originalDueAt!.getTime()).not.toBe(
+        detailAfter.dueAt.getTime(),
+      );
+
+      // Only BOARD_DETAIL's clock moved -- BOARD_INITIAL is untouched, and
+      // never gains an originalDueAt of its own.
+      expect(initialAfter.dueAt.getTime()).toBe(initialBefore.dueAt.getTime());
+      expect(initialAfter.originalDueAt).toBeNull();
+    });
+
+    it("keeps the FIRST original BOARD_DETAIL due date after a second extension, not the previously-extended one", async () => {
+      const f = await fixtureWithBoardInitial();
+      const becameAwareAt = new Date(Date.now() - 6 * 60 * 60 * 1000);
+      const breach = await TenantContext.run(f.store, () =>
+        service.create(
+          {
+            title: "Twice-extended breach",
+            description: "A test incident",
+            occurredAt: new Date(Date.now() - 7 * 60 * 60 * 1000).toISOString(),
+            becameAwareAt: becameAwareAt.toISOString(),
+            affectedSourceIds: ["source-1"],
+            dataCategories: ["IDENTITY"],
+            affectedPrincipalIds: f.principalIds,
+          },
+          f.actor,
+        ),
+      );
+      const before = await obligations(breach.id);
+      const detailBefore = before.find((o) => o.code === "BOARD_DETAIL")!;
+      const initialBefore = before.find((o) => o.code === "BOARD_INITIAL")!;
+      const trueOriginal = detailBefore.dueAt;
+
+      const firstGrant = new Date(trueOriginal.getTime() + 48 * 60 * 60 * 1000);
+      await TenantContext.run(f.store, () =>
+        service.recordExtension(
+          breach.id,
+          {
+            requestedAt: new Date().toISOString(),
+            grantedUntil: firstGrant.toISOString(),
+            reference: "BOARD-EXT-1",
+          },
+          f.actor,
+        ),
+      );
+      const afterFirst = (await obligations(breach.id)).find(
+        (o) => o.code === "BOARD_DETAIL",
+      )!;
+      expect(afterFirst.originalDueAt!.getTime()).toBe(trueOriginal.getTime());
+
+      const secondGrant = new Date(firstGrant.getTime() + 48 * 60 * 60 * 1000);
+      await TenantContext.run(f.store, () =>
+        service.recordExtension(
+          breach.id,
+          {
+            requestedAt: new Date().toISOString(),
+            grantedUntil: secondGrant.toISOString(),
+            reference: "BOARD-EXT-2",
+          },
+          f.actor,
+        ),
+      );
+      const afterSecond = (await obligations(breach.id)).find(
+        (o) => o.code === "BOARD_DETAIL",
+      )!;
+      const initialAfter = (await obligations(breach.id)).find(
+        (o) => o.code === "BOARD_INITIAL",
+      )!;
+
+      // The clock moved again, to the second grant.
+      expect(afterSecond.dueAt.getTime()).toBe(secondGrant.getTime());
+      // The ORIGINAL remains the very first due date -- not the first
+      // extension's date, which would make it the "previous" rather than
+      // the original.
+      expect(afterSecond.originalDueAt!.getTime()).toBe(trueOriginal.getTime());
+      expect(afterSecond.originalDueAt!.getTime()).not.toBe(
+        firstGrant.getTime(),
+      );
+      expect(afterSecond.originalDueAt!.getTime()).not.toBe(
+        secondGrant.getTime(),
+      );
+
+      // BOARD_INITIAL's clock is still untouched through both extensions.
+      expect(initialAfter.dueAt.getTime()).toBe(initialBefore.dueAt.getTime());
+      expect(initialAfter.originalDueAt).toBeNull();
+    });
+
+    it("rejects an extension request that does not move the clock forward, without disturbing originalDueAt", async () => {
+      const f = await fixtureWithBoardInitial();
+      const becameAwareAt = new Date(Date.now() - 6 * 60 * 60 * 1000);
+      const breach = await TenantContext.run(f.store, () =>
+        service.create(
+          {
+            title: "Rejected extension breach",
+            description: "A test incident",
+            occurredAt: new Date(Date.now() - 7 * 60 * 60 * 1000).toISOString(),
+            becameAwareAt: becameAwareAt.toISOString(),
+            affectedSourceIds: ["source-1"],
+            dataCategories: ["IDENTITY"],
+            affectedPrincipalIds: f.principalIds,
+          },
+          f.actor,
+        ),
+      );
+      const before = (await obligations(breach.id)).find(
+        (o) => o.code === "BOARD_DETAIL",
+      )!;
+      const earlierThanDue = new Date(before.dueAt.getTime() - 1000);
+      await expect(
+        TenantContext.run(f.store, () =>
+          service.recordExtension(
+            breach.id,
+            {
+              requestedAt: new Date().toISOString(),
+              grantedUntil: earlierThanDue.toISOString(),
+              reference: "BOARD-EXT-REJECTED",
+            },
+            f.actor,
+          ),
+        ),
+      ).rejects.toThrow(/later than the original/);
+      const after = (await obligations(breach.id)).find(
+        (o) => o.code === "BOARD_DETAIL",
+      )!;
+      expect(after.dueAt.getTime()).toBe(before.dueAt.getTime());
+      expect(after.originalDueAt).toBeNull();
+    });
+  });
 });

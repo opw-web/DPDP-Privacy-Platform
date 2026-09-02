@@ -102,15 +102,20 @@ export function renderAccessReportPdf(data: AccessReportData): Promise<Buffer> {
           `${task.retentionFloorUntil ? `, floor until: ${task.retentionFloorUntil.toISOString()}` : ""}`,
       );
     }
-
-    if (data.suppressedRequestCount > 0) {
-      writePdfSectionHeading(doc, "Notes");
-      writePdfLine(
-        doc,
-        `${data.suppressedRequestCount} record(s) affecting this report are withheld ` +
-          "under a non-disclosure direction and are not shown here.",
-      );
-    }
+    // No "Notes" section on the number of suppressed records: this
+    // renderer serves BOTH `GET /api/me/access-report.pdf` (the
+    // principal's own copy) and `GET /api/requests/:ref/access-report.pdf`
+    // (the identical document an employee previews/delivers for the same
+    // request) from the same `AccessReportData`. Spec 4.12 requires that
+    // where `nonDisclosureDirected` is true, the suppressed request never
+    // appears in her access report -- and naming the fact that something
+    // was withheld under a non-disclosure direction discloses exactly
+    // what that direction exists to conceal. The report simply omits the
+    // suppressed record and says nothing about its absence; the
+    // suppression is recorded separately in the audit log
+    // (`NON_DISCLOSURE_SUPPRESSION_APPLIED`, see `non-disclosure.ts`) and
+    // counted for staff on the internal evidence JSON view
+    // (`PrincipalEvidenceFile.suppressedRequestCount`), never here.
   });
 }
 
@@ -186,14 +191,10 @@ export function renderAccessReportCsv(data: AccessReportData): string {
     ]);
   }
 
-  if (data.suppressedRequestCount > 0) {
-    rows.push([
-      "NOTE",
-      "Withheld under non-disclosure direction",
-      String(data.suppressedRequestCount),
-      "",
-    ]);
-  }
+  // No suppressed-record note here either -- see the same comment in
+  // `renderAccessReportPdf` above. This CSV is the same principal-facing
+  // s.11 report in another format; it must say nothing about a withheld
+  // record.
 
   return csvDocument(ACCESS_REPORT_CSV_HEADER, rows);
 }

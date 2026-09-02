@@ -7,6 +7,17 @@ import { Button } from "../../components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/card";
 import { BreachObligationCard, type Obligation } from "../components/breaches/BreachObligationCard";
 
+/**
+ * The obligation shape as returned for a breach detail view: `dueAt` is the
+ * clock's current (possibly extended) due date; `originalDueAt` is the
+ * true pre-extension date, set once by the backend the first time this
+ * clock is extended and never overwritten by a later extension. Null means
+ * this clock has never been extended.
+ */
+export interface ObligationWithOriginal extends Obligation {
+  originalDueAt: string | null;
+}
+
 interface Breach {
   id: string;
   reference: string;
@@ -15,11 +26,22 @@ interface Breach {
   boardExtensionRequestedAt: string | null;
   boardExtensionGrantedUntil: string | null;
   boardExtensionReference: string | null;
-  obligations: Obligation[];
+  obligations: ObligationWithOriginal[];
 }
 
-export function originalBoardDetailDueAt(obligations: Obligation[]): string | null {
-  return obligations.find((o) => o.code === "BOARD_DETAIL")?.dueAt ?? null;
+/**
+ * Defect D8: `dueAt` on BOARD_DETAIL is overwritten in place when an
+ * extension is recorded, so it can never be read back as "the original".
+ * The true original lives in `originalDueAt`, a first-class field set once
+ * by the backend -- not mined from the audit log, which is a record of
+ * what happened rather than a projection to render from. Falls back to
+ * `dueAt` only for a clock that has never been extended, where the two are
+ * the same value anyway.
+ */
+export function originalBoardDetailDueAt(obligations: ObligationWithOriginal[]): string | null {
+  const detail = obligations.find((o) => o.code === "BOARD_DETAIL");
+  if (!detail) return null;
+  return detail.originalDueAt ?? detail.dueAt;
 }
 
 /**

@@ -1,4 +1,5 @@
 import { randomUUID } from "crypto";
+import { inflateSync } from "zlib";
 import { INestApplication } from "@nestjs/common";
 import request from "supertest";
 import * as argon2 from "argon2";
@@ -6,6 +7,11 @@ import { PrismaService } from "../src/common/prisma/prisma.service";
 import { TenantContext } from "../src/common/tenant/tenant-context";
 import { AccessReportService } from "../src/modules/evidence/access-report.service";
 import { PrincipalEvidenceService } from "../src/modules/evidence/principal-evidence.service";
+import {
+  renderAccessReportCsv,
+  renderAccessReportPdf,
+} from "../src/modules/evidence/access-report-render";
+import { renderPrincipalEvidencePdf } from "../src/modules/evidence/principal-evidence-render";
 import {
   bootstrapTestApp,
   cleanupOrgs,
@@ -425,6 +431,168 @@ describe("Evidence module (e2e)", () => {
         );
       }
     });
+
+    /**
+     * D9: a live walkthrough found the access report and the evidence
+     * file both telling the data principal, in plain words, that a
+     * record naming her is "withheld under a non-disclosure direction" --
+     * disclosing exactly the two facts such a direction exists to
+     * conceal. Spec 4.12: "the request never appears in her portal, her
+     * access report, or her evidence file" (no exception for a note
+     * about its absence), and "this is a small feature with a large
+     * failure mode. Test it explicitly."
+     *
+     * This asserts on the RENDERED documents (PDF text pulled back out
+     * of pdfkit's compressed content streams, plus the plain CSV), not
+     * just the pre-render `AccessReportData`/`PrincipalEvidenceFile`
+     * shape checked above -- the earlier version of this test suite only
+     * asserted the latter and passed while the render functions leaked
+     * the note, which is exactly why it did not catch D9.
+     */
+    it("D9: the rendered access report (PDF and CSV) and evidence file (PDF) say nothing about the suppressed record", async () => {
+      const report = await TenantContext.run(tenantStoreFor(orgA), () =>
+        accessReportService.buildReport(principal2Id),
+      );
+      const evidenceFile = await TenantContext.run(tenantStoreFor(orgA), () =>
+        principalEvidenceService.buildEvidenceFile(principal2Id),
+      );
+      // Fixture sanity: if this were 0, the assertions below would pass
+      // vacuously (nothing to leak).
+      expect(report.suppressedRequestCount).toBeGreaterThanOrEqual(1);
+      expect(evidenceFile.suppressedRequestCount).toBeGreaterThanOrEqual(1);
+
+      const accessReportPdfText = extractPdfText(await renderAccessReportPdf(report));
+      const accessReportCsv = renderAccessReportCsv(report);
+      const evidencePdfText = extractPdfText(
+        await renderPrincipalEvidencePdf(evidenceFile),
+      );
+
+      for (const rendered of [accessReportPdfText, accessReportCsv, evidencePdfText]) {
+        // The wording the walkthrough actually saw -- and the single
+        // word ("withheld") that can never be split by pdfkit's line
+        // wrapping, so this assertion still catches a reworded leak.
+        expect(rendered).not.toContain("withheld");
+        expect(rendered).not.toContain("non-disclosure direction");
+        expect(rendered).not.toContain("record(s) affecting");
+        // Not just the sentence -- the count itself is part of the
+        // disclosure (it tells her something is being hidden at all).
+        expect(rendered).not.toContain("suppressed");
+        expect(rendered).not.toMatch(/Withheld under non-disclosure/i);
+      }
+
+      // The internal-accountability half must still hold: the staff-only
+      // evidence JSON view (`PrincipalEvidencePage.tsx`'s "N visible
+      // request(s); M suppressed request(s)") still counts the
+      // suppression, and the audit log still carries it with its
+      // authorisation reference.
+      const staffEvidenceRes = await request(app.getHttpServer())
+        .get(`/api/principals/${principal2Id}/evidence`)
+        .set("Authorization", `Bearer ${orgA.accessToken}`);
+      expect(staffEvidenceRes.status).toBe(200);
+      expect(staffEvidenceRes.body.suppressedRequestCount).toBeGreaterThanOrEqual(1);
+      expect(
+        (staffEvidenceRes.body.governmentRequests as Array<{ id: string }>).some(
+          (r) => r.id === nonDisclosureRequestId,
+        ),
+      ).toBe(false);
+
+      const suppressionEvents = await prisma.auditEvent.findMany({
+        where: {
+          organizationId: orgA.organizationId,
+          action: "NON_DISCLOSURE_SUPPRESSION_APPLIED",
+          resourceId: nonDisclosureRequestId,
+        },
+      });
+      expect(suppressionEvents.length).toBeGreaterThan(0);
+      for (const event of suppressionEvents) {
+        expect((event.metadata as Record<string, unknown>)["authorisationRef"]).toBe(
+          NON_DISCLOSURE_AUTH_REF,
+        );
+      }
+    });
+  });
+
+  describe("D9 (HTTP half): neither principal-facing access-report route leaks the withheld-record note", () => {
+    let principalToken: string;
+    let requestsEmployee: OrgWithEmployee;
+    let requestReference: string;
+
+    beforeAll(async () => {
+      const email = `nondisclosure-principal-${randomUUID()}@example.test`;
+      await prisma.principalAccount.create({
+        data: {
+          organizationId: orgA.organizationId,
+          dataPrincipalId: principal2Id,
+          email,
+          passwordHash: await argon2.hash("CorrectHorseBattery9!", {
+            type: argon2.argon2id,
+          }),
+          status: "ACTIVE",
+        },
+      });
+      const loginRes = await request(app.getHttpServer())
+        .post("/api/auth/principal/login")
+        .send({ email, password: "CorrectHorseBattery9!" });
+      expect(loginRes.status).toBe(200);
+      principalToken = loginRes.body.accessToken as string;
+
+      // `GET /api/requests/:ref/access-report.pdf` is the staff-facing
+      // route: an employee handling her rights request, gated on
+      // CAN_MANAGE_REQUESTS (a separate permission from every other
+      // employee fixture in this file, which is deliberately EVID_FULL /
+      // EVID_LIMITED, neither of which carries it).
+      requestsEmployee = await addEmployee(orgA.organizationId, "EVID_REQUESTS", [
+        "CAN_MANAGE_REQUESTS",
+      ]);
+      const principalRequest = await prisma.principalRequest.create({
+        data: {
+          organizationId: orgA.organizationId,
+          reference: `REQ-${randomUUID()}`,
+          dataPrincipalId: principal2Id,
+          type: "ACCESS",
+          subject: "Access request",
+          body: "Please provide my s.11 access report.",
+        },
+      });
+      requestReference = principalRequest.reference;
+    });
+
+    it("GET /api/me/access-report.pdf (her own copy) says nothing about the withheld record", async () => {
+      const res = await bufferBinaryResponse(
+        request(app.getHttpServer())
+          .get("/api/me/access-report.pdf")
+          .set("Authorization", `Bearer ${principalToken}`),
+      );
+      expect(res.status).toBe(200);
+      const text = extractPdfText(Buffer.from(res.body as Buffer));
+      expect(text).not.toContain("withheld");
+      expect(text).not.toContain("non-disclosure direction");
+      expect(text).not.toContain("suppressed");
+    });
+
+    /**
+     * D9 crux: `MeController.accessReport()` and
+     * `RequestsController.accessReport()` both call
+     * `AccessReportService.buildReport()` and then the exact same
+     * `renderAccessReportPdf()` -- one renderer, reachable from both a
+     * principal-audience token and an employee-audience token with
+     * CAN_MANAGE_REQUESTS. This is the same document either way, so this
+     * staff route must be exactly as silent about the suppression as her
+     * own copy above -- the fix could not have been "only the /me route"
+     * without leaving this one leaking.
+     */
+    it("GET /api/requests/:ref/access-report.pdf (the employee's copy of the SAME document) is equally silent", async () => {
+      const res = await bufferBinaryResponse(
+        request(app.getHttpServer())
+          .get(`/api/requests/${requestReference}/access-report.pdf`)
+          .set("Authorization", `Bearer ${requestsEmployee.accessToken}`),
+      );
+      expect(res.status).toBe(200);
+      const text = extractPdfText(Buffer.from(res.body as Buffer));
+      expect(text).not.toContain("withheld");
+      expect(text).not.toContain("non-disclosure direction");
+      expect(text).not.toContain("suppressed");
+    });
   });
 
   describe("GET /api/principals/:id/evidence[.pdf]", () => {
@@ -583,6 +751,41 @@ describe("Evidence module (e2e)", () => {
  * ... and none is being added for one archive endpoint") -- same ruling
  * applies to reading it back in this test.
  */
+/**
+ * D9 regression guard: `pdfkit` (default `compress: true`, unchanged by
+ * `renderPdf` in `pdf-utils.ts`) FlateDecode-compresses every content
+ * stream, so a rendered PDF's text is not readable by scanning the raw
+ * bytes -- it has to be pulled back out of the `stream ... endstream`
+ * blocks. This walks every such block, inflates it, and concatenates
+ * whatever decodes successfully (non-content streams, e.g. the font
+ * descriptor, simply fail to `JSON`-adjacent-parse as text and are
+ * skipped -- ok, since the assertions below only need to prove a phrase
+ * is ABSENT from the whole document).
+ */
+function extractPdfText(buffer: Buffer): string {
+  const streamMarker = Buffer.from("stream");
+  const endMarker = Buffer.from("endstream");
+  let text = "";
+  let offset = 0;
+  for (;;) {
+    const start = buffer.indexOf(streamMarker, offset);
+    if (start === -1) break;
+    let dataStart = start + streamMarker.length;
+    if (buffer[dataStart] === 0x0d) dataStart += 1;
+    if (buffer[dataStart] === 0x0a) dataStart += 1;
+    const end = buffer.indexOf(endMarker, dataStart);
+    if (end === -1) break;
+    const raw = buffer.subarray(dataStart, end);
+    try {
+      text += inflateSync(raw).toString("latin1");
+    } catch {
+      // Not a (validly-aligned) flate stream -- skip it.
+    }
+    offset = end + endMarker.length;
+  }
+  return text;
+}
+
 function parseStoreZip(buffer: Buffer): Array<{ name: string; content: Buffer }> {
   const entries: Array<{ name: string; content: Buffer }> = [];
   let offset = 0;

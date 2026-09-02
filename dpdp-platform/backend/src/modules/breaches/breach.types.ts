@@ -13,6 +13,7 @@ export interface PublicBreachObligation {
   legalSourceSnapshot: string;
   basisSnapshot: RuleBasis;
   dueAt: Date;
+  originalDueAt: Date | null;
   warningAt: Date;
   status: ObligationStatus;
   completedAt: Date | null;

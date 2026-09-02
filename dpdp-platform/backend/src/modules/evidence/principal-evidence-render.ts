@@ -87,14 +87,17 @@ export function renderPrincipalEvidencePdf(
           `${breach.becameAwareAt.toISOString()})${breach.notifiedAt ? `, notified ${breach.notifiedAt.toISOString()}` : ", not yet notified"}`,
       );
     }
-
-    if (data.suppressedRequestCount > 0) {
-      writePdfSectionHeading(doc, "Notes");
-      writePdfLine(
-        doc,
-        `${data.suppressedRequestCount} record(s) affecting this file are withheld ` +
-          "under a non-disclosure direction and are not shown here.",
-      );
-    }
+    // No "Notes" section on the number of suppressed records: spec 4.12
+    // requires that where `nonDisclosureDirected` is true, the suppressed
+    // request never appears in her evidence file -- and naming the fact
+    // that something was withheld under a non-disclosure direction
+    // discloses exactly what that direction exists to conceal. The file
+    // simply omits the suppressed record and says nothing about its
+    // absence. The suppression is still recorded in the audit log
+    // (`NON_DISCLOSURE_SUPPRESSION_APPLIED`, see `non-disclosure.ts`) and
+    // still counted for staff on the internal evidence JSON view
+    // (`GET /api/principals/:id/evidence`, `PrincipalEvidencePage.tsx`'s
+    // "N visible request(s); M suppressed request(s)"), which is a
+    // separate, staff-only surface from this PDF.
   });
 }
