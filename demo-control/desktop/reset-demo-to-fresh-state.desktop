@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Reset Demo to Fresh State
+Comment=Wipe and rebuild the DPDP Privacy Demo from scratch (asks to confirm first)
+Exec=/bin/bash "/home/linux/Coding stuff/DPDP app/demo-control/reset.sh"
+Icon=view-refresh
+Terminal=true
+Categories=Utility;
+StartupNotify=true

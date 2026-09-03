@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Start Privacy Demo
+Comment=Turn on the DPDP Privacy Demo and open it in your browser
+Exec=/bin/bash "/home/linux/Coding stuff/DPDP app/demo-control/start.sh"
+Icon=media-playback-start
+Terminal=true
+Categories=Utility;
+StartupNotify=true

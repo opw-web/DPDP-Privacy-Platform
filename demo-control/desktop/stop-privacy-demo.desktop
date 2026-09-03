@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Stop Privacy Demo
+Comment=Turn off the DPDP Privacy Demo cleanly
+Exec=/bin/bash "/home/linux/Coding stuff/DPDP app/demo-control/stop.sh"
+Icon=media-playback-stop
+Terminal=true
+Categories=Utility;
+StartupNotify=true
