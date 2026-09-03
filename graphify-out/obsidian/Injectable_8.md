@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "campaign-send.processor.ts"
+community: "AccessReportService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/campaign-sendprocessorts
+  - community/AccessReportService
 ---
 
 # Injectable
 
 ## Connections
-- [[CampaignSendQueueService]] - `references` [EXTRACTED]
+- [[MeService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/campaign-sendprocessorts
+#graphify/code #graphify/EXTRACTED #community/AccessReportService

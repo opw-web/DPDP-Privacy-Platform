@@ -1,17 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts"
+source_file: "dpdp-platform/backend/src/modules/compliance/compliance.controller.ts"
 type: "code"
-community: "SdfController"
-location: "L40"
+community: "CreateComplianceRuleDto"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SdfController
+  - community/CreateComplianceRuleDto
 ---
 
 # .list()
 
 ## Connections
-- [[AlgorithmRegisterService]] - `method` [EXTRACTED]
+- [[ComplianceController]] - `method` [EXTRACTED]
+- [[Get_11]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SdfController
+#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto

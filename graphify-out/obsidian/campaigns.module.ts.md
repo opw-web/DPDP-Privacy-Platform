@@ -26,6 +26,7 @@ tags:
 - [[TemplatesModule]] - `imports` [EXTRACTED]
 - [[app.module.ts]] - `imports_from` [EXTRACTED]
 - [[audit.module.ts]] - `imports_from` [EXTRACTED]
+- [[breaches.module.ts]] - `imports_from` [EXTRACTED]
 - [[campaign-send.processor.ts]] - `imports_from` [EXTRACTED]
 - [[campaign-send.queue.ts]] - `imports_from` [EXTRACTED]
 - [[campaigns.controller.ts]] - `imports_from` [EXTRACTED]

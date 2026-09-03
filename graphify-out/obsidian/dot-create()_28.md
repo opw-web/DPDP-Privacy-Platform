@@ -18,7 +18,7 @@ tags:
 - [[ChildExemptionsController]] - `method` [EXTRACTED]
 - [[CreateExemptionClaimDto]] - `references` [EXTRACTED]
 - [[CurrentActor]] - `references` [EXTRACTED]
-- [[Post_24]] - `references` [EXTRACTED]
+- [[Post_23]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/child-exemptionsservicets

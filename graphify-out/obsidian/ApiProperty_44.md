@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "mappings.controller.ts"
+community: "roles.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingscontrollerts
+  - community/rolesservicets
 ---
 
 # ApiProperty
 
 ## Connections
-- [[MappingsResponseDto]] - `references` [EXTRACTED]
-- [[SourceFieldMappingResponseDto]] - `references` [EXTRACTED]
+- [[UpdateRolePermissionsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingscontrollerts
+#graphify/code #graphify/EXTRACTED #community/rolesservicets

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "campaign-send.processor.ts"
+community: "breaches.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/campaign-sendprocessorts
+  - community/breachesmodulets
 ---
 
 # Processor
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[CampaignSendProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/campaign-sendprocessorts
+#graphify/code #graphify/EXTRACTED #community/breachesmodulets

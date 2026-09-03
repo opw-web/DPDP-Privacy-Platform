@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalsPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/ReviewQueuePage.test.tsx"
 type: "code"
-community: "api-client.ts"
-location: "L43"
+community: "ReviewQueuePage.test.tsx"
+location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/ReviewQueuePagetesttsx
 ---
 
 # loginAndRender()
 
 ## Connections
-- [[PrincipalsPage.test.tsx]] - `contains` [EXTRACTED]
+- [[ReviewQueuePage.test.tsx]] - `contains` [EXTRACTED]
 - [[employeeLogin()]] - `calls` [EXTRACTED]
-- [[jsonResponse()_17]] - `calls` [EXTRACTED]
+- [[jsonResponse()_15]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/ReviewQueuePagetesttsx

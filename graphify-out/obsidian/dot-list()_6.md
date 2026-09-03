@@ -1,19 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/compliance/compliance.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/transfers.service.ts"
 type: "code"
-community: "ComplianceController"
-location: "L22"
+community: "TransfersService"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ComplianceController
+  - community/TransfersService
 ---
 
 # .list()
 
 ## Connections
-- [[ComplianceController]] - `method` [EXTRACTED]
-- [[Get_6]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[TransfersService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ComplianceController
+#graphify/code #graphify/EXTRACTED #community/TransfersService

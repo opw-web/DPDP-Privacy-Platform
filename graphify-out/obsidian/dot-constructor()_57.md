@@ -1,20 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/audit/audit-read.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts"
 type: "code"
-community: "PrismaService"
-location: "L85"
+community: "TemplatesService"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/TemplatesService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditReadService]] - `method` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
-- [[MaskingService]] - `references` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
+- [[TemplatesController]] - `method` [EXTRACTED]
+- [[TemplatesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

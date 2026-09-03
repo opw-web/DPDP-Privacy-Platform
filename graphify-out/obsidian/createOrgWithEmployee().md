@@ -1,35 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/test/support/e2e-harness.ts"
+source_file: "dpdp-platform/backend/test/compliance-rules.e2e-spec.ts"
 type: "code"
-community: "retention.e2e-spec.ts"
-location: "L116"
+community: "PrismaService"
+location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentione2e-spects
+  - community/PrismaService
 ---
 
 # createOrgWithEmployee()
 
 ## Connections
-- [[audiences.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[children.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[compliance-rules.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[consents.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[createAdmin()]] - `calls` [EXTRACTED]
-- [[e2e-harness.ts]] - `contains` [EXTRACTED]
-- [[ensurePermission()_1]] - `calls` [EXTRACTED]
-- [[evidence.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[information-requests.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[makeOrg()]] - `calls` [EXTRACTED]
-- [[makeSdfOrg()]] - `calls` [EXTRACTED]
-- [[mvp2-schema-constraints.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[notices.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[notifications.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[orgWithSender()]] - `calls` [EXTRACTED]
-- [[requests.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[retention.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[sdf.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[templates.e2e-spec.ts]] - `imports` [EXTRACTED]
+- [[compliance-rules.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[createOrgWithEmployee()_1]] - `calls` [EXTRACTED]
+- [[seedGrievanceStatutoryBaseline()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentione2e-spects
+#graphify/code #graphify/EXTRACTED #community/PrismaService

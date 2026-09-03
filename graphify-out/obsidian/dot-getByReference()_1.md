@@ -2,17 +2,18 @@
 source_file: "dpdp-platform/backend/src/modules/requests/requests.service.ts"
 type: "code"
 community: "RequestsController"
-location: "L144"
+location: "L184"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/RequestsController
 ---
 
 # .getByReference()
 
 ## Connections
+- [[dot-accessReport()_1]] - `calls` [INFERRED]
 - [[dot-getByReference()]] - `calls` [INFERRED]
 - [[RequestsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestsController
+#graphify/code #graphify/INFERRED #community/RequestsController

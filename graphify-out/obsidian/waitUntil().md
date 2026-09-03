@@ -1,19 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/support/e2e-harness.ts"
+source_file: "dpdp-platform/backend/test/sync.e2e-spec.ts"
 type: "code"
-community: "retention.e2e-spec.ts"
-location: "L224"
+community: "queues.module.ts"
+location: "L215"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentione2e-spects
+  - community/queuesmodulets
 ---
 
 # waitUntil()
 
 ## Connections
-- [[e2e-harness.ts]] - `contains` [EXTRACTED]
-- [[mvp2-schema-constraints.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[notifications.e2e-spec.ts]] - `imports` [EXTRACTED]
+- [[sync.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentione2e-spects
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

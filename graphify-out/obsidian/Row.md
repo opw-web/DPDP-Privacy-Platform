@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/DataTable.test.tsx"
 type: "code"
-community: "DataSourceDetailPage.tsx"
+community: "SecurityMeasuresTab.tsx"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourceDetailPagetsx
+  - community/SecurityMeasuresTabtsx
 ---
 
 # Row
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[DataTable.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourceDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx

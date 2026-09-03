@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "guardians.service.ts"
+community: "RequirePermission"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/RequirePermission
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_10]] - `references` [EXTRACTED]
-- [[dot-verify()]] - `references` [EXTRACTED]
+- [[dot-create()_14]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

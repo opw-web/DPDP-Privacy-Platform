@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/src/lib/auth.ts"
 type: "code"
-community: "api-client.ts"
+community: "router.tsx"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/routertsx
 ---
 
 # EmployeeSummary
 
 ## Connections
-- [[EmployeeSession_4]] - `inherits` [EXTRACTED]
+- [[EmployeeSession_5]] - `inherits` [EXTRACTED]
 - [[libauth.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/routertsx

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/notices.e2e-spec.ts"
 type: "code"
-community: "retention.e2e-spec.ts"
+community: "PrismaService"
 location: "L140"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentione2e-spects
+  - community/PrismaService
 ---
 
 # attachPurposeAndMapping()
@@ -15,4 +15,4 @@ tags:
 - [[notices.e2e-spec.ts]] - `contains` [EXTRACTED]
 - [[setupFixture()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentione2e-spects
+#graphify/code #graphify/EXTRACTED #community/PrismaService

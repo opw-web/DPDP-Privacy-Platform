@@ -12,8 +12,8 @@ tags:
 # .extractAndValidateVariables()
 
 ## Connections
-- [[dot-create()_9]] - `calls` [EXTRACTED]
-- [[dot-update()_10]] - `calls` [EXTRACTED]
+- [[dot-create()_10]] - `calls` [EXTRACTED]
+- [[dot-update()_9]] - `calls` [EXTRACTED]
 - [[TemplateVariableName]] - `references` [EXTRACTED]
 - [[TemplatesService]] - `method` [EXTRACTED]
 - [[extractTemplateVariables()]] - `calls` [EXTRACTED]

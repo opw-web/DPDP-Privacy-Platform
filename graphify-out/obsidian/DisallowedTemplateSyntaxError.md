@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts"
 type: "code"
-community: "template-renderer.ts"
-location: "L103"
+community: "templates.service.ts"
+location: "L104"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/template-rendererts
+  - community/templatesservicets
 ---
 
 # DisallowedTemplateSyntaxError
@@ -20,4 +20,4 @@ tags:
 - [[templates.service.ts]] - `imports` [EXTRACTED]
 - [[walkStatement()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/template-rendererts
+#graphify/code #graphify/EXTRACTED #community/templatesservicets

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SyncQueueService"
+community: "breaches.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/breachesmodulets
 ---
 
 # InjectQueue
 
 ## Connections
-- [[dot-constructor()_32]] - `references` [EXTRACTED]
+- [[dot-constructor()_56]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/breachesmodulets

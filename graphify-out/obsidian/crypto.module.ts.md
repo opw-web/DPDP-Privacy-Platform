@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/crypto/crypto.module.ts"
 type: "code"
-community: "CryptoService"
+community: "data-sources.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CryptoService
+  - community/data-sourcesservicets
 ---
 
 # crypto.module.ts
@@ -17,4 +17,4 @@ tags:
 - [[crypto.service.ts]] - `imports_from` [EXTRACTED]
 - [[data-sources.module.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CryptoService
+#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets

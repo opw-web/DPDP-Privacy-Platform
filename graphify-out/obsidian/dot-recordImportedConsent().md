@@ -16,8 +16,8 @@ tags:
 - [[Body_17]] - `references` [EXTRACTED]
 - [[ConsentsController]] - `method` [EXTRACTED]
 - [[ImportConsentDto]] - `references` [EXTRACTED]
-- [[Param_20]] - `references` [EXTRACTED]
-- [[Post_19]] - `references` [EXTRACTED]
+- [[Param_18]] - `references` [EXTRACTED]
+- [[Post_17]] - `references` [EXTRACTED]
 - [[Req_1]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 

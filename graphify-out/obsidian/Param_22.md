@@ -1,16 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "age-status.service.ts"
+community: "notices.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/age-statusservicets
+  - community/noticesservicets
 ---
 
 # Param
 
 ## Connections
-- [[dot-setAgeStatus()]] - `references` [EXTRACTED]
+- [[dot-createVersion()]] - `references` [EXTRACTED]
+- [[dot-get()_16]] - `references` [EXTRACTED]
+- [[dot-listEligibleFields()]] - `references` [EXTRACTED]
+- [[dot-preview()_3]] - `references` [EXTRACTED]
+- [[dot-publish()]] - `references` [EXTRACTED]
+- [[dot-upsertTranslation()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/age-statusservicets
+#graphify/code #graphify/EXTRACTED #community/noticesservicets

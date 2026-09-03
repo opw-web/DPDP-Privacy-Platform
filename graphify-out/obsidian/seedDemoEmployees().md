@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/prisma/seed.ts"
 type: "code"
 community: "seed.ts"
-location: "L82"
+location: "L83"
 tags:
   - graphify/code
   - graphify/EXTRACTED

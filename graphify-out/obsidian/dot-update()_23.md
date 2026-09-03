@@ -1,23 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/transfers.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/retention.controller.ts"
 type: "code"
-community: "CreateTransferDto"
+community: "retention.service.ts"
 location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTransferDto
+  - community/retentionservicets
 ---
 
 # .update()
 
 ## Connections
 - [[dot-update()_24]] - `calls` [INFERRED]
-- [[Body_25]] - `references` [EXTRACTED]
-- [[Param_26]] - `references` [EXTRACTED]
+- [[Body_27]] - `references` [EXTRACTED]
+- [[Param_28]] - `references` [EXTRACTED]
 - [[Patch_13]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[TransfersController]] - `method` [EXTRACTED]
-- [[UpdateTransferDto]] - `references` [EXTRACTED]
+- [[RetentionController_1]] - `method` [EXTRACTED]
+- [[UpdateRetentionPolicyDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTransferDto
+#graphify/code #graphify/EXTRACTED #community/retentionservicets

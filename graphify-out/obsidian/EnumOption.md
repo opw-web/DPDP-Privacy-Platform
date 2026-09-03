@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts"
 type: "code"
-community: "cn"
+community: "SecurityMeasuresTab.tsx"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/SecurityMeasuresTabtsx
 ---
 
 # EnumOption
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[enum-options.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx

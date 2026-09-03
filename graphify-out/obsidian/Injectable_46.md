@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CandidatesService"
+community: "PermissionsGuard"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CandidatesService
+  - community/PermissionsGuard
 ---
 
 # Injectable
 
 ## Connections
-- [[CandidatesService]] - `references` [EXTRACTED]
+- [[PermissionsGuard]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CandidatesService
+#graphify/code #graphify/EXTRACTED #community/PermissionsGuard

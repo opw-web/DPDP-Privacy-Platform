@@ -1,22 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/schedule-reconciliation.service.ts"
+source_file: "dpdp-platform/backend/src/modules/auth/token.service.ts"
 type: "code"
-community: "SyncQueueService"
-location: "L62"
+community: "principal-auth.service.ts"
+location: "L65"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/principal-authservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[dot-reconcileAtBoot()]] - `calls` [EXTRACTED]
-- [[dot-register()]] - `calls` [INFERRED]
-- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
-- [[ScheduleReconciliationService]] - `method` [EXTRACTED]
-- [[SyncQueueService]] - `references` [EXTRACTED]
+- [[TokenService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/principal-authservicets

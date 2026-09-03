@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/inventory/inventory.controller.ts"
 type: "code"
-community: "InventoryService"
+community: "ropa-export.service.ts"
 location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/InventoryService
+  - community/ropa-exportservicets
 ---
 
 # .summary()
@@ -17,4 +17,4 @@ tags:
 - [[InventoryController]] - `method` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/InventoryService
+#graphify/code #graphify/EXTRACTED #community/ropa-exportservicets

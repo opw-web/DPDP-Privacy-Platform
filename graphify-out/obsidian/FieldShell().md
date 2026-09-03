@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/form-controls.tsx"
 type: "code"
-community: "cn"
+community: "SecurityMeasuresTab.tsx"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/SecurityMeasuresTabtsx
 ---
 
 # FieldShell()
@@ -22,4 +22,4 @@ tags:
 - [[TransfersTab.tsx]] - `imports` [EXTRACTED]
 - [[form-controls.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx

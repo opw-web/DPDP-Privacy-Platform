@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "security-measures.service.ts"
+community: "TemplatesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/security-measuresservicets
+  - community/TemplatesService
 ---
 
 # Get
 
 ## Connections
-- [[dot-get()_5]] - `references` [EXTRACTED]
+- [[dot-get()_8]] - `references` [EXTRACTED]
 - [[dot-list()_11]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/security-measuresservicets
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

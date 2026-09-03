@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "compile-audience.ts"
+community: "ImportConsentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/compile-audiencets
+  - community/ImportConsentDto
 ---
 
 # IsObject
 
 ## Connections
-- [[PreviewAudienceDto]] - `references` [EXTRACTED]
+- [[ImportConsentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/compile-audiencets
+#graphify/code #graphify/EXTRACTED #community/ImportConsentDto

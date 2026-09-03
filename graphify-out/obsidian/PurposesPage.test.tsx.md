@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/PurposesPage.test.tsx"
 type: "code"
-community: "api-client.ts"
+community: "router.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/routertsx
 ---
 
 # PurposesPage.test.tsx
@@ -19,8 +19,8 @@ tags:
 - [[PurposesPage.tsx]] - `imports_from` [EXTRACTED]
 - [[employeeLogin()]] - `imports` [EXTRACTED]
 - [[employeeLogout()]] - `imports` [EXTRACTED]
-- [[jsonResponse()_18]] - `contains` [EXTRACTED]
+- [[jsonResponse()_9]] - `contains` [EXTRACTED]
 - [[libauth.ts]] - `imports_from` [EXTRACTED]
 - [[loginAndRenderThroughShell()_2]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/routertsx

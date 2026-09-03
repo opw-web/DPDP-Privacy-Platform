@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/DataSourceNewPage.test.tsx"
 type: "code"
-community: "api-client.ts"
+community: "DataSourceNewPage.test.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/DataSourceNewPagetesttsx
 ---
 
 # DataSourceNewPage.test.tsx
@@ -19,9 +19,9 @@ tags:
 - [[DetailStub()]] - `contains` [EXTRACTED]
 - [[employeeLogin()]] - `imports` [EXTRACTED]
 - [[employeeLogout()]] - `imports` [EXTRACTED]
-- [[jsonResponse()_15]] - `contains` [EXTRACTED]
+- [[jsonResponse()_4]] - `contains` [EXTRACTED]
 - [[libauth.ts]] - `imports_from` [EXTRACTED]
 - [[loginAndRenderWizard()]] - `contains` [EXTRACTED]
 - [[renderWizard()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/DataSourceNewPagetesttsx

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SyncQueueService"
+community: "jwt-employee.guard.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/jwt-employeeguardts
 ---
 
 # Injectable
 
 ## Connections
-- [[ScheduleReconciliationService]] - `references` [EXTRACTED]
+- [[JwtEmployeeGuard]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/jwt-employeeguardts

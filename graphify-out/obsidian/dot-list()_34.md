@@ -1,21 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principals/principals.service.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.controller.ts"
 type: "code"
-community: "principals.service.ts"
-location: "L75"
+community: "notices.service.ts"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principalsservicets
+  - community/noticesservicets
 ---
 
 # .list()
 
 ## Connections
-- [[dot-maskIfNeeded()]] - `calls` [INFERRED]
-- [[PrincipalsService]] - `method` [EXTRACTED]
-- [[buildPrincipalSearchQuery()]] - `calls` [EXTRACTED]
-- [[pickDisplayName()]] - `calls` [EXTRACTED]
-- [[resolveProvenance()]] - `calls` [EXTRACTED]
+- [[Get_29]] - `references` [EXTRACTED]
+- [[NoticesController]] - `method` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principalsservicets
+#graphify/code #graphify/EXTRACTED #community/noticesservicets

@@ -1,17 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sync/sync-error.ts"
+source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
 type: "code"
-community: "SyncPipelineService"
-location: "L80"
+community: "AuditService"
+location: "L133"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncPipelineService
+  - community/AuditService
 ---
 
 # .constructor()
 
 ## Connections
-- [[SyncLockUnavailableError]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[BreachPrincipalNoticeDispatchQueueService]] - `references` [EXTRACTED]
+- [[BreachService]] - `method` [EXTRACTED]
+- [[CampaignsService]] - `references` [EXTRACTED]
+- [[ComplianceService]] - `references` [EXTRACTED]
+- [[NotificationsService]] - `references` [EXTRACTED]
+- [[ReferenceService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncPipelineService
+#graphify/code #graphify/EXTRACTED #community/AuditService

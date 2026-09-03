@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sync.service.ts"
+community: "MappingsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/syncservicets
+  - community/MappingsController
 ---
 
 # ApiTags
 
 ## Connections
-- [[SyncController]] - `references` [EXTRACTED]
-- [[SyncJobsController]] - `references` [EXTRACTED]
+- [[MappingsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/syncservicets
+#graphify/code #graphify/EXTRACTED #community/MappingsController

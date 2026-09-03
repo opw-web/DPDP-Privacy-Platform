@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "SdfController"
+community: "MappingsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SdfController
+  - community/MappingsController
 ---
 
 # Get
 
 ## Connections
-- [[dot-getGaps()_1]] - `references` [EXTRACTED]
-- [[dot-listAlgorithms()]] - `references` [EXTRACTED]
-- [[dot-listAssessments()]] - `references` [EXTRACTED]
+- [[dot-getMappings()]] - `references` [EXTRACTED]
+- [[dot-getPurposes()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SdfController
+#graphify/code #graphify/EXTRACTED #community/MappingsController

@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/src/modules/sdf/sdf-cycle-scan.service.ts"
 type: "code"
 community: "prisma.service.ts"
-location: "L26"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED

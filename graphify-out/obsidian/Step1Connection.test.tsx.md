@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/wizard/Step1Connection.test.tsx"
 type: "code"
-community: "DataSourceDetailPage.tsx"
+community: "data-sources-api.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourceDetailPagetsx
+  - community/data-sources-apits
 ---
 
 # Step1Connection.test.tsx
@@ -22,4 +22,4 @@ tags:
 - [[jsonResponse()]] - `contains` [EXTRACTED]
 - [[renderStep1()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourceDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/data-sources-apits

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 31
+members: 32
 ---
 
 # compilerOptions
 
-**Members:** 31 nodes
+**Members:** 32 nodes
 
 ## Members
 - [[spec.ts]] - concept - dpdp-platform/backend/tsconfig.json
@@ -22,7 +22,7 @@ members: 31
 - [[forceConsistentCasingInFileNames_1]] - code - dpdp-platform/backend/tsconfig.json
 - [[incremental]] - code - dpdp-platform/backend/tsconfig.json
 - [[jest.config.ts_1]] - concept - dpdp-platform/backend/tsconfig.json
-- [[module_38]] - code - dpdp-platform/backend/tsconfig.json
+- [[module_40]] - code - dpdp-platform/backend/tsconfig.json
 - [[noFallthroughCasesInSwitch]] - code - dpdp-platform/backend/tsconfig.json
 - [[noImplicitAny]] - code - dpdp-platform/backend/tsconfig.json
 - [[noUncheckedIndexedAccess]] - code - dpdp-platform/backend/tsconfig.json
@@ -31,6 +31,7 @@ members: 31
 - [[prisma_3]] - concept - dpdp-platform/backend/tsconfig.json
 - [[removeComments]] - code - dpdp-platform/backend/tsconfig.json
 - [[rootDir_2]] - code - dpdp-platform/backend/tsconfig.json
+- [[scripts_3]] - concept - dpdp-platform/backend/tsconfig.json
 - [[skipLibCheck_2]] - code - dpdp-platform/backend/tsconfig.json
 - [[sourceMap_1]] - code - dpdp-platform/backend/tsconfig.json
 - [[strict_2]] - code - dpdp-platform/backend/tsconfig.json

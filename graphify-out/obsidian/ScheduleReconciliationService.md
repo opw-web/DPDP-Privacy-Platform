@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/src/queues/schedule-reconciliation.service.ts"
 type: "code"
 community: "SyncQueueService"
-location: "L59"
+location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,10 +12,10 @@ tags:
 # ScheduleReconciliationService
 
 ## Connections
-- [[dot-constructor()_31]] - `method` [EXTRACTED]
-- [[dot-reconcile()]] - `method` [EXTRACTED]
+- [[dot-constructor()_143]] - `method` [EXTRACTED]
+- [[dot-reconcile()_1]] - `method` [EXTRACTED]
 - [[dot-reconcileAtBoot()]] - `method` [EXTRACTED]
-- [[Injectable_18]] - `references` [EXTRACTED]
+- [[Injectable_81]] - `references` [EXTRACTED]
 - [[queues.module.ts]] - `imports` [EXTRACTED]
 - [[schedule-reconciliation.service.ts]] - `contains` [EXTRACTED]
 - [[sync.e2e-spec.ts]] - `imports` [EXTRACTED]

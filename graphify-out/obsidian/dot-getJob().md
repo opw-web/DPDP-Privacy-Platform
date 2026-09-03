@@ -12,7 +12,7 @@ tags:
 # .getJob()
 
 ## Connections
-- [[dot-get()_3]] - `calls` [INFERRED]
+- [[dot-get()_6]] - `calls` [INFERRED]
 - [[SyncService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/syncservicets

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ScopedTransactionClient"
+community: "recipients.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScopedTransactionClient
+  - community/recipientsservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[AgeService]] - `references` [EXTRACTED]
+- [[RecipientsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient
+#graphify/code #graphify/EXTRACTED #community/recipientsservicets

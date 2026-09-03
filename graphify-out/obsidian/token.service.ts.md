@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/token.service.ts"
 type: "code"
-community: "AccessTokenPayload"
+community: "RequirePermission"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/RequirePermission
 ---
 
 # token.service.ts
@@ -22,6 +22,8 @@ tags:
 - [[RefreshTokenPayload]] - `contains` [EXTRACTED]
 - [[TokenService]] - `contains` [EXTRACTED]
 - [[auth.module.ts]] - `imports_from` [EXTRACTED]
+- [[breach.service.ts]] - `imports_from` [EXTRACTED]
+- [[breaches.controller.ts]] - `imports_from` [EXTRACTED]
 - [[campaigns.controller.ts]] - `imports_from` [EXTRACTED]
 - [[campaigns.service.ts]] - `imports_from` [EXTRACTED]
 - [[candidates.controller.ts]] - `imports_from` [EXTRACTED]
@@ -53,4 +55,4 @@ tags:
 - [[tenant.middleware.ts]] - `imports_from` [EXTRACTED]
 - [[unmerge.controller.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

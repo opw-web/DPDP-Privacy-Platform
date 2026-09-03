@@ -1,23 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/consents/me-consents.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.ts"
 type: "code"
-community: ".setStatus"
-location: "L36"
+community: "SourcePurposesService"
+location: "L82"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/setStatus
+  - community/SourcePurposesService
 ---
 
 # .list()
 
 ## Connections
-- [[dot-listForPrincipal()_2]] - `calls` [INFERRED]
-- [[CurrentPrincipal]] - `references` [EXTRACTED]
-- [[Get_2]] - `references` [EXTRACTED]
-- [[MeConsentsController]] - `method` [EXTRACTED]
-- [[PrincipalActor]] - `references` [EXTRACTED]
-- [[Public()]] - `references` [EXTRACTED]
-- [[UseGuards_1]] - `references` [EXTRACTED]
+- [[PurposesService]] - `method` [EXTRACTED]
+- [[toPublicPurpose()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/setStatus
+#graphify/code #graphify/EXTRACTED #community/SourcePurposesService

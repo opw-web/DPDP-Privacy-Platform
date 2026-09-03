@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/wizard/Step3Mapping.tsx"
 type: "code"
-community: "DataSourceDetailPage.tsx"
-location: "L111"
+community: "data-sources-api.ts"
+location: "L115"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourceDetailPagetsx
+  - community/data-sources-apits
 ---
 
 # Step3Mapping()
@@ -20,4 +20,4 @@ tags:
 - [[humanizeEnum()]] - `calls` [EXTRACTED]
 - [[rowsFor()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourceDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/data-sources-apits

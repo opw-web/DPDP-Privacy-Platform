@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "sync.service.ts"
+community: ".markRead"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/syncservicets
+  - community/markRead
 ---
 
 # HttpCode
 
 ## Connections
-- [[dot-trigger()]] - `references` [EXTRACTED]
+- [[dot-markAllRead()_1]] - `references` [EXTRACTED]
+- [[dot-markRead()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/syncservicets
+#graphify/code #graphify/EXTRACTED #community/markRead

@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/campaign-send.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/consent-backfill.processor.ts"
 type: "code"
-community: "campaign-send.processor.ts"
-location: "L72"
+community: "consent-backfill.queue.ts"
+location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/campaign-sendprocessorts
+  - community/consent-backfillqueuets
 ---
 
 # .process()
 
 ## Connections
-- [[dot-deliverRecipient()]] - `calls` [INFERRED]
-- [[CampaignSendJobData]] - `references` [EXTRACTED]
-- [[CampaignSendProcessor]] - `method` [EXTRACTED]
+- [[dot-runForAllOrganizations()]] - `calls` [INFERRED]
+- [[ConsentBackfillJobData]] - `references` [EXTRACTED]
+- [[ConsentBackfillProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/campaign-sendprocessorts
+#graphify/code #graphify/EXTRACTED #community/consent-backfillqueuets

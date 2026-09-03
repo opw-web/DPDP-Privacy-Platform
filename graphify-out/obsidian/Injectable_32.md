@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "security-measures.service.ts"
+community: "AuditChainService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/security-measuresservicets
+  - community/AuditChainService
 ---
 
 # Injectable
 
 ## Connections
-- [[SecurityMeasuresService]] - `references` [EXTRACTED]
+- [[AuditChainService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/security-measuresservicets
+#graphify/code #graphify/EXTRACTED #community/AuditChainService

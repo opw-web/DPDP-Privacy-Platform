@@ -1,21 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principal-portal/me.service.ts"
+source_file: "dpdp-platform/backend/src/modules/principals/principals.service.ts"
 type: "code"
-community: "LineageService"
-location: "L93"
+community: "PrincipalsService"
+location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/LineageService
+  - community/PrincipalsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[LineageService]] - `references` [EXTRACTED]
-- [[MeService]] - `method` [EXTRACTED]
-- [[PrincipalRecipientsService]] - `references` [EXTRACTED]
-- [[PrincipalsService]] - `references` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
+- [[AccessLogService]] - `references` [EXTRACTED]
+- [[MaskingService]] - `references` [EXTRACTED]
+- [[PrincipalsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/LineageService
+#graphify/code #graphify/EXTRACTED #community/PrincipalsService

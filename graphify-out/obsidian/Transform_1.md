@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "audit-read.service.ts"
+community: "ListPrincipalsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-readservicets
+  - community/ListPrincipalsDto
 ---
 
 # Transform
 
 ## Connections
-- [[ListAuditEventsDto]] - `references` [EXTRACTED]
+- [[ListPrincipalsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-readservicets
+#graphify/code #graphify/EXTRACTED #community/ListPrincipalsDto

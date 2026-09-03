@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/deadline-scan.processor.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/candidates.service.ts"
 type: "code"
-community: "DeadlineScanProcessor"
-location: "L50"
+community: "AuditService"
+location: "L124"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DeadlineScanProcessor
+  - community/AuditService
 ---
 
 # .constructor()
 
 ## Connections
-- [[DeadlineScanProcessor]] - `method` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
-- [[RequestsService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[CandidatesService]] - `method` [EXTRACTED]
+- [[MergeService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DeadlineScanProcessor
+#graphify/code #graphify/EXTRACTED #community/AuditService

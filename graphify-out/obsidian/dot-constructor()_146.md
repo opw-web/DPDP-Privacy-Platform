@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts"
 type: "code"
-community: "mappings.controller.ts"
-location: "L34"
+community: "PrincipalAuthController"
+location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingscontrollerts
+  - community/PrincipalAuthController
 ---
 
 # .constructor()
 
 ## Connections
-- [[MappingsController]] - `method` [EXTRACTED]
-- [[MappingsService]] - `references` [EXTRACTED]
-- [[SourcePurposesService]] - `references` [EXTRACTED]
+- [[PrincipalAuthController]] - `method` [EXTRACTED]
+- [[PrincipalAuthService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingscontrollerts
+#graphify/code #graphify/EXTRACTED #community/PrincipalAuthController

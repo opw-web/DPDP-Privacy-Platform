@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "ConsentBackfillService"
+community: "consent-backfill.queue.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ConsentBackfillService
+  - community/consent-backfillqueuets
 ---
 
 # Processor
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[ConsentBackfillProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ConsentBackfillService
+#graphify/code #graphify/EXTRACTED #community/consent-backfillqueuets

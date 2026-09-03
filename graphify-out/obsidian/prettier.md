@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/package.json"
 type: "code"
 community: "prettier"
-location: "L71"
+location: "L72"
 tags:
   - graphify/code
   - graphify/EXTRACTED

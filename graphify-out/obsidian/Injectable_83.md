@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "connector.factory.ts"
+community: "SyncQueueService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/connectorfactoryts
+  - community/SyncQueueService
 ---
 
 # Injectable
 
 ## Connections
-- [[ConnectorFactory]] - `references` [EXTRACTED]
+- [[SyncQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/connectorfactoryts
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

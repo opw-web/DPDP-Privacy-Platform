@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/AuditPage.test.tsx"
 type: "code"
-community: "SecurityMeasuresTab.tsx"
+community: "cn"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresTabtsx
+  - community/cn
 ---
 
 # AuditPage.test.tsx
@@ -19,12 +19,12 @@ tags:
 - [[AuditEventRow.tsx]] - `imports_from` [EXTRACTED]
 - [[AuditPage()]] - `imports` [EXTRACTED]
 - [[AuditPage.tsx]] - `imports_from` [EXTRACTED]
-- [[MockRoutes_1]] - `contains` [EXTRACTED]
-- [[ORGANIZATION_1]] - `contains` [EXTRACTED]
+- [[MockRoutes_6]] - `contains` [EXTRACTED]
+- [[ORGANIZATION_3]] - `contains` [EXTRACTED]
 - [[employeeLogin()]] - `imports` [EXTRACTED]
 - [[employeeLogout()]] - `imports` [EXTRACTED]
 - [[jsonResponse()_8]] - `contains` [EXTRACTED]
 - [[libauth.ts]] - `imports_from` [EXTRACTED]
-- [[loginAndRenderThroughShell()]] - `contains` [EXTRACTED]
+- [[loginAndRenderThroughShell()_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx
+#graphify/code #graphify/EXTRACTED #community/cn

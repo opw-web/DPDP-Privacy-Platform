@@ -12,15 +12,15 @@ tags:
 # .login()
 
 ## Connections
-- [[dot-login()]] - `calls` [INFERRED]
+- [[dot-login()_1]] - `calls` [INFERRED]
 - [[dot-setRefreshCookie()_1]] - `calls` [EXTRACTED]
-- [[Body_27]] - `references` [EXTRACTED]
+- [[Body_28]] - `references` [EXTRACTED]
 - [[HttpCode_5]] - `references` [EXTRACTED]
 - [[Post_28]] - `references` [EXTRACTED]
 - [[PrincipalAuthController]] - `method` [EXTRACTED]
 - [[PrincipalLoginDto]] - `references` [EXTRACTED]
 - [[Public()]] - `references` [EXTRACTED]
 - [[Req_3]] - `references` [EXTRACTED]
-- [[Res_6]] - `references` [EXTRACTED]
+- [[Res_9]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PrincipalAuthController

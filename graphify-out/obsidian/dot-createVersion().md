@@ -18,8 +18,8 @@ tags:
 - [[CreateNoticeVersionDto]] - `references` [EXTRACTED]
 - [[CurrentActor]] - `references` [EXTRACTED]
 - [[NoticesController]] - `method` [EXTRACTED]
-- [[Param_23]] - `references` [EXTRACTED]
-- [[Post_22]] - `references` [EXTRACTED]
+- [[Param_22]] - `references` [EXTRACTED]
+- [[Post_21]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/noticesservicets

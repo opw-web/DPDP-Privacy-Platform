@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "retention.service.ts"
+community: "RetentionController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/RetentionController
 ---
 
 # MinLength
 
 ## Connections
-- [[UpdateRetentionPolicyDto]] - `references` [EXTRACTED]
+- [[CancelErasureTaskDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/RetentionController

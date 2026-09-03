@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "RetentionService"
+community: "retention.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionService
+  - community/retentionservicets
 ---
 
 # Get
 
 ## Connections
-- [[dot-get()_22]] - `references` [EXTRACTED]
-- [[dot-list()_48]] - `references` [EXTRACTED]
+- [[dot-get()_21]] - `references` [EXTRACTED]
+- [[dot-list()_44]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionService
+#graphify/code #graphify/EXTRACTED #community/retentionservicets

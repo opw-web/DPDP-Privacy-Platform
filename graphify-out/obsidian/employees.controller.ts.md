@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/employees/employees.controller.ts"
 type: "code"
-community: "employees.controller.ts"
+community: "employees.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeescontrollerts
+  - community/employeesservicets
 ---
 
 # employees.controller.ts
@@ -25,4 +25,4 @@ tags:
 - [[reset-employee-password.dto.ts]] - `imports_from` [EXTRACTED]
 - [[update-employee.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeescontrollerts
+#graphify/code #graphify/EXTRACTED #community/employeesservicets

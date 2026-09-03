@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EvidencePackController"
+community: "employees.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EvidencePackController
+  - community/employeesservicets
 ---
 
 # ApiTags
 
 ## Connections
-- [[EvidencePackController]] - `references` [EXTRACTED]
+- [[EmployeesController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EvidencePackController
+#graphify/code #graphify/EXTRACTED #community/employeesservicets

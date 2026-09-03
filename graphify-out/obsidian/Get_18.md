@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RequirePermission"
+community: ".me"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/me
 ---
 
 # Get
 
 ## Connections
-- [[dot-list()_19]] - `references` [EXTRACTED]
+- [[dot-me()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/me

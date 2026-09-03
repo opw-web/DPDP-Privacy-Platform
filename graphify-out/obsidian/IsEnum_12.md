@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "campaigns.service.ts"
+community: "ListPrincipalsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/campaignsservicets
+  - community/ListPrincipalsDto
 ---
 
 # IsEnum
 
 ## Connections
-- [[CreateCampaignDto]] - `references` [EXTRACTED]
+- [[ListPrincipalsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/campaignsservicets
+#graphify/code #graphify/EXTRACTED #community/ListPrincipalsDto

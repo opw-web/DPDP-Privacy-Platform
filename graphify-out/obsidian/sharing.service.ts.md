@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/sharing.service.ts"
 type: "code"
-community: "registers.module.ts"
+community: "CreateSharingActivityDto"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/registersmodulets
+  - community/CreateSharingActivityDto
 ---
 
 # sharing.service.ts
@@ -27,4 +27,4 @@ tags:
 - [[sharing.controller.ts]] - `imports_from` [EXTRACTED]
 - [[update-sharing-activity.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/registersmodulets
+#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

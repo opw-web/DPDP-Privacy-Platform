@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/retention.controller.ts"
 type: "code"
-community: "retention/retention.controller.ts"
+community: "RetentionController"
 location: "L55"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retention/retentioncontrollerts
+  - community/RetentionController
 ---
 
 # .cancel()
@@ -17,9 +17,9 @@ tags:
 - [[Body_21]] - `references` [EXTRACTED]
 - [[CancelErasureTaskDto]] - `references` [EXTRACTED]
 - [[CurrentActor]] - `references` [EXTRACTED]
-- [[Param_24]] - `references` [EXTRACTED]
-- [[Post_23]] - `references` [EXTRACTED]
+- [[Param_23]] - `references` [EXTRACTED]
+- [[Post_22]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[RetentionController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retention/retentioncontrollerts
+#graphify/code #graphify/EXTRACTED #community/RetentionController

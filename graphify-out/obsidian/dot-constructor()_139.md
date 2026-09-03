@@ -1,17 +1,20 @@
 ---
-source_file: "demo-company-server/src/seed/rng.ts"
+source_file: "dpdp-platform/backend/src/queues/consent-backfill.queue.ts"
 type: "code"
-community: "Rng"
-location: "L10"
+community: "SyncQueueService"
+location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Rng
+  - community/SyncQueueService
 ---
 
 # .constructor()
 
 ## Connections
-- [[Rng]] - `method` [EXTRACTED]
+- [[dot-register()]] - `calls` [INFERRED]
+- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
+- [[ConsentBackfillQueueService]] - `method` [EXTRACTED]
+- [[InjectQueue_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Rng
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

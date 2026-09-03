@@ -9,8 +9,8 @@ members: 31
 
 ## Members
 - [[dot-normalize()]] - code - dpdp-platform/backend/src/modules/normalization/normalization.service.ts
-- [[Injectable_57]] - code
-- [[Module_34]] - code
+- [[Injectable_61]] - code
+- [[Module_36]] - code
 - [[NormalizationModule]] - code - dpdp-platform/backend/src/modules/normalization/normalization.module.ts
 - [[NormalizationService]] - code - dpdp-platform/backend/src/modules/normalization/normalization.service.ts
 - [[NormalizationSourceRecord]] - code - dpdp-platform/backend/src/modules/normalization/normalization.service.ts
@@ -48,13 +48,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_ScopedTransactionClient]]
-- 3 edges to [[_COMMUNITY_prisma.service.ts]]
+- 7 edges to [[_COMMUNITY_ScopedTransactionClient]]
+- 4 edges to [[_COMMUNITY_sync-pipeline.service.ts]]
 - 2 edges to [[_COMMUNITY_app.module.ts]]
+- 2 edges to [[_COMMUNITY_prisma.service.ts]]
 
 ## Top bridge nodes
-- [[normalization.service.ts]] - degree 27, connects to 2 communities
-- [[NormalizationService]] - degree 8, connects to 2 communities
+- [[normalization.service.ts]] - degree 27, connects to 3 communities
+- [[NormalizationService]] - degree 8, connects to 3 communities
 - [[dot-normalize()]] - degree 11, connects to 1 community
 - [[normalization.module.ts]] - degree 4, connects to 1 community
 - [[NormalizationModule]] - degree 3, connects to 1 community

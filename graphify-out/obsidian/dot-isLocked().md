@@ -12,7 +12,7 @@ tags:
 # .isLocked()
 
 ## Connections
-- [[dot-trigger()_1]] - `calls` [INFERRED]
+- [[dot-trigger()]] - `calls` [INFERRED]
 - [[SyncLockService]] - `method` [EXTRACTED]
 - [[lockKey()]] - `calls` [EXTRACTED]
 

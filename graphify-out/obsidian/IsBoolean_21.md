@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateTransferDto"
+community: "registers.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTransferDto
+  - community/registersmodulets
 ---
 
 # IsBoolean
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[UpdateTransferDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTransferDto
+#graphify/code #graphify/EXTRACTED #community/registersmodulets

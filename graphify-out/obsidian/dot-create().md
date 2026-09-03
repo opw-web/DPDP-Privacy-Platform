@@ -1,22 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/children/guardians.controller.ts"
 type: "code"
-community: ".record"
-location: "L23"
+community: "VerifyGuardianDto"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/VerifyGuardianDto
 ---
 
 # .create()
 
 ## Connections
 - [[dot-create()_1]] - `calls` [INFERRED]
-- [[Body_2]] - `references` [EXTRACTED]
-- [[CreatePurposeDto]] - `references` [EXTRACTED]
-- [[Post_2]] - `references` [EXTRACTED]
-- [[PurposesController]] - `method` [EXTRACTED]
+- [[Body_1]] - `references` [EXTRACTED]
+- [[CreateGuardianDto]] - `references` [EXTRACTED]
+- [[CurrentActorPermissions]] - `references` [EXTRACTED]
+- [[GuardiansController]] - `method` [EXTRACTED]
+- [[Post]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/VerifyGuardianDto

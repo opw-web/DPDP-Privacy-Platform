@@ -1,20 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principals/principals.service.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/retention-scan.service.ts"
 type: "code"
-community: "access-report.service.ts"
-location: "L69"
+community: "AuditService"
+location: "L56"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-reportservicets
+  - community/AuditService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AccessLogService]] - `references` [EXTRACTED]
-- [[MaskingService]] - `references` [EXTRACTED]
-- [[PrincipalsService]] - `method` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[ComplianceService]] - `references` [EXTRACTED]
+- [[ErasureTaskService]] - `references` [EXTRACTED]
+- [[RetentionScanService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-reportservicets
+#graphify/code #graphify/EXTRACTED #community/AuditService

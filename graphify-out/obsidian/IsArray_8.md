@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
+community: "mappings.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/mappingscontrollerts
 ---
 
 # IsArray
 
 ## Connections
-- [[CreateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
+- [[AttachPurposesDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/mappingscontrollerts

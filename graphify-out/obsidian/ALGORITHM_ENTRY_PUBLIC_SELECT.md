@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts"
 type: "code"
-community: "PrismaService"
+community: "algorithm-register.service.ts"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/algorithm-registerservicets
 ---
 
 # ALGORITHM_ENTRY_PUBLIC_SELECT
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[algorithm-register.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/algorithm-registerservicets

@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/lib/api-client.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/test-support/mock-http-server.ts"
 type: "code"
-community: "DataSourceDetailPage.tsx"
-location: "L30"
+community: "data-sources.e2e-spec.ts"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourceDetailPagetsx
+  - community/data-sourcese2e-spects
 ---
 
 # .constructor()
 
 ## Connections
-- [[ApiError]] - `method` [EXTRACTED]
+- [[MockHttpServer]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourceDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/data-sourcese2e-spects

@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-listEligibleFields()_1]] - `calls` [INFERRED]
-- [[Get_31]] - `references` [EXTRACTED]
+- [[Get_29]] - `references` [EXTRACTED]
 - [[NoticesController]] - `method` [EXTRACTED]
-- [[Param_23]] - `references` [EXTRACTED]
+- [[Param_22]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/noticesservicets

@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sdf-cycle-scan.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/deadline-scan.processor.ts"
 type: "code"
-community: "sdf.module.ts"
-location: "L25"
+community: "DeadlineScanProcessor"
+location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdfmodulets
+  - community/DeadlineScanProcessor
 ---
 
 # .process()
 
 ## Connections
-- [[dot-runForAllOrganizations()]] - `calls` [INFERRED]
-- [[SdfCycleScanJobData]] - `references` [EXTRACTED]
-- [[SdfCycleScanProcessor]] - `method` [EXTRACTED]
+- [[dot-runScanCycle()]] - `calls` [EXTRACTED]
+- [[DeadlineScanJobData]] - `references` [EXTRACTED]
+- [[DeadlineScanProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdfmodulets
+#graphify/code #graphify/EXTRACTED #community/DeadlineScanProcessor

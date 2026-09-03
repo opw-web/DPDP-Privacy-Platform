@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/wizard/Step5Declarations.tsx"
 type: "code"
-community: "cn"
+community: "SecurityMeasuresTab.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/SecurityMeasuresTabtsx
 ---
 
 # Step5Declarations.tsx
@@ -15,6 +15,7 @@ tags:
 - [[ApiError]] - `imports` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
 - [[CheckboxOption]] - `imports` [EXTRACTED]
+- [[CheckboxOption_1]] - `imports` [EXTRACTED]
 - [[DataSourceDetailPage.tsx]] - `imports_from` [EXTRACTED]
 - [[DataSourceNewPage.tsx]] - `imports_from` [EXTRACTED]
 - [[DeclarationsFormValues]] - `contains` [EXTRACTED]
@@ -33,4 +34,4 @@ tags:
 - [[form-controls.tsx]] - `imports_from` [EXTRACTED]
 - [[input.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx

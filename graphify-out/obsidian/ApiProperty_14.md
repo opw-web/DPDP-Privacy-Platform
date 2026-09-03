@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "security-measures.service.ts"
+community: "mappings.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/security-measuresservicets
+  - community/mappingscontrollerts
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateSecurityMeasureDto]] - `references` [EXTRACTED]
+- [[DataSourcePurposeResponseDto]] - `references` [EXTRACTED]
+- [[DataSourcePurposesResponseDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/security-measuresservicets
+#graphify/code #graphify/EXTRACTED #community/mappingscontrollerts

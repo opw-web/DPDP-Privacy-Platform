@@ -1,22 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts"
 type: "code"
-community: "templates.service.ts"
-location: "L284"
+community: "TemplatesService"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatesservicets
+  - community/TemplatesService
 ---
 
 # .preview()
 
 ## Connections
-- [[dot-preview()_1]] - `calls` [INFERRED]
+- [[dot-preview()_2]] - `calls` [INFERRED]
+- [[Body_8]] - `references` [EXTRACTED]
+- [[Param_8]] - `references` [EXTRACTED]
+- [[Post_7]] - `references` [EXTRACTED]
 - [[PreviewTemplateDto]] - `references` [EXTRACTED]
-- [[RenderedTemplate]] - `references` [EXTRACTED]
-- [[TemplatesService]] - `method` [EXTRACTED]
-- [[renderOrganizationMessageTemplate()]] - `calls` [EXTRACTED]
-- [[toBadRequest()]] - `calls` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[TemplatesController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatesservicets
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "requests.controller.ts"
+community: "ChangeStatusDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/requestscontrollerts
+  - community/ChangeStatusDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[EscalateRequestDto]] - `references` [EXTRACTED]
+- [[ChangeStatusDto]] - `references` [EXTRACTED]
+- [[ErasureProcessorChecklistDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/requestscontrollerts
+#graphify/code #graphify/EXTRACTED #community/ChangeStatusDto

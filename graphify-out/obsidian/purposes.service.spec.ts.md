@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.spec.ts"
 type: "code"
-community: "mappings.service.ts"
+community: "purposes.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingsservicets
+  - community/purposesservicets
 ---
 
 # purposes.service.spec.ts
@@ -17,9 +17,9 @@ tags:
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[PurposesService]] - `imports` [EXTRACTED]
 - [[audit.service.ts]] - `imports_from` [EXTRACTED]
-- [[buildService()]] - `contains` [EXTRACTED]
+- [[buildService()_1]] - `contains` [EXTRACTED]
 - [[create-purpose.dto.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[purposes.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/EXTRACTED #community/purposesservicets

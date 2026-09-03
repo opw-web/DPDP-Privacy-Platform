@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
 community: "cookie-parser"
-location: "L37"
+location: "L38"
 tags:
   - graphify/concept
   - graphify/EXTRACTED

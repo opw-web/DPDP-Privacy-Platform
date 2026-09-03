@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "DataSourcesController"
+community: "age-status.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesController
+  - community/age-statusservicets
 ---
 
 # Post
 
 ## Connections
-- [[dot-create()_24]] - `references` [EXTRACTED]
-- [[dot-discoverSchema()_1]] - `references` [EXTRACTED]
-- [[dot-testConnection()_1]] - `references` [EXTRACTED]
+- [[dot-setAgeStatus()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesController
+#graphify/code #graphify/EXTRACTED #community/age-statusservicets

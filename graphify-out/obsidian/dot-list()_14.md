@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/requests/requests.service.ts"
+source_file: "dpdp-platform/backend/src/modules/audit/audit-read.service.ts"
 type: "code"
-community: "ListRequestsDto"
-location: "L130"
+community: "AuditReadService"
+location: "L157"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ListRequestsDto
+  - community/AuditReadService
 ---
 
 # .list()
 
 ## Connections
-- [[ListRequestsDto]] - `references` [EXTRACTED]
-- [[RequestsService]] - `method` [EXTRACTED]
+- [[dot-buildWhere()]] - `calls` [EXTRACTED]
+- [[dot-hasFullPersonalDataAccess()]] - `calls` [INFERRED]
+- [[AuditReadService]] - `method` [EXTRACTED]
+- [[ListAuditEventsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ListRequestsDto
+#graphify/code #graphify/EXTRACTED #community/AuditReadService

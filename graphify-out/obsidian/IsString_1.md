@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "requests.controller.ts"
+community: "VerifyGuardianDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/requestscontrollerts
+  - community/VerifyGuardianDto
 ---
 
 # IsString
 
 ## Connections
-- [[AssignRequestDto]] - `references` [EXTRACTED]
+- [[ListGuardiansDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/requestscontrollerts
+#graphify/code #graphify/EXTRACTED #community/VerifyGuardianDto

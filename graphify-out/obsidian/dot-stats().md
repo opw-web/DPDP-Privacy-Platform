@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/requests/requests.controller.ts"
 type: "code"
-community: "ListRequestsDto"
-location: "L47"
+community: "RequestsController"
+location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ListRequestsDto
+  - community/RequestsController
 ---
 
 # .stats()
 
 ## Connections
 - [[dot-stats()_1]] - `calls` [INFERRED]
-- [[Get_15]] - `references` [EXTRACTED]
+- [[Get_14]] - `references` [EXTRACTED]
 - [[RequestsController]] - `method` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ListRequestsDto
+#graphify/code #graphify/EXTRACTED #community/RequestsController

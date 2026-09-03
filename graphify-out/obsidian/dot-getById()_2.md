@@ -1,21 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/sdf-assessment.service.ts"
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
-location: "L29"
+community: "sdf.controller.ts"
+location: "L105"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/sdfcontrollerts
 ---
 
 # .getById()
 
 ## Connections
-- [[dot-getById()_3]] - `calls` [INFERRED]
-- [[Get_23]] - `references` [EXTRACTED]
-- [[Param_15]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[VoluntaryUndertakingsController]] - `method` [EXTRACTED]
+- [[SdfAssessmentService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/sdfcontrollerts

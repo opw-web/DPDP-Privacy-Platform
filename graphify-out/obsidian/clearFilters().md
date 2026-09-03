@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/AuditPage.tsx"
 type: "code"
-community: "SecurityMeasuresTab.tsx"
-location: "L148"
+community: "AuditPage"
+location: "L191"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/SecurityMeasuresTabtsx
+  - community/AuditPage
 ---
 
 # clearFilters()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[AuditPage()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/SecurityMeasuresTabtsx
+#graphify/code #graphify/INFERRED #community/AuditPage

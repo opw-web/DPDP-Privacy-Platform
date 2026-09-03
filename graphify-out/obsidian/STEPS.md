@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/DataSourceNewPage.tsx"
 type: "code"
-community: "DataSourceDetailPage.tsx"
+community: "data-sources-api.ts"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourceDetailPagetsx
+  - community/data-sources-apits
 ---
 
 # STEPS
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[DataSourceNewPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourceDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/data-sources-apits

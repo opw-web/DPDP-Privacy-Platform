@@ -1,26 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sync/sync-pipeline.service.ts"
+source_file: "dpdp-platform/backend/src/queues/sdf-cycle-scan.queue.ts"
 type: "code"
-community: "ScopedTransactionClient"
-location: "L169"
+community: "SyncQueueService"
+location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScopedTransactionClient
+  - community/SyncQueueService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AgeService]] - `references` [EXTRACTED]
-- [[AssemblyService]] - `references` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
-- [[DataSourcesService]] - `references` [EXTRACTED]
-- [[LinkingService]] - `references` [EXTRACTED]
-- [[MatchingService]] - `references` [EXTRACTED]
-- [[NormalizationService]] - `references` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
-- [[SyncLockService]] - `references` [EXTRACTED]
-- [[SyncPipelineService]] - `method` [EXTRACTED]
+- [[dot-register()]] - `calls` [INFERRED]
+- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
+- [[InjectQueue_7]] - `references` [EXTRACTED]
+- [[SdfCycleScanQueueService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

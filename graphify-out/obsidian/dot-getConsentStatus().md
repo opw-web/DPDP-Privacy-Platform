@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/src/modules/consents/consents.service.ts"
 type: "code"
 community: "ConsentsService"
-location: "L246"
+location: "L402"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-assertConsentPurpose()]] - `calls` [EXTRACTED]
-- [[dot-create()_19]] - `calls` [INFERRED]
+- [[dot-create()_21]] - `calls` [INFERRED]
 - [[ConsentsService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/ConsentsService

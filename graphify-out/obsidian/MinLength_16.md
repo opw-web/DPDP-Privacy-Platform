@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EnvironmentVariables"
+community: "CreateLegalHoldDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EnvironmentVariables
+  - community/CreateLegalHoldDto
 ---
 
 # MinLength
 
 ## Connections
-- [[EnvironmentVariables]] - `references` [EXTRACTED]
+- [[CreateLegalHoldDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EnvironmentVariables
+#graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto

@@ -12,6 +12,8 @@ tags:
 # refresh()
 
 ## Connections
+- [[MeRequestDetailPage()]] - `calls` [EXTRACTED]
+- [[RequestWorkPanel()]] - `calls` [EXTRACTED]
 - [[createApiClient()]] - `contains` [EXTRACTED]
 - [[rawRequest()]] - `calls` [EXTRACTED]
 

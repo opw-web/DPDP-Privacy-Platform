@@ -11,6 +11,6 @@ tags:
 # ApiTags
 
 ## Connections
-- [[PrincipalsController]] - `references` [EXTRACTED]
+- [[CampaignsController]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/RequirePermission

@@ -22,5 +22,6 @@ tags:
 - [[consents.module.ts]] - `imports_from` [EXTRACTED]
 - [[notices.controller.ts]] - `imports_from` [EXTRACTED]
 - [[notices.service.ts]] - `imports_from` [EXTRACTED]
+- [[principal-portal.module.ts]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/appmodulets

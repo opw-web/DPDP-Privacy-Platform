@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RequestsService"
+community: "retention.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestsService
+  - community/retentionmodulets
 ---
 
 # Injectable
 
 ## Connections
-- [[RequestsService]] - `references` [EXTRACTED]
+- [[RetentionScanQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestsService
+#graphify/code #graphify/EXTRACTED #community/retentionmodulets

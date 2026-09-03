@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principals/dto/list-principals.dto.ts"
 type: "code"
-community: "principals.e2e-spec.ts"
+community: "principals.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principalse2e-spects
+  - community/principalsservicets
 ---
 
 # list-principals.dto.ts
@@ -19,4 +19,4 @@ tags:
 - [[principals.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[principals.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principalse2e-spects
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/AuditPage.tsx"
 type: "code"
-community: "SecurityMeasuresTab.tsx"
+community: "cn"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresTabtsx
+  - community/cn
 ---
 
 # AuditPage.tsx
@@ -27,6 +27,7 @@ tags:
 - [[CardDescription]] - `imports` [EXTRACTED]
 - [[CardHeader]] - `imports` [EXTRACTED]
 - [[CardTitle]] - `imports` [EXTRACTED]
+- [[ChainVerificationResult_1]] - `contains` [EXTRACTED]
 - [[EMPTY_FILTERS]] - `contains` [EXTRACTED]
 - [[EmptyState()]] - `imports` [EXTRACTED]
 - [[EmptyState.tsx]] - `imports_from` [EXTRACTED]
@@ -54,7 +55,7 @@ tags:
 - [[input.tsx]] - `imports_from` [EXTRACTED]
 - [[label.tsx]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
-- [[saveBlob()_1]] - `contains` [EXTRACTED]
+- [[saveBlob()_2]] - `contains` [EXTRACTED]
 - [[table.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx
+#graphify/code #graphify/EXTRACTED #community/cn

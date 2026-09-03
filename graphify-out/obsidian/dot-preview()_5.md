@@ -1,20 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/audience/audience.service.ts"
 type: "code"
-community: "notices.service.ts"
-location: "L679"
+community: "compile-audience.ts"
+location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/noticesservicets
+  - community/compile-audiencets
 ---
 
 # .preview()
 
 ## Connections
-- [[dot-getVersionOrThrow()]] - `calls` [EXTRACTED]
-- [[dot-preview()_4]] - `calls` [INFERRED]
-- [[NoticesService]] - `method` [EXTRACTED]
-- [[isNoticeLanguageCode()]] - `calls` [EXTRACTED]
+- [[dot-compile()]] - `calls` [EXTRACTED]
+- [[dot-maskIfNeeded()]] - `calls` [INFERRED]
+- [[dot-preview()_1]] - `calls` [INFERRED]
+- [[AudienceService]] - `method` [EXTRACTED]
+- [[PreviewAudienceDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/noticesservicets
+#graphify/code #graphify/EXTRACTED #community/compile-audiencets

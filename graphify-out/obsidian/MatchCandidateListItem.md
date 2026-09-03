@@ -1,17 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/candidates.service.ts"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/CandidateComparison.tsx"
 type: "code"
-community: "merge-unmerge.e2e-spec.ts"
-location: "L49"
+community: "ReviewQueuePage.test.tsx"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/merge-unmergee2e-spects
+  - community/ReviewQueuePagetesttsx
 ---
 
 # MatchCandidateListItem
 
 ## Connections
-- [[candidates.service.ts]] - `contains` [EXTRACTED]
+- [[CandidateComparison.tsx]] - `contains` [EXTRACTED]
+- [[MockRoutes_4]] - `references` [EXTRACTED]
+- [[ReviewQueuePage.test.tsx]] - `imports` [EXTRACTED]
+- [[ReviewQueuePage.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/merge-unmergee2e-spects
+#graphify/code #graphify/EXTRACTED #community/ReviewQueuePagetesttsx

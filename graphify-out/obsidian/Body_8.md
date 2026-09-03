@@ -11,8 +11,8 @@ tags:
 # Body
 
 ## Connections
-- [[dot-create()_8]] - `references` [EXTRACTED]
-- [[dot-preview()_1]] - `references` [EXTRACTED]
-- [[dot-update()_9]] - `references` [EXTRACTED]
+- [[dot-create()_9]] - `references` [EXTRACTED]
+- [[dot-preview()]] - `references` [EXTRACTED]
+- [[dot-update()_8]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/TemplatesService

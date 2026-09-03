@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-approve()_1]] - `calls` [EXTRACTED]
-- [[dot-get()_10]] - `calls` [EXTRACTED]
+- [[dot-get()_14]] - `calls` [EXTRACTED]
 - [[dot-listRecipients()_1]] - `calls` [EXTRACTED]
 - [[dot-send()_7]] - `calls` [EXTRACTED]
 - [[campaigns.service.ts]] - `contains` [EXTRACTED]

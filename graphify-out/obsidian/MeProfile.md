@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/frontend/src/principal/pages/MeHomePage.tsx"
 type: "code"
 community: "card.tsx"
-location: "L10"
+location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED

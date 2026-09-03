@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "templates.service.ts"
+community: "sync.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatesservicets
+  - community/syncservicets
 ---
 
 # IsOptional
 
 ## Connections
-- [[PreviewTemplateDto]] - `references` [EXTRACTED]
+- [[ListSyncJobsQueryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatesservicets
+#graphify/code #graphify/EXTRACTED #community/syncservicets

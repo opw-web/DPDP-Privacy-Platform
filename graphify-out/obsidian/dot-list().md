@@ -1,19 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/candidates.service.ts"
+source_file: "dpdp-platform/backend/src/modules/children/guardians.controller.ts"
 type: "code"
-community: "merge-unmerge.e2e-spec.ts"
-location: "L130"
+community: "VerifyGuardianDto"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/merge-unmergee2e-spects
+  - community/VerifyGuardianDto
 ---
 
 # .list()
 
 ## Connections
-- [[CandidatesService]] - `method` [EXTRACTED]
-- [[isoDate()]] - `calls` [EXTRACTED]
-- [[recordValueFor()]] - `calls` [EXTRACTED]
+- [[CurrentActorPermissions]] - `references` [EXTRACTED]
+- [[Get_1]] - `references` [EXTRACTED]
+- [[GuardiansController]] - `method` [EXTRACTED]
+- [[ListGuardiansDto]] - `references` [EXTRACTED]
+- [[Query]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/merge-unmergee2e-spects
+#graphify/code #graphify/EXTRACTED #community/VerifyGuardianDto

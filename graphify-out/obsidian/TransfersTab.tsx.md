@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/registers/TransfersTab.tsx"
 type: "code"
-community: "cn"
+community: "SecurityMeasuresTab.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/SecurityMeasuresTabtsx
 ---
 
 # TransfersTab.tsx
@@ -20,9 +20,10 @@ tags:
 - [[CardHeader]] - `imports` [EXTRACTED]
 - [[CardTitle]] - `imports` [EXTRACTED]
 - [[CheckboxOption]] - `imports` [EXTRACTED]
+- [[CheckboxOption_1]] - `imports` [EXTRACTED]
 - [[CreateTransferPayload]] - `contains` [EXTRACTED]
 - [[DATA_CATEGORY_OPTIONS]] - `imports` [EXTRACTED]
-- [[DEFAULT_VALUES_4]] - `contains` [EXTRACTED]
+- [[DEFAULT_VALUES_5]] - `contains` [EXTRACTED]
 - [[DataTable()]] - `imports` [EXTRACTED]
 - [[DataTable.tsx]] - `imports_from` [EXTRACTED]
 - [[DateTime()]] - `imports` [EXTRACTED]
@@ -57,4 +58,4 @@ tags:
 - [[transferFormSchema]] - `contains` [EXTRACTED]
 - [[useEmployeeAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx

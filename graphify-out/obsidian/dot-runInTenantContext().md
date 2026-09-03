@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sync/sync-pipeline.service.ts"
 type: "code"
-community: "SyncPipelineService"
-location: "L216"
+community: "sync-pipeline.service.ts"
+location: "L219"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncPipelineService
+  - community/sync-pipelineservicets
 ---
 
 # .runInTenantContext()
@@ -23,4 +23,4 @@ tags:
 - [[describeSyncError()]] - `calls` [EXTRACTED]
 - [[zeroCounts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncPipelineService
+#graphify/code #graphify/EXTRACTED #community/sync-pipelineservicets

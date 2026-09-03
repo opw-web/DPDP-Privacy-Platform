@@ -1,21 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
 type: "code"
-community: "rest-api.connector.ts"
-location: "L178"
+community: "DataSourcesService"
+location: "L588"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rest-apiconnectorts
+  - community/DataSourcesService
 ---
 
 # .discoverSchema()
 
 ## Connections
-- [[dot-fetchPage()]] - `calls` [EXTRACTED]
-- [[RestApiConnector]] - `method` [EXTRACTED]
-- [[inferType()]] - `calls` [EXTRACTED]
-- [[stringifyForSample()]] - `calls` [EXTRACTED]
-- [[truncateSample()]] - `calls` [EXTRACTED]
+- [[dot-buildConnector()]] - `calls` [EXTRACTED]
+- [[dot-discoverSchema()_1]] - `calls` [INFERRED]
+- [[DataSourcesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts
+#graphify/code #graphify/EXTRACTED #community/DataSourcesService

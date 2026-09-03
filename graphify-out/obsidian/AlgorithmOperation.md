@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sdf/dto/algorithm-operations.ts"
 type: "code"
-community: "sdf-assessment.service.ts"
+community: "algorithm-register.service.ts"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdf-assessmentservicets
+  - community/algorithm-registerservicets
 ---
 
 # AlgorithmOperation
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[algorithm-operations.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdf-assessmentservicets
+#graphify/code #graphify/EXTRACTED #community/algorithm-registerservicets

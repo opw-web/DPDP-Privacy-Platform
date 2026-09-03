@@ -1,21 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/deadline-scan.queue.ts"
+source_file: "dpdp-platform/backend/src/modules/children/child-exemptions.controller.ts"
 type: "code"
-community: "BootRegistrationRegistry"
-location: "L70"
+community: "child-exemptions.service.ts"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BootRegistrationRegistry
+  - community/child-exemptionsservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[dot-register()]] - `calls` [INFERRED]
-- [[dot-registerSchedule()_2]] - `calls` [EXTRACTED]
-- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
-- [[DeadlineScanQueueService]] - `method` [EXTRACTED]
-- [[InjectQueue_4]] - `references` [EXTRACTED]
+- [[ChildExemptionsController]] - `method` [EXTRACTED]
+- [[ChildExemptionsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BootRegistrationRegistry
+#graphify/code #graphify/EXTRACTED #community/child-exemptionsservicets

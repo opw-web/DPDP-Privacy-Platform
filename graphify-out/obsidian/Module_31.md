@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "app.module.ts"
+community: "retention.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/appmodulets
+  - community/retentionmodulets
 ---
 
 # Module
 
 ## Connections
-- [[QueuesModule]] - `references` [EXTRACTED]
+- [[NotificationsModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/appmodulets
+#graphify/code #graphify/EXTRACTED #community/retentionmodulets

@@ -1,22 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/access-report.service.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/permissions.controller.ts"
 type: "code"
-community: "PrismaService"
-location: "L115"
+community: "PermissionsController"
+location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/PermissionsController
 ---
 
 # .constructor()
 
 ## Connections
-- [[AccessLogService]] - `references` [EXTRACTED]
-- [[AccessReportService]] - `method` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
-- [[LineageService]] - `references` [EXTRACTED]
-- [[PrincipalRecipientsService]] - `references` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
+- [[PermissionsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/PermissionsController

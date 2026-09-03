@@ -1,25 +1,22 @@
 ---
 type: community
-members: 13
+members: 10
 ---
 
 # ListRequestsDto
 
-**Members:** 13 nodes
+**Members:** 10 nodes
 
 ## Members
-- [[dot-list()_13]] - code - dpdp-platform/backend/src/modules/requests/requests.controller.ts
-- [[dot-list()_14]] - code - dpdp-platform/backend/src/modules/requests/requests.service.ts
-- [[dot-stats()]] - code - dpdp-platform/backend/src/modules/requests/requests.controller.ts
-- [[dot-stats()_1]] - code - dpdp-platform/backend/src/modules/requests/requests.service.ts
-- [[Get_15]] - code
-- [[IsBoolean_9]] - code
-- [[IsEnum_7]] - code
-- [[IsOptional_16]] - code
-- [[IsString_20]] - code
+- [[dot-list()_46]] - code - dpdp-platform/backend/src/modules/requests/requests.controller.ts
+- [[dot-list()_47]] - code - dpdp-platform/backend/src/modules/requests/requests.service.ts
+- [[IsBoolean_28]] - code
+- [[IsEnum_25]] - code
+- [[IsOptional_52]] - code
+- [[IsString_70]] - code
 - [[ListRequestsDto]] - code - dpdp-platform/backend/src/modules/requests/dto/list-requests.dto.ts
-- [[Query_1]] - code
-- [[Transform]] - code
+- [[Query_9]] - code
+- [[Transform_2]] - code
 - [[list-requests.dto.ts]] - code - dpdp-platform/backend/src/modules/requests/dto/list-requests.dto.ts
 
 ## Live Query (requires Dataview plugin)
@@ -30,15 +27,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_RequestsController]]
+- 2 edges to [[_COMMUNITY_RequestsController]]
 - 2 edges to [[_COMMUNITY_requests.controller.ts]]
 - 2 edges to [[_COMMUNITY_requests.service.ts]]
-- 2 edges to [[_COMMUNITY_RequestsService]]
-- 2 edges to [[_COMMUNITY_RequirePermission]]
+- 1 edge to [[_COMMUNITY_RequestsService]]
+- 1 edge to [[_COMMUNITY_RequirePermission]]
 
 ## Top bridge nodes
 - [[ListRequestsDto]] - degree 10, connects to 2 communities
-- [[dot-list()_13]] - degree 5, connects to 2 communities
-- [[dot-stats()]] - degree 4, connects to 2 communities
+- [[dot-list()_46]] - degree 5, connects to 2 communities
 - [[list-requests.dto.ts]] - degree 3, connects to 2 communities
-- [[Get_15]] - degree 3, connects to 1 community
+- [[dot-list()_47]] - degree 2, connects to 1 community

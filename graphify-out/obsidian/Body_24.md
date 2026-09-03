@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EmployeeAuthController"
+community: "roles.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeeAuthController
+  - community/rolesservicets
 ---
 
 # Body
 
 ## Connections
-- [[dot-login()_1]] - `references` [EXTRACTED]
+- [[dot-replacePermissions()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController
+#graphify/code #graphify/EXTRACTED #community/rolesservicets

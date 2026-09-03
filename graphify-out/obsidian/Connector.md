@@ -13,11 +13,11 @@ tags:
 
 ## Connections
 - [[dot-buildConnector()]] - `references` [EXTRACTED]
-- [[dot-create()_36]] - `references` [EXTRACTED]
-- [[dot-discoverSchema()_3]] - `method` [EXTRACTED]
-- [[dot-fetchChanges()_1]] - `method` [EXTRACTED]
-- [[dot-fetchRecords()_1]] - `method` [EXTRACTED]
-- [[dot-testConnection()_3]] - `method` [EXTRACTED]
+- [[dot-create()_2]] - `references` [EXTRACTED]
+- [[dot-discoverSchema()]] - `method` [EXTRACTED]
+- [[dot-fetchChanges()]] - `method` [EXTRACTED]
+- [[dot-fetchRecords()]] - `method` [EXTRACTED]
+- [[dot-testConnection()]] - `method` [EXTRACTED]
 - [[RestApiConnector]] - `implements` [EXTRACTED]
 - [[connector.factory.ts]] - `imports` [EXTRACTED]
 - [[connector.interface.ts]] - `contains` [EXTRACTED]

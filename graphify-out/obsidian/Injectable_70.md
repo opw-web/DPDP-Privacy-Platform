@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "employee-auth.service.ts"
+community: "RetentionController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employee-authservicets
+  - community/RetentionController
 ---
 
 # Injectable
 
 ## Connections
-- [[PrincipalAuthService]] - `references` [EXTRACTED]
+- [[LegalHoldService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employee-authservicets
+#graphify/code #graphify/EXTRACTED #community/RetentionController

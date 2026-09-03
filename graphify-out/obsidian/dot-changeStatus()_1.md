@@ -1,23 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/requests/requests.service.ts"
+source_file: "dpdp-platform/backend/src/modules/requests/requests.controller.ts"
 type: "code"
-community: "RequestsService"
-location: "L366"
+community: "RequestsController"
+location: "L109"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestsService
+  - community/RequestsController
 ---
 
 # .changeStatus()
 
 ## Connections
-- [[dot-assertLegalTransition()]] - `calls` [EXTRACTED]
 - [[dot-changeStatus()]] - `calls` [INFERRED]
-- [[dot-createFromTrigger()]] - `calls` [INFERRED]
-- [[dot-loadByReferenceOrThrow()]] - `calls` [EXTRACTED]
-- [[dot-writeTransition()]] - `calls` [EXTRACTED]
+- [[Body_9]] - `references` [EXTRACTED]
 - [[ChangeStatusDto]] - `references` [EXTRACTED]
-- [[RequestsService]] - `method` [EXTRACTED]
+- [[Param_10]] - `references` [EXTRACTED]
+- [[Post_8]] - `references` [EXTRACTED]
+- [[RequestsController]] - `method` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestsService
+#graphify/code #graphify/EXTRACTED #community/RequestsController

@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/non-disclosure.ts"
+source_file: "dpdp-platform/backend/src/modules/board/information-requests.service.ts"
 type: "code"
-community: "access-report.service.ts"
-location: "L22"
+community: "prisma.service.ts"
+location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-reportservicets
+  - community/prismaservicets
 ---
 
 # INFORMATION_REQUEST_PUBLIC_SELECT
 
 ## Connections
-- [[evidencenon-disclosure.ts]] - `contains` [EXTRACTED]
+- [[information-requests.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-reportservicets
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

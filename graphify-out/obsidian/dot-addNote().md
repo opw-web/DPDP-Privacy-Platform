@@ -1,23 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/requests/requests.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/requests/requests.service.ts"
 type: "code"
-community: "RequestsController"
-location: "L77"
+community: "RequestsService"
+location: "L602"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestsController
+  - community/RequestsService
 ---
 
 # .addNote()
 
 ## Connections
 - [[dot-addNote()_1]] - `calls` [INFERRED]
+- [[dot-commentOnRequest()_1]] - `calls` [INFERRED]
+- [[dot-loadByReferenceOrThrow()]] - `calls` [EXTRACTED]
+- [[dot-writeTransition()]] - `calls` [EXTRACTED]
 - [[AddNoteDto]] - `references` [EXTRACTED]
-- [[Body_10]] - `references` [EXTRACTED]
-- [[Param_13]] - `references` [EXTRACTED]
-- [[Post_12]] - `references` [EXTRACTED]
-- [[RequestsController]] - `method` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[RequestsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestsController
+#graphify/code #graphify/EXTRACTED #community/RequestsService

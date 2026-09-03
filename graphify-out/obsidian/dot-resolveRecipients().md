@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-compileFilter()]] - `calls` [EXTRACTED]
 - [[dot-findGrantedPrincipalIds()]] - `calls` [INFERRED]
-- [[dot-get()_10]] - `calls` [EXTRACTED]
+- [[dot-get()_14]] - `calls` [EXTRACTED]
 - [[dot-send()_7]] - `calls` [EXTRACTED]
 - [[CampaignsService]] - `method` [EXTRACTED]
 

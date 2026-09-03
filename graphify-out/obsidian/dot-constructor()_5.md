@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sdf-cycle-scan.processor.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.service.ts"
 type: "code"
-community: "sdf.module.ts"
-location: "L21"
+community: "AuditService"
+location: "L71"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdfmodulets
+  - community/AuditService
 ---
 
 # .constructor()
 
 ## Connections
-- [[SdfCycleScanProcessor]] - `method` [EXTRACTED]
-- [[SdfCycleScanService]] - `references` [EXTRACTED]
+- [[AssemblyService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[DataSourcesService]] - `references` [EXTRACTED]
+- [[MappingsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdfmodulets
+#graphify/code #graphify/EXTRACTED #community/AuditService

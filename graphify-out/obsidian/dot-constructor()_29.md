@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/common/tenant/tenant.middleware.ts"
+source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.service.ts"
 type: "code"
-community: "TokenService"
-location: "L46"
+community: "principal-auth.service.ts"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TokenService
+  - community/principal-authservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[PrismaService]] - `references` [EXTRACTED]
-- [[TenantMiddleware]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[EmployeeAuthService]] - `method` [EXTRACTED]
 - [[TokenService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TokenService
+#graphify/code #graphify/EXTRACTED #community/principal-authservicets

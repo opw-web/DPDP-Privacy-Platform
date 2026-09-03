@@ -1,0 +1,16 @@
+---
+source_file: ""
+type: "code"
+community: "audit-chain-verify.processor.ts"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/audit-chain-verifyprocessorts
+---
+
+# Processor
+
+## Connections
+- [[AuditChainVerifyProcessor]] - `references` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/audit-chain-verifyprocessorts

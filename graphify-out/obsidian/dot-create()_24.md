@@ -1,22 +1,25 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
 type: "code"
-community: "DataSourcesController"
-location: "L42"
+community: "DataSourcesService"
+location: "L230"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesController
+  - community/DataSourcesService
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_4]] - `calls` [INFERRED]
-- [[Body_18]] - `references` [EXTRACTED]
+- [[dot-assertPubliclyAvailableJustified()]] - `calls` [EXTRACTED]
+- [[dot-create()_23]] - `calls` [INFERRED]
+- [[dot-encrypt()]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-scheduleSync()]] - `calls` [EXTRACTED]
 - [[CreateDataSourceDto]] - `references` [EXTRACTED]
-- [[DataSourcesController]] - `method` [EXTRACTED]
-- [[Post_20]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[DataSourcesService]] - `method` [EXTRACTED]
+- [[duplicateNameMessage()]] - `calls` [EXTRACTED]
+- [[isUniqueConstraintViolation()_3]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesController
+#graphify/code #graphify/EXTRACTED #community/DataSourcesService

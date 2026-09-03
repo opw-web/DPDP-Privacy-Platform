@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principals/principal-recipients.service.ts"
+source_file: "dpdp-platform/backend/src/modules/evidence/audit-chain.service.ts"
 type: "code"
-community: "LineageService"
-location: "L7"
+community: "AuditChainService"
+location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/LineageService
+  - community/AuditChainService
 ---
 
 # .constructor()
 
 ## Connections
-- [[PrincipalRecipientsService]] - `method` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
+- [[AuditChainService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/LineageService
+#graphify/code #graphify/EXTRACTED #community/AuditChainService

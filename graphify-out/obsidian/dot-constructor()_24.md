@@ -1,18 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principal-portal/me.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
 type: "code"
-community: "Public"
-location: "L41"
+community: "connector.factory.ts"
+location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/connectorfactoryts
 ---
 
 # .constructor()
 
 ## Connections
-- [[MeController]] - `method` [EXTRACTED]
-- [[MeService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[ConnectorFactory]] - `references` [EXTRACTED]
+- [[CryptoService]] - `references` [EXTRACTED]
+- [[DataSourcesService]] - `method` [EXTRACTED]
+- [[SyncQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/connectorfactoryts

@@ -1,20 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/candidates.service.ts"
+source_file: "dpdp-platform/backend/src/common/mail/mailer.service.ts"
 type: "code"
-community: "PrismaService"
-location: "L124"
+community: "MailerService"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/MailerService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[CandidatesService]] - `method` [EXTRACTED]
-- [[MergeService]] - `references` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
+- [[MailerService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/MailerService

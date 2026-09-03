@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/compliance/compliance.controller.ts"
+source_file: "dpdp-platform/backend/src/common/guards/jwt-employee.guard.ts"
 type: "code"
-community: "ComplianceController"
-location: "L18"
+community: "jwt-employee.guard.ts"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ComplianceController
+  - community/jwt-employeeguardts
 ---
 
 # .constructor()
 
 ## Connections
-- [[ComplianceController]] - `method` [EXTRACTED]
-- [[ComplianceService]] - `references` [EXTRACTED]
+- [[JwtEmployeeGuard]] - `method` [EXTRACTED]
+- [[TokenService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ComplianceController
+#graphify/code #graphify/EXTRACTED #community/jwt-employeeguardts

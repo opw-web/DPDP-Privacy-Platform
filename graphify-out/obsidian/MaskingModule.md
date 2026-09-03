@@ -12,7 +12,7 @@ tags:
 # MaskingModule
 
 ## Connections
-- [[Module_6]] - `references` [EXTRACTED]
+- [[Module_5]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[audience.module.ts]] - `imports` [EXTRACTED]
 - [[audit-read.module.ts]] - `imports` [EXTRACTED]

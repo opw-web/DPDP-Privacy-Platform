@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "canonicalJson"
+community: "notifications.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/canonicalJson
+  - community/notificationsservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[AuditChainService]] - `references` [EXTRACTED]
+- [[PortalProvider]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/canonicalJson
+#graphify/code #graphify/EXTRACTED #community/notificationsservicets

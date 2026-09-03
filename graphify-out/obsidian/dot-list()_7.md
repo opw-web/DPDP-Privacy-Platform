@@ -15,7 +15,7 @@ tags:
 - [[dot-listJobs()]] - `calls` [INFERRED]
 - [[Get_8]] - `references` [EXTRACTED]
 - [[ListSyncJobsQueryDto]] - `references` [EXTRACTED]
-- [[Query]] - `references` [EXTRACTED]
+- [[Query_1]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[SyncJobsController]] - `method` [EXTRACTED]
 

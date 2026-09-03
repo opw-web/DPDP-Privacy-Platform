@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/dto/create-legal-hold.dto.ts"
 type: "code"
-community: "legal-hold.service.ts"
+community: "CreateLegalHoldDto"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/legal-holdservicets
+  - community/CreateLegalHoldDto
 ---
 
 # CreateLegalHoldDto
@@ -14,16 +14,16 @@ tags:
 ## Connections
 - [[dot-create()_27]] - `references` [EXTRACTED]
 - [[dot-createLegalHold()]] - `references` [EXTRACTED]
-- [[ApiProperty_5]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_6]] - `references` [EXTRACTED]
-- [[IsDateString_1]] - `references` [EXTRACTED]
-- [[IsOptional_5]] - `references` [EXTRACTED]
-- [[IsString_7]] - `references` [EXTRACTED]
-- [[MinLength_5]] - `references` [EXTRACTED]
-- [[Type]] - `references` [EXTRACTED]
-- [[ValidateNested]] - `references` [EXTRACTED]
+- [[ApiProperty_16]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_20]] - `references` [EXTRACTED]
+- [[IsDateString_5]] - `references` [EXTRACTED]
+- [[IsOptional_22]] - `references` [EXTRACTED]
+- [[IsString_23]] - `references` [EXTRACTED]
+- [[MinLength_16]] - `references` [EXTRACTED]
+- [[Type_5]] - `references` [EXTRACTED]
+- [[ValidateNested_3]] - `references` [EXTRACTED]
 - [[create-legal-hold.dto.ts]] - `contains` [EXTRACTED]
 - [[legal-hold.service.ts]] - `imports` [EXTRACTED]
 - [[retentionretention.controller.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/legal-holdservicets
+#graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto

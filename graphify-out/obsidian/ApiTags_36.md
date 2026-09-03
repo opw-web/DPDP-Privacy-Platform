@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EmployeeAuthController"
+community: "principal-evidence.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeeAuthController
+  - community/principal-evidenceservicets
 ---
 
 # ApiTags
 
 ## Connections
-- [[EmployeeAuthController]] - `references` [EXTRACTED]
+- [[PrincipalEvidenceController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController
+#graphify/code #graphify/EXTRACTED #community/principal-evidenceservicets

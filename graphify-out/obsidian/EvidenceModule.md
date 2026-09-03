@@ -12,8 +12,11 @@ tags:
 # EvidenceModule
 
 ## Connections
-- [[Module_16]] - `references` [EXTRACTED]
+- [[Module_15]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[evidence.module.ts]] - `contains` [EXTRACTED]
+- [[principal-portal.module.ts]] - `imports` [EXTRACTED]
+- [[queues.module.ts]] - `imports` [EXTRACTED]
+- [[requests.module.ts]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/appmodulets

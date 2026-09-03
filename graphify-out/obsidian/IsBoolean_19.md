@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "sdf-assessment.service.ts"
+community: "RetentionController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdf-assessmentservicets
+  - community/RetentionController
 ---
 
 # IsBoolean
 
 ## Connections
-- [[CompleteSdfAssessmentDto]] - `references` [EXTRACTED]
+- [[ProcessorChecklistTickDto]] - `references` [EXTRACTED]
+- [[SystemChecklistTickDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdf-assessmentservicets
+#graphify/code #graphify/EXTRACTED #community/RetentionController

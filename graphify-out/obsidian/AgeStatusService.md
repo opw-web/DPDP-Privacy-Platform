@@ -12,11 +12,11 @@ tags:
 # AgeStatusService
 
 ## Connections
-- [[dot-constructor()_119]] - `references` [EXTRACTED]
-- [[dot-constructor()_61]] - `method` [EXTRACTED]
+- [[dot-constructor()_109]] - `references` [EXTRACTED]
+- [[dot-constructor()_110]] - `method` [EXTRACTED]
 - [[dot-countUnknown()]] - `method` [EXTRACTED]
 - [[dot-setAgeStatus()_1]] - `method` [EXTRACTED]
-- [[Injectable_63]] - `references` [EXTRACTED]
+- [[Injectable_67]] - `references` [EXTRACTED]
 - [[age-status.controller.ts]] - `imports` [EXTRACTED]
 - [[age-status.service.ts]] - `contains` [EXTRACTED]
 - [[children.module.ts]] - `imports` [EXTRACTED]

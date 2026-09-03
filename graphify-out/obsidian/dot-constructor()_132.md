@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/retention.controller.ts"
 type: "code"
-community: "read-only-http.client.ts"
-location: "L107"
+community: "retention.service.ts"
+location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/read-only-httpclientts
+  - community/retentionservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[ReadOnlyHttpClient]] - `method` [EXTRACTED]
+- [[RetentionController_1]] - `method` [EXTRACTED]
+- [[RetentionService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/read-only-httpclientts
+#graphify/code #graphify/EXTRACTED #community/retentionservicets

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notices/notices.controller.ts"
 type: "code"
-community: "notices.service.ts"
+community: "RequirePermission"
 location: "L92"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/noticesservicets
+  - community/RequirePermission
 ---
 
 # .upsertTranslation()
@@ -17,9 +17,9 @@ tags:
 - [[Body_20]] - `references` [EXTRACTED]
 - [[CurrentActor]] - `references` [EXTRACTED]
 - [[NoticesController]] - `method` [EXTRACTED]
-- [[Param_23]] - `references` [EXTRACTED]
-- [[Put]] - `references` [EXTRACTED]
+- [[Param_22]] - `references` [EXTRACTED]
+- [[Put_1]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[UpsertTranslationDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/noticesservicets
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

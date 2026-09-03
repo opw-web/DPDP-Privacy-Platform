@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/employees/employees.service.ts"
 type: "code"
-community: "PrismaService"
+community: "employees.service.ts"
 location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/employeesservicets
 ---
 
 # PublicEmployee
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[employees.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/employeesservicets

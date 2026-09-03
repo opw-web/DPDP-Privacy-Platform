@@ -1,23 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/support/e2e-harness.ts"
+source_file: "dpdp-platform/backend/test/mappings.e2e-spec.ts"
 type: "code"
-community: "retention.e2e-spec.ts"
-location: "L77"
+community: "data-sources.e2e-spec.ts"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentione2e-spects
+  - community/data-sourcese2e-spects
 ---
 
 # ensurePermission()
 
 ## Connections
-- [[addEmployee()]] - `calls` [EXTRACTED]
-- [[children.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[createEmployeeWithPermissions()]] - `calls` [EXTRACTED]
-- [[createOrgWithEmployee()]] - `calls` [EXTRACTED]
-- [[e2e-harness.ts]] - `contains` [EXTRACTED]
-- [[evidence.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[retention.e2e-spec.ts]] - `imports` [EXTRACTED]
+- [[createEmployee()]] - `calls` [EXTRACTED]
+- [[mappings.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentione2e-spects
+#graphify/code #graphify/EXTRACTED #community/data-sourcese2e-spects

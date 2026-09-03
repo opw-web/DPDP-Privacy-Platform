@@ -12,7 +12,7 @@ tags:
 # MailModule
 
 ## Connections
-- [[Module_3]] - `references` [EXTRACTED]
+- [[Module]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[mail.module.ts]] - `contains` [EXTRACTED]
 - [[notifications.module.ts]] - `imports` [EXTRACTED]

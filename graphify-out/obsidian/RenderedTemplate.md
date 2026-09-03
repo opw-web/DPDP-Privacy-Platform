@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts"
 type: "code"
 community: "templates.service.ts"
-location: "L211"
+location: "L212"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # RenderedTemplate
 
 ## Connections
-- [[dot-preview()]] - `references` [EXTRACTED]
+- [[dot-preview()_2]] - `references` [EXTRACTED]
 - [[template-renderer.ts]] - `contains` [EXTRACTED]
 - [[templates.service.ts]] - `imports` [EXTRACTED]
 

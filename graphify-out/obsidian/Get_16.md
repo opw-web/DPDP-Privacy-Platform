@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "TemplatesService"
+community: "SdfController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/SdfController
 ---
 
 # Get
 
 ## Connections
-- [[dot-get()_7]] - `references` [EXTRACTED]
-- [[dot-list()_16]] - `references` [EXTRACTED]
+- [[dot-getGaps()_1]] - `references` [EXTRACTED]
+- [[dot-listAlgorithms()]] - `references` [EXTRACTED]
+- [[dot-listAssessments()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/SdfController

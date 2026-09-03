@@ -1,21 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/audience/audience.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts"
 type: "code"
-community: "compile-audience.ts"
-location: "L74"
+community: "templates.service.ts"
+location: "L284"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/compile-audiencets
+  - community/templatesservicets
 ---
 
 # .preview()
 
 ## Connections
-- [[dot-compile()]] - `calls` [EXTRACTED]
-- [[dot-maskIfNeeded()]] - `calls` [INFERRED]
-- [[dot-preview()_3]] - `calls` [INFERRED]
-- [[AudienceService]] - `method` [EXTRACTED]
-- [[PreviewAudienceDto]] - `references` [EXTRACTED]
+- [[dot-preview()]] - `calls` [INFERRED]
+- [[PreviewTemplateDto]] - `references` [EXTRACTED]
+- [[RenderedTemplate]] - `references` [EXTRACTED]
+- [[TemplatesService]] - `method` [EXTRACTED]
+- [[renderOrganizationMessageTemplate()]] - `calls` [EXTRACTED]
+- [[toBadRequest()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/compile-audiencets
+#graphify/code #graphify/EXTRACTED #community/templatesservicets

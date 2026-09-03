@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/audit/audit-read.controller.ts"
+source_file: "dpdp-platform/frontend/src/lib/api-client.ts"
 type: "code"
-community: "RequirePermission"
-location: "L19"
+community: "button.tsx"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/buttontsx
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditReadController]] - `method` [EXTRACTED]
-- [[AuditReadService]] - `references` [EXTRACTED]
+- [[ApiError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/buttontsx

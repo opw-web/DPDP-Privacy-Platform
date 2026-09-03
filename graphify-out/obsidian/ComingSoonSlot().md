@@ -13,6 +13,5 @@ tags:
 
 ## Connections
 - [[ComingSoonSlot.tsx]] - `contains` [EXTRACTED]
-- [[MeHomePage.tsx]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/cardtsx

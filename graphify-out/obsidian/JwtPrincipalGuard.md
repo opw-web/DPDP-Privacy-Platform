@@ -13,11 +13,12 @@ tags:
 
 ## Connections
 - [[dot-canActivate()_1]] - `method` [EXTRACTED]
-- [[dot-constructor()_28]] - `method` [EXTRACTED]
-- [[Injectable_13]] - `references` [EXTRACTED]
+- [[dot-constructor()_27]] - `method` [EXTRACTED]
+- [[Injectable_17]] - `references` [EXTRACTED]
 - [[auth.module.ts]] - `imports` [EXTRACTED]
 - [[jwt-principal.guard.ts]] - `contains` [EXTRACTED]
 - [[me-consents.controller.ts]] - `imports` [EXTRACTED]
+- [[me-rights.controller.ts]] - `imports` [EXTRACTED]
 - [[me.controller.ts]] - `imports` [EXTRACTED]
 - [[principal-auth.controller.ts]] - `imports` [EXTRACTED]
 

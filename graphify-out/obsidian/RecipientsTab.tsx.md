@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.tsx"
 type: "code"
-community: "cn"
+community: "SecurityMeasuresTab.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/SecurityMeasuresTabtsx
 ---
 
 # RecipientsTab.tsx
@@ -20,6 +20,7 @@ tags:
 - [[CardHeader]] - `imports` [EXTRACTED]
 - [[CardTitle]] - `imports` [EXTRACTED]
 - [[CheckboxOption]] - `imports` [EXTRACTED]
+- [[CheckboxOption_1]] - `imports` [EXTRACTED]
 - [[ContractStatusCell()]] - `contains` [EXTRACTED]
 - [[CreateRecipientPayload]] - `contains` [EXTRACTED]
 - [[DEFAULT_VALUES_1]] - `contains` [EXTRACTED]
@@ -50,4 +51,4 @@ tags:
 - [[input.tsx]] - `imports_from` [EXTRACTED]
 - [[recipientFormSchema]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx

@@ -13,7 +13,7 @@ members: 7
 - [[license]] - code - dpdp-platform/frontend/package.json
 - [[name]] - code - dpdp-platform/frontend/package.json
 - [[private]] - code - dpdp-platform/frontend/package.json
-- [[type_2]] - code - dpdp-platform/frontend/package.json
+- [[type_3]] - code - dpdp-platform/frontend/package.json
 - [[version]] - code - dpdp-platform/frontend/package.json
 
 ## Live Query (requires Dataview plugin)

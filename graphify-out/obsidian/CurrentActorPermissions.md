@@ -12,14 +12,14 @@ tags:
 # CurrentActorPermissions
 
 ## Connections
-- [[dot-create()_10]] - `references` [EXTRACTED]
+- [[dot-create()]] - `references` [EXTRACTED]
 - [[dot-detail()]] - `references` [EXTRACTED]
-- [[dot-list()_18]] - `references` [EXTRACTED]
 - [[dot-list()_19]] - `references` [EXTRACTED]
-- [[dot-list()_21]] - `references` [EXTRACTED]
-- [[dot-list()_22]] - `references` [EXTRACTED]
-- [[dot-preview()_3]] - `references` [EXTRACTED]
-- [[dot-send()]] - `references` [EXTRACTED]
+- [[dot-list()]] - `references` [EXTRACTED]
+- [[dot-list()_33]] - `references` [EXTRACTED]
+- [[dot-list()_15]] - `references` [EXTRACTED]
+- [[dot-preview()_1]] - `references` [EXTRACTED]
+- [[dot-send()_6]] - `references` [EXTRACTED]
 - [[dot-verify()]] - `references` [EXTRACTED]
 - [[audience.controller.ts]] - `imports` [EXTRACTED]
 - [[audit-read.controller.ts]] - `imports` [EXTRACTED]

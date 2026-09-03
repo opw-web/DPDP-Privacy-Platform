@@ -12,7 +12,7 @@ tags:
 # toRedisConnectionOptions()
 
 ## Connections
-- [[dot-constructor()_17]] - `calls` [EXTRACTED]
+- [[dot-constructor()_18]] - `calls` [EXTRACTED]
 - [[queues.module.ts]] - `imports` [EXTRACTED]
 - [[redis-connection.util.ts]] - `contains` [EXTRACTED]
 - [[sync-lock.service.ts]] - `imports` [EXTRACTED]

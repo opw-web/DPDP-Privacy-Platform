@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "child-exemptions.service.ts"
+community: "me-rights.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/child-exemptionsservicets
+  - community/me-rightsservicets
 ---
 
 # IsIn
 
 ## Connections
-- [[CreateExemptionClaimDto]] - `references` [EXTRACTED]
+- [[CreateMeRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/child-exemptionsservicets
+#graphify/code #graphify/EXTRACTED #community/me-rightsservicets

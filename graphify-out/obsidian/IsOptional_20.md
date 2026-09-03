@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "compile-audience.ts"
+community: "UpdateAlgorithmEntryDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/compile-audiencets
+  - community/UpdateAlgorithmEntryDto
 ---
 
 # IsOptional
 
 ## Connections
-- [[PreviewAudienceDto]] - `references` [EXTRACTED]
+- [[UpdateAlgorithmEntryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/compile-audiencets
+#graphify/code #graphify/EXTRACTED #community/UpdateAlgorithmEntryDto

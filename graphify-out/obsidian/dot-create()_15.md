@@ -1,20 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/employees.service.ts"
+source_file: "dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts"
 type: "code"
-community: "employees.controller.ts"
-location: "L66"
+community: "CreateVoluntaryUndertakingDto"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeescontrollerts
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_14]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[CreateEmployeeDto]] - `references` [EXTRACTED]
-- [[EmployeesService]] - `method` [EXTRACTED]
+- [[dot-create()_16]] - `calls` [INFERRED]
+- [[Body_12]] - `references` [EXTRACTED]
+- [[CreateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
+- [[Post_11]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[VoluntaryUndertakingsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeescontrollerts
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

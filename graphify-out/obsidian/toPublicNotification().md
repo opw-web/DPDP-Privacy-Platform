@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notifications/notifications.service.ts"
 type: "code"
-community: "NotificationsService"
-location: "L34"
+community: "notifications.service.ts"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/notificationsservicets
 ---
 
 # toPublicNotification()
 
 ## Connections
-- [[dot-list()_2]] - `indirect_call` [INFERRED]
-- [[dot-markRead()_1]] - `calls` [EXTRACTED]
+- [[dot-list()_10]] - `indirect_call` [INFERRED]
+- [[dot-markRead()]] - `calls` [EXTRACTED]
 - [[notifications.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/notificationsservicets

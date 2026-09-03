@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts"
 type: "code"
-community: "DataSourceDetailPage.tsx"
-location: "L171"
+community: "data-sources-api.ts"
+location: "L181"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourceDetailPagetsx
+  - community/data-sources-apits
 ---
 
 # ReplaceMappingsResult
@@ -17,4 +17,4 @@ tags:
 - [[Step3MappingProps]] - `references` [EXTRACTED]
 - [[data-sources-api.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourceDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/data-sources-apits

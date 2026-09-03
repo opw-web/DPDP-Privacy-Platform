@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
+community: "erasure-task.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/erasure-taskservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[VoluntaryUndertakingsService]] - `references` [EXTRACTED]
+- [[PurposeServedService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets

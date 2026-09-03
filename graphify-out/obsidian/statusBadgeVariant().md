@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/EmployeesPage.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx"
 type: "code"
-community: "EmployeesPage.tsx"
-location: "L83"
+community: "cn"
+location: "L92"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeesPagetsx
+  - community/cn
 ---
 
 # statusBadgeVariant()
 
 ## Connections
-- [[EmployeesPage()]] - `calls` [EXTRACTED]
-- [[EmployeesPage.tsx]] - `contains` [EXTRACTED]
+- [[MessagingCampaignDetailPage()]] - `calls` [EXTRACTED]
+- [[MessagingCampaignDetailPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeesPagetsx
+#graphify/code #graphify/EXTRACTED #community/cn

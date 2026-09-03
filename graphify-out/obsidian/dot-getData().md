@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principal-portal/me.service.ts"
 type: "code"
-community: "Public"
+community: "AccessReportService"
 location: "L143"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/AccessReportService
 ---
 
 # .getData()
@@ -17,4 +17,4 @@ tags:
 - [[dot-loadPurposeNamesBySource()]] - `calls` [EXTRACTED]
 - [[MeService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/AccessReportService

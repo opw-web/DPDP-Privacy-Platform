@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/sharing.service.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/legal-hold.service.ts"
 type: "code"
-community: "SharingService"
-location: "L59"
+community: "RetentionController"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SharingService
+  - community/RetentionController
 ---
 
 # .list()
 
 ## Connections
-- [[SharingService]] - `method` [EXTRACTED]
+- [[LegalHoldService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SharingService
+#graphify/code #graphify/EXTRACTED #community/RetentionController

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ChangeStatusDto"
+community: "CreateSdfAssessmentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ChangeStatusDto
+  - community/CreateSdfAssessmentDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[ChangeStatusDto]] - `references` [EXTRACTED]
+- [[CreateSdfAssessmentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ChangeStatusDto
+#graphify/code #graphify/EXTRACTED #community/CreateSdfAssessmentDto

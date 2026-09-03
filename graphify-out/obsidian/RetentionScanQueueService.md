@@ -12,10 +12,9 @@ tags:
 # RetentionScanQueueService
 
 ## Connections
-- [[dot-constructor()_118]] - `method` [EXTRACTED]
-- [[dot-registerSchedules()]] - `method` [EXTRACTED]
-- [[dot-registerSchedulesAtBoot()]] - `method` [EXTRACTED]
-- [[Injectable_6]] - `references` [EXTRACTED]
+- [[dot-constructor()_142]] - `method` [EXTRACTED]
+- [[Injectable_53]] - `references` [EXTRACTED]
+- [[queues.module.ts]] - `imports` [EXTRACTED]
 - [[retention-scan.queue.ts]] - `contains` [EXTRACTED]
 - [[retention.module.ts]] - `imports` [EXTRACTED]
 

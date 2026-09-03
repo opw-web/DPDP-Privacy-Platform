@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sync.e2e-spec.ts"
+community: "retention.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/synce2e-spects
+  - community/retentionmodulets
 ---
 
 # Processor
 
 ## Connections
-- [[SyncProcessor]] - `references` [EXTRACTED]
+- [[PreErasureNoticeProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/synce2e-spects
+#graphify/code #graphify/EXTRACTED #community/retentionmodulets

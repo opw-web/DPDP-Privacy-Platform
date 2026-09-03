@@ -1,40 +1,76 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/ui/button.tsx"
 type: "code"
-community: "cn"
+community: "button.tsx"
 location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/buttontsx
 ---
 
 # Button
 
 ## Connections
+- [[AccessReportPanel.tsx]] - `imports` [EXTRACTED]
+- [[AlgorithmRegisterPanel.tsx]] - `imports` [EXTRACTED]
 - [[AppShell.tsx]] - `imports` [EXTRACTED]
+- [[AssessmentRow.tsx]] - `imports` [EXTRACTED]
+- [[AudienceBuilder.tsx]] - `imports` [EXTRACTED]
 - [[AuditPage.tsx]] - `imports` [EXTRACTED]
+- [[BreachDetailPage.tsx]] - `imports` [EXTRACTED]
+- [[BreachObligationCard.tsx]] - `imports` [EXTRACTED]
+- [[BreachWizardPage.tsx]] - `imports` [EXTRACTED]
+- [[BreachesPage.tsx]] - `imports` [EXTRACTED]
 - [[CandidateComparison.tsx]] - `imports` [EXTRACTED]
+- [[ChildrenPage.tsx]] - `imports` [EXTRACTED]
 - [[ConfirmDialog.tsx]] - `imports` [EXTRACTED]
+- [[ConsentsPage.tsx]] - `imports` [EXTRACTED]
+- [[CorrectionWorkflow.tsx]] - `imports` [EXTRACTED]
 - [[DataSourcesPage.tsx]] - `imports` [EXTRACTED]
 - [[EmployeesPage.tsx]] - `imports` [EXTRACTED]
 - [[EmptyState.tsx]] - `imports` [EXTRACTED]
+- [[ExemptionClaimForm.tsx]] - `imports` [EXTRACTED]
 - [[ExportButtons.tsx]] - `imports` [EXTRACTED]
 - [[GapsPanel.tsx]] - `imports` [EXTRACTED]
+- [[GuardianForm.tsx]] - `imports` [EXTRACTED]
+- [[InformationRequestForm.tsx]] - `imports` [EXTRACTED]
+- [[InformationRequestsPage.tsx]] - `imports` [EXTRACTED]
+- [[LegalHoldForm.tsx]] - `imports` [EXTRACTED]
 - [[LinkedRecordsPanel.tsx]] - `imports` [EXTRACTED]
 - [[LoginPage.tsx]] - `imports` [EXTRACTED]
+- [[MeConsentsPage.tsx]] - `imports` [EXTRACTED]
+- [[MeNominationPage.tsx]] - `imports` [EXTRACTED]
+- [[MePrivacyPage.tsx]] - `imports` [EXTRACTED]
+- [[MeRequestDetailPage.tsx]] - `imports` [EXTRACTED]
+- [[MeRequestsPage.tsx]] - `imports` [EXTRACTED]
+- [[MessagingCampaignBuilderPage.tsx]] - `imports` [EXTRACTED]
+- [[MessagingCampaignDetailPage.tsx]] - `imports` [EXTRACTED]
+- [[MessagingCampaignsPage.tsx]] - `imports` [EXTRACTED]
+- [[MessagingTemplateEditorPage.tsx]] - `imports` [EXTRACTED]
+- [[MessagingTemplatesPage.tsx]] - `imports` [EXTRACTED]
+- [[NoticeBuilderPage.tsx]] - `imports` [EXTRACTED]
+- [[NoticeComposer.tsx]] - `imports` [EXTRACTED]
+- [[NoticesPage.tsx]] - `imports` [EXTRACTED]
 - [[NotificationBell.tsx]] - `imports` [EXTRACTED]
 - [[PortalShell.tsx]] - `imports` [EXTRACTED]
 - [[PrincipalDetailPage.tsx]] - `imports` [EXTRACTED]
+- [[PrincipalEvidencePage.tsx]] - `imports` [EXTRACTED]
 - [[PrincipalLoginPage.tsx]] - `imports` [EXTRACTED]
 - [[PrincipalsPage.tsx]] - `imports` [EXTRACTED]
 - [[PurposeForm.tsx]] - `imports` [EXTRACTED]
 - [[PurposesPage.tsx]] - `imports` [EXTRACTED]
 - [[RecipientsTab.tsx]] - `imports` [EXTRACTED]
+- [[RequestDetailPage.tsx]] - `imports` [EXTRACTED]
+- [[RequestWorkPanel.tsx]] - `imports` [EXTRACTED]
+- [[RetentionPage.tsx]] - `imports` [EXTRACTED]
 - [[RetentionTab.tsx]] - `imports` [EXTRACTED]
+- [[RetentionTaskCard.tsx]] - `imports` [EXTRACTED]
 - [[SdfDeclarationCard.tsx]] - `imports` [EXTRACTED]
 - [[SecurityMeasuresTab.tsx]] - `imports` [EXTRACTED]
+- [[SettingsCompliancePage.tsx]] - `imports` [EXTRACTED]
 - [[SettingsPage.tsx]] - `imports` [EXTRACTED]
+- [[SettingsRightsPage.tsx]] - `imports` [EXTRACTED]
 - [[SharingTab.tsx]] - `imports` [EXTRACTED]
 - [[Step1Connection.tsx]] - `imports` [EXTRACTED]
 - [[Step2Schema.tsx]] - `imports` [EXTRACTED]
@@ -47,4 +83,4 @@ tags:
 - [[buttonVariants]] - `calls` [EXTRACTED]
 - [[cn()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/buttontsx

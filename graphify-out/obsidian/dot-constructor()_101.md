@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/consents/consent-backfill.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync-error.ts"
 type: "code"
-community: "ConsentBackfillService"
-location: "L48"
+community: "sync-pipeline.service.ts"
+location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ConsentBackfillService
+  - community/sync-pipelineservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[ConsentBackfillService]] - `method` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
+- [[MissingRecordKeyError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ConsentBackfillService
+#graphify/code #graphify/EXTRACTED #community/sync-pipelineservicets

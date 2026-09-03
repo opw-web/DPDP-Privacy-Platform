@@ -12,7 +12,7 @@ tags:
 # createOrgWithSettingsManager()
 
 ## Connections
-- [[ensurePermission()_9]] - `calls` [EXTRACTED]
+- [[ensurePermission()_5]] - `calls` [EXTRACTED]
 - [[organizations.e2e-spec.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/AppModule

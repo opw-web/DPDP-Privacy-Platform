@@ -12,8 +12,9 @@ tags:
 # CampaignsModule
 
 ## Connections
-- [[Module_20]] - `references` [EXTRACTED]
+- [[Module_19]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
+- [[breaches.module.ts]] - `imports` [EXTRACTED]
 - [[campaigns.module.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/appmodulets

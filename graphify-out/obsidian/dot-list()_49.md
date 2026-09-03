@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/retention.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/sharing.service.ts"
 type: "code"
-community: "RetentionService"
-location: "L68"
+community: "SharingService"
+location: "L59"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionService
+  - community/SharingService
 ---
 
 # .list()
 
 ## Connections
-- [[RetentionService]] - `method` [EXTRACTED]
+- [[SharingService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionService
+#graphify/code #graphify/EXTRACTED #community/SharingService

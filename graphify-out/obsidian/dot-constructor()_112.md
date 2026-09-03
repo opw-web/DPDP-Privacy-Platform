@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/recipients.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
 type: "code"
-community: "RecipientsService"
-location: "L16"
+community: "notices.service.ts"
+location: "L158"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RecipientsService
+  - community/noticesservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[RecipientsController]] - `method` [EXTRACTED]
-- [[RecipientsService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[NoticesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RecipientsService
+#graphify/code #graphify/EXTRACTED #community/noticesservicets

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/StatCard.tsx"
 type: "code"
-community: "DashboardPage.test.tsx"
+community: "EmployeesPage.tsx"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DashboardPagetesttsx
+  - community/EmployeesPagetsx
 ---
 
 # StatCard()
@@ -15,4 +15,4 @@ tags:
 - [[DashboardPage.tsx]] - `imports` [EXTRACTED]
 - [[StatCard.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DashboardPagetesttsx
+#graphify/code #graphify/EXTRACTED #community/EmployeesPagetsx

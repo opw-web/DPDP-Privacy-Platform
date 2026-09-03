@@ -1,23 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/retention.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/sharing.controller.ts"
 type: "code"
-community: "RetentionService"
+community: "SharingService"
 location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionService
+  - community/SharingService
 ---
 
 # .update()
 
 ## Connections
 - [[dot-update()_26]] - `calls` [INFERRED]
-- [[Body_26]] - `references` [EXTRACTED]
-- [[Param_27]] - `references` [EXTRACTED]
+- [[Body_29]] - `references` [EXTRACTED]
+- [[Param_29]] - `references` [EXTRACTED]
 - [[Patch_14]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[RetentionController_1]] - `method` [EXTRACTED]
-- [[UpdateRetentionPolicyDto]] - `references` [EXTRACTED]
+- [[SharingController]] - `method` [EXTRACTED]
+- [[UpdateSharingActivityDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionService
+#graphify/code #graphify/EXTRACTED #community/SharingService

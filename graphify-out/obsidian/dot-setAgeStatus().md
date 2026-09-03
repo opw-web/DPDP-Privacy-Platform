@@ -15,8 +15,8 @@ tags:
 - [[dot-setAgeStatus()_1]] - `calls` [INFERRED]
 - [[AgeStatusController]] - `method` [EXTRACTED]
 - [[Body_19]] - `references` [EXTRACTED]
-- [[Param_22]] - `references` [EXTRACTED]
-- [[Post_21]] - `references` [EXTRACTED]
+- [[Param_21]] - `references` [EXTRACTED]
+- [[Post_20]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[SetAgeStatusDto]] - `references` [EXTRACTED]
 

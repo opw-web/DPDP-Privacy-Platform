@@ -12,8 +12,8 @@ tags:
 # DeadlineScanProcessor
 
 ## Connections
-- [[dot-constructor()_7]] - `method` [EXTRACTED]
-- [[dot-process()_1]] - `method` [EXTRACTED]
+- [[dot-constructor()_45]] - `method` [EXTRACTED]
+- [[dot-process()]] - `method` [EXTRACTED]
 - [[dot-runScanCycle()]] - `method` [EXTRACTED]
 - [[Processor_1]] - `references` [EXTRACTED]
 - [[deadline-scan.processor.ts]] - `contains` [EXTRACTED]

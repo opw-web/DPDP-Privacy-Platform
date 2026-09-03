@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "child-exemptions.service.ts"
+community: "data-sources.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/child-exemptionsservicets
+  - community/data-sourcesservicets
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[ListExemptionClaimsDto]] - `references` [EXTRACTED]
+- [[UpdateDataSourceDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/child-exemptionsservicets
+#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets

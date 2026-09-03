@@ -12,7 +12,7 @@ tags:
 # HealthModule
 
 ## Connections
-- [[Module_36]] - `references` [EXTRACTED]
+- [[Module_38]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[health.module.ts]] - `contains` [EXTRACTED]
 

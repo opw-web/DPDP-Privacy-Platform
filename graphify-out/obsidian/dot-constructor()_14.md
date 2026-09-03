@@ -1,20 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/campaign-send.processor.ts"
+source_file: "dpdp-platform/backend/src/modules/children/guardians.controller.ts"
 type: "code"
-community: "campaign-send.processor.ts"
-location: "L64"
+community: "VerifyGuardianDto"
+location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/campaign-sendprocessorts
+  - community/VerifyGuardianDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[CampaignSendProcessor]] - `method` [EXTRACTED]
-- [[CampaignsService]] - `references` [EXTRACTED]
-- [[NotificationsService]] - `references` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
+- [[GuardiansController]] - `method` [EXTRACTED]
+- [[GuardiansService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/campaign-sendprocessorts
+#graphify/code #graphify/EXTRACTED #community/VerifyGuardianDto

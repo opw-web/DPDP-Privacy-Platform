@@ -1,20 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sync.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/retention-scan.processor.ts"
 type: "code"
-community: "sync.e2e-spec.ts"
-location: "L50"
+community: "retention.module.ts"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/synce2e-spects
+  - community/retentionmodulets
 ---
 
 # .process()
 
 ## Connections
-- [[dot-run()]] - `calls` [INFERRED]
-- [[SyncJobData]] - `references` [EXTRACTED]
-- [[SyncProcessor]] - `method` [EXTRACTED]
-- [[SyncRunSummary]] - `references` [EXTRACTED]
+- [[dot-runForAllOrganizations()_1]] - `calls` [INFERRED]
+- [[RetentionScanJobData]] - `references` [EXTRACTED]
+- [[RetentionScanProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/synce2e-spects
+#graphify/code #graphify/EXTRACTED #community/retentionmodulets

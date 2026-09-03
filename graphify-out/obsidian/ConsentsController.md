@@ -12,12 +12,12 @@ tags:
 # ConsentsController
 
 ## Connections
-- [[dot-constructor()_114]] - `method` [EXTRACTED]
+- [[dot-constructor()_106]] - `method` [EXTRACTED]
 - [[dot-getConsentStats()]] - `method` [EXTRACTED]
 - [[dot-listForPrincipal()_1]] - `method` [EXTRACTED]
 - [[dot-recordImportedConsent()]] - `method` [EXTRACTED]
-- [[ApiTags_28]] - `references` [EXTRACTED]
-- [[Controller_28]] - `references` [EXTRACTED]
+- [[ApiTags_25]] - `references` [EXTRACTED]
+- [[Controller_26]] - `references` [EXTRACTED]
 - [[consents.controller.ts]] - `contains` [EXTRACTED]
 - [[consents.module.ts]] - `imports` [EXTRACTED]
 

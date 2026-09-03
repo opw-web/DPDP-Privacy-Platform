@@ -15,7 +15,7 @@ tags:
 - [[MOCK_RECIPIENTS]] - `contains` [EXTRACTED]
 - [[MeRecipientsPage()]] - `imports` [EXTRACTED]
 - [[MeRecipientsPage.tsx]] - `imports_from` [EXTRACTED]
-- [[jsonResponse()_4]] - `contains` [EXTRACTED]
+- [[jsonResponse()_7]] - `contains` [EXTRACTED]
 - [[renderMeRecipientsPage()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/cardtsx

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sdf-assessment.service.ts"
+community: "CreateInformationRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdf-assessmentservicets
+  - community/CreateInformationRequestDto
 ---
 
 # IsDateString
 
 ## Connections
-- [[CompleteSdfAssessmentDto]] - `references` [EXTRACTED]
+- [[CreateInformationRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdf-assessmentservicets
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

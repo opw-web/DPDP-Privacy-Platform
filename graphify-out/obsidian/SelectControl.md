@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/form-controls.tsx"
 type: "code"
-community: "SettingsPage.tsx"
-location: "L21"
+community: "data-sources-api.ts"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SettingsPagetsx
+  - community/data-sources-apits
 ---
 
 # SelectControl
@@ -25,4 +25,4 @@ tags:
 - [[TransfersTab.tsx]] - `imports` [EXTRACTED]
 - [[form-controls.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SettingsPagetsx
+#graphify/code #graphify/EXTRACTED #community/data-sources-apits

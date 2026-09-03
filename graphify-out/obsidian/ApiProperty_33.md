@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "retention/retention.controller.ts"
+community: "CreateInformationRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retention/retentioncontrollerts
+  - community/CreateInformationRequestDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CancelErasureTaskDto]] - `references` [EXTRACTED]
+- [[CreateInformationRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retention/retentioncontrollerts
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

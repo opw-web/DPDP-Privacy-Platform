@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/RuleBasisChip.tsx"
 type: "code"
-community: "DateTime.tsx"
+community: "AlgorithmRegisterPanel.tsx"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DateTimetsx
+  - community/AlgorithmRegisterPaneltsx
 ---
 
 # RuleBasisChipProps
@@ -15,4 +15,4 @@ tags:
 - [[RuleBasis]] - `references` [EXTRACTED]
 - [[RuleBasisChip.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DateTimetsx
+#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterPaneltsx

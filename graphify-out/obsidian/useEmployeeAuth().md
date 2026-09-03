@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/lib/auth.ts"
 type: "code"
-community: "api-client.ts"
+community: "router.tsx"
 location: "L145"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/routertsx
 ---
 
 # useEmployeeAuth()
@@ -17,6 +17,8 @@ tags:
 - [[EmployeeAuthBoundary()]] - `calls` [EXTRACTED]
 - [[LoginPage()]] - `calls` [EXTRACTED]
 - [[LoginPage.tsx]] - `imports` [EXTRACTED]
+- [[MessagingCampaignDetailPage()]] - `calls` [EXTRACTED]
+- [[MessagingCampaignDetailPage.tsx]] - `imports` [EXTRACTED]
 - [[RequireEmployeeAuth()]] - `calls` [EXTRACTED]
 - [[TransferForm()]] - `calls` [EXTRACTED]
 - [[TransfersTab.tsx]] - `imports` [EXTRACTED]
@@ -27,4 +29,4 @@ tags:
 - [[router.tsx]] - `imports` [EXTRACTED]
 - [[usePermission()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/routertsx

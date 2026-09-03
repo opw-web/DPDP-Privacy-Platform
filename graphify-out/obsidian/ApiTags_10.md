@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AccessTokenPayload"
+community: "CreateComplianceRuleDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/CreateComplianceRuleDto
 ---
 
 # ApiTags
 
 ## Connections
-- [[CampaignsController]] - `references` [EXTRACTED]
+- [[ComplianceController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto

@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/src/common/tenant/tenant-scoped-models.ts"
 type: "code"
 community: "tenant.extension.ts"
-location: "L116"
+location: "L118"
 tags:
   - graphify/code
   - graphify/EXTRACTED

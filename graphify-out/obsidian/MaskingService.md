@@ -12,10 +12,10 @@ tags:
 # MaskingService
 
 ## Connections
-- [[dot-constructor()_57]] - `references` [EXTRACTED]
-- [[dot-constructor()_63]] - `references` [EXTRACTED]
-- [[dot-constructor()_96]] - `references` [EXTRACTED]
-- [[dot-constructor()_13]] - `references` [EXTRACTED]
+- [[dot-constructor()_60]] - `references` [EXTRACTED]
+- [[dot-constructor()_17]] - `references` [EXTRACTED]
+- [[dot-constructor()_157]] - `references` [EXTRACTED]
+- [[dot-constructor()_44]] - `references` [EXTRACTED]
 - [[dot-hasFullPersonalDataAccess()]] - `method` [EXTRACTED]
 - [[dot-maskDigits()]] - `method` [EXTRACTED]
 - [[dot-maskDomain()]] - `method` [EXTRACTED]
@@ -25,7 +25,7 @@ tags:
 - [[dot-maskPhone()]] - `method` [EXTRACTED]
 - [[dot-maskSegment()]] - `method` [EXTRACTED]
 - [[dot-maskValue()]] - `method` [EXTRACTED]
-- [[Injectable_25]] - `references` [EXTRACTED]
+- [[Injectable_31]] - `references` [EXTRACTED]
 - [[audience.service.ts]] - `imports` [EXTRACTED]
 - [[audiences.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[audit-read.service.ts]] - `imports` [EXTRACTED]

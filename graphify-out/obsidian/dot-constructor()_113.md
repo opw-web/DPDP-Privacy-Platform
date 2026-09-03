@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/sharing.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/health/health.controller.ts"
 type: "code"
-community: "SharingService"
-location: "L11"
+community: "HealthService"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SharingService
+  - community/HealthService
 ---
 
 # .constructor()
 
 ## Connections
-- [[SharingController]] - `method` [EXTRACTED]
-- [[SharingService]] - `references` [EXTRACTED]
+- [[HealthController]] - `method` [EXTRACTED]
+- [[HealthService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SharingService
+#graphify/code #graphify/EXTRACTED #community/HealthService

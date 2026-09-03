@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/providers/smtp.provider.ts"
+source_file: "dpdp-platform/backend/src/common/audit/access-log.service.ts"
 type: "code"
-community: "notifications.module.ts"
-location: "L22"
+community: "PrincipalsService"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationsmodulets
+  - community/PrincipalsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[MailerService]] - `references` [EXTRACTED]
-- [[SmtpProvider]] - `method` [EXTRACTED]
+- [[AccessLogService]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationsmodulets
+#graphify/code #graphify/EXTRACTED #community/PrincipalsService

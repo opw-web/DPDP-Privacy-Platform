@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "MaskingService"
+community: "ropa-export.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MaskingService
+  - community/ropa-exportservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[MaskingService]] - `references` [EXTRACTED]
+- [[RopaExportService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MaskingService
+#graphify/code #graphify/EXTRACTED #community/ropa-exportservicets

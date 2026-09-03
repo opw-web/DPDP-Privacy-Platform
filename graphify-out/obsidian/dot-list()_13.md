@@ -1,21 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/requests/requests.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/principals/principals.service.ts"
 type: "code"
-community: "ListRequestsDto"
-location: "L41"
+community: "principals.service.ts"
+location: "L75"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ListRequestsDto
+  - community/principalsservicets
 ---
 
 # .list()
 
 ## Connections
-- [[Get_15]] - `references` [EXTRACTED]
-- [[ListRequestsDto]] - `references` [EXTRACTED]
-- [[Query_1]] - `references` [EXTRACTED]
-- [[RequestsController]] - `method` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-maskIfNeeded()]] - `calls` [INFERRED]
+- [[PrincipalsService]] - `method` [EXTRACTED]
+- [[buildPrincipalSearchQuery()]] - `calls` [EXTRACTED]
+- [[pickDisplayName()]] - `calls` [EXTRACTED]
+- [[resolveProvenance()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ListRequestsDto
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

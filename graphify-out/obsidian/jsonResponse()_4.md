@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/principal/pages/MeRecipientsPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/DataSourceNewPage.test.tsx"
 type: "code"
-community: "card.tsx"
-location: "L7"
+community: "DataSourceNewPage.test.tsx"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cardtsx
+  - community/DataSourceNewPagetesttsx
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[MeRecipientsPage.test.tsx]] - `contains` [EXTRACTED]
+- [[DataSourceNewPage.test.tsx]] - `contains` [EXTRACTED]
+- [[loginAndRenderWizard()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cardtsx
+#graphify/code #graphify/EXTRACTED #community/DataSourceNewPagetesttsx

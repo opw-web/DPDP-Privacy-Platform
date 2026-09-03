@@ -19,6 +19,7 @@ tags:
 - [[mappings.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[read-only-http.client.spec.ts]] - `imports_from` [EXTRACTED]
 - [[rest-api.connector.spec.ts]] - `imports_from` [EXTRACTED]
+- [[step6-conflict-acceptance.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[sync.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/data-sourcese2e-spects

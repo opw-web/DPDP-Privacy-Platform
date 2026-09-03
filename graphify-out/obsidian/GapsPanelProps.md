@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/GapsPanel.tsx"
 type: "code"
-community: "DashboardPage.test.tsx"
+community: "card.tsx"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DashboardPagetesttsx
+  - community/cardtsx
 ---
 
 # GapsPanelProps
@@ -15,4 +15,4 @@ tags:
 - [[GapsPanel.tsx]] - `contains` [EXTRACTED]
 - [[InventoryGap_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DashboardPagetesttsx
+#graphify/code #graphify/EXTRACTED #community/cardtsx

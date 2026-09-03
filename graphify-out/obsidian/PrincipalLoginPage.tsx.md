@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/PrincipalLoginPage.tsx"
 type: "code"
-community: "card.tsx"
+community: "button.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cardtsx
+  - community/buttontsx
 ---
 
 # PrincipalLoginPage.tsx
@@ -20,7 +20,7 @@ tags:
 - [[CardHeader]] - `imports` [EXTRACTED]
 - [[CardTitle]] - `imports` [EXTRACTED]
 - [[DEMO_PRINCIPALS]] - `contains` [EXTRACTED]
-- [[DemoCredentialsBanner()]] - `contains` [EXTRACTED]
+- [[DemoCredentialsBanner()_1]] - `contains` [EXTRACTED]
 - [[Input]] - `imports` [EXTRACTED]
 - [[Label]] - `imports` [EXTRACTED]
 - [[LoginFormValues_1]] - `contains` [EXTRACTED]
@@ -35,7 +35,7 @@ tags:
 - [[loginSchema_1]] - `contains` [EXTRACTED]
 - [[principalLogin()]] - `imports` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
-- [[shouldShowDemoCredentials()]] - `contains` [EXTRACTED]
+- [[shouldShowDemoCredentials()_1]] - `contains` [EXTRACTED]
 - [[usePrincipalAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cardtsx
+#graphify/code #graphify/EXTRACTED #community/buttontsx

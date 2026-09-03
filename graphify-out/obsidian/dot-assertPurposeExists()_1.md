@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/retention.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/sharing.service.ts"
 type: "code"
-community: "RetentionService"
-location: "L86"
+community: "SharingService"
+location: "L97"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionService
+  - community/SharingService
 ---
 
 # .assertPurposeExists()
 
 ## Connections
-- [[dot-create()_34]] - `calls` [EXTRACTED]
+- [[dot-create()_36]] - `calls` [EXTRACTED]
 - [[dot-update()_26]] - `calls` [EXTRACTED]
-- [[RetentionService]] - `method` [EXTRACTED]
+- [[SharingService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionService
+#graphify/code #graphify/EXTRACTED #community/SharingService

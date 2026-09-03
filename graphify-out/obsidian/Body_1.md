@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: ".setStatus"
+community: "VerifyGuardianDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/setStatus
+  - community/VerifyGuardianDto
 ---
 
 # Body
 
 ## Connections
-- [[dot-setStatus()]] - `references` [EXTRACTED]
+- [[dot-create()]] - `references` [EXTRACTED]
+- [[dot-verify()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/setStatus
+#graphify/code #graphify/EXTRACTED #community/VerifyGuardianDto

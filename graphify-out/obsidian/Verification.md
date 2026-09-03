@@ -1,17 +1,17 @@
 ---
-source_file: "docs/superpowers/plans/2026-08-31-dpdp-mvp2.md"
+source_file: "grievance-baseline-fix-report.md"
 type: "document"
-community: "DPDP Platform MVP 2 — Compliance Operations — Implementation Plan"
-location: "L112"
+community: "Grievance statutory-baseline fix report"
+location: "L22"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/DPDP_Platform_MVP_2__Compliance_Operations__Implementation_Plan
+  - community/Grievance_statutory-baseline_fix_report
 ---
 
 # Verification
 
 ## Connections
-- [[DPDP Platform MVP 2 — Compliance Operations — Implementation Plan]] - `contains` [EXTRACTED]
+- [[Grievance statutory-baseline fix report]] - `contains` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/DPDP_Platform_MVP_2__Compliance_Operations__Implementation_Plan
+#graphify/document #graphify/EXTRACTED #community/Grievance_statutory-baseline_fix_report

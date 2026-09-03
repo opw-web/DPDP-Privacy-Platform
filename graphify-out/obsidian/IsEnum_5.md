@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "templates.service.ts"
+community: "purposes.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatesservicets
+  - community/purposesservicets
 ---
 
 # IsEnum
 
 ## Connections
-- [[CreateTemplateDto]] - `references` [EXTRACTED]
+- [[UpdatePurposeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatesservicets
+#graphify/code #graphify/EXTRACTED #community/purposesservicets

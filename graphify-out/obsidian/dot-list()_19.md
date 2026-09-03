@@ -1,22 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/guardians.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/audit/audit-read.controller.ts"
 type: "code"
-community: "RequirePermission"
-location: "L19"
+community: "AuditReadController"
+location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/AuditReadController
 ---
 
 # .list()
 
 ## Connections
+- [[AuditReadController]] - `method` [EXTRACTED]
 - [[CurrentActorPermissions]] - `references` [EXTRACTED]
-- [[Get_18]] - `references` [EXTRACTED]
-- [[GuardiansController]] - `method` [EXTRACTED]
-- [[ListGuardiansDto]] - `references` [EXTRACTED]
-- [[Query_3]] - `references` [EXTRACTED]
+- [[Get_19]] - `references` [EXTRACTED]
+- [[ListAuditEventsDto]] - `references` [EXTRACTED]
+- [[Query_4]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/AuditReadController

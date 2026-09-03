@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/router.tsx"
 type: "code"
-community: "api-client.ts"
-location: "L45"
+community: "router.tsx"
+location: "L72"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/routertsx
 ---
 
 # FullPageLoading()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[router.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/routertsx

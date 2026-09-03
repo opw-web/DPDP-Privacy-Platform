@@ -1,19 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/child-exemptions.service.ts"
+source_file: "dpdp-platform/backend/src/modules/evidence/evidence-pack.service.ts"
 type: "code"
-community: "PrismaService"
-location: "L47"
+community: "AuditReadService"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/AuditReadService
 ---
 
 # .constructor()
 
 ## Connections
+- [[AuditExportService]] - `references` [EXTRACTED]
+- [[AuditReadService]] - `references` [EXTRACTED]
 - [[AuditService]] - `references` [EXTRACTED]
-- [[ChildExemptionsService]] - `method` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
+- [[EvidencePackService]] - `method` [EXTRACTED]
+- [[RopaExportService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/AuditReadService

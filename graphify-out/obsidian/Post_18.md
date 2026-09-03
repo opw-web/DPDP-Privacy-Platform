@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "SharingService"
+community: "DataSourcesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SharingService
+  - community/DataSourcesService
 ---
 
 # Post
 
 ## Connections
-- [[dot-create()_22]] - `references` [EXTRACTED]
+- [[dot-create()_23]] - `references` [EXTRACTED]
+- [[dot-discoverSchema()_1]] - `references` [EXTRACTED]
+- [[dot-testConnection()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SharingService
+#graphify/code #graphify/EXTRACTED #community/DataSourcesService

@@ -1,19 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/inventory/ropa-export.service.ts"
+source_file: "dpdp-platform/backend/src/modules/consents/consents.service.ts"
 type: "code"
-community: "PrismaService"
-location: "L46"
+community: "erasure-task.service.ts"
+location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/erasure-taskservicets
 ---
 
 # .constructor()
 
 ## Connections
 - [[AuditService]] - `references` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
-- [[RopaExportService]] - `method` [EXTRACTED]
+- [[ConsentsService]] - `method` [EXTRACTED]
+- [[ErasureTaskService]] - `references` [EXTRACTED]
+- [[GuardiansService]] - `references` [EXTRACTED]
+- [[NoticesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets

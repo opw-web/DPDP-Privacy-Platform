@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ScopedTransactionClient"
+community: "SyncQueueService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScopedTransactionClient
+  - community/SyncQueueService
 ---
 
 # Injectable
 
 ## Connections
-- [[MatchingService]] - `references` [EXTRACTED]
+- [[DeadlineScanQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

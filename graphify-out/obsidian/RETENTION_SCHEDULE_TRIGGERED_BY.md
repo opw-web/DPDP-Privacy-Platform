@@ -12,6 +12,7 @@ tags:
 # RETENTION_SCHEDULE_TRIGGERED_BY
 
 ## Connections
+- [[mvp2-schedules.ts]] - `imports` [EXTRACTED]
 - [[retention-scan.queue.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/retentionmodulets

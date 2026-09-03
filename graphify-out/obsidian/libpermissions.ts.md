@@ -12,6 +12,7 @@ tags:
 # lib/permissions.ts
 
 ## Connections
+- [[DashboardPage.tsx]] - `imports_from` [EXTRACTED]
 - [[EmployeesPage.tsx]] - `imports_from` [EXTRACTED]
 - [[LinkedRecordsPanel.tsx]] - `imports_from` [EXTRACTED]
 - [[PermissionCode]] - `contains` [EXTRACTED]

@@ -14,9 +14,9 @@ tags:
 ## Connections
 - [[dot-upsertTranslation()]] - `references` [EXTRACTED]
 - [[dot-upsertTranslation()_1]] - `references` [EXTRACTED]
-- [[ApiProperty_32]] - `references` [EXTRACTED]
-- [[IsString_46]] - `references` [EXTRACTED]
-- [[MinLength_37]] - `references` [EXTRACTED]
+- [[ApiProperty_40]] - `references` [EXTRACTED]
+- [[IsString_55]] - `references` [EXTRACTED]
+- [[MinLength_43]] - `references` [EXTRACTED]
 - [[notices.controller.ts]] - `imports` [EXTRACTED]
 - [[notices.service.ts]] - `imports` [EXTRACTED]
 - [[upsert-translation.dto.ts]] - `contains` [EXTRACTED]

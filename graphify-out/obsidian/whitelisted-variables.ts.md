@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/messaging/templates/whitelisted-variables.ts"
 type: "code"
-community: "template-renderer.ts"
+community: "templates.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/template-rendererts
+  - community/templatesservicets
 ---
 
 # whitelisted-variables.ts
@@ -19,8 +19,9 @@ tags:
 - [[WHITELIST_SET]] - `contains` [EXTRACTED]
 - [[campaigns.service.ts]] - `imports_from` [EXTRACTED]
 - [[isWhitelistedTemplateVariable()]] - `contains` [EXTRACTED]
+- [[template-renderer.spec.ts]] - `imports_from` [EXTRACTED]
 - [[template-renderer.ts]] - `imports_from` [EXTRACTED]
 - [[templates.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[templates.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/template-rendererts
+#graphify/code #graphify/EXTRACTED #community/templatesservicets

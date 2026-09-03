@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "VerifyIdentityDto"
+community: "notifications.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/VerifyIdentityDto
+  - community/notificationscontrollerts
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[VerifyIdentityDto]] - `references` [EXTRACTED]
+- [[NotificationDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/VerifyIdentityDto
+#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts

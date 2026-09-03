@@ -1,20 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principals/principals.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/evidence/audit-events-evidence.controller.ts"
 type: "code"
-community: "LineageService"
-location: "L13"
+community: "AuditChainService"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/LineageService
+  - community/AuditChainService
 ---
 
 # .constructor()
 
 ## Connections
-- [[LineageService]] - `references` [EXTRACTED]
-- [[PrincipalRecipientsService]] - `references` [EXTRACTED]
-- [[PrincipalsController]] - `method` [EXTRACTED]
-- [[PrincipalsService]] - `references` [EXTRACTED]
+- [[AuditChainService]] - `references` [EXTRACTED]
+- [[AuditEventsEvidenceController]] - `method` [EXTRACTED]
+- [[AuditExportService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/LineageService
+#graphify/code #graphify/EXTRACTED #community/AuditChainService

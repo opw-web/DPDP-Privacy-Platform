@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "TokenService"
+community: "connector.factory.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TokenService
+  - community/connectorfactoryts
 ---
 
 # Injectable
 
 ## Connections
-- [[TenantMiddleware]] - `references` [EXTRACTED]
+- [[ConnectorFactory]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TokenService
+#graphify/code #graphify/EXTRACTED #community/connectorfactoryts

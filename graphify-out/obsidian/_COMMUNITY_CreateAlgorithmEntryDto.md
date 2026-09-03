@@ -8,17 +8,17 @@ members: 11
 **Members:** 11 nodes
 
 ## Members
-- [[ApiProperty_13]] - code
-- [[ApiPropertyOptional_13]] - code
-- [[ArrayMinSize_1]] - code
+- [[ApiProperty_4]] - code
+- [[ApiPropertyOptional_6]] - code
+- [[ArrayMinSize]] - code
 - [[CreateAlgorithmEntryDto]] - code - dpdp-platform/backend/src/modules/sdf/dto/create-algorithm-entry.dto.ts
-- [[IsArray_7]] - code
-- [[IsBoolean_6]] - code
-- [[IsDateString_5]] - code
-- [[IsIn_1]] - code
-- [[IsOptional_14]] - code
-- [[IsString_16]] - code
-- [[MinLength_13]] - code
+- [[IsArray_1]] - code
+- [[IsBoolean_2]] - code
+- [[IsDateString_1]] - code
+- [[IsIn_3]] - code
+- [[IsOptional_6]] - code
+- [[IsString_6]] - code
+- [[MinLength_3]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -28,9 +28,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_sdf-assessment.service.ts]]
-- 2 edges to [[_COMMUNITY_SdfController]]
-- 1 edge to [[_COMMUNITY_PrismaService]]
+- 2 edges to [[_COMMUNITY_algorithm-register.service.ts]]
+- 2 edges to [[_COMMUNITY_dot-completeAssessment]]
+- 1 edge to [[_COMMUNITY_sdf.controller.ts]]
 
 ## Top bridge nodes
 - [[CreateAlgorithmEntryDto]] - degree 15, connects to 3 communities

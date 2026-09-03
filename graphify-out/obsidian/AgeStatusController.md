@@ -12,11 +12,11 @@ tags:
 # AgeStatusController
 
 ## Connections
-- [[dot-constructor()_119]] - `method` [EXTRACTED]
+- [[dot-constructor()_109]] - `method` [EXTRACTED]
 - [[dot-setAgeStatus()]] - `method` [EXTRACTED]
 - [[dot-unknownCount()]] - `method` [EXTRACTED]
-- [[ApiTags_30]] - `references` [EXTRACTED]
-- [[Controller_30]] - `references` [EXTRACTED]
+- [[ApiTags_28]] - `references` [EXTRACTED]
+- [[Controller_29]] - `references` [EXTRACTED]
 - [[age-status.controller.ts]] - `contains` [EXTRACTED]
 - [[children.module.ts]] - `imports` [EXTRACTED]
 

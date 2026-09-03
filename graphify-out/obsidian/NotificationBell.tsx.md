@@ -1,18 +1,19 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/NotificationBell.tsx"
 type: "code"
-community: "NotificationBell.tsx"
+community: "api-client.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationBelltsx
+  - community/api-clientts
 ---
 
 # NotificationBell.tsx
 
 ## Connections
 - [[ApiClient]] - `imports` [EXTRACTED]
+- [[AppShell.tsx]] - `imports_from` [EXTRACTED]
 - [[Badge()]] - `imports` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
 - [[NotificationBell()]] - `contains` [EXTRACTED]
@@ -20,6 +21,7 @@ tags:
 - [[NotificationBellProps]] - `contains` [EXTRACTED]
 - [[NotificationDto_1]] - `imports` [EXTRACTED]
 - [[NotificationRow()]] - `contains` [EXTRACTED]
+- [[PortalShell.tsx]] - `imports_from` [EXTRACTED]
 - [[api-client.ts]] - `imports_from` [EXTRACTED]
 - [[badge.tsx]] - `imports_from` [EXTRACTED]
 - [[button.tsx]] - `imports_from` [EXTRACTED]
@@ -30,4 +32,4 @@ tags:
 - [[mvp2-api.ts]] - `imports_from` [EXTRACTED]
 - [[utils.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationBelltsx
+#graphify/code #graphify/EXTRACTED #community/api-clientts

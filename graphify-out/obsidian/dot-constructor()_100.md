@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/audience/audience.controller.ts"
+source_file: "dpdp-platform/backend/src/queues/access-log-retention.processor.ts"
 type: "code"
-community: "RequirePermission"
-location: "L17"
+community: "audit-chain-verify.processor.ts"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/audit-chain-verifyprocessorts
 ---
 
 # .constructor()
 
 ## Connections
-- [[AudienceController]] - `method` [EXTRACTED]
-- [[AudienceService]] - `references` [EXTRACTED]
+- [[AccessLogRetentionProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/audit-chain-verifyprocessorts

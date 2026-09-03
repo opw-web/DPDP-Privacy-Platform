@@ -16,6 +16,7 @@ tags:
 - [[ReferenceService]] - `imports` [EXTRACTED]
 - [[app.module.ts]] - `imports_from` [EXTRACTED]
 - [[board.module.ts]] - `imports_from` [EXTRACTED]
+- [[breaches.module.ts]] - `imports_from` [EXTRACTED]
 - [[campaigns.module.ts]] - `imports_from` [EXTRACTED]
 - [[identity.module.ts]] - `imports_from` [EXTRACTED]
 - [[reference.service.ts]] - `imports_from` [EXTRACTED]

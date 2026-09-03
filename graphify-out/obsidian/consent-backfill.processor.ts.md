@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/consent-backfill.processor.ts"
 type: "code"
-community: "ConsentBackfillService"
+community: "consent-backfill.queue.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ConsentBackfillService
+  - community/consent-backfillqueuets
 ---
 
 # consent-backfill.processor.ts
@@ -20,4 +20,4 @@ tags:
 - [[consent-backfill.service.ts]] - `imports_from` [EXTRACTED]
 - [[consents.module.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ConsentBackfillService
+#graphify/code #graphify/EXTRACTED #community/consent-backfillqueuets

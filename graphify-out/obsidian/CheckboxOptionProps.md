@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/form-controls.tsx"
+source_file: "dpdp-platform/frontend/src/components/ui/checkbox.tsx"
 type: "code"
-community: "cn"
-location: "L43"
+community: "button.tsx"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/buttontsx
 ---
 
 # CheckboxOptionProps
 
 ## Connections
-- [[form-controls.tsx]] - `contains` [EXTRACTED]
+- [[checkbox.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/buttontsx

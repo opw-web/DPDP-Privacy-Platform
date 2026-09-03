@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/prisma/prisma.service.ts"
 type: "code"
-community: "prisma.service.ts"
+community: "PrismaService"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/PrismaService
 ---
 
 # extendWithTenantScoping()
@@ -15,4 +15,4 @@ tags:
 - [[dot-scoped()]] - `calls` [EXTRACTED]
 - [[prisma.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/PrismaService

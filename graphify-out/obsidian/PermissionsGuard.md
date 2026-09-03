@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-canActivate()_3]] - `method` [EXTRACTED]
-- [[dot-constructor()_136]] - `method` [EXTRACTED]
+- [[dot-constructor()_72]] - `method` [EXTRACTED]
 - [[dot-resolvePermissions()]] - `method` [EXTRACTED]
-- [[Injectable_73]] - `references` [EXTRACTED]
+- [[Injectable_46]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[permissions.guard.ts]] - `contains` [EXTRACTED]
 

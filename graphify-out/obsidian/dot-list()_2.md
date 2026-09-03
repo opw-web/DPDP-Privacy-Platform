@@ -1,20 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/notifications.service.ts"
+source_file: "dpdp-platform/backend/src/modules/consents/me-consents.controller.ts"
 type: "code"
-community: "NotificationsService"
-location: "L105"
+community: "SetMyConsentDto"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/SetMyConsentDto
 ---
 
 # .list()
 
 ## Connections
-- [[NotificationCallerActor]] - `references` [EXTRACTED]
-- [[NotificationsService]] - `method` [EXTRACTED]
-- [[ownershipWhere()]] - `calls` [EXTRACTED]
-- [[toPublicNotification()]] - `indirect_call` [INFERRED]
+- [[dot-listForPrincipal()_2]] - `calls` [INFERRED]
+- [[CurrentPrincipal]] - `references` [EXTRACTED]
+- [[Get_2]] - `references` [EXTRACTED]
+- [[MeConsentsController]] - `method` [EXTRACTED]
+- [[PrincipalActor]] - `references` [EXTRACTED]
+- [[Public()]] - `references` [EXTRACTED]
+- [[UseGuards]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/SetMyConsentDto

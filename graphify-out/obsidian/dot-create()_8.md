@@ -1,22 +1,24 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
 type: "code"
-community: "TemplatesService"
-location: "L34"
+community: "CreateComplianceRuleDto"
+location: "L389"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/CreateComplianceRuleDto
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_9]] - `calls` [INFERRED]
-- [[Body_8]] - `references` [EXTRACTED]
-- [[CreateTemplateDto]] - `references` [EXTRACTED]
-- [[Post_9]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[TemplatesController]] - `method` [EXTRACTED]
+- [[dot-create()_7]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-update()_7]] - `calls` [EXTRACTED]
+- [[dot-validateGrievanceCeiling()]] - `calls` [EXTRACTED]
+- [[ComplianceService]] - `method` [EXTRACTED]
+- [[CreateComplianceRuleDto]] - `references` [EXTRACTED]
+- [[diffRules()]] - `calls` [EXTRACTED]
+- [[toPublicComplianceRule()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto

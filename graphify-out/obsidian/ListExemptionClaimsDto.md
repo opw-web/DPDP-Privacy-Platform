@@ -12,11 +12,11 @@ tags:
 # ListExemptionClaimsDto
 
 ## Connections
-- [[dot-list()_41]] - `references` [EXTRACTED]
-- [[dot-list()_42]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_36]] - `references` [EXTRACTED]
-- [[IsOptional_39]] - `references` [EXTRACTED]
-- [[IsString_50]] - `references` [EXTRACTED]
+- [[dot-list()_37]] - `references` [EXTRACTED]
+- [[dot-list()_38]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_45]] - `references` [EXTRACTED]
+- [[IsOptional_47]] - `references` [EXTRACTED]
+- [[IsString_59]] - `references` [EXTRACTED]
 - [[child-exemptions.controller.ts]] - `imports` [EXTRACTED]
 - [[child-exemptions.service.ts]] - `imports` [EXTRACTED]
 - [[list-exemption-claims.dto.ts]] - `contains` [EXTRACTED]

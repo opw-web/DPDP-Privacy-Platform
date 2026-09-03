@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sdf-assessment.service.ts"
+community: ".unmerge"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdf-assessmentservicets
+  - community/unmerge
 ---
 
 # IsString
 
 ## Connections
-- [[CompleteSdfAssessmentDto]] - `references` [EXTRACTED]
+- [[UnmergeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdf-assessmentservicets
+#graphify/code #graphify/EXTRACTED #community/unmerge

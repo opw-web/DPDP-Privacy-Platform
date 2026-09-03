@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-countUnknown()]] - `calls` [INFERRED]
 - [[AgeStatusController]] - `method` [EXTRACTED]
-- [[Get_30]] - `references` [EXTRACTED]
+- [[Get_28]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/age-statusservicets

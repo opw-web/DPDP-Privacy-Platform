@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/retention.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync.service.ts"
 type: "code"
-community: "RetentionService"
-location: "L11"
+community: "SyncQueueService"
+location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionService
+  - community/SyncQueueService
 ---
 
 # .constructor()
 
 ## Connections
-- [[RetentionController_1]] - `method` [EXTRACTED]
-- [[RetentionService]] - `references` [EXTRACTED]
+- [[DataSourcesService]] - `references` [EXTRACTED]
+- [[SyncQueueService]] - `references` [EXTRACTED]
+- [[SyncService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionService
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

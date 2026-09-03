@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/retention.controller.ts"
 type: "code"
-community: "retention/retention.controller.ts"
+community: "RequirePermission"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retention/retentioncontrollerts
+  - community/RequirePermission
 ---
 
 # retention/retention.controller.ts
@@ -32,4 +32,4 @@ tags:
 - [[retention.module.ts]] - `imports_from` [EXTRACTED]
 - [[token.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retention/retentioncontrollerts
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

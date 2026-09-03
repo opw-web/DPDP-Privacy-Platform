@@ -1,21 +1,21 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/dto/create-legal-hold.dto.ts"
 type: "code"
-community: "legal-hold.service.ts"
+community: "CreateLegalHoldDto"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/legal-holdservicets
+  - community/CreateLegalHoldDto
 ---
 
 # LegalHoldScopeDto
 
 ## Connections
-- [[ApiPropertyOptional_6]] - `references` [EXTRACTED]
-- [[IsArray_2]] - `references` [EXTRACTED]
-- [[IsOptional_5]] - `references` [EXTRACTED]
-- [[IsString_7]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_20]] - `references` [EXTRACTED]
+- [[IsArray_10]] - `references` [EXTRACTED]
+- [[IsOptional_22]] - `references` [EXTRACTED]
+- [[IsString_23]] - `references` [EXTRACTED]
 - [[create-legal-hold.dto.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/legal-holdservicets
+#graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto

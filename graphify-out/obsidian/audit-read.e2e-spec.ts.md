@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/audit-read.e2e-spec.ts"
 type: "code"
-community: "audit.service.ts"
+community: "prisma.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/auditservicets
+  - community/prismaservicets
 ---
 
 # audit-read.e2e-spec.ts
@@ -17,7 +17,7 @@ tags:
 - [[AuditAction]] - `imports` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[EmployeeSession_2]] - `contains` [EXTRACTED]
-- [[Fixture_2]] - `contains` [EXTRACTED]
+- [[Fixture_1]] - `contains` [EXTRACTED]
 - [[PERMISSIONS]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[TenantContext]] - `imports` [EXTRACTED]
@@ -25,13 +25,13 @@ tags:
 - [[app.module.ts]] - `imports_from` [EXTRACTED]
 - [[audit-actions.ts]] - `imports_from` [EXTRACTED]
 - [[audit.service.ts]] - `imports_from` [EXTRACTED]
-- [[authenticated()]] - `contains` [EXTRACTED]
-- [[createFixture()_2]] - `contains` [EXTRACTED]
-- [[ensurePermission()_7]] - `contains` [EXTRACTED]
+- [[authenticated()_1]] - `contains` [EXTRACTED]
+- [[createFixture()_1]] - `contains` [EXTRACTED]
+- [[ensurePermission()_10]] - `contains` [EXTRACTED]
 - [[list-audit-events.dto.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[seedpermissions.ts]] - `imports_from` [EXTRACTED]
 - [[seedEvent()]] - `contains` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/auditservicets
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

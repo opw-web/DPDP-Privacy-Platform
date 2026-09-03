@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/common/guards/jwt-principal.guard.ts"
+source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts"
 type: "code"
-community: "TokenService"
-location: "L75"
+community: "principal-auth.service.ts"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TokenService
+  - community/principal-authservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[JwtPrincipalGuard]] - `method` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
-- [[TokenService]] - `references` [EXTRACTED]
+- [[EmployeeAuthController]] - `method` [EXTRACTED]
+- [[EmployeeAuthService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TokenService
+#graphify/code #graphify/EXTRACTED #community/principal-authservicets

@@ -1,25 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/retention.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/erasure-task.service.ts"
 type: "code"
-community: "retention/retention.controller.ts"
-location: "L45"
+community: "RetentionController"
+location: "L512"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retention/retentioncontrollerts
+  - community/RetentionController
 ---
 
 # .complete()
 
 ## Connections
-- [[dot-complete()]] - `calls` [INFERRED]
+- [[dot-complete()_2]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[Body_21]] - `references` [EXTRACTED]
 - [[CompleteErasureTaskDto]] - `references` [EXTRACTED]
-- [[CurrentActor]] - `references` [EXTRACTED]
-- [[Param_24]] - `references` [EXTRACTED]
-- [[Post_23]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[RetentionController]] - `method` [EXTRACTED]
+- [[ErasureTaskService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retention/retentioncontrollerts
+#graphify/code #graphify/EXTRACTED #community/RetentionController

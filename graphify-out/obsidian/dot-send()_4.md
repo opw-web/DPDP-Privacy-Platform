@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/providers/console.provider.ts"
+source_file: "dpdp-platform/backend/src/common/mail/mailer.service.ts"
 type: "code"
-community: "notifications.module.ts"
-location: "L23"
+community: "MailerService"
+location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationsmodulets
+  - community/MailerService
 ---
 
 # .send()
 
 ## Connections
-- [[ConsoleProvider]] - `method` [EXTRACTED]
-- [[NotificationSendInput]] - `references` [EXTRACTED]
-- [[NotificationSendResult]] - `references` [EXTRACTED]
+- [[dot-getTransporter()]] - `calls` [EXTRACTED]
+- [[dot-send()_5]] - `calls` [INFERRED]
+- [[MailerService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationsmodulets
+#graphify/code #graphify/EXTRACTED #community/MailerService

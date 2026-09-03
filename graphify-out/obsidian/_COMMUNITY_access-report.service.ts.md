@@ -1,39 +1,40 @@
 ---
 type: community
-members: 26
+members: 27
 ---
 
 # access-report.service.ts
 
-**Members:** 26 nodes
+**Members:** 27 nodes
 
 ## Members
-- [[dot-constructor()_12]] - code - dpdp-platform/backend/src/common/audit/access-log.service.ts
-- [[dot-constructor()_13]] - code - dpdp-platform/backend/src/modules/principals/principals.service.ts
-- [[AccessLogService]] - code - dpdp-platform/backend/src/common/audit/access-log.service.ts
+- [[dot-constructor()_147]] - code - dpdp-platform/backend/src/modules/evidence/access-report.service.ts
+- [[dot-constructor()_148]] - code - dpdp-platform/backend/src/modules/principal-portal/me.service.ts
+- [[dot-constructor()_149]] - code - dpdp-platform/backend/src/modules/principals/lineage.service.ts
+- [[dot-constructor()_150]] - code - dpdp-platform/backend/src/modules/principals/principal-recipients.service.ts
+- [[dot-constructor()_151]] - code - dpdp-platform/backend/src/modules/principals/principals.controller.ts
 - [[AccessReportConsentEntry]] - code - dpdp-platform/backend/src/modules/evidence/access-report.service.ts
 - [[AccessReportConsentHistoryEntry]] - code - dpdp-platform/backend/src/modules/evidence/access-report.service.ts
 - [[AccessReportData]] - code - dpdp-platform/backend/src/modules/evidence/access-report.service.ts
 - [[AccessReportProcessingActivity]] - code - dpdp-platform/backend/src/modules/evidence/access-report.service.ts
 - [[AccessReportRecipient]] - code - dpdp-platform/backend/src/modules/evidence/access-report.service.ts
 - [[AccessReportRetentionEntry]] - code - dpdp-platform/backend/src/modules/evidence/access-report.service.ts
-- [[EvidenceBreachInclusion]] - code - dpdp-platform/backend/src/modules/evidence/principal-evidence.service.ts
-- [[EvidenceConsentEvent]] - code - dpdp-platform/backend/src/modules/evidence/principal-evidence.service.ts
-- [[EvidenceMessageReceived]] - code - dpdp-platform/backend/src/modules/evidence/principal-evidence.service.ts
-- [[EvidenceNoticeVersionShown]] - code - dpdp-platform/backend/src/modules/evidence/principal-evidence.service.ts
-- [[EvidenceRequest]] - code - dpdp-platform/backend/src/modules/evidence/principal-evidence.service.ts
-- [[EvidenceRequestEvent]] - code - dpdp-platform/backend/src/modules/evidence/principal-evidence.service.ts
-- [[INFORMATION_REQUEST_PUBLIC_SELECT]] - code - dpdp-platform/backend/src/modules/evidence/non-disclosure.ts
-- [[Injectable_7]] - code
-- [[NonDisclosureSplit]] - code - dpdp-platform/backend/src/modules/evidence/non-disclosure.ts
-- [[PublicInformationRequest]] - code - dpdp-platform/backend/src/modules/evidence/non-disclosure.ts
-- [[RecordPersonalDataViewedInput]] - code - dpdp-platform/backend/src/common/audit/access-log.service.ts
-- [[access-log.service.ts]] - code - dpdp-platform/backend/src/common/audit/access-log.service.ts
+- [[DATA_CATEGORY_ORDER]] - code - dpdp-platform/backend/src/modules/principal-portal/me.service.ts
+- [[Injectable_84]] - code
+- [[Injectable_85]] - code
+- [[LineageService]] - code - dpdp-platform/backend/src/modules/principals/lineage.service.ts
+- [[MeDataCategoryGroup]] - code - dpdp-platform/backend/src/modules/principal-portal/me.service.ts
+- [[MeDataValue]] - code - dpdp-platform/backend/src/modules/principal-portal/me.service.ts
+- [[PRINCIPAL_FIELD_SELECT]] - code - dpdp-platform/backend/src/modules/principals/lineage.service.ts
+- [[PrincipalRecipientsService]] - code - dpdp-platform/backend/src/modules/principals/principal-recipients.service.ts
+- [[PublicInformationRequest_1]] - code - dpdp-platform/backend/src/modules/evidence/non-disclosure.ts
+- [[ResolvedPrincipalField]] - code - dpdp-platform/backend/src/modules/principals/lineage.service.ts
 - [[access-report.service.ts]] - code - dpdp-platform/backend/src/modules/evidence/access-report.service.ts
-- [[evidencenon-disclosure.ts]] - code - dpdp-platform/backend/src/modules/evidence/non-disclosure.ts
-- [[principal-evidence.service.ts]] - code - dpdp-platform/backend/src/modules/evidence/principal-evidence.service.ts
+- [[lineage.service.ts]] - code - dpdp-platform/backend/src/modules/principals/lineage.service.ts
+- [[me.service.ts]] - code - dpdp-platform/backend/src/modules/principal-portal/me.service.ts
 - [[principal-recipients.service.ts]] - code - dpdp-platform/backend/src/modules/principals/principal-recipients.service.ts
-- [[splitNonDisclosureRequests()]] - code - dpdp-platform/backend/src/modules/evidence/non-disclosure.ts
+- [[principals.controller.ts]] - code - dpdp-platform/backend/src/modules/principals/principals.controller.ts
+- [[principals.module.ts]] - code - dpdp-platform/backend/src/modules/principals/principals.module.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -43,25 +44,25 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_PrismaService]]
-- 6 edges to [[_COMMUNITY_principals.service.ts]]
-- 6 edges to [[_COMMUNITY_access-report-render.ts]]
-- 5 edges to [[_COMMUNITY_app.module.ts]]
-- 5 edges to [[_COMMUNITY_prisma.service.ts]]
-- 4 edges to [[_COMMUNITY_ScopedTransactionClient]]
-- 4 edges to [[_COMMUNITY_audit.service.ts]]
-- 3 edges to [[_COMMUNITY_LineageService]]
-- 2 edges to [[_COMMUNITY_PrincipalsService]]
-- 2 edges to [[_COMMUNITY_PrincipalEvidenceService]]
-- 2 edges to [[_COMMUNITY_AccessReportService]]
-- 2 edges to [[_COMMUNITY_retention.e2e-spec.ts]]
-- 1 edge to [[_COMMUNITY_MaskingService]]
-- 1 edge to [[_COMMUNITY_dot-record]]
-- 1 edge to [[_COMMUNITY_RequirePermission]]
+- 10 edges to [[_COMMUNITY_app.module.ts]]
+- 9 edges to [[_COMMUNITY_principals.service.ts]]
+- 8 edges to [[_COMMUNITY_PrincipalsService]]
+- 8 edges to [[_COMMUNITY_prisma.service.ts]]
+- 7 edges to [[_COMMUNITY_AccessReportService]]
+- 5 edges to [[_COMMUNITY_PrismaService]]
+- 4 edges to [[_COMMUNITY_Public]]
+- 4 edges to [[_COMMUNITY_RequirePermission]]
+- 3 edges to [[_COMMUNITY_access-report-render.ts]]
+- 3 edges to [[_COMMUNITY_PrincipalsController]]
+- 2 edges to [[_COMMUNITY_AuditService]]
+- 2 edges to [[_COMMUNITY_principal-evidence.service.ts]]
+- 2 edges to [[_COMMUNITY_principal-portal.e2e-spec.ts]]
+- 1 edge to [[_COMMUNITY_ListPrincipalsDto]]
+- 1 edge to [[_COMMUNITY_requests.controller.ts]]
 
 ## Top bridge nodes
-- [[access-report.service.ts]] - degree 24, connects to 9 communities
-- [[principal-evidence.service.ts]] - degree 21, connects to 7 communities
-- [[access-log.service.ts]] - degree 11, connects to 6 communities
-- [[principal-recipients.service.ts]] - degree 7, connects to 6 communities
-- [[AccessLogService]] - degree 12, connects to 5 communities
+- [[access-report.service.ts]] - degree 26, connects to 10 communities
+- [[me.service.ts]] - degree 19, connects to 8 communities
+- [[principals.controller.ts]] - degree 14, connects to 5 communities
+- [[principals.module.ts]] - degree 16, connects to 4 communities
+- [[lineage.service.ts]] - degree 12, connects to 3 communities

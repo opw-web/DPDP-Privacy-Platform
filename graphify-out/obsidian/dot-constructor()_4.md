@@ -1,20 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sdf/sdf-cycle-scan.service.ts"
+source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
 type: "code"
-community: "sdf.module.ts"
-location: "L43"
+community: "AuditService"
+location: "L217"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdfmodulets
+  - community/AuditService
 ---
 
 # .constructor()
 
 ## Connections
-- [[ComplianceService]] - `references` [EXTRACTED]
-- [[NotificationsService]] - `references` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
-- [[SdfCycleScanService]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[ComplianceService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdfmodulets
+#graphify/code #graphify/EXTRACTED #community/AuditService

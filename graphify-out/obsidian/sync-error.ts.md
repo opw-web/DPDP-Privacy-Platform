@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sync/sync-error.ts"
 type: "code"
-community: "SyncPipelineService"
+community: "sync-pipeline.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncPipelineService
+  - community/sync-pipelineservicets
 ---
 
 # sync-error.ts
@@ -20,4 +20,4 @@ tags:
 - [[sync-error.spec.ts]] - `imports_from` [EXTRACTED]
 - [[sync-pipeline.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncPipelineService
+#graphify/code #graphify/EXTRACTED #community/sync-pipelineservicets

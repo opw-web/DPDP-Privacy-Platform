@@ -37,6 +37,9 @@ tags:
 - [[inventory.module.ts]] - `imports_from` [EXTRACTED]
 - [[principal-evidence.controller.ts]] - `imports_from` [EXTRACTED]
 - [[principal-evidence.service.ts]] - `imports_from` [EXTRACTED]
+- [[principal-portal.module.ts]] - `imports_from` [EXTRACTED]
 - [[principals.module.ts]] - `imports_from` [EXTRACTED]
+- [[queues.module.ts]] - `imports_from` [EXTRACTED]
+- [[requests.module.ts]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/appmodulets

@@ -1,20 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sdf/sdf.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/inventory/ropa-export.service.ts"
 type: "code"
-community: "SdfController"
-location: "L28"
+community: "ropa-export.service.ts"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SdfController
+  - community/ropa-exportservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[AlgorithmRegisterService]] - `references` [EXTRACTED]
-- [[SdfAssessmentService]] - `references` [EXTRACTED]
-- [[SdfController]] - `method` [EXTRACTED]
-- [[SdfGapsService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[RopaExportService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SdfController
+#graphify/code #graphify/EXTRACTED #community/ropa-exportservicets

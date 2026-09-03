@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/router.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/EmployeesPage.test.tsx"
 type: "code"
-community: "api-client.ts"
-location: "L101"
+community: "EmployeesPage.test.tsx"
+location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/EmployeesPagetesttsx
 ---
 
 # ROLES
 
 ## Connections
-- [[router.test.tsx]] - `contains` [EXTRACTED]
+- [[EmployeesPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/EmployeesPagetesttsx

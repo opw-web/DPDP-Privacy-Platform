@@ -1,24 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/transfers.controller.ts"
 type: "code"
-community: "AccessTokenPayload"
-location: "L46"
+community: "TransfersService"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/TransfersService
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_19]] - `calls` [INFERRED]
-- [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[Body_6]] - `references` [EXTRACTED]
-- [[CampaignsController]] - `method` [EXTRACTED]
-- [[CreateCampaignDto]] - `references` [EXTRACTED]
-- [[CurrentActor]] - `references` [EXTRACTED]
-- [[Post_7]] - `references` [EXTRACTED]
+- [[dot-create()_6]] - `calls` [INFERRED]
+- [[Body_5]] - `references` [EXTRACTED]
+- [[CreateTransferDto]] - `references` [EXTRACTED]
+- [[Post_4]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
+- [[TransfersController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/TransfersService

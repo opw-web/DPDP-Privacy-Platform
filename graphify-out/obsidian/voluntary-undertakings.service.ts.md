@@ -12,12 +12,14 @@ tags:
 # voluntary-undertakings.service.ts
 
 ## Connections
+- [[AuditService]] - `imports` [EXTRACTED]
 - [[CreateVoluntaryUndertakingDto]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[PublicVoluntaryUndertaking]] - `contains` [EXTRACTED]
 - [[UpdateVoluntaryUndertakingDto]] - `imports` [EXTRACTED]
 - [[VOLUNTARY_UNDERTAKING_PUBLIC_SELECT]] - `contains` [EXTRACTED]
 - [[VoluntaryUndertakingsService]] - `contains` [EXTRACTED]
+- [[audit.service.ts]] - `imports_from` [EXTRACTED]
 - [[board.module.ts]] - `imports_from` [EXTRACTED]
 - [[create-voluntary-undertaking.dto.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]

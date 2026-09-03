@@ -20,7 +20,9 @@ tags:
 - [[RetentionScanJobData]] - `contains` [EXTRACTED]
 - [[RetentionScanQueueService]] - `contains` [EXTRACTED]
 - [[boot-registration.registry.ts]] - `imports_from` [EXTRACTED]
+- [[mvp2-schedules.ts]] - `imports_from` [EXTRACTED]
 - [[pre-erasure-notice.processor.ts]] - `imports_from` [EXTRACTED]
+- [[queues.module.ts]] - `imports_from` [EXTRACTED]
 - [[retention-scan.processor.ts]] - `imports_from` [EXTRACTED]
 - [[retention.module.ts]] - `imports_from` [EXTRACTED]
 

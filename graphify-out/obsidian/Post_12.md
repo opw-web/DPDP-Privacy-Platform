@@ -1,21 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "RequestsController"
+community: "employees.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestsController
+  - community/employeesservicets
 ---
 
 # Post
 
 ## Connections
-- [[dot-addNote()]] - `references` [EXTRACTED]
-- [[dot-assign()]] - `references` [EXTRACTED]
-- [[dot-changeStatus()]] - `references` [EXTRACTED]
-- [[dot-escalate()]] - `references` [EXTRACTED]
-- [[dot-flagFrivolous()]] - `references` [EXTRACTED]
-- [[dot-verifyIdentity()]] - `references` [EXTRACTED]
+- [[dot-create()_17]] - `references` [EXTRACTED]
+- [[dot-resetPassword()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestsController
+#graphify/code #graphify/EXTRACTED #community/employeesservicets

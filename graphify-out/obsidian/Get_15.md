@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ListRequestsDto"
+community: "PermissionsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ListRequestsDto
+  - community/PermissionsController
 ---
 
 # Get
 
 ## Connections
-- [[dot-getByReference()]] - `references` [EXTRACTED]
-- [[dot-list()_13]] - `references` [EXTRACTED]
-- [[dot-stats()]] - `references` [EXTRACTED]
+- [[dot-list()_17]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ListRequestsDto
+#graphify/code #graphify/EXTRACTED #community/PermissionsController

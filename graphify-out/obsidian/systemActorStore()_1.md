@@ -1,20 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/retention.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/sdf.e2e-spec.ts"
 type: "code"
-community: "retention.e2e-spec.ts"
-location: "L175"
+community: "PrismaService"
+location: "L78"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentione2e-spects
+  - community/PrismaService
 ---
 
 # systemActorStore()
 
 ## Connections
-- [[createTask()]] - `calls` [EXTRACTED]
-- [[retention.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[runPreErasureNotice()]] - `calls` [EXTRACTED]
-- [[runRetentionScan()]] - `calls` [EXTRACTED]
+- [[sdf.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentione2e-spects
+#graphify/code #graphify/EXTRACTED #community/PrismaService

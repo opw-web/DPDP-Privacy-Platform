@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/requests/requests.service.ts"
 type: "code"
-community: "requests.service.ts"
-location: "L42"
+community: "me-rights.service.ts"
+location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/requestsservicets
+  - community/me-rightsservicets
 ---
 
 # REQUEST_PUBLIC_SELECT
 
 ## Connections
+- [[me-rights.service.ts]] - `imports` [EXTRACTED]
 - [[requests.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/requestsservicets
+#graphify/code #graphify/EXTRACTED #community/me-rightsservicets

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EnvironmentVariables"
+community: "CreateTemplateDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EnvironmentVariables
+  - community/CreateTemplateDto
 ---
 
 # IsString
 
 ## Connections
-- [[EnvironmentVariables]] - `references` [EXTRACTED]
+- [[UpdateTemplateDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EnvironmentVariables
+#graphify/code #graphify/EXTRACTED #community/CreateTemplateDto

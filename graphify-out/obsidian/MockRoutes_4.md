@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/LinkedRecordsPanel.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/ReviewQueuePage.test.tsx"
 type: "code"
-community: "api-client.ts"
-location: "L37"
+community: "ReviewQueuePage.test.tsx"
+location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/ReviewQueuePagetesttsx
 ---
 
 # MockRoutes
 
 ## Connections
-- [[LinkedRecordsPanel.test.tsx]] - `contains` [EXTRACTED]
+- [[MatchCandidateListItem]] - `references` [EXTRACTED]
+- [[ReviewQueuePage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/ReviewQueuePagetesttsx

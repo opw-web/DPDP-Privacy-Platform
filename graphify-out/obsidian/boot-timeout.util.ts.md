@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/boot-timeout.util.ts"
 type: "code"
-community: "BootRegistrationRegistry"
+community: "SyncQueueService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BootRegistrationRegistry
+  - community/SyncQueueService
 ---
 
 # boot-timeout.util.ts
@@ -17,4 +17,4 @@ tags:
 - [[schedule-reconciliation.service.ts]] - `re_exports` [EXTRACTED]
 - [[withBootTimeout()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BootRegistrationRegistry
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

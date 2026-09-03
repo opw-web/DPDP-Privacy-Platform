@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/consent-backfill.processor.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync-error.spec.ts"
 type: "code"
-community: "ConsentBackfillService"
-location: "L21"
+community: "sync-pipeline.service.ts"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ConsentBackfillService
+  - community/sync-pipelineservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[ConsentBackfillProcessor]] - `method` [EXTRACTED]
-- [[ConsentBackfillService]] - `references` [EXTRACTED]
+- [[IdentifierOwnershipConflictError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ConsentBackfillService
+#graphify/code #graphify/EXTRACTED #community/sync-pipelineservicets

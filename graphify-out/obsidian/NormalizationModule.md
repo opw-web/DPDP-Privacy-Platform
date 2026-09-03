@@ -12,7 +12,7 @@ tags:
 # NormalizationModule
 
 ## Connections
-- [[Module_34]] - `references` [EXTRACTED]
+- [[Module_36]] - `references` [EXTRACTED]
 - [[normalization.module.ts]] - `contains` [EXTRACTED]
 - [[sync.module.ts]] - `imports` [EXTRACTED]
 

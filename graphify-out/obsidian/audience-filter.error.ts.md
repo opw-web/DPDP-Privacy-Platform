@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[AudienceFilterError]] - `contains` [EXTRACTED]
 - [[audience.service.ts]] - `imports_from` [EXTRACTED]
+- [[breach.service.ts]] - `imports_from` [EXTRACTED]
 - [[campaigns.service.ts]] - `imports_from` [EXTRACTED]
 - [[compile-audience.spec.ts]] - `imports_from` [EXTRACTED]
 - [[compile-audience.ts]] - `imports_from` [EXTRACTED]

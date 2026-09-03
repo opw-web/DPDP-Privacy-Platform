@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/registers.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/purposes.e2e-spec.ts"
 type: "code"
-community: "registers.e2e-spec.ts"
-location: "L101"
+community: "AppModule"
+location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/registerse2e-spects
+  - community/AppModule
 ---
 
 # createOrgWithManager()
 
 ## Connections
-- [[createEmployeeWithPermissions()_1]] - `calls` [EXTRACTED]
-- [[registers.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[ensurePermission()_6]] - `calls` [EXTRACTED]
+- [[purposes.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/registerse2e-spects
+#graphify/code #graphify/EXTRACTED #community/AppModule

@@ -12,6 +12,8 @@ tags:
 # usePermission()
 
 ## Connections
+- [[DashboardPage()]] - `calls` [EXTRACTED]
+- [[DashboardPage.tsx]] - `imports` [EXTRACTED]
 - [[EmployeesPage()]] - `calls` [EXTRACTED]
 - [[EmployeesPage.tsx]] - `imports` [EXTRACTED]
 - [[LinkedRecordsPanel()]] - `calls` [EXTRACTED]

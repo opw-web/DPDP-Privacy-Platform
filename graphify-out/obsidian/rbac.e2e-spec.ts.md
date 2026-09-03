@@ -16,8 +16,8 @@ tags:
 - [[PERMISSIONS]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[app.module.ts]] - `imports_from` [EXTRACTED]
-- [[createOrgWithEmployee()_1]] - `contains` [EXTRACTED]
-- [[ensurePermission()_11]] - `contains` [EXTRACTED]
+- [[createOrgWithEmployee()_2]] - `contains` [EXTRACTED]
+- [[ensurePermission()_7]] - `contains` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[seedpermissions.ts]] - `imports_from` [EXTRACTED]
 

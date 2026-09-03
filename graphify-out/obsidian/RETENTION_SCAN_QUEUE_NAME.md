@@ -12,6 +12,8 @@ tags:
 # RETENTION_SCAN_QUEUE_NAME
 
 ## Connections
+- [[mvp2-schedules.ts]] - `imports` [EXTRACTED]
+- [[queues.module.ts]] - `imports` [EXTRACTED]
 - [[retention-scan.processor.ts]] - `imports` [EXTRACTED]
 - [[retention-scan.queue.ts]] - `contains` [EXTRACTED]
 - [[retention.module.ts]] - `imports` [EXTRACTED]

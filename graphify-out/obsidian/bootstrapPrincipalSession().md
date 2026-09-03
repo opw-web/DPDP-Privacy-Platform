@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/lib/auth.ts"
 type: "code"
-community: "api-client.ts"
+community: "router.tsx"
 location: "L175"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/routertsx
 ---
 
 # bootstrapPrincipalSession()
@@ -17,4 +17,4 @@ tags:
 - [[refreshPrincipalToken()]] - `calls` [EXTRACTED]
 - [[router.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/routertsx

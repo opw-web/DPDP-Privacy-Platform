@@ -24,7 +24,7 @@ tags:
 - [[LineageService]] - `imports` [EXTRACTED]
 - [[PrincipalRecipientsService]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
-- [[PublicInformationRequest]] - `imports` [EXTRACTED]
+- [[PublicInformationRequest_1]] - `imports` [EXTRACTED]
 - [[ResolvedPrincipalField]] - `imports` [EXTRACTED]
 - [[access-log.service.ts]] - `imports_from` [EXTRACTED]
 - [[access-report-render.ts]] - `imports_from` [EXTRACTED]
@@ -33,8 +33,10 @@ tags:
 - [[evidence.module.ts]] - `imports_from` [EXTRACTED]
 - [[evidencenon-disclosure.ts]] - `imports_from` [EXTRACTED]
 - [[lineage.service.ts]] - `imports_from` [EXTRACTED]
+- [[me.controller.ts]] - `imports_from` [EXTRACTED]
 - [[principal-recipients.service.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
+- [[requests.controller.ts]] - `imports_from` [EXTRACTED]
 - [[splitNonDisclosureRequests()]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/access-reportservicets

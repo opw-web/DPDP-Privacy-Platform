@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/erasure-task.service.ts"
 type: "code"
-community: "retention.e2e-spec.ts"
-location: "L81"
+community: "erasure-task.service.ts"
+location: "L84"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentione2e-spects
+  - community/erasure-taskservicets
 ---
 
 # CreateFromTriggerInput
@@ -15,4 +15,4 @@ tags:
 - [[erasure-task.service.ts]] - `contains` [EXTRACTED]
 - [[retention.e2e-spec.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentione2e-spects
+#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets

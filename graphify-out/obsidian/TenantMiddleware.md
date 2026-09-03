@@ -1,21 +1,21 @@
 ---
 source_file: "dpdp-platform/backend/src/common/tenant/tenant.middleware.ts"
 type: "code"
-community: "TokenService"
+community: "TenantMiddleware"
 location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TokenService
+  - community/TenantMiddleware
 ---
 
 # TenantMiddleware
 
 ## Connections
-- [[dot-constructor()_29]] - `method` [EXTRACTED]
+- [[dot-constructor()_87]] - `method` [EXTRACTED]
 - [[dot-use()]] - `method` [EXTRACTED]
-- [[Injectable_16]] - `references` [EXTRACTED]
+- [[Injectable_57]] - `references` [EXTRACTED]
 - [[tenant.middleware.ts]] - `contains` [EXTRACTED]
 - [[tenant.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TokenService
+#graphify/code #graphify/EXTRACTED #community/TenantMiddleware

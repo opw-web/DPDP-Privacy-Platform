@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sdf-assessment.service.ts"
+community: "employees.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdf-assessmentservicets
+  - community/employeesservicets
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[CompleteSdfAssessmentDto]] - `references` [EXTRACTED]
+- [[UpdateEmployeeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdf-assessmentservicets
+#graphify/code #graphify/EXTRACTED #community/employeesservicets

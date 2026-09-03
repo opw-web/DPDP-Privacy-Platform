@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/LinkedRecordsPanel.test.tsx"
 type: "code"
-community: "api-client.ts"
-location: "L49"
+community: "LinkedRecordsPanel.test.tsx"
+location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/LinkedRecordsPaneltesttsx
 ---
 
 # MockRoutes
 
 ## Connections
-- [[SettingsPage.test.tsx]] - `contains` [EXTRACTED]
+- [[LinkedRecordsPanel.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/LinkedRecordsPaneltesttsx

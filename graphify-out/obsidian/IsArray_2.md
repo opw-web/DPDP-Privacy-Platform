@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "legal-hold.service.ts"
+community: "purposes.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/legal-holdservicets
+  - community/purposesservicets
 ---
 
 # IsArray
 
 ## Connections
-- [[LegalHoldScopeDto]] - `references` [EXTRACTED]
+- [[CreatePurposeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/legal-holdservicets
+#graphify/code #graphify/EXTRACTED #community/purposesservicets

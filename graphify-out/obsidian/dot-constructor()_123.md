@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/retention.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/breaches/breaches.controller.ts"
 type: "code"
-community: "retention/retention.controller.ts"
+community: "BreachesController"
 location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retention/retentioncontrollerts
+  - community/BreachesController
 ---
 
 # .constructor()
 
 ## Connections
-- [[ErasureTaskService]] - `references` [EXTRACTED]
-- [[LegalHoldService]] - `references` [EXTRACTED]
-- [[RetentionController]] - `method` [EXTRACTED]
+- [[BreachService]] - `references` [EXTRACTED]
+- [[BreachesController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retention/retentioncontrollerts
+#graphify/code #graphify/EXTRACTED #community/BreachesController

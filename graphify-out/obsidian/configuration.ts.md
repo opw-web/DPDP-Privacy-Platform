@@ -16,6 +16,7 @@ tags:
 - [[AppConfig]] - `contains` [EXTRACTED]
 - [[MailConfig]] - `contains` [EXTRACTED]
 - [[access-log-retention.constant.ts]] - `imports_from` [EXTRACTED]
+- [[access-log-retention.processor.ts]] - `imports_from` [EXTRACTED]
 - [[app.module.ts]] - `imports_from` [EXTRACTED]
 - [[crypto.service.ts]] - `imports_from` [EXTRACTED]
 - [[email-provider.factory.ts]] - `imports_from` [EXTRACTED]

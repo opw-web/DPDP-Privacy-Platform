@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/principal/pages/MeSourcesPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/RetentionPage.test.tsx"
 type: "code"
-community: "card.tsx"
+community: "RetentionPage.tsx"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cardtsx
+  - community/RetentionPagetsx
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[MeSourcesPage.test.tsx]] - `contains` [EXTRACTED]
+- [[RetentionPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cardtsx
+#graphify/code #graphify/EXTRACTED #community/RetentionPagetsx

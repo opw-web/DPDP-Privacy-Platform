@@ -12,7 +12,7 @@ tags:
 # ReadOnlyHttpStatusError
 
 ## Connections
-- [[dot-constructor()_134]] - `method` [EXTRACTED]
+- [[dot-constructor()_136]] - `method` [EXTRACTED]
 - [[dot-performRequest()]] - `calls` [EXTRACTED]
 - [[read-only-http.client.spec.ts]] - `imports` [EXTRACTED]
 - [[read-only-http.client.ts]] - `contains` [EXTRACTED]

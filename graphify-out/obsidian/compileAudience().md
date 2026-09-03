@@ -12,9 +12,11 @@ tags:
 # compileAudience()
 
 ## Connections
+- [[dot-candidateWhere()]] - `calls` [EXTRACTED]
 - [[dot-compile()]] - `calls` [EXTRACTED]
 - [[dot-compileFilter()]] - `calls` [EXTRACTED]
 - [[audience.service.ts]] - `imports` [EXTRACTED]
+- [[breach.service.ts]] - `imports` [EXTRACTED]
 - [[campaigns.service.ts]] - `imports` [EXTRACTED]
 - [[compile-audience.spec.ts]] - `imports` [EXTRACTED]
 - [[compile-audience.ts]] - `contains` [EXTRACTED]

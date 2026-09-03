@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalEvidenceService"
+community: "notifications.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalEvidenceService
+  - community/notificationsservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[PrincipalEvidenceService]] - `references` [EXTRACTED]
+- [[NotificationsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalEvidenceService
+#graphify/code #graphify/EXTRACTED #community/notificationsservicets

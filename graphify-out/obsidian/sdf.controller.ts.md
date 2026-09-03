@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sdf/sdf.controller.ts"
 type: "code"
-community: "sdf-assessment.service.ts"
+community: "sdf.controller.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdf-assessmentservicets
+  - community/sdfcontrollerts
 ---
 
 # sdf.controller.ts
@@ -31,4 +31,4 @@ tags:
 - [[sdf.module.ts]] - `imports_from` [EXTRACTED]
 - [[update-algorithm-entry.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdf-assessmentservicets
+#graphify/code #graphify/EXTRACTED #community/sdfcontrollerts

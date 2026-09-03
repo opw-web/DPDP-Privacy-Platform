@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/AppShell.tsx"
 type: "code"
-community: "api-client.ts"
-location: "L53"
+community: "router.tsx"
+location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/routertsx
 ---
 
 # AppShell()
@@ -16,10 +16,11 @@ tags:
 - [[AuditPage.test.tsx]] - `imports` [EXTRACTED]
 - [[DashboardPage.test.tsx]] - `imports` [EXTRACTED]
 - [[EmployeesPage.test.tsx]] - `imports` [EXTRACTED]
+- [[PrincipalEvidencePage.test.tsx]] - `imports` [EXTRACTED]
 - [[PurposesPage.test.tsx]] - `imports` [EXTRACTED]
 - [[SettingsPage.test.tsx]] - `imports` [EXTRACTED]
 - [[cn()]] - `calls` [EXTRACTED]
 - [[router.tsx]] - `imports` [EXTRACTED]
 - [[useEmployeeAuth()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/routertsx

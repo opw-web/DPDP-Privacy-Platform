@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/source-purposes.service.ts"
 type: "code"
-community: ".record"
-location: "L13"
+community: "SourcePurposesService"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/SourcePurposesService
 ---
 
 # .constructor()
 
 ## Connections
-- [[PurposesController]] - `method` [EXTRACTED]
-- [[PurposesService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[SourcePurposesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/SourcePurposesService

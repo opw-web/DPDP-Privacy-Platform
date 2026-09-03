@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.tsx"
 type: "code"
-community: "PrincipalDetailPage.tsx"
-location: "L16"
+community: "card.tsx"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalDetailPagetsx
+  - community/cardtsx
 ---
 
 # AgeStatus
 
 ## Connections
-- [[PrincipalDetailPage.tsx]] - `contains` [EXTRACTED]
+- [[ChildrenPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/cardtsx

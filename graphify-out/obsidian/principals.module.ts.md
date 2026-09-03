@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principals/principals.module.ts"
 type: "code"
-community: "app.module.ts"
+community: "access-report.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/appmodulets
+  - community/access-reportservicets
 ---
 
 # principals.module.ts
@@ -29,4 +29,4 @@ tags:
 - [[principals.controller.ts]] - `imports_from` [EXTRACTED]
 - [[principals.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/appmodulets
+#graphify/code #graphify/EXTRACTED #community/access-reportservicets

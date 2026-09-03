@@ -1,22 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts"
 type: "code"
-community: "PrismaService"
-location: "L114"
+community: "AlgorithmRegisterService"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/AlgorithmRegisterService
 ---
 
 # .constructor()
 
 ## Connections
+- [[AlgorithmRegisterService]] - `method` [EXTRACTED]
 - [[AuditService]] - `references` [EXTRACTED]
-- [[ConnectorFactory]] - `references` [EXTRACTED]
-- [[CryptoService]] - `references` [EXTRACTED]
-- [[DataSourcesService]] - `method` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
-- [[SyncQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterService

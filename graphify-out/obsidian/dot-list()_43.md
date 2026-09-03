@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/recipients.service.ts"
 type: "code"
-community: "compliance.service.ts"
-location: "L340"
+community: "recipients.service.ts"
+location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/complianceservicets
+  - community/recipientsservicets
 ---
 
 # .list()
 
 ## Connections
-- [[ComplianceService]] - `method` [EXTRACTED]
-- [[toPublicComplianceRule()]] - `indirect_call` [INFERRED]
+- [[RecipientsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/complianceservicets
+#graphify/code #graphify/EXTRACTED #community/recipientsservicets

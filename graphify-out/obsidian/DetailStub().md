@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/DataSourceNewPage.test.tsx"
 type: "code"
-community: "api-client.ts"
+community: "DataSourceNewPage.test.tsx"
 location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/DataSourceNewPagetesttsx
 ---
 
 # DetailStub()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[DataSourceNewPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/DataSourceNewPagetesttsx

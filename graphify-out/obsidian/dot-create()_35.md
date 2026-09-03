@@ -1,20 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sdf/sdf-assessment.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/sharing.controller.ts"
 type: "code"
-community: "CreateSdfAssessmentDto"
-location: "L159"
+community: "SharingService"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSdfAssessmentDto
+  - community/SharingService
 ---
 
 # .create()
 
 ## Connections
-- [[dot-createAssessment()]] - `calls` [INFERRED]
-- [[dot-resolveCycleDeadline()]] - `calls` [EXTRACTED]
-- [[CreateSdfAssessmentDto]] - `references` [EXTRACTED]
-- [[SdfAssessmentService]] - `method` [EXTRACTED]
+- [[dot-create()_36]] - `calls` [INFERRED]
+- [[Body_29]] - `references` [EXTRACTED]
+- [[CreateSharingActivityDto]] - `references` [EXTRACTED]
+- [[Post_29]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[SharingController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSdfAssessmentDto
+#graphify/code #graphify/EXTRACTED #community/SharingService

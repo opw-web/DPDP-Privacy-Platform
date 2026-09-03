@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ConsentsService"
+community: "employees.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ConsentsService
+  - community/employeesservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[ConsentsService]] - `references` [EXTRACTED]
+- [[EmployeesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ConsentsService
+#graphify/code #graphify/EXTRACTED #community/employeesservicets

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/compliance-rules.e2e-spec.ts"
 type: "code"
-community: "retention.e2e-spec.ts"
+community: "PrismaService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentione2e-spects
+  - community/PrismaService
 ---
 
 # compliance-rules.e2e-spec.ts
@@ -17,12 +17,13 @@ tags:
 - [[bootstrapTestApp()]] - `imports` [EXTRACTED]
 - [[cleanupOrgs()]] - `imports` [EXTRACTED]
 - [[compliance-rules.ts]] - `imports_from` [EXTRACTED]
-- [[createOrgWithEmployee()]] - `imports` [EXTRACTED]
+- [[createOrgWithEmployee()_1]] - `imports` [EXTRACTED]
+- [[createOrgWithEmployee()]] - `contains` [EXTRACTED]
 - [[e2e-harness.ts]] - `imports_from` [EXTRACTED]
 - [[grievancePayload()]] - `contains` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[rulePayload()]] - `contains` [EXTRACTED]
 - [[rulePayload_forVersionTest()]] - `contains` [EXTRACTED]
-- [[seedComplianceRules()]] - `imports` [EXTRACTED]
+- [[{   seedComplianceRules,   seedGrievanceStatutoryBaseline, }]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentione2e-spects
+#graphify/code #graphify/EXTRACTED #community/PrismaService

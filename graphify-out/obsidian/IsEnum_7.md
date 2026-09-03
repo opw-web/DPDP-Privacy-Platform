@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ListRequestsDto"
+community: "CreateComplianceRuleDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ListRequestsDto
+  - community/CreateComplianceRuleDto
 ---
 
 # IsEnum
 
 ## Connections
-- [[ListRequestsDto]] - `references` [EXTRACTED]
+- [[CreateComplianceRuleDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ListRequestsDto
+#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto

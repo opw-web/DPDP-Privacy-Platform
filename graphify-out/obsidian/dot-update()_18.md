@@ -1,23 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/recipients.service.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
 type: "code"
-community: "RecipientsService"
-location: "L167"
+community: "DataSourcesService"
+location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RecipientsService
+  - community/DataSourcesService
 ---
 
 # .update()
 
 ## Connections
-- [[dot-assertProcessorRule()]] - `calls` [EXTRACTED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[dot-update()_17]] - `calls` [INFERRED]
-- [[RecipientsService]] - `method` [EXTRACTED]
-- [[UpdateRecipientDto]] - `references` [EXTRACTED]
-- [[duplicateNameMessage()_1]] - `calls` [EXTRACTED]
-- [[isUniqueConstraintViolation()_2]] - `calls` [EXTRACTED]
+- [[dot-update()_19]] - `calls` [INFERRED]
+- [[Body_18]] - `references` [EXTRACTED]
+- [[DataSourcesController]] - `method` [EXTRACTED]
+- [[Param_19]] - `references` [EXTRACTED]
+- [[Patch_9]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[UpdateDataSourceDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RecipientsService
+#graphify/code #graphify/EXTRACTED #community/DataSourcesService

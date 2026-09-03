@@ -12,8 +12,8 @@ tags:
 # NotificationProvider
 
 ## Connections
-- [[dot-constructor()_41]] - `references` [EXTRACTED]
-- [[dot-send()_2]] - `method` [EXTRACTED]
+- [[dot-constructor()_50]] - `references` [EXTRACTED]
+- [[dot-send()]] - `method` [EXTRACTED]
 - [[ConsoleProvider]] - `implements` [EXTRACTED]
 - [[PortalProvider]] - `implements` [EXTRACTED]
 - [[SmtpProvider]] - `implements` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principals/lineage.service.ts"
 type: "code"
-community: "principals.service.ts"
+community: "access-report.service.ts"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principalsservicets
+  - community/access-reportservicets
 ---
 
 # ResolvedPrincipalField
@@ -20,4 +20,4 @@ tags:
 - [[me.service.ts]] - `imports` [EXTRACTED]
 - [[principals.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principalsservicets
+#graphify/code #graphify/EXTRACTED #community/access-reportservicets

@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "compile-audience.ts"
+community: "notifications.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/compile-audiencets
+  - community/notificationscontrollerts
 ---
 
 # ApiProperty
 
 ## Connections
-- [[PreviewAudienceDto]] - `references` [EXTRACTED]
+- [[MarkAllReadResponseDto]] - `references` [EXTRACTED]
+- [[NotificationDto]] - `references` [EXTRACTED]
+- [[NotificationListResponseDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/compile-audiencets
+#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts

@@ -1,22 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/auth/principal-auth.service.ts"
 type: "code"
-community: "AccessTokenPayload"
-location: "L123"
+community: "PrincipalAuthController"
+location: "L362"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/PrincipalAuthController
 ---
 
 # .me()
 
 ## Connections
-- [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[ApiOkResponse_2]] - `references` [EXTRACTED]
-- [[CurrentActor]] - `references` [EXTRACTED]
-- [[EmployeeAuthController]] - `method` [EXTRACTED]
-- [[EmployeeMeResponseDto]] - `references` [EXTRACTED]
-- [[Get_10]] - `references` [EXTRACTED]
+- [[dot-me()_1]] - `calls` [INFERRED]
+- [[PrincipalActor]] - `references` [EXTRACTED]
+- [[PrincipalAuthService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/PrincipalAuthController

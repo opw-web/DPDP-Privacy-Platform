@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
+source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
 type: "code"
-community: "DataSourcesService"
-location: "L188"
+community: "CreateComplianceRuleDto"
+location: "L359"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesService
+  - community/CreateComplianceRuleDto
 ---
 
 # .list()
 
 ## Connections
-- [[DataSourcesService]] - `method` [EXTRACTED]
+- [[ComplianceService]] - `method` [EXTRACTED]
+- [[toPublicComplianceRule()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesService
+#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto

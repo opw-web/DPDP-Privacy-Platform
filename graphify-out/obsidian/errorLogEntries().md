@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/SyncHistoryTable.tsx"
 type: "code"
-community: "DataSourceDetailPage.tsx"
+community: "data-sources-api.ts"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourceDetailPagetsx
+  - community/data-sources-apits
 ---
 
 # errorLogEntries()
@@ -15,4 +15,4 @@ tags:
 - [[SyncHistoryTable()]] - `calls` [EXTRACTED]
 - [[SyncHistoryTable.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourceDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/data-sources-apits

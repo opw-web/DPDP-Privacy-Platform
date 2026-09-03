@@ -33,10 +33,10 @@ members: 29
 - [[nameSources()]] - code - dpdp-platform/backend/src/modules/identity/assembly.service.spec.ts
 - [[normalized()]] - code - dpdp-platform/backend/test/assembly.e2e-spec.ts
 - [[normalizedValue()]] - code - dpdp-platform/backend/src/modules/identity/assembly.service.ts
-- [[organization()_3]] - code - dpdp-platform/backend/test/assembly.e2e-spec.ts
-- [[principal()_2]] - code - dpdp-platform/backend/test/assembly.e2e-spec.ts
+- [[organization()]] - code - dpdp-platform/backend/test/assembly.e2e-spec.ts
+- [[principal()]] - code - dpdp-platform/backend/test/assembly.e2e-spec.ts
 - [[source()]] - code - dpdp-platform/backend/test/assembly.e2e-spec.ts
-- [[tenant()_4]] - code - dpdp-platform/backend/test/assembly.e2e-spec.ts
+- [[tenant()]] - code - dpdp-platform/backend/test/assembly.e2e-spec.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -46,18 +46,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 20 edges to [[_COMMUNITY_ScopedTransactionClient]]
-- 4 edges to [[_COMMUNITY_prisma.service.ts]]
+- 10 edges to [[_COMMUNITY_ScopedTransactionClient]]
+- 7 edges to [[_COMMUNITY_AuditService]]
+- 7 edges to [[_COMMUNITY_prisma.service.ts]]
 - 3 edges to [[_COMMUNITY_app.module.ts]]
 - 2 edges to [[_COMMUNITY_PrismaService]]
+- 2 edges to [[_COMMUNITY_sync-pipeline.service.ts]]
 - 1 edge to [[_COMMUNITY_AppModule]]
+- 1 edge to [[_COMMUNITY_mappings.service.ts]]
 - 1 edge to [[_COMMUNITY_merge-unmerge.e2e-spec.ts]]
-- 1 edge to [[_COMMUNITY_retention.e2e-spec.ts]]
-- 1 edge to [[_COMMUNITY_audit.service.ts]]
 
 ## Top bridge nodes
-- [[assembly.e2e-spec.ts]] - degree 19, connects to 5 communities
-- [[age.service.ts]] - degree 15, connects to 5 communities
-- [[assembly.service.ts]] - degree 24, connects to 3 communities
+- [[assembly.service.ts]] - degree 25, connects to 7 communities
+- [[assembly.e2e-spec.ts]] - degree 19, connects to 6 communities
+- [[age.service.ts]] - degree 15, connects to 6 communities
 - [[assembleFields()]] - degree 8, connects to 1 community
 - [[displayNameFrom()]] - degree 5, connects to 1 community

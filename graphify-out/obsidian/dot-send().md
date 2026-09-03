@@ -1,24 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/notification-provider.interface.ts"
 type: "code"
-community: "AccessTokenPayload"
-location: "L61"
+community: "NotificationSendInput"
+location: "L86"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/NotificationSendInput
 ---
 
 # .send()
 
 ## Connections
-- [[dot-send()_7]] - `calls` [INFERRED]
-- [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[CampaignsController]] - `method` [EXTRACTED]
-- [[CurrentActor]] - `references` [EXTRACTED]
-- [[CurrentActorPermissions]] - `references` [EXTRACTED]
-- [[Param_7]] - `references` [EXTRACTED]
-- [[Post_7]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-deliverEmailBestEffort()]] - `calls` [INFERRED]
+- [[NotificationProvider]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/NotificationSendInput

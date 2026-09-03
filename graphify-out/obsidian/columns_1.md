@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/wizard/Step2Schema.tsx"
+source_file: "dpdp-platform/frontend/src/components/shared/DataTable.test.tsx"
 type: "code"
-community: "DataSourceDetailPage.tsx"
-location: "L18"
+community: "SecurityMeasuresTab.tsx"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourceDetailPagetsx
+  - community/SecurityMeasuresTabtsx
 ---
 
 # columns
 
 ## Connections
-- [[Step2Schema.tsx]] - `contains` [EXTRACTED]
+- [[DataTable.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourceDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx

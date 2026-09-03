@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/deadline-scan.queue.ts"
 type: "code"
-community: "BootRegistrationRegistry"
+community: "mvp2-schedules.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BootRegistrationRegistry
+  - community/mvp2-schedulests
 ---
 
 # deadline-scan.queue.ts
@@ -22,6 +22,8 @@ tags:
 - [[DeadlineScanQueueService]] - `contains` [EXTRACTED]
 - [[boot-registration.registry.ts]] - `imports_from` [EXTRACTED]
 - [[deadline-scan.processor.ts]] - `imports_from` [EXTRACTED]
+- [[mvp2-schedules.ts]] - `imports_from` [EXTRACTED]
+- [[queues.module.ts]] - `imports_from` [EXTRACTED]
 - [[requests.module.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BootRegistrationRegistry
+#graphify/code #graphify/EXTRACTED #community/mvp2-schedulests

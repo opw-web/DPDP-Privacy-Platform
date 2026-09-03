@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sdf/sdf-assessment.service.ts"
+source_file: "dpdp-platform/backend/src/modules/board/information-requests.service.ts"
 type: "code"
-community: "CreateSdfAssessmentDto"
-location: "L105"
+community: "CreateInformationRequestDto"
+location: "L73"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSdfAssessmentDto
+  - community/CreateInformationRequestDto
 ---
 
 # .getById()
 
 ## Connections
-- [[SdfAssessmentService]] - `method` [EXTRACTED]
+- [[dot-getById()_6]] - `calls` [INFERRED]
+- [[InformationRequestsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSdfAssessmentDto
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "retention.module.ts"
+community: "breaches.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionmodulets
+  - community/breachesmodulets
 ---
 
 # Processor
 
 ## Connections
-- [[RetentionScanProcessor]] - `references` [EXTRACTED]
+- [[BreachPrincipalNoticeDispatchProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionmodulets
+#graphify/code #graphify/EXTRACTED #community/breachesmodulets

@@ -18,7 +18,7 @@ tags:
 - [[Global Constraints_1]] - `contains` [EXTRACTED]
 - [[Pre-flight conflict scan (orchestrator, before Task 1)]] - `contains` [EXTRACTED]
 - [[Rulings taken up front]] - `contains` [EXTRACTED]
-- [[Verification]] - `contains` [EXTRACTED]
+- [[Verification_1]] - `contains` [EXTRACTED]
 - [[Wave Discipline — how parallelism actually works here]] - `contains` [EXTRACTED]
 - [[Waves and Tasks]] - `contains` [EXTRACTED]
 

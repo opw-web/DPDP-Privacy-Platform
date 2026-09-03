@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/templates.e2e-spec.ts"
 type: "code"
-community: "retention.e2e-spec.ts"
+community: "PrismaService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentione2e-spects
+  - community/PrismaService
 ---
 
 # templates.e2e-spec.ts
@@ -14,10 +14,10 @@ tags:
 ## Connections
 - [[BREACH_NOTIFICATION_REQUIRED_ELEMENTS]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
-- [[authed()_1]] - `contains` [EXTRACTED]
+- [[authed()]] - `contains` [EXTRACTED]
 - [[bootstrapTestApp()]] - `imports` [EXTRACTED]
 - [[cleanupOrgs()]] - `imports` [EXTRACTED]
-- [[createOrgWithEmployee()]] - `imports` [EXTRACTED]
+- [[createOrgWithEmployee()_1]] - `imports` [EXTRACTED]
 - [[e2e-harness.ts]] - `imports_from` [EXTRACTED]
 - [[message-templates.ts]] - `imports_from` [EXTRACTED]
 - [[orgWithSender()]] - `contains` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[seedMessageTemplates()]] - `imports` [EXTRACTED]
 - [[whitelisted-variables.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentione2e-spects
+#graphify/code #graphify/EXTRACTED #community/PrismaService

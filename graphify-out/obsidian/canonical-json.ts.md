@@ -12,6 +12,7 @@ tags:
 # canonical-json.ts
 
 ## Connections
+- [[audit-chain.service.spec.ts]] - `imports_from` [EXTRACTED]
 - [[audit-chain.service.ts]] - `imports_from` [EXTRACTED]
 - [[audit.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[audit.service.ts]] - `imports_from` [EXTRACTED]

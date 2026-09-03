@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "app.module.ts"
+community: "breaches.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/appmodulets
+  - community/breachesmodulets
 ---
 
 # Module
 
 ## Connections
-- [[RequestsModule]] - `references` [EXTRACTED]
+- [[BreachesModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/appmodulets
+#graphify/code #graphify/EXTRACTED #community/breachesmodulets

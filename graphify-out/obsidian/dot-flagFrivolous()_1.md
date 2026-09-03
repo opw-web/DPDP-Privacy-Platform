@@ -1,21 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/requests/requests.service.ts"
+source_file: "dpdp-platform/backend/src/modules/requests/requests.controller.ts"
 type: "code"
-community: "RequestsService"
-location: "L547"
+community: "RequestsController"
+location: "L133"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestsService
+  - community/RequestsController
 ---
 
 # .flagFrivolous()
 
 ## Connections
 - [[dot-flagFrivolous()]] - `calls` [INFERRED]
-- [[dot-loadByReferenceOrThrow()]] - `calls` [EXTRACTED]
-- [[dot-writeTransition()]] - `calls` [EXTRACTED]
+- [[Body_9]] - `references` [EXTRACTED]
 - [[FlagFrivolousDto]] - `references` [EXTRACTED]
-- [[RequestsService]] - `method` [EXTRACTED]
+- [[Param_10]] - `references` [EXTRACTED]
+- [[Post_8]] - `references` [EXTRACTED]
+- [[RequestsController]] - `method` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestsService
+#graphify/code #graphify/EXTRACTED #community/RequestsController

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AddNoteDto"
+community: "ImportConsentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AddNoteDto
+  - community/ImportConsentDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[AddNoteDto]] - `references` [EXTRACTED]
+- [[ImportConsentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AddNoteDto
+#graphify/code #graphify/EXTRACTED #community/ImportConsentDto

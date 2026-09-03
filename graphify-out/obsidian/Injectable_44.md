@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "TemplatesService"
+community: "AlgorithmRegisterService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/AlgorithmRegisterService
 ---
 
 # Injectable
 
 ## Connections
-- [[TemplatesService]] - `references` [EXTRACTED]
+- [[AlgorithmRegisterService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterService

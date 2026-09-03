@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/prisma/seed.ts"
+source_file: "dpdp-platform/backend/prisma/seed/mvp2-demo.ts"
 type: "code"
-community: "seed.ts"
-location: "L136"
+community: "mvp2-demo.ts"
+location: "L321"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/seedts
+  - community/mvp2-demots
 ---
 
 # main()
 
 ## Connections
 - [[PrismaService]] - `calls` [EXTRACTED]
-- [[runSeed()]] - `calls` [EXTRACTED]
-- [[seed.ts]] - `contains` [EXTRACTED]
+- [[mvp2-demo.ts]] - `contains` [EXTRACTED]
+- [[seedMvp2Demo()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/seedts
+#graphify/code #graphify/EXTRACTED #community/mvp2-demots

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/boot-registration.registry.ts"
 type: "code"
-community: "BootRegistrationRegistry"
+community: "SyncQueueService"
 location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BootRegistrationRegistry
+  - community/SyncQueueService
 ---
 
 # .onModuleInit()
@@ -15,4 +15,4 @@ tags:
 - [[BootRegistrationRegistry]] - `method` [EXTRACTED]
 - [[withBootTimeout()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BootRegistrationRegistry
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

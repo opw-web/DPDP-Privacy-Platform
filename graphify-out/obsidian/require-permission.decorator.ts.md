@@ -18,6 +18,7 @@ tags:
 - [[audience.controller.ts]] - `imports_from` [EXTRACTED]
 - [[audit-events-evidence.controller.ts]] - `imports_from` [EXTRACTED]
 - [[audit-read.controller.ts]] - `imports_from` [EXTRACTED]
+- [[breaches.controller.ts]] - `imports_from` [EXTRACTED]
 - [[campaigns.controller.ts]] - `imports_from` [EXTRACTED]
 - [[candidates.controller.ts]] - `imports_from` [EXTRACTED]
 - [[child-exemptions.controller.ts]] - `imports_from` [EXTRACTED]

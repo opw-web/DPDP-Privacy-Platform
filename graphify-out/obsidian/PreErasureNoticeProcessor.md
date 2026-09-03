@@ -12,9 +12,9 @@ tags:
 # PreErasureNoticeProcessor
 
 ## Connections
-- [[dot-constructor()_10]] - `method` [EXTRACTED]
-- [[dot-process()_2]] - `method` [EXTRACTED]
-- [[Processor_2]] - `references` [EXTRACTED]
+- [[dot-constructor()_80]] - `method` [EXTRACTED]
+- [[dot-process()_5]] - `method` [EXTRACTED]
+- [[Processor_6]] - `references` [EXTRACTED]
 - [[pre-erasure-notice.processor.ts]] - `contains` [EXTRACTED]
 - [[retention.module.ts]] - `imports` [EXTRACTED]
 

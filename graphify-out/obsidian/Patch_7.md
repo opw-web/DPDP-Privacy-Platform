@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "employees.controller.ts"
+community: "CreateInformationRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeescontrollerts
+  - community/CreateInformationRequestDto
 ---
 
 # Patch
 
 ## Connections
-- [[dot-update()_13]] - `references` [EXTRACTED]
+- [[dot-update()_15]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeescontrollerts
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

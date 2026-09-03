@@ -1,0 +1,20 @@
+---
+source_file: "dpdp-platform/backend/src/modules/retention/purpose-served.service.ts"
+type: "code"
+community: "erasure-task.service.ts"
+location: "L41"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/erasure-taskservicets
+---
+
+# .record()
+
+## Connections
+- [[dot-record()]] - `calls` [INFERRED]
+- [[PurposeServedService]] - `method` [EXTRACTED]
+- [[ScopedTransactionClient]] - `references` [EXTRACTED]
+- [[lockRetentionWorkflow()]] - `calls` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets

@@ -1,22 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/guardians.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/sdf-assessment.service.ts"
 type: "code"
-community: "guardians.service.ts"
-location: "L167"
+community: "CreateSdfAssessmentDto"
+location: "L155"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/CreateSdfAssessmentDto
 ---
 
 # .create()
 
 ## Connections
-- [[dot-assertPwdAppointmentValid()]] - `calls` [EXTRACTED]
-- [[dot-create()_10]] - `calls` [INFERRED]
+- [[dot-createAssessment()]] - `calls` [INFERRED]
 - [[dot-record()]] - `calls` [INFERRED]
-- [[dot-toResponse()]] - `calls` [EXTRACTED]
-- [[CreateGuardianDto]] - `references` [EXTRACTED]
-- [[GuardiansService]] - `method` [EXTRACTED]
+- [[dot-resolveCycleDeadline()]] - `calls` [EXTRACTED]
+- [[CreateSdfAssessmentDto]] - `references` [EXTRACTED]
+- [[SdfAssessmentService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/CreateSdfAssessmentDto

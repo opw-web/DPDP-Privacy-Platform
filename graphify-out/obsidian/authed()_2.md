@@ -12,7 +12,7 @@ tags:
 # authed()
 
 ## Connections
-- [[createDataSource()_2]] - `calls` [EXTRACTED]
+- [[createDataSource()_4]] - `calls` [EXTRACTED]
 - [[createPurpose()_2]] - `calls` [EXTRACTED]
 - [[createRecipient()]] - `calls` [EXTRACTED]
 - [[registers.e2e-spec.ts]] - `contains` [EXTRACTED]

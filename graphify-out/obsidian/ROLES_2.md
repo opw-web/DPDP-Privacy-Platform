@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/prisma/seed/roles.ts"
+source_file: "dpdp-platform/frontend/src/router.test.tsx"
 type: "code"
-community: "seed.ts"
-location: "L23"
+community: "router.test.tsx"
+location: "L101"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/seedts
+  - community/routertesttsx
 ---
 
 # ROLES
 
 ## Connections
-- [[roles.ts]] - `contains` [EXTRACTED]
-- [[seed.ts]] - `imports` [EXTRACTED]
+- [[router.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/seedts
+#graphify/code #graphify/EXTRACTED #community/routertesttsx

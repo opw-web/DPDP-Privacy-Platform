@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "security-measures.service.ts"
+community: "CreateComplianceRuleDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/security-measuresservicets
+  - community/CreateComplianceRuleDto
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_6]] - `references` [EXTRACTED]
-- [[dot-update()_7]] - `references` [EXTRACTED]
+- [[dot-create()_7]] - `references` [EXTRACTED]
+- [[dot-update()_6]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/security-measuresservicets
+#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto

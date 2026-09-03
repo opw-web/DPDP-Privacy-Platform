@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.tsx"
 type: "code"
-community: "PrincipalDetailPage.tsx"
+community: "DateTime.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalDetailPagetsx
+  - community/DateTimetsx
 ---
 
 # PrincipalDetailPage.tsx
 
 ## Connections
 - [[AGE_STATUS_SOURCE_LABEL]] - `contains` [EXTRACTED]
-- [[AgeStatus]] - `contains` [EXTRACTED]
+- [[AgeStatus_1]] - `contains` [EXTRACTED]
 - [[AttributedValue()]] - `contains` [EXTRACTED]
 - [[Badge()]] - `imports` [EXTRACTED]
 - [[BadgeProps]] - `imports` [EXTRACTED]
@@ -38,7 +38,7 @@ tags:
 - [[PrincipalDetail]] - `contains` [EXTRACTED]
 - [[PrincipalDetailPage()]] - `contains` [EXTRACTED]
 - [[PrincipalDetailPage.test.tsx]] - `imports_from` [EXTRACTED]
-- [[PrincipalField]] - `contains` [EXTRACTED]
+- [[PrincipalField_1]] - `contains` [EXTRACTED]
 - [[ProfileBlocks()]] - `contains` [EXTRACTED]
 - [[RecipientActivity]] - `contains` [EXTRACTED]
 - [[RecipientsSection()]] - `contains` [EXTRACTED]
@@ -56,4 +56,4 @@ tags:
 - [[humanizeEnum()]] - `imports` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/DateTimetsx

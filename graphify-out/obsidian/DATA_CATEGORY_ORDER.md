@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principal-portal/me.service.ts"
 type: "code"
-community: "principals.service.ts"
+community: "access-report.service.ts"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principalsservicets
+  - community/access-reportservicets
 ---
 
 # DATA_CATEGORY_ORDER
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[me.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principalsservicets
+#graphify/code #graphify/EXTRACTED #community/access-reportservicets

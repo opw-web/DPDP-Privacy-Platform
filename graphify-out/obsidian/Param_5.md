@@ -11,7 +11,7 @@ tags:
 # Param
 
 ## Connections
-- [[dot-get()_3]] - `references` [EXTRACTED]
-- [[dot-trigger()]] - `references` [EXTRACTED]
+- [[dot-get()_6]] - `references` [EXTRACTED]
+- [[dot-trigger()_1]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/syncservicets

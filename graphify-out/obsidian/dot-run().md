@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sync/sync-pipeline.service.ts"
 type: "code"
-community: "SyncPipelineService"
-location: "L194"
+community: "sync-pipeline.service.ts"
+location: "L197"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncPipelineService
+  - community/sync-pipelineservicets
 ---
 
 # .run()
 
 ## Connections
-- [[dot-process()_6]] - `calls` [INFERRED]
+- [[dot-process()_10]] - `calls` [INFERRED]
 - [[dot-runInTenantContext()]] - `calls` [EXTRACTED]
 - [[SyncPipelineService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncPipelineService
+#graphify/code #graphify/EXTRACTED #community/sync-pipelineservicets

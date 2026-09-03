@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/common/tenant/tenant.extension.ts"
+source_file: "dpdp-platform/backend/src/common/tenant/tenant.extension.js"
 type: "code"
 community: "tenant.extension.ts"
-location: "L321"
+location: "L188"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # notFoundError()
 
 ## Connections
-- [[tenant.extension.ts]] - `contains` [EXTRACTED]
+- [[tenant.extension.js]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/tenantextensionts

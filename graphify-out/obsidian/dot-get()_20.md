@@ -1,21 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/transfers.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/recipients.service.ts"
 type: "code"
-community: "CreateTransferDto"
-location: "L21"
+community: "recipients.service.ts"
+location: "L67"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTransferDto
+  - community/recipientsservicets
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_21]] - `calls` [INFERRED]
-- [[Get_36]] - `references` [EXTRACTED]
-- [[Param_26]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[TransfersController]] - `method` [EXTRACTED]
+- [[dot-get()_19]] - `calls` [INFERRED]
+- [[RecipientsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTransferDto
+#graphify/code #graphify/EXTRACTED #community/recipientsservicets

@@ -1,52 +1,66 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/token.service.ts"
 type: "code"
-community: "AccessTokenPayload"
+community: "RequirePermission"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/RequirePermission
 ---
 
 # AccessTokenPayload
 
 ## Connections
+- [[dot-addAffected()]] - `references` [EXTRACTED]
+- [[dot-addAffected()_1]] - `references` [EXTRACTED]
 - [[dot-approve()]] - `references` [EXTRACTED]
 - [[dot-approve()_1]] - `references` [EXTRACTED]
 - [[dot-cancel()]] - `references` [EXTRACTED]
 - [[dot-cancel()_1]] - `references` [EXTRACTED]
 - [[dot-claimPendingCandidate()]] - `references` [EXTRACTED]
-- [[dot-complete()]] - `references` [EXTRACTED]
 - [[dot-complete()_1]] - `references` [EXTRACTED]
+- [[dot-complete()_2]] - `references` [EXTRACTED]
+- [[dot-completeObligation()]] - `references` [EXTRACTED]
+- [[dot-completeObligation()_1]] - `references` [EXTRACTED]
 - [[dot-confirm()]] - `references` [EXTRACTED]
 - [[dot-confirm()_1]] - `references` [EXTRACTED]
+- [[dot-create()_12]] - `references` [EXTRACTED]
+- [[dot-create()_30]] - `references` [EXTRACTED]
 - [[dot-create()_28]] - `references` [EXTRACTED]
 - [[dot-create()_29]] - `references` [EXTRACTED]
-- [[dot-create()_5]] - `references` [EXTRACTED]
-- [[dot-create()_19]] - `references` [EXTRACTED]
+- [[dot-create()_14]] - `references` [EXTRACTED]
+- [[dot-create()_21]] - `references` [EXTRACTED]
 - [[dot-create()_27]] - `references` [EXTRACTED]
 - [[dot-createLegalHold()]] - `references` [EXTRACTED]
 - [[dot-createVersion()]] - `references` [EXTRACTED]
 - [[dot-createVersion()_1]] - `references` [EXTRACTED]
-- [[dot-me()_2]] - `references` [EXTRACTED]
+- [[dot-extension()]] - `references` [EXTRACTED]
+- [[dot-me()]] - `references` [EXTRACTED]
+- [[dot-notify()]] - `references` [EXTRACTED]
+- [[dot-notifyPrincipals()]] - `references` [EXTRACTED]
 - [[dot-publish()]] - `references` [EXTRACTED]
 - [[dot-publish()_1]] - `references` [EXTRACTED]
+- [[dot-recordExtension()]] - `references` [EXTRACTED]
 - [[dot-reject()]] - `references` [EXTRACTED]
 - [[dot-reject()_1]] - `references` [EXTRACTED]
 - [[dot-resolvePermissions()]] - `references` [EXTRACTED]
 - [[dot-review()_1]] - `references` [EXTRACTED]
-- [[dot-review()_3]] - `references` [EXTRACTED]
 - [[dot-review()_2]] - `references` [EXTRACTED]
+- [[dot-review()_3]] - `references` [EXTRACTED]
 - [[dot-review()]] - `references` [EXTRACTED]
-- [[dot-send()]] - `references` [EXTRACTED]
+- [[dot-send()_6]] - `references` [EXTRACTED]
 - [[dot-send()_7]] - `references` [EXTRACTED]
 - [[dot-unmerge()_1]] - `references` [EXTRACTED]
 - [[dot-unmerge()]] - `references` [EXTRACTED]
+- [[dot-update()_10]] - `references` [EXTRACTED]
+- [[dot-update()_20]] - `references` [EXTRACTED]
 - [[dot-upsertTranslation()]] - `references` [EXTRACTED]
 - [[dot-upsertTranslation()_1]] - `references` [EXTRACTED]
 - [[dot-verify()]] - `references` [EXTRACTED]
 - [[dot-verify()_1]] - `references` [EXTRACTED]
+- [[breach.service.ts]] - `imports` [EXTRACTED]
+- [[breaches.controller.ts]] - `imports` [EXTRACTED]
 - [[campaigns.controller.ts]] - `imports` [EXTRACTED]
 - [[campaigns.service.ts]] - `imports` [EXTRACTED]
 - [[candidates.controller.ts]] - `imports` [EXTRACTED]
@@ -73,4 +87,4 @@ tags:
 - [[token.service.ts]] - `contains` [EXTRACTED]
 - [[unmerge.controller.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

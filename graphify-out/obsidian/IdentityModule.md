@@ -12,8 +12,9 @@ tags:
 # IdentityModule
 
 ## Connections
-- [[Module_17]] - `references` [EXTRACTED]
+- [[Module_16]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
+- [[data-sources.module.ts]] - `imports` [EXTRACTED]
 - [[identity.module.ts]] - `contains` [EXTRACTED]
 - [[sync.module.ts]] - `imports` [EXTRACTED]
 

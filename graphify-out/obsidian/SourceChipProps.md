@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/SourceChip.tsx"
 type: "code"
-community: "EmployeesPage.tsx"
+community: "MeDataPage.tsx"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeesPagetsx
+  - community/MeDataPagetsx
 ---
 
 # SourceChipProps
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[SourceChip.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeesPagetsx
+#graphify/code #graphify/EXTRACTED #community/MeDataPagetsx

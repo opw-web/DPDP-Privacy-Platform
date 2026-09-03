@@ -1,21 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/linking.service.ts"
+source_file: "dpdp-platform/backend/src/queues/schedule-reconciliation.service.ts"
 type: "code"
-community: "ScopedTransactionClient"
-location: "L64"
+community: "SyncQueueService"
+location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScopedTransactionClient
+  - community/SyncQueueService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AgeService]] - `references` [EXTRACTED]
-- [[AssemblyService]] - `references` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
-- [[LinkingService]] - `method` [EXTRACTED]
-- [[ReferenceService]] - `references` [EXTRACTED]
+- [[dot-reconcileAtBoot()]] - `calls` [EXTRACTED]
+- [[dot-register()]] - `calls` [INFERRED]
+- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
+- [[Mvp2ScheduleReconciliationService]] - `references` [EXTRACTED]
+- [[ScheduleReconciliationService]] - `method` [EXTRACTED]
+- [[SyncQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

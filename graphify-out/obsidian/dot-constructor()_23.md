@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/unmerge.controller.ts"
+source_file: "dpdp-platform/backend/src/common/prisma/prisma.service.ts"
 type: "code"
-community: ".unmerge"
-location: "L20"
+community: "PrismaService"
+location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/unmerge
+  - community/PrismaService
 ---
 
 # .constructor()
 
 ## Connections
-- [[MergeService]] - `references` [EXTRACTED]
-- [[UnmergeController]] - `method` [EXTRACTED]
+- [[PrismaService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/unmerge
+#graphify/code #graphify/EXTRACTED #community/PrismaService

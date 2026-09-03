@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/DeadlinePill.tsx"
 type: "code"
-community: "PrincipalDetailPage.tsx"
+community: "DateTime.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalDetailPagetsx
+  - community/DateTimetsx
 ---
 
 # DeadlinePill.tsx
 
 ## Connections
+- [[AssessmentRow.tsx]] - `imports_from` [EXTRACTED]
 - [[BADGE_VARIANT]] - `contains` [EXTRACTED]
 - [[Badge()]] - `imports` [EXTRACTED]
 - [[BadgeProps]] - `imports` [EXTRACTED]
@@ -28,4 +29,4 @@ tags:
 - [[useCountdown.ts]] - `imports_from` [EXTRACTED]
 - [[utils.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/DateTimetsx

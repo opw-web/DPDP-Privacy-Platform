@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/src/modules/board/voluntary-undertakings.service.ts"
 type: "code"
 community: "CreateVoluntaryUndertakingDto"
-location: "L38"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,13 +12,13 @@ tags:
 # VoluntaryUndertakingsService
 
 ## Connections
-- [[dot-constructor()_107]] - `references` [EXTRACTED]
-- [[dot-constructor()_108]] - `method` [EXTRACTED]
-- [[dot-create()_13]] - `method` [EXTRACTED]
-- [[dot-getById()_3]] - `method` [EXTRACTED]
-- [[dot-list()_26]] - `method` [EXTRACTED]
+- [[dot-constructor()_83]] - `references` [EXTRACTED]
+- [[dot-constructor()_84]] - `method` [EXTRACTED]
+- [[dot-create()_16]] - `method` [EXTRACTED]
+- [[dot-getById()_5]] - `method` [EXTRACTED]
+- [[dot-list()_23]] - `method` [EXTRACTED]
 - [[dot-update()_12]] - `method` [EXTRACTED]
-- [[Injectable_50]] - `references` [EXTRACTED]
+- [[Injectable_54]] - `references` [EXTRACTED]
 - [[board.module.ts]] - `imports` [EXTRACTED]
 - [[voluntary-undertakings.controller.ts]] - `imports` [EXTRACTED]
 - [[voluntary-undertakings.service.ts]] - `contains` [EXTRACTED]

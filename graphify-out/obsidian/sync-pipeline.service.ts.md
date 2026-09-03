@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sync/sync-pipeline.service.ts"
 type: "code"
-community: "ScopedTransactionClient"
+community: "sync-pipeline.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScopedTransactionClient
+  - community/sync-pipelineservicets
 ---
 
 # sync-pipeline.service.ts
@@ -43,11 +43,13 @@ tags:
 - [[identifier-ownership-lock.ts]] - `imports_from` [EXTRACTED]
 - [[linking.service.ts]] - `imports_from` [EXTRACTED]
 - [[lockIdentifiersForOwnership()]] - `imports` [EXTRACTED]
+- [[lockNameKeyForOwnership()]] - `imports` [EXTRACTED]
 - [[matching.service.ts]] - `imports_from` [EXTRACTED]
 - [[normalization.service.ts]] - `imports_from` [EXTRACTED]
 - [[payload-hash.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[scoped-transaction-client.ts]] - `imports_from` [EXTRACTED]
+- [[step6-conflict-acceptance.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[sync-error.ts]] - `imports_from` [EXTRACTED]
 - [[sync-lock.service.ts]] - `imports_from` [EXTRACTED]
 - [[sync.e2e-spec.ts]] - `imports_from` [EXTRACTED]
@@ -56,4 +58,4 @@ tags:
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 - [[zeroCounts()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient
+#graphify/code #graphify/EXTRACTED #community/sync-pipelineservicets

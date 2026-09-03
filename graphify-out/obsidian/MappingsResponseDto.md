@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/dto/mappings-response.dto.ts"
 type: "code"
-community: "mappings.controller.ts"
-location: "L37"
+community: "mapping-warning-response.dto.ts"
+location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingscontrollerts
+  - community/mapping-warning-responsedtots
 ---
 
 # MappingsResponseDto
 
 ## Connections
-- [[ApiProperty_44]] - `references` [EXTRACTED]
+- [[ApiProperty_51]] - `references` [EXTRACTED]
 - [[MappingWarningResponseDto]] - `references` [EXTRACTED]
 - [[mappings-response.dto.ts]] - `contains` [EXTRACTED]
 - [[mappings.controller.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingscontrollerts
+#graphify/code #graphify/EXTRACTED #community/mapping-warning-responsedtots

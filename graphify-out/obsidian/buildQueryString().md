@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/AuditPage.tsx"
 type: "code"
-community: "SecurityMeasuresTab.tsx"
-location: "L92"
+community: "AuditPage"
+location: "L133"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresTabtsx
+  - community/AuditPage
 ---
 
 # buildQueryString()
@@ -15,4 +15,4 @@ tags:
 - [[AuditPage()]] - `calls` [EXTRACTED]
 - [[AuditPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx
+#graphify/code #graphify/EXTRACTED #community/AuditPage

@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/security-measures.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/compliance/compliance.controller.ts"
 type: "code"
-community: "security-measures.service.ts"
-location: "L17"
+community: "CreateComplianceRuleDto"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/security-measuresservicets
+  - community/CreateComplianceRuleDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[SecurityMeasuresController]] - `method` [EXTRACTED]
-- [[SecurityMeasuresService]] - `references` [EXTRACTED]
+- [[ComplianceController]] - `method` [EXTRACTED]
+- [[ComplianceService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/security-measuresservicets
+#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto

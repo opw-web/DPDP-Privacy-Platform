@@ -18,6 +18,7 @@ tags:
 - [[health.controller.ts]] - `imports_from` [EXTRACTED]
 - [[jwt-employee.guard.ts]] - `imports_from` [EXTRACTED]
 - [[me-consents.controller.ts]] - `imports_from` [EXTRACTED]
+- [[me-rights.controller.ts]] - `imports_from` [EXTRACTED]
 - [[me.controller.ts]] - `imports_from` [EXTRACTED]
 - [[notifications.controller.ts]] - `imports_from` [EXTRACTED]
 - [[principal-auth.controller.ts]] - `imports_from` [EXTRACTED]

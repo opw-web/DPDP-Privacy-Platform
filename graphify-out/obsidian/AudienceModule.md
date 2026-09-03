@@ -12,7 +12,7 @@ tags:
 # AudienceModule
 
 ## Connections
-- [[Module_19]] - `references` [EXTRACTED]
+- [[Module_18]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[audience.module.ts]] - `contains` [EXTRACTED]
 

@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "legal-hold.service.ts"
+community: "requests.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/legal-holdservicets
+  - community/requestscontrollerts
 ---
 
 # IsString
 
 ## Connections
-- [[CreateLegalHoldDto]] - `references` [EXTRACTED]
-- [[LegalHoldScopeDto]] - `references` [EXTRACTED]
+- [[AddNoteDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/legal-holdservicets
+#graphify/code #graphify/EXTRACTED #community/requestscontrollerts

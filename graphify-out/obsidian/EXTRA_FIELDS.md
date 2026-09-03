@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/src/modules/identity/assembly.service.ts"
 type: "code"
 community: "assembly.service.ts"
-location: "L72"
+location: "L79"
 tags:
   - graphify/code
   - graphify/EXTRACTED

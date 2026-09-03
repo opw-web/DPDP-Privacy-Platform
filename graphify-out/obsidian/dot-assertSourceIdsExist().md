@@ -12,8 +12,8 @@ tags:
 # .assertSourceIdsExist()
 
 ## Connections
-- [[dot-create()_23]] - `calls` [EXTRACTED]
-- [[dot-update()_20]] - `calls` [EXTRACTED]
+- [[dot-create()_36]] - `calls` [EXTRACTED]
+- [[dot-update()_26]] - `calls` [EXTRACTED]
 - [[SharingService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/SharingService

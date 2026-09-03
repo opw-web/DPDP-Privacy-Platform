@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/ui/badge.tsx"
 type: "code"
-community: "PrincipalDetailPage.tsx"
+community: "card.tsx"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalDetailPagetsx
+  - community/cardtsx
 ---
 
 # badgeVariants
@@ -15,4 +15,4 @@ tags:
 - [[Badge()]] - `calls` [EXTRACTED]
 - [[badge.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/cardtsx

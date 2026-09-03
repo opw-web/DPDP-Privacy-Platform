@@ -1,22 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/evidence-pack.service.ts"
+source_file: "dpdp-platform/backend/src/modules/evidence/evidence-pack.controller.ts"
 type: "code"
-community: "PrismaService"
-location: "L41"
+community: "EvidencePackController"
+location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/EvidencePackController
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditExportService]] - `references` [EXTRACTED]
-- [[AuditReadService]] - `references` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
-- [[EvidencePackService]] - `method` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
-- [[RopaExportService]] - `references` [EXTRACTED]
+- [[EvidencePackController]] - `method` [EXTRACTED]
+- [[EvidencePackService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/EvidencePackController

@@ -1,21 +1,20 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/form-controls.tsx"
 type: "code"
-community: "cn"
+community: "SecurityMeasuresTab.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/SecurityMeasuresTabtsx
 ---
 
 # form-controls.tsx
 
 ## Connections
 - [[AuditPage.tsx]] - `imports_from` [EXTRACTED]
-- [[Checkbox]] - `imports` [EXTRACTED]
-- [[CheckboxOption]] - `contains` [EXTRACTED]
-- [[CheckboxOptionProps]] - `contains` [EXTRACTED]
+- [[CheckboxOption]] - `imports` [EXTRACTED]
+- [[CheckboxOption_1]] - `contains` [EXTRACTED]
 - [[FieldShell()]] - `contains` [EXTRACTED]
 - [[FieldShellProps]] - `contains` [EXTRACTED]
 - [[Label]] - `imports` [EXTRACTED]
@@ -34,9 +33,9 @@ tags:
 - [[Textarea]] - `imports` [EXTRACTED]
 - [[TextareaControl]] - `contains` [EXTRACTED]
 - [[TransfersTab.tsx]] - `imports_from` [EXTRACTED]
-- [[checkbox.tsx]] - `imports_from` [EXTRACTED]
+- [[checkbox.tsx]] - `re_exports` [EXTRACTED]
 - [[label.tsx]] - `imports_from` [EXTRACTED]
 - [[select.tsx]] - `re_exports` [EXTRACTED]
 - [[textarea.tsx]] - `re_exports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx

@@ -12,11 +12,11 @@ tags:
 # FlagFrivolousDto
 
 ## Connections
-- [[dot-flagFrivolous()]] - `references` [EXTRACTED]
 - [[dot-flagFrivolous()_1]] - `references` [EXTRACTED]
-- [[ApiProperty_2]] - `references` [EXTRACTED]
-- [[IsString_3]] - `references` [EXTRACTED]
-- [[MinLength_1]] - `references` [EXTRACTED]
+- [[dot-flagFrivolous()]] - `references` [EXTRACTED]
+- [[ApiProperty_6]] - `references` [EXTRACTED]
+- [[IsString_8]] - `references` [EXTRACTED]
+- [[MinLength_5]] - `references` [EXTRACTED]
 - [[flag-frivolous.dto.ts]] - `contains` [EXTRACTED]
 - [[requests.controller.ts]] - `imports` [EXTRACTED]
 - [[requests.service.ts]] - `imports` [EXTRACTED]

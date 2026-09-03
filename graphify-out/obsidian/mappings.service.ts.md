@@ -12,6 +12,7 @@ tags:
 # mappings.service.ts
 
 ## Connections
+- [[AssemblyService]] - `imports` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[DataSourcesService]] - `imports` [EXTRACTED]
 - [[MappingWarning_1]] - `re_exports` [EXTRACTED]
@@ -23,12 +24,13 @@ tags:
 - [[ReplaceMappingsDto]] - `imports` [EXTRACTED]
 - [[ReplaceMappingsResult_1]] - `contains` [EXTRACTED]
 - [[SOURCE_FIELD_MAPPING_PUBLIC_SELECT]] - `contains` [EXTRACTED]
+- [[assembly.service.ts]] - `imports_from` [EXTRACTED]
 - [[audit.service.ts]] - `imports_from` [EXTRACTED]
 - [[computeMappingWarnings()]] - `imports` [EXTRACTED]
 - [[data-sources.module.ts]] - `imports_from` [EXTRACTED]
 - [[data-sources.service.ts]] - `imports_from` [EXTRACTED]
 - [[duplicateSourceFieldMessage()]] - `contains` [EXTRACTED]
-- [[isUniqueConstraintViolation()_3]] - `contains` [EXTRACTED]
+- [[isUniqueConstraintViolation()_1]] - `contains` [EXTRACTED]
 - [[mapping-warnings.ts]] - `re_exports` [EXTRACTED]
 - [[mappings.controller.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]

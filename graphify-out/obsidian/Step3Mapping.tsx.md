@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/wizard/Step3Mapping.tsx"
 type: "code"
-community: "DataSourceDetailPage.tsx"
+community: "data-sources-api.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourceDetailPagetsx
+  - community/data-sources-apits
 ---
 
 # Step3Mapping.tsx
@@ -17,10 +17,13 @@ tags:
 - [[CANONICAL_FIELD_VALUES]] - `imports` [EXTRACTED]
 - [[CanonicalField]] - `imports` [EXTRACTED]
 - [[CheckboxOption]] - `imports` [EXTRACTED]
+- [[CheckboxOption_1]] - `imports` [EXTRACTED]
 - [[DATA_CATEGORY_VALUES]] - `imports` [EXTRACTED]
 - [[DataCategory]] - `imports` [EXTRACTED]
 - [[DataSourceDetailPage.tsx]] - `imports_from` [EXTRACTED]
 - [[DataSourceNewPage.tsx]] - `imports_from` [EXTRACTED]
+- [[MAPPING_COMPARISON_POLICY_VALUES]] - `imports` [EXTRACTED]
+- [[MappingComparisonPolicy]] - `imports` [EXTRACTED]
 - [[MappingFormValues]] - `contains` [EXTRACTED]
 - [[MappingWarning]] - `imports` [EXTRACTED]
 - [[PublicDataSourceField]] - `imports` [EXTRACTED]
@@ -43,4 +46,4 @@ tags:
 - [[rowSchema]] - `contains` [EXTRACTED]
 - [[rowsFor()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourceDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/data-sources-apits

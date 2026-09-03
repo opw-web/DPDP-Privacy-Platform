@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
 type: "code"
-community: "compliance.service.ts"
-location: "L169"
+community: "CreateComplianceRuleDto"
+location: "L166"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/complianceservicets
+  - community/CreateComplianceRuleDto
 ---
 
 # worstCaseDeadlineDays()
@@ -15,4 +15,4 @@ tags:
 - [[dot-validateGrievanceCeiling()]] - `calls` [EXTRACTED]
 - [[compliance.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/complianceservicets
+#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto

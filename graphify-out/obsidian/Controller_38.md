@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RetentionService"
+community: "recipients.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionService
+  - community/recipientsservicets
 ---
 
 # Controller
 
 ## Connections
-- [[RetentionController_1]] - `references` [EXTRACTED]
+- [[RecipientsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionService
+#graphify/code #graphify/EXTRACTED #community/recipientsservicets

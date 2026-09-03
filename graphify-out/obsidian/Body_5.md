@@ -1,19 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "SdfController"
+community: "TransfersService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SdfController
+  - community/TransfersService
 ---
 
 # Body
 
 ## Connections
-- [[dot-completeAssessment()]] - `references` [EXTRACTED]
-- [[dot-createAlgorithm()]] - `references` [EXTRACTED]
-- [[dot-createAssessment()]] - `references` [EXTRACTED]
-- [[dot-updateAlgorithm()]] - `references` [EXTRACTED]
+- [[dot-create()_5]] - `references` [EXTRACTED]
+- [[dot-update()_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SdfController
+#graphify/code #graphify/EXTRACTED #community/TransfersService

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/sdf-cycle-scan.queue.ts"
 type: "code"
-community: "sdf.module.ts"
+community: "mvp2-schedules.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdfmodulets
+  - community/mvp2-schedulests
 ---
 
 # sdf-cycle-scan.queue.ts
@@ -21,7 +21,9 @@ tags:
 - [[SdfCycleScanJobData]] - `contains` [EXTRACTED]
 - [[SdfCycleScanQueueService]] - `contains` [EXTRACTED]
 - [[boot-registration.registry.ts]] - `imports_from` [EXTRACTED]
+- [[mvp2-schedules.ts]] - `imports_from` [EXTRACTED]
+- [[queues.module.ts]] - `imports_from` [EXTRACTED]
 - [[sdf-cycle-scan.processor.ts]] - `imports_from` [EXTRACTED]
 - [[sdf.module.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdfmodulets
+#graphify/code #graphify/EXTRACTED #community/mvp2-schedulests

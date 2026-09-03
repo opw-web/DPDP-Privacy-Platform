@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.tsx"
 type: "code"
-community: "api-client.ts"
+community: "SettingsPage.tsx"
 location: "L428"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/SettingsPagetsx
 ---
 
 # SettingsPage()
@@ -16,4 +16,4 @@ tags:
 - [[SettingsPage.tsx]] - `contains` [EXTRACTED]
 - [[router.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/SettingsPagetsx

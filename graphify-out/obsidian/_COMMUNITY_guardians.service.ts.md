@@ -1,63 +1,43 @@
 ---
 type: community
-members: 50
+members: 30
 ---
 
 # guardians.service.ts
 
-**Members:** 50 nodes
+**Members:** 30 nodes
 
 ## Members
+- [[dot-assertGuardianConsentEligible()]] - code - dpdp-platform/backend/src/modules/children/guardians.service.ts
 - [[dot-assertPwdAppointmentValid()]] - code - dpdp-platform/backend/src/modules/children/guardians.service.ts
-- [[dot-constructor()_105]] - code - dpdp-platform/backend/src/modules/children/guardians.controller.ts
-- [[dot-create()_10]] - code - dpdp-platform/backend/src/modules/children/guardians.controller.ts
-- [[dot-create()_11]] - code - dpdp-platform/backend/src/modules/children/guardians.service.ts
-- [[dot-list()_23]] - code - dpdp-platform/backend/src/modules/children/guardians.service.ts
+- [[dot-constructor()_17]] - code - dpdp-platform/backend/src/modules/children/guardians.service.ts
+- [[dot-create()_1]] - code - dpdp-platform/backend/src/modules/children/guardians.service.ts
+- [[dot-list()_1]] - code - dpdp-platform/backend/src/modules/children/guardians.service.ts
+- [[dot-rescrubFieldSample()]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts
 - [[dot-toResponse()]] - code - dpdp-platform/backend/src/modules/children/guardians.service.ts
-- [[dot-verify()]] - code - dpdp-platform/backend/src/modules/children/guardians.controller.ts
-- [[dot-verify()_1]] - code - dpdp-platform/backend/src/modules/children/guardians.service.ts
 - [[APPOINTING_AUTHORITIES]] - code - dpdp-platform/backend/src/modules/children/appointing-authority.ts
-- [[ApiProperty_21]] - code
-- [[ApiProperty_22]] - code
-- [[ApiPropertyOptional_22]] - code
-- [[ApiPropertyOptional_23]] - code
-- [[ApiPropertyOptional_24]] - code
-- [[ApiTags_22]] - code
+- [[ApiProperty_2]] - code
+- [[ApiPropertyOptional_4]] - code
 - [[AppointingAuthority]] - code - dpdp-platform/backend/src/modules/children/appointing-authority.ts
-- [[Body_11]] - code
-- [[CHILD_LIKE_AGE_STATUSES_1]] - code - dpdp-platform/backend/src/modules/children/guardians.service.ts
-- [[Controller_22]] - code
+- [[CHILD_LIKE_AGE_STATUSES]] - code - dpdp-platform/backend/src/modules/children/guardians.service.ts
 - [[CreateGuardianDto]] - code - dpdp-platform/backend/src/modules/children/dto/create-guardian.dto.ts
 - [[GUARDIAN_PUBLIC_SELECT]] - code - dpdp-platform/backend/src/modules/children/guardians.service.ts
 - [[GuardianRow]] - code - dpdp-platform/backend/src/modules/children/guardians.service.ts
-- [[GuardiansController]] - code - dpdp-platform/backend/src/modules/children/guardians.controller.ts
 - [[GuardiansService]] - code - dpdp-platform/backend/src/modules/children/guardians.service.ts
-- [[Injectable_48]] - code
-- [[IsEmail_3]] - code
-- [[IsEnum_10]] - code
-- [[IsEnum_11]] - code
-- [[IsIn_9]] - code
-- [[IsOptional_26]] - code
-- [[IsOptional_27]] - code
-- [[IsOptional_28]] - code
-- [[IsString_30]] - code
-- [[IsString_31]] - code
-- [[IsString_32]] - code
-- [[ListGuardiansDto]] - code - dpdp-platform/backend/src/modules/children/dto/list-guardians.dto.ts
-- [[MinLength_22]] - code
-- [[MinLength_23]] - code
-- [[Param_14]] - code
-- [[Post_13]] - code
+- [[Injectable_9]] - code
+- [[IsEmail_1]] - code
+- [[IsEnum_3]] - code
+- [[IsIn_1]] - code
+- [[IsOptional_4]] - code
+- [[IsString_4]] - code
+- [[MinLength_1]] - code
 - [[PublicGuardian]] - code - dpdp-platform/backend/src/modules/children/guardians.service.ts
-- [[VerifyGuardianDto]] - code - dpdp-platform/backend/src/modules/children/dto/verify-guardian.dto.ts
+- [[TenantScopedPrismaClient]] - code - dpdp-platform/backend/src/common/prisma/prisma.service.ts
 - [[appointing-authority.ts]] - code - dpdp-platform/backend/src/modules/children/appointing-authority.ts
 - [[create-guardian.dto.ts]] - code - dpdp-platform/backend/src/modules/children/dto/create-guardian.dto.ts
-- [[guardians.controller.ts]] - code - dpdp-platform/backend/src/modules/children/guardians.controller.ts
 - [[guardians.service.ts]] - code - dpdp-platform/backend/src/modules/children/guardians.service.ts
 - [[isPwd()]] - code - dpdp-platform/backend/src/modules/children/guardians.service.ts
-- [[list-guardians.dto.ts]] - code - dpdp-platform/backend/src/modules/children/dto/list-guardians.dto.ts
 - [[toPublicGuardian()]] - code - dpdp-platform/backend/src/modules/children/guardians.service.ts
-- [[verify-guardian.dto.ts]] - code - dpdp-platform/backend/src/modules/children/dto/verify-guardian.dto.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -67,21 +47,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_RequirePermission]]
-- 9 edges to [[_COMMUNITY_AccessTokenPayload]]
-- 4 edges to [[_COMMUNITY_PrismaService]]
-- 4 edges to [[_COMMUNITY_app.module.ts]]
-- 4 edges to [[_COMMUNITY_ScopedTransactionClient]]
-- 3 edges to [[_COMMUNITY_audit.service.ts]]
-- 2 edges to [[_COMMUNITY_MaskingService]]
-- 2 edges to [[_COMMUNITY_retention.e2e-spec.ts]]
-- 2 edges to [[_COMMUNITY_dot-record]]
-- 1 edge to [[_COMMUNITY_masking.service.ts]]
-- 1 edge to [[_COMMUNITY_prisma.service.ts]]
+- 10 edges to [[_COMMUNITY_VerifyGuardianDto]]
+- 7 edges to [[_COMMUNITY_prisma.service.ts]]
+- 6 edges to [[_COMMUNITY_RequirePermission]]
+- 4 edges to [[_COMMUNITY_MaskingService]]
+- 3 edges to [[_COMMUNITY_PrismaService]]
+- 3 edges to [[_COMMUNITY_ScopedTransactionClient]]
+- 2 edges to [[_COMMUNITY_AuditService]]
+- 2 edges to [[_COMMUNITY_app.module.ts]]
+- 1 edge to [[_COMMUNITY_data-sources.service.ts]]
+- 1 edge to [[_COMMUNITY_erasure-task.service.ts]]
+- 1 edge to [[_COMMUNITY_DataSourcesService]]
+- 1 edge to [[_COMMUNITY_ConsentsService]]
+- 1 edge to [[_COMMUNITY_dot-record]]
+- 1 edge to [[_COMMUNITY_dot-replace]]
 
 ## Top bridge nodes
-- [[guardians.service.ts]] - degree 30, connects to 9 communities
-- [[GuardiansService]] - degree 15, connects to 5 communities
-- [[guardians.controller.ts]] - degree 18, connects to 3 communities
-- [[dot-verify()]] - degree 10, connects to 2 communities
-- [[GuardiansController]] - degree 8, connects to 2 communities
+- [[guardians.service.ts]] - degree 30, connects to 8 communities
+- [[GuardiansService]] - degree 15, connects to 6 communities
+- [[dot-rescrubFieldSample()]] - degree 4, connects to 3 communities
+- [[CreateGuardianDto]] - degree 13, connects to 2 communities
+- [[TenantScopedPrismaClient]] - degree 6, connects to 2 communities

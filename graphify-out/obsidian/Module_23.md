@@ -11,6 +11,6 @@ tags:
 # Module
 
 ## Connections
-- [[NotificationsModule]] - `references` [EXTRACTED]
+- [[PrincipalPortalModule]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/appmodulets

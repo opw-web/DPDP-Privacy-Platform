@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateAlgorithmEntryDto"
+community: "mappings.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateAlgorithmEntryDto
+  - community/mappingscontrollerts
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateAlgorithmEntryDto]] - `references` [EXTRACTED]
+- [[AttachPurposesDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto
+#graphify/code #graphify/EXTRACTED #community/mappingscontrollerts

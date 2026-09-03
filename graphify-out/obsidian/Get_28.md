@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ConsentsService"
+community: "age-status.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ConsentsService
+  - community/age-statusservicets
 ---
 
 # Get
 
 ## Connections
-- [[dot-getConsentStats()]] - `references` [EXTRACTED]
-- [[dot-listForPrincipal()_1]] - `references` [EXTRACTED]
+- [[dot-unknownCount()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ConsentsService
+#graphify/code #graphify/EXTRACTED #community/age-statusservicets

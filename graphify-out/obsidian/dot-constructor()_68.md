@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/source-purposes.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/sdf-gaps.service.ts"
 type: "code"
-community: "PrismaService"
-location: "L36"
+community: "AlgorithmRegisterService"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/AlgorithmRegisterService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
-- [[SourcePurposesService]] - `method` [EXTRACTED]
+- [[ComplianceService]] - `references` [EXTRACTED]
+- [[SdfGapsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterService

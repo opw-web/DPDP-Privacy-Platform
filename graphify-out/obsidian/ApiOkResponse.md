@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "NotificationsService"
+community: "Public"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/Public
 ---
 
 # ApiOkResponse
 
 ## Connections
-- [[dot-list()_1]] - `references` [EXTRACTED]
-- [[dot-markAllRead()]] - `references` [EXTRACTED]
-- [[dot-markRead()]] - `references` [EXTRACTED]
+- [[dot-privacyContact()]] - `references` [EXTRACTED]
+- [[dot-profile()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/Public

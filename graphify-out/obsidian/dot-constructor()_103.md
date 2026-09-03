@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/requests/requests.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync-error.ts"
 type: "code"
-community: "RequestsController"
-location: "L37"
+community: "sync-pipeline.service.ts"
+location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestsController
+  - community/sync-pipelineservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[RequestsController]] - `method` [EXTRACTED]
-- [[RequestsService]] - `references` [EXTRACTED]
+- [[SyncLockUnavailableError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestsController
+#graphify/code #graphify/EXTRACTED #community/sync-pipelineservicets

@@ -1,0 +1,210 @@
+[
+  {
+    "kind": "request",
+    "requestId": "0070F198FDB3326FAD2C20414DC6A7FE",
+    "method": "OPTIONS",
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=6eb87b36-2184-4ae9-b132-80d9931d396d&limit=1"
+  },
+  {
+    "kind": "request",
+    "requestId": "E3258AE9B83E1613B7AB85E694D37A7C",
+    "method": "OPTIONS",
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=a8bd9ca8-6e44-48d3-ae73-50e906e45a9b&limit=1"
+  },
+  {
+    "kind": "request",
+    "requestId": "1404616.1974",
+    "method": "GET",
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=6eb87b36-2184-4ae9-b132-80d9931d396d&limit=1"
+  },
+  {
+    "kind": "request",
+    "requestId": "1404616.1975",
+    "method": "GET",
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=a8bd9ca8-6e44-48d3-ae73-50e906e45a9b&limit=1"
+  },
+  {
+    "kind": "request",
+    "requestId": "1404616.1976",
+    "method": "GET",
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=d14fedb7-73bb-486f-882b-9c9dc89df173&limit=1"
+  },
+  {
+    "kind": "request",
+    "requestId": "1404616.1977",
+    "method": "GET",
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=f9d2374f-9dd5-40be-8c0a-d06ed8d6938f&limit=1"
+  },
+  {
+    "kind": "response",
+    "requestId": "0070F198FDB3326FAD2C20414DC6A7FE",
+    "status": 204,
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=6eb87b36-2184-4ae9-b132-80d9931d396d&limit=1",
+    "body": null
+  },
+  {
+    "kind": "request",
+    "requestId": "C0EEEBAF3F1CC6BD607E2B354A34922F",
+    "method": "OPTIONS",
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=d14fedb7-73bb-486f-882b-9c9dc89df173&limit=1"
+  },
+  {
+    "kind": "request",
+    "requestId": "5646676F22675C80AF2164E5F4432855",
+    "method": "OPTIONS",
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=f9d2374f-9dd5-40be-8c0a-d06ed8d6938f&limit=1"
+  },
+  {
+    "kind": "response",
+    "requestId": "E3258AE9B83E1613B7AB85E694D37A7C",
+    "status": 204,
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=a8bd9ca8-6e44-48d3-ae73-50e906e45a9b&limit=1",
+    "body": null
+  },
+  {
+    "kind": "response",
+    "requestId": "C0EEEBAF3F1CC6BD607E2B354A34922F",
+    "status": 204,
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=d14fedb7-73bb-486f-882b-9c9dc89df173&limit=1",
+    "body": null
+  },
+  {
+    "kind": "response",
+    "requestId": "5646676F22675C80AF2164E5F4432855",
+    "status": 204,
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=f9d2374f-9dd5-40be-8c0a-d06ed8d6938f&limit=1",
+    "body": null
+  },
+  {
+    "kind": "response",
+    "requestId": "1404616.1975",
+    "status": 200,
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=a8bd9ca8-6e44-48d3-ae73-50e906e45a9b&limit=1",
+    "body": "[]"
+  },
+  {
+    "kind": "response",
+    "requestId": "1404616.1976",
+    "status": 200,
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=d14fedb7-73bb-486f-882b-9c9dc89df173&limit=1",
+    "body": "[]"
+  },
+  {
+    "kind": "response",
+    "requestId": "1404616.1974",
+    "status": 200,
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=6eb87b36-2184-4ae9-b132-80d9931d396d&limit=1",
+    "body": "[{\"id\":\"05d6cb44-faa9-43b4-9736-494c12f887fc\",\"organizationId\":\"3cbf6d8c-29e5-4912-bf61-30e3462acc87\",\"dataSourceId\":\"6eb87b36-2184-4ae9-b132-80d9931d396d\",\"triggeredBy\":\"62a54486-a803-43a3-9e20-0fd10257f989\",\"startedAt\":\"2026-09-03T02:49:23.927Z\",\"finishedAt\":\"2026-09-03T02:49:47.631Z\",\"status\":\"SUCCESS\",\"recordsRead\":114,\"recordsCreated\":114,\"recordsUpdated\":0,\"recordsSkipped\":0,\"recordsFailed\":0,\"principalsCreated\":114,\"principalsLinked\":0,\"candidatesRaised\":0,\"errorLog\":[]}]"
+  },
+  {
+    "kind": "response",
+    "requestId": "1404616.1977",
+    "status": 200,
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=f9d2374f-9dd5-40be-8c0a-d06ed8d6938f&limit=1",
+    "body": "[]"
+  },
+  {
+    "kind": "request",
+    "requestId": "1404616.1978",
+    "method": "POST",
+    "url": "http://127.0.0.1:4001/api/data-sources/a8bd9ca8-6e44-48d3-ae73-50e906e45a9b/sync"
+  },
+  {
+    "kind": "request",
+    "requestId": "EACF3965E4D7B010E3483510D301C921",
+    "method": "OPTIONS",
+    "url": "http://127.0.0.1:4001/api/data-sources/a8bd9ca8-6e44-48d3-ae73-50e906e45a9b/sync"
+  },
+  {
+    "kind": "response",
+    "requestId": "EACF3965E4D7B010E3483510D301C921",
+    "status": 204,
+    "url": "http://127.0.0.1:4001/api/data-sources/a8bd9ca8-6e44-48d3-ae73-50e906e45a9b/sync",
+    "body": null
+  },
+  {
+    "kind": "response",
+    "requestId": "1404616.1978",
+    "status": 202,
+    "url": "http://127.0.0.1:4001/api/data-sources/a8bd9ca8-6e44-48d3-ae73-50e906e45a9b/sync",
+    "body": "{\"queued\":true,\"dataSourceId\":\"a8bd9ca8-6e44-48d3-ae73-50e906e45a9b\"}"
+  },
+  {
+    "kind": "request",
+    "requestId": "1404616.1979",
+    "method": "GET",
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=6eb87b36-2184-4ae9-b132-80d9931d396d&limit=1"
+  },
+  {
+    "kind": "request",
+    "requestId": "1404616.1980",
+    "method": "GET",
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=a8bd9ca8-6e44-48d3-ae73-50e906e45a9b&limit=1"
+  },
+  {
+    "kind": "request",
+    "requestId": "1404616.1981",
+    "method": "GET",
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=d14fedb7-73bb-486f-882b-9c9dc89df173&limit=1"
+  },
+  {
+    "kind": "request",
+    "requestId": "1404616.1982",
+    "method": "GET",
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=f9d2374f-9dd5-40be-8c0a-d06ed8d6938f&limit=1"
+  },
+  {
+    "kind": "response",
+    "requestId": "1404616.1979",
+    "status": 200,
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=6eb87b36-2184-4ae9-b132-80d9931d396d&limit=1",
+    "body": "[{\"id\":\"05d6cb44-faa9-43b4-9736-494c12f887fc\",\"organizationId\":\"3cbf6d8c-29e5-4912-bf61-30e3462acc87\",\"dataSourceId\":\"6eb87b36-2184-4ae9-b132-80d9931d396d\",\"triggeredBy\":\"62a54486-a803-43a3-9e20-0fd10257f989\",\"startedAt\":\"2026-09-03T02:49:23.927Z\",\"finishedAt\":\"2026-09-03T02:49:47.631Z\",\"status\":\"SUCCESS\",\"recordsRead\":114,\"recordsCreated\":114,\"recordsUpdated\":0,\"recordsSkipped\":0,\"recordsFailed\":0,\"principalsCreated\":114,\"principalsLinked\":0,\"candidatesRaised\":0,\"errorLog\":[]}]"
+  },
+  {
+    "kind": "response",
+    "requestId": "1404616.1980",
+    "status": 200,
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=a8bd9ca8-6e44-48d3-ae73-50e906e45a9b&limit=1",
+    "body": "[]"
+  },
+  {
+    "kind": "response",
+    "requestId": "1404616.1981",
+    "status": 200,
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=d14fedb7-73bb-486f-882b-9c9dc89df173&limit=1",
+    "body": "[]"
+  },
+  {
+    "kind": "response",
+    "requestId": "1404616.1982",
+    "status": 200,
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=f9d2374f-9dd5-40be-8c0a-d06ed8d6938f&limit=1",
+    "body": "[]"
+  },
+  {
+    "kind": "request",
+    "requestId": "AD96C914D58FC548D466B8DB40D195B7",
+    "method": "OPTIONS",
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=a8bd9ca8-6e44-48d3-ae73-50e906e45a9b&limit=50"
+  },
+  {
+    "kind": "request",
+    "requestId": "1404616.1984",
+    "method": "GET",
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=a8bd9ca8-6e44-48d3-ae73-50e906e45a9b&limit=50"
+  },
+  {
+    "kind": "response",
+    "requestId": "AD96C914D58FC548D466B8DB40D195B7",
+    "status": 204,
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=a8bd9ca8-6e44-48d3-ae73-50e906e45a9b&limit=50",
+    "body": null
+  },
+  {
+    "kind": "response",
+    "requestId": "1404616.1984",
+    "status": 200,
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=a8bd9ca8-6e44-48d3-ae73-50e906e45a9b&limit=50",
+    "body": "[{\"id\":\"33bcf757-ade0-4dd0-8e13-7d8217ccae81\",\"organizationId\":\"3cbf6d8c-29e5-4912-bf61-30e3462acc87\",\"dataSourceId\":\"a8bd9ca8-6e44-48d3-ae73-50e906e45a9b\",\"triggeredBy\":\"62a54486-a803-43a3-9e20-0fd10257f989\",\"startedAt\":\"2026-09-03T02:51:41.566Z\",\"finishedAt\":null,\"status\":\"RUNNING\",\"recordsRead\":0,\"recordsCreated\":0,\"recordsUpdated\":0,\"recordsSkipped\":0,\"recordsFailed\":0,\"principalsCreated\":0,\"principalsLinked\":0,\"candidatesRaised\":0,\"errorLog\":[]}]"
+  }
+]

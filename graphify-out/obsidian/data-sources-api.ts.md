@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts"
 type: "code"
-community: "DataSourceDetailPage.tsx"
+community: "data-sources-api.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourceDetailPagetsx
+  - community/data-sources-apits
 ---
 
 # data-sources-api.ts
@@ -17,6 +17,7 @@ tags:
 - [[ApiError]] - `imports` [EXTRACTED]
 - [[AttachedPurpose]] - `contains` [EXTRACTED]
 - [[AuthType]] - `contains` [EXTRACTED]
+- [[BreachWizardPage.tsx]] - `imports_from` [EXTRACTED]
 - [[CANONICAL_FIELD_VALUES]] - `contains` [EXTRACTED]
 - [[CanonicalField]] - `contains` [EXTRACTED]
 - [[DATA_CATEGORY_VALUES]] - `contains` [EXTRACTED]
@@ -26,6 +27,8 @@ tags:
 - [[DataSourcePurposesResult]] - `contains` [EXTRACTED]
 - [[DataSourceStatus]] - `contains` [EXTRACTED]
 - [[DataSourcesPage.tsx]] - `imports_from` [EXTRACTED]
+- [[MAPPING_COMPARISON_POLICY_VALUES]] - `contains` [EXTRACTED]
+- [[MappingComparisonPolicy]] - `contains` [EXTRACTED]
 - [[MappingWarning]] - `contains` [EXTRACTED]
 - [[MappingWarningPurposeSummary]] - `contains` [EXTRACTED]
 - [[MappingWarningType]] - `contains` [EXTRACTED]
@@ -56,4 +59,4 @@ tags:
 - [[purposesQueryKey()]] - `contains` [EXTRACTED]
 - [[refreshEmployeeTokenForPut()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourceDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/data-sources-apits

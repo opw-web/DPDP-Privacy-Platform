@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "mappings.controller.ts"
+community: "child-exemptions.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingscontrollerts
+  - community/child-exemptionsservicets
 ---
 
 # ApiProperty
 
 ## Connections
-- [[MappingWarningPurposeSummaryResponseDto]] - `references` [EXTRACTED]
-- [[MappingWarningResponseDto]] - `references` [EXTRACTED]
+- [[CreateExemptionClaimDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingscontrollerts
+#graphify/code #graphify/EXTRACTED #community/child-exemptionsservicets

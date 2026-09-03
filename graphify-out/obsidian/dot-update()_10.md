@@ -1,22 +1,28 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts"
+source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
 type: "code"
-community: "TemplatesService"
-location: "L207"
+community: ".record"
+location: "L371"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/record
 ---
 
 # .update()
 
 ## Connections
-- [[dot-extractAndValidateVariables()]] - `calls` [EXTRACTED]
+- [[dot-addAffected()]] - `calls` [EXTRACTED]
+- [[dot-completeObligation()]] - `calls` [EXTRACTED]
+- [[dot-public()]] - `calls` [EXTRACTED]
 - [[dot-record()]] - `calls` [INFERRED]
-- [[dot-update()_9]] - `calls` [INFERRED]
-- [[dot-validateRequiredSubsetOfReferenced()]] - `calls` [EXTRACTED]
-- [[TemplatesService]] - `method` [EXTRACTED]
-- [[UpdateTemplateDto]] - `references` [EXTRACTED]
+- [[dot-recordExtension()]] - `calls` [EXTRACTED]
+- [[dot-scanClock()]] - `calls` [EXTRACTED]
+- [[dot-update()_20]] - `calls` [INFERRED]
+- [[AccessTokenPayload]] - `references` [EXTRACTED]
+- [[BreachService]] - `method` [EXTRACTED]
+- [[PublicBreach]] - `references` [EXTRACTED]
+- [[UpdateBreachDto]] - `references` [EXTRACTED]
+- [[asDate()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/record

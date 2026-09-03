@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/linking.service.ts"
 type: "code"
-community: "rest-api.connector.ts"
-location: "L51"
+community: "ScopedTransactionClient"
+location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rest-apiconnectorts
+  - community/ScopedTransactionClient
 ---
 
 # .constructor()
 
 ## Connections
-- [[PageCapExceededError_1]] - `method` [EXTRACTED]
+- [[IdentifierOwnershipConflictError_1]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

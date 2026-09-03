@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateTransferDto"
+community: "principal-evidence.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTransferDto
+  - community/principal-evidenceservicets
 ---
 
 # Controller
 
 ## Connections
-- [[TransfersController]] - `references` [EXTRACTED]
+- [[PrincipalEvidenceController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTransferDto
+#graphify/code #graphify/EXTRACTED #community/principal-evidenceservicets

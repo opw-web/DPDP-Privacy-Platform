@@ -1,17 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/test-support/mock-http-server.ts"
+source_file: "dpdp-platform/backend/src/queues/audit-chain-verify.processor.ts"
 type: "code"
-community: "data-sources.e2e-spec.ts"
-location: "L26"
+community: "AuditChainService"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcese2e-spects
+  - community/AuditChainService
 ---
 
 # .constructor()
 
 ## Connections
-- [[MockHttpServer]] - `method` [EXTRACTED]
+- [[AuditChainService]] - `references` [EXTRACTED]
+- [[AuditChainVerifyProcessor]] - `method` [EXTRACTED]
+- [[NotificationsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcese2e-spects
+#graphify/code #graphify/EXTRACTED #community/AuditChainService

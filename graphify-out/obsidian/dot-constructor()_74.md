@@ -1,20 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/principal-evidence.service.ts"
+source_file: "dpdp-platform/backend/src/modules/audit/audit-read.controller.ts"
 type: "code"
-community: "PrismaService"
-location: "L129"
+community: "AuditReadController"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/AuditReadController
 ---
 
 # .constructor()
 
 ## Connections
-- [[AccessLogService]] - `references` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
-- [[PrincipalEvidenceService]] - `method` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
+- [[AuditReadController]] - `method` [EXTRACTED]
+- [[AuditReadService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/AuditReadController

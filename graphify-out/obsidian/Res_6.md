@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalAuthController"
+community: "BreachesController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalAuthController
+  - community/BreachesController
 ---
 
 # Res
 
 ## Connections
-- [[dot-login()_3]] - `references` [EXTRACTED]
-- [[dot-logout()_3]] - `references` [EXTRACTED]
-- [[dot-refresh()_3]] - `references` [EXTRACTED]
+- [[dot-boardDetailed()]] - `references` [EXTRACTED]
+- [[dot-boardInitial()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalAuthController
+#graphify/code #graphify/EXTRACTED #community/BreachesController

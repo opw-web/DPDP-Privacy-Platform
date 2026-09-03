@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdateRolePermissionsDto"
+community: "principal-evidence.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateRolePermissionsDto
+  - community/principal-evidenceservicets
 ---
 
 # Get
 
 ## Connections
-- [[dot-list()_44]] - `references` [EXTRACTED]
+- [[dot-evidence()]] - `references` [EXTRACTED]
+- [[dot-evidencePdf()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto
+#graphify/code #graphify/EXTRACTED #community/principal-evidenceservicets

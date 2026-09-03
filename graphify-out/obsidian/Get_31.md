@@ -1,19 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "notices.service.ts"
+community: "RetentionController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/noticesservicets
+  - community/RetentionController
 ---
 
 # Get
 
 ## Connections
-- [[dot-get()_18]] - `references` [EXTRACTED]
-- [[dot-list()_38]] - `references` [EXTRACTED]
-- [[dot-listEligibleFields()]] - `references` [EXTRACTED]
-- [[dot-preview()_4]] - `references` [EXTRACTED]
+- [[dot-listLegalHolds()]] - `references` [EXTRACTED]
+- [[dot-listTasks()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/noticesservicets
+#graphify/code #graphify/EXTRACTED #community/RetentionController

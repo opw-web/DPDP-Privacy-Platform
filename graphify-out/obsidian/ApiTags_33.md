@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "retention/retention.controller.ts"
+community: "BreachesController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retention/retentioncontrollerts
+  - community/BreachesController
 ---
 
 # ApiTags
 
 ## Connections
-- [[RetentionController]] - `references` [EXTRACTED]
+- [[BreachesController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retention/retentioncontrollerts
+#graphify/code #graphify/EXTRACTED #community/BreachesController

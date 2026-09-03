@@ -19,7 +19,7 @@ tags:
 - [[isolatedModules]] - `contains` [EXTRACTED]
 - [[jsx]] - `contains` [EXTRACTED]
 - [[lib_1]] - `contains` [EXTRACTED]
-- [[module_40]] - `contains` [EXTRACTED]
+- [[module_41]] - `contains` [EXTRACTED]
 - [[moduleResolution_2]] - `contains` [EXTRACTED]
 - [[noEmit_1]] - `contains` [EXTRACTED]
 - [[noFallthroughCasesInSwitch_1]] - `contains` [EXTRACTED]
@@ -31,7 +31,7 @@ tags:
 - [[skipLibCheck_3]] - `contains` [EXTRACTED]
 - [[strict_3]] - `contains` [EXTRACTED]
 - [[target_2]] - `contains` [EXTRACTED]
-- [[types]] - `contains` [EXTRACTED]
+- [[types_1]] - `contains` [EXTRACTED]
 - [[useDefineForClassFields]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/compilerOptions

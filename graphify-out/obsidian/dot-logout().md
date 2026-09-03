@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.service.ts"
 type: "code"
-community: "employee-auth.service.ts"
+community: "principal-auth.service.ts"
 location: "L286"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/employee-authservicets
+  - community/principal-authservicets
 ---
 
 # .logout()
@@ -17,4 +17,4 @@ tags:
 - [[dot-verifyRefreshToken()]] - `calls` [INFERRED]
 - [[EmployeeAuthService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/employee-authservicets
+#graphify/code #graphify/INFERRED #community/principal-authservicets

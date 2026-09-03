@@ -1,18 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/retention-scan.processor.ts"
+source_file: "dpdp-platform/backend/src/modules/requests/requests.service.ts"
 type: "code"
-community: "retention.module.ts"
-location: "L20"
+community: "AuditService"
+location: "L157"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionmodulets
+  - community/AuditService
 ---
 
 # .constructor()
 
 ## Connections
-- [[RetentionScanProcessor]] - `method` [EXTRACTED]
-- [[RetentionScanService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[ComplianceService]] - `references` [EXTRACTED]
+- [[ErasureTaskService]] - `references` [EXTRACTED]
+- [[NotificationsService]] - `references` [EXTRACTED]
+- [[ReferenceService]] - `references` [EXTRACTED]
+- [[RequestsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionmodulets
+#graphify/code #graphify/EXTRACTED #community/AuditService

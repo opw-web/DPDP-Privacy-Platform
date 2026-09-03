@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "TenantModule"
+community: "connector.factory.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TenantModule
+  - community/connectorfactoryts
 ---
 
 # Module
 
 ## Connections
-- [[TenantModule]] - `references` [EXTRACTED]
+- [[ConnectorsModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TenantModule
+#graphify/code #graphify/EXTRACTED #community/connectorfactoryts

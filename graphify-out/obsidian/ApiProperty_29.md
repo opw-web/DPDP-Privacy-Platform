@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateInformationRequestDto"
+community: "MeProfileTimezoneDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateInformationRequestDto
+  - community/MeProfileTimezoneDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateInformationRequestDto]] - `references` [EXTRACTED]
+- [[MeProfileTimezoneDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto
+#graphify/code #graphify/EXTRACTED #community/MeProfileTimezoneDto

@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/mappings.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/sync.e2e-spec.ts"
 type: "code"
-community: "data-sources.e2e-spec.ts"
-location: "L125"
+community: "queues.module.ts"
+location: "L187"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcese2e-spects
+  - community/queuesmodulets
 ---
 
 # createDataSource()
 
 ## Connections
-- [[mappings.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[sync.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[tenant()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcese2e-spects
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

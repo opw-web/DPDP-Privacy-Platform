@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "DataSourcesController"
+community: "roles.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesController
+  - community/rolesservicets
 ---
 
 # Patch
 
 ## Connections
-- [[dot-update()_21]] - `references` [EXTRACTED]
+- [[dot-replacePermissions()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesController
+#graphify/code #graphify/EXTRACTED #community/rolesservicets

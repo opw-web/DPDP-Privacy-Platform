@@ -13,8 +13,10 @@ tags:
 
 ## Connections
 - [[ACCESS_LOG_CSV_HEADER]] - `contains` [EXTRACTED]
+- [[ACCESS_LOG_ENTRY_SELECT]] - `contains` [EXTRACTED]
 - [[AUDIT_EVENTS_PAGE_SIZE]] - `imports` [EXTRACTED]
 - [[AUDIT_EVENT_LIST_SELECT]] - `contains` [EXTRACTED]
+- [[AccessLogEntryRow]] - `contains` [EXTRACTED]
 - [[AccessLogExportDto]] - `imports` [EXTRACTED]
 - [[AuditEventListItem]] - `contains` [EXTRACTED]
 - [[AuditEventListResult]] - `contains` [EXTRACTED]

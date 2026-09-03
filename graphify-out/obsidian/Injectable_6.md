@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "retention.module.ts"
+community: "AuditService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionmodulets
+  - community/AuditService
 ---
 
 # Injectable
 
 ## Connections
-- [[RetentionScanQueueService]] - `references` [EXTRACTED]
+- [[MergeService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionmodulets
+#graphify/code #graphify/EXTRACTED #community/AuditService

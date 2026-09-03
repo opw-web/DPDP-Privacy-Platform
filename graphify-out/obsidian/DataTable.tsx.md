@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/DataTable.tsx"
 type: "code"
-community: "SecurityMeasuresTab.tsx"
+community: "cn"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresTabtsx
+  - community/cn
 ---
 
 # DataTable.tsx
@@ -23,6 +23,7 @@ tags:
 - [[PrincipalsPage.tsx]] - `imports_from` [EXTRACTED]
 - [[PurposesPage.tsx]] - `imports_from` [EXTRACTED]
 - [[RecipientsTab.tsx]] - `imports_from` [EXTRACTED]
+- [[RequestsPage.tsx]] - `imports_from` [EXTRACTED]
 - [[RetentionTab.tsx]] - `imports_from` [EXTRACTED]
 - [[SharingTab.tsx]] - `imports_from` [EXTRACTED]
 - [[Skeleton()]] - `imports` [EXTRACTED]
@@ -38,4 +39,4 @@ tags:
 - [[TransfersTab.tsx]] - `imports_from` [EXTRACTED]
 - [[table.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx
+#graphify/code #graphify/EXTRACTED #community/cn

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/employees/employees.service.ts"
 type: "code"
-community: "employees.controller.ts"
+community: "employees.service.ts"
 location: "L178"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeescontrollerts
+  - community/employeesservicets
 ---
 
 # .resetPassword()
@@ -16,4 +16,4 @@ tags:
 - [[dot-update()_14]] - `calls` [EXTRACTED]
 - [[EmployeesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeescontrollerts
+#graphify/code #graphify/EXTRACTED #community/employeesservicets

@@ -1,21 +1,21 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notifications/decorators/current-notification-actor.decorator.ts"
 type: "code"
-community: "NotificationsService"
+community: ".markRead"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/markRead
 ---
 
 # CurrentNotificationActor
 
 ## Connections
-- [[dot-list()_1]] - `references` [EXTRACTED]
-- [[dot-markAllRead()]] - `references` [EXTRACTED]
-- [[dot-markRead()]] - `references` [EXTRACTED]
+- [[dot-list()_30]] - `references` [EXTRACTED]
+- [[dot-markAllRead()_1]] - `references` [EXTRACTED]
+- [[dot-markRead()_1]] - `references` [EXTRACTED]
 - [[current-notification-actor.decorator.ts]] - `contains` [EXTRACTED]
 - [[notifications.controller.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/markRead

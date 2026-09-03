@@ -1,24 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.ts"
+source_file: "dpdp-platform/backend/src/modules/children/guardians.service.ts"
 type: "code"
-community: ".record"
-location: "L141"
+community: "guardians.service.ts"
+location: "L167"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/guardiansservicets
 ---
 
 # .create()
 
 ## Connections
+- [[dot-assertPwdAppointmentValid()]] - `calls` [EXTRACTED]
 - [[dot-create()]] - `calls` [INFERRED]
 - [[dot-record()]] - `calls` [INFERRED]
-- [[dot-validateBasis()]] - `calls` [EXTRACTED]
-- [[CreatePurposeDto]] - `references` [EXTRACTED]
-- [[PurposesService]] - `method` [EXTRACTED]
-- [[duplicateCodeMessage()]] - `calls` [EXTRACTED]
-- [[isUniqueConstraintViolation()]] - `calls` [EXTRACTED]
-- [[toPublicPurpose()]] - `calls` [EXTRACTED]
+- [[dot-toResponse()]] - `calls` [EXTRACTED]
+- [[CreateGuardianDto]] - `references` [EXTRACTED]
+- [[GuardiansService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/guardiansservicets

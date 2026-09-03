@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "mappings.controller.ts"
+community: "PrincipalAuthController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingscontrollerts
+  - community/PrincipalAuthController
 ---
 
 # Body
 
 ## Connections
-- [[dot-replaceMappings()]] - `references` [EXTRACTED]
-- [[dot-replacePurposes()]] - `references` [EXTRACTED]
+- [[dot-login()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingscontrollerts
+#graphify/code #graphify/EXTRACTED #community/PrincipalAuthController

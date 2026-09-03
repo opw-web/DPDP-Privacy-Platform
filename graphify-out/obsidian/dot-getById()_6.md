@@ -1,19 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
+source_file: "dpdp-platform/backend/src/modules/board/information-requests.controller.ts"
 type: "code"
-community: "compliance.service.ts"
-location: "L354"
+community: "CreateInformationRequestDto"
+location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/complianceservicets
+  - community/CreateInformationRequestDto
 ---
 
 # .getById()
 
 ## Connections
-- [[dot-getById()]] - `calls` [INFERRED]
-- [[ComplianceService]] - `method` [EXTRACTED]
-- [[toPublicComplianceRule()]] - `calls` [EXTRACTED]
+- [[dot-getById()_7]] - `calls` [INFERRED]
+- [[Get_23]] - `references` [EXTRACTED]
+- [[InformationRequestsController]] - `method` [EXTRACTED]
+- [[Param_14]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/complianceservicets
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/recipients.service.ts"
 type: "code"
-community: "EmployeeAuthController"
-location: "L30"
+community: "recipients.service.ts"
+location: "L55"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeeAuthController
+  - community/recipientsservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[EmployeeAuthController]] - `method` [EXTRACTED]
-- [[EmployeeAuthService]] - `references` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[RecipientsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController
+#graphify/code #graphify/EXTRACTED #community/recipientsservicets

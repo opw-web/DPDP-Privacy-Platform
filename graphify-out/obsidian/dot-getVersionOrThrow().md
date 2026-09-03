@@ -12,7 +12,7 @@ tags:
 # .getVersionOrThrow()
 
 ## Connections
-- [[dot-preview()_5]] - `calls` [EXTRACTED]
+- [[dot-preview()_4]] - `calls` [EXTRACTED]
 - [[dot-publish()_1]] - `calls` [EXTRACTED]
 - [[dot-upsertTranslation()_1]] - `calls` [EXTRACTED]
 - [[NoticesService]] - `method` [EXTRACTED]

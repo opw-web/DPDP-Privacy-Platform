@@ -24,7 +24,7 @@ tags:
 - [[persist()]] - `contains` [EXTRACTED]
 - [[persistMappings()]] - `contains` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
-- [[tenant()_2]] - `contains` [EXTRACTED]
+- [[tenant()_3]] - `contains` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/prismaservicets

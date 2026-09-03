@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/audit-read.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/step6-conflict-acceptance.e2e-spec.ts"
 type: "code"
-community: "audit.service.ts"
-location: "L107"
+community: "step6-conflict-acceptance.e2e-spec.ts"
+location: "L139"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/auditservicets
+  - community/step6-conflict-acceptancee2e-spects
 ---
 
 # authenticated()
 
 ## Connections
-- [[audit-read.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[putLegacyMappings()]] - `calls` [EXTRACTED]
+- [[step6-conflict-acceptance.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/auditservicets
+#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects

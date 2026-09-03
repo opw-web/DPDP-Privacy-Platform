@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-create()_29]] - `calls` [EXTRACTED]
-- [[dot-list()_42]] - `indirect_call` [INFERRED]
+- [[dot-list()_38]] - `indirect_call` [INFERRED]
 - [[child-exemptions.service.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/child-exemptionsservicets

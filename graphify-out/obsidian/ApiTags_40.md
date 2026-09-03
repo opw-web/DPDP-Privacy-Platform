@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "mappings.controller.ts"
+community: "SharingService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingscontrollerts
+  - community/SharingService
 ---
 
 # ApiTags
 
 ## Connections
-- [[MappingsController]] - `references` [EXTRACTED]
+- [[SharingController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingscontrollerts
+#graphify/code #graphify/EXTRACTED #community/SharingService

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/ConflictBadge.tsx"
 type: "code"
-community: "PrincipalDetailPage.tsx"
+community: "DateTime.tsx"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalDetailPagetsx
+  - community/DateTimetsx
 ---
 
 # ConflictBadgeProps
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ConflictBadge.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/DateTimetsx

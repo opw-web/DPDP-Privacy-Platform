@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/employees/roles.controller.ts"
 type: "code"
-community: "UpdateRolePermissionsDto"
+community: "roles.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateRolePermissionsDto
+  - community/rolesservicets
 ---
 
 # roles.controller.ts
@@ -21,4 +21,4 @@ tags:
 - [[roles.service.ts]] - `imports_from` [EXTRACTED]
 - [[update-role-permissions.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto
+#graphify/code #graphify/EXTRACTED #community/rolesservicets

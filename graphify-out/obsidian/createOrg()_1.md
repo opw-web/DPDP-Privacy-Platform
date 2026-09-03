@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/mappings.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/audit.e2e-spec.ts"
 type: "code"
-community: "data-sources.e2e-spec.ts"
-location: "L49"
+community: "canonicalJson"
+location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcese2e-spects
+  - community/canonicalJson
 ---
 
 # createOrg()
 
 ## Connections
-- [[createOrgWithBothPermissions()]] - `calls` [EXTRACTED]
-- [[mappings.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[audit.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcese2e-spects
+#graphify/code #graphify/EXTRACTED #community/canonicalJson

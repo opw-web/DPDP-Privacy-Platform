@@ -1,22 +1,27 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
-location: "L35"
+community: ".record"
+location: "L206"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/record
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_13]] - `calls` [INFERRED]
-- [[Body_12]] - `references` [EXTRACTED]
-- [[CreateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
-- [[Post_14]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[VoluntaryUndertakingsController]] - `method` [EXTRACTED]
+- [[dot-computeDeadline()]] - `calls` [INFERRED]
+- [[dot-create()_30]] - `calls` [INFERRED]
+- [[dot-previewAffected()]] - `calls` [EXTRACTED]
+- [[dot-public()]] - `calls` [EXTRACTED]
+- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-resolveRule()]] - `calls` [INFERRED]
+- [[AccessTokenPayload]] - `references` [EXTRACTED]
+- [[BreachService]] - `method` [EXTRACTED]
+- [[CreateBreachDto]] - `references` [EXTRACTED]
+- [[PublicBreach]] - `references` [EXTRACTED]
+- [[asDate()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/record

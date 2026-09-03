@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "legal-hold.service.ts"
+community: "CreateAlgorithmEntryDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/legal-holdservicets
+  - community/CreateAlgorithmEntryDto
 ---
 
 # IsDateString
 
 ## Connections
-- [[CreateLegalHoldDto]] - `references` [EXTRACTED]
+- [[CreateAlgorithmEntryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/legal-holdservicets
+#graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto

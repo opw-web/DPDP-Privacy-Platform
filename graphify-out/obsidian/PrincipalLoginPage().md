@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/PrincipalLoginPage.tsx"
 type: "code"
-community: "api-client.ts"
+community: "router.tsx"
 location: "L65"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/routertsx
 ---
 
 # PrincipalLoginPage()
@@ -18,4 +18,4 @@ tags:
 - [[router.tsx]] - `imports` [EXTRACTED]
 - [[usePrincipalAuth()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/routertsx

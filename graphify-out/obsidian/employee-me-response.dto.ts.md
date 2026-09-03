@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/dto/employee-me-response.dto.ts"
 type: "code"
-community: "AccessTokenPayload"
+community: ".me"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/me
 ---
 
 # employee-me-response.dto.ts
@@ -16,4 +16,4 @@ tags:
 - [[EmployeeMeRoleDto]] - `contains` [EXTRACTED]
 - [[employee-auth.controller.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/me

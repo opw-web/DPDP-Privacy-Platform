@@ -1,19 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/audit-export.service.ts"
+source_file: "dpdp-platform/backend/src/common/guards/permissions.guard.ts"
 type: "code"
-community: "PrismaService"
-location: "L34"
+community: "PermissionsGuard"
+location: "L81"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/PermissionsGuard
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditExportService]] - `method` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
+- [[PermissionsGuard]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/PermissionsGuard

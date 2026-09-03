@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RequirePermission"
+community: "EvidencePackController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/EvidencePackController
 ---
 
 # ApiTags
 
 ## Connections
-- [[AuditReadController]] - `references` [EXTRACTED]
+- [[EvidencePackController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/EvidencePackController

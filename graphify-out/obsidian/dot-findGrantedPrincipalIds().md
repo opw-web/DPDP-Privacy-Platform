@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/consents/consents.service.ts"
 type: "code"
-community: "ConsentsService"
-location: "L266"
+community: "CampaignsService"
+location: "L422"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ConsentsService
+  - community/CampaignsService
 ---
 
 # .findGrantedPrincipalIds()
@@ -16,4 +16,4 @@ tags:
 - [[dot-resolveRecipients()]] - `calls` [INFERRED]
 - [[ConsentsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ConsentsService
+#graphify/code #graphify/EXTRACTED #community/CampaignsService

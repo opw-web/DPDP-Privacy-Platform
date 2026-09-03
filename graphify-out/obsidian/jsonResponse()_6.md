@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/PurposeForm.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/DashboardPage.test.tsx"
 type: "code"
-community: "cn"
-location: "L12"
+community: "DashboardPage.test.tsx"
+location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/DashboardPagetesttsx
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[PurposeForm.test.tsx]] - `contains` [EXTRACTED]
+- [[DashboardPage.test.tsx]] - `contains` [EXTRACTED]
+- [[mockRoutesAndLogin()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/DashboardPagetesttsx

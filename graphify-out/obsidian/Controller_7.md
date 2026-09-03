@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "InventoryService"
+community: "ropa-export.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/InventoryService
+  - community/ropa-exportservicets
 ---
 
 # Controller
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[InventoryController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/InventoryService
+#graphify/code #graphify/EXTRACTED #community/ropa-exportservicets

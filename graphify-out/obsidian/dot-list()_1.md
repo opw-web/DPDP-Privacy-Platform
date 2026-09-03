@@ -1,23 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/notifications.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/children/guardians.service.ts"
 type: "code"
-community: "NotificationsService"
-location: "L44"
+community: "guardians.service.ts"
+location: "L117"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/guardiansservicets
 ---
 
 # .list()
 
 ## Connections
-- [[ApiOkResponse]] - `references` [EXTRACTED]
-- [[CurrentNotificationActor]] - `references` [EXTRACTED]
-- [[Get_1]] - `references` [EXTRACTED]
-- [[NotificationCallerActor]] - `references` [EXTRACTED]
-- [[NotificationsController]] - `method` [EXTRACTED]
-- [[Public()]] - `references` [EXTRACTED]
-- [[UseGuards]] - `references` [EXTRACTED]
+- [[dot-toResponse()]] - `calls` [EXTRACTED]
+- [[GuardiansService]] - `method` [EXTRACTED]
+- [[ListGuardiansDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/guardiansservicets

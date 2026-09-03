@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/audit/audit-read.controller.ts"
 type: "code"
-community: "RequirePermission"
+community: "AuditReadController"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/AuditReadController
 ---
 
 # .accessLogCsv()
@@ -15,9 +15,9 @@ tags:
 - [[dot-accessLogCsv()]] - `calls` [INFERRED]
 - [[AccessLogExportDto]] - `references` [EXTRACTED]
 - [[AuditReadController]] - `method` [EXTRACTED]
-- [[Get_17]] - `references` [EXTRACTED]
-- [[Query_2]] - `references` [EXTRACTED]
+- [[Get_19]] - `references` [EXTRACTED]
+- [[Query_4]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[Res_3]] - `references` [EXTRACTED]
+- [[Res_5]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/AuditReadController

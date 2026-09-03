@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "notifications.module.ts"
+community: "MeRightsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationsmodulets
+  - community/MeRightsService
 ---
 
 # Injectable
 
 ## Connections
-- [[PortalProvider]] - `references` [EXTRACTED]
+- [[MeRightsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationsmodulets
+#graphify/code #graphify/EXTRACTED #community/MeRightsService

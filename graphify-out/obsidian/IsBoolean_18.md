@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "retention/retention.controller.ts"
+community: "CreateSharingActivityDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retention/retentioncontrollerts
+  - community/CreateSharingActivityDto
 ---
 
 # IsBoolean
 
 ## Connections
-- [[ProcessorChecklistTickDto]] - `references` [EXTRACTED]
-- [[SystemChecklistTickDto]] - `references` [EXTRACTED]
+- [[UpdateSharingActivityDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retention/retentioncontrollerts
+#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

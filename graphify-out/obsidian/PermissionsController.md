@@ -1,22 +1,22 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/employees/permissions.controller.ts"
 type: "code"
-community: "RequirePermission"
+community: "PermissionsController"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/PermissionsController
 ---
 
 # PermissionsController
 
 ## Connections
-- [[dot-constructor()_99]] - `method` [EXTRACTED]
-- [[dot-list()_20]] - `method` [EXTRACTED]
-- [[ApiTags_17]] - `references` [EXTRACTED]
-- [[Controller_17]] - `references` [EXTRACTED]
+- [[dot-constructor()_71]] - `method` [EXTRACTED]
+- [[dot-list()_17]] - `method` [EXTRACTED]
+- [[ApiTags_14]] - `references` [EXTRACTED]
+- [[Controller_15]] - `references` [EXTRACTED]
 - [[employees.module.ts]] - `imports` [EXTRACTED]
 - [[permissions.controller.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/PermissionsController

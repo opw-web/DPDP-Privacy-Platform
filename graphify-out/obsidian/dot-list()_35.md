@@ -1,19 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/sharing.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
 type: "code"
-community: "SharingService"
-location: "L15"
+community: "notices.service.ts"
+location: "L163"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SharingService
+  - community/noticesservicets
 ---
 
 # .list()
 
 ## Connections
-- [[Get_27]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[SharingController]] - `method` [EXTRACTED]
+- [[NoticesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SharingService
+#graphify/code #graphify/EXTRACTED #community/noticesservicets

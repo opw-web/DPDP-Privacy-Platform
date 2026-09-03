@@ -1,23 +1,24 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/retention.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/sharing.service.ts"
 type: "code"
-community: "RetentionService"
-location: "L165"
+community: "SharingService"
+location: "L170"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionService
+  - community/SharingService
 ---
 
 # .update()
 
 ## Connections
 - [[dot-assertPurposeExists()_1]] - `calls` [EXTRACTED]
+- [[dot-assertRecipientExists()_1]] - `calls` [EXTRACTED]
+- [[dot-assertSourceIdsExist()]] - `calls` [EXTRACTED]
 - [[dot-record()]] - `calls` [INFERRED]
 - [[dot-update()_25]] - `calls` [INFERRED]
-- [[RetentionService]] - `method` [EXTRACTED]
-- [[UpdateRetentionPolicyDto]] - `references` [EXTRACTED]
-- [[duplicateNameMessage()_2]] - `calls` [EXTRACTED]
-- [[isUniqueConstraintViolation()_6]] - `calls` [EXTRACTED]
+- [[SharingService]] - `method` [EXTRACTED]
+- [[UpdateSharingActivityDto]] - `references` [EXTRACTED]
+- [[assertNonBlankDescription()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionService
+#graphify/code #graphify/EXTRACTED #community/SharingService

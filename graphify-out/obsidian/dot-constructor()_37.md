@@ -1,20 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sync/sync.service.ts"
+source_file: "dpdp-platform/backend/src/modules/inventory/inventory.service.ts"
 type: "code"
-community: "sync.service.ts"
-location: "L25"
+community: "ropa-export.service.ts"
+location: "L78"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/syncservicets
+  - community/ropa-exportservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[DataSourcesService]] - `references` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
-- [[SyncQueueService]] - `references` [EXTRACTED]
-- [[SyncService]] - `method` [EXTRACTED]
+- [[InventoryService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/syncservicets
+#graphify/code #graphify/EXTRACTED #community/ropa-exportservicets

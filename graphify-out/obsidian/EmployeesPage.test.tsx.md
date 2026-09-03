@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/EmployeesPage.test.tsx"
 type: "code"
-community: "api-client.ts"
+community: "EmployeesPage.test.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/EmployeesPagetesttsx
 ---
 
 # EmployeesPage.test.tsx
@@ -20,14 +20,14 @@ tags:
 - [[LoginOptions]] - `contains` [EXTRACTED]
 - [[ORGANIZATION_2]] - `contains` [EXTRACTED]
 - [[PatchEmployeeStatusBox]] - `contains` [EXTRACTED]
-- [[ROLES]] - `contains` [EXTRACTED]
+- [[ROLES_1]] - `contains` [EXTRACTED]
 - [[api-client.ts]] - `imports_from` [EXTRACTED]
 - [[employeeApiClient]] - `imports` [EXTRACTED]
 - [[employeeLogin()]] - `imports` [EXTRACTED]
 - [[employeeLogout()]] - `imports` [EXTRACTED]
-- [[jsonResponse()_16]] - `contains` [EXTRACTED]
+- [[jsonResponse()_19]] - `contains` [EXTRACTED]
 - [[libauth.ts]] - `imports_from` [EXTRACTED]
-- [[loginAndRenderThroughShell()_1]] - `contains` [EXTRACTED]
-- [[shouldShowDemoCredentials()_1]] - `imports` [EXTRACTED]
+- [[loginAndRenderThroughShell()_3]] - `contains` [EXTRACTED]
+- [[shouldShowDemoCredentials()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/EmployeesPagetesttsx

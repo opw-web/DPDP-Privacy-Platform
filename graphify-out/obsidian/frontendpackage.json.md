@@ -19,7 +19,7 @@ tags:
 - [[name]] - `contains` [EXTRACTED]
 - [[private]] - `contains` [EXTRACTED]
 - [[scripts_1]] - `contains` [EXTRACTED]
-- [[type_2]] - `contains` [EXTRACTED]
+- [[type_3]] - `contains` [EXTRACTED]
 - [[version]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/frontend/packagejson

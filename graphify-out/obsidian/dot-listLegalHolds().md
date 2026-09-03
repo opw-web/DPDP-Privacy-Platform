@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/retention.controller.ts"
 type: "code"
-community: "retention/retention.controller.ts"
+community: "RetentionController"
 location: "L65"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retention/retentioncontrollerts
+  - community/RetentionController
 ---
 
 # .listLegalHolds()
 
 ## Connections
-- [[Get_33]] - `references` [EXTRACTED]
+- [[Get_31]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[RetentionController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retention/retentioncontrollerts
+#graphify/code #graphify/EXTRACTED #community/RetentionController

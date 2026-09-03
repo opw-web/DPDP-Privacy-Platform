@@ -1,22 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/transfers.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/recipients.service.ts"
 type: "code"
-community: "CreateTransferDto"
-location: "L89"
+community: "recipients.service.ts"
+location: "L106"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTransferDto
+  - community/recipientsservicets
 ---
 
 # .create()
 
 ## Connections
-- [[dot-assertEmployeeExists()_1]] - `calls` [EXTRACTED]
-- [[dot-assertRecipientExists()_1]] - `calls` [EXTRACTED]
+- [[dot-assertProcessorRule()]] - `calls` [EXTRACTED]
 - [[dot-create()_31]] - `calls` [INFERRED]
 - [[dot-record()]] - `calls` [INFERRED]
-- [[CreateTransferDto]] - `references` [EXTRACTED]
-- [[TransfersService]] - `method` [EXTRACTED]
+- [[CreateRecipientDto]] - `references` [EXTRACTED]
+- [[RecipientsService]] - `method` [EXTRACTED]
+- [[duplicateNameMessage()_1]] - `calls` [EXTRACTED]
+- [[isUniqueConstraintViolation()_5]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTransferDto
+#graphify/code #graphify/EXTRACTED #community/recipientsservicets

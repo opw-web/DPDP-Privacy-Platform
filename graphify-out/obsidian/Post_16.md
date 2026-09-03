@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateInformationRequestDto"
+community: ".markRead"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateInformationRequestDto
+  - community/markRead
 ---
 
 # Post
 
 ## Connections
-- [[dot-create()_16]] - `references` [EXTRACTED]
+- [[dot-markAllRead()_1]] - `references` [EXTRACTED]
+- [[dot-markRead()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto
+#graphify/code #graphify/EXTRACTED #community/markRead

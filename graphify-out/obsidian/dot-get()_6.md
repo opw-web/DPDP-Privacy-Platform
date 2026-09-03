@@ -1,19 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/security-measures.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync.controller.ts"
 type: "code"
-community: "security-measures.service.ts"
-location: "L81"
+community: "sync.service.ts"
+location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/security-measuresservicets
+  - community/syncservicets
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_5]] - `calls` [INFERRED]
-- [[SecurityMeasuresService]] - `method` [EXTRACTED]
-- [[groupByRuleReference()]] - `calls` [EXTRACTED]
+- [[dot-getJob()]] - `calls` [INFERRED]
+- [[Get_8]] - `references` [EXTRACTED]
+- [[Param_5]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[SyncJobsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/security-measuresservicets
+#graphify/code #graphify/EXTRACTED #community/syncservicets

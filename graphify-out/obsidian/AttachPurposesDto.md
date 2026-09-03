@@ -12,12 +12,12 @@ tags:
 # AttachPurposesDto
 
 ## Connections
-- [[dot-replace()_1]] - `references` [EXTRACTED]
+- [[dot-replace()]] - `references` [EXTRACTED]
 - [[dot-replacePurposes()]] - `references` [EXTRACTED]
-- [[ApiProperty_42]] - `references` [EXTRACTED]
-- [[ArrayUnique_9]] - `references` [EXTRACTED]
-- [[IsArray_20]] - `references` [EXTRACTED]
-- [[IsString_61]] - `references` [EXTRACTED]
+- [[ApiProperty_13]] - `references` [EXTRACTED]
+- [[ArrayUnique_2]] - `references` [EXTRACTED]
+- [[IsArray_8]] - `references` [EXTRACTED]
+- [[IsString_21]] - `references` [EXTRACTED]
 - [[attach-purposes.dto.ts]] - `contains` [EXTRACTED]
 - [[mappings.controller.ts]] - `imports` [EXTRACTED]
 - [[source-purposes.service.ts]] - `imports` [EXTRACTED]

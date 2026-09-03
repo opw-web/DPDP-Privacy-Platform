@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ConsentsService"
+community: "age-status.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ConsentsService
+  - community/age-statusservicets
 ---
 
 # ApiTags
 
 ## Connections
-- [[ConsentsController]] - `references` [EXTRACTED]
+- [[AgeStatusController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ConsentsService
+#graphify/code #graphify/EXTRACTED #community/age-statusservicets

@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/requests/types.ts"
 type: "code"
-community: "PrincipalDetailPage.tsx"
-location: "L19"
+community: "employeeApiClient"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalDetailPagetsx
+  - community/employeeApiClient
 ---
 
 # PrincipalField
 
 ## Connections
-- [[PrincipalDetailPage.tsx]] - `contains` [EXTRACTED]
-- [[SourceRef_1]] - `references` [EXTRACTED]
+- [[requeststypes.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/employeeApiClient

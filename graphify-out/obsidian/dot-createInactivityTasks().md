@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/retention-scan.service.ts"
 type: "code"
-community: "RetentionScanService"
-location: "L95"
+community: "erasure-task.service.ts"
+location: "L111"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/RetentionScanService
+  - graphify/EXTRACTED
+  - community/erasure-taskservicets
 ---
 
 # .createInactivityTasks()
@@ -17,5 +17,6 @@ tags:
 - [[dot-resolveRule()]] - `calls` [INFERRED]
 - [[dot-runForCurrentOrganization()_1]] - `calls` [EXTRACTED]
 - [[RetentionScanService]] - `method` [EXTRACTED]
+- [[lockRetentionWorkflow()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/RetentionScanService
+#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets

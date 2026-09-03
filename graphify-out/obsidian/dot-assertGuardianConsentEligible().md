@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/children/guardians.service.ts"
 type: "code"
-community: "ScopedTransactionClient"
+community: "guardians.service.ts"
 location: "L301"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScopedTransactionClient
+  - community/guardiansservicets
 ---
 
 # .assertGuardianConsentEligible()
@@ -17,4 +17,4 @@ tags:
 - [[ScopedTransactionClient]] - `references` [EXTRACTED]
 - [[TenantScopedPrismaClient]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient
+#graphify/code #graphify/EXTRACTED #community/guardiansservicets

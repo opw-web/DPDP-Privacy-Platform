@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/consents/consents.service.ts"
 type: "code"
-community: "audit.service.ts"
+community: "prisma.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/auditservicets
+  - community/prismaservicets
 ---
 
 # consents.service.ts
@@ -22,7 +22,7 @@ tags:
 - [[ErasureTaskService]] - `imports` [EXTRACTED]
 - [[GuardiansService]] - `imports` [EXTRACTED]
 - [[NoticesService]] - `imports` [EXTRACTED]
-- [[OPEN_ERASURE_TASK_STATES_2]] - `contains` [EXTRACTED]
+- [[OPEN_ERASURE_TASK_STATES]] - `contains` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[PublicConsentRecord]] - `contains` [EXTRACTED]
 - [[ScopedTransactionClient]] - `imports` [EXTRACTED]
@@ -36,11 +36,11 @@ tags:
 - [[consents.module.ts]] - `imports_from` [EXTRACTED]
 - [[erasure-task.service.ts]] - `imports_from` [EXTRACTED]
 - [[guardians.service.ts]] - `imports_from` [EXTRACTED]
-- [[isUniqueConstraintViolation()_4]] - `contains` [EXTRACTED]
+- [[isUniqueConstraintViolation()_2]] - `contains` [EXTRACTED]
 - [[me-consents.controller.ts]] - `imports_from` [EXTRACTED]
 - [[notices.service.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[scoped-transaction-client.ts]] - `imports_from` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/auditservicets
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

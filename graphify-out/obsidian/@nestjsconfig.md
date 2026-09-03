@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "code"
-community: "@nestjs/config"
-location: "L28"
+community: "dependencies"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/config
+  - community/dependencies
 ---
 
 # @nestjs/config
@@ -15,4 +15,4 @@ tags:
 - [[@nestjsconfig_1]] - `imports` [EXTRACTED]
 - [[dependencies_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/config
+#graphify/code #graphify/EXTRACTED #community/dependencies

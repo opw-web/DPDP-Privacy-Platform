@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "NotificationsService"
+community: "VerifyGuardianDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/VerifyGuardianDto
 ---
 
 # Post
 
 ## Connections
-- [[dot-markAllRead()]] - `references` [EXTRACTED]
-- [[dot-markRead()]] - `references` [EXTRACTED]
+- [[dot-create()]] - `references` [EXTRACTED]
+- [[dot-verify()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/VerifyGuardianDto

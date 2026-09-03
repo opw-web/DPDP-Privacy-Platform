@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CryptoService"
+community: "app.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CryptoService
+  - community/appmodulets
 ---
 
 # Module
 
 ## Connections
-- [[CryptoModule]] - `references` [EXTRACTED]
+- [[AuditModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CryptoService
+#graphify/code #graphify/EXTRACTED #community/appmodulets

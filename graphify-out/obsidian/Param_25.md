@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdateRolePermissionsDto"
+community: "roles.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateRolePermissionsDto
+  - community/rolesservicets
 ---
 
 # Param
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-replacePermissions()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto
+#graphify/code #graphify/EXTRACTED #community/rolesservicets

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "DataSourcesService"
+community: "ropa-export.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesService
+  - community/ropa-exportservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[DataSourcesService]] - `references` [EXTRACTED]
+- [[InventoryService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesService
+#graphify/code #graphify/EXTRACTED #community/ropa-exportservicets

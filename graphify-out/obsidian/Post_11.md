@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RequirePermission"
+community: "CreateVoluntaryUndertakingDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # Post
 
 ## Connections
-- [[dot-preview()_3]] - `references` [EXTRACTED]
+- [[dot-create()_15]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

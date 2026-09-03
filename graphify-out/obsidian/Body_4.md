@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "ComplianceController"
+community: "purposes.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ComplianceController
+  - community/purposesservicets
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_2]] - `references` [EXTRACTED]
-- [[dot-update()_4]] - `references` [EXTRACTED]
+- [[dot-create()_3]] - `references` [EXTRACTED]
+- [[dot-update()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ComplianceController
+#graphify/code #graphify/EXTRACTED #community/purposesservicets

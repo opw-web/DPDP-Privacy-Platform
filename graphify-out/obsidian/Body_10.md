@@ -1,21 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RequestsController"
+community: ".preview"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestsController
+  - community/preview
 ---
 
 # Body
 
 ## Connections
-- [[dot-addNote()]] - `references` [EXTRACTED]
-- [[dot-assign()]] - `references` [EXTRACTED]
-- [[dot-changeStatus()]] - `references` [EXTRACTED]
-- [[dot-escalate()]] - `references` [EXTRACTED]
-- [[dot-flagFrivolous()]] - `references` [EXTRACTED]
-- [[dot-verifyIdentity()]] - `references` [EXTRACTED]
+- [[dot-preview()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestsController
+#graphify/code #graphify/EXTRACTED #community/preview

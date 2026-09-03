@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/retention-scan.service.ts"
 type: "code"
-community: "RetentionScanService"
-location: "L71"
+community: "erasure-task.service.ts"
+location: "L86"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionScanService
+  - community/erasure-taskservicets
 ---
 
 # .runForCurrentOrganization()
@@ -14,10 +14,11 @@ tags:
 ## Connections
 - [[dot-applyLegalHolds()]] - `calls` [EXTRACTED]
 - [[dot-createInactivityTasks()]] - `calls` [EXTRACTED]
+- [[dot-createPurposeServedTasks()]] - `calls` [EXTRACTED]
 - [[dot-promoteFromFloor()]] - `calls` [EXTRACTED]
 - [[dot-promoteNoticeSentToReady()]] - `calls` [EXTRACTED]
 - [[dot-releaseLegalHolds()]] - `calls` [EXTRACTED]
-- [[dot-runForAllOrganizations()_2]] - `calls` [EXTRACTED]
+- [[dot-runForAllOrganizations()_1]] - `calls` [EXTRACTED]
 - [[RetentionScanService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionScanService
+#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets

@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/principal/pages/MeDataPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.test.tsx"
 type: "code"
-community: "card.tsx"
-location: "L7"
+community: "children/types.ts"
+location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cardtsx
+  - community/children/typests
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[MeDataPage.test.tsx]] - `contains` [EXTRACTED]
+- [[ChildrenPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cardtsx
+#graphify/code #graphify/EXTRACTED #community/children/typests

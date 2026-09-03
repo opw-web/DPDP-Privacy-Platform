@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/recipients.service.ts"
+source_file: "dpdp-platform/backend/src/modules/consents/consents.service.ts"
 type: "code"
-community: "RecipientsService"
-location: "L43"
+community: "ConsentsService"
+location: "L106"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RecipientsService
+  - community/ConsentsService
 ---
 
 # isUniqueConstraintViolation()
 
 ## Connections
-- [[dot-create()_21]] - `calls` [EXTRACTED]
-- [[dot-update()_18]] - `calls` [EXTRACTED]
-- [[recipients.service.ts]] - `contains` [EXTRACTED]
+- [[dot-getOrCreateRecord()]] - `calls` [EXTRACTED]
+- [[consents.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RecipientsService
+#graphify/code #graphify/EXTRACTED #community/ConsentsService

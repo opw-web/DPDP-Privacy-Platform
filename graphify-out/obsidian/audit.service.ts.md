@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/audit/audit.service.ts"
 type: "code"
-community: "audit.service.ts"
+community: "prisma.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/auditservicets
+  - community/prismaservicets
 ---
 
 # audit.service.ts
@@ -34,6 +34,7 @@ tags:
 - [[audit.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[audit.module.ts]] - `imports_from` [EXTRACTED]
 - [[boardnon-disclosure.ts]] - `imports_from` [EXTRACTED]
+- [[breach.service.ts]] - `imports_from` [EXTRACTED]
 - [[campaigns.service.ts]] - `imports_from` [EXTRACTED]
 - [[candidates.service.ts]] - `imports_from` [EXTRACTED]
 - [[canonical-json.ts]] - `imports_from` [EXTRACTED]
@@ -54,22 +55,27 @@ tags:
 - [[legal-hold.service.ts]] - `imports_from` [EXTRACTED]
 - [[linking.service.ts]] - `imports_from` [EXTRACTED]
 - [[mappings.service.ts]] - `imports_from` [EXTRACTED]
+- [[me-rights.service.ts]] - `imports_from` [EXTRACTED]
 - [[merge.service.ts]] - `imports_from` [EXTRACTED]
 - [[notices.service.ts]] - `imports_from` [EXTRACTED]
 - [[organizations.service.ts]] - `imports_from` [EXTRACTED]
 - [[pre-erasure-notice.service.ts]] - `imports_from` [EXTRACTED]
 - [[principal-auth.service.ts]] - `imports_from` [EXTRACTED]
 - [[principal-evidence.service.ts]] - `imports_from` [EXTRACTED]
+- [[purpose-served.service.ts]] - `imports_from` [EXTRACTED]
 - [[purposes.service.spec.ts]] - `imports_from` [EXTRACTED]
 - [[purposes.service.ts]] - `imports_from` [EXTRACTED]
 - [[recipients.service.ts]] - `imports_from` [EXTRACTED]
 - [[refresh-rotation.util.ts]] - `imports_from` [EXTRACTED]
 - [[requests.service.ts]] - `imports_from` [EXTRACTED]
+- [[retention-scan.service.ts]] - `imports_from` [EXTRACTED]
+- [[retention.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[retention.service.ts]] - `imports_from` [EXTRACTED]
 - [[roles.service.ts]] - `imports_from` [EXTRACTED]
 - [[ropa-export.service.ts]] - `imports_from` [EXTRACTED]
 - [[scoped-transaction-client.ts]] - `imports_from` [EXTRACTED]
 - [[sdf-assessment.service.ts]] - `imports_from` [EXTRACTED]
+- [[sdf-cycle-scan.service.ts]] - `imports_from` [EXTRACTED]
 - [[security-measures.service.ts]] - `imports_from` [EXTRACTED]
 - [[sharing.service.ts]] - `imports_from` [EXTRACTED]
 - [[source-purposes.service.ts]] - `imports_from` [EXTRACTED]
@@ -77,5 +83,6 @@ tags:
 - [[templates.service.ts]] - `imports_from` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 - [[transfers.service.ts]] - `imports_from` [EXTRACTED]
+- [[voluntary-undertakings.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/auditservicets
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

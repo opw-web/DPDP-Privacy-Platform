@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/employees.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.service.ts"
 type: "code"
-community: "employees.controller.ts"
-location: "L42"
+community: "CampaignsService"
+location: "L171"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeescontrollerts
+  - community/CampaignsService
 ---
 
 # .list()
 
 ## Connections
-- [[EmployeesService]] - `method` [EXTRACTED]
+- [[CampaignsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeescontrollerts
+#graphify/code #graphify/EXTRACTED #community/CampaignsService

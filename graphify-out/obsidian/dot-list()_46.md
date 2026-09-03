@@ -1,19 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/transfers.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/requests/requests.controller.ts"
 type: "code"
-community: "CreateTransferDto"
-location: "L15"
+community: "ListRequestsDto"
+location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTransferDto
+  - community/ListRequestsDto
 ---
 
 # .list()
 
 ## Connections
-- [[Get_36]] - `references` [EXTRACTED]
+- [[Get_14]] - `references` [EXTRACTED]
+- [[ListRequestsDto]] - `references` [EXTRACTED]
+- [[Query_9]] - `references` [EXTRACTED]
+- [[RequestsController]] - `method` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[TransfersController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTransferDto
+#graphify/code #graphify/EXTRACTED #community/ListRequestsDto

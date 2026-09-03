@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/DataSourceDetailPage.test.tsx"
 type: "code"
-community: "api-client.ts"
+community: "DataSourceDetailPage.test.tsx"
 location: "L84"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/DataSourceDetailPagetesttsx
 ---
 
 # loginAndRenderDetailPage()
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[DataSourceDetailPage.test.tsx]] - `contains` [EXTRACTED]
 - [[employeeLogin()]] - `calls` [EXTRACTED]
-- [[jsonResponse()_14]] - `calls` [EXTRACTED]
+- [[jsonResponse()_20]] - `calls` [EXTRACTED]
 - [[renderDetailPage()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/DataSourceDetailPagetesttsx

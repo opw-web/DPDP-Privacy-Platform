@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/age.service.ts"
+source_file: "dpdp-platform/backend/src/queues/mvp2-schedules.ts"
 type: "code"
-community: "ScopedTransactionClient"
+community: "SyncQueueService"
 location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScopedTransactionClient
+  - community/SyncQueueService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AgeService]] - `method` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
+- [[InjectQueue_5]] - `references` [EXTRACTED]
+- [[Mvp2ScheduleReconciliationService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

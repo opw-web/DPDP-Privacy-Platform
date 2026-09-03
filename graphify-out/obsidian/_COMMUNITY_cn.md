@@ -1,135 +1,67 @@
 ---
 type: community
-members: 122
+members: 54
 ---
 
 # cn
 
-**Members:** 122 nodes
+**Members:** 54 nodes
 
 ## Members
-- [[Button]] - code - dpdp-platform/frontend/src/components/ui/button.tsx
-- [[ButtonProps]] - code - dpdp-platform/frontend/src/components/ui/button.tsx
-- [[Checkbox]] - code - dpdp-platform/frontend/src/components/ui/checkbox.tsx
-- [[CheckboxOptionProps]] - code - dpdp-platform/frontend/src/fiduciary/components/form-controls.tsx
-- [[ConfirmDialog()]] - code - dpdp-platform/frontend/src/components/shared/ConfirmDialog.tsx
-- [[ConfirmDialog.tsx]] - code - dpdp-platform/frontend/src/components/shared/ConfirmDialog.tsx
-- [[ConfirmDialogProps]] - code - dpdp-platform/frontend/src/components/shared/ConfirmDialog.tsx
-- [[ContractStatusCell()]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.tsx
-- [[CreatePurposePayload]] - code - dpdp-platform/frontend/src/fiduciary/components/PurposeForm.tsx
-- [[CreateRecipientPayload]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.tsx
-- [[CreateRetentionPayload]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RetentionTab.tsx
-- [[CreateSharingPayload]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SharingTab.tsx
-- [[CreateTransferPayload]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/TransfersTab.tsx
-- [[DATA_CATEGORY_OPTIONS]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
-- [[DEFAULT_VALUES]] - code - dpdp-platform/frontend/src/fiduciary/components/PurposeForm.tsx
-- [[DEFAULT_VALUES_1]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.tsx
-- [[DEFAULT_VALUES_2]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RetentionTab.tsx
-- [[DEFAULT_VALUES_3]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SharingTab.tsx
-- [[DEFAULT_VALUES_4]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/TransfersTab.tsx
-- [[DeclarationsFormValues]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step5Declarations.tsx
-- [[Dialog]] - code - dpdp-platform/frontend/src/components/ui/dialog.tsx
-- [[DialogClose]] - code - dpdp-platform/frontend/src/components/ui/dialog.tsx
-- [[DialogContent]] - code - dpdp-platform/frontend/src/components/ui/dialog.tsx
-- [[DialogDescription]] - code - dpdp-platform/frontend/src/components/ui/dialog.tsx
-- [[DialogFooter()]] - code - dpdp-platform/frontend/src/components/ui/dialog.tsx
-- [[DialogHeader()]] - code - dpdp-platform/frontend/src/components/ui/dialog.tsx
-- [[DialogOverlay]] - code - dpdp-platform/frontend/src/components/ui/dialog.tsx
-- [[DialogPortal]] - code - dpdp-platform/frontend/src/components/ui/dialog.tsx
-- [[DialogTitle]] - code - dpdp-platform/frontend/src/components/ui/dialog.tsx
-- [[DialogTrigger]] - code - dpdp-platform/frontend/src/components/ui/dialog.tsx
-- [[EnumOption]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
-- [[FieldShell()]] - code - dpdp-platform/frontend/src/fiduciary/components/form-controls.tsx
-- [[FieldShellProps]] - code - dpdp-platform/frontend/src/fiduciary/components/form-controls.tsx
-- [[Input]] - code - dpdp-platform/frontend/src/components/ui/input.tsx
-- [[InputProps]] - code - dpdp-platform/frontend/src/components/ui/input.tsx
-- [[LAWFUL_BASIS_OPTIONS]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
-- [[LAWFUL_BASIS_VALUES]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
-- [[LEGITIMATE_USE_LIMB_OPTIONS]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
-- [[LEGITIMATE_USE_LIMB_VALUES]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
-- [[Label]] - code - dpdp-platform/frontend/src/components/ui/label.tsx
-- [[LanguageSelector()]] - code - dpdp-platform/frontend/src/components/shared/LanguageSelector.tsx
-- [[LanguageSelector.tsx]] - code - dpdp-platform/frontend/src/components/shared/LanguageSelector.tsx
-- [[LanguageSelectorProps]] - code - dpdp-platform/frontend/src/components/shared/LanguageSelector.tsx
-- [[NOTICE_LANGUAGES]] - code - dpdp-platform/frontend/src/components/shared/LanguageSelector.tsx
-- [[NotReviewedChip()]] - code - dpdp-platform/frontend/src/fiduciary/components/NotReviewedChip.tsx
-- [[NotReviewedChip.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/NotReviewedChip.test.tsx
-- [[NotReviewedChip.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/NotReviewedChip.tsx
-- [[NotReviewedChipProps]] - code - dpdp-platform/frontend/src/fiduciary/components/NotReviewedChip.tsx
-- [[NoticeLanguageCode]] - code - dpdp-platform/frontend/src/components/shared/LanguageSelector.tsx
-- [[PurposeForm()]] - code - dpdp-platform/frontend/src/fiduciary/components/PurposeForm.tsx
-- [[PurposeForm.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/PurposeForm.test.tsx
-- [[PurposeForm.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/PurposeForm.tsx
-- [[PurposeFormProps]] - code - dpdp-platform/frontend/src/fiduciary/components/PurposeForm.tsx
-- [[PurposeFormValues]] - code - dpdp-platform/frontend/src/fiduciary/components/PurposeForm.tsx
-- [[PurposeRef]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RetentionTab.tsx
-- [[PurposeRef_1]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SharingTab.tsx
-- [[RECIPIENT_TYPE_OPTIONS]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
-- [[RECIPIENT_TYPE_VALUES]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
-- [[RETENTION_LEGAL_BASIS_TYPE_OPTIONS]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
-- [[RETENTION_LEGAL_BASIS_TYPE_VALUES]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
-- [[RETENTION_TRIGGER_TYPE_OPTIONS]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
-- [[RETENTION_TRIGGER_TYPE_VALUES]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
-- [[RETENTION_UNIT_OPTIONS]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
-- [[RETENTION_UNIT_VALUES]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
-- [[Recipient]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.tsx
-- [[RecipientForm()]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.tsx
-- [[RecipientFormValues]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.tsx
-- [[RecipientRef]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SharingTab.tsx
-- [[RecipientRef_1]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/TransfersTab.tsx
-- [[RecipientsTab.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.tsx
-- [[RegistersPage()]] - code - dpdp-platform/frontend/src/fiduciary/pages/RegistersPage.tsx
-- [[RegistersPage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/RegistersPage.tsx
-- [[RestrictionCell()]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/TransfersTab.tsx
-- [[RetentionForm()]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RetentionTab.tsx
-- [[RetentionFormValues]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RetentionTab.tsx
-- [[RetentionPolicy]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RetentionTab.tsx
-- [[RetentionTab()]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RetentionTab.tsx
-- [[RetentionTab.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RetentionTab.tsx
-- [[SecurityMeasuresTab()_1]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SecurityMeasuresTab.tsx
-- [[Select]] - code - dpdp-platform/frontend/src/components/ui/select.tsx
-- [[SharingActivity]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SharingTab.tsx
-- [[SharingForm()]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SharingTab.tsx
-- [[SharingFormValues]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SharingTab.tsx
-- [[SharingTab()]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SharingTab.tsx
-- [[SharingTab.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SharingTab.tsx
-- [[Step5Declarations()]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step5Declarations.tsx
-- [[Step5Declarations.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step5Declarations.tsx
-- [[Tabs]] - code - dpdp-platform/frontend/src/components/ui/tabs.tsx
-- [[TabsContent]] - code - dpdp-platform/frontend/src/components/ui/tabs.tsx
-- [[TabsList]] - code - dpdp-platform/frontend/src/components/ui/tabs.tsx
-- [[TabsTrigger]] - code - dpdp-platform/frontend/src/components/ui/tabs.tsx
-- [[Textarea]] - code - dpdp-platform/frontend/src/components/ui/textarea.tsx
-- [[TextareaControl]] - code - dpdp-platform/frontend/src/fiduciary/components/form-controls.tsx
-- [[Transfer]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/TransfersTab.tsx
-- [[TransferForm()]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/TransfersTab.tsx
-- [[TransferFormValues]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/TransfersTab.tsx
-- [[TransfersTab()]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/TransfersTab.tsx
-- [[TransfersTab.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/TransfersTab.tsx
-- [[button.tsx]] - code - dpdp-platform/frontend/src/components/ui/button.tsx
-- [[buttonVariants]] - code - dpdp-platform/frontend/src/components/ui/button.tsx
-- [[checkbox.tsx]] - code - dpdp-platform/frontend/src/components/ui/checkbox.tsx
+- [[AUDIT_ACTION_VALUES]] - code - dpdp-platform/frontend/src/fiduciary/pages/AuditPage.tsx
+- [[AUDIT_EVENT]] - code - dpdp-platform/frontend/src/fiduciary/pages/AuditPage.test.tsx
+- [[AuditEventListItem_1]] - code - dpdp-platform/frontend/src/fiduciary/components/AuditEventRow.tsx
+- [[AuditEventListResult_1]] - code - dpdp-platform/frontend/src/fiduciary/pages/AuditPage.tsx
+- [[AuditEventRow()]] - code - dpdp-platform/frontend/src/fiduciary/components/AuditEventRow.tsx
+- [[AuditEventRow.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/AuditEventRow.tsx
+- [[AuditEventRowProps]] - code - dpdp-platform/frontend/src/fiduciary/components/AuditEventRow.tsx
+- [[AuditFilters]] - code - dpdp-platform/frontend/src/fiduciary/pages/AuditPage.tsx
+- [[AuditPage.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/AuditPage.test.tsx
+- [[AuditPage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/AuditPage.tsx
+- [[Campaign_1]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
+- [[CampaignRecipient]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
+- [[ChainVerificationResult_1]] - code - dpdp-platform/frontend/src/fiduciary/pages/AuditPage.tsx
+- [[DataTable.tsx]] - code - dpdp-platform/frontend/src/components/shared/DataTable.tsx
+- [[DataTableProps]] - code - dpdp-platform/frontend/src/components/shared/DataTable.tsx
+- [[DownloadButton()]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
+- [[EMPTY_FILTERS]] - code - dpdp-platform/frontend/src/fiduciary/pages/AuditPage.tsx
+- [[EmptyEvidence()]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
+- [[EmptyStateConfig]] - code - dpdp-platform/frontend/src/components/shared/DataTable.tsx
+- [[EvidenceCard()]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
+- [[MessagingCampaignDetailPage()]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
+- [[MessagingCampaignDetailPage.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.test.tsx
+- [[MessagingCampaignDetailPage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
+- [[MockRoutes_6]] - code - dpdp-platform/frontend/src/fiduciary/pages/AuditPage.test.tsx
+- [[ORGANIZATION_3]] - code - dpdp-platform/frontend/src/fiduciary/pages/AuditPage.test.tsx
+- [[PrincipalEvidenceBreachInclusion]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
+- [[PrincipalEvidenceConsentEvent]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
+- [[PrincipalEvidenceMessage]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
+- [[PrincipalEvidenceNoticeVersion]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
+- [[PrincipalEvidencePage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
+- [[PrincipalEvidenceRequest]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
+- [[PrincipalEvidenceRequestEvent]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
+- [[RecipientStatusCounts]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
+- [[Table]] - code - dpdp-platform/frontend/src/components/ui/table.tsx
+- [[TableBody]] - code - dpdp-platform/frontend/src/components/ui/table.tsx
+- [[TableCell]] - code - dpdp-platform/frontend/src/components/ui/table.tsx
+- [[TableHead]] - code - dpdp-platform/frontend/src/components/ui/table.tsx
+- [[TableHeader]] - code - dpdp-platform/frontend/src/components/ui/table.tsx
+- [[TableRow]] - code - dpdp-platform/frontend/src/components/ui/table.tsx
+- [[campaignNoticeLinkText()]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
+- [[canApproveCampaign()]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
+- [[canSendCampaign()]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
 - [[cn()]] - code - dpdp-platform/frontend/src/lib/utils.ts
-- [[declarationsSchema]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step5Declarations.tsx
-- [[dialog.tsx]] - code - dpdp-platform/frontend/src/components/ui/dialog.tsx
-- [[enum-options.ts]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
-- [[fillRequiredTextFields()]] - code - dpdp-platform/frontend/src/fiduciary/components/PurposeForm.test.tsx
-- [[form-controls.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/form-controls.tsx
-- [[input.tsx]] - code - dpdp-platform/frontend/src/components/ui/input.tsx
-- [[jsonResponse()_6]] - code - dpdp-platform/frontend/src/fiduciary/components/PurposeForm.test.tsx
-- [[label.tsx]] - code - dpdp-platform/frontend/src/components/ui/label.tsx
-- [[purposeFormSchema]] - code - dpdp-platform/frontend/src/fiduciary/components/PurposeForm.tsx
-- [[recipientFormSchema]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.tsx
-- [[renderForm()]] - code - dpdp-platform/frontend/src/fiduciary/components/PurposeForm.test.tsx
-- [[retentionFormSchema]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RetentionTab.tsx
-- [[select.tsx]] - code - dpdp-platform/frontend/src/components/ui/select.tsx
-- [[sharingFormSchema]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SharingTab.tsx
-- [[tabs.tsx]] - code - dpdp-platform/frontend/src/components/ui/tabs.tsx
-- [[textarea.tsx]] - code - dpdp-platform/frontend/src/components/ui/textarea.tsx
-- [[titleCase()]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
-- [[toOptions()]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
-- [[transferFormSchema]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/TransfersTab.tsx
-- [[utils.ts]] - code - dpdp-platform/frontend/src/lib/utils.ts
+- [[deliveredToNobody()]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
+- [[download()]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
+- [[hasVisibleMetadata()]] - code - dpdp-platform/frontend/src/fiduciary/components/AuditEventRow.tsx
+- [[jsonResponse()_22]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.test.tsx
+- [[recipientReasonText()]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
+- [[renderPage()_9]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.test.tsx
+- [[saveBlob()_1]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
+- [[shouldShowCampaignApproval()]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
+- [[statusBadgeVariant()]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
+- [[summarizeRecipientStatuses()]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
+- [[table.tsx]] - code - dpdp-platform/frontend/src/components/ui/table.tsx
 
 ## Live Query (requires Dataview plugin)
 
@@ -139,21 +71,25 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 54 edges to [[_COMMUNITY_DataSourceDetailPage.tsx]]
-- 49 edges to [[_COMMUNITY_card.tsx]]
-- 40 edges to [[_COMMUNITY_PrincipalDetailPage.tsx]]
-- 39 edges to [[_COMMUNITY_SecurityMeasuresTab.tsx]]
-- 24 edges to [[_COMMUNITY_api-client.ts]]
-- 24 edges to [[_COMMUNITY_SettingsPage.tsx]]
-- 21 edges to [[_COMMUNITY_EmployeesPage.tsx]]
-- 19 edges to [[_COMMUNITY_DateTime.tsx]]
-- 6 edges to [[_COMMUNITY_NotificationBell.tsx]]
-- 2 edges to [[_COMMUNITY_CandidateComparison.tsx]]
-- 2 edges to [[_COMMUNITY_DashboardPage.test.tsx]]
+- 48 edges to [[_COMMUNITY_card.tsx]]
+- 27 edges to [[_COMMUNITY_SecurityMeasuresTab.tsx]]
+- 25 edges to [[_COMMUNITY_button.tsx]]
+- 18 edges to [[_COMMUNITY_DateTime.tsx]]
+- 15 edges to [[_COMMUNITY_router.tsx]]
+- 8 edges to [[_COMMUNITY_api-client.ts]]
+- 7 edges to [[_COMMUNITY_MeConsentsPage.tsx]]
+- 5 edges to [[_COMMUNITY_data-sources-api.ts]]
+- 5 edges to [[_COMMUNITY_EmployeesPage.tsx]]
+- 4 edges to [[_COMMUNITY_employeeLogin]]
+- 4 edges to [[_COMMUNITY_AuditPage]]
+- 4 edges to [[_COMMUNITY_employeeApiClient]]
+- 3 edges to [[_COMMUNITY_AlgorithmRegisterPanel.tsx]]
+- 2 edges to [[_COMMUNITY_employeeLogout]]
+- 2 edges to [[_COMMUNITY_MeDataPage.tsx]]
 
 ## Top bridge nodes
-- [[button.tsx]] - degree 36, connects to 10 communities
-- [[Button]] - degree 34, connects to 10 communities
-- [[cn()]] - degree 64, connects to 8 communities
-- [[SharingTab.tsx]] - degree 44, connects to 8 communities
-- [[TransfersTab.tsx]] - degree 44, connects to 8 communities
+- [[cn()]] - degree 64, connects to 10 communities
+- [[AuditPage.tsx]] - degree 45, connects to 9 communities
+- [[PrincipalEvidencePage.tsx]] - degree 44, connects to 8 communities
+- [[MessagingCampaignDetailPage.tsx]] - degree 40, connects to 7 communities
+- [[DataTable.tsx]] - degree 26, connects to 6 communities

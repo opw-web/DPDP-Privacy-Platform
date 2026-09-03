@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/erasure-task.service.ts"
 type: "code"
-community: "retention/retention.controller.ts"
-location: "L473"
+community: "RetentionController"
+location: "L620"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retention/retentioncontrollerts
+  - community/RetentionController
 ---
 
 # .cancel()
@@ -18,4 +18,4 @@ tags:
 - [[CancelErasureTaskDto]] - `references` [EXTRACTED]
 - [[ErasureTaskService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retention/retentioncontrollerts
+#graphify/code #graphify/EXTRACTED #community/RetentionController

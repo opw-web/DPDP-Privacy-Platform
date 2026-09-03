@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.test.tsx"
 type: "code"
-community: "PrincipalDetailPage.tsx"
+community: "PrincipalDetailPage.test.tsx"
 location: "L87"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalDetailPagetsx
+  - community/PrincipalDetailPagetesttsx
 ---
 
 # SOURCE_RECORDS_RESPONSE
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[PrincipalDetailPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/PrincipalDetailPagetesttsx

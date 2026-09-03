@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.ts"
 type: "code"
-community: ".record"
+community: "purposes.service.ts"
 location: "L206"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/purposesservicets
 ---
 
 # .update()
@@ -20,4 +20,4 @@ tags:
 - [[UpdatePurposeDto]] - `references` [EXTRACTED]
 - [[toPublicPurpose()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/purposesservicets

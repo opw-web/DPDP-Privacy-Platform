@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts"
+source_file: "dpdp-platform/backend/src/queues/deadline-scan.queue.ts"
 type: "code"
-community: "PrincipalAuthController"
-location: "L41"
+community: "SyncQueueService"
+location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalAuthController
+  - community/SyncQueueService
 ---
 
 # .constructor()
 
 ## Connections
-- [[PrincipalAuthController]] - `method` [EXTRACTED]
-- [[PrincipalAuthService]] - `references` [EXTRACTED]
+- [[dot-register()]] - `calls` [INFERRED]
+- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
+- [[DeadlineScanQueueService]] - `method` [EXTRACTED]
+- [[InjectQueue_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalAuthController
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

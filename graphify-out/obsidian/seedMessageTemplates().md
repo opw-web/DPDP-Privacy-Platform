@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/prisma/seed/message-templates.ts"
 type: "code"
-community: "seed.ts"
+community: "templates.service.ts"
 location: "L471"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/seedts
+  - community/templatesservicets
 ---
 
 # seedMessageTemplates()
@@ -18,4 +18,4 @@ tags:
 - [[seed.ts]] - `imports` [EXTRACTED]
 - [[templates.e2e-spec.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/seedts
+#graphify/code #graphify/EXTRACTED #community/templatesservicets

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/PurposeForm.tsx"
 type: "code"
-community: "cn"
+community: "SecurityMeasuresTab.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/SecurityMeasuresTabtsx
 ---
 
 # PurposeForm.tsx
@@ -15,6 +15,7 @@ tags:
 - [[ApiError]] - `imports` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
 - [[CheckboxOption]] - `imports` [EXTRACTED]
+- [[CheckboxOption_1]] - `imports` [EXTRACTED]
 - [[CreatePurposePayload]] - `contains` [EXTRACTED]
 - [[DATA_CATEGORY_OPTIONS]] - `imports` [EXTRACTED]
 - [[DEFAULT_VALUES]] - `contains` [EXTRACTED]
@@ -43,4 +44,4 @@ tags:
 - [[label.tsx]] - `imports_from` [EXTRACTED]
 - [[purposeFormSchema]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx

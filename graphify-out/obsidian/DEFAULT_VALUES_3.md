@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/registers/SharingTab.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/registers/SecurityMeasuresTab.tsx"
 type: "code"
-community: "cn"
-location: "L62"
+community: "SecurityMeasuresTab.tsx"
+location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/SecurityMeasuresTabtsx
 ---
 
 # DEFAULT_VALUES
 
 ## Connections
-- [[SharingTab.tsx]] - `contains` [EXTRACTED]
+- [[SecurityMeasuresTab.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx

@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/retention-scan.service.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/pre-erasure-notice.service.ts"
 type: "code"
-community: "RetentionScanService"
-location: "L50"
+community: "retention.module.ts"
+location: "L75"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionScanService
+  - community/retentionmodulets
 ---
 
 # .runForAllOrganizations()
 
 ## Connections
-- [[dot-process()_3]] - `calls` [INFERRED]
-- [[dot-runForCurrentOrganization()_1]] - `calls` [EXTRACTED]
-- [[RetentionScanService]] - `method` [EXTRACTED]
+- [[dot-process()_5]] - `calls` [INFERRED]
+- [[dot-runForCurrentOrganization()_3]] - `calls` [EXTRACTED]
+- [[PreErasureNoticeService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionScanService
+#graphify/code #graphify/EXTRACTED #community/retentionmodulets

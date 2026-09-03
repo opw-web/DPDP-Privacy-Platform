@@ -12,7 +12,7 @@ tags:
 # tenant.extension.spec.ts
 
 ## Connections
-- [[primaryKeyWhereFor()]] - `imports` [EXTRACTED]
+- [[primaryKeyWhereFor()_1]] - `imports` [EXTRACTED]
 - [[tenant.extension.ts]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/tenantextensionts

@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/common/mail/mailer.service.ts"
 type: "code"
-community: "notifications.module.ts"
+community: "MailerService"
 location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationsmodulets
+  - community/MailerService
 ---
 
 # .getTransporter()
 
 ## Connections
-- [[dot-send()_1]] - `calls` [EXTRACTED]
+- [[dot-send()_4]] - `calls` [EXTRACTED]
 - [[MailerService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationsmodulets
+#graphify/code #graphify/EXTRACTED #community/MailerService

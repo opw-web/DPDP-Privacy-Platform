@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/router.tsx"
 type: "code"
-community: "api-client.ts"
-location: "L102"
+community: "router.test.tsx"
+location: "L129"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/routertesttsx
 ---
 
 # AppRouter()
@@ -16,4 +16,4 @@ tags:
 - [[router.test.tsx]] - `imports` [EXTRACTED]
 - [[router.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/routertesttsx

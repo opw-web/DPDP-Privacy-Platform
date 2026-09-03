@@ -1,22 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/merge.service.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/providers/smtp.provider.ts"
 type: "code"
-community: "PrismaService"
-location: "L54"
+community: "MailerService"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/MailerService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AgeService]] - `references` [EXTRACTED]
-- [[AssemblyService]] - `references` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
-- [[MergeService]] - `method` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
-- [[ReferenceService]] - `references` [EXTRACTED]
+- [[MailerService]] - `references` [EXTRACTED]
+- [[SmtpProvider]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/MailerService

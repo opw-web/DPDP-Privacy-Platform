@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts"
 type: "code"
-community: "template-renderer.ts"
-location: "L112"
+community: "templates.service.ts"
+location: "L113"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/template-rendererts
+  - community/templatesservicets
 ---
 
 # assertSimpleWhitelistedMustache()
@@ -18,4 +18,4 @@ tags:
 - [[template-renderer.ts]] - `contains` [EXTRACTED]
 - [[walkStatement()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/template-rendererts
+#graphify/code #graphify/EXTRACTED #community/templatesservicets

@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-buildPack()]] - `calls` [INFERRED]
 - [[EvidencePackController]] - `method` [EXTRACTED]
-- [[Get_22]] - `references` [EXTRACTED]
+- [[Get_17]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[Res_4]] - `references` [EXTRACTED]
 

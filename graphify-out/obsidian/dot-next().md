@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/reference/reference.service.ts"
 type: "code"
-community: "audit.service.ts"
+community: "AuditService"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/auditservicets
+  - community/AuditService
 ---
 
 # .next()
@@ -15,4 +15,4 @@ tags:
 - [[ReferenceService]] - `method` [EXTRACTED]
 - [[allocateCounterValue()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/auditservicets
+#graphify/code #graphify/EXTRACTED #community/AuditService

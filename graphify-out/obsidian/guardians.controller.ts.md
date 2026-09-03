@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/children/guardians.controller.ts"
 type: "code"
-community: "guardians.service.ts"
+community: "RequirePermission"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/RequirePermission
 ---
 
 # guardians.controller.ts
@@ -31,4 +31,4 @@ tags:
 - [[token.service.ts]] - `imports_from` [EXTRACTED]
 - [[verify-guardian.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/prisma/scoped-transaction-client.ts"
 type: "code"
-community: "ScopedTransactionClient"
+community: "prisma.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScopedTransactionClient
+  - community/prismaservicets
 ---
 
 # scoped-transaction-client.ts
@@ -32,11 +32,14 @@ tags:
 - [[mapping-warnings.ts]] - `imports_from` [EXTRACTED]
 - [[matching.service.ts]] - `imports_from` [EXTRACTED]
 - [[merge.service.ts]] - `imports_from` [EXTRACTED]
+- [[notifications.service.ts]] - `imports_from` [EXTRACTED]
 - [[principals.service.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
+- [[purpose-served.service.ts]] - `imports_from` [EXTRACTED]
 - [[reference.service.ts]] - `imports_from` [EXTRACTED]
 - [[refresh-rotation.util.ts]] - `imports_from` [EXTRACTED]
 - [[requests.service.ts]] - `imports_from` [EXTRACTED]
+- [[retention-transaction-lock.util.ts]] - `imports_from` [EXTRACTED]
 - [[sync-pipeline.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

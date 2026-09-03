@@ -1,23 +1,23 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/dto/employee-login.dto.ts"
 type: "code"
-community: "AccessTokenPayload"
+community: "EmployeeAuthController"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/EmployeeAuthController
 ---
 
 # EmployeeLoginDto
 
 ## Connections
-- [[dot-login()_1]] - `references` [EXTRACTED]
-- [[ApiProperty_8]] - `references` [EXTRACTED]
-- [[IsEmail_1]] - `references` [EXTRACTED]
-- [[IsString_10]] - `references` [EXTRACTED]
-- [[MinLength_7]] - `references` [EXTRACTED]
+- [[dot-login()_2]] - `references` [EXTRACTED]
+- [[ApiProperty_45]] - `references` [EXTRACTED]
+- [[IsEmail_5]] - `references` [EXTRACTED]
+- [[IsString_61]] - `references` [EXTRACTED]
+- [[MinLength_46]] - `references` [EXTRACTED]
 - [[employee-auth.controller.ts]] - `imports` [EXTRACTED]
 - [[employee-login.dto.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController

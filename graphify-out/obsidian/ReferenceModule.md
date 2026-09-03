@@ -12,9 +12,10 @@ tags:
 # ReferenceModule
 
 ## Connections
-- [[Module_7]] - `references` [EXTRACTED]
+- [[Module_6]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[board.module.ts]] - `imports` [EXTRACTED]
+- [[breaches.module.ts]] - `imports` [EXTRACTED]
 - [[campaigns.module.ts]] - `imports` [EXTRACTED]
 - [[identity.module.ts]] - `imports` [EXTRACTED]
 - [[reference.module.ts]] - `contains` [EXTRACTED]

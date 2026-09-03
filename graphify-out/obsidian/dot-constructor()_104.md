@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/evidence-pack.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/unmerge.controller.ts"
 type: "code"
-community: "EvidencePackController"
-location: "L11"
+community: ".unmerge"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EvidencePackController
+  - community/unmerge
 ---
 
 # .constructor()
 
 ## Connections
-- [[EvidencePackController]] - `method` [EXTRACTED]
-- [[EvidencePackService]] - `references` [EXTRACTED]
+- [[MergeService]] - `references` [EXTRACTED]
+- [[UnmergeController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EvidencePackController
+#graphify/code #graphify/EXTRACTED #community/unmerge

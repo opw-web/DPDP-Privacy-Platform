@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts"
+source_file: "dpdp-platform/backend/src/queues/sync.processor.ts"
 type: "code"
-community: "template-renderer.ts"
-location: "L86"
+community: "queues.module.ts"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/template-rendererts
+  - community/queuesmodulets
 ---
 
 # .constructor()
 
 ## Connections
-- [[MissingRequiredVariableError]] - `method` [EXTRACTED]
+- [[SyncPipelineService]] - `references` [EXTRACTED]
+- [[SyncProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/template-rendererts
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

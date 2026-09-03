@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/roles.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/retention.controller.ts"
 type: "code"
-community: "UpdateRolePermissionsDto"
-location: "L14"
+community: "retention.service.ts"
+location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateRolePermissionsDto
+  - community/retentionservicets
 ---
 
 # .list()
 
 ## Connections
-- [[Get_35]] - `references` [EXTRACTED]
+- [[Get_37]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[RolesController]] - `method` [EXTRACTED]
+- [[RetentionController_1]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto
+#graphify/code #graphify/EXTRACTED #community/retentionservicets

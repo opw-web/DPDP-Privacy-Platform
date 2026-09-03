@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CampaignsService"
+community: "CreateVoluntaryUndertakingDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampaignsService
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # Injectable
 
 ## Connections
-- [[CampaignsService]] - `references` [EXTRACTED]
+- [[VoluntaryUndertakingsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampaignsService
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

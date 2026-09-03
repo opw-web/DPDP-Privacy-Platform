@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/inventory/inventory.service.ts"
 type: "code"
-community: "masking.service.ts"
-location: "L88"
+community: "inventory.service.ts"
+location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/maskingservicets
+  - community/inventoryservicets
 ---
 
 # ShortfallCounts
@@ -15,4 +15,4 @@ tags:
 - [[InventorySummary]] - `inherits` [EXTRACTED]
 - [[inventory.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/maskingservicets
+#graphify/code #graphify/EXTRACTED #community/inventoryservicets

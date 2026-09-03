@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts"
 type: "code"
-community: "template-renderer.ts"
-location: "L353"
+community: "templates.service.ts"
+location: "L383"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/template-rendererts
+  - community/templatesservicets
 ---
 
 # renderOrganizationMessageTemplate()
 
 ## Connections
-- [[dot-preview()]] - `calls` [EXTRACTED]
+- [[dot-preview()_2]] - `calls` [EXTRACTED]
 - [[dot-send()_7]] - `calls` [EXTRACTED]
 - [[campaigns.service.ts]] - `imports` [EXTRACTED]
 - [[renderMessageTemplate()]] - `calls` [EXTRACTED]
@@ -20,4 +20,4 @@ tags:
 - [[template-renderer.ts]] - `contains` [EXTRACTED]
 - [[templates.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/template-rendererts
+#graphify/code #graphify/EXTRACTED #community/templatesservicets

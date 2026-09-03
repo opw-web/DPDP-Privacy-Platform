@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-buildAuthHeaders()]] - `calls` [EXTRACTED]
 - [[dot-request()]] - `calls` [INFERRED]
-- [[dot-testConnection()_2]] - `calls` [EXTRACTED]
+- [[dot-testConnection()_3]] - `calls` [EXTRACTED]
 - [[RestApiConnector]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts

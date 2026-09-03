@@ -17,7 +17,7 @@ tags:
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[app.module.ts]] - `imports_from` [EXTRACTED]
 - [[createOrgWithSettingsManager()]] - `contains` [EXTRACTED]
-- [[ensurePermission()_9]] - `contains` [EXTRACTED]
+- [[ensurePermission()_5]] - `contains` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[seedpermissions.ts]] - `imports_from` [EXTRACTED]
 

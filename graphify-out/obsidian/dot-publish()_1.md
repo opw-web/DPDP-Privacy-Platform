@@ -12,7 +12,7 @@ tags:
 # .publish()
 
 ## Connections
-- [[dot-get()_19]] - `calls` [EXTRACTED]
+- [[dot-get()_17]] - `calls` [EXTRACTED]
 - [[dot-getVersionOrThrow()]] - `calls` [EXTRACTED]
 - [[dot-publish()]] - `calls` [INFERRED]
 - [[dot-record()]] - `calls` [INFERRED]

@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sync.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/sync.queue.ts"
 type: "code"
-community: "sync.e2e-spec.ts"
-location: "L46"
+community: "SyncQueueService"
+location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/synce2e-spects
+  - community/SyncQueueService
 ---
 
 # .constructor()
 
 ## Connections
-- [[SyncPipelineService]] - `references` [EXTRACTED]
-- [[SyncProcessor]] - `method` [EXTRACTED]
+- [[InjectQueue_8]] - `references` [EXTRACTED]
+- [[SyncLockService]] - `references` [EXTRACTED]
+- [[SyncQueueService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/synce2e-spects
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

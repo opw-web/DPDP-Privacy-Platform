@@ -1,19 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/notifications.service.ts"
 type: "code"
-community: "AccessTokenPayload"
-location: "L34"
+community: "notifications.service.ts"
+location: "L149"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/notificationsservicets
 ---
 
 # .list()
 
 ## Connections
-- [[CampaignsController]] - `method` [EXTRACTED]
-- [[Get_11]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[NotificationCallerActor]] - `references` [EXTRACTED]
+- [[NotificationsService]] - `method` [EXTRACTED]
+- [[ownershipWhere()]] - `calls` [EXTRACTED]
+- [[toPublicNotification()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/notificationsservicets

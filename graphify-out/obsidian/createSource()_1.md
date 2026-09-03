@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/principals.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/principal-portal.e2e-spec.ts"
 type: "code"
-community: "principals.e2e-spec.ts"
-location: "L120"
+community: "principal-portal.e2e-spec.ts"
+location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principalse2e-spects
+  - community/principal-portale2e-spects
 ---
 
 # createSource()
 
 ## Connections
-- [[createFixture()_1]] - `calls` [EXTRACTED]
-- [[principals.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[createFixture()_2]] - `calls` [EXTRACTED]
+- [[principal-portal.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principalse2e-spects
+#graphify/code #graphify/EXTRACTED #community/principal-portale2e-spects

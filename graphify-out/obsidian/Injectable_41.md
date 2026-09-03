@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PrismaService"
+community: "sdf.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/sdfcontrollerts
 ---
 
 # Injectable
 
 ## Connections
-- [[OrganizationsService]] - `references` [EXTRACTED]
+- [[SdfAssessmentService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/sdfcontrollerts

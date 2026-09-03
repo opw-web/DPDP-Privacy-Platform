@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/lib/api-client.test.ts"
 type: "code"
-community: "api-client.ts"
+community: "router.tsx"
 location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/routertsx
 ---
 
 # authHeaderOf()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[api-client.test.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/routertsx

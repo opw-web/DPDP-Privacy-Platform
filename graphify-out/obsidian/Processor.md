@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sdf.module.ts"
+community: "queues.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdfmodulets
+  - community/queuesmodulets
 ---
 
 # Processor
 
 ## Connections
-- [[SdfCycleScanProcessor]] - `references` [EXTRACTED]
+- [[SyncProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdfmodulets
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

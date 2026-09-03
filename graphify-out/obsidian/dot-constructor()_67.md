@@ -1,20 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/sdf.controller.ts"
 type: "code"
-community: "PrismaService"
-location: "L69"
+community: "AlgorithmRegisterService"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/AlgorithmRegisterService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[DataSourcesService]] - `references` [EXTRACTED]
-- [[MappingsService]] - `method` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
+- [[AlgorithmRegisterService]] - `references` [EXTRACTED]
+- [[SdfAssessmentService]] - `references` [EXTRACTED]
+- [[SdfController]] - `method` [EXTRACTED]
+- [[SdfGapsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterService

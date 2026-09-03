@@ -1,17 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "canonicalJson"
+community: "RequestsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/canonicalJson
+  - community/RequestsController
 ---
 
 # Get
 
 ## Connections
-- [[dot-exportCsv()_2]] - `references` [EXTRACTED]
-- [[dot-verifyChain()_1]] - `references` [EXTRACTED]
+- [[dot-accessReport()_1]] - `references` [EXTRACTED]
+- [[dot-erasureCompletionHolders()]] - `references` [EXTRACTED]
+- [[dot-getByReference()]] - `references` [EXTRACTED]
+- [[dot-list()_46]] - `references` [EXTRACTED]
+- [[dot-stats()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/canonicalJson
+#graphify/code #graphify/EXTRACTED #community/RequestsController

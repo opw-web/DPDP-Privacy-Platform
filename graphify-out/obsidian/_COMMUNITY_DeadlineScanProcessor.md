@@ -8,8 +8,8 @@ members: 6
 **Members:** 6 nodes
 
 ## Members
-- [[dot-constructor()_7]] - code - dpdp-platform/backend/src/queues/deadline-scan.processor.ts
-- [[dot-process()_1]] - code - dpdp-platform/backend/src/queues/deadline-scan.processor.ts
+- [[dot-constructor()_45]] - code - dpdp-platform/backend/src/queues/deadline-scan.processor.ts
+- [[dot-process()]] - code - dpdp-platform/backend/src/queues/deadline-scan.processor.ts
 - [[dot-runScanCycle()]] - code - dpdp-platform/backend/src/queues/deadline-scan.processor.ts
 - [[DeadlineScanJobData]] - code - dpdp-platform/backend/src/queues/deadline-scan.queue.ts
 - [[DeadlineScanProcessor]] - code - dpdp-platform/backend/src/queues/deadline-scan.processor.ts
@@ -25,12 +25,11 @@ SORT file.name ASC
 ## Connections to other communities
 - 3 edges to [[_COMMUNITY_requests.service.ts]]
 - 2 edges to [[_COMMUNITY_RequestsService]]
-- 1 edge to [[_COMMUNITY_app.module.ts]]
-- 1 edge to [[_COMMUNITY_BootRegistrationRegistry]]
-- 1 edge to [[_COMMUNITY_PrismaService]]
+- 1 edge to [[_COMMUNITY_retention.module.ts]]
+- 1 edge to [[_COMMUNITY_mvp2-schedules.ts]]
 
 ## Top bridge nodes
 - [[DeadlineScanProcessor]] - degree 7, connects to 2 communities
 - [[DeadlineScanJobData]] - degree 3, connects to 2 communities
-- [[dot-constructor()_7]] - degree 3, connects to 2 communities
 - [[dot-runScanCycle()]] - degree 3, connects to 1 community
+- [[dot-constructor()_45]] - degree 2, connects to 1 community

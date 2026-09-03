@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/package.json"
 type: "code"
 community: "cookie-parser"
-location: "L37"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED

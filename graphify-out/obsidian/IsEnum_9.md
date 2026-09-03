@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ChangeStatusDto"
+community: "CreateTemplateDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ChangeStatusDto
+  - community/CreateTemplateDto
 ---
 
 # IsEnum
 
 ## Connections
-- [[ChangeStatusDto]] - `references` [EXTRACTED]
+- [[CreateTemplateDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ChangeStatusDto
+#graphify/code #graphify/EXTRACTED #community/CreateTemplateDto

@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/dto/employee-me-response.dto.ts"
 type: "code"
-community: "AccessTokenPayload"
+community: ".me"
 location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/me
 ---
 
 # EmployeeMeResponseDto
 
 ## Connections
-- [[dot-me()_2]] - `references` [EXTRACTED]
-- [[ApiProperty_9]] - `references` [EXTRACTED]
+- [[dot-me()]] - `references` [EXTRACTED]
+- [[ApiProperty_22]] - `references` [EXTRACTED]
 - [[employee-auth.controller.ts]] - `imports` [EXTRACTED]
 - [[employee-me-response.dto.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/me

@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/candidates.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
 type: "code"
 community: "RequirePermission"
-location: "L47"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,11 +12,8 @@ tags:
 # .list()
 
 ## Connections
-- [[CandidatesController]] - `method` [EXTRACTED]
-- [[CurrentActorPermissions]] - `references` [EXTRACTED]
+- [[CampaignsController]] - `method` [EXTRACTED]
 - [[Get_20]] - `references` [EXTRACTED]
-- [[ListMatchCandidatesQueryDto]] - `references` [EXTRACTED]
-- [[Query_4]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/RequirePermission

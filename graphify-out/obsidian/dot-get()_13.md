@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/recipients.service.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/employees.service.ts"
 type: "code"
-community: "RecipientsService"
-location: "L67"
+community: "employees.service.ts"
+location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RecipientsService
+  - community/employeesservicets
 ---
 
 # .get()
 
 ## Connections
 - [[dot-get()_12]] - `calls` [INFERRED]
-- [[RecipientsService]] - `method` [EXTRACTED]
+- [[EmployeesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RecipientsService
+#graphify/code #graphify/EXTRACTED #community/employeesservicets

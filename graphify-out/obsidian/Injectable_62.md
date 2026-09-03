@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "BootRegistrationRegistry"
+community: "CampaignsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BootRegistrationRegistry
+  - community/CampaignsService
 ---
 
 # Injectable
 
 ## Connections
-- [[DeadlineScanQueueService]] - `references` [EXTRACTED]
+- [[CampaignsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BootRegistrationRegistry
+#graphify/code #graphify/EXTRACTED #community/CampaignsService

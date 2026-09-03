@@ -1,19 +1,25 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync-pipeline.service.ts"
 type: "code"
-community: "rest-api.connector.ts"
-location: "L142"
+community: "ScopedTransactionClient"
+location: "L172"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rest-apiconnectorts
+  - community/ScopedTransactionClient
 ---
 
 # .constructor()
 
 ## Connections
-- [[ReadOnlyHttpClient]] - `references` [EXTRACTED]
-- [[RestApiConnector]] - `method` [EXTRACTED]
-- [[UnsupportedPaginationStyleError]] - `calls` [EXTRACTED]
+- [[AgeService]] - `references` [EXTRACTED]
+- [[AssemblyService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[DataSourcesService]] - `references` [EXTRACTED]
+- [[LinkingService]] - `references` [EXTRACTED]
+- [[MatchingService]] - `references` [EXTRACTED]
+- [[NormalizationService]] - `references` [EXTRACTED]
+- [[SyncLockService]] - `references` [EXTRACTED]
+- [[SyncPipelineService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

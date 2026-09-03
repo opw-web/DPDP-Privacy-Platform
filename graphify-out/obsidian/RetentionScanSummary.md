@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/src/modules/retention/retention-scan.service.ts"
 type: "code"
 community: "erasure-task.service.ts"
-location: "L20"
+location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED

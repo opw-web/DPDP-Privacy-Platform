@@ -30,6 +30,7 @@ tags:
 - [[identity.module.ts]] - `imports_from` [EXTRACTED]
 - [[jsonValue()]] - `contains` [EXTRACTED]
 - [[linking.service.ts]] - `imports_from` [EXTRACTED]
+- [[mappings.service.ts]] - `imports_from` [EXTRACTED]
 - [[mappingsForSource()]] - `contains` [EXTRACTED]
 - [[merge-unmerge.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[merge.service.ts]] - `imports_from` [EXTRACTED]

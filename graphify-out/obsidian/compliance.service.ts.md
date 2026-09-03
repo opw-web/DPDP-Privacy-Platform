@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
 type: "code"
-community: "compliance.service.ts"
+community: "AuditService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/complianceservicets
+  - community/AuditService
 ---
 
 # compliance.service.ts
@@ -25,12 +25,14 @@ tags:
 - [[UpdateComplianceRuleDto]] - `imports` [EXTRACTED]
 - [[addByDeadlineUnit()]] - `contains` [EXTRACTED]
 - [[audit.service.ts]] - `imports_from` [EXTRACTED]
+- [[breach.service.ts]] - `imports_from` [EXTRACTED]
 - [[compliance.controller.ts]] - `imports_from` [EXTRACTED]
 - [[compliance.module.ts]] - `imports_from` [EXTRACTED]
 - [[compliance.service.spec.ts]] - `imports_from` [EXTRACTED]
 - [[create-compliance-rule.dto.ts]] - `imports_from` [EXTRACTED]
 - [[diffRules()]] - `contains` [EXTRACTED]
 - [[erasure-task.service.ts]] - `imports_from` [EXTRACTED]
+- [[evidence-pack.service.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[requests.service.ts]] - `imports_from` [EXTRACTED]
 - [[retention-scan.service.ts]] - `imports_from` [EXTRACTED]
@@ -45,4 +47,4 @@ tags:
 - [[update-compliance-rule.dto.ts]] - `imports_from` [EXTRACTED]
 - [[worstCaseDeadlineDays()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/complianceservicets
+#graphify/code #graphify/EXTRACTED #community/AuditService

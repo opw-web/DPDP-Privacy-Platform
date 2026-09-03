@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ComplianceController"
+community: "TransfersService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ComplianceController
+  - community/TransfersService
 ---
 
 # Controller
 
 ## Connections
-- [[ComplianceController]] - `references` [EXTRACTED]
+- [[TransfersController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ComplianceController
+#graphify/code #graphify/EXTRACTED #community/TransfersService

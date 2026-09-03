@@ -12,10 +12,11 @@ tags:
 # NoticesModule
 
 ## Connections
-- [[Module_22]] - `references` [EXTRACTED]
+- [[Module_21]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[campaigns.module.ts]] - `imports` [EXTRACTED]
 - [[consents.module.ts]] - `imports` [EXTRACTED]
 - [[notices.module.ts]] - `contains` [EXTRACTED]
+- [[principal-portal.module.ts]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/appmodulets

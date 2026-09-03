@@ -12,7 +12,7 @@ tags:
 # RetentionScanJobData
 
 ## Connections
-- [[dot-process()_3]] - `references` [EXTRACTED]
+- [[dot-process()_6]] - `references` [EXTRACTED]
 - [[retention-scan.processor.ts]] - `imports` [EXTRACTED]
 - [[retention-scan.queue.ts]] - `contains` [EXTRACTED]
 

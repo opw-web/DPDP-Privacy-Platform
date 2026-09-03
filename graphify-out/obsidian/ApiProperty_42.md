@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "mappings.controller.ts"
+community: "RetentionController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingscontrollerts
+  - community/RetentionController
 ---
 
 # ApiProperty
 
 ## Connections
-- [[AttachPurposesDto]] - `references` [EXTRACTED]
+- [[CompleteErasureTaskDto]] - `references` [EXTRACTED]
+- [[ProcessorChecklistTickDto]] - `references` [EXTRACTED]
+- [[SystemChecklistTickDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingscontrollerts
+#graphify/code #graphify/EXTRACTED #community/RetentionController

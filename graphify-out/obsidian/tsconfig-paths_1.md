@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
 community: "tsconfig-paths"
-location: "L77"
+location: "L78"
 tags:
   - graphify/concept
   - graphify/EXTRACTED

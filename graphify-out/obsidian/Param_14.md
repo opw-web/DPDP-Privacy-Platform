@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "guardians.service.ts"
+community: "CreateInformationRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/CreateInformationRequestDto
 ---
 
 # Param
 
 ## Connections
-- [[dot-verify()]] - `references` [EXTRACTED]
+- [[dot-getById()_6]] - `references` [EXTRACTED]
+- [[dot-update()_15]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

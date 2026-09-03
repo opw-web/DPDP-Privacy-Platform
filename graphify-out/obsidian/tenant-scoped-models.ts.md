@@ -18,6 +18,7 @@ tags:
 - [[TENANT_SCOPED_MODELS]] - `contains` [EXTRACTED]
 - [[TenantScopedModel]] - `contains` [EXTRACTED]
 - [[tenant-scoped-models.spec.ts]] - `imports_from` [EXTRACTED]
+- [[tenant.extension.js]] - `imports_from` [EXTRACTED]
 - [[tenant.extension.ts]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/tenantextensionts

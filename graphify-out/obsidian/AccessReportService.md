@@ -16,10 +16,14 @@ tags:
 - [[dot-buildProcessingActivities()]] - `method` [EXTRACTED]
 - [[dot-buildReport()]] - `method` [EXTRACTED]
 - [[dot-buildRetentionSection()]] - `method` [EXTRACTED]
-- [[dot-constructor()_71]] - `method` [EXTRACTED]
-- [[Injectable_43]] - `references` [EXTRACTED]
+- [[dot-constructor()_15]] - `references` [EXTRACTED]
+- [[dot-constructor()_70]] - `references` [EXTRACTED]
+- [[dot-constructor()_147]] - `method` [EXTRACTED]
+- [[Injectable_7]] - `references` [EXTRACTED]
 - [[access-report.service.ts]] - `contains` [EXTRACTED]
 - [[evidence.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[evidence.module.ts]] - `imports` [EXTRACTED]
+- [[me.controller.ts]] - `imports` [EXTRACTED]
+- [[requests.controller.ts]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/AccessReportService

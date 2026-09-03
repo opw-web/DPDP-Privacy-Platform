@@ -8,16 +8,16 @@ members: 13
 **Members:** 13 nodes
 
 ## Members
-- [[dot-constructor()_23]] - code - dpdp-platform/backend/src/modules/identity/unmerge.controller.ts
+- [[dot-constructor()_104]] - code - dpdp-platform/backend/src/modules/identity/unmerge.controller.ts
 - [[dot-unmerge()]] - code - dpdp-platform/backend/src/modules/identity/unmerge.controller.ts
-- [[ApiProperty_4]] - code
-- [[ApiTags_4]] - code
-- [[Body_3]] - code
-- [[Controller_4]] - code
-- [[IsString_6]] - code
-- [[MinLength_4]] - code
-- [[Param_3]] - code
-- [[Post_3]] - code
+- [[ApiProperty_36]] - code
+- [[ApiTags_23]] - code
+- [[Body_16]] - code
+- [[Controller_24]] - code
+- [[IsString_51]] - code
+- [[MinLength_39]] - code
+- [[Param_16]] - code
+- [[Post_15]] - code
 - [[UnmergeController]] - code - dpdp-platform/backend/src/modules/identity/unmerge.controller.ts
 - [[UnmergeDto]] - code - dpdp-platform/backend/src/modules/identity/dto/unmerge.dto.ts
 - [[unmerge.dto.ts]] - code - dpdp-platform/backend/src/modules/identity/dto/unmerge.dto.ts
@@ -30,14 +30,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_AccessTokenPayload]]
-- 2 edges to [[_COMMUNITY_ScopedTransactionClient]]
+- 6 edges to [[_COMMUNITY_RequirePermission]]
+- 1 edge to [[_COMMUNITY_AuditService]]
 - 1 edge to [[_COMMUNITY_app.module.ts]]
-- 1 edge to [[_COMMUNITY_RequirePermission]]
+- 1 edge to [[_COMMUNITY_ScopedTransactionClient]]
 
 ## Top bridge nodes
-- [[dot-unmerge()]] - degree 9, connects to 3 communities
+- [[dot-unmerge()]] - degree 9, connects to 2 communities
 - [[UnmergeController]] - degree 6, connects to 2 communities
 - [[UnmergeDto]] - degree 6, connects to 1 community
-- [[dot-constructor()_23]] - degree 2, connects to 1 community
+- [[dot-constructor()_104]] - degree 2, connects to 1 community
 - [[unmerge.dto.ts]] - degree 2, connects to 1 community

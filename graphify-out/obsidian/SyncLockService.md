@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-acquire()]] - `method` [EXTRACTED]
-- [[dot-constructor()_144]] - `references` [EXTRACTED]
-- [[dot-constructor()_32]] - `references` [EXTRACTED]
-- [[dot-constructor()_17]] - `method` [EXTRACTED]
+- [[dot-constructor()_127]] - `references` [EXTRACTED]
+- [[dot-constructor()_145]] - `references` [EXTRACTED]
+- [[dot-constructor()_18]] - `method` [EXTRACTED]
 - [[dot-isLocked()]] - `method` [EXTRACTED]
 - [[dot-onModuleDestroy()]] - `method` [EXTRACTED]
 - [[Injectable_10]] - `references` [EXTRACTED]

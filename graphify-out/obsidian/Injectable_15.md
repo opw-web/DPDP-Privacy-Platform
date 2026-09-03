@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "TokenService"
+community: "notifications.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TokenService
+  - community/notificationsmodulets
 ---
 
 # Injectable
 
 ## Connections
-- [[JwtEmployeeGuard]] - `references` [EXTRACTED]
+- [[SmtpProvider]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TokenService
+#graphify/code #graphify/EXTRACTED #community/notificationsmodulets

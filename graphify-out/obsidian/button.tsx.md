@@ -1,42 +1,78 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/ui/button.tsx"
 type: "code"
-community: "cn"
+community: "button.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/buttontsx
 ---
 
 # button.tsx
 
 ## Connections
+- [[AccessReportPanel.tsx]] - `imports_from` [EXTRACTED]
+- [[AlgorithmRegisterPanel.tsx]] - `imports_from` [EXTRACTED]
 - [[AppShell.tsx]] - `imports_from` [EXTRACTED]
+- [[AssessmentRow.tsx]] - `imports_from` [EXTRACTED]
+- [[AudienceBuilder.tsx]] - `imports_from` [EXTRACTED]
 - [[AuditPage.tsx]] - `imports_from` [EXTRACTED]
+- [[BreachDetailPage.tsx]] - `imports_from` [EXTRACTED]
+- [[BreachObligationCard.tsx]] - `imports_from` [EXTRACTED]
+- [[BreachWizardPage.tsx]] - `imports_from` [EXTRACTED]
+- [[BreachesPage.tsx]] - `imports_from` [EXTRACTED]
 - [[Button]] - `contains` [EXTRACTED]
 - [[ButtonProps]] - `contains` [EXTRACTED]
 - [[CandidateComparison.tsx]] - `imports_from` [EXTRACTED]
+- [[ChildrenPage.tsx]] - `imports_from` [EXTRACTED]
 - [[ConfirmDialog.tsx]] - `imports_from` [EXTRACTED]
+- [[ConsentsPage.tsx]] - `imports_from` [EXTRACTED]
+- [[CorrectionWorkflow.tsx]] - `imports_from` [EXTRACTED]
 - [[DataSourcesPage.tsx]] - `imports_from` [EXTRACTED]
 - [[EmployeesPage.tsx]] - `imports_from` [EXTRACTED]
 - [[EmptyState.tsx]] - `imports_from` [EXTRACTED]
+- [[ExemptionClaimForm.tsx]] - `imports_from` [EXTRACTED]
 - [[ExportButtons.tsx]] - `imports_from` [EXTRACTED]
 - [[GapsPanel.tsx]] - `imports_from` [EXTRACTED]
+- [[GuardianForm.tsx]] - `imports_from` [EXTRACTED]
+- [[InformationRequestForm.tsx]] - `imports_from` [EXTRACTED]
+- [[InformationRequestsPage.tsx]] - `imports_from` [EXTRACTED]
+- [[LegalHoldForm.tsx]] - `imports_from` [EXTRACTED]
 - [[LinkedRecordsPanel.tsx]] - `imports_from` [EXTRACTED]
 - [[LoginPage.tsx]] - `imports_from` [EXTRACTED]
+- [[MeConsentsPage.tsx]] - `imports_from` [EXTRACTED]
+- [[MeNominationPage.tsx]] - `imports_from` [EXTRACTED]
+- [[MePrivacyPage.tsx]] - `imports_from` [EXTRACTED]
+- [[MeRequestDetailPage.tsx]] - `imports_from` [EXTRACTED]
+- [[MeRequestsPage.tsx]] - `imports_from` [EXTRACTED]
+- [[MessagingCampaignBuilderPage.tsx]] - `imports_from` [EXTRACTED]
+- [[MessagingCampaignDetailPage.tsx]] - `imports_from` [EXTRACTED]
+- [[MessagingCampaignsPage.tsx]] - `imports_from` [EXTRACTED]
+- [[MessagingTemplateEditorPage.tsx]] - `imports_from` [EXTRACTED]
+- [[MessagingTemplatesPage.tsx]] - `imports_from` [EXTRACTED]
+- [[NoticeBuilderPage.tsx]] - `imports_from` [EXTRACTED]
+- [[NoticeComposer.tsx]] - `imports_from` [EXTRACTED]
+- [[NoticesPage.tsx]] - `imports_from` [EXTRACTED]
 - [[NotificationBell.tsx]] - `imports_from` [EXTRACTED]
 - [[PortalShell.tsx]] - `imports_from` [EXTRACTED]
 - [[PrincipalDetailPage.tsx]] - `imports_from` [EXTRACTED]
+- [[PrincipalEvidencePage.tsx]] - `imports_from` [EXTRACTED]
 - [[PrincipalLoginPage.tsx]] - `imports_from` [EXTRACTED]
 - [[PrincipalsPage.tsx]] - `imports_from` [EXTRACTED]
 - [[PurposeForm.tsx]] - `imports_from` [EXTRACTED]
 - [[PurposesPage.tsx]] - `imports_from` [EXTRACTED]
 - [[RecipientsTab.tsx]] - `imports_from` [EXTRACTED]
+- [[RequestDetailPage.tsx]] - `imports_from` [EXTRACTED]
+- [[RequestWorkPanel.tsx]] - `imports_from` [EXTRACTED]
+- [[RetentionPage.tsx]] - `imports_from` [EXTRACTED]
 - [[RetentionTab.tsx]] - `imports_from` [EXTRACTED]
+- [[RetentionTaskCard.tsx]] - `imports_from` [EXTRACTED]
 - [[SdfDeclarationCard.tsx]] - `imports_from` [EXTRACTED]
 - [[SecurityMeasuresTab.tsx]] - `imports_from` [EXTRACTED]
+- [[SettingsCompliancePage.tsx]] - `imports_from` [EXTRACTED]
 - [[SettingsPage.tsx]] - `imports_from` [EXTRACTED]
+- [[SettingsRightsPage.tsx]] - `imports_from` [EXTRACTED]
 - [[SharingTab.tsx]] - `imports_from` [EXTRACTED]
 - [[Step1Connection.tsx]] - `imports_from` [EXTRACTED]
 - [[Step2Schema.tsx]] - `imports_from` [EXTRACTED]
@@ -49,4 +85,4 @@ tags:
 - [[cn()]] - `imports` [EXTRACTED]
 - [[utils.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/buttontsx

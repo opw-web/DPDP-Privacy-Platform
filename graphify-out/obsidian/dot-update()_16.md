@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/src/modules/board/information-requests.service.ts"
 type: "code"
 community: "CreateInformationRequestDto"
-location: "L147"
+location: "L178"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,7 @@ tags:
 # .update()
 
 ## Connections
+- [[dot-assertAffectedPrincipals()]] - `calls` [EXTRACTED]
 - [[dot-assertDirectionHasAuthorisation()]] - `calls` [EXTRACTED]
 - [[dot-record()]] - `calls` [INFERRED]
 - [[dot-update()_15]] - `calls` [INFERRED]

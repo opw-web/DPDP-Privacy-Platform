@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SharingService"
+community: ".unmerge"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SharingService
+  - community/unmerge
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_22]] - `references` [EXTRACTED]
-- [[dot-update()_19]] - `references` [EXTRACTED]
+- [[dot-unmerge()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SharingService
+#graphify/code #graphify/EXTRACTED #community/unmerge

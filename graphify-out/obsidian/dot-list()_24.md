@@ -1,17 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/erasure-task.service.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/employees.controller.ts"
 type: "code"
-community: "erasure-task.service.ts"
-location: "L330"
+community: "employees.service.ts"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/employeesservicets
 ---
 
 # .list()
 
 ## Connections
-- [[ErasureTaskService]] - `method` [EXTRACTED]
+- [[EmployeesController]] - `method` [EXTRACTED]
+- [[Get_22]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/employeesservicets

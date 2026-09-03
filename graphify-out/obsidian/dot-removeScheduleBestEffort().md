@@ -12,7 +12,7 @@ tags:
 # .removeScheduleBestEffort()
 
 ## Connections
-- [[dot-remove()]] - `calls` [EXTRACTED]
+- [[dot-remove()_1]] - `calls` [EXTRACTED]
 - [[dot-removeSchedule()]] - `calls` [INFERRED]
 - [[DataSourcesService]] - `method` [EXTRACTED]
 

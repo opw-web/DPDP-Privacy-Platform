@@ -12,7 +12,7 @@ tags:
 # DeadlineScanJobData
 
 ## Connections
-- [[dot-process()_1]] - `references` [EXTRACTED]
+- [[dot-process()]] - `references` [EXTRACTED]
 - [[deadline-scan.processor.ts]] - `imports` [EXTRACTED]
 - [[deadline-scan.queue.ts]] - `contains` [EXTRACTED]
 

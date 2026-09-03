@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: ".record"
+community: "ChangeStatusDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/ChangeStatusDto
 ---
 
 # IsOptional
 
 ## Connections
-- [[CreatePurposeDto]] - `references` [EXTRACTED]
+- [[ChangeStatusDto]] - `references` [EXTRACTED]
+- [[ErasureProcessorChecklistDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/ChangeStatusDto

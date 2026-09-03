@@ -1,21 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notices/notices.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/breaches/breaches.controller.ts"
 type: "code"
-community: "notices.service.ts"
-location: "L44"
+community: "BreachesController"
+location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/noticesservicets
+  - community/BreachesController
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_19]] - `calls` [INFERRED]
-- [[Get_31]] - `references` [EXTRACTED]
-- [[NoticesController]] - `method` [EXTRACTED]
-- [[Param_23]] - `references` [EXTRACTED]
+- [[dot-get()_10]] - `calls` [INFERRED]
+- [[BreachesController]] - `method` [EXTRACTED]
+- [[Get_33]] - `references` [EXTRACTED]
+- [[Param_24]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/noticesservicets
+#graphify/code #graphify/EXTRACTED #community/BreachesController

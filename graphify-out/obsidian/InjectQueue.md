@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sdf.module.ts"
+community: "breaches.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdfmodulets
+  - community/breachesmodulets
 ---
 
 # InjectQueue
 
 ## Connections
-- [[dot-constructor()_6]] - `references` [EXTRACTED]
+- [[dot-constructor()_53]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdfmodulets
+#graphify/code #graphify/EXTRACTED #community/breachesmodulets

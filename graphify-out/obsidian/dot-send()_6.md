@@ -1,20 +1,24 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/providers/smtp.provider.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
 type: "code"
-community: "notifications.module.ts"
-location: "L24"
+community: "RequirePermission"
+location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationsmodulets
+  - community/RequirePermission
 ---
 
 # .send()
 
 ## Connections
-- [[dot-send()_1]] - `calls` [INFERRED]
-- [[NotificationSendInput]] - `references` [EXTRACTED]
-- [[NotificationSendResult]] - `references` [EXTRACTED]
-- [[SmtpProvider]] - `method` [EXTRACTED]
+- [[dot-send()_7]] - `calls` [INFERRED]
+- [[AccessTokenPayload]] - `references` [EXTRACTED]
+- [[CampaignsController]] - `method` [EXTRACTED]
+- [[CurrentActor]] - `references` [EXTRACTED]
+- [[CurrentActorPermissions]] - `references` [EXTRACTED]
+- [[Param_11]] - `references` [EXTRACTED]
+- [[Post_10]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationsmodulets
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

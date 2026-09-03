@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/board/information-requests.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/children/age-status.service.ts"
 type: "code"
-community: "CreateInformationRequestDto"
-location: "L15"
+community: "age-status.service.ts"
+location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateInformationRequestDto
+  - community/age-statusservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[InformationRequestsController]] - `method` [EXTRACTED]
-- [[InformationRequestsService]] - `references` [EXTRACTED]
+- [[AgeStatusService]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto
+#graphify/code #graphify/EXTRACTED #community/age-statusservicets

@@ -10,6 +10,8 @@ members: 39
 ## Members
 - [[@nestjscommon]] - code - dpdp-platform/backend/package.json
 - [[@nestjscommon_1]] - concept - dpdp-platform/backend/package.json
+- [[@nestjsconfig]] - code - dpdp-platform/backend/package.json
+- [[@nestjsconfig_1]] - concept - dpdp-platform/backend/package.json
 - [[@nestjscore]] - code - dpdp-platform/backend/package.json
 - [[@nestjscore_1]] - concept - dpdp-platform/backend/package.json
 - [[@nestjsplatform-express]] - code - dpdp-platform/backend/package.json
@@ -20,8 +22,6 @@ members: 39
 - [[@prismaclient_1]] - concept - dpdp-platform/backend/package.json
 - [[argon2]] - code - dpdp-platform/backend/package.json
 - [[argon2_1]] - concept - dpdp-platform/backend/package.json
-- [[bullmq]] - code - dpdp-platform/backend/package.json
-- [[bullmq_1]] - concept - dpdp-platform/backend/package.json
 - [[class-transformer]] - code - dpdp-platform/backend/package.json
 - [[class-transformer_1]] - concept - dpdp-platform/backend/package.json
 - [[class-validator]] - code - dpdp-platform/backend/package.json
@@ -29,8 +29,8 @@ members: 39
 - [[date-fns_2]] - code - dpdp-platform/backend/package.json
 - [[date-fns_3]] - concept - dpdp-platform/backend/package.json
 - [[dependencies_1]] - code - dpdp-platform/backend/package.json
-- [[ioredis]] - code - dpdp-platform/backend/package.json
-- [[ioredis_1]] - concept - dpdp-platform/backend/package.json
+- [[jsonwebtoken]] - code - dpdp-platform/backend/package.json
+- [[jsonwebtoken_1]] - concept - dpdp-platform/backend/package.json
 - [[nodemailer]] - code - dpdp-platform/backend/package.json
 - [[nodemailer_1]] - concept - dpdp-platform/backend/package.json
 - [[pdfkit_1]] - code - dpdp-platform/backend/package.json
@@ -62,8 +62,8 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_nestjs-pino]]
 - 1 edge to [[_COMMUNITY_handlebars]]
 - 1 edge to [[_COMMUNITY_backendpackage.json]]
-- 1 edge to [[_COMMUNITY_@nestjsconfig]]
-- 1 edge to [[_COMMUNITY_jsonwebtoken]]
+- 1 edge to [[_COMMUNITY_bullmq]]
+- 1 edge to [[_COMMUNITY_ioredis]]
 
 ## Top bridge nodes
 - [[dependencies_1]] - degree 27, connects to 8 communities

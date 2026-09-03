@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-evidence()]] - `references` [EXTRACTED]
-- [[PublicInformationRequest]] - `references` [EXTRACTED]
+- [[PublicInformationRequest_1]] - `references` [EXTRACTED]
 - [[principal-evidence-render.ts]] - `imports` [EXTRACTED]
 - [[principal-evidence.controller.ts]] - `imports` [EXTRACTED]
 - [[principal-evidence.service.ts]] - `contains` [EXTRACTED]

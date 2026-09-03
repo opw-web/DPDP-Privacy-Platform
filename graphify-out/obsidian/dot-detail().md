@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principals/principals.controller.ts"
 type: "code"
-community: "RequirePermission"
+community: "PrincipalsController"
 location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/PrincipalsController
 ---
 
 # .detail()
@@ -14,9 +14,9 @@ tags:
 ## Connections
 - [[dot-getDetail()]] - `calls` [INFERRED]
 - [[CurrentActorPermissions]] - `references` [EXTRACTED]
-- [[Get_21]] - `references` [EXTRACTED]
-- [[Param_12]] - `references` [EXTRACTED]
+- [[Get_13]] - `references` [EXTRACTED]
+- [[Param_9]] - `references` [EXTRACTED]
 - [[PrincipalsController]] - `method` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/PrincipalsController

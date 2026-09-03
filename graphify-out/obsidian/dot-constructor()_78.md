@@ -1,24 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.service.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/purpose-served.service.ts"
 type: "code"
-community: "PrismaService"
-location: "L161"
+community: "erasure-task.service.ts"
+location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/erasure-taskservicets
 ---
 
 # .constructor()
 
 ## Connections
 - [[AuditService]] - `references` [EXTRACTED]
-- [[CampaignSendQueueService]] - `references` [EXTRACTED]
-- [[CampaignsService]] - `method` [EXTRACTED]
-- [[ConsentsService]] - `references` [EXTRACTED]
-- [[NoticesService]] - `references` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
-- [[ReferenceService]] - `references` [EXTRACTED]
-- [[TemplatesService]] - `references` [EXTRACTED]
+- [[PurposeServedService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets

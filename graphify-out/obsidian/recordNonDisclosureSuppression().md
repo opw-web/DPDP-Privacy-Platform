@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/board/non-disclosure.ts"
 type: "code"
-community: "campaigns.service.ts"
+community: "CampaignsService"
 location: "L89"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/campaignsservicets
+  - community/CampaignsService
 ---
 
 # recordNonDisclosureSuppression()
@@ -17,4 +17,4 @@ tags:
 - [[boardnon-disclosure.ts]] - `contains` [EXTRACTED]
 - [[campaigns.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/campaignsservicets
+#graphify/code #graphify/EXTRACTED #community/CampaignsService

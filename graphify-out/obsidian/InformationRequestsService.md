@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/src/modules/board/information-requests.service.ts"
 type: "code"
 community: "CreateInformationRequestDto"
-location: "L59"
+location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,14 +12,15 @@ tags:
 # InformationRequestsService
 
 ## Connections
+- [[dot-assertAffectedPrincipals()]] - `method` [EXTRACTED]
 - [[dot-assertDirectionHasAuthorisation()]] - `method` [EXTRACTED]
-- [[dot-constructor()_110]] - `references` [EXTRACTED]
-- [[dot-constructor()_60]] - `method` [EXTRACTED]
-- [[dot-create()_17]] - `method` [EXTRACTED]
-- [[dot-getById()_5]] - `method` [EXTRACTED]
-- [[dot-list()_30]] - `method` [EXTRACTED]
+- [[dot-constructor()_96]] - `references` [EXTRACTED]
+- [[dot-constructor()_97]] - `method` [EXTRACTED]
+- [[dot-create()_20]] - `method` [EXTRACTED]
+- [[dot-getById()_7]] - `method` [EXTRACTED]
+- [[dot-list()_27]] - `method` [EXTRACTED]
 - [[dot-update()_16]] - `method` [EXTRACTED]
-- [[Injectable_52]] - `references` [EXTRACTED]
+- [[Injectable_60]] - `references` [EXTRACTED]
 - [[board.module.ts]] - `imports` [EXTRACTED]
 - [[information-requests.controller.ts]] - `imports` [EXTRACTED]
 - [[information-requests.service.ts]] - `contains` [EXTRACTED]

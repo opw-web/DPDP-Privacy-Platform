@@ -1,24 +1,24 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
+source_file: "dpdp-platform/backend/src/modules/breaches/breaches.controller.ts"
 type: "code"
-community: "compliance.service.ts"
-location: "L366"
+community: "BreachesController"
+location: "L65"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/complianceservicets
+  - community/BreachesController
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_2]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[dot-update()_22]] - `calls` [EXTRACTED]
-- [[dot-validateGrievanceCeiling()]] - `calls` [EXTRACTED]
-- [[ComplianceService]] - `method` [EXTRACTED]
-- [[CreateComplianceRuleDto]] - `references` [EXTRACTED]
-- [[diffRules()]] - `calls` [EXTRACTED]
-- [[toPublicComplianceRule()]] - `calls` [EXTRACTED]
+- [[dot-create()_12]] - `calls` [INFERRED]
+- [[AccessTokenPayload]] - `references` [EXTRACTED]
+- [[Actor]] - `references` [EXTRACTED]
+- [[Body_23]] - `references` [EXTRACTED]
+- [[BreachesController]] - `method` [EXTRACTED]
+- [[CreateBreachDto]] - `references` [EXTRACTED]
+- [[Post_24]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/complianceservicets
+#graphify/code #graphify/EXTRACTED #community/BreachesController

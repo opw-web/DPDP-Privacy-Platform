@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/src/modules/board/voluntary-undertakings.service.ts"
 type: "code"
 community: "CreateVoluntaryUndertakingDto"
-location: "L73"
+location: "L86"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,7 @@ tags:
 # .update()
 
 ## Connections
+- [[dot-record()]] - `calls` [INFERRED]
 - [[dot-update()_11]] - `calls` [INFERRED]
 - [[UpdateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
 - [[VoluntaryUndertakingsService]] - `method` [EXTRACTED]

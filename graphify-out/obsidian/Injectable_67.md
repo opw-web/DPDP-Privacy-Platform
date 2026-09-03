@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "child-exemptions.service.ts"
+community: "age-status.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/child-exemptionsservicets
+  - community/age-statusservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[ChildExemptionsService]] - `references` [EXTRACTED]
+- [[AgeStatusService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/child-exemptionsservicets
+#graphify/code #graphify/EXTRACTED #community/age-statusservicets

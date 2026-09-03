@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: ".record"
+community: "purposes.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/purposesservicets
 ---
 
 # ValidateIf
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[UpdatePurposeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/purposesservicets

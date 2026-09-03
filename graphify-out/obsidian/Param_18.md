@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "RecipientsService"
+community: "ConsentsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RecipientsService
+  - community/ConsentsService
 ---
 
 # Param
 
 ## Connections
-- [[dot-get()_12]] - `references` [EXTRACTED]
-- [[dot-update()_17]] - `references` [EXTRACTED]
+- [[dot-getConsentStats()]] - `references` [EXTRACTED]
+- [[dot-listForPrincipal()_1]] - `references` [EXTRACTED]
+- [[dot-recordImportedConsent()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RecipientsService
+#graphify/code #graphify/EXTRACTED #community/ConsentsService

@@ -12,14 +12,14 @@ tags:
 # PreviewAudienceDto
 
 ## Connections
-- [[dot-preview()_3]] - `references` [EXTRACTED]
-- [[dot-preview()_2]] - `references` [EXTRACTED]
-- [[ApiProperty_17]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_18]] - `references` [EXTRACTED]
-- [[IsObject_3]] - `references` [EXTRACTED]
-- [[IsOptional_20]] - `references` [EXTRACTED]
-- [[IsString_24]] - `references` [EXTRACTED]
-- [[MinLength_19]] - `references` [EXTRACTED]
+- [[dot-preview()_1]] - `references` [EXTRACTED]
+- [[dot-preview()_5]] - `references` [EXTRACTED]
+- [[ApiProperty_52]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_54]] - `references` [EXTRACTED]
+- [[IsObject_7]] - `references` [EXTRACTED]
+- [[IsOptional_53]] - `references` [EXTRACTED]
+- [[IsString_71]] - `references` [EXTRACTED]
+- [[MinLength_55]] - `references` [EXTRACTED]
 - [[audience.controller.ts]] - `imports` [EXTRACTED]
 - [[audience.service.ts]] - `imports` [EXTRACTED]
 - [[preview-audience.dto.ts]] - `contains` [EXTRACTED]

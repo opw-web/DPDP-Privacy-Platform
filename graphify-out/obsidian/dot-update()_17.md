@@ -1,23 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/recipients.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts"
 type: "code"
-community: "RecipientsService"
-location: "L38"
+community: ".completeAssessment"
+location: "L87"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RecipientsService
+  - community/completeAssessment
 ---
 
 # .update()
 
 ## Connections
-- [[dot-update()_18]] - `calls` [INFERRED]
-- [[Body_15]] - `references` [EXTRACTED]
-- [[Param_18]] - `references` [EXTRACTED]
-- [[Patch_9]] - `references` [EXTRACTED]
-- [[RecipientsController]] - `method` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[UpdateRecipientDto]] - `references` [EXTRACTED]
+- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-updateAlgorithm()]] - `calls` [INFERRED]
+- [[AlgorithmRegisterService]] - `method` [EXTRACTED]
+- [[UpdateAlgorithmEntryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RecipientsService
+#graphify/code #graphify/EXTRACTED #community/completeAssessment

@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
+source_file: "dpdp-platform/backend/src/modules/evidence/principal-evidence.controller.ts"
 type: "code"
-community: "rest-api.connector.ts"
-location: "L40"
+community: "principal-evidence.service.ts"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rest-apiconnectorts
+  - community/principal-evidenceservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[UnsupportedPaginationStyleError]] - `method` [EXTRACTED]
+- [[PrincipalEvidenceController]] - `method` [EXTRACTED]
+- [[PrincipalEvidenceService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts
+#graphify/code #graphify/EXTRACTED #community/principal-evidenceservicets

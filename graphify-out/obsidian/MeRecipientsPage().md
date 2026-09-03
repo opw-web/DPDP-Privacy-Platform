@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[MeRecipientsPage.test.tsx]] - `imports` [EXTRACTED]
 - [[MeRecipientsPage.tsx]] - `contains` [EXTRACTED]
-- [[categoryLabel()_1]] - `calls` [EXTRACTED]
+- [[categoryLabel()]] - `calls` [EXTRACTED]
 - [[recipientTypeLabel()]] - `calls` [EXTRACTED]
 - [[router.tsx]] - `imports` [EXTRACTED]
 

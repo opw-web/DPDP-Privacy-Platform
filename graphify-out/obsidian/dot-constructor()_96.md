@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/audience/audience.service.ts"
+source_file: "dpdp-platform/backend/src/modules/board/information-requests.controller.ts"
 type: "code"
-community: "compile-audience.ts"
-location: "L69"
+community: "CreateInformationRequestDto"
+location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/compile-audiencets
+  - community/CreateInformationRequestDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[AudienceService]] - `method` [EXTRACTED]
-- [[MaskingService]] - `references` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
+- [[InformationRequestsController]] - `method` [EXTRACTED]
+- [[InformationRequestsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/compile-audiencets
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

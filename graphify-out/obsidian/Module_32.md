@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PrismaModule"
+community: "retention.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaModule
+  - community/retentionmodulets
 ---
 
 # Module
 
 ## Connections
-- [[PrismaModule]] - `references` [EXTRACTED]
+- [[RetentionModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaModule
+#graphify/code #graphify/EXTRACTED #community/retentionmodulets

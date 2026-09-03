@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/sync.queue.ts"
 type: "code"
-community: "sync.e2e-spec.ts"
+community: "queues.module.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/synce2e-spects
+  - community/queuesmodulets
 ---
 
 # sync.queue.ts
@@ -30,4 +30,4 @@ tags:
 - [[syncJobId()]] - `contains` [EXTRACTED]
 - [[syncSchedulerId()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/synce2e-spects
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

@@ -1,23 +1,23 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
 type: "code"
-community: ".record"
+community: "purposes.service.ts"
 location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/purposesservicets
 ---
 
 # .update()
 
 ## Connections
 - [[dot-update()_3]] - `calls` [INFERRED]
-- [[Body_2]] - `references` [EXTRACTED]
-- [[Param_2]] - `references` [EXTRACTED]
+- [[Body_4]] - `references` [EXTRACTED]
+- [[Param_3]] - `references` [EXTRACTED]
 - [[Patch_1]] - `references` [EXTRACTED]
 - [[PurposesController]] - `method` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[UpdatePurposeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/purposesservicets

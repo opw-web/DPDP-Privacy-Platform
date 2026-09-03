@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/notices.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/mappings.e2e-spec.ts"
 type: "code"
-community: "retention.e2e-spec.ts"
-location: "L120"
+community: "data-sources.e2e-spec.ts"
+location: "L125"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentione2e-spects
+  - community/data-sourcese2e-spects
 ---
 
 # createDataSource()
 
 ## Connections
-- [[notices.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[setupFixture()]] - `calls` [EXTRACTED]
+- [[mappings.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentione2e-spects
+#graphify/code #graphify/EXTRACTED #community/data-sourcese2e-spects

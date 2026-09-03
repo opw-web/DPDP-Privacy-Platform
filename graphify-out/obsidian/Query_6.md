@@ -11,6 +11,6 @@ tags:
 # Query
 
 ## Connections
-- [[dot-preview()_4]] - `references` [EXTRACTED]
+- [[dot-preview()_3]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/noticesservicets

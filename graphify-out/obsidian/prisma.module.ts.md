@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/prisma/prisma.module.ts"
 type: "code"
-community: "prisma.service.ts"
+community: "PrismaService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/PrismaService
 ---
 
 # prisma.module.ts
@@ -17,4 +17,4 @@ tags:
 - [[app.module.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/PrismaService

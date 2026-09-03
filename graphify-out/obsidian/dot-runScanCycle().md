@@ -12,7 +12,7 @@ tags:
 # .runScanCycle()
 
 ## Connections
-- [[dot-process()_1]] - `calls` [EXTRACTED]
+- [[dot-process()]] - `calls` [EXTRACTED]
 - [[dot-scanOrgDeadlines()]] - `calls` [INFERRED]
 - [[DeadlineScanProcessor]] - `method` [EXTRACTED]
 

@@ -2,10 +2,10 @@
 source_file: "dpdp-platform/backend/src/modules/identity/assembly.service.ts"
 type: "code"
 community: "ScopedTransactionClient"
-location: "L325"
+location: "L346"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/ScopedTransactionClient
 ---
 
@@ -15,10 +15,11 @@ tags:
 - [[dot-applyMatch()]] - `calls` [INFERRED]
 - [[dot-mergeRecordIntoPrincipal()]] - `calls` [INFERRED]
 - [[dot-persistAndLink()]] - `calls` [INFERRED]
+- [[dot-replace()_1]] - `calls` [INFERRED]
 - [[dot-unmerge()_1]] - `calls` [INFERRED]
 - [[AssemblyService]] - `method` [EXTRACTED]
 - [[ScopedTransactionClient]] - `references` [EXTRACTED]
 - [[assembleFields()]] - `calls` [EXTRACTED]
 - [[displayNameFrom()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient
+#graphify/code #graphify/INFERRED #community/ScopedTransactionClient

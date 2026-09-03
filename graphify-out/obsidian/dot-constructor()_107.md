@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
-location: "L19"
+community: "DataSourcesService"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/DataSourcesService
 ---
 
 # .constructor()
 
 ## Connections
-- [[VoluntaryUndertakingsController]] - `method` [EXTRACTED]
-- [[VoluntaryUndertakingsService]] - `references` [EXTRACTED]
+- [[DataSourcesController]] - `method` [EXTRACTED]
+- [[DataSourcesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/DataSourcesService

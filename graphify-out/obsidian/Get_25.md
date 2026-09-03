@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateInformationRequestDto"
+community: "ConsentsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateInformationRequestDto
+  - community/ConsentsService
 ---
 
 # Get
 
 ## Connections
-- [[dot-getById()_4]] - `references` [EXTRACTED]
-- [[dot-list()_29]] - `references` [EXTRACTED]
+- [[dot-getConsentStats()]] - `references` [EXTRACTED]
+- [[dot-listForPrincipal()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto
+#graphify/code #graphify/EXTRACTED #community/ConsentsService

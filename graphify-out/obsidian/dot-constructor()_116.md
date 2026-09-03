@@ -1,21 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/consent-backfill.queue.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/retention.controller.ts"
 type: "code"
-community: "BootRegistrationRegistry"
-location: "L72"
+community: "RetentionController"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BootRegistrationRegistry
+  - community/RetentionController
 ---
 
 # .constructor()
 
 ## Connections
-- [[dot-register()]] - `calls` [INFERRED]
-- [[dot-registerScheduleAtBoot()]] - `calls` [EXTRACTED]
-- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
-- [[ConsentBackfillQueueService]] - `method` [EXTRACTED]
-- [[InjectQueue_3]] - `references` [EXTRACTED]
+- [[ErasureTaskService]] - `references` [EXTRACTED]
+- [[LegalHoldService]] - `references` [EXTRACTED]
+- [[RetentionController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BootRegistrationRegistry
+#graphify/code #graphify/EXTRACTED #community/RetentionController

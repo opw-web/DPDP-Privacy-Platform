@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "normalization.service.ts"
+community: "retention.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/normalizationservicets
+  - community/retentionmodulets
 ---
 
 # Module
 
 ## Connections
-- [[NormalizationModule]] - `references` [EXTRACTED]
+- [[QueuesModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/normalizationservicets
+#graphify/code #graphify/EXTRACTED #community/retentionmodulets

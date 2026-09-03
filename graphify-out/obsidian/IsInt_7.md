@@ -11,6 +11,6 @@ tags:
 # IsInt
 
 ## Connections
-- [[CreateDataSourceDto]] - `references` [EXTRACTED]
+- [[UpdateDataSourceDto]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/data-sourcesservicets

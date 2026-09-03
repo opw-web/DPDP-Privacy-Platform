@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SdfController"
+community: "purposes.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SdfController
+  - community/purposesservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[AlgorithmRegisterService]] - `references` [EXTRACTED]
+- [[PurposesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SdfController
+#graphify/code #graphify/EXTRACTED #community/purposesservicets

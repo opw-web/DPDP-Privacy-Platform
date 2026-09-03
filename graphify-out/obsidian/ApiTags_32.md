@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "HealthService"
+community: "child-exemptions.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/HealthService
+  - community/child-exemptionsservicets
 ---
 
 # ApiTags
 
 ## Connections
-- [[HealthController]] - `references` [EXTRACTED]
+- [[ChildExemptionsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/HealthService
+#graphify/code #graphify/EXTRACTED #community/child-exemptionsservicets

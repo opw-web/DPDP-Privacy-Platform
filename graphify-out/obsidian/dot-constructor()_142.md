@@ -1,17 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/linking.service.ts"
+source_file: "dpdp-platform/backend/src/queues/retention-scan.queue.ts"
 type: "code"
-community: "ScopedTransactionClient"
-location: "L33"
+community: "SyncQueueService"
+location: "L75"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScopedTransactionClient
+  - community/SyncQueueService
 ---
 
 # .constructor()
 
 ## Connections
-- [[IdentifierOwnershipConflictError_1]] - `method` [EXTRACTED]
+- [[dot-register()]] - `calls` [INFERRED]
+- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
+- [[InjectQueue_6]] - `references` [EXTRACTED]
+- [[RetentionScanQueueService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

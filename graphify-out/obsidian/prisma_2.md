@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/package.json"
 type: "code"
 community: "backend/package.json"
-location: "L22"
+location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED

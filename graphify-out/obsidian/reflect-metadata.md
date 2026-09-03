@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/package.json"
 type: "code"
 community: "dependencies"
-location: "L50"
+location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/common/crypto/crypto.service.ts"
+source_file: "dpdp-platform/backend/src/queues/breach-principal-notice-dispatch.queue.ts"
 type: "code"
-community: "CryptoService"
-location: "L21"
+community: "breaches.module.ts"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CryptoService
+  - community/breachesmodulets
 ---
 
 # .constructor()
 
 ## Connections
-- [[InvalidEncryptionKeyError]] - `method` [EXTRACTED]
+- [[BreachPrincipalNoticeDispatchQueueService]] - `method` [EXTRACTED]
+- [[InjectQueue_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CryptoService
+#graphify/code #graphify/EXTRACTED #community/breachesmodulets

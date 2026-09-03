@@ -12,6 +12,7 @@ tags:
 # requests.controller.ts
 
 ## Connections
+- [[AccessReportService]] - `imports` [EXTRACTED]
 - [[AddNoteDto]] - `imports` [EXTRACTED]
 - [[AssignRequestDto]] - `imports` [EXTRACTED]
 - [[ChangeStatusDto]] - `imports` [EXTRACTED]
@@ -22,12 +23,15 @@ tags:
 - [[RequestsService]] - `imports` [EXTRACTED]
 - [[RequirePermission()]] - `imports` [EXTRACTED]
 - [[VerifyIdentityDto]] - `imports` [EXTRACTED]
+- [[access-report-render.ts]] - `imports_from` [EXTRACTED]
+- [[access-report.service.ts]] - `imports_from` [EXTRACTED]
 - [[add-note.dto.ts]] - `imports_from` [EXTRACTED]
 - [[assign-request.dto.ts]] - `imports_from` [EXTRACTED]
 - [[change-status.dto.ts]] - `imports_from` [EXTRACTED]
 - [[escalate-request.dto.ts]] - `imports_from` [EXTRACTED]
 - [[flag-frivolous.dto.ts]] - `imports_from` [EXTRACTED]
 - [[list-requests.dto.ts]] - `imports_from` [EXTRACTED]
+- [[renderAccessReportPdf()]] - `imports` [EXTRACTED]
 - [[requests.module.ts]] - `imports_from` [EXTRACTED]
 - [[requests.service.ts]] - `imports_from` [EXTRACTED]
 - [[require-permission.decorator.ts]] - `imports_from` [EXTRACTED]

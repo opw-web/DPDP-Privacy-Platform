@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/test/identity-matching.e2e-spec.ts"
 type: "code"
-community: "prisma.service.ts"
+community: "ScopedTransactionClient"
 location: "L151"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/ScopedTransactionClient
 ---
 
 # apply()
 
 ## Connections
 - [[identity-matching.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[tenant()_1]] - `calls` [EXTRACTED]
+- [[tenant()_5]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/retention.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/principal-portal-mvp2.e2e-spec.ts"
 type: "code"
-community: "retention.e2e-spec.ts"
-location: "L125"
+community: "PrismaService"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentione2e-spects
+  - community/PrismaService
 ---
 
 # createPrincipal()
 
 ## Connections
-- [[retention.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[principal-portal-mvp2.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentione2e-spects
+#graphify/code #graphify/EXTRACTED #community/PrismaService

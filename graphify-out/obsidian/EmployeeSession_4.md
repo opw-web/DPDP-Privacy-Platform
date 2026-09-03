@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/lib/auth.ts"
+source_file: "dpdp-platform/backend/test/inventory.e2e-spec.ts"
 type: "code"
-community: "api-client.ts"
-location: "L31"
+community: "inventory.e2e-spec.ts"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/inventorye2e-spects
 ---
 
 # EmployeeSession
 
 ## Connections
-- [[EmployeeSummary]] - `inherits` [EXTRACTED]
-- [[libauth.ts]] - `contains` [EXTRACTED]
+- [[ensurePermission()_12]] - `calls` [EXTRACTED]
+- [[inventory.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/inventorye2e-spects

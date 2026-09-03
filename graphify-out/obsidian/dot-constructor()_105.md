@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/guardians.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/notifications.controller.ts"
 type: "code"
-community: "guardians.service.ts"
-location: "L15"
+community: ".markRead"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/markRead
 ---
 
 # .constructor()
 
 ## Connections
-- [[GuardiansController]] - `method` [EXTRACTED]
-- [[GuardiansService]] - `references` [EXTRACTED]
+- [[NotificationsController]] - `method` [EXTRACTED]
+- [[NotificationsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/markRead

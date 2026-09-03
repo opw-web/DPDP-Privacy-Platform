@@ -19,6 +19,6 @@ tags:
 - [[PrincipalAuthController]] - `method` [EXTRACTED]
 - [[Public()]] - `references` [EXTRACTED]
 - [[Req_3]] - `references` [EXTRACTED]
-- [[Res_6]] - `references` [EXTRACTED]
+- [[Res_9]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PrincipalAuthController

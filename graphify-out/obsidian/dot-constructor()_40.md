@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/common/mail/mailer.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync.controller.ts"
 type: "code"
-community: "notifications.module.ts"
-location: "L40"
+community: "sync.service.ts"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationsmodulets
+  - community/syncservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[MailerService]] - `method` [EXTRACTED]
+- [[SyncJobsController]] - `method` [EXTRACTED]
+- [[SyncService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationsmodulets
+#graphify/code #graphify/EXTRACTED #community/syncservicets

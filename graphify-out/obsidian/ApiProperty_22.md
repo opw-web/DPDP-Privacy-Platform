@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "guardians.service.ts"
+community: ".me"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/me
 ---
 
 # ApiProperty
 
 ## Connections
-- [[VerifyGuardianDto]] - `references` [EXTRACTED]
+- [[EmployeeMeResponseDto]] - `references` [EXTRACTED]
+- [[EmployeeMeRoleDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/me

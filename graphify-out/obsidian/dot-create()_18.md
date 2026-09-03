@@ -1,23 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/requests/requests.service.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/employees.service.ts"
 type: "code"
-community: "RequestsService"
-location: "L178"
+community: "employees.service.ts"
+location: "L66"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/RequestsService
+  - graphify/EXTRACTED
+  - community/employeesservicets
 ---
 
 # .create()
 
 ## Connections
-- [[dot-computeDeadline()]] - `calls` [INFERRED]
+- [[dot-create()_17]] - `calls` [INFERRED]
 - [[dot-record()]] - `calls` [INFERRED]
-- [[dot-resolveRule()]] - `calls` [INFERRED]
-- [[dot-scanOrgDeadlines()]] - `calls` [EXTRACTED]
-- [[dot-snapshotOnto()]] - `calls` [INFERRED]
-- [[dot-writeTransition()]] - `calls` [EXTRACTED]
-- [[RequestsService]] - `method` [EXTRACTED]
+- [[CreateEmployeeDto]] - `references` [EXTRACTED]
+- [[EmployeesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/RequestsService
+#graphify/code #graphify/EXTRACTED #community/employeesservicets

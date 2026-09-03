@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/src/modules/identity/linking.service.ts"
 type: "code"
 community: "ScopedTransactionClient"
-location: "L32"
+location: "L42"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-attachIdentifier()]] - `calls` [EXTRACTED]
-- [[dot-constructor()_142]] - `method` [EXTRACTED]
+- [[dot-constructor()_126]] - `method` [EXTRACTED]
 - [[linking.service.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

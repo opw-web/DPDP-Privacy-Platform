@@ -12,8 +12,9 @@ tags:
 # checklist.types.ts
 
 ## Connections
-- [[ProcessorChecklistEntry]] - `contains` [EXTRACTED]
-- [[SystemChecklistEntry]] - `contains` [EXTRACTED]
+- [[ProcessorChecklistEntry_1]] - `contains` [EXTRACTED]
+- [[SystemChecklistEntry_1]] - `contains` [EXTRACTED]
 - [[erasure-task.service.ts]] - `imports_from` [EXTRACTED]
+- [[requests.service.ts]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/erasure-taskservicets

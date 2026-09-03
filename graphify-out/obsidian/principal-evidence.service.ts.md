@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/principal-evidence.service.ts"
 type: "code"
-community: "access-report.service.ts"
+community: "principal-evidence.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-reportservicets
+  - community/principal-evidenceservicets
 ---
 
 # principal-evidence.service.ts
@@ -23,7 +23,7 @@ tags:
 - [[PrincipalEvidenceFile]] - `contains` [EXTRACTED]
 - [[PrincipalEvidenceService]] - `contains` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
-- [[PublicInformationRequest]] - `imports` [EXTRACTED]
+- [[PublicInformationRequest_1]] - `imports` [EXTRACTED]
 - [[access-log.service.ts]] - `imports_from` [EXTRACTED]
 - [[audit.service.ts]] - `imports_from` [EXTRACTED]
 - [[evidence.e2e-spec.ts]] - `imports_from` [EXTRACTED]
@@ -34,4 +34,4 @@ tags:
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[splitNonDisclosureRequests()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-reportservicets
+#graphify/code #graphify/EXTRACTED #community/principal-evidenceservicets

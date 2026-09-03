@@ -12,14 +12,18 @@ tags:
 # RuleBasisChip.tsx
 
 ## Connections
+- [[AlgorithmRegisterPanel.tsx]] - `imports_from` [EXTRACTED]
 - [[Badge()]] - `imports` [EXTRACTED]
 - [[BadgeProps]] - `imports` [EXTRACTED]
+- [[BreachObligationCard.tsx]] - `imports_from` [EXTRACTED]
 - [[IS_LEGAL_BASIS]] - `contains` [EXTRACTED]
 - [[LABEL_1]] - `contains` [EXTRACTED]
 - [[RuleBasis]] - `imports` [EXTRACTED]
 - [[RuleBasisChip()]] - `contains` [EXTRACTED]
 - [[RuleBasisChip.test.tsx]] - `imports_from` [EXTRACTED]
 - [[RuleBasisChipProps]] - `contains` [EXTRACTED]
+- [[SdfGapsSection.tsx]] - `imports_from` [EXTRACTED]
+- [[SdfPage.tsx]] - `imports_from` [EXTRACTED]
 - [[Tooltip]] - `imports` [EXTRACTED]
 - [[TooltipContent]] - `imports` [EXTRACTED]
 - [[TooltipProvider]] - `imports` [EXTRACTED]

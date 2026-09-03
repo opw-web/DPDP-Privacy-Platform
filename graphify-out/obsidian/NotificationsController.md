@@ -1,24 +1,24 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notifications/notifications.controller.ts"
 type: "code"
-community: "NotificationsService"
+community: ".markRead"
 location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/markRead
 ---
 
 # NotificationsController
 
 ## Connections
-- [[dot-constructor()_9]] - `method` [EXTRACTED]
-- [[dot-list()_1]] - `method` [EXTRACTED]
-- [[dot-markAllRead()]] - `method` [EXTRACTED]
-- [[dot-markRead()]] - `method` [EXTRACTED]
-- [[ApiTags_1]] - `references` [EXTRACTED]
-- [[Controller_1]] - `references` [EXTRACTED]
+- [[dot-constructor()_105]] - `method` [EXTRACTED]
+- [[dot-list()_30]] - `method` [EXTRACTED]
+- [[dot-markAllRead()_1]] - `method` [EXTRACTED]
+- [[dot-markRead()_1]] - `method` [EXTRACTED]
+- [[ApiTags_24]] - `references` [EXTRACTED]
+- [[Controller_25]] - `references` [EXTRACTED]
 - [[notifications.controller.ts]] - `contains` [EXTRACTED]
 - [[notifications.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/markRead

@@ -9,12 +9,12 @@ members: 9
 
 ## Members
 - [[authed()_2]] - code - dpdp-platform/backend/test/registers.e2e-spec.ts
-- [[createDataSource()_2]] - code - dpdp-platform/backend/test/registers.e2e-spec.ts
+- [[createDataSource()_4]] - code - dpdp-platform/backend/test/registers.e2e-spec.ts
 - [[createEmployeeWithPermissions()_1]] - code - dpdp-platform/backend/test/registers.e2e-spec.ts
-- [[createOrgWithManager()]] - code - dpdp-platform/backend/test/registers.e2e-spec.ts
+- [[createOrgWithManager()_1]] - code - dpdp-platform/backend/test/registers.e2e-spec.ts
 - [[createPurpose()_2]] - code - dpdp-platform/backend/test/registers.e2e-spec.ts
 - [[createRecipient()]] - code - dpdp-platform/backend/test/registers.e2e-spec.ts
-- [[ensurePermission()_5]] - code - dpdp-platform/backend/test/registers.e2e-spec.ts
+- [[ensurePermission()_9]] - code - dpdp-platform/backend/test/registers.e2e-spec.ts
 - [[recipientPayload()]] - code - dpdp-platform/backend/test/registers.e2e-spec.ts
 - [[registers.e2e-spec.ts]] - code - dpdp-platform/backend/test/registers.e2e-spec.ts
 

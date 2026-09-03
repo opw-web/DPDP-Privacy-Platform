@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/lib/query-client.ts"
 type: "code"
-community: "api-client.ts"
+community: "router.test.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/routertesttsx
 ---
 
 # query-client.ts
@@ -15,4 +15,4 @@ tags:
 - [[main.tsx]] - `imports_from` [EXTRACTED]
 - [[queryClient]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/routertesttsx

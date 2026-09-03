@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/lib/api-client.test.ts"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/DataSourceDetailPage.test.tsx"
 type: "code"
-community: "api-client.ts"
-location: "L11"
+community: "DataSourceDetailPage.test.tsx"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/DataSourceDetailPagetesttsx
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[api-client.test.ts]] - `contains` [EXTRACTED]
+- [[DataSourceDetailPage.test.tsx]] - `contains` [EXTRACTED]
+- [[loginAndRenderDetailPage()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/DataSourceDetailPagetesttsx

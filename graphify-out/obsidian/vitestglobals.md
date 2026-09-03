@@ -12,6 +12,6 @@ tags:
 # vitest/globals
 
 ## Connections
-- [[types]] - `extends` [EXTRACTED]
+- [[types_1]] - `extends` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/compilerOptions

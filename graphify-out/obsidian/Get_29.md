@@ -1,18 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "DataSourcesController"
+community: "notices.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesController
+  - community/noticesservicets
 ---
 
 # Get
 
 ## Connections
-- [[dot-get()_17]] - `references` [EXTRACTED]
-- [[dot-list()_37]] - `references` [EXTRACTED]
-- [[dot-listFields()]] - `references` [EXTRACTED]
+- [[dot-get()_16]] - `references` [EXTRACTED]
+- [[dot-list()_34]] - `references` [EXTRACTED]
+- [[dot-listEligibleFields()]] - `references` [EXTRACTED]
+- [[dot-preview()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesController
+#graphify/code #graphify/EXTRACTED #community/noticesservicets

@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
 type: "code"
-community: "RetentionScanService"
-location: "L196"
+community: "erasure-task.service.ts"
+location: "L193"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionScanService
+  - community/erasure-taskservicets
 ---
 
 # addByDeadlineUnit()
 
 ## Connections
+- [[dot-buildGrievanceReportCsv()]] - `calls` [EXTRACTED]
 - [[dot-computeDeadline()]] - `calls` [EXTRACTED]
 - [[dot-createFromTrigger()]] - `calls` [EXTRACTED]
 - [[dot-getGaps()_2]] - `calls` [EXTRACTED]
@@ -19,10 +20,11 @@ tags:
 - [[dot-runForCurrentOrganization()_2]] - `calls` [EXTRACTED]
 - [[compliance.service.ts]] - `contains` [EXTRACTED]
 - [[erasure-task.service.ts]] - `imports` [EXTRACTED]
+- [[evidence-pack.service.ts]] - `imports` [EXTRACTED]
 - [[retention-scan.service.ts]] - `imports` [EXTRACTED]
 - [[retention.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[sdf-cycle-scan.service.ts]] - `imports` [EXTRACTED]
 - [[sdf-gaps.service.ts]] - `imports` [EXTRACTED]
 - [[sdf.e2e-spec.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionScanService
+#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets

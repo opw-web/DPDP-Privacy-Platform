@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[demo-org.ts]] - `contains` [EXTRACTED]
+- [[mvp2-demo.ts]] - `imports` [EXTRACTED]
 - [[seed-principals.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[seed-principals.ts]] - `imports` [EXTRACTED]
 - [[seed.ts]] - `imports` [EXTRACTED]

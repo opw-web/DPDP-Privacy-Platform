@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SyncPipelineService"
+community: "UpdateOrganizationDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncPipelineService
+  - community/UpdateOrganizationDto
 ---
 
 # Injectable
 
 ## Connections
-- [[SyncPipelineService]] - `references` [EXTRACTED]
+- [[OrganizationsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncPipelineService
+#graphify/code #graphify/EXTRACTED #community/UpdateOrganizationDto

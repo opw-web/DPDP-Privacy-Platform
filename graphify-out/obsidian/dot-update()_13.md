@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/employees/employees.controller.ts"
 type: "code"
-community: "employees.controller.ts"
+community: "employees.service.ts"
 location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeescontrollerts
+  - community/employeesservicets
 ---
 
 # .update()
@@ -15,9 +15,9 @@ tags:
 - [[dot-update()_14]] - `calls` [INFERRED]
 - [[Body_13]] - `references` [EXTRACTED]
 - [[EmployeesController]] - `method` [EXTRACTED]
-- [[Param_16]] - `references` [EXTRACTED]
-- [[Patch_7]] - `references` [EXTRACTED]
+- [[Param_13]] - `references` [EXTRACTED]
+- [[Patch_6]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[UpdateEmployeeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeescontrollerts
+#graphify/code #graphify/EXTRACTED #community/employeesservicets

@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
 community: "@nestjs/bullmq"
-location: "L26"
+location: "L27"
 tags:
   - graphify/concept
   - graphify/EXTRACTED

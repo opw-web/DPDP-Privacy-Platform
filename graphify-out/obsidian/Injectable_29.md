@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "notifications.module.ts"
+community: "PrincipalsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationsmodulets
+  - community/PrincipalsService
 ---
 
 # Injectable
 
 ## Connections
-- [[SmtpProvider]] - `references` [EXTRACTED]
+- [[AccessLogService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationsmodulets
+#graphify/code #graphify/EXTRACTED #community/PrincipalsService

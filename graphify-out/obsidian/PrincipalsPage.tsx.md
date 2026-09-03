@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalsPage.tsx"
 type: "code"
-community: "PrincipalDetailPage.tsx"
+community: "DateTime.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalDetailPagetsx
+  - community/DateTimetsx
 ---
 
 # PrincipalsPage.tsx
 
 ## Connections
 - [[AGE_STATUS_OPTIONS]] - `contains` [EXTRACTED]
-- [[AgeStatus_1]] - `contains` [EXTRACTED]
+- [[AgeStatus_2]] - `contains` [EXTRACTED]
 - [[Badge()]] - `imports` [EXTRACTED]
 - [[BadgeProps]] - `imports` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
@@ -24,8 +24,8 @@ tags:
 - [[Input]] - `imports` [EXTRACTED]
 - [[LineageChip()]] - `imports` [EXTRACTED]
 - [[LineageChip.tsx]] - `imports_from` [EXTRACTED]
-- [[PrincipalListItem_1]] - `contains` [EXTRACTED]
-- [[PrincipalListResponse]] - `contains` [EXTRACTED]
+- [[PrincipalListItem_2]] - `contains` [EXTRACTED]
+- [[PrincipalListResponse_2]] - `contains` [EXTRACTED]
 - [[PrincipalsPage()]] - `contains` [EXTRACTED]
 - [[PrincipalsPage.test.tsx]] - `imports_from` [EXTRACTED]
 - [[SourceRef_1]] - `imports` [EXTRACTED]
@@ -38,6 +38,6 @@ tags:
 - [[humanizeEnum()]] - `imports` [EXTRACTED]
 - [[input.tsx]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
-- [[useDebouncedValue()]] - `contains` [EXTRACTED]
+- [[useDebouncedValue()_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/DateTimetsx

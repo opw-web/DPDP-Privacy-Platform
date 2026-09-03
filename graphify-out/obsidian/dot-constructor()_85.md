@@ -1,19 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/security-measures.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/sdf-cycle-scan.service.ts"
 type: "code"
-community: "PrismaService"
-location: "L69"
+community: "mvp2-schedules.ts"
+location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/mvp2-schedulests
 ---
 
 # .constructor()
 
 ## Connections
 - [[AuditService]] - `references` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
-- [[SecurityMeasuresService]] - `method` [EXTRACTED]
+- [[ComplianceService]] - `references` [EXTRACTED]
+- [[NotificationsService]] - `references` [EXTRACTED]
+- [[SdfCycleScanService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/mvp2-schedulests

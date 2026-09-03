@@ -11,6 +11,6 @@ tags:
 # Module
 
 ## Connections
-- [[EmployeesModule]] - `references` [EXTRACTED]
+- [[EvidenceModule]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/appmodulets

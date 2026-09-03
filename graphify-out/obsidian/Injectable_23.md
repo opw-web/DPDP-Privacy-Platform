@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SdfController"
+community: "TransfersService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SdfController
+  - community/TransfersService
 ---
 
 # Injectable
 
 ## Connections
-- [[SdfGapsService]] - `references` [EXTRACTED]
+- [[TransfersService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SdfController
+#graphify/code #graphify/EXTRACTED #community/TransfersService

@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/sharing.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/transfers.service.ts"
 type: "code"
-community: "SharingService"
-location: "L87"
+community: "TransfersService"
+location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SharingService
+  - community/TransfersService
 ---
 
 # .assertRecipientExists()
 
 ## Connections
-- [[dot-create()_23]] - `calls` [EXTRACTED]
-- [[dot-update()_20]] - `calls` [EXTRACTED]
-- [[SharingService]] - `method` [EXTRACTED]
+- [[dot-create()_6]] - `calls` [EXTRACTED]
+- [[dot-update()_5]] - `calls` [EXTRACTED]
+- [[TransfersService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SharingService
+#graphify/code #graphify/EXTRACTED #community/TransfersService

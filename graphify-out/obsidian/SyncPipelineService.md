@@ -1,29 +1,30 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sync/sync-pipeline.service.ts"
 type: "code"
-community: "SyncPipelineService"
-location: "L166"
+community: "sync-pipeline.service.ts"
+location: "L169"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncPipelineService
+  - community/sync-pipelineservicets
 ---
 
 # SyncPipelineService
 
 ## Connections
-- [[dot-constructor()_145]] - `references` [EXTRACTED]
-- [[dot-constructor()_144]] - `method` [EXTRACTED]
+- [[dot-constructor()_19]] - `references` [EXTRACTED]
+- [[dot-constructor()_127]] - `method` [EXTRACTED]
 - [[dot-finalize()]] - `method` [EXTRACTED]
 - [[dot-persistAndLink()]] - `method` [EXTRACTED]
 - [[dot-processRecord()]] - `method` [EXTRACTED]
 - [[dot-run()]] - `method` [EXTRACTED]
 - [[dot-runInTenantContext()]] - `method` [EXTRACTED]
 - [[dot-startJob()]] - `method` [EXTRACTED]
-- [[Injectable]] - `references` [EXTRACTED]
+- [[Injectable_63]] - `references` [EXTRACTED]
+- [[step6-conflict-acceptance.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[sync-pipeline.service.ts]] - `contains` [EXTRACTED]
 - [[sync.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[sync.module.ts]] - `imports` [EXTRACTED]
 - [[sync.processor.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncPipelineService
+#graphify/code #graphify/EXTRACTED #community/sync-pipelineservicets

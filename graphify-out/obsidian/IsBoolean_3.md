@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdateComplianceRuleDto"
+community: "requests.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateComplianceRuleDto
+  - community/requestscontrollerts
 ---
 
 # IsBoolean
 
 ## Connections
-- [[UpdateComplianceRuleDto]] - `references` [EXTRACTED]
+- [[AddNoteDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateComplianceRuleDto
+#graphify/code #graphify/EXTRACTED #community/requestscontrollerts

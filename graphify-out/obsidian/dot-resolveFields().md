@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principals/lineage.service.ts"
 type: "code"
-community: "LineageService"
+community: "principals.service.ts"
 location: "L78"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/LineageService
+  - community/principalsservicets
 ---
 
 # .resolveFields()
@@ -16,4 +16,4 @@ tags:
 - [[LineageService]] - `method` [EXTRACTED]
 - [[resolveProvenance()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/LineageService
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

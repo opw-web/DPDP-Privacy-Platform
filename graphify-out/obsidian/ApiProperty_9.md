@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AccessTokenPayload"
+community: "purposes.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/purposesservicets
 ---
 
 # ApiProperty
 
 ## Connections
-- [[EmployeeMeResponseDto]] - `references` [EXTRACTED]
-- [[EmployeeMeRoleDto]] - `references` [EXTRACTED]
+- [[CreatePurposeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/purposesservicets

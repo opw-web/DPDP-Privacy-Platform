@@ -12,14 +12,14 @@ tags:
 # ListPrincipalsDto
 
 ## Connections
-- [[dot-list()_22]] - `references` [EXTRACTED]
-- [[IsEnum_8]] - `references` [EXTRACTED]
-- [[IsInt_6]] - `references` [EXTRACTED]
-- [[IsOptional_21]] - `references` [EXTRACTED]
-- [[IsString_25]] - `references` [EXTRACTED]
+- [[dot-list()_15]] - `references` [EXTRACTED]
+- [[IsEnum_12]] - `references` [EXTRACTED]
+- [[IsInt_5]] - `references` [EXTRACTED]
+- [[IsOptional_31]] - `references` [EXTRACTED]
+- [[IsString_33]] - `references` [EXTRACTED]
 - [[Max_2]] - `references` [EXTRACTED]
-- [[Min_6]] - `references` [EXTRACTED]
-- [[Transform_2]] - `references` [EXTRACTED]
+- [[Min_5]] - `references` [EXTRACTED]
+- [[Transform_1]] - `references` [EXTRACTED]
 - [[list-principals.dto.ts]] - `contains` [EXTRACTED]
 - [[principals.controller.ts]] - `imports` [EXTRACTED]
 

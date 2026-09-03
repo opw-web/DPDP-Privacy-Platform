@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sdf.module.ts"
+community: "AuditService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdfmodulets
+  - community/AuditService
 ---
 
 # Injectable
 
 ## Connections
-- [[SdfCycleScanService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdfmodulets
+#graphify/code #graphify/EXTRACTED #community/AuditService

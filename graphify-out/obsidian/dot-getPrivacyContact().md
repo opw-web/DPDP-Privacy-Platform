@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/src/modules/principal-portal/me.service.ts"
 type: "code"
 community: "Public"
-location: "L245"
+location: "L244"
 tags:
   - graphify/code
   - graphify/EXTRACTED

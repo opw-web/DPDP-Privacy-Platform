@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-update()_12]] - `calls` [INFERRED]
 - [[Body_12]] - `references` [EXTRACTED]
-- [[Param_15]] - `references` [EXTRACTED]
-- [[Patch_6]] - `references` [EXTRACTED]
+- [[Param_12]] - `references` [EXTRACTED]
+- [[Patch_5]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[UpdateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
 - [[VoluntaryUndertakingsController]] - `method` [EXTRACTED]

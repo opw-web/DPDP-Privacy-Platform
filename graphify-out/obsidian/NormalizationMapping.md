@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/normalization/normalization.service.ts"
 type: "code"
-community: "ScopedTransactionClient"
+community: "sync-pipeline.service.ts"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScopedTransactionClient
+  - community/sync-pipelineservicets
 ---
 
 # NormalizationMapping
@@ -26,4 +26,4 @@ tags:
 - [[normalization.service.ts]] - `contains` [EXTRACTED]
 - [[sync-pipeline.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient
+#graphify/code #graphify/EXTRACTED #community/sync-pipelineservicets

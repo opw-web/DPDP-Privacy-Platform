@@ -1,21 +1,26 @@
 ---
 type: community
-members: 8
+members: 13
 ---
 
 # ChangeStatusDto
 
-**Members:** 8 nodes
+**Members:** 13 nodes
 
 ## Members
-- [[ApiProperty_19]] - code
-- [[ApiPropertyOptional_20]] - code
+- [[ApiProperty_1]] - code
+- [[ApiPropertyOptional_3]] - code
 - [[ChangeStatusDto]] - code - dpdp-platform/backend/src/modules/requests/dto/change-status.dto.ts
-- [[IsBoolean_12]] - code
-- [[IsEnum_9]] - code
-- [[IsIn_8]] - code
-- [[IsOptional_24]] - code
-- [[IsString_28]] - code
+- [[ErasureProcessorChecklistDto]] - code - dpdp-platform/backend/src/modules/requests/dto/change-status.dto.ts
+- [[ErasureSystemChecklistDto]] - code - dpdp-platform/backend/src/modules/requests/dto/change-status.dto.ts
+- [[IsArray]] - code
+- [[IsBoolean_1]] - code
+- [[IsEnum_2]] - code
+- [[IsIn]] - code
+- [[IsOptional_3]] - code
+- [[IsString_3]] - code
+- [[Type]] - code
+- [[ValidateNested]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -25,10 +30,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_requests.service.ts]]
+- 5 edges to [[_COMMUNITY_requests.service.ts]]
 - 1 edge to [[_COMMUNITY_requests.controller.ts]]
 - 1 edge to [[_COMMUNITY_RequestsController]]
 - 1 edge to [[_COMMUNITY_RequestsService]]
 
 ## Top bridge nodes
-- [[ChangeStatusDto]] - degree 13, connects to 4 communities
+- [[ChangeStatusDto]] - degree 16, connects to 4 communities
+- [[ErasureProcessorChecklistDto]] - degree 6, connects to 1 community
+- [[ErasureSystemChecklistDto]] - degree 4, connects to 1 community

@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/deadline-scan.queue.ts"
 type: "code"
-community: "BootRegistrationRegistry"
+community: "mvp2-schedules.ts"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BootRegistrationRegistry
+  - community/mvp2-schedulests
 ---
 
 # DEADLINE_SCAN_JOB_NAME
 
 ## Connections
 - [[deadline-scan.queue.ts]] - `contains` [EXTRACTED]
+- [[mvp2-schedules.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BootRegistrationRegistry
+#graphify/code #graphify/EXTRACTED #community/mvp2-schedulests

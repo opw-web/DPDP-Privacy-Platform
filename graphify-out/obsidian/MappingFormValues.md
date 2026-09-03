@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/wizard/Step3Mapping.tsx"
 type: "code"
-community: "DataSourceDetailPage.tsx"
-location: "L69"
+community: "data-sources-api.ts"
+location: "L72"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourceDetailPagetsx
+  - community/data-sources-apits
 ---
 
 # MappingFormValues
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Step3Mapping.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourceDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/data-sources-apits

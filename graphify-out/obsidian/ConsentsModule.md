@@ -12,7 +12,7 @@ tags:
 # ConsentsModule
 
 ## Connections
-- [[Module_13]] - `references` [EXTRACTED]
+- [[Module_12]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[campaigns.module.ts]] - `imports` [EXTRACTED]
 - [[consents.module.ts]] - `contains` [EXTRACTED]

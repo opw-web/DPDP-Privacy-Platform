@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeSourcesPage.test.tsx"
 type: "code"
-community: "card.tsx"
+community: "router.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cardtsx
+  - community/routertsx
 ---
 
 # MeSourcesPage.test.tsx
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[MeSourcesPage()]] - `imports` [EXTRACTED]
 - [[MeSourcesPage.tsx]] - `imports_from` [EXTRACTED]
-- [[jsonResponse()_5]] - `contains` [EXTRACTED]
+- [[jsonResponse()_25]] - `contains` [EXTRACTED]
 - [[renderMeSourcesPage()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cardtsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

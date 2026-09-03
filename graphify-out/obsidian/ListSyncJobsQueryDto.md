@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-list()_7]] - `references` [EXTRACTED]
 - [[IsInt_1]] - `references` [EXTRACTED]
-- [[IsOptional_6]] - `references` [EXTRACTED]
-- [[IsString_8]] - `references` [EXTRACTED]
+- [[IsOptional_11]] - `references` [EXTRACTED]
+- [[IsString_12]] - `references` [EXTRACTED]
 - [[Max]] - `references` [EXTRACTED]
 - [[Min_1]] - `references` [EXTRACTED]
 - [[Type_1]] - `references` [EXTRACTED]

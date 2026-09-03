@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "retention.service.ts"
+community: "RetentionController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/RetentionController
 ---
 
 # IsString
 
 ## Connections
-- [[UpdateRetentionPolicyDto]] - `references` [EXTRACTED]
+- [[ProcessorChecklistTickDto]] - `references` [EXTRACTED]
+- [[SystemChecklistTickDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/RetentionController

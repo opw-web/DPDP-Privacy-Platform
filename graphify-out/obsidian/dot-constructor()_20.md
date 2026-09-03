@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts"
+source_file: "dpdp-platform/backend/src/modules/consents/me-consents.controller.ts"
 type: "code"
-community: "template-renderer.ts"
-location: "L63"
+community: "SetMyConsentDto"
+location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/template-rendererts
+  - community/SetMyConsentDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[TemplateRenderError]] - `method` [EXTRACTED]
+- [[ConsentsService]] - `references` [EXTRACTED]
+- [[MeConsentsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/template-rendererts
+#graphify/code #graphify/EXTRACTED #community/SetMyConsentDto

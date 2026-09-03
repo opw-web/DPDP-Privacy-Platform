@@ -16,8 +16,8 @@ tags:
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
 - [[CandidatesController]] - `method` [EXTRACTED]
 - [[CurrentActor]] - `references` [EXTRACTED]
-- [[Param_11]] - `references` [EXTRACTED]
-- [[Post_10]] - `references` [EXTRACTED]
+- [[Param_20]] - `references` [EXTRACTED]
+- [[Post_19]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CandidatesService

@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalsPage.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/information-requests/InformationRequestForm.tsx"
 type: "code"
-community: "PrincipalDetailPage.tsx"
-location: "L62"
+community: "button.tsx"
+location: "L134"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalDetailPagetsx
+  - community/buttontsx
 ---
 
 # useDebouncedValue()
 
 ## Connections
-- [[PrincipalsPage()]] - `calls` [EXTRACTED]
-- [[PrincipalsPage.tsx]] - `contains` [EXTRACTED]
+- [[InformationRequestForm()]] - `calls` [EXTRACTED]
+- [[InformationRequestForm.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/buttontsx

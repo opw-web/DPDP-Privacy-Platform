@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "ChangeStatusDto"
+community: "CreateLegalHoldDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ChangeStatusDto
+  - community/CreateLegalHoldDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[ChangeStatusDto]] - `references` [EXTRACTED]
+- [[CreateLegalHoldDto]] - `references` [EXTRACTED]
+- [[LegalHoldScopeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ChangeStatusDto
+#graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto

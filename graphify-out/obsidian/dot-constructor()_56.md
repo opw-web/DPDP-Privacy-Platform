@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/common/prisma/prisma.service.ts"
+source_file: "dpdp-platform/backend/src/queues/campaign-send.queue.ts"
 type: "code"
-community: "PrismaService"
-location: "L48"
+community: "breaches.module.ts"
+location: "L67"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/breachesmodulets
 ---
 
 # .constructor()
 
 ## Connections
-- [[PrismaService]] - `method` [EXTRACTED]
+- [[CampaignSendQueueService]] - `method` [EXTRACTED]
+- [[InjectQueue_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/breachesmodulets

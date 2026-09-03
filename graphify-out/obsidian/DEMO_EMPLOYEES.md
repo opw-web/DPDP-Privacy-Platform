@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/EmployeesPage.tsx"
+source_file: "dpdp-platform/backend/prisma/seed/demo-org.ts"
 type: "code"
-community: "EmployeesPage.tsx"
-location: "L96"
+community: "seed.ts"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeesPagetsx
+  - community/seedts
 ---
 
 # DEMO_EMPLOYEES
 
 ## Connections
-- [[EmployeesPage.tsx]] - `contains` [EXTRACTED]
+- [[demo-org.ts]] - `contains` [EXTRACTED]
+- [[seed.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeesPagetsx
+#graphify/code #graphify/EXTRACTED #community/seedts

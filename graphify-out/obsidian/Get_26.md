@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "RecipientsService"
+community: "DataSourcesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RecipientsService
+  - community/DataSourcesService
 ---
 
 # Get
 
 ## Connections
-- [[dot-get()_12]] - `references` [EXTRACTED]
-- [[dot-list()_32]] - `references` [EXTRACTED]
+- [[dot-get()_15]] - `references` [EXTRACTED]
+- [[dot-list()_31]] - `references` [EXTRACTED]
+- [[dot-listFields()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RecipientsService
+#graphify/code #graphify/EXTRACTED #community/DataSourcesService

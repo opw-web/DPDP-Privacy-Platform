@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdateComplianceRuleDto"
+community: "purposes.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateComplianceRuleDto
+  - community/purposesservicets
 ---
 
 # IsEnum
 
 ## Connections
-- [[UpdateComplianceRuleDto]] - `references` [EXTRACTED]
+- [[CreatePurposeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateComplianceRuleDto
+#graphify/code #graphify/EXTRACTED #community/purposesservicets

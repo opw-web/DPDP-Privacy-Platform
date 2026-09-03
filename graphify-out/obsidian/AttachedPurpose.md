@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts"
 type: "code"
-community: "DataSourceDetailPage.tsx"
-location: "L177"
+community: "data-sources-api.ts"
+location: "L187"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourceDetailPagetsx
+  - community/data-sources-apits
 ---
 
 # AttachedPurpose
@@ -16,4 +16,4 @@ tags:
 - [[Step4Purposes.tsx]] - `imports` [EXTRACTED]
 - [[data-sources-api.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourceDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/data-sources-apits

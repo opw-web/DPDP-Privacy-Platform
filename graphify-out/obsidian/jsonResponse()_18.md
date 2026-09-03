@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/PurposesPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/principal/pages/MeDataPage.test.tsx"
 type: "code"
-community: "api-client.ts"
-location: "L13"
+community: "MeDataPage.tsx"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/MeDataPagetsx
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[PurposesPage.test.tsx]] - `contains` [EXTRACTED]
-- [[loginAndRenderThroughShell()_2]] - `calls` [EXTRACTED]
+- [[MeDataPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/MeDataPagetsx

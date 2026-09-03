@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "RequirePermission"
+community: "CreateLegalHoldDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/CreateLegalHoldDto
 ---
 
 # IsOptional
 
 ## Connections
-- [[AccessLogExportDto]] - `references` [EXTRACTED]
+- [[CreateLegalHoldDto]] - `references` [EXTRACTED]
+- [[LegalHoldScopeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto

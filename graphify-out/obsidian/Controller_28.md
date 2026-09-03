@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ConsentsService"
+community: "CandidatesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ConsentsService
+  - community/CandidatesService
 ---
 
 # Controller
 
 ## Connections
-- [[ConsentsController]] - `references` [EXTRACTED]
+- [[CandidatesController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ConsentsService
+#graphify/code #graphify/EXTRACTED #community/CandidatesService

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RecipientsService"
+community: "mvp2-schedules.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RecipientsService
+  - community/mvp2-schedulests
 ---
 
 # Injectable
 
 ## Connections
-- [[RecipientsService]] - `references` [EXTRACTED]
+- [[SdfCycleScanService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RecipientsService
+#graphify/code #graphify/EXTRACTED #community/mvp2-schedulests

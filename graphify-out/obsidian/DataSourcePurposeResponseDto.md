@@ -12,8 +12,8 @@ tags:
 # DataSourcePurposeResponseDto
 
 ## Connections
-- [[ApiProperty_45]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_46]] - `references` [EXTRACTED]
+- [[ApiProperty_14]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_18]] - `references` [EXTRACTED]
 - [[purposes-response.dto.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/mappingscontrollerts

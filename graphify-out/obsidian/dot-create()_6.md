@@ -1,22 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/security-measures.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/transfers.service.ts"
 type: "code"
-community: "security-measures.service.ts"
-location: "L35"
+community: "TransfersService"
+location: "L89"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/security-measuresservicets
+  - community/TransfersService
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_7]] - `calls` [INFERRED]
-- [[Body_7]] - `references` [EXTRACTED]
-- [[CreateSecurityMeasureDto]] - `references` [EXTRACTED]
-- [[Post_8]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[SecurityMeasuresController]] - `method` [EXTRACTED]
+- [[dot-assertEmployeeExists()]] - `calls` [EXTRACTED]
+- [[dot-assertRecipientExists()]] - `calls` [EXTRACTED]
+- [[dot-create()_5]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
+- [[CreateTransferDto]] - `references` [EXTRACTED]
+- [[TransfersService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/security-measuresservicets
+#graphify/code #graphify/EXTRACTED #community/TransfersService

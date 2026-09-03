@@ -1,0 +1,16 @@
+---
+source_file: ""
+type: "code"
+community: "compile-audience.ts"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/compile-audiencets
+---
+
+# Injectable
+
+## Connections
+- [[AudienceService]] - `references` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/compile-audiencets

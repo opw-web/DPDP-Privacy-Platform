@@ -29,6 +29,7 @@ tags:
 - [[audit.module.ts]] - `imports_from` [EXTRACTED]
 - [[candidates.controller.ts]] - `imports_from` [EXTRACTED]
 - [[candidates.service.ts]] - `imports_from` [EXTRACTED]
+- [[data-sources.module.ts]] - `imports_from` [EXTRACTED]
 - [[linking.service.ts]] - `imports_from` [EXTRACTED]
 - [[matching.service.ts]] - `imports_from` [EXTRACTED]
 - [[merge.service.ts]] - `imports_from` [EXTRACTED]

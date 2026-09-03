@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SharingService"
+community: "data-sources.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SharingService
+  - community/data-sourcesservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[SharingService]] - `references` [EXTRACTED]
+- [[CryptoService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SharingService
+#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets

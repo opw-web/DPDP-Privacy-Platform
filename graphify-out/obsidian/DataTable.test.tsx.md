@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/DataTable.test.tsx"
 type: "code"
-community: "DataSourceDetailPage.tsx"
+community: "SecurityMeasuresTab.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourceDetailPagetsx
+  - community/SecurityMeasuresTabtsx
 ---
 
 # DataTable.test.tsx
@@ -16,6 +16,6 @@ tags:
 - [[DataTable.tsx]] - `imports_from` [EXTRACTED]
 - [[Row]] - `contains` [EXTRACTED]
 - [[clickAction]] - `contains` [EXTRACTED]
-- [[columns]] - `contains` [EXTRACTED]
+- [[columns_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourceDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx

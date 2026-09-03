@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ComplianceController"
+community: "ropa-export.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ComplianceController
+  - community/ropa-exportservicets
 ---
 
 # ApiTags
 
 ## Connections
-- [[ComplianceController]] - `references` [EXTRACTED]
+- [[InventoryController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ComplianceController
+#graphify/code #graphify/EXTRACTED #community/ropa-exportservicets

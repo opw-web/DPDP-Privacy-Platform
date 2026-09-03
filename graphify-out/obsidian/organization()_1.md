@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/identity-matching.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/sync.e2e-spec.ts"
 type: "code"
-community: "prisma.service.ts"
-location: "L69"
+community: "queues.module.ts"
+location: "L78"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/queuesmodulets
 ---
 
 # organization()
 
 ## Connections
-- [[identity-matching.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[sync.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

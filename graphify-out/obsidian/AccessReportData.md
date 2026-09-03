@@ -12,7 +12,7 @@ tags:
 # AccessReportData
 
 ## Connections
-- [[PublicInformationRequest]] - `references` [EXTRACTED]
+- [[PublicInformationRequest_1]] - `references` [EXTRACTED]
 - [[ResolvedPrincipalField]] - `references` [EXTRACTED]
 - [[access-report-render.ts]] - `imports` [EXTRACTED]
 - [[access-report.service.ts]] - `contains` [EXTRACTED]

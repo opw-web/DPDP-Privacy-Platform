@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "SdfController"
+community: "CreateComplianceRuleDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SdfController
+  - community/CreateComplianceRuleDto
 ---
 
 # Post
 
 ## Connections
-- [[dot-completeAssessment()]] - `references` [EXTRACTED]
-- [[dot-createAlgorithm()]] - `references` [EXTRACTED]
-- [[dot-createAssessment()]] - `references` [EXTRACTED]
+- [[dot-create()_7]] - `references` [EXTRACTED]
+- [[dot-review()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SdfController
+#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto

@@ -12,13 +12,13 @@ tags:
 # VoluntaryUndertakingsController
 
 ## Connections
-- [[dot-constructor()_107]] - `method` [EXTRACTED]
-- [[dot-create()_12]] - `method` [EXTRACTED]
-- [[dot-getById()_2]] - `method` [EXTRACTED]
-- [[dot-list()_25]] - `method` [EXTRACTED]
+- [[dot-constructor()_83]] - `method` [EXTRACTED]
+- [[dot-create()_15]] - `method` [EXTRACTED]
+- [[dot-getById()_4]] - `method` [EXTRACTED]
+- [[dot-list()_22]] - `method` [EXTRACTED]
 - [[dot-update()_11]] - `method` [EXTRACTED]
-- [[ApiTags_23]] - `references` [EXTRACTED]
-- [[Controller_23]] - `references` [EXTRACTED]
+- [[ApiTags_20]] - `references` [EXTRACTED]
+- [[Controller_21]] - `references` [EXTRACTED]
 - [[board.module.ts]] - `imports` [EXTRACTED]
 - [[voluntary-undertakings.controller.ts]] - `contains` [EXTRACTED]
 

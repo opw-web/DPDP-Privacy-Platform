@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SharingService"
+community: "CandidatesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SharingService
+  - community/CandidatesService
 ---
 
 # ApiTags
 
 ## Connections
-- [[SharingController]] - `references` [EXTRACTED]
+- [[CandidatesController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SharingService
+#graphify/code #graphify/EXTRACTED #community/CandidatesService

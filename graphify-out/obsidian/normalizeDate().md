@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/src/modules/normalization/normalizers/date.ts"
 type: "code"
 community: "normalization.service.ts"
-location: "L29"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED

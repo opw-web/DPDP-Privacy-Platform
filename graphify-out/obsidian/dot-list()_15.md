@@ -1,20 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/audit/audit-read.service.ts"
+source_file: "dpdp-platform/backend/src/modules/principals/principals.controller.ts"
 type: "code"
-community: "audit-read.service.ts"
-location: "L140"
+community: "PrincipalsController"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-readservicets
+  - community/PrincipalsController
 ---
 
 # .list()
 
 ## Connections
-- [[dot-buildWhere()]] - `calls` [EXTRACTED]
-- [[dot-hasFullPersonalDataAccess()]] - `calls` [INFERRED]
-- [[AuditReadService]] - `method` [EXTRACTED]
-- [[ListAuditEventsDto]] - `references` [EXTRACTED]
+- [[CurrentActorPermissions]] - `references` [EXTRACTED]
+- [[Get_13]] - `references` [EXTRACTED]
+- [[ListPrincipalsDto]] - `references` [EXTRACTED]
+- [[PrincipalsController]] - `method` [EXTRACTED]
+- [[Query_3]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-readservicets
+#graphify/code #graphify/EXTRACTED #community/PrincipalsController

@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/health/health.service.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
 type: "code"
-community: "HealthService"
-location: "L28"
+community: "rest-api.connector.ts"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/HealthService
+  - community/rest-apiconnectorts
 ---
 
 # .constructor()
 
 ## Connections
-- [[HealthService]] - `method` [EXTRACTED]
+- [[UnsupportedPaginationStyleError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/HealthService
+#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts

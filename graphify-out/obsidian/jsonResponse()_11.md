@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/ReviewQueuePage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/InformationRequestsPage.test.tsx"
 type: "code"
-community: "CandidateComparison.tsx"
-location: "L15"
+community: "InformationRequestsPage.test.tsx"
+location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CandidateComparisontsx
+  - community/InformationRequestsPagetesttsx
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[ReviewQueuePage.test.tsx]] - `contains` [EXTRACTED]
-- [[loginAndRender()_2]] - `calls` [EXTRACTED]
+- [[InformationRequestsPage.test.tsx]] - `contains` [EXTRACTED]
+- [[loginAndRender()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CandidateComparisontsx
+#graphify/code #graphify/EXTRACTED #community/InformationRequestsPagetesttsx

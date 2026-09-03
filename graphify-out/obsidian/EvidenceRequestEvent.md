@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/principal-evidence.service.ts"
 type: "code"
-community: "access-report.service.ts"
+community: "principal-evidence.service.ts"
 location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-reportservicets
+  - community/principal-evidenceservicets
 ---
 
 # EvidenceRequestEvent
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[principal-evidence.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-reportservicets
+#graphify/code #graphify/EXTRACTED #community/principal-evidenceservicets

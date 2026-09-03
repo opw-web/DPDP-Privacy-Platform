@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/ExportButtons.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/requests/AccessReportPanel.tsx"
 type: "code"
-community: "EmployeesPage.tsx"
-location: "L39"
+community: "employeeApiClient"
+location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeesPagetsx
+  - community/employeeApiClient
 ---
 
 # saveBlob()
 
 ## Connections
-- [[ExportButtons.tsx]] - `contains` [EXTRACTED]
-- [[handleExport()]] - `calls` [EXTRACTED]
+- [[AccessReportPanel.tsx]] - `contains` [EXTRACTED]
+- [[generateAndDownload()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeesPagetsx
+#graphify/code #graphify/EXTRACTED #community/employeeApiClient

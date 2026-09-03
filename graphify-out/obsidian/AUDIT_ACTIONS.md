@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/src/common/audit/audit-actions.ts"
 type: "code"
 community: "audit-read.service.ts"
-location: "L106"
+location: "L117"
 tags:
   - graphify/code
   - graphify/EXTRACTED

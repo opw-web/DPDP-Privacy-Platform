@@ -1,20 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/source-purposes.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/sharing.service.ts"
 type: "code"
-community: "mappings.controller.ts"
-location: "L179"
+community: "SharingService"
+location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingscontrollerts
+  - community/SharingService
 ---
 
 # .get()
 
 ## Connections
-- [[dot-getPurposes()]] - `calls` [INFERRED]
-- [[dot-replace()_1]] - `calls` [EXTRACTED]
-- [[SourcePurposesService]] - `method` [EXTRACTED]
-- [[toPublicPurpose()]] - `calls` [EXTRACTED]
+- [[dot-get()_23]] - `calls` [INFERRED]
+- [[SharingService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingscontrollerts
+#graphify/code #graphify/EXTRACTED #community/SharingService

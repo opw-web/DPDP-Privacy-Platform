@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/CandidateComparison.tsx"
 type: "code"
-community: "CandidateComparison.tsx"
+community: "DateTime.tsx"
 location: "L101"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CandidateComparisontsx
+  - community/DateTimetsx
 ---
 
 # CandidateComparison()
@@ -16,4 +16,4 @@ tags:
 - [[ReviewQueuePage.tsx]] - `imports` [EXTRACTED]
 - [[signalBadgeVariant()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CandidateComparisontsx
+#graphify/code #graphify/EXTRACTED #community/DateTimetsx

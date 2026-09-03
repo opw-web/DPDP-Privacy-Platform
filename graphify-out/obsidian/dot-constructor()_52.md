@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/audit-events-evidence.controller.ts"
+source_file: "dpdp-platform/backend/src/queues/breach-clock.processor.ts"
 type: "code"
-community: "canonicalJson"
-location: "L21"
+community: "breaches.module.ts"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/canonicalJson
+  - community/breachesmodulets
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditChainService]] - `references` [EXTRACTED]
-- [[AuditEventsEvidenceController]] - `method` [EXTRACTED]
-- [[AuditExportService]] - `references` [EXTRACTED]
+- [[BreachClockProcessor]] - `method` [EXTRACTED]
+- [[BreachService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/canonicalJson
+#graphify/code #graphify/EXTRACTED #community/breachesmodulets

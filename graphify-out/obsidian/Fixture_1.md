@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/principals.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/audit-read.e2e-spec.ts"
 type: "code"
-community: "principals.e2e-spec.ts"
-location: "L27"
+community: "prisma.service.ts"
+location: "L111"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principalse2e-spects
+  - community/prismaservicets
 ---
 
 # Fixture
 
 ## Connections
-- [[principals.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[audit-read.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principalse2e-spects
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

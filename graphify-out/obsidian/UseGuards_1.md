@@ -1,17 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: ".setStatus"
+community: "Public"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/setStatus
+  - community/Public
 ---
 
 # UseGuards
 
 ## Connections
-- [[dot-list()_3]] - `references` [EXTRACTED]
-- [[dot-setStatus()]] - `references` [EXTRACTED]
+- [[dot-accessReport()]] - `references` [EXTRACTED]
+- [[dot-data()]] - `references` [EXTRACTED]
+- [[dot-privacyContact()]] - `references` [EXTRACTED]
+- [[dot-profile()]] - `references` [EXTRACTED]
+- [[dot-recipients()]] - `references` [EXTRACTED]
+- [[dot-sources()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/setStatus
+#graphify/code #graphify/EXTRACTED #community/Public

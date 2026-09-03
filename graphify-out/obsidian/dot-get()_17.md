@@ -1,21 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
 type: "code"
-community: "DataSourcesController"
-location: "L36"
+community: "notices.service.ts"
+location: "L170"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesController
+  - community/noticesservicets
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_2]] - `calls` [INFERRED]
-- [[DataSourcesController]] - `method` [EXTRACTED]
-- [[Get_29]] - `references` [EXTRACTED]
-- [[Param_21]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-get()_16]] - `calls` [INFERRED]
+- [[dot-publish()_1]] - `calls` [EXTRACTED]
+- [[dot-resolveItemisedFields()]] - `calls` [EXTRACTED]
+- [[dot-snapshotPurposeStatements()]] - `calls` [EXTRACTED]
+- [[NoticesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesController
+#graphify/code #graphify/EXTRACTED #community/noticesservicets

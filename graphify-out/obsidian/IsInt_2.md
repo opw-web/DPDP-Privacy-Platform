@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdateComplianceRuleDto"
+community: "audit-read.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateComplianceRuleDto
+  - community/audit-readservicets
 ---
 
 # IsInt
 
 ## Connections
-- [[UpdateComplianceRuleDto]] - `references` [EXTRACTED]
+- [[ListAuditEventsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateComplianceRuleDto
+#graphify/code #graphify/EXTRACTED #community/audit-readservicets

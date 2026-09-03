@@ -12,7 +12,7 @@ tags:
 # DataSourcePurposesResponseDto
 
 ## Connections
-- [[ApiProperty_45]] - `references` [EXTRACTED]
+- [[ApiProperty_14]] - `references` [EXTRACTED]
 - [[mappings.controller.ts]] - `imports` [EXTRACTED]
 - [[purposes-response.dto.ts]] - `contains` [EXTRACTED]
 

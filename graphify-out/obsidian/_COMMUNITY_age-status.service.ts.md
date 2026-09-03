@@ -1,14 +1,15 @@
 ---
 type: community
-members: 21
+members: 22
 ---
 
 # age-status.service.ts
 
-**Members:** 21 nodes
+**Members:** 22 nodes
 
 ## Members
-- [[dot-constructor()_119]] - code - dpdp-platform/backend/src/modules/children/age-status.controller.ts
+- [[dot-constructor()_109]] - code - dpdp-platform/backend/src/modules/children/age-status.controller.ts
+- [[dot-constructor()_110]] - code - dpdp-platform/backend/src/modules/children/age-status.service.ts
 - [[dot-countUnknown()]] - code - dpdp-platform/backend/src/modules/children/age-status.service.ts
 - [[dot-setAgeStatus()]] - code - dpdp-platform/backend/src/modules/children/age-status.controller.ts
 - [[dot-setAgeStatus()_1]] - code - dpdp-platform/backend/src/modules/children/age-status.service.ts
@@ -16,15 +17,15 @@ members: 21
 - [[AGE_STATUS_PUBLIC_SELECT]] - code - dpdp-platform/backend/src/modules/children/age-status.service.ts
 - [[AgeStatusController]] - code - dpdp-platform/backend/src/modules/children/age-status.controller.ts
 - [[AgeStatusService]] - code - dpdp-platform/backend/src/modules/children/age-status.service.ts
-- [[ApiProperty_30]] - code
-- [[ApiTags_30]] - code
+- [[ApiProperty_38]] - code
+- [[ApiTags_28]] - code
 - [[Body_19]] - code
-- [[Controller_30]] - code
-- [[Get_30]] - code
-- [[Injectable_63]] - code
-- [[IsEnum_17]] - code
-- [[Param_22]] - code
-- [[Post_21]] - code
+- [[Controller_29]] - code
+- [[Get_28]] - code
+- [[Injectable_67]] - code
+- [[IsEnum_20]] - code
+- [[Param_21]] - code
+- [[Post_20]] - code
 - [[SetAgeStatusDto]] - code - dpdp-platform/backend/src/modules/children/dto/set-age-status.dto.ts
 - [[age-status.controller.ts]] - code - dpdp-platform/backend/src/modules/children/age-status.controller.ts
 - [[age-status.service.ts]] - code - dpdp-platform/backend/src/modules/children/age-status.service.ts
@@ -40,14 +41,14 @@ SORT file.name ASC
 ## Connections to other communities
 - 4 edges to [[_COMMUNITY_app.module.ts]]
 - 4 edges to [[_COMMUNITY_RequirePermission]]
-- 3 edges to [[_COMMUNITY_PrismaService]]
+- 2 edges to [[_COMMUNITY_AuditService]]
+- 2 edges to [[_COMMUNITY_prisma.service.ts]]
+- 1 edge to [[_COMMUNITY_PrismaService]]
 - 1 edge to [[_COMMUNITY_dot-record]]
-- 1 edge to [[_COMMUNITY_prisma.service.ts]]
-- 1 edge to [[_COMMUNITY_audit.service.ts]]
 
 ## Top bridge nodes
 - [[age-status.service.ts]] - degree 10, connects to 4 communities
-- [[AgeStatusService]] - degree 8, connects to 2 communities
 - [[age-status.controller.ts]] - degree 8, connects to 2 communities
+- [[AgeStatusService]] - degree 8, connects to 1 community
 - [[AgeStatusController]] - degree 7, connects to 1 community
 - [[dot-setAgeStatus()]] - degree 7, connects to 1 community

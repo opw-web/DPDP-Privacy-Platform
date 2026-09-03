@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts"
 type: "code"
 community: "TemplatesService"
-location: "L40"
+location: "L207"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,12 +12,11 @@ tags:
 # .update()
 
 ## Connections
-- [[dot-update()_10]] - `calls` [INFERRED]
-- [[Body_8]] - `references` [EXTRACTED]
-- [[Param_10]] - `references` [EXTRACTED]
-- [[Patch_5]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[TemplatesController]] - `method` [EXTRACTED]
+- [[dot-extractAndValidateVariables()]] - `calls` [EXTRACTED]
+- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-update()_8]] - `calls` [INFERRED]
+- [[dot-validateRequiredSubsetOfReferenced()]] - `calls` [EXTRACTED]
+- [[TemplatesService]] - `method` [EXTRACTED]
 - [[UpdateTemplateDto]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/TemplatesService

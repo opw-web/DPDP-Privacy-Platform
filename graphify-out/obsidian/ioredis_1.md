@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "dependencies"
-location: "L41"
+community: "ioredis"
+location: "L42"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/ioredis
 ---
 
 # ioredis
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ioredis]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/dependencies
+#graphify/concept #graphify/EXTRACTED #community/ioredis

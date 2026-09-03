@@ -1,25 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/notifications.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/notifications.service.ts"
 type: "code"
-community: "NotificationsService"
-location: "L65"
+community: "notifications.service.ts"
+location: "L200"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/notificationsservicets
 ---
 
 # .markAllRead()
 
 ## Connections
 - [[dot-markAllRead()_1]] - `calls` [INFERRED]
-- [[ApiOkResponse]] - `references` [EXTRACTED]
-- [[CurrentNotificationActor]] - `references` [EXTRACTED]
-- [[HttpCode]] - `references` [EXTRACTED]
 - [[NotificationCallerActor]] - `references` [EXTRACTED]
-- [[NotificationsController]] - `method` [EXTRACTED]
-- [[Post]] - `references` [EXTRACTED]
-- [[Public()]] - `references` [EXTRACTED]
-- [[UseGuards]] - `references` [EXTRACTED]
+- [[NotificationsService]] - `method` [EXTRACTED]
+- [[ownershipWhere()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/notificationsservicets

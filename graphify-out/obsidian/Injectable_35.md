@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CryptoService"
+community: "breaches.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CryptoService
+  - community/breachesmodulets
 ---
 
 # Injectable
 
 ## Connections
-- [[CryptoService]] - `references` [EXTRACTED]
+- [[BreachPrincipalNoticeDispatchQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CryptoService
+#graphify/code #graphify/EXTRACTED #community/breachesmodulets

@@ -1,17 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "retention/retention.controller.ts"
+community: "BreachesController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retention/retentioncontrollerts
+  - community/BreachesController
 ---
 
 # Get
 
 ## Connections
-- [[dot-listLegalHolds()]] - `references` [EXTRACTED]
-- [[dot-listTasks()]] - `references` [EXTRACTED]
+- [[dot-boardDetailed()]] - `references` [EXTRACTED]
+- [[dot-boardInitial()]] - `references` [EXTRACTED]
+- [[dot-get()_18]] - `references` [EXTRACTED]
+- [[dot-list()_39]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retention/retentioncontrollerts
+#graphify/code #graphify/EXTRACTED #community/BreachesController

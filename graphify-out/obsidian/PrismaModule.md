@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Global]] - `references` [EXTRACTED]
-- [[Module_32]] - `references` [EXTRACTED]
+- [[Module_29]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[prisma.module.ts]] - `contains` [EXTRACTED]
 

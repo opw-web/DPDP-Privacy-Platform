@@ -1,21 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/child-exemptions.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/roles.service.ts"
 type: "code"
-community: "child-exemptions.service.ts"
-location: "L17"
+community: "roles.service.ts"
+location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/child-exemptionsservicets
+  - community/rolesservicets
 ---
 
 # .list()
 
 ## Connections
-- [[ChildExemptionsController]] - `method` [EXTRACTED]
-- [[Get_34]] - `references` [EXTRACTED]
-- [[ListExemptionClaimsDto]] - `references` [EXTRACTED]
-- [[Query_8]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[RolesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/child-exemptionsservicets
+#graphify/code #graphify/EXTRACTED #community/rolesservicets

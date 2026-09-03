@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/zip-writer.ts"
 type: "code"
-community: "zip-writer.ts"
+community: "evidence-pack.service.ts"
 location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/zip-writerts
+  - community/evidence-packservicets
 ---
 
 # CRC_TABLE
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[zip-writer.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/zip-writerts
+#graphify/code #graphify/EXTRACTED #community/evidence-packservicets

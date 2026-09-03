@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "templates.service.ts"
+community: "SetMyConsentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatesservicets
+  - community/SetMyConsentDto
 ---
 
 # IsObject
 
 ## Connections
-- [[PreviewTemplateDto]] - `references` [EXTRACTED]
+- [[SetMyConsentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatesservicets
+#graphify/code #graphify/EXTRACTED #community/SetMyConsentDto

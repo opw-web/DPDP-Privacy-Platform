@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/wizard/Step1Connection.tsx"
 type: "code"
-community: "DataSourceDetailPage.tsx"
+community: "data-sources-api.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourceDetailPagetsx
+  - community/data-sources-apits
 ---
 
 # Step1Connection.tsx
@@ -17,6 +17,7 @@ tags:
 - [[AuthType]] - `imports` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
 - [[CheckboxOption]] - `imports` [EXTRACTED]
+- [[CheckboxOption_1]] - `imports` [EXTRACTED]
 - [[ConnectionFormValues]] - `contains` [EXTRACTED]
 - [[DataSourceDetailPage.tsx]] - `imports_from` [EXTRACTED]
 - [[DataSourceNewPage.tsx]] - `imports_from` [EXTRACTED]
@@ -42,4 +43,4 @@ tags:
 - [[humanizeEnum()]] - `imports` [EXTRACTED]
 - [[input.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourceDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/data-sources-apits

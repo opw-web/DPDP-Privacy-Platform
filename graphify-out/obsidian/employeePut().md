@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts"
 type: "code"
-community: "DataSourceDetailPage.tsx"
-location: "L290"
+community: "data-sources-api.ts"
+location: "L300"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourceDetailPagetsx
+  - community/data-sources-apits
 ---
 
 # employeePut()
@@ -19,4 +19,4 @@ tags:
 - [[extractMessage()]] - `calls` [EXTRACTED]
 - [[refreshEmployeeTokenForPut()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourceDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/data-sources-apits

@@ -12,7 +12,7 @@ tags:
 # tenantScopingExtension
 
 ## Connections
-- [[buildModelOverrides()]] - `calls` [EXTRACTED]
+- [[buildModelOverrides()_1]] - `calls` [EXTRACTED]
 - [[prisma.service.ts]] - `imports` [EXTRACTED]
 - [[tenant.extension.ts]] - `contains` [EXTRACTED]
 

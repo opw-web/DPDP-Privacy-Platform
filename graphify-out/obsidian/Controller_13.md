@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "canonicalJson"
+community: "PrincipalsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/canonicalJson
+  - community/PrincipalsController
 ---
 
 # Controller
 
 ## Connections
-- [[AuditEventsEvidenceController]] - `references` [EXTRACTED]
+- [[PrincipalsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/canonicalJson
+#graphify/code #graphify/EXTRACTED #community/PrincipalsController

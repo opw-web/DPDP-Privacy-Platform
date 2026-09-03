@@ -12,12 +12,13 @@ tags:
 # AuditModule
 
 ## Connections
-- [[Module_5]] - `references` [EXTRACTED]
+- [[Module_4]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[audit-read.module.ts]] - `imports` [EXTRACTED]
 - [[audit.module.ts]] - `contains` [EXTRACTED]
 - [[auth.module.ts]] - `imports` [EXTRACTED]
 - [[board.module.ts]] - `imports` [EXTRACTED]
+- [[breaches.module.ts]] - `imports` [EXTRACTED]
 - [[campaigns.module.ts]] - `imports` [EXTRACTED]
 - [[children.module.ts]] - `imports` [EXTRACTED]
 - [[compliance.module.ts]] - `imports` [EXTRACTED]
@@ -29,6 +30,7 @@ tags:
 - [[inventory.module.ts]] - `imports` [EXTRACTED]
 - [[notices.module.ts]] - `imports` [EXTRACTED]
 - [[organizations.module.ts]] - `imports` [EXTRACTED]
+- [[principal-portal.module.ts]] - `imports` [EXTRACTED]
 - [[principals.module.ts]] - `imports` [EXTRACTED]
 - [[purposes.module.ts]] - `imports` [EXTRACTED]
 - [[registers.module.ts]] - `imports` [EXTRACTED]

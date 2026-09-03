@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sync-lock.service.ts"
+source_file: "dpdp-platform/backend/src/modules/children/guardians.service.ts"
 type: "code"
-community: "queues.module.ts"
-location: "L94"
+community: "guardians.service.ts"
+location: "L76"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/guardiansservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[SyncLockService]] - `method` [EXTRACTED]
-- [[toRedisConnectionOptions()]] - `calls` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[GuardiansService]] - `method` [EXTRACTED]
+- [[MaskingService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/guardiansservicets

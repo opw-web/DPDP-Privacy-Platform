@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/EmployeesPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/PurposeForm.test.tsx"
 type: "code"
-community: "api-client.ts"
-location: "L16"
+community: "SecurityMeasuresTab.tsx"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/SecurityMeasuresTabtsx
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[EmployeesPage.test.tsx]] - `contains` [EXTRACTED]
-- [[loginAndRenderThroughShell()_1]] - `calls` [EXTRACTED]
+- [[PurposeForm.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx

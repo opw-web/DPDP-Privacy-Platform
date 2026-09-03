@@ -1,24 +1,24 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/messaging/templates/dto/preview-template.dto.ts"
 type: "code"
-community: "templates.service.ts"
+community: "CreateTemplateDto"
 location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatesservicets
+  - community/CreateTemplateDto
 ---
 
 # PreviewTemplateDto
 
 ## Connections
-- [[dot-preview()_1]] - `references` [EXTRACTED]
 - [[dot-preview()]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_10]] - `references` [EXTRACTED]
-- [[IsObject_1]] - `references` [EXTRACTED]
-- [[IsOptional_11]] - `references` [EXTRACTED]
+- [[dot-preview()_2]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_15]] - `references` [EXTRACTED]
+- [[IsObject_2]] - `references` [EXTRACTED]
+- [[IsOptional_18]] - `references` [EXTRACTED]
 - [[preview-template.dto.ts]] - `contains` [EXTRACTED]
 - [[templates.controller.ts]] - `imports` [EXTRACTED]
 - [[templates.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatesservicets
+#graphify/code #graphify/EXTRACTED #community/CreateTemplateDto

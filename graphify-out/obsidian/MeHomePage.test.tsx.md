@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeHomePage.test.tsx"
 type: "code"
-community: "card.tsx"
+community: "MeHomePage.test.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cardtsx
+  - community/MeHomePagetesttsx
 ---
 
 # MeHomePage.test.tsx
@@ -16,7 +16,7 @@ tags:
 - [[MeHomePage()]] - `imports` [EXTRACTED]
 - [[MeHomePage.tsx]] - `imports_from` [EXTRACTED]
 - [[assertNoJargon()]] - `contains` [EXTRACTED]
-- [[jsonResponse()_3]] - `contains` [EXTRACTED]
+- [[jsonResponse()_17]] - `contains` [EXTRACTED]
 - [[renderMeHomePage()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cardtsx
+#graphify/code #graphify/EXTRACTED #community/MeHomePagetesttsx

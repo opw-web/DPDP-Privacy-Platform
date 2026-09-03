@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/checklist.types.ts"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/retention/types.ts"
 type: "code"
-community: "erasure-task.service.ts"
-location: "L28"
+community: "RetentionPage.tsx"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/RetentionPagetsx
 ---
 
 # ProcessorChecklistEntry
 
 ## Connections
-- [[dot-buildChecklists()]] - `references` [EXTRACTED]
-- [[checklist.types.ts]] - `contains` [EXTRACTED]
-- [[erasure-task.service.ts]] - `imports` [EXTRACTED]
+- [[RetentionTaskCard.tsx]] - `imports` [EXTRACTED]
+- [[retentiontypes.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/RetentionPagetsx

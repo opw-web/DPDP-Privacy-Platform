@@ -1,19 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts"
 type: "code"
-community: "TemplatesService"
-location: "L22"
+community: "AlgorithmRegisterService"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/AlgorithmRegisterService
 ---
 
 # .list()
 
 ## Connections
-- [[Get_16]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[TemplatesController]] - `method` [EXTRACTED]
+- [[AlgorithmRegisterService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterService

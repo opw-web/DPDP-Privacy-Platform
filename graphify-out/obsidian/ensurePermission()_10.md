@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/purposes.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/audit-read.e2e-spec.ts"
 type: "code"
-community: "AppModule"
-location: "L28"
+community: "prisma.service.ts"
+location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AppModule
+  - community/prismaservicets
 ---
 
 # ensurePermission()
 
 ## Connections
-- [[createOrgWithManager()_1]] - `calls` [EXTRACTED]
-- [[purposes.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[EmployeeSession_2]] - `calls` [EXTRACTED]
+- [[audit-read.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AppModule
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

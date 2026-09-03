@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "retention/retention.controller.ts"
+community: "me-rights.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retention/retentioncontrollerts
+  - community/me-rightsservicets
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CompleteErasureTaskDto]] - `references` [EXTRACTED]
-- [[ProcessorChecklistTickDto]] - `references` [EXTRACTED]
-- [[SystemChecklistTickDto]] - `references` [EXTRACTED]
+- [[CreateMeRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retention/retentioncontrollerts
+#graphify/code #graphify/EXTRACTED #community/me-rightsservicets

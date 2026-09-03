@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/LoginPage.tsx"
 type: "code"
-community: "card.tsx"
+community: "button.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cardtsx
+  - community/buttontsx
 ---
 
 # LoginPage.tsx
@@ -36,4 +36,4 @@ tags:
 - [[sanitizeRedirectTarget()]] - `contains` [EXTRACTED]
 - [[useEmployeeAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cardtsx
+#graphify/code #graphify/EXTRACTED #community/buttontsx

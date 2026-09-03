@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "ListPrincipalsDto"
+community: "CreateNoticeVersionDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ListPrincipalsDto
+  - community/CreateNoticeVersionDto
 ---
 
 # IsOptional
 
 ## Connections
-- [[ListPrincipalsDto]] - `references` [EXTRACTED]
+- [[CreateNoticeVersionDto]] - `references` [EXTRACTED]
+- [[ItemisedFieldInputDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ListPrincipalsDto
+#graphify/code #graphify/EXTRACTED #community/CreateNoticeVersionDto

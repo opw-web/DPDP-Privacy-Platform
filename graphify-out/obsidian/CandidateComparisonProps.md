@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/CandidateComparison.tsx"
 type: "code"
-community: "CandidateComparison.tsx"
+community: "DateTime.tsx"
 location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CandidateComparisontsx
+  - community/DateTimetsx
 ---
 
 # CandidateComparisonProps
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[CandidateComparison.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CandidateComparisontsx
+#graphify/code #graphify/EXTRACTED #community/DateTimetsx

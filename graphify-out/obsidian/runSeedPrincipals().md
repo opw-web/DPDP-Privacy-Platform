@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[claimDemoPrincipalAccounts()]] - `calls` [EXTRACTED]
-- [[main()]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 - [[resolveDemoOrganizationId()]] - `calls` [EXTRACTED]
 - [[seed-principals.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[seed-principals.ts]] - `contains` [EXTRACTED]

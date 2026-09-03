@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalsPage.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/information-requests/InformationRequestForm.tsx"
 type: "code"
-community: "PrincipalDetailPage.tsx"
-location: "L25"
+community: "button.tsx"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalDetailPagetsx
+  - community/buttontsx
 ---
 
 # PrincipalListItem
 
 ## Connections
-- [[PrincipalsPage.tsx]] - `contains` [EXTRACTED]
-- [[SourceRef_1]] - `references` [EXTRACTED]
+- [[InformationRequestForm.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/buttontsx

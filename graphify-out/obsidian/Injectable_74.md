@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateTransferDto"
+community: "ScopedTransactionClient"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTransferDto
+  - community/ScopedTransactionClient
 ---
 
 # Injectable
 
 ## Connections
-- [[TransfersService]] - `references` [EXTRACTED]
+- [[MatchingService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTransferDto
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

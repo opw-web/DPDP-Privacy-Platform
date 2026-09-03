@@ -1,29 +1,29 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/purposes/dto/create-purpose.dto.ts"
 type: "code"
-community: ".record"
+community: "purposes.service.ts"
 location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/purposesservicets
 ---
 
 # CreatePurposeDto
 
 ## Connections
-- [[dot-create()]] - `references` [EXTRACTED]
-- [[dot-create()_1]] - `references` [EXTRACTED]
-- [[ApiProperty_3]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_4]] - `references` [EXTRACTED]
-- [[IsArray]] - `references` [EXTRACTED]
-- [[IsEnum_1]] - `references` [EXTRACTED]
-- [[IsOptional_3]] - `references` [EXTRACTED]
-- [[IsString_4]] - `references` [EXTRACTED]
-- [[MinLength_2]] - `references` [EXTRACTED]
+- [[dot-create()_3]] - `references` [EXTRACTED]
+- [[dot-create()_4]] - `references` [EXTRACTED]
+- [[ApiProperty_9]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_9]] - `references` [EXTRACTED]
+- [[IsArray_2]] - `references` [EXTRACTED]
+- [[IsEnum_4]] - `references` [EXTRACTED]
+- [[IsOptional_9]] - `references` [EXTRACTED]
+- [[IsString_10]] - `references` [EXTRACTED]
+- [[MinLength_7]] - `references` [EXTRACTED]
 - [[create-purpose.dto.ts]] - `contains` [EXTRACTED]
 - [[purposes.controller.ts]] - `imports` [EXTRACTED]
 - [[purposes.service.spec.ts]] - `imports` [EXTRACTED]
 - [[purposes.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/purposesservicets

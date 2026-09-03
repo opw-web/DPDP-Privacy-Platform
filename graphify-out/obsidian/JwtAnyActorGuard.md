@@ -1,22 +1,22 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notifications/guards/jwt-any-actor.guard.ts"
 type: "code"
-community: "NotificationsService"
+community: "notifications.controller.ts"
 location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/notificationscontrollerts
 ---
 
 # JwtAnyActorGuard
 
 ## Connections
 - [[dot-canActivate()_2]] - `method` [EXTRACTED]
-- [[dot-constructor()_8]] - `method` [EXTRACTED]
-- [[Injectable_3]] - `references` [EXTRACTED]
+- [[dot-constructor()_59]] - `method` [EXTRACTED]
+- [[Injectable_38]] - `references` [EXTRACTED]
 - [[jwt-any-actor.guard.ts]] - `contains` [EXTRACTED]
 - [[notifications.controller.ts]] - `imports` [EXTRACTED]
 - [[notifications.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts

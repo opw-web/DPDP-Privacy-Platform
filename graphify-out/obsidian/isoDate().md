@@ -12,7 +12,7 @@ tags:
 # isoDate()
 
 ## Connections
-- [[dot-list()]] - `calls` [EXTRACTED]
+- [[dot-list()_29]] - `calls` [EXTRACTED]
 - [[candidates.service.ts]] - `contains` [EXTRACTED]
 - [[recordValueFor()]] - `calls` [EXTRACTED]
 

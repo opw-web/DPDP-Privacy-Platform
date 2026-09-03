@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "BootRegistrationRegistry"
+community: "CreateInformationRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BootRegistrationRegistry
+  - community/CreateInformationRequestDto
 ---
 
 # Injectable
 
 ## Connections
-- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
+- [[InformationRequestsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BootRegistrationRegistry
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

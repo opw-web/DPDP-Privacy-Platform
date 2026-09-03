@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sync/sync-error.spec.ts"
+source_file: "dpdp-platform/backend/src/common/reference/reference.service.ts"
 type: "code"
-community: "SyncPipelineService"
-location: "L12"
+community: "AuditService"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncPipelineService
+  - community/AuditService
 ---
 
 # .constructor()
 
 ## Connections
-- [[IdentifierOwnershipConflictError]] - `method` [EXTRACTED]
+- [[ReferenceService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncPipelineService
+#graphify/code #graphify/EXTRACTED #community/AuditService

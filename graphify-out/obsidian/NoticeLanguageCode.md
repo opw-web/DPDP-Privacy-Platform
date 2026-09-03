@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/LanguageSelector.tsx"
 type: "code"
-community: "cn"
+community: "LanguageSelector.tsx"
 location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/LanguageSelectortsx
 ---
 
 # NoticeLanguageCode
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[LanguageSelector.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/LanguageSelectortsx

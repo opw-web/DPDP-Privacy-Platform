@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdateComplianceRuleDto"
+community: "ReplaceMappingsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateComplianceRuleDto
+  - community/ReplaceMappingsDto
 ---
 
 # MinLength
 
 ## Connections
-- [[UpdateComplianceRuleDto]] - `references` [EXTRACTED]
+- [[SourceFieldMappingDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateComplianceRuleDto
+#graphify/code #graphify/EXTRACTED #community/ReplaceMappingsDto

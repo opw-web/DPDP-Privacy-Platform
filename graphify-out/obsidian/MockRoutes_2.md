@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/InformationRequestsPage.test.tsx"
 type: "code"
-community: "PrincipalDetailPage.tsx"
-location: "L121"
+community: "InformationRequestsPage.test.tsx"
+location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalDetailPagetsx
+  - community/InformationRequestsPagetesttsx
 ---
 
 # MockRoutes
 
 ## Connections
-- [[PrincipalDetailPage.test.tsx]] - `contains` [EXTRACTED]
+- [[InformationRequestsPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/InformationRequestsPagetesttsx

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sdf.module.ts"
+community: "notifications.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdfmodulets
+  - community/notificationsmodulets
 ---
 
 # Module
 
 ## Connections
-- [[SdfModule]] - `references` [EXTRACTED]
+- [[MailModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdfmodulets
+#graphify/code #graphify/EXTRACTED #community/notificationsmodulets

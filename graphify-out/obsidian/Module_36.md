@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "HealthService"
+community: "normalization.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/HealthService
+  - community/normalizationservicets
 ---
 
 # Module
 
 ## Connections
-- [[HealthModule]] - `references` [EXTRACTED]
+- [[NormalizationModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/HealthService
+#graphify/code #graphify/EXTRACTED #community/normalizationservicets

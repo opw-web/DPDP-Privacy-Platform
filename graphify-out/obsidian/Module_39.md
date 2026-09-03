@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "connector.factory.ts"
+community: "registers.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/connectorfactoryts
+  - community/registersmodulets
 ---
 
 # Module
 
 ## Connections
-- [[ConnectorsModule]] - `references` [EXTRACTED]
+- [[RegistersModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/connectorfactoryts
+#graphify/code #graphify/EXTRACTED #community/registersmodulets

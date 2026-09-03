@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "InventoryService"
+community: "ropa-export.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/InventoryService
+  - community/ropa-exportservicets
 ---
 
 # Get
@@ -15,4 +15,4 @@ tags:
 - [[dot-ropaCsv()]] - `references` [EXTRACTED]
 - [[dot-summary()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/InventoryService
+#graphify/code #graphify/EXTRACTED #community/ropa-exportservicets

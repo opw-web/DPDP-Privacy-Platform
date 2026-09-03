@@ -12,10 +12,10 @@ tags:
 # SyncJobsController
 
 ## Connections
-- [[dot-constructor()_36]] - `method` [EXTRACTED]
-- [[dot-get()_3]] - `method` [EXTRACTED]
+- [[dot-constructor()_40]] - `method` [EXTRACTED]
+- [[dot-get()_6]] - `method` [EXTRACTED]
 - [[dot-list()_7]] - `method` [EXTRACTED]
-- [[ApiTags_8]] - `references` [EXTRACTED]
+- [[ApiTags_7]] - `references` [EXTRACTED]
 - [[Controller_8]] - `references` [EXTRACTED]
 - [[sync.controller.ts]] - `contains` [EXTRACTED]
 - [[sync.module.ts]] - `imports` [EXTRACTED]

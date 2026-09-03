@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RequestsController"
+community: "RequirePermission"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestsController
+  - community/RequirePermission
 ---
 
 # Controller
 
 ## Connections
-- [[RequestsController]] - `references` [EXTRACTED]
+- [[CampaignsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestsController
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

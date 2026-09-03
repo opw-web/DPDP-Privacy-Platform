@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/src/modules/requests/requests.service.ts"
 type: "code"
 community: "RequestsService"
-location: "L574"
+location: "L684"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,10 +12,10 @@ tags:
 # .scanOrgDeadlines()
 
 ## Connections
-- [[dot-create()_18]] - `calls` [EXTRACTED]
+- [[dot-create()_13]] - `calls` [EXTRACTED]
 - [[dot-record()]] - `calls` [INFERRED]
 - [[dot-runScanCycle()]] - `calls` [INFERRED]
-- [[dot-send()_3]] - `calls` [INFERRED]
+- [[dot-send()_1]] - `calls` [INFERRED]
 - [[RequestsService]] - `method` [EXTRACTED]
 - [[transitionTargets()]] - `calls` [EXTRACTED]
 

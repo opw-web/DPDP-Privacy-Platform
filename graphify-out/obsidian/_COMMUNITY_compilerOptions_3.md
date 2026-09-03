@@ -21,7 +21,7 @@ members: 30
 - [[isolatedModules]] - code - dpdp-platform/frontend/tsconfig.json
 - [[jsx]] - code - dpdp-platform/frontend/tsconfig.json
 - [[lib_1]] - code - dpdp-platform/frontend/tsconfig.json
-- [[module_40]] - code - dpdp-platform/frontend/tsconfig.json
+- [[module_41]] - code - dpdp-platform/frontend/tsconfig.json
 - [[moduleResolution_2]] - code - dpdp-platform/frontend/tsconfig.json
 - [[noEmit_1]] - code - dpdp-platform/frontend/tsconfig.json
 - [[noFallthroughCasesInSwitch_1]] - code - dpdp-platform/frontend/tsconfig.json
@@ -35,7 +35,7 @@ members: 30
 - [[src]] - concept - dpdp-platform/frontend/tsconfig.json
 - [[strict_3]] - code - dpdp-platform/frontend/tsconfig.json
 - [[target_2]] - code - dpdp-platform/frontend/tsconfig.json
-- [[types]] - code - dpdp-platform/frontend/tsconfig.json
+- [[types_1]] - code - dpdp-platform/frontend/tsconfig.json
 - [[useDefineForClassFields]] - code - dpdp-platform/frontend/tsconfig.json
 - [[vitestglobals]] - concept - dpdp-platform/frontend/tsconfig.json
 

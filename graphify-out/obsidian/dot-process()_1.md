@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/deadline-scan.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/breach-clock.processor.ts"
 type: "code"
-community: "DeadlineScanProcessor"
-location: "L57"
+community: "breaches.module.ts"
+location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DeadlineScanProcessor
+  - community/breachesmodulets
 ---
 
 # .process()
 
 ## Connections
-- [[dot-runScanCycle()]] - `calls` [EXTRACTED]
-- [[DeadlineScanJobData]] - `references` [EXTRACTED]
-- [[DeadlineScanProcessor]] - `method` [EXTRACTED]
+- [[dot-runClockCycle()]] - `calls` [EXTRACTED]
+- [[BreachClockProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DeadlineScanProcessor
+#graphify/code #graphify/EXTRACTED #community/breachesmodulets

@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/PurposesPage.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.tsx"
 type: "code"
 community: "card.tsx"
-location: "L18"
+location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # Purpose
 
 ## Connections
-- [[PurposesPage.tsx]] - `contains` [EXTRACTED]
+- [[ChildrenPage.tsx]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/cardtsx

@@ -15,8 +15,8 @@ tags:
 - [[dot-update()_16]] - `calls` [INFERRED]
 - [[Body_14]] - `references` [EXTRACTED]
 - [[InformationRequestsController]] - `method` [EXTRACTED]
-- [[Param_17]] - `references` [EXTRACTED]
-- [[Patch_8]] - `references` [EXTRACTED]
+- [[Param_14]] - `references` [EXTRACTED]
+- [[Patch_7]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[UpdateInformationRequestDto]] - `references` [EXTRACTED]
 

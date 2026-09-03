@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "dependencies"
-location: "L34"
+community: "bullmq"
+location: "L35"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/bullmq
 ---
 
 # bullmq
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[bullmq]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/dependencies
+#graphify/concept #graphify/EXTRACTED #community/bullmq

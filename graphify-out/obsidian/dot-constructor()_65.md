@@ -1,22 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/consents/consents.service.ts"
+source_file: "dpdp-platform/backend/src/queues/consent-backfill.processor.ts"
 type: "code"
-community: "PrismaService"
-location: "L89"
+community: "consent-backfill.queue.ts"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/consent-backfillqueuets
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[ConsentsService]] - `method` [EXTRACTED]
-- [[ErasureTaskService]] - `references` [EXTRACTED]
-- [[GuardiansService]] - `references` [EXTRACTED]
-- [[NoticesService]] - `references` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
+- [[ConsentBackfillProcessor]] - `method` [EXTRACTED]
+- [[ConsentBackfillService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/consent-backfillqueuets

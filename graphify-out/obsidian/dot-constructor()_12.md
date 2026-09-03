@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/common/audit/access-log.service.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/erasure-task.service.ts"
 type: "code"
-community: "access-report.service.ts"
-location: "L50"
+community: "AuditService"
+location: "L109"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-reportservicets
+  - community/AuditService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AccessLogService]] - `method` [EXTRACTED]
 - [[AuditService]] - `references` [EXTRACTED]
+- [[ComplianceService]] - `references` [EXTRACTED]
+- [[ErasureTaskService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-reportservicets
+#graphify/code #graphify/EXTRACTED #community/AuditService

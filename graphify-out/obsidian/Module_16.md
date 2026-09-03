@@ -11,6 +11,6 @@ tags:
 # Module
 
 ## Connections
-- [[EvidenceModule]] - `references` [EXTRACTED]
+- [[IdentityModule]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/appmodulets

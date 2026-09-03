@@ -1,17 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: ".record"
+community: "Public"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/Public
 ---
 
 # Param
 
 ## Connections
-- [[dot-review()_2]] - `references` [EXTRACTED]
-- [[dot-update()_2]] - `references` [EXTRACTED]
+- [[dot-cancelRequest()]] - `references` [EXTRACTED]
+- [[dot-commentOnRequest()]] - `references` [EXTRACTED]
+- [[dot-getPublishedNotice()]] - `references` [EXTRACTED]
+- [[dot-getRequest()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/Public

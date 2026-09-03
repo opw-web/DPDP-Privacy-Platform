@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/common/reference/reference.service.ts"
+source_file: "dpdp-platform/backend/src/modules/evidence/principal-evidence.service.ts"
 type: "code"
-community: "audit.service.ts"
-location: "L18"
+community: "principal-evidence.service.ts"
+location: "L129"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/auditservicets
+  - community/principal-evidenceservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[PrismaService]] - `references` [EXTRACTED]
-- [[ReferenceService]] - `method` [EXTRACTED]
+- [[AccessLogService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[PrincipalEvidenceService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/auditservicets
+#graphify/code #graphify/EXTRACTED #community/principal-evidenceservicets

@@ -1,21 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sdf-cycle-scan.queue.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/age.service.ts"
 type: "code"
-community: "sdf.module.ts"
-location: "L62"
+community: "AuditService"
+location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdfmodulets
+  - community/AuditService
 ---
 
 # .constructor()
 
 ## Connections
-- [[dot-register()]] - `calls` [INFERRED]
-- [[dot-registerSchedule()]] - `calls` [EXTRACTED]
-- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
-- [[InjectQueue]] - `references` [EXTRACTED]
-- [[SdfCycleScanQueueService]] - `method` [EXTRACTED]
+- [[AgeService]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdfmodulets
+#graphify/code #graphify/EXTRACTED #community/AuditService

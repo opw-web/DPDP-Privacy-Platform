@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/audit/dto/access-log-export.dto.ts"
 type: "code"
-community: "RequirePermission"
+community: "audit-read.service.ts"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/audit-readservicets
 ---
 
 # AccessLogExportDto
@@ -14,10 +14,10 @@ tags:
 ## Connections
 - [[dot-accessLogCsv()_1]] - `references` [EXTRACTED]
 - [[dot-accessLogCsv()]] - `references` [EXTRACTED]
-- [[IsOptional_22]] - `references` [EXTRACTED]
-- [[IsString_26]] - `references` [EXTRACTED]
+- [[IsOptional_13]] - `references` [EXTRACTED]
+- [[IsString_14]] - `references` [EXTRACTED]
 - [[access-log-export.dto.ts]] - `contains` [EXTRACTED]
 - [[audit-read.controller.ts]] - `imports` [EXTRACTED]
 - [[audit-read.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/audit-readservicets

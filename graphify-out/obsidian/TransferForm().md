@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/registers/TransfersTab.tsx"
 type: "code"
-community: "cn"
+community: "router.tsx"
 location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/routertsx
 ---
 
 # TransferForm()
@@ -15,4 +15,4 @@ tags:
 - [[TransfersTab.tsx]] - `contains` [EXTRACTED]
 - [[useEmployeeAuth()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/routertsx

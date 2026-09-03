@@ -12,7 +12,7 @@ tags:
 # ReadOnlyHttpMethodError
 
 ## Connections
-- [[dot-constructor()_133]] - `method` [EXTRACTED]
+- [[dot-constructor()_135]] - `method` [EXTRACTED]
 - [[dot-request()]] - `calls` [EXTRACTED]
 - [[read-only-http.client.spec.ts]] - `imports` [EXTRACTED]
 - [[read-only-http.client.ts]] - `contains` [EXTRACTED]

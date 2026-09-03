@@ -9,7 +9,7 @@ members: 3
 
 ## Members
 - [[Global]] - code
-- [[Module_32]] - code
+- [[Module_29]] - code
 - [[PrismaModule]] - code - dpdp-platform/backend/src/common/prisma/prisma.module.ts
 
 ## Live Query (requires Dataview plugin)
@@ -21,7 +21,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 1 edge to [[_COMMUNITY_app.module.ts]]
-- 1 edge to [[_COMMUNITY_prisma.service.ts]]
+- 1 edge to [[_COMMUNITY_PrismaService]]
 
 ## Top bridge nodes
 - [[PrismaModule]] - degree 4, connects to 2 communities

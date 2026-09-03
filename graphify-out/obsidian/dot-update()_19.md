@@ -1,23 +1,26 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/sharing.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
 type: "code"
-community: "SharingService"
-location: "L33"
+community: "DataSourcesService"
+location: "L318"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SharingService
+  - community/DataSourcesService
 ---
 
 # .update()
 
 ## Connections
-- [[dot-update()_20]] - `calls` [INFERRED]
-- [[Body_16]] - `references` [EXTRACTED]
-- [[Param_19]] - `references` [EXTRACTED]
-- [[Patch_10]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[SharingController]] - `method` [EXTRACTED]
-- [[UpdateSharingActivityDto]] - `references` [EXTRACTED]
+- [[dot-assertPubliclyAvailableJustified()]] - `calls` [EXTRACTED]
+- [[dot-encrypt()]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-scheduleSync()]] - `calls` [EXTRACTED]
+- [[dot-testConnection()_2]] - `calls` [EXTRACTED]
+- [[dot-update()_18]] - `calls` [INFERRED]
+- [[DataSourcesService]] - `method` [EXTRACTED]
+- [[UpdateDataSourceDto]] - `references` [EXTRACTED]
+- [[duplicateNameMessage()]] - `calls` [EXTRACTED]
+- [[isUniqueConstraintViolation()_3]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SharingService
+#graphify/code #graphify/EXTRACTED #community/DataSourcesService

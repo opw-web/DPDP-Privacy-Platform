@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/pre-erasure-notice.service.ts"
 type: "code"
-community: "retention.module.ts"
-location: "L21"
+community: "NotificationSendInput"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionmodulets
+  - community/NotificationSendInput
 ---
 
 # buildPreErasureNoticeBody()
@@ -15,4 +15,4 @@ tags:
 - [[dot-sendDueNotices()]] - `calls` [EXTRACTED]
 - [[pre-erasure-notice.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionmodulets
+#graphify/code #graphify/EXTRACTED #community/NotificationSendInput

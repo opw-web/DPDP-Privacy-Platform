@@ -13,9 +13,12 @@ tags:
 
 ## Connections
 - [[access-report-render.ts]] - `imports` [EXTRACTED]
+- [[breach-render.ts]] - `imports` [EXTRACTED]
 - [[pdf-utils.ts]] - `contains` [EXTRACTED]
 - [[principal-evidence-render.ts]] - `imports` [EXTRACTED]
 - [[renderAccessReportPdf()]] - `calls` [EXTRACTED]
+- [[renderBoardDetailedPdf()]] - `calls` [EXTRACTED]
+- [[renderBoardInitialPdf()]] - `calls` [EXTRACTED]
 - [[renderPrincipalEvidencePdf()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/access-report-renderts

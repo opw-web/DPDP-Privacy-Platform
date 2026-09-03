@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/children.e2e-spec.ts"
 type: "code"
-community: "retention.e2e-spec.ts"
+community: "PrismaService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentione2e-spects
+  - community/PrismaService
 ---
 
 # children.e2e-spec.ts
@@ -20,9 +20,9 @@ tags:
 - [[age.service.ts]] - `imports_from` [EXTRACTED]
 - [[bootstrapTestApp()]] - `imports` [EXTRACTED]
 - [[cleanupOrgs()]] - `imports` [EXTRACTED]
-- [[createOrgWithEmployee()]] - `imports` [EXTRACTED]
+- [[createOrgWithEmployee()_1]] - `imports` [EXTRACTED]
 - [[e2e-harness.ts]] - `imports_from` [EXTRACTED]
-- [[ensurePermission()_1]] - `imports` [EXTRACTED]
+- [[ensurePermission()_3]] - `imports` [EXTRACTED]
 - [[guardians.service.ts]] - `imports_from` [EXTRACTED]
 - [[makeNoPermActor()]] - `contains` [EXTRACTED]
 - [[makeOrg()]] - `contains` [EXTRACTED]
@@ -32,4 +32,4 @@ tags:
 - [[validExemptionPayload()]] - `contains` [EXTRACTED]
 - [[validGuardianPayload()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentione2e-spects
+#graphify/code #graphify/EXTRACTED #community/PrismaService

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "notices.service.ts"
+community: "employees.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/noticesservicets
+  - community/employeesservicets
 ---
 
 # ApiProperty
 
 ## Connections
-- [[UpsertTranslationDto]] - `references` [EXTRACTED]
+- [[ResetEmployeePasswordDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/noticesservicets
+#graphify/code #graphify/EXTRACTED #community/employeesservicets

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".unmerge"
+community: "Public"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/unmerge
+  - community/Public
 ---
 
 # Controller
 
 ## Connections
-- [[UnmergeController]] - `references` [EXTRACTED]
+- [[MeRightsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/unmerge
+#graphify/code #graphify/EXTRACTED #community/Public

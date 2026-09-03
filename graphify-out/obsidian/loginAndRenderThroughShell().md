@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/AuditPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.test.tsx"
 type: "code"
-community: "SecurityMeasuresTab.tsx"
-location: "L48"
+community: "SettingsPage.test.tsx"
+location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresTabtsx
+  - community/SettingsPagetesttsx
 ---
 
 # loginAndRenderThroughShell()
 
 ## Connections
-- [[AuditPage.test.tsx]] - `contains` [EXTRACTED]
+- [[SettingsPage.test.tsx]] - `contains` [EXTRACTED]
 - [[employeeLogin()]] - `calls` [EXTRACTED]
-- [[jsonResponse()_8]] - `calls` [EXTRACTED]
+- [[jsonResponse()_3]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx
+#graphify/code #graphify/EXTRACTED #community/SettingsPagetesttsx

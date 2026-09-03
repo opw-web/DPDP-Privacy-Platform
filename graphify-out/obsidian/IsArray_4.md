@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "templates.service.ts"
+community: "ReplaceMappingsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatesservicets
+  - community/ReplaceMappingsDto
 ---
 
 # IsArray
 
 ## Connections
-- [[CreateTemplateDto]] - `references` [EXTRACTED]
+- [[ReplaceMappingsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatesservicets
+#graphify/code #graphify/EXTRACTED #community/ReplaceMappingsDto

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "NotificationsService"
+community: "AuditService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/AuditService
 ---
 
 # Injectable
 
 ## Connections
-- [[JwtAnyActorGuard]] - `references` [EXTRACTED]
+- [[ComplianceService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/AuditService

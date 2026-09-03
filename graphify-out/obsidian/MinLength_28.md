@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "data-sources.service.ts"
+community: "AddMeRequestCommentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesservicets
+  - community/AddMeRequestCommentDto
 ---
 
 # MinLength
 
 ## Connections
-- [[CreateDataSourceDto]] - `references` [EXTRACTED]
+- [[AddMeRequestCommentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets
+#graphify/code #graphify/EXTRACTED #community/AddMeRequestCommentDto

@@ -19,7 +19,7 @@ tags:
 - [[TenantStore]] - `imports` [EXTRACTED]
 - [[access-log.service.ts]] - `imports_from` [EXTRACTED]
 - [[audit.service.ts]] - `imports_from` [EXTRACTED]
-- [[createOrg()_3]] - `contains` [EXTRACTED]
+- [[createOrg()_2]] - `contains` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 

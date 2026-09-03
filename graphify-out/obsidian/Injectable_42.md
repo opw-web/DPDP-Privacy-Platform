@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalsService"
+community: "consent-backfill.queue.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalsService
+  - community/consent-backfillqueuets
 ---
 
 # Injectable
 
 ## Connections
-- [[PrincipalsService]] - `references` [EXTRACTED]
+- [[ConsentBackfillService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalsService
+#graphify/code #graphify/EXTRACTED #community/consent-backfillqueuets

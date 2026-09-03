@@ -1,23 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/requests/requests.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/requests/requests.service.ts"
 type: "code"
-community: "RequestsController"
-location: "L83"
+community: "RequestsService"
+location: "L618"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestsController
+  - community/RequestsService
 ---
 
 # .verifyIdentity()
 
 ## Connections
+- [[dot-assertLegalTransition()]] - `calls` [EXTRACTED]
+- [[dot-loadByReferenceOrThrow()]] - `calls` [EXTRACTED]
 - [[dot-verifyIdentity()_1]] - `calls` [INFERRED]
-- [[Body_10]] - `references` [EXTRACTED]
-- [[Param_13]] - `references` [EXTRACTED]
-- [[Post_12]] - `references` [EXTRACTED]
-- [[RequestsController]] - `method` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-writeTransition()]] - `calls` [EXTRACTED]
+- [[RequestsService]] - `method` [EXTRACTED]
 - [[VerifyIdentityDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestsController
+#graphify/code #graphify/EXTRACTED #community/RequestsService

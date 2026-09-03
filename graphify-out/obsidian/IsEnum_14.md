@@ -11,6 +11,6 @@ tags:
 # IsEnum
 
 ## Connections
-- [[UpdateDataSourceDto]] - `references` [EXTRACTED]
+- [[CreateDataSourceDto]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/data-sourcesservicets

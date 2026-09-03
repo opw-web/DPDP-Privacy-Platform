@@ -11,6 +11,8 @@ tags:
 # Get
 
 ## Connections
+- [[dot-get()_11]] - `references` [EXTRACTED]
 - [[dot-list()_21]] - `references` [EXTRACTED]
+- [[dot-listRecipients()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/RequirePermission

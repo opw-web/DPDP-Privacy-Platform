@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/audit-chain.service.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/providers/portal.provider.ts"
 type: "code"
-community: "canonicalJson"
-location: "L48"
+community: "notifications.service.ts"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/canonicalJson
+  - community/notificationsservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditChainService]] - `method` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
+- [[PortalProvider]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/canonicalJson
+#graphify/code #graphify/EXTRACTED #community/notificationsservicets

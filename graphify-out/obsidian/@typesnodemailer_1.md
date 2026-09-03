@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
 community: "@types/nodemailer"
-location: "L62"
+location: "L63"
 tags:
   - graphify/concept
   - graphify/EXTRACTED

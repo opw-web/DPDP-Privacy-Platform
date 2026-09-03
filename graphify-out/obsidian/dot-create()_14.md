@@ -1,22 +1,24 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/employees.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
 type: "code"
-community: "employees.controller.ts"
-location: "L28"
+community: "RequirePermission"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeescontrollerts
+  - community/RequirePermission
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_15]] - `calls` [INFERRED]
-- [[Body_13]] - `references` [EXTRACTED]
-- [[CreateEmployeeDto]] - `references` [EXTRACTED]
-- [[EmployeesController]] - `method` [EXTRACTED]
-- [[Post_15]] - `references` [EXTRACTED]
+- [[dot-create()_21]] - `calls` [INFERRED]
+- [[AccessTokenPayload]] - `references` [EXTRACTED]
+- [[Body_11]] - `references` [EXTRACTED]
+- [[CampaignsController]] - `method` [EXTRACTED]
+- [[CreateCampaignDto]] - `references` [EXTRACTED]
+- [[CurrentActor]] - `references` [EXTRACTED]
+- [[Post_10]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeescontrollerts
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

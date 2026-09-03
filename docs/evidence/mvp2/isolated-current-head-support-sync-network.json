@@ -1,0 +1,82 @@
+[
+  {
+    "status": 204,
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=6eb87b36-2184-4ae9-b132-80d9931d396d&limit=1",
+    "body": null
+  },
+  {
+    "status": 204,
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=a8bd9ca8-6e44-48d3-ae73-50e906e45a9b&limit=1",
+    "body": null
+  },
+  {
+    "status": 204,
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=d14fedb7-73bb-486f-882b-9c9dc89df173&limit=1",
+    "body": null
+  },
+  {
+    "status": 204,
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=f9d2374f-9dd5-40be-8c0a-d06ed8d6938f&limit=1",
+    "body": null
+  },
+  {
+    "status": 200,
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=6eb87b36-2184-4ae9-b132-80d9931d396d&limit=1",
+    "body": "[{\"id\":\"05d6cb44-faa9-43b4-9736-494c12f887fc\",\"organizationId\":\"3cbf6d8c-29e5-4912-bf61-30e3462acc87\",\"dataSourceId\":\"6eb87b36-2184-4ae9-b132-80d9931d396d\",\"triggeredBy\":\"62a54486-a803-43a3-9e20-0fd10257f989\",\"startedAt\":\"2026-09-03T02:49:23.927Z\",\"finishedAt\":\"2026-09-03T02:49:47.631Z\",\"status\":\"SUCCESS\",\"recordsRead\":114,\"recordsCreated\":114,\"recordsUpdated\":0,\"recordsSkipped\":0,\"recordsFailed\":0,\"principalsCreated\":114,\"principalsLinked\":0,\"candidatesRaised\":0,\"errorLog\":[]}]"
+  },
+  {
+    "status": 200,
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=a8bd9ca8-6e44-48d3-ae73-50e906e45a9b&limit=1",
+    "body": "[{\"id\":\"33bcf757-ade0-4dd0-8e13-7d8217ccae81\",\"organizationId\":\"3cbf6d8c-29e5-4912-bf61-30e3462acc87\",\"dataSourceId\":\"a8bd9ca8-6e44-48d3-ae73-50e906e45a9b\",\"triggeredBy\":\"62a54486-a803-43a3-9e20-0fd10257f989\",\"startedAt\":\"2026-09-03T02:51:41.566Z\",\"finishedAt\":\"2026-09-03T02:51:59.574Z\",\"status\":\"SUCCESS\",\"recordsRead\":137,\"recordsCreated\":137,\"recordsUpdated\":0,\"recordsSkipped\":0,\"recordsFailed\":0,\"principalsCreated\":104,\"principalsLinked\":33,\"candidatesRaised\":0,\"errorLog\":[]}]"
+  },
+  {
+    "status": 200,
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=f9d2374f-9dd5-40be-8c0a-d06ed8d6938f&limit=1",
+    "body": "[]"
+  },
+  {
+    "status": 200,
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=d14fedb7-73bb-486f-882b-9c9dc89df173&limit=1",
+    "body": "[]"
+  },
+  {
+    "status": 204,
+    "url": "http://127.0.0.1:4001/api/data-sources/d14fedb7-73bb-486f-882b-9c9dc89df173/sync",
+    "body": null
+  },
+  {
+    "status": 202,
+    "url": "http://127.0.0.1:4001/api/data-sources/d14fedb7-73bb-486f-882b-9c9dc89df173/sync",
+    "body": "{\"queued\":true,\"dataSourceId\":\"d14fedb7-73bb-486f-882b-9c9dc89df173\"}"
+  },
+  {
+    "status": 200,
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=a8bd9ca8-6e44-48d3-ae73-50e906e45a9b&limit=1",
+    "body": "[{\"id\":\"33bcf757-ade0-4dd0-8e13-7d8217ccae81\",\"organizationId\":\"3cbf6d8c-29e5-4912-bf61-30e3462acc87\",\"dataSourceId\":\"a8bd9ca8-6e44-48d3-ae73-50e906e45a9b\",\"triggeredBy\":\"62a54486-a803-43a3-9e20-0fd10257f989\",\"startedAt\":\"2026-09-03T02:51:41.566Z\",\"finishedAt\":\"2026-09-03T02:51:59.574Z\",\"status\":\"SUCCESS\",\"recordsRead\":137,\"recordsCreated\":137,\"recordsUpdated\":0,\"recordsSkipped\":0,\"recordsFailed\":0,\"principalsCreated\":104,\"principalsLinked\":33,\"candidatesRaised\":0,\"errorLog\":[]}]"
+  },
+  {
+    "status": 200,
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=d14fedb7-73bb-486f-882b-9c9dc89df173&limit=1",
+    "body": "[]"
+  },
+  {
+    "status": 200,
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=f9d2374f-9dd5-40be-8c0a-d06ed8d6938f&limit=1",
+    "body": "[]"
+  },
+  {
+    "status": 200,
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=6eb87b36-2184-4ae9-b132-80d9931d396d&limit=1",
+    "body": "[{\"id\":\"05d6cb44-faa9-43b4-9736-494c12f887fc\",\"organizationId\":\"3cbf6d8c-29e5-4912-bf61-30e3462acc87\",\"dataSourceId\":\"6eb87b36-2184-4ae9-b132-80d9931d396d\",\"triggeredBy\":\"62a54486-a803-43a3-9e20-0fd10257f989\",\"startedAt\":\"2026-09-03T02:49:23.927Z\",\"finishedAt\":\"2026-09-03T02:49:47.631Z\",\"status\":\"SUCCESS\",\"recordsRead\":114,\"recordsCreated\":114,\"recordsUpdated\":0,\"recordsSkipped\":0,\"recordsFailed\":0,\"principalsCreated\":114,\"principalsLinked\":0,\"candidatesRaised\":0,\"errorLog\":[]}]"
+  },
+  {
+    "status": 204,
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=d14fedb7-73bb-486f-882b-9c9dc89df173&limit=50",
+    "body": null
+  },
+  {
+    "status": 200,
+    "url": "http://127.0.0.1:4001/api/sync-jobs?dataSourceId=d14fedb7-73bb-486f-882b-9c9dc89df173&limit=50",
+    "body": "[{\"id\":\"97b025ef-5830-45d5-b57b-fbba6a2a034a\",\"organizationId\":\"3cbf6d8c-29e5-4912-bf61-30e3462acc87\",\"dataSourceId\":\"d14fedb7-73bb-486f-882b-9c9dc89df173\",\"triggeredBy\":\"62a54486-a803-43a3-9e20-0fd10257f989\",\"startedAt\":\"2026-09-03T02:53:21.331Z\",\"finishedAt\":null,\"status\":\"RUNNING\",\"recordsRead\":0,\"recordsCreated\":0,\"recordsUpdated\":0,\"recordsSkipped\":0,\"recordsFailed\":0,\"principalsCreated\":0,\"principalsLinked\":0,\"candidatesRaised\":0,\"errorLog\":[]}]"
+  }
+]

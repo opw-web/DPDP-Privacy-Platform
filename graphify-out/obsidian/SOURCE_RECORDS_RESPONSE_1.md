@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/LinkedRecordsPanel.test.tsx"
 type: "code"
-community: "api-client.ts"
+community: "LinkedRecordsPanel.test.tsx"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/LinkedRecordsPaneltesttsx
 ---
 
 # SOURCE_RECORDS_RESPONSE
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[LinkedRecordsPanel.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/LinkedRecordsPaneltesttsx

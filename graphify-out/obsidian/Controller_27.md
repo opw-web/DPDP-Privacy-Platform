@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SharingService"
+community: "DataSourcesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SharingService
+  - community/DataSourcesService
 ---
 
 # Controller
 
 ## Connections
-- [[SharingController]] - `references` [EXTRACTED]
+- [[DataSourcesController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SharingService
+#graphify/code #graphify/EXTRACTED #community/DataSourcesService

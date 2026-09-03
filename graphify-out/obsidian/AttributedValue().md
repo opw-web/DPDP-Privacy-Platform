@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.tsx"
 type: "code"
-community: "PrincipalDetailPage.tsx"
+community: "PrincipalDetailPage.test.tsx"
 location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalDetailPagetsx
+  - community/PrincipalDetailPagetesttsx
 ---
 
 # AttributedValue()
@@ -15,4 +15,4 @@ tags:
 - [[PrincipalDetailPage.test.tsx]] - `imports` [EXTRACTED]
 - [[PrincipalDetailPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/PrincipalDetailPagetesttsx

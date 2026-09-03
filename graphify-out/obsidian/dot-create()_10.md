@@ -1,23 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/guardians.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts"
 type: "code"
-community: "guardians.service.ts"
-location: "L28"
+community: "TemplatesService"
+location: "L140"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/TemplatesService
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_11]] - `calls` [INFERRED]
-- [[Body_11]] - `references` [EXTRACTED]
-- [[CreateGuardianDto]] - `references` [EXTRACTED]
-- [[CurrentActorPermissions]] - `references` [EXTRACTED]
-- [[GuardiansController]] - `method` [EXTRACTED]
-- [[Post_13]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-create()_9]] - `calls` [INFERRED]
+- [[dot-extractAndValidateVariables()]] - `calls` [EXTRACTED]
+- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-validateRequiredSubsetOfReferenced()]] - `calls` [EXTRACTED]
+- [[CreateTemplateDto]] - `references` [EXTRACTED]
+- [[TemplatesService]] - `method` [EXTRACTED]
+- [[duplicateCodeMessage()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

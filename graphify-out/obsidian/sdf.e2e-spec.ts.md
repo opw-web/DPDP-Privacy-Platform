@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/sdf.e2e-spec.ts"
 type: "code"
-community: "prisma.service.ts"
+community: "PrismaService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/PrismaService
 ---
 
 # sdf.e2e-spec.ts
@@ -21,13 +21,13 @@ tags:
 - [[cleanupOrgs()]] - `imports` [EXTRACTED]
 - [[compliance-rules.ts]] - `imports_from` [EXTRACTED]
 - [[compliance.service.ts]] - `imports_from` [EXTRACTED]
-- [[createOrgWithEmployee()]] - `imports` [EXTRACTED]
+- [[createOrgWithEmployee()_1]] - `imports` [EXTRACTED]
 - [[e2e-harness.ts]] - `imports_from` [EXTRACTED]
 - [[makeSdfOrg()]] - `contains` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[sdf-cycle-scan.service.ts]] - `imports_from` [EXTRACTED]
 - [[seedComplianceRules()]] - `imports` [EXTRACTED]
-- [[systemActorStore()_2]] - `contains` [EXTRACTED]
+- [[systemActorStore()_1]] - `contains` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/PrismaService

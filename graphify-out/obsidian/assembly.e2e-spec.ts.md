@@ -25,11 +25,11 @@ tags:
 - [[link()]] - `contains` [EXTRACTED]
 - [[linking.service.ts]] - `imports_from` [EXTRACTED]
 - [[normalized()]] - `contains` [EXTRACTED]
-- [[organization()_3]] - `contains` [EXTRACTED]
-- [[principal()_2]] - `contains` [EXTRACTED]
+- [[organization()]] - `contains` [EXTRACTED]
+- [[principal()]] - `contains` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[source()]] - `contains` [EXTRACTED]
-- [[tenant()_4]] - `contains` [EXTRACTED]
+- [[tenant()]] - `contains` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/assemblyservicets

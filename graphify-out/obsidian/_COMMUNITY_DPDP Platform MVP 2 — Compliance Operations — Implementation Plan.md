@@ -18,7 +18,7 @@ members: 12
 - [[Pre-flight conflict scan (orchestrator, before Task 1)]] - document - docs/superpowers/plans/2026-08-31-dpdp-mvp2.md
 - [[Rulings taken up front]] - document - docs/superpowers/plans/2026-08-31-dpdp-mvp2.md
 - [[The rules every wave obeys]] - document - docs/superpowers/plans/2026-08-31-dpdp-mvp2.md
-- [[Verification]] - document - docs/superpowers/plans/2026-08-31-dpdp-mvp2.md
+- [[Verification_1]] - document - docs/superpowers/plans/2026-08-31-dpdp-mvp2.md
 - [[Wave Discipline — how parallelism actually works here]] - document - docs/superpowers/plans/2026-08-31-dpdp-mvp2.md
 
 ## Live Query (requires Dataview plugin)

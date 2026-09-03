@@ -1,22 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/requests/requests.service.ts"
+source_file: "dpdp-platform/backend/src/modules/requests/requests.controller.ts"
 type: "code"
-community: "RequestsService"
-location: "L474"
+community: "RequestsController"
+location: "L115"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestsService
+  - community/RequestsController
 ---
 
 # .escalate()
 
 ## Connections
-- [[dot-assertLegalTransition()]] - `calls` [EXTRACTED]
 - [[dot-escalate()]] - `calls` [INFERRED]
-- [[dot-loadByReferenceOrThrow()]] - `calls` [EXTRACTED]
-- [[dot-writeTransition()]] - `calls` [EXTRACTED]
+- [[Body_9]] - `references` [EXTRACTED]
 - [[EscalateRequestDto]] - `references` [EXTRACTED]
-- [[RequestsService]] - `method` [EXTRACTED]
+- [[Param_10]] - `references` [EXTRACTED]
+- [[Post_8]] - `references` [EXTRACTED]
+- [[RequestsController]] - `method` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestsService
+#graphify/code #graphify/EXTRACTED #community/RequestsController

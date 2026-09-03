@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/employees/employees.controller.ts"
 type: "code"
-community: "employees.controller.ts"
+community: "employees.service.ts"
 location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeescontrollerts
+  - community/employeesservicets
 ---
 
 # .resetPassword()
@@ -15,9 +15,9 @@ tags:
 - [[dot-resetPassword()_1]] - `calls` [INFERRED]
 - [[Body_13]] - `references` [EXTRACTED]
 - [[EmployeesController]] - `method` [EXTRACTED]
-- [[Param_16]] - `references` [EXTRACTED]
-- [[Post_15]] - `references` [EXTRACTED]
+- [[Param_13]] - `references` [EXTRACTED]
+- [[Post_12]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[ResetEmployeePasswordDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeescontrollerts
+#graphify/code #graphify/EXTRACTED #community/employeesservicets

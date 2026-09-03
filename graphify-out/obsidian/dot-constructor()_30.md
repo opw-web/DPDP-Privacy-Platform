@@ -1,17 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/auth/token.service.ts"
+source_file: "dpdp-platform/backend/src/modules/auth/principal-auth.service.ts"
 type: "code"
-community: "TokenService"
-location: "L65"
+community: "principal-auth.service.ts"
+location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TokenService
+  - community/principal-authservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[TokenService]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[PrincipalAuthService]] - `method` [EXTRACTED]
+- [[TokenService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TokenService
+#graphify/code #graphify/EXTRACTED #community/principal-authservicets

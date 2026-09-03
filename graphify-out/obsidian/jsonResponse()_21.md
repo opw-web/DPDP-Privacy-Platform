@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/router.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/LinkedRecordsPanel.test.tsx"
 type: "code"
-community: "api-client.ts"
-location: "L67"
+community: "LinkedRecordsPanel.test.tsx"
+location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/LinkedRecordsPaneltesttsx
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[installFetchMock()]] - `calls` [EXTRACTED]
-- [[router.test.tsx]] - `contains` [EXTRACTED]
+- [[LinkedRecordsPanel.test.tsx]] - `contains` [EXTRACTED]
+- [[loginAndRender()_6]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/LinkedRecordsPaneltesttsx

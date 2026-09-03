@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "AccessTokenPayload"
+community: "CreateComplianceRuleDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/CreateComplianceRuleDto
 ---
 
 # Get
 
 ## Connections
-- [[dot-get()_4]] - `references` [EXTRACTED]
-- [[dot-list()_10]] - `references` [EXTRACTED]
-- [[dot-listRecipients()]] - `references` [EXTRACTED]
+- [[dot-getById()]] - `references` [EXTRACTED]
+- [[dot-list()_8]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto

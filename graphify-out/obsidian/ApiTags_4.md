@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".unmerge"
+community: "purposes.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/unmerge
+  - community/purposesservicets
 ---
 
 # ApiTags
 
 ## Connections
-- [[UnmergeController]] - `references` [EXTRACTED]
+- [[PurposesController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/unmerge
+#graphify/code #graphify/EXTRACTED #community/purposesservicets

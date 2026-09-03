@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notifications/notifications.service.ts"
 type: "code"
-community: "notifications.module.ts"
+community: "notifications.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationsmodulets
+  - community/notificationsservicets
 ---
 
 # notifications.service.ts
@@ -22,9 +22,14 @@ tags:
 - [[PortalProvider]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[PublicNotification]] - `contains` [EXTRACTED]
+- [[ScopedTransactionClient]] - `imports` [EXTRACTED]
+- [[audit-chain-verify.processor.ts]] - `imports_from` [EXTRACTED]
+- [[breach.service.ts]] - `imports_from` [EXTRACTED]
 - [[campaign-send.processor.ts]] - `imports_from` [EXTRACTED]
+- [[campaigns.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[email-provider.factory.ts]] - `imports_from` [EXTRACTED]
 - [[jwt-any-actor.guard.ts]] - `imports_from` [EXTRACTED]
+- [[me-rights.service.ts]] - `imports_from` [EXTRACTED]
 - [[notification-provider.interface.ts]] - `imports_from` [EXTRACTED]
 - [[notifications.controller.ts]] - `imports_from` [EXTRACTED]
 - [[notifications.e2e-spec.ts]] - `imports_from` [EXTRACTED]
@@ -34,7 +39,8 @@ tags:
 - [[pre-erasure-notice.service.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[requests.service.ts]] - `imports_from` [EXTRACTED]
+- [[scoped-transaction-client.ts]] - `imports_from` [EXTRACTED]
 - [[sdf-cycle-scan.service.ts]] - `imports_from` [EXTRACTED]
 - [[toPublicNotification()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationsmodulets
+#graphify/code #graphify/EXTRACTED #community/notificationsservicets

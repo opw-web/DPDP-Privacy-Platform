@@ -12,7 +12,7 @@ tags:
 # ThirdScheduleClass
 
 ## Connections
-- [[Organization]] - `references` [EXTRACTED]
+- [[Organization_1]] - `references` [EXTRACTED]
 - [[SdfDeclarationCard.tsx]] - `contains` [EXTRACTED]
 - [[SettingsPage.tsx]] - `imports` [EXTRACTED]
 

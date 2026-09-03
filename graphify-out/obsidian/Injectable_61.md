@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "BootRegistrationRegistry"
+community: "normalization.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BootRegistrationRegistry
+  - community/normalizationservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[ConsentBackfillQueueService]] - `references` [EXTRACTED]
+- [[NormalizationService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BootRegistrationRegistry
+#graphify/code #graphify/EXTRACTED #community/normalizationservicets

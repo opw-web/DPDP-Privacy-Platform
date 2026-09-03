@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/token.service.ts"
 type: "code"
-community: "TokenService"
+community: "principal-auth.service.ts"
 location: "L71"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TokenService
+  - community/principal-authservicets
 ---
 
 # .refreshSecret()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[TokenService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TokenService
+#graphify/code #graphify/EXTRACTED #community/principal-authservicets

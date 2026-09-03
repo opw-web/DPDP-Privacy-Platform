@@ -16,7 +16,7 @@ tags:
 - [[EmployeesPage.tsx]] - `contains` [EXTRACTED]
 - [[describeMutationError()]] - `calls` [EXTRACTED]
 - [[router.tsx]] - `imports` [EXTRACTED]
-- [[statusBadgeVariant()]] - `calls` [EXTRACTED]
+- [[statusBadgeVariant()_1]] - `calls` [EXTRACTED]
 - [[usePermission()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/EmployeesPagetsx

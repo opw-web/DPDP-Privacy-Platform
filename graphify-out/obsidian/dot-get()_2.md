@@ -1,19 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/source-purposes.service.ts"
 type: "code"
-community: "sync.service.ts"
-location: "L195"
+community: "SourcePurposesService"
+location: "L179"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/syncservicets
+  - graphify/EXTRACTED
+  - community/SourcePurposesService
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_17]] - `calls` [INFERRED]
-- [[dot-triggerSync()]] - `calls` [INFERRED]
-- [[DataSourcesService]] - `method` [EXTRACTED]
+- [[dot-getPurposes()]] - `calls` [INFERRED]
+- [[dot-replace()]] - `calls` [EXTRACTED]
+- [[SourcePurposesService]] - `method` [EXTRACTED]
+- [[toPublicPurpose()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/syncservicets
+#graphify/code #graphify/EXTRACTED #community/SourcePurposesService

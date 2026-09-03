@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/employees/employees.service.ts"
 type: "code"
-community: "employees.controller.ts"
+community: "employees.service.ts"
 location: "L98"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeescontrollerts
+  - community/employeesservicets
 ---
 
 # .update()
@@ -18,4 +18,4 @@ tags:
 - [[EmployeesService]] - `method` [EXTRACTED]
 - [[UpdateEmployeeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeescontrollerts
+#graphify/code #graphify/EXTRACTED #community/employeesservicets

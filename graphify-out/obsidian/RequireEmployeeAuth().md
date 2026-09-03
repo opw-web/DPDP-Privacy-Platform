@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/router.tsx"
 type: "code"
-community: "api-client.ts"
-location: "L68"
+community: "router.tsx"
+location: "L95"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/routertsx
 ---
 
 # RequireEmployeeAuth()
@@ -15,4 +15,4 @@ tags:
 - [[router.tsx]] - `contains` [EXTRACTED]
 - [[useEmployeeAuth()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/routertsx

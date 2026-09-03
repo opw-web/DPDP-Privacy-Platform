@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-getHealth()]] - `calls` [INFERRED]
-- [[ApiOkResponse_3]] - `references` [EXTRACTED]
+- [[ApiOkResponse_4]] - `references` [EXTRACTED]
 - [[ApiServiceUnavailableResponse]] - `references` [EXTRACTED]
-- [[Get_32]] - `references` [EXTRACTED]
+- [[Get_30]] - `references` [EXTRACTED]
 - [[HealthController]] - `method` [EXTRACTED]
 - [[HealthStatus]] - `references` [EXTRACTED]
 - [[HttpCode_3]] - `references` [EXTRACTED]

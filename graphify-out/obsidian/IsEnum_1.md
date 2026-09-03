@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".record"
+community: "VerifyGuardianDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/VerifyGuardianDto
 ---
 
 # IsEnum
 
 ## Connections
-- [[CreatePurposeDto]] - `references` [EXTRACTED]
+- [[VerifyGuardianDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/VerifyGuardianDto

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PermissionsGuard"
+community: "ScopedTransactionClient"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PermissionsGuard
+  - community/ScopedTransactionClient
 ---
 
 # Injectable
 
 ## Connections
-- [[PermissionsGuard]] - `references` [EXTRACTED]
+- [[LinkingService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PermissionsGuard
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

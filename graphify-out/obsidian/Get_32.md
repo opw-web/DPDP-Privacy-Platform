@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "HealthService"
+community: "child-exemptions.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/HealthService
+  - community/child-exemptionsservicets
 ---
 
 # Get
 
 ## Connections
-- [[dot-check()]] - `references` [EXTRACTED]
+- [[dot-list()_37]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/HealthService
+#graphify/code #graphify/EXTRACTED #community/child-exemptionsservicets

@@ -8,10 +8,10 @@ members: 6
 **Members:** 6 nodes
 
 ## Members
-- [[ApiProperty_10]] - code
+- [[ApiProperty_25]] - code
 - [[IsEmail_2]] - code
-- [[IsString_11]] - code
-- [[MinLength_8]] - code
+- [[IsString_36]] - code
+- [[MinLength_24]] - code
 - [[PrincipalLoginDto]] - code - dpdp-platform/backend/src/modules/auth/dto/principal-login.dto.ts
 - [[principal-login.dto.ts]] - code - dpdp-platform/backend/src/modules/auth/dto/principal-login.dto.ts
 

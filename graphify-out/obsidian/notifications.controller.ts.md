@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notifications/notifications.controller.ts"
 type: "code"
-community: "NotificationsService"
+community: "notifications.controller.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/notificationscontrollerts
 ---
 
 # notifications.controller.ts
@@ -28,4 +28,4 @@ tags:
 - [[notifications.service.ts]] - `imports_from` [EXTRACTED]
 - [[public.decorator.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts

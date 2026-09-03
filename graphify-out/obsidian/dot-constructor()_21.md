@@ -1,17 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.controller.ts"
 type: "code"
-community: "template-renderer.ts"
-location: "L74"
+community: "SourcePurposesService"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/template-rendererts
+  - community/SourcePurposesService
 ---
 
 # .constructor()
 
 ## Connections
-- [[UnknownTemplateVariableError]] - `method` [EXTRACTED]
+- [[MappingsController]] - `method` [EXTRACTED]
+- [[MappingsService]] - `references` [EXTRACTED]
+- [[SourcePurposesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/template-rendererts
+#graphify/code #graphify/EXTRACTED #community/SourcePurposesService

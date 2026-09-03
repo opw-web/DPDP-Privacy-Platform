@@ -1,24 +1,24 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/requests/dto/assign-request.dto.ts"
 type: "code"
-community: "requests.controller.ts"
+community: "AssignRequestDto"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/requestscontrollerts
+  - community/AssignRequestDto
 ---
 
 # AssignRequestDto
 
 ## Connections
-- [[dot-assign()]] - `references` [EXTRACTED]
-- [[ApiProperty_1]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_2]] - `references` [EXTRACTED]
-- [[IsOptional_1]] - `references` [EXTRACTED]
-- [[IsString_1]] - `references` [EXTRACTED]
-- [[MinLength]] - `references` [EXTRACTED]
+- [[dot-assign()_1]] - `references` [EXTRACTED]
+- [[ApiProperty_24]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_31]] - `references` [EXTRACTED]
+- [[IsOptional_33]] - `references` [EXTRACTED]
+- [[IsString_35]] - `references` [EXTRACTED]
+- [[MinLength_23]] - `references` [EXTRACTED]
 - [[assign-request.dto.ts]] - `contains` [EXTRACTED]
 - [[requests.controller.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/requestscontrollerts
+#graphify/code #graphify/EXTRACTED #community/AssignRequestDto

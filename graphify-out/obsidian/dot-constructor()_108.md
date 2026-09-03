@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/board/voluntary-undertakings.service.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/candidates.controller.ts"
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
-location: "L39"
+community: "CandidatesService"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/CandidatesService
 ---
 
 # .constructor()
 
 ## Connections
-- [[PrismaService]] - `references` [EXTRACTED]
-- [[VoluntaryUndertakingsService]] - `method` [EXTRACTED]
+- [[CandidatesController]] - `method` [EXTRACTED]
+- [[CandidatesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/CandidatesService

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "BootRegistrationRegistry"
+community: "SyncQueueService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BootRegistrationRegistry
+  - community/SyncQueueService
 ---
 
 # InjectQueue
 
 ## Connections
-- [[dot-constructor()_116]] - `references` [EXTRACTED]
+- [[dot-constructor()_139]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BootRegistrationRegistry
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

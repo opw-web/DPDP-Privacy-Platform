@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/package.json"
 type: "code"
 community: "@types/nodemailer"
-location: "L62"
+location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -5,13 +5,15 @@ community: "AccessReportService"
 location: "L123"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/AccessReportService
 ---
 
 # .buildReport()
 
 ## Connections
+- [[dot-accessReport()]] - `calls` [INFERRED]
+- [[dot-accessReport()_1]] - `calls` [INFERRED]
 - [[dot-buildConsentSection()]] - `calls` [EXTRACTED]
 - [[dot-buildProcessingActivities()]] - `calls` [EXTRACTED]
 - [[dot-buildRetentionSection()]] - `calls` [EXTRACTED]
@@ -22,4 +24,4 @@ tags:
 - [[AccessReportService]] - `method` [EXTRACTED]
 - [[splitNonDisclosureRequests()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessReportService
+#graphify/code #graphify/INFERRED #community/AccessReportService

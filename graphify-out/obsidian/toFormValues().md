@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/sdf/AssessmentRow.tsx"
 type: "code"
-community: "SettingsPage.tsx"
-location: "L56"
+community: "button.tsx"
+location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SettingsPagetsx
+  - community/buttontsx
 ---
 
 # toFormValues()
 
 ## Connections
-- [[SdfDeclarationCard()]] - `calls` [EXTRACTED]
-- [[SdfDeclarationCard.tsx]] - `contains` [EXTRACTED]
+- [[AssessmentRow()]] - `calls` [EXTRACTED]
+- [[AssessmentRow.tsx]] - `contains` [EXTRACTED]
+- [[toDatetimeLocalValue()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SettingsPagetsx
+#graphify/code #graphify/EXTRACTED #community/buttontsx

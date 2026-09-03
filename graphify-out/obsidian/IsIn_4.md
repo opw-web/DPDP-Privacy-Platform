@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EnvironmentVariables"
+community: "audit-read.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EnvironmentVariables
+  - community/audit-readservicets
 ---
 
 # IsIn
 
 ## Connections
-- [[EnvironmentVariables]] - `references` [EXTRACTED]
+- [[ListAuditEventsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EnvironmentVariables
+#graphify/code #graphify/EXTRACTED #community/audit-readservicets

@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/security-measures.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/transfers.service.ts"
 type: "code"
-community: "security-measures.service.ts"
-location: "L102"
+community: "TransfersService"
+location: "L79"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/security-measuresservicets
+  - community/TransfersService
 ---
 
 # .assertEmployeeExists()
 
 ## Connections
-- [[dot-create()_7]] - `calls` [EXTRACTED]
-- [[dot-update()_8]] - `calls` [EXTRACTED]
-- [[SecurityMeasuresService]] - `method` [EXTRACTED]
+- [[dot-create()_6]] - `calls` [EXTRACTED]
+- [[dot-update()_5]] - `calls` [EXTRACTED]
+- [[TransfersService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/security-measuresservicets
+#graphify/code #graphify/EXTRACTED #community/TransfersService

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/registers/SharingTab.tsx"
 type: "code"
-community: "cn"
+community: "SecurityMeasuresTab.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/SecurityMeasuresTabtsx
 ---
 
 # SharingTab.tsx
@@ -20,9 +20,10 @@ tags:
 - [[CardHeader]] - `imports` [EXTRACTED]
 - [[CardTitle]] - `imports` [EXTRACTED]
 - [[CheckboxOption]] - `imports` [EXTRACTED]
+- [[CheckboxOption_1]] - `imports` [EXTRACTED]
 - [[CreateSharingPayload]] - `contains` [EXTRACTED]
 - [[DATA_CATEGORY_OPTIONS]] - `imports` [EXTRACTED]
-- [[DEFAULT_VALUES_3]] - `contains` [EXTRACTED]
+- [[DEFAULT_VALUES_4]] - `contains` [EXTRACTED]
 - [[DataTable()]] - `imports` [EXTRACTED]
 - [[DataTable.tsx]] - `imports_from` [EXTRACTED]
 - [[DateTime()]] - `imports` [EXTRACTED]
@@ -57,4 +58,4 @@ tags:
 - [[label.tsx]] - `imports_from` [EXTRACTED]
 - [[sharingFormSchema]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/sdf-cycle-scan.queue.ts"
 type: "code"
-community: "sdf.module.ts"
+community: "mvp2-schedules.ts"
 location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdfmodulets
+  - community/mvp2-schedulests
 ---
 
 # SDF_CYCLE_SCAN_CRON_PATTERN
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sdf-cycle-scan.queue.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdfmodulets
+#graphify/code #graphify/EXTRACTED #community/mvp2-schedulests

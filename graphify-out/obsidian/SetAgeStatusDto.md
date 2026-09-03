@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-setAgeStatus()]] - `references` [EXTRACTED]
 - [[dot-setAgeStatus()_1]] - `references` [EXTRACTED]
-- [[ApiProperty_30]] - `references` [EXTRACTED]
-- [[IsEnum_17]] - `references` [EXTRACTED]
+- [[ApiProperty_38]] - `references` [EXTRACTED]
+- [[IsEnum_20]] - `references` [EXTRACTED]
 - [[age-status.controller.ts]] - `imports` [EXTRACTED]
 - [[age-status.service.ts]] - `imports` [EXTRACTED]
 - [[set-age-status.dto.ts]] - `contains` [EXTRACTED]

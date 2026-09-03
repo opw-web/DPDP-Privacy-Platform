@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeDataPage.tsx"
 type: "code"
-community: "card.tsx"
+community: "MeDataPage.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cardtsx
+  - community/MeDataPagetsx
 ---
 
 # MeDataPage.tsx
@@ -26,8 +26,8 @@ tags:
 - [[ValueCard.tsx]] - `imports_from` [EXTRACTED]
 - [[ValueCardSource]] - `imports` [EXTRACTED]
 - [[api-client.ts]] - `imports_from` [EXTRACTED]
-- [[categoryLabel()]] - `contains` [EXTRACTED]
+- [[categoryLabel()_1]] - `contains` [EXTRACTED]
 - [[principalApiClient]] - `imports` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cardtsx
+#graphify/code #graphify/EXTRACTED #community/MeDataPagetsx

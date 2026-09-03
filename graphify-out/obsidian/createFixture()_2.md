@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/test/audit-read.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/principal-portal.e2e-spec.ts"
 type: "code"
-community: "audit.service.ts"
-location: "L122"
+community: "principal-portal.e2e-spec.ts"
+location: "L169"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/auditservicets
+  - community/principal-portale2e-spects
 ---
 
 # createFixture()
 
 ## Connections
-- [[audit-read.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[seedEvent()]] - `calls` [EXTRACTED]
+- [[createPrincipal()_8]] - `calls` [EXTRACTED]
+- [[createSource()_1]] - `calls` [EXTRACTED]
+- [[principal-portal.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/auditservicets
+#graphify/code #graphify/EXTRACTED #community/principal-portale2e-spects

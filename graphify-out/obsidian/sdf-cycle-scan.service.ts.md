@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[ASSESSMENT_KINDS]] - `contains` [EXTRACTED]
+- [[AuditService]] - `imports` [EXTRACTED]
 - [[ComplianceService]] - `imports` [EXTRACTED]
 - [[NotificationsService]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
@@ -22,6 +23,7 @@ tags:
 - [[TenantContext]] - `imports` [EXTRACTED]
 - [[TenantStore]] - `imports` [EXTRACTED]
 - [[addByDeadlineUnit()]] - `imports` [EXTRACTED]
+- [[audit.service.ts]] - `imports_from` [EXTRACTED]
 - [[compliance.service.ts]] - `imports_from` [EXTRACTED]
 - [[notifications.service.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]

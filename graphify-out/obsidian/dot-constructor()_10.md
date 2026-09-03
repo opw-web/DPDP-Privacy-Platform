@@ -1,18 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/pre-erasure-notice.processor.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.service.ts"
 type: "code"
-community: "retention.module.ts"
-location: "L20"
+community: "AuditService"
+location: "L161"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionmodulets
+  - community/AuditService
 ---
 
 # .constructor()
 
 ## Connections
-- [[PreErasureNoticeProcessor]] - `method` [EXTRACTED]
-- [[PreErasureNoticeService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[CampaignSendQueueService]] - `references` [EXTRACTED]
+- [[CampaignsService]] - `method` [EXTRACTED]
+- [[ConsentsService]] - `references` [EXTRACTED]
+- [[NoticesService]] - `references` [EXTRACTED]
+- [[ReferenceService]] - `references` [EXTRACTED]
+- [[TemplatesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionmodulets
+#graphify/code #graphify/EXTRACTED #community/AuditService

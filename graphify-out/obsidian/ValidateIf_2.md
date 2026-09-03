@@ -11,6 +11,6 @@ tags:
 # ValidateIf
 
 ## Connections
-- [[UpdateSharingActivityDto]] - `references` [EXTRACTED]
+- [[UpdateTransferDto]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/registersmodulets

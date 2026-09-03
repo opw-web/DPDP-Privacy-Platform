@@ -1,21 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/retention-scan.queue.ts"
+source_file: "dpdp-platform/backend/src/modules/children/child-exemptions.service.ts"
 type: "code"
-community: "BootRegistrationRegistry"
-location: "L77"
+community: "child-exemptions.service.ts"
+location: "L47"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BootRegistrationRegistry
+  - community/child-exemptionsservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[dot-register()]] - `calls` [INFERRED]
-- [[dot-registerSchedulesAtBoot()]] - `calls` [EXTRACTED]
-- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
-- [[InjectQueue_5]] - `references` [EXTRACTED]
-- [[RetentionScanQueueService]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[ChildExemptionsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BootRegistrationRegistry
+#graphify/code #graphify/EXTRACTED #community/child-exemptionsservicets

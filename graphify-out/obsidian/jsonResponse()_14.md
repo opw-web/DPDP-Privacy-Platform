@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/DataSourceDetailPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.test.tsx"
 type: "code"
-community: "api-client.ts"
-location: "L13"
+community: "RecipientsTab.test.tsx"
+location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/RecipientsTabtesttsx
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[DataSourceDetailPage.test.tsx]] - `contains` [EXTRACTED]
-- [[loginAndRenderDetailPage()]] - `calls` [EXTRACTED]
+- [[RecipientsTab.test.tsx]] - `contains` [EXTRACTED]
+- [[loginAndRender()_4]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/RecipientsTabtesttsx

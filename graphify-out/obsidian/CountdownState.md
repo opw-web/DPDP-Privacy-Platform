@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/hooks/useCountdown.ts"
 type: "code"
-community: "PrincipalDetailPage.tsx"
+community: "useCountdown.ts"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalDetailPagetsx
+  - community/useCountdownts
 ---
 
 # CountdownState
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[useCountdown.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/useCountdownts

@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sdf/sdf-gaps.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync.controller.ts"
 type: "code"
-community: "SdfController"
-location: "L34"
+community: "sync.service.ts"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SdfController
+  - community/syncservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[ComplianceService]] - `references` [EXTRACTED]
-- [[PrismaService]] - `references` [EXTRACTED]
-- [[SdfGapsService]] - `method` [EXTRACTED]
+- [[SyncController]] - `method` [EXTRACTED]
+- [[SyncService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SdfController
+#graphify/code #graphify/EXTRACTED #community/syncservicets

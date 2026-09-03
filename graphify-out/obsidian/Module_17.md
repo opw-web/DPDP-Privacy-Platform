@@ -11,6 +11,6 @@ tags:
 # Module
 
 ## Connections
-- [[IdentityModule]] - `references` [EXTRACTED]
+- [[InventoryModule]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/appmodulets

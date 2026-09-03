@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/board/information-requests.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/candidates.service.ts"
 type: "code"
-community: "CreateInformationRequestDto"
-location: "L19"
+community: "merge-unmerge.e2e-spec.ts"
+location: "L130"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateInformationRequestDto
+  - community/merge-unmergee2e-spects
 ---
 
 # .list()
 
 ## Connections
-- [[Get_25]] - `references` [EXTRACTED]
-- [[InformationRequestsController]] - `method` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[CandidatesService]] - `method` [EXTRACTED]
+- [[isoDate()]] - `calls` [EXTRACTED]
+- [[recordValueFor()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto
+#graphify/code #graphify/EXTRACTED #community/merge-unmergee2e-spects

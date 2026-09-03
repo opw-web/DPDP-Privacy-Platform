@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/reference/reference.service.ts"
 type: "code"
-community: "audit.service.ts"
+community: "prisma.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/auditservicets
+  - community/prismaservicets
 ---
 
 # reference.service.ts
@@ -18,9 +18,9 @@ tags:
 - [[ScopedTransactionClient]] - `imports` [EXTRACTED]
 - [[TenantContext]] - `imports` [EXTRACTED]
 - [[allocateCounterValue()]] - `imports` [EXTRACTED]
+- [[breach.service.ts]] - `imports_from` [EXTRACTED]
 - [[campaigns.service.ts]] - `imports_from` [EXTRACTED]
 - [[counter.ts]] - `imports_from` [EXTRACTED]
-- [[information-requests.service.ts]] - `imports_from` [EXTRACTED]
 - [[linking.service.ts]] - `imports_from` [EXTRACTED]
 - [[merge.service.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
@@ -30,4 +30,4 @@ tags:
 - [[scoped-transaction-client.ts]] - `imports_from` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/auditservicets
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

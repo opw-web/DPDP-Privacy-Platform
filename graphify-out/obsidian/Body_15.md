@@ -1,17 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "RecipientsService"
+community: ".completeAssessment"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RecipientsService
+  - community/completeAssessment
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_20]] - `references` [EXTRACTED]
-- [[dot-update()_17]] - `references` [EXTRACTED]
+- [[dot-completeAssessment()]] - `references` [EXTRACTED]
+- [[dot-createAlgorithm()]] - `references` [EXTRACTED]
+- [[dot-createAssessment()]] - `references` [EXTRACTED]
+- [[dot-updateAlgorithm()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RecipientsService
+#graphify/code #graphify/EXTRACTED #community/completeAssessment

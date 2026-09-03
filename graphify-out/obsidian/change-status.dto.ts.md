@@ -14,7 +14,9 @@ tags:
 ## Connections
 - [[ChangeStatusDto]] - `contains` [EXTRACTED]
 - [[ERASURE_STATUTORY_GROUNDS]] - `imports` [EXTRACTED]
+- [[ErasureProcessorChecklistDto]] - `contains` [EXTRACTED]
 - [[ErasureStatutoryGround]] - `imports` [EXTRACTED]
+- [[ErasureSystemChecklistDto]] - `contains` [EXTRACTED]
 - [[requests.constants.ts]] - `imports_from` [EXTRACTED]
 - [[requests.controller.ts]] - `imports_from` [EXTRACTED]
 - [[requests.service.ts]] - `imports_from` [EXTRACTED]

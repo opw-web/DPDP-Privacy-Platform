@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/consents.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/campaigns.e2e-spec.ts"
 type: "code"
-community: "prisma.service.ts"
-location: "L86"
+community: "PrismaService"
+location: "L177"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/PrismaService
 ---
 
 # createConsentPurpose()
 
 ## Connections
-- [[consents.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[campaigns.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/PrismaService

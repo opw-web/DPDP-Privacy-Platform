@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/lib/mvp2-api.ts"
 type: "code"
-community: "NotificationBell.tsx"
+community: "api-client.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationBelltsx
+  - community/api-clientts
 ---
 
 # mvp2-api.ts
@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[ApiClient]] - `imports` [EXTRACTED]
 - [[MarkAllReadResponse]] - `contains` [EXTRACTED]
+- [[MeMessagesPage.tsx]] - `imports_from` [EXTRACTED]
 - [[NotificationBell.test.tsx]] - `imports_from` [EXTRACTED]
 - [[NotificationBell.tsx]] - `imports_from` [EXTRACTED]
 - [[NotificationDto_1]] - `contains` [EXTRACTED]
@@ -24,5 +25,6 @@ tags:
 - [[listNotifications()]] - `contains` [EXTRACTED]
 - [[markAllNotificationsRead()]] - `contains` [EXTRACTED]
 - [[markNotificationRead()]] - `contains` [EXTRACTED]
+- [[sdftypes.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationBelltsx
+#graphify/code #graphify/EXTRACTED #community/api-clientts

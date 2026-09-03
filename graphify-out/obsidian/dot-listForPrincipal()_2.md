@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/src/modules/consents/consents.service.ts"
 type: "code"
 community: "ConsentsService"
-location: "L106"
+location: "L131"
 tags:
   - graphify/code
   - graphify/INFERRED
@@ -12,7 +12,7 @@ tags:
 # .listForPrincipal()
 
 ## Connections
-- [[dot-list()_3]] - `calls` [INFERRED]
+- [[dot-list()_2]] - `calls` [INFERRED]
 - [[dot-listForPrincipal()_1]] - `calls` [INFERRED]
 - [[ConsentsService]] - `method` [EXTRACTED]
 

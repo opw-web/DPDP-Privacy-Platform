@@ -28,7 +28,9 @@ tags:
 - [[rbac.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[registers.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[roles.ts]] - `imports_from` [EXTRACTED]
+- [[seed-scale.ts]] - `imports_from` [EXTRACTED]
 - [[seed.ts]] - `imports_from` [EXTRACTED]
+- [[step6-conflict-acceptance.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[sync.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/AppModule

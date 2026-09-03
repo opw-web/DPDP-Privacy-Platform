@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "InventoryService"
+community: "principal-auth.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/InventoryService
+  - community/principal-authservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[InventoryService]] - `references` [EXTRACTED]
+- [[PrincipalAuthService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/InventoryService
+#graphify/code #graphify/EXTRACTED #community/principal-authservicets

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/token.service.ts"
 type: "code"
-community: "TokenService"
+community: "jwt-employee.guard.ts"
 location: "L99"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/TokenService
+  - community/jwt-employeeguardts
 ---
 
 # .verifyAccessToken()
@@ -17,4 +17,4 @@ tags:
 - [[dot-canActivate()_2]] - `calls` [INFERRED]
 - [[TokenService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/TokenService
+#graphify/code #graphify/INFERRED #community/jwt-employeeguardts

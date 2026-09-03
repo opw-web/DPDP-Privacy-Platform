@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/reference/counter.ts"
 type: "code"
-community: "audit.service.ts"
+community: "prisma.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/auditservicets
+  - community/prismaservicets
 ---
 
 # counter.ts
@@ -16,8 +16,9 @@ tags:
 - [[ScopedTransactionClient]] - `imports` [EXTRACTED]
 - [[allocateCounterValue()]] - `contains` [EXTRACTED]
 - [[audit.service.ts]] - `imports_from` [EXTRACTED]
+- [[information-requests.service.ts]] - `imports_from` [EXTRACTED]
 - [[reference.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[reference.service.ts]] - `imports_from` [EXTRACTED]
 - [[scoped-transaction-client.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/auditservicets
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

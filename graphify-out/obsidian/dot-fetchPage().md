@@ -14,10 +14,10 @@ tags:
 ## Connections
 - [[dot-buildAuthHeaders()]] - `calls` [EXTRACTED]
 - [[dot-buildUrl()]] - `calls` [EXTRACTED]
-- [[dot-discoverSchema()_2]] - `calls` [EXTRACTED]
+- [[dot-discoverSchema()_3]] - `calls` [EXTRACTED]
 - [[dot-encodeCursor()]] - `calls` [EXTRACTED]
-- [[dot-fetchChanges()]] - `calls` [EXTRACTED]
-- [[dot-fetchRecords()]] - `calls` [EXTRACTED]
+- [[dot-fetchChanges()_1]] - `calls` [EXTRACTED]
+- [[dot-fetchRecords()_1]] - `calls` [EXTRACTED]
 - [[dot-request()]] - `calls` [INFERRED]
 - [[PageCapExceededError_1]] - `calls` [EXTRACTED]
 - [[RestApiConnector]] - `method` [EXTRACTED]

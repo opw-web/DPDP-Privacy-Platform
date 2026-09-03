@@ -1,17 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/common/crypto/crypto.service.ts"
+source_file: "dpdp-platform/backend/src/queues/campaign-send.processor.ts"
 type: "code"
-community: "CryptoService"
-location: "L38"
+community: "breaches.module.ts"
+location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CryptoService
+  - community/breachesmodulets
 ---
 
 # .constructor()
 
 ## Connections
-- [[MalformedCiphertextError]] - `method` [EXTRACTED]
+- [[CampaignSendProcessor]] - `method` [EXTRACTED]
+- [[CampaignsService]] - `references` [EXTRACTED]
+- [[NotificationsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CryptoService
+#graphify/code #graphify/EXTRACTED #community/breachesmodulets

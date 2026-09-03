@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/AuditPage.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx"
 type: "code"
-community: "SecurityMeasuresTab.tsx"
-location: "L106"
+community: "cn"
+location: "L115"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresTabtsx
+  - community/cn
 ---
 
 # saveBlob()
 
 ## Connections
-- [[AuditPage.tsx]] - `contains` [EXTRACTED]
-- [[exportAccessLog()]] - `calls` [EXTRACTED]
+- [[PrincipalEvidencePage.tsx]] - `contains` [EXTRACTED]
+- [[download()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx
+#graphify/code #graphify/EXTRACTED #community/cn

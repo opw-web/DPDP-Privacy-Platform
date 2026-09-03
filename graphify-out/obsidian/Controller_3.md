@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".record"
+community: "Public"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/Public
 ---
 
 # Controller
 
 ## Connections
-- [[PurposesController]] - `references` [EXTRACTED]
+- [[MeController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/Public

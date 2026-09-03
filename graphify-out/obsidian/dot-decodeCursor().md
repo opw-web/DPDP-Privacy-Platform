@@ -12,7 +12,7 @@ tags:
 # .decodeCursor()
 
 ## Connections
-- [[dot-fetchRecords()]] - `calls` [EXTRACTED]
+- [[dot-fetchRecords()_1]] - `calls` [EXTRACTED]
 - [[InvalidCursorError]] - `calls` [EXTRACTED]
 - [[RestApiConnector]] - `method` [EXTRACTED]
 

@@ -12,7 +12,7 @@ tags:
 # truncateSample()
 
 ## Connections
-- [[dot-discoverSchema()_2]] - `calls` [EXTRACTED]
+- [[dot-discoverSchema()_3]] - `calls` [EXTRACTED]
 - [[rest-api.connector.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts

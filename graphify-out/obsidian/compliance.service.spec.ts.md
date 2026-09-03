@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.spec.ts"
 type: "code"
-community: "PrismaService"
+community: "AuditService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/AuditService
 ---
 
 # compliance.service.spec.ts
@@ -17,9 +17,9 @@ tags:
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[audit.service.ts]] - `imports_from` [EXTRACTED]
 - [[buildRule()]] - `contains` [EXTRACTED]
-- [[buildService()_1]] - `contains` [EXTRACTED]
+- [[buildService()]] - `contains` [EXTRACTED]
 - [[compliance.service.ts]] - `imports_from` [EXTRACTED]
 - [[computeInTimeZone()]] - `contains` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/AuditService

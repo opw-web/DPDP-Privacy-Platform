@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "SetMyConsentDto"
+community: "CreateNoticeVersionDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SetMyConsentDto
+  - community/CreateNoticeVersionDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[SetMyConsentDto]] - `references` [EXTRACTED]
+- [[CreateNoticeVersionDto]] - `references` [EXTRACTED]
+- [[ItemisedFieldInputDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SetMyConsentDto
+#graphify/code #graphify/EXTRACTED #community/CreateNoticeVersionDto

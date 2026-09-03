@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateTransferDto"
+community: "EmployeeAuthController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTransferDto
+  - community/EmployeeAuthController
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_31]] - `references` [EXTRACTED]
-- [[dot-update()_23]] - `references` [EXTRACTED]
+- [[dot-login()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTransferDto
+#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController

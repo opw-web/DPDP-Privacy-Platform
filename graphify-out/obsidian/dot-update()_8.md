@@ -1,22 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/security-measures.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts"
 type: "code"
-community: "security-measures.service.ts"
-location: "L172"
+community: "TemplatesService"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/security-measuresservicets
+  - community/TemplatesService
 ---
 
 # .update()
 
 ## Connections
-- [[dot-assertDataSourceExists()]] - `calls` [EXTRACTED]
-- [[dot-assertEmployeeExists()]] - `calls` [EXTRACTED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[dot-update()_7]] - `calls` [INFERRED]
-- [[SecurityMeasuresService]] - `method` [EXTRACTED]
-- [[UpdateSecurityMeasureDto]] - `references` [EXTRACTED]
+- [[dot-update()_9]] - `calls` [INFERRED]
+- [[Body_8]] - `references` [EXTRACTED]
+- [[Param_8]] - `references` [EXTRACTED]
+- [[Patch_4]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[TemplatesController]] - `method` [EXTRACTED]
+- [[UpdateTemplateDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/security-measuresservicets
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

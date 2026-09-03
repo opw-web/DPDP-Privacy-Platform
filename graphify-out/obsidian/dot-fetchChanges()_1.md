@@ -1,17 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/connector.interface.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
 type: "code"
-community: "connector.factory.ts"
-location: "L19"
+community: "rest-api.connector.ts"
+location: "L235"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/connectorfactoryts
+  - community/rest-apiconnectorts
 ---
 
 # .fetchChanges()
 
 ## Connections
-- [[Connector]] - `method` [EXTRACTED]
+- [[dot-fetchPage()]] - `calls` [EXTRACTED]
+- [[dot-fetchRecords()_1]] - `calls` [EXTRACTED]
+- [[RestApiConnector]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/connectorfactoryts
+#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts

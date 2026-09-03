@@ -1,26 +1,27 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notifications/guards/jwt-any-actor.guard.ts"
 type: "code"
-community: "NotificationsService"
+community: "notifications.service.ts"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/notificationsservicets
 ---
 
 # NotificationCallerActor
 
 ## Connections
-- [[dot-list()_1]] - `references` [EXTRACTED]
-- [[dot-list()_2]] - `references` [EXTRACTED]
-- [[dot-markAllRead()]] - `references` [EXTRACTED]
+- [[dot-list()_30]] - `references` [EXTRACTED]
+- [[dot-list()_10]] - `references` [EXTRACTED]
 - [[dot-markAllRead()_1]] - `references` [EXTRACTED]
-- [[dot-markRead()]] - `references` [EXTRACTED]
+- [[dot-markAllRead()]] - `references` [EXTRACTED]
 - [[dot-markRead()_1]] - `references` [EXTRACTED]
+- [[dot-markRead()]] - `references` [EXTRACTED]
 - [[current-notification-actor.decorator.ts]] - `imports` [EXTRACTED]
 - [[jwt-any-actor.guard.ts]] - `contains` [EXTRACTED]
+- [[me-rights.service.ts]] - `imports` [EXTRACTED]
 - [[notifications.controller.ts]] - `imports` [EXTRACTED]
 - [[notifications.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/notificationsservicets

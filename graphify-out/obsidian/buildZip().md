@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/zip-writer.ts"
 type: "code"
-community: "zip-writer.ts"
+community: "evidence-pack.service.ts"
 location: "L65"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/zip-writerts
+  - community/evidence-packservicets
 ---
 
 # buildZip()
@@ -18,4 +18,4 @@ tags:
 - [[toDosDateTime()]] - `calls` [EXTRACTED]
 - [[zip-writer.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/zip-writerts
+#graphify/code #graphify/EXTRACTED #community/evidence-packservicets

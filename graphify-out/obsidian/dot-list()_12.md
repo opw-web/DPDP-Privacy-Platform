@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/security-measures.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts"
 type: "code"
-community: "security-measures.service.ts"
-location: "L74"
+community: "TemplatesService"
+location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/security-measuresservicets
+  - community/TemplatesService
 ---
 
 # .list()
 
 ## Connections
-- [[SecurityMeasuresService]] - `method` [EXTRACTED]
-- [[groupByRuleReference()]] - `calls` [EXTRACTED]
+- [[TemplatesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/security-measuresservicets
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

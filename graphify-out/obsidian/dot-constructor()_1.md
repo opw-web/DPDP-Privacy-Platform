@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sync/sync-error.ts"
+source_file: "dpdp-platform/backend/src/modules/organizations/organizations.service.ts"
 type: "code"
-community: "SyncPipelineService"
-location: "L70"
+community: "UpdateOrganizationDto"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncPipelineService
+  - community/UpdateOrganizationDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[MissingRecordKeyError]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[OrganizationsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncPipelineService
+#graphify/code #graphify/EXTRACTED #community/UpdateOrganizationDto
