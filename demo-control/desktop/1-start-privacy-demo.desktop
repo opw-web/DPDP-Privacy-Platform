@@ -1,8 +1,8 @@
 [Desktop Entry]
 Type=Application
 Version=1.0
-Name=Start Privacy Demo
-Comment=Turn on the DPDP Privacy Demo and open it in your browser
+Name=1 - Start Privacy Demo
+Comment=Start everything the demo needs and open the platform website
 Exec=/bin/bash "/home/linux/Coding stuff/DPDP app/demo-control/start.sh"
 Icon=media-playback-start
 Terminal=true

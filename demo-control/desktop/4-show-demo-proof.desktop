@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=4 - Show Demo Proof
+Comment=Count the live demo data and show the numbers in a window
+Exec=/bin/bash "/home/linux/Coding stuff/DPDP app/demo-control/show-demo-proof.sh"
+Icon=dialog-information
+Terminal=true
+Categories=Utility;
+StartupNotify=true

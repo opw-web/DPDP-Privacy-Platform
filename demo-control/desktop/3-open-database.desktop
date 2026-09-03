@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=3 - Open Database
+Comment=Browse the demo database table by table, no SQL needed
+Exec=/bin/bash "/home/linux/Coding stuff/DPDP app/demo-control/open-database.sh"
+Icon=drive-harddisk
+Terminal=true
+Categories=Utility;
+StartupNotify=true

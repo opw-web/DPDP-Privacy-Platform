@@ -51,7 +51,7 @@ setup_node
 # 1/7 -- stop the app processes (containers are left running -- the
 # database step needs postgres up anyway).
 # -----------------------------------------------------------------
-step "1/8 -- Stopping the demo application"
+step "1/9 -- Stopping the demo application"
 stop_by_cwd "dist/main.js"   "$BACKEND_DIR"  "the backend API"
 stop_by_cwd "vite"           "$FRONTEND_DIR" "the platform website"
 stop_by_cwd "dist/server.js" "$DEMO_DIR"     "the demo company server"
@@ -59,7 +59,7 @@ stop_by_cwd "dist/server.js" "$DEMO_DIR"     "the demo company server"
 # -----------------------------------------------------------------
 # 2/7 -- drop and recreate the database via the supported Prisma path.
 # -----------------------------------------------------------------
-step "2/8 -- Rebuilding the database from scratch"
+step "2/9 -- Rebuilding the database from scratch"
 ensure_database_up || exit 1
 say "Dropping and recreating the database, then applying every migration"
 say "(this also reseeds the base demo organisation and its five employee"
@@ -74,7 +74,7 @@ fi
 # -----------------------------------------------------------------
 # 3/7 -- seed the demo company's own deterministic dataset.
 # -----------------------------------------------------------------
-step "3/8 -- Seeding Acme Retail's demo company data"
+step "3/9 -- Seeding Acme Retail's demo company data"
 say "Regenerating Acme Retail's four source systems with a fixed, repeatable dataset (seed 20260830)..."
 if ( cd "$DEMO_DIR" && npm run seed ) >>"$LOG_DIR/reset.log" 2>&1; then
   ok "Demo company data seeded."
@@ -86,7 +86,7 @@ fi
 # -----------------------------------------------------------------
 # 4/7 -- start everything back up.
 # -----------------------------------------------------------------
-step "4/8 -- Starting the demo services"
+step "4/9 -- Starting the demo services"
 say "Rebuilding the backend from the current checked-out code (not reusing"
 say "whatever was previously running) so the reset always exercises the"
 say "latest fixes, never a stale build..."
@@ -103,7 +103,7 @@ ensure_frontend_up || exit 1
 # -----------------------------------------------------------------
 # 5/7 -- connect and sync the four data sources through the real API.
 # -----------------------------------------------------------------
-step "5/8 -- Connecting and syncing the four data sources"
+step "5/9 -- Connecting and syncing the four data sources"
 
 api() {
   # api METHOD PATH [JSON_BODY]
@@ -295,7 +295,7 @@ ok "All four sources synced and their sync queue is drained."
 # header comments call out, not a workaround. No SQL, no fixture rows:
 # this runs the project's own npm scripts, same as every other step.
 # -----------------------------------------------------------------
-step "6/8 -- Completing the compliance seed (notices and portal accounts)"
+step "6/9 -- Completing the compliance seed (notices and portal accounts)"
 say "Re-running the platform seed now that purposes and data principals"
 say "exist, so privacy notices get their Rule 3(b) content and version 1..."
 if ( cd "$BACKEND_DIR" && npm run seed ) >>"$LOG_DIR/reset.log" 2>&1; then
@@ -321,7 +321,7 @@ fi
 # SAME real-world fact (so a mismatch between them is worth flagging),
 # or just two differently-shaped fields that happen to share a name?
 # -----------------------------------------------------------------
-step "7/8 -- Reviewing the City field for the accuracy dashboard"
+step "7/9 -- Reviewing the City field for the accuracy dashboard"
 say "Marking City as the same real-world fact on Marketing and E-commerce:"
 say "an administrator has to confirm this before a mismatch between the"
 say "two sources counts as a tracked accuracy conflict (GO-03) -- without"
@@ -361,7 +361,7 @@ ok "City marked accuracy-comparable on Marketing and E-commerce."
 # count is non-deterministic across runs. This prints what is actually
 # in the database, never a hard-coded expectation.
 # -----------------------------------------------------------------
-step "8/8 -- Final numbers"
+step "8/9 -- Final numbers"
 SUMMARY_JSON=$(api GET /api/inventory/summary)
 RAW=$(printf '%s' "$SUMMARY_JSON" | json_get "d['rawRecordCount']" 2>/dev/null || echo "?")
 PRINCIPALS=$(printf '%s' "$SUMMARY_JSON" | json_get "d['uniquePrincipalCount']" 2>/dev/null || echo "?")
@@ -388,6 +388,24 @@ echo
 warn "KNOWN OPEN DEFECT: the principal count above can vary between resets"
 warn "(327 and 328 have both been observed, with pending-review 4, 2 or 0)."
 warn "This is being investigated separately -- it is not fixed by this script."
+
+# -----------------------------------------------------------------
+# 9/9 -- fill in every screen the demo needs. Without this the notice,
+# portal, requests, consent, guardian, breach, retention, SDF and
+# information-request pages are all empty on a fresh database: they only
+# fill up when a human performs the 34-step walkthrough by hand. The
+# staging script does that walkthrough through the same HTTP API, so the
+# demo opens on real, rule-checked data rather than blank tables.
+# -----------------------------------------------------------------
+step "9/9 -- Filling in the demo data"
+STAGE_DEMO_SOURCED=1
+export STAGE_DEMO_SOURCED
+if bash "$COMMON_SH_DIR/stage-demo.sh"; then
+  ok "Demo data staged."
+else
+  warn "Staging the demo data did not finish cleanly."
+  warn "Check $LOG_DIR/stage-demo.log -- some demo screens may be empty."
+fi
 
 # -----------------------------------------------------------------
 # Prove the portal login actually works -- a row in PrincipalAccount is

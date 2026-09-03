@@ -1,10 +1,10 @@
 [Desktop Entry]
 Type=Application
 Version=1.0
-Name=Demo Status
-Comment=Show what parts of the DPDP Privacy Demo are on or off
+Name=5 - Demo Status
+Comment=Show what is running and what is not
 Exec=/bin/bash "/home/linux/Coding stuff/DPDP app/demo-control/status.sh"
-Icon=dialog-information
+Icon=utilities-system-monitor
 Terminal=true
 Categories=Utility;
 StartupNotify=true

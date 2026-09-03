@@ -1,0 +1,820 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Acme Privacy Platform — Demo Runbook</title>
+<style>
+/* ------------------------------------------------------------------
+   This file is meant to be edited by hand. Everything is plain HTML and
+   plain CSS in one file, with the screenshots sitting in ./images/.
+   No build step, no framework, no internet connection required.
+   ------------------------------------------------------------------ */
+:root{
+  --ink:#16181d; --ink-soft:#4a5160; --ink-faint:#767f92;
+  --paper:#ffffff; --wash:#f6f7f9; --line:#e2e5eb;
+  --accent:#1c5f8b; --accent-wash:#eaf3f9;
+  --do:#0d6b43; --do-wash:#e8f6ee;
+  --warn:#8a5a00; --warn-wash:#fdf4e3;
+  --stop:#a32b2b; --stop-wash:#fbecec;
+  --say-wash:#f3f0fa; --say-line:#6b4fa8;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--wash); color:var(--ink);
+  font:16px/1.65 var(--sans); -webkit-font-smoothing:antialiased;
+}
+.page{max-width:1180px;margin:0 auto;padding:0 24px 120px;display:grid;grid-template-columns:250px 1fr;gap:48px;align-items:start}
+@media (max-width:960px){.page{grid-template-columns:1fr;gap:0}}
+
+/* ---------- masthead ---------- */
+.masthead{grid-column:1/-1;background:var(--paper);border:1px solid var(--line);border-top:none;border-radius:0 0 14px 14px;padding:38px 44px 34px;margin-bottom:40px}
+.masthead .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.masthead h1{margin:.3em 0 .15em;font-size:38px;line-height:1.15;letter-spacing:-.02em}
+.masthead .sub{font-size:18px;color:var(--ink-soft);max-width:62ch;margin:0}
+.masthead .meta{margin-top:22px;padding-top:18px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:28px;font-size:13.5px;color:var(--ink-faint)}
+.masthead .meta b{color:var(--ink);font-weight:600}
+
+/* ---------- nav ---------- */
+nav{position:sticky;top:20px;font-size:14px}
+@media (max-width:960px){nav{position:static;margin-bottom:36px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 22px}}
+nav .navtitle{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint);font-weight:700;margin-bottom:10px}
+nav ol{list-style:none;margin:0 0 22px;padding:0}
+nav li{margin:0}
+nav a{display:block;padding:5px 10px;color:var(--ink-soft);text-decoration:none;border-left:2px solid transparent;border-radius:0 5px 5px 0}
+nav a:hover{color:var(--accent);background:var(--accent-wash);border-left-color:var(--accent)}
+nav a.lead{font-weight:650;color:var(--ink)}
+nav .sm{padding-left:24px;font-size:13px}
+
+/* ---------- sections ---------- */
+main{min-width:0}
+section{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:38px 44px;margin-bottom:28px}
+@media (max-width:600px){section{padding:26px 22px}.masthead{padding:28px 22px}}
+section > h2{margin:0 0 6px;font-size:27px;letter-spacing:-.015em;line-height:1.2}
+section > .lede{color:var(--ink-soft);font-size:17px;margin:0 0 28px;max-width:64ch}
+h3{margin:34px 0 10px;font-size:19px;letter-spacing:-.01em}
+h4{margin:24px 0 8px;font-size:15.5px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.07em}
+p{margin:0 0 14px;max-width:72ch}
+ul,ol{max-width:72ch;padding-left:22px}
+li{margin:0 0 7px}
+a{color:var(--accent)}
+code{font:13.5px/1.5 var(--mono);background:var(--wash);border:1px solid var(--line);border-radius:4px;padding:1px 5px}
+strong{font-weight:650}
+
+/* ---------- the demo act ---------- */
+.act{border:1px solid var(--line);border-radius:12px;margin:0 0 26px;overflow:hidden;background:var(--paper)}
+.act > header{display:flex;gap:14px;align-items:baseline;padding:16px 22px;background:var(--wash);border-bottom:1px solid var(--line)}
+.act .num{flex:none;width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;font-size:14px;font-weight:700;display:grid;place-items:center;align-self:center}
+.act h3{margin:0;font-size:18.5px;flex:1}
+.act .clock{font-size:12.5px;color:var(--ink-faint);font-variant-numeric:tabular-nums;white-space:nowrap}
+.act .body{padding:22px}
+.act .body > :first-child{margin-top:0}
+
+.block{border-left:3px solid var(--line);padding:2px 0 2px 16px;margin:0 0 16px}
+.block .tag{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;display:block;margin-bottom:5px}
+.block p:last-child{margin-bottom:0}
+.do{border-left-color:var(--do);background:var(--do-wash);border-radius:0 7px 7px 0;padding:12px 16px}
+.do .tag{color:var(--do)}
+.see{border-left-color:var(--accent);background:var(--accent-wash);border-radius:0 7px 7px 0;padding:12px 16px}
+.see .tag{color:var(--accent)}
+.say{border-left-color:var(--say-line);background:var(--say-wash);border-radius:0 7px 7px 0;padding:12px 16px}
+.say .tag{color:var(--say-line)}
+.say p{font-size:16.5px;line-height:1.6}
+.law{border-left-color:var(--ink-faint);background:var(--wash);border-radius:0 7px 7px 0;padding:12px 16px;font-size:14.5px;color:var(--ink-soft)}
+.law .tag{color:var(--ink-faint)}
+.note{background:var(--warn-wash);border-left-color:var(--warn);border-radius:0 7px 7px 0;padding:12px 16px;font-size:14.5px}
+.note .tag{color:var(--warn)}
+
+/* ---------- figures ---------- */
+figure{margin:18px 0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--wash)}
+figure img{display:block;width:100%;height:auto}
+figcaption{padding:10px 16px;font-size:13.5px;color:var(--ink-soft);border-top:1px solid var(--line);background:var(--paper)}
+figure.missing{padding:40px;text-align:center;color:var(--ink-faint);font-size:14px;border-style:dashed}
+
+/* ---------- buttons + keys ---------- */
+.btn{display:inline-flex;align-items:center;gap:7px;background:var(--ink);color:#fff;border-radius:7px;padding:3px 11px;font-size:14px;font-weight:600;white-space:nowrap}
+.btn .n{background:rgba(255,255,255,.22);border-radius:4px;padding:0 5px;font-variant-numeric:tabular-nums}
+.btn.danger{background:var(--stop)}
+
+/* ---------- tables ---------- */
+.scroll{overflow-x:auto;margin:16px 0}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:520px}
+th,td{text-align:left;padding:9px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);font-weight:700;background:var(--wash)}
+tbody tr:last-child td{border-bottom:none}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* ---------- credentials ---------- */
+.creds{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:14px;margin:18px 0}
+.cred{border:1px solid var(--line);border-radius:10px;padding:14px 16px;background:var(--wash)}
+.cred .who{font-weight:650;margin-bottom:2px}
+.cred .role{font-size:12.5px;color:var(--ink-faint);margin-bottom:9px}
+.cred .kv{font:13px/1.75 var(--mono);word-break:break-all}
+
+/* ---------- misc ---------- */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px;margin:18px 0}
+.card{border:1px solid var(--line);border-radius:10px;padding:16px 18px;background:var(--wash)}
+.card h4{margin:0 0 6px;font-size:14px;text-transform:none;letter-spacing:0;color:var(--ink);font-weight:650}
+.card p{font-size:14px;color:var(--ink-soft);margin:0}
+.big{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin:20px 0}
+.big div{border:1px solid var(--line);border-radius:10px;padding:16px;text-align:center;background:var(--wash)}
+.big .v{font-size:30px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.1}
+.big .k{font-size:12.5px;color:var(--ink-faint);margin-top:4px}
+hr{border:none;border-top:1px solid var(--line);margin:34px 0}
+.footer{grid-column:1/-1;text-align:center;color:var(--ink-faint);font-size:13.5px;padding-top:8px}
+
+@media print{
+  body{background:#fff}
+  .page{display:block;max-width:none;padding:0}
+  nav{display:none}
+  section{border:none;padding:0;margin:0 0 28px;break-inside:auto}
+  .act{break-inside:avoid}
+  figure{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="masthead">
+  <div class="kicker">Demo Runbook · Acme Retail Pvt Ltd</div>
+  <h1>The Privacy Platform, start to finish</h1>
+  <p class="sub">Everything you need to run this demonstration: from switching the laptop on, to explaining what the software is for, to walking an audience through it, to shutting it down again. No terminal, no commands, no prior knowledge assumed.</p>
+  <div class="meta">
+    <span><b>Runs in</b> about 20 minutes</span>
+    <span><b>Written for</b> someone who has never seen this software</span>
+    <span><b>You will need</b> this laptop, and nothing else</span>
+  </div>
+</header>
+
+<nav>
+  <div class="navtitle">Contents</div>
+  <ol>
+    <li><a class="lead" href="#why">0 · What this is, and why</a></li>
+    <li><a class="sm" href="#law">The law, in plain English</a></li>
+    <li><a class="sm" href="#what">What the software does</a></li>
+    <li><a class="lead" href="#start">1 · Switching it on</a></li>
+    <li><a class="sm" href="#buttons">The seven buttons</a></li>
+    <li><a class="sm" href="#signin">Signing in</a></li>
+    <li><a class="lead" href="#demo">2 · The demo</a></li>
+    <li><a class="sm" href="#act1">1 · Four systems, one company</a></li>
+    <li><a class="sm" href="#act2">2 · 500 records, 327 people</a></li>
+    <li><a class="sm" href="#act3">3 · Refusing to guess</a></li>
+    <li><a class="sm" href="#act4">4 · Deadlines from rules</a></li>
+    <li><a class="sm" href="#act5">5 · Telling people</a></li>
+    <li><a class="sm" href="#act6">6 · Her side of it</a></li>
+    <li><a class="sm" href="#act7">7 · Asking for a correction</a></li>
+    <li><a class="sm" href="#act8">8 · Consent, and taking it back</a></li>
+    <li><a class="sm" href="#act9">9 · Protecting a child</a></li>
+    <li><a class="sm" href="#act10">10 · A breach, on the clock</a></li>
+    <li><a class="sm" href="#act11">11 · The secret request</a></li>
+    <li><a class="sm" href="#act12">12 · Proving all of it</a></li>
+    <li><a class="lead" href="#database">3 · Inside the database</a></li>
+    <li><a class="lead" href="#stop">4 · Shutting down</a></li>
+    <li><a class="lead" href="#appendix-a">A · All 34 spec steps</a></li>
+    <li><a class="lead" href="#appendix-b">B · Every login</a></li>
+    <li><a class="lead" href="#appendix-c">C · Rebuilding from zero</a></li>
+    <li><a class="lead" href="#appendix-d">D · If something looks wrong</a></li>
+  </ol>
+</nav>
+
+<main>
+
+<!-- ================================================================ -->
+<section id="why">
+<h2>0 · What this is, and why it exists</h2>
+<p class="lede">Read this part once, the day before. You are not memorising it — you are making sure that when someone asks "but what is it <em>for</em>?", you have an answer that does not begin with a technical word.</p>
+
+<h3 id="law">The law, in plain English</h3>
+
+<p>In 2023 India passed the <strong>Digital Personal Data Protection Act</strong>. In 2025 the rules that go with it were notified. Together they say something simple, and quite demanding:</p>
+
+<p><strong>If your company holds information about a person, that person has rights over it — and you have to be able to prove you respected them.</strong></p>
+
+<p>The Act gives two things names, and it is worth using them, because everything in this software is built around the pair:</p>
+
+<div class="cards">
+  <div class="card">
+    <h4>Data Principal</h4>
+    <p>The person the data is about. You. Me. A customer. The law puts them at the centre and gives them rights.</p>
+  </div>
+  <div class="card">
+    <h4>Data Fiduciary</h4>
+    <p>The company holding that data. Not an "owner" — a <em>fiduciary</em>, someone trusted to look after something that belongs to someone else.</p>
+  </div>
+</div>
+
+<p>That word choice is the whole point. A company does not own your phone number. It is holding it on trust, for a reason you were told about, for as long as that reason lasts.</p>
+
+<p>What the Act then demands of that company:</p>
+
+<ul>
+  <li><strong>Tell people, before you take it.</strong> In clear language, itemised — not "we may collect certain information".</li>
+  <li><strong>Have a lawful reason for every use.</strong> Either the person consented, or the law lists your specific situation. Nothing else counts.</li>
+  <li><strong>Make withdrawing as easy as agreeing.</strong> If saying yes took one click, saying no cannot take a phone call and a form.</li>
+  <li><strong>Answer people who ask.</strong> What do you hold about me? Correct it. Erase it. Within a deadline, not eventually.</li>
+  <li><strong>Protect children by default.</strong> No tracking, no targeted advertising at under-18s. A parent's permission does not unlock it.</li>
+  <li><strong>Report a breach immediately.</strong> Tell every affected person, and tell the Data Protection Board — the initial report at once, the detailed one within 72 hours of finding out.</li>
+  <li><strong>Do not keep it forever.</strong> When the reason ends, the data goes — but never before a statutory minimum.</li>
+  <li><strong>Be able to prove all of the above.</strong> Not describe it. Prove it, with records.</li>
+</ul>
+
+<p>The penalty for getting it badly wrong runs to <strong>₹250 crore</strong> for a single failure to protect data.</p>
+
+<h3 id="what">So what does this software actually do?</h3>
+
+<p>Here is the problem it solves, in one picture. A mid-sized Indian retailer does not have "a customer database". It has four or five of them, bought at different times, run by different teams:</p>
+
+<ul>
+  <li>The marketing team's mailing tool, where you are <code>customer_email</code>.</li>
+  <li>The sales team's CRM, where you are <code>primary_email</code>.</li>
+  <li>The support desk, where you are <code>user_ref</code>.</li>
+  <li>The online shop, where you are <code>customer_code</code>.</li>
+</ul>
+
+<p>You are one person. To that company you are four rows, spelled four different ways, and nobody has ever tried to line them up. So when you write in and say <em>"tell me everything you hold about me"</em>, the honest answer is that they do not know. And the Act gives them a deadline to find out.</p>
+
+<p><strong>This platform is what sits on top of those systems and makes the company able to answer.</strong> It:</p>
+
+<ol>
+  <li><strong>Reads</strong> the existing systems, without ever writing back to them.</li>
+  <li><strong>Works out</strong> which rows are the same human being — and, crucially, refuses to guess when it is not sure.</li>
+  <li><strong>Records</strong> why the company is allowed to hold each thing, and who else it was given to.</li>
+  <li><strong>Tells</strong> each person what is held, in their language, and lets them agree or refuse purpose by purpose.</li>
+  <li><strong>Handles</strong> their requests against deadlines the company configured from the actual rules — not deadlines a programmer typed into the code.</li>
+  <li><strong>Runs the clock</strong> when there is a breach, and produces the reports the regulator asks for.</li>
+  <li><strong>Records everything</strong> in a log that cannot be quietly edited afterwards.</li>
+</ol>
+
+<div class="block law">
+  <span class="tag">Worth saying out loud</span>
+  <p>Installing software does not make a company compliant, and this platform never claims otherwise. It does the part software can do: find the data, keep the record, run the clock, and produce the evidence. The judgement calls stay with a human, and the platform is careful to ask for them rather than invent them.</p>
+</div>
+
+<h3>The one-paragraph version</h3>
+
+<div class="block say">
+  <span class="tag">Say this</span>
+  <p>"India's data protection law says a company has to know what personal data it holds, why it is allowed to hold it, and who it shared it with — and has to prove it. Most companies genuinely cannot answer that, because the same customer sits in four different systems under four different spellings. This platform reads those systems without changing them, works out who is who, and then runs everything the law requires on top: the notices, the consent, the requests, the deadlines, the breach clock, and an audit log nobody can edit afterwards. Let me show you."</p>
+</div>
+
+<h3>Where this demo came from</h3>
+<p>The demonstration you are about to give is not improvised. It follows the project's own definition of done — a 34-step walkthrough written into the specification before any code existed, in <code>DPDP_MVP1_FOUNDATION_AND_DISCOVERY.md</code> and <code>DPDP_MVP2_COMPLIANCE_OPERATIONS.md</code>. Every screen in Part 2 is one or more of those steps. <a href="#appendix-a">Appendix A</a> maps them one to one, so if an evaluator asks for step 27 by number, you can go straight to it.</p>
+</section>
+
+<!-- ================================================================ -->
+<section id="start">
+<h2>1 · From a cold laptop to the app on screen</h2>
+<p class="lede">Roughly four minutes, almost all of it waiting. You will double-click one icon and watch a window fill with sentences.</p>
+
+<h3>Before the audience arrives</h3>
+<ol>
+  <li>Switch the laptop on and log in as normal.</li>
+  <li>Close anything you do not need. The demo uses a web browser and nothing else.</li>
+  <li>Go to the <strong>Desktop</strong> — minimise everything, or press the show-desktop key.</li>
+</ol>
+
+<h3 id="buttons">The seven buttons</h3>
+<p>The Desktop has seven icons, numbered in the order you will use them. Numbering is deliberate: you never have to remember which is which, only what comes next.</p>
+
+<figure>
+  <img src="images/desktop-icons.png" alt="The Desktop showing seven numbered demo launcher icons">
+  <figcaption>The seven demo buttons on the Desktop. Number 9 is last and separate because it destroys data.</figcaption>
+</figure>
+
+<div class="scroll">
+<table>
+  <thead><tr><th>Button</th><th>What it does</th><th>How long</th></tr></thead>
+  <tbody>
+    <tr><td><span class="btn"><span class="n">1</span> Start Privacy Demo</span></td><td>Starts the database and the app, then opens the website for you.</td><td class="num">~2 min</td></tr>
+    <tr><td><span class="btn"><span class="n">2</span> Demo Runbook</span></td><td>Opens this document.</td><td class="num">instant</td></tr>
+    <tr><td><span class="btn"><span class="n">3</span> Open Database</span></td><td>Opens a table browser so you can look inside the database itself.</td><td class="num">~20 sec</td></tr>
+    <tr><td><span class="btn"><span class="n">4</span> Show Demo Proof</span></td><td>Counts the live data and shows the numbers in a window.</td><td class="num">~10 sec</td></tr>
+    <tr><td><span class="btn"><span class="n">5</span> Demo Status</span></td><td>Tells you what is running and what is not.</td><td class="num">~5 sec</td></tr>
+    <tr><td><span class="btn"><span class="n">6</span> Stop Privacy Demo</span></td><td>Shuts everything down. Your data is kept.</td><td class="num">~20 sec</td></tr>
+    <tr><td><span class="btn danger"><span class="n">9</span> Reset Demo to Fresh State</span></td><td><strong>Destroys all demo data</strong> and rebuilds it from scratch. Asks first.</td><td class="num">~12 min</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="block note">
+  <span class="tag">The first time only</span>
+  <p>If a button says something about an <em>untrusted application launcher</em>, right-click it once and choose <strong>Allow Launching</strong>. That only ever needs doing once per button.</p>
+</div>
+
+<h3>Starting it</h3>
+
+<div class="act">
+  <header><span class="num">▶</span><h3>Double-click <span class="btn"><span class="n">1</span> Start Privacy Demo</span></h3></header>
+  <div class="body">
+    <div class="block do">
+      <span class="tag">Do</span>
+      <p>Double-click the icon. A black window opens and starts writing lines of plain English. <strong>Do not close it.</strong> It is the demo running.</p>
+    </div>
+    <div class="block see">
+      <span class="tag">You will see</span>
+      <p>Lines appearing one by one: the database starting, the backend coming up, the website coming up. Each one ends with a short confirmation. It finishes with a list of addresses and the sign-in details.</p>
+    </div>
+    <figure>
+      <img src="images/start-terminal.png" alt="The startup window listing each service as it comes up">
+      <figcaption>What the startup window looks like when it has finished. Leave it open behind the browser.</figcaption>
+    </figure>
+    <div class="block note">
+      <span class="tag">If nothing opens</span>
+      <p>Your browser should open by itself at <code>http://localhost:5173</code>. If it does not, open a browser and type that address. If the page will not load, wait twenty seconds and refresh once — the website takes a moment longer than the rest.</p>
+    </div>
+  </div>
+</div>
+
+<h3 id="signin">Signing in</h3>
+
+<div class="act">
+  <header><span class="num">▶</span><h3>Sign in as the company's administrator</h3></header>
+  <div class="body">
+    <div class="block do">
+      <span class="tag">Do</span>
+      <p>Type <code>admin@acmeretail.demo</code> and <code>Password123!</code>, then press Sign in.</p>
+    </div>
+    <figure>
+      <img src="images/login.png" alt="The sign-in screen">
+      <figcaption>The sign-in screen. This is the company's side — the staff console.</figcaption>
+    </figure>
+    <div class="block note">
+      <span class="tag">Two different front doors</span>
+      <p>There are two ways into this system and they are deliberately separate. <strong>Staff</strong> sign in here. <strong>Members of the public</strong> sign in at <code>/me/login</code>, and a staff pass will not open that door — nor the other way round. You will use both during the demo.</p>
+    </div>
+  </div>
+</div>
+
+<div class="block note">
+  <span class="tag">Have this open before you begin</span>
+  <p>Open a <strong>second browser tab</strong> at <code>http://localhost:5173/me/login</code> and leave it there. Halfway through the demo you will switch to it to show a customer's own view, and having it ready saves an awkward pause.</p>
+</div>
+</section>
+
+<!-- ================================================================ -->
+<section id="demo">
+<h2>2 · The demonstration</h2>
+<p class="lede">Twelve acts, roughly ninety seconds each. Every screen already has real data in it — nothing here asks you to fill in a form while people watch. Each act tells you what to click, what will appear, a line you can say, and which part of the law it answers.</p>
+
+<div class="block note">
+  <span class="tag">How to read an act</span>
+  <p><strong>Do</strong> is the click. <strong>You will see</strong> is what should appear — if it does not, you have the wrong page. <strong>Say</strong> is a line you can use as-is or reword. <strong>In law</strong> is there for the question that always comes.</p>
+</div>
+
+<!-- ACT 1 -->
+<div class="act" id="act1">
+  <header><span class="num">1</span><h3>Four systems, one company</h3><span class="clock">~90 sec</span></header>
+  <div class="body">
+    <div class="block do"><span class="tag">Do</span><p>From the left menu, open <strong>Data Sources</strong>.</p></div>
+    <div class="block see"><span class="tag">You will see</span><p>Four connected systems — Marketing, Sales, Support, E-commerce — each showing when it last synchronised and how many records came back.</p></div>
+    <figure><img src="images/data-sources.png" alt="The Data Sources page listing four connected systems"><figcaption>Four separate systems, connected read-only. Click one to see how its oddly-named fields were mapped.</figcaption></figure>
+    <div class="block say"><span class="tag">Say</span><p>"This is the realistic starting point. Four systems, bought at different times, none of them talking to each other. The marketing tool calls your email <em>customer_email</em>; the shop calls it just <em>email</em>. Someone had to sit down and say which field means what — and that mapping is recorded here, not hidden in code."</p></div>
+    <div class="block say"><span class="tag">Then add</span><p>"Notice the connection is read-only. The platform never writes back into a company's own systems. If this went wrong, it cannot corrupt the business."</p></div>
+    <div class="block law"><span class="tag">In law</span><p>Spec steps 4 and 5. A company cannot describe what it holds unless it first knows where it is. This is the foundation of the Record of Processing the Act requires.</p></div>
+  </div>
+</div>
+
+<!-- ACT 2 -->
+<div class="act" id="act2">
+  <header><span class="num">2</span><h3>500 records become 327 people</h3><span class="clock">~2 min</span></header>
+  <div class="body">
+    <div class="block do"><span class="tag">Do</span><p>Click <strong>Dashboard</strong> in the left menu. Pause on the four numbers at the top.</p></div>
+    <div class="block see"><span class="tag">You will see</span></div>
+    <div class="big">
+      <div><div class="v">500</div><div class="k">Records pulled in</div></div>
+      <div><div class="v">327</div><div class="k">Actual people</div></div>
+      <div><div class="v">4</div><div class="k">Waiting for a human</div></div>
+      <div><div class="v">12</div><div class="k">Conflicting values</div></div>
+    </div>
+    <figure><img src="images/dashboard.png" alt="The dashboard showing 500 records, 327 principals, 4 pending, 12 conflicts"><figcaption>The single most important screen in the demo. Everything else follows from these four numbers.</figcaption></figure>
+    <div class="block say"><span class="tag">Say</span><p>"Five hundred rows went in. Three hundred and twenty-seven human beings came out. The difference is the same person appearing in three or four systems under different spellings — <em>Aman Sharma</em> in one, <em>A. Sharma</em> in another, a different phone number in a third."</p></div>
+    <div class="block say"><span class="tag">Then, pointing at the 12</span><p>"And twelve places where two systems disagree about the same fact — different cities for the same customer. The company did not know that before this morning. Now it is a list somebody can work through."</p></div>
+    <div class="block law"><span class="tag">In law</span><p>Spec step 6, and the whole of the MVP 1 definition of done. Also section 8(4): a Data Fiduciary must ensure personal data is complete, accurate and consistent. You cannot fix a contradiction you have never seen.</p></div>
+  </div>
+</div>
+
+<!-- ACT 3 -->
+<div class="act" id="act3">
+  <header><span class="num">3</span><h3>The bit where it refuses to guess</h3><span class="clock">~2 min</span></header>
+  <div class="body">
+    <div class="block do"><span class="tag">Do</span><p>Open <strong>Principals</strong> and search for <code>Rahul Verma</code>.</p></div>
+    <div class="block see"><span class="tag">You will see</span><p><strong>Two separate people</strong>, with different reference numbers — not one merged record.</p></div>
+    <figure><img src="images/principals-rahul.png" alt="Two distinct Rahul Verma profiles kept apart"><figcaption>Two different men named Rahul Verma. The platform kept them apart, on purpose.</figcaption></figure>
+    <div class="block say"><span class="tag">Say</span><p>"Two different men, both called Rahul Verma. A careless system merges these — and then one of them can see the other's order history. That is a data breach the company created itself, out of tidiness. This platform will only merge on evidence: a matching email, a matching phone. A shared name is not evidence."</p></div>
+    <div class="block do"><span class="tag">Then do</span><p>Open <strong>Review Queue</strong> from the left menu.</p></div>
+    <div class="block see"><span class="tag">You will see</span><p>Four pairs waiting for a human decision, each showing exactly what matched and what did not.</p></div>
+    <figure><img src="images/review-queue.png" alt="The review queue with four ambiguous pairs"><figcaption>Four pairs the platform would not decide on its own.</figcaption></figure>
+    <div class="block say"><span class="tag">Say</span><p>"When it genuinely cannot tell, it does not pick. It stops and asks. Four pairs are sitting here waiting for a person — and if that person gets it wrong, the merge can be undone without losing a single byte of the original records."</p></div>
+    <div class="block law"><span class="tag">In law</span><p>Spec step 6 again, and requirement GO-03. This is the difference between software that is confident and software that is honest.</p></div>
+  </div>
+</div>
+
+<!-- ACT 4 -->
+<div class="act" id="act4">
+  <header><span class="num">4</span><h3>Deadlines that come from rules, not from code</h3><span class="clock">~90 sec</span></header>
+  <div class="body">
+    <div class="block do"><span class="tag">Do</span><p>Open <strong>Settings → Compliance Rules</strong>.</p></div>
+    <div class="block see"><span class="tag">You will see</span><p>A list of deadlines, each with a legal citation next to it, and most marked <em>Not yet reviewed</em>.</p></div>
+    <figure><img src="images/compliance-rules.png" alt="The compliance rules table with citations and review badges"><figcaption>Every deadline the platform enforces, with the rule it came from — and a note that a human has not yet signed it off.</figcaption></figure>
+    <div class="block say"><span class="tag">Say</span><p>"This is the screen I would look at first if I were evaluating this. Every deadline the system enforces is listed here as <em>data</em>, with the rule it came from written next to it. Not one of these numbers is buried in the code. When the rules change — and they will — this is a screen someone edits, not a release someone ships."</p></div>
+    <div class="block say"><span class="tag">Point at a badge</span><p>"And they all say <em>Not yet reviewed</em>. The platform ships defaults so nobody starts from a blank page, but it will not pretend a lawyer has approved them. Somebody has to click confirm, and their name goes on it."</p></div>
+    <div class="block do"><span class="tag">Optional, ten seconds</span><p>Click <strong>Confirm</strong> on one rule to show the badge change and the reviewer's name appear. Safe to do live.</p></div>
+    <div class="block law"><span class="tag">In law</span><p>Spec step 7. The platform's own rule: no legal deadline may appear as a number in the source code. Every one is configuration, cited and reviewable.</p></div>
+  </div>
+</div>
+
+<!-- ACT 5 -->
+<div class="act" id="act5">
+  <header><span class="num">5</span><h3>Telling people what you hold</h3><span class="clock">~2 min</span></header>
+  <div class="body">
+    <div class="block do"><span class="tag">Do</span><p>Open <strong>Notices</strong> and click the published marketing notice.</p></div>
+    <div class="block see"><span class="tag">You will see</span><p>A published notice listing each item of personal data by name, what it is used for, and three links — how to withdraw, how to exercise rights, how to complain to the Board.</p></div>
+    <figure><img src="images/notice-published.png" alt="A published privacy notice with an itemised data list"><figcaption>A notice that names each field, rather than saying "certain information".</figcaption></figure>
+    <div class="block say"><span class="tag">Say</span><p>"The Act does not accept 'we may collect certain information'. It wants the list, itemised. So this notice is not typed by hand — it is generated from the field mappings you saw in the first screen. If the company starts collecting date of birth tomorrow, the notice knows."</p></div>
+    <div class="block do"><span class="tag">Then do</span><p>Try to edit the published version.</p></div>
+    <div class="block see"><span class="tag">You will see</span><p>It refuses. You can only create a new version.</p></div>
+    <div class="block say"><span class="tag">Say</span><p>"Once published, it is frozen — the database itself refuses the edit, not just the screen. That matters, because consent means nothing unless you can prove what the person was actually shown at the moment they agreed. If the wording could be quietly changed afterwards, every consent record in the system would be worthless."</p></div>
+    <div class="block do"><span class="tag">Then do</span><p>Switch the notice to <strong>Hindi</strong>.</p></div>
+    <figure><img src="images/notice-hindi.png" alt="The same notice in Hindi"><figcaption>The same published version, in Hindi.</figcaption></figure>
+    <div class="block say"><span class="tag">Say</span><p>"The Act says a person may ask for the notice in any language in the Eighth Schedule — twenty-two of them. Note that this is a human translation the company supplied and takes responsibility for. The platform never machine-translates a legal notice."</p></div>
+    <div class="block law"><span class="tag">In law</span><p>Spec step 8. Rule 3(a) — the notice must stand on its own. Rule 3(b) — itemised. Rule 3(c) — the three links. Section 5(3) — the language choice.</p></div>
+  </div>
+</div>
+
+<!-- ACT 6 -->
+<div class="act" id="act6">
+  <header><span class="num">6</span><h3>Now her side of it</h3><span class="clock">~2 min</span></header>
+  <div class="body">
+    <div class="block do"><span class="tag">Do</span><p>Switch to your second browser tab at <code>/me/login</code>. Sign in as <code>aman.sharma@gmail.com</code> / <code>Password123!</code>.</p></div>
+    <div class="block see"><span class="tag">You will see</span><p>A completely different, much simpler interface — the Data Principal's own portal.</p></div>
+    <figure><img src="images/portal-home.png" alt="The data principal portal home screen"><figcaption>The same platform, seen by the person the data is about.</figcaption></figure>
+    <div class="block say"><span class="tag">Say</span><p>"This is Aman. He is not an employee — he is a customer. And this is the half of the law that companies usually forget: the person has to be able to see this for themselves, not by writing a letter and waiting."</p></div>
+    <div class="block do"><span class="tag">Then do</span><p>Click through <strong>My Data</strong>, then <strong>Where it came from</strong>, then <strong>Who has it</strong>.</p></div>
+    <div class="block say"><span class="tag">Say, on the sources page</span><p>"Every single value tells him which of the company's systems it came from. His phone number is here because it is in the Sales CRM and the support desk. That is lineage, and it is what makes the next screen possible."</p></div>
+    <div class="block say"><span class="tag">Say, on the recipients page</span><p>"And this is the question almost no company can answer: <em>who else has my data?</em> Not a generic list of 'trusted partners' — the actual recipients who hold <em>his</em> record, worked out from which systems his data is in and which of those feed which sharing arrangement."</p></div>
+    <div class="block law"><span class="tag">In law</span><p>Spec steps 9 and 10. Section 11(1) — the right to a summary of the data and the identities of those it was shared with.</p></div>
+    <div class="block note"><span class="tag">Guard against the obvious question</span><p>If asked "can he see anyone else's data?" — no, and it is structural rather than a filter someone remembered to write. Every database query in the system is scoped to the signed-in identity at a level below the application code.</p></div>
+  </div>
+</div>
+
+<!-- ACT 7 -->
+<div class="act" id="act7">
+  <header><span class="num">7</span><h3>Asking for a correction</h3><span class="clock">~2 min</span></header>
+  <div class="body">
+    <div class="block do"><span class="tag">Do</span><p>Still as Aman, open <strong>My Requests</strong>.</p></div>
+    <div class="block see"><span class="tag">You will see</span><p>Two requests he has already raised — a correction and an access request — each with a reference and a deadline. Open the correction.</p></div>
+    <figure><img src="images/portal-requests.png" alt="Aman's requests with references and deadlines"><figcaption>Aman's own view: a reference number, a deadline, and a visible timeline.</figcaption></figure>
+    <div class="block say"><span class="tag">Say</span><p>"Aman noticed the company has an old phone number for him — one that now belongs to somebody else. He asked them to fix it. He can see it was received, he can see who is dealing with it, and he can see the date they owe him an answer by."</p></div>
+    <div class="block do"><span class="tag">Then do</span><p>Switch back to the staff tab. Open <strong>Requests</strong> and click the same reference.</p></div>
+    <figure><img src="images/request-detail.png" alt="The staff view of the same request"><figcaption>The staff view of the same request: deadline, the rule that produced it, and internal notes.</figcaption></figure>
+    <div class="block say"><span class="tag">Say</span><p>"Same request, the company's side. The deadline is not a number somebody typed — it was calculated from the rule you saw earlier, and the citation is right there. The staff notes are split: this one is visible to Aman, this one is internal and he cannot see it. Both are in the audit log."</p></div>
+    <div class="block law"><span class="tag">In law</span><p>Spec steps 11, 12 and 13. Section 12 — the right to correction and erasure. Section 13 — the right to grievance redressal within a published period.</p></div>
+  </div>
+</div>
+
+<!-- ACT 8 -->
+<div class="act" id="act8">
+  <header><span class="num">8</span><h3>Consent, and taking it back</h3><span class="clock">~2 min</span></header>
+  <div class="body">
+    <div class="block do"><span class="tag">Do</span><p>Open <strong>Consents</strong> on the staff side.</p></div>
+    <div class="block see"><span class="tag">You will see</span><p>A dashboard per purpose: granted, refused, withdrawn, and not yet asked.</p></div>
+    <figure><img src="images/consents-dashboard.png" alt="The consent dashboard by purpose"><figcaption>Consent tracked separately for each purpose, not as one blanket yes.</figcaption></figure>
+    <div class="block say"><span class="tag">Say</span><p>"Consent here is not one switch. It is per purpose. You can agree to order updates and refuse marketing, and the system holds both at once — which is exactly what the Act requires and what most cookie banners quietly refuse to do."</p></div>
+    <div class="block do"><span class="tag">Then do</span><p>Click into a purpose and open one consent record.</p></div>
+    <div class="block say"><span class="tag">Say</span><p>"And every record is frozen to the exact version of the notice the person was shown at that moment. Not the current wording — the wording on the day. Otherwise the company is claiming consent to something the person never read."</p></div>
+    <div class="block do"><span class="tag">Then do</span><p>Point out the withdrawn entry (Neha Rao), then open <strong>Retention</strong>.</p></div>
+    <figure><img src="images/retention.png" alt="The retention page showing a deferred erasure task"><figcaption>A withdrawal produced an erasure task — which the law then holds back.</figcaption></figure>
+    <div class="block say"><span class="tag">Say</span><p>"Neha withdrew her consent. One click, exactly as many as it took to give it — the Act is explicit that withdrawing cannot be harder than agreeing. And the moment she did, the system created an erasure task on its own."</p></div>
+    <div class="block say"><span class="tag">Then, pointing at the deferral</span><p>"But look — it has not run. It is deferred, with a release date and a citation. Because there is a rule that says certain records must be kept for at least a year. So the law pushes in both directions at once, and the platform holds both: erase this, but not yet, and here is exactly why."</p></div>
+    <div class="block law"><span class="tag">In law</span><p>Spec steps 15 to 18 and 29. Section 6(4) and 6(6) — withdrawal as easy as giving, and consequences follow. Rule 8(3) — the retention floor.</p></div>
+  </div>
+</div>
+
+<!-- ACT 9 -->
+<div class="act" id="act9">
+  <header><span class="num">9</span><h3>Protecting a child, even from a parent's permission</h3><span class="clock">~2 min</span></header>
+  <div class="body">
+    <div class="block do"><span class="tag">Do</span><p>Open <strong>Children</strong>.</p></div>
+    <div class="block see"><span class="tag">You will see</span><p>Six under-18s found in the data, and one with a guardian recorded and verified.</p></div>
+    <figure><img src="images/children.png" alt="The children page showing flagged under-18 records and a verified guardian"><figcaption>Six under-18 records the sync flagged, and one verified guardian.</figcaption></figure>
+    <div class="block say"><span class="tag">Say</span><p>"Six of those 327 people are under eighteen. Nobody told the system that — it worked it out from the dates of birth in the online shop's data. For one of them, a parent has been registered and verified, and that verification was recorded with the method and the reference number."</p></div>
+    <div class="block do"><span class="tag">Then do</span><p>Open <strong>Messaging → Campaigns</strong> and click the <strong>Monsoon sale</strong> campaign, then its recipients list.</p></div>
+    <div class="block see"><span class="tag">You will see</span><p>Three outcomes side by side — delivered, held back for no consent, and held back as children.</p></div>
+    <figure><img src="images/campaign-recipients.png" alt="Campaign recipients showing delivered and two kinds of suppression"><figcaption>The same send, three different outcomes, each with its reason recorded.</figcaption></figure>
+    <div class="block say"><span class="tag">Say — this is the strongest moment in the demo</span><p>"A marketing campaign went out. Some people got it, because they had consented. Some were held back because they had not. And these six were held back for a completely different reason: <em>child, marketing prohibited</em>."</p></div>
+    <div class="block say"><span class="tag">Then, slowly</span><p>"Here is the part I would emphasise. The parent <em>did</em> consent. It is recorded, right there. And the platform still refused to send — because the Act does not let a guardian consent to advertising aimed at a child. That is not a setting somebody remembered to switch on. It is a refusal built into the send path, so it cannot be forgotten."</p></div>
+    <div class="block law"><span class="tag">In law</span><p>Spec steps 19 and 20. Section 9(1) — verifiable guardian consent. Section 9(3) — no tracking or targeted advertising directed at children, full stop.</p></div>
+  </div>
+</div>
+
+<!-- ACT 10 -->
+<div class="act" id="act10">
+  <header><span class="num">10</span><h3>A breach, with the regulator's clock already running</h3><span class="clock">~3 min</span></header>
+  <div class="body">
+    <div class="block do"><span class="tag">Do</span><p>Open <strong>Breaches</strong> and click <code>BR-000001</code>.</p></div>
+    <div class="block see"><span class="tag">You will see</span><p>An incident with two different times recorded, a list of affected people, and three live countdowns.</p></div>
+    <figure><img src="images/breach-detail.png" alt="The breach detail page"><figcaption>A backup left readable. Occurred five days ago; discovered today.</figcaption></figure>
+    <div class="block say"><span class="tag">Say</span><p>"A nightly backup of the marketing database was left readable without a password. Note that the system records two separate times: when it <em>happened</em>, and when the company <em>found out</em>. They are days apart, and it is the second one that starts every legal clock."</p></div>
+    <div class="block do"><span class="tag">Then do</span><p>Scroll to the countdowns.</p></div>
+    <figure><img src="images/breach-clocks.png" alt="Three labelled countdowns with citations"><figcaption>Three obligations, three clocks, each labelled with the rule it comes from.</figcaption></figure>
+    <div class="block say"><span class="tag">Say</span><p>"Three separate obligations, three separate clocks, each labelled with the rule behind it. Tell the affected people. Tell the Board immediately. Give the Board the detailed report within seventy-two hours of finding out. These are ticking right now, in front of you."</p></div>
+    <div class="block do"><span class="tag">Then do</span><p>Point at the recorded Board extension.</p></div>
+    <div class="block say"><span class="tag">Say</span><p>"The Board granted an extension on the detailed report. Watch what moved: only that one clock. The other two are untouched, and the original date is still shown, struck through, with the Board's reference beside it. The company cannot quietly grant itself more time."</p></div>
+    <div class="block do"><span class="tag">Then do</span><p>Open the breach notice that was sent, showing its six sections.</p></div>
+    <div class="block say"><span class="tag">Say</span><p>"Every affected person got this, and the rules specify exactly six things it must contain — what happened, what it means for you, what we have done, what you should do, who to contact, and the reference. The platform will not send a breach notice with one of them missing. It refuses, and tells you which one."</p></div>
+    <div class="block do"><span class="tag">Then do</span><p>Switch to the portal tab. As Aman, show the pinned breach notice. Then mention Sara Khan does not have one.</p></div>
+    <div class="block say"><span class="tag">Say</span><p>"Aman was affected, so it is pinned at the top of his messages. Sara Khan was not, and has nothing — because the recipient list came from the committed affected list, previewed and counted before anyone pressed send."</p></div>
+    <div class="block say"><span class="tag">One more, on approval</span><p>"And it took two people. The person who drafted this notice was not allowed to approve it. That is enforced, not encouraged."</p></div>
+    <div class="block law"><span class="tag">In law</span><p>Spec steps 21 to 28. Section 8(6) — intimate the Board and each affected principal. Rule 7(1) — the six elements. Rule 7(2) — at once, and in detail within 72 hours.</p></div>
+  </div>
+</div>
+
+<!-- ACT 11 -->
+<div class="act" id="act11">
+  <header><span class="num">11</span><h3>The request the customer must not be told about</h3><span class="clock">~90 sec</span></header>
+  <div class="body">
+    <div class="block do"><span class="tag">Do</span><p>Open <strong>Information Requests</strong>.</p></div>
+    <div class="block see"><span class="tag">You will see</span><p>A Government request naming Aman, marked with a non-disclosure direction.</p></div>
+    <figure><img src="images/information-requests.png" alt="A government information request under a non-disclosure direction"><figcaption>A Government request naming a specific person, which that person may not be told about.</figcaption></figure>
+    <div class="block say"><span class="tag">Say</span><p>"The Government has asked for information about a named person, and attached a direction saying he must not be told. That is lawful, and it puts the company in a genuinely awkward position: it has to honour the direction while still keeping honest records."</p></div>
+    <div class="block do"><span class="tag">Then do</span><p>Switch to Aman's portal. Show his messages, his requests, and his downloaded evidence file.</p></div>
+    <div class="block say"><span class="tag">Say</span><p>"Nothing. It is not in his messages, not in his requests, not in his access report, and not in his evidence file. It is genuinely invisible to him."</p></div>
+    <div class="block do"><span class="tag">Then do</span><p>Back on the staff side, open <strong>Audit Log</strong> and find it.</p></div>
+    <div class="block say"><span class="tag">Say</span><p>"But it is right here in the audit log, in full, with a timestamp. Hidden from him, not hidden from the record. If the Board ever audits this company, the fact that it happened — and that it was correctly suppressed — is provable."</p></div>
+    <div class="block law"><span class="tag">In law</span><p>Spec step 32. Section 36 — the power to call for information. Rule 23(2) — the non-disclosure direction.</p></div>
+  </div>
+</div>
+
+<!-- ACT 12 -->
+<div class="act" id="act12">
+  <header><span class="num">12</span><h3>Proving all of it</h3><span class="clock">~2 min</span></header>
+  <div class="body">
+    <div class="block do"><span class="tag">Do</span><p>Open <strong>Audit Log</strong>, filter to today, and press <strong>Verify hash chain</strong>.</p></div>
+    <div class="block see"><span class="tag">You will see</span><p>A confirmation that the chain is valid, and how many events were checked.</p></div>
+    <figure><img src="images/audit-chain.png" alt="The audit log after a successful hash chain verification"><figcaption>Every event you have just watched, in a chain that cannot be quietly edited.</figcaption></figure>
+    <div class="block say"><span class="tag">Say</span><p>"Every single thing you have watched in the last twenty minutes is in here. And each entry carries a fingerprint of the one before it, so they form a chain. Delete one, change one word in one, and every entry after it stops matching. The database itself refuses updates and deletes on this table — it is not a rule the application politely follows."</p></div>
+    <div class="block say"><span class="tag">Then</span><p>"That button just re-checked the whole chain, live, and said it is intact."</p></div>
+    <div class="block do"><span class="tag">Then do</span><p>Open a principal and download their <strong>evidence file</strong>. Then download the full <strong>evidence pack</strong>.</p></div>
+    <figure><img src="images/evidence-pack.png" alt="The evidence download controls"><figcaption>One person's file, or the whole organisation's pack.</figcaption></figure>
+    <div class="block say"><span class="tag">Say — close on this</span><p>"And this is what all of it was for. If the Board comes asking, the company does not write a report. It presses a button, and out comes the evidence: what was held, why it was allowed, who it was shared with, what each person was told, what they agreed to, what they asked for, and when they were answered. That is the difference between saying you are compliant and being able to show it."</p></div>
+    <div class="block law"><span class="tag">In law</span><p>Spec steps 33 and 34. Section 8(9) and the evidentiary requirements throughout — the obligation is not just to comply, but to be able to demonstrate compliance.</p></div>
+  </div>
+</div>
+
+<div class="block say" style="margin-top:32px">
+  <span class="tag">Closing line, if you want one</span>
+  <p>"Every screen you have seen is real. The data came out of four separate systems this morning. Nothing was typed in to make the demo look good, and where the platform could not be sure of something, it said so rather than guessing. That was the design goal: a system a company could actually put in front of a regulator."</p>
+</div>
+</section>
+
+<!-- ================================================================ -->
+<section id="database">
+<h2>3 · Looking inside the database</h2>
+<p class="lede">If someone says "yes, but is that real, or is the screen just drawing it?" — this is the answer. Two buttons, no SQL, no terminal.</p>
+
+<h3>Button 4 — the numbers</h3>
+<div class="act">
+  <header><span class="num">▶</span><h3>Double-click <span class="btn"><span class="n">4</span> Show Demo Proof</span></h3></header>
+  <div class="body">
+    <div class="block see"><span class="tag">You will see</span><p>A window of live counts, read from the database at the moment you clicked, grouped by what each one proves. Every number in Part 2 of this runbook appears here.</p></div>
+    <figure><img src="images/demo-proof.png" alt="The demo proof window showing live counts"><figcaption>Live counts, read at the moment you click. Nothing cached.</figcaption></figure>
+    <div class="block say"><span class="tag">Say</span><p>"That is not the app telling you about itself. That is a direct count out of the database, taken just now, next to the number we expected. If the two disagreed, you would see it."</p></div>
+  </div>
+</div>
+
+<h3>Button 3 — the tables themselves</h3>
+<div class="act">
+  <header><span class="num">▶</span><h3>Double-click <span class="btn"><span class="n">3</span> Open Database</span></h3></header>
+  <div class="body">
+    <div class="block see"><span class="tag">You will see</span><p>A browser tab with every table listed down the left. Click one and its rows appear on the right, like a spreadsheet.</p></div>
+    <figure><img src="images/prisma-studio.png" alt="The database browser showing tables and rows"><figcaption>The database, table by table. A row is one record; a column is one field.</figcaption></figure>
+    <p>The five worth showing, in this order:</p>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>Table</th><th>What a row is</th><th>Why show it</th></tr></thead>
+      <tbody>
+        <tr><td><code>SourceRecord</code></td><td>One untouched row exactly as it came out of a source system.</td><td>All 500 are still here, unedited. Nothing was thrown away.</td></tr>
+        <tr><td><code>DataPrincipal</code></td><td>One real human being.</td><td>327 of them. This is the number on the dashboard.</td></tr>
+        <tr><td><code>NoticeVersion</code></td><td>One published notice, frozen.</td><td>The exact wording people were shown, preserved.</td></tr>
+        <tr><td><code>ConsentRecord</code></td><td>One person's decision about one purpose.</td><td>Each points at the notice version they saw.</td></tr>
+        <tr><td><code>AuditEvent</code></td><td>One thing that happened.</td><td>Each carries the hash of the one before it. This is the chain.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="block say"><span class="tag">Say, on AuditEvent</span><p>"Scroll to the hash column. Each row carries a fingerprint that includes the row above it. That is why nobody can delete an inconvenient line — everything after it would stop matching, and the verify button would say so."</p></div>
+    <div class="block note"><span class="tag">Careful</span><p>This browser can edit rows as well as show them. Look, do not touch. If you change something by accident, button 9 rebuilds everything — but that takes twelve minutes you may not have.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- ================================================================ -->
+<section id="stop">
+<h2>4 · Shutting down</h2>
+<p class="lede">Twenty seconds. Nothing you have shown is lost.</p>
+
+<div class="act">
+  <header><span class="num">▶</span><h3>Double-click <span class="btn"><span class="n">6</span> Stop Privacy Demo</span></h3></header>
+  <div class="body">
+    <div class="block see"><span class="tag">You will see</span><p>Each part reported as stopped, then <em>Everything is stopped</em>, then a prompt to close the window.</p></div>
+    <figure><img src="images/stop-terminal.png" alt="The shutdown window confirming everything stopped"><figcaption>Press Enter to close the window when it says so.</figcaption></figure>
+    <div class="block note"><span class="tag">"Your demo data is kept"</span><p>The shutdown message says this, and it is literal. The database is paused, not emptied. Press button 1 tomorrow and every screen comes back exactly as you left it — same breach, same requests, same consents. The <strong>only</strong> thing that erases data is button 9.</p></div>
+    <p>Afterwards it is safe to close the browser tabs, close the black windows, and shut the laptop down normally. Nothing needs saving.</p>
+    <div class="block do"><span class="tag">To check</span><p>Double-click <span class="btn"><span class="n">5</span> Demo Status</span>. Everything should read <strong>DOWN</strong>. That is what a clean shutdown looks like.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- ================================================================ -->
+<section id="appendix-a">
+<h2>Appendix A · All 34 specification steps</h2>
+<p class="lede">The project's definition of done is a 34-step walkthrough. The demo in Part 2 covers all of it, but compresses it into twelve acts. If an evaluator asks for a step by number, this is where it lives.</p>
+
+<div class="scroll">
+<table>
+  <thead><tr><th>Step</th><th>What it requires</th><th>Where in the demo</th><th>State</th></tr></thead>
+  <tbody>
+    <tr><td class="num">1</td><td>Start the platform</td><td>Part 1</td><td>Live</td></tr>
+    <tr><td class="num">2</td><td>Log in as the Acme admin</td><td>Part 1</td><td>Live</td></tr>
+    <tr><td class="num">3</td><td>Declare purposes with lawful bases</td><td>Act 1 → Purposes</td><td>Pre-filled</td></tr>
+    <tr><td class="num">4</td><td>Add four endpoints, test, map fields, attach purposes</td><td>Act 1</td><td>Pre-filled</td></tr>
+    <tr><td class="num">5</td><td>Register processor, sharing activity, transfer</td><td>Act 1 → Registers</td><td>Pre-filled</td></tr>
+    <tr><td class="num">6</td><td>Sync: 500 → 327, 4 pending, 2 Rahuls apart, 12 conflicts, 6 under-18</td><td>Acts 2 and 3</td><td>Pre-filled</td></tr>
+    <tr><td class="num">7</td><td>Review seeded compliance rules; 120-day grievance refused</td><td>Act 4</td><td>Live (one click)</td></tr>
+    <tr><td class="num">8</td><td>Build, publish, translate a notice; published edit refused</td><td>Act 5</td><td>Pre-filled</td></tr>
+    <tr><td class="num">9</td><td>Log into the portal as Aman</td><td>Act 6</td><td>Live</td></tr>
+    <tr><td class="num">10</td><td>Read the notice in English, then Hindi</td><td>Acts 5 and 6</td><td>Live</td></tr>
+    <tr><td class="num">11</td><td>Submit a correction request</td><td>Act 7</td><td>Pre-filled</td></tr>
+    <tr><td class="num">12</td><td>Employee sees reference, deadline, rule and citation</td><td>Act 7</td><td>Pre-filled</td></tr>
+    <tr><td class="num">13</td><td>Assign it, move to In Progress, principal's timeline updates</td><td>Act 7</td><td>Pre-filled</td></tr>
+    <tr><td class="num">14</td><td>Access request, and the full access report</td><td>Acts 7 and 12</td><td>Pre-filled</td></tr>
+    <tr><td class="num">15</td><td>Build an audience, preview the count, send a consent request</td><td>Act 8</td><td>Pre-filled</td></tr>
+    <tr><td class="num">16</td><td>Recipient reads the exact notice and grants consent</td><td>Act 8</td><td>Pre-filled</td></tr>
+    <tr><td class="num">17</td><td>The decision appears on the company dashboard immediately</td><td>Act 8</td><td>Pre-filled</td></tr>
+    <tr><td class="num">18</td><td>Withdraw in the same number of clicks; erasure task appears</td><td>Act 8</td><td>Pre-filled</td></tr>
+    <tr><td class="num">19</td><td>Register a guardian, verify them, record consent</td><td>Act 9</td><td>Pre-filled</td></tr>
+    <tr><td class="num">20</td><td>Child suppressed from marketing despite guardian consent</td><td>Act 9</td><td>Pre-filled</td></tr>
+    <tr><td class="num">21</td><td>Create a breach with occurred and aware timestamps</td><td>Act 10</td><td>Pre-filled</td></tr>
+    <tr><td class="num">22</td><td>Preview the affected count before committing</td><td>Act 10</td><td>Pre-filled</td></tr>
+    <tr><td class="num">23</td><td>Notice contains all six Rule 7(1) elements</td><td>Act 10</td><td>Pre-filled</td></tr>
+    <tr><td class="num">24</td><td>A second employee approves it, then it sends</td><td>Act 10</td><td>Pre-filled</td></tr>
+    <tr><td class="num">25</td><td>Affected principal sees it pinned; unaffected sees nothing</td><td>Act 10</td><td>Pre-filled</td></tr>
+    <tr><td class="num">26</td><td>Three countdowns, each cited and basis-labelled</td><td>Act 10</td><td>Pre-filled, live clocks</td></tr>
+    <tr><td class="num">27</td><td>Board extension moves only the detailed-report clock</td><td>Act 10</td><td>Pre-filled</td></tr>
+    <tr><td class="num">28</td><td>Download the Board detailed report with delivery evidence</td><td>Act 10 / Act 12</td><td>Pre-filled</td></tr>
+    <tr><td class="num">29</td><td>Withdrawal erasure task deferred by the one-year floor</td><td>Act 8</td><td>Pre-filled</td></tr>
+    <tr><td class="num">30</td><td>Pre-erasure notice; the person logs in; the task cancels</td><td>—</td><td>See note below</td></tr>
+    <tr><td class="num">31</td><td>Mark SDF; cycles, algorithm register, localisation gaps</td><td>Ask-me screen</td><td>Pre-filled</td></tr>
+    <tr><td class="num">32</td><td>Government request with non-disclosure, suppressed but audited</td><td>Act 11</td><td>Pre-filled</td></tr>
+    <tr><td class="num">33</td><td>Verify today's audit hash chain</td><td>Act 12</td><td>Live</td></tr>
+    <tr><td class="num">34</td><td>Download the evidence file and the full evidence pack</td><td>Act 12</td><td>Live</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="block note">
+  <span class="tag">Step 30, honestly</span>
+  <p>Step 30 depends on a scheduled background job reaching a pre-erasure notice and then a login cancelling it. That timing cannot be guaranteed inside a twenty-minute window, so it is not on the demo path. If asked, say so plainly — the mechanism is on the Retention page and the cancellation behaviour is covered in the project's evaluation record. Claiming it live and having it not fire is worse than not claiming it.</p>
+</div>
+
+<h3>Two extra screens worth knowing about</h3>
+<p>Neither is in the twelve acts, both are one click away if someone asks:</p>
+<ul>
+  <li><strong>SDF</strong> (left menu) — Acme is marked a Significant Data Fiduciary, so this page shows the twelve-month assessment and audit cycles, the register of algorithms used on personal data with their risk reviews, and the data-localisation gaps. That is spec step 31.</li>
+  <li><strong>Registers</strong> (left menu) — the processors, sharing activities, cross-border transfers, retention policies and security measures behind everything else. That is spec step 5, and it is where the "who has my data" answer in Act 6 comes from.</li>
+</ul>
+</section>
+
+<!-- ================================================================ -->
+<section id="appendix-b">
+<h2>Appendix B · Every login</h2>
+<p class="lede">Every account below uses the same password: <code>Password123!</code></p>
+
+<h3>Staff — sign in at <code>http://localhost:5173/login</code></h3>
+<div class="creds">
+  <div class="cred"><div class="who">Acme Admin</div><div class="role">Administrator · use this one</div><div class="kv">admin@acmeretail.demo<br>Password123!</div></div>
+  <div class="cred"><div class="who">Acme DPO</div><div class="role">Data Protection Officer · approves what the admin drafted</div><div class="kv">dpo@acmeretail.demo<br>Password123!</div></div>
+  <div class="cred"><div class="who">Acme Employee</div><div class="role">Employee · handles requests, sees far less</div><div class="kv">employee@acmeretail.demo<br>Password123!</div></div>
+  <div class="cred"><div class="who">Compliance Manager</div><div class="role">Compliance Manager</div><div class="kv">compliance@acmeretail.demo<br>Password123!</div></div>
+  <div class="cred"><div class="who">Acme Auditor</div><div class="role">Auditor · read-only</div><div class="kv">auditor@acmeretail.demo<br>Password123!</div></div>
+</div>
+
+<h3>Members of the public — sign in at <code>http://localhost:5173/me/login</code></h3>
+<div class="creds">
+  <div class="cred"><div class="who">Aman Sharma</div><div class="role">The main character. Raised both requests; affected by the breach; named in the Government request.</div><div class="kv">aman.sharma@gmail.com<br>Password123!</div></div>
+  <div class="cred"><div class="who">Raj Patel</div><div class="role">Granted marketing consent from his own portal.</div><div class="kv">raj.patel@gmail.com<br>Password123!</div></div>
+  <div class="cred"><div class="who">Neha Rao</div><div class="role">Granted consent, then withdrew it. Her withdrawal made the erasure task.</div><div class="kv">neha.rao@example.com<br>Password123!</div></div>
+  <div class="cred"><div class="who">Sara Khan</div><div class="role">Not affected by the breach — use her to show the absence.</div><div class="kv">sara.khan@example.com<br>Password123!</div></div>
+  <div class="cred"><div class="who">Vikram Nair</div><div class="role">Deliberately one of an unmerged pair.</div><div class="kv">vikram.n@gmail.com<br>Password123!</div></div>
+</div>
+
+<div class="block note">
+  <span class="tag">If you have seen an older document</span>
+  <p>Some earlier notes mention <code>aman@example.demo</code>. <strong>That account does not exist.</strong> The real one is <code>aman.sharma@gmail.com</code>.</p>
+</div>
+
+<h3>Addresses</h3>
+<div class="scroll">
+<table>
+  <thead><tr><th>What</th><th>Address</th></tr></thead>
+  <tbody>
+    <tr><td>The platform website</td><td><code>http://localhost:5173</code></td></tr>
+    <tr><td>The public portal</td><td><code>http://localhost:5173/me/login</code></td></tr>
+    <tr><td>Database browser (button 3)</td><td><code>http://localhost:5555</code></td></tr>
+    <tr><td>Mail catcher — every email the demo sends</td><td><code>http://localhost:8025</code></td></tr>
+    <tr><td>API documentation, if a technical evaluator asks</td><td><code>http://localhost:4000/api/docs</code></td></tr>
+  </tbody>
+</table>
+</div>
+<p>The mail catcher is worth remembering. If anyone doubts that a message really went out, open <code>localhost:8025</code> and there it is — the consent requests, the breach notices, all of them.</p>
+</section>
+
+<!-- ================================================================ -->
+<section id="appendix-c">
+<h2>Appendix C · Rebuilding from zero</h2>
+<p class="lede">Button 9 destroys everything and builds it again from the four source systems. You do not need it for a normal demo — but it is the most convincing thing in the box, so it is worth knowing when to use it.</p>
+
+<h3>What it actually does</h3>
+<p>It asks you to confirm, then works through nine steps, narrating each one:</p>
+<ol>
+  <li>Stops the running app.</li>
+  <li>Throws the database away and rebuilds it from the project's own migrations.</li>
+  <li>Reseeds the four demo source systems with their fixed dataset.</li>
+  <li>Rebuilds and restarts everything.</li>
+  <li>Connects all four systems through the real API, maps the fields, and synchronises them one at a time.</li>
+  <li>Completes the compliance seed — notices and portal accounts.</li>
+  <li>Records the one governance decision the accuracy dashboard needs from a human.</li>
+  <li>Prints the numbers it actually observed.</li>
+  <li>Fills in the demo data: the notices, requests, consents, guardian, campaigns, breach, SDF declaration and Government request.</li>
+</ol>
+<p>Nothing in there is a shortcut. Every artifact is created through the same API the website uses, and if the platform would refuse a human doing it by hand, it refuses the script too.</p>
+
+<h3>Which of the two to do</h3>
+<div class="cards">
+  <div class="card">
+    <h4>The night before — recommended</h4>
+    <p>Press 9 the evening before, let it finish, check the numbers, then press 6. On the day you press 1 and you are ready in two minutes. This is the default and it is what this runbook assumes.</p>
+  </div>
+  <div class="card">
+    <h4>Live, as the opening act</h4>
+    <p>Genuinely impressive — they watch 500 rows become 327 people from an empty database. But you are standing there for twelve minutes. Only do this if you have the time and the room is patient.</p>
+  </div>
+</div>
+
+<h3>How to tell it worked</h3>
+<p>When it finishes, step 8 prints the numbers. They should read:</p>
+<div class="big">
+  <div><div class="v">500</div><div class="k">Raw records</div></div>
+  <div><div class="v">327</div><div class="k">Principals</div></div>
+  <div><div class="v">4</div><div class="k">Pending review</div></div>
+  <div><div class="v">12</div><div class="k">Conflicts</div></div>
+  <div><div class="v">6</div><div class="k">Under-18</div></div>
+</div>
+<p>Then step 9 prints a checklist of everything it staged, and finally it signs in to the public portal for real, to prove that door opens. <strong>If any line in that checklist says <code>[FAILED]</code>, a screen in the demo will be empty.</strong> Run button 9 again before you rely on it.</p>
+
+<div class="block note">
+  <span class="tag">One known wobble, stated plainly</span>
+  <p>The principal count has occasionally come out as 328 rather than 327 across resets. The reset script prints what it actually found rather than what it hoped for, and warns about this. If you see 328, the demo still works — but say the number on the screen, not the number in this document.</p>
+</div>
+</section>
+
+<!-- ================================================================ -->
+<section id="appendix-d">
+<h2>Appendix D · If something looks wrong</h2>
+<p class="lede">The demo is staged so this should not happen. If it does, almost everything is one button.</p>
+
+<div class="scroll">
+<table>
+  <thead><tr><th>What you see</th><th>What to do</th></tr></thead>
+  <tbody>
+    <tr><td>The website will not load at all</td><td>Wait 20 seconds and refresh once. Still nothing: <span class="btn"><span class="n">5</span> Demo Status</span> to see what is down, then <span class="btn"><span class="n">1</span> Start Privacy Demo</span>.</td></tr>
+    <tr><td>A page is blank or spinning</td><td>Refresh the page. The website reloads instantly; only the first start is slow.</td></tr>
+    <tr><td>Sign-in says the details are wrong</td><td>Check the front door. Staff go to <code>/login</code>, members of the public to <code>/me/login</code>. The passwords are all <code>Password123!</code> — the exclamation mark is part of it.</td></tr>
+    <tr><td>A screen that should have data is empty</td><td>Something did not stage. Finish the demo without it, then run <span class="btn danger"><span class="n">9</span> Reset</span> afterwards.</td></tr>
+    <tr><td>The startup window shows an error</td><td>It stays open on purpose and names a log folder. Close it, run <span class="btn"><span class="n">6</span> Stop</span>, then <span class="btn"><span class="n">1</span> Start</span> again.</td></tr>
+    <tr><td>A button flashes and disappears</td><td>Right-click it once, choose <strong>Allow Launching</strong>.</td></tr>
+    <tr><td>The database browser will not open</td><td>Only works while the demo is running. Press <span class="btn"><span class="n">1</span> Start</span> first.</td></tr>
+    <tr><td>Numbers differ from this document</td><td>Say what is on the screen. The reset prints observed values, never expected ones, and so should you.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>The one rule</h3>
+<p><strong>Never press button 9 during a demo.</strong> It destroys everything and takes twelve minutes. Every other button is safe at any time.</p>
+
+<h3>If something goes wrong mid-sentence</h3>
+<p>Say what happened and move on. This is compliance software: an audience that has just watched you explain that the platform refuses to guess, refuses to send an incomplete breach notice, and refuses to let a company quietly edit a published notice, will think considerably more of you for saying "that screen has not loaded, let me come back to it" than for improvising. The whole argument of the demo is that honest software beats confident software. Be the same.</p>
+</section>
+
+<div class="footer">
+  Acme Retail Pvt Ltd · DPDP compliance platform · demo runbook<br>
+  Screenshots in <code>./images/</code>. This file is plain HTML — edit it in any text editor.
+</div>
+
+</main>
+</div>
+</body>
+</html>

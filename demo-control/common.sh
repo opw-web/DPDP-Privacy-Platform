@@ -34,6 +34,13 @@ BACKEND_URL="http://localhost:4000"
 FRONTEND_URL="http://localhost:5173"
 DEMO_URL="http://localhost:5001"
 MAILHOG_URL="http://localhost:8025"
+# Prisma Studio -- the table browser behind the "Open Database" button.
+# Not a service the app needs; started on demand, stopped by stop.sh.
+STUDIO_PORT="5555"
+STUDIO_URL="http://localhost:5555"
+
+# The demo runbook, opened by the "Demo Runbook" button.
+RUNBOOK_FILE="$REPO_ROOT/docs/demo-runbook/RUNBOOK.html"
 
 ADMIN_EMAIL="admin@acmeretail.demo"
 ADMIN_PASSWORD="Password123!"
@@ -118,6 +125,7 @@ wait_for_http() {
 backend_healthy()  { [ "$(http_code "$BACKEND_URL/api/health")" = "200" ]; }
 frontend_healthy() { [ "$(http_code "$FRONTEND_URL")" = "200" ]; }
 demo_healthy()     { [ "$(http_code "$DEMO_URL/health")" = "200" ]; }
+studio_healthy()   { [ "$(http_code "$STUDIO_URL")" = "200" ]; }
 
 # ---------------------------------------------------------------------
 # Process management by (pattern, expected cwd) -- NOT by port alone,
@@ -271,6 +279,30 @@ ensure_frontend_up() {
     ok "Platform website is ready."
   else
     warn "The platform website did not come up within 60 seconds. Check $LOG_DIR/frontend.log"
+    return 1
+  fi
+}
+
+# Prisma Studio: a read/write table browser for the demo database, shipped
+# with the `prisma` dependency the backend already has. Nothing to install.
+# --browser none because we open it ourselves, after the health check --
+# otherwise Studio races the browser and opens a tab on a dead port.
+ensure_studio_up() {
+  if studio_healthy; then
+    ok "Database browser is already running."
+    return 0
+  fi
+  if fuser "$STUDIO_PORT/tcp" >/dev/null 2>&1 && ! studio_healthy; then
+    free_port_if_stale "$STUDIO_PORT" "database browser"
+  fi
+  say "Starting the database browser..."
+  ( cd "$BACKEND_DIR" && setsid npx prisma studio --port "$STUDIO_PORT" --browser none \
+      >>"$LOG_DIR/studio.log" 2>&1 </dev/null & )
+  say "Waiting for the database browser to come up (about 15 seconds)..."
+  if wait_for_http "$STUDIO_URL" "the database browser" 60; then
+    ok "Database browser is ready."
+  else
+    warn "The database browser did not come up within 60 seconds. Check $LOG_DIR/studio.log"
     return 1
   fi
 }

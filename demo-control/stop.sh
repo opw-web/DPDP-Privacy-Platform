@@ -17,6 +17,7 @@ step "Application processes"
 stop_by_cwd "dist/main.js"   "$BACKEND_DIR"  "the backend API"
 stop_by_cwd "vite"           "$FRONTEND_DIR" "the platform website"
 stop_by_cwd "dist/server.js" "$DEMO_DIR"     "the demo company server"
+stop_by_cwd "prisma studio" "$BACKEND_DIR"  "the database browser"
 
 step "Database, cache and mail catcher"
 say "Stopping the database, cache and mail catcher (Docker)..."

@@ -2,31 +2,50 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Privacy Demo — How to use it</title>
+<title>Privacy Demo — the seven buttons</title>
 <style>
-  body { font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 640px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #1a1a1a; background: #fafafa; }
+  body { font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 680px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #1a1a1a; background: #fafafa; }
   h1 { font-size: 1.6em; }
-  .card { background: #fff; border: 1px solid #e0e0e0; border-radius: 10px; padding: 16px 20px; margin: 14px 0; }
+  .card { background: #fff; border: 1px solid #e0e0e0; border-radius: 10px; padding: 14px 20px; margin: 12px 0; }
   .card b { font-size: 1.05em; }
+  .card .n { display:inline-block; min-width:1.4em; text-align:center; background:#1a1a1a; color:#fff; border-radius:5px; padding:0 5px; margin-right:6px; font-size:.9em; }
   code { background: #eee; padding: 2px 6px; border-radius: 4px; }
   .warn { color: #8a4b00; background: #fff4e5; border: 1px solid #f0c98a; border-radius: 8px; padding: 10px 14px; }
+  .lead { background:#eaf3f9; border:1px solid #b7d5e7; border-radius:8px; padding:12px 16px; }
 </style>
 </head>
 <body>
-<h1>Privacy Demo — the four buttons</h1>
+<h1>Privacy Demo — the seven buttons</h1>
 
-<p>These four icons are on your Desktop and in your applications menu. Double-click one, a black window will pop up and tell you what it's doing — just wait for it to finish, then close it (or press Enter when it says you can).</p>
+<p class="lead"><b>Looking for the full walkthrough?</b> Double-click <b>2 - Demo Runbook</b>, or open
+<code>docs/demo-runbook/RUNBOOK.html</code>. It covers everything from switching the laptop on to
+shutting it down, with screenshots and a line to say at each step. This page is only the button list.</p>
 
-<div class="card"><b>▶ Start Privacy Demo</b><br>Turns everything on and opens the demo in your web browser when it's ready. Safe to click even if it's already running.</div>
+<p>These seven icons are on your Desktop and in your applications menu, numbered in the order you use
+them. Double-click one, a black window pops up and tells you what it is doing in plain English — wait
+for it to finish, then press Enter to close it.</p>
 
-<div class="card"><b>⏹ Stop Privacy Demo</b><br>Turns everything off cleanly. Your demo data is kept, so Start will bring it back the way it was.</div>
+<div class="card"><b><span class="n">1</span> Start Privacy Demo</b><br>Turns everything on and opens the demo in your web browser when it is ready. Safe to click even if it is already running. About two minutes.</div>
 
-<div class="card"><b>⟳ Reset Demo to Fresh State</b><br>Wipes the demo data and rebuilds it from scratch, ready for a fresh walkthrough. This asks you to confirm before it deletes anything — it takes a few minutes, so start it before you need it.</div>
+<div class="card"><b><span class="n">2</span> Demo Runbook</b><br>Opens the full step-by-step demo guide in your browser. Works whether or not the demo is running.</div>
 
-<div class="card"><b>ℹ Demo Status</b><br>Shows what's on and what's off, and the web addresses for everything, without changing anything.</div>
+<div class="card"><b><span class="n">3</span> Open Database</b><br>Opens a table browser so you can look inside the database itself — click a table name, see its rows. No SQL, no terminal.</div>
 
-<p class="warn">Sign in to the demo with <code>admin@acmeretail.demo</code> / <code>Password123!</code>.</p>
+<div class="card"><b><span class="n">4</span> Show Demo Proof</b><br>Counts the live demo data and shows the numbers in a window you can point at, next to the numbers that were expected.</div>
 
-<p>Nothing here requires typing a command — if a button ever fails, the window will tell you in plain English what happened before you close it.</p>
+<div class="card"><b><span class="n">5</span> Demo Status</b><br>Shows what is on and what is off, and the web address for each part, without changing anything.</div>
+
+<div class="card"><b><span class="n">6</span> Stop Privacy Demo</b><br>Turns everything off cleanly. Your demo data is kept, so Start brings it back exactly as you left it.</div>
+
+<div class="card"><b><span class="n">9</span> Reset Demo to Fresh State</b><br><b>Destroys all demo data</b> and rebuilds it from scratch, including all the notices, consents, requests and the breach the demo needs. It asks you to confirm first. Takes about twelve minutes — never run it during a demo.</div>
+
+<p class="warn">Sign in to the demo with <code>admin@acmeretail.demo</code> / <code>Password123!</code>.
+Members of the public sign in at <code>/me/login</code> — try <code>aman.sharma@gmail.com</code>, same password.</p>
+
+<p>If the buttons are not on your Desktop, or the folder has moved, run
+<code>demo-control/install-launchers.sh</code> once to put them there.</p>
+
+<p>Nothing here requires typing a command — if a button ever fails, the window tells you in plain
+English what happened before you close it.</p>
 </body>
 </html>
