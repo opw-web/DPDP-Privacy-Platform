@@ -8,6 +8,7 @@ import { Prisma } from "@prisma/client";
 import { PrismaService } from "../../common/prisma/prisma.service";
 import { AuditService } from "../../common/audit/audit.service";
 import { DataSourcesService } from "./data-sources.service";
+import { AssemblyService } from "../identity/assembly.service";
 import { ReplaceMappingsDto } from "./dto/replace-mappings.dto";
 import { computeMappingWarnings } from "./mapping-warnings";
 import type { MappingWarning } from "./mapping-warnings";
@@ -39,6 +40,7 @@ export const SOURCE_FIELD_MAPPING_PUBLIC_SELECT = {
   dataCategory: true,
   containsPersonalData: true,
   isVerifiedCustomerId: true,
+  comparisonPolicy: true,
 } satisfies Prisma.SourceFieldMappingSelect;
 
 export type PublicSourceFieldMapping = Prisma.SourceFieldMappingGetPayload<{
@@ -70,6 +72,7 @@ export class MappingsService {
     private readonly prisma: PrismaService,
     private readonly auditService: AuditService,
     private readonly dataSourcesService: DataSourcesService,
+    private readonly assemblyService: AssemblyService,
   ) {}
 
   /**
@@ -145,6 +148,7 @@ export class MappingsService {
               dataCategory: mapping.dataCategory ?? "OTHER",
               containsPersonalData: mapping.containsPersonalData ?? true,
               isVerifiedCustomerId: mapping.isVerifiedCustomerId ?? false,
+              comparisonPolicy: mapping.comparisonPolicy ?? "NOT_COMPARABLE",
             } as never,
             select: SOURCE_FIELD_MAPPING_PUBLIC_SELECT,
           });
@@ -190,8 +194,31 @@ export class MappingsService {
         metadata: {
           mappingCount: created.length,
           sourceFields: created.map((m) => m.sourceField),
+          comparisonPolicies: created.map((m) => ({
+            sourceField: m.sourceField,
+            comparisonPolicy: m.comparisonPolicy,
+          })),
         },
       });
+
+      // The durable GO-03 eligibility signal is derived from mappings. A
+      // replacement therefore takes effect immediately for every profile that
+      // has an ACTIVE record from this source; waiting for a later sync would
+      // make the dashboard stale after an operator's reviewed policy change.
+      const affectedPrincipals = await tx.dataPrincipal.findMany({
+        where: {
+          links: {
+            some: {
+              status: "ACTIVE",
+              normalizedRecord: { sourceRecord: { dataSourceId } },
+            },
+          },
+        },
+        select: { id: true },
+      });
+      for (const principal of affectedPrincipals) {
+        await this.assemblyService.rebuild(tx, principal.id);
+      }
 
       const warnings = await computeMappingWarnings(tx, dataSourceId, created);
 

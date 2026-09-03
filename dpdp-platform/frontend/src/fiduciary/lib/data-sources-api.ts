@@ -110,6 +110,15 @@ export const DATA_CATEGORY_VALUES = [
 ] as const;
 export type DataCategory = (typeof DATA_CATEGORY_VALUES)[number];
 
+/** Mirrors Prisma's MappingComparisonPolicy. */
+export const MAPPING_COMPARISON_POLICY_VALUES = [
+  "ACCURACY_COMPARABLE",
+  "MULTI_VALUE",
+  "NOT_COMPARABLE",
+] as const;
+export type MappingComparisonPolicy =
+  (typeof MAPPING_COMPARISON_POLICY_VALUES)[number];
+
 export interface PublicDataSource {
   id: string;
   name: string;
@@ -166,6 +175,7 @@ export interface PublicSourceFieldMapping {
   dataCategory: DataCategory;
   containsPersonalData: boolean;
   isVerifiedCustomerId: boolean;
+  comparisonPolicy: MappingComparisonPolicy;
 }
 
 export interface ReplaceMappingsResult {

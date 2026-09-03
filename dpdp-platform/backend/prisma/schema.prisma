@@ -122,6 +122,14 @@ enum DataCategory {
   OTHER
 }
 
+/// A reviewed governance declaration for comparing values from source systems.
+/// Canonical names alone never establish that two source concepts are comparable.
+enum MappingComparisonPolicy {
+  ACCURACY_COMPARABLE
+  MULTI_VALUE
+  NOT_COMPARABLE
+}
+
 enum IdentifierType {
   EMAIL
   PHONE
@@ -503,6 +511,7 @@ model SourceFieldMapping {
   dataCategory         DataCategory   @default(OTHER)
   containsPersonalData Boolean        @default(true)
   isVerifiedCustomerId Boolean        @default(false) // gate for the EXACT match rule
+  comparisonPolicy     MappingComparisonPolicy @default(NOT_COMPARABLE)
   dataSource           DataSource     @relation(fields: [dataSourceId], references: [id], onDelete: Cascade)
 
   @@unique([dataSourceId, sourceField])
@@ -786,12 +795,14 @@ model PrincipalDataField {
   dataCategory    DataCategory
   sourceIds       String[] // contributing dataSourceIds
   isPrimary       Boolean        @default(false)
-  conflict        Boolean        @default(false) // GO-03: accuracy/consistency signal
+  conflict        Boolean        @default(false) // profile variance: more than one observed value
+  accuracyConflictEligible Boolean @default(false) // durable mapping-governed GO-03 signal
   updatedAt       DateTime       @updatedAt @db.Timestamptz(6)
   dataPrincipal   DataPrincipal  @relation(fields: [dataPrincipalId], references: [id], onDelete: Cascade)
 
   @@unique([dataPrincipalId, canonicalField, value])
   @@index([organizationId, dataPrincipalId])
+  @@index([organizationId, accuracyConflictEligible])
 }
 
 model MatchCandidate {

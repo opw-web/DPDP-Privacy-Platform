@@ -9,7 +9,11 @@ import {
 } from "class-validator";
 import { Type } from "class-transformer";
 import { ApiProperty, ApiPropertyOptional } from "@nestjs/swagger";
-import { CanonicalField, DataCategory } from "@prisma/client";
+import {
+  CanonicalField,
+  DataCategory,
+  MappingComparisonPolicy,
+} from "@prisma/client";
 
 /**
  * One row of the full-set replacement `PUT /api/data-sources/:id/mappings`
@@ -64,6 +68,18 @@ export class SourceFieldMappingDto {
   @IsOptional()
   @IsBoolean()
   isVerifiedCustomerId?: boolean;
+
+  @ApiPropertyOptional({
+    enum: MappingComparisonPolicy,
+    default: "NOT_COMPARABLE",
+    description:
+      "Whether this field is comparable with values from other sources for " +
+      "the GO-03 accuracy dashboard. The conservative default does not " +
+      "classify a field as comparable.",
+  })
+  @IsOptional()
+  @IsEnum(MappingComparisonPolicy)
+  comparisonPolicy?: MappingComparisonPolicy;
 }
 
 /**

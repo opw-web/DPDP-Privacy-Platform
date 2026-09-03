@@ -1,5 +1,9 @@
 import { Injectable, NotFoundException } from "@nestjs/common";
-import type { CanonicalField, DataCategory } from "@prisma/client";
+import type {
+  CanonicalField,
+  DataCategory,
+  MappingComparisonPolicy,
+} from "@prisma/client";
 import type { ScopedTransactionClient } from "../../common/prisma/scoped-transaction-client";
 
 type AssemblyMapping = {
@@ -7,6 +11,7 @@ type AssemblyMapping = {
   sourceField: string;
   canonicalField: CanonicalField;
   dataCategory: DataCategory;
+  comparisonPolicy: MappingComparisonPolicy;
 };
 
 type AssemblyRecord = {
@@ -41,6 +46,7 @@ type Contribution = {
   lastSeenAt: Date;
   normalizedRecordId: string;
   sourceRecordId: string;
+  comparisonPolicy: MappingComparisonPolicy;
 };
 
 export type AssembledField = {
@@ -50,6 +56,7 @@ export type AssembledField = {
   sourceIds: string[];
   isPrimary: boolean;
   conflict: boolean;
+  accuracyConflictEligible: boolean;
 };
 
 const SCALAR_COLUMNS: ReadonlyArray<
@@ -188,6 +195,7 @@ export function assembleFields(
         lastSeenAt: source.lastSeenAt,
         normalizedRecordId: record.id,
         sourceRecordId: source.id,
+        comparisonPolicy: mapping.comparisonPolicy,
       });
     };
 
@@ -227,6 +235,15 @@ export function assembleFields(
       byValue.set(contribution.value, values);
     }
     const conflict = byValue.size > 1;
+    // Profile variance stays visible regardless of policy. It becomes a
+    // GO-03 accuracy finding only after every contributing mapping explicitly
+    // declares that it represents the same accuracy-comparable fact.
+    const accuracyConflictEligible =
+      conflict &&
+      fieldContributions.every(
+        (contribution) =>
+          contribution.comparisonPolicy === "ACCURACY_COMPARABLE",
+      );
     for (const [value, valueContributions] of byValue) {
       const newestForValue = [...valueContributions].sort(compareNewest)[0];
       if (!newestForValue) {
@@ -247,6 +264,7 @@ export function assembleFields(
         sourceIds,
         isPrimary: value === primary.value,
         conflict,
+        accuracyConflictEligible,
       });
     }
   }
@@ -294,6 +312,9 @@ export function displayNameFrom(
       lastSeenAt: source.lastSeenAt,
       normalizedRecordId: record.id,
       sourceRecordId: source.id,
+      // Display-name selection never produces a persisted field, but the
+      // ordering helper uses Contribution's complete shape.
+      comparisonPolicy: "NOT_COMPARABLE" as MappingComparisonPolicy,
     };
     const add = (priority: number, value: string | null): void => {
       const normalized = normalizedValue(value);
@@ -385,6 +406,7 @@ export class AssemblyService {
               sourceField: true,
               canonicalField: true,
               dataCategory: true,
+              comparisonPolicy: true,
             },
           });
     const sourceById = new Map(sources.map((source) => [source.id, source]));

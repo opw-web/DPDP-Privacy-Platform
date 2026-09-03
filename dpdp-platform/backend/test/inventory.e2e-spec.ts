@@ -206,6 +206,7 @@ describe("Inventory API (e2e)", () => {
         dataCategory: "CONTACT",
         sourceIds: [source.id],
         conflict: true,
+        accuracyConflictEligible: true,
       },
     });
 
@@ -487,7 +488,10 @@ describe("Inventory API (e2e)", () => {
           where: { ...orgWhere, status: "PENDING" },
         }),
         prisma.dataPrincipal.count({
-          where: { ...orgWhere, fields: { some: { conflict: true } } },
+          where: {
+            ...orgWhere,
+            fields: { some: { accuracyConflictEligible: true } },
+          },
         }),
         prisma.dataPrincipal.count({
           where: { ...orgWhere, ageStatus: "UNKNOWN" },
@@ -543,14 +547,7 @@ describe("Inventory API (e2e)", () => {
       expect(response.status).toBe(403);
     });
 
-    it("I-5 (final whole-branch review): conflictCount excludes an EXTERNAL_ID-only conflict but counts a real personal-data conflict, per field not per principal", async () => {
-      // Pins exactly what the review's fix decided should and should not
-      // count: EXTERNAL_ID is a per-system row identifier, guaranteed to
-      // differ across any two systems by construction -- not the "same
-      // fact, inconsistent value" GO-03 exists to catch -- while CITY/
-      // EMAIL genuinely can be. `assembly.service.ts`'s `conflict` flag
-      // itself is untouched; only the dashboard's aggregate excludes
-      // `MaskingService.PASS_THROUGH_FIELDS`.
+    it("counts only durable mapping-eligible GO-03 conflicts, not profile variance", async () => {
       const organizationId = randomUUID();
       organizationIds.push(organizationId);
       await prisma.organization.create({
@@ -572,8 +569,9 @@ describe("Inventory API (e2e)", () => {
           canonicalField: "EXTERNAL_ID",
           value: "100",
           dataCategory: "IDENTITY",
-          sourceIds: [randomUUID()],
-          conflict: true,
+        sourceIds: [randomUUID()],
+        conflict: true,
+        accuracyConflictEligible: false,
         },
       });
 
@@ -592,41 +590,44 @@ describe("Inventory API (e2e)", () => {
           canonicalField: "CITY",
           value: "Pune",
           dataCategory: "LOCATION",
-          sourceIds: [randomUUID()],
-          conflict: true,
+        sourceIds: [randomUUID()],
+        conflict: true,
+        accuracyConflictEligible: true,
         },
       });
 
-      // Principal C: BOTH an EXTERNAL_ID conflict AND a real EMAIL
-      // conflict -- proves the exclusion is per FIELD, not "skip the
-      // whole principal if it has any pass-through conflict at all".
-      const mixed = await prisma.dataPrincipal.create({
+      // Principal C: two genuine profile variances that are deliberately
+      // not GO-03 eligible: personal/work email can be MULTI_VALUE, and
+      // Sales lifetime value vs storefront total is NOT_COMPARABLE.
+      const nonComparableVariance = await prisma.dataPrincipal.create({
         data: {
           organizationId,
           reference: `DP-${randomUUID()}`,
-          displayName: "Mixed",
+          displayName: "Multi-value and semantic mismatch",
         },
       });
       await prisma.principalDataField.create({
         data: {
           organizationId,
-          dataPrincipalId: mixed.id,
-          canonicalField: "EXTERNAL_ID",
-          value: "200",
-          dataCategory: "IDENTITY",
-          sourceIds: [randomUUID()],
-          conflict: true,
+        dataPrincipalId: nonComparableVariance.id,
+        canonicalField: "EMAIL",
+        value: "personal@example.test",
+        dataCategory: "CONTACT",
+        sourceIds: [randomUUID()],
+        conflict: true,
+        accuracyConflictEligible: false,
         },
       });
       await prisma.principalDataField.create({
         data: {
           organizationId,
-          dataPrincipalId: mixed.id,
-          canonicalField: "EMAIL",
-          value: "mixed@example.test",
-          dataCategory: "CONTACT",
-          sourceIds: [randomUUID()],
-          conflict: true,
+        dataPrincipalId: nonComparableVariance.id,
+        canonicalField: "PURCHASE_TOTAL",
+        value: "12000",
+        dataCategory: "FINANCIAL",
+        sourceIds: [randomUUID()],
+        conflict: true,
+        accuracyConflictEligible: false,
         },
       });
 
@@ -640,8 +641,9 @@ describe("Inventory API (e2e)", () => {
         .get("/api/inventory/summary")
         .set(...authenticated(viewer));
       expect(summaryResponse.status).toBe(200);
-      // Only cityConflict and mixed count; externalIdOnly does not.
-      expect(summaryResponse.body.conflictCount).toBe(2);
+      // Only the reviewed comparable CITY variance counts. All profile
+      // variance remains stored; the dashboard is deliberately narrower.
+      expect(summaryResponse.body.conflictCount).toBe(1);
 
       const gapsResponse = await request(app.getHttpServer())
         .get("/api/inventory/gaps")
@@ -650,7 +652,7 @@ describe("Inventory API (e2e)", () => {
       const go03 = (
         gapsResponse.body as Array<{ code: string; count: number }>
       ).find((gap) => gap.code === "GO-03");
-      expect(go03?.count).toBe(2);
+      expect(go03?.count).toBe(1);
     });
   });
 

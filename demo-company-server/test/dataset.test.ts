@@ -234,7 +234,7 @@ test('roughly 25 records with no phone (band: 22-28)', () => {
   assert.ok(total >= 22 && total <= 28, `expected 22-28 missing phones, got ${total}`);
 });
 
-test('roughly 12 conflicting-city people (band: 10-14)', () => {
+test('exactly 12 conflicting-city people', () => {
   const records = loadSimRecordsFromDb();
   const sim = simulateMatching(records);
 
@@ -250,7 +250,50 @@ test('roughly 12 conflicting-city people (band: 10-14)', () => {
     const cities = new Set(recs.map((r) => r.city).filter(Boolean));
     if (cities.size > 1) conflictCount++;
   }
-  assert.ok(conflictCount >= 10 && conflictCount <= 14, `expected 10-14 conflicting-city people, got ${conflictCount}`);
+  assert.equal(conflictCount, 12, `expected exactly 12 conflicting-city people, got ${conflictCount}`);
+});
+
+test('Section 7 Step 6 deterministic four-source acceptance baseline is 500 / 327 / 4 / 12 / 2 Rahuls / 6 children', () => {
+  const records = loadSimRecordsFromDb();
+  const sim = simulateMatching(records);
+  assert.equal(records.length, 500);
+  assert.equal(sim.principals.length, 327);
+  assert.equal(sim.candidates.length, 4);
+
+  const rahul = records.filter((record: any) => record.name === 'Rahul Verma');
+  assert.equal(rahul.length, 2);
+  assert.equal(
+    new Set(rahul.map((record: any) => sim.recordToPrincipal.get(record.sourceId))).size,
+    2,
+    'the two same-named Rahuls must remain separate principals',
+  );
+
+  const byPrincipal = new Map<number, any[]>();
+  for (const record of records) {
+    const principalId = sim.recordToPrincipal.get(record.sourceId);
+    if (principalId !== undefined) {
+      byPrincipal.set(principalId, [...(byPrincipal.get(principalId) ?? []), record]);
+    }
+  }
+  const cityConflicts = [...byPrincipal.values()].filter((principalRecords) =>
+    new Set(principalRecords.map((record) => record.city).filter(Boolean)).size > 1,
+  ).length;
+  assert.equal(cityConflicts, 12);
+
+  const reference = new Date(DOB_REFERENCE_DATE);
+  const childRecords = records.filter((record: any) => {
+    if (!record.dob) return false;
+    const dob = new Date(record.dob);
+    let age = reference.getFullYear() - dob.getFullYear();
+    const month = reference.getMonth() - dob.getMonth();
+    if (month < 0 || (month === 0 && reference.getDate() < dob.getDate())) age--;
+    return age < 18;
+  });
+  assert.equal(
+    new Set(childRecords.map((record: any) => sim.recordToPrincipal.get(record.sourceId))).size,
+    6,
+    'six distinct principals must derive CHILD from the mapped e-commerce DOBs',
+  );
 });
 
 // ---------------------------------------------------------------------

@@ -813,11 +813,13 @@ describe("Field mappings and purpose attachment (e2e)", () => {
         sourceField: "email",
         canonicalField: "EMAIL",
         dataCategory: "CONTACT",
+        comparisonPolicy: "MULTI_VALUE",
       },
       {
         sourceField: "fullName",
         canonicalField: "FULL_NAME",
         dataCategory: "IDENTITY",
+        comparisonPolicy: "NOT_COMPARABLE",
       },
     ]);
     expect(putMappingsRes.status).toBe(200);
@@ -834,6 +836,21 @@ describe("Field mappings and purpose attachment (e2e)", () => {
     expect(sortByField(getMappingsRes.body.mappings)).toEqual(
       sortByField(putMappingsRes.body.mappings),
     );
+    const returnedMappings = getMappingsRes.body.mappings as Array<{
+      sourceField: string;
+      comparisonPolicy: string;
+    }>;
+    expect(
+      [...returnedMappings]
+        .sort((left, right) => left.sourceField.localeCompare(right.sourceField))
+        .map((mapping) => [
+          mapping.sourceField,
+          mapping.comparisonPolicy,
+        ]),
+    ).toEqual([
+      ["email", "MULTI_VALUE"],
+      ["fullName", "NOT_COMPARABLE"],
+    ]);
     // The SAME warning the write returned -- not a re-derived
     // approximation that happens to look similar.
     expect(getMappingsRes.body.warnings).toEqual(putMappingsRes.body.warnings);

@@ -11,11 +11,13 @@ import { CheckboxOption, SelectControl } from "../form-controls";
 import {
   CANONICAL_FIELD_VALUES,
   DATA_CATEGORY_VALUES,
+  MAPPING_COMPARISON_POLICY_VALUES,
   cacheMappingsResult,
   employeePut,
   type CanonicalField,
   type DataCategory,
   type MappingWarning,
+  type MappingComparisonPolicy,
   type PublicDataSourceField,
   type PublicSourceFieldMapping,
   type ReplaceMappingsResult,
@@ -29,6 +31,7 @@ const rowSchema = z
     dataCategory: z.union([z.enum(DATA_CATEGORY_VALUES), z.literal("")]),
     containsPersonalData: z.boolean(),
     isVerifiedCustomerId: z.boolean(),
+    comparisonPolicy: z.enum(MAPPING_COMPARISON_POLICY_VALUES),
   });
 
 const mappingFormSchema = z.object({ rows: z.array(rowSchema) }).superRefine((values, ctx) => {
@@ -81,6 +84,7 @@ function rowsFor(
       dataCategory: existing?.dataCategory ?? "",
       containsPersonalData: existing?.containsPersonalData ?? true,
       isVerifiedCustomerId: existing?.isVerifiedCustomerId ?? false,
+      comparisonPolicy: existing?.comparisonPolicy ?? "NOT_COMPARABLE",
     };
   });
 }
@@ -151,6 +155,7 @@ export function Step3Mapping({
             : (row.dataCategory as DataCategory),
         containsPersonalData: row.containsPersonalData,
         isVerifiedCustomerId: row.isVerifiedCustomerId,
+        comparisonPolicy: row.comparisonPolicy as MappingComparisonPolicy,
       }));
       const result = await employeePut<ReplaceMappingsResult>(
         `/data-sources/${dataSourceId}/mappings`,
@@ -187,8 +192,9 @@ export function Step3Mapping({
     <form className="space-y-4" onSubmit={onSubmit} noValidate>
       <p className="text-sm text-muted-foreground">
         Map each discovered field to a canonical field and data category, or mark it "Not carried
-        forward" to drop it. A field is not classified by default -- every row is an explicit
-        choice.
+        forward" to drop it. Review its comparison policy too: only values explicitly declared
+        accuracy-comparable across every linked source become GO-03 dashboard findings. "Not
+        comparable" is the safe default until you confirm the fields mean the same fact.
       </p>
 
       <div className="overflow-x-auto rounded-md border border-border">
@@ -201,6 +207,7 @@ export function Step3Mapping({
               <th className="px-3 py-2">Data category</th>
               <th className="px-3 py-2">Personal data</th>
               <th className="px-3 py-2">Verified customer ID</th>
+              <th className="px-3 py-2">Comparison policy</th>
             </tr>
           </thead>
           <tbody>
@@ -271,10 +278,21 @@ export function Step3Mapping({
                         {...register(`rows.${index}.isVerifiedCustomerId`)}
                       />
                     </td>
+                    <td className="px-3 py-2">
+                      <SelectControl
+                        aria-label={`Comparison policy for ${sourceField}`}
+                        disabled={isIgnored}
+                        {...register(`rows.${index}.comparisonPolicy`)}
+                      >
+                        <option value="NOT_COMPARABLE">Not comparable (safe default)</option>
+                        <option value="MULTI_VALUE">Multiple values are expected</option>
+                        <option value="ACCURACY_COMPARABLE">Accuracy-comparable same fact</option>
+                      </SelectControl>
+                    </td>
                   </tr>
                   {warning ? (
                     <tr>
-                      <td colSpan={6} className="px-3 pb-3">
+                      <td colSpan={7} className="px-3 pb-3">
                         <div
                           className="flex items-start gap-2 rounded-md border border-amber/40 bg-amber/10 p-2 text-xs text-amber-foreground"
                           role="note"

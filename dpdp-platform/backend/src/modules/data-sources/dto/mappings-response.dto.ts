@@ -1,5 +1,9 @@
 import { ApiProperty } from "@nestjs/swagger";
-import { CanonicalField, DataCategory } from "@prisma/client";
+import {
+  CanonicalField,
+  DataCategory,
+  MappingComparisonPolicy,
+} from "@prisma/client";
 import { MappingWarningResponseDto } from "./mapping-warning-response.dto";
 
 /** Swagger-only mirror of `PublicSourceFieldMapping` (`mappings.service.ts`). */
@@ -24,6 +28,9 @@ export class SourceFieldMappingResponseDto {
 
   @ApiProperty()
   isVerifiedCustomerId!: boolean;
+
+  @ApiProperty({ enum: MappingComparisonPolicy })
+  comparisonPolicy!: MappingComparisonPolicy;
 }
 
 /**

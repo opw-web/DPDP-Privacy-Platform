@@ -34,42 +34,49 @@ describe("profile assembly", () => {
       sourceField: "email",
       canonicalField: "EMAIL" as const,
       dataCategory: "CONTACT" as const,
+      comparisonPolicy: "MULTI_VALUE" as const,
     },
     {
       dataSourceId: "marketing",
       sourceField: "city",
       canonicalField: "CITY" as const,
       dataCategory: "LOCATION" as const,
+      comparisonPolicy: "ACCURACY_COMPARABLE" as const,
     },
     {
       dataSourceId: "sales",
       sourceField: "email",
       canonicalField: "EMAIL" as const,
       dataCategory: "CONTACT" as const,
+      comparisonPolicy: "MULTI_VALUE" as const,
     },
     {
       dataSourceId: "sales",
       sourceField: "city",
       canonicalField: "CITY" as const,
       dataCategory: "LOCATION" as const,
+      comparisonPolicy: "ACCURACY_COMPARABLE" as const,
     },
     {
       dataSourceId: "support",
       sourceField: "email",
       canonicalField: "EMAIL" as const,
       dataCategory: "CONTACT" as const,
+      comparisonPolicy: "MULTI_VALUE" as const,
     },
     {
       dataSourceId: "support",
       sourceField: "gender",
       canonicalField: "GENDER" as const,
       dataCategory: "DEMOGRAPHIC" as const,
+      comparisonPolicy: "NOT_COMPARABLE" as const,
     },
     {
       dataSourceId: "support",
       sourceField: "ignored",
       canonicalField: "IGNORE" as const,
       dataCategory: "OTHER" as const,
+      comparisonPolicy: "NOT_COMPARABLE" as const,
     },
   ];
 
@@ -137,6 +144,7 @@ describe("profile assembly", () => {
         sourceIds: ["sales"],
         isPrimary: true,
         conflict: true,
+        accuracyConflictEligible: true,
       },
       {
         canonicalField: "CITY",
@@ -145,6 +153,7 @@ describe("profile assembly", () => {
         sourceIds: ["marketing"],
         isPrimary: false,
         conflict: true,
+        accuracyConflictEligible: true,
       },
       {
         canonicalField: "EMAIL",
@@ -153,6 +162,7 @@ describe("profile assembly", () => {
         sourceIds: ["marketing", "sales", "support"],
         isPrimary: true,
         conflict: false,
+        accuracyConflictEligible: false,
       },
       {
         canonicalField: "GENDER",
@@ -161,6 +171,7 @@ describe("profile assembly", () => {
         sourceIds: ["support"],
         isPrimary: true,
         conflict: false,
+        accuracyConflictEligible: false,
       },
     ]);
     expect(fields.every((field) => field.sourceIds.length > 0)).toBe(true);
@@ -234,6 +245,7 @@ describe("profile assembly", () => {
         sourceIds: ["marketing", "sales"],
         isPrimary: true,
         conflict: false,
+        accuracyConflictEligible: false,
       },
     ]);
   });

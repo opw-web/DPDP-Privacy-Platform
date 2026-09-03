@@ -73,6 +73,7 @@ describe("Step3Mapping -- CN-02 data-minimisation warning rendering", () => {
             dataCategory: "CONTACT",
             containsPersonalData: true,
             isVerifiedCustomerId: false,
+            comparisonPolicy: "MULTI_VALUE",
           },
           {
             id: "m2",
@@ -81,6 +82,7 @@ describe("Step3Mapping -- CN-02 data-minimisation warning rendering", () => {
             dataCategory: "IDENTITY",
             containsPersonalData: true,
             isVerifiedCustomerId: false,
+            comparisonPolicy: "NOT_COMPARABLE",
           },
         ],
         warnings: [CATEGORY_WARNING],
@@ -91,6 +93,7 @@ describe("Step3Mapping -- CN-02 data-minimisation warning rendering", () => {
 
     await user.selectOptions(screen.getByLabelText(/canonical field for email/i), "EMAIL");
     await user.selectOptions(screen.getByLabelText(/data category for email/i), "CONTACT");
+    await user.selectOptions(screen.getByLabelText(/comparison policy for email/i), "MULTI_VALUE");
     await user.selectOptions(screen.getByLabelText(/canonical field for fullname/i), "FULL_NAME");
     await user.selectOptions(screen.getByLabelText(/data category for fullname/i), "IDENTITY");
     await user.click(screen.getByRole("button", { name: /save mappings/i }));
@@ -99,6 +102,39 @@ describe("Step3Mapping -- CN-02 data-minimisation warning rendering", () => {
     expect(warningNote).toHaveTextContent(/not declared as necessary/i);
     // Exactly one warning rendered -- the covered "email" field gets none.
     expect(screen.getAllByRole("note")).toHaveLength(1);
+  });
+
+  it("submits the reviewed comparison policy and defaults an unreviewed mapping to not comparable", async () => {
+    const fetchMock = vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      jsonResponse({ mappings: [], warnings: [] }),
+    );
+    const user = userEvent.setup();
+    renderStep3();
+
+    await user.selectOptions(screen.getByLabelText(/canonical field for email/i), "EMAIL");
+    await user.selectOptions(screen.getByLabelText(/data category for email/i), "CONTACT");
+    await user.selectOptions(screen.getByLabelText(/comparison policy for email/i), "MULTI_VALUE");
+    await user.selectOptions(screen.getByLabelText(/canonical field for fullname/i), "FULL_NAME");
+    await user.selectOptions(screen.getByLabelText(/data category for fullname/i), "IDENTITY");
+    await user.click(screen.getByRole("button", { name: /save mappings/i }));
+
+    await vi.waitFor(() => expect(fetchMock).toHaveBeenCalledTimes(1));
+    const requestInit = fetchMock.mock.calls[0]?.[1] as RequestInit;
+    const body = JSON.parse(String(requestInit.body)) as {
+      mappings: Array<{ sourceField: string; comparisonPolicy: string }>;
+    };
+    expect(body.mappings).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          sourceField: "email",
+          comparisonPolicy: "MULTI_VALUE",
+        }),
+        expect.objectContaining({
+          sourceField: "fullName",
+          comparisonPolicy: "NOT_COMPARABLE",
+        }),
+      ]),
+    );
   });
 
   it("renders a standing warning immediately on mount via initialWarnings -- CN-02 is a standing property, not only visible right after saving", () => {
