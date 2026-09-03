@@ -51,7 +51,7 @@ setup_node
 # 1/7 -- stop the app processes (containers are left running -- the
 # database step needs postgres up anyway).
 # -----------------------------------------------------------------
-step "1/7 -- Stopping the demo application"
+step "1/8 -- Stopping the demo application"
 stop_by_cwd "dist/main.js"   "$BACKEND_DIR"  "the backend API"
 stop_by_cwd "vite"           "$FRONTEND_DIR" "the platform website"
 stop_by_cwd "dist/server.js" "$DEMO_DIR"     "the demo company server"
@@ -59,7 +59,7 @@ stop_by_cwd "dist/server.js" "$DEMO_DIR"     "the demo company server"
 # -----------------------------------------------------------------
 # 2/7 -- drop and recreate the database via the supported Prisma path.
 # -----------------------------------------------------------------
-step "2/7 -- Rebuilding the database from scratch"
+step "2/8 -- Rebuilding the database from scratch"
 ensure_database_up || exit 1
 say "Dropping and recreating the database, then applying every migration"
 say "(this also reseeds the base demo organisation and its five employee"
@@ -74,7 +74,7 @@ fi
 # -----------------------------------------------------------------
 # 3/7 -- seed the demo company's own deterministic dataset.
 # -----------------------------------------------------------------
-step "3/7 -- Seeding Acme Retail's demo company data"
+step "3/8 -- Seeding Acme Retail's demo company data"
 say "Regenerating Acme Retail's four source systems with a fixed, repeatable dataset (seed 20260830)..."
 if ( cd "$DEMO_DIR" && npm run seed ) >>"$LOG_DIR/reset.log" 2>&1; then
   ok "Demo company data seeded."
@@ -86,7 +86,7 @@ fi
 # -----------------------------------------------------------------
 # 4/7 -- start everything back up.
 # -----------------------------------------------------------------
-step "4/7 -- Starting the demo services"
+step "4/8 -- Starting the demo services"
 say "Rebuilding the backend from the current checked-out code (not reusing"
 say "whatever was previously running) so the reset always exercises the"
 say "latest fixes, never a stale build..."
@@ -103,7 +103,7 @@ ensure_frontend_up || exit 1
 # -----------------------------------------------------------------
 # 5/7 -- connect and sync the four data sources through the real API.
 # -----------------------------------------------------------------
-step "5/7 -- Connecting and syncing the four data sources"
+step "5/8 -- Connecting and syncing the four data sources"
 
 api() {
   # api METHOD PATH [JSON_BODY]
@@ -272,12 +272,56 @@ sync_and_wait ecommerce "E-commerce" || exit 1
 ok "All four sources synced and their sync queue is drained."
 
 # -----------------------------------------------------------------
-# 6/7 -- the one governance decision the accuracy dashboard needs a
+# 6/8 -- complete the compliance-half demo seed now that the sync has
+# produced data principals, identifiers and purposes to attach it to.
+#
+# `prisma migrate reset` (step 2/8) already ran `prisma/seed.ts`, but
+# at that point there were ZERO DataPrincipals and ZERO purposes (the
+# purposes are only created in step 5/8, above), so
+# `seedMvp2Demo()` could only create empty DRAFT notice shells -- its
+# own return value reports this as `deferred: ["child","purpose"]` and
+# `seed.ts` documents the two-pass design in its own comment ("the
+# guardian and inactivity policy are completed by rerunning
+# seedMvp2Demo after the sync"). Nothing previously took it up on that.
+# Separately, `prisma/seed-principals.ts` (the ONLY script that creates
+# `PrincipalAccount` rows so a citizen can log into the portal) was
+# never invoked by this reset at all.
+#
+# Both scripts are documented and written to be idempotent/safe to
+# rerun (`seed.ts`: upsert-keyed, no row ever regenerated to a
+# different value; `seed-principals.ts`: keyed on the `@unique`
+# `PrincipalAccount.dataPrincipalId`, skips anyone already claimed) --
+# rerunning them here is exactly the "preferred order" their own
+# header comments call out, not a workaround. No SQL, no fixture rows:
+# this runs the project's own npm scripts, same as every other step.
+# -----------------------------------------------------------------
+step "6/8 -- Completing the compliance seed (notices and portal accounts)"
+say "Re-running the platform seed now that purposes and data principals"
+say "exist, so privacy notices get their Rule 3(b) content and version 1..."
+if ( cd "$BACKEND_DIR" && npm run seed ) >>"$LOG_DIR/reset.log" 2>&1; then
+  ok "Notice versions, guardian relationship and retention policy completed."
+else
+  warn "Completing the platform seed failed. Check $LOG_DIR/reset.log"
+  exit 1
+fi
+
+say "Claiming portal accounts for the five named demo personas (Aman Sharma,"
+say "Neha Rao, Raj Patel, Sara Khan, Vikram Nair) now that the sync has"
+say "written their PrincipalIdentifier rows..."
+if ( cd "$BACKEND_DIR" && npm run seed:principals ) >>"$LOG_DIR/reset.log" 2>&1; then
+  ok "Portal accounts claimed."
+else
+  warn "Claiming the demo portal accounts failed. Check $LOG_DIR/reset.log"
+  exit 1
+fi
+
+# -----------------------------------------------------------------
+# 7/8 -- the one governance decision the accuracy dashboard needs a
 # human to make: is "City" on Marketing and "City" on E-commerce the
 # SAME real-world fact (so a mismatch between them is worth flagging),
 # or just two differently-shaped fields that happen to share a name?
 # -----------------------------------------------------------------
-step "6/7 -- Reviewing the City field for the accuracy dashboard"
+step "7/8 -- Reviewing the City field for the accuracy dashboard"
 say "Marking City as the same real-world fact on Marketing and E-commerce:"
 say "an administrator has to confirm this before a mismatch between the"
 say "two sources counts as a tracked accuracy conflict (GO-03) -- without"
@@ -312,12 +356,12 @@ api PUT "/api/data-sources/${SOURCE_ID[ecommerce]}/mappings" '{"mappings":[
 ok "City marked accuracy-comparable on Marketing and E-commerce."
 
 # -----------------------------------------------------------------
-# 7/7 -- report the numbers actually observed. There is a KNOWN OPEN
+# 8/8 -- report the numbers actually observed. There is a KNOWN OPEN
 # DEFECT (being diagnosed elsewhere, not fixed here): the principal
 # count is non-deterministic across runs. This prints what is actually
 # in the database, never a hard-coded expectation.
 # -----------------------------------------------------------------
-step "7/7 -- Final numbers"
+step "8/8 -- Final numbers"
 SUMMARY_JSON=$(api GET /api/inventory/summary)
 RAW=$(printf '%s' "$SUMMARY_JSON" | json_get "d['rawRecordCount']" 2>/dev/null || echo "?")
 PRINCIPALS=$(printf '%s' "$SUMMARY_JSON" | json_get "d['uniquePrincipalCount']" 2>/dev/null || echo "?")
@@ -326,6 +370,10 @@ CONFLICTS=$(printf '%s' "$SUMMARY_JSON" | json_get "d['conflictCount']" 2>/dev/n
 
 UNDER18=$(PGPASSWORD=dpdp psql -h 127.0.0.1 -p 5432 -U dpdp -d dpdp -tAc \
   "SELECT COUNT(*) FROM \"DataPrincipal\" WHERE \"ageStatus\" = 'CHILD';" 2>/dev/null || echo "?")
+NOTICE_VERSIONS=$(PGPASSWORD=dpdp psql -h 127.0.0.1 -p 5432 -U dpdp -d dpdp -tAc \
+  "SELECT COUNT(*) FROM \"NoticeVersion\";" 2>/dev/null || echo "?")
+PRINCIPAL_ACCOUNTS=$(PGPASSWORD=dpdp psql -h 127.0.0.1 -p 5432 -U dpdp -d dpdp -tAc \
+  "SELECT COUNT(*) FROM \"PrincipalAccount\";" 2>/dev/null || echo "?")
 
 echo
 say "Observed numbers for this reset (target for reference: 500 / 327 / 4 / 12 / 6):"
@@ -334,10 +382,35 @@ say "  Principals ............... $PRINCIPALS"
 say "  Pending review ........... $PENDING"
 say "  Accuracy conflicts (GO-03) $CONFLICTS"
 say "  Under-18 flagged ......... $UNDER18"
+say "  Notice versions .......... $NOTICE_VERSIONS"
+say "  Portal accounts .......... $PRINCIPAL_ACCOUNTS"
 echo
 warn "KNOWN OPEN DEFECT: the principal count above can vary between resets"
 warn "(327 and 328 have both been observed, with pending-review 4, 2 or 0)."
 warn "This is being investigated separately -- it is not fixed by this script."
+
+# -----------------------------------------------------------------
+# Prove the portal login actually works -- a row in PrincipalAccount is
+# not proof anyone can sign in. Sign in for real, through the same
+# endpoint the Data Principal Portal itself calls.
+# -----------------------------------------------------------------
+step "Verifying portal login (Data Principal Portal)"
+PORTAL_EMAIL="aman.sharma@gmail.com"
+PORTAL_PASSWORD="Password123!"
+PORTAL_LOGIN_JSON=$(curl -s -X POST "$BACKEND_URL/api/auth/principal/login" \
+  -H 'Content-Type: application/json' \
+  -d "{\"email\":\"$PORTAL_EMAIL\",\"password\":\"$PORTAL_PASSWORD\"}")
+PORTAL_TOKEN=$(printf '%s' "$PORTAL_LOGIN_JSON" | json_get "d['accessToken']" 2>/dev/null || true)
+if [ -n "$PORTAL_TOKEN" ]; then
+  ok "Portal login succeeded for $PORTAL_EMAIL -- accessToken issued."
+else
+  warn "Portal login FAILED for $PORTAL_EMAIL. Response was:"
+  warn "$PORTAL_LOGIN_JSON"
+fi
+echo
+say "Data Principal Portal credentials (http://localhost:5173):"
+say "  Email .................... $PORTAL_EMAIL"
+say "  Password .................. $PORTAL_PASSWORD"
 
 trap - EXIT
 pause_before_exit
