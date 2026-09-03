@@ -17,7 +17,10 @@ import {
 import { LinkingService } from "../identity/linking.service";
 import { AssemblyService } from "../identity/assembly.service";
 import { AgeService } from "../identity/age.service";
-import { lockIdentifiersForOwnership } from "../identity/identifier-ownership-lock";
+import {
+  lockIdentifiersForOwnership,
+  lockNameKeyForOwnership,
+} from "../identity/identifier-ownership-lock";
 import { hashPayload } from "./payload-hash";
 import {
   describeSyncError,
@@ -456,6 +459,23 @@ export class SyncPipelineService {
       tx,
       buildCandidateSignals(normalizedRow, context.mappings),
     );
+
+    // D10 fix: the identifier lock above only ever serializes two
+    // transactions that want the EXACT SAME identifier value -- it says
+    // nothing about `MatchingService.supportingCandidates` (rule 4), which
+    // reads every `NormalizedRecord` sharing this record's `nameKey` and
+    // the `IdentityLink`s already active for them, entirely unlocked.
+    // Two different sources syncing the SAME nameKey+pincode pair at the
+    // same time could each run that read before the other's transaction
+    // committed, both see "no active link for my nameKey twin yet", and
+    // both create their own principal -- silently dropping the pending
+    // `MatchCandidate` that should connect them. Acquired AFTER the
+    // identifier locks, in that fixed relative order for every
+    // transaction, so two transactions that need both kinds of lock never
+    // deadlock waiting on each other in reverse. See
+    // `identifier-ownership-lock.ts` and
+    // `.superpowers/sdd/2026-08-31-dpdp-mvp2/d10-identity-nondeterminism-report.md`.
+    await lockNameKeyForOwnership(tx, normalizedRow.nameKey);
 
     // MATCH (task 18 review, Important 3: reads through the SAME `tx` as
     // the write below now, not a second connection off `prisma.scoped`.

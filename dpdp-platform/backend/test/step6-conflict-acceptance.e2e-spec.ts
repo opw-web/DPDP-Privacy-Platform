@@ -385,7 +385,14 @@ describe("Step 6 conflict-count acceptance (e2e)", () => {
       expect(childResponse.status).toBe(200);
       expect((childResponse.body.items as unknown[]).length).toBe(6);
     },
-    60000,
+    // D10 fix: 150000, not 60000. This test was already fully sequential
+    // (never the source of the D10 non-determinism -- see the sibling
+    // test's own D10 comment), but 500 records through the real pipeline
+    // measured 51-85s across otherwise-idle-to-loaded runs on a shared dev
+    // machine, leaving too little margin under the old 60000 budget.
+    // Matches the sibling test's budget now that both run the same
+    // sequential shape.
+    150000,
   );
 
   it(
@@ -476,11 +483,39 @@ describe("Step 6 conflict-count acceptance (e2e)", () => {
         persistedPolicies.every((row) => row.comparisonPolicy === "NOT_COMPARABLE"),
       ).toBe(true);
 
-      const results = await Promise.all(
-        [marketingId, salesId, supportId, ecommerceId].map((id) =>
-          pipeline.run(id, "step6-legacy-mapping-acceptance"),
-        ),
-      );
+      // D10 fix: sequential, one source fully at a time -- SAME order as
+      // the retained Step 6 browser walkthrough network log (Marketing,
+      // Sales, Support, E-commerce) and identical to the sibling test
+      // above. This was `Promise.all(...)` over all four `pipeline.run()`
+      // calls, which genuinely runs four different data sources'
+      // per-record transactions concurrently. That is not how an
+      // operator drives the Step 6 wizard (one source at a time), and it
+      // is not identity-safe: `SyncLockService`'s mutex only serializes a
+      // source against itself, `lockIdentifiersForOwnership` only
+      // serializes two transactions that want the EXACT SAME identifier
+      // value, and `MatchingService.supportingCandidates` (rule 4's
+      // nameKey-based possible-duplicate check) takes no lock at all.
+      // Diagnosis proved two distinct, reproducible races from running
+      // these four sources concurrently: (1) two records sharing a
+      // nameKey+pincode pair, synced by two different sources at the same
+      // time, can each read "no active link for my nameKey twin yet" (its
+      // twin's NormalizedRecord/IdentityLink not yet committed) and both
+      // become independent NEW principals, silently dropping the pending
+      // MatchCandidate that should connect them (uniquePrincipalCount
+      // stays right, pendingReviewCount undercounts); (2) two records
+      // carrying DISJOINT identifiers for the same real person can each
+      // create their own principal before a later "bridging" record (one
+      // that carries both identifiers) is synced, so that bridging
+      // record's rules-1-3 match then finds a genuine EXACT-vs-HIGH
+      // conflict between two principals that should never have existed
+      // separately -- one extra permanent DataPrincipal plus one extra
+      // pending candidate that a real, sequential run never produces.
+      // See `.superpowers/sdd/2026-08-31-dpdp-mvp2/
+      // d10-identity-nondeterminism-report.md`.
+      const results: Awaited<ReturnType<typeof pipeline.run>>[] = [];
+      for (const id of [marketingId, salesId, supportId, ecommerceId]) {
+        results.push(await pipeline.run(id, "step6-legacy-mapping-acceptance"));
+      }
       for (const result of results) {
         expect(result.status).toBe("SUCCESS");
       }
@@ -504,6 +539,13 @@ describe("Step 6 conflict-count acceptance (e2e)", () => {
         conflictCount: 0,
       });
     },
-    60000,
+    // D10 fix: 150000, not 60000 -- this test's four `pipeline.run()`
+    // calls are now sequential (see the D10 comment above them), same as
+    // the sibling test's ~51-85s, PLUS this test's own extra
+    // bare-data-source creation and four `PUT .../mappings` HTTP round
+    // trips before the sync loop even starts. The previous 60000 only
+    // fit because `Promise.all` ran all four sources' record loops
+    // concurrently -- the exact non-determinism this fix removes.
+    150000,
   );
 });

@@ -65,9 +65,50 @@ import { TenantContext } from "../../common/tenant/tenant-context";
  */
 const IDENTIFIER_LOCK_NAMESPACE = "PrincipalIdentifier";
 
+/**
+ * D10 fix: rule 4 (`MatchingService.supportingCandidates`, the
+ * nameKey-based "possible duplicate" check) reads `NormalizedRecord` rows
+ * sharing a `nameKey` and the `IdentityLink`s already active for them, with
+ * NO lock at all -- unlike rules 1-3, which have held a per-identifier-value
+ * advisory lock (below) since the MVP1 Checks 4/6 fix. Two different
+ * sources' concurrent syncs (`SyncLockService`'s mutex only ever serializes
+ * a source against itself) processing the SAME pair's two records at the
+ * same time can each run this read before the other's transaction commits,
+ * so BOTH see "no active link for my nameKey twin yet" and BOTH create
+ * their own principal -- silently dropping the pending `MatchCandidate`
+ * that should connect them, with no error and no trace. Diagnosis:
+ * `.superpowers/sdd/2026-08-31-dpdp-mvp2/d10-identity-nondeterminism-report.md`.
+ * Reuses the exact `PrincipalIdentifier` advisory-lock namespace with a
+ * `NAME_KEY` "identifier type" that no real `IdentifierType` enum value can
+ * ever collide with, so it shares one lock table with rules 1-3 instead of
+ * inventing a second one.
+ */
+const NAME_KEY_LOCK_TYPE = "NAME_KEY";
+
 export interface IdentifierLockSignal {
   readonly identifierType: string;
   readonly value: string;
+}
+
+async function acquireAdvisoryLock(
+  tx: ScopedTransactionClient,
+  lockKey: string,
+): Promise<void> {
+  // hashtextextended(text, seed) -> bigint: a single 64-bit advisory-lock
+  // key derived from the full (org, type, value) tuple, letting Postgres do
+  // the hashing instead of replicating it in application code. A hash
+  // collision between two DIFFERENT keys only ever costs unrelated
+  // transactions an unnecessary wait, never an incorrect result -- the
+  // actual ownership decision is still made by MATCH's own read and LINK's
+  // own unique constraint (or, for the nameKey lock, by
+  // `supportingCandidates`' own read), both unaffected by this lock.
+  //
+  // `$executeRaw`, not `$queryRaw`: `pg_advisory_xact_lock` returns `void`,
+  // which `$queryRaw` cannot deserialize into a Prisma value ("Failed to
+  // deserialize column of type 'void'", confirmed by running this exact
+  // query) -- `$executeRaw` only reports the affected-row count and never
+  // attempts to decode a result column, which is all this call needs.
+  await tx.$executeRaw`SELECT pg_advisory_xact_lock(hashtextextended(${lockKey}, 0))`;
 }
 
 /**
@@ -87,20 +128,26 @@ export async function lockIdentifiersForOwnership(
   const { organizationId } = TenantContext.get();
   for (const signal of signals) {
     const lockKey = `${IDENTIFIER_LOCK_NAMESPACE}:${organizationId}:${signal.identifierType}:${signal.value}`;
-    // hashtextextended(text, seed) -> bigint: a single 64-bit advisory-lock
-    // key derived from the full (org, type, value) tuple, letting Postgres
-    // do the hashing instead of replicating it in application code. A hash
-    // collision between two DIFFERENT identifier values only ever costs
-    // unrelated transactions an unnecessary wait, never an incorrect
-    // result -- the actual ownership decision is still made by MATCH's own
-    // read and LINK's own unique constraint, both unaffected by this lock.
-    //
-    // `$executeRaw`, not `$queryRaw`: `pg_advisory_xact_lock` returns
-    // `void`, which `$queryRaw` cannot deserialize into a Prisma value
-    // ("Failed to deserialize column of type 'void'", confirmed by
-    // running this exact query) -- `$executeRaw` only reports the
-    // affected-row count and never attempts to decode a result column,
-    // which is all this call needs.
-    await tx.$executeRaw`SELECT pg_advisory_xact_lock(hashtextextended(${lockKey}, 0))`;
+    await acquireAdvisoryLock(tx, lockKey);
   }
+}
+
+/**
+ * Closes the rule-4 nameKey race described above. Callers MUST acquire this
+ * AFTER `lockIdentifiersForOwnership` for the same record, never before --
+ * one fixed relative order for every transaction (identifier signals, then
+ * nameKey) is what rules out an ABBA deadlock between two transactions that
+ * both need both kinds of lock. A no-op when the record has no `nameKey`
+ * (nothing for `supportingCandidates` to read in that case).
+ */
+export async function lockNameKeyForOwnership(
+  tx: ScopedTransactionClient,
+  nameKey: string | null,
+): Promise<void> {
+  if (!nameKey) {
+    return;
+  }
+  const { organizationId } = TenantContext.get();
+  const lockKey = `${IDENTIFIER_LOCK_NAMESPACE}:${organizationId}:${NAME_KEY_LOCK_TYPE}:${nameKey}`;
+  await acquireAdvisoryLock(tx, lockKey);
 }
