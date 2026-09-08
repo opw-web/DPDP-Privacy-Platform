@@ -302,7 +302,8 @@ hr{border:none;border-top:1px solid var(--line);margin:34px 0}
 
 <div class="block note">
   <span class="tag">The first time only</span>
-  <p>If a button says something about an <em>untrusted application launcher</em>, right-click it once and choose <strong>Allow Launching</strong>. That only ever needs doing once per button.</p>
+  <p><strong>On Windows:</strong> if a blue <em>“Windows protected your PC”</em> box appears, choose <strong>More info</strong>, then <strong>Run anyway</strong>. If a Windows Firewall prompt appears, accept it — the platform runs entirely on this computer.</p>
+  <p><strong>On Linux:</strong> if a button says something about an <em>untrusted application launcher</em>, right-click it once and choose <strong>Allow Launching</strong>. That only ever needs doing once per button.</p>
 </div>
 
 <h3>Starting it</h3>
@@ -795,7 +796,7 @@ hr{border:none;border-top:1px solid var(--line);margin:34px 0}
     <tr><td>Sign-in says the details are wrong</td><td>Check the front door. Staff go to <code>/login</code>, members of the public to <code>/me/login</code>. The passwords are all <code>Password123!</code> — the exclamation mark is part of it.</td></tr>
     <tr><td>A screen that should have data is empty</td><td>Something did not stage. Finish the demo without it, then run <span class="btn danger"><span class="n">9</span> Reset</span> afterwards.</td></tr>
     <tr><td>The startup window shows an error</td><td>It stays open on purpose and names a log folder. Close it, run <span class="btn"><span class="n">6</span> Stop</span>, then <span class="btn"><span class="n">1</span> Start</span> again.</td></tr>
-    <tr><td>A button flashes and disappears</td><td>Right-click it once, choose <strong>Allow Launching</strong>.</td></tr>
+    <tr><td>A button flashes and disappears</td><td>On Linux, right-click it once and choose <strong>Allow Launching</strong>. On Windows, this usually means Git for Windows is not installed — install it from git-scm.com and try again.</td></tr>
     <tr><td>The database browser will not open</td><td>Only works while the demo is running. Press <span class="btn"><span class="n">1</span> Start</span> first.</td></tr>
     <tr><td>Numbers differ from this document</td><td>Say what is on the screen. The reset prints observed values, never expected ones, and so should you.</td></tr>
   </tbody>
