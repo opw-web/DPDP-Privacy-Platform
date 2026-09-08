@@ -7,5 +7,7 @@
     "^.+\\.(t|j)s$": "ts-jest"
   },
   "testTimeout": 15000,
-  "maxWorkers": 1
+  "maxWorkers": 1,
+  "globalSetup": "<rootDir>/global-setup.ts",
+  "setupFiles": ["<rootDir>/setup-env.ts"]
 }
