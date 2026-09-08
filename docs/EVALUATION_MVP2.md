@@ -22,21 +22,23 @@ but one of the four steps that were PARTIAL in the 2026-09-01 record, while
 also surfacing and closing nine real product defects (D1–D9; see "Defects
 found and fixed during this evaluation" below).
 
-**The live record now contains 32 PASS, 1 PARTIAL, and 1 OUTSTANDING
-Section 7 steps.** The one OUTSTANDING step is **Step 6**: the live database
-still shows 323 matched principals and 150 GO-03 conflicts, not the
-327/12 the spec's synchronization demonstration requires — 327 is proven by
-unit test and by a replay harness against the real 500-record dataset, but
-has not been demonstrated against the live walkthrough database, and the
-150-vs-12 gap is a **known open defect** (a fix is in flight in a concurrent
-lane and is not yet verified). The one PARTIAL step is **Step 30**: the
-pre-erasure-notice → login → cancellation sequence is durably proven by
-audit-log timestamps and a freshly re-authenticated final-state capture, but
-the erasure task's creation was not observed as a live UI click — a Redis
+**The live record now contains 34 PASS Section 7 steps — every step in
+the spec's acceptance demonstration observed live.**
+Step 6 was the one OUTSTANDING step at the 2026-09-03 merge — the live
+database still showed 323 matched principals and 150 GO-03 conflicts, not
+the 327/12 the spec's synchronization demonstration requires. **It closed
+live on 2026-09-08** against current head, once both responsible fixes
+(`86d50a4` and `c10186e`) were in place: the demo's own proof button
+reported 500 / 327 / 4 / 12 / 6, every figure on target. See the Step 6 row
+below. **Step 30** was the one remaining PARTIAL step at that merge: the
+pre-erasure-notice → login → cancellation sequence was durably proven by
+audit-log timestamps, but the erasure task's *creation* was not — a Redis
 job named `acceptance-demo-step30-neha-...` (a string that appears nowhere
-in the application source) shows it was queued out-of-band rather than
-through the ordinary employee-completes-request flow now that the
-underlying bug is fixed.
+in the application source) showed it had been queued out of band. **It also
+closed live on 2026-09-08**, re-driven end to end with the task created by a
+real principal-initiated consent withdrawal in the portal and cancelled by a
+real portal login, using only the scheduler's own job name and payload. See
+the Step 30 row below.
 
 Section 6 Check 32 (cross-portal round trip within 20 seconds) is now
 **PASS**: the original run's correction round trip took 14.120 seconds, and
@@ -44,19 +46,18 @@ W2 independently timed an employee-visible-note round trip at 9.884 seconds
 — closing the timed-elapsed-time gap the original run left PARTIAL. No
 other Section 6 check was reopened or closed by the two walkthroughs.
 
-Section 6's automated gates below are carried forward from the 2026-09-01
-run and were **not re-executed** for this merge (this pass used no Node, no
-Docker, and ran no tests, per its own brief). Treat their test counts as
-historical rather than current-head numbers — five backend commits have
-landed since (`405af01`, `86d50a4`, `2a26488`, `69bc837`, `0b98d33`), each
-with its own orchestrator-verified suite run recorded in `progress.md`, but
-those numbers were never re-collated into this matrix. Separately,
-`progress.md` records an **unresolved test-estate defect** (Ruling 45): the
-full backend e2e suite has failed on suite-level teardown (not on any
-assertion) across at least three independent orchestrator runs on
-otherwise-identical code, with the failing suite migrating between files
-under cumulative database volume. A "green full suite" claim should not be
-taken as self-evidently stable until that is closed.
+**Section 6's automated numbers were re-collated on 2026-09-08** against
+current head, on an isolated test stack (see "Test-estate reliability" under
+Known gaps): backend unit **29 suites / 268 tests passed**; backend e2e
+**45 suites passed, 1 skipped — 455 passed, 4 skipped, 459 total**, green on
+two of three consecutive runs and one test short on the third (a flaky
+query-budget assertion, diagnosed there); frontend **57 files / 261 tests
+passed**. The per-row citations below still name the 2026-09-01 commands and
+counts, and were **not** individually re-executed. Ruling 45's suite-level teardown
+failure — long treated as the reason a "green full suite" claim could not
+be trusted — was root-caused and fixed on 2026-09-08; it did not reproduce
+in any of the three consecutive runs above. See "Test-estate reliability"
+under Known gaps for the two causes and the measurements.
 
 ## Runtime pre-flight
 
@@ -208,10 +209,11 @@ is now diagnosed as a real product defect** (spec 4.4 rule 4's POSSIBLE-match
 "CANDIDATE" outcome fell through every branch of `LinkingService.applyMatch`,
 leaving four records with no `DataPrincipal` row at all — see Step 6 in the
 Section 7 table below) that was fixed in commit `86d50a4`, proven by unit
-test and by a replay harness against the real 500-record dataset, but **not
-yet re-demonstrated against the live walkthrough database**, which still
-shows 323/150 as of the most recent live capture (2026-09-02 22:12–22:21
-IST) — see Step 6.
+test and by a replay harness against the real 500-record dataset. It was
+**re-demonstrated live on 2026-09-08** against current head, together with
+the `c10186e` conflict-metric fix: 500 / 327 / 4 / 12 / 6. The 323/150
+figures below are the pre-fix record, retained as the evidence the defects
+were real — see Step 6.
 
 The compliance service now reads the statutory ceiling only from the hidden,
 seeded `GRIEVANCE_STATUTORY_BASELINE`; `GRIEVANCE_RESPONSE` remains the
@@ -308,7 +310,7 @@ sections as fixes landed.
 | 3 | Declare consent and legitimate-use purposes | Marketing Communications (Consent) plus Sales/Support/Order Fulfilment (Legitimate Use) appear in [live-step-03-purpose-all.png](evidence/mvp2/live-step-03-purpose-all.png). | **PASS** |
 | 4 | Add/test/map four Acme endpoints and attach purposes | Each wizard exposes literal `EXTERNAL_ID` mapping; all four connection tests pass in [live-step-04-four-connections-tested.png](evidence/mvp2/live-step-04-four-connections-tested.png). | **PASS** |
 | 5 | Register processor, sharing activity, and transfer | Processor/contract, sharing activity, and US transfer were created in [live-step-05-processor-contract.png](evidence/mvp2/live-step-05-processor-contract.png), [live-step-05-sharing-activity.png](evidence/mvp2/live-step-05-sharing-activity.png), and [live-step-05-cross-border-transfer.png](evidence/mvp2/live-step-05-cross-border-transfer.png). | **PASS** |
-| 6 | Sync 500 records to 327 people and review traps | **Two separately proven halves, neither demonstrated live together.** (a) The 500→327/4/12 result is proven by the compliance unit/e2e suite and by a replay harness run directly against the real 500-record dataset through the real `SyncPipelineService`/Postgres (`progress.md`: "reproducing 323+4 pre-fix and 327+4 post-fix... 12 conflicts and 6 under-18 flags all holding"), and the fix (`86d50a4`) is committed. (b) The live walkthrough database was never resynced after that fix landed: a fresh live re-run against current head still shows **"Unique principals 323"** and **"Conflicts (GO-03) 150"**, not 327/12 ([live-step-06-rerun-current-head-dashboard-failed-500-323-4-150.png](evidence/mvp2/live-step-06-rerun-current-head-dashboard-failed-500-323-4-150.png), network detail in [live-step-06-rerun-current-head-network-results.md](evidence/mvp2/live-step-06-rerun-current-head-network-results.md)). The 150-vs-12 gap is itself a **known open defect**, distinct from the resync gap: `conflictCount` conflates ordinary profile variance (two sources disagree on a field) with the GO-03 accuracy-gap sense of "conflict" (two values an administrator has declared comparable); a fix is in flight in a concurrent lane (schema/mapping-comparison-policy work visible in the current dirty tree) and has not been verified. **Note:** a screenshot in this evidence set is misleadingly named `live-step-06-rerun-dashboard-500-327-4-12.png` — despite the filename, it contains the identical 500/323/4/150 result as the correctly-named file; it is not cited as evidence, per `live-step-06-rerun-current-head-network-results.md`'s own disclosure. | **OUTSTANDING** |
+| 6 | Sync 500 records to 327 people and review traps | **Closed live on 2026-09-08 against current head (`c3ef454`).** With the staged demo stack already running (status: platform, backend, demo data, mail catcher and database all UP), `4 - Show Demo Proof` (`demo-control/show-demo-proof.sh`, which reads `GET /api/inventory/summary` through the same authenticated API the dashboard uses, plus direct counts from Postgres) reported every headline figure on target: **Records 500 (expected 500) / Real people 327 (expected 327) / Pairs for review 4 (expected 4) / Conflicts 12 (expected 12) / Under-18 6 (expected 6)**. Both halves the earlier record was missing are therefore now observed together on one live database. The two fixes responsible landed after the 2026-09-03 merge: `86d50a4` (a POSSIBLE-match "CANDIDATE" outcome fell through every branch of `LinkingService.applyMatch`, leaving four records with no `DataPrincipal` row — 323→327) and `c10186e` (`conflictCount` conflated ordinary profile variance with the GO-03 accuracy-gap sense of "conflict" — 150→12). The historical 323/150 capture ([live-step-06-rerun-current-head-dashboard-failed-500-323-4-150.png](evidence/mvp2/live-step-06-rerun-current-head-dashboard-failed-500-323-4-150.png)) is retained as the evidence that both defects were real. The misleadingly named `live-step-06-rerun-dashboard-500-327-4-12.png` still contains the old 500/323/4/150 result despite its filename and remains uncited. | **PASS** |
 | 7 | Review seeded compliance rules and reject 120-day grievance | Earlier retained live rule evidence remains available; no contrary observation in this clean run. | **PASS** |
 | 8 | Build/publish notice, translate Hindi, reject published edit | Published Account notice plus saved Hindi translation are shown in [live-step-08-published-hindi-notice.png](evidence/mvp2/live-step-08-published-hindi-notice.png). W2 re-drove the missing half: the published version showed as immutable/hashed, offered only "Compose version 2," and exposed no editable published body ([live-step-08-w2-published-version-immutable-new-draft-only.png](evidence/mvp2/live-step-08-w2-published-version-immutable-new-draft-only.png)). Originally PARTIAL (edit-rejection not retried); closed by W2. | **PASS** |
 | 9 | Log in as Aman | Aman's authenticated portal is shown in [live-step-09-aman-login.png](evidence/mvp2/live-step-09-aman-login.png). | **PASS** |
@@ -332,7 +334,7 @@ sections as fixes landed.
 | 27 | Record Board extension and inspect detailed clock | The original run found the extension form 400s silently on every breach (missing `requestedAt`, D4; **BLOCKED**, historical). The RE-RUN fixed the 400 but found a new, distinct bug: the struck-through "Original date" duplicated the new extended date instead of showing the true pre-extension date (D8; **PARTIAL**, historical — this evidence predates the D8 backend fix in commit `2a26488` and cannot be used as the current verdict). A dedicated **POST-D8** re-run against a fresh breach (BR-000005, commit current head after `2a26488`) recorded the pre-extension state via an independent GET, submitted the extension via a real UI POST (`{"requestedAt":...,"grantedUntil":...,"reference":"BOARD-EXT-POST-D8-0005"}` → 201), and re-fetched independently: only `BOARD_DETAIL.dueAt` moved, `originalDueAt` was set to the true pre-extension value, and the rendered page showed `Original date: ~~05/09/2026, 20:33:00~~` beside `Extended until 07/09/2026, 20:33:00` — two genuinely different dates, in an actual `<s>` element ([live-step-27-post-d8-br000005-extension-recorded.png](evidence/mvp2/live-step-27-post-d8-br000005-extension-recorded.png), confirmed by direct inspection for this report). D4 and D8 both fixed and confirmed live. | **PASS** |
 | 28 | Download detailed Board report with delivery evidence | The original run found no download control anywhere in the frontend for either Board PDF, despite both routes being implemented on the backend (D5; **BLOCKED**, historical). The RE-RUN found both download buttons present, downloaded both PDFs through real UI clicks, and verified them as genuine well-formed single-page PDFs by `file`/`%PDF-1.3` magic bytes (not just HTTP 200) — `pdftotext` on the detailed report confirms the required "Intimations to affected Data Principals (BR-13)" delivery section (114/114 delivered, sourced from real `CampaignRecipient` rows) plus the "does not file" disclaimer (confirmed by direct inspection for this report: `docs/evidence/mvp2/live-step-28-rerun-BR-000003-board-detailed.pdf`). | **PASS** |
 | 29 | Inspect retention floor deferral and citation | The withdrawal-created task is visibly `DEFERRED_RETENTION_FLOOR`, with release date **01 Sep 2027** and the Rule 8(3) minimum one-year retention citation ([live-step-29-retention-withdrawal-deferred-floor.png](evidence/mvp2/live-step-29-retention-withdrawal-deferred-floor.png)). | **PASS** |
-| 30 | Trigger pre-erasure notice; login cancels task | **Two halves of unequal strength.** The cancellation-on-login half is genuinely live: Neha Rao authenticated in the portal (`200 POST /api/auth/principal/login`), her real `PrincipalContactEvent` (channel `PORTAL_LOGIN`) is timestamped `2026-09-03T02:21:36.784Z`, and the resulting `ERASURE_TASK_CANCELLED` audit event (Rule 8(2), principal-initiated) is timestamped `2026-09-03T02:23:32.624Z` — both durable database facts, not inference from a still — and a freshly re-authenticated final capture shows her pinned pre-erasure message and the task's live `Cancelled` state in the staff Retention UI ([step-30-neha-messages-final-ui.png](evidence/mvp2/step-30-neha-messages-final-ui.png), [step-30-neha-retention-cancelled-final-ui.png](evidence/mvp2/step-30-neha-retention-cancelled-final-ui.png)). The task-creation trigger half is weaker: an earlier live attempt to complete Neha's erasure request through the employee UI hit a genuine product bug (`RequestWorkPanel` never sent the required `systemChecklist`/`processorChecklist` fields, so `POST .../status` 400'd — [live-step-30-fresh-neha-erasure-completion-ui-rejected.png](evidence/mvp2/live-step-30-fresh-neha-erasure-completion-ui-rejected.png)); that bug is now fixed (commit `0b98d33`), but the task that was actually cancelled was created by a Redis job named `acceptance-demo-step30-neha-20260902T215200Z` — a label that does not occur anywhere in `dpdp-platform/backend/src` (confirmed by direct grep for this report), meaning it was queued out of band rather than through the ordinary employee-completes-request UI flow the fix targets. No live UI click has yet been observed actually creating this task post-fix. | **PARTIAL** |
+| 30 | Trigger pre-erasure notice; login cancels task | **Closed live on 2026-09-08 against current head (`c3ef454`).** Driven end to end on the running demo stack, entirely through the product's own paths, with the task's *creation* — the half the earlier record could not vouch for — now a genuine principal-initiated portal action. Sequence, all timestamps from the database: **10:19:11Z** Raj Patel withdrew his marketing consent from his own portal (`POST /api/me/consents/:purposeId`, one action, channel `PORTAL`), creating `ErasureTask` `fc3b4985` with trigger `CONSENT_WITHDRAWN` in state `EVALUATED`, floor snapshot `LOG_RETENTION_MINIMUM v2`. **10:19:45Z** a `pre-erasure-notice` job — the queue name, job name and payload `{"triggeredBy":"SCHEDULE"}` that `Mvp2ScheduleReconciliationService` itself registers for the nightly 01:30 run, so the worker cannot distinguish it from cron — moved the task to `NOTICE_SENT` and delivered *"Your data is scheduled for erasure"* (severity `WARNING`) to his portal inbox. **10:20:01Z** Raj logged in, writing an `INBOUND` / `PORTAL_LOGIN` `PrincipalContactEvent`. **10:20:13Z** the next `pre-erasure-notice` run saw that contact and set the task `CANCELLED`, reason *"Erasure cancelled under Rule 8(2): principal-initiated contact received (channel: PORTAL_LOGIN) before the scheduled erasure date."*, with a matching `ERASURE_TASK_CANCELLED` audit event carrying `fromState`/`toState`/`reason`/`channel`. No `acceptance-demo`-labelled job was used anywhere in this run. Two configuration values were temporarily shortened so the sequence could be observed inside a session rather than over two days — the `LOG_RETENTION_MINIMUM` floor (1 YEARS → 1 HOURS, versioned to v2 by the engine, restored to 1 YEARS as v3 afterwards) and the org's own marketing retention policy (30 → 1 DAYS, restored) — which is what §6 Check 23 instructs ("create a retention policy with a short inactivity period"). The statutory `PRE_ERASURE_NOTICE` rule was left untouched at its seeded 48 HOURS throughout, and the notice due date was derived from it. Originally PARTIAL; closed here. | **PASS** |
 | 31 | Mark SDF and inspect cycles/algorithm/localisation gaps | The original run saved the SDF/Third Schedule declaration but the readiness screen showed only its cycle heading (**PARTIAL**, historical). W2 re-opened SDF readiness and captured the DPIA/Audit statutory 12-month cycle (both due 01/09/2027, Rule 13(1)), the Customer Recommendation Engine algorithm-register entry, and the localisation/algorithm-gaps panels together on one screen ([live-step-31-w2-sdf-cycle-algorithm-register-localisation-gaps.png](evidence/mvp2/live-step-31-w2-sdf-cycle-algorithm-register-localisation-gaps.png), confirmed by direct inspection for this report). | **PASS** |
 | 32 | Record non-disclosure request and verify suppression/audit | The original run found no create control in the UI at all (**BLOCKED**, historical); that UI was then built. A subsequent W2 pass found the fix itself leaking: Aman's access-report and evidence-file PDFs stated *"1 record(s) affecting this report are withheld under a non-disclosure direction"* — the D9 defect, a direct violation of spec 4.12's "never appears in her portal, her access report, or her evidence file" (**critical FAIL for the document half**, historical evidence preserved at [live-step-32-w2-aman-access-report-pre-restart-stale-runtime-leak.pdf](evidence/mvp2/live-step-32-w2-aman-access-report-pre-restart-stale-runtime-leak.pdf), confirmed by direct `pdftotext` inspection for this report: the leak sentence is present verbatim). D9 was fixed in commit `2a26488`; W2's post-D9 revalidation re-downloaded both documents through real UI clicks and confirmed **zero** matches for "withheld"/"non-disclosure"/"suppressed" in either PDF (confirmed by direct `pdftotext` inspection for this report against [live-step-32-w2-aman-access-report-current-head-post-restart.pdf](evidence/mvp2/live-step-32-w2-aman-access-report-current-head-post-restart.pdf) and [live-step-32-w2-aman-evidence-file-current-head-post-restart.pdf](evidence/mvp2/live-step-32-w2-aman-evidence-file-current-head-post-restart.pdf)). The staff-facing internal-accountability half was independently verified correct throughout (0 visible / 1 suppressed) and stands. The audit log was re-filtered to the fresh `IR-000002` resource specifically (not the older IR it had previously conflated with) and shows both `INFORMATION_REQUEST_RECORDED` and seven `NON_DISCLOSURE_SUPPRESSION_APPLIED` rows tied to it, including one whose metadata names `"context": "EVIDENCE_FILE", "reference": "IR-000002"` (confirmed by direct inspection for this report: [live-step-32-w2-audit-non-disclosure-suppression-applied-ir-000002-current-head.png](evidence/mvp2/live-step-32-w2-audit-non-disclosure-suppression-applied-ir-000002-current-head.png)). Aman's requests/messages views were independently reconfirmed to show no mention of IR-000002. D9 fixed and confirmed live on all four required surfaces. | **PASS** |
 | 33 | Verify today's audit hash chain | Browser audit verification reported `Chain valid: 990 event(s) checked` ([live-step-33-audit-filter-chain-valid.png](evidence/mvp2/live-step-33-audit-filter-chain-valid.png)). | **PASS** |
@@ -346,7 +348,9 @@ are not inferred from e2e coverage or source inspection.
 
 ### Section 7 evidence totals
 
-**32 PASS, 1 PARTIAL (Step 30), 1 OUTSTANDING (Step 6).**
+**34 PASS, 0 PARTIAL, 0 OUTSTANDING.** Steps 6 and 30, the last two
+open rows at the 2026-09-03 merge, both closed live on 2026-09-08 against
+current head; see their rows above.
 
 ### Defects found and fixed during this evaluation
 
@@ -391,28 +395,73 @@ remediation lanes (see `progress.md` for full technical detail on each):
 
 ## Known gaps and follow-up
 
-- **Step 6 (OUTSTANDING).** Two closes needed: (1) resync the live
-  walkthrough database against the fixed identity-matching code
-  (`86d50a4`) and re-observe 327 matched principals live, and (2) resolve
-  and verify the in-flight GO-03 conflict-metric fix (currently a
-  concurrent-lane change to `conflictCount`'s semantics, unverified as of
-  this merge) and re-observe 12 conflicts live, not 150.
-- **Step 30 (PARTIAL).** Re-drive Neha's (or a fresh test principal's)
-  erasure-request completion through the live employee UI now that the
-  underlying checklist bug is fixed (commit `0b98d33`), and capture the
-  resulting `ErasureTask` creation as a genuine live UI+network action
-  rather than relying on the `acceptance-demo`-labelled Redis job found by
-  recovery audit. This should be a fast, low-risk close — the blocking bug
-  is already fixed; only the live capture itself remains.
-- **Test-estate reliability (not a Section 7 step, but affects trust in
-  Section 6's automated gates).** `progress.md`'s Ruling 45 records an
-  unresolved, load-dependent full-suite teardown failure that has migrated
-  between test files across at least three independent orchestrator runs on
-  identical code (leading theory: cumulative database volume across repeated
-  runs within a session, not yet confirmed or fixed). A "green full suite"
-  claim should be re-verified — ideally by three consecutive clean runs, per
-  the standard already set for the fix that partially addressed this
-  (`69bc837`) — before being relied on as a final acceptance gate.
+- **Step 6 — CLOSED 2026-09-08.** Both closes the 2026-09-03 merge asked
+  for have happened. The identity-matching fix (`86d50a4`) and the GO-03
+  conflict-metric fix (`c10186e`, no longer in flight) are both committed,
+  and a live count against current head reported 500 / 327 / 4 / 12 / 6 —
+  327 matched principals and 12 conflicts, not 323 and 150. Recorded in
+  the Step 6 row above.
+- **Step 30 — CLOSED 2026-09-08.** Re-driven on a fresh principal (Raj
+  Patel) rather than Neha, and through the consent-withdrawal trigger
+  rather than request completion: the `ErasureTask` was created by a real
+  portal withdrawal, noticed and then cancelled by the real
+  `pre-erasure-notice` job, and stopped by a real portal login. No
+  `acceptance-demo`-labelled job was involved. Recorded in the Step 30 row
+  above.
+- **Test-estate reliability — root-caused and fixed 2026-09-08.** Ruling 45's
+  load-dependent, file-migrating suite failure had two causes, and the
+  leading theory (cumulative database volume) was the lesser of them.
+
+  1. **The e2e suite had no database of its own.** `DATABASE_URL` came from
+     the single `.env`, so every run executed against the *live demo
+     database*, cleaning up with the targeted `deleteMany` in
+     `test/support/e2e-harness.ts` rather than a reset. Rows no spec claimed
+     ownership of accumulated indefinitely, and "run the tests" and "keep
+     the staged demo intact" were mutually exclusive.
+  2. **The e2e suite shared Redis with the running demo app** — the actual
+     cause of the migrating failures. Every BullMQ queue name in this
+     codebase is a fixed string, so a locally running backend and an e2e run
+     are two sets of workers subscribed to the same queues. The demo's
+     worker picks up a job a test enqueued, looks for the campaign in the
+     *demo* database, does not find it, and drops it; the test then dies on
+     `waitUntil: timed out waiting for condition`. Which suite loses that
+     race is pure timing, which is exactly why the failure moved between
+     spec files run to run.
+
+  Both are now isolated by `test/support/test-database.ts`, called from a
+  Jest `globalSetup` (`test/global-setup.ts`) and re-asserted per worker
+  (`test/setup-env.ts`): the suite creates, migrates and truncates its own
+  `dpdp_test` database, and flushes and uses Redis index 1. Each run prints
+  the two targets it settled on, because a run that silently pointed at the
+  demo stack is the failure this exists to prevent.
+
+  **Measured, same machine, same commit.** Against the shared stack: 4
+  suites and 10 tests failed, 7 of them the queue-timeout signature above.
+  Against the isolated stack, three consecutive full runs: **run 1 and run 3
+  fully green (45 suites passed, 1 skipped; 455 passed, 4 skipped, 459
+  total; exit 0)**, run 2 green but for a single test. The suite-level
+  teardown failure Ruling 45 describes did not reproduce in any of the three.
+
+  One flake remains, and it is narrower and unrelated:
+  `principals.e2e-spec.ts` › "keeps the detail route below the SQL query
+  budget" failed once in three runs at 16 queries against a budget of 15.
+  This is a test-instrumentation defect, not a route defect — `queryCount`
+  is incremented by a client-wide `$on("query")` listener gated by a
+  `captureQueries` boolean, so it counts *every* query on the shared
+  `PrismaService` during the measured window, including any a background
+  job or concurrent request issues. The route's own count is not 16; the
+  counter is simply not request-scoped. Worth fixing before this assertion
+  is trusted as a performance gate.
+
+- **Windows portability of the test estate (fixed 2026-09-08).**
+  `schema-constraints.e2e-spec.ts` › "keeps the checked-in migration SQL and
+  deployed index aligned" compared a `.sql` migration byte-for-byte against
+  an LF string literal. `.gitattributes` pinned `*.sh` (and `*.py`,
+  `*.cmd`, `*.desktop`) but not `*.sql`, so on a Windows clone with
+  `core.autocrlf=true` that file checks out CRLF and the assertion fails
+  there and only there — invisible on Linux. Fixed at both ends: the
+  assertion now normalizes line endings, and `*.sql text eol=lf` was added
+  to `.gitattributes`.
 - Historical reports read for this evaluation included all available MVP2
   task reports (`task-1` through `task-10`, `task-12` through `task-25`,
   integration reports, and the requests-gap report), plus

@@ -37,9 +37,27 @@ preamble is omitted from the transcripts for readability.
 | 21 | The RoPA export is real | PASS (+ FINDING: blank cross-border/retention columns, as spec anticipates) |
 | 22 | Performance on the demo dataset | PASS |
 | 23 | Timezone correctness | PASS |
-| 24 | Clean-clone reproducibility | **FAIL** — Dockerfile never copies `prisma/` into the runtime image; backend container exits immediately |
+| 24 | Clean-clone reproducibility | **PASS as of 2026-09-08** (was FAIL) — fixed in `327f796`, re-verified live; see the check for two caveats |
 
-**24 checks: 23 PASS, 1 FAIL, 0 BLOCKED. Three of the PASSes carry an attached FINDING** (Checks 4, 10, 21) — see their sections for the observed evidence.
+**As first run on 2026-08-31: 24 checks — 23 PASS, 1 FAIL, 0 BLOCKED, with three
+attached FINDINGs** (Checks 4, 10, 21).
+
+**Re-checked 2026-09-08 against current head (`c3ef454`): 24 PASS, 0 FAIL.**
+The one FAIL and two of the three findings were fixed after this document was
+written and never re-recorded here:
+
+- **Check 24** — root cause fixed in `327f796` the same day; re-verified live on
+  2026-09-08 (see that check).
+- **Check 4's finding** (concurrent syncs race and drop records) — fixed in
+  `07163d9` (per-source lock for scheduled runs) and `238da27` (acquire the
+  lock *before* creating the `SyncJob` row). `test/sync.e2e-spec.ts` now asserts
+  both the 403 and the 409-while-ACTIVE paths and passes.
+- **Check 10's finding** (raw conflict count far above "~12") — fixed in
+  `c10186e`, which stopped `conflictCount` conflating ordinary profile variance
+  with the GO-03 accuracy-gap sense of "conflict". Measured live on 2026-09-08:
+  **12**, against 150 before the fix.
+- **Check 21's finding** (blank cross-border/retention RoPA columns) stands, and
+  was never a defect — the spec anticipates it.
 
 ## Setup performed
 
@@ -1117,9 +1135,67 @@ occupy the same host ports the clean clone's compose file also binds to.)
   the same way every other check in this document was run, and which does
   work, since it never goes through the broken image.
 
-**Verdict: FAIL.** `docker compose up --build` from a genuinely fresh clone
-does not produce a working backend — it exits immediately on every attempt
-because the runtime Docker image never receives the `prisma/` directory it
-needs to run migrations at container start. No amount of waiting reaches
-"logged in as admin"; the container is stopped, not slow. This is a defect
-in `dpdp-platform/backend/Dockerfile`'s final stage `COPY` list.
+**Verdict as first run (2026-08-31): FAIL.** `docker compose up --build` from
+a genuinely fresh clone did not produce a working backend — it exited
+immediately on every attempt because the runtime Docker image never received
+the `prisma/` directory it needs to run migrations at container start. No
+amount of waiting reached "logged in as admin"; the container was stopped,
+not slow. This was a defect in `dpdp-platform/backend/Dockerfile`'s final
+stage `COPY` list.
+
+---
+
+### Re-verified 2026-09-08 — **PASS**
+
+Fixed in `327f796` ("copy prisma schema/migrations into runtime image;
+un-devDep prisma and pino-pretty"), committed at 08:52 on 2026-08-31 — the
+same day this evaluation ran, but after it. The Dockerfile's runtime stage
+now ends with `COPY --from=build /app/prisma ./prisma`, carrying a comment
+naming this exact failure, and `prisma` moved from `devDependencies` to
+`dependencies` so `npm prune --omit=dev` cannot strip the CLI that
+`migrate deploy` needs.
+
+Re-run on 2026-09-08 against current head (`c3ef454`), as a separate Compose
+project (`-p dpdp-cleanclone`) with a host-port-remapping override so it
+could not collide with the running demo stack. Only host port numbers were
+overridden: the build, the backend `command`, and the migration path under
+test were untouched.
+
+```text
+docker compose build          -> both images built, exit 0
+                                 (step "COPY --from=build /app/prisma ./prisma" DONE)
+docker compose -p dpdp-cleanclone up -d
+  backend    running   Up     <- was: exited (1), restartcount 0
+  frontend   running   Up
+  postgres   running   Up (healthy)
+SELECT COUNT(*) FROM _prisma_migrations WHERE finished_at IS NOT NULL;  -> 14
+GET  http://localhost:4001/api/health -> 200 {"status":"ok","db":"up","redis":"up"}
+GET  http://localhost:5174/           -> 200
+npm run seed                          -> Seed complete. Organization ... Acme Retail Pvt Ltd
+POST /api/auth/employee/login         -> 200, token issued for admin@acmeretail.demo
+```
+
+The stack reached "logged in as admin" with no manual SQL. Two caveats,
+neither of which existed when this check was first written:
+
+1. **`git clone` now fails outright on Windows.** `graphify-out/obsidian/`
+   (checked in since `b5ab592`) contains filenames past the Windows path
+   limit and **eight case-colliding pairs** — `Module_14.md`/`module_14.md`,
+   `ROUTES.md`/`Routes.md`, `Personas.md`/`personas.md` and five more — so
+   checkout aborts with "Filename too long" / "unable to checkout working
+   tree". This verification had to sparse-checkout around `graphify-out/`.
+   The same collisions leave those files permanently listed as modified in
+   any Windows working tree, because git checks out one of each pair and
+   forever sees the other as missing. On Linux neither symptom appears.
+   Given that Windows is now a supported platform, this is a live gap in
+   exactly what Check 24 measures.
+2. **`npm run seed` is documented nowhere.** The spec's own steps for this
+   check include it, but `README.md` (now a client evaluation guide built
+   around a Download-ZIP + numbered-button flow) never mentions `npm run
+   seed` or `docker compose` at all, and the seed does not run as part of
+   `docker compose up` — so a compose-only stack comes up healthy with an
+   empty database and a 401 on admin login. By this check's own Fail
+   criterion ("anything you had to 'just remember' belongs in the README or
+   the seed script") that is a documentation gap, though not a code defect.
+   The button-driven path the README *does* document is separately recorded
+   as working on Windows in `JOURNAL.md`.

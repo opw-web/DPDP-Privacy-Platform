@@ -5,17 +5,15 @@ automatically by Claude Code hooks. Humans and future sessions read the "Now" bl
 
 <!-- journal:pinned:start -->
 ## Now
-- **Working on:** Windows compatibility for the demo control layer (2026-09-08). Approach: the `.sh` files stay the single source of truth and run under Git Bash; every OS difference lives in the new `demo-control/platform.sh`, sourced first by `common.sh`. Root `N - Name (Windows).cmd` wrappers find Git Bash and run the same `.sh`. No PowerShell port — `stage-demo.sh` alone has 69 `jq_py` calls over 47 distinct Python expressions, so Python stays a dependency and `psql` was dropped instead (`psql_q` runs SQL inside the postgres container). Added `.gitattributes` (`*.sh` = LF) after finding every script checked out CRLF under `core.autocrlf=true`. Journal hooks now go via `.claude/journal/run.sh`.
-- **Windows is GREEN (2026-09-08).** Button 0 reached "Preparation complete" with every stage A–J `[made]`, zero `[FAILED]`, portal login verified. Button 4 reports exactly 500/327/4/12/6. Buttons 1/3/5/6 all run and return promptly; data survives a stop/start cycle. Prereqs installed: Node 20.20.2 (from nodejs.org — winget has no Node 20), Python 3.12.10, VS Build Tools 2022 (C++), Docker Desktop 29.7.2, WSL2.
-- **Fixed mid-run:** `run_detached`'s first Windows version used `( cmd & )`. The service survived but kept its MSYS bash parent alive and held the console, so button 0/1 never returned. Now uses `Start-Process`. Also: Windows has no SIGTERM, so `kill_pid` goes straight to `taskkill /T /F` instead of timing out and crying "did not stop gracefully".
-- **Next up:** re-run buttons 1/5/4/6 on Linux Mint to prove no regression — `psql_q`'s Linux branch (`sg docker -c` + `printf %q`) is the one path not exercised anywhere yet. Optionally retake `docs/demo-runbook/images/desktop-icons.png` on Windows (currently GNOME icons).
-- **Windows prereq note for clients:** `argon2@0.45.1` has no usable Windows prebuild and compiles from source, so VS Build Tools (~2–4 GB, admin) is required on every Windows machine. `argon2@0.44.0` installs prebuilt and passes hash+verify if that ever proves too heavy for client laptops.
-- **Earlier context — DPDP MVP 2, branch `mvp2-compliance-operations`, demo-rush mode — user needs a live demo NOW. Spec `DPDP_MVP2_COMPLIANCE_OPERATIONS.md`; ledger `.superpowers/sdd/2026-08-31-dpdp-mvp2/progress.md` (tail has the resume block plus LANE B, LANE A and D10 CLOSE entries).
-- **Demo control surface COMMITTED:** `demo-control/` (`common.sh`, `start.sh`, `stop.sh`, `status.sh`, `reset.sh`, `desktop/*.desktop`) in git; launchers also copied to `~/Desktop` and `~/.local/share/applications`. Live trial done: start → status → stop → status → start, backend login smoke-checked, frontend on :5173 confirmed after retry. Trial notes at `.superpowers/sdd/2026-08-31-dpdp-mvp2/demo-launchers-report`; screenshot findings at `.superpowers/sdd/2026-08-31-dpdp-mvp2/demo-screenshots-report.md`. Docker runs via `sg docker -c`; paths quoted for the space in "DPDP app". Seed path now mapped: `prisma/seed.ts` → `prisma/seed/mvp2-demo.ts` plus principal seeding, driven by `demo-control/reset.sh`.
-- **Committed:** Lane A `c10186e feat(inventory): count a GO-03 accuracy gap, not every profile variance`; D10 `8b23b72 fix(identity): lock the name key, so one person cannot become two`; demo launchers `ad91b93 feat(demo): four double-click buttons to run the demo without a terminal`. Lane B done: `docs/EVALUATION_MVP2.md`. The **full backend suite has NOT been re-run** over Lane A or D10 — do not claim green.
-- **Next up:** (1) Run the full backend suite over the committed Lane A + D10 changes. (2) Suite contention, Ruling 45 — cumulative-DB-volume theory, row counts, no raised timeouts. (3) Walkthrough re-captures: step 27 (post-D8), step 32 document halves (post-D9), step 6 after a resync — all need the shared Postgres, so HELD not parallelised (Ruling 50). (4) Optional: a true double-click trial from the file manager (only `gio launch` was exercised for the GUI path).
+- **Working on:** acceptance closure for both specs (2026-09-08). MVP2 Section 7 is now **34 PASS, 0 PARTIAL, 0 OUTSTANDING**; MVP1 is **24 PASS, 0 FAIL**. Both evaluation docs updated. Step 6 closed by button 4 reporting 500/327/4/12/6 live. Step 30 re-driven end to end (Raj withdraws in the portal -> real `pre-erasure-notice` job -> NOTICE_SENT -> he logs in -> CANCELLED under Rule 8(2)), no bespoke job names; the two shortened rules were restored.
+- **Ruling 45 is CLOSED — and the cumulative-DB-volume theory was the lesser half.** The e2e suite had no database of its own (ran against the live demo DB, cleaned by targeted `deleteMany`), AND shared Redis with the running demo app: fixed queue names mean the demo's workers eat jobs the tests enqueue, look for the row in the demo DB, and drop it -> `waitUntil: timed out`. Which suite loses that race is timing, hence the migration between files. Now isolated by `test/support/test-database.ts` + `test/global-setup.ts` + `test/setup-env.ts`: own `dpdp_test` DB (created/migrated/truncated per run) and Redis index 1 (flushed). Shared stack: 4 suites / 10 tests failed. Isolated: runs 1 and 3 fully green (45 suites, 455 passed / 4 skipped), run 2 green but one test.
+- **One flake left, narrower:** `principals.e2e-spec.ts` "SQL query budget" failed once in three at 16 vs a budget of 15. Instrumentation defect, not a route defect — `queryCount` uses a client-wide `$on("query")` listener gated by a boolean, so it counts every query on the shared PrismaService in the window, including background jobs. Not request-scoped. Fix before trusting it as a gate.
+- **MVP1 Check 24 re-verified PASS.** `327f796` had fixed it (runtime image now copies `prisma/`, `prisma` moved to dependencies) but nobody re-ran it. Clean clone -> compose build -> backend **running** (was exited 1), 14 migrations, health 200, seed, admin login 200. Run as `-p dpdp-cleanclone` with a host-port override so the live demo was never touched.
+- **Two findings neither evaluation had:** (1) `git clone` FAILS on Windows — `graphify-out/obsidian/` has over-long filenames and 8 case-colliding pairs (`Module_14.md`/`module_14.md`, `ROUTES.md`/`Routes.md`, ...). Also why those files sit permanently "modified" in a Windows tree. Had to sparse-checkout around it. (2) `dpdp-platform/.env` and `backend/.env` are COMMITTED (`153a069`) including `ENCRYPTION_KEY` and both JWT secrets — in tension with MVP1 Check 14.
+- **Also fixed:** `schema-constraints.e2e-spec.ts` compared a `.sql` migration byte-for-byte against an LF literal; `.gitattributes` pinned `*.sh` but not `*.sql`, so it failed on Windows only. Assertion now normalizes EOL, and `*.sql text eol=lf` added.
+- **Next up:** decide on the two findings above (graphify-out Windows-unsafe filenames; committed .env secrets), and the query-budget instrumentation. Nothing is committed yet — all of today's changes are working-tree only.
 - **Blocked:** nothing.
-- **Tried and rejected:** `git stash` in this shared tree (live grenade); raising a test timeout to cure contention (Ruling 24); a one-line `canonicalField === CITY` filter for step 6 (Ruling 47); folding the default-unreviewed backfill into the already-applied 20260903090000 migration (checksum drift — split into a second migration); trusting an agent's "suite green" without re-running it (contradicted three times).
+- **Tried and rejected:** `git stash` in this shared tree (live grenade); raising a test timeout to cure contention (Ruling 24); cumulative DB volume as the *sole* Ruling 45 cause (shared Redis mattered more); running the clean-clone compose on default ports (would have collided with, and adopted, the live demo's project name and pgdata volume).
 <!-- journal:pinned:end -->
 
 ---
@@ -3067,3 +3065,193 @@ _Earlier entries archived to .claude/journal/archive/JOURNAL-2026-08.md._
 - `14:19` ran `cd "/home/linux/Coding stuff/DPDP app/dpdp-platform/backend/src/modules/requests" && grep -n -A20 "^export const TRAN...`
 - `14:20` ran `cd "/home/linux/Coding stuff/DPDP app/demo-control" && python3 - <<'PY' import io p="stage-demo.sh"; s=io.open(p,enco...`
 - `14:20` ran `cd "/home/linux/Coding stuff/DPDP app" && T=$(curl -s -X POST localhost:4000/api/auth/employee/login -H 'Content-Type...`
+
+### 2026-09-08 15:28 - session `b0f97ba3`
+
+**Why:** is @DPDP_MVP2_COMPLIANCE_OPERATIONS.md built completely and finished?
+
+- `15:29` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && ls && echo "--- backend src ---" && ls dpdp-platform/backend/src 2>/dev...`
+- `15:29` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && echo "=== MVP2 models present? ===" && for m in C...`
+- `15:29` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && echo "=== queues/jobs ===" && ls -R src/queues | ...`
+- `15:29` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform" && echo "=== frontend routes ===" && find frontend/src -type...`
+- `15:29` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform" && ls && echo "--- frontend ---" && ls frontend 2>/dev/null ...`
+- `15:29` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/frontend" && grep -oE 'path="[^"]*"' src/router.tsx | sort -u`
+- `15:29` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && echo "=== JOURNAL grep mvp2 ===" && grep -niE "mvp ?2|check 3[0-9]|acce...`
+- `15:29` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && wc -l docs/EVALUATION_MVP2.md && sed -n '1,120p' docs/EVALUATION_MVP2.md`
+- `15:29` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && sed -n '120,300p' docs/EVALUATION_MVP2.md`
+- `15:29` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && sed -n '300,423p' docs/EVALUATION_MVP2.md`
+- `15:30` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git log --oneline -25 && echo "=== show demo proof ===" && cat "4 - Sho...`
+- `15:30` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && sed -n '1,120p' demo-control/show-demo-proof.sh`
+- `15:30` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && echo "=== seed files ===" && ls prisma/seed* pris...`
+- `15:30` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && grep -oE "ruleCode: *[\"'][A-Z_]+" prisma/seed/co...`
+- `15:30` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && ls -a | grep -i superpower; echo "--- docs/superpowers ---"; ls docs/su...`
+- `15:30` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git log --oneline -1 -- docs/evidence/mvp2/live-step-30-postfix-neha-ev...`
+- `15:30` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -nE "^stage_[A-J]|^# Stage|stage \"[A-J]" demo-control/stage-demo....`
+- `15:30` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -nE "stage[_ ]?[A-J]\b" demo-control/stage-demo.sh | head -30; ech...`
+- `15:30` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -nE '^\s*(stage|step)[A-Za-z_]*\(\)|^# [A-J][.)] |made\b' demo-con...`
+- `15:31` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -nE '^# *[-=]{0,3} *[A-J] |^### |^## ' demo-control/stage-demo.sh ...`
+- `15:31` wrote `C:\Users\ompuri\.claude\plans\is-dpdp-mvp2-compliance-operations-md-bu-humble-llama.md` (~77 lines)
+- `15:32` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/evidence/mvp2" && ls -la live-step-30-postfix-* live-step-30-vikram-* ...`
+- `15:32` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && ls docs/evidence/ && echo "=== reports ===" && find docs -name "*walkth...`
+- `15:33` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/evidence/mvp2" && for f in live-step-30-postfix-neha-evaluated-task-be...`
+- `15:33` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && timeout 120 /bin/bash demo-control/status.sh 2>&1 | head -60`
+- `15:33` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && sed -n '120,220p' demo-control/show-demo-proof.sh`
+- `15:33` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && timeout 300 /bin/bash demo-control/show-demo-proof.sh < /dev/null 2>&1 ...`
+- `15:34` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && grep -nE "@(Get|Post|Patch|Delete)\(|@RequirePerm...`
+- `15:34` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && cat src/queues/retention-scan.queue.ts && echo "=...`
+- `15:34` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && ls src/modules/retention/ && echo "=== processor ...`
+- `15:34` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && grep -n "INACTIVITY\|thirdScheduleClass\|lastPrin...`
+- `15:34` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && sed -n '95,185p' src/modules/retention/retention-...`
+- `15:35` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && ls test/support/ && echo "=== harness DB handling...`
+- `15:35` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && python -c " import json d=json.load(open('package...`
+- `15:37` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform" && grep -nE "POSTGRES_DB|POSTGRES_USER|container_name|ports"...`
+- `15:37` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform" && grep -nE "POSTGRES_DB|POSTGRES_USER|image: postgres|5432"...`
+- `15:37` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -rn "dpdp_test\|DATABASE_URL" --include=*.sh demo-control/ 2>/dev/...`
+- `15:37` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -n "^| 6 |" docs/EVALUATION_MVP2.md | cut -c1-200; echo "---"; gre...`
+- `15:37` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PY' import io,re p='docs/EVALUATION_MVP2.md' s=io.open(p,en...`
+- `15:38` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PY' import io p='docs/EVALUATION_MVP2.md' s=io.open(p,encod...`
+- `15:38` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && sed -n '22,45p' docs/EVALUATION_MVP2.md`
+
+**Why:** <task-notification> <task-id>btchznej0</task-id> <tool-use-id>toolu_01DpmPpQEdGdfsJ4MwkiNoeW</tool-use-id> <output-file>C:\Users\ompuri\AppData\Local\Temp\claude\C--Coding-stuff-DPDP-Privacy-Platform\...
+
+- `15:38` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PY' import io p='docs/EVALUATION_MVP2.md' s=io.open(p,encod...`
+- `15:38` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PY' import io p='docs/EVALUATION_MVP2.md' s=io.open(p,encod...`
+- `15:38` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PY' import io p='docs/EVALUATION_MVP2.md' s=io.open(p,encod...`
+- `15:38` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && echo "=== remaining OUTSTANDING mentions ===" && grep -n "OUTSTANDING" ...`
+- `15:42` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && ls src/config/ && echo "=== ConfigModule setup ==...`
+- `15:42` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && sed -n '44,60p' src/app.module.ts && echo "=== pr...`
+- `15:42` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && find src -name "prisma*.ts" | head && echo "---" ...`
+- `15:42` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && sed -n '45,75p' src/common/prisma/prisma.service....`
+- `15:42` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && sed -n '1,80p' test/support/e2e-harness.ts`
+- `15:43` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && grep -rln "GRIEVANCE_STATUTORY_BASELINE\|seedComp...`
+- `15:43` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && grep -n "seedComplianceRules\|GRIEVANCE_STATUTORY...`
+- `15:43` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && python -c " import json; d=json.load(open('packag...`
+- `15:43` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && cat > test/support/test-database.ts <<'TS' import...`
+- `15:43` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && cat > test/global-setup.ts <<'TS' import { config...`
+- `15:44` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && python -c " import json; d=json.load(open('packag...`
+- `15:44` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && ls node_modules/dotenv/package.json 2>/dev/null &...`
+- `15:44` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && python - <<'PY' import io p='test/support/test-da...`
+- `15:44` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && sed -n '36,80p' test/support/test-database.ts`
+- `15:44` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && python - <<'PY' import io p='test/support/test-da...`
+- `15:44` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && python - <<'PY' import io,re p='test/support/test...`
+- `15:44` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && python - <<'PY' import io p='test/support/test-da...`
+- `15:45` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && cat > test/global-setup.ts <<'TS' import { loadEn...`
+- `15:45` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && echo "demo DB principals BEFORE:" && /bin/bash -c '. demo-control/commo...`
+- `15:45` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && timeout 550 npx jest --config ./test/jest-e2e.jso...`
+- `15:45` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && python - <<'PY' import io p='test/support/test-da...`
+- `15:46` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && timeout 550 npx jest --config ./test/jest-e2e.jso...`
+- `15:46` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && python - <<'PY' import io p='test/support/test-da...`
+- `15:46` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && echo "demo DB principals AFTER: $(/bin/bash -c '. demo-control/common.s...`
+- `15:46` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && mkdir -p /c/Users/ompuri/AppData/Local/Temp/claud...`
+- `15:47` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && grep -n "createFromTrigger" -A 70 src/modules/ret...`
+- `15:47` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && sed -n '169,240p' src/modules/retention/erasure-t...`
+- `15:47` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && grep -rn "ERASURE_TASK_CANCELLED\|cancelForPrinci...`
+- `15:47` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && sed -n '180,235p' src/modules/auth/principal-auth...`
+- `15:47` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && /bin/bash -c '. demo-control/common.sh 2>/dev/null echo "--- purposes -...`
+- `15:48` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && grep -n "RetentionUnit" prisma/schema.prisma | he...`
+- `15:48` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && grep -n "@Controller\|@Get(\|@Post(\|@Patch(\|Req...`
+- `15:48` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && grep -n "RETENTION_UNITS\s*=" -A 3 src/modules/re...`
+- `15:48` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && /bin/bash -c '. demo-control/common.sh 2>/dev/null echo "--- portal acc...`
+- `15:48` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -rn "PASSWORD\|password" demo-control/common.sh | head && echo "==...`
+- `15:48` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && API=http://localhost:4000/api && TOKEN=[REDACTED] -s -X POST "$API/auth...`
+- `15:49` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && API=http://localhost:4000/api && TOKEN=[REDACTED] /tmp/adm.tok) && echo...`
+- `15:49` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && API=http://localhost:4000/api && PURPOSE=89987d5f-71a9-4785-b51e-dec3fc...`
+- `15:49` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && /bin/bash -c '. demo-control/common.sh 2>/dev/null psql_q "SELECT id, t...`
+- `15:49` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && grep -iE "redis" .env && echo "=== redis-connecti...`
+- `15:49` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && SP=/c/Users/ompuri/AppData/Local/Temp/claude/C--C...`
+- `15:49` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && /bin/bash -c '. demo-control/common.sh 2>/dev/null echo "--- task state...`
+- `15:50` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && API=http://localhost:4000/api && RAJ2=$(curl -s -X POST "$API/auth/prin...`
+- `15:50` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && SP=/c/Users/ompuri/AppData/Local/Temp/claude/C--C...`
+- `15:50` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && API=http://localhost:4000/api && TOKEN=[REDACTED] /tmp/adm.tok) && curl...`
+- `15:50` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PY' import io p='docs/EVALUATION_MVP2.md' s=io.open(p,encod...`
+- `15:51` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PY' import io p='docs/EVALUATION_MVP2.md' s=io.open(p,encod...`
+- `15:51` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PY' import io p='docs/EVALUATION_MVP2.md' s=io.open(p,encod...`
+- `15:51` ran `L=/c/Users/ompuri/AppData/Local/Temp/claude/C--Coding-stuff-DPDP-Privacy-Platform/b0f97ba3-32bc-4d4d-8a1a-7e344c5cd9e...`
+- `15:51` ran `L=/c/Users/ompuri/AppData/Local/Temp/claude/C--Coding-stuff-DPDP-Privacy-Platform/b0f97ba3-32bc-4d4d-8a1a-7e344c5cd9e...`
+- `15:51` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && cat src/queues/redis-connection.util.ts`
+- `15:52` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && python - <<'PY' import io p='test/support/test-da...`
+- `15:52` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && python - <<'PY' import io p='test/support/test-da...`
+- `15:52` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && cat > test/global-setup.ts <<'TS' import { loadEn...`
+- `15:52` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && timeout 550 npx jest --config ./test/jest-e2e.jso...`
+- `15:53` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && timeout 550 npx jest --config ./test/jest-e2e.jso...`
+- `15:53` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && file prisma/migrations/20260830120000_normalized_...`
+- `15:53` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && sed -n '175,215p' test/schema-constraints.e2e-spe...`
+- `15:53` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && python - <<'PY' import io p='test/schema-constrai...`
+- `15:53` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && python - <<'PY' import io p='test/schema-constrai...`
+- `15:53` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && python - <<'PY' import io p='test/schema-constrai...`
+- `15:54` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && timeout 550 npx jest --config ./test/jest-e2e.jso...`
+- `15:54` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && LOG=/c/Users/ompuri/AppData/Local/Temp/claude/C--...`
+- `15:54` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/frontend" && timeout 550 npm run test -- --run 2>&1 | tail -15`
+- `15:55` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && python -c " import json;d=json.load(open('package...`
+- `15:55` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && ls jest.config* 2>/dev/null; cat jest.config.js 2...`
+- `15:55` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && timeout 550 npm test 2>&1 | grep -E "^Test Suites...`
+- `15:55` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git status --short && echo "=== diff stat ===" && git diff --stat`
+- `15:56` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git status --short -- .gitattributes docs/ dpdp-platform/ && echo "=== ...`
+- `15:56` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && curl -s http://localhost:4000/api/health | head -c 300; echo; /bin/bash...`
+- `15:56` ran `L=/c/Users/ompuri/AppData/Local/Temp/claude/C--Coding-stuff-DPDP-Privacy-Platform/b0f97ba3-32bc-4d4d-8a1a-7e344c5cd9e...`
+- `15:56` ran `until grep -q "ALL RUNS DONE" "C:/Users/ompuri/AppData/Local/Temp/claude/C--Coding-stuff-DPDP-Privacy-Platform/b0f97b...`
+
+### 2026-09-08 16:01 - session `b0f97ba3`
+
+**Why:** so @DPDP_MVP1_FOUNDATION_AND_DISCOVERY.md and @DPDP_MVP2_COMPLIANCE_OPERATIONS.md are now completely built and finished?
+
+- `16:01` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && sed -n '1,70p' docs/EVALUATION_MVP1.md`
+- `16:02` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && sed -n '/^#### Check 24/,/^#### /p' docs/EVALUATION_MVP1.md | head -45`
+- `16:02` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -n "Check 24" docs/EVALUATION_MVP1.md | head && echo "---" && awk ...`
+- `16:02` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && cat Dockerfile`
+- `16:02` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && python -c " import json;d=json.load(open('package...`
+- `16:02` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git log -1 --format="%h %ad %s" --date=iso 327f796 && echo "=== does MV...`
+
+**Why:** <task-notification> <task-id>buz2cg18u</task-id> <tool-use-id>toolu_01A8B7NwnFH1RvVpHARejLcz</tool-use-id> <output-file>C:\Users\ompuri\AppData\Local\Temp\claude\C--Coding-stuff-DPDP-Privacy-Platform\...
+
+- `16:10` ran `L=/c/Users/ompuri/AppData/Local/Temp/claude/C--Coding-stuff-DPDP-Privacy-Platform/b0f97ba3-32bc-4d4d-8a1a-7e344c5cd9e...`
+- `16:10` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && sed -n '855,922p' test/principals.e2e-spec.ts`
+- `16:10` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && grep -n "captureQueries\|queryCount\|\$on(" test/...`
+- `16:10` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PY' import io p='docs/EVALUATION_MVP2.md' s=io.open(p,encod...`
+- `16:11` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PY' import io p='docs/EVALUATION_MVP2.md' s=io.open(p,encod...`
+- `16:11` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && echo "=== dirty files at session start (from git status) ===" && git st...`
+- `16:11` removed `rm -rf /c/dpdp-cc && git -c core.longpaths=true clone --quiet --no-checkout "C:/Coding stuff/DPDP-Privacy-Platform" /...`
+- `16:12` ran `cd /c/dpdp-cc/dpdp-platform && ls -a | head -20 && echo "--- .env.example present? ---" && ls .env.example 2>/dev/nul...`
+- `16:12` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git ls-files | grep -E "(^|/)\.env$" && echo "--- committed .env conten...`
+- `16:12` ran `cd /c/dpdp-cc/dpdp-platform && docker compose build 2>&1 | tail -40`
+
+### 2026-09-08 16:15 - session `b0f97ba3`
+
+**Why:** <task-notification> <task-id>bvgirj362</task-id> <tool-use-id>toolu_01HfiGug44AXRLkfUNWT7GdC</tool-use-id> <output-file>C:\Users\ompuri\AppData\Local\Temp\claude\C--Coding-stuff-DPDP-Privacy-Platform\...
+
+- `16:15` ran `docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Ports}}" && echo "=== volumes ===" && docker volume ls | head -1...`
+- `16:15` ran `cd /c/dpdp-cc/dpdp-platform && cat docker-compose.yml`
+- `16:15` ran `cd /c/dpdp-cc/dpdp-platform && cat > docker-compose.override.yml <<'YML' # Host-port remap only, so this clean-clone ...`
+- `16:16` ran `cd /c/dpdp-cc/dpdp-platform && docker compose -p dpdp-cleanclone down 2>&1 | tail -3 && cat > docker-compose.override...`
+- `16:16` ran `cd /c/dpdp-cc/dpdp-platform && docker compose -p dpdp-cleanclone ps --format "table {{.Service}}\t{{.State}}\t{{.Stat...`
+- `16:16` ran `cd /c/dpdp-cc/dpdp-platform && for i in $(seq 1 20); do H=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:4...`
+- `16:16` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -n "Check 24" DPDP_MVP1_FOUNDATION_AND_DISCOVERY.md && awk '/#### ...`
+- `16:16` ran `cd /c/dpdp-cc && grep -n -A 20 -i "docker compose up\|npm run seed" README.md 2>/dev/null | head -40`
+- `16:16` ran `cd /c/dpdp-cc && ls *.md && echo "=== seed mentions in README ===" && grep -n -i "seed" README.md | head -20`
+- `16:16` ran `cd /c/dpdp-cc && wc -l README.md && head -60 README.md`
+- `16:17` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && head -25 prisma/seed.ts && echo "=== dotenv/env h...`
+- `16:17` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && DATABASE_URL="postgresql://dpdp:dpdp@localhost:54...`
+- `16:17` ran `cd /c/dpdp-cc/dpdp-platform && docker compose -p dpdp-cleanclone down -v 2>&1 | tail -6 && echo "=== remaining contai...`
+- `16:18` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PY' import io p='docs/EVALUATION_MVP1.md' s=io.open(p,encod...`
+- `16:18` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PY' import io p='docs/EVALUATION_MVP1.md' s=io.open(p,encod...`
+- `16:18` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PY' import io p='docs/EVALUATION_MVP1.md' s=io.open(p,encod...`
+- `16:19` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PY' import io p='docs/EVALUATION_MVP1.md' s=io.open(p,encod...`
+- `16:19` removed `rm -rf /c/dpdp-cc && SP=/c/Users/ompuri/AppData/Local/Temp/claude/C--Coding-stuff-DPDP-Privacy-Platform/b0f97ba3-32bc...`
+- `16:19` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -n "journal:pinned" JOURNAL.md && sed -n "$(grep -n 'journal:pinne...`
+- `16:19` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && sed -n '6,19p' JOURNAL.md | cut -c1-160`
+- `16:20` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PY' import io p='JOURNAL.md' s=io.open(p,encoding='utf-8',n...`
+
+### 2026-09-08 16:27 - session `b0f97ba3`
+
+**Why:** commit and push
+
+- `16:28` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && echo "=== branch ===" && git rev-parse --abbrev-ref HEAD && git status ...`
+- `16:28` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && echo "=== sample diff: a vault note ===" && git diff --stat -- graphify...`
+- `16:28` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && echo "=== deletions in graphify-out ===" && git status --short -- graph...`
+- `16:28` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && echo "=== what git has committed for each (differ?) ===" && echo "Modul...`
+- `16:28` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git diff -- dpdp-platform/backend/test/jest-e2e.json .gitattributes dpd...`
+- `16:29` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && cat > test/jest-e2e.json <<'JSON' { "moduleFileEx...`
+- `16:29` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && python - <<'PY' import io, json B = chr(92) lines...`
+- `16:29` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && timeout 550 npx jest --config ./test/jest-e2e.jso...`
+- `16:29` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git add dpdp-platform/backend/test/global-setup.ts dpdp-platform/backen...`
+- `16:29` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git add .gitattributes dpdp-platform/backend/test/schema-constraints.e2...`
