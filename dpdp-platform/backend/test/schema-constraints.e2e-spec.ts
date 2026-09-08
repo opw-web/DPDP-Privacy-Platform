@@ -194,7 +194,11 @@ describe("Schema constraints and triggers (e2e)", () => {
         ),
         "utf8",
       );
-      expect(migrationSql).toBe(
+      // Compare on content, not on line endings: a Windows clone with
+      // core.autocrlf=true checks this .sql file out as CRLF, which is
+      // harmless to Prisma and to psql but would fail a byte-for-byte
+      // comparison against the LF literal below.
+      expect(migrationSql.replace(/\r\n/g, "\n")).toBe(
         "-- Supporting-signal matching searches nameKey within a tenant.\n" +
           'CREATE INDEX "NormalizedRecord_organizationId_nameKey_idx"\n' +
           '  ON "NormalizedRecord"("organizationId", "nameKey");\n',
