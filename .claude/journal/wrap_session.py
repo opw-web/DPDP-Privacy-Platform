@@ -15,7 +15,12 @@ def main():
     ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR") or os.getcwd())
     J = ROOT / "JOURNAL.md"
     STATE = ROOT / ".claude" / "journal"
-    if not J.exists() or not shutil.which("claude"):
+    # Resolve the executable rather than relying on the name. On Windows the
+    # CLI is a claude.cmd shim, and subprocess.run without shell=True does not
+    # reliably resolve a .cmd from a bare name -- but it does run the full
+    # path shutil.which hands back.
+    claude_exe = shutil.which("claude")
+    if not J.exists() or not claude_exe:
         return
     stamp = STATE / ".recap.stamp"
     now = int(time.time())
@@ -41,7 +46,7 @@ def main():
            "=== Now ===\n" + pinned + "\n\n=== Turn ===\n" + block[-4000:])
     env = dict(os.environ, JOURNAL_NO_SUMMARY="1")
     try:
-        p = subprocess.run(["claude", "-p", ask], capture_output=True, text=True,
+        p = subprocess.run([claude_exe, "-p", ask], capture_output=True, text=True,
                            timeout=120, env=env, cwd=str(ROOT), stdin=subprocess.DEVNULL)
     except Exception:
         return
@@ -62,10 +67,16 @@ def main():
     if got.get("recap"):
         text = text.rstrip("\n") + "\n- **Recap:** " + " ".join(got["recap"].split()) + "\n"
     with open(J, "w", encoding="utf-8") as fh:
+        # fcntl on Linux, msvcrt on Windows; best-effort on both.
         try:
-            import fcntl; fcntl.flock(fh, fcntl.LOCK_EX)
+            import fcntl
+            fcntl.flock(fh, fcntl.LOCK_EX)
         except Exception:
-            pass
+            try:
+                import msvcrt
+                msvcrt.locking(fh.fileno(), msvcrt.LK_LOCK, 1)
+            except Exception:
+                pass
         fh.write(text)
 
 try:

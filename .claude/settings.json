@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/home/linux/.local/bin/graphify hook-guard search"
+            "command": "C:/Users/ompuri/.local/bin/graphify.EXE hook-guard search"
           }
         ]
       },
@@ -15,7 +15,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/home/linux/.local/bin/graphify hook-guard read"
+            "command": "C:/Users/ompuri/.local/bin/graphify.EXE hook-guard read"
           }
         ]
       }
@@ -34,7 +34,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/journal/log_event.py\"",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/journal/run.sh\" log_event.py",
             "timeout": 20
           }
         ],
@@ -46,7 +46,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/journal/capture_intent.py\"",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/journal/run.sh\" capture_intent.py",
             "timeout": 20
           }
         ]
@@ -57,7 +57,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/journal/session_start.py\"",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/journal/run.sh\" session_start.py",
             "timeout": 20
           }
         ],
@@ -69,7 +69,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/journal/wrap_session.py\"",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/journal/run.sh\" wrap_session.py",
             "timeout": 20
           }
         ]
@@ -80,7 +80,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/journal/wrap_session.py\"",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/journal/run.sh\" wrap_session.py",
             "timeout": 20
           }
         ]

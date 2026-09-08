@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "\"/home/linux/Coding stuff/DPDP app/.venv/bin/graphify\" hook-guard search"
+            "command": "/home/linux/.local/bin/graphify hook-guard search"
           }
         ]
       },
@@ -15,7 +15,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "\"/home/linux/Coding stuff/DPDP app/.venv/bin/graphify\" hook-guard read"
+            "command": "/home/linux/.local/bin/graphify hook-guard read"
           }
         ]
       }

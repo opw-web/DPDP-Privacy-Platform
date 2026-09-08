@@ -12,7 +12,11 @@ SKIP_PATH = ("JOURNAL.md", ".claude/journal", ".git/", "node_modules/",
              "graphify-out/", ".env", "secrets/", ".pem", ".key", "id_rsa")
 SKIP_CMD = ("ls", "cat", "head", "tail", "grep", "rg", "find", "fd", "which", "pwd",
             "echo", "wc", "tree", "jq", "sed -n", "git status", "git diff", "git log",
-            "git show", "git branch --list", "python3 .claude/journal")
+            "git show", "git branch --list", "python3 .claude/journal",
+            # The journal's own hooks now go through run.sh, which resolves a
+            # working interpreter. Both spellings stay listed so the filter
+            # keeps working on a checkout that predates that change.
+            "bash .claude/journal", ".claude/journal/run.sh")
 
 # Secrets must never reach the journal (it gets committed). SKIP_CMD is prefix-only,
 # so a secret inside a compound command (cd x && echo pw | sudo -S ...) slips past it.
@@ -61,6 +65,28 @@ def rollover(text):
         fh.write(log)
     return head + "## Log\n\n_Earlier entries archived to " + rel(arch) + "._\n"
 
+def lock(fh):
+    """Take an exclusive lock on an open file, on Linux or Windows.
+
+    Several hooks can fire at once, so appends have to be serialised. fcntl
+    does not exist on Windows; msvcrt.locking is the equivalent there. Both
+    are best-effort -- if locking is unavailable the write still goes ahead,
+    because losing a journal line is better than failing the hook.
+    """
+    try:
+        import fcntl
+        fcntl.flock(fh, fcntl.LOCK_EX)
+        return
+    except Exception:
+        pass
+    try:
+        import msvcrt
+        # Locks one byte from the current position, which is all that is
+        # needed to serialise appenders.
+        msvcrt.locking(fh.fileno(), msvcrt.LK_LOCK, 1)
+    except Exception:
+        pass
+
 def append(chunk):
     if not JOURNAL.exists():
         JOURNAL.write_text(TEMPLATE, encoding="utf-8")
@@ -69,10 +95,7 @@ def append(chunk):
     if rolled != cur:
         JOURNAL.write_text(rolled, encoding="utf-8")
     with open(JOURNAL, "a", encoding="utf-8") as fh:
-        try:
-            import fcntl; fcntl.flock(fh, fcntl.LOCK_EX)
-        except Exception:
-            pass
+        lock(fh)
         turn = STATE / ".turn"
         if turn.exists():
             fh.write(turn.read_text(encoding="utf-8"))
