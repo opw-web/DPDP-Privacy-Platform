@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/RequestDetailPage.tsx"
 type: "code"
-community: "employeeApiClient"
+community: "RequestDetailPage.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeeApiClient
+  - community/RequestDetailPagetsx
 ---
 
 # RequestDetailPage.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[AccessReportPanel()]] - `imports` [EXTRACTED]
 - [[AccessReportPanel.tsx]] - `imports_from` [EXTRACTED]
 - [[Badge()]] - `imports` [EXTRACTED]
@@ -40,7 +41,9 @@ tags:
 - [[card.tsx]] - `imports_from` [EXTRACTED]
 - [[checkbox.tsx]] - `imports_from` [EXTRACTED]
 - [[employeeApiClient]] - `imports` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
+- [[react-router-dom_1]] - `imports_from` [EXTRACTED]
 - [[requeststypes.ts]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeeApiClient
+#graphify/code #graphify/EXTRACTED #community/RequestDetailPagetsx

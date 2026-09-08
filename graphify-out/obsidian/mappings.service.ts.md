@@ -12,6 +12,8 @@ tags:
 # mappings.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AssemblyService]] - `imports` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[DataSourcesService]] - `imports` [EXTRACTED]

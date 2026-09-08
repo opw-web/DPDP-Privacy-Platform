@@ -12,12 +12,12 @@ tags:
 # MergeService
 
 ## Connections
-- [[dot-constructor()_7]] - `references` [EXTRACTED]
-- [[dot-constructor()_104]] - `references` [EXTRACTED]
-- [[dot-constructor()_9]] - `method` [EXTRACTED]
+- [[dot-constructor()_8]] - `references` [EXTRACTED]
+- [[dot-constructor()_110]] - `references` [EXTRACTED]
+- [[dot-constructor()_10]] - `method` [EXTRACTED]
 - [[dot-mergeRecordIntoPrincipal()]] - `method` [EXTRACTED]
 - [[dot-unmerge()_1]] - `method` [EXTRACTED]
-- [[Injectable_6]] - `references` [EXTRACTED]
+- [[Injectable_5]] - `references` [EXTRACTED]
 - [[candidates.service.ts]] - `imports` [EXTRACTED]
 - [[identity.module.ts]] - `imports` [EXTRACTED]
 - [[merge-unmerge.e2e-spec.ts]] - `imports` [EXTRACTED]

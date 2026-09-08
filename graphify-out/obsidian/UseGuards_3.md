@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".markRead"
+community: "Public"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/markRead
+  - community/Public
 ---
 
 # UseGuards
 
 ## Connections
-- [[dot-list()_30]] - `references` [EXTRACTED]
-- [[dot-markAllRead()_1]] - `references` [EXTRACTED]
-- [[dot-markRead()_1]] - `references` [EXTRACTED]
+- [[MeRightsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/markRead
+#graphify/code #graphify/EXTRACTED #community/Public

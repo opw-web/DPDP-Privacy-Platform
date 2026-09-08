@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/DataTable.tsx"
 type: "code"
-community: "cn"
+community: "AuditPage.tsx"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/AuditPagetsx
 ---
 
 # EmptyStateConfig
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[DataTable.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/AuditPagetsx

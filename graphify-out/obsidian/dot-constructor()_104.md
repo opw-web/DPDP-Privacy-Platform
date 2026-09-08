@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/unmerge.controller.ts"
+source_file: "dpdp-platform/backend/src/queues/access-log-retention.processor.ts"
 type: "code"
-community: ".unmerge"
-location: "L20"
+community: "token.service.ts"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/unmerge
+  - community/tokenservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[MergeService]] - `references` [EXTRACTED]
-- [[UnmergeController]] - `method` [EXTRACTED]
+- [[AccessLogRetentionProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/unmerge
+#graphify/code #graphify/EXTRACTED #community/tokenservicets

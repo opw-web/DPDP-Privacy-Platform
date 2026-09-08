@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/inventory/ropa-export.service.ts"
 type: "code"
-community: "ropa-export.service.ts"
+community: "@nestjs/common"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ropa-exportservicets
+  - community/nestjs/common
 ---
 
 # ropa-export.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[ROPA_CSV_HEADER]] - `contains` [EXTRACTED]
@@ -25,4 +26,4 @@ tags:
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[sortedUnique()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ropa-exportservicets
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

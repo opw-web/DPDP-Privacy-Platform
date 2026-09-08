@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sdf-cycle-scan.processor.ts"
+source_file: "dpdp-platform/backend/src/modules/principals/principal-recipients.service.ts"
 type: "code"
-community: "mvp2-schedules.ts"
-location: "L21"
+community: "@nestjs/common"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mvp2-schedulests
+  - community/nestjs/common
 ---
 
 # .constructor()
 
 ## Connections
-- [[SdfCycleScanProcessor]] - `method` [EXTRACTED]
-- [[SdfCycleScanService]] - `references` [EXTRACTED]
+- [[PrincipalRecipientsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mvp2-schedulests
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

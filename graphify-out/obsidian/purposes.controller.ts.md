@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
 type: "code"
-community: "RequirePermission"
+community: "purposes.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/purposesservicets
 ---
 
 # purposes.controller.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[AccessTokenPayload]] - `imports` [EXTRACTED]
 - [[CreatePurposeDto]] - `imports` [EXTRACTED]
 - [[CurrentActor]] - `imports` [EXTRACTED]
@@ -27,4 +29,4 @@ tags:
 - [[token.service.ts]] - `imports_from` [EXTRACTED]
 - [[update-purpose.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/purposesservicets

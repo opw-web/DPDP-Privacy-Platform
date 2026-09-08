@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "employees.service.ts"
+community: "breach.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeesservicets
+  - community/breachservicets
 ---
 
 # IsEnum
 
 ## Connections
-- [[UpdateEmployeeDto]] - `references` [EXTRACTED]
+- [[UpdateBreachDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeesservicets
+#graphify/code #graphify/EXTRACTED #community/breachservicets

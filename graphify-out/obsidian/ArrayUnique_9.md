@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "roles.service.ts"
+community: "CreateSharingActivityDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rolesservicets
+  - community/CreateSharingActivityDto
 ---
 
 # ArrayUnique
 
 ## Connections
-- [[UpdateRolePermissionsDto]] - `references` [EXTRACTED]
+- [[UpdateSharingActivityDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rolesservicets
+#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

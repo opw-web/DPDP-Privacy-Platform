@@ -13,6 +13,5 @@ tags:
 
 ## Connections
 - [[devDependencies_1]] - `contains` [EXTRACTED]
-- [[eslint-config-prettier_1]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/devDependencies

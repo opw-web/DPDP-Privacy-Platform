@@ -13,6 +13,5 @@ tags:
 
 ## Connections
 - [[frontendtsconfig.json]] - `contains` [EXTRACTED]
-- [[src]] - `extends` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/compilerOptions

@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/AuditPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/LinkedRecordsPanel.test.tsx"
 type: "code"
-community: "employeeLogin"
-location: "L15"
+community: "router.tsx"
+location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeeLogin
+  - community/routertsx
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[AuditPage.test.tsx]] - `contains` [EXTRACTED]
-- [[loginAndRenderThroughShell()_1]] - `calls` [EXTRACTED]
+- [[LinkedRecordsPanel.test.tsx]] - `contains` [EXTRACTED]
+- [[loginAndRender()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeeLogin
+#graphify/code #graphify/EXTRACTED #community/routertsx

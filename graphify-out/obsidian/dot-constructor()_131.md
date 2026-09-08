@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/recipients.service.ts"
+source_file: "dpdp-platform/backend/src/common/audit/access-log.service.ts"
 type: "code"
-community: "recipients.service.ts"
-location: "L55"
+community: "access-report.service.ts"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/access-reportservicets
 ---
 
 # .constructor()
 
 ## Connections
+- [[AccessLogService]] - `method` [EXTRACTED]
 - [[AuditService]] - `references` [EXTRACTED]
-- [[RecipientsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/access-reportservicets

@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
 type: "code"
-community: "CampaignsService"
+community: "ConsentsService"
 location: "L721"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/CampaignsService
+  - community/ConsentsService
 ---
 
 # .getPublishedVersion()
 
 ## Connections
 - [[dot-applyStatusChange()]] - `calls` [INFERRED]
-- [[dot-create()_21]] - `calls` [INFERRED]
+- [[dot-create()_22]] - `calls` [INFERRED]
 - [[NoticesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/CampaignsService
+#graphify/code #graphify/INFERRED #community/ConsentsService

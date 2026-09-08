@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/breach-clock.processor.ts"
 type: "code"
-community: "breaches.module.ts"
+community: "app.module.ts"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breachesmodulets
+  - community/appmodulets
 ---
 
 # BreachClockJobData
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[breach-clock.processor.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breachesmodulets
+#graphify/code #graphify/EXTRACTED #community/appmodulets

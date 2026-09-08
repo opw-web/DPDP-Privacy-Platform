@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/providers/smtp.provider.ts"
+source_file: "dpdp-platform/backend/src/common/prisma/prisma.service.ts"
 type: "code"
-community: "MailerService"
-location: "L22"
+community: "PrismaService"
+location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MailerService
+  - community/PrismaService
 ---
 
 # .constructor()
 
 ## Connections
-- [[MailerService]] - `references` [EXTRACTED]
-- [[SmtpProvider]] - `method` [EXTRACTED]
+- [[PrismaService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MailerService
+#graphify/code #graphify/EXTRACTED #community/PrismaService

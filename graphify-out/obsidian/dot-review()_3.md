@@ -1,23 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
 type: "code"
-community: "RequirePermission"
-location: "L35"
+community: "compliance.service.ts"
+location: "L562"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/complianceservicets
 ---
 
 # .review()
 
 ## Connections
+- [[dot-record()_1]] - `calls` [INFERRED]
 - [[dot-review()]] - `calls` [INFERRED]
+- [[dot-update()_7]] - `calls` [EXTRACTED]
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[CurrentActor]] - `references` [EXTRACTED]
-- [[Param_3]] - `references` [EXTRACTED]
-- [[Post_3]] - `references` [EXTRACTED]
-- [[PurposesController]] - `method` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[ComplianceService]] - `method` [EXTRACTED]
+- [[toPublicComplianceRule()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/complianceservicets

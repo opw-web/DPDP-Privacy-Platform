@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalsPage.tsx"
 type: "code"
-community: "DateTime.tsx"
+community: "SettingsPage.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DateTimetsx
+  - community/SettingsPagetsx
 ---
 
 # PrincipalsPage.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
+- [[@tanstackreact-table]] - `imports_from` [EXTRACTED]
 - [[AGE_STATUS_OPTIONS]] - `contains` [EXTRACTED]
 - [[AgeStatus_2]] - `contains` [EXTRACTED]
 - [[Badge()]] - `imports` [EXTRACTED]
@@ -37,7 +39,10 @@ tags:
 - [[enum-options.ts]] - `imports_from` [EXTRACTED]
 - [[humanizeEnum()]] - `imports` [EXTRACTED]
 - [[input.tsx]] - `imports_from` [EXTRACTED]
+- [[lucide-react_1]] - `imports_from` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
+- [[react-router-dom_1]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 - [[useDebouncedValue()_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DateTimetsx
+#graphify/code #graphify/EXTRACTED #community/SettingsPagetsx

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/children/GuardianForm.tsx"
 type: "code"
-community: "button.tsx"
+community: "react"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react
 ---
 
 # GuardianFormProps
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[GuardianForm.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/react

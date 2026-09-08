@@ -1,17 +1,19 @@
 ---
-source_file: "demo-company-server/src/seed/rng.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/sdf-assessment.service.ts"
 type: "code"
-community: "Rng"
-location: "L10"
+community: "SdfAssessmentService"
+location: "L78"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Rng
+  - community/SdfAssessmentService
 ---
 
 # .constructor()
 
 ## Connections
-- [[Rng]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[ComplianceService]] - `references` [EXTRACTED]
+- [[SdfAssessmentService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Rng
+#graphify/code #graphify/EXTRACTED #community/SdfAssessmentService

@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/pre-erasure-notice.service.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/legal-hold.service.ts"
 type: "code"
-community: "retention.module.ts"
-location: "L69"
+community: "erasure-task.service.ts"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionmodulets
+  - community/erasure-taskservicets
 ---
 
 # .constructor()
 
 ## Connections
 - [[AuditService]] - `references` [EXTRACTED]
-- [[NotificationsService]] - `references` [EXTRACTED]
-- [[PreErasureNoticeService]] - `method` [EXTRACTED]
+- [[LegalHoldService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionmodulets
+#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets

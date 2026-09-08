@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "roles.service.ts"
+community: "children.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rolesservicets
+  - community/childrenmodulets
 ---
 
 # Injectable
 
 ## Connections
-- [[RolesService]] - `references` [EXTRACTED]
+- [[ChildExemptionsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rolesservicets
+#graphify/code #graphify/EXTRACTED #community/childrenmodulets

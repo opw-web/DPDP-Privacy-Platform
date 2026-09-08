@@ -13,11 +13,11 @@ tags:
 
 ## Connections
 - [[dot-createRequest()_1]] - `calls` [INFERRED]
-- [[Body_3]] - `references` [EXTRACTED]
+- [[Body_6]] - `references` [EXTRACTED]
 - [[CreateMeRequestDto]] - `references` [EXTRACTED]
 - [[CurrentPrincipal]] - `references` [EXTRACTED]
 - [[MeRightsController]] - `method` [EXTRACTED]
-- [[Post_2]] - `references` [EXTRACTED]
+- [[Post_7]] - `references` [EXTRACTED]
 - [[PrincipalActor]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Public

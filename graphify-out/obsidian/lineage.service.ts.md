@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principals/lineage.service.ts"
 type: "code"
-community: "access-report.service.ts"
+community: "principals.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-reportservicets
+  - community/principalsservicets
 ---
 
 # lineage.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[LineageService]] - `contains` [EXTRACTED]
 - [[PRINCIPAL_FIELD_SELECT]] - `contains` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
@@ -25,4 +27,4 @@ tags:
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[resolveProvenance()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-reportservicets
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

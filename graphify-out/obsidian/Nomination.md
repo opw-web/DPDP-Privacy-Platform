@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeNominationPage.tsx"
 type: "code"
-community: "card.tsx"
+community: "react"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cardtsx
+  - community/react
 ---
 
 # Nomination
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[MeNominationPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cardtsx
+#graphify/code #graphify/EXTRACTED #community/react

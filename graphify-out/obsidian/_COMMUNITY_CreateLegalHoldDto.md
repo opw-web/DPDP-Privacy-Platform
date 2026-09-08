@@ -1,25 +1,24 @@
 ---
 type: community
-members: 12
+members: 11
 ---
 
 # CreateLegalHoldDto
 
-**Members:** 12 nodes
+**Members:** 11 nodes
 
 ## Members
-- [[ApiProperty_16]] - code
-- [[ApiPropertyOptional_20]] - code
+- [[ApiProperty_25]] - code
+- [[ApiPropertyOptional_24]] - code
 - [[CreateLegalHoldDto]] - code - dpdp-platform/backend/src/modules/retention/dto/create-legal-hold.dto.ts
-- [[IsArray_10]] - code
-- [[IsDateString_5]] - code
-- [[IsOptional_22]] - code
-- [[IsString_23]] - code
+- [[IsArray_15]] - code
+- [[IsDateString_9]] - code
+- [[IsOptional_25]] - code
+- [[IsString_32]] - code
 - [[LegalHoldScopeDto]] - code - dpdp-platform/backend/src/modules/retention/dto/create-legal-hold.dto.ts
-- [[MinLength_16]] - code
-- [[Type_5]] - code
+- [[MinLength_26]] - code
+- [[Type_6]] - code
 - [[ValidateNested_3]] - code
-- [[create-legal-hold.dto.ts]] - code - dpdp-platform/backend/src/modules/retention/dto/create-legal-hold.dto.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -29,10 +28,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_erasure-task.service.ts]]
-- 2 edges to [[_COMMUNITY_RequirePermission]]
-- 2 edges to [[_COMMUNITY_RetentionController]]
+- 3 edges to [[_COMMUNITY_@prismaclient]]
+- 1 edge to [[_COMMUNITY_audit.service.ts]]
+- 1 edge to [[_COMMUNITY_erasure-task.service.ts]]
+- 1 edge to [[_COMMUNITY_AccessTokenPayload]]
 
 ## Top bridge nodes
-- [[CreateLegalHoldDto]] - degree 13, connects to 3 communities
-- [[create-legal-hold.dto.ts]] - degree 4, connects to 2 communities
+- [[CreateLegalHoldDto]] - degree 13, connects to 4 communities
+- [[LegalHoldScopeDto]] - degree 5, connects to 1 community

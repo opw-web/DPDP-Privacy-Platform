@@ -12,7 +12,7 @@ tags:
 # BoardModule
 
 ## Connections
-- [[Module_10]] - `references` [EXTRACTED]
+- [[Module_9]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[board.module.ts]] - `contains` [EXTRACTED]
 

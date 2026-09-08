@@ -1,22 +1,25 @@
 ---
 source_file: "dpdp-platform/backend/test/mappings.e2e-spec.ts"
 type: "code"
-community: "data-sources.e2e-spec.ts"
+community: "sync.e2e-spec.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcese2e-spects
+  - community/synce2e-spects
 ---
 
 # mappings.e2e-spec.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjstesting]] - `imports_from` [EXTRACTED]
 - [[AppModule]] - `imports` [EXTRACTED]
 - [[MockHttpServer]] - `imports` [EXTRACTED]
 - [[PERMISSIONS]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[app.module.ts]] - `imports_from` [EXTRACTED]
+- [[argon2_1]] - `imports_from` [EXTRACTED]
 - [[createDataSource()]] - `contains` [EXTRACTED]
 - [[createEmployee()]] - `contains` [EXTRACTED]
 - [[createOrg()]] - `contains` [EXTRACTED]
@@ -32,5 +35,6 @@ tags:
 - [[putPurposes()]] - `contains` [EXTRACTED]
 - [[seedpermissions.ts]] - `imports_from` [EXTRACTED]
 - [[startRecordsServer()_1]] - `contains` [EXTRACTED]
+- [[supertest]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcese2e-spects
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

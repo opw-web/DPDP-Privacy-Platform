@@ -1,15 +1,207 @@
 ---
 type: community
-members: 2
+members: 194
 ---
 
 # react
 
-**Members:** 2 nodes
+**Members:** 194 nodes
 
 ## Members
-- [[react]] - code - dpdp-platform/frontend/package.json
+- [[dot-constructor()_101]] - code - dpdp-platform/frontend/src/lib/api-client.ts
+- [[@uiwreact-md-editor_1]] - concept - dpdp-platform/frontend/package.json
+- [[AgeStatus]] - code - dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.tsx
+- [[AlgorithmFormFields.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/sdf/AlgorithmFormFields.tsx
+- [[ApiError]] - code - dpdp-platform/frontend/src/lib/api-client.ts
+- [[AssessmentRow()]] - code - dpdp-platform/frontend/src/fiduciary/components/sdf/AssessmentRow.tsx
+- [[AssessmentRow.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/sdf/AssessmentRow.tsx
+- [[Button]] - code - dpdp-platform/frontend/src/components/ui/button.tsx
+- [[ButtonProps]] - code - dpdp-platform/frontend/src/components/ui/button.tsx
+- [[CHILD_AGE_STATUSES]] - code - dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.tsx
+- [[Checkbox]] - code - dpdp-platform/frontend/src/components/ui/checkbox.tsx
+- [[CheckboxOption_1]] - code - dpdp-platform/frontend/src/components/ui/checkbox.tsx
+- [[CheckboxOptionProps]] - code - dpdp-platform/frontend/src/components/ui/checkbox.tsx
+- [[ChildrenPage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.tsx
+- [[CompleteFormValues]] - code - dpdp-platform/frontend/src/fiduciary/components/sdf/AssessmentRow.tsx
+- [[ComplianceRule_1]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsCompliancePage.tsx
+- [[ConsentStats]] - code - dpdp-platform/frontend/src/fiduciary/pages/ConsentsPage.tsx
+- [[ConsentsPage()]] - code - dpdp-platform/frontend/src/fiduciary/pages/ConsentsPage.tsx
+- [[ConsentsPage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/ConsentsPage.tsx
+- [[ContractStatusCell()]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.tsx
+- [[CreatePurposePayload]] - code - dpdp-platform/frontend/src/fiduciary/components/PurposeForm.tsx
+- [[CreateRecipientPayload]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.tsx
+- [[CreateRetentionPayload]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RetentionTab.tsx
+- [[CreateSecurityMeasurePayload]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SecurityMeasuresTab.tsx
+- [[CreateSharingPayload]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SharingTab.tsx
+- [[CreateTransferPayload]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/TransfersTab.tsx
+- [[DEFAULT_VALUES]] - code - dpdp-platform/frontend/src/fiduciary/components/PurposeForm.tsx
+- [[DEFAULT_VALUES_1]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.tsx
+- [[DEFAULT_VALUES_2]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RetentionTab.tsx
+- [[DEFAULT_VALUES_3]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SecurityMeasuresTab.tsx
+- [[DEFAULT_VALUES_4]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SharingTab.tsx
+- [[DEFAULT_VALUES_5]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/TransfersTab.tsx
+- [[DEMO_PRINCIPALS]] - code - dpdp-platform/frontend/src/principal/pages/PrincipalLoginPage.tsx
+- [[DeclarationsFormValues]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step5Declarations.tsx
+- [[DemoCredentialsBanner()]] - code - dpdp-platform/frontend/src/principal/pages/PrincipalLoginPage.tsx
+- [[EMPTY_INFORMATION_REQUEST_FORM]] - code - dpdp-platform/frontend/src/fiduciary/components/information-requests/InformationRequestForm.tsx
+- [[EMPTY_NOMINATION]] - code - dpdp-platform/frontend/src/principal/pages/MeNominationPage.tsx
+- [[EXPORTS]] - code - dpdp-platform/frontend/src/fiduciary/components/ExportButtons.tsx
+- [[EligibleItemisedField]] - code - dpdp-platform/frontend/src/fiduciary/components/notices/types.ts
+- [[EnumOption]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
+- [[ExemptionClaim]] - code - dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.tsx
+- [[ExemptionClaimForm()]] - code - dpdp-platform/frontend/src/fiduciary/components/children/ExemptionClaimForm.tsx
+- [[ExemptionClaimForm.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/children/ExemptionClaimForm.tsx
+- [[ExportButtons.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/ExportButtons.tsx
+- [[ExportDefinition]] - code - dpdp-platform/frontend/src/fiduciary/components/ExportButtons.tsx
+- [[FieldShell()]] - code - dpdp-platform/frontend/src/fiduciary/components/form-controls.tsx
+- [[FieldShellProps]] - code - dpdp-platform/frontend/src/fiduciary/components/form-controls.tsx
+- [[GuardianForm()]] - code - dpdp-platform/frontend/src/fiduciary/components/children/GuardianForm.tsx
+- [[GuardianForm.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/children/GuardianForm.tsx
+- [[GuardianFormProps]] - code - dpdp-platform/frontend/src/fiduciary/components/children/GuardianForm.tsx
+- [[InformationRequestForm()]] - code - dpdp-platform/frontend/src/fiduciary/components/information-requests/InformationRequestForm.tsx
+- [[InformationRequestForm.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/information-requests/InformationRequestForm.tsx
+- [[InformationRequestFormProps]] - code - dpdp-platform/frontend/src/fiduciary/components/information-requests/InformationRequestForm.tsx
+- [[InformationRequestFormValues]] - code - dpdp-platform/frontend/src/fiduciary/components/information-requests/InformationRequestForm.tsx
+- [[Input]] - code - dpdp-platform/frontend/src/components/ui/input.tsx
+- [[InputProps]] - code - dpdp-platform/frontend/src/components/ui/input.tsx
+- [[LAWFUL_BASIS_OPTIONS]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
+- [[LAWFUL_BASIS_VALUES]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
+- [[LEGITIMATE_USE_LIMB_OPTIONS]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
+- [[LEGITIMATE_USE_LIMB_VALUES]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
+- [[Label_1]] - code - dpdp-platform/frontend/src/components/ui/label.tsx
+- [[LegalHoldForm.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/retention/LegalHoldForm.tsx
+- [[LoginFormValues_1]] - code - dpdp-platform/frontend/src/principal/pages/PrincipalLoginPage.tsx
+- [[MarkdownMessageEditor.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/messaging/MarkdownMessageEditor.tsx
+- [[MeNominationPage.tsx]] - code - dpdp-platform/frontend/src/principal/pages/MeNominationPage.tsx
+- [[NOTICE_LANGUAGES_1]] - code - dpdp-platform/frontend/src/fiduciary/components/notices/types.ts
+- [[Nomination]] - code - dpdp-platform/frontend/src/principal/pages/MeNominationPage.tsx
+- [[Notice]] - code - dpdp-platform/frontend/src/fiduciary/components/notices/types.ts
+- [[NoticeBuilderPage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/NoticeBuilderPage.tsx
+- [[NoticeComposer()]] - code - dpdp-platform/frontend/src/fiduciary/components/notices/NoticeComposer.tsx
+- [[NoticeComposer.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/notices/NoticeComposer.tsx
+- [[NoticeComposerProps]] - code - dpdp-platform/frontend/src/fiduciary/components/notices/NoticeComposer.tsx
+- [[NoticeDetail]] - code - dpdp-platform/frontend/src/fiduciary/components/notices/types.ts
+- [[NoticeDraftValues]] - code - dpdp-platform/frontend/src/fiduciary/components/notices/NoticeComposer.tsx
+- [[NoticeItemisedField]] - code - dpdp-platform/frontend/src/fiduciary/components/notices/types.ts
+- [[NoticeLanguageCode_1]] - code - dpdp-platform/frontend/src/fiduciary/components/notices/types.ts
+- [[NoticePreview.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/notices/NoticePreview.test.tsx
+- [[NoticePreview.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/notices/NoticePreview.tsx
+- [[NoticePreviewProps]] - code - dpdp-platform/frontend/src/fiduciary/components/notices/NoticePreview.tsx
+- [[NoticePurposeStatement]] - code - dpdp-platform/frontend/src/fiduciary/components/notices/types.ts
+- [[NoticeStandalonePreview()]] - code - dpdp-platform/frontend/src/fiduciary/components/notices/NoticePreview.tsx
+- [[NoticeVersion_1]] - code - dpdp-platform/frontend/src/fiduciary/components/notices/types.ts
+- [[Organization]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsRightsPage.tsx
+- [[PermissionGate()]] - code - dpdp-platform/frontend/src/components/shared/PermissionGate.tsx
+- [[PrincipalListItem_1]] - code - dpdp-platform/frontend/src/fiduciary/components/information-requests/InformationRequestForm.tsx
+- [[PrincipalListResponse]] - code - dpdp-platform/frontend/src/fiduciary/components/information-requests/InformationRequestForm.tsx
+- [[PrincipalListResponse_1]] - code - dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.tsx
+- [[PrincipalLoginPage.tsx]] - code - dpdp-platform/frontend/src/principal/pages/PrincipalLoginPage.tsx
+- [[Purpose_1]] - code - dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.tsx
+- [[Purpose_2]] - code - dpdp-platform/frontend/src/fiduciary/pages/ConsentsPage.tsx
+- [[Purpose_3]] - code - dpdp-platform/frontend/src/fiduciary/pages/NoticeBuilderPage.tsx
+- [[PurposeForm.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/PurposeForm.tsx
+- [[PurposeFormProps]] - code - dpdp-platform/frontend/src/fiduciary/components/PurposeForm.tsx
+- [[PurposeFormValues]] - code - dpdp-platform/frontend/src/fiduciary/components/PurposeForm.tsx
+- [[PurposeRef]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RetentionTab.tsx
+- [[PurposeRef_1]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SharingTab.tsx
+- [[RECIPIENT_TYPE_OPTIONS]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
+- [[RECIPIENT_TYPE_VALUES]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
+- [[REQUESTING_BODIES_1]] - code - dpdp-platform/frontend/src/fiduciary/components/information-requests/InformationRequestForm.tsx
+- [[REQUESTING_BODY_LABELS]] - code - dpdp-platform/frontend/src/fiduciary/components/information-requests/InformationRequestForm.tsx
+- [[RETENTION_LEGAL_BASIS_TYPE_OPTIONS]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
+- [[RETENTION_LEGAL_BASIS_TYPE_VALUES]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
+- [[RETENTION_TRIGGER_TYPE_OPTIONS]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
+- [[RETENTION_TRIGGER_TYPE_VALUES]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
+- [[RETENTION_UNIT_OPTIONS]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
+- [[RETENTION_UNIT_VALUES]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
+- [[Recipient]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.tsx
+- [[RecipientForm()]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.tsx
+- [[RecipientFormValues]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.tsx
+- [[RecipientRef]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SharingTab.tsx
+- [[RecipientRef_1]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/TransfersTab.tsx
+- [[RecipientsTab.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.tsx
+- [[RequestWorkPanel.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/requests/RequestWorkPanel.tsx
+- [[RequestingBody_1]] - code - dpdp-platform/frontend/src/fiduciary/components/information-requests/InformationRequestForm.tsx
+- [[RestrictionCell()]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/TransfersTab.tsx
+- [[RetentionForm()]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RetentionTab.tsx
+- [[RetentionFormValues]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RetentionTab.tsx
+- [[RetentionPolicy]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RetentionTab.tsx
+- [[RetentionTab.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RetentionTab.tsx
+- [[SECURITY_MEASURE_TYPE_OPTIONS]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
+- [[SECURITY_MEASURE_TYPE_VALUES]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
+- [[SECURITY_RULE_REFERENCE_OPTIONS]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
+- [[SECURITY_RULE_REFERENCE_VALUES]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
+- [[SdfDeclarationCard.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.tsx
+- [[SdfDeclarationCardProps]] - code - dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.tsx
+- [[SdfFormValues]] - code - dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.tsx
+- [[SecurityFormValues]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SecurityMeasuresTab.tsx
+- [[SecurityMeasure_1]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SecurityMeasuresTab.tsx
+- [[SecurityMeasureForm()]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SecurityMeasuresTab.tsx
+- [[SecurityMeasureGroup_1]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SecurityMeasuresTab.tsx
+- [[SecurityMeasuresTab.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SecurityMeasuresTab.tsx
+- [[Select]] - code - dpdp-platform/frontend/src/components/ui/select.tsx
+- [[SelectControl]] - code - dpdp-platform/frontend/src/components/ui/select.tsx
+- [[SelectControl_1]] - code - dpdp-platform/frontend/src/fiduciary/components/form-controls.tsx
+- [[SettingsCompliancePage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsCompliancePage.tsx
+- [[SettingsRightsPage()]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsRightsPage.tsx
+- [[SettingsRightsPage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsRightsPage.tsx
+- [[SharingActivity]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SharingTab.tsx
+- [[SharingForm()]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SharingTab.tsx
+- [[SharingFormValues]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SharingTab.tsx
+- [[SharingTab.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SharingTab.tsx
+- [[Step5Declarations.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step5Declarations.tsx
+- [[THIRD_SCHEDULE_CLASSES]] - code - dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.tsx
+- [[Textarea]] - code - dpdp-platform/frontend/src/components/ui/textarea.tsx
+- [[TextareaControl]] - code - dpdp-platform/frontend/src/components/ui/textarea.tsx
+- [[TextareaControl_1]] - code - dpdp-platform/frontend/src/fiduciary/components/form-controls.tsx
+- [[Transfer]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/TransfersTab.tsx
+- [[TransferFormValues]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/TransfersTab.tsx
+- [[TransfersTab.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/TransfersTab.tsx
+- [[VerificationEditor()]] - code - dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.tsx
+- [[buildInformationRequestPayload()]] - code - dpdp-platform/frontend/src/fiduciary/components/information-requests/InformationRequestForm.tsx
+- [[button.tsx]] - code - dpdp-platform/frontend/src/components/ui/button.tsx
+- [[buttonVariants]] - code - dpdp-platform/frontend/src/components/ui/button.tsx
+- [[checkbox.tsx]] - code - dpdp-platform/frontend/src/components/ui/checkbox.tsx
+- [[declarationsSchema]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step5Declarations.tsx
+- [[describeCompleteError()]] - code - dpdp-platform/frontend/src/fiduciary/components/sdf/AssessmentRow.tsx
+- [[employeeApiClient]] - code - dpdp-platform/frontend/src/lib/api-client.ts
+- [[enum-options.ts]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
+- [[errorMessage()]] - code - dpdp-platform/frontend/src/fiduciary/pages/ConsentsPage.tsx
+- [[failure()]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsRightsPage.tsx
+- [[form-controls.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/form-controls.tsx
+- [[input.tsx]] - code - dpdp-platform/frontend/src/components/ui/input.tsx
+- [[isInformationRequestFormValid()]] - code - dpdp-platform/frontend/src/fiduciary/components/information-requests/InformationRequestForm.tsx
+- [[label.tsx]] - code - dpdp-platform/frontend/src/components/ui/label.tsx
+- [[loginSchema_1]] - code - dpdp-platform/frontend/src/principal/pages/PrincipalLoginPage.tsx
+- [[noticestypes.ts]] - code - dpdp-platform/frontend/src/fiduciary/components/notices/types.ts
+- [[purposeFormSchema]] - code - dpdp-platform/frontend/src/fiduciary/components/PurposeForm.tsx
+- [[putTranslation()]] - code - dpdp-platform/frontend/src/fiduciary/pages/NoticeBuilderPage.tsx
 - [[react_1]] - concept - dpdp-platform/frontend/package.json
+- [[react-hook-form_1]] - concept - dpdp-platform/frontend/package.json
+- [[recipientFormSchema]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.tsx
+- [[retentionFormSchema]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RetentionTab.tsx
+- [[rightsText()]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsRightsPage.tsx
+- [[sdfFormSchema]] - code - dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.tsx
+- [[securityFormSchema]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SecurityMeasuresTab.tsx
+- [[select.tsx]] - code - dpdp-platform/frontend/src/components/ui/select.tsx
+- [[sharingFormSchema]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SharingTab.tsx
+- [[shouldShowDemoCredentials()]] - code - dpdp-platform/frontend/src/principal/pages/PrincipalLoginPage.tsx
+- [[sonner_1]] - concept - dpdp-platform/frontend/package.json
+- [[submit()_1]] - code - dpdp-platform/frontend/src/fiduciary/components/children/ExemptionClaimForm.tsx
+- [[submit()_2]] - code - dpdp-platform/frontend/src/fiduciary/components/children/GuardianForm.tsx
+- [[submit()_3]] - code - dpdp-platform/frontend/src/fiduciary/components/information-requests/InformationRequestForm.tsx
+- [[textarea.tsx]] - code - dpdp-platform/frontend/src/components/ui/textarea.tsx
+- [[titleCase()_1]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
+- [[toCompletePayload()]] - code - dpdp-platform/frontend/src/fiduciary/components/sdf/AssessmentRow.tsx
+- [[toDatetimeLocalValue()]] - code - dpdp-platform/frontend/src/fiduciary/components/sdf/AssessmentRow.tsx
+- [[toFormValues()]] - code - dpdp-platform/frontend/src/fiduciary/components/sdf/AssessmentRow.tsx
+- [[toOptions()]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
+- [[toggleAffectedPrincipal()]] - code - dpdp-platform/frontend/src/fiduciary/components/information-requests/InformationRequestForm.tsx
+- [[toggleField()]] - code - dpdp-platform/frontend/src/fiduciary/components/notices/NoticeComposer.tsx
+- [[transferFormSchema]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/TransfersTab.tsx
+- [[useDebouncedValue()]] - code - dpdp-platform/frontend/src/fiduciary/components/information-requests/InformationRequestForm.tsx
+- [[utils.ts]] - code - dpdp-platform/frontend/src/lib/utils.ts
+- [[zod_1]] - concept - dpdp-platform/frontend/package.json
 
 ## Live Query (requires Dataview plugin)
 
@@ -19,7 +211,29 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_dependencies]]
+- 221 edges to [[_COMMUNITY_react-router-dom]]
+- 80 edges to [[_COMMUNITY_data-sources-api.ts]]
+- 75 edges to [[_COMMUNITY_router.tsx]]
+- 48 edges to [[_COMMUNITY_SettingsPage.tsx]]
+- 42 edges to [[_COMMUNITY_AuditPage.tsx]]
+- 39 edges to [[_COMMUNITY_EmployeesPage.tsx]]
+- 32 edges to [[_COMMUNITY_api-client.ts]]
+- 31 edges to [[_COMMUNITY_cn]]
+- 30 edges to [[_COMMUNITY_DateTime.tsx]]
+- 28 edges to [[_COMMUNITY_RequestDetailPage.tsx]]
+- 21 edges to [[_COMMUNITY_BreachWizardPage.tsx]]
+- 15 edges to [[_COMMUNITY_MessagingCampaignBuilderPage.tsx]]
+- 9 edges to [[_COMMUNITY_frontendpackage.json]]
+- 8 edges to [[_COMMUNITY_childrentypes.ts]]
+- 7 edges to [[_COMMUNITY_CandidateComparison.tsx]]
+- 4 edges to [[_COMMUNITY_DeadlinePill.tsx]]
+- 4 edges to [[_COMMUNITY_AudienceBuilder.tsx]]
+- 2 edges to [[_COMMUNITY_createApiClient]]
+- 2 edges to [[_COMMUNITY_LanguageSelector.tsx]]
 
 ## Top bridge nodes
-- [[react]] - degree 2, connects to 1 community
+- [[react_1]] - degree 83, connects to 16 communities
+- [[button.tsx]] - degree 75, connects to 15 communities
+- [[Button]] - degree 70, connects to 14 communities
+- [[employeeApiClient]] - degree 63, connects to 13 communities
+- [[sonner_1]] - degree 54, connects to 13 communities

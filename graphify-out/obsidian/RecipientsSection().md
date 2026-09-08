@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.tsx"
 type: "code"
-community: "DateTime.tsx"
+community: "SettingsPage.tsx"
 location: "L194"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DateTimetsx
+  - community/SettingsPagetsx
 ---
 
 # RecipientsSection()
@@ -15,4 +15,4 @@ tags:
 - [[PrincipalDetailPage.tsx]] - `contains` [EXTRACTED]
 - [[humanizeEnum()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DateTimetsx
+#graphify/code #graphify/EXTRACTED #community/SettingsPagetsx

@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "sync.service.ts"
+community: "CreateAlgorithmEntryDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/syncservicets
+  - community/CreateAlgorithmEntryDto
 ---
 
 # Post
 
 ## Connections
-- [[dot-trigger()_1]] - `references` [EXTRACTED]
+- [[dot-completeAssessment()]] - `references` [EXTRACTED]
+- [[dot-createAlgorithm()]] - `references` [EXTRACTED]
+- [[dot-createAssessment()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/syncservicets
+#graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto

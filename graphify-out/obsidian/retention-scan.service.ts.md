@@ -1,23 +1,25 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/retention-scan.service.ts"
 type: "code"
-community: "prisma.service.ts"
+community: "PrismaService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/PrismaService
 ---
 
 # retention-scan.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AuditAction]] - `imports` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[ComplianceService]] - `imports` [EXTRACTED]
 - [[ErasureTaskService]] - `imports` [EXTRACTED]
 - [[LegalHoldScope]] - `imports` [EXTRACTED]
-- [[OPEN_ERASURE_TASK_STATES_1]] - `contains` [EXTRACTED]
+- [[OPEN_ERASURE_TASK_STATES_2]] - `contains` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[RetentionScanService]] - `contains` [EXTRACTED]
 - [[RetentionScanSummary]] - `contains` [EXTRACTED]
@@ -38,4 +40,4 @@ tags:
 - [[retention.module.ts]] - `imports_from` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/PrismaService

@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-login()]] - `references` [EXTRACTED]
-- [[dot-login()_1]] - `references` [EXTRACTED]
-- [[dot-refresh()]] - `references` [EXTRACTED]
+- [[dot-login()_2]] - `references` [EXTRACTED]
 - [[dot-refresh()_1]] - `references` [EXTRACTED]
+- [[dot-refresh()_2]] - `references` [EXTRACTED]
 - [[employee-auth.service.ts]] - `imports` [EXTRACTED]
 - [[login-request-meta.ts]] - `contains` [EXTRACTED]
 - [[principal-auth.service.ts]] - `imports` [EXTRACTED]

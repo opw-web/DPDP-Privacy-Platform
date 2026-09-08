@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/candidates.service.ts"
 type: "code"
-community: "CandidatesService"
+community: "candidates.service.ts"
 location: "L302"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CandidatesService
+  - community/candidatesservicets
 ---
 
 # .claimPendingCandidate()
@@ -19,4 +19,4 @@ tags:
 - [[CandidatesService]] - `method` [EXTRACTED]
 - [[ScopedTransactionClient]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CandidatesService
+#graphify/code #graphify/EXTRACTED #community/candidatesservicets

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.tsx"
 type: "code"
-community: "SettingsPage.tsx"
+community: "react"
 location: "L47"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SettingsPagetsx
+  - community/react
 ---
 
 # sdfFormSchema
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[SdfDeclarationCard.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SettingsPagetsx
+#graphify/code #graphify/EXTRACTED #community/react

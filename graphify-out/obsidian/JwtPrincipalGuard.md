@@ -12,8 +12,8 @@ tags:
 # JwtPrincipalGuard
 
 ## Connections
-- [[dot-canActivate()_1]] - `method` [EXTRACTED]
-- [[dot-constructor()_27]] - `method` [EXTRACTED]
+- [[dot-canActivate()_2]] - `method` [EXTRACTED]
+- [[dot-constructor()_33]] - `method` [EXTRACTED]
 - [[Injectable_17]] - `references` [EXTRACTED]
 - [[auth.module.ts]] - `imports` [EXTRACTED]
 - [[jwt-principal.guard.ts]] - `contains` [EXTRACTED]

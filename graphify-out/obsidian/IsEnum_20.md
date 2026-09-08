@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "age-status.service.ts"
+community: "children.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/age-statusservicets
+  - community/childrenmodulets
 ---
 
 # IsEnum
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[SetAgeStatusDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/age-statusservicets
+#graphify/code #graphify/EXTRACTED #community/childrenmodulets

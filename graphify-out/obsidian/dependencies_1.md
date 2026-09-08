@@ -12,7 +12,7 @@ tags:
 # dependencies
 
 ## Connections
-- [[@nestjsbullmq]] - `contains` [EXTRACTED]
+- [[@nestjsbullmq_1]] - `contains` [EXTRACTED]
 - [[@nestjscommon]] - `contains` [EXTRACTED]
 - [[@nestjsconfig]] - `contains` [EXTRACTED]
 - [[@nestjscore]] - `contains` [EXTRACTED]
@@ -32,7 +32,7 @@ tags:
 - [[jsonwebtoken]] - `contains` [EXTRACTED]
 - [[nestjs-pino]] - `contains` [EXTRACTED]
 - [[nodemailer]] - `contains` [EXTRACTED]
-- [[pdfkit_1]] - `contains` [EXTRACTED]
+- [[pdfkit_2]] - `contains` [EXTRACTED]
 - [[pg]] - `contains` [EXTRACTED]
 - [[pino-http]] - `contains` [EXTRACTED]
 - [[pino-pretty]] - `contains` [EXTRACTED]

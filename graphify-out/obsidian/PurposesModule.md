@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/purposes/purposes.module.ts"
 type: "code"
-community: "app.module.ts"
+community: "purposes.service.ts"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/appmodulets
+  - community/purposesservicets
 ---
 
 # PurposesModule
 
 ## Connections
-- [[Module_25]] - `references` [EXTRACTED]
+- [[Module]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[purposes.module.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/appmodulets
+#graphify/code #graphify/EXTRACTED #community/purposesservicets

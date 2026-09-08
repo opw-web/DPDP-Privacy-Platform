@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principal-portal/me.service.ts"
 type: "code"
-community: "AccessReportService"
+community: "LineageService"
 location: "L124"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/AccessReportService
+  - community/LineageService
 ---
 
 # .getProfile()
@@ -16,4 +16,4 @@ tags:
 - [[dot-profile()]] - `calls` [INFERRED]
 - [[MeService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/AccessReportService
+#graphify/code #graphify/INFERRED #community/LineageService

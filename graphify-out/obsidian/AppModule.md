@@ -12,8 +12,8 @@ tags:
 # AppModule
 
 ## Connections
-- [[dot-configure()]] - `method` [EXTRACTED]
-- [[Module_3]] - `references` [EXTRACTED]
+- [[dot-configure()_1]] - `method` [EXTRACTED]
+- [[Module_36]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `contains` [EXTRACTED]
 - [[assembly.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[audit-read.e2e-spec.ts]] - `imports` [EXTRACTED]

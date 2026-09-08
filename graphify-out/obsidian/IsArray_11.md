@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".record"
+community: "CreateNoticeDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/CreateNoticeDto
 ---
 
 # IsArray
 
 ## Connections
-- [[AffectedPrincipalsDto]] - `references` [EXTRACTED]
+- [[CreateNoticeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/CreateNoticeDto

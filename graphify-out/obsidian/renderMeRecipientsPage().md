@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeRecipientsPage.test.tsx"
 type: "code"
-community: "card.tsx"
+community: "router.tsx"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cardtsx
+  - community/routertsx
 ---
 
 # renderMeRecipientsPage()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[MeRecipientsPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cardtsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

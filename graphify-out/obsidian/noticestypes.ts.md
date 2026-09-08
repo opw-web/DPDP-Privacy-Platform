@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/notices/types.ts"
 type: "code"
-community: "button.tsx"
+community: "react"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react
 ---
 
 # notices/types.ts
@@ -27,4 +27,4 @@ tags:
 - [[NoticeVersion_1]] - `contains` [EXTRACTED]
 - [[NoticesPage.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/react

@@ -12,7 +12,6 @@ tags:
 # @typescript-eslint/eslint-plugin
 
 ## Connections
-- [[@typescript-eslinteslint-plugin_1]] - `imports` [EXTRACTED]
 - [[devDependencies_1]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/devDependencies

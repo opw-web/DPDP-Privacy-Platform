@@ -1,23 +1,23 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sync/sync.controller.ts"
 type: "code"
-community: "sync.service.ts"
+community: "SyncService"
 location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/syncservicets
+  - community/SyncService
 ---
 
 # SyncJobsController
 
 ## Connections
-- [[dot-constructor()_40]] - `method` [EXTRACTED]
-- [[dot-get()_6]] - `method` [EXTRACTED]
-- [[dot-list()_7]] - `method` [EXTRACTED]
-- [[ApiTags_7]] - `references` [EXTRACTED]
-- [[Controller_8]] - `references` [EXTRACTED]
+- [[dot-constructor()_45]] - `method` [EXTRACTED]
+- [[dot-get()_7]] - `method` [EXTRACTED]
+- [[dot-list()_10]] - `method` [EXTRACTED]
+- [[ApiTags_11]] - `references` [EXTRACTED]
+- [[Controller_12]] - `references` [EXTRACTED]
 - [[sync.controller.ts]] - `contains` [EXTRACTED]
 - [[sync.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/syncservicets
+#graphify/code #graphify/EXTRACTED #community/SyncService

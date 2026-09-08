@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "campaigns.service.ts"
+community: "CreateTemplateDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/campaignsservicets
+  - community/CreateTemplateDto
 ---
 
 # ArrayUnique
 
 ## Connections
-- [[CreateCampaignDto]] - `references` [EXTRACTED]
+- [[CreateTemplateDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/campaignsservicets
+#graphify/code #graphify/EXTRACTED #community/CreateTemplateDto

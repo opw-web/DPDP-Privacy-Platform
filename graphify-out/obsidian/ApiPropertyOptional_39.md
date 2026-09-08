@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateInformationRequestDto"
+community: "@prisma/client"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateInformationRequestDto
+  - community/prisma/client
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[UpdateInformationRequestDto]] - `references` [EXTRACTED]
+- [[DataSourcePurposeResponseDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto
+#graphify/code #graphify/EXTRACTED #community/prisma/client

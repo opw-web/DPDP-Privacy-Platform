@@ -12,6 +12,8 @@ tags:
 # notification.dto.ts
 
 ## Connections
+- [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[MarkAllReadResponseDto]] - `contains` [EXTRACTED]
 - [[NotificationDto]] - `contains` [EXTRACTED]
 - [[NotificationListResponseDto]] - `contains` [EXTRACTED]

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalLoginDto"
+community: "CreateLegalHoldDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalLoginDto
+  - community/CreateLegalHoldDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[PrincipalLoginDto]] - `references` [EXTRACTED]
+- [[CreateLegalHoldDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalLoginDto
+#graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto

@@ -1,24 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts"
 type: "code"
-community: "purposes.service.ts"
-location: "L141"
+community: "CreateAlgorithmEntryDto"
+location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposesservicets
+  - community/CreateAlgorithmEntryDto
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_3]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[dot-validateBasis()]] - `calls` [EXTRACTED]
-- [[CreatePurposeDto]] - `references` [EXTRACTED]
-- [[PurposesService]] - `method` [EXTRACTED]
-- [[duplicateCodeMessage()]] - `calls` [EXTRACTED]
-- [[isUniqueConstraintViolation()]] - `calls` [EXTRACTED]
-- [[toPublicPurpose()]] - `calls` [EXTRACTED]
+- [[dot-createAlgorithm()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[AlgorithmRegisterService]] - `method` [EXTRACTED]
+- [[CreateAlgorithmEntryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposesservicets
+#graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto

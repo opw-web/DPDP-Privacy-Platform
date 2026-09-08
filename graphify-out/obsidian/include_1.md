@@ -13,6 +13,5 @@ tags:
 
 ## Connections
 - [[demo-company-servertsconfig.json]] - `contains` [EXTRACTED]
-- [[src.ts]] - `extends` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/compilerOptions

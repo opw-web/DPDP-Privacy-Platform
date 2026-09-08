@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AuditChainService"
+community: "CreateTransferDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditChainService
+  - community/CreateTransferDto
 ---
 
 # Controller
 
 ## Connections
-- [[AuditEventsEvidenceController]] - `references` [EXTRACTED]
+- [[TransfersController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditChainService
+#graphify/code #graphify/EXTRACTED #community/CreateTransferDto

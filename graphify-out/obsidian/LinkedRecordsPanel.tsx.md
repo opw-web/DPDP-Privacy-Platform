@@ -12,6 +12,8 @@ tags:
 # LinkedRecordsPanel.tsx
 
 ## Connections
+- [[@radix-uireact-dialog_1]] - `imports_from` [EXTRACTED]
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[ApiError]] - `imports` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
 - [[DateTime()]] - `imports` [EXTRACTED]
@@ -34,6 +36,9 @@ tags:
 - [[button.tsx]] - `imports_from` [EXTRACTED]
 - [[employeeApiClient]] - `imports` [EXTRACTED]
 - [[libpermissions.ts]] - `imports_from` [EXTRACTED]
+- [[lucide-react_1]] - `imports_from` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
+- [[sonner_1]] - `imports_from` [EXTRACTED]
 - [[unmergeErrorMessage()]] - `contains` [EXTRACTED]
 - [[usePermission()]] - `imports` [EXTRACTED]
 

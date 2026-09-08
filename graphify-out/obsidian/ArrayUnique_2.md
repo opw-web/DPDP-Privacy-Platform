@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "mappings.controller.ts"
+community: "CreateNoticeDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingscontrollerts
+  - community/CreateNoticeDto
 ---
 
 # ArrayUnique
 
 ## Connections
-- [[AttachPurposesDto]] - `references` [EXTRACTED]
+- [[CreateNoticeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingscontrollerts
+#graphify/code #graphify/EXTRACTED #community/CreateNoticeDto

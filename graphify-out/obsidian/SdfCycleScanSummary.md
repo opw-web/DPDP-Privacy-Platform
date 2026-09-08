@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sdf/sdf-cycle-scan.service.ts"
 type: "code"
-community: "prisma.service.ts"
+community: "PrismaService"
 location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/PrismaService
 ---
 
 # SdfCycleScanSummary
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sdf-cycle-scan.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/PrismaService

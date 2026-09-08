@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/PurposeForm.tsx"
 type: "code"
-community: "SecurityMeasuresTab.tsx"
+community: "react"
 location: "L78"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresTabtsx
+  - community/react
 ---
 
 # CreatePurposePayload
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[PurposeForm.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx
+#graphify/code #graphify/EXTRACTED #community/react

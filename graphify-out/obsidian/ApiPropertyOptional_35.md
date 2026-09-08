@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "data-sources.service.ts"
+community: "AssignRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesservicets
+  - community/AssignRequestDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[CreateDataSourceDto]] - `references` [EXTRACTED]
+- [[AssignRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets
+#graphify/code #graphify/EXTRACTED #community/AssignRequestDto

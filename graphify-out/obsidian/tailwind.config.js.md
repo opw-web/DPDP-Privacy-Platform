@@ -11,4 +11,7 @@ tags:
 
 # tailwind.config.js
 
+## Connections
+- [[tailwindcss_1]] - `dynamic_import` [EXTRACTED]
+
 #graphify/code #graphify/EXTRACTED #community/tailwindconfigjs

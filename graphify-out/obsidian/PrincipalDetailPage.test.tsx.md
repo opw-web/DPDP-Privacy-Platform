@@ -1,28 +1,32 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.test.tsx"
 type: "code"
-community: "PrincipalDetailPage.test.tsx"
+community: "router.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalDetailPagetesttsx
+  - community/routertsx
 ---
 
 # PrincipalDetailPage.test.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
+- [[@testing-libraryreact_1]] - `imports_from` [EXTRACTED]
 - [[AttributedValue()]] - `imports` [EXTRACTED]
 - [[DETAIL_RESPONSE]] - `contains` [EXTRACTED]
-- [[MockRoutes_3]] - `contains` [EXTRACTED]
+- [[MockRoutes_5]] - `contains` [EXTRACTED]
 - [[PrincipalDetailPage()]] - `imports` [EXTRACTED]
 - [[PrincipalDetailPage.tsx]] - `imports_from` [EXTRACTED]
 - [[RECIPIENTS_RESPONSE]] - `contains` [EXTRACTED]
-- [[SOURCE_RECORDS_RESPONSE]] - `contains` [EXTRACTED]
+- [[SOURCE_RECORDS_RESPONSE_1]] - `contains` [EXTRACTED]
 - [[employeeLogin()]] - `imports` [EXTRACTED]
 - [[employeeLogout()]] - `imports` [EXTRACTED]
-- [[jsonResponse()_12]] - `contains` [EXTRACTED]
+- [[jsonResponse()_17]] - `contains` [EXTRACTED]
 - [[libauth.ts]] - `imports_from` [EXTRACTED]
-- [[loginAndRender()_2]] - `contains` [EXTRACTED]
+- [[loginAndRender()_5]] - `contains` [EXTRACTED]
+- [[react-router-dom_1]] - `imports_from` [EXTRACTED]
+- [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalDetailPagetesttsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateInformationRequestDto"
+community: "requests.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateInformationRequestDto
+  - community/requestsservicets
 ---
 
 # IsArray
 
 ## Connections
-- [[UpdateInformationRequestDto]] - `references` [EXTRACTED]
+- [[ChangeStatusDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto
+#graphify/code #graphify/EXTRACTED #community/requestsservicets

@@ -12,8 +12,8 @@ tags:
 # .assertDirectionHasAuthorisation()
 
 ## Connections
-- [[dot-create()_20]] - `calls` [EXTRACTED]
-- [[dot-update()_16]] - `calls` [EXTRACTED]
+- [[dot-create()_21]] - `calls` [EXTRACTED]
+- [[dot-update()_15]] - `calls` [EXTRACTED]
 - [[InformationRequestsService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

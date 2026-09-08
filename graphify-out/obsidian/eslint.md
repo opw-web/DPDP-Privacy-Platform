@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/package.json"
-type: "code"
-community: "devDependencies"
-location: "L68"
+source_file: "dpdp-platform/frontend/package.json"
+type: "concept"
+community: "frontend/package.json"
+location: "L51"
 tags:
-  - graphify/code
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/devDependencies
+  - community/frontend/packagejson
 ---
 
 # eslint
 
 ## Connections
-- [[devDependencies_1]] - `contains` [EXTRACTED]
-- [[eslint_1]] - `imports` [EXTRACTED]
+- [[frontendpackage.json]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/devDependencies
+#graphify/concept #graphify/EXTRACTED #community/frontend/packagejson

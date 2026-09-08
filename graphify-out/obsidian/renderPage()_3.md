@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/principal/pages/MeRequestsPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.test.tsx"
 type: "code"
-community: "card.tsx"
-location: "L19"
+community: "router.tsx"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cardtsx
+  - community/routertsx
 ---
 
 # renderPage()
 
 ## Connections
-- [[MeRequestsPage.test.tsx]] - `contains` [EXTRACTED]
+- [[ChildrenPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cardtsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

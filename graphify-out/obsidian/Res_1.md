@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ropa-export.service.ts"
+community: "Public"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ropa-exportservicets
+  - community/Public
 ---
 
 # Res
 
 ## Connections
-- [[dot-ropaCsv()]] - `references` [EXTRACTED]
+- [[dot-accessReport()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ropa-exportservicets
+#graphify/code #graphify/EXTRACTED #community/Public

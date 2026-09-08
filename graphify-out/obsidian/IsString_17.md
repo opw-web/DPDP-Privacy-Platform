@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateComplianceRuleDto"
+community: "CreateBreachDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateComplianceRuleDto
+  - community/CreateBreachDto
 ---
 
 # IsString
 
 ## Connections
-- [[UpdateComplianceRuleDto]] - `references` [EXTRACTED]
+- [[CreateBreachDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto
+#graphify/code #graphify/EXTRACTED #community/CreateBreachDto

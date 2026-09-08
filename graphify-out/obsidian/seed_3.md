@@ -12,6 +12,6 @@ tags:
 # seed
 
 ## Connections
-- [[prisma_2]] - `contains` [EXTRACTED]
+- [[prisma_1]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/backend/packagejson

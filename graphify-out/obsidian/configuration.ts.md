@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/config/configuration.ts"
 type: "code"
-community: "notifications.module.ts"
+community: "token.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationsmodulets
+  - community/tokenservicets
 ---
 
 # configuration.ts
@@ -30,4 +30,4 @@ tags:
 - [[sync-lock.service.ts]] - `imports_from` [EXTRACTED]
 - [[token.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationsmodulets
+#graphify/code #graphify/EXTRACTED #community/tokenservicets

@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notifications/providers/portal.provider.ts"
 type: "code"
-community: "NotificationSendInput"
+community: "notifications.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationSendInput
+  - community/notificationsservicets
 ---
 
 # portal.provider.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[NotificationProvider]] - `imports` [EXTRACTED]
 - [[NotificationSendInput]] - `imports` [EXTRACTED]
 - [[NotificationSendResult]] - `imports` [EXTRACTED]
@@ -22,4 +23,4 @@ tags:
 - [[notifications.service.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationSendInput
+#graphify/code #graphify/EXTRACTED #community/notificationsservicets

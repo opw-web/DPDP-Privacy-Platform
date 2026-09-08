@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/principal/pages/MeMessagesPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/principal/pages/MeRequestsPage.test.tsx"
 type: "code"
-community: "card.tsx"
-location: "L7"
+community: "react-router-dom"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cardtsx
+  - community/react-router-dom
 ---
 
 # renderPage()
 
 ## Connections
-- [[MeMessagesPage.test.tsx]] - `contains` [EXTRACTED]
+- [[MeRequestsPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cardtsx
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

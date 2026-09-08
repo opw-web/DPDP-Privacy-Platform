@@ -19,5 +19,6 @@ tags:
 - [[consentRequestSubmissionBlocked()]] - `imports` [EXTRACTED]
 - [[marketingSubmissionBlocked()]] - `imports` [EXTRACTED]
 - [[pickDefaultBreachTemplate()]] - `imports` [EXTRACTED]
+- [[vitest_1]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/MessagingCampaignBuilderPagetsx

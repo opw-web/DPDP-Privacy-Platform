@@ -12,7 +12,7 @@ tags:
 # TenantModule
 
 ## Connections
-- [[dot-configure()_1]] - `method` [EXTRACTED]
+- [[dot-configure()]] - `method` [EXTRACTED]
 - [[Module_7]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[tenant.module.ts]] - `contains` [EXTRACTED]

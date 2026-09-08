@@ -1,20 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/retention-scan.service.ts"
+source_file: "dpdp-platform/backend/src/common/guards/permissions.guard.ts"
 type: "code"
-community: "AuditService"
-location: "L56"
+community: "AccessTokenPayload"
+location: "L81"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/AccessTokenPayload
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[ComplianceService]] - `references` [EXTRACTED]
-- [[ErasureTaskService]] - `references` [EXTRACTED]
-- [[RetentionScanService]] - `method` [EXTRACTED]
+- [[PermissionsGuard]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

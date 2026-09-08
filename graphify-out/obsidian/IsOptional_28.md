@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".record"
+community: "SdfAssessmentService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/SdfAssessmentService
 ---
 
 # IsOptional
 
 ## Connections
-- [[CompleteObligationDto]] - `references` [EXTRACTED]
+- [[CompleteSdfAssessmentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/SdfAssessmentService

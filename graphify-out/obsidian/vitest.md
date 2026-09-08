@@ -1,18 +1,17 @@
 ---
 source_file: "dpdp-platform/frontend/package.json"
 type: "code"
-community: "vitest"
+community: "devDependencies"
 location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/vitest
+  - community/devDependencies
 ---
 
 # vitest
 
 ## Connections
 - [[devDependencies_2]] - `contains` [EXTRACTED]
-- [[vitest_1]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/vitest
+#graphify/code #graphify/EXTRACTED #community/devDependencies

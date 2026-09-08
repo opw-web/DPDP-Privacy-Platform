@@ -12,7 +12,7 @@ tags:
 # dependencies
 
 ## Connections
-- [[better-sqlite3]] - `contains` [EXTRACTED]
+- [[better-sqlite3_1]] - `contains` [EXTRACTED]
 - [[demo-company-serverpackage.json]] - `contains` [EXTRACTED]
 - [[fastify]] - `contains` [EXTRACTED]
 

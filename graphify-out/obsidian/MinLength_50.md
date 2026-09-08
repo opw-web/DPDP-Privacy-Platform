@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "recipients.service.ts"
+community: "retention.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/retentionservicets
 ---
 
 # MinLength
 
 ## Connections
-- [[UpdateRecipientDto]] - `references` [EXTRACTED]
+- [[CreateRetentionPolicyDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/retentionservicets

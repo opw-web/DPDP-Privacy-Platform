@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".replace"
+community: "@nestjs/common"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/replace
+  - community/nestjs/common
 ---
 
 # Injectable
 
 ## Connections
-- [[MappingsService]] - `references` [EXTRACTED]
+- [[PrincipalRecipientsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/replace
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RequirePermission"
+community: "Public"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/Public
 ---
 
 # Put
 
 ## Connections
-- [[dot-upsertTranslation()]] - `references` [EXTRACTED]
+- [[dot-upsertNomination()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/Public

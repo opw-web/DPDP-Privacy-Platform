@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: ".unmerge"
+community: "employees.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/unmerge
+  - community/employeesservicets
 ---
 
 # Param
 
 ## Connections
-- [[dot-unmerge()]] - `references` [EXTRACTED]
+- [[dot-get()_11]] - `references` [EXTRACTED]
+- [[dot-resetPassword()]] - `references` [EXTRACTED]
+- [[dot-update()_12]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/unmerge
+#graphify/code #graphify/EXTRACTED #community/employeesservicets

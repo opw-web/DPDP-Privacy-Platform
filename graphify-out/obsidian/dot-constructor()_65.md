@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/consent-backfill.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/breach-principal-notice-dispatch.processor.ts"
 type: "code"
-community: "consent-backfill.queue.ts"
-location: "L21"
+community: "breach-principal-notice-dispatch.queue.ts"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/consent-backfillqueuets
+  - community/breach-principal-notice-dispatchqueuets
 ---
 
 # .constructor()
 
 ## Connections
-- [[ConsentBackfillProcessor]] - `method` [EXTRACTED]
-- [[ConsentBackfillService]] - `references` [EXTRACTED]
+- [[BreachPrincipalNoticeDispatchProcessor]] - `method` [EXTRACTED]
+- [[BreachService]] - `references` [EXTRACTED]
+- [[CampaignSendJobData]] - `references` [EXTRACTED]
+- [[InjectQueue_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/consent-backfillqueuets
+#graphify/code #graphify/EXTRACTED #community/breach-principal-notice-dispatchqueuets

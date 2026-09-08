@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notifications/notification-provider.interface.ts"
 type: "code"
-community: "NotificationSendInput"
+community: "NotificationsService"
 location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationSendInput
+  - community/NotificationsService
 ---
 
 # NotificationSendInput
@@ -16,9 +16,9 @@ tags:
 - [[dot-createPortalInTransaction()]] - `references` [EXTRACTED]
 - [[dot-deliverEmailBestEffort()]] - `references` [EXTRACTED]
 - [[dot-send()_1]] - `references` [EXTRACTED]
-- [[dot-send()_2]] - `references` [EXTRACTED]
 - [[dot-send()_3]] - `references` [EXTRACTED]
-- [[dot-send()_5]] - `references` [EXTRACTED]
+- [[dot-send()_2]] - `references` [EXTRACTED]
+- [[dot-send()_4]] - `references` [EXTRACTED]
 - [[console.provider.ts]] - `imports` [EXTRACTED]
 - [[notification-provider.interface.ts]] - `contains` [EXTRACTED]
 - [[notifications.e2e-spec.ts]] - `imports` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[pre-erasure-notice.service.ts]] - `imports` [EXTRACTED]
 - [[smtp.provider.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationSendInput
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

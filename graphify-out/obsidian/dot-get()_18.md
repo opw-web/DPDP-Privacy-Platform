@@ -12,9 +12,9 @@ tags:
 # .get()
 
 ## Connections
-- [[dot-get()_10]] - `calls` [INFERRED]
+- [[dot-get()_15]] - `calls` [INFERRED]
 - [[BreachesController]] - `method` [EXTRACTED]
-- [[Get_33]] - `references` [EXTRACTED]
+- [[Get_34]] - `references` [EXTRACTED]
 - [[Param_24]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 

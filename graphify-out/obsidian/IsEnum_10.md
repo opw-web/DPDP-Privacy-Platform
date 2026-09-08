@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: ".record"
+community: "CreateBreachDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/CreateBreachDto
 ---
 
 # IsEnum
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[CreateBreachDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/CreateBreachDto

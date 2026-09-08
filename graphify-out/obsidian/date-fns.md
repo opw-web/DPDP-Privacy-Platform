@@ -12,7 +12,6 @@ tags:
 # date-fns
 
 ## Connections
-- [[date-fns_1]] - `imports` [EXTRACTED]
 - [[dependencies]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/dependencies

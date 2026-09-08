@@ -12,6 +12,8 @@ tags:
 # notifications.controller.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[CurrentNotificationActor]] - `imports` [EXTRACTED]
 - [[JwtAnyActorGuard]] - `imports` [EXTRACTED]
 - [[MarkAllReadResponseDto]] - `imports` [EXTRACTED]

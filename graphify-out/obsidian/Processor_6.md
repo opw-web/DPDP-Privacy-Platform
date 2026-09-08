@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "retention.module.ts"
+community: "consent-backfill.queue.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionmodulets
+  - community/consent-backfillqueuets
 ---
 
 # Processor
 
 ## Connections
-- [[PreErasureNoticeProcessor]] - `references` [EXTRACTED]
+- [[ConsentBackfillProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionmodulets
+#graphify/code #graphify/EXTRACTED #community/consent-backfillqueuets

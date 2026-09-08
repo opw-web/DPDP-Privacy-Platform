@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/RecentAuditStrip.tsx"
 type: "code"
-community: "card.tsx"
+community: "react-router-dom"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cardtsx
+  - community/react-router-dom
 ---
 
 # RecentAuditStrip.tsx
@@ -29,5 +29,7 @@ tags:
 - [[Skeleton.tsx]] - `imports_from` [EXTRACTED]
 - [[badge.tsx]] - `imports_from` [EXTRACTED]
 - [[card.tsx]] - `imports_from` [EXTRACTED]
+- [[lucide-react_1]] - `imports_from` [EXTRACTED]
+- [[react-router-dom_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cardtsx
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

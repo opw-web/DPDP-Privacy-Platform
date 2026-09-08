@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "VerifyGuardianDto"
+community: "AccessTokenPayload"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/VerifyGuardianDto
+  - community/AccessTokenPayload
 ---
 
 # Get
 
 ## Connections
-- [[dot-list()]] - `references` [EXTRACTED]
+- [[dot-me()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/VerifyGuardianDto
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

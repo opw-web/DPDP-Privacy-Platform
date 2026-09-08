@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RetentionController"
+community: "CandidatesController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionController
+  - community/CandidatesController
 ---
 
 # Query
 
 ## Connections
-- [[dot-listTasks()]] - `references` [EXTRACTED]
+- [[dot-list()_34]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionController
+#graphify/code #graphify/EXTRACTED #community/CandidatesController

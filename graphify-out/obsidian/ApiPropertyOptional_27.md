@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".record"
+community: "notifications.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/notificationscontrollerts
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[CompleteObligationDto]] - `references` [EXTRACTED]
+- [[NotificationDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts

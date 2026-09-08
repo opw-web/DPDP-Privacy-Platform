@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/retention.service.ts"
+source_file: "dpdp-platform/backend/src/modules/evidence/principal-evidence.controller.ts"
 type: "code"
-community: "retention.service.ts"
-location: "L63"
+community: "access-report.service.ts"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/access-reportservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[RetentionService]] - `method` [EXTRACTED]
+- [[PrincipalEvidenceController]] - `method` [EXTRACTED]
+- [[PrincipalEvidenceService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/access-reportservicets

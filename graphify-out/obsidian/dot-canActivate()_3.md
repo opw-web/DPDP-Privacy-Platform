@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/common/guards/permissions.guard.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/guards/jwt-any-actor.guard.ts"
 type: "code"
-community: "PermissionsGuard"
-location: "L86"
+community: "TokenService"
+location: "L56"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PermissionsGuard
+  - community/TokenService
 ---
 
 # .canActivate()
 
 ## Connections
-- [[dot-resolvePermissions()]] - `calls` [EXTRACTED]
-- [[PermissionsGuard]] - `method` [EXTRACTED]
+- [[dot-verifyAccessToken()]] - `calls` [INFERRED]
+- [[JwtAnyActorGuard]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PermissionsGuard
+#graphify/code #graphify/EXTRACTED #community/TokenService

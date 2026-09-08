@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-listMessages()_1]] - `calls` [INFERRED]
 - [[CurrentPrincipal]] - `references` [EXTRACTED]
-- [[Get_4]] - `references` [EXTRACTED]
+- [[Get_9]] - `references` [EXTRACTED]
 - [[MeRightsController]] - `method` [EXTRACTED]
 - [[PrincipalActor]] - `references` [EXTRACTED]
 

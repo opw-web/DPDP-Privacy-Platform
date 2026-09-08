@@ -11,6 +11,6 @@ tags:
 # MinLength
 
 ## Connections
-- [[CreateSecurityMeasureDto]] - `references` [EXTRACTED]
+- [[UpdateSecurityMeasureDto]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/security-measuresservicets

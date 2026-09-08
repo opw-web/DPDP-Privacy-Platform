@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[db.ts]] - `imports_from` [EXTRACTED]
 - [[envelope()]] - `imports` [EXTRACTED]
+- [[fastify_1]] - `imports_from` [EXTRACTED]
 - [[methodGate.ts]] - `imports_from` [EXTRACTED]
 - [[onlyGet()]] - `imports` [EXTRACTED]
 - [[openDb()]] - `imports` [EXTRACTED]

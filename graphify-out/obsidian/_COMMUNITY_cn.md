@@ -1,67 +1,52 @@
 ---
 type: community
-members: 54
+members: 39
 ---
 
 # cn
 
-**Members:** 54 nodes
+**Members:** 39 nodes
 
 ## Members
-- [[AUDIT_ACTION_VALUES]] - code - dpdp-platform/frontend/src/fiduciary/pages/AuditPage.tsx
-- [[AUDIT_EVENT]] - code - dpdp-platform/frontend/src/fiduciary/pages/AuditPage.test.tsx
-- [[AuditEventListItem_1]] - code - dpdp-platform/frontend/src/fiduciary/components/AuditEventRow.tsx
-- [[AuditEventListResult_1]] - code - dpdp-platform/frontend/src/fiduciary/pages/AuditPage.tsx
-- [[AuditEventRow()]] - code - dpdp-platform/frontend/src/fiduciary/components/AuditEventRow.tsx
-- [[AuditEventRow.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/AuditEventRow.tsx
-- [[AuditEventRowProps]] - code - dpdp-platform/frontend/src/fiduciary/components/AuditEventRow.tsx
-- [[AuditFilters]] - code - dpdp-platform/frontend/src/fiduciary/pages/AuditPage.tsx
-- [[AuditPage.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/AuditPage.test.tsx
-- [[AuditPage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/AuditPage.tsx
-- [[Campaign_1]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
-- [[CampaignRecipient]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
-- [[ChainVerificationResult_1]] - code - dpdp-platform/frontend/src/fiduciary/pages/AuditPage.tsx
-- [[DataTable.tsx]] - code - dpdp-platform/frontend/src/components/shared/DataTable.tsx
-- [[DataTableProps]] - code - dpdp-platform/frontend/src/components/shared/DataTable.tsx
-- [[DownloadButton()]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
-- [[EMPTY_FILTERS]] - code - dpdp-platform/frontend/src/fiduciary/pages/AuditPage.tsx
-- [[EmptyEvidence()]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
-- [[EmptyStateConfig]] - code - dpdp-platform/frontend/src/components/shared/DataTable.tsx
-- [[EvidenceCard()]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
-- [[MessagingCampaignDetailPage()]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
-- [[MessagingCampaignDetailPage.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.test.tsx
-- [[MessagingCampaignDetailPage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
-- [[MockRoutes_6]] - code - dpdp-platform/frontend/src/fiduciary/pages/AuditPage.test.tsx
-- [[ORGANIZATION_3]] - code - dpdp-platform/frontend/src/fiduciary/pages/AuditPage.test.tsx
-- [[PrincipalEvidenceBreachInclusion]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
-- [[PrincipalEvidenceConsentEvent]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
-- [[PrincipalEvidenceMessage]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
-- [[PrincipalEvidenceNoticeVersion]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
-- [[PrincipalEvidencePage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
-- [[PrincipalEvidenceRequest]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
-- [[PrincipalEvidenceRequestEvent]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
-- [[RecipientStatusCounts]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
-- [[Table]] - code - dpdp-platform/frontend/src/components/ui/table.tsx
-- [[TableBody]] - code - dpdp-platform/frontend/src/components/ui/table.tsx
-- [[TableCell]] - code - dpdp-platform/frontend/src/components/ui/table.tsx
-- [[TableHead]] - code - dpdp-platform/frontend/src/components/ui/table.tsx
-- [[TableHeader]] - code - dpdp-platform/frontend/src/components/ui/table.tsx
-- [[TableRow]] - code - dpdp-platform/frontend/src/components/ui/table.tsx
-- [[campaignNoticeLinkText()]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
-- [[canApproveCampaign()]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
-- [[canSendCampaign()]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
+- [[@radix-uireact-tabs_1]] - concept - dpdp-platform/frontend/package.json
+- [[ConfirmDialog()]] - code - dpdp-platform/frontend/src/components/shared/ConfirmDialog.tsx
+- [[ConfirmDialog.tsx]] - code - dpdp-platform/frontend/src/components/shared/ConfirmDialog.tsx
+- [[ConfirmDialogProps]] - code - dpdp-platform/frontend/src/components/shared/ConfirmDialog.tsx
+- [[ConsentHistoryItem]] - code - dpdp-platform/frontend/src/principal/pages/MeConsentsPage.tsx
+- [[ConsentStatus]] - code - dpdp-platform/frontend/src/principal/pages/MeConsentsPage.tsx
+- [[Dialog]] - code - dpdp-platform/frontend/src/components/ui/dialog.tsx
+- [[DialogClose]] - code - dpdp-platform/frontend/src/components/ui/dialog.tsx
+- [[DialogContent]] - code - dpdp-platform/frontend/src/components/ui/dialog.tsx
+- [[DialogDescription]] - code - dpdp-platform/frontend/src/components/ui/dialog.tsx
+- [[DialogFooter()]] - code - dpdp-platform/frontend/src/components/ui/dialog.tsx
+- [[DialogHeader()]] - code - dpdp-platform/frontend/src/components/ui/dialog.tsx
+- [[DialogOverlay]] - code - dpdp-platform/frontend/src/components/ui/dialog.tsx
+- [[DialogPortal]] - code - dpdp-platform/frontend/src/components/ui/dialog.tsx
+- [[DialogTitle]] - code - dpdp-platform/frontend/src/components/ui/dialog.tsx
+- [[DialogTrigger]] - code - dpdp-platform/frontend/src/components/ui/dialog.tsx
+- [[LegitimateUsePurpose]] - code - dpdp-platform/frontend/src/principal/pages/MeConsentsPage.tsx
+- [[MeConsent]] - code - dpdp-platform/frontend/src/principal/pages/MeConsentsPage.tsx
+- [[MeConsentsPage()]] - code - dpdp-platform/frontend/src/principal/pages/MeConsentsPage.tsx
+- [[MeConsentsPage.tsx]] - code - dpdp-platform/frontend/src/principal/pages/MeConsentsPage.tsx
+- [[MeConsentsResponse]] - code - dpdp-platform/frontend/src/principal/pages/MeConsentsPage.tsx
+- [[NoticeDialog()]] - code - dpdp-platform/frontend/src/principal/pages/MeConsentsPage.tsx
+- [[NoticeVersion]] - code - dpdp-platform/frontend/src/principal/pages/MeConsentsPage.tsx
+- [[RegistersPage()]] - code - dpdp-platform/frontend/src/fiduciary/pages/RegistersPage.tsx
+- [[RegistersPage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/RegistersPage.tsx
+- [[RetentionTab()]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RetentionTab.tsx
+- [[STATUS_COPY]] - code - dpdp-platform/frontend/src/principal/pages/MeConsentsPage.tsx
+- [[SecurityMeasuresTab()_1]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SecurityMeasuresTab.tsx
+- [[SharingTab()]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SharingTab.tsx
+- [[StatusBadge()]] - code - dpdp-platform/frontend/src/principal/pages/MeConsentsPage.tsx
+- [[Tabs]] - code - dpdp-platform/frontend/src/components/ui/tabs.tsx
+- [[TabsContent]] - code - dpdp-platform/frontend/src/components/ui/tabs.tsx
+- [[TabsList]] - code - dpdp-platform/frontend/src/components/ui/tabs.tsx
+- [[TabsTrigger]] - code - dpdp-platform/frontend/src/components/ui/tabs.tsx
+- [[TransfersTab()]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/TransfersTab.tsx
+- [[asSections()]] - code - dpdp-platform/frontend/src/principal/pages/MeConsentsPage.tsx
 - [[cn()]] - code - dpdp-platform/frontend/src/lib/utils.ts
-- [[deliveredToNobody()]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
-- [[download()]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
-- [[hasVisibleMetadata()]] - code - dpdp-platform/frontend/src/fiduciary/components/AuditEventRow.tsx
-- [[jsonResponse()_22]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.test.tsx
-- [[recipientReasonText()]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
-- [[renderPage()_9]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.test.tsx
-- [[saveBlob()_1]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
-- [[shouldShowCampaignApproval()]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
-- [[statusBadgeVariant()]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
-- [[summarizeRecipientStatuses()]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
-- [[table.tsx]] - code - dpdp-platform/frontend/src/components/ui/table.tsx
+- [[dialog.tsx]] - code - dpdp-platform/frontend/src/components/ui/dialog.tsx
+- [[tabs.tsx]] - code - dpdp-platform/frontend/src/components/ui/tabs.tsx
 
 ## Live Query (requires Dataview plugin)
 
@@ -71,25 +56,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 48 edges to [[_COMMUNITY_card.tsx]]
-- 27 edges to [[_COMMUNITY_SecurityMeasuresTab.tsx]]
-- 25 edges to [[_COMMUNITY_button.tsx]]
-- 18 edges to [[_COMMUNITY_DateTime.tsx]]
-- 15 edges to [[_COMMUNITY_router.tsx]]
-- 8 edges to [[_COMMUNITY_api-client.ts]]
-- 7 edges to [[_COMMUNITY_MeConsentsPage.tsx]]
-- 5 edges to [[_COMMUNITY_data-sources-api.ts]]
-- 5 edges to [[_COMMUNITY_EmployeesPage.tsx]]
-- 4 edges to [[_COMMUNITY_employeeLogin]]
-- 4 edges to [[_COMMUNITY_AuditPage]]
-- 4 edges to [[_COMMUNITY_employeeApiClient]]
-- 3 edges to [[_COMMUNITY_AlgorithmRegisterPanel.tsx]]
-- 2 edges to [[_COMMUNITY_employeeLogout]]
-- 2 edges to [[_COMMUNITY_MeDataPage.tsx]]
+- 31 edges to [[_COMMUNITY_react]]
+- 29 edges to [[_COMMUNITY_react-router-dom]]
+- 13 edges to [[_COMMUNITY_router.tsx]]
+- 7 edges to [[_COMMUNITY_AuditPage.tsx]]
+- 6 edges to [[_COMMUNITY_data-sources-api.ts]]
+- 5 edges to [[_COMMUNITY_DateTime.tsx]]
+- 5 edges to [[_COMMUNITY_SettingsPage.tsx]]
+- 4 edges to [[_COMMUNITY_api-client.ts]]
+- 3 edges to [[_COMMUNITY_EmployeesPage.tsx]]
+- 2 edges to [[_COMMUNITY_DeadlinePill.tsx]]
+- 2 edges to [[_COMMUNITY_RequestDetailPage.tsx]]
+- 1 edge to [[_COMMUNITY_frontendpackage.json]]
 
 ## Top bridge nodes
-- [[cn()]] - degree 64, connects to 10 communities
-- [[AuditPage.tsx]] - degree 45, connects to 9 communities
-- [[PrincipalEvidencePage.tsx]] - degree 44, connects to 8 communities
-- [[MessagingCampaignDetailPage.tsx]] - degree 40, connects to 7 communities
-- [[DataTable.tsx]] - degree 26, connects to 6 communities
+- [[cn()]] - degree 64, connects to 11 communities
+- [[MeConsentsPage.tsx]] - degree 42, connects to 5 communities
+- [[dialog.tsx]] - degree 17, connects to 3 communities
+- [[RegistersPage.tsx]] - degree 17, connects to 2 communities
+- [[tabs.tsx]] - degree 10, connects to 2 communities

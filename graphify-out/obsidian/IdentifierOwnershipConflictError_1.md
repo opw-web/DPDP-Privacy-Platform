@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-attachIdentifier()]] - `calls` [EXTRACTED]
-- [[dot-constructor()_126]] - `method` [EXTRACTED]
+- [[dot-constructor()_130]] - `method` [EXTRACTED]
 - [[linking.service.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

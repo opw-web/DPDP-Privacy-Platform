@@ -13,6 +13,5 @@ tags:
 
 ## Connections
 - [[devDependencies_1]] - `contains` [EXTRACTED]
-- [[ts-jest_1]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/devDependencies

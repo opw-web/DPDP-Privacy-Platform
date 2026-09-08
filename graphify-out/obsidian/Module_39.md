@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "registers.module.ts"
+community: "health.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/registersmodulets
+  - community/healthservicets
 ---
 
 # Module
 
 ## Connections
-- [[RegistersModule]] - `references` [EXTRACTED]
+- [[HealthModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/registersmodulets
+#graphify/code #graphify/EXTRACTED #community/healthservicets

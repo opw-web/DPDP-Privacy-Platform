@@ -12,6 +12,7 @@ tags:
 # audit.module.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[AccessLogService]] - `imports` [EXTRACTED]
 - [[AuditModule]] - `contains` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]

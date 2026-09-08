@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/prisma/tsconfig.seed.json"
 type: "concept"
-community: "exclude"
+community: "tsconfig.seed.json"
 location: "L2"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/exclude
+  - community/tsconfigseedjson
 ---
 
 # ../tsconfig.json
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[tsconfig.seed.json]] - `extends` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/exclude
+#graphify/concept #graphify/EXTRACTED #community/tsconfigseedjson

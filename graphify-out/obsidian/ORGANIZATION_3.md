@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/AuditPage.test.tsx"
 type: "code"
-community: "cn"
+community: "router.tsx"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/routertsx
 ---
 
 # ORGANIZATION
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[AuditPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/routertsx

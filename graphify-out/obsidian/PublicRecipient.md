@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/recipients.service.ts"
 type: "code"
-community: "recipients.service.ts"
+community: "@nestjs/common"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/nestjs/common
 ---
 
 # PublicRecipient
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[recipients.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

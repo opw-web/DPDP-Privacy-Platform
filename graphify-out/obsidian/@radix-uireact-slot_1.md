@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/package.json"
 type: "concept"
-community: "dependencies"
+community: "frontend/package.json"
 location: "L21"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/frontend/packagejson
 ---
 
 # @radix-ui/react-slot
 
 ## Connections
-- [[@radix-uireact-slot]] - `imports` [EXTRACTED]
+- [[button.tsx]] - `imports_from` [EXTRACTED]
+- [[frontendpackage.json]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/dependencies
+#graphify/concept #graphify/EXTRACTED #community/frontend/packagejson

@@ -1,17 +1,92 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "dependencies"
+community: "@prisma/client"
 location: "L37"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/prisma/client
 ---
 
 # class-validator
 
 ## Connections
-- [[class-validator]] - `imports` [EXTRACTED]
+- [[access-log-export.dto.ts]] - `imports_from` [EXTRACTED]
+- [[add-me-request-comment.dto.ts]] - `imports_from` [EXTRACTED]
+- [[add-note.dto.ts]] - `imports_from` [EXTRACTED]
+- [[affected-principals.dto.ts]] - `imports_from` [EXTRACTED]
+- [[assign-request.dto.ts]] - `imports_from` [EXTRACTED]
+- [[attach-purposes.dto.ts]] - `imports_from` [EXTRACTED]
+- [[backendpackage.json]] - `imports` [EXTRACTED]
+- [[cancel-erasure-task.dto.ts]] - `imports_from` [EXTRACTED]
+- [[change-status.dto.ts]] - `imports_from` [EXTRACTED]
+- [[complete-erasure-task.dto.ts]] - `imports_from` [EXTRACTED]
+- [[complete-obligation.dto.ts]] - `imports_from` [EXTRACTED]
+- [[complete-sdf-assessment.dto.ts]] - `imports_from` [EXTRACTED]
+- [[create-algorithm-entry.dto.ts]] - `imports_from` [EXTRACTED]
+- [[create-breach.dto.ts]] - `imports_from` [EXTRACTED]
+- [[create-campaign.dto.ts]] - `imports_from` [EXTRACTED]
+- [[create-compliance-rule.dto.ts]] - `imports_from` [EXTRACTED]
+- [[create-data-source.dto.ts]] - `imports_from` [EXTRACTED]
+- [[create-employee.dto.ts]] - `imports_from` [EXTRACTED]
+- [[create-exemption-claim.dto.ts]] - `imports_from` [EXTRACTED]
+- [[create-guardian.dto.ts]] - `imports_from` [EXTRACTED]
+- [[create-information-request.dto.ts]] - `imports_from` [EXTRACTED]
+- [[create-legal-hold.dto.ts]] - `imports_from` [EXTRACTED]
+- [[create-me-request.dto.ts]] - `imports_from` [EXTRACTED]
+- [[create-notice-version.dto.ts]] - `imports_from` [EXTRACTED]
+- [[create-notice.dto.ts]] - `imports_from` [EXTRACTED]
+- [[create-purpose.dto.ts]] - `imports_from` [EXTRACTED]
+- [[create-recipient.dto.ts]] - `imports_from` [EXTRACTED]
+- [[create-retention-policy.dto.ts]] - `imports_from` [EXTRACTED]
+- [[create-sdf-assessment.dto.ts]] - `imports_from` [EXTRACTED]
+- [[create-security-measure.dto.ts]] - `imports_from` [EXTRACTED]
+- [[create-sharing-activity.dto.ts]] - `imports_from` [EXTRACTED]
+- [[create-template.dto.ts]] - `imports_from` [EXTRACTED]
+- [[create-transfer.dto.ts]] - `imports_from` [EXTRACTED]
+- [[create-voluntary-undertaking.dto.ts]] - `imports_from` [EXTRACTED]
+- [[employee-login.dto.ts]] - `imports_from` [EXTRACTED]
+- [[env.validation.ts]] - `imports_from` [EXTRACTED]
+- [[escalate-request.dto.ts]] - `imports_from` [EXTRACTED]
+- [[extension.dto.ts]] - `imports_from` [EXTRACTED]
+- [[flag-frivolous.dto.ts]] - `imports_from` [EXTRACTED]
+- [[import-consent.dto.ts]] - `imports_from` [EXTRACTED]
+- [[list-audit-events.dto.ts]] - `imports_from` [EXTRACTED]
+- [[list-exemption-claims.dto.ts]] - `imports_from` [EXTRACTED]
+- [[list-guardians.dto.ts]] - `imports_from` [EXTRACTED]
+- [[list-match-candidates.dto.ts]] - `imports_from` [EXTRACTED]
+- [[list-principals.dto.ts]] - `imports_from` [EXTRACTED]
+- [[list-requests.dto.ts]] - `imports_from` [EXTRACTED]
+- [[list-sync-jobs.dto.ts]] - `imports_from` [EXTRACTED]
+- [[preview-audience.dto.ts]] - `imports_from` [EXTRACTED]
+- [[preview-template.dto.ts]] - `imports_from` [EXTRACTED]
+- [[principal-login.dto.ts]] - `imports_from` [EXTRACTED]
+- [[replace-mappings.dto.ts]] - `imports_from` [EXTRACTED]
+- [[reset-employee-password.dto.ts]] - `imports_from` [EXTRACTED]
+- [[set-age-status.dto.ts]] - `imports_from` [EXTRACTED]
+- [[set-my-consent.dto.ts]] - `imports_from` [EXTRACTED]
+- [[undertaking-commitment.dto.ts]] - `imports_from` [EXTRACTED]
+- [[unmerge.dto.ts]] - `imports_from` [EXTRACTED]
+- [[update-algorithm-entry.dto.ts]] - `imports_from` [EXTRACTED]
+- [[update-breach.dto.ts]] - `imports_from` [EXTRACTED]
+- [[update-compliance-rule.dto.ts]] - `imports_from` [EXTRACTED]
+- [[update-data-source.dto.ts]] - `imports_from` [EXTRACTED]
+- [[update-employee.dto.ts]] - `imports_from` [EXTRACTED]
+- [[update-information-request.dto.ts]] - `imports_from` [EXTRACTED]
+- [[update-me-nomination.dto.ts]] - `imports_from` [EXTRACTED]
+- [[update-organization.dto.ts]] - `imports_from` [EXTRACTED]
+- [[update-purpose.dto.ts]] - `imports_from` [EXTRACTED]
+- [[update-recipient.dto.ts]] - `imports_from` [EXTRACTED]
+- [[update-retention-policy.dto.ts]] - `imports_from` [EXTRACTED]
+- [[update-role-permissions.dto.ts]] - `imports_from` [EXTRACTED]
+- [[update-security-measure.dto.ts]] - `imports_from` [EXTRACTED]
+- [[update-sharing-activity.dto.ts]] - `imports_from` [EXTRACTED]
+- [[update-template.dto.ts]] - `imports_from` [EXTRACTED]
+- [[update-transfer.dto.ts]] - `imports_from` [EXTRACTED]
+- [[update-voluntary-undertaking.dto.ts]] - `imports_from` [EXTRACTED]
+- [[upsert-translation.dto.ts]] - `imports_from` [EXTRACTED]
+- [[verify-guardian.dto.ts]] - `imports_from` [EXTRACTED]
+- [[verify-identity.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/dependencies
+#graphify/concept #graphify/EXTRACTED #community/prisma/client

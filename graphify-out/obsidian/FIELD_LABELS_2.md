@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/messaging/AudienceBuilder.tsx"
 type: "code"
-community: "MessagingCampaignBuilderPage.tsx"
+community: "AudienceBuilder.tsx"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MessagingCampaignBuilderPagetsx
+  - community/AudienceBuildertsx
 ---
 
 # FIELD_LABELS
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[AudienceBuilder.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MessagingCampaignBuilderPagetsx
+#graphify/code #graphify/EXTRACTED #community/AudienceBuildertsx

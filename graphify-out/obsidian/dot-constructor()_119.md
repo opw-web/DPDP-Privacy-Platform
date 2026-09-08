@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
+source_file: "dpdp-platform/backend/src/modules/children/age-status.controller.ts"
 type: "code"
-community: "rest-api.connector.ts"
-location: "L62"
+community: "children.module.ts"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rest-apiconnectorts
+  - community/childrenmodulets
 ---
 
 # .constructor()
 
 ## Connections
-- [[InvalidCursorError]] - `method` [EXTRACTED]
+- [[AgeStatusController]] - `method` [EXTRACTED]
+- [[AgeStatusService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts
+#graphify/code #graphify/EXTRACTED #community/childrenmodulets

@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/deadline-scan.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/audit-chain-verify.processor.ts"
 type: "code"
-community: "DeadlineScanProcessor"
-location: "L57"
+community: "NotificationsService"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DeadlineScanProcessor
+  - community/NotificationsService
 ---
 
 # .process()
 
 ## Connections
-- [[dot-runScanCycle()]] - `calls` [EXTRACTED]
-- [[DeadlineScanJobData]] - `references` [EXTRACTED]
-- [[DeadlineScanProcessor]] - `method` [EXTRACTED]
+- [[dot-runVerificationCycle()]] - `calls` [EXTRACTED]
+- [[AuditChainVerifyProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DeadlineScanProcessor
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "child-exemptions.service.ts"
+community: "children.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/child-exemptionsservicets
+  - community/childrenmodulets
 ---
 
 # IsInt
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[CreateExemptionClaimDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/child-exemptionsservicets
+#graphify/code #graphify/EXTRACTED #community/childrenmodulets

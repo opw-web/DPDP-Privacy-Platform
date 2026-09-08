@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: ".record"
+community: "CreateNoticeVersionDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/CreateNoticeVersionDto
 ---
 
 # IsString
 
 ## Connections
-- [[ExtensionDto]] - `references` [EXTRACTED]
+- [[CreateNoticeVersionDto]] - `references` [EXTRACTED]
+- [[ItemisedFieldInputDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/CreateNoticeVersionDto

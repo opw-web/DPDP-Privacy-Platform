@@ -1,19 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/campaign-send.processor.ts"
+source_file: "dpdp-platform/backend/src/modules/evidence/audit-chain.service.ts"
 type: "code"
-community: "breaches.module.ts"
-location: "L64"
+community: "AuditChainService"
+location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breachesmodulets
+  - community/AuditChainService
 ---
 
 # .constructor()
 
 ## Connections
-- [[CampaignSendProcessor]] - `method` [EXTRACTED]
-- [[CampaignsService]] - `references` [EXTRACTED]
-- [[NotificationsService]] - `references` [EXTRACTED]
+- [[AuditChainService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breachesmodulets
+#graphify/code #graphify/EXTRACTED #community/AuditChainService

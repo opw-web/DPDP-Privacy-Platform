@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/package.json"
 type: "concept"
-community: "dependencies"
+community: "frontend/package.json"
 location: "L20"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/frontend/packagejson
 ---
 
 # @radix-ui/react-label
 
 ## Connections
-- [[@radix-uireact-label]] - `imports` [EXTRACTED]
+- [[frontendpackage.json]] - `imports` [EXTRACTED]
+- [[label.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/dependencies
+#graphify/concept #graphify/EXTRACTED #community/frontend/packagejson

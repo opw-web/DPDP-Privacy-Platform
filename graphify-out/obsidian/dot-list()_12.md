@@ -1,17 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts"
+source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
 type: "code"
-community: "TemplatesService"
-location: "L77"
+community: "compliance.service.ts"
+location: "L359"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/TemplatesService
+  - graphify/INFERRED
+  - community/complianceservicets
 ---
 
 # .list()
 
 ## Connections
-- [[TemplatesService]] - `method` [EXTRACTED]
+- [[dot-list()_11]] - `calls` [INFERRED]
+- [[ComplianceService]] - `method` [EXTRACTED]
+- [[toPublicComplianceRule()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/INFERRED #community/complianceservicets

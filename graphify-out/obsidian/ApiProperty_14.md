@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "mappings.controller.ts"
+community: "CreateBreachDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingscontrollerts
+  - community/CreateBreachDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[DataSourcePurposeResponseDto]] - `references` [EXTRACTED]
-- [[DataSourcePurposesResponseDto]] - `references` [EXTRACTED]
+- [[CreateBreachDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingscontrollerts
+#graphify/code #graphify/EXTRACTED #community/CreateBreachDto

@@ -8,13 +8,13 @@ members: 8
 **Members:** 8 nodes
 
 ## Members
-- [[IsEnum_12]] - code
-- [[IsInt_5]] - code
-- [[IsOptional_31]] - code
-- [[IsString_33]] - code
+- [[IsEnum_17]] - code
+- [[IsInt_8]] - code
+- [[IsOptional_35]] - code
+- [[IsString_42]] - code
 - [[ListPrincipalsDto]] - code - dpdp-platform/backend/src/modules/principals/dto/list-principals.dto.ts
 - [[Max_2]] - code
-- [[Min_5]] - code
+- [[Min_8]] - code
 - [[Transform_1]] - code
 
 ## Live Query (requires Dataview plugin)
@@ -25,9 +25,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_access-report.service.ts]]
+- 1 edge to [[_COMMUNITY_@nestjscommon]]
 - 1 edge to [[_COMMUNITY_PrincipalsController]]
-- 1 edge to [[_COMMUNITY_principals.service.ts]]
+- 1 edge to [[_COMMUNITY_@prismaclient]]
 
 ## Top bridge nodes
 - [[ListPrincipalsDto]] - degree 10, connects to 3 communities

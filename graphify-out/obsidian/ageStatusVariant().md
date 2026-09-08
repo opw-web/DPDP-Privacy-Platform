@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.tsx"
 type: "code"
-community: "DateTime.tsx"
+community: "SettingsPage.tsx"
 location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DateTimetsx
+  - community/SettingsPagetsx
 ---
 
 # ageStatusVariant()
@@ -15,4 +15,4 @@ tags:
 - [[PrincipalDetailPage()]] - `calls` [EXTRACTED]
 - [[PrincipalDetailPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DateTimetsx
+#graphify/code #graphify/EXTRACTED #community/SettingsPagetsx

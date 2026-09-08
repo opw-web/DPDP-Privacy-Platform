@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/audit-chain-verify.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/campaign-send.processor.ts"
 type: "code"
-community: "audit-chain-verify.processor.ts"
-location: "L19"
+community: "CampaignsService"
+location: "L72"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-chain-verifyprocessorts
+  - community/CampaignsService
 ---
 
 # .process()
 
 ## Connections
-- [[dot-runVerificationCycle()]] - `calls` [EXTRACTED]
-- [[AuditChainVerifyProcessor]] - `method` [EXTRACTED]
+- [[dot-deliverRecipient()]] - `calls` [INFERRED]
+- [[CampaignSendJobData]] - `references` [EXTRACTED]
+- [[CampaignSendProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-chain-verifyprocessorts
+#graphify/code #graphify/EXTRACTED #community/CampaignsService

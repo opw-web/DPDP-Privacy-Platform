@@ -20,5 +20,7 @@ tags:
 - [[audit-read.controller.ts]] - `imports_from` [EXTRACTED]
 - [[audit-read.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[audit-read.service.ts]] - `imports_from` [EXTRACTED]
+- [[class-transformer_1]] - `imports_from` [EXTRACTED]
+- [[class-validator_1]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/audit-readservicets

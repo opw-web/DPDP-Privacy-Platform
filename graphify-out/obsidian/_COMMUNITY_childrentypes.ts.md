@@ -1,15 +1,14 @@
 ---
 type: community
-members: 15
+members: 12
 ---
 
 # children/types.ts
 
-**Members:** 15 nodes
+**Members:** 12 nodes
 
 ## Members
 - [[ChildrenPage()]] - code - dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.tsx
-- [[ChildrenPage.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.test.tsx
 - [[GuardianConsentSelector()]] - code - dpdp-platform/frontend/src/fiduciary/components/children/GuardianConsentSelector.tsx
 - [[GuardianConsentSelector.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/children/GuardianConsentSelector.tsx
 - [[GuardianConsentSelectorProps]] - code - dpdp-platform/frontend/src/fiduciary/components/children/GuardianConsentSelector.tsx
@@ -21,8 +20,6 @@ members: 15
 - [[guardianRowsForChild()]] - code - dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.tsx
 - [[guardianVerificationLabel()]] - code - dpdp-platform/frontend/src/fiduciary/components/children/types.ts
 - [[isGuardianConsentEligible()]] - code - dpdp-platform/frontend/src/fiduciary/components/children/types.ts
-- [[jsonResponse()_2]] - code - dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.test.tsx
-- [[renderPage()]] - code - dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.test.tsx
 
 ## Live Query (requires Dataview plugin)
 
@@ -32,8 +29,8 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_card.tsx]]
-- 1 edge to [[_COMMUNITY_router.tsx]]
+- 8 edges to [[_COMMUNITY_react]]
+- 2 edges to [[_COMMUNITY_router.tsx]]
 
 ## Top bridge nodes
 - [[ChildrenPage()]] - degree 6, connects to 2 communities

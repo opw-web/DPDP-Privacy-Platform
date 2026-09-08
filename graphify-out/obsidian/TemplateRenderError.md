@@ -12,7 +12,7 @@ tags:
 # TemplateRenderError
 
 ## Connections
-- [[dot-constructor()_89]] - `method` [EXTRACTED]
+- [[dot-constructor()_92]] - `method` [EXTRACTED]
 - [[DisallowedTemplateSyntaxError]] - `inherits` [EXTRACTED]
 - [[MissingOrganizationContactError]] - `inherits` [EXTRACTED]
 - [[MissingRequiredVariableError]] - `inherits` [EXTRACTED]

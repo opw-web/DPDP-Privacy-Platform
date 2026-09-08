@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/assembly.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/sync.e2e-spec.ts"
 type: "code"
-community: "assembly.service.ts"
-location: "L32"
+community: "sync.e2e-spec.ts"
+location: "L78"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/assemblyservicets
+  - community/synce2e-spects
 ---
 
 # organization()
 
 ## Connections
-- [[assembly.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[sync.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/assemblyservicets
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

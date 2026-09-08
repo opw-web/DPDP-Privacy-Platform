@@ -1,19 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/guardians.service.ts"
+source_file: "dpdp-platform/backend/src/modules/principals/lineage.service.ts"
 type: "code"
-community: "guardians.service.ts"
-location: "L76"
+community: "LineageService"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/LineageService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[GuardiansService]] - `method` [EXTRACTED]
-- [[MaskingService]] - `references` [EXTRACTED]
+- [[LineageService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/LineageService

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/ui/table.tsx"
 type: "code"
-community: "cn"
+community: "AuditPage.tsx"
 location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/AuditPagetsx
 ---
 
 # TableCell
@@ -20,4 +20,4 @@ tags:
 - [[cn()]] - `calls` [EXTRACTED]
 - [[table.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/AuditPagetsx

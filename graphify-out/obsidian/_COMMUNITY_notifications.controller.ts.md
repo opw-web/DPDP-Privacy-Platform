@@ -1,17 +1,16 @@
 ---
 type: community
-members: 12
+members: 11
 ---
 
 # notifications.controller.ts
 
-**Members:** 12 nodes
+**Members:** 11 nodes
 
 ## Members
-- [[dot-constructor()_59]] - code - dpdp-platform/backend/src/modules/notifications/guards/jwt-any-actor.guard.ts
-- [[ApiProperty_17]] - code
-- [[ApiPropertyOptional_21]] - code
-- [[Injectable_38]] - code
+- [[ApiProperty_26]] - code
+- [[ApiPropertyOptional_27]] - code
+- [[Injectable_43]] - code
 - [[JwtAnyActorGuard]] - code - dpdp-platform/backend/src/modules/notifications/guards/jwt-any-actor.guard.ts
 - [[MarkAllReadResponseDto]] - code - dpdp-platform/backend/src/modules/notifications/dto/notification.dto.ts
 - [[NotificationDto]] - code - dpdp-platform/backend/src/modules/notifications/dto/notification.dto.ts
@@ -29,20 +28,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_notifications.service.ts]]
-- 3 edges to [[_COMMUNITY_notifications.module.ts]]
-- 3 edges to [[_COMMUNITY_dot-markRead]]
-- 2 edges to [[_COMMUNITY_principal-auth.service.ts]]
+- 6 edges to [[_COMMUNITY_NotificationCallerActor]]
+- 3 edges to [[_COMMUNITY_TokenService]]
+- 3 edges to [[_COMMUNITY_app.module.ts]]
+- 3 edges to [[_COMMUNITY_@nestjscommon]]
+- 3 edges to [[_COMMUNITY_@prismaclient]]
+- 2 edges to [[_COMMUNITY_PrismaService]]
 - 2 edges to [[_COMMUNITY_Public]]
-- 1 edge to [[_COMMUNITY_PrismaService]]
-- 1 edge to [[_COMMUNITY_jwt-employee.guard.ts]]
-- 1 edge to [[_COMMUNITY_RequirePermission]]
-- 1 edge to [[_COMMUNITY_prisma.service.ts]]
+- 2 edges to [[_COMMUNITY_notifications.service.ts]]
+- 1 edge to [[_COMMUNITY_NotificationsService]]
+- 1 edge to [[_COMMUNITY_token.service.ts]]
 - 1 edge to [[_COMMUNITY_me-rights.service.ts]]
 
 ## Top bridge nodes
-- [[jwt-any-actor.guard.ts]] - degree 11, connects to 7 communities
-- [[notifications.controller.ts]] - degree 15, connects to 4 communities
+- [[jwt-any-actor.guard.ts]] - degree 12, connects to 8 communities
+- [[notifications.controller.ts]] - degree 17, connects to 7 communities
 - [[JwtAnyActorGuard]] - degree 6, connects to 2 communities
-- [[current-notification-actor.decorator.ts]] - degree 4, connects to 2 communities
-- [[dot-constructor()_59]] - degree 2, connects to 1 community
+- [[current-notification-actor.decorator.ts]] - degree 5, connects to 2 communities
+- [[notification.dto.ts]] - degree 6, connects to 1 community

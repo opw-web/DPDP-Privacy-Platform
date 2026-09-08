@@ -12,6 +12,8 @@ tags:
 # EmployeesPage.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
+- [[@tanstackreact-table]] - `imports_from` [EXTRACTED]
 - [[ApiError]] - `imports` [EXTRACTED]
 - [[Badge()]] - `imports` [EXTRACTED]
 - [[BadgeProps]] - `imports` [EXTRACTED]
@@ -27,13 +29,13 @@ tags:
 - [[DataTable.tsx]] - `imports_from` [EXTRACTED]
 - [[DateTime()]] - `imports` [EXTRACTED]
 - [[DateTime.tsx]] - `imports_from` [EXTRACTED]
-- [[DemoCredentialsBanner()]] - `contains` [EXTRACTED]
+- [[DemoCredentialsBanner()_1]] - `contains` [EXTRACTED]
 - [[EmployeeRow]] - `contains` [EXTRACTED]
 - [[EmployeeStatus]] - `contains` [EXTRACTED]
 - [[EmployeesPage()]] - `contains` [EXTRACTED]
 - [[EmployeesPage.test.tsx]] - `imports_from` [EXTRACTED]
 - [[Input]] - `imports` [EXTRACTED]
-- [[Label]] - `imports` [EXTRACTED]
+- [[Label_1]] - `imports` [EXTRACTED]
 - [[PermissionGate()]] - `imports` [EXTRACTED]
 - [[PermissionGate.tsx]] - `imports_from` [EXTRACTED]
 - [[ResetPasswordValues]] - `contains` [EXTRACTED]
@@ -48,10 +50,15 @@ tags:
 - [[input.tsx]] - `imports_from` [EXTRACTED]
 - [[label.tsx]] - `imports_from` [EXTRACTED]
 - [[libpermissions.ts]] - `imports_from` [EXTRACTED]
+- [[lucide-react_1]] - `imports_from` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
+- [[react-hook-form_1]] - `imports_from` [EXTRACTED]
 - [[resetPasswordSchema]] - `contains` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
-- [[shouldShowDemoCredentials()]] - `contains` [EXTRACTED]
+- [[shouldShowDemoCredentials()_1]] - `contains` [EXTRACTED]
+- [[sonner_1]] - `imports_from` [EXTRACTED]
 - [[statusBadgeVariant()_1]] - `contains` [EXTRACTED]
 - [[usePermission()]] - `imports` [EXTRACTED]
+- [[zod_1]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/EmployeesPagetsx

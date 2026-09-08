@@ -12,6 +12,8 @@ tags:
 # employee-auth.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[EmployeeAuthService]] - `contains` [EXTRACTED]
 - [[EmployeeLoginResult]] - `contains` [EXTRACTED]
@@ -22,6 +24,7 @@ tags:
 - [[TenantContext]] - `imports` [EXTRACTED]
 - [[TenantStore]] - `imports` [EXTRACTED]
 - [[TokenService]] - `imports` [EXTRACTED]
+- [[argon2_1]] - `imports_from` [EXTRACTED]
 - [[audit.service.ts]] - `imports_from` [EXTRACTED]
 - [[auth.module.ts]] - `imports_from` [EXTRACTED]
 - [[dummy-hash.util.ts]] - `imports_from` [EXTRACTED]

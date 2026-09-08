@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-extension()]] - `calls` [INFERRED]
-- [[dot-get()_10]] - `calls` [EXTRACTED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[dot-update()_10]] - `calls` [EXTRACTED]
+- [[dot-get()_15]] - `calls` [EXTRACTED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-update()_17]] - `calls` [EXTRACTED]
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
 - [[BreachService]] - `method` [EXTRACTED]
 - [[ExtensionDto]] - `references` [EXTRACTED]

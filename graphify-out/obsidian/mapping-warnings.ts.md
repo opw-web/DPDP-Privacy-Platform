@@ -12,6 +12,7 @@ tags:
 # mapping-warnings.ts
 
 ## Connections
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[MappingForWarningCheck]] - `contains` [EXTRACTED]
 - [[MappingWarning_1]] - `contains` [EXTRACTED]
 - [[MappingWarningPurposeSummary_1]] - `contains` [EXTRACTED]

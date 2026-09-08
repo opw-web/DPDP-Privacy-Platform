@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "SharingService"
+community: "CreateSharingActivityDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SharingService
+  - community/CreateSharingActivityDto
 ---
 
 # Injectable
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[SharingService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SharingService
+#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

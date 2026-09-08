@@ -1,30 +1,26 @@
 ---
 type: community
-members: 17
+members: 13
 ---
 
 # notifications.service.ts
 
-**Members:** 17 nodes
+**Members:** 13 nodes
 
 ## Members
-- [[dot-constructor()_50]] - code - dpdp-platform/backend/src/modules/notifications/notifications.service.ts
-- [[dot-constructor()_51]] - code - dpdp-platform/backend/src/modules/notifications/providers/portal.provider.ts
-- [[dot-list()_10]] - code - dpdp-platform/backend/src/modules/notifications/notifications.service.ts
-- [[dot-markAllRead()]] - code - dpdp-platform/backend/src/modules/notifications/notifications.service.ts
-- [[dot-markRead()]] - code - dpdp-platform/backend/src/modules/notifications/notifications.service.ts
+- [[dot-constructor()_62]] - code - dpdp-platform/backend/src/modules/notifications/notifications.service.ts
+- [[dot-constructor()_63]] - code - dpdp-platform/backend/src/modules/notifications/providers/portal.provider.ts
+- [[dot-send()_5]] - code - dpdp-platform/backend/src/modules/notifications/notification-provider.interface.ts
+- [[EMAIL_PROVIDER]] - code - dpdp-platform/backend/src/modules/notifications/email-provider.factory.ts
 - [[Inject]] - code
-- [[Injectable_33]] - code
-- [[Injectable_34]] - code
+- [[Injectable_39]] - code
 - [[NOTIFICATION_PUBLIC_SELECT]] - code - dpdp-platform/backend/src/modules/notifications/notifications.service.ts
-- [[NotificationCallerActor]] - code - dpdp-platform/backend/src/modules/notifications/guards/jwt-any-actor.guard.ts
+- [[NotificationProvider]] - code - dpdp-platform/backend/src/modules/notifications/notification-provider.interface.ts
 - [[NotificationRow]] - code - dpdp-platform/backend/src/modules/notifications/notifications.service.ts
-- [[NotificationsService]] - code - dpdp-platform/backend/src/modules/notifications/notifications.service.ts
 - [[PortalProvider]] - code - dpdp-platform/backend/src/modules/notifications/providers/portal.provider.ts
 - [[PublicNotification]] - code - dpdp-platform/backend/src/modules/notifications/notifications.service.ts
 - [[notifications.service.ts]] - code - dpdp-platform/backend/src/modules/notifications/notifications.service.ts
-- [[ownershipWhere()]] - code - dpdp-platform/backend/src/modules/notifications/notifications.service.ts
-- [[toPublicNotification()]] - code - dpdp-platform/backend/src/modules/notifications/notifications.service.ts
+- [[portal.provider.ts]] - code - dpdp-platform/backend/src/modules/notifications/providers/portal.provider.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -34,28 +30,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_NotificationSendInput]]
-- 8 edges to [[_COMMUNITY_notifications.module.ts]]
-- 6 edges to [[_COMMUNITY_notifications.controller.ts]]
-- 6 edges to [[_COMMUNITY_dot-markRead]]
-- 6 edges to [[_COMMUNITY_prisma.service.ts]]
-- 3 edges to [[_COMMUNITY_PrismaService]]
-- 3 edges to [[_COMMUNITY_me-rights.service.ts]]
-- 3 edges to [[_COMMUNITY_breaches.module.ts]]
-- 2 edges to [[_COMMUNITY_dot-record]]
-- 2 edges to [[_COMMUNITY_requests.service.ts]]
-- 2 edges to [[_COMMUNITY_audit-chain-verify.processor.ts]]
-- 2 edges to [[_COMMUNITY_notifications.e2e-spec.ts]]
-- 2 edges to [[_COMMUNITY_AuditService]]
-- 1 edge to [[_COMMUNITY_MeRightsService]]
-- 1 edge to [[_COMMUNITY_retention.module.ts]]
-- 1 edge to [[_COMMUNITY_mvp2-schedules.ts]]
-- 1 edge to [[_COMMUNITY_AuditChainService]]
+- 13 edges to [[_COMMUNITY_notifications.e2e-spec.ts]]
+- 8 edges to [[_COMMUNITY_PrismaService]]
+- 6 edges to [[_COMMUNITY_NotificationsService]]
+- 4 edges to [[_COMMUNITY_app.module.ts]]
+- 3 edges to [[_COMMUNITY_NotificationCallerActor]]
+- 2 edges to [[_COMMUNITY_notifications.controller.ts]]
+- 2 edges to [[_COMMUNITY_@nestjscommon]]
 - 1 edge to [[_COMMUNITY_ScopedTransactionClient]]
+- 1 edge to [[_COMMUNITY_supertest]]
+- 1 edge to [[_COMMUNITY_audit.service.ts]]
+- 1 edge to [[_COMMUNITY_breach.service.ts]]
+- 1 edge to [[_COMMUNITY_@prismaclient]]
+- 1 edge to [[_COMMUNITY_me-rights.service.ts]]
+- 1 edge to [[_COMMUNITY_requests.service.ts]]
 
 ## Top bridge nodes
-- [[NotificationsService]] - degree 29, connects to 17 communities
-- [[notifications.service.ts]] - degree 30, connects to 12 communities
-- [[NotificationCallerActor]] - degree 11, connects to 3 communities
+- [[notifications.service.ts]] - degree 32, connects to 14 communities
+- [[portal.provider.ts]] - degree 10, connects to 5 communities
 - [[PortalProvider]] - degree 8, connects to 2 communities
-- [[dot-markRead()]] - degree 5, connects to 1 community
+- [[EMAIL_PROVIDER]] - degree 4, connects to 2 communities
+- [[NotificationProvider]] - degree 11, connects to 1 community

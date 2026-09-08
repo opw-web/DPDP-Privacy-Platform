@@ -19,6 +19,7 @@ tags:
 - [[buildServer()]] - `imports` [EXTRACTED]
 - [[closeDb()]] - `imports` [EXTRACTED]
 - [[db.ts]] - `imports_from` [EXTRACTED]
+- [[fastify_1]] - `imports_from` [EXTRACTED]
 - [[openDb()]] - `imports` [EXTRACTED]
 - [[server.ts]] - `imports_from` [EXTRACTED]
 - [[{ buildServer }]] - `contains` [EXTRACTED]

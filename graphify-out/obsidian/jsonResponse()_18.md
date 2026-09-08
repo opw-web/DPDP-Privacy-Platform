@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/principal/pages/MeDataPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.test.tsx"
 type: "code"
-community: "MeDataPage.tsx"
-location: "L7"
+community: "router.tsx"
+location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeDataPagetsx
+  - community/routertsx
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[MeDataPage.test.tsx]] - `contains` [EXTRACTED]
+- [[PrincipalEvidencePage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeDataPagetsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

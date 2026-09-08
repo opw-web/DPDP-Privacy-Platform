@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "me-rights.service.ts"
+community: "@prisma/client"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/me-rightsservicets
+  - community/prisma/client
 ---
 
 # IsString
 
 ## Connections
-- [[CreateMeRequestDto]] - `references` [EXTRACTED]
+- [[UpsertTranslationDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/me-rightsservicets
+#graphify/code #graphify/EXTRACTED #community/prisma/client

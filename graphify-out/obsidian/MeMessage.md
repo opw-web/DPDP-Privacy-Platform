@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeMessagesPage.tsx"
 type: "code"
-community: "card.tsx"
+community: "react-router-dom"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cardtsx
+  - community/react-router-dom
 ---
 
 # MeMessage
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[MeMessagesPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cardtsx
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

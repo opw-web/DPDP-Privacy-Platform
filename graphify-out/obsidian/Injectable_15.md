@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "notifications.module.ts"
+community: "notifications.e2e-spec.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationsmodulets
+  - community/notificationse2e-spects
 ---
 
 # Injectable
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[SmtpProvider]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationsmodulets
+#graphify/code #graphify/EXTRACTED #community/notificationse2e-spects

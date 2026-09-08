@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/registers/SharingTab.tsx"
 type: "code"
-community: "SecurityMeasuresTab.tsx"
+community: "react"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresTabtsx
+  - community/react
 ---
 
 # SharingActivity
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[SharingTab.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx
+#graphify/code #graphify/EXTRACTED #community/react

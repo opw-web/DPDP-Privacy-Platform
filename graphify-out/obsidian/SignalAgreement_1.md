@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/CandidateComparison.tsx"
+source_file: "dpdp-platform/backend/src/modules/identity/candidates.service.ts"
 type: "code"
-community: "DateTime.tsx"
-location: "L17"
+community: "candidates.service.ts"
+location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DateTimetsx
+  - community/candidatesservicets
 ---
 
 # SignalAgreement
 
 ## Connections
-- [[CandidateComparison.tsx]] - `contains` [EXTRACTED]
+- [[candidates.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DateTimetsx
+#graphify/code #graphify/EXTRACTED #community/candidatesservicets

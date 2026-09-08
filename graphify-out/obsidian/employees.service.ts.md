@@ -12,6 +12,8 @@ tags:
 # employees.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[CreateEmployeeDto]] - `imports` [EXTRACTED]
 - [[EMPLOYEE_PUBLIC_SELECT]] - `contains` [EXTRACTED]
@@ -19,6 +21,7 @@ tags:
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[PublicEmployee]] - `contains` [EXTRACTED]
 - [[UpdateEmployeeDto]] - `imports` [EXTRACTED]
+- [[argon2_1]] - `imports_from` [EXTRACTED]
 - [[audit.service.ts]] - `imports_from` [EXTRACTED]
 - [[create-employee.dto.ts]] - `imports_from` [EXTRACTED]
 - [[employees.controller.ts]] - `imports_from` [EXTRACTED]

@@ -12,9 +12,9 @@ tags:
 # JwtAnyActorGuard
 
 ## Connections
-- [[dot-canActivate()_2]] - `method` [EXTRACTED]
-- [[dot-constructor()_59]] - `method` [EXTRACTED]
-- [[Injectable_38]] - `references` [EXTRACTED]
+- [[dot-canActivate()_3]] - `method` [EXTRACTED]
+- [[dot-constructor()_36]] - `method` [EXTRACTED]
+- [[Injectable_43]] - `references` [EXTRACTED]
 - [[jwt-any-actor.guard.ts]] - `contains` [EXTRACTED]
 - [[notifications.controller.ts]] - `imports` [EXTRACTED]
 - [[notifications.module.ts]] - `imports` [EXTRACTED]

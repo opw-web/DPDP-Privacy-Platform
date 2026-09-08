@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/EmployeesPage.tsx"
+source_file: "dpdp-platform/frontend/src/principal/pages/PrincipalLoginPage.tsx"
 type: "code"
-community: "EmployeesPage.test.tsx"
-location: "L110"
+community: "react"
+location: "L42"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeesPagetesttsx
+  - community/react
 ---
 
 # DemoCredentialsBanner()
 
 ## Connections
-- [[EmployeesPage.tsx]] - `contains` [EXTRACTED]
+- [[PrincipalLoginPage.tsx]] - `contains` [EXTRACTED]
 - [[shouldShowDemoCredentials()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeesPagetesttsx
+#graphify/code #graphify/EXTRACTED #community/react

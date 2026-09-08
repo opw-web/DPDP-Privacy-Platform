@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/recipients.controller.ts"
 type: "code"
-community: "read-only-http.client.ts"
-location: "L55"
+community: "CreateRecipientDto"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/read-only-httpclientts
+  - community/CreateRecipientDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[ReadOnlyHttpStatusError]] - `method` [EXTRACTED]
-- [[stripQuery()_1]] - `calls` [EXTRACTED]
+- [[RecipientsController]] - `method` [EXTRACTED]
+- [[RecipientsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/read-only-httpclientts
+#graphify/code #graphify/EXTRACTED #community/CreateRecipientDto

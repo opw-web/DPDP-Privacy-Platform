@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sdf.controller.ts"
+community: "ExtensionDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdfcontrollerts
+  - community/ExtensionDto
 ---
 
 # IsDateString
 
 ## Connections
-- [[CompleteSdfAssessmentDto]] - `references` [EXTRACTED]
+- [[ExtensionDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdfcontrollerts
+#graphify/code #graphify/EXTRACTED #community/ExtensionDto

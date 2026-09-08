@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/requests.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/templates.e2e-spec.ts"
 type: "code"
-community: "requests.service.ts"
-location: "L145"
+community: "supertest"
+location: "L56"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/requestsservicets
+  - community/supertest
 ---
 
 # authed()
 
 ## Connections
-- [[requests.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[templates.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/requestsservicets
+#graphify/code #graphify/EXTRACTED #community/supertest

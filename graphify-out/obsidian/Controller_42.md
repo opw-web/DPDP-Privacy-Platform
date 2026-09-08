@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SecurityMeasuresService"
+community: "CreateSharingActivityDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresService
+  - community/CreateSharingActivityDto
 ---
 
 # Controller
 
 ## Connections
-- [[SecurityMeasuresController]] - `references` [EXTRACTED]
+- [[SharingController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresService
+#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

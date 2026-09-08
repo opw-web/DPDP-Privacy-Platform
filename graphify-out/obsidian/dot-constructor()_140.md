@@ -1,20 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/deadline-scan.queue.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/retention.service.ts"
 type: "code"
-community: "SyncQueueService"
-location: "L68"
+community: "retention.service.ts"
+location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/retentionservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[dot-register()]] - `calls` [INFERRED]
-- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
-- [[DeadlineScanQueueService]] - `method` [EXTRACTED]
-- [[InjectQueue_4]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[RetentionService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/retentionservicets

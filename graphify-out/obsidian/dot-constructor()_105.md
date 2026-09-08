@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/notifications.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync-error.ts"
 type: "code"
-community: ".markRead"
-location: "L38"
+community: "sync-pipeline.service.ts"
+location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/markRead
+  - community/sync-pipelineservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[NotificationsController]] - `method` [EXTRACTED]
-- [[NotificationsService]] - `references` [EXTRACTED]
+- [[MissingRecordKeyError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/markRead
+#graphify/code #graphify/EXTRACTED #community/sync-pipelineservicets

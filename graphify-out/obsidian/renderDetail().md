@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/RequestDetailPage.test.tsx"
 type: "code"
-community: "employeeLogin"
+community: "router.tsx"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeeLogin
+  - community/routertsx
 ---
 
 # renderDetail()
@@ -17,4 +17,4 @@ tags:
 - [[json()]] - `calls` [EXTRACTED]
 - [[request()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeeLogin
+#graphify/code #graphify/EXTRACTED #community/routertsx

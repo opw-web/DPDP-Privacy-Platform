@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AddMeRequestCommentDto"
+community: "breach.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AddMeRequestCommentDto
+  - community/breachservicets
 ---
 
 # IsString
 
 ## Connections
-- [[AddMeRequestCommentDto]] - `references` [EXTRACTED]
+- [[UpdateBreachDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AddMeRequestCommentDto
+#graphify/code #graphify/EXTRACTED #community/breachservicets

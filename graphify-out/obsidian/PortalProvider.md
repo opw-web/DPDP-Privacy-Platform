@@ -12,10 +12,10 @@ tags:
 # PortalProvider
 
 ## Connections
-- [[dot-constructor()_50]] - `references` [EXTRACTED]
-- [[dot-constructor()_51]] - `method` [EXTRACTED]
-- [[dot-send()_3]] - `method` [EXTRACTED]
-- [[Injectable_34]] - `references` [EXTRACTED]
+- [[dot-constructor()_62]] - `references` [EXTRACTED]
+- [[dot-constructor()_63]] - `method` [EXTRACTED]
+- [[dot-send()_2]] - `method` [EXTRACTED]
+- [[Injectable_39]] - `references` [EXTRACTED]
 - [[NotificationProvider]] - `implements` [EXTRACTED]
 - [[notifications.module.ts]] - `imports` [EXTRACTED]
 - [[notifications.service.ts]] - `imports` [EXTRACTED]

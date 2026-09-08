@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "retention.module.ts"
+community: "PreviewAudienceDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionmodulets
+  - community/PreviewAudienceDto
 ---
 
 # Injectable
 
 ## Connections
-- [[PreErasureNoticeService]] - `references` [EXTRACTED]
+- [[AudienceService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionmodulets
+#graphify/code #graphify/EXTRACTED #community/PreviewAudienceDto

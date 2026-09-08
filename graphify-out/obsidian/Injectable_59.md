@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "employees.service.ts"
+community: "CryptoService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeesservicets
+  - community/CryptoService
 ---
 
 # Injectable
 
 ## Connections
-- [[EmployeesService]] - `references` [EXTRACTED]
+- [[CryptoService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeesservicets
+#graphify/code #graphify/EXTRACTED #community/CryptoService

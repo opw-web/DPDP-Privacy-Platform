@@ -1,20 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts"
 type: "code"
 community: "CampaignsService"
-location: "L178"
+location: "L84"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/CampaignsService
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_11]] - `calls` [INFERRED]
-- [[dot-resolveRecipients()]] - `calls` [EXTRACTED]
-- [[CampaignsService]] - `method` [EXTRACTED]
-- [[notFoundCampaign()]] - `calls` [EXTRACTED]
+- [[dot-create()_22]] - `calls` [INFERRED]
+- [[dot-get()_10]] - `calls` [INFERRED]
+- [[dot-send()_7]] - `calls` [INFERRED]
+- [[TemplatesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampaignsService
+#graphify/code #graphify/INFERRED #community/CampaignsService

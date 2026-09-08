@@ -12,9 +12,9 @@ tags:
 # rotateRefreshToken()
 
 ## Connections
-- [[dot-record()]] - `calls` [INFERRED]
-- [[dot-refresh()]] - `calls` [EXTRACTED]
+- [[dot-record()_1]] - `calls` [INFERRED]
 - [[dot-refresh()_1]] - `calls` [EXTRACTED]
+- [[dot-refresh()_2]] - `calls` [EXTRACTED]
 - [[employee-auth.service.ts]] - `imports` [EXTRACTED]
 - [[principal-auth.service.ts]] - `imports` [EXTRACTED]
 - [[refresh-rotation.util.ts]] - `contains` [EXTRACTED]

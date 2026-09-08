@@ -11,6 +11,6 @@ tags:
 # Injectable
 
 ## Connections
-- [[MatchingService]] - `references` [EXTRACTED]
+- [[LinkingService]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

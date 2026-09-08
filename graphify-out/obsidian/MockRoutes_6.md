@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/AuditPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.test.tsx"
 type: "code"
-community: "cn"
-location: "L43"
+community: "router.tsx"
+location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/routertsx
 ---
 
 # MockRoutes
 
 ## Connections
-- [[AuditEventListItem_1]] - `references` [EXTRACTED]
-- [[AuditPage.test.tsx]] - `contains` [EXTRACTED]
+- [[SettingsPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/routertsx

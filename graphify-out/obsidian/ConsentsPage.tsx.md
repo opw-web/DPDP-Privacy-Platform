@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/ConsentsPage.tsx"
 type: "code"
-community: "button.tsx"
+community: "react"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react
 ---
 
 # ConsentsPage.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[ApiError]] - `imports` [EXTRACTED]
 - [[Badge()]] - `imports` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
@@ -23,7 +24,7 @@ tags:
 - [[ConsentStats]] - `contains` [EXTRACTED]
 - [[ConsentsPage()]] - `contains` [EXTRACTED]
 - [[Input]] - `imports` [EXTRACTED]
-- [[Label]] - `imports` [EXTRACTED]
+- [[Label_1]] - `imports` [EXTRACTED]
 - [[PermissionGate()]] - `imports` [EXTRACTED]
 - [[PermissionGate.tsx]] - `imports_from` [EXTRACTED]
 - [[Purpose_2]] - `contains` [EXTRACTED]
@@ -36,7 +37,9 @@ tags:
 - [[errorMessage()]] - `contains` [EXTRACTED]
 - [[input.tsx]] - `imports_from` [EXTRACTED]
 - [[label.tsx]] - `imports_from` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 - [[select.tsx]] - `imports_from` [EXTRACTED]
+- [[sonner_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/react

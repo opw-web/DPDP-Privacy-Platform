@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "registers.module.ts"
+community: "EmployeeAuthController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/registersmodulets
+  - community/EmployeeAuthController
 ---
 
 # MinLength
 
 ## Connections
-- [[CreateTransferDto]] - `references` [EXTRACTED]
+- [[EmployeeLoginDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/registersmodulets
+#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController

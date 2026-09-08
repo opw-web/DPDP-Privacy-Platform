@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "child-exemptions.service.ts"
+community: "ImportConsentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/child-exemptionsservicets
+  - community/ImportConsentDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateExemptionClaimDto]] - `references` [EXTRACTED]
+- [[ImportConsentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/child-exemptionsservicets
+#graphify/code #graphify/EXTRACTED #community/ImportConsentDto

@@ -12,6 +12,7 @@ tags:
 # current-principal.decorator.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[CurrentPrincipal]] - `contains` [EXTRACTED]
 - [[PrincipalActor]] - `imports` [EXTRACTED]
 - [[jwt-principal.guard.ts]] - `imports_from` [EXTRACTED]

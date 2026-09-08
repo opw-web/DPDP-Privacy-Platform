@@ -12,7 +12,7 @@ tags:
 # AuthModule
 
 ## Connections
-- [[Module_9]] - `references` [EXTRACTED]
+- [[Module_8]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[auth.module.ts]] - `contains` [EXTRACTED]
 - [[consents.module.ts]] - `imports` [EXTRACTED]

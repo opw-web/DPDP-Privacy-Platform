@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notifications/notifications.service.ts"
 type: "code"
-community: "notifications.service.ts"
+community: "NotificationsService"
 location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationsservicets
+  - community/NotificationsService
 ---
 
 # NotificationsService
@@ -14,21 +14,21 @@ tags:
 ## Connections
 - [[dot-assertValidInput()]] - `method` [EXTRACTED]
 - [[dot-constructor()_3]] - `references` [EXTRACTED]
-- [[dot-constructor()_105]] - `references` [EXTRACTED]
-- [[dot-constructor()_42]] - `references` [EXTRACTED]
-- [[dot-constructor()_11]] - `references` [EXTRACTED]
-- [[dot-constructor()_79]] - `references` [EXTRACTED]
-- [[dot-constructor()_85]] - `references` [EXTRACTED]
-- [[dot-constructor()_48]] - `references` [EXTRACTED]
-- [[dot-constructor()_55]] - `references` [EXTRACTED]
-- [[dot-constructor()_50]] - `method` [EXTRACTED]
+- [[dot-constructor()_111]] - `references` [EXTRACTED]
+- [[dot-constructor()_109]] - `references` [EXTRACTED]
+- [[dot-constructor()_12]] - `references` [EXTRACTED]
+- [[dot-constructor()_25]] - `references` [EXTRACTED]
+- [[dot-constructor()_89]] - `references` [EXTRACTED]
+- [[dot-constructor()_22]] - `references` [EXTRACTED]
+- [[dot-constructor()_103]] - `references` [EXTRACTED]
+- [[dot-constructor()_62]] - `method` [EXTRACTED]
 - [[dot-createPortalInTransaction()]] - `method` [EXTRACTED]
 - [[dot-deliverEmailBestEffort()]] - `method` [EXTRACTED]
-- [[dot-list()_10]] - `method` [EXTRACTED]
-- [[dot-markAllRead()]] - `method` [EXTRACTED]
-- [[dot-markRead()]] - `method` [EXTRACTED]
+- [[dot-list()_31]] - `method` [EXTRACTED]
+- [[dot-markAllRead()_1]] - `method` [EXTRACTED]
+- [[dot-markRead()_1]] - `method` [EXTRACTED]
 - [[dot-send()_1]] - `method` [EXTRACTED]
-- [[Injectable_33]] - `references` [EXTRACTED]
+- [[Injectable_10]] - `references` [EXTRACTED]
 - [[audit-chain-verify.processor.ts]] - `imports` [EXTRACTED]
 - [[breach.service.ts]] - `imports` [EXTRACTED]
 - [[campaign-send.processor.ts]] - `imports` [EXTRACTED]
@@ -42,4 +42,4 @@ tags:
 - [[requests.service.ts]] - `imports` [EXTRACTED]
 - [[sdf-cycle-scan.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationsservicets
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

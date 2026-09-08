@@ -1,17 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/transfers.service.ts"
+source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
 type: "code"
-community: "TransfersService"
-location: "L50"
+community: "purposes.service.ts"
+location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TransfersService
+  - community/purposesservicets
 ---
 
 # .list()
 
 ## Connections
-- [[TransfersService]] - `method` [EXTRACTED]
+- [[dot-list()_7]] - `calls` [INFERRED]
+- [[Get_10]] - `references` [EXTRACTED]
+- [[PurposesController]] - `method` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TransfersService
+#graphify/code #graphify/EXTRACTED #community/purposesservicets

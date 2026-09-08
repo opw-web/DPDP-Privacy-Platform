@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sdf.controller.ts"
+community: "UpdateAlgorithmEntryDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdfcontrollerts
+  - community/UpdateAlgorithmEntryDto
 ---
 
 # IsOptional
 
 ## Connections
-- [[CompleteSdfAssessmentDto]] - `references` [EXTRACTED]
+- [[UpdateAlgorithmEntryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdfcontrollerts
+#graphify/code #graphify/EXTRACTED #community/UpdateAlgorithmEntryDto

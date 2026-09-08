@@ -1,18 +1,17 @@
 ---
 source_file: "dpdp-platform/frontend/package.json"
-type: "code"
-community: "devDependencies"
+type: "concept"
+community: "frontend/package.json"
 location: "L56"
 tags:
-  - graphify/code
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/devDependencies
+  - community/frontend/packagejson
 ---
 
 # postcss
 
 ## Connections
-- [[devDependencies_2]] - `contains` [EXTRACTED]
-- [[postcss_1]] - `imports` [EXTRACTED]
+- [[frontendpackage.json]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/devDependencies
+#graphify/concept #graphify/EXTRACTED #community/frontend/packagejson

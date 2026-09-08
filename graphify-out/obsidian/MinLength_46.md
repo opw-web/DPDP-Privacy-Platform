@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EmployeeAuthController"
+community: "children.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeeAuthController
+  - community/childrenmodulets
 ---
 
 # MinLength
 
 ## Connections
-- [[EmployeeLoginDto]] - `references` [EXTRACTED]
+- [[CreateExemptionClaimDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController
+#graphify/code #graphify/EXTRACTED #community/childrenmodulets

@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/LinkedRecordsPanel.test.tsx"
 type: "code"
-community: "PrincipalDetailPage.test.tsx"
-location: "L125"
+community: "router.tsx"
+location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalDetailPagetesttsx
+  - community/routertsx
 ---
 
 # loginAndRender()
 
 ## Connections
-- [[PrincipalDetailPage.test.tsx]] - `contains` [EXTRACTED]
+- [[LinkedRecordsPanel.test.tsx]] - `contains` [EXTRACTED]
 - [[employeeLogin()]] - `calls` [EXTRACTED]
-- [[jsonResponse()_12]] - `calls` [EXTRACTED]
+- [[jsonResponse()_8]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalDetailPagetesttsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

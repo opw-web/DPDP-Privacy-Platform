@@ -1,18 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "employees.service.ts"
+community: "PrincipalsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeesservicets
+  - community/PrincipalsController
 ---
 
 # Param
 
 ## Connections
-- [[dot-get()_12]] - `references` [EXTRACTED]
-- [[dot-resetPassword()]] - `references` [EXTRACTED]
-- [[dot-update()_13]] - `references` [EXTRACTED]
+- [[dot-detail()]] - `references` [EXTRACTED]
+- [[dot-lineage()]] - `references` [EXTRACTED]
+- [[dot-recipients()_1]] - `references` [EXTRACTED]
+- [[dot-sourceRecords()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeesservicets
+#graphify/code #graphify/EXTRACTED #community/PrincipalsController

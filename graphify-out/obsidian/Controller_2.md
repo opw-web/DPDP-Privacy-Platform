@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SetMyConsentDto"
+community: "AccessTokenPayload"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SetMyConsentDto
+  - community/AccessTokenPayload
 ---
 
 # Controller
 
 ## Connections
-- [[MeConsentsController]] - `references` [EXTRACTED]
+- [[CampaignsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SetMyConsentDto
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

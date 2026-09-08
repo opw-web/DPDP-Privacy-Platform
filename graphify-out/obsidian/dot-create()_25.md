@@ -1,22 +1,25 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notices/notices.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
 type: "code"
-community: "notices.service.ts"
-location: "L50"
+community: "DataSourcesService"
+location: "L230"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/noticesservicets
+  - community/DataSourcesService
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_26]] - `calls` [INFERRED]
-- [[Body_20]] - `references` [EXTRACTED]
-- [[CreateNoticeDto]] - `references` [EXTRACTED]
-- [[NoticesController]] - `method` [EXTRACTED]
-- [[Post_21]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-assertPubliclyAvailableJustified()]] - `calls` [EXTRACTED]
+- [[dot-create()_24]] - `calls` [INFERRED]
+- [[dot-encrypt()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-scheduleSync()]] - `calls` [EXTRACTED]
+- [[CreateDataSourceDto]] - `references` [EXTRACTED]
+- [[DataSourcesService]] - `method` [EXTRACTED]
+- [[duplicateNameMessage()]] - `calls` [EXTRACTED]
+- [[isUniqueConstraintViolation()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/noticesservicets
+#graphify/code #graphify/EXTRACTED #community/DataSourcesService

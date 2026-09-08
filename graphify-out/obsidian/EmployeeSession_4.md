@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/inventory.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/principal-portal.e2e-spec.ts"
 type: "code"
-community: "inventory.e2e-spec.ts"
-location: "L21"
+community: "principal-portal.e2e-spec.ts"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/inventorye2e-spects
+  - community/principal-portale2e-spects
 ---
 
 # EmployeeSession
 
 ## Connections
 - [[ensurePermission()_12]] - `calls` [EXTRACTED]
-- [[inventory.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[principal-portal.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/inventorye2e-spects
+#graphify/code #graphify/EXTRACTED #community/principal-portale2e-spects

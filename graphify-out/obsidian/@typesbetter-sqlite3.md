@@ -12,7 +12,6 @@ tags:
 # @types/better-sqlite3
 
 ## Connections
-- [[@typesbetter-sqlite3_1]] - `imports` [EXTRACTED]
 - [[devDependencies]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/demo-company-server/packagejson

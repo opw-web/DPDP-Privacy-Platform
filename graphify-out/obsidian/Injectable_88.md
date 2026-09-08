@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "compile-audience.ts"
+community: "SyncQueueService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/compile-audiencets
+  - community/SyncQueueService
 ---
 
 # Injectable
 
 ## Connections
-- [[AudienceService]] - `references` [EXTRACTED]
+- [[SyncQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/compile-audiencets
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

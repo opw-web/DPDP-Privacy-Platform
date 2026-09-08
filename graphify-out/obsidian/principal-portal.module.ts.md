@@ -12,6 +12,7 @@ tags:
 # principal-portal.module.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[AuditModule]] - `imports` [EXTRACTED]
 - [[AuthModule]] - `imports` [EXTRACTED]
 - [[EvidenceModule]] - `imports` [EXTRACTED]

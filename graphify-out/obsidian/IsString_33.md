@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ListPrincipalsDto"
+community: "TemplatesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ListPrincipalsDto
+  - community/TemplatesService
 ---
 
 # IsString
 
 ## Connections
-- [[ListPrincipalsDto]] - `references` [EXTRACTED]
+- [[UpdateTemplateDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ListPrincipalsDto
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

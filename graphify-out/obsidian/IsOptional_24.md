@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "ImportConsentDto"
+community: "CreateNoticeVersionDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ImportConsentDto
+  - community/CreateNoticeVersionDto
 ---
 
 # IsOptional
 
 ## Connections
-- [[ImportConsentDto]] - `references` [EXTRACTED]
+- [[CreateNoticeVersionDto]] - `references` [EXTRACTED]
+- [[ItemisedFieldInputDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ImportConsentDto
+#graphify/code #graphify/EXTRACTED #community/CreateNoticeVersionDto

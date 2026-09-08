@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/campaigns.e2e-spec.ts"
 type: "code"
-community: "PrismaService"
+community: "supertest"
 location: "L123"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/supertest
 ---
 
 # addEmployeeToOrg()
@@ -16,4 +16,4 @@ tags:
 - [[ensurePermission()_3]] - `calls` [EXTRACTED]
 - [[setupOrg()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/supertest

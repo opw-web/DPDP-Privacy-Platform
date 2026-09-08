@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/board/information-requests.controller.ts"
+source_file: "dpdp-platform/backend/src/common/crypto/crypto.service.ts"
 type: "code"
-community: "CreateInformationRequestDto"
-location: "L15"
+community: "CryptoService"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateInformationRequestDto
+  - community/CryptoService
 ---
 
 # .constructor()
 
 ## Connections
-- [[InformationRequestsController]] - `method` [EXTRACTED]
-- [[InformationRequestsService]] - `references` [EXTRACTED]
+- [[MalformedCiphertextError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto
+#graphify/code #graphify/EXTRACTED #community/CryptoService

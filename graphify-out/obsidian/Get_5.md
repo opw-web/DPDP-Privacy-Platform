@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "purposes.service.ts"
+community: "csvDocument"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposesservicets
+  - community/csvDocument
 ---
 
 # Get
 
 ## Connections
-- [[dot-list()_4]] - `references` [EXTRACTED]
+- [[dot-packZip()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposesservicets
+#graphify/code #graphify/EXTRACTED #community/csvDocument

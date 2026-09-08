@@ -1,20 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principal-portal/me.service.ts"
+source_file: "dpdp-platform/backend/src/queues/consent-backfill.queue.ts"
 type: "code"
-community: "access-report.service.ts"
-location: "L93"
+community: "BootRegistrationRegistry"
+location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-reportservicets
+  - community/BootRegistrationRegistry
 ---
 
 # .constructor()
 
 ## Connections
-- [[LineageService]] - `references` [EXTRACTED]
-- [[MeService]] - `method` [EXTRACTED]
-- [[PrincipalRecipientsService]] - `references` [EXTRACTED]
-- [[PrincipalsService]] - `references` [EXTRACTED]
+- [[dot-register()]] - `calls` [INFERRED]
+- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
+- [[ConsentBackfillQueueService]] - `method` [EXTRACTED]
+- [[InjectQueue_5]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-reportservicets
+#graphify/code #graphify/EXTRACTED #community/BootRegistrationRegistry

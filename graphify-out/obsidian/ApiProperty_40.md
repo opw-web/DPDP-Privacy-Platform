@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "notices.service.ts"
+community: "token.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/noticesservicets
+  - community/tokenservicets
 ---
 
 # ApiProperty
 
 ## Connections
-- [[UpsertTranslationDto]] - `references` [EXTRACTED]
+- [[EmployeeMeResponseDto]] - `references` [EXTRACTED]
+- [[EmployeeMeRoleDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/noticesservicets
+#graphify/code #graphify/EXTRACTED #community/tokenservicets

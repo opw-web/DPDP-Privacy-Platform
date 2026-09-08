@@ -1,20 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/breach-principal-notice-dispatch.queue.ts"
+source_file: "dpdp-platform/backend/src/queues/campaign-send.queue.ts"
 type: "code"
-community: "breaches.module.ts"
-location: "L34"
+community: "CampaignSendQueueService"
+location: "L72"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breachesmodulets
+  - community/CampaignSendQueueService
 ---
 
 # .enqueue()
 
 ## Connections
-- [[dot-notifyPrincipals()]] - `calls` [INFERRED]
-- [[dot-reconcilePrincipalNoticeDispatches()]] - `calls` [INFERRED]
-- [[BreachPrincipalNoticeDispatchQueueService]] - `method` [EXTRACTED]
-- [[breachPrincipalNoticeDispatchJobId()]] - `calls` [EXTRACTED]
+- [[dot-send()_7]] - `calls` [INFERRED]
+- [[CampaignSendQueueService]] - `method` [EXTRACTED]
+- [[campaignSendJobId()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breachesmodulets
+#graphify/code #graphify/EXTRACTED #community/CampaignSendQueueService

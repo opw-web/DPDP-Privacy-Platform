@@ -1,18 +1,30 @@
 ---
 source_file: "dpdp-platform/frontend/package.json"
-type: "code"
-community: "dependencies"
+type: "concept"
+community: "data-sources-api.ts"
 location: "L25"
 tags:
-  - graphify/code
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/data-sources-apits
 ---
 
 # @tanstack/react-table
 
 ## Connections
-- [[@tanstackreact-table_1]] - `imports` [EXTRACTED]
-- [[dependencies]] - `contains` [EXTRACTED]
+- [[DataSourcesPage.tsx]] - `imports_from` [EXTRACTED]
+- [[DataTable.test.tsx]] - `imports_from` [EXTRACTED]
+- [[DataTable.tsx]] - `imports_from` [EXTRACTED]
+- [[EmployeesPage.tsx]] - `imports_from` [EXTRACTED]
+- [[PrincipalsPage.tsx]] - `imports_from` [EXTRACTED]
+- [[PurposesPage.tsx]] - `imports_from` [EXTRACTED]
+- [[RecipientsTab.tsx]] - `imports_from` [EXTRACTED]
+- [[RequestsPage.tsx]] - `imports_from` [EXTRACTED]
+- [[RetentionTab.tsx]] - `imports_from` [EXTRACTED]
+- [[SharingTab.tsx]] - `imports_from` [EXTRACTED]
+- [[Step2Schema.tsx]] - `imports_from` [EXTRACTED]
+- [[SyncHistoryTable.tsx]] - `imports_from` [EXTRACTED]
+- [[TransfersTab.tsx]] - `imports_from` [EXTRACTED]
+- [[frontendpackage.json]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dependencies
+#graphify/concept #graphify/EXTRACTED #community/data-sources-apits

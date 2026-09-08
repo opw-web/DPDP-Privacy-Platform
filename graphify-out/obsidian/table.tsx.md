@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/ui/table.tsx"
 type: "code"
-community: "cn"
+community: "AuditPage.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/AuditPagetsx
 ---
 
 # table.tsx
@@ -25,6 +25,7 @@ tags:
 - [[TableHeader]] - `contains` [EXTRACTED]
 - [[TableRow]] - `contains` [EXTRACTED]
 - [[cn()]] - `imports` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
 - [[utils.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/AuditPagetsx

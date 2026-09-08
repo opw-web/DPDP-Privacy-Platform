@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/transfers.controller.ts"
 type: "code"
-community: "registers.module.ts"
+community: "@nestjs/common"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/registersmodulets
+  - community/nestjs/common
 ---
 
 # transfers.controller.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[CreateTransferDto]] - `imports` [EXTRACTED]
 - [[RequirePermission()]] - `imports` [EXTRACTED]
 - [[TransfersController]] - `contains` [EXTRACTED]
@@ -23,4 +25,4 @@ tags:
 - [[transfers.service.ts]] - `imports_from` [EXTRACTED]
 - [[update-transfer.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/registersmodulets
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

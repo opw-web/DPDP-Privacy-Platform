@@ -1,21 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.service.ts"
 type: "code"
-community: "TemplatesService"
-location: "L28"
+community: "mappings.service.ts"
+location: "L244"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/mappingsservicets
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_9]] - `calls` [INFERRED]
-- [[Get_12]] - `references` [EXTRACTED]
-- [[Param_8]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[TemplatesController]] - `method` [EXTRACTED]
+- [[dot-getMappings()]] - `calls` [INFERRED]
+- [[MappingsService]] - `method` [EXTRACTED]
+- [[computeMappingWarnings()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/mappingsservicets

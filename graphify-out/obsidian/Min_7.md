@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "data-sources.service.ts"
+community: "compliance.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesservicets
+  - community/complianceservicets
 ---
 
 # Min
 
 ## Connections
-- [[UpdateDataSourceDto]] - `references` [EXTRACTED]
+- [[UpdateComplianceRuleDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets
+#graphify/code #graphify/EXTRACTED #community/complianceservicets

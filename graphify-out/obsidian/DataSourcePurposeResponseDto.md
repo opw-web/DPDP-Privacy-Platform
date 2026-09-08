@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/dto/purposes-response.dto.ts"
 type: "code"
-community: "mappings.controller.ts"
+community: "@prisma/client"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingscontrollerts
+  - community/prisma/client
 ---
 
 # DataSourcePurposeResponseDto
 
 ## Connections
-- [[ApiProperty_14]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_18]] - `references` [EXTRACTED]
+- [[ApiProperty_35]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_39]] - `references` [EXTRACTED]
 - [[purposes-response.dto.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingscontrollerts
+#graphify/code #graphify/EXTRACTED #community/prisma/client

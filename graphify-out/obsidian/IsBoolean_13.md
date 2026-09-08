@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "data-sources.service.ts"
+community: "TemplatesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesservicets
+  - community/TemplatesService
 ---
 
 # IsBoolean
 
 ## Connections
-- [[CreateDataSourceDto]] - `references` [EXTRACTED]
+- [[UpdateTemplateDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

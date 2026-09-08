@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ReplaceMappingsDto"
+community: "CreateDataSourceDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ReplaceMappingsDto
+  - community/CreateDataSourceDto
 ---
 
 # IsBoolean
 
 ## Connections
-- [[SourceFieldMappingDto]] - `references` [EXTRACTED]
+- [[CreateDataSourceDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ReplaceMappingsDto
+#graphify/code #graphify/EXTRACTED #community/CreateDataSourceDto

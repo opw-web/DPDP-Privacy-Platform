@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "TemplatesService"
+community: "SyncService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/SyncService
 ---
 
 # ApiTags
 
 ## Connections
-- [[TemplatesController]] - `references` [EXTRACTED]
+- [[SyncController]] - `references` [EXTRACTED]
+- [[SyncJobsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/SyncService

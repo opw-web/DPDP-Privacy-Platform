@@ -42,9 +42,9 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 10 edges to [[_COMMUNITY_generate.ts]]
-- 3 edges to [[_COMMUNITY_server.ts]]
+- 2 edges to [[_COMMUNITY_routes.test.ts]]
+- 2 edges to [[_COMMUNITY_server.ts]]
 - 2 edges to [[_COMMUNITY_generateDataset]]
-- 1 edge to [[_COMMUNITY_routes.test.ts]]
 
 ## Top bridge nodes
 - [[dataset.test.ts]] - degree 26, connects to 4 communities

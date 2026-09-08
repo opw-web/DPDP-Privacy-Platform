@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/RequestsPage.tsx"
 type: "code"
-community: "employeeApiClient"
+community: "router.tsx"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeeApiClient
+  - community/routertsx
 ---
 
 # RequestsPage()
@@ -17,4 +17,4 @@ tags:
 - [[humanizeEnum()]] - `calls` [EXTRACTED]
 - [[router.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeeApiClient
+#graphify/code #graphify/EXTRACTED #community/routertsx

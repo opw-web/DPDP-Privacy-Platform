@@ -12,11 +12,11 @@ tags:
 # .login()
 
 ## Connections
-- [[dot-login()_1]] - `calls` [INFERRED]
+- [[dot-login()_2]] - `calls` [INFERRED]
 - [[dot-setRefreshCookie()_1]] - `calls` [EXTRACTED]
-- [[Body_28]] - `references` [EXTRACTED]
+- [[Body_29]] - `references` [EXTRACTED]
 - [[HttpCode_5]] - `references` [EXTRACTED]
-- [[Post_28]] - `references` [EXTRACTED]
+- [[Post_29]] - `references` [EXTRACTED]
 - [[PrincipalAuthController]] - `method` [EXTRACTED]
 - [[PrincipalLoginDto]] - `references` [EXTRACTED]
 - [[Public()]] - `references` [EXTRACTED]

@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/RequestsPage.tsx"
 type: "code"
-community: "employeeApiClient"
+community: "react-router-dom"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeeApiClient
+  - community/react-router-dom
 ---
 
 # RequestsPage.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
+- [[@tanstackreact-table]] - `imports_from` [EXTRACTED]
 - [[Badge()]] - `imports` [EXTRACTED]
 - [[Card]] - `imports` [EXTRACTED]
 - [[CardContent]] - `imports` [EXTRACTED]
@@ -27,7 +29,9 @@ tags:
 - [[employeeApiClient]] - `imports` [EXTRACTED]
 - [[enum-options.ts]] - `imports_from` [EXTRACTED]
 - [[humanizeEnum()]] - `imports` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
+- [[react-router-dom_1]] - `imports_from` [EXTRACTED]
 - [[requeststypes.ts]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeeApiClient
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/retention.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/principal-portal.e2e-spec.ts"
 type: "code"
-community: "erasure-task.service.ts"
-location: "L143"
+community: "principal-portal.e2e-spec.ts"
+location: "L131"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/principal-portale2e-spects
 ---
 
 # createPrincipal()
 
 ## Connections
-- [[retention.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[createFixture()_3]] - `calls` [EXTRACTED]
+- [[principal-portal.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/principal-portale2e-spects

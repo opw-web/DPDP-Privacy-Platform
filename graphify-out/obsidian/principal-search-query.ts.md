@@ -12,6 +12,7 @@ tags:
 # principal-search-query.ts
 
 ## Connections
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[PrincipalSearchQueryParams]] - `contains` [EXTRACTED]
 - [[buildPrincipalSearchQuery()]] - `contains` [EXTRACTED]
 - [[principals.e2e-spec.ts]] - `imports_from` [EXTRACTED]

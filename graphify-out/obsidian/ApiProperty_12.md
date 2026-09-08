@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateTemplateDto"
+community: "CreateTransferDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTemplateDto
+  - community/CreateTransferDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateTemplateDto]] - `references` [EXTRACTED]
+- [[CreateTransferDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTemplateDto
+#graphify/code #graphify/EXTRACTED #community/CreateTransferDto

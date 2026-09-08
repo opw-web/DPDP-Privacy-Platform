@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
 type: "code"
-community: "RequirePermission"
+community: "AccessTokenPayload"
 location: "L55"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/AccessTokenPayload
 ---
 
 # .approve()
@@ -16,8 +16,8 @@ tags:
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
 - [[CampaignsController]] - `method` [EXTRACTED]
 - [[CurrentActor]] - `references` [EXTRACTED]
-- [[Param_11]] - `references` [EXTRACTED]
-- [[Post_10]] - `references` [EXTRACTED]
+- [[Param_2]] - `references` [EXTRACTED]
+- [[Post_2]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

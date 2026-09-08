@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "guardians.service.ts"
+community: "AccessTokenPayload"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/AccessTokenPayload
 ---
 
 # MinLength
 
 ## Connections
-- [[CreateGuardianDto]] - `references` [EXTRACTED]
+- [[CancelErasureTaskDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

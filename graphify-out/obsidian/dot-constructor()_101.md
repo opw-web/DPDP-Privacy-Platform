@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sync/sync-error.ts"
+source_file: "dpdp-platform/frontend/src/lib/api-client.ts"
 type: "code"
-community: "sync-pipeline.service.ts"
-location: "L70"
+community: "react"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sync-pipelineservicets
+  - community/react
 ---
 
 # .constructor()
 
 ## Connections
-- [[MissingRecordKeyError]] - `method` [EXTRACTED]
+- [[ApiError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sync-pipelineservicets
+#graphify/code #graphify/EXTRACTED #community/react

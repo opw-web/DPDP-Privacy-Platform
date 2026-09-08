@@ -12,6 +12,8 @@ tags:
 # access-report.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AccessLogService]] - `imports` [EXTRACTED]
 - [[AccessReportConsentEntry]] - `contains` [EXTRACTED]
 - [[AccessReportConsentHistoryEntry]] - `contains` [EXTRACTED]

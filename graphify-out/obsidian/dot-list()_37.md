@@ -1,21 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/child-exemptions.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/children/child-exemptions.service.ts"
 type: "code"
-community: "child-exemptions.service.ts"
-location: "L17"
+community: "children.module.ts"
+location: "L79"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/child-exemptionsservicets
+  - community/childrenmodulets
 ---
 
 # .list()
 
 ## Connections
-- [[ChildExemptionsController]] - `method` [EXTRACTED]
-- [[Get_32]] - `references` [EXTRACTED]
+- [[dot-list()_36]] - `calls` [INFERRED]
+- [[ChildExemptionsService]] - `method` [EXTRACTED]
 - [[ListExemptionClaimsDto]] - `references` [EXTRACTED]
-- [[Query_8]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[toPublicExemptionClaim()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/child-exemptionsservicets
+#graphify/code #graphify/EXTRACTED #community/childrenmodulets

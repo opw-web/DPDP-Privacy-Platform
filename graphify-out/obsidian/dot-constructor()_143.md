@@ -1,22 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/schedule-reconciliation.service.ts"
+source_file: "demo-company-server/src/seed/rng.ts"
 type: "code"
-community: "SyncQueueService"
-location: "L63"
+community: "generateDataset"
+location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/generateDataset
 ---
 
 # .constructor()
 
 ## Connections
-- [[dot-reconcileAtBoot()]] - `calls` [EXTRACTED]
-- [[dot-register()]] - `calls` [INFERRED]
-- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
-- [[Mvp2ScheduleReconciliationService]] - `references` [EXTRACTED]
-- [[ScheduleReconciliationService]] - `method` [EXTRACTED]
-- [[SyncQueueService]] - `references` [EXTRACTED]
+- [[Rng]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/generateDataset

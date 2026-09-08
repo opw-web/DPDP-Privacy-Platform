@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "age-status.service.ts"
+community: "DataSourcesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/age-statusservicets
+  - community/DataSourcesService
 ---
 
 # ApiTags
 
 ## Connections
-- [[AgeStatusController]] - `references` [EXTRACTED]
+- [[DataSourcesController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/age-statusservicets
+#graphify/code #graphify/EXTRACTED #community/DataSourcesService

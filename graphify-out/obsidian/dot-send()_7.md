@@ -12,14 +12,14 @@ tags:
 # .send()
 
 ## Connections
-- [[dot-create()_21]] - `calls` [EXTRACTED]
+- [[dot-create()_22]] - `calls` [EXTRACTED]
 - [[dot-deliverRecipient()]] - `calls` [EXTRACTED]
 - [[dot-dispatchPrincipalNoticeCampaign()]] - `calls` [INFERRED]
-- [[dot-enqueue()_1]] - `calls` [INFERRED]
-- [[dot-get()_9]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-enqueue()]] - `calls` [INFERRED]
+- [[dot-get()_14]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
 - [[dot-resolveRecipients()]] - `calls` [EXTRACTED]
-- [[dot-send()_6]] - `calls` [INFERRED]
+- [[dot-send()]] - `calls` [INFERRED]
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
 - [[CampaignsService]] - `method` [EXTRACTED]
 - [[notFoundCampaign()]] - `calls` [EXTRACTED]

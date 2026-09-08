@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/ui/button.tsx"
 type: "code"
-community: "button.tsx"
+community: "react"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react
 ---
 
 # buttonVariants
@@ -15,4 +15,4 @@ tags:
 - [[Button]] - `calls` [EXTRACTED]
 - [[button.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/react

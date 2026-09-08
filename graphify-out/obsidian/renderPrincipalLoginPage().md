@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/PrincipalLoginPage.test.tsx"
 type: "code"
-community: "router.tsx"
+community: "api-client.ts"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/api-clientts
 ---
 
 # renderPrincipalLoginPage()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[PrincipalLoginPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/api-clientts

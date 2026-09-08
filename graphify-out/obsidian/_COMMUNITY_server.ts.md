@@ -12,10 +12,10 @@ members: 25
 - [[SYSTEM_KEYS]] - code - demo-company-server/src/auth.ts
 - [[System]] - code - demo-company-server/src/auth.ts
 - [[buildServer()]] - code - demo-company-server/src/server.ts
-- [[db.ts]] - code - demo-company-server/src/db.ts
 - [[ecommerce.ts]] - code - demo-company-server/src/routes/ecommerce.ts
 - [[ecommerceRoutes()]] - code - demo-company-server/src/routes/ecommerce.ts
 - [[envelope()]] - code - demo-company-server/src/pagination.ts
+- [[fastify_1]] - concept - demo-company-server/package.json
 - [[health.ts]] - code - demo-company-server/src/routes/health.ts
 - [[healthRoutes()]] - code - demo-company-server/src/routes/health.ts
 - [[marketing.ts]] - code - demo-company-server/src/routes/marketing.ts
@@ -42,12 +42,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_routes.test.ts]]
-- 3 edges to [[_COMMUNITY_dataset.test.ts]]
-- 2 edges to [[_COMMUNITY_generate.ts]]
+- 9 edges to [[_COMMUNITY_routes.test.ts]]
+- 2 edges to [[_COMMUNITY_dataset.test.ts]]
+- 1 edge to [[_COMMUNITY_generate.ts]]
+- 1 edge to [[_COMMUNITY_demo-company-serverpackage.json]]
 
 ## Top bridge nodes
 - [[openDb()]] - degree 13, connects to 3 communities
-- [[db.ts]] - degree 9, connects to 3 communities
-- [[server.ts]] - degree 14, connects to 1 community
-- [[buildServer()]] - degree 8, connects to 1 community
+- [[fastify_1]] - degree 11, connects to 2 communities
+- [[server.ts]] - degree 15, connects to 1 community
+- [[ecommerce.ts]] - degree 12, connects to 1 community
+- [[marketing.ts]] - degree 12, connects to 1 community

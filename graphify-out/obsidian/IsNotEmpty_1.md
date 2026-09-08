@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "audit-chain-verify.processor.ts"
+community: "EnvironmentVariables"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-chain-verifyprocessorts
+  - community/EnvironmentVariables
 ---
 
 # IsNotEmpty
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[EnvironmentVariables]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-chain-verifyprocessorts
+#graphify/code #graphify/EXTRACTED #community/EnvironmentVariables

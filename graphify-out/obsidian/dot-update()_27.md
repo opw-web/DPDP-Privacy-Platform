@@ -1,12 +1,12 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/security-measures.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/sharing.controller.ts"
 type: "code"
-community: "SecurityMeasuresService"
-location: "L41"
+community: "CreateSharingActivityDto"
+location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresService
+  - community/CreateSharingActivityDto
 ---
 
 # .update()
@@ -17,7 +17,7 @@ tags:
 - [[Param_30]] - `references` [EXTRACTED]
 - [[Patch_15]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[SecurityMeasuresController]] - `method` [EXTRACTED]
-- [[UpdateSecurityMeasureDto]] - `references` [EXTRACTED]
+- [[SharingController]] - `method` [EXTRACTED]
+- [[UpdateSharingActivityDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresService
+#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

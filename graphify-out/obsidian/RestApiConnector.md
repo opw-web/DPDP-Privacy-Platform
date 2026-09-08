@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-buildAuthHeaders()]] - `method` [EXTRACTED]
 - [[dot-buildUrl()]] - `method` [EXTRACTED]
-- [[dot-constructor()_121]] - `method` [EXTRACTED]
-- [[dot-create()_2]] - `calls` [EXTRACTED]
+- [[dot-constructor()_124]] - `method` [EXTRACTED]
+- [[dot-create()_5]] - `calls` [EXTRACTED]
 - [[dot-decodeCursor()]] - `method` [EXTRACTED]
 - [[dot-discoverSchema()_3]] - `method` [EXTRACTED]
 - [[dot-encodeCursor()]] - `method` [EXTRACTED]

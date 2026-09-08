@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".unmerge"
+community: "@prisma/client"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/unmerge
+  - community/prisma/client
 ---
 
 # ApiProperty
 
 ## Connections
-- [[UnmergeDto]] - `references` [EXTRACTED]
+- [[UpsertTranslationDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/unmerge
+#graphify/code #graphify/EXTRACTED #community/prisma/client

@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/legal-hold.service.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.controller.ts"
 type: "code"
-community: "RetentionController"
-location: "L35"
+community: "NoticesService"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionController
+  - community/NoticesService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[LegalHoldService]] - `method` [EXTRACTED]
+- [[NoticesController]] - `method` [EXTRACTED]
+- [[NoticesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionController
+#graphify/code #graphify/EXTRACTED #community/NoticesService

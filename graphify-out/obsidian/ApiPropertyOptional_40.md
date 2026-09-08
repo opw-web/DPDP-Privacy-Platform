@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "me-rights.service.ts"
+community: "employees.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/me-rightsservicets
+  - community/employeesservicets
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[CreateMeRequestDto]] - `references` [EXTRACTED]
+- [[UpdateEmployeeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/me-rightsservicets
+#graphify/code #graphify/EXTRACTED #community/employeesservicets

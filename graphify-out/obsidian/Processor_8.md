@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "mvp2-schedules.ts"
+community: "sdf-cycle-scan.queue.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mvp2-schedulests
+  - community/sdf-cycle-scanqueuets
 ---
 
 # Processor
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[SdfCycleScanProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mvp2-schedulests
+#graphify/code #graphify/EXTRACTED #community/sdf-cycle-scanqueuets

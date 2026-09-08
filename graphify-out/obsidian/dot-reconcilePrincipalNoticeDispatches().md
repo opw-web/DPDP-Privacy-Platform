@@ -12,7 +12,7 @@ tags:
 # .reconcilePrincipalNoticeDispatches()
 
 ## Connections
-- [[dot-enqueue()]] - `calls` [INFERRED]
+- [[dot-enqueue()_1]] - `calls` [INFERRED]
 - [[dot-scanClock()]] - `calls` [EXTRACTED]
 - [[BreachService]] - `method` [EXTRACTED]
 

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts"
 type: "code"
-community: "SecurityMeasuresTab.tsx"
+community: "SettingsPage.tsx"
 location: "L129"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresTabtsx
+  - community/SettingsPagetsx
 ---
 
 # humanizeEnum()
@@ -55,6 +55,6 @@ tags:
 - [[TransfersTab()]] - `calls` [EXTRACTED]
 - [[TransfersTab.tsx]] - `imports` [EXTRACTED]
 - [[enum-options.ts]] - `contains` [EXTRACTED]
-- [[titleCase()]] - `calls` [EXTRACTED]
+- [[titleCase()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx
+#graphify/code #graphify/EXTRACTED #community/SettingsPagetsx

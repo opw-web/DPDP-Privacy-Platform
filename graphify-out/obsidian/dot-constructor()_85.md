@@ -1,20 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sdf/sdf-cycle-scan.service.ts"
+source_file: "dpdp-platform/backend/src/modules/evidence/evidence-pack.service.ts"
 type: "code"
-community: "mvp2-schedules.ts"
-location: "L44"
+community: "@nestjs/common"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mvp2-schedulests
+  - community/nestjs/common
 ---
 
 # .constructor()
 
 ## Connections
+- [[AuditExportService]] - `references` [EXTRACTED]
+- [[AuditReadService]] - `references` [EXTRACTED]
 - [[AuditService]] - `references` [EXTRACTED]
-- [[ComplianceService]] - `references` [EXTRACTED]
-- [[NotificationsService]] - `references` [EXTRACTED]
-- [[SdfCycleScanService]] - `method` [EXTRACTED]
+- [[EvidencePackService]] - `method` [EXTRACTED]
+- [[RopaExportService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mvp2-schedulests
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

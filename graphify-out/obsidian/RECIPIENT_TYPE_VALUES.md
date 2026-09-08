@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts"
 type: "code"
-community: "SecurityMeasuresTab.tsx"
+community: "react"
 location: "L73"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresTabtsx
+  - community/react
 ---
 
 # RECIPIENT_TYPE_VALUES
@@ -15,4 +15,4 @@ tags:
 - [[RecipientsTab.tsx]] - `imports` [EXTRACTED]
 - [[enum-options.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx
+#graphify/code #graphify/EXTRACTED #community/react

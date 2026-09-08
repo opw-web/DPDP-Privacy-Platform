@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/inventory.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/audit-read.e2e-spec.ts"
 type: "code"
-community: "inventory.e2e-spec.ts"
-location: "L83"
+community: "audit-read.e2e-spec.ts"
+location: "L107"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/inventorye2e-spects
+  - community/audit-reade2e-spects
 ---
 
 # authenticated()
 
 ## Connections
-- [[inventory.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[audit-read.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/inventorye2e-spects
+#graphify/code #graphify/EXTRACTED #community/audit-reade2e-spects

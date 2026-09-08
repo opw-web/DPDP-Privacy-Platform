@@ -14,11 +14,11 @@ tags:
 ## Connections
 - [[dot-commentOnRequest()_1]] - `calls` [INFERRED]
 - [[AddMeRequestCommentDto]] - `references` [EXTRACTED]
-- [[Body_3]] - `references` [EXTRACTED]
+- [[Body_6]] - `references` [EXTRACTED]
 - [[CurrentPrincipal]] - `references` [EXTRACTED]
 - [[MeRightsController]] - `method` [EXTRACTED]
-- [[Param_2]] - `references` [EXTRACTED]
-- [[Post_2]] - `references` [EXTRACTED]
+- [[Param_6]] - `references` [EXTRACTED]
+- [[Post_7]] - `references` [EXTRACTED]
 - [[PrincipalActor]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Public

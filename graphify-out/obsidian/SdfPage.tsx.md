@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/SdfPage.tsx"
 type: "code"
-community: "AlgorithmRegisterPanel.tsx"
+community: "react-router-dom"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AlgorithmRegisterPaneltsx
+  - community/react-router-dom
 ---
 
 # SdfPage.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[AlgorithmRegisterPanel()]] - `imports` [EXTRACTED]
 - [[AlgorithmRegisterPanel.tsx]] - `imports_from` [EXTRACTED]
 - [[AssessmentRow()]] - `imports` [EXTRACTED]
@@ -38,7 +39,8 @@ tags:
 - [[card.tsx]] - `imports_from` [EXTRACTED]
 - [[employeeApiClient]] - `imports` [EXTRACTED]
 - [[findSdfCycleRule()]] - `imports` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 - [[sdftypes.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterPaneltsx
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

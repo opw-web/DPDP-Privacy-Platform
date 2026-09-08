@@ -12,11 +12,12 @@ tags:
 # .list()
 
 ## Connections
+- [[dot-list()_16]] - `calls` [INFERRED]
 - [[CurrentActorPermissions]] - `references` [EXTRACTED]
-- [[Get_13]] - `references` [EXTRACTED]
+- [[Get_18]] - `references` [EXTRACTED]
 - [[ListPrincipalsDto]] - `references` [EXTRACTED]
 - [[PrincipalsController]] - `method` [EXTRACTED]
-- [[Query_3]] - `references` [EXTRACTED]
+- [[Query_4]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PrincipalsController

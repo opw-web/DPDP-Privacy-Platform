@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principal-portal/me-rights.service.ts"
 type: "code"
-community: "MeRightsService"
+community: "me-rights.service.ts"
 location: "L76"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeRightsService
+  - community/me-rightsservicets
 ---
 
 # MeRightsService
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-cancelRequest()_1]] - `method` [EXTRACTED]
 - [[dot-commentOnRequest()_1]] - `method` [EXTRACTED]
-- [[dot-constructor()_41]] - `references` [EXTRACTED]
-- [[dot-constructor()_42]] - `method` [EXTRACTED]
+- [[dot-constructor()_108]] - `references` [EXTRACTED]
+- [[dot-constructor()_109]] - `method` [EXTRACTED]
 - [[dot-createRequest()_1]] - `method` [EXTRACTED]
 - [[dot-getNomination()_1]] - `method` [EXTRACTED]
 - [[dot-getPublishedNotice()_1]] - `method` [EXTRACTED]
@@ -25,9 +25,9 @@ tags:
 - [[dot-listRequests()_1]] - `method` [EXTRACTED]
 - [[dot-ownRequest()]] - `method` [EXTRACTED]
 - [[dot-upsertNomination()_1]] - `method` [EXTRACTED]
-- [[Injectable_28]] - `references` [EXTRACTED]
+- [[Injectable_65]] - `references` [EXTRACTED]
 - [[me-rights.controller.ts]] - `imports` [EXTRACTED]
 - [[me-rights.service.ts]] - `contains` [EXTRACTED]
 - [[principal-portal.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeRightsService
+#graphify/code #graphify/EXTRACTED #community/me-rightsservicets

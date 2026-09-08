@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/registers/SecurityMeasuresTab.tsx"
 type: "code"
-community: "SecurityMeasuresTab.tsx"
+community: "cn"
 location: "L234"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresTabtsx
+  - community/cn
 ---
 
 # SecurityMeasuresTab()
@@ -15,4 +15,4 @@ tags:
 - [[RegistersPage.tsx]] - `imports` [EXTRACTED]
 - [[SecurityMeasuresTab.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx
+#graphify/code #graphify/EXTRACTED #community/cn

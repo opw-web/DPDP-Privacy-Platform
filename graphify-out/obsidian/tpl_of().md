@@ -2,7 +2,7 @@
 source_file: "demo-control/stage-demo.sh"
 type: "code"
 community: "common.sh"
-location: "L157"
+location: "L175"
 tags:
   - graphify/code
   - graphify/EXTRACTED

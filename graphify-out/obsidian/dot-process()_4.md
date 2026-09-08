@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/consent-backfill.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/breach-clock.processor.ts"
 type: "code"
-community: "consent-backfill.queue.ts"
-location: "L25"
+community: "BreachClockProcessor"
+location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/consent-backfillqueuets
+  - community/BreachClockProcessor
 ---
 
 # .process()
 
 ## Connections
-- [[dot-runForAllOrganizations()]] - `calls` [INFERRED]
-- [[ConsentBackfillJobData]] - `references` [EXTRACTED]
-- [[ConsentBackfillProcessor]] - `method` [EXTRACTED]
+- [[dot-runClockCycle()]] - `calls` [EXTRACTED]
+- [[BreachClockProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/consent-backfillqueuets
+#graphify/code #graphify/EXTRACTED #community/BreachClockProcessor

@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "SdfController"
+community: "compliance.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SdfController
+  - community/complianceservicets
 ---
 
 # Get
 
 ## Connections
-- [[dot-getGaps()_1]] - `references` [EXTRACTED]
-- [[dot-listAlgorithms()]] - `references` [EXTRACTED]
-- [[dot-listAssessments()]] - `references` [EXTRACTED]
+- [[dot-getById()]] - `references` [EXTRACTED]
+- [[dot-list()_11]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SdfController
+#graphify/code #graphify/EXTRACTED #community/complianceservicets

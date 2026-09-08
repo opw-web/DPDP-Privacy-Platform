@@ -1,17 +1,20 @@
 ---
 source_file: "dpdp-platform/frontend/package.json"
 type: "concept"
-community: "dependencies"
+community: "react"
 location: "L26"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/react
 ---
 
 # @uiw/react-md-editor
 
 ## Connections
-- [[@uiwreact-md-editor]] - `imports` [EXTRACTED]
+- [[MarkdownMessageEditor.tsx]] - `imports_from` [EXTRACTED]
+- [[NoticeComposer.tsx]] - `imports_from` [EXTRACTED]
+- [[NoticePreview.tsx]] - `imports_from` [EXTRACTED]
+- [[frontendpackage.json]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/dependencies
+#graphify/concept #graphify/EXTRACTED #community/react

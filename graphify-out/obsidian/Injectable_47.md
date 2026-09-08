@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".record"
+community: "AlgorithmRegisterService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/AlgorithmRegisterService
 ---
 
 # Injectable
 
 ## Connections
-- [[BreachService]] - `references` [EXTRACTED]
+- [[SdfGapsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterService

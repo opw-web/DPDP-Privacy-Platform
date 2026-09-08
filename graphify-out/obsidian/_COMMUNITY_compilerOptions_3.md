@@ -1,17 +1,13 @@
 ---
 type: community
-members: 30
+members: 24
 ---
 
 # compilerOptions
 
-**Members:** 30 nodes
+**Members:** 24 nodes
 
 ## Members
-- [[@testing-libraryjest-dom_2]] - concept - dpdp-platform/frontend/tsconfig.json
-- [[DOM]] - concept - dpdp-platform/frontend/tsconfig.json
-- [[DOM.Iterable]] - concept - dpdp-platform/frontend/tsconfig.json
-- [[ES2022]] - concept - dpdp-platform/frontend/tsconfig.json
 - [[allowImportingTsExtensions]] - code - dpdp-platform/frontend/tsconfig.json
 - [[baseUrl_1]] - code - dpdp-platform/frontend/tsconfig.json
 - [[compilerOptions_5]] - code - dpdp-platform/frontend/tsconfig.json
@@ -32,12 +28,10 @@ members: 30
 - [[references]] - code - dpdp-platform/frontend/tsconfig.json
 - [[resolveJsonModule_1]] - code - dpdp-platform/frontend/tsconfig.json
 - [[skipLibCheck_3]] - code - dpdp-platform/frontend/tsconfig.json
-- [[src]] - concept - dpdp-platform/frontend/tsconfig.json
 - [[strict_3]] - code - dpdp-platform/frontend/tsconfig.json
 - [[target_2]] - code - dpdp-platform/frontend/tsconfig.json
 - [[types_1]] - code - dpdp-platform/frontend/tsconfig.json
 - [[useDefineForClassFields]] - code - dpdp-platform/frontend/tsconfig.json
-- [[vitestglobals]] - concept - dpdp-platform/frontend/tsconfig.json
 
 ## Live Query (requires Dataview plugin)
 

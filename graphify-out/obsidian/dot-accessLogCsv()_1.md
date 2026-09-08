@@ -15,8 +15,8 @@ tags:
 - [[dot-accessLogCsv()]] - `calls` [INFERRED]
 - [[AccessLogExportDto]] - `references` [EXTRACTED]
 - [[AuditReadController]] - `method` [EXTRACTED]
-- [[Get_19]] - `references` [EXTRACTED]
-- [[Query_4]] - `references` [EXTRACTED]
+- [[Get_21]] - `references` [EXTRACTED]
+- [[Query_5]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[Res_5]] - `references` [EXTRACTED]
 

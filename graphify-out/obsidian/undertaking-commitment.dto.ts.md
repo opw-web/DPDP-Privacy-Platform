@@ -12,8 +12,10 @@ tags:
 # undertaking-commitment.dto.ts
 
 ## Connections
+- [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[COMMITMENT_STATUSES]] - `contains` [EXTRACTED]
 - [[UndertakingCommitmentDto]] - `contains` [EXTRACTED]
+- [[class-validator_1]] - `imports_from` [EXTRACTED]
 - [[create-voluntary-undertaking.dto.ts]] - `imports_from` [EXTRACTED]
 - [[update-voluntary-undertaking.dto.ts]] - `imports_from` [EXTRACTED]
 

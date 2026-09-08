@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalLoginDto"
+community: "UpdateAlgorithmEntryDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalLoginDto
+  - community/UpdateAlgorithmEntryDto
 ---
 
 # MinLength
 
 ## Connections
-- [[PrincipalLoginDto]] - `references` [EXTRACTED]
+- [[UpdateAlgorithmEntryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalLoginDto
+#graphify/code #graphify/EXTRACTED #community/UpdateAlgorithmEntryDto

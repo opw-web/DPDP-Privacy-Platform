@@ -1,10 +1,10 @@
 ---
 source_file: "dpdp-platform/frontend/package.json"
-type: "concept"
+type: "code"
 community: "devDependencies"
 location: "L60"
 tags:
-  - graphify/concept
+  - graphify/code
   - graphify/EXTRACTED
   - community/devDependencies
 ---
@@ -12,6 +12,6 @@ tags:
 # vite
 
 ## Connections
-- [[vite]] - `imports` [EXTRACTED]
+- [[devDependencies_2]] - `contains` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/devDependencies
+#graphify/code #graphify/EXTRACTED #community/devDependencies

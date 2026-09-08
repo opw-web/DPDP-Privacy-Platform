@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalsService"
+community: "audit.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalsService
+  - community/auditservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[PrincipalsService]] - `references` [EXTRACTED]
+- [[PurposeServedService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalsService
+#graphify/code #graphify/EXTRACTED #community/auditservicets

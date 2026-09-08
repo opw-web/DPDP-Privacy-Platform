@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/token.service.ts"
 type: "code"
-community: "RequirePermission"
+community: "token.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/tokenservicets
 ---
 
 # token.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsconfig_1]] - `imports_from` [EXTRACTED]
 - [[ACCESS_TOKEN_AUDIENCES]] - `contains` [EXTRACTED]
 - [[AccessTokenAudience]] - `contains` [EXTRACTED]
 - [[AccessTokenPayload]] - `contains` [EXTRACTED]
@@ -39,6 +41,7 @@ tags:
 - [[erasure-task.service.ts]] - `imports_from` [EXTRACTED]
 - [[guardians.controller.ts]] - `imports_from` [EXTRACTED]
 - [[guardians.service.ts]] - `imports_from` [EXTRACTED]
+- [[jsonwebtoken_1]] - `imports_from` [EXTRACTED]
 - [[jwt-any-actor.guard.ts]] - `imports_from` [EXTRACTED]
 - [[jwt-employee.guard.ts]] - `imports_from` [EXTRACTED]
 - [[jwt-principal.guard.ts]] - `imports_from` [EXTRACTED]
@@ -55,4 +58,4 @@ tags:
 - [[tenant.middleware.ts]] - `imports_from` [EXTRACTED]
 - [[unmerge.controller.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/tokenservicets

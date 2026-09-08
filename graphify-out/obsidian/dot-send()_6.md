@@ -1,24 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
+source_file: "dpdp-platform/backend/src/common/mail/mailer.service.ts"
 type: "code"
-community: "RequirePermission"
-location: "L61"
+community: "MailerService"
+location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/MailerService
 ---
 
 # .send()
 
 ## Connections
-- [[dot-send()_7]] - `calls` [INFERRED]
-- [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[CampaignsController]] - `method` [EXTRACTED]
-- [[CurrentActor]] - `references` [EXTRACTED]
-- [[CurrentActorPermissions]] - `references` [EXTRACTED]
-- [[Param_11]] - `references` [EXTRACTED]
-- [[Post_10]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-getTransporter()]] - `calls` [EXTRACTED]
+- [[dot-send()_4]] - `calls` [INFERRED]
+- [[MailerService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/MailerService

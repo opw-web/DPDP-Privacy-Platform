@@ -11,6 +11,6 @@ tags:
 # Module
 
 ## Connections
-- [[BoardModule]] - `references` [EXTRACTED]
+- [[BreachesModule]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/appmodulets

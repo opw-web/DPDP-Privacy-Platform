@@ -12,8 +12,8 @@ tags:
 # .clearRefreshCookie()
 
 ## Connections
-- [[dot-logout()_2]] - `calls` [EXTRACTED]
-- [[dot-refresh()_2]] - `calls` [EXTRACTED]
+- [[dot-logout()]] - `calls` [EXTRACTED]
+- [[dot-refresh()]] - `calls` [EXTRACTED]
 - [[EmployeeAuthController]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/EmployeeAuthController

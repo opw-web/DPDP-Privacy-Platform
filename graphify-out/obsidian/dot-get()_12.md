@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/employees.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/employees.service.ts"
 type: "code"
 community: "employees.service.ts"
-location: "L22"
+location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,10 +12,7 @@ tags:
 # .get()
 
 ## Connections
-- [[dot-get()_13]] - `calls` [INFERRED]
-- [[EmployeesController]] - `method` [EXTRACTED]
-- [[Get_22]] - `references` [EXTRACTED]
-- [[Param_13]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-get()_11]] - `calls` [INFERRED]
+- [[EmployeesService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/employeesservicets

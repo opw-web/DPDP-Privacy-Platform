@@ -1,20 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sdf-cycle-scan.queue.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts"
 type: "code"
-community: "SyncQueueService"
-location: "L60"
+community: "read-only-http.client.ts"
+location: "L107"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/read-only-httpclientts
 ---
 
 # .constructor()
 
 ## Connections
-- [[dot-register()]] - `calls` [INFERRED]
-- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
-- [[InjectQueue_7]] - `references` [EXTRACTED]
-- [[SdfCycleScanQueueService]] - `method` [EXTRACTED]
+- [[ReadOnlyHttpClient]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/read-only-httpclientts

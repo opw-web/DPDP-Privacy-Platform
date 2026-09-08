@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "retention.service.ts"
+community: "EmployeeAuthController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/EmployeeAuthController
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateRetentionPolicyDto]] - `references` [EXTRACTED]
+- [[EmployeeLoginDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController

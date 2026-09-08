@@ -1,22 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/transfers.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/connector.factory.ts"
 type: "code"
-community: "TransfersService"
-location: "L27"
+community: "Connector"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TransfersService
+  - community/Connector
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_6]] - `calls` [INFERRED]
-- [[Body_5]] - `references` [EXTRACTED]
-- [[CreateTransferDto]] - `references` [EXTRACTED]
-- [[Post_4]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[TransfersController]] - `method` [EXTRACTED]
+- [[dot-buildConnector()]] - `calls` [INFERRED]
+- [[Connector]] - `references` [EXTRACTED]
+- [[ConnectorFactory]] - `method` [EXTRACTED]
+- [[RestApiConnector]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TransfersService
+#graphify/code #graphify/EXTRACTED #community/Connector

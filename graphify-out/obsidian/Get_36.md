@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "recipients.service.ts"
+community: "access-report.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/access-reportservicets
 ---
 
 # Get
 
 ## Connections
-- [[dot-get()_19]] - `references` [EXTRACTED]
-- [[dot-list()_42]] - `references` [EXTRACTED]
+- [[dot-evidence()]] - `references` [EXTRACTED]
+- [[dot-evidencePdf()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/access-reportservicets

@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/common/audit/access-log.service.ts"
+source_file: "dpdp-platform/backend/src/modules/inventory/inventory.service.ts"
 type: "code"
-community: "PrincipalsService"
-location: "L50"
+community: "inventory.service.ts"
+location: "L78"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalsService
+  - community/inventoryservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[AccessLogService]] - `method` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
+- [[InventoryService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalsService
+#graphify/code #graphify/EXTRACTED #community/inventoryservicets

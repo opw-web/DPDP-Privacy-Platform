@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".record"
+community: "CreateSdfAssessmentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/CreateSdfAssessmentDto
 ---
 
 # IsIn
 
 ## Connections
-- [[CompleteObligationDto]] - `references` [EXTRACTED]
+- [[CreateSdfAssessmentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/CreateSdfAssessmentDto

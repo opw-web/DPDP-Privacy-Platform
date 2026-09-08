@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RetentionController"
+community: "ImportConsentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionController
+  - community/ImportConsentDto
 ---
 
 # IsString
 
 ## Connections
-- [[ProcessorChecklistTickDto]] - `references` [EXTRACTED]
-- [[SystemChecklistTickDto]] - `references` [EXTRACTED]
+- [[ImportConsentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionController
+#graphify/code #graphify/EXTRACTED #community/ImportConsentDto

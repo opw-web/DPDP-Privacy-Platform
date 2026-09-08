@@ -12,6 +12,7 @@ tags:
 # SettingsPage.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[ApiError]] - `imports` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
 - [[Card]] - `imports` [EXTRACTED]
@@ -19,14 +20,14 @@ tags:
 - [[CardDescription]] - `imports` [EXTRACTED]
 - [[CardHeader]] - `imports` [EXTRACTED]
 - [[CardTitle]] - `imports` [EXTRACTED]
-- [[CheckboxOption]] - `imports` [EXTRACTED]
 - [[CheckboxOption_1]] - `imports` [EXTRACTED]
+- [[CheckboxOption]] - `imports` [EXTRACTED]
 - [[DpoContactSection()]] - `contains` [EXTRACTED]
 - [[DpoContactValues]] - `contains` [EXTRACTED]
 - [[ENTITY_ROLES]] - `contains` [EXTRACTED]
 - [[EntityRole]] - `contains` [EXTRACTED]
 - [[Input]] - `imports` [EXTRACTED]
-- [[Label]] - `imports` [EXTRACTED]
+- [[Label_1]] - `imports` [EXTRACTED]
 - [[OrgDetailsValues]] - `contains` [EXTRACTED]
 - [[Organization_1]] - `contains` [EXTRACTED]
 - [[OrganizationDetailsSection()]] - `contains` [EXTRACTED]
@@ -35,7 +36,7 @@ tags:
 - [[SdfDeclarationCard()]] - `imports` [EXTRACTED]
 - [[SdfDeclarationCard.tsx]] - `imports_from` [EXTRACTED]
 - [[Select]] - `imports` [EXTRACTED]
-- [[SelectControl]] - `imports` [EXTRACTED]
+- [[SelectControl_1]] - `imports` [EXTRACTED]
 - [[SettingsPage()]] - `contains` [EXTRACTED]
 - [[SettingsPage.test.tsx]] - `imports_from` [EXTRACTED]
 - [[Skeleton()]] - `imports` [EXTRACTED]
@@ -55,8 +56,11 @@ tags:
 - [[optionalEmail]] - `contains` [EXTRACTED]
 - [[optionalUrl]] - `contains` [EXTRACTED]
 - [[orgDetailsSchema]] - `contains` [EXTRACTED]
+- [[react-hook-form_1]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
+- [[sonner_1]] - `imports_from` [EXTRACTED]
 - [[toDpoContactValues()]] - `contains` [EXTRACTED]
 - [[toOrgDetailsValues()]] - `contains` [EXTRACTED]
+- [[zod_1]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/SettingsPagetsx

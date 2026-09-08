@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/transfers.service.ts"
 type: "code"
-community: "registers.module.ts"
+community: "@nestjs/common"
 location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/registersmodulets
+  - community/nestjs/common
 ---
 
 # PublicTransfer
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[transfers.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/registersmodulets
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

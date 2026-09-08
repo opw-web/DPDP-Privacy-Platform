@@ -1,18 +1,17 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "code"
-community: "bullmq"
+community: "dependencies"
 location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/bullmq
+  - community/dependencies
 ---
 
 # bullmq
 
 ## Connections
-- [[bullmq_1]] - `imports` [EXTRACTED]
 - [[dependencies_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/bullmq
+#graphify/code #graphify/EXTRACTED #community/dependencies

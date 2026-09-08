@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/DashboardPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.test.tsx"
 type: "code"
-community: "DashboardPage.test.tsx"
-location: "L10"
+community: "AuditPage.tsx"
+location: "L110"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DashboardPagetesttsx
+  - community/AuditPagetsx
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[DashboardPage.test.tsx]] - `contains` [EXTRACTED]
-- [[mockRoutesAndLogin()]] - `calls` [EXTRACTED]
+- [[MessagingCampaignDetailPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DashboardPagetesttsx
+#graphify/code #graphify/EXTRACTED #community/AuditPagetsx

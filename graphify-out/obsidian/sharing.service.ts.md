@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/sharing.service.ts"
 type: "code"
-community: "CreateSharingActivityDto"
+community: "@nestjs/common"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSharingActivityDto
+  - community/nestjs/common
 ---
 
 # sharing.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[CreateSharingActivityDto]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
@@ -27,4 +29,4 @@ tags:
 - [[sharing.controller.ts]] - `imports_from` [EXTRACTED]
 - [[update-sharing-activity.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

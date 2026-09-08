@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "HealthService"
+community: "health.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/HealthService
+  - community/healthservicets
 ---
 
 # ApiTags
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[HealthController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/HealthService
+#graphify/code #graphify/EXTRACTED #community/healthservicets

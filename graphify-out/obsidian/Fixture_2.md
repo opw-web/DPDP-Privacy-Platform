@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/principal-portal.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/audit-read.e2e-spec.ts"
 type: "code"
-community: "principal-portal.e2e-spec.ts"
-location: "L146"
+community: "audit-read.e2e-spec.ts"
+location: "L111"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principal-portale2e-spects
+  - community/audit-reade2e-spects
 ---
 
 # Fixture
 
 ## Connections
-- [[principal-portal.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[audit-read.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principal-portale2e-spects
+#graphify/code #graphify/EXTRACTED #community/audit-reade2e-spects

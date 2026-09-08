@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/ReviewQueuePage.test.tsx"
 type: "code"
-community: "SettingsPage.test.tsx"
-location: "L49"
+community: "CandidateComparison.tsx"
+location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SettingsPagetesttsx
+  - community/CandidateComparisontsx
 ---
 
 # MockRoutes
 
 ## Connections
-- [[SettingsPage.test.tsx]] - `contains` [EXTRACTED]
+- [[MatchCandidateListItem]] - `references` [EXTRACTED]
+- [[ReviewQueuePage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SettingsPagetesttsx
+#graphify/code #graphify/EXTRACTED #community/CandidateComparisontsx

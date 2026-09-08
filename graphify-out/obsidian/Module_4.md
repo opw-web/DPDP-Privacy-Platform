@@ -11,6 +11,6 @@ tags:
 # Module
 
 ## Connections
-- [[AuditModule]] - `references` [EXTRACTED]
+- [[MailModule]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/appmodulets

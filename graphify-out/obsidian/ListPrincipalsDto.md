@@ -13,12 +13,12 @@ tags:
 
 ## Connections
 - [[dot-list()_15]] - `references` [EXTRACTED]
-- [[IsEnum_12]] - `references` [EXTRACTED]
-- [[IsInt_5]] - `references` [EXTRACTED]
-- [[IsOptional_31]] - `references` [EXTRACTED]
-- [[IsString_33]] - `references` [EXTRACTED]
+- [[IsEnum_17]] - `references` [EXTRACTED]
+- [[IsInt_8]] - `references` [EXTRACTED]
+- [[IsOptional_35]] - `references` [EXTRACTED]
+- [[IsString_42]] - `references` [EXTRACTED]
 - [[Max_2]] - `references` [EXTRACTED]
-- [[Min_5]] - `references` [EXTRACTED]
+- [[Min_8]] - `references` [EXTRACTED]
 - [[Transform_1]] - `references` [EXTRACTED]
 - [[list-principals.dto.ts]] - `contains` [EXTRACTED]
 - [[principals.controller.ts]] - `imports` [EXTRACTED]

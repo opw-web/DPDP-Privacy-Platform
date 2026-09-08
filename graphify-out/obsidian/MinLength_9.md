@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ReplaceMappingsDto"
+community: "purposes.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ReplaceMappingsDto
+  - community/purposesservicets
 ---
 
 # MinLength
 
 ## Connections
-- [[SourceFieldMappingDto]] - `references` [EXTRACTED]
+- [[UpdatePurposeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ReplaceMappingsDto
+#graphify/code #graphify/EXTRACTED #community/purposesservicets

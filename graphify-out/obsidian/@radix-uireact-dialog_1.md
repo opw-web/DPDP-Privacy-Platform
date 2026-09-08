@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/frontend/package.json"
 type: "concept"
-community: "@radix-ui/react-dialog"
+community: "EmployeesPage.tsx"
 location: "L19"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/radix-ui/react-dialog
+  - community/EmployeesPagetsx
 ---
 
 # @radix-ui/react-dialog
 
 ## Connections
-- [[@radix-uireact-dialog]] - `imports` [EXTRACTED]
+- [[LinkedRecordsPanel.tsx]] - `imports_from` [EXTRACTED]
+- [[dialog.tsx]] - `imports_from` [EXTRACTED]
+- [[frontendpackage.json]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/radix-ui/react-dialog
+#graphify/concept #graphify/EXTRACTED #community/EmployeesPagetsx

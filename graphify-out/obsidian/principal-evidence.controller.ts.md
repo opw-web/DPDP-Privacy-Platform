@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/principal-evidence.controller.ts"
 type: "code"
-community: "access-report-render.ts"
+community: "@nestjs/common"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-report-renderts
+  - community/nestjs/common
 ---
 
 # principal-evidence.controller.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[PrincipalEvidenceController]] - `contains` [EXTRACTED]
 - [[PrincipalEvidenceFile]] - `imports` [EXTRACTED]
 - [[PrincipalEvidenceService]] - `imports` [EXTRACTED]
@@ -22,4 +24,4 @@ tags:
 - [[renderPrincipalEvidencePdf()]] - `imports` [EXTRACTED]
 - [[require-permission.decorator.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-report-renderts
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

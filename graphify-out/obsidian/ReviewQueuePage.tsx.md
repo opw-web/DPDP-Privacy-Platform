@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/ReviewQueuePage.tsx"
 type: "code"
-community: "card.tsx"
+community: "CandidateComparison.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cardtsx
+  - community/CandidateComparisontsx
 ---
 
 # ReviewQueuePage.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[ApiError]] - `imports` [EXTRACTED]
 - [[CandidateComparison()]] - `imports` [EXTRACTED]
 - [[CandidateComparison.tsx]] - `imports_from` [EXTRACTED]
@@ -25,6 +26,8 @@ tags:
 - [[api-client.ts]] - `imports_from` [EXTRACTED]
 - [[apiErrorMessage()]] - `contains` [EXTRACTED]
 - [[employeeApiClient]] - `imports` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
+- [[sonner_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cardtsx
+#graphify/code #graphify/EXTRACTED #community/CandidateComparisontsx

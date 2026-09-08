@@ -1,20 +1,19 @@
 ---
 type: community
-members: 7
+members: 6
 ---
 
 # AssignRequestDto
 
-**Members:** 7 nodes
+**Members:** 6 nodes
 
 ## Members
-- [[ApiProperty_24]] - code
-- [[ApiPropertyOptional_31]] - code
+- [[ApiProperty_31]] - code
+- [[ApiPropertyOptional_35]] - code
 - [[AssignRequestDto]] - code - dpdp-platform/backend/src/modules/requests/dto/assign-request.dto.ts
-- [[IsOptional_33]] - code
-- [[IsString_35]] - code
-- [[MinLength_23]] - code
-- [[assign-request.dto.ts]] - code - dpdp-platform/backend/src/modules/requests/dto/assign-request.dto.ts
+- [[IsOptional_37]] - code
+- [[IsString_44]] - code
+- [[MinLength_32]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -24,9 +23,8 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_requests.controller.ts]]
+- 2 edges to [[_COMMUNITY_@prismaclient]]
 - 1 edge to [[_COMMUNITY_RequestsController]]
 
 ## Top bridge nodes
 - [[AssignRequestDto]] - degree 8, connects to 2 communities
-- [[assign-request.dto.ts]] - degree 2, connects to 1 community

@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/package.json"
-type: "code"
-community: "typescript-eslint"
+type: "concept"
+community: "frontend/package.json"
 location: "L59"
 tags:
-  - graphify/code
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/typescript-eslint
+  - community/frontend/packagejson
 ---
 
 # typescript-eslint
 
 ## Connections
-- [[devDependencies_2]] - `contains` [EXTRACTED]
-- [[typescript-eslint_1]] - `imports` [EXTRACTED]
+- [[eslint.config.js]] - `imports_from` [EXTRACTED]
+- [[frontendpackage.json]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/typescript-eslint
+#graphify/concept #graphify/EXTRACTED #community/frontend/packagejson

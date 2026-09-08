@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sdf.controller.ts"
+community: "CreateNoticeDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdfcontrollerts
+  - community/CreateNoticeDto
 ---
 
 # IsString
 
 ## Connections
-- [[CompleteSdfAssessmentDto]] - `references` [EXTRACTED]
+- [[CreateNoticeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdfcontrollerts
+#graphify/code #graphify/EXTRACTED #community/CreateNoticeDto

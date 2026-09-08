@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/breaches/breaches.module.ts"
 type: "code"
-community: "breaches.module.ts"
+community: "app.module.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breachesmodulets
+  - community/appmodulets
 ---
 
 # breaches.module.ts
 
 ## Connections
+- [[@nestjsbullmq]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[AuditModule]] - `imports` [EXTRACTED]
 - [[BREACH_CLOCK_QUEUE_NAME]] - `imports` [EXTRACTED]
 - [[BREACH_PRINCIPAL_NOTICE_DISPATCH_QUEUE_NAME]] - `imports` [EXTRACTED]
@@ -41,4 +43,4 @@ tags:
 - [[queues.module.ts]] - `imports_from` [EXTRACTED]
 - [[reference.module.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breachesmodulets
+#graphify/code #graphify/EXTRACTED #community/appmodulets

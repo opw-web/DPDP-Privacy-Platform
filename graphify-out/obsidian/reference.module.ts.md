@@ -12,6 +12,7 @@ tags:
 # reference.module.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[ReferenceModule]] - `contains` [EXTRACTED]
 - [[ReferenceService]] - `imports` [EXTRACTED]
 - [[app.module.ts]] - `imports_from` [EXTRACTED]

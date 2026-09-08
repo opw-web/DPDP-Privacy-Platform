@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/PurposeForm.tsx"
 type: "code"
-community: "SecurityMeasuresTab.tsx"
+community: "router.tsx"
 location: "L94"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresTabtsx
+  - community/routertsx
 ---
 
 # PurposeForm()
@@ -16,4 +16,4 @@ tags:
 - [[PurposeForm.tsx]] - `contains` [EXTRACTED]
 - [[PurposesPage.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

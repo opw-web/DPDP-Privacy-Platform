@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "principal-evidence.service.ts"
+community: "ScopedTransactionClient"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principal-evidenceservicets
+  - community/ScopedTransactionClient
 ---
 
 # Injectable
 
 ## Connections
-- [[PrincipalEvidenceService]] - `references` [EXTRACTED]
+- [[MatchingService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principal-evidenceservicets
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/ui/badge.tsx"
 type: "code"
-community: "card.tsx"
+community: "react-router-dom"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cardtsx
+  - community/react-router-dom
 ---
 
 # badge.tsx
@@ -60,7 +60,9 @@ tags:
 - [[TransfersTab.tsx]] - `imports_from` [EXTRACTED]
 - [[UnreviewedRuleChip.tsx]] - `imports_from` [EXTRACTED]
 - [[badgeVariants]] - `contains` [EXTRACTED]
+- [[class-variance-authority_1]] - `imports_from` [EXTRACTED]
 - [[cn()]] - `imports` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
 - [[utils.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cardtsx
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

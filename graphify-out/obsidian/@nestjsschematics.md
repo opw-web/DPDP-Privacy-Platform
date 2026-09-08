@@ -12,7 +12,6 @@ tags:
 # @nestjs/schematics
 
 ## Connections
-- [[@nestjsschematics_1]] - `imports` [EXTRACTED]
 - [[devDependencies_1]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/devDependencies

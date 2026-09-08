@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/auth/principal-auth.service.ts"
+source_file: "dpdp-platform/backend/src/queues/sync-lock.service.ts"
 type: "code"
-community: "principal-auth.service.ts"
-location: "L74"
+community: "SyncLockService"
+location: "L94"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principal-authservicets
+  - community/SyncLockService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[PrincipalAuthService]] - `method` [EXTRACTED]
-- [[TokenService]] - `references` [EXTRACTED]
+- [[SyncLockService]] - `method` [EXTRACTED]
+- [[toRedisConnectionOptions()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principal-authservicets
+#graphify/code #graphify/EXTRACTED #community/SyncLockService

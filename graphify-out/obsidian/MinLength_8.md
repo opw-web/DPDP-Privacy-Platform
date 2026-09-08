@@ -11,6 +11,6 @@ tags:
 # MinLength
 
 ## Connections
-- [[UpdatePurposeDto]] - `references` [EXTRACTED]
+- [[CreatePurposeDto]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/purposesservicets

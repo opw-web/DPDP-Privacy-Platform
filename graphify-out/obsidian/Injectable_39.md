@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AuditReadService"
+community: "notifications.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditReadService
+  - community/notificationsservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[AuditReadService]] - `references` [EXTRACTED]
+- [[PortalProvider]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditReadService
+#graphify/code #graphify/EXTRACTED #community/notificationsservicets

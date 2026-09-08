@@ -1,22 +1,19 @@
 ---
 type: community
-members: 9
+members: 6
 ---
 
 # .completeAssessment
 
-**Members:** 9 nodes
+**Members:** 6 nodes
 
 ## Members
 - [[dot-completeAssessment()]] - code - dpdp-platform/backend/src/modules/sdf/sdf.controller.ts
-- [[dot-create()_22]] - code - dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts
-- [[dot-createAlgorithm()]] - code - dpdp-platform/backend/src/modules/sdf/sdf.controller.ts
-- [[dot-update()_17]] - code - dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts
+- [[dot-update()_16]] - code - dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts
 - [[dot-updateAlgorithm()]] - code - dpdp-platform/backend/src/modules/sdf/sdf.controller.ts
-- [[Body_15]] - code
-- [[Param_15]] - code
+- [[Body_17]] - code
+- [[Param_18]] - code
 - [[Patch_8]] - code
-- [[Post_14]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -26,18 +23,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_SdfController]]
-- 3 edges to [[_COMMUNITY_RequirePermission]]
-- 2 edges to [[_COMMUNITY_CreateAlgorithmEntryDto]]
 - 2 edges to [[_COMMUNITY_UpdateAlgorithmEntryDto]]
-- 2 edges to [[_COMMUNITY_sdf.controller.ts]]
-- 2 edges to [[_COMMUNITY_AlgorithmRegisterService]]
-- 2 edges to [[_COMMUNITY_CreateSdfAssessmentDto]]
-- 2 edges to [[_COMMUNITY_dot-record]]
+- 2 edges to [[_COMMUNITY_SdfAssessmentService]]
+- 2 edges to [[_COMMUNITY_SdfController]]
+- 2 edges to [[_COMMUNITY_CreateAlgorithmEntryDto]]
+- 2 edges to [[_COMMUNITY_@nestjscommon]]
+- 1 edge to [[_COMMUNITY_AlgorithmRegisterService]]
+- 1 edge to [[_COMMUNITY_CreateSdfAssessmentDto]]
+- 1 edge to [[_COMMUNITY_dot-record]]
 
 ## Top bridge nodes
-- [[dot-completeAssessment()]] - degree 7, connects to 3 communities
+- [[dot-completeAssessment()]] - degree 7, connects to 4 communities
 - [[dot-updateAlgorithm()]] - degree 7, connects to 3 communities
-- [[dot-createAlgorithm()]] - degree 6, connects to 3 communities
-- [[dot-create()_22]] - degree 4, connects to 3 communities
-- [[dot-update()_17]] - degree 4, connects to 3 communities
+- [[dot-update()_16]] - degree 4, connects to 3 communities
+- [[Body_17]] - degree 4, connects to 2 communities

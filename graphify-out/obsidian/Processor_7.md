@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "retention.module.ts"
+community: "mvp2-schedules.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionmodulets
+  - community/mvp2-schedulests
 ---
 
 # Processor
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[RetentionScanProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionmodulets
+#graphify/code #graphify/EXTRACTED #community/mvp2-schedulests

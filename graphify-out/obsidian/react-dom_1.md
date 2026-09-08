@@ -1,17 +1,17 @@
 ---
 source_file: "dpdp-platform/frontend/package.json"
 type: "concept"
-community: "dependencies"
+community: "frontend/package.json"
 location: "L34"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/frontend/packagejson
 ---
 
 # react-dom
 
 ## Connections
-- [[react-dom]] - `imports` [EXTRACTED]
+- [[frontendpackage.json]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/dependencies
+#graphify/concept #graphify/EXTRACTED #community/frontend/packagejson

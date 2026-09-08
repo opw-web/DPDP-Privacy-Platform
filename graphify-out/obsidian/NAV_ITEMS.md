@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/AppShell.tsx"
 type: "code"
-community: "DateTime.tsx"
+community: "router.tsx"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DateTimetsx
+  - community/routertsx
 ---
 
 # NAV_ITEMS
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[AppShell.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DateTimetsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

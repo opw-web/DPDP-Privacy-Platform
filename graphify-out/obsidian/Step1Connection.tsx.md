@@ -12,12 +12,13 @@ tags:
 # Step1Connection.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[AUTH_TYPE_VALUES]] - `imports` [EXTRACTED]
 - [[ApiError]] - `imports` [EXTRACTED]
 - [[AuthType]] - `imports` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
-- [[CheckboxOption]] - `imports` [EXTRACTED]
 - [[CheckboxOption_1]] - `imports` [EXTRACTED]
+- [[CheckboxOption]] - `imports` [EXTRACTED]
 - [[ConnectionFormValues]] - `contains` [EXTRACTED]
 - [[DataSourceDetailPage.tsx]] - `imports_from` [EXTRACTED]
 - [[DataSourceNewPage.tsx]] - `imports_from` [EXTRACTED]
@@ -26,7 +27,7 @@ tags:
 - [[PublicDataSource]] - `imports` [EXTRACTED]
 - [[SYNC_FREQUENCY_VALUES]] - `imports` [EXTRACTED]
 - [[Select]] - `imports` [EXTRACTED]
-- [[SelectControl]] - `imports` [EXTRACTED]
+- [[SelectControl_1]] - `imports` [EXTRACTED]
 - [[Step1Connection()]] - `contains` [EXTRACTED]
 - [[Step1Connection.test.tsx]] - `imports_from` [EXTRACTED]
 - [[Step1ConnectionProps]] - `contains` [EXTRACTED]
@@ -42,5 +43,10 @@ tags:
 - [[form-controls.tsx]] - `imports_from` [EXTRACTED]
 - [[humanizeEnum()]] - `imports` [EXTRACTED]
 - [[input.tsx]] - `imports_from` [EXTRACTED]
+- [[lucide-react_1]] - `imports_from` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
+- [[react-hook-form_1]] - `imports_from` [EXTRACTED]
+- [[sonner_1]] - `imports_from` [EXTRACTED]
+- [[zod_1]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/data-sources-apits

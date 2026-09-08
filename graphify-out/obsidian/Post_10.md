@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RequirePermission"
+community: "SyncService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/SyncService
 ---
 
 # Post
 
 ## Connections
-- [[dot-approve()]] - `references` [EXTRACTED]
-- [[dot-create()_14]] - `references` [EXTRACTED]
-- [[dot-send()_6]] - `references` [EXTRACTED]
+- [[dot-trigger()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/SyncService

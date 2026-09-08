@@ -12,6 +12,8 @@ tags:
 # DataSourcesPage.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
+- [[@tanstackreact-table]] - `imports_from` [EXTRACTED]
 - [[ApiError]] - `imports` [EXTRACTED]
 - [[Badge()]] - `imports` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
@@ -33,6 +35,9 @@ tags:
 - [[button.tsx]] - `imports_from` [EXTRACTED]
 - [[data-sources-api.ts]] - `imports_from` [EXTRACTED]
 - [[employeeApiClient]] - `imports` [EXTRACTED]
+- [[lucide-react_1]] - `imports_from` [EXTRACTED]
+- [[react-router-dom_1]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
+- [[sonner_1]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/data-sources-apits

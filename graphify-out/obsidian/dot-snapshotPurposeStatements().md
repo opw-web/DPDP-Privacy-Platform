@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
 type: "code"
-community: "notices.service.ts"
+community: "NoticesService"
 location: "L379"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/noticesservicets
+  - community/NoticesService
 ---
 
 # .snapshotPurposeStatements()
@@ -16,4 +16,4 @@ tags:
 - [[dot-get()_17]] - `calls` [EXTRACTED]
 - [[NoticesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/noticesservicets
+#graphify/code #graphify/EXTRACTED #community/NoticesService

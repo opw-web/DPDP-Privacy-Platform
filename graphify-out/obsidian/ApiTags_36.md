@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "principal-evidence.service.ts"
+community: "access-report.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principal-evidenceservicets
+  - community/access-reportservicets
 ---
 
 # ApiTags
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[PrincipalEvidenceController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principal-evidenceservicets
+#graphify/code #graphify/EXTRACTED #community/access-reportservicets

@@ -1,17 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/test-support/mock-http-server.ts"
+source_file: "dpdp-platform/backend/src/modules/principal-portal/me.service.ts"
 type: "code"
-community: "data-sources.e2e-spec.ts"
-location: "L26"
+community: "LineageService"
+location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcese2e-spects
+  - community/LineageService
 ---
 
 # .constructor()
 
 ## Connections
-- [[MockHttpServer]] - `method` [EXTRACTED]
+- [[LineageService]] - `references` [EXTRACTED]
+- [[MeService]] - `method` [EXTRACTED]
+- [[PrincipalRecipientsService]] - `references` [EXTRACTED]
+- [[PrincipalsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcese2e-spects
+#graphify/code #graphify/EXTRACTED #community/LineageService

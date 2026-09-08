@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/campaign-send.queue.ts"
 type: "code"
-community: "breaches.module.ts"
+community: "PrismaService"
 location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breachesmodulets
+  - community/PrismaService
 ---
 
 # CAMPAIGN_SEND_MAX_ATTEMPTS
@@ -16,4 +16,4 @@ tags:
 - [[campaign-send.processor.ts]] - `imports` [EXTRACTED]
 - [[campaign-send.queue.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breachesmodulets
+#graphify/code #graphify/EXTRACTED #community/PrismaService

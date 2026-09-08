@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SyncQueueService"
+community: "candidates.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/candidatesservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[SdfCycleScanQueueService]] - `references` [EXTRACTED]
+- [[CandidatesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/candidatesservicets

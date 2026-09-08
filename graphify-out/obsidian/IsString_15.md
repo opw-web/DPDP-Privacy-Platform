@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "audit-read.service.ts"
+community: "SyncService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-readservicets
+  - community/SyncService
 ---
 
 # IsString
 
 ## Connections
-- [[ListAuditEventsDto]] - `references` [EXTRACTED]
+- [[ListSyncJobsQueryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-readservicets
+#graphify/code #graphify/EXTRACTED #community/SyncService

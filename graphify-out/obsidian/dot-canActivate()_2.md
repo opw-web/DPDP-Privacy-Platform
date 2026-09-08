@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/guards/jwt-any-actor.guard.ts"
+source_file: "dpdp-platform/backend/src/common/guards/jwt-principal.guard.ts"
 type: "code"
-community: "jwt-employee.guard.ts"
-location: "L56"
+community: "TokenService"
+location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/jwt-employeeguardts
+  - community/TokenService
 ---
 
 # .canActivate()
 
 ## Connections
 - [[dot-verifyAccessToken()]] - `calls` [INFERRED]
-- [[JwtAnyActorGuard]] - `method` [EXTRACTED]
+- [[JwtPrincipalGuard]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/jwt-employeeguardts
+#graphify/code #graphify/EXTRACTED #community/TokenService

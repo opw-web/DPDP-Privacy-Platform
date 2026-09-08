@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "audit-chain-verify.processor.ts"
+community: "CampaignsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-chain-verifyprocessorts
+  - community/CampaignsService
 ---
 
 # Processor
 
 ## Connections
-- [[AccessLogRetentionProcessor]] - `references` [EXTRACTED]
+- [[CampaignSendProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-chain-verifyprocessorts
+#graphify/code #graphify/EXTRACTED #community/CampaignsService

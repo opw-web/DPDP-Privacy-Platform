@@ -1,27 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts"
 type: "code"
-community: ".record"
-location: "L206"
+community: "TemplatesService"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/TemplatesService
 ---
 
 # .create()
 
 ## Connections
-- [[dot-computeDeadline()]] - `calls` [INFERRED]
-- [[dot-create()_30]] - `calls` [INFERRED]
-- [[dot-previewAffected()]] - `calls` [EXTRACTED]
-- [[dot-public()]] - `calls` [EXTRACTED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[dot-resolveRule()]] - `calls` [INFERRED]
-- [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[BreachService]] - `method` [EXTRACTED]
-- [[CreateBreachDto]] - `references` [EXTRACTED]
-- [[PublicBreach]] - `references` [EXTRACTED]
-- [[asDate()]] - `calls` [EXTRACTED]
+- [[dot-create()_13]] - `calls` [INFERRED]
+- [[Body_11]] - `references` [EXTRACTED]
+- [[CreateTemplateDto]] - `references` [EXTRACTED]
+- [[Post_12]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[TemplatesController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

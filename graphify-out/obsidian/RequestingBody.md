@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/board/dto/requesting-body.ts"
 type: "code"
-community: "CreateInformationRequestDto"
+community: "@prisma/client"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateInformationRequestDto
+  - community/prisma/client
 ---
 
 # RequestingBody
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[requesting-body.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto
+#graphify/code #graphify/EXTRACTED #community/prisma/client

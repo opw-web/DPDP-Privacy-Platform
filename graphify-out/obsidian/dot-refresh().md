@@ -1,23 +1,25 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.service.ts"
+source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts"
 type: "code"
-community: "principal-auth.service.ts"
-location: "L219"
+community: "EmployeeAuthController"
+location: "L86"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principal-authservicets
+  - community/EmployeeAuthController
 ---
 
 # .refresh()
 
 ## Connections
-- [[dot-hashRefreshToken()]] - `calls` [INFERRED]
-- [[dot-issueTokenPair()]] - `calls` [EXTRACTED]
-- [[dot-refresh()_2]] - `calls` [INFERRED]
-- [[dot-verifyRefreshToken()]] - `calls` [INFERRED]
-- [[EmployeeAuthService]] - `method` [EXTRACTED]
-- [[LoginRequestMeta]] - `references` [EXTRACTED]
-- [[rotateRefreshToken()]] - `calls` [EXTRACTED]
+- [[dot-clearRefreshCookie()]] - `calls` [EXTRACTED]
+- [[dot-refresh()_1]] - `calls` [INFERRED]
+- [[dot-setRefreshCookie()]] - `calls` [EXTRACTED]
+- [[EmployeeAuthController]] - `method` [EXTRACTED]
+- [[HttpCode_4]] - `references` [EXTRACTED]
+- [[Post_25]] - `references` [EXTRACTED]
+- [[Public()]] - `references` [EXTRACTED]
+- [[Req_2]] - `references` [EXTRACTED]
+- [[Res_7]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principal-authservicets
+#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/prisma/seed.ts"
 type: "code"
-community: "seed.ts"
+community: "argon2"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/seedts
+  - community/argon2
 ---
 
 # seed.ts
@@ -18,17 +18,18 @@ tags:
 - [[PERMISSIONS]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[ROLES]] - `imports` [EXTRACTED]
+- [[argon2_1]] - `imports_from` [EXTRACTED]
 - [[compliance-rules.ts]] - `imports_from` [EXTRACTED]
 - [[demo-org.ts]] - `imports_from` [EXTRACTED]
 - [[employee-auth.e2e-spec.ts]] - `imports_from` [EXTRACTED]
-- [[main()]] - `contains` [EXTRACTED]
+- [[main()_1]] - `contains` [EXTRACTED]
 - [[message-templates.ts]] - `imports_from` [EXTRACTED]
 - [[mvp2-demo.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[roles.ts]] - `imports_from` [EXTRACTED]
 - [[runSeed()]] - `contains` [EXTRACTED]
 - [[seedpermissions.ts]] - `imports_from` [EXTRACTED]
-- [[seedComplianceRules()]] - `imports` [EXTRACTED]
+- [[seedComplianceRules()_1]] - `imports` [EXTRACTED]
 - [[seedDemoEmployees()]] - `contains` [EXTRACTED]
 - [[seedMessageTemplates()]] - `imports` [EXTRACTED]
 - [[seedMvp2Demo()]] - `imports` [EXTRACTED]
@@ -36,4 +37,4 @@ tags:
 - [[seedPermissions()]] - `contains` [EXTRACTED]
 - [[seedRoles()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/seedts
+#graphify/code #graphify/EXTRACTED #community/argon2

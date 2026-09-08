@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts"
 type: "code"
-community: "PrincipalAuthController"
-location: "L41"
+community: "read-only-http.client.ts"
+location: "L55"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalAuthController
+  - community/read-only-httpclientts
 ---
 
 # .constructor()
 
 ## Connections
-- [[PrincipalAuthController]] - `method` [EXTRACTED]
-- [[PrincipalAuthService]] - `references` [EXTRACTED]
+- [[ReadOnlyHttpStatusError]] - `method` [EXTRACTED]
+- [[stripQuery()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalAuthController
+#graphify/code #graphify/EXTRACTED #community/read-only-httpclientts

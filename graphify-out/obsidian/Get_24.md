@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: ".markRead"
+community: "CreateVoluntaryUndertakingDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/markRead
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # Get
 
 ## Connections
-- [[dot-list()_30]] - `references` [EXTRACTED]
+- [[dot-getById()_4]] - `references` [EXTRACTED]
+- [[dot-list()_23]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/markRead
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

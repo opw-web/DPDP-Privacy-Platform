@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateComplianceRuleDto"
+community: "CreateDataSourceDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateComplianceRuleDto
+  - community/CreateDataSourceDto
 ---
 
 # MinLength
 
 ## Connections
-- [[CreateComplianceRuleDto]] - `references` [EXTRACTED]
+- [[CreateDataSourceDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto
+#graphify/code #graphify/EXTRACTED #community/CreateDataSourceDto

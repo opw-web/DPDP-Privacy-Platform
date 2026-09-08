@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "age-status.service.ts"
+community: "ImportConsentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/age-statusservicets
+  - community/ImportConsentDto
 ---
 
 # Post
 
 ## Connections
-- [[dot-setAgeStatus()]] - `references` [EXTRACTED]
+- [[dot-recordImportedConsent()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/age-statusservicets
+#graphify/code #graphify/EXTRACTED #community/ImportConsentDto

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".markRead"
+community: "CreateInformationRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/markRead
+  - community/CreateInformationRequestDto
 ---
 
 # ApiTags
 
 ## Connections
-- [[NotificationsController]] - `references` [EXTRACTED]
+- [[InformationRequestsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/markRead
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

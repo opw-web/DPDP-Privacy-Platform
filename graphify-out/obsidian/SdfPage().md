@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/SdfPage.tsx"
 type: "code"
-community: "AlgorithmRegisterPanel.tsx"
+community: "react-router-dom"
 location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AlgorithmRegisterPaneltsx
+  - community/react-router-dom
 ---
 
 # SdfPage()
@@ -17,4 +17,4 @@ tags:
 - [[findSdfCycleRule()]] - `calls` [EXTRACTED]
 - [[router.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterPaneltsx
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

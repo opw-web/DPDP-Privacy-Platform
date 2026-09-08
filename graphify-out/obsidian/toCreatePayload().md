@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/sdf/AlgorithmRegisterPanel.tsx"
 type: "code"
-community: "AlgorithmRegisterPanel.tsx"
+community: "react-router-dom"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AlgorithmRegisterPaneltsx
+  - community/react-router-dom
 ---
 
 # toCreatePayload()
@@ -16,4 +16,4 @@ tags:
 - [[AlgorithmRegisterPanel()]] - `calls` [EXTRACTED]
 - [[AlgorithmRegisterPanel.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterPaneltsx
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

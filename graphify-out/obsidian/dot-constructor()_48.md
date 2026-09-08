@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/audit-chain-verify.processor.ts"
+source_file: "dpdp-platform/backend/src/modules/requests/requests.controller.ts"
 type: "code"
-community: "AuditChainService"
-location: "L18"
+community: "AccessReportService"
+location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditChainService
+  - community/AccessReportService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditChainService]] - `references` [EXTRACTED]
-- [[AuditChainVerifyProcessor]] - `method` [EXTRACTED]
-- [[NotificationsService]] - `references` [EXTRACTED]
+- [[AccessReportService]] - `references` [EXTRACTED]
+- [[RequestsController]] - `method` [EXTRACTED]
+- [[RequestsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditChainService
+#graphify/code #graphify/EXTRACTED #community/AccessReportService

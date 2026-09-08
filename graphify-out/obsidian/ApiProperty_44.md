@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "roles.service.ts"
+community: "ProcessorChecklistTickDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rolesservicets
+  - community/ProcessorChecklistTickDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[UpdateRolePermissionsDto]] - `references` [EXTRACTED]
+- [[CompleteErasureTaskDto]] - `references` [EXTRACTED]
+- [[ProcessorChecklistTickDto]] - `references` [EXTRACTED]
+- [[SystemChecklistTickDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rolesservicets
+#graphify/code #graphify/EXTRACTED #community/ProcessorChecklistTickDto

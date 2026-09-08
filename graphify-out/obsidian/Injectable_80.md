@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SyncQueueService"
+community: "retention.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/retentionservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[Mvp2ScheduleReconciliationService]] - `references` [EXTRACTED]
+- [[RetentionService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/retentionservicets

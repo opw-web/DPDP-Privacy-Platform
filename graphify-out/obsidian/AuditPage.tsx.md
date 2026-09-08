@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/AuditPage.tsx"
 type: "code"
-community: "cn"
+community: "AuditPage.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/AuditPagetsx
 ---
 
 # AuditPage.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[AUDIT_ACTION_VALUES]] - `contains` [EXTRACTED]
 - [[ApiError]] - `imports` [EXTRACTED]
 - [[AuditEventListItem_1]] - `imports` [EXTRACTED]
@@ -32,11 +33,11 @@ tags:
 - [[EmptyState()]] - `imports` [EXTRACTED]
 - [[EmptyState.tsx]] - `imports_from` [EXTRACTED]
 - [[Input]] - `imports` [EXTRACTED]
-- [[Label]] - `imports` [EXTRACTED]
+- [[Label_1]] - `imports` [EXTRACTED]
 - [[PermissionGate()]] - `imports` [EXTRACTED]
 - [[PermissionGate.tsx]] - `imports_from` [EXTRACTED]
 - [[Select]] - `imports` [EXTRACTED]
-- [[SelectControl]] - `imports` [EXTRACTED]
+- [[SelectControl_1]] - `imports` [EXTRACTED]
 - [[Skeleton()]] - `imports` [EXTRACTED]
 - [[Skeleton.tsx]] - `imports_from` [EXTRACTED]
 - [[Table]] - `imports` [EXTRACTED]
@@ -54,8 +55,11 @@ tags:
 - [[humanizeEnum()]] - `imports` [EXTRACTED]
 - [[input.tsx]] - `imports_from` [EXTRACTED]
 - [[label.tsx]] - `imports_from` [EXTRACTED]
+- [[lucide-react_1]] - `imports_from` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 - [[saveBlob()_2]] - `contains` [EXTRACTED]
+- [[sonner_1]] - `imports_from` [EXTRACTED]
 - [[table.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/AuditPagetsx

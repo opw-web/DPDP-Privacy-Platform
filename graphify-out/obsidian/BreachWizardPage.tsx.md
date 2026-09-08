@@ -12,6 +12,7 @@ tags:
 # BreachWizardPage.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[AffectedPreviewResult]] - `contains` [EXTRACTED]
 - [[AffectedSelectionMode]] - `contains` [EXTRACTED]
 - [[ApiError]] - `imports` [EXTRACTED]
@@ -42,6 +43,9 @@ tags:
 - [[hasRequiredAffectedSources()]] - `contains` [EXTRACTED]
 - [[hasRequiredBreachTimes()]] - `contains` [EXTRACTED]
 - [[missingRule71NarrativeLabels()]] - `contains` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
+- [[react-router-dom_1]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
+- [[sonner_1]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/BreachWizardPagetsx

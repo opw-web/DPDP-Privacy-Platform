@@ -12,6 +12,8 @@ tags:
 # campaigns.module.ts
 
 ## Connections
+- [[@nestjsbullmq]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[AuditModule]] - `imports` [EXTRACTED]
 - [[CAMPAIGN_SEND_QUEUE_NAME]] - `imports` [EXTRACTED]
 - [[CampaignSendProcessor]] - `imports` [EXTRACTED]

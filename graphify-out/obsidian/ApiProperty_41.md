@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RetentionController"
+community: "me-rights.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionController
+  - community/me-rightsservicets
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CancelErasureTaskDto]] - `references` [EXTRACTED]
+- [[UpdateMeNominationDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionController
+#graphify/code #graphify/EXTRACTED #community/me-rightsservicets

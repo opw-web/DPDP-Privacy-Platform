@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeRequestDetailPage.test.tsx"
 type: "code"
-community: "api-client.ts"
+community: "router.tsx"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/routertsx
 ---
 
 # updated
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[MeRequestDetailPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/routertsx

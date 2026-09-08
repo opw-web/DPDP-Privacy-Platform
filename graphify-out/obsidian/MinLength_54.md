@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "security-measures.service.ts"
+community: "CreateSharingActivityDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/security-measuresservicets
+  - community/CreateSharingActivityDto
 ---
 
 # MinLength
 
 ## Connections
-- [[UpdateSecurityMeasureDto]] - `references` [EXTRACTED]
+- [[CreateSharingActivityDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/security-measuresservicets
+#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

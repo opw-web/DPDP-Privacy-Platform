@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "TransfersService"
+community: "AccessTokenPayload"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TransfersService
+  - community/AccessTokenPayload
 ---
 
 # Param
 
 ## Connections
-- [[dot-get()_3]] - `references` [EXTRACTED]
-- [[dot-update()_4]] - `references` [EXTRACTED]
+- [[dot-cancel()_1]] - `references` [EXTRACTED]
+- [[dot-complete()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TransfersService
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

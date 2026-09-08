@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
+community: "requests.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/requestsservicets
 ---
 
 # ApiProperty
 
 ## Connections
-- [[UndertakingCommitmentDto]] - `references` [EXTRACTED]
+- [[ChangeStatusDto]] - `references` [EXTRACTED]
+- [[ErasureProcessorChecklistDto]] - `references` [EXTRACTED]
+- [[ErasureSystemChecklistDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/requestsservicets

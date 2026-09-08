@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RetentionController"
+community: "ImportConsentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionController
+  - community/ImportConsentDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[ProcessorChecklistTickDto]] - `references` [EXTRACTED]
+- [[ImportConsentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionController
+#graphify/code #graphify/EXTRACTED #community/ImportConsentDto

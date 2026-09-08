@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdateAlgorithmEntryDto"
+community: "audit-read.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateAlgorithmEntryDto
+  - community/audit-readservicets
 ---
 
 # IsIn
 
 ## Connections
-- [[UpdateAlgorithmEntryDto]] - `references` [EXTRACTED]
+- [[ListAuditEventsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateAlgorithmEntryDto
+#graphify/code #graphify/EXTRACTED #community/audit-readservicets

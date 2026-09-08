@@ -1,16 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "roles.service.ts"
+community: "BreachesController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rolesservicets
+  - community/BreachesController
 ---
 
 # Get
 
 ## Connections
-- [[dot-list()_40]] - `references` [EXTRACTED]
+- [[dot-boardDetailed()]] - `references` [EXTRACTED]
+- [[dot-boardInitial()]] - `references` [EXTRACTED]
+- [[dot-get()_18]] - `references` [EXTRACTED]
+- [[dot-list()_38]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rolesservicets
+#graphify/code #graphify/EXTRACTED #community/BreachesController

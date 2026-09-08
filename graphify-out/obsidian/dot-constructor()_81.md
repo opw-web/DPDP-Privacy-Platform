@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/retention-scan.processor.ts"
 type: "code"
-community: "retention.module.ts"
+community: "mvp2-schedules.ts"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionmodulets
+  - community/mvp2-schedulests
 ---
 
 # .constructor()
@@ -15,4 +15,4 @@ tags:
 - [[RetentionScanProcessor]] - `method` [EXTRACTED]
 - [[RetentionScanService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionmodulets
+#graphify/code #graphify/EXTRACTED #community/mvp2-schedulests

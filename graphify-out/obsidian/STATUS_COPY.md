@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeConsentsPage.tsx"
 type: "code"
-community: "MeConsentsPage.tsx"
+community: "cn"
 location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeConsentsPagetsx
+  - community/cn
 ---
 
 # STATUS_COPY
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[MeConsentsPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeConsentsPagetsx
+#graphify/code #graphify/EXTRACTED #community/cn

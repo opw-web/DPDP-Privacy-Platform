@@ -1,19 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/retention.controller.ts"
 type: "code"
-community: "RetentionController"
+community: "erasure-task.service.ts"
 location: "L65"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionController
+  - community/erasure-taskservicets
 ---
 
 # .listLegalHolds()
 
 ## Connections
-- [[Get_31]] - `references` [EXTRACTED]
+- [[dot-list()_21]] - `calls` [INFERRED]
+- [[Get_22]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[RetentionController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionController
+#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets

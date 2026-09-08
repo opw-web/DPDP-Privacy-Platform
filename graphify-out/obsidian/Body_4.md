@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "purposes.service.ts"
+community: "AccessTokenPayload"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposesservicets
+  - community/AccessTokenPayload
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_3]] - `references` [EXTRACTED]
-- [[dot-update()_2]] - `references` [EXTRACTED]
+- [[dot-cancel()_1]] - `references` [EXTRACTED]
+- [[dot-complete()_1]] - `references` [EXTRACTED]
+- [[dot-createLegalHold()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposesservicets
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

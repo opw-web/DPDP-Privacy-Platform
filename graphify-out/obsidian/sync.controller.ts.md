@@ -12,6 +12,8 @@ tags:
 # sync.controller.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[ListSyncJobsQueryDto]] - `imports` [EXTRACTED]
 - [[RequirePermission()]] - `imports` [EXTRACTED]
 - [[SyncController]] - `contains` [EXTRACTED]

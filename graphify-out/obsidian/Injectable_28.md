@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "MeRightsService"
+community: "mappings.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeRightsService
+  - community/mappingsservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[MeRightsService]] - `references` [EXTRACTED]
+- [[MappingsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeRightsService
+#graphify/code #graphify/EXTRACTED #community/mappingsservicets

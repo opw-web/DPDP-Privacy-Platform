@@ -1,40 +1,58 @@
 ---
 type: community
-members: 27
+members: 45
 ---
 
 # CreateSharingActivityDto
 
-**Members:** 27 nodes
+**Members:** 45 nodes
 
 ## Members
-- [[ApiProperty_37]] - code
-- [[ApiPropertyOptional_42]] - code
-- [[ApiPropertyOptional_43]] - code
-- [[ArrayUnique_6]] - code
-- [[ArrayUnique_7]] - code
+- [[dot-assertPurposeExists()_1]] - code - dpdp-platform/backend/src/modules/registers/sharing.service.ts
+- [[dot-assertRecipientExists()_1]] - code - dpdp-platform/backend/src/modules/registers/sharing.service.ts
+- [[dot-assertSourceIdsExist()]] - code - dpdp-platform/backend/src/modules/registers/sharing.service.ts
+- [[dot-constructor()_155]] - code - dpdp-platform/backend/src/modules/registers/sharing.controller.ts
+- [[dot-constructor()_156]] - code - dpdp-platform/backend/src/modules/registers/sharing.service.ts
+- [[dot-create()_37]] - code - dpdp-platform/backend/src/modules/registers/sharing.controller.ts
+- [[dot-create()_38]] - code - dpdp-platform/backend/src/modules/registers/sharing.service.ts
+- [[dot-get()_25]] - code - dpdp-platform/backend/src/modules/registers/sharing.controller.ts
+- [[dot-get()_26]] - code - dpdp-platform/backend/src/modules/registers/sharing.service.ts
+- [[dot-list()_50]] - code - dpdp-platform/backend/src/modules/registers/sharing.controller.ts
+- [[dot-list()_51]] - code - dpdp-platform/backend/src/modules/registers/sharing.service.ts
+- [[dot-update()_27]] - code - dpdp-platform/backend/src/modules/registers/sharing.controller.ts
+- [[dot-update()_28]] - code - dpdp-platform/backend/src/modules/registers/sharing.service.ts
+- [[ApiProperty_52]] - code
+- [[ApiPropertyOptional_53]] - code
+- [[ApiPropertyOptional_54]] - code
+- [[ApiTags_41]] - code
+- [[ArrayUnique_8]] - code
+- [[ArrayUnique_9]] - code
+- [[Body_30]] - code
+- [[Controller_42]] - code
 - [[CreateSharingActivityDto]] - code - dpdp-platform/backend/src/modules/registers/dto/create-sharing-activity.dto.ts
-- [[IsArray_18]] - code
-- [[IsArray_19]] - code
-- [[IsBoolean_17]] - code
-- [[IsBoolean_18]] - code
-- [[IsDateString_16]] - code
-- [[IsDateString_17]] - code
-- [[IsEnum_17]] - code
-- [[IsEnum_18]] - code
-- [[IsOptional_44]] - code
-- [[IsString_52]] - code
-- [[IsString_53]] - code
-- [[MinLength_40]] - code
-- [[MinLength_41]] - code
-- [[PublicSharingActivity]] - code - dpdp-platform/backend/src/modules/registers/sharing.service.ts
-- [[SHARING_ACTIVITY_PUBLIC_SELECT]] - code - dpdp-platform/backend/src/modules/registers/sharing.service.ts
+- [[Get_40]] - code
+- [[Injectable_86]] - code
+- [[IsArray_23]] - code
+- [[IsArray_24]] - code
+- [[IsBoolean_27]] - code
+- [[IsBoolean_28]] - code
+- [[IsDateString_22]] - code
+- [[IsDateString_23]] - code
+- [[IsEnum_24]] - code
+- [[IsEnum_25]] - code
+- [[IsOptional_53]] - code
+- [[IsString_70]] - code
+- [[IsString_71]] - code
+- [[MinLength_54]] - code
+- [[MinLength_55]] - code
+- [[Param_30]] - code
+- [[Patch_15]] - code
+- [[Post_30]] - code
+- [[SharingController]] - code - dpdp-platform/backend/src/modules/registers/sharing.controller.ts
+- [[SharingService]] - code - dpdp-platform/backend/src/modules/registers/sharing.service.ts
 - [[UpdateSharingActivityDto]] - code - dpdp-platform/backend/src/modules/registers/dto/update-sharing-activity.dto.ts
-- [[ValidateIf_1]] - code
-- [[create-sharing-activity.dto.ts]] - code - dpdp-platform/backend/src/modules/registers/dto/create-sharing-activity.dto.ts
-- [[sharing.controller.ts]] - code - dpdp-platform/backend/src/modules/registers/sharing.controller.ts
-- [[sharing.service.ts]] - code - dpdp-platform/backend/src/modules/registers/sharing.service.ts
-- [[update-sharing-activity.dto.ts]] - code - dpdp-platform/backend/src/modules/registers/dto/update-sharing-activity.dto.ts
+- [[ValidateIf_5]] - code
+- [[assertNonBlankDescription()]] - code - dpdp-platform/backend/src/modules/registers/sharing.service.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -44,15 +62,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_SharingService]]
-- 2 edges to [[_COMMUNITY_RequirePermission]]
-- 2 edges to [[_COMMUNITY_prisma.service.ts]]
-- 2 edges to [[_COMMUNITY_registers.module.ts]]
+- 14 edges to [[_COMMUNITY_@nestjscommon]]
+- 2 edges to [[_COMMUNITY_@prismaclient]]
+- 2 edges to [[_COMMUNITY_dot-record]]
 - 1 edge to [[_COMMUNITY_AuditService]]
-- 1 edge to [[_COMMUNITY_PrismaService]]
 
 ## Top bridge nodes
-- [[sharing.service.ts]] - degree 14, connects to 5 communities
-- [[sharing.controller.ts]] - degree 10, connects to 3 communities
-- [[CreateSharingActivityDto]] - degree 15, connects to 1 community
-- [[UpdateSharingActivityDto]] - degree 14, connects to 1 community
+- [[CreateSharingActivityDto]] - degree 15, connects to 2 communities
+- [[UpdateSharingActivityDto]] - degree 14, connects to 2 communities
+- [[SharingService]] - degree 13, connects to 1 community
+- [[SharingController]] - degree 9, connects to 1 community
+- [[dot-create()_38]] - degree 8, connects to 1 community

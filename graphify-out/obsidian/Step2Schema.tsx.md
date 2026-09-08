@@ -12,6 +12,8 @@ tags:
 # Step2Schema.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
+- [[@tanstackreact-table]] - `imports_from` [EXTRACTED]
 - [[ApiError]] - `imports` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
 - [[DataSourceNewPage.tsx]] - `imports_from` [EXTRACTED]
@@ -22,8 +24,11 @@ tags:
 - [[Step2SchemaProps]] - `contains` [EXTRACTED]
 - [[api-client.ts]] - `imports_from` [EXTRACTED]
 - [[button.tsx]] - `imports_from` [EXTRACTED]
-- [[columns]] - `contains` [EXTRACTED]
+- [[columns_1]] - `contains` [EXTRACTED]
 - [[data-sources-api.ts]] - `imports_from` [EXTRACTED]
 - [[employeeApiClient]] - `imports` [EXTRACTED]
+- [[lucide-react_1]] - `imports_from` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
+- [[sonner_1]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/data-sources-apits

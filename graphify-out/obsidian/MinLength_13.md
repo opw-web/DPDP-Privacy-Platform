@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateTemplateDto"
+community: "CreateCampaignDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTemplateDto
+  - community/CreateCampaignDto
 ---
 
 # MinLength
 
 ## Connections
-- [[UpdateTemplateDto]] - `references` [EXTRACTED]
+- [[CreateCampaignDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTemplateDto
+#graphify/code #graphify/EXTRACTED #community/CreateCampaignDto

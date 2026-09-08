@@ -1,19 +1,23 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/RetentionPage.test.tsx"
 type: "code"
-community: "RetentionPage.tsx"
+community: "DateTime.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionPagetsx
+  - community/DateTimetsx
 ---
 
 # RetentionPage.test.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
+- [[@testing-libraryreact_1]] - `imports_from` [EXTRACTED]
 - [[RetentionPage()]] - `imports` [EXTRACTED]
 - [[RetentionPage.tsx]] - `imports_from` [EXTRACTED]
-- [[jsonResponse()_5]] - `contains` [EXTRACTED]
+- [[jsonResponse()_2]] - `contains` [EXTRACTED]
+- [[react-router-dom_1]] - `imports_from` [EXTRACTED]
+- [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionPagetsx
+#graphify/code #graphify/EXTRACTED #community/DateTimetsx

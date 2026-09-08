@@ -12,6 +12,7 @@ tags:
 # NotificationBell.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[ApiClient]] - `imports` [EXTRACTED]
 - [[AppShell.tsx]] - `imports_from` [EXTRACTED]
 - [[Badge()]] - `imports` [EXTRACTED]
@@ -27,9 +28,12 @@ tags:
 - [[button.tsx]] - `imports_from` [EXTRACTED]
 - [[cn()]] - `imports` [EXTRACTED]
 - [[listNotifications()]] - `imports` [EXTRACTED]
+- [[lucide-react_1]] - `imports_from` [EXTRACTED]
 - [[markAllNotificationsRead()]] - `imports` [EXTRACTED]
 - [[markNotificationRead()]] - `imports` [EXTRACTED]
 - [[mvp2-api.ts]] - `imports_from` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
+- [[react-router-dom_1]] - `imports_from` [EXTRACTED]
 - [[utils.ts]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/api-clientts

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "notices.service.ts"
+community: "CreateInformationRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/noticesservicets
+  - community/CreateInformationRequestDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateNoticeDto]] - `references` [EXTRACTED]
+- [[CreateInformationRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/noticesservicets
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

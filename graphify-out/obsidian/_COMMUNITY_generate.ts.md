@@ -1,11 +1,11 @@
 ---
 type: community
-members: 25
+members: 26
 ---
 
 # generate.ts
 
-**Members:** 25 nodes
+**Members:** 26 nodes
 
 ## Members
 - [[ACCOUNT_STATUSES]] - code - demo-company-server/src/seed/generate.ts
@@ -31,6 +31,7 @@ members: 25
 - [[SupportRecord]] - code - demo-company-server/src/seed/personas.ts
 - [[System_1]] - code - demo-company-server/src/seed/generate.ts
 - [[generate.ts]] - code - demo-company-server/src/seed/generate.ts
+- [[personaToBuilt()]] - code - demo-company-server/src/seed/generate.ts
 - [[personas]] - code - demo-company-server/src/seed/personas.ts
 - [[personas.ts]] - code - demo-company-server/src/seed/personas.ts
 
@@ -43,14 +44,13 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 10 edges to [[_COMMUNITY_dataset.test.ts]]
-- 4 edges to [[_COMMUNITY_generateDataset]]
-- 2 edges to [[_COMMUNITY_Rng]]
-- 2 edges to [[_COMMUNITY_server.ts]]
-- 1 edge to [[_COMMUNITY_routes.test.ts]]
+- 6 edges to [[_COMMUNITY_generateDataset]]
+- 2 edges to [[_COMMUNITY_routes.test.ts]]
+- 1 edge to [[_COMMUNITY_server.ts]]
 
 ## Top bridge nodes
-- [[generate.ts]] - degree 33, connects to 5 communities
+- [[generate.ts]] - degree 33, connects to 4 communities
 - [[personas.ts]] - degree 12, connects to 1 community
 - [[DOB_REFERENCE_DATE]] - degree 3, connects to 1 community
 - [[SimRecord]] - degree 2, connects to 1 community
-- [[SEED_2]] - degree 2, connects to 1 community
+- [[personaToBuilt()]] - degree 2, connects to 1 community

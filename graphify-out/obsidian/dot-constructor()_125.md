@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/roles.service.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
 type: "code"
-community: "roles.service.ts"
-location: "L9"
+community: "rest-api.connector.ts"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rolesservicets
+  - community/rest-apiconnectorts
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[RolesService]] - `method` [EXTRACTED]
+- [[UnsupportedPaginationStyleError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rolesservicets
+#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts

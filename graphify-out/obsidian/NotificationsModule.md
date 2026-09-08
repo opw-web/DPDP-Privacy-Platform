@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notifications/notifications.module.ts"
 type: "code"
-community: "retention.module.ts"
+community: "app.module.ts"
 location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionmodulets
+  - community/appmodulets
 ---
 
 # NotificationsModule
 
 ## Connections
-- [[Module_31]] - `references` [EXTRACTED]
+- [[Module_22]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[breaches.module.ts]] - `imports` [EXTRACTED]
 - [[campaigns.module.ts]] - `imports` [EXTRACTED]
@@ -23,4 +23,4 @@ tags:
 - [[retention.module.ts]] - `imports` [EXTRACTED]
 - [[sdf.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionmodulets
+#graphify/code #graphify/EXTRACTED #community/appmodulets

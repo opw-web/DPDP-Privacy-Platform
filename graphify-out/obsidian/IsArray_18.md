@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateSharingActivityDto"
+community: "CreateVoluntaryUndertakingDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSharingActivityDto
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # IsArray
 
 ## Connections
-- [[CreateSharingActivityDto]] - `references` [EXTRACTED]
+- [[CreateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

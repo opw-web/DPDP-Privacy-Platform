@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/deadline-scan.processor.ts"
 type: "code"
-community: "requests.service.ts"
+community: "deadline-scan.processor.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/requestsservicets
+  - community/deadline-scanprocessorts
 ---
 
 # deadline-scan.processor.ts
 
 ## Connections
+- [[@nestjsbullmq]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[DEADLINE_SCAN_ACTOR_LABEL]] - `imports` [EXTRACTED]
 - [[DEADLINE_SCAN_QUEUE_NAME]] - `imports` [EXTRACTED]
 - [[DeadlineScanJobData]] - `imports` [EXTRACTED]
@@ -22,6 +24,7 @@ tags:
 - [[RequestsService]] - `imports` [EXTRACTED]
 - [[TenantContext]] - `imports` [EXTRACTED]
 - [[TenantStore]] - `imports` [EXTRACTED]
+- [[bullmq_1]] - `imports_from` [EXTRACTED]
 - [[deadline-scan.queue.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[requests.constants.ts]] - `imports_from` [EXTRACTED]
@@ -30,4 +33,4 @@ tags:
 - [[requests.service.ts]] - `imports_from` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/requestsservicets
+#graphify/code #graphify/EXTRACTED #community/deadline-scanprocessorts

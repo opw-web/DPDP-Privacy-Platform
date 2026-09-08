@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/RetentionPage.test.tsx"
 type: "code"
-community: "children/types.ts"
-location: "L8"
+community: "DateTime.tsx"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/children/typests
+  - community/DateTimetsx
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[ChildrenPage.test.tsx]] - `contains` [EXTRACTED]
+- [[RetentionPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/children/typests
+#graphify/code #graphify/EXTRACTED #community/DateTimetsx

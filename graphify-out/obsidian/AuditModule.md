@@ -12,7 +12,7 @@ tags:
 # AuditModule
 
 ## Connections
-- [[Module_4]] - `references` [EXTRACTED]
+- [[Module_3]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[audit-read.module.ts]] - `imports` [EXTRACTED]
 - [[audit.module.ts]] - `contains` [EXTRACTED]

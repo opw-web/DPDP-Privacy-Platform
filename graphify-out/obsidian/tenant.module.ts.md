@@ -12,6 +12,7 @@ tags:
 # tenant.module.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[AuthModule]] - `imports` [EXTRACTED]
 - [[TenantMiddleware]] - `imports` [EXTRACTED]
 - [[TenantModule]] - `contains` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/access-log-retention.processor.ts"
 type: "code"
-community: "audit-chain-verify.processor.ts"
+community: "token.service.ts"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-chain-verifyprocessorts
+  - community/tokenservicets
 ---
 
 # AccessLogRetentionJobData
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[access-log-retention.processor.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-chain-verifyprocessorts
+#graphify/code #graphify/EXTRACTED #community/tokenservicets

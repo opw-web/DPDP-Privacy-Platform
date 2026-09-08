@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-unmerge()]] - `references` [EXTRACTED]
-- [[ApiProperty_36]] - `references` [EXTRACTED]
-- [[IsString_51]] - `references` [EXTRACTED]
-- [[MinLength_39]] - `references` [EXTRACTED]
+- [[ApiProperty_42]] - `references` [EXTRACTED]
+- [[IsString_56]] - `references` [EXTRACTED]
+- [[MinLength_44]] - `references` [EXTRACTED]
 - [[unmerge.controller.ts]] - `imports` [EXTRACTED]
 - [[unmerge.dto.ts]] - `contains` [EXTRACTED]
 

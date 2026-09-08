@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CandidatesService"
+community: "CandidatesController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CandidatesService
+  - community/CandidatesController
 ---
 
 # IsEnum
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[ListMatchCandidatesQueryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CandidatesService
+#graphify/code #graphify/EXTRACTED #community/CandidatesController

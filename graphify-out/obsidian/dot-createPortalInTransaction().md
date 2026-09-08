@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notifications/notifications.service.ts"
 type: "code"
-community: "NotificationSendInput"
+community: "NotificationsService"
 location: "L99"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationSendInput
+  - community/NotificationsService
 ---
 
 # .createPortalInTransaction()
@@ -18,4 +18,4 @@ tags:
 - [[NotificationsService]] - `method` [EXTRACTED]
 - [[ScopedTransactionClient]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationSendInput
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

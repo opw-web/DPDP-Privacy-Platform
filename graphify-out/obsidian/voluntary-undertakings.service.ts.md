@@ -12,6 +12,8 @@ tags:
 # voluntary-undertakings.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[CreateVoluntaryUndertakingDto]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]

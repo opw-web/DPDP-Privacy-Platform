@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RetentionController"
+community: "children.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionController
+  - community/childrenmodulets
 ---
 
 # Controller
 
 ## Connections
-- [[RetentionController]] - `references` [EXTRACTED]
+- [[AgeStatusController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionController
+#graphify/code #graphify/EXTRACTED #community/childrenmodulets

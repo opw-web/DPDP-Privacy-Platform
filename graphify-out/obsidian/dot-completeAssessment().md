@@ -12,11 +12,11 @@ tags:
 # .completeAssessment()
 
 ## Connections
-- [[dot-complete()]] - `calls` [INFERRED]
-- [[Body_15]] - `references` [EXTRACTED]
+- [[dot-complete()_2]] - `calls` [INFERRED]
+- [[Body_17]] - `references` [EXTRACTED]
 - [[CompleteSdfAssessmentDto]] - `references` [EXTRACTED]
-- [[Param_15]] - `references` [EXTRACTED]
-- [[Post_14]] - `references` [EXTRACTED]
+- [[Param_18]] - `references` [EXTRACTED]
+- [[Post_5]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[SdfController]] - `method` [EXTRACTED]
 

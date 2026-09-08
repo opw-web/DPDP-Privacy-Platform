@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "data-sources.service.ts"
+community: "sdf-cycle-scan.queue.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesservicets
+  - community/sdf-cycle-scanqueuets
 ---
 
 # Injectable
 
 ## Connections
-- [[CryptoService]] - `references` [EXTRACTED]
+- [[SdfCycleScanService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets
+#graphify/code #graphify/EXTRACTED #community/sdf-cycle-scanqueuets

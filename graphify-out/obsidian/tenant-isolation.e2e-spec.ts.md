@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/tenant-isolation.e2e-spec.ts"
 type: "code"
-community: "prisma.service.ts"
+community: "PrismaService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/PrismaService
 ---
 
 # tenant-isolation.e2e-spec.ts
@@ -20,4 +20,4 @@ tags:
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/PrismaService

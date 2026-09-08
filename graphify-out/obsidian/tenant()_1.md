@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/test/sync.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/step6-conflict-acceptance.e2e-spec.ts"
 type: "code"
-community: "queues.module.ts"
-location: "L54"
+community: "step6-conflict-acceptance.e2e-spec.ts"
+location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/step6-conflict-acceptancee2e-spects
 ---
 
 # tenant()
 
 ## Connections
-- [[createDataSource()_1]] - `calls` [EXTRACTED]
-- [[sync.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[bareDataSource()]] - `calls` [EXTRACTED]
+- [[createDataSource()_3]] - `calls` [EXTRACTED]
+- [[step6-conflict-acceptance.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects

@@ -1,21 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principals/principals.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts"
 type: "code"
-community: "principals.service.ts"
-location: "L75"
+community: "TemplatesService"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principalsservicets
+  - community/TemplatesService
 ---
 
 # .list()
 
 ## Connections
-- [[dot-maskIfNeeded()]] - `calls` [INFERRED]
-- [[PrincipalsService]] - `method` [EXTRACTED]
-- [[buildPrincipalSearchQuery()]] - `calls` [EXTRACTED]
-- [[pickDisplayName()]] - `calls` [EXTRACTED]
-- [[resolveProvenance()]] - `calls` [EXTRACTED]
+- [[dot-list()_14]] - `calls` [INFERRED]
+- [[Get_17]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[TemplatesController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principalsservicets
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

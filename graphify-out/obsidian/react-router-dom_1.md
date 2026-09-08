@@ -1,17 +1,93 @@
 ---
 source_file: "dpdp-platform/frontend/package.json"
 type: "concept"
-community: "dependencies"
+community: "react-router-dom"
 location: "L36"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/react-router-dom
 ---
 
 # react-router-dom
 
 ## Connections
-- [[react-router-dom]] - `imports` [EXTRACTED]
+- [[AppShell.tsx]] - `imports_from` [EXTRACTED]
+- [[AuditPage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[BreachDetailPage.tsx]] - `imports_from` [EXTRACTED]
+- [[BreachWizardPage.tsx]] - `imports_from` [EXTRACTED]
+- [[BreachesPage.tsx]] - `imports_from` [EXTRACTED]
+- [[ChildrenPage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[DashboardPage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[DataSourceDetailPage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[DataSourceDetailPage.tsx]] - `imports_from` [EXTRACTED]
+- [[DataSourceNewPage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[DataSourceNewPage.tsx]] - `imports_from` [EXTRACTED]
+- [[DataSourcesPage.tsx]] - `imports_from` [EXTRACTED]
+- [[DataTable.test.tsx]] - `imports_from` [EXTRACTED]
+- [[EmployeesPage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[EmptyState.test.tsx]] - `imports_from` [EXTRACTED]
+- [[EmptyState.tsx]] - `imports_from` [EXTRACTED]
+- [[GapsPanel.tsx]] - `imports_from` [EXTRACTED]
+- [[InformationRequestsPage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[LinkedRecordsPanel.test.tsx]] - `imports_from` [EXTRACTED]
+- [[LoginPage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[LoginPage.tsx]] - `imports_from` [EXTRACTED]
+- [[MeConsentsPage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[MeDataPage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[MeHomePage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[MeHomePage.tsx]] - `imports_from` [EXTRACTED]
+- [[MeMessagesPage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[MeNominationPage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[MePrivacyPage.tsx]] - `imports_from` [EXTRACTED]
+- [[MeRecipientsPage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[MeRequestDetailPage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[MeRequestDetailPage.tsx]] - `imports_from` [EXTRACTED]
+- [[MeRequestsPage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[MeRequestsPage.tsx]] - `imports_from` [EXTRACTED]
+- [[MeSourcesPage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[MessagingCampaignBuilderPage.tsx]] - `imports_from` [EXTRACTED]
+- [[MessagingCampaignDetailPage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[MessagingCampaignDetailPage.tsx]] - `imports_from` [EXTRACTED]
+- [[MessagingCampaignsPage.tsx]] - `imports_from` [EXTRACTED]
+- [[MessagingTemplateEditorPage.tsx]] - `imports_from` [EXTRACTED]
+- [[MessagingTemplatesPage.tsx]] - `imports_from` [EXTRACTED]
+- [[NoticeBuilderPage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[NoticeBuilderPage.tsx]] - `imports_from` [EXTRACTED]
+- [[NoticesPage.tsx]] - `imports_from` [EXTRACTED]
+- [[NotificationBell.test.tsx]] - `imports_from` [EXTRACTED]
+- [[NotificationBell.tsx]] - `imports_from` [EXTRACTED]
+- [[PortalHelpLink.tsx]] - `imports_from` [EXTRACTED]
+- [[PortalShell.test.tsx]] - `imports_from` [EXTRACTED]
+- [[PortalShell.tsx]] - `imports_from` [EXTRACTED]
+- [[PrincipalDetailPage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[PrincipalDetailPage.tsx]] - `imports_from` [EXTRACTED]
+- [[PrincipalEvidencePage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[PrincipalEvidencePage.tsx]] - `imports_from` [EXTRACTED]
+- [[PrincipalLoginPage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[PrincipalLoginPage.tsx]] - `imports_from` [EXTRACTED]
+- [[PrincipalsPage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[PrincipalsPage.tsx]] - `imports_from` [EXTRACTED]
+- [[PurposesPage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[RecentAuditStrip.tsx]] - `imports_from` [EXTRACTED]
+- [[RequestDetailPage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[RequestDetailPage.tsx]] - `imports_from` [EXTRACTED]
+- [[RequestsPage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[RequestsPage.tsx]] - `imports_from` [EXTRACTED]
+- [[RetentionPage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[ReviewQueuePage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[SdfGapsPage.tsx]] - `imports_from` [EXTRACTED]
+- [[SdfGapsSection.tsx]] - `imports_from` [EXTRACTED]
+- [[SdfPage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[SettingsCompliancePage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[SettingsPage.test.tsx]] - `imports_from` [EXTRACTED]
+- [[StatCard.tsx]] - `imports_from` [EXTRACTED]
+- [[Step4Purposes.tsx]] - `imports_from` [EXTRACTED]
+- [[UnreviewedRuleChip.test.tsx]] - `imports_from` [EXTRACTED]
+- [[UnreviewedRuleChip.tsx]] - `imports_from` [EXTRACTED]
+- [[frontendpackage.json]] - `imports` [EXTRACTED]
+- [[main.tsx]] - `imports_from` [EXTRACTED]
+- [[router.test.tsx]] - `imports_from` [EXTRACTED]
+- [[router.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/dependencies
+#graphify/concept #graphify/EXTRACTED #community/react-router-dom

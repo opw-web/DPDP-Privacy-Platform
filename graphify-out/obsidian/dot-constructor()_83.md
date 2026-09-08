@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/audience/audience.service.ts"
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
-location: "L19"
+community: "PreviewAudienceDto"
+location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/PreviewAudienceDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[VoluntaryUndertakingsController]] - `method` [EXTRACTED]
-- [[VoluntaryUndertakingsService]] - `references` [EXTRACTED]
+- [[AudienceService]] - `method` [EXTRACTED]
+- [[MaskingService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/PreviewAudienceDto

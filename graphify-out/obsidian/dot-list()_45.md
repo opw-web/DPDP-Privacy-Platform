@@ -1,17 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/retention.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/security-measures.controller.ts"
 type: "code"
-community: "retention.service.ts"
-location: "L68"
+community: "security-measures.service.ts"
+location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/security-measuresservicets
 ---
 
 # .list()
 
 ## Connections
-- [[RetentionService]] - `method` [EXTRACTED]
+- [[dot-list()_46]] - `calls` [INFERRED]
+- [[Get_39]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[SecurityMeasuresController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/security-measuresservicets

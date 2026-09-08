@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx"
 type: "code"
-community: "cn"
+community: "AuditPage.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/AuditPagetsx
 ---
 
 # PrincipalEvidencePage.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[ApiError]] - `imports` [EXTRACTED]
 - [[Badge()]] - `imports` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
@@ -53,8 +54,12 @@ tags:
 - [[employeeApiClient]] - `imports` [EXTRACTED]
 - [[enum-options.ts]] - `imports_from` [EXTRACTED]
 - [[humanizeEnum()]] - `imports` [EXTRACTED]
+- [[lucide-react_1]] - `imports_from` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
+- [[react-router-dom_1]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 - [[saveBlob()_1]] - `contains` [EXTRACTED]
+- [[sonner_1]] - `imports_from` [EXTRACTED]
 - [[table.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/AuditPagetsx

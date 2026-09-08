@@ -12,6 +12,9 @@ tags:
 # Step1Connection.test.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
+- [[@testing-libraryreact_1]] - `imports_from` [EXTRACTED]
+- [[@testing-libraryuser-event_1]] - `imports_from` [EXTRACTED]
 - [[EXISTING_DATA_SOURCE]] - `contains` [EXTRACTED]
 - [[PublicDataSource]] - `imports` [EXTRACTED]
 - [[Step1Connection()]] - `imports` [EXTRACTED]
@@ -21,5 +24,6 @@ tags:
 - [[employeeTokenStore]] - `imports` [EXTRACTED]
 - [[jsonResponse()]] - `contains` [EXTRACTED]
 - [[renderStep1()]] - `contains` [EXTRACTED]
+- [[vitest_1]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/data-sources-apits

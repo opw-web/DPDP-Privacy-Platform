@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/frontend/src/lib/api-client.test.ts"
+source_file: "dpdp-platform/frontend/src/principal/pages/MeRecipientsPage.test.tsx"
 type: "code"
 community: "router.tsx"
-location: "L11"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # jsonResponse()
 
 ## Connections
-- [[api-client.test.ts]] - `contains` [EXTRACTED]
+- [[MeRecipientsPage.test.tsx]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/routertsx

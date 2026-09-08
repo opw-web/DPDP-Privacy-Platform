@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "TemplatesService"
+community: "inventory.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/inventoryservicets
 ---
 
 # Get
 
 ## Connections
-- [[dot-get()_8]] - `references` [EXTRACTED]
-- [[dot-list()_11]] - `references` [EXTRACTED]
+- [[dot-gaps()]] - `references` [EXTRACTED]
+- [[dot-ropaCsv()]] - `references` [EXTRACTED]
+- [[dot-summary()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/inventoryservicets

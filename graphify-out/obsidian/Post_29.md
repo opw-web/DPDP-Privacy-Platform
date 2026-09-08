@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "SharingService"
+community: "PrincipalAuthController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SharingService
+  - community/PrincipalAuthController
 ---
 
 # Post
 
 ## Connections
-- [[dot-create()_35]] - `references` [EXTRACTED]
+- [[dot-login()_3]] - `references` [EXTRACTED]
+- [[dot-logout()_3]] - `references` [EXTRACTED]
+- [[dot-refresh()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SharingService
+#graphify/code #graphify/EXTRACTED #community/PrincipalAuthController

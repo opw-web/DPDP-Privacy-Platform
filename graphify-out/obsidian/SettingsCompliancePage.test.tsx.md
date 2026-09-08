@@ -1,24 +1,29 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/SettingsCompliancePage.test.tsx"
 type: "code"
-community: "employeeLogin"
+community: "router.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeeLogin
+  - community/routertsx
 ---
 
 # SettingsCompliancePage.test.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
+- [[@testing-libraryreact_1]] - `imports_from` [EXTRACTED]
+- [[@testing-libraryuser-event_1]] - `imports_from` [EXTRACTED]
 - [[SettingsCompliancePage()]] - `imports` [EXTRACTED]
 - [[SettingsCompliancePage.tsx]] - `imports_from` [EXTRACTED]
 - [[employeeLogin()]] - `imports` [EXTRACTED]
 - [[employeeLogout()]] - `imports` [EXTRACTED]
 - [[libauth.ts]] - `imports_from` [EXTRACTED]
-- [[renderPage()_4]] - `contains` [EXTRACTED]
-- [[response()]] - `contains` [EXTRACTED]
+- [[react-router-dom_1]] - `imports_from` [EXTRACTED]
+- [[renderPage()_7]] - `contains` [EXTRACTED]
+- [[response()_1]] - `contains` [EXTRACTED]
 - [[rule]] - `contains` [EXTRACTED]
+- [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeeLogin
+#graphify/code #graphify/EXTRACTED #community/routertsx

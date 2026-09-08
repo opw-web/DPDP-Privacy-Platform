@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[dot-getById()_5]] - `calls` [INFERRED]
-- [[Get_21]] - `references` [EXTRACTED]
-- [[Param_12]] - `references` [EXTRACTED]
+- [[Get_24]] - `references` [EXTRACTED]
+- [[Param_15]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[VoluntaryUndertakingsController]] - `method` [EXTRACTED]
 

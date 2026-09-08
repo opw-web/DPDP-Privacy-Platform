@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/SdfPage.tsx"
 type: "code"
-community: "SdfPage.test.tsx"
+community: "router.tsx"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SdfPagetesttsx
+  - community/routertsx
 ---
 
 # canCompleteAudit()
@@ -15,4 +15,4 @@ tags:
 - [[SdfPage.test.tsx]] - `imports` [EXTRACTED]
 - [[SdfPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SdfPagetesttsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

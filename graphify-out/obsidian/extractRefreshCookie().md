@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/test/employee-auth.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/principal-auth.e2e-spec.ts"
 type: "code"
 community: "AppModule"
-location: "L168"
+location: "L178"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # extractRefreshCookie()
 
 ## Connections
-- [[employee-auth.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[principal-auth.e2e-spec.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/AppModule

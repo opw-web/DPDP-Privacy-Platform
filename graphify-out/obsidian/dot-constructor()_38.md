@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/inventory/ropa-export.service.ts"
+source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
 type: "code"
-community: "ropa-export.service.ts"
-location: "L46"
+community: "purposes.service.ts"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ropa-exportservicets
+  - community/purposesservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[RopaExportService]] - `method` [EXTRACTED]
+- [[PurposesController]] - `method` [EXTRACTED]
+- [[PurposesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ropa-exportservicets
+#graphify/code #graphify/EXTRACTED #community/purposesservicets

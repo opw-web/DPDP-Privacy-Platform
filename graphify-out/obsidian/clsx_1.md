@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/package.json"
 type: "concept"
-community: "dependencies"
+community: "frontend/package.json"
 location: "L28"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/frontend/packagejson
 ---
 
 # clsx
 
 ## Connections
-- [[clsx]] - `imports` [EXTRACTED]
+- [[frontendpackage.json]] - `imports` [EXTRACTED]
+- [[utils.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/dependencies
+#graphify/concept #graphify/EXTRACTED #community/frontend/packagejson

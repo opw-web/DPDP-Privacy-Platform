@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "TransfersService"
+community: "CreateTransferDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TransfersService
+  - community/CreateTransferDto
 ---
 
 # Patch
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-update()_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TransfersService
+#graphify/code #graphify/EXTRACTED #community/CreateTransferDto

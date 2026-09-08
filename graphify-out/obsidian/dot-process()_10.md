@@ -1,20 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sync.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/access-log-retention.processor.ts"
 type: "code"
-community: "sync-pipeline.service.ts"
-location: "L50"
+community: "token.service.ts"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sync-pipelineservicets
+  - community/tokenservicets
 ---
 
 # .process()
 
 ## Connections
-- [[dot-run()]] - `calls` [INFERRED]
-- [[SyncJobData]] - `references` [EXTRACTED]
-- [[SyncProcessor]] - `method` [EXTRACTED]
-- [[SyncRunSummary]] - `references` [EXTRACTED]
+- [[dot-runRetention()]] - `calls` [EXTRACTED]
+- [[AccessLogRetentionProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sync-pipelineservicets
+#graphify/code #graphify/EXTRACTED #community/tokenservicets

@@ -13,13 +13,13 @@ tags:
 
 ## Connections
 - [[dot-assertPurposeExists()]] - `method` [EXTRACTED]
-- [[dot-constructor()_132]] - `references` [EXTRACTED]
-- [[dot-constructor()_133]] - `method` [EXTRACTED]
+- [[dot-constructor()_139]] - `references` [EXTRACTED]
+- [[dot-constructor()_140]] - `method` [EXTRACTED]
 - [[dot-create()_34]] - `method` [EXTRACTED]
 - [[dot-get()_22]] - `method` [EXTRACTED]
-- [[dot-list()_45]] - `method` [EXTRACTED]
+- [[dot-list()_44]] - `method` [EXTRACTED]
 - [[dot-update()_24]] - `method` [EXTRACTED]
-- [[Injectable_77]] - `references` [EXTRACTED]
+- [[Injectable_80]] - `references` [EXTRACTED]
 - [[registers.module.ts]] - `imports` [EXTRACTED]
 - [[registersretention.controller.ts]] - `imports` [EXTRACTED]
 - [[retention.service.ts]] - `contains` [EXTRACTED]

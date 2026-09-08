@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
+community: "CreateLegalHoldDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/CreateLegalHoldDto
 ---
 
 # IsArray
 
 ## Connections
-- [[UpdateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
+- [[LegalHoldScopeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto

@@ -1,21 +1,26 @@
 ---
 type: community
-members: 9
+members: 14
 ---
 
 # AuditReadController
 
-**Members:** 9 nodes
+**Members:** 14 nodes
 
 ## Members
 - [[dot-accessLogCsv()_1]] - code - dpdp-platform/backend/src/modules/audit/audit-read.controller.ts
-- [[dot-constructor()_74]] - code - dpdp-platform/backend/src/modules/audit/audit-read.controller.ts
-- [[dot-list()_19]] - code - dpdp-platform/backend/src/modules/audit/audit-read.controller.ts
-- [[ApiTags_17]] - code
+- [[dot-buildWhere()]] - code - dpdp-platform/backend/src/modules/audit/audit-read.service.ts
+- [[dot-constructor()_75]] - code - dpdp-platform/backend/src/modules/audit/audit-read.controller.ts
+- [[dot-list()_18]] - code - dpdp-platform/backend/src/modules/audit/audit-read.controller.ts
+- [[dot-list()_19]] - code - dpdp-platform/backend/src/modules/audit/audit-read.service.ts
+- [[AccessLogExportDto]] - code - dpdp-platform/backend/src/modules/audit/dto/access-log-export.dto.ts
+- [[ApiTags_19]] - code
 - [[AuditReadController]] - code - dpdp-platform/backend/src/modules/audit/audit-read.controller.ts
-- [[Controller_18]] - code
-- [[Get_19]] - code
-- [[Query_4]] - code
+- [[Controller_20]] - code
+- [[Get_21]] - code
+- [[IsOptional_34]] - code
+- [[IsString_41]] - code
+- [[Query_5]] - code
 - [[Res_5]] - code
 
 ## Live Query (requires Dataview plugin)
@@ -26,14 +31,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_RequirePermission]]
-- 2 edges to [[_COMMUNITY_audit-read.service.ts]]
-- 1 edge to [[_COMMUNITY_AuditReadService]]
-- 1 edge to [[_COMMUNITY_app.module.ts]]
-- 1 edge to [[_COMMUNITY_csvDocument]]
+- 9 edges to [[_COMMUNITY_@nestjscommon]]
+- 3 edges to [[_COMMUNITY_audit-read.service.ts]]
+- 2 edges to [[_COMMUNITY_csvDocument]]
+- 1 edge to [[_COMMUNITY_@prismaclient]]
+- 1 edge to [[_COMMUNITY_MaskingService]]
 
 ## Top bridge nodes
-- [[dot-accessLogCsv()_1]] - degree 7, connects to 3 communities
-- [[AuditReadController]] - degree 7, connects to 2 communities
-- [[dot-list()_19]] - degree 6, connects to 2 communities
-- [[dot-constructor()_74]] - degree 2, connects to 1 community
+- [[AccessLogExportDto]] - degree 7, connects to 4 communities
+- [[dot-list()_19]] - degree 5, connects to 3 communities
+- [[dot-accessLogCsv()_1]] - degree 7, connects to 2 communities
+- [[dot-list()_18]] - degree 7, connects to 2 communities
+- [[AuditReadController]] - degree 7, connects to 1 community

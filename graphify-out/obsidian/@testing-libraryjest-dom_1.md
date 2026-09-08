@@ -1,17 +1,17 @@
 ---
 source_file: "dpdp-platform/frontend/package.json"
-type: "concept"
-community: "@testing-library/jest-dom"
+type: "code"
+community: "devDependencies"
 location: "L43"
 tags:
-  - graphify/concept
+  - graphify/code
   - graphify/EXTRACTED
-  - community/testing-library/jest-dom
+  - community/devDependencies
 ---
 
 # @testing-library/jest-dom
 
 ## Connections
-- [[@testing-libraryjest-dom]] - `imports` [EXTRACTED]
+- [[devDependencies_2]] - `contains` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/testing-library/jest-dom
+#graphify/code #graphify/EXTRACTED #community/devDependencies

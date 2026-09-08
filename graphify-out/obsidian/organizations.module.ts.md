@@ -12,6 +12,7 @@ tags:
 # organizations.module.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[AuditModule]] - `imports` [EXTRACTED]
 - [[OrganizationsController]] - `imports` [EXTRACTED]
 - [[OrganizationsModule]] - `contains` [EXTRACTED]

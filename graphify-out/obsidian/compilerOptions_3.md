@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/prisma/tsconfig.seed.json"
 type: "code"
-community: "exclude"
+community: "tsconfig.seed.json"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/exclude
+  - community/tsconfigseedjson
 ---
 
 # compilerOptions
@@ -17,4 +17,4 @@ tags:
 - [[rootDir_1]] - `contains` [EXTRACTED]
 - [[tsconfig.seed.json]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/exclude
+#graphify/code #graphify/EXTRACTED #community/tsconfigseedjson

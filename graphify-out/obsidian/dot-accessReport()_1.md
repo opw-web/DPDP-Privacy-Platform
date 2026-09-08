@@ -14,11 +14,11 @@ tags:
 ## Connections
 - [[dot-buildReport()]] - `calls` [INFERRED]
 - [[dot-getByReference()_1]] - `calls` [INFERRED]
-- [[Get_14]] - `references` [EXTRACTED]
-- [[Param_10]] - `references` [EXTRACTED]
+- [[Get_19]] - `references` [EXTRACTED]
+- [[Param_14]] - `references` [EXTRACTED]
 - [[RequestsController]] - `method` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[Res_3]] - `references` [EXTRACTED]
+- [[Res_4]] - `references` [EXTRACTED]
 - [[renderAccessReportPdf()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/RequestsController

@@ -12,7 +12,7 @@ tags:
 # ConnectorsModule
 
 ## Connections
-- [[Module_1]] - `references` [EXTRACTED]
+- [[Module_2]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[connectors.module.spec.ts]] - `imports` [EXTRACTED]
 - [[connectors.module.ts]] - `contains` [EXTRACTED]

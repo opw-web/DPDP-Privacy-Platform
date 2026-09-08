@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/audit-events-evidence.controller.ts"
 type: "code"
-community: "AuditChainService"
+community: "@nestjs/common"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditChainService
+  - community/nestjs/common
 ---
 
 # audit-events-evidence.controller.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[AuditChainService]] - `imports` [EXTRACTED]
 - [[AuditEventsEvidenceController]] - `contains` [EXTRACTED]
 - [[AuditExportService]] - `imports` [EXTRACTED]
@@ -22,4 +24,4 @@ tags:
 - [[evidence.module.ts]] - `imports_from` [EXTRACTED]
 - [[require-permission.decorator.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditChainService
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

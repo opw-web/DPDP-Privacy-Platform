@@ -12,6 +12,6 @@ tags:
 # @types/better-sqlite3
 
 ## Connections
-- [[@typesbetter-sqlite3]] - `imports` [EXTRACTED]
+- [[demo-company-serverpackage.json]] - `imports` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/demo-company-server/packagejson

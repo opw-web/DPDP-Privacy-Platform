@@ -12,7 +12,6 @@ tags:
 # @radix-ui/react-tabs
 
 ## Connections
-- [[@radix-uireact-tabs_1]] - `imports` [EXTRACTED]
 - [[dependencies]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/dependencies

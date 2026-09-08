@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principals/principal-recipients.service.ts"
 type: "code"
-community: "access-report.service.ts"
+community: "@nestjs/common"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-reportservicets
+  - community/nestjs/common
 ---
 
 # principal-recipients.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[PrincipalRecipientsService]] - `contains` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[access-report.service.ts]] - `imports_from` [EXTRACTED]
@@ -20,4 +21,4 @@ tags:
 - [[principals.module.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-reportservicets
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

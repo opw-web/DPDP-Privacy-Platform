@@ -1,19 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/notifications.service.ts"
 type: "code"
-community: "DataSourcesService"
-location: "L30"
+community: "NotificationCallerActor"
+location: "L149"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesService
+  - community/NotificationCallerActor
 ---
 
 # .list()
 
 ## Connections
-- [[DataSourcesController]] - `method` [EXTRACTED]
-- [[Get_26]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-list()_30]] - `calls` [INFERRED]
+- [[dot-listMessages()_1]] - `calls` [INFERRED]
+- [[NotificationCallerActor]] - `references` [EXTRACTED]
+- [[NotificationsService]] - `method` [EXTRACTED]
+- [[ownershipWhere()]] - `calls` [EXTRACTED]
+- [[toPublicNotification()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesService
+#graphify/code #graphify/EXTRACTED #community/NotificationCallerActor

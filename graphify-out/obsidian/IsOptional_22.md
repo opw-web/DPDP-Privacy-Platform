@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateLegalHoldDto"
+community: "CreateTemplateDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateLegalHoldDto
+  - community/CreateTemplateDto
 ---
 
 # IsOptional
 
 ## Connections
-- [[CreateLegalHoldDto]] - `references` [EXTRACTED]
-- [[LegalHoldScopeDto]] - `references` [EXTRACTED]
+- [[CreateTemplateDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto
+#graphify/code #graphify/EXTRACTED #community/CreateTemplateDto

@@ -13,6 +13,5 @@ tags:
 
 ## Connections
 - [[dependencies]] - `contains` [EXTRACTED]
-- [[sonner_1]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/dependencies

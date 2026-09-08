@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts"
 type: "code"
-community: "CreateTemplateDto"
+community: "@prisma/client"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTemplateDto
+  - community/prisma/client
 ---
 
 # templates.controller.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[CreateTemplateDto]] - `imports` [EXTRACTED]
 - [[PreviewTemplateDto]] - `imports` [EXTRACTED]
 - [[RequirePermission()]] - `imports` [EXTRACTED]
@@ -25,4 +27,4 @@ tags:
 - [[templates.service.ts]] - `imports_from` [EXTRACTED]
 - [[update-template.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTemplateDto
+#graphify/code #graphify/EXTRACTED #community/prisma/client

@@ -1,42 +1,70 @@
 ---
 type: community
-members: 29
+members: 57
 ---
 
 # SettingsPage.tsx
 
-**Members:** 29 nodes
+**Members:** 57 nodes
 
 ## Members
+- [[AGE_STATUS_OPTIONS]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalsPage.tsx
+- [[AGE_STATUS_SOURCE_LABEL]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.tsx
+- [[AgeStatus_1]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.tsx
+- [[AgeStatus_2]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalsPage.tsx
+- [[CanonicalFieldGroup]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.tsx
+- [[ConflictBadge()]] - code - dpdp-platform/frontend/src/fiduciary/components/ConflictBadge.tsx
+- [[ConflictBadge.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/ConflictBadge.tsx
+- [[ConflictBadgeProps]] - code - dpdp-platform/frontend/src/fiduciary/components/ConflictBadge.tsx
+- [[ConflictingValue]] - code - dpdp-platform/frontend/src/fiduciary/components/ConflictBadge.tsx
+- [[DATA_CATEGORY_VALUES_1]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
 - [[DpoContactSection()]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.tsx
 - [[DpoContactValues]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.tsx
 - [[ENTITY_ROLES]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.tsx
 - [[EntityRole]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.tsx
-- [[ORGANIZATION_4]] - code - dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.test.tsx
+- [[FieldGroupRow()]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.tsx
+- [[LawfulBasisCell()]] - code - dpdp-platform/frontend/src/fiduciary/pages/PurposesPage.tsx
+- [[LineageChip()]] - code - dpdp-platform/frontend/src/fiduciary/components/LineageChip.tsx
+- [[LineageChip.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/LineageChip.tsx
+- [[LineageChipProps]] - code - dpdp-platform/frontend/src/fiduciary/components/LineageChip.tsx
 - [[OrgDetailsValues]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.tsx
 - [[Organization_1]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.tsx
 - [[OrganizationDetailsSection()]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.tsx
+- [[PrincipalDetail]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.tsx
+- [[PrincipalDetailPage()]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.tsx
+- [[PrincipalDetailPage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.tsx
+- [[PrincipalEvidencePage()]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
+- [[PrincipalField_1]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.tsx
+- [[PrincipalListItem_2]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalsPage.tsx
+- [[PrincipalListResponse_2]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalsPage.tsx
+- [[PrincipalsPage()]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalsPage.tsx
+- [[PrincipalsPage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalsPage.tsx
+- [[ProfileBlocks()]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.tsx
+- [[RecipientActivity]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.tsx
+- [[RecipientsSection()]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.tsx
+- [[RuleCard()]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsCompliancePage.tsx
+- [[RuleGroupCard()]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/SecurityMeasuresTab.tsx
 - [[SdfDeclarationCard()]] - code - dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.tsx
-- [[SdfDeclarationCard.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.test.tsx
-- [[SdfDeclarationCard.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.tsx
-- [[SdfDeclarationCardProps]] - code - dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.tsx
-- [[SdfDeclarationFields]] - code - dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.tsx
-- [[SdfFormValues]] - code - dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.tsx
-- [[SettingsPage()]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.tsx
 - [[SettingsPage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.tsx
-- [[THIRD_SCHEDULE_CLASSES]] - code - dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.tsx
+- [[SourceRef_1]] - code - dpdp-platform/frontend/src/fiduciary/components/LineageChip.tsx
 - [[ThirdScheduleClass]] - code - dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.tsx
+- [[ageStatusVariant()]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.tsx
+- [[ageStatusVariant()_1]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalsPage.tsx
 - [[describeSaveError()]] - code - dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.tsx
 - [[describeSettingsError()]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.tsx
 - [[dpoContactSchema]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.tsx
+- [[errorMessage()_2]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsCompliancePage.tsx
+- [[groupByCanonicalField()]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.tsx
+- [[handleUnmerged()]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.tsx
+- [[humanizeEnum()]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
 - [[optionalEmail]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.tsx
 - [[optionalUrl]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.tsx
 - [[orgDetailsSchema]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.tsx
-- [[renderCard()]] - code - dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.test.tsx
-- [[sdfFormSchema]] - code - dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.tsx
+- [[submit()_4]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsCompliancePage.tsx
 - [[toDpoContactValues()]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.tsx
 - [[toFormValues()_1]] - code - dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.tsx
 - [[toOrgDetailsValues()]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.tsx
+- [[useDebouncedValue()_1]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalsPage.tsx
 
 ## Live Query (requires Dataview plugin)
 
@@ -46,20 +74,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 16 edges to [[_COMMUNITY_button.tsx]]
-- 14 edges to [[_COMMUNITY_card.tsx]]
-- 12 edges to [[_COMMUNITY_SecurityMeasuresTab.tsx]]
-- 4 edges to [[_COMMUNITY_EmployeesPage.tsx]]
-- 2 edges to [[_COMMUNITY_SettingsPage.test.tsx]]
-- 2 edges to [[_COMMUNITY_router.tsx]]
-- 2 edges to [[_COMMUNITY_DateTime.tsx]]
-- 2 edges to [[_COMMUNITY_data-sources-api.ts]]
-- 2 edges to [[_COMMUNITY_employeeApiClient]]
-- 2 edges to [[_COMMUNITY_api-client.ts]]
+- 48 edges to [[_COMMUNITY_react]]
+- 31 edges to [[_COMMUNITY_react-router-dom]]
+- 21 edges to [[_COMMUNITY_router.tsx]]
+- 7 edges to [[_COMMUNITY_data-sources-api.ts]]
+- 6 edges to [[_COMMUNITY_AuditPage.tsx]]
+- 5 edges to [[_COMMUNITY_cn]]
+- 5 edges to [[_COMMUNITY_EmployeesPage.tsx]]
+- 4 edges to [[_COMMUNITY_DateTime.tsx]]
+- 3 edges to [[_COMMUNITY_RequestDetailPage.tsx]]
+- 3 edges to [[_COMMUNITY_api-client.ts]]
+- 2 edges to [[_COMMUNITY_CandidateComparison.tsx]]
+- 1 edge to [[_COMMUNITY_AuditPage]]
 
 ## Top bridge nodes
-- [[SettingsPage.tsx]] - degree 46, connects to 9 communities
-- [[SdfDeclarationCard.tsx]] - degree 37, connects to 8 communities
-- [[SettingsPage()]] - degree 3, connects to 2 communities
-- [[SdfDeclarationCard()]] - degree 6, connects to 1 community
-- [[OrganizationDetailsSection()]] - degree 4, connects to 1 community
+- [[humanizeEnum()]] - degree 44, connects to 8 communities
+- [[PrincipalsPage.tsx]] - degree 32, connects to 8 communities
+- [[PrincipalDetailPage.tsx]] - degree 46, connects to 7 communities
+- [[SettingsPage.tsx]] - degree 50, connects to 6 communities
+- [[LineageChip.tsx]] - degree 10, connects to 3 communities

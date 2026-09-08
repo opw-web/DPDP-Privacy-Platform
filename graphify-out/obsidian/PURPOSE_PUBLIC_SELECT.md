@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.ts"
 type: "code"
-community: "purposes.service.ts"
+community: "mappings.service.ts"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposesservicets
+  - community/mappingsservicets
 ---
 
 # PURPOSE_PUBLIC_SELECT
@@ -15,4 +15,4 @@ tags:
 - [[purposes.service.ts]] - `contains` [EXTRACTED]
 - [[source-purposes.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposesservicets
+#graphify/code #graphify/EXTRACTED #community/mappingsservicets

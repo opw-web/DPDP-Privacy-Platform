@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/DashboardPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/AuditPage.test.tsx"
 type: "code"
-community: "DashboardPage.test.tsx"
-location: "L129"
+community: "AuditPage.tsx"
+location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DashboardPagetesttsx
+  - community/AuditPagetsx
 ---
 
 # MockRoutes
 
 ## Connections
-- [[DashboardPage.test.tsx]] - `contains` [EXTRACTED]
-- [[InventoryGap_1]] - `references` [EXTRACTED]
-- [[InventorySummary_1]] - `references` [EXTRACTED]
+- [[AuditEventListItem_1]] - `references` [EXTRACTED]
+- [[AuditPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DashboardPagetesttsx
+#graphify/code #graphify/EXTRACTED #community/AuditPagetsx

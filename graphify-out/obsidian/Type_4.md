@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateNoticeVersionDto"
+community: "mappings.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateNoticeVersionDto
+  - community/mappingsservicets
 ---
 
 # Type
 
 ## Connections
-- [[CreateNoticeVersionDto]] - `references` [EXTRACTED]
+- [[ReplaceMappingsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateNoticeVersionDto
+#graphify/code #graphify/EXTRACTED #community/mappingsservicets

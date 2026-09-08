@@ -12,7 +12,6 @@ tags:
 # @typescript-eslint/parser
 
 ## Connections
-- [[@typescript-eslintparser_1]] - `imports` [EXTRACTED]
 - [[devDependencies_1]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/devDependencies

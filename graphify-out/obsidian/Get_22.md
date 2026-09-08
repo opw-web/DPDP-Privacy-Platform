@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "employees.service.ts"
+community: "erasure-task.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeesservicets
+  - community/erasure-taskservicets
 ---
 
 # Get
 
 ## Connections
-- [[dot-get()_12]] - `references` [EXTRACTED]
-- [[dot-list()_24]] - `references` [EXTRACTED]
+- [[dot-listLegalHolds()]] - `references` [EXTRACTED]
+- [[dot-listTasks()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeesservicets
+#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets

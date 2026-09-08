@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/common/prisma/prisma.service.ts"
+source_file: "dpdp-platform/backend/src/queues/boot-registration.registry.ts"
 type: "code"
-community: "PrismaService"
-location: "L66"
+community: "schedule-reconciliation.service.ts"
+location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/schedule-reconciliationservicets
 ---
 
 # .onModuleInit()
 
 ## Connections
-- [[PrismaService]] - `method` [EXTRACTED]
+- [[BootRegistrationRegistry]] - `method` [EXTRACTED]
+- [[withBootTimeout()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/schedule-reconciliationservicets

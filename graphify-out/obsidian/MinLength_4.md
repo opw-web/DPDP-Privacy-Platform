@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "requests.controller.ts"
+community: "SetMyConsentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/requestscontrollerts
+  - community/SetMyConsentDto
 ---
 
 # MinLength
 
 ## Connections
-- [[AddNoteDto]] - `references` [EXTRACTED]
+- [[SetMyConsentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/requestscontrollerts
+#graphify/code #graphify/EXTRACTED #community/SetMyConsentDto

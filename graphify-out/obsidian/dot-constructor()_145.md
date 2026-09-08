@@ -1,19 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sync.queue.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts"
 type: "code"
-community: "SyncQueueService"
-location: "L68"
+community: "read-only-http.client.ts"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/read-only-httpclientts
 ---
 
 # .constructor()
 
 ## Connections
-- [[InjectQueue_8]] - `references` [EXTRACTED]
-- [[SyncLockService]] - `references` [EXTRACTED]
-- [[SyncQueueService]] - `method` [EXTRACTED]
+- [[ReadOnlyHttpMethodError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/read-only-httpclientts

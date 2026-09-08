@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/audit/audit-actions.ts"
 type: "code"
-community: "prisma.service.ts"
+community: "audit-read.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/audit-readservicets
 ---
 
 # audit-actions.ts
@@ -22,4 +22,4 @@ tags:
 - [[requests.service.ts]] - `imports_from` [EXTRACTED]
 - [[retention-scan.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/audit-readservicets

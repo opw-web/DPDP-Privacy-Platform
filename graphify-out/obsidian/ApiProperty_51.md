@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "mapping-warning-response.dto.ts"
+community: "security-measures.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mapping-warning-responsedtots
+  - community/security-measuresservicets
 ---
 
 # ApiProperty
 
 ## Connections
-- [[MappingsResponseDto]] - `references` [EXTRACTED]
-- [[SourceFieldMappingResponseDto]] - `references` [EXTRACTED]
+- [[CreateSecurityMeasureDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mapping-warning-responsedtots
+#graphify/code #graphify/EXTRACTED #community/security-measuresservicets

@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/registers/SecurityMeasuresTab.tsx"
 type: "code"
-community: "SecurityMeasuresTab.tsx"
+community: "react"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresTabtsx
+  - community/react
 ---
 
 # SecurityMeasuresTab.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[ApiError]] - `imports` [EXTRACTED]
 - [[Badge()]] - `imports` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
@@ -19,8 +20,8 @@ tags:
 - [[CardContent]] - `imports` [EXTRACTED]
 - [[CardHeader]] - `imports` [EXTRACTED]
 - [[CardTitle]] - `imports` [EXTRACTED]
-- [[CheckboxOption]] - `imports` [EXTRACTED]
 - [[CheckboxOption_1]] - `imports` [EXTRACTED]
+- [[CheckboxOption]] - `imports` [EXTRACTED]
 - [[CreateSecurityMeasurePayload]] - `contains` [EXTRACTED]
 - [[DEFAULT_VALUES_3]] - `contains` [EXTRACTED]
 - [[DateTime()]] - `imports` [EXTRACTED]
@@ -43,7 +44,7 @@ tags:
 - [[SecurityMeasureGroup_1]] - `contains` [EXTRACTED]
 - [[SecurityMeasuresTab()_1]] - `contains` [EXTRACTED]
 - [[Select]] - `imports` [EXTRACTED]
-- [[SelectControl]] - `imports` [EXTRACTED]
+- [[SelectControl_1]] - `imports` [EXTRACTED]
 - [[Skeleton()]] - `imports` [EXTRACTED]
 - [[Skeleton.tsx]] - `imports_from` [EXTRACTED]
 - [[Table]] - `imports` [EXTRACTED]
@@ -53,7 +54,7 @@ tags:
 - [[TableHeader]] - `imports` [EXTRACTED]
 - [[TableRow]] - `imports` [EXTRACTED]
 - [[Textarea]] - `imports` [EXTRACTED]
-- [[TextareaControl]] - `imports` [EXTRACTED]
+- [[TextareaControl_1]] - `imports` [EXTRACTED]
 - [[api-client.ts]] - `imports_from` [EXTRACTED]
 - [[badge.tsx]] - `imports_from` [EXTRACTED]
 - [[button.tsx]] - `imports_from` [EXTRACTED]
@@ -63,7 +64,12 @@ tags:
 - [[form-controls.tsx]] - `imports_from` [EXTRACTED]
 - [[humanizeEnum()]] - `imports` [EXTRACTED]
 - [[input.tsx]] - `imports_from` [EXTRACTED]
+- [[lucide-react_1]] - `imports_from` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
+- [[react-hook-form_1]] - `imports_from` [EXTRACTED]
 - [[securityFormSchema]] - `contains` [EXTRACTED]
+- [[sonner_1]] - `imports_from` [EXTRACTED]
 - [[table.tsx]] - `imports_from` [EXTRACTED]
+- [[zod_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx
+#graphify/code #graphify/EXTRACTED #community/react

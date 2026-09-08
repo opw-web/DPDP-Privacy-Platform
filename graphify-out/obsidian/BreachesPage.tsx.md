@@ -1,18 +1,19 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/BreachesPage.tsx"
 type: "code"
-community: "router.tsx"
+community: "react-router-dom"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/react-router-dom
 ---
 
 # BreachesPage.tsx
 
 ## Connections
-- [[Breach_1]] - `contains` [EXTRACTED]
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
+- [[Breach]] - `contains` [EXTRACTED]
 - [[BreachesPage()]] - `contains` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
 - [[Card]] - `imports` [EXTRACTED]
@@ -21,6 +22,7 @@ tags:
 - [[button.tsx]] - `imports_from` [EXTRACTED]
 - [[card.tsx]] - `imports_from` [EXTRACTED]
 - [[employeeApiClient]] - `imports` [EXTRACTED]
+- [[react-router-dom_1]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

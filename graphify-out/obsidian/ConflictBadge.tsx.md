@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/ConflictBadge.tsx"
 type: "code"
-community: "DateTime.tsx"
+community: "SettingsPage.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DateTimetsx
+  - community/SettingsPagetsx
 ---
 
 # ConflictBadge.tsx
@@ -21,5 +21,6 @@ tags:
 - [[PrincipalDetailPage.tsx]] - `imports_from` [EXTRACTED]
 - [[SourceRef_1]] - `imports` [EXTRACTED]
 - [[badge.tsx]] - `imports_from` [EXTRACTED]
+- [[lucide-react_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DateTimetsx
+#graphify/code #graphify/EXTRACTED #community/SettingsPagetsx

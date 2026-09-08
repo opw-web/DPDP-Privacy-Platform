@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-exportCsv()]] - `calls` [INFERRED]
 - [[AuditEventsEvidenceController]] - `method` [EXTRACTED]
-- [[Get_10]] - `references` [EXTRACTED]
+- [[Get_15]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[Res_2]] - `references` [EXTRACTED]
+- [[Res_3]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/AuditChainService

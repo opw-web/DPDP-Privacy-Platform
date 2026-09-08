@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/non-disclosure.ts"
 type: "code"
-community: "prisma.service.ts"
+community: "access-report.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/access-reportservicets
 ---
 
 # evidence/non-disclosure.ts
 
 ## Connections
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[INFORMATION_REQUEST_PUBLIC_SELECT_1]] - `contains` [EXTRACTED]
 - [[NonDisclosureSplit]] - `contains` [EXTRACTED]
@@ -23,4 +24,4 @@ tags:
 - [[scoped-transaction-client.ts]] - `imports_from` [EXTRACTED]
 - [[splitNonDisclosureRequests()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/access-reportservicets

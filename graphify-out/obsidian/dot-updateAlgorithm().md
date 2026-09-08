@@ -12,9 +12,9 @@ tags:
 # .updateAlgorithm()
 
 ## Connections
-- [[dot-update()_17]] - `calls` [INFERRED]
-- [[Body_15]] - `references` [EXTRACTED]
-- [[Param_15]] - `references` [EXTRACTED]
+- [[dot-update()_16]] - `calls` [INFERRED]
+- [[Body_17]] - `references` [EXTRACTED]
+- [[Param_18]] - `references` [EXTRACTED]
 - [[Patch_8]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[SdfController]] - `method` [EXTRACTED]

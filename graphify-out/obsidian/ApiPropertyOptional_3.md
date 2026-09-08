@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ChangeStatusDto"
+community: "guardians.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ChangeStatusDto
+  - community/guardiansservicets
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[ChangeStatusDto]] - `references` [EXTRACTED]
-- [[ErasureProcessorChecklistDto]] - `references` [EXTRACTED]
+- [[ListGuardiansDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ChangeStatusDto
+#graphify/code #graphify/EXTRACTED #community/guardiansservicets

@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RetentionController"
+community: "children.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionController
+  - community/childrenmodulets
 ---
 
 # Post
 
 ## Connections
-- [[dot-cancel()_1]] - `references` [EXTRACTED]
-- [[dot-complete()_2]] - `references` [EXTRACTED]
-- [[dot-createLegalHold()]] - `references` [EXTRACTED]
+- [[dot-setAgeStatus()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionController
+#graphify/code #graphify/EXTRACTED #community/childrenmodulets

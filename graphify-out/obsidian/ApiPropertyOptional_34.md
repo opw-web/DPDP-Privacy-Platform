@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
+community: "PreviewAudienceDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/PreviewAudienceDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[UpdateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
+- [[PreviewAudienceDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/PreviewAudienceDto

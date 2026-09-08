@@ -34,6 +34,9 @@ tags:
 - [[card.tsx]] - `imports_from` [EXTRACTED]
 - [[cn()]] - `imports` [EXTRACTED]
 - [[data-sources-api.ts]] - `imports_from` [EXTRACTED]
+- [[lucide-react_1]] - `imports_from` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
+- [[react-router-dom_1]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 - [[utils.ts]] - `imports_from` [EXTRACTED]
 

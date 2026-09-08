@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/BreachDetailPage.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/BreachesPage.tsx"
 type: "code"
-community: "BreachWizardPage.tsx"
-location: "L21"
+community: "react-router-dom"
+location: "L2"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BreachWizardPagetsx
+  - community/react-router-dom
 ---
 
 # Breach
 
 ## Connections
-- [[BreachDetailPage.tsx]] - `contains` [EXTRACTED]
+- [[BreachesPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BreachWizardPagetsx
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

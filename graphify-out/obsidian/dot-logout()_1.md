@@ -1,20 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/auth/principal-auth.service.ts"
+source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.service.ts"
 type: "code"
-community: "principal-auth.service.ts"
-location: "L306"
+community: "PrincipalAuthService"
+location: "L286"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/principal-authservicets
+  - community/PrincipalAuthService
 ---
 
 # .logout()
 
 ## Connections
 - [[dot-hashRefreshToken()]] - `calls` [INFERRED]
-- [[dot-logout()_3]] - `calls` [INFERRED]
+- [[dot-logout()]] - `calls` [INFERRED]
 - [[dot-verifyRefreshToken()]] - `calls` [INFERRED]
-- [[PrincipalAuthService]] - `method` [EXTRACTED]
+- [[EmployeeAuthService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/principal-authservicets
+#graphify/code #graphify/INFERRED #community/PrincipalAuthService

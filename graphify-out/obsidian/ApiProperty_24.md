@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "AssignRequestDto"
+community: "CreateNoticeVersionDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AssignRequestDto
+  - community/CreateNoticeVersionDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[AssignRequestDto]] - `references` [EXTRACTED]
+- [[CreateNoticeVersionDto]] - `references` [EXTRACTED]
+- [[ItemisedFieldInputDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AssignRequestDto
+#graphify/code #graphify/EXTRACTED #community/CreateNoticeVersionDto

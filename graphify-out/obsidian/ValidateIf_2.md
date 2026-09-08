@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "registers.module.ts"
+community: "CreateRecipientDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/registersmodulets
+  - community/CreateRecipientDto
 ---
 
 # ValidateIf
 
 ## Connections
-- [[UpdateTransferDto]] - `references` [EXTRACTED]
+- [[UpdateRecipientDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/registersmodulets
+#graphify/code #graphify/EXTRACTED #community/CreateRecipientDto

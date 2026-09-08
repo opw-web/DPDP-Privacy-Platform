@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.controller.ts"
 type: "code"
-community: "mappings.controller.ts"
+community: "@prisma/client"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingscontrollerts
+  - community/prisma/client
 ---
 
 # mappings.controller.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[AttachPurposesDto]] - `imports` [EXTRACTED]
 - [[DataSourcePurposesResponseDto]] - `imports` [EXTRACTED]
 - [[MappingsController]] - `contains` [EXTRACTED]
@@ -29,4 +31,4 @@ tags:
 - [[require-permission.decorator.ts]] - `imports_from` [EXTRACTED]
 - [[source-purposes.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingscontrollerts
+#graphify/code #graphify/EXTRACTED #community/prisma/client

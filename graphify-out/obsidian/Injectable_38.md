@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "notifications.controller.ts"
+community: "app.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationscontrollerts
+  - community/appmodulets
 ---
 
 # Injectable
 
 ## Connections
-- [[JwtAnyActorGuard]] - `references` [EXTRACTED]
+- [[SdfCycleScanQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts
+#graphify/code #graphify/EXTRACTED #community/appmodulets

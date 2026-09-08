@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "campaigns.service.ts"
+community: "breach.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/campaignsservicets
+  - community/breachservicets
 ---
 
 # IsOptional
 
 ## Connections
-- [[CreateCampaignDto]] - `references` [EXTRACTED]
+- [[CompleteObligationDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/campaignsservicets
+#graphify/code #graphify/EXTRACTED #community/breachservicets

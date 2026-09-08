@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ropa-export.service.ts"
+community: "SyncService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ropa-exportservicets
+  - community/SyncService
 ---
 
 # Injectable
 
 ## Connections
-- [[RopaExportService]] - `references` [EXTRACTED]
+- [[SyncService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ropa-exportservicets
+#graphify/code #graphify/EXTRACTED #community/SyncService

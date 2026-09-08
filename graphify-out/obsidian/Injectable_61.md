@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "normalization.service.ts"
+community: "CreateInformationRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/normalizationservicets
+  - community/CreateInformationRequestDto
 ---
 
 # Injectable
 
 ## Connections
-- [[NormalizationService]] - `references` [EXTRACTED]
+- [[InformationRequestsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/normalizationservicets
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

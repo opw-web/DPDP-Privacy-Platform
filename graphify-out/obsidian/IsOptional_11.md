@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sync.service.ts"
+community: "CreateTransferDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/syncservicets
+  - community/CreateTransferDto
 ---
 
 # IsOptional
 
 ## Connections
-- [[ListSyncJobsQueryDto]] - `references` [EXTRACTED]
+- [[CreateTransferDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/syncservicets
+#graphify/code #graphify/EXTRACTED #community/CreateTransferDto

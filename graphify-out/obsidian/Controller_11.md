@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateComplianceRuleDto"
+community: "inventory.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateComplianceRuleDto
+  - community/inventoryservicets
 ---
 
 # Controller
 
 ## Connections
-- [[ComplianceController]] - `references` [EXTRACTED]
+- [[InventoryController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto
+#graphify/code #graphify/EXTRACTED #community/inventoryservicets

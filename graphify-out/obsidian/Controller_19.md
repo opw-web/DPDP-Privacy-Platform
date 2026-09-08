@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".preview"
+community: "SdfController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/preview
+  - community/SdfController
 ---
 
 # Controller
 
 ## Connections
-- [[AudienceController]] - `references` [EXTRACTED]
+- [[SdfController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/preview
+#graphify/code #graphify/EXTRACTED #community/SdfController

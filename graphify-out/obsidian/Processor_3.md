@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "breaches.module.ts"
+community: "RequestsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breachesmodulets
+  - community/RequestsService
 ---
 
 # Processor
 
 ## Connections
-- [[BreachPrincipalNoticeDispatchProcessor]] - `references` [EXTRACTED]
+- [[DeadlineScanProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breachesmodulets
+#graphify/code #graphify/EXTRACTED #community/RequestsService

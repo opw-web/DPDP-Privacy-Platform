@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/ExportButtons.tsx"
 type: "code"
-community: "EmployeesPage.tsx"
+community: "react"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeesPagetsx
+  - community/react
 ---
 
 # ExportButtons.tsx
@@ -23,6 +23,9 @@ tags:
 - [[api-client.ts]] - `imports_from` [EXTRACTED]
 - [[button.tsx]] - `imports_from` [EXTRACTED]
 - [[employeeApiClient]] - `imports` [EXTRACTED]
+- [[lucide-react_1]] - `imports_from` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
 - [[saveBlob()_3]] - `contains` [EXTRACTED]
+- [[sonner_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeesPagetsx
+#graphify/code #graphify/EXTRACTED #community/react

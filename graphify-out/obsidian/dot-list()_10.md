@@ -1,20 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/notifications.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync.controller.ts"
 type: "code"
-community: "notifications.service.ts"
-location: "L149"
+community: "SyncService"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationsservicets
+  - community/SyncService
 ---
 
 # .list()
 
 ## Connections
-- [[NotificationCallerActor]] - `references` [EXTRACTED]
-- [[NotificationsService]] - `method` [EXTRACTED]
-- [[ownershipWhere()]] - `calls` [EXTRACTED]
-- [[toPublicNotification()]] - `indirect_call` [INFERRED]
+- [[dot-listJobs()]] - `calls` [INFERRED]
+- [[Get_13]] - `references` [EXTRACTED]
+- [[ListSyncJobsQueryDto]] - `references` [EXTRACTED]
+- [[Query_3]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[SyncJobsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationsservicets
+#graphify/code #graphify/EXTRACTED #community/SyncService

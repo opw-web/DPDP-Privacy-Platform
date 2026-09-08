@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/AppShell.tsx"
 type: "code"
-community: "DateTime.tsx"
+community: "router.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DateTimetsx
+  - community/routertsx
 ---
 
 # AppShell.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[AppShell()]] - `contains` [EXTRACTED]
 - [[AuditPage.test.tsx]] - `imports_from` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
@@ -32,9 +33,11 @@ tags:
 - [[cn()]] - `imports` [EXTRACTED]
 - [[employeeApiClient]] - `imports` [EXTRACTED]
 - [[libauth.ts]] - `imports_from` [EXTRACTED]
+- [[lucide-react_1]] - `imports_from` [EXTRACTED]
+- [[react-router-dom_1]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 - [[tooltip.tsx]] - `imports_from` [EXTRACTED]
 - [[useEmployeeAuth()]] - `imports` [EXTRACTED]
 - [[utils.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DateTimetsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

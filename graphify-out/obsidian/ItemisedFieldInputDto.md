@@ -12,11 +12,11 @@ tags:
 # ItemisedFieldInputDto
 
 ## Connections
-- [[ApiProperty_15]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_19]] - `references` [EXTRACTED]
-- [[IsOptional_21]] - `references` [EXTRACTED]
-- [[IsString_22]] - `references` [EXTRACTED]
-- [[MinLength_15]] - `references` [EXTRACTED]
+- [[ApiProperty_24]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_23]] - `references` [EXTRACTED]
+- [[IsOptional_24]] - `references` [EXTRACTED]
+- [[IsString_31]] - `references` [EXTRACTED]
+- [[MinLength_25]] - `references` [EXTRACTED]
 - [[create-notice-version.dto.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CreateNoticeVersionDto

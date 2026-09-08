@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ListPrincipalsDto"
+community: "EnvironmentVariables"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ListPrincipalsDto
+  - community/EnvironmentVariables
 ---
 
 # IsInt
 
 ## Connections
-- [[ListPrincipalsDto]] - `references` [EXTRACTED]
+- [[EnvironmentVariables]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ListPrincipalsDto
+#graphify/code #graphify/EXTRACTED #community/EnvironmentVariables

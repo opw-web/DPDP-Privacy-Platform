@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/CandidateComparison.tsx"
+source_file: "dpdp-platform/frontend/src/principal/components/ValueCard.tsx"
 type: "code"
-community: "DateTime.tsx"
-location: "L53"
+community: "MeDataPage.tsx"
+location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DateTimetsx
+  - community/MeDataPagetsx
 ---
 
 # FIELD_LABELS
 
 ## Connections
-- [[CandidateComparison.tsx]] - `contains` [EXTRACTED]
+- [[ValueCard.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DateTimetsx
+#graphify/code #graphify/EXTRACTED #community/MeDataPagetsx

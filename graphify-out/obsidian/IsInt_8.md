@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "audit-chain-verify.processor.ts"
+community: "ListPrincipalsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-chain-verifyprocessorts
+  - community/ListPrincipalsDto
 ---
 
 # IsInt
 
 ## Connections
-- [[EnvironmentVariables]] - `references` [EXTRACTED]
+- [[ListPrincipalsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-chain-verifyprocessorts
+#graphify/code #graphify/EXTRACTED #community/ListPrincipalsDto

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "notifications.service.ts"
+community: "EmployeeAuthService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationsservicets
+  - community/EmployeeAuthService
 ---
 
 # Injectable
 
 ## Connections
-- [[PortalProvider]] - `references` [EXTRACTED]
+- [[EmployeeAuthService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationsservicets
+#graphify/code #graphify/EXTRACTED #community/EmployeeAuthService

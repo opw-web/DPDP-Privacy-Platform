@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/PrincipalLoginPage.tsx"
 type: "code"
-community: "button.tsx"
+community: "react"
 location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react
 ---
 
 # DEMO_PRINCIPALS
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[PrincipalLoginPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/react

@@ -11,6 +11,6 @@ tags:
 # Injectable
 
 ## Connections
-- [[AgeService]] - `references` [EXTRACTED]
+- [[AssemblyService]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/AuditService

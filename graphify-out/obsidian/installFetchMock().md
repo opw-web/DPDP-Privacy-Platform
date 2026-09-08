@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/router.test.tsx"
 type: "code"
-community: "router.test.tsx"
+community: "router.tsx"
 location: "L121"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertesttsx
+  - community/routertsx
 ---
 
 # installFetchMock()
@@ -15,4 +15,4 @@ tags:
 - [[jsonResponse()_26]] - `calls` [EXTRACTED]
 - [[router.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertesttsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

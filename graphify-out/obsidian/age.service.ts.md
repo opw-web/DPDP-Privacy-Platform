@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/age.service.ts"
 type: "code"
-community: "assembly.service.ts"
+community: "AuditService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/assemblyservicets
+  - community/AuditService
 ---
 
 # age.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AgeService]] - `contains` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[DobCandidate]] - `contains` [EXTRACTED]
@@ -28,4 +30,4 @@ tags:
 - [[scoped-transaction-client.ts]] - `imports_from` [EXTRACTED]
 - [[sync-pipeline.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/assemblyservicets
+#graphify/code #graphify/EXTRACTED #community/AuditService

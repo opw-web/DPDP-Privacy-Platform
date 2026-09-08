@@ -12,22 +12,26 @@ tags:
 # principal-portal.e2e-spec.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjstesting]] - `imports_from` [EXTRACTED]
 - [[AppModule]] - `imports` [EXTRACTED]
-- [[EmployeeSession_3]] - `contains` [EXTRACTED]
-- [[Fixture_2]] - `contains` [EXTRACTED]
+- [[EmployeeSession_4]] - `contains` [EXTRACTED]
+- [[Fixture_3]] - `contains` [EXTRACTED]
 - [[MeController]] - `imports` [EXTRACTED]
 - [[PERMISSIONS]] - `imports` [EXTRACTED]
 - [[PURPOSE_NOT_CONFIGURED]] - `imports` [EXTRACTED]
 - [[PrincipalSession]] - `contains` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[app.module.ts]] - `imports_from` [EXTRACTED]
-- [[createFixture()_2]] - `contains` [EXTRACTED]
-- [[createPrincipal()_8]] - `contains` [EXTRACTED]
+- [[argon2_1]] - `imports_from` [EXTRACTED]
+- [[createFixture()_3]] - `contains` [EXTRACTED]
+- [[createPrincipal()_9]] - `contains` [EXTRACTED]
 - [[createSource()_1]] - `contains` [EXTRACTED]
-- [[ensurePermission()_11]] - `contains` [EXTRACTED]
+- [[ensurePermission()_12]] - `contains` [EXTRACTED]
 - [[me.controller.ts]] - `imports_from` [EXTRACTED]
 - [[me.service.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[seedpermissions.ts]] - `imports_from` [EXTRACTED]
+- [[supertest]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/principal-portale2e-spects

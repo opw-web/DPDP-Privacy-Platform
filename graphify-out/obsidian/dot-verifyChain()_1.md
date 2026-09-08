@@ -15,7 +15,7 @@ tags:
 - [[dot-verifyChain()]] - `calls` [INFERRED]
 - [[AuditEventsEvidenceController]] - `method` [EXTRACTED]
 - [[ChainVerificationResult]] - `references` [EXTRACTED]
-- [[Get_10]] - `references` [EXTRACTED]
+- [[Get_15]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/AuditChainService

@@ -12,8 +12,8 @@ tags:
 # .update()
 
 ## Connections
-- [[dot-record()]] - `calls` [INFERRED]
-- [[dot-review()]] - `calls` [EXTRACTED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-review()_2]] - `calls` [EXTRACTED]
 - [[dot-update()_2]] - `calls` [INFERRED]
 - [[dot-validateBasis()]] - `calls` [EXTRACTED]
 - [[PurposesService]] - `method` [EXTRACTED]

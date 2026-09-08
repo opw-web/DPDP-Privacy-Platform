@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts"
 type: "code"
-community: "SecurityMeasuresTab.tsx"
+community: "react"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresTabtsx
+  - community/react
 ---
 
 # enum-options.ts
@@ -53,7 +53,7 @@ tags:
 - [[Step3Mapping.tsx]] - `imports_from` [EXTRACTED]
 - [[TransfersTab.tsx]] - `imports_from` [EXTRACTED]
 - [[humanizeEnum()]] - `contains` [EXTRACTED]
-- [[titleCase()]] - `contains` [EXTRACTED]
+- [[titleCase()_1]] - `contains` [EXTRACTED]
 - [[toOptions()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx
+#graphify/code #graphify/EXTRACTED #community/react

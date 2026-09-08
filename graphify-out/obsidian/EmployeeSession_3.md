@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/principal-portal.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/audit-read.e2e-spec.ts"
 type: "code"
-community: "principal-portal.e2e-spec.ts"
-location: "L36"
+community: "audit-read.e2e-spec.ts"
+location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principal-portale2e-spects
+  - community/audit-reade2e-spects
 ---
 
 # EmployeeSession
 
 ## Connections
-- [[ensurePermission()_11]] - `calls` [EXTRACTED]
-- [[principal-portal.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[audit-read.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[ensurePermission()_10]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principal-portale2e-spects
+#graphify/code #graphify/EXTRACTED #community/audit-reade2e-spects

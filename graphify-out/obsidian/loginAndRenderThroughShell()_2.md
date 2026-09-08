@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/PurposesPage.test.tsx"
 type: "code"
-community: "employeeLogin"
+community: "router.tsx"
 location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeeLogin
+  - community/routertsx
 ---
 
 # loginAndRenderThroughShell()
@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[PurposesPage.test.tsx]] - `contains` [EXTRACTED]
 - [[employeeLogin()]] - `calls` [EXTRACTED]
-- [[jsonResponse()_9]] - `calls` [EXTRACTED]
+- [[jsonResponse()_20]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeeLogin
+#graphify/code #graphify/EXTRACTED #community/routertsx

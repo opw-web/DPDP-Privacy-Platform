@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/evidence-pack.controller.ts"
 type: "code"
-community: "RequirePermission"
+community: "@nestjs/common"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/nestjs/common
 ---
 
 # evidence-pack.controller.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[EvidencePackController]] - `contains` [EXTRACTED]
 - [[EvidencePackService]] - `imports` [EXTRACTED]
 - [[RequirePermission()]] - `imports` [EXTRACTED]
@@ -19,4 +21,4 @@ tags:
 - [[evidence.module.ts]] - `imports_from` [EXTRACTED]
 - [[require-permission.decorator.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

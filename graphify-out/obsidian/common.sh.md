@@ -33,6 +33,7 @@ tags:
 - [[open-runbook.sh]] - `imports_from` [EXTRACTED]
 - [[pause_before_exit()]] - `defines` [EXTRACTED]
 - [[pids_for()]] - `defines` [EXTRACTED]
+- [[prepare.sh]] - `imports_from` [EXTRACTED]
 - [[reset.sh]] - `imports_from` [EXTRACTED]
 - [[say()]] - `defines` [EXTRACTED]
 - [[setup_node()]] - `defines` [EXTRACTED]

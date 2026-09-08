@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/LinkedRecordsPanel.test.tsx"
 type: "code"
-community: "PrincipalDetailPage.test.tsx"
-location: "L121"
+community: "router.tsx"
+location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalDetailPagetesttsx
+  - community/routertsx
 ---
 
 # MockRoutes
 
 ## Connections
-- [[PrincipalDetailPage.test.tsx]] - `contains` [EXTRACTED]
+- [[LinkedRecordsPanel.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalDetailPagetesttsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

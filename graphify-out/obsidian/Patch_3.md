@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateComplianceRuleDto"
+community: "compliance.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateComplianceRuleDto
+  - community/complianceservicets
 ---
 
 # Patch
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-update()_6]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto
+#graphify/code #graphify/EXTRACTED #community/complianceservicets

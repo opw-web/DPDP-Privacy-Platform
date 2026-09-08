@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/inventory/inventory.service.ts"
+source_file: "dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts"
 type: "code"
-community: "ropa-export.service.ts"
-location: "L78"
+community: "PDFDocument"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ropa-exportservicets
+  - community/PDFDocument
 ---
 
 # .constructor()
 
 ## Connections
-- [[InventoryService]] - `method` [EXTRACTED]
+- [[PDFDocument]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ropa-exportservicets
+#graphify/code #graphify/EXTRACTED #community/PDFDocument

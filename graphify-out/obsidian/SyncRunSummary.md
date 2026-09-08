@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sync/sync-pipeline.service.ts"
 type: "code"
-community: "sync-pipeline.service.ts"
+community: "sync.queue.ts"
 location: "L81"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sync-pipelineservicets
+  - community/syncqueuets
 ---
 
 # SyncRunSummary
 
 ## Connections
-- [[dot-process()_10]] - `references` [EXTRACTED]
+- [[dot-process()_1]] - `references` [EXTRACTED]
 - [[SyncCounts]] - `inherits` [EXTRACTED]
 - [[sync-pipeline.service.ts]] - `contains` [EXTRACTED]
 - [[sync.processor.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sync-pipelineservicets
+#graphify/code #graphify/EXTRACTED #community/syncqueuets

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/decorators/public.decorator.ts"
 type: "code"
-community: "jwt-employee.guard.ts"
+community: "token.service.ts"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/jwt-employeeguardts
+  - community/tokenservicets
 ---
 
 # IS_PUBLIC_KEY
@@ -15,4 +15,4 @@ tags:
 - [[jwt-employee.guard.ts]] - `imports` [EXTRACTED]
 - [[public.decorator.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/jwt-employeeguardts
+#graphify/code #graphify/EXTRACTED #community/tokenservicets

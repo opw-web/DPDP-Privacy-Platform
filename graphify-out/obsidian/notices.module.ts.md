@@ -12,6 +12,7 @@ tags:
 # notices.module.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[AuditModule]] - `imports` [EXTRACTED]
 - [[NoticesController]] - `imports` [EXTRACTED]
 - [[NoticesModule]] - `contains` [EXTRACTED]

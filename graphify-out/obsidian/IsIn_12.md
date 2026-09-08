@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "audit-chain-verify.processor.ts"
+community: "CreateInformationRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-chain-verifyprocessorts
+  - community/CreateInformationRequestDto
 ---
 
 # IsIn
 
 ## Connections
-- [[EnvironmentVariables]] - `references` [EXTRACTED]
+- [[UpdateInformationRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-chain-verifyprocessorts
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

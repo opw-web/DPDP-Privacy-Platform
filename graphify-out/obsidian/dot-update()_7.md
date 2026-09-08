@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
 type: "code"
-community: "CreateComplianceRuleDto"
+community: "compliance.service.ts"
 location: "L469"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateComplianceRuleDto
+  - community/complianceservicets
 ---
 
 # .update()
 
 ## Connections
-- [[dot-create()_8]] - `calls` [EXTRACTED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[dot-review()_2]] - `calls` [EXTRACTED]
+- [[dot-create()_11]] - `calls` [EXTRACTED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-review()_3]] - `calls` [EXTRACTED]
 - [[dot-update()_6]] - `calls` [INFERRED]
 - [[dot-validateGrievanceCeiling()]] - `calls` [EXTRACTED]
 - [[ComplianceService]] - `method` [EXTRACTED]
@@ -22,4 +22,4 @@ tags:
 - [[diffRules()]] - `calls` [EXTRACTED]
 - [[toPublicComplianceRule()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto
+#graphify/code #graphify/EXTRACTED #community/complianceservicets

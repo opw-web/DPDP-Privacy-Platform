@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/audit-events-evidence.controller.ts"
+source_file: "dpdp-platform/backend/src/queues/deadline-scan.processor.ts"
 type: "code"
-community: "AuditChainService"
-location: "L21"
+community: "RequestsService"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditChainService
+  - community/RequestsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditChainService]] - `references` [EXTRACTED]
-- [[AuditEventsEvidenceController]] - `method` [EXTRACTED]
-- [[AuditExportService]] - `references` [EXTRACTED]
+- [[DeadlineScanProcessor]] - `method` [EXTRACTED]
+- [[RequestsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditChainService
+#graphify/code #graphify/EXTRACTED #community/RequestsService

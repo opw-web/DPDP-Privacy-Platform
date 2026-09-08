@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/board/voluntary-undertakings.service.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/permissions.controller.ts"
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
-location: "L37"
+community: "@nestjs/common"
+location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/nestjs/common
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[VoluntaryUndertakingsService]] - `method` [EXTRACTED]
+- [[PermissionsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

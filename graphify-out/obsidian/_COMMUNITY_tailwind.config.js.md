@@ -1,14 +1,15 @@
 ---
 type: community
-members: 1
+members: 2
 ---
 
 # tailwind.config.js
 
-**Members:** 1 nodes
+**Members:** 2 nodes
 
 ## Members
 - [[tailwind.config.js]] - code - dpdp-platform/frontend/tailwind.config.js
+- [[tailwindcss_1]] - code - tailwindcss
 
 ## Live Query (requires Dataview plugin)
 

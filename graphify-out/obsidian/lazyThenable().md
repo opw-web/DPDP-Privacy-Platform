@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/tenant/tenant-context.spec.ts"
 type: "code"
-community: "prisma.service.ts"
+community: "PrismaService"
 location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/PrismaService
 ---
 
 # lazyThenable()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[tenant-context.spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/PrismaService

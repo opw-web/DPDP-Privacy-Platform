@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "registers.module.ts"
+community: "children.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/registersmodulets
+  - community/childrenmodulets
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateTransferDto]] - `references` [EXTRACTED]
+- [[SetAgeStatusDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/registersmodulets
+#graphify/code #graphify/EXTRACTED #community/childrenmodulets

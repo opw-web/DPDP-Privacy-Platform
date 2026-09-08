@@ -12,6 +12,8 @@ tags:
 # assembly.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AssembledField]] - `contains` [EXTRACTED]
 - [[AssemblyMapping]] - `contains` [EXTRACTED]
 - [[AssemblyRecord]] - `contains` [EXTRACTED]

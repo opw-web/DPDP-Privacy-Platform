@@ -1,20 +1,24 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.service.ts"
+source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts"
 type: "code"
-community: "principal-auth.service.ts"
-location: "L286"
+community: "EmployeeAuthController"
+location: "L112"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/principal-authservicets
+  - graphify/EXTRACTED
+  - community/EmployeeAuthController
 ---
 
 # .logout()
 
 ## Connections
-- [[dot-hashRefreshToken()]] - `calls` [INFERRED]
-- [[dot-logout()_2]] - `calls` [INFERRED]
-- [[dot-verifyRefreshToken()]] - `calls` [INFERRED]
-- [[EmployeeAuthService]] - `method` [EXTRACTED]
+- [[dot-clearRefreshCookie()]] - `calls` [EXTRACTED]
+- [[dot-logout()_1]] - `calls` [INFERRED]
+- [[EmployeeAuthController]] - `method` [EXTRACTED]
+- [[HttpCode_4]] - `references` [EXTRACTED]
+- [[Post_25]] - `references` [EXTRACTED]
+- [[Public()]] - `references` [EXTRACTED]
+- [[Req_2]] - `references` [EXTRACTED]
+- [[Res_7]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/principal-authservicets
+#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController

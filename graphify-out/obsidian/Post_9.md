@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".preview"
+community: "CreateTransferDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/preview
+  - community/CreateTransferDto
 ---
 
 # Post
 
 ## Connections
-- [[dot-preview()_1]] - `references` [EXTRACTED]
+- [[dot-create()_8]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/preview
+#graphify/code #graphify/EXTRACTED #community/CreateTransferDto

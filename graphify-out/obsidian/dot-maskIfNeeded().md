@@ -13,10 +13,10 @@ tags:
 
 ## Connections
 - [[dot-hasFullPersonalDataAccess()]] - `calls` [EXTRACTED]
-- [[dot-list()_13]] - `calls` [INFERRED]
+- [[dot-list()_16]] - `calls` [INFERRED]
 - [[dot-loadProfile()]] - `calls` [INFERRED]
 - [[dot-maskValue()]] - `calls` [EXTRACTED]
-- [[dot-preview()_5]] - `calls` [INFERRED]
+- [[dot-preview()_4]] - `calls` [INFERRED]
 - [[dot-toResponse()]] - `calls` [INFERRED]
 - [[MaskingService]] - `method` [EXTRACTED]
 

@@ -12,7 +12,7 @@ tags:
 # InvalidCursorError
 
 ## Connections
-- [[dot-constructor()_119]] - `method` [EXTRACTED]
+- [[dot-constructor()_122]] - `method` [EXTRACTED]
 - [[dot-decodeCursor()]] - `calls` [EXTRACTED]
 - [[rest-api.connector.spec.ts]] - `imports` [EXTRACTED]
 - [[rest-api.connector.ts]] - `contains` [EXTRACTED]

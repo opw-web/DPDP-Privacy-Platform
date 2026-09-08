@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/common/audit/access-log.service.ts"
 type: "code"
-community: "prisma.service.ts"
+community: "audit.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/auditservicets
 ---
 
 # access-log.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[AccessLogService]] - `contains` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[RecordPersonalDataViewedInput]] - `contains` [EXTRACTED]
@@ -24,4 +25,4 @@ tags:
 - [[principals.service.ts]] - `imports_from` [EXTRACTED]
 - [[scoped-transaction-client.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/auditservicets

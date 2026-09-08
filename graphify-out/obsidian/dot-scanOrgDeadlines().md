@@ -12,8 +12,8 @@ tags:
 # .scanOrgDeadlines()
 
 ## Connections
-- [[dot-create()_13]] - `calls` [EXTRACTED]
-- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-create()_26]] - `calls` [EXTRACTED]
+- [[dot-record()_1]] - `calls` [INFERRED]
 - [[dot-runScanCycle()]] - `calls` [INFERRED]
 - [[dot-send()_1]] - `calls` [INFERRED]
 - [[RequestsService]] - `method` [EXTRACTED]

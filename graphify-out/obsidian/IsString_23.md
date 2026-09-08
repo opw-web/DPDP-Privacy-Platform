@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateLegalHoldDto"
+community: "AffectedPrincipalsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateLegalHoldDto
+  - community/AffectedPrincipalsDto
 ---
 
 # IsString
 
 ## Connections
-- [[CreateLegalHoldDto]] - `references` [EXTRACTED]
-- [[LegalHoldScopeDto]] - `references` [EXTRACTED]
+- [[AffectedPrincipalsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto
+#graphify/code #graphify/EXTRACTED #community/AffectedPrincipalsDto

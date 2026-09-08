@@ -12,6 +12,7 @@ tags:
 # audience.module.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[AudienceController]] - `imports` [EXTRACTED]
 - [[AudienceModule]] - `contains` [EXTRACTED]
 - [[AudienceService]] - `imports` [EXTRACTED]

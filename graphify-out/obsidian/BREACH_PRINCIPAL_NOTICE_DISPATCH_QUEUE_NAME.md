@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/breach-principal-notice-dispatch.queue.ts"
 type: "code"
-community: "breaches.module.ts"
+community: "breach-principal-notice-dispatch.queue.ts"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breachesmodulets
+  - community/breach-principal-notice-dispatchqueuets
 ---
 
 # BREACH_PRINCIPAL_NOTICE_DISPATCH_QUEUE_NAME
@@ -16,4 +16,4 @@ tags:
 - [[breach-principal-notice-dispatch.queue.ts]] - `contains` [EXTRACTED]
 - [[breaches.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breachesmodulets
+#graphify/code #graphify/EXTRACTED #community/breach-principal-notice-dispatchqueuets

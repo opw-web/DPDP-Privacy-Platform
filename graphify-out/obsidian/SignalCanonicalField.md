@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/CandidateComparison.tsx"
 type: "code"
-community: "DateTime.tsx"
+community: "CandidateComparison.tsx"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DateTimetsx
+  - community/CandidateComparisontsx
 ---
 
 # SignalCanonicalField
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[CandidateComparison.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DateTimetsx
+#graphify/code #graphify/EXTRACTED #community/CandidateComparisontsx

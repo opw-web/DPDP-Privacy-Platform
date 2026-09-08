@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/ExportButtons.tsx"
 type: "code"
-community: "EmployeesPage.tsx"
+community: "react"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeesPagetsx
+  - community/react
 ---
 
 # EXPORTS
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ExportButtons.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeesPagetsx
+#graphify/code #graphify/EXTRACTED #community/react

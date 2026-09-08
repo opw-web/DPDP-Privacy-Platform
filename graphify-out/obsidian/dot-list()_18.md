@@ -1,19 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
+source_file: "dpdp-platform/backend/src/modules/audit/audit-read.controller.ts"
 type: "code"
-community: ".record"
-location: "L151"
+community: "AuditReadController"
+location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/AuditReadController
 ---
 
 # .list()
 
 ## Connections
-- [[dot-public()]] - `calls` [EXTRACTED]
-- [[BreachService]] - `method` [EXTRACTED]
-- [[PublicBreach]] - `references` [EXTRACTED]
+- [[dot-list()_19]] - `calls` [INFERRED]
+- [[AuditReadController]] - `method` [EXTRACTED]
+- [[CurrentActorPermissions]] - `references` [EXTRACTED]
+- [[Get_21]] - `references` [EXTRACTED]
+- [[ListAuditEventsDto]] - `references` [EXTRACTED]
+- [[Query_5]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/AuditReadController

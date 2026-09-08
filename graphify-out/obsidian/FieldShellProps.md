@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/form-controls.tsx"
 type: "code"
-community: "SecurityMeasuresTab.tsx"
+community: "react"
 location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresTabtsx
+  - community/react
 ---
 
 # FieldShellProps
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[form-controls.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx
+#graphify/code #graphify/EXTRACTED #community/react

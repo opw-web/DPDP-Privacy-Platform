@@ -12,6 +12,7 @@ tags:
 # jwt-any-actor.guard.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[JwtAnyActorGuard]] - `contains` [EXTRACTED]
 - [[NotificationCallerActor]] - `contains` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]

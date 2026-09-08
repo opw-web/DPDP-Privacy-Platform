@@ -12,6 +12,8 @@ tags:
 # matching.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[CONFIDENCE_RANK]] - `contains` [EXTRACTED]
 - [[CandidateMatchResult]] - `contains` [EXTRACTED]
 - [[LinkMatchResult]] - `contains` [EXTRACTED]

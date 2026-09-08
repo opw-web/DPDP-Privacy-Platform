@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/sharing.controller.ts"
 type: "code"
-community: "CreateSharingActivityDto"
+community: "@nestjs/common"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSharingActivityDto
+  - community/nestjs/common
 ---
 
 # sharing.controller.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[CreateSharingActivityDto]] - `imports` [EXTRACTED]
 - [[RequirePermission()]] - `imports` [EXTRACTED]
 - [[SharingController]] - `contains` [EXTRACTED]
@@ -23,4 +25,4 @@ tags:
 - [[sharing.service.ts]] - `imports_from` [EXTRACTED]
 - [[update-sharing-activity.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

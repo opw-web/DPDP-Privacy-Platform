@@ -12,7 +12,6 @@ tags:
 # @types/jest
 
 ## Connections
-- [[@typesjest_1]] - `imports` [EXTRACTED]
 - [[devDependencies_1]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/devDependencies

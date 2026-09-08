@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "HealthService"
+community: "CandidatesController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/HealthService
+  - community/CandidatesController
 ---
 
 # Get
 
 ## Connections
-- [[dot-check()]] - `references` [EXTRACTED]
+- [[dot-list()_34]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/HealthService
+#graphify/code #graphify/EXTRACTED #community/CandidatesController

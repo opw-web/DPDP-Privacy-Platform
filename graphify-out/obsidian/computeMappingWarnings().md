@@ -12,9 +12,9 @@ tags:
 # computeMappingWarnings()
 
 ## Connections
-- [[dot-get()_7]] - `calls` [EXTRACTED]
-- [[dot-replace()_1]] - `calls` [EXTRACTED]
+- [[dot-get()_8]] - `calls` [EXTRACTED]
 - [[dot-replace()]] - `calls` [EXTRACTED]
+- [[dot-replace()_1]] - `calls` [EXTRACTED]
 - [[mapping-warnings.ts]] - `contains` [EXTRACTED]
 - [[mappings.service.ts]] - `imports` [EXTRACTED]
 - [[source-purposes.service.ts]] - `imports` [EXTRACTED]

@@ -1,19 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/sharing.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/requests/requests.controller.ts"
 type: "code"
-community: "SharingService"
-location: "L15"
+community: "ListRequestsDto"
+location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SharingService
+  - community/ListRequestsDto
 ---
 
 # .list()
 
 ## Connections
-- [[Get_39]] - `references` [EXTRACTED]
+- [[dot-list()_49]] - `calls` [INFERRED]
+- [[Get_19]] - `references` [EXTRACTED]
+- [[ListRequestsDto]] - `references` [EXTRACTED]
+- [[Query_9]] - `references` [EXTRACTED]
+- [[RequestsController]] - `method` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[SharingController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SharingService
+#graphify/code #graphify/EXTRACTED #community/ListRequestsDto

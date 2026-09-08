@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/DeadlinePill.test.tsx"
 type: "code"
-community: "DateTime.tsx"
+community: "DeadlinePill.tsx"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DateTimetsx
+  - community/DeadlinePilltsx
 ---
 
 # isoIn()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[DeadlinePill.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DateTimetsx
+#graphify/code #graphify/EXTRACTED #community/DeadlinePilltsx

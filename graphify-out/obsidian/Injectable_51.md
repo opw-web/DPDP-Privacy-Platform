@@ -11,6 +11,6 @@ tags:
 # Injectable
 
 ## Connections
-- [[RetentionScanService]] - `references` [EXTRACTED]
+- [[LegalHoldService]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/erasure-taskservicets

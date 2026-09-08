@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/sdf/AssessmentRow.tsx"
 type: "code"
-community: "button.tsx"
+community: "react"
 location: "L102"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react
 ---
 
 # AssessmentRow()
@@ -18,4 +18,4 @@ tags:
 - [[toCompletePayload()]] - `calls` [EXTRACTED]
 - [[toFormValues()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/react

@@ -1,20 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principal-portal/me-rights.service.ts"
+source_file: "dpdp-platform/backend/src/modules/inventory/inventory.controller.ts"
 type: "code"
-community: "MeRightsService"
-location: "L77"
+community: "inventory.service.ts"
+location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeRightsService
+  - community/inventoryservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[MeRightsService]] - `method` [EXTRACTED]
-- [[NotificationsService]] - `references` [EXTRACTED]
-- [[RequestsService]] - `references` [EXTRACTED]
+- [[InventoryController]] - `method` [EXTRACTED]
+- [[InventoryService]] - `references` [EXTRACTED]
+- [[RopaExportService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeRightsService
+#graphify/code #graphify/EXTRACTED #community/inventoryservicets

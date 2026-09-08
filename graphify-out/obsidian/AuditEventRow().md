@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/AuditEventRow.tsx"
 type: "code"
-community: "cn"
+community: "AuditPage.tsx"
 location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/AuditPagetsx
 ---
 
 # AuditEventRow()
@@ -16,4 +16,4 @@ tags:
 - [[AuditPage.tsx]] - `imports` [EXTRACTED]
 - [[hasVisibleMetadata()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/AuditPagetsx

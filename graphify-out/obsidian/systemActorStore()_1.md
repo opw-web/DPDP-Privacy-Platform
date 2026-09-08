@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/sdf.e2e-spec.ts"
 type: "code"
-community: "PrismaService"
+community: "supertest"
 location: "L78"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/supertest
 ---
 
 # systemActorStore()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sdf.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/supertest

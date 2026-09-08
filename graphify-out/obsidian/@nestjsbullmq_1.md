@@ -1,17 +1,17 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
-type: "concept"
-community: "@nestjs/bullmq"
+type: "code"
+community: "dependencies"
 location: "L27"
 tags:
-  - graphify/concept
+  - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/bullmq
+  - community/dependencies
 ---
 
 # @nestjs/bullmq
 
 ## Connections
-- [[@nestjsbullmq]] - `imports` [EXTRACTED]
+- [[dependencies_1]] - `contains` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/nestjs/bullmq
+#graphify/code #graphify/EXTRACTED #community/dependencies

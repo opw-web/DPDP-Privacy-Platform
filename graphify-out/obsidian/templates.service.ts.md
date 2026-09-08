@@ -12,6 +12,8 @@ tags:
 # templates.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[BREACH_NOTIFICATION_REQUIRED_ELEMENTS]] - `imports` [EXTRACTED]
 - [[CreateTemplateDto]] - `imports` [EXTRACTED]

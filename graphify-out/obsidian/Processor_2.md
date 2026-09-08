@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "breaches.module.ts"
+community: "PreErasureNoticeService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breachesmodulets
+  - community/PreErasureNoticeService
 ---
 
 # Processor
 
 ## Connections
-- [[BreachClockProcessor]] - `references` [EXTRACTED]
+- [[PreErasureNoticeProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breachesmodulets
+#graphify/code #graphify/EXTRACTED #community/PreErasureNoticeService

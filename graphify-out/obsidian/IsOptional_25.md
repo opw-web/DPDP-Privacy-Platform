@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "RequestsController"
+community: "CreateLegalHoldDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestsController
+  - community/CreateLegalHoldDto
 ---
 
 # IsOptional
 
 ## Connections
-- [[EscalateRequestDto]] - `references` [EXTRACTED]
+- [[CreateLegalHoldDto]] - `references` [EXTRACTED]
+- [[LegalHoldScopeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestsController
+#graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto

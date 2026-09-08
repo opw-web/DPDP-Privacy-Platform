@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/common/mail/mail.module.ts"
 type: "code"
-community: "notifications.module.ts"
+community: "app.module.ts"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationsmodulets
+  - community/appmodulets
 ---
 
 # MailModule
 
 ## Connections
-- [[Module]] - `references` [EXTRACTED]
+- [[Module_4]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[mail.module.ts]] - `contains` [EXTRACTED]
 - [[notifications.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationsmodulets
+#graphify/code #graphify/EXTRACTED #community/appmodulets

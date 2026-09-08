@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "breaches.module.ts"
+community: "AuditChainService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breachesmodulets
+  - community/AuditChainService
 ---
 
 # Injectable
 
 ## Connections
-- [[BreachPrincipalNoticeDispatchQueueService]] - `references` [EXTRACTED]
+- [[AuditChainService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breachesmodulets
+#graphify/code #graphify/EXTRACTED #community/AuditChainService

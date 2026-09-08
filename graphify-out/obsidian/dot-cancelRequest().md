@@ -15,8 +15,8 @@ tags:
 - [[dot-cancelRequest()_1]] - `calls` [INFERRED]
 - [[CurrentPrincipal]] - `references` [EXTRACTED]
 - [[MeRightsController]] - `method` [EXTRACTED]
-- [[Param_2]] - `references` [EXTRACTED]
-- [[Post_2]] - `references` [EXTRACTED]
+- [[Param_6]] - `references` [EXTRACTED]
+- [[Post_7]] - `references` [EXTRACTED]
 - [[PrincipalActor]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Public

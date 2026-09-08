@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "breaches.module.ts"
+community: "schedule-reconciliation.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breachesmodulets
+  - community/schedule-reconciliationservicets
 ---
 
 # InjectQueue
 
 ## Connections
-- [[dot-constructor()_53]] - `references` [EXTRACTED]
+- [[dot-constructor()_27]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breachesmodulets
+#graphify/code #graphify/EXTRACTED #community/schedule-reconciliationservicets

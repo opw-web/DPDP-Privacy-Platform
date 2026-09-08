@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/NoticeBuilderPage.tsx"
 type: "code"
-community: "button.tsx"
+community: "react"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react
 ---
 
 # NoticeBuilderPage.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[API_BASE]] - `imports` [EXTRACTED]
 - [[ApiError]] - `imports` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
@@ -22,7 +23,7 @@ tags:
 - [[CardTitle]] - `imports` [EXTRACTED]
 - [[EligibleItemisedField]] - `imports` [EXTRACTED]
 - [[Input]] - `imports` [EXTRACTED]
-- [[Label]] - `imports` [EXTRACTED]
+- [[Label_1]] - `imports` [EXTRACTED]
 - [[NOTICE_LANGUAGES_1]] - `imports` [EXTRACTED]
 - [[NoticeBuilderPage()]] - `contains` [EXTRACTED]
 - [[NoticeBuilderPage.test.tsx]] - `imports_from` [EXTRACTED]
@@ -46,7 +47,10 @@ tags:
 - [[label.tsx]] - `imports_from` [EXTRACTED]
 - [[noticestypes.ts]] - `imports_from` [EXTRACTED]
 - [[putTranslation()]] - `contains` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
+- [[react-router-dom_1]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
+- [[sonner_1]] - `imports_from` [EXTRACTED]
 - [[textarea.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/react

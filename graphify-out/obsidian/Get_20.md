@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "RequirePermission"
+community: "SdfController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/SdfController
 ---
 
 # Get
 
 ## Connections
-- [[dot-get()_11]] - `references` [EXTRACTED]
-- [[dot-list()_21]] - `references` [EXTRACTED]
-- [[dot-listRecipients()]] - `references` [EXTRACTED]
+- [[dot-getGaps()_1]] - `references` [EXTRACTED]
+- [[dot-listAlgorithms()]] - `references` [EXTRACTED]
+- [[dot-listAssessments()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/SdfController

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/breaches/dto/complete-obligation.dto.ts"
 type: "code"
-community: ".record"
+community: "breach.service.ts"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/breachservicets
 ---
 
 # CompleteObligationDto
@@ -14,13 +14,13 @@ tags:
 ## Connections
 - [[dot-completeObligation()]] - `references` [EXTRACTED]
 - [[dot-completeObligation()_1]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_27]] - `references` [EXTRACTED]
-- [[IsIn_8]] - `references` [EXTRACTED]
-- [[IsOptional_28]] - `references` [EXTRACTED]
-- [[IsString_29]] - `references` [EXTRACTED]
-- [[MinLength_18]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_32]] - `references` [EXTRACTED]
+- [[IsIn_9]] - `references` [EXTRACTED]
+- [[IsOptional_32]] - `references` [EXTRACTED]
+- [[IsString_39]] - `references` [EXTRACTED]
+- [[MinLength_29]] - `references` [EXTRACTED]
 - [[breach.service.ts]] - `imports` [EXTRACTED]
 - [[breaches.controller.ts]] - `imports` [EXTRACTED]
 - [[complete-obligation.dto.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/breachservicets

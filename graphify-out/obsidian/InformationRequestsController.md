@@ -12,13 +12,13 @@ tags:
 # InformationRequestsController
 
 ## Connections
-- [[dot-constructor()_96]] - `method` [EXTRACTED]
-- [[dot-create()_19]] - `method` [EXTRACTED]
+- [[dot-constructor()_98]] - `method` [EXTRACTED]
+- [[dot-create()_20]] - `method` [EXTRACTED]
 - [[dot-getById()_6]] - `method` [EXTRACTED]
-- [[dot-list()_26]] - `method` [EXTRACTED]
-- [[dot-update()_15]] - `method` [EXTRACTED]
-- [[ApiTags_22]] - `references` [EXTRACTED]
-- [[Controller_23]] - `references` [EXTRACTED]
+- [[dot-list()_27]] - `method` [EXTRACTED]
+- [[dot-update()_14]] - `method` [EXTRACTED]
+- [[ApiTags_24]] - `references` [EXTRACTED]
+- [[Controller_25]] - `references` [EXTRACTED]
 - [[board.module.ts]] - `imports` [EXTRACTED]
 - [[information-requests.controller.ts]] - `contains` [EXTRACTED]
 

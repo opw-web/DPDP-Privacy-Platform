@@ -12,6 +12,8 @@ tags:
 # voluntary-undertakings.controller.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[CreateVoluntaryUndertakingDto]] - `imports` [EXTRACTED]
 - [[RequirePermission()]] - `imports` [EXTRACTED]
 - [[UpdateVoluntaryUndertakingDto]] - `imports` [EXTRACTED]

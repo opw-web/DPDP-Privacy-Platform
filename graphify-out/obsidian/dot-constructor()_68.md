@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sdf/sdf-gaps.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts"
 type: "code"
-community: "AlgorithmRegisterService"
-location: "L34"
+community: "TemplatesService"
+location: "L72"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AlgorithmRegisterService
+  - community/TemplatesService
 ---
 
 # .constructor()
 
 ## Connections
-- [[ComplianceService]] - `references` [EXTRACTED]
-- [[SdfGapsService]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[TemplatesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterService
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

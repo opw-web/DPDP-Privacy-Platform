@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sdf/sdf-cycle-scan.service.ts"
 type: "code"
-community: "mvp2-schedules.ts"
+community: "sdf-cycle-scan.queue.ts"
 location: "L161"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mvp2-schedulests
+  - community/sdf-cycle-scanqueuets
 ---
 
 # .sendWarningsIfDue()
@@ -17,4 +17,4 @@ tags:
 - [[dot-send()_1]] - `calls` [INFERRED]
 - [[SdfCycleScanService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mvp2-schedulests
+#graphify/code #graphify/EXTRACTED #community/sdf-cycle-scanqueuets

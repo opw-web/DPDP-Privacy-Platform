@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateNoticeVersionDto"
+community: "SourceFieldMappingDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateNoticeVersionDto
+  - community/SourceFieldMappingDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateNoticeVersionDto]] - `references` [EXTRACTED]
-- [[ItemisedFieldInputDto]] - `references` [EXTRACTED]
+- [[ReplaceMappingsDto]] - `references` [EXTRACTED]
+- [[SourceFieldMappingDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateNoticeVersionDto
+#graphify/code #graphify/EXTRACTED #community/SourceFieldMappingDto

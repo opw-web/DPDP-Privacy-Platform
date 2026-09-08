@@ -12,11 +12,11 @@ tags:
 # AuditEventsEvidenceController
 
 ## Connections
-- [[dot-constructor()_47]] - `method` [EXTRACTED]
+- [[dot-constructor()_56]] - `method` [EXTRACTED]
 - [[dot-exportCsv()_2]] - `method` [EXTRACTED]
 - [[dot-verifyChain()_1]] - `method` [EXTRACTED]
-- [[ApiTags_9]] - `references` [EXTRACTED]
-- [[Controller_10]] - `references` [EXTRACTED]
+- [[ApiTags_13]] - `references` [EXTRACTED]
+- [[Controller_14]] - `references` [EXTRACTED]
 - [[audit-events-evidence.controller.ts]] - `contains` [EXTRACTED]
 - [[evidence.module.ts]] - `imports` [EXTRACTED]
 

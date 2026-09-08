@@ -12,12 +12,12 @@ tags:
 # AgeService
 
 ## Connections
-- [[dot-constructor()_8]] - `references` [EXTRACTED]
 - [[dot-constructor()_9]] - `references` [EXTRACTED]
-- [[dot-constructor()_127]] - `references` [EXTRACTED]
-- [[dot-constructor()_6]] - `method` [EXTRACTED]
+- [[dot-constructor()_10]] - `references` [EXTRACTED]
+- [[dot-constructor()_100]] - `references` [EXTRACTED]
+- [[dot-constructor()_7]] - `method` [EXTRACTED]
 - [[dot-derive()]] - `method` [EXTRACTED]
-- [[Injectable_4]] - `references` [EXTRACTED]
+- [[Injectable_3]] - `references` [EXTRACTED]
 - [[age.service.ts]] - `contains` [EXTRACTED]
 - [[assembly.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[children.e2e-spec.ts]] - `imports` [EXTRACTED]

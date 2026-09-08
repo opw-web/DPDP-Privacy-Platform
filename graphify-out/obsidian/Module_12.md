@@ -11,6 +11,6 @@ tags:
 # Module
 
 ## Connections
-- [[ConsentsModule]] - `references` [EXTRACTED]
+- [[ComplianceModule]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/appmodulets

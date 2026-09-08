@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/mvp2-schedules.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/security-measures.controller.ts"
 type: "code"
-community: "SyncQueueService"
-location: "L53"
+community: "security-measures.service.ts"
+location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/security-measuresservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[InjectQueue_5]] - `references` [EXTRACTED]
-- [[Mvp2ScheduleReconciliationService]] - `method` [EXTRACTED]
+- [[SecurityMeasuresController]] - `method` [EXTRACTED]
+- [[SecurityMeasuresService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/security-measuresservicets

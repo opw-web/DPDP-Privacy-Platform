@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/employees.controller.ts"
+source_file: "dpdp-platform/backend/src/common/crypto/crypto.service.ts"
 type: "code"
-community: "employees.service.ts"
-location: "L12"
+community: "CryptoService"
+location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeesservicets
+  - community/CryptoService
 ---
 
 # .constructor()
 
 ## Connections
-- [[EmployeesController]] - `method` [EXTRACTED]
-- [[EmployeesService]] - `references` [EXTRACTED]
+- [[CryptoService]] - `method` [EXTRACTED]
+- [[InvalidEncryptionKeyError]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeesservicets
+#graphify/code #graphify/EXTRACTED #community/CryptoService

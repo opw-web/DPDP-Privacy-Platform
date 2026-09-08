@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
+source_file: "dpdp-platform/backend/src/modules/children/child-exemptions.controller.ts"
 type: "code"
-community: "rest-api.connector.ts"
-location: "L142"
+community: "children.module.ts"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rest-apiconnectorts
+  - community/childrenmodulets
 ---
 
 # .constructor()
 
 ## Connections
-- [[ReadOnlyHttpClient]] - `references` [EXTRACTED]
-- [[RestApiConnector]] - `method` [EXTRACTED]
-- [[UnsupportedPaginationStyleError]] - `calls` [EXTRACTED]
+- [[ChildExemptionsController]] - `method` [EXTRACTED]
+- [[ChildExemptionsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts
+#graphify/code #graphify/EXTRACTED #community/childrenmodulets

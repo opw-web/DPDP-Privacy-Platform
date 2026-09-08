@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/permissions.controller.ts"
+source_file: "dpdp-platform/backend/src/queues/consent-backfill.processor.ts"
 type: "code"
-community: "PermissionsController"
-location: "L9"
+community: "consent-backfill.queue.ts"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PermissionsController
+  - community/consent-backfillqueuets
 ---
 
 # .constructor()
 
 ## Connections
-- [[PermissionsController]] - `method` [EXTRACTED]
+- [[ConsentBackfillProcessor]] - `method` [EXTRACTED]
+- [[ConsentBackfillService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PermissionsController
+#graphify/code #graphify/EXTRACTED #community/consent-backfillqueuets

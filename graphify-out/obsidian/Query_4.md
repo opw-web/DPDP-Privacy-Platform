@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AuditReadController"
+community: "PrincipalsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditReadController
+  - community/PrincipalsController
 ---
 
 # Query
 
 ## Connections
-- [[dot-accessLogCsv()_1]] - `references` [EXTRACTED]
-- [[dot-list()_19]] - `references` [EXTRACTED]
+- [[dot-list()_15]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditReadController
+#graphify/code #graphify/EXTRACTED #community/PrincipalsController

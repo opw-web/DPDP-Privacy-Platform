@@ -22,7 +22,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_card.tsx]]
+- 2 edges to [[_COMMUNITY_react]]
 
 ## Top bridge nodes
 - [[LanguageSelector.tsx]] - degree 6, connects to 1 community

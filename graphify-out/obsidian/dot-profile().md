@@ -14,12 +14,12 @@ tags:
 ## Connections
 - [[dot-getProfile()]] - `calls` [INFERRED]
 - [[ApiExtraModels]] - `references` [EXTRACTED]
-- [[ApiOkResponse]] - `references` [EXTRACTED]
+- [[ApiOkResponse_1]] - `references` [EXTRACTED]
 - [[CurrentPrincipal]] - `references` [EXTRACTED]
-- [[Get_3]] - `references` [EXTRACTED]
+- [[Get_8]] - `references` [EXTRACTED]
 - [[MeController]] - `method` [EXTRACTED]
 - [[PrincipalActor]] - `references` [EXTRACTED]
 - [[Public()]] - `references` [EXTRACTED]
-- [[UseGuards_1]] - `references` [EXTRACTED]
+- [[UseGuards_2]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Public

@@ -1,22 +1,22 @@
 ---
 source_file: "dpdp-platform/backend/src/common/guards/permissions.guard.ts"
 type: "code"
-community: "PermissionsGuard"
+community: "AccessTokenPayload"
 location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PermissionsGuard
+  - community/AccessTokenPayload
 ---
 
 # PermissionsGuard
 
 ## Connections
-- [[dot-canActivate()_3]] - `method` [EXTRACTED]
-- [[dot-constructor()_72]] - `method` [EXTRACTED]
+- [[dot-canActivate()]] - `method` [EXTRACTED]
+- [[dot-constructor()_13]] - `method` [EXTRACTED]
 - [[dot-resolvePermissions()]] - `method` [EXTRACTED]
-- [[Injectable_46]] - `references` [EXTRACTED]
+- [[Injectable_6]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[permissions.guard.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PermissionsGuard
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

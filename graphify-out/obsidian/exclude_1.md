@@ -12,13 +12,6 @@ tags:
 # exclude
 
 ## Connections
-- [[spec.ts]] - `extends` [EXTRACTED]
 - [[backendtsconfig.json]] - `contains` [EXTRACTED]
-- [[dist]] - `extends` [EXTRACTED]
-- [[jest.config.ts_1]] - `extends` [EXTRACTED]
-- [[node_modules]] - `extends` [EXTRACTED]
-- [[prisma_3]] - `extends` [EXTRACTED]
-- [[scripts_3]] - `extends` [EXTRACTED]
-- [[test_3]] - `extends` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/compilerOptions

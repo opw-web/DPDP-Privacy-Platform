@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SyncQueueService"
+community: "security-measures.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/security-measuresservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[ScheduleReconciliationService]] - `references` [EXTRACTED]
+- [[SecurityMeasuresService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/security-measuresservicets

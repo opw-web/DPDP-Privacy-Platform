@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notifications/notifications.service.ts"
 type: "code"
-community: "NotificationSendInput"
+community: "NotificationsService"
 location: "L82"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/NotificationSendInput
+  - community/NotificationsService
 ---
 
 # .send()
@@ -17,9 +17,9 @@ tags:
 - [[dot-runVerificationCycle()]] - `calls` [INFERRED]
 - [[dot-scanClock()]] - `calls` [INFERRED]
 - [[dot-scanOrgDeadlines()]] - `calls` [INFERRED]
-- [[dot-send()_3]] - `calls` [INFERRED]
+- [[dot-send()_2]] - `calls` [INFERRED]
 - [[dot-sendWarningsIfDue()]] - `calls` [INFERRED]
 - [[NotificationSendInput]] - `references` [EXTRACTED]
 - [[NotificationsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/NotificationSendInput
+#graphify/code #graphify/INFERRED #community/NotificationsService

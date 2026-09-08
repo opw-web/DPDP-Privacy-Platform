@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx"
 type: "code"
-community: "cn"
+community: "AuditPage.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/AuditPagetsx
 ---
 
 # MessagingCampaignDetailPage.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[Badge()]] - `imports` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
 - [[Campaign_1]] - `contains` [EXTRACTED]
@@ -45,12 +46,14 @@ tags:
 - [[enum-options.ts]] - `imports_from` [EXTRACTED]
 - [[humanizeEnum()]] - `imports` [EXTRACTED]
 - [[libauth.ts]] - `imports_from` [EXTRACTED]
+- [[react-router-dom_1]] - `imports_from` [EXTRACTED]
 - [[recipientReasonText()]] - `contains` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 - [[shouldShowCampaignApproval()]] - `contains` [EXTRACTED]
+- [[sonner_1]] - `imports_from` [EXTRACTED]
 - [[statusBadgeVariant()]] - `contains` [EXTRACTED]
 - [[summarizeRecipientStatuses()]] - `contains` [EXTRACTED]
 - [[table.tsx]] - `imports_from` [EXTRACTED]
 - [[useEmployeeAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/AuditPagetsx

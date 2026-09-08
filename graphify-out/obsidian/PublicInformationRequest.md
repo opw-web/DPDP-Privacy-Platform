@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/board/information-requests.service.ts"
 type: "code"
-community: "prisma.service.ts"
+community: "audit.service.ts"
 location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/auditservicets
 ---
 
 # PublicInformationRequest
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[information-requests.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/auditservicets

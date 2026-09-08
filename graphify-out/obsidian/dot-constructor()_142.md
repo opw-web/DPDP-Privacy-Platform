@@ -1,20 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/retention-scan.queue.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/security-measures.service.ts"
 type: "code"
-community: "SyncQueueService"
-location: "L75"
+community: "security-measures.service.ts"
+location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/security-measuresservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[dot-register()]] - `calls` [INFERRED]
-- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
-- [[InjectQueue_6]] - `references` [EXTRACTED]
-- [[RetentionScanQueueService]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[SecurityMeasuresService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/security-measuresservicets

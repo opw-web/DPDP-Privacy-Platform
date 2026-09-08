@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-cancelRequest()]] - `method` [EXTRACTED]
 - [[dot-commentOnRequest()]] - `method` [EXTRACTED]
-- [[dot-constructor()_41]] - `method` [EXTRACTED]
+- [[dot-constructor()_108]] - `method` [EXTRACTED]
 - [[dot-createRequest()]] - `method` [EXTRACTED]
 - [[dot-getNomination()]] - `method` [EXTRACTED]
 - [[dot-getPublishedNotice()]] - `method` [EXTRACTED]
@@ -23,9 +23,9 @@ tags:
 - [[dot-listPublishedNotices()]] - `method` [EXTRACTED]
 - [[dot-listRequests()]] - `method` [EXTRACTED]
 - [[dot-upsertNomination()]] - `method` [EXTRACTED]
-- [[Controller_4]] - `references` [EXTRACTED]
+- [[Controller_8]] - `references` [EXTRACTED]
 - [[Public()]] - `references` [EXTRACTED]
-- [[UseGuards_2]] - `references` [EXTRACTED]
+- [[UseGuards_3]] - `references` [EXTRACTED]
 - [[me-rights.controller.ts]] - `contains` [EXTRACTED]
 - [[principal-portal.module.ts]] - `imports` [EXTRACTED]
 

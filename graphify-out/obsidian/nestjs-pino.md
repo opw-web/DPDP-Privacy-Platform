@@ -1,18 +1,17 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "code"
-community: "nestjs-pino"
+community: "dependencies"
 location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs-pino
+  - community/dependencies
 ---
 
 # nestjs-pino
 
 ## Connections
 - [[dependencies_1]] - `contains` [EXTRACTED]
-- [[nestjs-pino_1]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs-pino
+#graphify/code #graphify/EXTRACTED #community/dependencies

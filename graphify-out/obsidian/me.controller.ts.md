@@ -12,6 +12,8 @@ tags:
 # me.controller.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[AccessReportService]] - `imports` [EXTRACTED]
 - [[CurrentPrincipal]] - `imports` [EXTRACTED]
 - [[JwtPrincipalGuard]] - `imports` [EXTRACTED]

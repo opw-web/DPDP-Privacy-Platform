@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/retention/RetentionTaskCard.tsx"
 type: "code"
-community: "RetentionPage.tsx"
+community: "DateTime.tsx"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionPagetsx
+  - community/DateTimetsx
 ---
 
 # hasIncompleteChecklist()
@@ -15,4 +15,4 @@ tags:
 - [[RetentionTaskCard()]] - `calls` [EXTRACTED]
 - [[RetentionTaskCard.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionPagetsx
+#graphify/code #graphify/EXTRACTED #community/DateTimetsx

@@ -1,24 +1,26 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/legal-hold.service.ts"
 type: "code"
-community: "erasure-task.service.ts"
+community: "audit.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/auditservicets
 ---
 
 # legal-hold.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AccessTokenPayload]] - `imports` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[CreateLegalHoldDto]] - `imports` [EXTRACTED]
 - [[LEGAL_HOLD_PUBLIC_SELECT]] - `contains` [EXTRACTED]
 - [[LegalHoldScope]] - `imports` [EXTRACTED]
 - [[LegalHoldService]] - `contains` [EXTRACTED]
-- [[OPEN_ERASURE_TASK_STATES_2]] - `contains` [EXTRACTED]
+- [[OPEN_ERASURE_TASK_STATES_1]] - `contains` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[PublicLegalHold]] - `contains` [EXTRACTED]
 - [[audit.service.ts]] - `imports_from` [EXTRACTED]
@@ -32,4 +34,4 @@ tags:
 - [[retentionretention.controller.ts]] - `imports_from` [EXTRACTED]
 - [[token.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/auditservicets

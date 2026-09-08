@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/EmployeesPage.test.tsx"
 type: "code"
-community: "SettingsPage.tsx"
-location: "L10"
+community: "router.tsx"
+location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SettingsPagetsx
+  - community/routertsx
 ---
 
 # ORGANIZATION
 
 ## Connections
-- [[SdfDeclarationCard.test.tsx]] - `contains` [EXTRACTED]
+- [[EmployeesPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SettingsPagetsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

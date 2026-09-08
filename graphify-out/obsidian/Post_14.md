@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".completeAssessment"
+community: "PreviewAudienceDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/completeAssessment
+  - community/PreviewAudienceDto
 ---
 
 # Post
 
 ## Connections
-- [[dot-completeAssessment()]] - `references` [EXTRACTED]
-- [[dot-createAlgorithm()]] - `references` [EXTRACTED]
-- [[dot-createAssessment()]] - `references` [EXTRACTED]
+- [[dot-preview()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/completeAssessment
+#graphify/code #graphify/EXTRACTED #community/PreviewAudienceDto

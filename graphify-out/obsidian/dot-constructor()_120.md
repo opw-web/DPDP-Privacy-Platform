@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
+source_file: "dpdp-platform/backend/src/modules/children/age-status.service.ts"
 type: "code"
-community: "rest-api.connector.ts"
-location: "L51"
+community: "children.module.ts"
+location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rest-apiconnectorts
+  - community/childrenmodulets
 ---
 
 # .constructor()
 
 ## Connections
-- [[PageCapExceededError_1]] - `method` [EXTRACTED]
+- [[AgeStatusService]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts
+#graphify/code #graphify/EXTRACTED #community/childrenmodulets

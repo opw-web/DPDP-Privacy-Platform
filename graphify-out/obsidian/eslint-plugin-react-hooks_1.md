@@ -1,17 +1,17 @@
 ---
 source_file: "dpdp-platform/frontend/package.json"
-type: "concept"
-community: "eslint-plugin-react-hooks"
+type: "code"
+community: "devDependencies"
 location: "L52"
 tags:
-  - graphify/concept
+  - graphify/code
   - graphify/EXTRACTED
-  - community/eslint-plugin-react-hooks
+  - community/devDependencies
 ---
 
 # eslint-plugin-react-hooks
 
 ## Connections
-- [[eslint-plugin-react-hooks]] - `imports` [EXTRACTED]
+- [[devDependencies_2]] - `contains` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/eslint-plugin-react-hooks
+#graphify/code #graphify/EXTRACTED #community/devDependencies

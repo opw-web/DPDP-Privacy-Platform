@@ -1,19 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/children/guardians.service.ts"
 type: "code"
-community: "purposes.service.ts"
-location: "L17"
+community: "guardians.service.ts"
+location: "L117"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposesservicets
+  - community/guardiansservicets
 ---
 
 # .list()
 
 ## Connections
-- [[Get_5]] - `references` [EXTRACTED]
-- [[PurposesController]] - `method` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-list()]] - `calls` [INFERRED]
+- [[dot-toResponse()]] - `calls` [EXTRACTED]
+- [[GuardiansService]] - `method` [EXTRACTED]
+- [[ListGuardiansDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposesservicets
+#graphify/code #graphify/EXTRACTED #community/guardiansservicets

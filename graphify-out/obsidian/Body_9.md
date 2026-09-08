@@ -1,21 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "RequestsController"
+community: "mappings.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestsController
+  - community/mappingsservicets
 ---
 
 # Body
 
 ## Connections
-- [[dot-addNote()_1]] - `references` [EXTRACTED]
-- [[dot-assign()_1]] - `references` [EXTRACTED]
-- [[dot-changeStatus()_1]] - `references` [EXTRACTED]
-- [[dot-escalate()_1]] - `references` [EXTRACTED]
-- [[dot-flagFrivolous()_1]] - `references` [EXTRACTED]
-- [[dot-verifyIdentity()_1]] - `references` [EXTRACTED]
+- [[dot-replaceMappings()]] - `references` [EXTRACTED]
+- [[dot-replacePurposes()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestsController
+#graphify/code #graphify/EXTRACTED #community/mappingsservicets

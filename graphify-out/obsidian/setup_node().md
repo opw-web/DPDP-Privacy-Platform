@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[common.sh]] - `defines` [EXTRACTED]
 - [[open-database.sh script]] - `calls` [EXTRACTED]
+- [[prepare.sh script]] - `calls` [EXTRACTED]
 - [[reset.sh script]] - `calls` [EXTRACTED]
 - [[show-demo-proof.sh script]] - `calls` [EXTRACTED]
 - [[stage-demo.sh script]] - `calls` [EXTRACTED]

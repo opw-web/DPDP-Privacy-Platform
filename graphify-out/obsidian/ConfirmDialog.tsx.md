@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/ConfirmDialog.tsx"
 type: "code"
-community: "MeConsentsPage.tsx"
+community: "cn"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeConsentsPagetsx
+  - community/cn
 ---
 
 # ConfirmDialog.tsx
@@ -24,4 +24,4 @@ tags:
 - [[button.tsx]] - `imports_from` [EXTRACTED]
 - [[dialog.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeConsentsPagetsx
+#graphify/code #graphify/EXTRACTED #community/cn

@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateLegalHoldDto"
+community: "compliance.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateLegalHoldDto
+  - community/complianceservicets
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[CreateLegalHoldDto]] - `references` [EXTRACTED]
-- [[LegalHoldScopeDto]] - `references` [EXTRACTED]
+- [[UpdateComplianceRuleDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto
+#graphify/code #graphify/EXTRACTED #community/complianceservicets

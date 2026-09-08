@@ -11,6 +11,6 @@ tags:
 # IsOptional
 
 ## Connections
-- [[CreatePurposeDto]] - `references` [EXTRACTED]
+- [[UpdatePurposeDto]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/purposesservicets

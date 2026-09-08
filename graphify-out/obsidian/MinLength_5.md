@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "requests.controller.ts"
+community: "CreateAlgorithmEntryDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/requestscontrollerts
+  - community/CreateAlgorithmEntryDto
 ---
 
 # MinLength
 
 ## Connections
-- [[FlagFrivolousDto]] - `references` [EXTRACTED]
+- [[CreateAlgorithmEntryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/requestscontrollerts
+#graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto

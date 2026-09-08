@@ -12,7 +12,7 @@ tags:
 # PrincipalsModule
 
 ## Connections
-- [[Module_24]] - `references` [EXTRACTED]
+- [[Module_25]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[evidence.module.ts]] - `imports` [EXTRACTED]
 - [[principal-portal.module.ts]] - `imports` [EXTRACTED]

@@ -14,10 +14,10 @@ tags:
 ## Connections
 - [[dot-assertPurposeExists()]] - `calls` [EXTRACTED]
 - [[dot-create()_33]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
 - [[CreateRetentionPolicyDto]] - `references` [EXTRACTED]
 - [[RetentionService]] - `method` [EXTRACTED]
 - [[duplicateNameMessage()_2]] - `calls` [EXTRACTED]
-- [[isUniqueConstraintViolation()_6]] - `calls` [EXTRACTED]
+- [[isUniqueConstraintViolation()_5]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/retentionservicets

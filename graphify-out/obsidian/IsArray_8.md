@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "mappings.controller.ts"
+community: "mappings.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingscontrollerts
+  - community/mappingsservicets
 ---
 
 # IsArray
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[AttachPurposesDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingscontrollerts
+#graphify/code #graphify/EXTRACTED #community/mappingsservicets

@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-getDetail()]] - `calls` [INFERRED]
 - [[CurrentActorPermissions]] - `references` [EXTRACTED]
-- [[Get_13]] - `references` [EXTRACTED]
-- [[Param_9]] - `references` [EXTRACTED]
+- [[Get_18]] - `references` [EXTRACTED]
+- [[Param_13]] - `references` [EXTRACTED]
 - [[PrincipalsController]] - `method` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 

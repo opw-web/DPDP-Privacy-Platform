@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[common.sh]] - `defines` [EXTRACTED]
 - [[ensure_database_up()]] - `calls` [EXTRACTED]
+- [[prepare.sh script]] - `calls` [EXTRACTED]
 - [[status.sh script]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/commonsh

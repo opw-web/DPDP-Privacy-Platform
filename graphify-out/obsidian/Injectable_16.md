@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "connector.factory.ts"
+community: "Connector"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/connectorfactoryts
+  - community/Connector
 ---
 
 # Injectable
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[ConnectorFactory]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/connectorfactoryts
+#graphify/code #graphify/EXTRACTED #community/Connector

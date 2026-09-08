@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx"
 type: "code"
-community: "cn"
+community: "AuditPage.tsx"
 location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/AuditPagetsx
 ---
 
 # CampaignRecipient
@@ -15,4 +15,4 @@ tags:
 - [[MessagingCampaignDetailPage.test.tsx]] - `imports` [EXTRACTED]
 - [[MessagingCampaignDetailPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/AuditPagetsx

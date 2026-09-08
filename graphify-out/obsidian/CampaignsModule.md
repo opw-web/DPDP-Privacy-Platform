@@ -12,7 +12,7 @@ tags:
 # CampaignsModule
 
 ## Connections
-- [[Module_19]] - `references` [EXTRACTED]
+- [[Module_18]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[breaches.module.ts]] - `imports` [EXTRACTED]
 - [[campaigns.module.ts]] - `contains` [EXTRACTED]

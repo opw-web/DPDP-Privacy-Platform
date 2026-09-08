@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/common/crypto/crypto.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts"
 type: "code"
-community: "data-sources.service.ts"
-location: "L38"
+community: "templates.service.ts"
+location: "L75"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesservicets
+  - community/templatesservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[MalformedCiphertextError]] - `method` [EXTRACTED]
+- [[UnknownTemplateVariableError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets
+#graphify/code #graphify/EXTRACTED #community/templatesservicets

@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/ReviewQueuePage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/InformationRequestsPage.test.tsx"
 type: "code"
-community: "ReviewQueuePage.test.tsx"
-location: "L58"
+community: "router.tsx"
+location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ReviewQueuePagetesttsx
+  - community/routertsx
 ---
 
 # MockRoutes
 
 ## Connections
-- [[MatchCandidateListItem]] - `references` [EXTRACTED]
-- [[ReviewQueuePage.test.tsx]] - `contains` [EXTRACTED]
+- [[InformationRequestsPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ReviewQueuePagetesttsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

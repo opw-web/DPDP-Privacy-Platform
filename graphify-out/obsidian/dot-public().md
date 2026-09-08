@@ -12,10 +12,10 @@ tags:
 # .public()
 
 ## Connections
-- [[dot-create()_12]] - `calls` [EXTRACTED]
-- [[dot-get()_10]] - `calls` [EXTRACTED]
-- [[dot-list()_18]] - `calls` [EXTRACTED]
-- [[dot-update()_10]] - `calls` [EXTRACTED]
+- [[dot-create()_23]] - `calls` [EXTRACTED]
+- [[dot-get()_15]] - `calls` [EXTRACTED]
+- [[dot-list()_29]] - `calls` [EXTRACTED]
+- [[dot-update()_17]] - `calls` [EXTRACTED]
 - [[BreachService]] - `method` [EXTRACTED]
 - [[PublicBreach]] - `references` [EXTRACTED]
 

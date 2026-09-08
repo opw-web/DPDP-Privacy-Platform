@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/children/child-exemptions.controller.ts"
 type: "code"
-community: "RequirePermission"
+community: "children.module.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/childrenmodulets
 ---
 
 # child-exemptions.controller.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[AccessTokenPayload]] - `imports` [EXTRACTED]
 - [[ChildExemptionsController]] - `contains` [EXTRACTED]
 - [[ChildExemptionsService]] - `imports` [EXTRACTED]
@@ -27,4 +29,4 @@ tags:
 - [[require-permission.decorator.ts]] - `imports_from` [EXTRACTED]
 - [[token.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/childrenmodulets

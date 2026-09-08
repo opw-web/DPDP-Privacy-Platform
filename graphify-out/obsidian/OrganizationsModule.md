@@ -12,7 +12,7 @@ tags:
 # OrganizationsModule
 
 ## Connections
-- [[Module_22]] - `references` [EXTRACTED]
+- [[Module_23]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[organizations.module.ts]] - `contains` [EXTRACTED]
 

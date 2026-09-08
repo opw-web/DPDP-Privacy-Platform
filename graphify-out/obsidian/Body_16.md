@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: ".unmerge"
+community: "CreateInformationRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/unmerge
+  - community/CreateInformationRequestDto
 ---
 
 # Body
 
 ## Connections
-- [[dot-unmerge()]] - `references` [EXTRACTED]
+- [[dot-create()_20]] - `references` [EXTRACTED]
+- [[dot-update()_14]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/unmerge
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

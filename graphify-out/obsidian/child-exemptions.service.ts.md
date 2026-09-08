@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/children/child-exemptions.service.ts"
 type: "code"
-community: "child-exemptions.service.ts"
+community: "children.module.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/child-exemptionsservicets
+  - community/childrenmodulets
 ---
 
 # child-exemptions.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AccessTokenPayload]] - `imports` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[ChildExemptionsService]] - `contains` [EXTRACTED]
@@ -30,4 +32,4 @@ tags:
 - [[toPublicExemptionClaim()]] - `contains` [EXTRACTED]
 - [[token.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/child-exemptionsservicets
+#graphify/code #graphify/EXTRACTED #community/childrenmodulets

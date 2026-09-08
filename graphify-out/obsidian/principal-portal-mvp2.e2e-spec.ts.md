@@ -1,21 +1,25 @@
 ---
 source_file: "dpdp-platform/backend/test/principal-portal-mvp2.e2e-spec.ts"
 type: "code"
-community: "PrismaService"
+community: "AppModule"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/AppModule
 ---
 
 # principal-portal-mvp2.e2e-spec.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjstesting]] - `imports_from` [EXTRACTED]
 - [[AppModule]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[app.module.ts]] - `imports_from` [EXTRACTED]
-- [[createPrincipal()_4]] - `contains` [EXTRACTED]
+- [[argon2_1]] - `imports_from` [EXTRACTED]
+- [[createPrincipal()_10]] - `contains` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
+- [[supertest]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/AppModule

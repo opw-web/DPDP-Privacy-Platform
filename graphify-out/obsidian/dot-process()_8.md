@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/access-log-retention.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/sdf-cycle-scan.processor.ts"
 type: "code"
-community: "audit-chain-verify.processor.ts"
-location: "L24"
+community: "sdf-cycle-scan.queue.ts"
+location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-chain-verifyprocessorts
+  - community/sdf-cycle-scanqueuets
 ---
 
 # .process()
 
 ## Connections
-- [[dot-runRetention()]] - `calls` [EXTRACTED]
-- [[AccessLogRetentionProcessor]] - `method` [EXTRACTED]
+- [[dot-runForAllOrganizations()_2]] - `calls` [INFERRED]
+- [[SdfCycleScanJobData]] - `references` [EXTRACTED]
+- [[SdfCycleScanProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-chain-verifyprocessorts
+#graphify/code #graphify/EXTRACTED #community/sdf-cycle-scanqueuets

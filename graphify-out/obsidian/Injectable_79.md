@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SyncQueueService"
+community: "PrincipalAuthService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/PrincipalAuthService
 ---
 
 # Injectable
 
 ## Connections
-- [[DeadlineScanQueueService]] - `references` [EXTRACTED]
+- [[PrincipalAuthService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/PrincipalAuthService

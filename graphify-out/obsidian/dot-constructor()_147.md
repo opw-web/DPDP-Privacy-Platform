@@ -1,21 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/access-report.service.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts"
 type: "code"
-community: "access-report.service.ts"
-location: "L115"
+community: "read-only-http.client.ts"
+location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-reportservicets
+  - community/read-only-httpclientts
 ---
 
 # .constructor()
 
 ## Connections
-- [[AccessLogService]] - `references` [EXTRACTED]
-- [[AccessReportService]] - `method` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
-- [[LineageService]] - `references` [EXTRACTED]
-- [[PrincipalRecipientsService]] - `references` [EXTRACTED]
+- [[ReadOnlyHttpTimeoutError]] - `method` [EXTRACTED]
+- [[stripQuery()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-reportservicets
+#graphify/code #graphify/EXTRACTED #community/read-only-httpclientts

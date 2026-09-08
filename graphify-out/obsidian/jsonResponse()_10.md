@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/principal/pages/MeConsentsPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.test.tsx"
 type: "code"
-community: "MeConsentsPage.tsx"
-location: "L8"
+community: "router.tsx"
+location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeConsentsPagetsx
+  - community/routertsx
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[MeConsentsPage.test.tsx]] - `contains` [EXTRACTED]
+- [[RecipientsTab.test.tsx]] - `contains` [EXTRACTED]
+- [[loginAndRender()_3]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeConsentsPagetsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

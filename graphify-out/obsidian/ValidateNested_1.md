@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "ReplaceMappingsDto"
+community: "mappings.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ReplaceMappingsDto
+  - community/mappingsservicets
 ---
 
 # ValidateNested
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[ReplaceMappingsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ReplaceMappingsDto
+#graphify/code #graphify/EXTRACTED #community/mappingsservicets

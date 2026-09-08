@@ -12,6 +12,7 @@ tags:
 # templates.module.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[AuditModule]] - `imports` [EXTRACTED]
 - [[TemplatesController]] - `imports` [EXTRACTED]
 - [[TemplatesModule]] - `contains` [EXTRACTED]

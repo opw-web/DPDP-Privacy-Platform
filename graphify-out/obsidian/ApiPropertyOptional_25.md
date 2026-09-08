@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateSdfAssessmentDto"
+community: "TemplatesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSdfAssessmentDto
+  - community/TemplatesService
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[CreateSdfAssessmentDto]] - `references` [EXTRACTED]
+- [[PreviewTemplateDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSdfAssessmentDto
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

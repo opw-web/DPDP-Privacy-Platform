@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/InformationRequestsPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/AuditPage.test.tsx"
 type: "code"
-community: "InformationRequestsPage.test.tsx"
-location: "L14"
+community: "router.tsx"
+location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/InformationRequestsPagetesttsx
+  - community/routertsx
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[InformationRequestsPage.test.tsx]] - `contains` [EXTRACTED]
-- [[loginAndRender()_1]] - `calls` [EXTRACTED]
+- [[AuditPage.test.tsx]] - `contains` [EXTRACTED]
+- [[loginAndRenderThroughShell()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/InformationRequestsPagetesttsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

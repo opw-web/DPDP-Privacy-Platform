@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "HealthService"
+community: "health.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/HealthService
+  - community/healthservicets
 ---
 
 # ApiServiceUnavailableResponse
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-check()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/HealthService
+#graphify/code #graphify/EXTRACTED #community/healthservicets

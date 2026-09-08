@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "compile-audience.ts"
+community: "CreateSharingActivityDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/compile-audiencets
+  - community/CreateSharingActivityDto
 ---
 
 # IsOptional
 
 ## Connections
-- [[PreviewAudienceDto]] - `references` [EXTRACTED]
+- [[CreateSharingActivityDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/compile-audiencets
+#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

@@ -11,6 +11,6 @@ tags:
 # Module
 
 ## Connections
-- [[CampaignsModule]] - `references` [EXTRACTED]
+- [[TemplatesModule]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/appmodulets

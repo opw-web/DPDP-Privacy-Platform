@@ -1,17 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts"
+source_file: "dpdp-platform/backend/src/modules/principals/principals.service.ts"
 type: "code"
-community: "read-only-http.client.ts"
-location: "L38"
+community: "access-report.service.ts"
+location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/read-only-httpclientts
+  - community/access-reportservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[ReadOnlyHttpMethodError]] - `method` [EXTRACTED]
+- [[AccessLogService]] - `references` [EXTRACTED]
+- [[MaskingService]] - `references` [EXTRACTED]
+- [[PrincipalsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/read-only-httpclientts
+#graphify/code #graphify/EXTRACTED #community/access-reportservicets

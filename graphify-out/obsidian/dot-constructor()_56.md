@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/campaign-send.queue.ts"
+source_file: "dpdp-platform/backend/src/modules/evidence/audit-events-evidence.controller.ts"
 type: "code"
-community: "breaches.module.ts"
-location: "L67"
+community: "AuditChainService"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breachesmodulets
+  - community/AuditChainService
 ---
 
 # .constructor()
 
 ## Connections
-- [[CampaignSendQueueService]] - `method` [EXTRACTED]
-- [[InjectQueue_2]] - `references` [EXTRACTED]
+- [[AuditChainService]] - `references` [EXTRACTED]
+- [[AuditEventsEvidenceController]] - `method` [EXTRACTED]
+- [[AuditExportService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breachesmodulets
+#graphify/code #graphify/EXTRACTED #community/AuditChainService

@@ -1,18 +1,17 @@
 ---
 source_file: "dpdp-platform/frontend/package.json"
 type: "code"
-community: "react"
+community: "dependencies"
 location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/dependencies
 ---
 
 # react
 
 ## Connections
 - [[dependencies]] - `contains` [EXTRACTED]
-- [[react_1]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/dependencies

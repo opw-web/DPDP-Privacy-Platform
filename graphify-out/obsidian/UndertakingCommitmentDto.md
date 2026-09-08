@@ -12,14 +12,14 @@ tags:
 # UndertakingCommitmentDto
 
 ## Connections
-- [[ApiProperty_27]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_33]] - `references` [EXTRACTED]
+- [[ApiProperty_34]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_37]] - `references` [EXTRACTED]
 - [[CreateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
-- [[IsDateString_12]] - `references` [EXTRACTED]
-- [[IsIn_9]] - `references` [EXTRACTED]
-- [[IsOptional_35]] - `references` [EXTRACTED]
-- [[IsString_38]] - `references` [EXTRACTED]
-- [[MinLength_26]] - `references` [EXTRACTED]
+- [[IsDateString_14]] - `references` [EXTRACTED]
+- [[IsIn_10]] - `references` [EXTRACTED]
+- [[IsOptional_39]] - `references` [EXTRACTED]
+- [[IsString_47]] - `references` [EXTRACTED]
+- [[MinLength_35]] - `references` [EXTRACTED]
 - [[UpdateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
 - [[create-voluntary-undertaking.dto.ts]] - `imports` [EXTRACTED]
 - [[undertaking-commitment.dto.ts]] - `contains` [EXTRACTED]

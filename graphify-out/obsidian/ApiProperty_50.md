@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "mapping-warning-response.dto.ts"
+community: "retention.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mapping-warning-responsedtots
+  - community/retentionservicets
 ---
 
 # ApiProperty
 
 ## Connections
-- [[MappingWarningPurposeSummaryResponseDto]] - `references` [EXTRACTED]
-- [[MappingWarningResponseDto]] - `references` [EXTRACTED]
+- [[CreateRetentionPolicyDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mapping-warning-responsedtots
+#graphify/code #graphify/EXTRACTED #community/retentionservicets

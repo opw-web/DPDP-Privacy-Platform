@@ -12,6 +12,9 @@ tags:
 # principal-auth.controller.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsconfig_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[AppConfig]] - `imports` [EXTRACTED]
 - [[CurrentPrincipal]] - `imports` [EXTRACTED]
 - [[JwtPrincipalGuard]] - `imports` [EXTRACTED]

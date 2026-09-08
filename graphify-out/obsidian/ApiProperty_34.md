@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "me-rights.service.ts"
+community: "CreateVoluntaryUndertakingDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/me-rightsservicets
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateMeRequestDto]] - `references` [EXTRACTED]
+- [[UndertakingCommitmentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/me-rightsservicets
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

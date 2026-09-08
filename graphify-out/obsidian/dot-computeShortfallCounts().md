@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/inventory/inventory.service.ts"
 type: "code"
-community: "ropa-export.service.ts"
+community: "inventory.service.ts"
 location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ropa-exportservicets
+  - community/inventoryservicets
 ---
 
 # .computeShortfallCounts()
@@ -16,4 +16,4 @@ tags:
 - [[dot-getSummary()]] - `calls` [EXTRACTED]
 - [[InventoryService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ropa-exportservicets
+#graphify/code #graphify/EXTRACTED #community/inventoryservicets

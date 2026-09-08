@@ -12,6 +12,7 @@ tags:
 # connector.factory.spec.ts
 
 ## Connections
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[ConnectorFactory]] - `imports` [EXTRACTED]
 - [[DataSourceRowForConnector]] - `imports` [EXTRACTED]
 - [[MockHttpServer]] - `imports` [EXTRACTED]

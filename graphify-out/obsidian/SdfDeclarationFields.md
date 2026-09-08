@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.tsx"
 type: "code"
-community: "SettingsPage.tsx"
+community: "router.tsx"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SettingsPagetsx
+  - community/routertsx
 ---
 
 # SdfDeclarationFields
@@ -15,4 +15,4 @@ tags:
 - [[SdfDeclarationCard.test.tsx]] - `imports` [EXTRACTED]
 - [[SdfDeclarationCard.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SettingsPagetsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

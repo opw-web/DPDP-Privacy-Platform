@@ -11,6 +11,6 @@ tags:
 # Module
 
 ## Connections
-- [[AudienceModule]] - `references` [EXTRACTED]
+- [[CampaignsModule]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/appmodulets

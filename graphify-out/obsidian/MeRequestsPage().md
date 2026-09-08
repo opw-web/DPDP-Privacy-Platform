@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeRequestsPage.tsx"
 type: "code"
-community: "card.tsx"
+community: "react-router-dom"
 location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cardtsx
+  - community/react-router-dom
 ---
 
 # MeRequestsPage()
@@ -20,4 +20,4 @@ tags:
 - [[router.tsx]] - `imports` [EXTRACTED]
 - [[typeSubject()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cardtsx
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

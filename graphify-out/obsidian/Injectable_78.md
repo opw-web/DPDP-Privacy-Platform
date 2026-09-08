@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SyncQueueService"
+community: "CreateRecipientDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/CreateRecipientDto
 ---
 
 # Injectable
 
 ## Connections
-- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
+- [[RecipientsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/CreateRecipientDto

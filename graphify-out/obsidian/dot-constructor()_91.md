@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/common/crypto/crypto.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts"
 type: "code"
-community: "data-sources.service.ts"
-location: "L70"
+community: "templates.service.ts"
+location: "L87"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesservicets
+  - community/templatesservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[CryptoService]] - `method` [EXTRACTED]
-- [[InvalidEncryptionKeyError]] - `calls` [EXTRACTED]
+- [[MissingRequiredVariableError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets
+#graphify/code #graphify/EXTRACTED #community/templatesservicets

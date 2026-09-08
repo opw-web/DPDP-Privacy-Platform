@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateAlgorithmEntryDto"
+community: "EnvironmentVariables"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateAlgorithmEntryDto
+  - community/EnvironmentVariables
 ---
 
 # IsIn
 
 ## Connections
-- [[CreateAlgorithmEntryDto]] - `references` [EXTRACTED]
+- [[EnvironmentVariables]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto
+#graphify/code #graphify/EXTRACTED #community/EnvironmentVariables

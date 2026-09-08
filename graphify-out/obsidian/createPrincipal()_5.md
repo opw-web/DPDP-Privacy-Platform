@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/principals.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/notifications.e2e-spec.ts"
 type: "code"
-community: "principals.service.ts"
-location: "L137"
+community: "notifications.e2e-spec.ts"
+location: "L78"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principalsservicets
+  - community/notificationse2e-spects
 ---
 
 # createPrincipal()
 
 ## Connections
-- [[createFixture()]] - `calls` [EXTRACTED]
-- [[principals.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[notifications.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principalsservicets
+#graphify/code #graphify/EXTRACTED #community/notificationse2e-spects

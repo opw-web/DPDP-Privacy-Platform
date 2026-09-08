@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/retention-scan.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/consent-backfill.processor.ts"
 type: "code"
-community: "retention.module.ts"
-location: "L24"
+community: "consent-backfill.queue.ts"
+location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionmodulets
+  - community/consent-backfillqueuets
 ---
 
 # .process()
 
 ## Connections
 - [[dot-runForAllOrganizations()_1]] - `calls` [INFERRED]
-- [[RetentionScanJobData]] - `references` [EXTRACTED]
-- [[RetentionScanProcessor]] - `method` [EXTRACTED]
+- [[ConsentBackfillJobData]] - `references` [EXTRACTED]
+- [[ConsentBackfillProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionmodulets
+#graphify/code #graphify/EXTRACTED #community/consent-backfillqueuets

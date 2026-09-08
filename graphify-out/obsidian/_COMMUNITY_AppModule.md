@@ -1,35 +1,43 @@
 ---
 type: community
-members: 22
+members: 30
 ---
 
 # AppModule
 
-**Members:** 22 nodes
+**Members:** 30 nodes
 
 ## Members
-- [[dot-configure()]] - code - dpdp-platform/backend/src/app.module.ts
+- [[dot-configure()_1]] - code - dpdp-platform/backend/src/app.module.ts
+- [[@nestjstesting]] - concept - dpdp-platform/backend/package.json
 - [[AppModule]] - code - dpdp-platform/backend/src/app.module.ts
-- [[Module_3]] - code
-- [[PERMISSIONS]] - code - dpdp-platform/backend/prisma/seed/permissions.ts
-- [[PermissionSeed]] - code - dpdp-platform/backend/prisma/seed/permissions.ts
-- [[createOrgWithEmployee()_2]] - code - dpdp-platform/backend/test/rbac.e2e-spec.ts
-- [[createOrgWithManager()]] - code - dpdp-platform/backend/test/purposes.e2e-spec.ts
-- [[createOrgWithRoleAndEmployee()]] - code - dpdp-platform/backend/test/employee-auth.e2e-spec.ts
-- [[createOrgWithSettingsManager()]] - code - dpdp-platform/backend/test/organizations.e2e-spec.ts
-- [[decodeJwtPayload()]] - code - dpdp-platform/backend/test/employee-auth.e2e-spec.ts
-- [[employee-auth.e2e-spec.ts]] - code - dpdp-platform/backend/test/employee-auth.e2e-spec.ts
-- [[ensurePermission()_5]] - code - dpdp-platform/backend/test/organizations.e2e-spec.ts
-- [[ensurePermission()_6]] - code - dpdp-platform/backend/test/purposes.e2e-spec.ts
-- [[ensurePermission()_7]] - code - dpdp-platform/backend/test/rbac.e2e-spec.ts
-- [[extractRefreshCookie()]] - code - dpdp-platform/backend/test/employee-auth.e2e-spec.ts
+- [[Module_36]] - code
+- [[apply()]] - code - dpdp-platform/backend/test/identity-matching.e2e-spec.ts
+- [[assembly.e2e-spec.ts]] - code - dpdp-platform/backend/test/assembly.e2e-spec.ts
+- [[createOrgWithPrincipalAccount()]] - code - dpdp-platform/backend/test/principal-auth.e2e-spec.ts
+- [[createOrgWithRoleAndEmployee()]] - code - dpdp-platform/backend/test/principal-auth.e2e-spec.ts
+- [[createPrincipal()_10]] - code - dpdp-platform/backend/test/principal-portal-mvp2.e2e-spec.ts
+- [[createSourceRecord()]] - code - dpdp-platform/backend/test/normalization.e2e-spec.ts
+- [[decodeJwtPayload()]] - code - dpdp-platform/backend/test/principal-auth.e2e-spec.ts
+- [[extractRefreshCookie()]] - code - dpdp-platform/backend/test/principal-auth.e2e-spec.ts
 - [[health.e2e-spec.ts]] - code - dpdp-platform/backend/test/health.e2e-spec.ts
-- [[loginAndFetchMe()]] - code - dpdp-platform/backend/test/employee-auth.e2e-spec.ts
-- [[organizations.e2e-spec.ts]] - code - dpdp-platform/backend/test/organizations.e2e-spec.ts
-- [[purposes.e2e-spec.ts]] - code - dpdp-platform/backend/test/purposes.e2e-spec.ts
-- [[rbac.e2e-spec.ts]] - code - dpdp-platform/backend/test/rbac.e2e-spec.ts
-- [[seedpermissions.ts]] - code - dpdp-platform/backend/prisma/seed/permissions.ts
-- [[validPayload()_1]] - code - dpdp-platform/backend/test/purposes.e2e-spec.ts
+- [[identity-matching.e2e-spec.ts]] - code - dpdp-platform/backend/test/identity-matching.e2e-spec.ts
+- [[link()]] - code - dpdp-platform/backend/test/assembly.e2e-spec.ts
+- [[normalization.e2e-spec.ts]] - code - dpdp-platform/backend/test/normalization.e2e-spec.ts
+- [[normalized()]] - code - dpdp-platform/backend/test/assembly.e2e-spec.ts
+- [[organization()_2]] - code - dpdp-platform/backend/test/assembly.e2e-spec.ts
+- [[organization()_3]] - code - dpdp-platform/backend/test/identity-matching.e2e-spec.ts
+- [[persist()]] - code - dpdp-platform/backend/test/normalization.e2e-spec.ts
+- [[persistMappings()]] - code - dpdp-platform/backend/test/normalization.e2e-spec.ts
+- [[principal()]] - code - dpdp-platform/backend/test/assembly.e2e-spec.ts
+- [[principal()_1]] - code - dpdp-platform/backend/test/identity-matching.e2e-spec.ts
+- [[principal-auth.e2e-spec.ts]] - code - dpdp-platform/backend/test/principal-auth.e2e-spec.ts
+- [[principal-portal-mvp2.e2e-spec.ts]] - code - dpdp-platform/backend/test/principal-portal-mvp2.e2e-spec.ts
+- [[record()]] - code - dpdp-platform/backend/test/identity-matching.e2e-spec.ts
+- [[source()]] - code - dpdp-platform/backend/test/assembly.e2e-spec.ts
+- [[tenant()_2]] - code - dpdp-platform/backend/test/assembly.e2e-spec.ts
+- [[tenant()_3]] - code - dpdp-platform/backend/test/identity-matching.e2e-spec.ts
+- [[tenant()_4]] - code - dpdp-platform/backend/test/normalization.e2e-spec.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -39,27 +47,32 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_PrismaService]]
-- 8 edges to [[_COMMUNITY_prisma.service.ts]]
-- 6 edges to [[_COMMUNITY_data-sources.e2e-spec.ts]]
-- 6 edges to [[_COMMUNITY_app.module.ts]]
-- 6 edges to [[_COMMUNITY_seed.ts]]
-- 4 edges to [[_COMMUNITY_queues.module.ts]]
-- 3 edges to [[_COMMUNITY_inventory.e2e-spec.ts]]
-- 3 edges to [[_COMMUNITY_merge-unmerge.e2e-spec.ts]]
-- 3 edges to [[_COMMUNITY_principal-portal.e2e-spec.ts]]
-- 3 edges to [[_COMMUNITY_principals.service.ts]]
-- 3 edges to [[_COMMUNITY_registers.e2e-spec.ts]]
-- 3 edges to [[_COMMUNITY_step6-conflict-acceptance.e2e-spec.ts]]
-- 2 edges to [[_COMMUNITY_seed-scale.ts]]
-- 1 edge to [[_COMMUNITY_main.ts]]
+- 19 edges to [[_COMMUNITY_PrismaService]]
+- 10 edges to [[_COMMUNITY_principals.e2e-spec.ts]]
+- 9 edges to [[_COMMUNITY_ScopedTransactionClient]]
+- 7 edges to [[_COMMUNITY_app.module.ts]]
+- 6 edges to [[_COMMUNITY_sync.e2e-spec.ts]]
+- 6 edges to [[_COMMUNITY_@nestjscommon]]
+- 5 edges to [[_COMMUNITY_supertest]]
+- 4 edges to [[_COMMUNITY_argon2]]
+- 3 edges to [[_COMMUNITY_AuditService]]
+- 3 edges to [[_COMMUNITY_normalization.service.ts]]
+- 3 edges to [[_COMMUNITY_@prismaclient]]
+- 2 edges to [[_COMMUNITY_audit-read.e2e-spec.ts]]
+- 2 edges to [[_COMMUNITY_sync.queue.ts]]
+- 2 edges to [[_COMMUNITY_merge-unmerge.e2e-spec.ts]]
+- 2 edges to [[_COMMUNITY_principal-portal.e2e-spec.ts]]
+- 2 edges to [[_COMMUNITY_registers.e2e-spec.ts]]
+- 2 edges to [[_COMMUNITY_step6-conflict-acceptance.e2e-spec.ts]]
+- 1 edge to [[_COMMUNITY_token.service.ts]]
 - 1 edge to [[_COMMUNITY_assembly.service.ts]]
-- 1 edge to [[_COMMUNITY_ScopedTransactionClient]]
-- 1 edge to [[_COMMUNITY_principal-auth.e2e-spec.ts]]
+- 1 edge to [[_COMMUNITY_connector.factory.ts]]
+- 1 edge to [[_COMMUNITY_backendpackage.json]]
+- 1 edge to [[_COMMUNITY_health.service.ts]]
 
 ## Top bridge nodes
-- [[AppModule]] - degree 26, connects to 15 communities
-- [[seedpermissions.ts]] - degree 20, connects to 12 communities
-- [[PERMISSIONS]] - degree 19, connects to 12 communities
-- [[employee-auth.e2e-spec.ts]] - degree 12, connects to 4 communities
-- [[purposes.e2e-spec.ts]] - degree 9, connects to 3 communities
+- [[@nestjstesting]] - degree 25, connects to 13 communities
+- [[AppModule]] - degree 26, connects to 12 communities
+- [[assembly.e2e-spec.ts]] - degree 22, connects to 7 communities
+- [[identity-matching.e2e-spec.ts]] - degree 22, connects to 6 communities
+- [[principal-auth.e2e-spec.ts]] - degree 13, connects to 6 communities

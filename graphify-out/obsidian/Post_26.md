@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "recipients.service.ts"
+community: "CreateRecipientDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/CreateRecipientDto
 ---
 
 # Post
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-create()_31]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/CreateRecipientDto

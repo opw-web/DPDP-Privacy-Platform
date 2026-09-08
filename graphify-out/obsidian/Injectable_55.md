@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "mvp2-schedules.ts"
+community: "@nestjs/common"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mvp2-schedulests
+  - community/nestjs/common
 ---
 
 # Injectable
 
 ## Connections
-- [[SdfCycleScanService]] - `references` [EXTRACTED]
+- [[RopaExportService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mvp2-schedulests
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

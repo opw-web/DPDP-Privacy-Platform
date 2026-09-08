@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "audit-chain-verify.processor.ts"
+community: "CreateVoluntaryUndertakingDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-chain-verifyprocessorts
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # IsString
 
 ## Connections
-- [[EnvironmentVariables]] - `references` [EXTRACTED]
+- [[UpdateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-chain-verifyprocessorts
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

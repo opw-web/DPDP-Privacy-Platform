@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts"
+source_file: "dpdp-platform/backend/src/modules/board/voluntary-undertakings.service.ts"
 type: "code"
-community: "templates.service.ts"
-location: "L87"
+community: "CreateVoluntaryUndertakingDto"
+location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatesservicets
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[MissingRequiredVariableError]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[VoluntaryUndertakingsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatesservicets
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

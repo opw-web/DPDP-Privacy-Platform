@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/ui/select.tsx"
 type: "code"
-community: "card.tsx"
+community: "react"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cardtsx
+  - community/react
 ---
 
 # select.tsx
@@ -21,10 +21,11 @@ tags:
 - [[MeRequestsPage.tsx]] - `imports_from` [EXTRACTED]
 - [[RequestWorkPanel.tsx]] - `imports_from` [EXTRACTED]
 - [[Select]] - `contains` [EXTRACTED]
-- [[SelectControl_1]] - `contains` [EXTRACTED]
+- [[SelectControl]] - `contains` [EXTRACTED]
 - [[SettingsCompliancePage.tsx]] - `imports_from` [EXTRACTED]
 - [[cn()]] - `imports` [EXTRACTED]
 - [[form-controls.tsx]] - `re_exports` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
 - [[utils.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cardtsx
+#graphify/code #graphify/EXTRACTED #community/react

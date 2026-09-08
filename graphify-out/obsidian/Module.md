@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "notifications.module.ts"
+community: "purposes.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationsmodulets
+  - community/purposesservicets
 ---
 
 # Module
 
 ## Connections
-- [[MailModule]] - `references` [EXTRACTED]
+- [[PurposesModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationsmodulets
+#graphify/code #graphify/EXTRACTED #community/purposesservicets

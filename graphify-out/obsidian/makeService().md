@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/crypto/crypto.service.spec.ts"
 type: "code"
-community: "data-sources.service.ts"
+community: "CryptoService"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesservicets
+  - community/CryptoService
 ---
 
 # makeService()
@@ -15,4 +15,4 @@ tags:
 - [[CryptoService]] - `calls` [EXTRACTED]
 - [[crypto.service.spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets
+#graphify/code #graphify/EXTRACTED #community/CryptoService

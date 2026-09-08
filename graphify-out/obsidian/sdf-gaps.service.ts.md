@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sdf/sdf-gaps.service.ts"
 type: "code"
-community: "AuditService"
+community: "sdf-assessment.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/sdf-assessmentservicets
 ---
 
 # sdf-gaps.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[ComplianceService]] - `imports` [EXTRACTED]
 - [[LocalisationRequiredTransferGap]] - `contains` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
@@ -26,4 +27,4 @@ tags:
 - [[sdf.controller.ts]] - `imports_from` [EXTRACTED]
 - [[sdf.module.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/sdf-assessmentservicets

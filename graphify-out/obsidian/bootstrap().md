@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/main.ts"
 type: "code"
-community: "main.ts"
+community: "token.service.ts"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/maints
+  - community/tokenservicets
 ---
 
 # bootstrap()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[main.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/maints
+#graphify/code #graphify/EXTRACTED #community/tokenservicets

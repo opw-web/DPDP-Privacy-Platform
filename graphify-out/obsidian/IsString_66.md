@@ -11,6 +11,6 @@ tags:
 # IsString
 
 ## Connections
-- [[CreateRetentionPolicyDto]] - `references` [EXTRACTED]
+- [[UpdateRetentionPolicyDto]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/retentionservicets

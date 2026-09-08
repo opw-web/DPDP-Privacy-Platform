@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/requests/CorrectionWorkflow.tsx"
 type: "code"
-community: "employeeApiClient"
+community: "RequestDetailPage.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeeApiClient
+  - community/RequestDetailPagetsx
 ---
 
 # CorrectionWorkflow.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
 - [[CorrectionWorkflow()]] - `contains` [EXTRACTED]
 - [[RequestDetailPage.tsx]] - `imports_from` [EXTRACTED]
@@ -21,5 +22,6 @@ tags:
 - [[button.tsx]] - `imports_from` [EXTRACTED]
 - [[employeeApiClient]] - `imports` [EXTRACTED]
 - [[requeststypes.ts]] - `imports_from` [EXTRACTED]
+- [[sonner_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeeApiClient
+#graphify/code #graphify/EXTRACTED #community/RequestDetailPagetsx

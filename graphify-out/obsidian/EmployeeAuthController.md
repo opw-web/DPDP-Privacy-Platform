@@ -13,12 +13,12 @@ tags:
 
 ## Connections
 - [[dot-clearRefreshCookie()]] - `method` [EXTRACTED]
-- [[dot-constructor()_28]] - `method` [EXTRACTED]
+- [[dot-constructor()_129]] - `method` [EXTRACTED]
 - [[dot-isProduction()]] - `method` [EXTRACTED]
-- [[dot-login()_2]] - `method` [EXTRACTED]
-- [[dot-logout()_2]] - `method` [EXTRACTED]
+- [[dot-login()_1]] - `method` [EXTRACTED]
+- [[dot-logout()]] - `method` [EXTRACTED]
 - [[dot-me()]] - `method` [EXTRACTED]
-- [[dot-refresh()_2]] - `method` [EXTRACTED]
+- [[dot-refresh()]] - `method` [EXTRACTED]
 - [[dot-setRefreshCookie()]] - `method` [EXTRACTED]
 - [[ApiTags_35]] - `references` [EXTRACTED]
 - [[Controller_36]] - `references` [EXTRACTED]

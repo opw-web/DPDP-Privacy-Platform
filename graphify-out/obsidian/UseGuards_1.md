@@ -11,11 +11,7 @@ tags:
 # UseGuards
 
 ## Connections
-- [[dot-accessReport()]] - `references` [EXTRACTED]
-- [[dot-data()]] - `references` [EXTRACTED]
-- [[dot-privacyContact()]] - `references` [EXTRACTED]
-- [[dot-profile()]] - `references` [EXTRACTED]
-- [[dot-recipients()]] - `references` [EXTRACTED]
-- [[dot-sources()]] - `references` [EXTRACTED]
+- [[dot-list()_5]] - `references` [EXTRACTED]
+- [[dot-setStatus()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Public

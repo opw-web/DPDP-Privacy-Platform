@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/ui/button.tsx"
 type: "code"
-community: "button.tsx"
+community: "react"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react
 ---
 
 # button.tsx
 
 ## Connections
+- [[@radix-uireact-slot_1]] - `imports_from` [EXTRACTED]
 - [[AccessReportPanel.tsx]] - `imports_from` [EXTRACTED]
 - [[AlgorithmRegisterPanel.tsx]] - `imports_from` [EXTRACTED]
 - [[AppShell.tsx]] - `imports_from` [EXTRACTED]
@@ -82,7 +83,9 @@ tags:
 - [[SyncHistoryTable.tsx]] - `imports_from` [EXTRACTED]
 - [[TransfersTab.tsx]] - `imports_from` [EXTRACTED]
 - [[buttonVariants]] - `contains` [EXTRACTED]
+- [[class-variance-authority_1]] - `imports_from` [EXTRACTED]
 - [[cn()]] - `imports` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
 - [[utils.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/react

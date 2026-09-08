@@ -1,25 +1,31 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/LinkedRecordsPanel.test.tsx"
 type: "code"
-community: "LinkedRecordsPanel.test.tsx"
+community: "router.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/LinkedRecordsPaneltesttsx
+  - community/routertsx
 ---
 
 # LinkedRecordsPanel.test.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
+- [[@testing-libraryreact_1]] - `imports_from` [EXTRACTED]
+- [[@testing-libraryuser-event_1]] - `imports_from` [EXTRACTED]
 - [[LinkedRecordsPanel()]] - `imports` [EXTRACTED]
 - [[LinkedRecordsPanel.tsx]] - `imports_from` [EXTRACTED]
-- [[MockRoutes_5]] - `contains` [EXTRACTED]
-- [[SOURCE_RECORDS_RESPONSE_1]] - `contains` [EXTRACTED]
+- [[MockRoutes_3]] - `contains` [EXTRACTED]
+- [[SOURCE_RECORDS_RESPONSE]] - `contains` [EXTRACTED]
 - [[employeeLogin()]] - `imports` [EXTRACTED]
 - [[employeeLogout()]] - `imports` [EXTRACTED]
-- [[jsonResponse()_21]] - `contains` [EXTRACTED]
+- [[jsonResponse()_8]] - `contains` [EXTRACTED]
 - [[libauth.ts]] - `imports_from` [EXTRACTED]
-- [[loginAndRender()_6]] - `contains` [EXTRACTED]
+- [[loginAndRender()_2]] - `contains` [EXTRACTED]
+- [[react-router-dom_1]] - `imports_from` [EXTRACTED]
+- [[sonner_1]] - `imports_from` [EXTRACTED]
+- [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/LinkedRecordsPaneltesttsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

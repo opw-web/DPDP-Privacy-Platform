@@ -12,6 +12,7 @@ tags:
 # connectors.module.spec.ts
 
 ## Connections
+- [[@nestjstesting]] - `imports_from` [EXTRACTED]
 - [[ConnectorFactory]] - `imports` [EXTRACTED]
 - [[ConnectorsModule]] - `imports` [EXTRACTED]
 - [[connector.factory.ts]] - `imports_from` [EXTRACTED]

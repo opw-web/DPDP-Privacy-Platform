@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/sharing.controller.ts"
+source_file: "dpdp-platform/backend/src/queues/sdf-cycle-scan.queue.ts"
 type: "code"
-community: "SharingService"
-location: "L11"
+community: "BootRegistrationRegistry"
+location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SharingService
+  - community/BootRegistrationRegistry
 ---
 
 # .constructor()
 
 ## Connections
-- [[SharingController]] - `method` [EXTRACTED]
-- [[SharingService]] - `references` [EXTRACTED]
+- [[dot-register()]] - `calls` [INFERRED]
+- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
+- [[InjectQueue_8]] - `references` [EXTRACTED]
+- [[SdfCycleScanQueueService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SharingService
+#graphify/code #graphify/EXTRACTED #community/BootRegistrationRegistry

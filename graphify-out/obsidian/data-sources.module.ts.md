@@ -12,6 +12,7 @@ tags:
 # data-sources.module.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[AuditModule]] - `imports` [EXTRACTED]
 - [[ConnectorsModule]] - `imports` [EXTRACTED]
 - [[CryptoModule]] - `imports` [EXTRACTED]

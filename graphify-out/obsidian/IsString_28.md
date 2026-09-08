@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".record"
+community: "compliance.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/complianceservicets
 ---
 
 # IsString
 
 ## Connections
-- [[AffectedPrincipalsDto]] - `references` [EXTRACTED]
+- [[UpdateComplianceRuleDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/complianceservicets

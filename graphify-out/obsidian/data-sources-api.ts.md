@@ -12,6 +12,7 @@ tags:
 # data-sources-api.ts
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[API_BASE]] - `imports` [EXTRACTED]
 - [[AUTH_TYPE_VALUES]] - `contains` [EXTRACTED]
 - [[ApiError]] - `imports` [EXTRACTED]

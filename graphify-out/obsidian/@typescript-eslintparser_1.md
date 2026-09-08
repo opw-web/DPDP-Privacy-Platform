@@ -1,17 +1,17 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "devDependencies"
+community: "backend/package.json"
 location: "L67"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/devDependencies
+  - community/backend/packagejson
 ---
 
 # @typescript-eslint/parser
 
 ## Connections
-- [[@typescript-eslintparser]] - `imports` [EXTRACTED]
+- [[backendpackage.json]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/devDependencies
+#graphify/concept #graphify/EXTRACTED #community/backend/packagejson

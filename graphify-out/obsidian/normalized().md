@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/test/assembly.e2e-spec.ts"
 type: "code"
-community: "assembly.service.ts"
+community: "AppModule"
 location: "L81"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/assemblyservicets
+  - community/AppModule
 ---
 
 # normalized()
 
 ## Connections
 - [[assembly.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[tenant()]] - `calls` [EXTRACTED]
+- [[tenant()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/assemblyservicets
+#graphify/code #graphify/EXTRACTED #community/AppModule

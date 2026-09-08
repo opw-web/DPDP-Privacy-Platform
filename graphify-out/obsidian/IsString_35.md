@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "AssignRequestDto"
+community: "requests.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AssignRequestDto
+  - community/requestsservicets
 ---
 
 # IsString
 
 ## Connections
-- [[AssignRequestDto]] - `references` [EXTRACTED]
+- [[ChangeStatusDto]] - `references` [EXTRACTED]
+- [[ErasureProcessorChecklistDto]] - `references` [EXTRACTED]
+- [[ErasureSystemChecklistDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AssignRequestDto
+#graphify/code #graphify/EXTRACTED #community/requestsservicets

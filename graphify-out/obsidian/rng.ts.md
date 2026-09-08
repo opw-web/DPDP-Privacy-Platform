@@ -1,12 +1,12 @@
 ---
 source_file: "demo-company-server/src/seed/rng.ts"
 type: "code"
-community: "Rng"
+community: "generateDataset"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Rng
+  - community/generateDataset
 ---
 
 # rng.ts
@@ -15,4 +15,4 @@ tags:
 - [[Rng]] - `contains` [EXTRACTED]
 - [[generate.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Rng
+#graphify/code #graphify/EXTRACTED #community/generateDataset

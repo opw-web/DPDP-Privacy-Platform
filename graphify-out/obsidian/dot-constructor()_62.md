@@ -1,21 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/evidence-pack.service.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/notifications.service.ts"
 type: "code"
-community: "AuditReadService"
-location: "L36"
+community: "notifications.service.ts"
+location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditReadService
+  - community/notificationsservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditExportService]] - `references` [EXTRACTED]
-- [[AuditReadService]] - `references` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
-- [[EvidencePackService]] - `method` [EXTRACTED]
-- [[RopaExportService]] - `references` [EXTRACTED]
+- [[Inject]] - `references` [EXTRACTED]
+- [[NotificationProvider]] - `references` [EXTRACTED]
+- [[NotificationsService]] - `method` [EXTRACTED]
+- [[PortalProvider]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditReadService
+#graphify/code #graphify/EXTRACTED #community/notificationsservicets

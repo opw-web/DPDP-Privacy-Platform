@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CandidatesService"
+community: "ImportConsentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CandidatesService
+  - community/ImportConsentDto
 ---
 
 # IsOptional
 
 ## Connections
-- [[ListMatchCandidatesQueryDto]] - `references` [EXTRACTED]
+- [[ImportConsentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CandidatesService
+#graphify/code #graphify/EXTRACTED #community/ImportConsentDto

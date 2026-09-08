@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.test.tsx"
 type: "code"
-community: "RecipientsTab.test.tsx"
+community: "router.tsx"
 location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RecipientsTabtesttsx
+  - community/routertsx
 ---
 
 # RouteHooks
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[RecipientsTab.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RecipientsTabtesttsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

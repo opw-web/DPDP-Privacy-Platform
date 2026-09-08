@@ -1,21 +1,24 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
 type: "code"
-community: "DataSourcesService"
-location: "L36"
+community: ".record"
+location: "L159"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesService
+  - community/record
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_5]] - `calls` [INFERRED]
-- [[DataSourcesController]] - `method` [EXTRACTED]
-- [[Get_26]] - `references` [EXTRACTED]
-- [[Param_19]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-boardReport()]] - `calls` [EXTRACTED]
+- [[dot-completeObligation()]] - `calls` [EXTRACTED]
+- [[dot-get()_18]] - `calls` [INFERRED]
+- [[dot-notifyPrincipals()]] - `calls` [EXTRACTED]
+- [[dot-public()]] - `calls` [EXTRACTED]
+- [[dot-recordExtension()]] - `calls` [EXTRACTED]
+- [[BreachService]] - `method` [EXTRACTED]
+- [[PublicBreach]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesService
+#graphify/code #graphify/EXTRACTED #community/record

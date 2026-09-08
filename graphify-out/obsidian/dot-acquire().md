@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/sync-lock.service.ts"
 type: "code"
-community: "queues.module.ts"
+community: "SyncLockService"
 location: "L124"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/SyncLockService
 ---
 
 # .acquire()
@@ -16,4 +16,4 @@ tags:
 - [[SyncLockService]] - `method` [EXTRACTED]
 - [[lockKey()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/SyncLockService

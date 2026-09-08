@@ -13,14 +13,14 @@ tags:
 
 ## Connections
 - [[dot-setStatus()]] - `references` [EXTRACTED]
-- [[ApiProperty_3]] - `references` [EXTRACTED]
+- [[ApiProperty_4]] - `references` [EXTRACTED]
 - [[ApiPropertyOptional_5]] - `references` [EXTRACTED]
-- [[IsIn_2]] - `references` [EXTRACTED]
+- [[IsIn_1]] - `references` [EXTRACTED]
 - [[IsObject_1]] - `references` [EXTRACTED]
 - [[IsOptional_5]] - `references` [EXTRACTED]
-- [[IsString_5]] - `references` [EXTRACTED]
+- [[IsString_6]] - `references` [EXTRACTED]
 - [[IsUUID]] - `references` [EXTRACTED]
-- [[MinLength_2]] - `references` [EXTRACTED]
+- [[MinLength_4]] - `references` [EXTRACTED]
 - [[me-consents.controller.ts]] - `imports` [EXTRACTED]
 - [[set-my-consent.dto.ts]] - `contains` [EXTRACTED]
 

@@ -12,6 +12,7 @@ tags:
 # DataSourceDetailPage.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[AttachedPurpose]] - `imports` [EXTRACTED]
 - [[Badge()]] - `imports` [EXTRACTED]
 - [[DataSourceDetailPage()]] - `contains` [EXTRACTED]
@@ -50,8 +51,10 @@ tags:
 - [[badge.tsx]] - `imports_from` [EXTRACTED]
 - [[data-sources-api.ts]] - `imports_from` [EXTRACTED]
 - [[employeeApiClient]] - `imports` [EXTRACTED]
+- [[lucide-react_1]] - `imports_from` [EXTRACTED]
 - [[mappingsQueryKey()]] - `imports` [EXTRACTED]
 - [[purposesQueryKey()]] - `imports` [EXTRACTED]
+- [[react-router-dom_1]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 - [[tabs.tsx]] - `imports_from` [EXTRACTED]
 - [[useDataSourceMappings()]] - `contains` [EXTRACTED]

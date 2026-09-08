@@ -1,17 +1,20 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/SdfPage.test.tsx"
 type: "code"
-community: "SdfPage.test.tsx"
+community: "router.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SdfPagetesttsx
+  - community/routertsx
 ---
 
 # SdfPage.test.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
+- [[@testing-libraryreact_1]] - `imports_from` [EXTRACTED]
+- [[@testing-libraryuser-event_1]] - `imports_from` [EXTRACTED]
 - [[ALGORITHMS]] - `contains` [EXTRACTED]
 - [[ASSESSMENTS]] - `contains` [EXTRACTED]
 - [[CYCLE_RULE]] - `contains` [EXTRACTED]
@@ -26,6 +29,9 @@ tags:
 - [[json()_1]] - `contains` [EXTRACTED]
 - [[libauth.ts]] - `imports_from` [EXTRACTED]
 - [[mockFetch()]] - `contains` [EXTRACTED]
-- [[renderPage()_8]] - `contains` [EXTRACTED]
+- [[react-router-dom_1]] - `imports_from` [EXTRACTED]
+- [[renderPage()_6]] - `contains` [EXTRACTED]
+- [[sonner_1]] - `imports_from` [EXTRACTED]
+- [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SdfPagetesttsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

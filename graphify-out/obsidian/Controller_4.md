@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Public"
+community: "AccessTokenPayload"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/AccessTokenPayload
 ---
 
 # Controller
 
 ## Connections
-- [[MeRightsController]] - `references` [EXTRACTED]
+- [[RetentionController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

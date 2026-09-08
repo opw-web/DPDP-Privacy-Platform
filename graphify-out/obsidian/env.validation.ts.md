@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/config/env.validation.ts"
 type: "code"
-community: "audit-chain-verify.processor.ts"
+community: "token.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-chain-verifyprocessorts
+  - community/tokenservicets
 ---
 
 # env.validation.ts
@@ -16,7 +16,9 @@ tags:
 - [[EnvironmentVariables]] - `contains` [EXTRACTED]
 - [[access-log-retention.constant.ts]] - `imports_from` [EXTRACTED]
 - [[app.module.ts]] - `imports_from` [EXTRACTED]
+- [[class-transformer_1]] - `imports_from` [EXTRACTED]
+- [[class-validator_1]] - `imports_from` [EXTRACTED]
 - [[env.validation.spec.ts]] - `imports_from` [EXTRACTED]
 - [[validate()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-chain-verifyprocessorts
+#graphify/code #graphify/EXTRACTED #community/tokenservicets

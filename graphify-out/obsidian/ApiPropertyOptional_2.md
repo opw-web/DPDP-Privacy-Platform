@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "VerifyGuardianDto"
+community: "guardians.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/VerifyGuardianDto
+  - community/guardiansservicets
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[VerifyGuardianDto]] - `references` [EXTRACTED]
+- [[CreateGuardianDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/VerifyGuardianDto
+#graphify/code #graphify/EXTRACTED #community/guardiansservicets

@@ -12,6 +12,7 @@ tags:
 # me-privacy-contact.dto.ts
 
 ## Connections
+- [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[MePrivacyContactDto]] - `contains` [EXTRACTED]
 - [[me.controller.ts]] - `imports_from` [EXTRACTED]
 - [[me.service.ts]] - `imports_from` [EXTRACTED]

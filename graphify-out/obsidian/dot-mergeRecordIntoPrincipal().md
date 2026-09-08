@@ -15,7 +15,7 @@ tags:
 - [[dot-confirm()_1]] - `calls` [INFERRED]
 - [[dot-derive()]] - `calls` [INFERRED]
 - [[dot-rebuild()]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
 - [[MergeService]] - `method` [EXTRACTED]
 - [[ScopedTransactionClient]] - `references` [EXTRACTED]
 

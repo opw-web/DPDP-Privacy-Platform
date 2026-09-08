@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "breaches.module.ts"
+community: "BreachClockProcessor"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breachesmodulets
+  - community/BreachClockProcessor
 ---
 
 # Processor
 
 ## Connections
-- [[CampaignSendProcessor]] - `references` [EXTRACTED]
+- [[BreachClockProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breachesmodulets
+#graphify/code #graphify/EXTRACTED #community/BreachClockProcessor

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "data-sources.service.ts"
+community: "PreviewAudienceDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesservicets
+  - community/PreviewAudienceDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateDataSourceDto]] - `references` [EXTRACTED]
+- [[PreviewAudienceDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets
+#graphify/code #graphify/EXTRACTED #community/PreviewAudienceDto

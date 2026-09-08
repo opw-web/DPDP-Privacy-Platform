@@ -11,8 +11,8 @@ tags:
 # Res
 
 ## Connections
-- [[dot-login()_2]] - `references` [EXTRACTED]
-- [[dot-logout()_2]] - `references` [EXTRACTED]
-- [[dot-refresh()_2]] - `references` [EXTRACTED]
+- [[dot-login()_1]] - `references` [EXTRACTED]
+- [[dot-logout()]] - `references` [EXTRACTED]
+- [[dot-refresh()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/EmployeeAuthController

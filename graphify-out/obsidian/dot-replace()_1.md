@@ -1,26 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.service.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/source-purposes.service.ts"
 type: "code"
-community: ".replace"
-location: "L123"
+community: "mappings.service.ts"
+location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/replace
+  - community/mappingsservicets
 ---
 
 # .replace()
 
 ## Connections
-- [[dot-rebuild()]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[dot-replaceMappings()]] - `calls` [INFERRED]
-- [[dot-rescrubFieldSample()]] - `calls` [INFERRED]
-- [[dot-validateVerifiedCustomerId()]] - `calls` [EXTRACTED]
-- [[MappingsService]] - `method` [EXTRACTED]
-- [[ReplaceMappingsDto]] - `references` [EXTRACTED]
+- [[dot-get()_9]] - `calls` [EXTRACTED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-replacePurposes()]] - `calls` [INFERRED]
+- [[AttachPurposesDto]] - `references` [EXTRACTED]
+- [[SourcePurposesService]] - `method` [EXTRACTED]
 - [[computeMappingWarnings()]] - `calls` [EXTRACTED]
-- [[duplicateSourceFieldMessage()]] - `calls` [EXTRACTED]
-- [[isUniqueConstraintViolation()_1]] - `calls` [EXTRACTED]
+- [[toPublicPurpose()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/replace
+#graphify/code #graphify/EXTRACTED #community/mappingsservicets

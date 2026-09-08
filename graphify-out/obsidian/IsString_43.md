@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "employees.service.ts"
+community: "PreviewAudienceDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeesservicets
+  - community/PreviewAudienceDto
 ---
 
 # IsString
 
 ## Connections
-- [[CreateEmployeeDto]] - `references` [EXTRACTED]
+- [[PreviewAudienceDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeesservicets
+#graphify/code #graphify/EXTRACTED #community/PreviewAudienceDto

@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/scripts/seed-scale.ts"
+source_file: "dpdp-platform/backend/prisma/seed-principals.ts"
 type: "code"
-community: "seed-scale.ts"
-location: "L359"
+community: "argon2"
+location: "L238"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/seed-scalets
+  - community/argon2
 ---
 
 # main()
 
 ## Connections
 - [[PrismaService]] - `calls` [EXTRACTED]
-- [[seed-scale.ts]] - `contains` [EXTRACTED]
-- [[seedScale()]] - `calls` [EXTRACTED]
+- [[runSeedPrincipals()]] - `calls` [EXTRACTED]
+- [[seed-principals.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/seed-scalets
+#graphify/code #graphify/EXTRACTED #community/argon2

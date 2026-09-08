@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "MappingsController"
+community: "purposes.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MappingsController
+  - community/purposesservicets
 ---
 
 # ApiTags
 
 ## Connections
-- [[MappingsController]] - `references` [EXTRACTED]
+- [[PurposesController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MappingsController
+#graphify/code #graphify/EXTRACTED #community/purposesservicets

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "breaches.module.ts"
+community: "CampaignSendQueueService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breachesmodulets
+  - community/CampaignSendQueueService
 ---
 
 # InjectQueue
 
 ## Connections
-- [[dot-constructor()_56]] - `references` [EXTRACTED]
+- [[dot-constructor()_64]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breachesmodulets
+#graphify/code #graphify/EXTRACTED #community/CampaignSendQueueService

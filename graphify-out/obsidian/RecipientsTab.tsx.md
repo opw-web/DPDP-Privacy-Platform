@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.tsx"
 type: "code"
-community: "SecurityMeasuresTab.tsx"
+community: "react"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresTabtsx
+  - community/react
 ---
 
 # RecipientsTab.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
+- [[@tanstackreact-table]] - `imports_from` [EXTRACTED]
 - [[ApiError]] - `imports` [EXTRACTED]
 - [[Badge()]] - `imports` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
@@ -19,8 +21,8 @@ tags:
 - [[CardContent]] - `imports` [EXTRACTED]
 - [[CardHeader]] - `imports` [EXTRACTED]
 - [[CardTitle]] - `imports` [EXTRACTED]
-- [[CheckboxOption]] - `imports` [EXTRACTED]
 - [[CheckboxOption_1]] - `imports` [EXTRACTED]
+- [[CheckboxOption]] - `imports` [EXTRACTED]
 - [[ContractStatusCell()]] - `contains` [EXTRACTED]
 - [[CreateRecipientPayload]] - `contains` [EXTRACTED]
 - [[DEFAULT_VALUES_1]] - `contains` [EXTRACTED]
@@ -39,7 +41,7 @@ tags:
 - [[RecipientsTab.test.tsx]] - `imports_from` [EXTRACTED]
 - [[RegistersPage.tsx]] - `imports_from` [EXTRACTED]
 - [[Select]] - `imports` [EXTRACTED]
-- [[SelectControl]] - `imports` [EXTRACTED]
+- [[SelectControl_1]] - `imports` [EXTRACTED]
 - [[api-client.ts]] - `imports_from` [EXTRACTED]
 - [[badge.tsx]] - `imports_from` [EXTRACTED]
 - [[button.tsx]] - `imports_from` [EXTRACTED]
@@ -49,6 +51,11 @@ tags:
 - [[form-controls.tsx]] - `imports_from` [EXTRACTED]
 - [[humanizeEnum()]] - `imports` [EXTRACTED]
 - [[input.tsx]] - `imports_from` [EXTRACTED]
+- [[lucide-react_1]] - `imports_from` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
+- [[react-hook-form_1]] - `imports_from` [EXTRACTED]
 - [[recipientFormSchema]] - `contains` [EXTRACTED]
+- [[sonner_1]] - `imports_from` [EXTRACTED]
+- [[zod_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx
+#graphify/code #graphify/EXTRACTED #community/react

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeHomePage.tsx"
 type: "code"
-community: "card.tsx"
+community: "react-router-dom"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cardtsx
+  - community/react-router-dom
 ---
 
 # MeProfile
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[MeHomePage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cardtsx
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

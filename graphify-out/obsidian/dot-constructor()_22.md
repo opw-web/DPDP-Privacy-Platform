@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/source-purposes.service.ts"
+source_file: "dpdp-platform/backend/src/queues/audit-chain-verify.processor.ts"
 type: "code"
-community: "SourcePurposesService"
-location: "L36"
+community: "NotificationsService"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SourcePurposesService
+  - community/NotificationsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[SourcePurposesService]] - `method` [EXTRACTED]
+- [[AuditChainService]] - `references` [EXTRACTED]
+- [[AuditChainVerifyProcessor]] - `method` [EXTRACTED]
+- [[NotificationsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SourcePurposesService
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

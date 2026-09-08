@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".unmerge"
+community: "employees.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/unmerge
+  - community/employeesservicets
 ---
 
 # MinLength
 
 ## Connections
-- [[UnmergeDto]] - `references` [EXTRACTED]
+- [[ResetEmployeePasswordDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/unmerge
+#graphify/code #graphify/EXTRACTED #community/employeesservicets

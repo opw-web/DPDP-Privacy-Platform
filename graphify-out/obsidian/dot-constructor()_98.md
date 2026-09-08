@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/lib/api-client.ts"
+source_file: "dpdp-platform/backend/src/modules/board/information-requests.controller.ts"
 type: "code"
-community: "button.tsx"
-location: "L30"
+community: "CreateInformationRequestDto"
+location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/CreateInformationRequestDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[ApiError]] - `method` [EXTRACTED]
+- [[InformationRequestsController]] - `method` [EXTRACTED]
+- [[InformationRequestsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

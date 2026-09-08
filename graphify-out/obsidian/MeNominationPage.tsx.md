@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeNominationPage.tsx"
 type: "code"
-community: "card.tsx"
+community: "react"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cardtsx
+  - community/react
 ---
 
 # MeNominationPage.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
 - [[Card]] - `imports` [EXTRACTED]
 - [[CardContent]] - `imports` [EXTRACTED]
@@ -19,7 +20,7 @@ tags:
 - [[CardTitle]] - `imports` [EXTRACTED]
 - [[EMPTY_NOMINATION]] - `contains` [EXTRACTED]
 - [[Input]] - `imports` [EXTRACTED]
-- [[Label]] - `imports` [EXTRACTED]
+- [[Label_1]] - `imports` [EXTRACTED]
 - [[MeNominationPage()]] - `contains` [EXTRACTED]
 - [[MeNominationPage.test.tsx]] - `imports_from` [EXTRACTED]
 - [[Nomination]] - `contains` [EXTRACTED]
@@ -34,7 +35,8 @@ tags:
 - [[input.tsx]] - `imports_from` [EXTRACTED]
 - [[label.tsx]] - `imports_from` [EXTRACTED]
 - [[principalApiClient]] - `imports` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 - [[select.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cardtsx
+#graphify/code #graphify/EXTRACTED #community/react

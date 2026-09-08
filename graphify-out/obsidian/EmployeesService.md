@@ -12,14 +12,14 @@ tags:
 # EmployeesService
 
 ## Connections
-- [[dot-constructor()_94]] - `references` [EXTRACTED]
-- [[dot-constructor()_95]] - `method` [EXTRACTED]
-- [[dot-create()_18]] - `method` [EXTRACTED]
-- [[dot-get()_13]] - `method` [EXTRACTED]
-- [[dot-list()_25]] - `method` [EXTRACTED]
+- [[dot-constructor()_97]] - `references` [EXTRACTED]
+- [[dot-constructor()_5]] - `method` [EXTRACTED]
+- [[dot-create()_19]] - `method` [EXTRACTED]
+- [[dot-get()_12]] - `method` [EXTRACTED]
+- [[dot-list()_26]] - `method` [EXTRACTED]
 - [[dot-resetPassword()_1]] - `method` [EXTRACTED]
-- [[dot-update()_14]] - `method` [EXTRACTED]
-- [[Injectable_59]] - `references` [EXTRACTED]
+- [[dot-update()_13]] - `method` [EXTRACTED]
+- [[Injectable_60]] - `references` [EXTRACTED]
 - [[employees.controller.ts]] - `imports` [EXTRACTED]
 - [[employees.module.ts]] - `imports` [EXTRACTED]
 - [[employees.service.ts]] - `contains` [EXTRACTED]

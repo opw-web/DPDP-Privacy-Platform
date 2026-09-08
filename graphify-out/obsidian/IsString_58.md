@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "child-exemptions.service.ts"
+community: "ProcessorChecklistTickDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/child-exemptionsservicets
+  - community/ProcessorChecklistTickDto
 ---
 
 # IsString
 
 ## Connections
-- [[CreateExemptionClaimDto]] - `references` [EXTRACTED]
+- [[ProcessorChecklistTickDto]] - `references` [EXTRACTED]
+- [[SystemChecklistTickDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/child-exemptionsservicets
+#graphify/code #graphify/EXTRACTED #community/ProcessorChecklistTickDto

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/messaging/audience/audience.controller.ts"
 type: "code"
-community: ".preview"
+community: "PreviewAudienceDto"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/preview
+  - community/PreviewAudienceDto
 ---
 
 # .constructor()
@@ -15,4 +15,4 @@ tags:
 - [[AudienceController]] - `method` [EXTRACTED]
 - [[AudienceService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/preview
+#graphify/code #graphify/EXTRACTED #community/PreviewAudienceDto

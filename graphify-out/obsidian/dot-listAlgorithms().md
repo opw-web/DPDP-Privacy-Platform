@@ -12,7 +12,8 @@ tags:
 # .listAlgorithms()
 
 ## Connections
-- [[Get_16]] - `references` [EXTRACTED]
+- [[dot-list()_17]] - `calls` [INFERRED]
+- [[Get_20]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[SdfController]] - `method` [EXTRACTED]
 

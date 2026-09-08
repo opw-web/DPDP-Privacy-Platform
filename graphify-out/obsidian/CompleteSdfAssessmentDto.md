@@ -1,26 +1,26 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sdf/dto/complete-sdf-assessment.dto.ts"
 type: "code"
-community: "sdf.controller.ts"
+community: "SdfAssessmentService"
 location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdfcontrollerts
+  - community/SdfAssessmentService
 ---
 
 # CompleteSdfAssessmentDto
 
 ## Connections
-- [[dot-complete()]] - `references` [EXTRACTED]
+- [[dot-complete()_2]] - `references` [EXTRACTED]
 - [[dot-completeAssessment()]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_22]] - `references` [EXTRACTED]
-- [[IsBoolean_10]] - `references` [EXTRACTED]
-- [[IsDateString_6]] - `references` [EXTRACTED]
-- [[IsOptional_23]] - `references` [EXTRACTED]
-- [[IsString_24]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_28]] - `references` [EXTRACTED]
+- [[IsBoolean_14]] - `references` [EXTRACTED]
+- [[IsDateString_10]] - `references` [EXTRACTED]
+- [[IsOptional_28]] - `references` [EXTRACTED]
+- [[IsString_34]] - `references` [EXTRACTED]
 - [[complete-sdf-assessment.dto.ts]] - `contains` [EXTRACTED]
 - [[sdf-assessment.service.ts]] - `imports` [EXTRACTED]
 - [[sdf.controller.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdfcontrollerts
+#graphify/code #graphify/EXTRACTED #community/SdfAssessmentService

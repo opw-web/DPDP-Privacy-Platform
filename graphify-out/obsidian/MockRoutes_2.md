@@ -1,17 +1,19 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/InformationRequestsPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/DashboardPage.test.tsx"
 type: "code"
-community: "InformationRequestsPage.test.tsx"
-location: "L64"
+community: "EmployeesPage.tsx"
+location: "L129"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/InformationRequestsPagetesttsx
+  - community/EmployeesPagetsx
 ---
 
 # MockRoutes
 
 ## Connections
-- [[InformationRequestsPage.test.tsx]] - `contains` [EXTRACTED]
+- [[DashboardPage.test.tsx]] - `contains` [EXTRACTED]
+- [[InventoryGap_1]] - `references` [EXTRACTED]
+- [[InventorySummary_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/InformationRequestsPagetesttsx
+#graphify/code #graphify/EXTRACTED #community/EmployeesPagetsx

@@ -1,20 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/audit/audit-read.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts"
 type: "code"
-community: "AuditReadService"
-location: "L157"
+community: "TemplatesService"
+location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditReadService
+  - community/TemplatesService
 ---
 
 # .list()
 
 ## Connections
-- [[dot-buildWhere()]] - `calls` [EXTRACTED]
-- [[dot-hasFullPersonalDataAccess()]] - `calls` [INFERRED]
-- [[AuditReadService]] - `method` [EXTRACTED]
-- [[ListAuditEventsDto]] - `references` [EXTRACTED]
+- [[dot-list()_13]] - `calls` [INFERRED]
+- [[TemplatesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditReadService
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

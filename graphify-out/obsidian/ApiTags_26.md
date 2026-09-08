@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "DataSourcesService"
+community: "NotificationCallerActor"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesService
+  - community/NotificationCallerActor
 ---
 
 # ApiTags
 
 ## Connections
-- [[DataSourcesController]] - `references` [EXTRACTED]
+- [[NotificationsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesService
+#graphify/code #graphify/EXTRACTED #community/NotificationCallerActor

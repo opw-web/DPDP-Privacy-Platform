@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sync/sync-error.spec.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
 type: "code"
-community: "sync-pipeline.service.ts"
-location: "L12"
+community: "CampaignsService"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sync-pipelineservicets
+  - community/CampaignsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[IdentifierOwnershipConflictError]] - `method` [EXTRACTED]
+- [[CampaignsController]] - `method` [EXTRACTED]
+- [[CampaignsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sync-pipelineservicets
+#graphify/code #graphify/EXTRACTED #community/CampaignsService

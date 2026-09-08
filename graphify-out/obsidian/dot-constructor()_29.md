@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.service.ts"
+source_file: "dpdp-platform/backend/src/modules/consents/me-consents.controller.ts"
 type: "code"
-community: "principal-auth.service.ts"
-location: "L35"
+community: "Public"
+location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principal-authservicets
+  - community/Public
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[EmployeeAuthService]] - `method` [EXTRACTED]
-- [[TokenService]] - `references` [EXTRACTED]
+- [[ConsentsService]] - `references` [EXTRACTED]
+- [[MeConsentsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principal-authservicets
+#graphify/code #graphify/EXTRACTED #community/Public

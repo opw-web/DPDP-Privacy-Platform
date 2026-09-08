@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/compliance/compliance.module.ts"
 type: "code"
-community: "retention.module.ts"
+community: "app.module.ts"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionmodulets
+  - community/appmodulets
 ---
 
 # ComplianceModule
 
 ## Connections
-- [[Module_30]] - `references` [EXTRACTED]
+- [[Module_12]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[breaches.module.ts]] - `imports` [EXTRACTED]
 - [[compliance.module.ts]] - `contains` [EXTRACTED]
@@ -20,4 +20,4 @@ tags:
 - [[retention.module.ts]] - `imports` [EXTRACTED]
 - [[sdf.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionmodulets
+#graphify/code #graphify/EXTRACTED #community/appmodulets

@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/health/health.service.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/candidates.controller.ts"
 type: "code"
-community: "HealthService"
-location: "L28"
+community: "CandidatesController"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/HealthService
+  - community/CandidatesController
 ---
 
 # .constructor()
 
 ## Connections
-- [[HealthService]] - `method` [EXTRACTED]
+- [[CandidatesController]] - `method` [EXTRACTED]
+- [[CandidatesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/HealthService
+#graphify/code #graphify/EXTRACTED #community/CandidatesController

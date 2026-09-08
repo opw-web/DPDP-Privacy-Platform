@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "MeRightsService"
+community: "Public"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeRightsService
+  - community/Public
 ---
 
 # Query
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-getPublishedNotice()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeRightsService
+#graphify/code #graphify/EXTRACTED #community/Public

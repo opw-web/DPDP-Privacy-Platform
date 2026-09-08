@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: ".record"
+community: "AffectedPrincipalsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/AffectedPrincipalsDto
 ---
 
 # IsObject
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[AffectedPrincipalsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/AffectedPrincipalsDto

@@ -1,39 +1,29 @@
 ---
 type: community
-members: 26
+members: 16
 ---
 
 # mvp2-schedules.ts
 
-**Members:** 26 nodes
+**Members:** 16 nodes
 
 ## Members
-- [[dot-constructor()_85]] - code - dpdp-platform/backend/src/modules/sdf/sdf-cycle-scan.service.ts
-- [[dot-constructor()_86]] - code - dpdp-platform/backend/src/queues/sdf-cycle-scan.processor.ts
-- [[dot-findSdfManagerEmployeeIds()]] - code - dpdp-platform/backend/src/modules/sdf/sdf-cycle-scan.service.ts
-- [[dot-process()_7]] - code - dpdp-platform/backend/src/queues/sdf-cycle-scan.processor.ts
-- [[dot-runForAllOrganizations()_3]] - code - dpdp-platform/backend/src/modules/sdf/sdf-cycle-scan.service.ts
-- [[dot-sendWarningsIfDue()]] - code - dpdp-platform/backend/src/modules/sdf/sdf-cycle-scan.service.ts
-- [[DEADLINE_SCAN_CRON_PATTERN]] - code - dpdp-platform/backend/src/queues/deadline-scan.queue.ts
-- [[DEADLINE_SCAN_JOB_NAME]] - code - dpdp-platform/backend/src/queues/deadline-scan.queue.ts
-- [[DEADLINE_SCAN_QUEUE_NAME]] - code - dpdp-platform/backend/src/queues/deadline-scan.queue.ts
-- [[DEADLINE_SCAN_SCHEDULER_ID]] - code - dpdp-platform/backend/src/queues/deadline-scan.queue.ts
-- [[DEADLINE_SCAN_SCHEDULE_TRIGGERED_BY]] - code - dpdp-platform/backend/src/queues/deadline-scan.queue.ts
-- [[Injectable_55]] - code
-- [[Processor_8]] - code
-- [[SDF_CYCLE_SCAN_CRON_PATTERN]] - code - dpdp-platform/backend/src/queues/sdf-cycle-scan.queue.ts
-- [[SDF_CYCLE_SCAN_JOB_NAME]] - code - dpdp-platform/backend/src/queues/sdf-cycle-scan.queue.ts
-- [[SDF_CYCLE_SCAN_QUEUE_NAME]] - code - dpdp-platform/backend/src/queues/sdf-cycle-scan.queue.ts
-- [[SDF_CYCLE_SCAN_SCHEDULER_ID]] - code - dpdp-platform/backend/src/queues/sdf-cycle-scan.queue.ts
-- [[SDF_CYCLE_SCAN_SCHEDULE_TRIGGERED_BY]] - code - dpdp-platform/backend/src/queues/sdf-cycle-scan.queue.ts
+- [[dot-constructor()_81]] - code - dpdp-platform/backend/src/queues/retention-scan.processor.ts
+- [[dot-process()_7]] - code - dpdp-platform/backend/src/queues/retention-scan.processor.ts
+- [[AUDIT_CHAIN_VERIFY_QUEUE_NAME]] - code - dpdp-platform/backend/src/queues/audit-chain-verify.processor.ts
+- [[PRE_ERASURE_NOTICE_QUEUE_NAME]] - code - dpdp-platform/backend/src/queues/retention-scan.queue.ts
+- [[PreErasureNoticeJobData]] - code - dpdp-platform/backend/src/queues/retention-scan.queue.ts
+- [[Processor_7]] - code
+- [[RETENTION_SCAN_QUEUE_NAME]] - code - dpdp-platform/backend/src/queues/retention-scan.queue.ts
+- [[RETENTION_SCHEDULE_TRIGGERED_BY]] - code - dpdp-platform/backend/src/queues/retention-scan.queue.ts
+- [[RetentionScanJobData]] - code - dpdp-platform/backend/src/queues/retention-scan.queue.ts
+- [[RetentionScanProcessor]] - code - dpdp-platform/backend/src/queues/retention-scan.processor.ts
 - [[SchedulableQueue]] - code - dpdp-platform/backend/src/queues/mvp2-schedules.ts
-- [[SdfCycleScanJobData]] - code - dpdp-platform/backend/src/queues/sdf-cycle-scan.queue.ts
-- [[SdfCycleScanProcessor]] - code - dpdp-platform/backend/src/queues/sdf-cycle-scan.processor.ts
-- [[SdfCycleScanService]] - code - dpdp-platform/backend/src/modules/sdf/sdf-cycle-scan.service.ts
-- [[deadline-scan.queue.ts]] - code - dpdp-platform/backend/src/queues/deadline-scan.queue.ts
+- [[bullmq_1]] - concept - dpdp-platform/backend/package.json
 - [[mvp2-schedules.ts]] - code - dpdp-platform/backend/src/queues/mvp2-schedules.ts
-- [[sdf-cycle-scan.processor.ts]] - code - dpdp-platform/backend/src/queues/sdf-cycle-scan.processor.ts
-- [[sdf-cycle-scan.queue.ts]] - code - dpdp-platform/backend/src/queues/sdf-cycle-scan.queue.ts
+- [[pre-erasure-notice.processor.ts]] - code - dpdp-platform/backend/src/queues/pre-erasure-notice.processor.ts
+- [[retention-scan.processor.ts]] - code - dpdp-platform/backend/src/queues/retention-scan.processor.ts
+- [[retention-scan.queue.ts]] - code - dpdp-platform/backend/src/queues/retention-scan.queue.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -43,24 +33,25 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_retention.module.ts]]
-- 8 edges to [[_COMMUNITY_SyncQueueService]]
-- 5 edges to [[_COMMUNITY_queues.module.ts]]
-- 5 edges to [[_COMMUNITY_audit-chain-verify.processor.ts]]
-- 3 edges to [[_COMMUNITY_erasure-task.service.ts]]
-- 3 edges to [[_COMMUNITY_consent-backfill.queue.ts]]
-- 2 edges to [[_COMMUNITY_AuditService]]
-- 2 edges to [[_COMMUNITY_prisma.service.ts]]
-- 2 edges to [[_COMMUNITY_breaches.module.ts]]
-- 2 edges to [[_COMMUNITY_requests.service.ts]]
-- 1 edge to [[_COMMUNITY_DeadlineScanProcessor]]
-- 1 edge to [[_COMMUNITY_notifications.service.ts]]
-- 1 edge to [[_COMMUNITY_PrismaService]]
-- 1 edge to [[_COMMUNITY_NotificationSendInput]]
+- 18 edges to [[_COMMUNITY_app.module.ts]]
+- 8 edges to [[_COMMUNITY_PrismaService]]
+- 6 edges to [[_COMMUNITY_deadline-scan.processor.ts]]
+- 6 edges to [[_COMMUNITY_sdf-cycle-scan.queue.ts]]
+- 5 edges to [[_COMMUNITY_consent-backfill.queue.ts]]
+- 4 edges to [[_COMMUNITY_token.service.ts]]
+- 4 edges to [[_COMMUNITY_@nestjscommon]]
+- 3 edges to [[_COMMUNITY_PreErasureNoticeService]]
+- 3 edges to [[_COMMUNITY_schedule-reconciliation.service.ts]]
+- 3 edges to [[_COMMUNITY_RetentionScanService]]
+- 3 edges to [[_COMMUNITY_sync.queue.ts]]
+- 2 edges to [[_COMMUNITY_BootRegistrationRegistry]]
+- 1 edge to [[_COMMUNITY_sync.e2e-spec.ts]]
+- 1 edge to [[_COMMUNITY_breach-principal-notice-dispatch.queue.ts]]
+- 1 edge to [[_COMMUNITY_backendpackage.json]]
 
 ## Top bridge nodes
-- [[mvp2-schedules.ts]] - degree 26, connects to 6 communities
-- [[deadline-scan.queue.ts]] - degree 13, connects to 5 communities
-- [[SdfCycleScanService]] - degree 11, connects to 4 communities
-- [[sdf-cycle-scan.queue.ts]] - degree 13, connects to 3 communities
-- [[DEADLINE_SCAN_QUEUE_NAME]] - degree 5, connects to 3 communities
+- [[bullmq_1]] - degree 22, connects to 10 communities
+- [[mvp2-schedules.ts]] - degree 29, connects to 8 communities
+- [[retention-scan.queue.ts]] - degree 16, connects to 4 communities
+- [[pre-erasure-notice.processor.ts]] - degree 10, connects to 4 communities
+- [[retention-scan.processor.ts]] - degree 10, connects to 4 communities

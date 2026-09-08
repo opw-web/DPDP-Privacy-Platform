@@ -1,17 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts"
+source_file: "dpdp-platform/backend/src/modules/principals/principals.service.ts"
 type: "code"
-community: "AlgorithmRegisterService"
-location: "L40"
+community: "PrincipalsController"
+location: "L75"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AlgorithmRegisterService
+  - community/PrincipalsController
 ---
 
 # .list()
 
 ## Connections
-- [[AlgorithmRegisterService]] - `method` [EXTRACTED]
+- [[dot-list()_15]] - `calls` [INFERRED]
+- [[dot-maskIfNeeded()]] - `calls` [INFERRED]
+- [[PrincipalsService]] - `method` [EXTRACTED]
+- [[buildPrincipalSearchQuery()]] - `calls` [EXTRACTED]
+- [[pickDisplayName()]] - `calls` [EXTRACTED]
+- [[resolveProvenance()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterService
+#graphify/code #graphify/EXTRACTED #community/PrincipalsController

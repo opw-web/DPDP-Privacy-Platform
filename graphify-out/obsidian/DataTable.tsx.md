@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/DataTable.tsx"
 type: "code"
-community: "cn"
+community: "AuditPage.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/AuditPagetsx
 ---
 
 # DataTable.tsx
 
 ## Connections
+- [[@tanstackreact-table]] - `imports_from` [EXTRACTED]
 - [[DataSourcesPage.tsx]] - `imports_from` [EXTRACTED]
 - [[DataTable()]] - `contains` [EXTRACTED]
 - [[DataTable.test.tsx]] - `imports_from` [EXTRACTED]
@@ -39,4 +40,4 @@ tags:
 - [[TransfersTab.tsx]] - `imports_from` [EXTRACTED]
 - [[table.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/AuditPagetsx

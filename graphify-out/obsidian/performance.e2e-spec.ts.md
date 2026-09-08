@@ -12,6 +12,7 @@ tags:
 # performance.e2e-spec.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[SCALE_APPROVER_EMAIL]] - `imports` [EXTRACTED]
 - [[SCALE_CONSENT_COUNT]] - `imports` [EXTRACTED]
@@ -23,6 +24,7 @@ tags:
 - [[e2e-harness.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[seed-scale.ts]] - `imports_from` [EXTRACTED]
+- [[supertest]] - `imports_from` [EXTRACTED]
 - [[waitUntil()_1]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/seed-scalets

@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.controller.ts"
 type: "code"
-community: "SourcePurposesService"
-location: "L82"
+community: "AccessTokenPayload"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SourcePurposesService
+  - community/AccessTokenPayload
 ---
 
 # .list()
 
 ## Connections
-- [[PurposesService]] - `method` [EXTRACTED]
-- [[toPublicPurpose()]] - `indirect_call` [INFERRED]
+- [[dot-list()_35]] - `calls` [INFERRED]
+- [[Get_4]] - `references` [EXTRACTED]
+- [[NoticesController]] - `method` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SourcePurposesService
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

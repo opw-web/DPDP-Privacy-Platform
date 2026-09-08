@@ -12,6 +12,9 @@ tags:
 # Step3Mapping.test.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
+- [[@testing-libraryreact_1]] - `imports_from` [EXTRACTED]
+- [[@testing-libraryuser-event_1]] - `imports_from` [EXTRACTED]
 - [[CATEGORY_WARNING]] - `contains` [EXTRACTED]
 - [[FIELDS]] - `contains` [EXTRACTED]
 - [[MappingWarning]] - `imports` [EXTRACTED]
@@ -22,6 +25,8 @@ tags:
 - [[data-sources-api.ts]] - `imports_from` [EXTRACTED]
 - [[employeeTokenStore]] - `imports` [EXTRACTED]
 - [[jsonResponse()_1]] - `contains` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
 - [[renderStep3()]] - `contains` [EXTRACTED]
+- [[vitest_1]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/data-sources-apits

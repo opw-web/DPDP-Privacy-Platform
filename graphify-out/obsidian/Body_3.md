@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Public"
+community: "AccessTokenPayload"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/AccessTokenPayload
 ---
 
 # Body
 
 ## Connections
-- [[dot-commentOnRequest()]] - `references` [EXTRACTED]
-- [[dot-createRequest()]] - `references` [EXTRACTED]
-- [[dot-upsertNomination()]] - `references` [EXTRACTED]
+- [[dot-create()_2]] - `references` [EXTRACTED]
+- [[dot-createVersion()]] - `references` [EXTRACTED]
+- [[dot-upsertTranslation()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

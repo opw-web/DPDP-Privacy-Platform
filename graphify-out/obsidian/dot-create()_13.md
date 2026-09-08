@@ -1,24 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/requests/requests.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts"
 type: "code"
-community: "erasure-task.service.ts"
-location: "L259"
+community: "TemplatesService"
+location: "L140"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/erasure-taskservicets
+  - graphify/EXTRACTED
+  - community/TemplatesService
 ---
 
 # .create()
 
 ## Connections
-- [[dot-computeDeadline()]] - `calls` [INFERRED]
-- [[dot-createRequest()_1]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[dot-resolveRule()]] - `calls` [INFERRED]
-- [[dot-scanOrgDeadlines()]] - `calls` [EXTRACTED]
-- [[dot-snapshotOnto()]] - `calls` [INFERRED]
-- [[dot-writeTransition()]] - `calls` [EXTRACTED]
-- [[RequestsService]] - `method` [EXTRACTED]
+- [[dot-create()_12]] - `calls` [INFERRED]
+- [[dot-extractAndValidateVariables()]] - `calls` [EXTRACTED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-validateRequiredSubsetOfReferenced()]] - `calls` [EXTRACTED]
+- [[CreateTemplateDto]] - `references` [EXTRACTED]
+- [[TemplatesService]] - `method` [EXTRACTED]
+- [[duplicateCodeMessage()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

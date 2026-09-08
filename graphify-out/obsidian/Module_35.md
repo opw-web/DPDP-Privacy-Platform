@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "data-sources.service.ts"
+community: "@nestjs/common"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesservicets
+  - community/nestjs/common
 ---
 
 # Module
 
 ## Connections
-- [[CryptoModule]] - `references` [EXTRACTED]
+- [[RegistersModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

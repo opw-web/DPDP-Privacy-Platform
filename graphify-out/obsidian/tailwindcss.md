@@ -1,13 +1,17 @@
 ---
-source_file: "tailwindcss"
-type: "code"
-community: "tailwindcss"
+source_file: "dpdp-platform/frontend/package.json"
+type: "concept"
+community: "frontend/package.json"
+location: "L57"
 tags:
-  - graphify/code
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/tailwindcss
+  - community/frontend/packagejson
 ---
 
 # tailwindcss
 
-#graphify/code #graphify/EXTRACTED #community/tailwindcss
+## Connections
+- [[frontendpackage.json]] - `imports` [EXTRACTED]
+
+#graphify/concept #graphify/EXTRACTED #community/frontend/packagejson

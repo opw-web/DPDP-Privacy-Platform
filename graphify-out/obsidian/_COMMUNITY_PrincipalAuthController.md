@@ -1,32 +1,28 @@
 ---
 type: community
-members: 19
+members: 15
 ---
 
 # PrincipalAuthController
 
-**Members:** 19 nodes
+**Members:** 15 nodes
 
 ## Members
 - [[dot-clearRefreshCookie()_1]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
-- [[dot-constructor()_146]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
+- [[dot-constructor()_153]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
 - [[dot-isProduction()_1]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
 - [[dot-login()_3]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
 - [[dot-logout()_3]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
-- [[dot-me()_1]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
-- [[dot-me()_2]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.service.ts
 - [[dot-refresh()_3]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
 - [[dot-setRefreshCookie()_1]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
-- [[ApiTags_39]] - code
-- [[Body_28]] - code
-- [[Controller_40]] - code
-- [[Get_38]] - code
+- [[ApiTags_40]] - code
+- [[Body_29]] - code
+- [[Controller_41]] - code
 - [[HttpCode_5]] - code
-- [[Post_28]] - code
+- [[Post_29]] - code
 - [[PrincipalAuthController]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
 - [[Req_3]] - code
 - [[Res_9]] - code
-- [[UseGuards_4]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -36,8 +32,8 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_Public]]
-- 5 edges to [[_COMMUNITY_principal-auth.service.ts]]
+- 5 edges to [[_COMMUNITY_Public]]
+- 4 edges to [[_COMMUNITY_PrincipalAuthService]]
 - 1 edge to [[_COMMUNITY_PrincipalLoginDto]]
 - 1 edge to [[_COMMUNITY_app.module.ts]]
 
@@ -46,4 +42,4 @@ SORT file.name ASC
 - [[PrincipalAuthController]] - degree 12, connects to 2 communities
 - [[dot-refresh()_3]] - degree 9, connects to 2 communities
 - [[dot-logout()_3]] - degree 8, connects to 2 communities
-- [[dot-me()_2]] - degree 3, connects to 2 communities
+- [[dot-constructor()_153]] - degree 2, connects to 1 community

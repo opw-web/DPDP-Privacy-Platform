@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
+community: "compliance.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/complianceservicets
 ---
 
 # Post
 
 ## Connections
-- [[dot-create()_15]] - `references` [EXTRACTED]
+- [[dot-create()_10]] - `references` [EXTRACTED]
+- [[dot-review()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/complianceservicets

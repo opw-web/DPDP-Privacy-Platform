@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/candidates.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/principal-portal/me-rights.controller.ts"
 type: "code"
-community: "CandidatesService"
-location: "L27"
+community: "me-rights.service.ts"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CandidatesService
+  - community/me-rightsservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[CandidatesController]] - `method` [EXTRACTED]
-- [[CandidatesService]] - `references` [EXTRACTED]
+- [[MeRightsController]] - `method` [EXTRACTED]
+- [[MeRightsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CandidatesService
+#graphify/code #graphify/EXTRACTED #community/me-rightsservicets

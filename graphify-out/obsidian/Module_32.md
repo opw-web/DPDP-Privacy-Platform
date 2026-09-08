@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "retention.module.ts"
+community: "@nestjs/common"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionmodulets
+  - community/nestjs/common
 ---
 
 # Module
 
 ## Connections
-- [[RetentionModule]] - `references` [EXTRACTED]
+- [[AuditReadModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionmodulets
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

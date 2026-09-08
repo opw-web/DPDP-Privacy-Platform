@@ -12,7 +12,6 @@ tags:
 # @nestjs/cli
 
 ## Connections
-- [[@nestjscli_1]] - `imports` [EXTRACTED]
 - [[devDependencies_1]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/devDependencies

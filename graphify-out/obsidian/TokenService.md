@@ -1,25 +1,25 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/token.service.ts"
 type: "code"
-community: "principal-auth.service.ts"
+community: "TokenService"
 location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principal-authservicets
+  - community/TokenService
 ---
 
 # TokenService
 
 ## Connections
 - [[dot-accessSecret()]] - `method` [EXTRACTED]
-- [[dot-constructor()_25]] - `references` [EXTRACTED]
-- [[dot-constructor()_27]] - `references` [EXTRACTED]
-- [[dot-constructor()_87]] - `references` [EXTRACTED]
-- [[dot-constructor()_29]] - `references` [EXTRACTED]
-- [[dot-constructor()_30]] - `references` [EXTRACTED]
-- [[dot-constructor()_59]] - `references` [EXTRACTED]
-- [[dot-constructor()_31]] - `method` [EXTRACTED]
+- [[dot-constructor()_32]] - `references` [EXTRACTED]
+- [[dot-constructor()_33]] - `references` [EXTRACTED]
+- [[dot-constructor()_34]] - `references` [EXTRACTED]
+- [[dot-constructor()_54]] - `references` [EXTRACTED]
+- [[dot-constructor()_138]] - `references` [EXTRACTED]
+- [[dot-constructor()_36]] - `references` [EXTRACTED]
+- [[dot-constructor()_35]] - `method` [EXTRACTED]
 - [[dot-decodeActorAccessToken()]] - `method` [EXTRACTED]
 - [[dot-hashRefreshToken()]] - `method` [EXTRACTED]
 - [[dot-refreshSecret()]] - `method` [EXTRACTED]
@@ -37,4 +37,4 @@ tags:
 - [[tenant.middleware.ts]] - `imports` [EXTRACTED]
 - [[token.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principal-authservicets
+#graphify/code #graphify/EXTRACTED #community/TokenService

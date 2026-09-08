@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/retention.module.ts"
 type: "code"
-community: "retention.module.ts"
+community: "app.module.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionmodulets
+  - community/appmodulets
 ---
 
 # retention.module.ts
 
 ## Connections
+- [[@nestjsbullmq]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[AuditModule]] - `imports` [EXTRACTED]
 - [[ComplianceModule]] - `imports` [EXTRACTED]
 - [[ErasureTaskService]] - `imports` [EXTRACTED]
@@ -45,4 +47,4 @@ tags:
 - [[retention-scan.service.ts]] - `imports_from` [EXTRACTED]
 - [[retentionretention.controller.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionmodulets
+#graphify/code #graphify/EXTRACTED #community/appmodulets

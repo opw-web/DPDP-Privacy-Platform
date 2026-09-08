@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "employees.service.ts"
+community: "PrincipalLoginDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeesservicets
+  - community/PrincipalLoginDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[ResetEmployeePasswordDto]] - `references` [EXTRACTED]
+- [[PrincipalLoginDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeesservicets
+#graphify/code #graphify/EXTRACTED #community/PrincipalLoginDto

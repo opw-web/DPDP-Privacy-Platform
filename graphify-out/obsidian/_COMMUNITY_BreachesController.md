@@ -13,11 +13,11 @@ members: 23
 - [[dot-boardInitial()]] - code - dpdp-platform/backend/src/modules/breaches/breaches.controller.ts
 - [[dot-boardReport()]] - code - dpdp-platform/backend/src/modules/breaches/breach.service.ts
 - [[dot-completeObligation()_1]] - code - dpdp-platform/backend/src/modules/breaches/breaches.controller.ts
-- [[dot-constructor()_123]] - code - dpdp-platform/backend/src/modules/breaches/breaches.controller.ts
+- [[dot-constructor()_126]] - code - dpdp-platform/backend/src/modules/breaches/breaches.controller.ts
 - [[dot-create()_30]] - code - dpdp-platform/backend/src/modules/breaches/breaches.controller.ts
 - [[dot-extension()]] - code - dpdp-platform/backend/src/modules/breaches/breaches.controller.ts
 - [[dot-get()_18]] - code - dpdp-platform/backend/src/modules/breaches/breaches.controller.ts
-- [[dot-list()_39]] - code - dpdp-platform/backend/src/modules/breaches/breaches.controller.ts
+- [[dot-list()_38]] - code - dpdp-platform/backend/src/modules/breaches/breaches.controller.ts
 - [[dot-notify()]] - code - dpdp-platform/backend/src/modules/breaches/breaches.controller.ts
 - [[dot-previewAffected()_1]] - code - dpdp-platform/backend/src/modules/breaches/breaches.controller.ts
 - [[dot-update()_20]] - code - dpdp-platform/backend/src/modules/breaches/breaches.controller.ts
@@ -26,7 +26,7 @@ members: 23
 - [[Body_23]] - code
 - [[BreachesController]] - code - dpdp-platform/backend/src/modules/breaches/breaches.controller.ts
 - [[Controller_34]] - code
-- [[Get_33]] - code
+- [[Get_34]] - code
 - [[Param_24]] - code
 - [[Patch_10]] - code
 - [[Post_24]] - code
@@ -40,14 +40,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 18 edges to [[_COMMUNITY_RequirePermission]]
-- 17 edges to [[_COMMUNITY_dot-record]]
+- 12 edges to [[_COMMUNITY_dot-record]]
+- 11 edges to [[_COMMUNITY_@nestjscommon]]
+- 6 edges to [[_COMMUNITY_AccessTokenPayload]]
+- 2 edges to [[_COMMUNITY_AffectedPrincipalsDto]]
+- 2 edges to [[_COMMUNITY_breach.service.ts]]
 - 2 edges to [[_COMMUNITY_access-report-render.ts]]
-- 1 edge to [[_COMMUNITY_breaches.module.ts]]
+- 1 edge to [[_COMMUNITY_CreateBreachDto]]
+- 1 edge to [[_COMMUNITY_ExtensionDto]]
+- 1 edge to [[_COMMUNITY_app.module.ts]]
+- 1 edge to [[_COMMUNITY_@prismaclient]]
 
 ## Top bridge nodes
-- [[BreachesController]] - degree 16, connects to 2 communities
-- [[dot-addAffected()_1]] - degree 9, connects to 2 communities
-- [[dot-completeObligation()_1]] - degree 9, connects to 2 communities
-- [[dot-extension()]] - degree 9, connects to 2 communities
-- [[dot-update()_20]] - degree 9, connects to 2 communities
+- [[dot-addAffected()_1]] - degree 9, connects to 4 communities
+- [[dot-completeObligation()_1]] - degree 9, connects to 4 communities
+- [[dot-extension()]] - degree 9, connects to 4 communities
+- [[dot-update()_20]] - degree 9, connects to 4 communities
+- [[dot-create()_30]] - degree 8, connects to 4 communities

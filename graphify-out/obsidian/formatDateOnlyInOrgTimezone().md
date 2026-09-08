@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/lib/format.ts"
 type: "code"
-community: "DateTime.tsx"
+community: "DeadlinePill.tsx"
 location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DateTimetsx
+  - community/DeadlinePilltsx
 ---
 
 # formatDateOnlyInOrgTimezone()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[format.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DateTimetsx
+#graphify/code #graphify/EXTRACTED #community/DeadlinePilltsx

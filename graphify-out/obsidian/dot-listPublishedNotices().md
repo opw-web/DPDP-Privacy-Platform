@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-listPublishedNotices()_1]] - `calls` [INFERRED]
-- [[Get_4]] - `references` [EXTRACTED]
+- [[Get_9]] - `references` [EXTRACTED]
 - [[MeRightsController]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Public

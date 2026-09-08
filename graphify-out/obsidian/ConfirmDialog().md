@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/ConfirmDialog.tsx"
 type: "code"
-community: "MeConsentsPage.tsx"
+community: "cn"
 location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeConsentsPagetsx
+  - community/cn
 ---
 
 # ConfirmDialog()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ConfirmDialog.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeConsentsPagetsx
+#graphify/code #graphify/EXTRACTED #community/cn

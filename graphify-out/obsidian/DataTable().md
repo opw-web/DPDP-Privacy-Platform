@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/DataTable.tsx"
 type: "code"
-community: "SecurityMeasuresTab.tsx"
+community: "data-sources-api.ts"
 location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresTabtsx
+  - community/data-sources-apits
 ---
 
 # DataTable()
@@ -26,4 +26,4 @@ tags:
 - [[SyncHistoryTable.tsx]] - `imports` [EXTRACTED]
 - [[TransfersTab.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx
+#graphify/code #graphify/EXTRACTED #community/data-sources-apits

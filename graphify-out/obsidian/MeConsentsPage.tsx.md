@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeConsentsPage.tsx"
 type: "code"
-community: "MeConsentsPage.tsx"
+community: "cn"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeConsentsPagetsx
+  - community/cn
 ---
 
 # MeConsentsPage.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[Badge()]] - `imports` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
 - [[Card]] - `imports` [EXTRACTED]
@@ -49,7 +50,9 @@ tags:
 - [[button.tsx]] - `imports_from` [EXTRACTED]
 - [[card.tsx]] - `imports_from` [EXTRACTED]
 - [[dialog.tsx]] - `imports_from` [EXTRACTED]
+- [[lucide-react_1]] - `imports_from` [EXTRACTED]
 - [[principalApiClient]] - `imports` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeConsentsPagetsx
+#graphify/code #graphify/EXTRACTED #community/cn

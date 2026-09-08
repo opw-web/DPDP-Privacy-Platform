@@ -1,19 +1,18 @@
 ---
 type: community
-members: 27
+members: 25
 ---
 
 # demo-company-server/package.json
 
-**Members:** 27 nodes
+**Members:** 25 nodes
 
 ## Members
 - [[@typesbetter-sqlite3]] - code - demo-company-server/package.json
 - [[@typesbetter-sqlite3_1]] - concept - demo-company-server/package.json
-- [[@typesnode_2]] - code - demo-company-server/package.json
-- [[@typesnode_3]] - concept - demo-company-server/package.json
-- [[better-sqlite3]] - code - demo-company-server/package.json
-- [[better-sqlite3_1]] - concept - demo-company-server/package.json
+- [[@typesnode]] - code - demo-company-server/package.json
+- [[@typesnode_1]] - concept - demo-company-server/package.json
+- [[better-sqlite3_1]] - code - demo-company-server/package.json
 - [[build_2]] - code - demo-company-server/package.json
 - [[demo-company-serverpackage.json]] - code - demo-company-server/package.json
 - [[dependencies_2]] - code - demo-company-server/package.json
@@ -21,7 +20,6 @@ members: 27
 - [[dev_1]] - code - demo-company-server/package.json
 - [[devDependencies]] - code - demo-company-server/package.json
 - [[fastify]] - code - demo-company-server/package.json
-- [[fastify_1]] - concept - demo-company-server/package.json
 - [[main]] - code - demo-company-server/package.json
 - [[name_1]] - code - demo-company-server/package.json
 - [[private_1]] - code - demo-company-server/package.json
@@ -29,11 +27,11 @@ members: 27
 - [[seed_1]] - code - demo-company-server/package.json
 - [[start_1]] - code - demo-company-server/package.json
 - [[test_2]] - code - demo-company-server/package.json
-- [[ts-node_2]] - code - demo-company-server/package.json
-- [[ts-node_3]] - concept - demo-company-server/package.json
-- [[type_8]] - code - demo-company-server/package.json
-- [[typescript]] - code - demo-company-server/package.json
-- [[typescript_1]] - concept - demo-company-server/package.json
+- [[ts-node]] - code - demo-company-server/package.json
+- [[ts-node_1]] - concept - demo-company-server/package.json
+- [[type_10]] - code - demo-company-server/package.json
+- [[typescript_1]] - code - demo-company-server/package.json
+- [[typescript_2]] - concept - demo-company-server/package.json
 - [[version_1]] - code - demo-company-server/package.json
 
 ## Live Query (requires Dataview plugin)
@@ -42,3 +40,10 @@ members: 27
 TABLE source_file, type FROM #community/demo-company-server/packagejson
 SORT file.name ASC
 ```
+
+## Connections to other communities
+- 1 edge to [[_COMMUNITY_routes.test.ts]]
+- 1 edge to [[_COMMUNITY_server.ts]]
+
+## Top bridge nodes
+- [[demo-company-serverpackage.json]] - degree 15, connects to 2 communities

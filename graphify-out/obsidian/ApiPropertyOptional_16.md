@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateTemplateDto"
+community: "UpdateDataSourceDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTemplateDto
+  - community/UpdateDataSourceDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[UpdateTemplateDto]] - `references` [EXTRACTED]
+- [[UpdateDataSourceDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTemplateDto
+#graphify/code #graphify/EXTRACTED #community/UpdateDataSourceDto

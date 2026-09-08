@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "retention.service.ts"
+community: "access-report.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/access-reportservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[RetentionService]] - `references` [EXTRACTED]
+- [[PrincipalEvidenceService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/access-reportservicets

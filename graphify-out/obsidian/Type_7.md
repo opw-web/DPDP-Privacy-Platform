@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
+community: "requests.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/requestsservicets
 ---
 
 # Type
 
 ## Connections
-- [[UpdateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
+- [[ChangeStatusDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/requestsservicets

@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/rbac.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/principals.e2e-spec.ts"
 type: "code"
-community: "AppModule"
-location: "L44"
+community: "principals.e2e-spec.ts"
+location: "L71"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AppModule
+  - community/principalse2e-spects
 ---
 
 # ensurePermission()
 
 ## Connections
-- [[createOrgWithEmployee()_2]] - `calls` [EXTRACTED]
-- [[rbac.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[EmployeeSession_2]] - `calls` [EXTRACTED]
+- [[principals.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AppModule
+#graphify/code #graphify/EXTRACTED #community/principalse2e-spects

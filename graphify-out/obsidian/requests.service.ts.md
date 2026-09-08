@@ -12,6 +12,8 @@ tags:
 # requests.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[APPLIES_TO_BY_REQUEST_TYPE]] - `imports` [EXTRACTED]
 - [[AddNoteDto]] - `imports` [EXTRACTED]
 - [[AuditAction]] - `imports` [EXTRACTED]

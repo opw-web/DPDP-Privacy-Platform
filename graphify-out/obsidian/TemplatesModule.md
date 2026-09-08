@@ -12,7 +12,7 @@ tags:
 # TemplatesModule
 
 ## Connections
-- [[Module_20]] - `references` [EXTRACTED]
+- [[Module_19]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[campaigns.module.ts]] - `imports` [EXTRACTED]
 - [[templates.module.ts]] - `contains` [EXTRACTED]

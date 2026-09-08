@@ -1,21 +1,21 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.service.ts"
 type: "code"
-community: "RequirePermission"
+community: "CampaignsService"
 location: "L432"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/CampaignsService
 ---
 
 # .approve()
 
 ## Connections
 - [[dot-approve()]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
 - [[CampaignsService]] - `method` [EXTRACTED]
 - [[notFoundCampaign()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/CampaignsService

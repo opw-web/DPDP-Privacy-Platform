@@ -12,6 +12,7 @@ tags:
 # identity.module.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[AgeService]] - `imports` [EXTRACTED]
 - [[AssemblyService]] - `imports` [EXTRACTED]
 - [[AuditModule]] - `imports` [EXTRACTED]

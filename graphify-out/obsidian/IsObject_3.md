@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ImportConsentDto"
+community: "CreateMeRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ImportConsentDto
+  - community/CreateMeRequestDto
 ---
 
 # IsObject
 
 ## Connections
-- [[ImportConsentDto]] - `references` [EXTRACTED]
+- [[CreateMeRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ImportConsentDto
+#graphify/code #graphify/EXTRACTED #community/CreateMeRequestDto

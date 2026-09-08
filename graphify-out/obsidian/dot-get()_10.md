@@ -1,24 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts"
 type: "code"
-community: ".record"
-location: "L159"
+community: "TemplatesService"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/TemplatesService
 ---
 
 # .get()
 
 ## Connections
-- [[dot-boardReport()]] - `calls` [EXTRACTED]
-- [[dot-completeObligation()]] - `calls` [EXTRACTED]
-- [[dot-get()_18]] - `calls` [INFERRED]
-- [[dot-notifyPrincipals()]] - `calls` [EXTRACTED]
-- [[dot-public()]] - `calls` [EXTRACTED]
-- [[dot-recordExtension()]] - `calls` [EXTRACTED]
-- [[BreachService]] - `method` [EXTRACTED]
-- [[PublicBreach]] - `references` [EXTRACTED]
+- [[dot-get()_14]] - `calls` [INFERRED]
+- [[Get_17]] - `references` [EXTRACTED]
+- [[Param_12]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[TemplatesController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

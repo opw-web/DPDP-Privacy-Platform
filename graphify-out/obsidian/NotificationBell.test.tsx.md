@@ -12,6 +12,8 @@ tags:
 # NotificationBell.test.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
+- [[@testing-libraryreact_1]] - `imports_from` [EXTRACTED]
 - [[ApiClient]] - `imports` [EXTRACTED]
 - [[EMPTY]] - `contains` [EXTRACTED]
 - [[NotificationBell()]] - `imports` [EXTRACTED]
@@ -20,6 +22,8 @@ tags:
 - [[api-client.ts]] - `imports_from` [EXTRACTED]
 - [[makeFakeApiClient()]] - `contains` [EXTRACTED]
 - [[mvp2-api.ts]] - `imports_from` [EXTRACTED]
+- [[react-router-dom_1]] - `imports_from` [EXTRACTED]
 - [[renderBell()]] - `contains` [EXTRACTED]
+- [[vitest_1]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/api-clientts

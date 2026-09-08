@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/RetentionPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/principal/pages/MeDataPage.test.tsx"
 type: "code"
-community: "RetentionPage.tsx"
+community: "MeDataPage.tsx"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionPagetsx
+  - community/MeDataPagetsx
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[RetentionPage.test.tsx]] - `contains` [EXTRACTED]
+- [[MeDataPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionPagetsx
+#graphify/code #graphify/EXTRACTED #community/MeDataPagetsx

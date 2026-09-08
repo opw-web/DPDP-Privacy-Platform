@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/notices/NoticeComposer.tsx"
 type: "code"
-community: "button.tsx"
+community: "react"
 location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react
 ---
 
 # NoticeComposer()
@@ -16,4 +16,4 @@ tags:
 - [[NoticeComposer.tsx]] - `contains` [EXTRACTED]
 - [[toggleField()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/react

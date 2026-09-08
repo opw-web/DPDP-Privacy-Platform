@@ -11,6 +11,6 @@ tags:
 # Module
 
 ## Connections
-- [[InventoryModule]] - `references` [EXTRACTED]
+- [[AudienceModule]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/appmodulets

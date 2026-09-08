@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalAuthController"
+community: "security-measures.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalAuthController
+  - community/security-measuresservicets
 ---
 
 # Post
 
 ## Connections
-- [[dot-login()_3]] - `references` [EXTRACTED]
-- [[dot-logout()_3]] - `references` [EXTRACTED]
-- [[dot-refresh()_3]] - `references` [EXTRACTED]
+- [[dot-create()_35]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalAuthController
+#graphify/code #graphify/EXTRACTED #community/security-measuresservicets

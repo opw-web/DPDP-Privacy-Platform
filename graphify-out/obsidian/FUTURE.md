@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/router.test.tsx"
 type: "code"
-community: "router.test.tsx"
+community: "router.tsx"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertesttsx
+  - community/routertsx
 ---
 
 # FUTURE
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[router.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertesttsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

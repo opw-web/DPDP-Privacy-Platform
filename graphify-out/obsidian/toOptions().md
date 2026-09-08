@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts"
 type: "code"
-community: "SecurityMeasuresTab.tsx"
+community: "react"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresTabtsx
+  - community/react
 ---
 
 # toOptions()
 
 ## Connections
 - [[enum-options.ts]] - `contains` [EXTRACTED]
-- [[titleCase()]] - `calls` [EXTRACTED]
+- [[titleCase()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx
+#graphify/code #graphify/EXTRACTED #community/react

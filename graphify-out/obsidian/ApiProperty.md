@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "VerifyGuardianDto"
+community: "AccessTokenPayload"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/VerifyGuardianDto
+  - community/AccessTokenPayload
 ---
 
 # ApiProperty
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[VerifyGuardianDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/VerifyGuardianDto
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

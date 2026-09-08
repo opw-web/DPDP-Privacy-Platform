@@ -12,7 +12,7 @@ tags:
 # .getTransporter()
 
 ## Connections
-- [[dot-send()_4]] - `calls` [EXTRACTED]
+- [[dot-send()_6]] - `calls` [EXTRACTED]
 - [[MailerService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/MailerService

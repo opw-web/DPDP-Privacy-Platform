@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/information-requests/InformationRequestForm.tsx"
 type: "code"
-community: "button.tsx"
+community: "react"
 location: "L95"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react
 ---
 
 # isInformationRequestFormValid()
@@ -15,4 +15,4 @@ tags:
 - [[InformationRequestForm.tsx]] - `contains` [EXTRACTED]
 - [[submit()_3]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/react

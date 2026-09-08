@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sdf-cycle-scan.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/retention-scan.processor.ts"
 type: "code"
 community: "mvp2-schedules.ts"
-location: "L25"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-runForAllOrganizations()_3]] - `calls` [INFERRED]
-- [[SdfCycleScanJobData]] - `references` [EXTRACTED]
-- [[SdfCycleScanProcessor]] - `method` [EXTRACTED]
+- [[RetentionScanJobData]] - `references` [EXTRACTED]
+- [[RetentionScanProcessor]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/mvp2-schedulests

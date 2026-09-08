@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/PurposeForm.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/InformationRequestsPage.test.tsx"
 type: "code"
-community: "SecurityMeasuresTab.tsx"
-location: "L12"
+community: "router.tsx"
+location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresTabtsx
+  - community/routertsx
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[PurposeForm.test.tsx]] - `contains` [EXTRACTED]
+- [[InformationRequestsPage.test.tsx]] - `contains` [EXTRACTED]
+- [[loginAndRender()_4]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

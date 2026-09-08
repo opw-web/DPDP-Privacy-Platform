@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/health/health.service.ts"
 type: "code"
-community: "HealthService"
+community: "health.service.ts"
 location: "L92"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/HealthService
+  - community/healthservicets
 ---
 
 # .getHealth()
@@ -17,4 +17,4 @@ tags:
 - [[dot-checkRedis()]] - `calls` [EXTRACTED]
 - [[HealthService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/HealthService
+#graphify/code #graphify/EXTRACTED #community/healthservicets

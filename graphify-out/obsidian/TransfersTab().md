@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/registers/TransfersTab.tsx"
 type: "code"
-community: "SecurityMeasuresTab.tsx"
+community: "cn"
 location: "L257"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresTabtsx
+  - community/cn
 ---
 
 # TransfersTab()
@@ -16,4 +16,4 @@ tags:
 - [[TransfersTab.tsx]] - `contains` [EXTRACTED]
 - [[humanizeEnum()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx
+#graphify/code #graphify/EXTRACTED #community/cn

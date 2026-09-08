@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
+community: "CreateSdfAssessmentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/CreateSdfAssessmentDto
 ---
 
 # IsString
 
 ## Connections
-- [[UndertakingCommitmentDto]] - `references` [EXTRACTED]
+- [[CreateSdfAssessmentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/CreateSdfAssessmentDto

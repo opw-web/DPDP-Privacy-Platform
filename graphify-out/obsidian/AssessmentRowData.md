@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/sdf/AssessmentRow.tsx"
 type: "code"
-community: "AlgorithmRegisterPanel.tsx"
+community: "react-router-dom"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AlgorithmRegisterPaneltsx
+  - community/react-router-dom
 ---
 
 # AssessmentRowData
@@ -16,4 +16,4 @@ tags:
 - [[SdfData]] - `references` [EXTRACTED]
 - [[SdfPage.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterPaneltsx
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

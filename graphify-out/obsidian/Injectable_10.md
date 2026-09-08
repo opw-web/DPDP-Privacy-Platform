@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "queues.module.ts"
+community: "NotificationsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/NotificationsService
 ---
 
 # Injectable
 
 ## Connections
-- [[SyncLockService]] - `references` [EXTRACTED]
+- [[NotificationsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

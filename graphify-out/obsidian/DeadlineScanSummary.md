@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/deadline-scan.processor.ts"
 type: "code"
-community: "requests.service.ts"
+community: "deadline-scan.processor.ts"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/requestsservicets
+  - community/deadline-scanprocessorts
 ---
 
 # DeadlineScanSummary
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[deadline-scan.processor.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/requestsservicets
+#graphify/code #graphify/EXTRACTED #community/deadline-scanprocessorts

@@ -1,18 +1,17 @@
 ---
-source_file: "demo-company-server/src/seed/personas.ts"
-type: "code"
-community: "personas.ts"
-location: "L93"
+source_file: "demo-company-server/README.md"
+type: "document"
+community: "demo-company-server"
+location: "L155"
 tags:
-  - graphify/code
+  - graphify/document
   - graphify/EXTRACTED
-  - community/personasts
+  - community/demo-company-server
 ---
 
-# personas
+# Personas
 
 ## Connections
-- [[generate.ts]] - `imports` [EXTRACTED]
-- [[personas.ts]] - `contains` [EXTRACTED]
+- [[Demo dataset (`npm run seed`)]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/personasts
+#graphify/document #graphify/EXTRACTED #community/demo-company-server

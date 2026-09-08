@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/test/audit-read.e2e-spec.ts"
 type: "code"
-community: "prisma.service.ts"
+community: "audit-read.e2e-spec.ts"
 location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/audit-reade2e-spects
 ---
 
 # seedEvent()
 
 ## Connections
-- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
 - [[audit-read.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[createFixture()_1]] - `calls` [EXTRACTED]
+- [[createFixture()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/audit-reade2e-spects

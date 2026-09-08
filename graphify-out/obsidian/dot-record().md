@@ -1,110 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/common/audit/audit.service.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/purpose-served.service.ts"
 type: "code"
-community: ".record"
-location: "L121"
+community: "audit.service.ts"
+location: "L41"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/record
+  - graphify/EXTRACTED
+  - community/auditservicets
 ---
 
 # .record()
 
 ## Connections
-- [[dot-accessLogCsv()]] - `calls` [INFERRED]
-- [[dot-addAffected()]] - `calls` [INFERRED]
-- [[dot-applyMatch()]] - `calls` [INFERRED]
-- [[dot-applyStatusChange()]] - `calls` [INFERRED]
-- [[dot-approve()_1]] - `calls` [INFERRED]
-- [[dot-buildEvidenceFile()]] - `calls` [INFERRED]
-- [[dot-buildPack()]] - `calls` [INFERRED]
-- [[dot-buildReport()]] - `calls` [INFERRED]
-- [[dot-cancel()]] - `calls` [INFERRED]
-- [[dot-cancelOnContact()]] - `calls` [INFERRED]
-- [[dot-complete()_1]] - `calls` [INFERRED]
-- [[dot-complete()]] - `calls` [INFERRED]
-- [[dot-completeObligation()]] - `calls` [INFERRED]
-- [[dot-confirm()_1]] - `calls` [INFERRED]
-- [[dot-create()_20]] - `calls` [INFERRED]
-- [[dot-create()_16]] - `calls` [INFERRED]
-- [[dot-create()_12]] - `calls` [INFERRED]
-- [[dot-create()_29]] - `calls` [INFERRED]
-- [[dot-create()_1]] - `calls` [INFERRED]
-- [[dot-create()_8]] - `calls` [INFERRED]
-- [[dot-create()_24]] - `calls` [INFERRED]
-- [[dot-create()_18]] - `calls` [INFERRED]
-- [[dot-create()_21]] - `calls` [INFERRED]
-- [[dot-create()_10]] - `calls` [INFERRED]
-- [[dot-create()_26]] - `calls` [INFERRED]
-- [[dot-create()_4]] - `calls` [INFERRED]
-- [[dot-create()_32]] - `calls` [INFERRED]
-- [[dot-create()_34]] - `calls` [INFERRED]
-- [[dot-create()_38]] - `calls` [INFERRED]
-- [[dot-create()_36]] - `calls` [INFERRED]
-- [[dot-create()_6]] - `calls` [INFERRED]
-- [[dot-create()_13]] - `calls` [INFERRED]
-- [[dot-create()_27]] - `calls` [INFERRED]
-- [[dot-create()_22]] - `calls` [INFERRED]
-- [[dot-create()_11]] - `calls` [INFERRED]
-- [[dot-createCandidate()]] - `calls` [INFERRED]
-- [[dot-createFromTrigger()]] - `calls` [INFERRED]
-- [[dot-createVersion()_1]] - `calls` [INFERRED]
-- [[dot-derive()]] - `calls` [INFERRED]
-- [[dot-exportCsv()]] - `calls` [INFERRED]
-- [[dot-exportCsv()_1]] - `calls` [INFERRED]
-- [[dot-finalize()]] - `calls` [INFERRED]
-- [[dot-login()]] - `calls` [INFERRED]
-- [[dot-login()_1]] - `calls` [INFERRED]
-- [[dot-mergeRecordIntoPrincipal()]] - `calls` [INFERRED]
-- [[dot-notifyPrincipals()]] - `calls` [INFERRED]
-- [[dot-publish()_1]] - `calls` [INFERRED]
 - [[dot-record()_1]] - `calls` [INFERRED]
-- [[dot-recordExtension()]] - `calls` [INFERRED]
-- [[dot-recordPersonalDataViewed()]] - `calls` [INFERRED]
-- [[dot-reject()_1]] - `calls` [INFERRED]
-- [[dot-remove()_1]] - `calls` [INFERRED]
-- [[dot-replace()_1]] - `calls` [INFERRED]
-- [[dot-replace()]] - `calls` [INFERRED]
-- [[dot-replacePermissions()_1]] - `calls` [INFERRED]
-- [[dot-review()_2]] - `calls` [INFERRED]
-- [[dot-review()]] - `calls` [INFERRED]
-- [[dot-runForCurrentOrganization()_2]] - `calls` [INFERRED]
-- [[dot-scanClock()]] - `calls` [INFERRED]
-- [[dot-scanOrgDeadlines()]] - `calls` [INFERRED]
-- [[dot-send()_7]] - `calls` [INFERRED]
-- [[dot-sendDueNotices()]] - `calls` [INFERRED]
-- [[dot-setAgeStatus()_1]] - `calls` [INFERRED]
-- [[dot-startJob()]] - `calls` [INFERRED]
-- [[dot-transitionTask()]] - `calls` [INFERRED]
-- [[dot-unmerge()_1]] - `calls` [INFERRED]
-- [[dot-update()_16]] - `calls` [INFERRED]
-- [[dot-update()_12]] - `calls` [INFERRED]
-- [[dot-update()_10]] - `calls` [INFERRED]
-- [[dot-update()_7]] - `calls` [INFERRED]
-- [[dot-update()_19]] - `calls` [INFERRED]
-- [[dot-update()_14]] - `calls` [INFERRED]
-- [[dot-update()_9]] - `calls` [INFERRED]
-- [[dot-update()_1]] - `calls` [INFERRED]
-- [[dot-update()_3]] - `calls` [INFERRED]
-- [[dot-update()_22]] - `calls` [INFERRED]
-- [[dot-update()_24]] - `calls` [INFERRED]
-- [[dot-update()_28]] - `calls` [INFERRED]
-- [[dot-update()_26]] - `calls` [INFERRED]
-- [[dot-update()_5]] - `calls` [INFERRED]
-- [[dot-update()_17]] - `calls` [INFERRED]
-- [[dot-upsertNomination()_1]] - `calls` [INFERRED]
-- [[dot-upsertTranslation()_1]] - `calls` [INFERRED]
-- [[dot-verify()_1]] - `calls` [INFERRED]
-- [[dot-writeTransition()]] - `calls` [INFERRED]
-- [[AuditService]] - `method` [EXTRACTED]
+- [[PurposeServedService]] - `method` [EXTRACTED]
 - [[ScopedTransactionClient]] - `references` [EXTRACTED]
-- [[allocateCounterValue()]] - `calls` [EXTRACTED]
-- [[assertNoForbiddenMetadata()]] - `calls` [EXTRACTED]
-- [[canonicalJson()]] - `calls` [EXTRACTED]
-- [[recordNonDisclosureSuppression()]] - `calls` [INFERRED]
-- [[rotateRefreshToken()]] - `calls` [INFERRED]
-- [[seedEvent()]] - `calls` [INFERRED]
-- [[splitNonDisclosureRequests()]] - `calls` [INFERRED]
+- [[lockRetentionWorkflow()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/record
+#graphify/code #graphify/EXTRACTED #community/auditservicets

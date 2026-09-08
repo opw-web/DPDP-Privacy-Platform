@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "campaigns.service.ts"
+community: "UpdateAlgorithmEntryDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/campaignsservicets
+  - community/UpdateAlgorithmEntryDto
 ---
 
 # IsArray
 
 ## Connections
-- [[CreateCampaignDto]] - `references` [EXTRACTED]
+- [[UpdateAlgorithmEntryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/campaignsservicets
+#graphify/code #graphify/EXTRACTED #community/UpdateAlgorithmEntryDto

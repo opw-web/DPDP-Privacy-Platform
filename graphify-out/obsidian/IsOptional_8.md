@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "requests.controller.ts"
+community: "purposes.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/requestscontrollerts
+  - community/purposesservicets
 ---
 
 # IsOptional
 
 ## Connections
-- [[VerifyIdentityDto]] - `references` [EXTRACTED]
+- [[CreatePurposeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/requestscontrollerts
+#graphify/code #graphify/EXTRACTED #community/purposesservicets

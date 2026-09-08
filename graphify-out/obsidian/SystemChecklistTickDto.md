@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/dto/complete-erasure-task.dto.ts"
 type: "code"
-community: "RetentionController"
+community: "ProcessorChecklistTickDto"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionController
+  - community/ProcessorChecklistTickDto
 ---
 
 # SystemChecklistTickDto
 
 ## Connections
-- [[ApiProperty_42]] - `references` [EXTRACTED]
+- [[ApiProperty_44]] - `references` [EXTRACTED]
 - [[IsBoolean_19]] - `references` [EXTRACTED]
-- [[IsString_57]] - `references` [EXTRACTED]
+- [[IsString_58]] - `references` [EXTRACTED]
 - [[complete-erasure-task.dto.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionController
+#graphify/code #graphify/EXTRACTED #community/ProcessorChecklistTickDto

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ListPrincipalsDto"
+community: "UpdateDataSourceDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ListPrincipalsDto
+  - community/UpdateDataSourceDto
 ---
 
 # IsEnum
 
 ## Connections
-- [[ListPrincipalsDto]] - `references` [EXTRACTED]
+- [[UpdateDataSourceDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ListPrincipalsDto
+#graphify/code #graphify/EXTRACTED #community/UpdateDataSourceDto

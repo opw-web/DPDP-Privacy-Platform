@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/common/crypto/crypto.service.spec.ts"
 type: "code"
-community: "data-sources.service.ts"
+community: "CryptoService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesservicets
+  - community/CryptoService
 ---
 
 # crypto.service.spec.ts
 
 ## Connections
+- [[@nestjsconfig_1]] - `imports_from` [EXTRACTED]
 - [[CryptoService]] - `imports` [EXTRACTED]
 - [[InvalidEncryptionKeyError]] - `imports` [EXTRACTED]
 - [[MalformedCiphertextError]] - `imports` [EXTRACTED]
@@ -19,4 +20,4 @@ tags:
 - [[crypto.service.ts]] - `imports_from` [EXTRACTED]
 - [[makeService()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets
+#graphify/code #graphify/EXTRACTED #community/CryptoService

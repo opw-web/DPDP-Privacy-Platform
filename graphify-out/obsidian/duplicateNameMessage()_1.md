@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/recipients.service.ts"
 type: "code"
-community: "recipients.service.ts"
+community: "CreateRecipientDto"
 location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/CreateRecipientDto
 ---
 
 # duplicateNameMessage()
@@ -16,4 +16,4 @@ tags:
 - [[dot-update()_22]] - `calls` [EXTRACTED]
 - [[recipients.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/CreateRecipientDto

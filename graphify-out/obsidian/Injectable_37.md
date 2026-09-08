@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "TemplatesService"
+community: "app.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/appmodulets
 ---
 
 # Injectable
 
 ## Connections
-- [[TemplatesService]] - `references` [EXTRACTED]
+- [[ConsentBackfillQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/appmodulets

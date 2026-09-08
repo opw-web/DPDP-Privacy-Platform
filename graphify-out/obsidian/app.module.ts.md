@@ -12,6 +12,9 @@ tags:
 # app.module.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsconfig_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscore_1]] - `imports_from` [EXTRACTED]
 - [[AppModule]] - `contains` [EXTRACTED]
 - [[AudienceModule]] - `imports` [EXTRACTED]
 - [[AuditModule]] - `imports` [EXTRACTED]
@@ -63,6 +66,7 @@ tags:
 - [[configuration.ts]] - `imports_from` [EXTRACTED]
 - [[connectors.module.ts]] - `imports_from` [EXTRACTED]
 - [[consents.module.ts]] - `imports_from` [EXTRACTED]
+- [[cookie-parser_1]] - `imports_from` [EXTRACTED]
 - [[data-sources.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[data-sources.module.ts]] - `imports_from` [EXTRACTED]
 - [[e2e-harness.ts]] - `imports_from` [EXTRACTED]
@@ -83,6 +87,7 @@ tags:
 - [[mappings.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[masking.module.ts]] - `imports_from` [EXTRACTED]
 - [[merge-unmerge.e2e-spec.ts]] - `imports_from` [EXTRACTED]
+- [[nestjs-pino_1]] - `imports_from` [EXTRACTED]
 - [[normalization.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[notices.module.ts]] - `imports_from` [EXTRACTED]
 - [[notifications.module.ts]] - `imports_from` [EXTRACTED]

@@ -12,9 +12,11 @@ tags:
 # update-security-measure.dto.ts
 
 ## Connections
+- [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[SECURITY_MEASURE_TYPES]] - `imports` [EXTRACTED]
 - [[SECURITY_RULE_REFERENCES]] - `imports` [EXTRACTED]
 - [[UpdateSecurityMeasureDto]] - `contains` [EXTRACTED]
+- [[class-validator_1]] - `imports_from` [EXTRACTED]
 - [[create-security-measure.dto.ts]] - `imports_from` [EXTRACTED]
 - [[security-measures.controller.ts]] - `imports_from` [EXTRACTED]
 - [[security-measures.service.ts]] - `imports_from` [EXTRACTED]

@@ -12,12 +12,13 @@ tags:
 # purposes.service.spec.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[CreatePurposeDto]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[PurposesService]] - `imports` [EXTRACTED]
 - [[audit.service.ts]] - `imports_from` [EXTRACTED]
-- [[buildService()_1]] - `contains` [EXTRACTED]
+- [[buildService()]] - `contains` [EXTRACTED]
 - [[create-purpose.dto.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[purposes.service.ts]] - `imports_from` [EXTRACTED]

@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.spec.ts"
+source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.spec.ts"
 type: "code"
-community: "AuditService"
-location: "L14"
+community: "purposes.service.ts"
+location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/purposesservicets
 ---
 
 # buildService()
 
 ## Connections
-- [[ComplianceService]] - `calls` [EXTRACTED]
-- [[buildRule()]] - `calls` [EXTRACTED]
-- [[compliance.service.spec.ts]] - `contains` [EXTRACTED]
+- [[PurposesService]] - `calls` [EXTRACTED]
+- [[purposes.service.spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/purposesservicets

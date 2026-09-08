@@ -1,10 +1,10 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
-type: "concept"
+type: "code"
 community: "dependencies"
 location: "L46"
 tags:
-  - graphify/concept
+  - graphify/code
   - graphify/EXTRACTED
   - community/dependencies
 ---
@@ -12,6 +12,6 @@ tags:
 # pdfkit
 
 ## Connections
-- [[pdfkit_1]] - `imports` [EXTRACTED]
+- [[dependencies_1]] - `contains` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/dependencies
+#graphify/code #graphify/EXTRACTED #community/dependencies

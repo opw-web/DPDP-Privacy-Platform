@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts"
+source_file: "dpdp-platform/backend/src/queues/pre-erasure-notice.processor.ts"
 type: "code"
-community: "PDFDocument"
-location: "L27"
+community: "PreErasureNoticeService"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PDFDocument
+  - community/PreErasureNoticeService
 ---
 
 # .constructor()
 
 ## Connections
-- [[PDFDocument]] - `method` [EXTRACTED]
+- [[PreErasureNoticeProcessor]] - `method` [EXTRACTED]
+- [[PreErasureNoticeService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PDFDocument
+#graphify/code #graphify/EXTRACTED #community/PreErasureNoticeService

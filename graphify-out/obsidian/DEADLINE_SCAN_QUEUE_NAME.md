@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/deadline-scan.queue.ts"
 type: "code"
-community: "mvp2-schedules.ts"
+community: "deadline-scan.processor.ts"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mvp2-schedulests
+  - community/deadline-scanprocessorts
 ---
 
 # DEADLINE_SCAN_QUEUE_NAME
@@ -18,4 +18,4 @@ tags:
 - [[queues.module.ts]] - `imports` [EXTRACTED]
 - [[requests.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mvp2-schedulests
+#graphify/code #graphify/EXTRACTED #community/deadline-scanprocessorts

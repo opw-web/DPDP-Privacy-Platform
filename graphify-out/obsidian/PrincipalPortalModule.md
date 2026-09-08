@@ -12,7 +12,7 @@ tags:
 # PrincipalPortalModule
 
 ## Connections
-- [[Module_23]] - `references` [EXTRACTED]
+- [[Module_24]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[principal-portal.module.ts]] - `contains` [EXTRACTED]
 

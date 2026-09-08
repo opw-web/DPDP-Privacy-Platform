@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateTemplateDto"
+community: "CreateTransferDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTemplateDto
+  - community/CreateTransferDto
 ---
 
 # MinLength
 
 ## Connections
-- [[CreateTemplateDto]] - `references` [EXTRACTED]
+- [[UpdateTransferDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTemplateDto
+#graphify/code #graphify/EXTRACTED #community/CreateTransferDto

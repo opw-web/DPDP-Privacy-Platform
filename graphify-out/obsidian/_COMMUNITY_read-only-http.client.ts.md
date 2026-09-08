@@ -8,10 +8,10 @@ members: 18
 **Members:** 18 nodes
 
 ## Members
-- [[dot-constructor()_134]] - code - dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts
-- [[dot-constructor()_135]] - code - dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts
-- [[dot-constructor()_136]] - code - dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts
-- [[dot-constructor()_137]] - code - dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts
+- [[dot-constructor()_144]] - code - dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts
+- [[dot-constructor()_145]] - code - dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts
+- [[dot-constructor()_146]] - code - dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts
+- [[dot-constructor()_147]] - code - dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts
 - [[dot-performRequest()]] - code - dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts
 - [[dot-request()]] - code - dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts
 - [[dot-requestWithRetry()]] - code - dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts
@@ -36,11 +36,12 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 10 edges to [[_COMMUNITY_rest-api.connector.ts]]
-- 3 edges to [[_COMMUNITY_data-sources.e2e-spec.ts]]
+- 3 edges to [[_COMMUNITY_sync.e2e-spec.ts]]
+- 2 edges to [[_COMMUNITY_@nestjscommon]]
 
 ## Top bridge nodes
-- [[read-only-http.client.ts]] - degree 12, connects to 1 community
-- [[read-only-http.client.spec.ts]] - degree 11, connects to 1 community
+- [[read-only-http.client.ts]] - degree 13, connects to 2 communities
+- [[read-only-http.client.spec.ts]] - degree 12, connects to 2 communities
 - [[ReadOnlyHttpClient]] - degree 10, connects to 1 community
 - [[stripQuery()_1]] - degree 8, connects to 1 community
 - [[dot-request()]] - degree 6, connects to 1 community

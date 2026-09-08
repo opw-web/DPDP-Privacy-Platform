@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts"
+source_file: "dpdp-platform/backend/src/modules/normalization/normalizers/name.ts"
 type: "code"
-community: "SecurityMeasuresTab.tsx"
-location: "L24"
+community: "normalization.service.ts"
+location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresTabtsx
+  - community/normalizationservicets
 ---
 
 # titleCase()
 
 ## Connections
-- [[enum-options.ts]] - `contains` [EXTRACTED]
-- [[humanizeEnum()]] - `calls` [EXTRACTED]
-- [[toOptions()]] - `calls` [EXTRACTED]
+- [[name.ts]] - `contains` [EXTRACTED]
+- [[normalizeName()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx
+#graphify/code #graphify/EXTRACTED #community/normalizationservicets

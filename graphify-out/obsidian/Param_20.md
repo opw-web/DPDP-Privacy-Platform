@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CandidatesService"
+community: "NotificationCallerActor"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CandidatesService
+  - community/NotificationCallerActor
 ---
 
 # Param
 
 ## Connections
-- [[dot-confirm()]] - `references` [EXTRACTED]
-- [[dot-reject()]] - `references` [EXTRACTED]
+- [[dot-markRead()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CandidatesService
+#graphify/code #graphify/EXTRACTED #community/NotificationCallerActor

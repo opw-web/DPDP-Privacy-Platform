@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "recipients.service.ts"
+community: "ListRequestsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/ListRequestsDto
 ---
 
 # IsEnum
 
 ## Connections
-- [[CreateRecipientDto]] - `references` [EXTRACTED]
+- [[ListRequestsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/ListRequestsDto

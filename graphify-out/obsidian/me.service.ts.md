@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principal-portal/me.service.ts"
 type: "code"
-community: "access-report.service.ts"
+community: "principals.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-reportservicets
+  - community/principalsservicets
 ---
 
 # me.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[DATA_CATEGORY_ORDER]] - `contains` [EXTRACTED]
 - [[LineageService]] - `imports` [EXTRACTED]
 - [[MeDataCategoryGroup]] - `contains` [EXTRACTED]
@@ -32,4 +34,4 @@ tags:
 - [[principals.service.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-reportservicets
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

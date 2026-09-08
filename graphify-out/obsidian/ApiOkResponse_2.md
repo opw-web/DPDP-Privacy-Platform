@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: ".me"
+community: "mappings.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/me
+  - community/mappingsservicets
 ---
 
 # ApiOkResponse
 
 ## Connections
-- [[dot-me()]] - `references` [EXTRACTED]
+- [[dot-getMappings()]] - `references` [EXTRACTED]
+- [[dot-getPurposes()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/me
+#graphify/code #graphify/EXTRACTED #community/mappingsservicets

@@ -1,17 +1,18 @@
 ---
 source_file: "demo-company-server/src/seed/rng.ts"
 type: "code"
-community: "Rng"
+community: "generateDataset"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Rng
+  - community/generateDataset
 ---
 
 # .int()
 
 ## Connections
 - [[Rng]] - `method` [EXTRACTED]
+- [[phoneVariant()]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Rng
+#graphify/code #graphify/EXTRACTED #community/generateDataset

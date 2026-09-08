@@ -11,6 +11,6 @@ tags:
 # ValidateNested
 
 ## Connections
-- [[UpdateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
+- [[CreateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

@@ -14,9 +14,9 @@ tags:
 ## Connections
 - [[dot-getRequest()_1]] - `calls` [INFERRED]
 - [[CurrentPrincipal]] - `references` [EXTRACTED]
-- [[Get_4]] - `references` [EXTRACTED]
+- [[Get_9]] - `references` [EXTRACTED]
 - [[MeRightsController]] - `method` [EXTRACTED]
-- [[Param_2]] - `references` [EXTRACTED]
+- [[Param_6]] - `references` [EXTRACTED]
 - [[PrincipalActor]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Public

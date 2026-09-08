@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AuditService"
+community: "AccessTokenPayload"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/AccessTokenPayload
 ---
 
 # Injectable
 
 ## Connections
-- [[MergeService]] - `references` [EXTRACTED]
+- [[PermissionsGuard]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

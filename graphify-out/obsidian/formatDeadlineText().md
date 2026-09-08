@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/lib/format.ts"
 type: "code"
-community: "DateTime.tsx"
+community: "DeadlinePill.tsx"
 location: "L71"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DateTimetsx
+  - community/DeadlinePilltsx
 ---
 
 # formatDeadlineText()
@@ -16,4 +16,4 @@ tags:
 - [[DeadlinePill.tsx]] - `imports` [EXTRACTED]
 - [[format.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DateTimetsx
+#graphify/code #graphify/EXTRACTED #community/DeadlinePilltsx

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "notifications.controller.ts"
+community: "CreateTemplateDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationscontrollerts
+  - community/CreateTemplateDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[NotificationDto]] - `references` [EXTRACTED]
+- [[CreateTemplateDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts
+#graphify/code #graphify/EXTRACTED #community/CreateTemplateDto

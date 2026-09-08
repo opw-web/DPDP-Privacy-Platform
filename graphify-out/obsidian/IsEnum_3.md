@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "guardians.service.ts"
+community: "CreateComplianceRuleDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/CreateComplianceRuleDto
 ---
 
 # IsEnum
 
 ## Connections
-- [[CreateGuardianDto]] - `references` [EXTRACTED]
+- [[CreateComplianceRuleDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto

@@ -1,25 +1,24 @@
 ---
 type: community
-members: 12
+members: 11
 ---
 
 # CreateNoticeVersionDto
 
-**Members:** 12 nodes
+**Members:** 11 nodes
 
 ## Members
-- [[ApiProperty_15]] - code
-- [[ApiPropertyOptional_19]] - code
+- [[ApiProperty_24]] - code
+- [[ApiPropertyOptional_23]] - code
 - [[CreateNoticeVersionDto]] - code - dpdp-platform/backend/src/modules/notices/dto/create-notice-version.dto.ts
-- [[IsArray_9]] - code
-- [[IsOptional_21]] - code
-- [[IsString_22]] - code
+- [[IsArray_14]] - code
+- [[IsOptional_24]] - code
+- [[IsString_31]] - code
 - [[IsUrl_1]] - code
 - [[ItemisedFieldInputDto]] - code - dpdp-platform/backend/src/modules/notices/dto/create-notice-version.dto.ts
-- [[MinLength_15]] - code
-- [[Type_4]] - code
+- [[MinLength_25]] - code
+- [[Type_5]] - code
 - [[ValidateNested_2]] - code
-- [[create-notice-version.dto.ts]] - code - dpdp-platform/backend/src/modules/notices/dto/create-notice-version.dto.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -29,9 +28,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_notices.service.ts]]
-- 2 edges to [[_COMMUNITY_RequirePermission]]
+- 3 edges to [[_COMMUNITY_@prismaclient]]
+- 1 edge to [[_COMMUNITY_notices.service.ts]]
+- 1 edge to [[_COMMUNITY_AccessTokenPayload]]
+- 1 edge to [[_COMMUNITY_NoticesService]]
 
 ## Top bridge nodes
-- [[CreateNoticeVersionDto]] - degree 14, connects to 2 communities
-- [[create-notice-version.dto.ts]] - degree 4, connects to 2 communities
+- [[CreateNoticeVersionDto]] - degree 14, connects to 4 communities
+- [[ItemisedFieldInputDto]] - degree 6, connects to 1 community

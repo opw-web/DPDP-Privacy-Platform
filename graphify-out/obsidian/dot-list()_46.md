@@ -1,21 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/requests/requests.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/security-measures.service.ts"
 type: "code"
-community: "ListRequestsDto"
-location: "L58"
+community: "security-measures.service.ts"
+location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ListRequestsDto
+  - community/security-measuresservicets
 ---
 
 # .list()
 
 ## Connections
-- [[Get_14]] - `references` [EXTRACTED]
-- [[ListRequestsDto]] - `references` [EXTRACTED]
-- [[Query_9]] - `references` [EXTRACTED]
-- [[RequestsController]] - `method` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-list()_45]] - `calls` [INFERRED]
+- [[SecurityMeasuresService]] - `method` [EXTRACTED]
+- [[groupByRuleReference()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ListRequestsDto
+#graphify/code #graphify/EXTRACTED #community/security-measuresservicets

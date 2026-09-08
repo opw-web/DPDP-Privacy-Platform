@@ -1,21 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/assembly.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/sync.e2e-spec.ts"
 type: "code"
-community: "assembly.service.ts"
-location: "L23"
+community: "sync.e2e-spec.ts"
+location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/assemblyservicets
+  - community/synce2e-spects
 ---
 
 # tenant()
 
 ## Connections
-- [[assembly.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[link()]] - `calls` [EXTRACTED]
-- [[normalized()]] - `calls` [EXTRACTED]
-- [[principal()]] - `calls` [EXTRACTED]
-- [[source()]] - `calls` [EXTRACTED]
+- [[createDataSource()_1]] - `calls` [EXTRACTED]
+- [[sync.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/assemblyservicets
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

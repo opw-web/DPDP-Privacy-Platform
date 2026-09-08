@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/boot-registration.registry.ts"
 type: "code"
-community: "SyncQueueService"
+community: "schedule-reconciliation.service.ts"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/schedule-reconciliationservicets
 ---
 
 # BootRegistration
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[boot-registration.registry.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/schedule-reconciliationservicets

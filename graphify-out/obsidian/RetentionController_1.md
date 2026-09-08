@@ -12,10 +12,10 @@ tags:
 # RetentionController
 
 ## Connections
-- [[dot-constructor()_132]] - `method` [EXTRACTED]
+- [[dot-constructor()_139]] - `method` [EXTRACTED]
 - [[dot-create()_33]] - `method` [EXTRACTED]
 - [[dot-get()_21]] - `method` [EXTRACTED]
-- [[dot-list()_44]] - `method` [EXTRACTED]
+- [[dot-list()_43]] - `method` [EXTRACTED]
 - [[dot-update()_23]] - `method` [EXTRACTED]
 - [[ApiTags_38]] - `references` [EXTRACTED]
 - [[Controller_39]] - `references` [EXTRACTED]

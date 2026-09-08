@@ -12,7 +12,7 @@ tags:
 # MissingRequiredVariableError
 
 ## Connections
-- [[dot-constructor()_88]] - `method` [EXTRACTED]
+- [[dot-constructor()_91]] - `method` [EXTRACTED]
 - [[TemplateRenderError]] - `inherits` [EXTRACTED]
 - [[campaigns.service.ts]] - `imports` [EXTRACTED]
 - [[renderMessageTemplate()]] - `calls` [EXTRACTED]

@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts"
+source_file: "dpdp-platform/backend/src/queues/breach-principal-notice-dispatch.queue.ts"
 type: "code"
-community: "AlgorithmRegisterService"
-location: "L35"
+community: "breach-principal-notice-dispatch.queue.ts"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AlgorithmRegisterService
+  - community/breach-principal-notice-dispatchqueuets
 ---
 
 # .constructor()
 
 ## Connections
-- [[AlgorithmRegisterService]] - `method` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
+- [[BreachPrincipalNoticeDispatchQueueService]] - `method` [EXTRACTED]
+- [[InjectQueue_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterService
+#graphify/code #graphify/EXTRACTED #community/breach-principal-notice-dispatchqueuets

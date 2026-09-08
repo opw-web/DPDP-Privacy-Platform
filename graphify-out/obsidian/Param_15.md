@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: ".completeAssessment"
+community: "CreateVoluntaryUndertakingDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/completeAssessment
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # Param
 
 ## Connections
-- [[dot-completeAssessment()]] - `references` [EXTRACTED]
-- [[dot-updateAlgorithm()]] - `references` [EXTRACTED]
+- [[dot-getById()_4]] - `references` [EXTRACTED]
+- [[dot-update()_10]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/completeAssessment
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
 type: "code"
-community: ".record"
+community: "breach.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/breachservicets
 ---
 
 # breach.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AccessTokenPayload]] - `imports` [EXTRACTED]
 - [[AffectedPreview]] - `imports` [EXTRACTED]
 - [[AffectedPrincipalsDto]] - `imports` [EXTRACTED]
@@ -59,4 +61,4 @@ tags:
 - [[token.service.ts]] - `imports_from` [EXTRACTED]
 - [[update-breach.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/breachservicets

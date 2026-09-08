@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/registers/SharingTab.tsx"
 type: "code"
-community: "SecurityMeasuresTab.tsx"
+community: "react"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresTabtsx
+  - community/react
 ---
 
 # SharingTab.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
+- [[@tanstackreact-table]] - `imports_from` [EXTRACTED]
 - [[ApiError]] - `imports` [EXTRACTED]
 - [[Badge()]] - `imports` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
@@ -19,8 +21,8 @@ tags:
 - [[CardContent]] - `imports` [EXTRACTED]
 - [[CardHeader]] - `imports` [EXTRACTED]
 - [[CardTitle]] - `imports` [EXTRACTED]
-- [[CheckboxOption]] - `imports` [EXTRACTED]
 - [[CheckboxOption_1]] - `imports` [EXTRACTED]
+- [[CheckboxOption]] - `imports` [EXTRACTED]
 - [[CreateSharingPayload]] - `contains` [EXTRACTED]
 - [[DATA_CATEGORY_OPTIONS]] - `imports` [EXTRACTED]
 - [[DEFAULT_VALUES_4]] - `contains` [EXTRACTED]
@@ -30,7 +32,7 @@ tags:
 - [[DateTime.tsx]] - `imports_from` [EXTRACTED]
 - [[FieldShell()]] - `imports` [EXTRACTED]
 - [[Input]] - `imports` [EXTRACTED]
-- [[Label]] - `imports` [EXTRACTED]
+- [[Label_1]] - `imports` [EXTRACTED]
 - [[NotReviewedChip()]] - `imports` [EXTRACTED]
 - [[NotReviewedChip.tsx]] - `imports_from` [EXTRACTED]
 - [[PermissionGate()]] - `imports` [EXTRACTED]
@@ -39,13 +41,13 @@ tags:
 - [[RecipientRef]] - `contains` [EXTRACTED]
 - [[RegistersPage.tsx]] - `imports_from` [EXTRACTED]
 - [[Select]] - `imports` [EXTRACTED]
-- [[SelectControl]] - `imports` [EXTRACTED]
+- [[SelectControl_1]] - `imports` [EXTRACTED]
 - [[SharingActivity]] - `contains` [EXTRACTED]
 - [[SharingForm()]] - `contains` [EXTRACTED]
 - [[SharingFormValues]] - `contains` [EXTRACTED]
 - [[SharingTab()]] - `contains` [EXTRACTED]
 - [[Textarea]] - `imports` [EXTRACTED]
-- [[TextareaControl]] - `imports` [EXTRACTED]
+- [[TextareaControl_1]] - `imports` [EXTRACTED]
 - [[api-client.ts]] - `imports_from` [EXTRACTED]
 - [[badge.tsx]] - `imports_from` [EXTRACTED]
 - [[button.tsx]] - `imports_from` [EXTRACTED]
@@ -56,6 +58,11 @@ tags:
 - [[humanizeEnum()]] - `imports` [EXTRACTED]
 - [[input.tsx]] - `imports_from` [EXTRACTED]
 - [[label.tsx]] - `imports_from` [EXTRACTED]
+- [[lucide-react_1]] - `imports_from` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
+- [[react-hook-form_1]] - `imports_from` [EXTRACTED]
 - [[sharingFormSchema]] - `contains` [EXTRACTED]
+- [[sonner_1]] - `imports_from` [EXTRACTED]
+- [[zod_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresTabtsx
+#graphify/code #graphify/EXTRACTED #community/react

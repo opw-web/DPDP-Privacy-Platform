@@ -1,22 +1,22 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sdf/sdf.controller.ts"
 type: "code"
-community: ".completeAssessment"
+community: "CreateAlgorithmEntryDto"
 location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/completeAssessment
+  - community/CreateAlgorithmEntryDto
 ---
 
 # .createAlgorithm()
 
 ## Connections
-- [[dot-create()_22]] - `calls` [INFERRED]
-- [[Body_15]] - `references` [EXTRACTED]
+- [[dot-create()_4]] - `calls` [INFERRED]
+- [[Body_17]] - `references` [EXTRACTED]
 - [[CreateAlgorithmEntryDto]] - `references` [EXTRACTED]
-- [[Post_14]] - `references` [EXTRACTED]
+- [[Post_5]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[SdfController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/completeAssessment
+#graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto

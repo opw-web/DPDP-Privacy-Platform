@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/SettingsCompliancePage.tsx"
 type: "code"
-community: "button.tsx"
+community: "react"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react
 ---
 
 # ComplianceRule
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[SettingsCompliancePage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/react

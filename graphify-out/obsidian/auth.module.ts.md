@@ -12,6 +12,7 @@ tags:
 # auth.module.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[AuditModule]] - `imports` [EXTRACTED]
 - [[AuthModule]] - `contains` [EXTRACTED]
 - [[EmployeeAuthController]] - `imports` [EXTRACTED]

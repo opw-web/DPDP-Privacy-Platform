@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "TenantMiddleware"
+community: "CreateVoluntaryUndertakingDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TenantMiddleware
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # Injectable
 
 ## Connections
-- [[TenantMiddleware]] - `references` [EXTRACTED]
+- [[VoluntaryUndertakingsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TenantMiddleware
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

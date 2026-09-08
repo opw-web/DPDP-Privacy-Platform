@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/inventory/inventory.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/guards/jwt-any-actor.guard.ts"
 type: "code"
-community: "ropa-export.service.ts"
-location: "L17"
+community: "TokenService"
+location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ropa-exportservicets
+  - community/TokenService
 ---
 
 # .constructor()
 
 ## Connections
-- [[InventoryController]] - `method` [EXTRACTED]
-- [[InventoryService]] - `references` [EXTRACTED]
-- [[RopaExportService]] - `references` [EXTRACTED]
+- [[JwtAnyActorGuard]] - `method` [EXTRACTED]
+- [[TokenService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ropa-exportservicets
+#graphify/code #graphify/EXTRACTED #community/TokenService

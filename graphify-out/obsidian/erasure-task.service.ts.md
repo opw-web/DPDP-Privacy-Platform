@@ -12,6 +12,8 @@ tags:
 # erasure-task.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[ACCOUNT_ACCESS_CANONICAL_FIELDS]] - `contains` [EXTRACTED]
 - [[AccessTokenPayload]] - `imports` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]

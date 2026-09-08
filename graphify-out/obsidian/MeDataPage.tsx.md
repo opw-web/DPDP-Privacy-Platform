@@ -12,6 +12,7 @@ tags:
 # MeDataPage.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[CATEGORY_LABELS]] - `contains` [EXTRACTED]
 - [[DataPageSkeleton()]] - `contains` [EXTRACTED]
 - [[EmptyState()]] - `imports` [EXTRACTED]

@@ -12,6 +12,7 @@ tags:
 # compile-audience.ts
 
 ## Connections
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AUDIENCE_FILTER_FIELDS]] - `imports` [EXTRACTED]
 - [[AUDIENCE_FILTER_OPERATORS]] - `imports` [EXTRACTED]
 - [[AudienceFilter_1]] - `imports` [EXTRACTED]

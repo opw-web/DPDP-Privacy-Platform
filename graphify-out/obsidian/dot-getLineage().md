@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principals/lineage.service.ts"
 type: "code"
-community: "AccessReportService"
+community: "LineageService"
 location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessReportService
+  - community/LineageService
 ---
 
 # .getLineage()
@@ -16,4 +16,4 @@ tags:
 - [[dot-lineage()]] - `calls` [INFERRED]
 - [[LineageService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessReportService
+#graphify/code #graphify/EXTRACTED #community/LineageService

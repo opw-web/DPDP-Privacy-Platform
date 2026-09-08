@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateSharingActivityDto"
+community: "CreateTransferDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSharingActivityDto
+  - community/CreateTransferDto
 ---
 
 # ValidateIf
 
 ## Connections
-- [[UpdateSharingActivityDto]] - `references` [EXTRACTED]
+- [[UpdateTransferDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto
+#graphify/code #graphify/EXTRACTED #community/CreateTransferDto

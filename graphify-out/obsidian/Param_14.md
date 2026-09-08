@@ -1,17 +1,24 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateInformationRequestDto"
+community: "RequestsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateInformationRequestDto
+  - community/RequestsController
 ---
 
 # Param
 
 ## Connections
-- [[dot-getById()_6]] - `references` [EXTRACTED]
-- [[dot-update()_15]] - `references` [EXTRACTED]
+- [[dot-accessReport()_1]] - `references` [EXTRACTED]
+- [[dot-addNote()_1]] - `references` [EXTRACTED]
+- [[dot-assign()_1]] - `references` [EXTRACTED]
+- [[dot-changeStatus()_1]] - `references` [EXTRACTED]
+- [[dot-erasureCompletionHolders()]] - `references` [EXTRACTED]
+- [[dot-escalate()_1]] - `references` [EXTRACTED]
+- [[dot-flagFrivolous()_1]] - `references` [EXTRACTED]
+- [[dot-getByReference()]] - `references` [EXTRACTED]
+- [[dot-verifyIdentity()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto
+#graphify/code #graphify/EXTRACTED #community/RequestsController

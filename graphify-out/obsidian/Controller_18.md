@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AuditReadController"
+community: "RequestsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditReadController
+  - community/RequestsController
 ---
 
 # Controller
 
 ## Connections
-- [[AuditReadController]] - `references` [EXTRACTED]
+- [[RequestsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditReadController
+#graphify/code #graphify/EXTRACTED #community/RequestsController

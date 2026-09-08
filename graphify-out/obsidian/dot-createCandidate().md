@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-applyMatch()]] - `calls` [EXTRACTED]
-- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
 - [[LinkingService]] - `method` [EXTRACTED]
 - [[RaisedCandidate]] - `references` [EXTRACTED]
 - [[ScopedTransactionClient]] - `references` [EXTRACTED]

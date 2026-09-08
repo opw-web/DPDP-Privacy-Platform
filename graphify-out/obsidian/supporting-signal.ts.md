@@ -12,6 +12,7 @@ tags:
 # supporting-signal.ts
 
 ## Connections
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[SCORE_BY_SIGNAL]] - `contains` [EXTRACTED]
 - [[SupportingSignal]] - `contains` [EXTRACTED]
 - [[lastSix()]] - `contains` [EXTRACTED]

@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.spec.ts"
+source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.spec.ts"
 type: "code"
-community: "purposes.service.ts"
-location: "L32"
+community: "compliance.service.ts"
+location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposesservicets
+  - community/complianceservicets
 ---
 
 # buildService()
 
 ## Connections
-- [[PurposesService]] - `calls` [EXTRACTED]
-- [[purposes.service.spec.ts]] - `contains` [EXTRACTED]
+- [[ComplianceService]] - `calls` [EXTRACTED]
+- [[buildRule()]] - `calls` [EXTRACTED]
+- [[compliance.service.spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposesservicets
+#graphify/code #graphify/EXTRACTED #community/complianceservicets

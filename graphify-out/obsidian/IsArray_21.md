@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RetentionController"
+community: "CreateInformationRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionController
+  - community/CreateInformationRequestDto
 ---
 
 # IsArray
 
 ## Connections
-- [[CompleteErasureTaskDto]] - `references` [EXTRACTED]
+- [[UpdateInformationRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionController
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

@@ -1,19 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "MappingsController"
+community: "Public"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MappingsController
+  - community/Public
 ---
 
 # Param
 
 ## Connections
-- [[dot-getMappings()]] - `references` [EXTRACTED]
-- [[dot-getPurposes()]] - `references` [EXTRACTED]
-- [[dot-replaceMappings()]] - `references` [EXTRACTED]
-- [[dot-replacePurposes()]] - `references` [EXTRACTED]
+- [[dot-cancelRequest()]] - `references` [EXTRACTED]
+- [[dot-commentOnRequest()]] - `references` [EXTRACTED]
+- [[dot-getPublishedNotice()]] - `references` [EXTRACTED]
+- [[dot-getRequest()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MappingsController
+#graphify/code #graphify/EXTRACTED #community/Public

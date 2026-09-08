@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/common/decorators/current-actor.decorator.ts"
 type: "code"
-community: "RequirePermission"
+community: "@nestjs/common"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/nestjs/common
 ---
 
 # current-actor.decorator.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[AccessTokenPayload]] - `imports` [EXTRACTED]
 - [[CurrentActor]] - `contains` [EXTRACTED]
 - [[breaches.controller.ts]] - `imports_from` [EXTRACTED]
@@ -27,4 +28,4 @@ tags:
 - [[token.service.ts]] - `imports_from` [EXTRACTED]
 - [[unmerge.controller.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

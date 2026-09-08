@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/notices/NoticePreview.tsx"
 type: "code"
-community: "button.tsx"
+community: "react"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react
 ---
 
 # NoticePreview.tsx
 
 ## Connections
+- [[@uiwreact-md-editor_1]] - `imports_from` [EXTRACTED]
 - [[NoticeComposer.tsx]] - `imports_from` [EXTRACTED]
 - [[NoticeItemisedField]] - `imports` [EXTRACTED]
 - [[NoticePreview.test.tsx]] - `imports_from` [EXTRACTED]
@@ -20,4 +21,4 @@ tags:
 - [[NoticeStandalonePreview()]] - `contains` [EXTRACTED]
 - [[noticestypes.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/react

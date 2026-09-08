@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/children/guardians.controller.ts"
 type: "code"
-community: "VerifyGuardianDto"
+community: "AccessTokenPayload"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/VerifyGuardianDto
+  - community/AccessTokenPayload
 ---
 
 # .constructor()
@@ -15,4 +15,4 @@ tags:
 - [[GuardiansController]] - `method` [EXTRACTED]
 - [[GuardiansService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/VerifyGuardianDto
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

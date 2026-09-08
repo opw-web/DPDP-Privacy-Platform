@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/messaging/AudienceBuilder.tsx"
 type: "code"
-community: "MessagingCampaignBuilderPage.tsx"
+community: "AudienceBuilder.tsx"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MessagingCampaignBuilderPagetsx
+  - community/AudienceBuildertsx
 ---
 
 # audienceRuleForField()
@@ -16,4 +16,4 @@ tags:
 - [[AudienceBuilder.test.tsx]] - `imports` [EXTRACTED]
 - [[AudienceBuilder.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MessagingCampaignBuilderPagetsx
+#graphify/code #graphify/EXTRACTED #community/AudienceBuildertsx

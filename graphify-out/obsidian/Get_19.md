@@ -1,17 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "AuditReadController"
+community: "RequestsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditReadController
+  - community/RequestsController
 ---
 
 # Get
 
 ## Connections
-- [[dot-accessLogCsv()_1]] - `references` [EXTRACTED]
-- [[dot-list()_19]] - `references` [EXTRACTED]
+- [[dot-accessReport()_1]] - `references` [EXTRACTED]
+- [[dot-erasureCompletionHolders()]] - `references` [EXTRACTED]
+- [[dot-getByReference()]] - `references` [EXTRACTED]
+- [[dot-list()_48]] - `references` [EXTRACTED]
+- [[dot-stats()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditReadController
+#graphify/code #graphify/EXTRACTED #community/RequestsController

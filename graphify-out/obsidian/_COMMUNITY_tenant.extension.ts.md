@@ -30,7 +30,7 @@ members: 54
 - [[client_1]] - code - dpdp-platform/backend/src/common/prisma/prisma.service.js
 - [[client_1_1]] - code - dpdp-platform/backend/src/common/tenant/tenant.extension.js
 - [[common_1]] - code - dpdp-platform/backend/src/common/prisma/prisma.service.js
-- [[extendWithTenantScoping()_1]] - code - dpdp-platform/backend/src/common/prisma/prisma.service.js
+- [[extendWithTenantScoping()]] - code - dpdp-platform/backend/src/common/prisma/prisma.service.js
 - [[flattenUniqueWhere()]] - code - dpdp-platform/backend/src/common/tenant/tenant.extension.js
 - [[flattenUniqueWhere()_1]] - code - dpdp-platform/backend/src/common/tenant/tenant.extension.ts
 - [[lowerFirst()]] - code - dpdp-platform/backend/src/common/tenant/tenant.extension.js
@@ -71,9 +71,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_prisma.service.ts]]
+- 5 edges to [[_COMMUNITY_@prismaclient]]
+- 5 edges to [[_COMMUNITY_PrismaService]]
+- 1 edge to [[_COMMUNITY_@nestjscommon]]
 
 ## Top bridge nodes
-- [[tenant.extension.ts]] - degree 27, connects to 1 community
-- [[tenant.extension.js]] - degree 21, connects to 1 community
-- [[tenantScopingExtension]] - degree 3, connects to 1 community
+- [[tenant.extension.ts]] - degree 28, connects to 2 communities
+- [[tenant.extension.js]] - degree 22, connects to 2 communities
+- [[prisma.service.js]] - degree 9, connects to 2 communities
+- [[tenant-scoped-models.ts]] - degree 9, connects to 1 community
+- [[tenant-scoped-models.spec.ts]] - degree 6, connects to 1 community

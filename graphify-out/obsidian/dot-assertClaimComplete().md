@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/children/child-exemptions.service.ts"
 type: "code"
-community: "child-exemptions.service.ts"
+community: "children.module.ts"
 location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/child-exemptionsservicets
+  - community/childrenmodulets
 ---
 
 # .assertClaimComplete()
@@ -16,4 +16,4 @@ tags:
 - [[ChildExemptionsService]] - `method` [EXTRACTED]
 - [[CreateExemptionClaimDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/child-exemptionsservicets
+#graphify/code #graphify/EXTRACTED #community/childrenmodulets

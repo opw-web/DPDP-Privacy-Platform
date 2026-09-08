@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/breach-clock.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/sync.processor.ts"
 type: "code"
-community: "breaches.module.ts"
-location: "L31"
+community: "sync.queue.ts"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breachesmodulets
+  - community/syncqueuets
 ---
 
 # .process()
 
 ## Connections
-- [[dot-runClockCycle()]] - `calls` [EXTRACTED]
-- [[BreachClockProcessor]] - `method` [EXTRACTED]
+- [[dot-run()]] - `calls` [INFERRED]
+- [[SyncJobData]] - `references` [EXTRACTED]
+- [[SyncProcessor]] - `method` [EXTRACTED]
+- [[SyncRunSummary]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breachesmodulets
+#graphify/code #graphify/EXTRACTED #community/syncqueuets

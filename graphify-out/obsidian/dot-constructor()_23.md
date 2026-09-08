@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/common/prisma/prisma.service.ts"
+source_file: "dpdp-platform/backend/src/queues/sync.processor.ts"
 type: "code"
-community: "PrismaService"
-location: "L48"
+community: "sync.queue.ts"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/syncqueuets
 ---
 
 # .constructor()
 
 ## Connections
-- [[PrismaService]] - `method` [EXTRACTED]
+- [[SyncPipelineService]] - `references` [EXTRACTED]
+- [[SyncProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/syncqueuets

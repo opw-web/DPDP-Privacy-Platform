@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/connectors/connector.interface.ts"
 type: "code"
-community: "connector.factory.ts"
+community: "Connector"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/connectorfactoryts
+  - community/Connector
 ---
 
 # .discoverSchema()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Connector]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/connectorfactoryts
+#graphify/code #graphify/EXTRACTED #community/Connector

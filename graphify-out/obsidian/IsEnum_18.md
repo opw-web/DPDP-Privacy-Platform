@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateSharingActivityDto"
+community: "employees.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSharingActivityDto
+  - community/employeesservicets
 ---
 
 # IsEnum
 
 ## Connections
-- [[UpdateSharingActivityDto]] - `references` [EXTRACTED]
+- [[UpdateEmployeeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto
+#graphify/code #graphify/EXTRACTED #community/employeesservicets

@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalAuthController"
+community: "NotificationCallerActor"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalAuthController
+  - community/NotificationCallerActor
 ---
 
 # UseGuards
 
 ## Connections
-- [[dot-me()_1]] - `references` [EXTRACTED]
+- [[dot-list()_30]] - `references` [EXTRACTED]
+- [[dot-markAllRead()]] - `references` [EXTRACTED]
+- [[dot-markRead()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalAuthController
+#graphify/code #graphify/EXTRACTED #community/NotificationCallerActor

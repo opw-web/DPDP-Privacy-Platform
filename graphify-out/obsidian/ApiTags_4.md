@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "purposes.service.ts"
+community: "AccessTokenPayload"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposesservicets
+  - community/AccessTokenPayload
 ---
 
 # ApiTags
 
 ## Connections
-- [[PurposesController]] - `references` [EXTRACTED]
+- [[RetentionController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposesservicets
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

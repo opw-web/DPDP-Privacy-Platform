@@ -1,24 +1,24 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/legal-hold.service.ts"
 type: "code"
-community: "RetentionController"
+community: "erasure-task.service.ts"
 location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionController
+  - community/erasure-taskservicets
 ---
 
 # LegalHoldService
 
 ## Connections
-- [[dot-constructor()_116]] - `references` [EXTRACTED]
-- [[dot-constructor()_115]] - `method` [EXTRACTED]
-- [[dot-create()_27]] - `method` [EXTRACTED]
-- [[dot-list()_36]] - `method` [EXTRACTED]
-- [[Injectable_70]] - `references` [EXTRACTED]
+- [[dot-constructor()_80]] - `references` [EXTRACTED]
+- [[dot-constructor()_79]] - `method` [EXTRACTED]
+- [[dot-create()_15]] - `method` [EXTRACTED]
+- [[dot-list()_21]] - `method` [EXTRACTED]
+- [[Injectable_51]] - `references` [EXTRACTED]
 - [[legal-hold.service.ts]] - `contains` [EXTRACTED]
 - [[retention.module.ts]] - `imports` [EXTRACTED]
 - [[retentionretention.controller.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionController
+#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets

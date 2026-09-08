@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
+community: "notifications.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/notificationscontrollerts
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
+- [[MarkAllReadResponseDto]] - `references` [EXTRACTED]
+- [[NotificationDto]] - `references` [EXTRACTED]
+- [[NotificationListResponseDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts

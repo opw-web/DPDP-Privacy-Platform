@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/prisma/seed-principals.ts"
 type: "code"
-community: "seed-principals.ts"
+community: "argon2"
 location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/seed-principalsts
+  - community/argon2
 ---
 
 # DemoPrincipalToClaim
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[seed-principals.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/seed-principalsts
+#graphify/code #graphify/EXTRACTED #community/argon2

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/config/access-log-retention.constant.ts"
 type: "code"
-community: "audit-chain-verify.processor.ts"
+community: "token.service.ts"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-chain-verifyprocessorts
+  - community/tokenservicets
 ---
 
 # ACCESS_LOG_RETENTION_FLOOR_DAYS
@@ -19,4 +19,4 @@ tags:
 - [[env.validation.ts]] - `imports` [EXTRACTED]
 - [[scheduled-jobs.e2e-spec.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-chain-verifyprocessorts
+#graphify/code #graphify/EXTRACTED #community/tokenservicets

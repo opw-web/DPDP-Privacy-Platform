@@ -1,20 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/breach-principal-notice-dispatch.processor.ts"
+source_file: "dpdp-platform/backend/src/modules/audit/audit-read.service.ts"
 type: "code"
-community: "breaches.module.ts"
-location: "L35"
+community: "MaskingService"
+location: "L102"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breachesmodulets
+  - community/MaskingService
 ---
 
 # .constructor()
 
 ## Connections
-- [[BreachPrincipalNoticeDispatchProcessor]] - `method` [EXTRACTED]
-- [[BreachService]] - `references` [EXTRACTED]
-- [[CampaignSendJobData]] - `references` [EXTRACTED]
-- [[InjectQueue]] - `references` [EXTRACTED]
+- [[AuditReadService]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[MaskingService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breachesmodulets
+#graphify/code #graphify/EXTRACTED #community/MaskingService

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "campaigns.service.ts"
+community: "requests.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/campaignsservicets
+  - community/requestsservicets
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[CreateCampaignDto]] - `references` [EXTRACTED]
+- [[EscalateRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/campaignsservicets
+#graphify/code #graphify/EXTRACTED #community/requestsservicets

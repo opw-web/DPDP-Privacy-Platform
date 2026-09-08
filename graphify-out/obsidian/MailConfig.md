@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/config/configuration.ts"
 type: "code"
-community: "notifications.module.ts"
+community: "token.service.ts"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationsmodulets
+  - community/tokenservicets
 ---
 
 # MailConfig
@@ -18,4 +18,4 @@ tags:
 - [[mailer.service.ts]] - `imports` [EXTRACTED]
 - [[notifications.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationsmodulets
+#graphify/code #graphify/EXTRACTED #community/tokenservicets

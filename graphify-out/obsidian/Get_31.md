@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RetentionController"
+community: "health.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionController
+  - community/healthservicets
 ---
 
 # Get
 
 ## Connections
-- [[dot-listLegalHolds()]] - `references` [EXTRACTED]
-- [[dot-listTasks()]] - `references` [EXTRACTED]
+- [[dot-check()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionController
+#graphify/code #graphify/EXTRACTED #community/healthservicets

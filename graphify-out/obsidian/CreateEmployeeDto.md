@@ -12,12 +12,12 @@ tags:
 # CreateEmployeeDto
 
 ## Connections
-- [[dot-create()_17]] - `references` [EXTRACTED]
 - [[dot-create()_18]] - `references` [EXTRACTED]
-- [[ApiProperty_31]] - `references` [EXTRACTED]
+- [[dot-create()_19]] - `references` [EXTRACTED]
+- [[ApiProperty_37]] - `references` [EXTRACTED]
 - [[IsEmail_3]] - `references` [EXTRACTED]
-- [[IsString_43]] - `references` [EXTRACTED]
-- [[MinLength_31]] - `references` [EXTRACTED]
+- [[IsString_50]] - `references` [EXTRACTED]
+- [[MinLength_38]] - `references` [EXTRACTED]
 - [[create-employee.dto.ts]] - `contains` [EXTRACTED]
 - [[employees.controller.ts]] - `imports` [EXTRACTED]
 - [[employees.service.ts]] - `imports` [EXTRACTED]

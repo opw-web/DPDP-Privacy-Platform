@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "notifications.controller.ts"
+community: "mappings.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationscontrollerts
+  - community/mappingsservicets
 ---
 
 # ApiProperty
 
 ## Connections
-- [[MarkAllReadResponseDto]] - `references` [EXTRACTED]
-- [[NotificationDto]] - `references` [EXTRACTED]
-- [[NotificationListResponseDto]] - `references` [EXTRACTED]
+- [[MappingWarningPurposeSummaryResponseDto]] - `references` [EXTRACTED]
+- [[MappingWarningResponseDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts
+#graphify/code #graphify/EXTRACTED #community/mappingsservicets

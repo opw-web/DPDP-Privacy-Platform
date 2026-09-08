@@ -1,12 +1,12 @@
 ---
 source_file: "demo-company-server/src/seed/rng.ts"
 type: "code"
-community: "Rng"
+community: "generateDataset"
 location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Rng
+  - community/generateDataset
 ---
 
 # .shuffle()
@@ -15,4 +15,4 @@ tags:
 - [[Rng]] - `method` [EXTRACTED]
 - [[generateDataset()]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Rng
+#graphify/code #graphify/EXTRACTED #community/generateDataset

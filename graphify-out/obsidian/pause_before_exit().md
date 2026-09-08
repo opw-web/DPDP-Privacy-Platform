@@ -17,6 +17,7 @@ tags:
 - [[on_error()]] - `calls` [EXTRACTED]
 - [[open-database.sh script]] - `calls` [EXTRACTED]
 - [[open-runbook.sh script]] - `calls` [EXTRACTED]
+- [[prepare.sh script]] - `calls` [EXTRACTED]
 - [[reset.sh script]] - `calls` [EXTRACTED]
 - [[say()]] - `calls` [EXTRACTED]
 - [[show-demo-proof.sh script]] - `calls` [EXTRACTED]

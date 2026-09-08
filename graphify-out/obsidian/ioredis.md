@@ -1,18 +1,17 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "code"
-community: "ioredis"
+community: "dependencies"
 location: "L42"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ioredis
+  - community/dependencies
 ---
 
 # ioredis
 
 ## Connections
 - [[dependencies_1]] - `contains` [EXTRACTED]
-- [[ioredis_1]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ioredis
+#graphify/code #graphify/EXTRACTED #community/dependencies

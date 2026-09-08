@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/deadline-scan.processor.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync.controller.ts"
 type: "code"
-community: "DeadlineScanProcessor"
-location: "L50"
+community: "SyncService"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DeadlineScanProcessor
+  - community/SyncService
 ---
 
 # .constructor()
 
 ## Connections
-- [[DeadlineScanProcessor]] - `method` [EXTRACTED]
-- [[RequestsService]] - `references` [EXTRACTED]
+- [[SyncJobsController]] - `method` [EXTRACTED]
+- [[SyncService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DeadlineScanProcessor
+#graphify/code #graphify/EXTRACTED #community/SyncService

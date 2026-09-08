@@ -11,6 +11,6 @@ tags:
 # Module
 
 ## Connections
-- [[SyncModule]] - `references` [EXTRACTED]
+- [[RetentionModule]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/appmodulets

@@ -12,16 +12,16 @@ tags:
 # ListAuditEventsDto
 
 ## Connections
+- [[dot-list()_18]] - `references` [EXTRACTED]
 - [[dot-list()_19]] - `references` [EXTRACTED]
-- [[dot-list()_14]] - `references` [EXTRACTED]
 - [[AUDIT_ACTIONS]] - `references` [EXTRACTED]
 - [[IsISO8601]] - `references` [EXTRACTED]
-- [[IsIn_4]] - `references` [EXTRACTED]
-- [[IsInt_2]] - `references` [EXTRACTED]
-- [[IsOptional_14]] - `references` [EXTRACTED]
-- [[IsString_15]] - `references` [EXTRACTED]
+- [[IsIn_5]] - `references` [EXTRACTED]
+- [[IsInt_6]] - `references` [EXTRACTED]
+- [[IsOptional_19]] - `references` [EXTRACTED]
+- [[IsString_25]] - `references` [EXTRACTED]
 - [[Max_1]] - `references` [EXTRACTED]
-- [[Min_2]] - `references` [EXTRACTED]
+- [[Min_6]] - `references` [EXTRACTED]
 - [[Transform]] - `references` [EXTRACTED]
 - [[audit-read.controller.ts]] - `imports` [EXTRACTED]
 - [[audit-read.service.ts]] - `imports` [EXTRACTED]

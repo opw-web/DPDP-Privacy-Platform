@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PermissionsController"
+community: "compliance.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PermissionsController
+  - community/complianceservicets
 ---
 
 # ApiTags
 
 ## Connections
-- [[PermissionsController]] - `references` [EXTRACTED]
+- [[ComplianceController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PermissionsController
+#graphify/code #graphify/EXTRACTED #community/complianceservicets

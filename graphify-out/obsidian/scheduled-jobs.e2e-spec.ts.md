@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/scheduled-jobs.e2e-spec.ts"
 type: "code"
-community: "audit-chain-verify.processor.ts"
+community: "token.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-chain-verifyprocessorts
+  - community/tokenservicets
 ---
 
 # scheduled-jobs.e2e-spec.ts
@@ -22,4 +22,4 @@ tags:
 - [[audit-chain-verify.processor.ts]] - `imports_from` [EXTRACTED]
 - [[mvp2-schedules.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-chain-verifyprocessorts
+#graphify/code #graphify/EXTRACTED #community/tokenservicets

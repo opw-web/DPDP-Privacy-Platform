@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateTemplateDto"
+community: "SourceFieldMappingDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTemplateDto
+  - community/SourceFieldMappingDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[PreviewTemplateDto]] - `references` [EXTRACTED]
+- [[SourceFieldMappingDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTemplateDto
+#graphify/code #graphify/EXTRACTED #community/SourceFieldMappingDto

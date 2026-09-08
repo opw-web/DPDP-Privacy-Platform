@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ChangeStatusDto"
+community: "AccessTokenPayload"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ChangeStatusDto
+  - community/AccessTokenPayload
 ---
 
 # ApiProperty
 
 ## Connections
-- [[ChangeStatusDto]] - `references` [EXTRACTED]
-- [[ErasureProcessorChecklistDto]] - `references` [EXTRACTED]
-- [[ErasureSystemChecklistDto]] - `references` [EXTRACTED]
+- [[CancelErasureTaskDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ChangeStatusDto
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

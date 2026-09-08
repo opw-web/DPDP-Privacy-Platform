@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "MailerService"
+community: "PrismaService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MailerService
+  - community/PrismaService
 ---
 
 # Injectable
 
 ## Connections
-- [[MailerService]] - `references` [EXTRACTED]
+- [[PrismaService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MailerService
+#graphify/code #graphify/EXTRACTED #community/PrismaService

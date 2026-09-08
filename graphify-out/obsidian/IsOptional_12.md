@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ReplaceMappingsDto"
+community: "SyncService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ReplaceMappingsDto
+  - community/SyncService
 ---
 
 # IsOptional
 
 ## Connections
-- [[SourceFieldMappingDto]] - `references` [EXTRACTED]
+- [[ListSyncJobsQueryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ReplaceMappingsDto
+#graphify/code #graphify/EXTRACTED #community/SyncService

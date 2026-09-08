@@ -12,8 +12,8 @@ tags:
 # .setRefreshCookie()
 
 ## Connections
-- [[dot-login()_2]] - `calls` [EXTRACTED]
-- [[dot-refresh()_2]] - `calls` [EXTRACTED]
+- [[dot-login()_1]] - `calls` [EXTRACTED]
+- [[dot-refresh()]] - `calls` [EXTRACTED]
 - [[EmployeeAuthController]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/EmployeeAuthController

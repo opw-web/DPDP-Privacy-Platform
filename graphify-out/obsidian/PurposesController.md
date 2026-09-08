@@ -12,13 +12,13 @@ tags:
 # PurposesController
 
 ## Connections
-- [[dot-constructor()_32]] - `method` [EXTRACTED]
-- [[dot-create()_3]] - `method` [EXTRACTED]
-- [[dot-list()_4]] - `method` [EXTRACTED]
-- [[dot-review()_3]] - `method` [EXTRACTED]
+- [[dot-constructor()_38]] - `method` [EXTRACTED]
+- [[dot-create()_6]] - `method` [EXTRACTED]
+- [[dot-list()_6]] - `method` [EXTRACTED]
+- [[dot-review()_1]] - `method` [EXTRACTED]
 - [[dot-update()_2]] - `method` [EXTRACTED]
-- [[ApiTags_4]] - `references` [EXTRACTED]
-- [[Controller_5]] - `references` [EXTRACTED]
+- [[ApiTags_8]] - `references` [EXTRACTED]
+- [[Controller_9]] - `references` [EXTRACTED]
 - [[purposes.controller.ts]] - `contains` [EXTRACTED]
 - [[purposes.module.ts]] - `imports` [EXTRACTED]
 

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateComplianceRuleDto"
+community: "SourceFieldMappingDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateComplianceRuleDto
+  - community/SourceFieldMappingDto
 ---
 
 # IsOptional
 
 ## Connections
-- [[CreateComplianceRuleDto]] - `references` [EXTRACTED]
+- [[SourceFieldMappingDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto
+#graphify/code #graphify/EXTRACTED #community/SourceFieldMappingDto

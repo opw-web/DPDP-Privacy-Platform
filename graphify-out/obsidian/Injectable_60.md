@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateInformationRequestDto"
+community: "employees.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateInformationRequestDto
+  - community/employeesservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[InformationRequestsService]] - `references` [EXTRACTED]
+- [[EmployeesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto
+#graphify/code #graphify/EXTRACTED #community/employeesservicets

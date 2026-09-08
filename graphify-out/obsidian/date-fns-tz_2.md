@@ -1,18 +1,17 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "code"
-community: "date-fns-tz"
+community: "dependencies"
 location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/date-fns-tz
+  - community/dependencies
 ---
 
 # date-fns-tz
 
 ## Connections
-- [[date-fns-tz_3]] - `imports` [EXTRACTED]
 - [[dependencies_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/date-fns-tz
+#graphify/code #graphify/EXTRACTED #community/dependencies

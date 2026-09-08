@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[ecommerce.ts]] - `imports_from` [EXTRACTED]
+- [[fastify_1]] - `imports_from` [EXTRACTED]
 - [[marketing.ts]] - `imports_from` [EXTRACTED]
 - [[onlyGet()]] - `contains` [EXTRACTED]
 - [[sales.ts]] - `imports_from` [EXTRACTED]

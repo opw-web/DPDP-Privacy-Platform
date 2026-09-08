@@ -1,11 +1,11 @@
 ---
 type: community
-members: 29
+members: 27
 ---
 
 # UpdateOrganizationDto
 
-**Members:** 29 nodes
+**Members:** 27 nodes
 
 ## Members
 - [[dot-constructor()]] - code - dpdp-platform/backend/src/modules/organizations/organizations.controller.ts
@@ -35,8 +35,6 @@ members: 29
 - [[OrganizationsService]] - code - dpdp-platform/backend/src/modules/organizations/organizations.service.ts
 - [[Patch]] - code
 - [[UpdateOrganizationDto]] - code - dpdp-platform/backend/src/modules/organizations/dto/update-organization.dto.ts
-- [[organizations.controller.ts]] - code - dpdp-platform/backend/src/modules/organizations/organizations.controller.ts
-- [[update-organization.dto.ts]] - code - dpdp-platform/backend/src/modules/organizations/dto/update-organization.dto.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -46,15 +44,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_prisma.service.ts]]
-- 4 edges to [[_COMMUNITY_RequirePermission]]
-- 3 edges to [[_COMMUNITY_app.module.ts]]
+- 5 edges to [[_COMMUNITY_@nestjscommon]]
+- 2 edges to [[_COMMUNITY_PrismaService]]
+- 2 edges to [[_COMMUNITY_app.module.ts]]
+- 1 edge to [[_COMMUNITY_@prismaclient]]
 - 1 edge to [[_COMMUNITY_AuditService]]
 - 1 edge to [[_COMMUNITY_dot-record]]
 
 ## Top bridge nodes
-- [[organizations.controller.ts]] - degree 8, connects to 3 communities
-- [[OrganizationsService]] - degree 8, connects to 2 communities
-- [[UpdateOrganizationDto]] - degree 17, connects to 1 community
-- [[OrganizationsController]] - degree 7, connects to 1 community
+- [[UpdateOrganizationDto]] - degree 17, connects to 3 communities
+- [[OrganizationsService]] - degree 8, connects to 3 communities
+- [[OrganizationsController]] - degree 7, connects to 2 communities
 - [[dot-update()]] - degree 6, connects to 1 community
+- [[dot-get()]] - degree 4, connects to 1 community

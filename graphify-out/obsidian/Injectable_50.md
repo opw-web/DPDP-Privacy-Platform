@@ -11,6 +11,6 @@ tags:
 # Injectable
 
 ## Connections
-- [[PurposeServedService]] - `references` [EXTRACTED]
+- [[ErasureTaskService]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/erasure-taskservicets

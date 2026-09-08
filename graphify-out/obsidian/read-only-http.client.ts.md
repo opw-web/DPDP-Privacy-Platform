@@ -12,6 +12,7 @@ tags:
 # read-only-http.client.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[RETRY_BACKOFF_MS]] - `contains` [EXTRACTED]
 - [[ReadOnlyHttpClient]] - `contains` [EXTRACTED]
 - [[ReadOnlyHttpMethodError]] - `contains` [EXTRACTED]

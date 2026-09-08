@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateTemplateDto"
+community: "CreateMeRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTemplateDto
+  - community/CreateMeRequestDto
 ---
 
 # IsOptional
 
 ## Connections
-- [[CreateTemplateDto]] - `references` [EXTRACTED]
+- [[CreateMeRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTemplateDto
+#graphify/code #graphify/EXTRACTED #community/CreateMeRequestDto

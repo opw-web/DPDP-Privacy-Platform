@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/requests/dto/change-status.dto.ts"
 type: "code"
-community: "ChangeStatusDto"
+community: "requests.service.ts"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ChangeStatusDto
+  - community/requestsservicets
 ---
 
 # ErasureSystemChecklistDto
 
 ## Connections
-- [[ApiProperty_1]] - `references` [EXTRACTED]
-- [[IsBoolean_1]] - `references` [EXTRACTED]
-- [[IsString_3]] - `references` [EXTRACTED]
+- [[ApiProperty_27]] - `references` [EXTRACTED]
+- [[IsBoolean_15]] - `references` [EXTRACTED]
+- [[IsString_35]] - `references` [EXTRACTED]
 - [[change-status.dto.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ChangeStatusDto
+#graphify/code #graphify/EXTRACTED #community/requestsservicets

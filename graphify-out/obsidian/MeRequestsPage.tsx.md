@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeRequestsPage.tsx"
 type: "code"
-community: "card.tsx"
+community: "react-router-dom"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cardtsx
+  - community/react-router-dom
 ---
 
 # MeRequestsPage.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[Badge()]] - `imports` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
 - [[Card]] - `imports` [EXTRACTED]
@@ -23,7 +24,7 @@ tags:
 - [[EmptyState()]] - `imports` [EXTRACTED]
 - [[EmptyState.tsx]] - `imports_from` [EXTRACTED]
 - [[Input]] - `imports` [EXTRACTED]
-- [[Label]] - `imports` [EXTRACTED]
+- [[Label_1]] - `imports` [EXTRACTED]
 - [[MeRequest]] - `contains` [EXTRACTED]
 - [[MeRequestsPage()]] - `contains` [EXTRACTED]
 - [[MeRequestsPage.test.tsx]] - `imports_from` [EXTRACTED]
@@ -45,9 +46,11 @@ tags:
 - [[label.tsx]] - `imports_from` [EXTRACTED]
 - [[labelForType()]] - `contains` [EXTRACTED]
 - [[principalApiClient]] - `imports` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
+- [[react-router-dom_1]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 - [[select.tsx]] - `imports_from` [EXTRACTED]
 - [[textarea.tsx]] - `imports_from` [EXTRACTED]
 - [[typeSubject()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cardtsx
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

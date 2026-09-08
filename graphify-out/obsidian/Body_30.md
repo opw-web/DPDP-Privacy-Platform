@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "SecurityMeasuresService"
+community: "CreateSharingActivityDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SecurityMeasuresService
+  - community/CreateSharingActivityDto
 ---
 
 # Body
@@ -14,4 +14,4 @@ tags:
 - [[dot-create()_37]] - `references` [EXTRACTED]
 - [[dot-update()_27]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SecurityMeasuresService
+#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "access-report.service.ts"
+community: "BootRegistrationRegistry"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-reportservicets
+  - community/BootRegistrationRegistry
 ---
 
 # Injectable
 
 ## Connections
-- [[LineageService]] - `references` [EXTRACTED]
+- [[RetentionScanQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-reportservicets
+#graphify/code #graphify/EXTRACTED #community/BootRegistrationRegistry

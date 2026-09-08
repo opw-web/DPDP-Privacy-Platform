@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "employees.service.ts"
+community: "PreviewAudienceDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeesservicets
+  - community/PreviewAudienceDto
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_17]] - `references` [EXTRACTED]
-- [[dot-resetPassword()]] - `references` [EXTRACTED]
-- [[dot-update()_13]] - `references` [EXTRACTED]
+- [[dot-preview()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeesservicets
+#graphify/code #graphify/EXTRACTED #community/PreviewAudienceDto

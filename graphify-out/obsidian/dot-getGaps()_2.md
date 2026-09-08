@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sdf/sdf-gaps.service.ts"
 type: "code"
-community: "erasure-task.service.ts"
+community: "SdfController"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/SdfController
 ---
 
 # .getGaps()
@@ -17,4 +17,4 @@ tags:
 - [[SdfGapsService]] - `method` [EXTRACTED]
 - [[addByDeadlineUnit()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/SdfController

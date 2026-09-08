@@ -1,17 +1,16 @@
 ---
 type: community
-members: 38
+members: 32
 ---
 
 # templates.service.ts
 
-**Members:** 38 nodes
+**Members:** 32 nodes
 
 ## Members
-- [[dot-constructor()_88]] - code - dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts
-- [[dot-constructor()_89]] - code - dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts
-- [[dot-constructor()_90]] - code - dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts
-- [[dot-preview()_2]] - code - dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts
+- [[dot-constructor()_91]] - code - dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts
+- [[dot-constructor()_92]] - code - dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts
+- [[dot-constructor()_93]] - code - dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts
 - [[BREACH_NOTIFICATION_REQUIRED_ELEMENTS]] - code - dpdp-platform/backend/src/modules/messaging/templates/whitelisted-variables.ts
 - [[DisallowedTemplateSyntaxError]] - code - dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts
 - [[MESSAGE_TEMPLATE_PUBLIC_SELECT]] - code - dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts
@@ -22,8 +21,6 @@ members: 38
 - [[RenderOrganizationTemplateInput]] - code - dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts
 - [[RenderTemplateInput]] - code - dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts
 - [[RenderedTemplate]] - code - dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts
-- [[SYSTEM_MESSAGE_TEMPLATES]] - code - dpdp-platform/backend/prisma/seed/message-templates.ts
-- [[SystemMessageTemplateSeed]] - code - dpdp-platform/backend/prisma/seed/message-templates.ts
 - [[TEMPLATE_VARIABLE_WHITELIST]] - code - dpdp-platform/backend/src/modules/messaging/templates/whitelisted-variables.ts
 - [[TEMPLATE_VARIABLE_WHITELIST_COUNT]] - code - dpdp-platform/backend/src/modules/messaging/templates/whitelisted-variables.ts
 - [[TemplateRenderError]] - code - dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts
@@ -34,16 +31,13 @@ members: 38
 - [[engine]] - code - dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts
 - [[extractTemplateVariables()]] - code - dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts
 - [[isWhitelistedTemplateVariable()]] - code - dpdp-platform/backend/src/modules/messaging/templates/whitelisted-variables.ts
-- [[message-templates.ts]] - code - dpdp-platform/backend/prisma/seed/message-templates.ts
 - [[renderMessageTemplate()]] - code - dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts
 - [[renderOrganizationMessageTemplate()]] - code - dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts
 - [[renderSource()]] - code - dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts
 - [[resolveOrganizationContactVariables()]] - code - dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts
-- [[seedMessageTemplates()]] - code - dpdp-platform/backend/prisma/seed/message-templates.ts
 - [[template-renderer.spec.ts]] - code - dpdp-platform/backend/src/modules/messaging/templates/template-renderer.spec.ts
 - [[template-renderer.ts]] - code - dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts
 - [[templates.service.ts]] - code - dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts
-- [[toBadRequest()]] - code - dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts
 - [[walkStatement()]] - code - dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts
 - [[whitelisted-variables.ts]] - code - dpdp-platform/backend/src/modules/messaging/templates/whitelisted-variables.ts
 
@@ -56,18 +50,22 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 11 edges to [[_COMMUNITY_campaigns.service.ts]]
-- 8 edges to [[_COMMUNITY_CreateTemplateDto]]
-- 6 edges to [[_COMMUNITY_PrismaService]]
-- 6 edges to [[_COMMUNITY_TemplatesService]]
+- 9 edges to [[_COMMUNITY_TemplatesService]]
+- 5 edges to [[_COMMUNITY_@prismaclient]]
 - 3 edges to [[_COMMUNITY_CampaignsService]]
-- 3 edges to [[_COMMUNITY_seed.ts]]
-- 3 edges to [[_COMMUNITY_prisma.service.ts]]
+- 3 edges to [[_COMMUNITY_argon2]]
+- 2 edges to [[_COMMUNITY_PrismaService]]
+- 2 edges to [[_COMMUNITY_supertest]]
 - 1 edge to [[_COMMUNITY_AuditService]]
+- 1 edge to [[_COMMUNITY_CreateTemplateDto]]
+- 1 edge to [[_COMMUNITY_audit.service.ts]]
 - 1 edge to [[_COMMUNITY_app.module.ts]]
+- 1 edge to [[_COMMUNITY_@nestjscommon]]
+- 1 edge to [[_COMMUNITY_backendpackage.json]]
 
 ## Top bridge nodes
-- [[templates.service.ts]] - degree 30, connects to 7 communities
-- [[extractTemplateVariables()]] - degree 10, connects to 3 communities
-- [[message-templates.ts]] - degree 9, connects to 3 communities
+- [[templates.service.ts]] - degree 32, connects to 9 communities
+- [[extractTemplateVariables()]] - degree 10, connects to 4 communities
+- [[template-renderer.ts]] - degree 26, connects to 3 communities
 - [[TemplateVariableName]] - degree 8, connects to 3 communities
-- [[whitelisted-variables.ts]] - degree 11, connects to 2 communities
+- [[renderOrganizationMessageTemplate()]] - degree 7, connects to 3 communities

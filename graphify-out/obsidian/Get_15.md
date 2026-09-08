@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "PermissionsController"
+community: "AuditChainService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PermissionsController
+  - community/AuditChainService
 ---
 
 # Get
 
 ## Connections
-- [[dot-list()_17]] - `references` [EXTRACTED]
+- [[dot-exportCsv()_2]] - `references` [EXTRACTED]
+- [[dot-verifyChain()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PermissionsController
+#graphify/code #graphify/EXTRACTED #community/AuditChainService

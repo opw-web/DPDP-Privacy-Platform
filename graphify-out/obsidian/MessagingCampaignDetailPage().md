@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx"
 type: "code"
-community: "cn"
+community: "AuditPage.tsx"
 location: "L100"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/AuditPagetsx
 ---
 
 # MessagingCampaignDetailPage()
@@ -26,4 +26,4 @@ tags:
 - [[summarizeRecipientStatuses()]] - `calls` [EXTRACTED]
 - [[useEmployeeAuth()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/AuditPagetsx

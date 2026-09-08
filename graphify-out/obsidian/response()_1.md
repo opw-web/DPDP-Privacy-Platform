@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/NoticeBuilderPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/SettingsCompliancePage.test.tsx"
 type: "code"
-community: "employeeLogout"
+community: "router.tsx"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeeLogout
+  - community/routertsx
 ---
 
 # response()
 
 ## Connections
-- [[NoticeBuilderPage.test.tsx]] - `contains` [EXTRACTED]
+- [[SettingsCompliancePage.test.tsx]] - `contains` [EXTRACTED]
+- [[renderPage()_7]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeeLogout
+#graphify/code #graphify/EXTRACTED #community/routertsx

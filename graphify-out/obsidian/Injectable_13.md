@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PrismaService"
+community: "schedule-reconciliation.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/schedule-reconciliationservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[PrismaService]] - `references` [EXTRACTED]
+- [[Mvp2ScheduleReconciliationService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/schedule-reconciliationservicets

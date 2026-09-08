@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "TemplatesService"
+community: "CreateTransferDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/CreateTransferDto
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_9]] - `references` [EXTRACTED]
-- [[dot-preview()]] - `references` [EXTRACTED]
-- [[dot-update()_8]] - `references` [EXTRACTED]
+- [[dot-create()_8]] - `references` [EXTRACTED]
+- [[dot-update()_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/CreateTransferDto

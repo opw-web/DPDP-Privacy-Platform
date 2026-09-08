@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "MaskingService"
+community: "PrincipalsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MaskingService
+  - community/PrincipalsService
 ---
 
 # Injectable
 
 ## Connections
-- [[MaskingService]] - `references` [EXTRACTED]
+- [[PrincipalsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MaskingService
+#graphify/code #graphify/EXTRACTED #community/PrincipalsService

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "SharingService"
+community: "security-measures.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SharingService
+  - community/security-measuresservicets
 ---
 
 # Param
@@ -14,4 +14,4 @@ tags:
 - [[dot-get()_23]] - `references` [EXTRACTED]
 - [[dot-update()_25]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SharingService
+#graphify/code #graphify/EXTRACTED #community/security-measuresservicets

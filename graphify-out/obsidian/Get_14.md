@@ -1,20 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "RequestsController"
+community: "mappings.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestsController
+  - community/mappingsservicets
 ---
 
 # Get
 
 ## Connections
-- [[dot-accessReport()_1]] - `references` [EXTRACTED]
-- [[dot-erasureCompletionHolders()]] - `references` [EXTRACTED]
-- [[dot-getByReference()]] - `references` [EXTRACTED]
-- [[dot-list()_46]] - `references` [EXTRACTED]
-- [[dot-stats()]] - `references` [EXTRACTED]
+- [[dot-getMappings()]] - `references` [EXTRACTED]
+- [[dot-getPurposes()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestsController
+#graphify/code #graphify/EXTRACTED #community/mappingsservicets

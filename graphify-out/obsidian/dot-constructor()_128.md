@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/principal-evidence.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/roles.service.ts"
 type: "code"
-community: "principal-evidence.service.ts"
-location: "L24"
+community: "UpdateRolePermissionsDto"
+location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principal-evidenceservicets
+  - community/UpdateRolePermissionsDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[PrincipalEvidenceController]] - `method` [EXTRACTED]
-- [[PrincipalEvidenceService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[RolesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principal-evidenceservicets
+#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto

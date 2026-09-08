@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "notifications.service.ts"
+community: "MaskingService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationsservicets
+  - community/MaskingService
 ---
 
 # Injectable
 
 ## Connections
-- [[NotificationsService]] - `references` [EXTRACTED]
+- [[MaskingService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationsservicets
+#graphify/code #graphify/EXTRACTED #community/MaskingService

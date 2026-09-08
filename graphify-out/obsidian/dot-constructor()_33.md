@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.ts"
+source_file: "dpdp-platform/backend/src/common/guards/jwt-principal.guard.ts"
 type: "code"
-community: "purposes.service.ts"
-location: "L77"
+community: "TokenService"
+location: "L75"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposesservicets
+  - community/TokenService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[PurposesService]] - `method` [EXTRACTED]
+- [[JwtPrincipalGuard]] - `method` [EXTRACTED]
+- [[TokenService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposesservicets
+#graphify/code #graphify/EXTRACTED #community/TokenService

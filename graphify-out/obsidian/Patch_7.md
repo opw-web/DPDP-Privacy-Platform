@@ -11,6 +11,6 @@ tags:
 # Patch
 
 ## Connections
-- [[dot-update()_15]] - `references` [EXTRACTED]
+- [[dot-update()_14]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

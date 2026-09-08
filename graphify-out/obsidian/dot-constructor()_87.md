@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/common/tenant/tenant.middleware.ts"
+source_file: "dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts"
 type: "code"
-community: "TenantMiddleware"
-location: "L46"
+community: "CreateVoluntaryUndertakingDto"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TenantMiddleware
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[TenantMiddleware]] - `method` [EXTRACTED]
-- [[TokenService]] - `references` [EXTRACTED]
+- [[VoluntaryUndertakingsController]] - `method` [EXTRACTED]
+- [[VoluntaryUndertakingsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TenantMiddleware
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

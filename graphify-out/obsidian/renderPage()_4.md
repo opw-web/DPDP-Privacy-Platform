@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/SettingsCompliancePage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/InformationRequestsPage.test.tsx"
 type: "code"
-community: "employeeLogin"
-location: "L12"
+community: "router.tsx"
+location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeeLogin
+  - community/routertsx
 ---
 
 # renderPage()
 
 ## Connections
-- [[SettingsCompliancePage.test.tsx]] - `contains` [EXTRACTED]
-- [[employeeLogin()]] - `calls` [EXTRACTED]
-- [[response()]] - `calls` [EXTRACTED]
+- [[InformationRequestsPage.test.tsx]] - `contains` [EXTRACTED]
+- [[loginAndRender()_4]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeeLogin
+#graphify/code #graphify/EXTRACTED #community/routertsx

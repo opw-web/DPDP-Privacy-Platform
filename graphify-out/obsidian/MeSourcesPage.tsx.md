@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeSourcesPage.tsx"
 type: "code"
-community: "card.tsx"
+community: "react-router-dom"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cardtsx
+  - community/react-router-dom
 ---
 
 # MeSourcesPage.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[Card]] - `imports` [EXTRACTED]
 - [[CardContent]] - `imports` [EXTRACTED]
 - [[EmptyState()]] - `imports` [EXTRACTED]
@@ -23,7 +24,8 @@ tags:
 - [[Skeleton.tsx]] - `imports_from` [EXTRACTED]
 - [[api-client.ts]] - `imports_from` [EXTRACTED]
 - [[card.tsx]] - `imports_from` [EXTRACTED]
+- [[lucide-react_1]] - `imports_from` [EXTRACTED]
 - [[principalApiClient]] - `imports` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cardtsx
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

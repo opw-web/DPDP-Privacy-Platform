@@ -1,19 +1,19 @@
 ---
 source_file: "demo-company-server/src/seed/rng.ts"
 type: "code"
-community: "Rng"
+community: "generateDataset"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Rng
+  - community/generateDataset
 ---
 
 # Rng
 
 ## Connections
 - [[dot-chance()]] - `method` [EXTRACTED]
-- [[dot-constructor()_69]] - `method` [EXTRACTED]
+- [[dot-constructor()_143]] - `method` [EXTRACTED]
 - [[dot-int()]] - `method` [EXTRACTED]
 - [[dot-next()_1]] - `method` [EXTRACTED]
 - [[dot-pick()]] - `method` [EXTRACTED]
@@ -22,4 +22,4 @@ tags:
 - [[generateDataset()]] - `calls` [EXTRACTED]
 - [[rng.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Rng
+#graphify/code #graphify/EXTRACTED #community/generateDataset

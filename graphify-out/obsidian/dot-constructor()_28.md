@@ -1,18 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
 type: "code"
-community: "principal-auth.service.ts"
-location: "L30"
+community: "Connector"
+location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principal-authservicets
+  - community/Connector
 ---
 
 # .constructor()
 
 ## Connections
-- [[EmployeeAuthController]] - `method` [EXTRACTED]
-- [[EmployeeAuthService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[ConnectorFactory]] - `references` [EXTRACTED]
+- [[CryptoService]] - `references` [EXTRACTED]
+- [[DataSourcesService]] - `method` [EXTRACTED]
+- [[SyncQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principal-authservicets
+#graphify/code #graphify/EXTRACTED #community/Connector

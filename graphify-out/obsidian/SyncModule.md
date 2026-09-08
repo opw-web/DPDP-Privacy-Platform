@@ -12,7 +12,7 @@ tags:
 # SyncModule
 
 ## Connections
-- [[Module_27]] - `references` [EXTRACTED]
+- [[Module_29]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[sync.module.ts]] - `contains` [EXTRACTED]
 

@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/guards/jwt-any-actor.guard.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/erasure-task.service.ts"
 type: "code"
-community: "notifications.controller.ts"
-location: "L51"
+community: "compliance.service.ts"
+location: "L109"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationscontrollerts
+  - community/complianceservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[JwtAnyActorGuard]] - `method` [EXTRACTED]
-- [[TokenService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[ComplianceService]] - `references` [EXTRACTED]
+- [[ErasureTaskService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts
+#graphify/code #graphify/EXTRACTED #community/complianceservicets

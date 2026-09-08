@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "nestjs-pino"
+community: "token.service.ts"
 location: "L44"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/nestjs-pino
+  - community/tokenservicets
 ---
 
 # nestjs-pino
 
 ## Connections
-- [[nestjs-pino]] - `imports` [EXTRACTED]
+- [[app.module.ts]] - `imports_from` [EXTRACTED]
+- [[backendpackage.json]] - `imports` [EXTRACTED]
+- [[main.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/nestjs-pino
+#graphify/concept #graphify/EXTRACTED #community/tokenservicets

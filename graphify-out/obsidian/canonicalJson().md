@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-publish()_1]] - `calls` [EXTRACTED]
-- [[dot-record()]] - `calls` [EXTRACTED]
+- [[dot-record()_1]] - `calls` [EXTRACTED]
 - [[dot-verifyChain()]] - `calls` [EXTRACTED]
 - [[Event]] - `calls` [EXTRACTED]
 - [[audit-chain.service.spec.ts]] - `imports` [EXTRACTED]

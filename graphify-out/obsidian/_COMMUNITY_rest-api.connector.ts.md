@@ -10,10 +10,10 @@ members: 29
 ## Members
 - [[dot-buildAuthHeaders()]] - code - dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts
 - [[dot-buildUrl()]] - code - dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts
-- [[dot-constructor()_119]] - code - dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts
-- [[dot-constructor()_120]] - code - dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts
-- [[dot-constructor()_121]] - code - dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts
 - [[dot-constructor()_122]] - code - dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts
+- [[dot-constructor()_123]] - code - dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts
+- [[dot-constructor()_124]] - code - dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts
+- [[dot-constructor()_125]] - code - dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts
 - [[dot-decodeCursor()]] - code - dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts
 - [[dot-discoverSchema()_3]] - code - dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts
 - [[dot-encodeCursor()]] - code - dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts
@@ -47,12 +47,14 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 10 edges to [[_COMMUNITY_read-only-http.client.ts]]
-- 9 edges to [[_COMMUNITY_connector.factory.ts]]
-- 2 edges to [[_COMMUNITY_data-sources.e2e-spec.ts]]
+- 5 edges to [[_COMMUNITY_connector.factory.ts]]
+- 4 edges to [[_COMMUNITY_Connector]]
+- 2 edges to [[_COMMUNITY_sync.e2e-spec.ts]]
+- 2 edges to [[_COMMUNITY_@prismaclient]]
 
 ## Top bridge nodes
-- [[rest-api.connector.ts]] - degree 20, connects to 2 communities
-- [[RestApiConnector]] - degree 18, connects to 2 communities
-- [[rest-api.connector.spec.ts]] - degree 11, connects to 2 communities
+- [[rest-api.connector.ts]] - degree 21, connects to 4 communities
+- [[RestApiConnector]] - degree 18, connects to 3 communities
+- [[rest-api.connector.spec.ts]] - degree 12, connects to 3 communities
 - [[dot-fetchPage()]] - degree 11, connects to 1 community
 - [[dot-ping()]] - degree 4, connects to 1 community

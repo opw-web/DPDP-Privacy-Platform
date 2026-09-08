@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ReplaceMappingsDto"
+community: "CreateTransferDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ReplaceMappingsDto
+  - community/CreateTransferDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[SourceFieldMappingDto]] - `references` [EXTRACTED]
+- [[CreateTransferDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ReplaceMappingsDto
+#graphify/code #graphify/EXTRACTED #community/CreateTransferDto

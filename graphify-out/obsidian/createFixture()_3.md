@@ -1,17 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/test/inventory.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/principal-portal.e2e-spec.ts"
 type: "code"
-community: "inventory.e2e-spec.ts"
-location: "L87"
+community: "principal-portal.e2e-spec.ts"
+location: "L169"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/inventorye2e-spects
+  - community/principal-portale2e-spects
 ---
 
 # createFixture()
 
 ## Connections
-- [[inventory.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[createPrincipal()_9]] - `calls` [EXTRACTED]
+- [[createSource()_1]] - `calls` [EXTRACTED]
+- [[principal-portal.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/inventorye2e-spects
+#graphify/code #graphify/EXTRACTED #community/principal-portale2e-spects

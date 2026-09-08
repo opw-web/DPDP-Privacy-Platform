@@ -1,29 +1,29 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/breaches/dto/create-breach.dto.ts"
 type: "code"
-community: ".record"
+community: "CreateBreachDto"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/CreateBreachDto
 ---
 
 # CreateBreachDto
 
 ## Connections
-- [[dot-create()_12]] - `references` [EXTRACTED]
+- [[dot-create()_23]] - `references` [EXTRACTED]
 - [[dot-create()_30]] - `references` [EXTRACTED]
-- [[ApiProperty_20]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_28]] - `references` [EXTRACTED]
-- [[IsArray_12]] - `references` [EXTRACTED]
-- [[IsDateString_8]] - `references` [EXTRACTED]
+- [[ApiProperty_14]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_14]] - `references` [EXTRACTED]
+- [[IsArray_7]] - `references` [EXTRACTED]
+- [[IsDateString_5]] - `references` [EXTRACTED]
 - [[IsEnum_10]] - `references` [EXTRACTED]
-- [[IsOptional_29]] - `references` [EXTRACTED]
-- [[IsString_30]] - `references` [EXTRACTED]
-- [[MinLength_19]] - `references` [EXTRACTED]
+- [[IsOptional_14]] - `references` [EXTRACTED]
+- [[IsString_17]] - `references` [EXTRACTED]
+- [[MinLength_14]] - `references` [EXTRACTED]
 - [[breach.service.ts]] - `imports` [EXTRACTED]
 - [[breaches.controller.ts]] - `imports` [EXTRACTED]
 - [[create-breach.dto.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/CreateBreachDto

@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-accessLogCsv()_1]] - `calls` [INFERRED]
 - [[dot-buildPack()]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
 - [[AccessLogExportDto]] - `references` [EXTRACTED]
 - [[AuditReadService]] - `method` [EXTRACTED]
 - [[csvDocument()]] - `calls` [EXTRACTED]

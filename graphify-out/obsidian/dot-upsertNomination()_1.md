@@ -12,7 +12,7 @@ tags:
 # .upsertNomination()
 
 ## Connections
-- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
 - [[dot-upsertNomination()]] - `calls` [INFERRED]
 - [[MeRightsService]] - `method` [EXTRACTED]
 - [[UpdateMeNominationDto]] - `references` [EXTRACTED]

@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
 type: "code"
-community: "data-sources.service.ts"
+community: "@prisma/client"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesservicets
+  - community/prisma/client
 ---
 
 # data-sources.controller.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[CreateDataSourceDto]] - `imports` [EXTRACTED]
 - [[DataSourcesController]] - `contains` [EXTRACTED]
 - [[DataSourcesService]] - `imports` [EXTRACTED]
@@ -23,4 +25,4 @@ tags:
 - [[require-permission.decorator.ts]] - `imports_from` [EXTRACTED]
 - [[update-data-source.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets
+#graphify/code #graphify/EXTRACTED #community/prisma/client

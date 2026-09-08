@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/package.json"
+source_file: "demo-company-server/package.json"
 type: "concept"
-community: "@types/node"
-location: "L62"
+community: "demo-company-server/package.json"
+location: "L21"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/types/node
+  - community/demo-company-server/packagejson
 ---
 
 # @types/node
 
 ## Connections
-- [[@typesnode]] - `imports` [EXTRACTED]
+- [[demo-company-serverpackage.json]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/types/node
+#graphify/concept #graphify/EXTRACTED #community/demo-company-server/packagejson

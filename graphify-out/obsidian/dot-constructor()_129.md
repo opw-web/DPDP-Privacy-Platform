@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/principal-evidence.service.ts"
+source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts"
 type: "code"
-community: "principal-evidence.service.ts"
-location: "L129"
+community: "EmployeeAuthController"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principal-evidenceservicets
+  - community/EmployeeAuthController
 ---
 
 # .constructor()
 
 ## Connections
-- [[AccessLogService]] - `references` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
-- [[PrincipalEvidenceService]] - `method` [EXTRACTED]
+- [[EmployeeAuthController]] - `method` [EXTRACTED]
+- [[EmployeeAuthService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principal-evidenceservicets
+#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController

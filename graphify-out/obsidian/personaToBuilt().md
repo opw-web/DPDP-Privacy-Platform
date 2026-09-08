@@ -1,12 +1,12 @@
 ---
 source_file: "demo-company-server/src/seed/generate.ts"
 type: "code"
-community: "generateDataset"
+community: "generate.ts"
 location: "L121"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/generateDataset
+  - community/generatets
 ---
 
 # personaToBuilt()
@@ -15,4 +15,4 @@ tags:
 - [[generate.ts]] - `contains` [EXTRACTED]
 - [[generateDataset()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/generateDataset
+#graphify/code #graphify/EXTRACTED #community/generatets

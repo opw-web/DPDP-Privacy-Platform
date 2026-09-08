@@ -1,12 +1,12 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/sharing.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/security-measures.controller.ts"
 type: "code"
-community: "SharingService"
-location: "L21"
+community: "security-measures.service.ts"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SharingService
+  - community/security-measuresservicets
 ---
 
 # .get()
@@ -16,6 +16,6 @@ tags:
 - [[Get_39]] - `references` [EXTRACTED]
 - [[Param_29]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[SharingController]] - `method` [EXTRACTED]
+- [[SecurityMeasuresController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SharingService
+#graphify/code #graphify/EXTRACTED #community/security-measuresservicets

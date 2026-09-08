@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
 type: "code"
 community: "rest-api.connector.ts"
-location: "L40"
+location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # .constructor()
 
 ## Connections
-- [[UnsupportedPaginationStyleError]] - `method` [EXTRACTED]
+- [[InvalidCursorError]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts

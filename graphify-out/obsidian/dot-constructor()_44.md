@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principals/principals.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync.controller.ts"
 type: "code"
-community: "PrincipalsService"
-location: "L69"
+community: "SyncService"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalsService
+  - community/SyncService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AccessLogService]] - `references` [EXTRACTED]
-- [[MaskingService]] - `references` [EXTRACTED]
-- [[PrincipalsService]] - `method` [EXTRACTED]
+- [[SyncController]] - `method` [EXTRACTED]
+- [[SyncService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalsService
+#graphify/code #graphify/EXTRACTED #community/SyncService

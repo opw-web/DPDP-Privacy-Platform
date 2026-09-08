@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sdf/sdf-assessment.service.ts"
 type: "code"
-community: "AuditService"
+community: "sdf-assessment.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/sdf-assessmentservicets
 ---
 
 # sdf-assessment.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[CompleteSdfAssessmentDto]] - `imports` [EXTRACTED]
 - [[ComplianceDeadlineSnapshot]] - `imports` [EXTRACTED]
@@ -34,4 +36,4 @@ tags:
 - [[sdf.controller.ts]] - `imports_from` [EXTRACTED]
 - [[sdf.module.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/sdf-assessmentservicets

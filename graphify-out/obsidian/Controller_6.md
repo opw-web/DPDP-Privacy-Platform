@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "TransfersService"
+community: "Public"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TransfersService
+  - community/Public
 ---
 
 # Controller
 
 ## Connections
-- [[TransfersController]] - `references` [EXTRACTED]
+- [[MeConsentsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TransfersService
+#graphify/code #graphify/EXTRACTED #community/Public

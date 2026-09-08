@@ -1,21 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "notices.service.ts"
+community: "DataSourcesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/noticesservicets
+  - community/DataSourcesService
 ---
 
 # Param
 
 ## Connections
-- [[dot-createVersion()]] - `references` [EXTRACTED]
+- [[dot-discoverSchema()_2]] - `references` [EXTRACTED]
 - [[dot-get()_16]] - `references` [EXTRACTED]
-- [[dot-listEligibleFields()]] - `references` [EXTRACTED]
-- [[dot-preview()_3]] - `references` [EXTRACTED]
-- [[dot-publish()]] - `references` [EXTRACTED]
-- [[dot-upsertTranslation()]] - `references` [EXTRACTED]
+- [[dot-listFields()]] - `references` [EXTRACTED]
+- [[dot-remove()]] - `references` [EXTRACTED]
+- [[dot-testConnection()_1]] - `references` [EXTRACTED]
+- [[dot-update()_18]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/noticesservicets
+#graphify/code #graphify/EXTRACTED #community/DataSourcesService

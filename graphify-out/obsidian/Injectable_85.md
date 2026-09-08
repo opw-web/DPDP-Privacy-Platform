@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "access-report.service.ts"
+community: "ConsentsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-reportservicets
+  - community/ConsentsService
 ---
 
 # Injectable
 
 ## Connections
-- [[PrincipalRecipientsService]] - `references` [EXTRACTED]
+- [[ConsentsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-reportservicets
+#graphify/code #graphify/EXTRACTED #community/ConsentsService

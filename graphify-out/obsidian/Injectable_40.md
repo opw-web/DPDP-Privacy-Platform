@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AuditReadService"
+community: "CampaignSendQueueService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditReadService
+  - community/CampaignSendQueueService
 ---
 
 # Injectable
 
 ## Connections
-- [[AuditExportService]] - `references` [EXTRACTED]
+- [[CampaignSendQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditReadService
+#graphify/code #graphify/EXTRACTED #community/CampaignSendQueueService

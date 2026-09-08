@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/ui/label.tsx"
 type: "code"
-community: "button.tsx"
+community: "react"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react
 ---
 
 # label.tsx
 
 ## Connections
+- [[@radix-uireact-label_1]] - `imports_from` [EXTRACTED]
 - [[AlgorithmFormFields.tsx]] - `imports_from` [EXTRACTED]
 - [[AssessmentRow.tsx]] - `imports_from` [EXTRACTED]
 - [[AuditPage.tsx]] - `imports_from` [EXTRACTED]
@@ -21,7 +22,7 @@ tags:
 - [[ExemptionClaimForm.tsx]] - `imports_from` [EXTRACTED]
 - [[GuardianForm.tsx]] - `imports_from` [EXTRACTED]
 - [[InformationRequestForm.tsx]] - `imports_from` [EXTRACTED]
-- [[Label]] - `contains` [EXTRACTED]
+- [[Label_1]] - `contains` [EXTRACTED]
 - [[LegalHoldForm.tsx]] - `imports_from` [EXTRACTED]
 - [[LoginPage.tsx]] - `imports_from` [EXTRACTED]
 - [[MarkdownMessageEditor.tsx]] - `imports_from` [EXTRACTED]
@@ -40,6 +41,7 @@ tags:
 - [[TransfersTab.tsx]] - `imports_from` [EXTRACTED]
 - [[cn()]] - `imports` [EXTRACTED]
 - [[form-controls.tsx]] - `imports_from` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
 - [[utils.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/react

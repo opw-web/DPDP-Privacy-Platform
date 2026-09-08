@@ -1,19 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sdf/sdf-assessment.service.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/providers/portal.provider.ts"
 type: "code"
-community: "sdf.controller.ts"
-location: "L78"
+community: "notifications.service.ts"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdfcontrollerts
+  - community/notificationsservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[ComplianceService]] - `references` [EXTRACTED]
-- [[SdfAssessmentService]] - `method` [EXTRACTED]
+- [[PortalProvider]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdfcontrollerts
+#graphify/code #graphify/EXTRACTED #community/notificationsservicets

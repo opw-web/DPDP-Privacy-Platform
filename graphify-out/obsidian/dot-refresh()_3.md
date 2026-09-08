@@ -13,10 +13,10 @@ tags:
 
 ## Connections
 - [[dot-clearRefreshCookie()_1]] - `calls` [EXTRACTED]
-- [[dot-refresh()_1]] - `calls` [INFERRED]
+- [[dot-refresh()_2]] - `calls` [INFERRED]
 - [[dot-setRefreshCookie()_1]] - `calls` [EXTRACTED]
 - [[HttpCode_5]] - `references` [EXTRACTED]
-- [[Post_28]] - `references` [EXTRACTED]
+- [[Post_29]] - `references` [EXTRACTED]
 - [[PrincipalAuthController]] - `method` [EXTRACTED]
 - [[Public()]] - `references` [EXTRACTED]
 - [[Req_3]] - `references` [EXTRACTED]

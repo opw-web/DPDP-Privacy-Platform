@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalLoginDto"
+community: "requests.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalLoginDto
+  - community/requestsservicets
 ---
 
 # IsString
 
 ## Connections
-- [[PrincipalLoginDto]] - `references` [EXTRACTED]
+- [[EscalateRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalLoginDto
+#graphify/code #graphify/EXTRACTED #community/requestsservicets

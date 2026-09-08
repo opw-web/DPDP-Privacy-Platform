@@ -14,7 +14,7 @@ members: 9
 - [[createOrgWithManager()_1]] - code - dpdp-platform/backend/test/registers.e2e-spec.ts
 - [[createPurpose()_2]] - code - dpdp-platform/backend/test/registers.e2e-spec.ts
 - [[createRecipient()]] - code - dpdp-platform/backend/test/registers.e2e-spec.ts
-- [[ensurePermission()_9]] - code - dpdp-platform/backend/test/registers.e2e-spec.ts
+- [[ensurePermission()_11]] - code - dpdp-platform/backend/test/registers.e2e-spec.ts
 - [[recipientPayload()]] - code - dpdp-platform/backend/test/registers.e2e-spec.ts
 - [[registers.e2e-spec.ts]] - code - dpdp-platform/backend/test/registers.e2e-spec.ts
 
@@ -26,10 +26,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_AppModule]]
-- 1 edge to [[_COMMUNITY_PrismaService]]
+- 2 edges to [[_COMMUNITY_PrismaService]]
+- 2 edges to [[_COMMUNITY_AppModule]]
+- 2 edges to [[_COMMUNITY_principals.e2e-spec.ts]]
+- 1 edge to [[_COMMUNITY_supertest]]
 - 1 edge to [[_COMMUNITY_app.module.ts]]
-- 1 edge to [[_COMMUNITY_prisma.service.ts]]
+- 1 edge to [[_COMMUNITY_@nestjscommon]]
+- 1 edge to [[_COMMUNITY_argon2]]
+- 1 edge to [[_COMMUNITY_health.service.ts]]
 
 ## Top bridge nodes
-- [[registers.e2e-spec.ts]] - degree 14, connects to 4 communities
+- [[registers.e2e-spec.ts]] - degree 19, connects to 8 communities

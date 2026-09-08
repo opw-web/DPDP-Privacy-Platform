@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/audit-export.service.ts"
 type: "code"
-community: "csv-writer.ts"
+community: "@nestjs/common"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/csv-writerts
+  - community/nestjs/common
 ---
 
 # audit-export.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[AUDIT_LOG_CSV_HEADER]] - `contains` [EXTRACTED]
 - [[AuditExportService]] - `contains` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
@@ -24,4 +25,4 @@ tags:
 - [[evidence.module.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/csv-writerts
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

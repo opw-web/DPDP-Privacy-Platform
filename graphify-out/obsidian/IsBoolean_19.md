@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "RetentionController"
+community: "ProcessorChecklistTickDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionController
+  - community/ProcessorChecklistTickDto
 ---
 
 # IsBoolean
@@ -14,4 +14,4 @@ tags:
 - [[ProcessorChecklistTickDto]] - `references` [EXTRACTED]
 - [[SystemChecklistTickDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionController
+#graphify/code #graphify/EXTRACTED #community/ProcessorChecklistTickDto

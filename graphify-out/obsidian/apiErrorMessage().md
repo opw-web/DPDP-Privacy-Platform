@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/ReviewQueuePage.tsx"
 type: "code"
-community: "card.tsx"
+community: "CandidateComparison.tsx"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cardtsx
+  - community/CandidateComparisontsx
 ---
 
 # apiErrorMessage()
@@ -15,4 +15,4 @@ tags:
 - [[ReviewQueuePage()]] - `calls` [EXTRACTED]
 - [[ReviewQueuePage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cardtsx
+#graphify/code #graphify/EXTRACTED #community/CandidateComparisontsx

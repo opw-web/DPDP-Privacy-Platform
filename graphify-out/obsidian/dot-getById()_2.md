@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sdf/sdf-assessment.service.ts"
 type: "code"
-community: "sdf.controller.ts"
+community: "SdfAssessmentService"
 location: "L105"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdfcontrollerts
+  - community/SdfAssessmentService
 ---
 
 # .getById()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[SdfAssessmentService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdfcontrollerts
+#graphify/code #graphify/EXTRACTED #community/SdfAssessmentService

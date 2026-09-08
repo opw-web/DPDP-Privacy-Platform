@@ -12,11 +12,11 @@ tags:
 # AuditChainService
 
 ## Connections
-- [[dot-constructor()_47]] - `references` [EXTRACTED]
-- [[dot-constructor()_48]] - `references` [EXTRACTED]
-- [[dot-constructor()_46]] - `method` [EXTRACTED]
+- [[dot-constructor()_56]] - `references` [EXTRACTED]
+- [[dot-constructor()_22]] - `references` [EXTRACTED]
+- [[dot-constructor()_55]] - `method` [EXTRACTED]
 - [[dot-verifyChain()]] - `method` [EXTRACTED]
-- [[Injectable_32]] - `references` [EXTRACTED]
+- [[Injectable_35]] - `references` [EXTRACTED]
 - [[audit-chain-verify.processor.ts]] - `imports` [EXTRACTED]
 - [[audit-chain.service.spec.ts]] - `imports` [EXTRACTED]
 - [[audit-chain.service.ts]] - `contains` [EXTRACTED]

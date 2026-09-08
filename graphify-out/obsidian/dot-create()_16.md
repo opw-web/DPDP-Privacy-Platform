@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/board/voluntary-undertakings.service.ts"
+source_file: "dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts"
 type: "code"
 community: "CreateVoluntaryUndertakingDto"
-location: "L60"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,9 +12,11 @@ tags:
 # .create()
 
 ## Connections
-- [[dot-create()_15]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-create()_17]] - `calls` [INFERRED]
+- [[Body_14]] - `references` [EXTRACTED]
 - [[CreateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
-- [[VoluntaryUndertakingsService]] - `method` [EXTRACTED]
+- [[Post_15]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[VoluntaryUndertakingsController]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

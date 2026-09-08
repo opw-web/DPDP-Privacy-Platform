@@ -1,19 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/audit/audit-read.service.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/retention-scan.service.ts"
 type: "code"
-community: "AuditReadService"
-location: "L102"
+community: "compliance.service.ts"
+location: "L56"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditReadService
+  - community/complianceservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditReadService]] - `method` [EXTRACTED]
 - [[AuditService]] - `references` [EXTRACTED]
-- [[MaskingService]] - `references` [EXTRACTED]
+- [[ComplianceService]] - `references` [EXTRACTED]
+- [[ErasureTaskService]] - `references` [EXTRACTED]
+- [[RetentionScanService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditReadService
+#graphify/code #graphify/EXTRACTED #community/complianceservicets

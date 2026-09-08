@@ -13,10 +13,10 @@ tags:
 
 ## Connections
 - [[dot-reconcilePrincipalNoticeDispatches()]] - `calls` [EXTRACTED]
-- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
 - [[dot-runClockCycle()]] - `calls` [INFERRED]
 - [[dot-send()_1]] - `calls` [INFERRED]
-- [[dot-update()_10]] - `calls` [EXTRACTED]
+- [[dot-update()_17]] - `calls` [EXTRACTED]
 - [[BreachService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/record

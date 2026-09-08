@@ -12,6 +12,8 @@ tags:
 # masking.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[CAN_VIEW_ALL_PERSONAL_DATA]] - `contains` [EXTRACTED]
 - [[MaskingService]] - `contains` [EXTRACTED]
 - [[PASS_THROUGH_FIELDS]] - `contains` [EXTRACTED]

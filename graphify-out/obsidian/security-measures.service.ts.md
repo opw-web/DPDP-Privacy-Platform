@@ -12,6 +12,8 @@ tags:
 # security-measures.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[CreateSecurityMeasureDto]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]

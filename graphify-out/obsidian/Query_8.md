@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "child-exemptions.service.ts"
+community: "children.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/child-exemptionsservicets
+  - community/childrenmodulets
 ---
 
 # Query
 
 ## Connections
-- [[dot-list()_37]] - `references` [EXTRACTED]
+- [[dot-list()_36]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/child-exemptionsservicets
+#graphify/code #graphify/EXTRACTED #community/childrenmodulets

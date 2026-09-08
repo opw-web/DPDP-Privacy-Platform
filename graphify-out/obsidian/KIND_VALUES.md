@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sdf/dto/create-sdf-assessment.dto.ts"
 type: "code"
-community: "CreateSdfAssessmentDto"
+community: "@prisma/client"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSdfAssessmentDto
+  - community/prisma/client
 ---
 
 # KIND_VALUES
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[create-sdf-assessment.dto.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSdfAssessmentDto
+#graphify/code #graphify/EXTRACTED #community/prisma/client

@@ -12,6 +12,7 @@ tags:
 # DashboardPage.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[BreachObligation]] - `contains` [EXTRACTED]
 - [[DashboardBreach]] - `contains` [EXTRACTED]
 - [[DashboardPage()]] - `contains` [EXTRACTED]
@@ -32,6 +33,7 @@ tags:
 - [[api-client.ts]] - `imports_from` [EXTRACTED]
 - [[employeeApiClient]] - `imports` [EXTRACTED]
 - [[libpermissions.ts]] - `imports_from` [EXTRACTED]
+- [[lucide-react_1]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 - [[usePermission()]] - `imports` [EXTRACTED]
 

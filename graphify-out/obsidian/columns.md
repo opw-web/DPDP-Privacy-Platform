@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/wizard/Step2Schema.tsx"
+source_file: "dpdp-platform/frontend/src/components/shared/DataTable.test.tsx"
 type: "code"
 community: "data-sources-api.ts"
-location: "L18"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # columns
 
 ## Connections
-- [[Step2Schema.tsx]] - `contains` [EXTRACTED]
+- [[DataTable.test.tsx]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/data-sources-apits

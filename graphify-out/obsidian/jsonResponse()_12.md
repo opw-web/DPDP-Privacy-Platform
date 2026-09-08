@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.test.tsx"
 type: "code"
-community: "PrincipalDetailPage.test.tsx"
+community: "router.tsx"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalDetailPagetesttsx
+  - community/routertsx
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[PrincipalDetailPage.test.tsx]] - `contains` [EXTRACTED]
-- [[loginAndRender()_2]] - `calls` [EXTRACTED]
+- [[ChildrenPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalDetailPagetesttsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

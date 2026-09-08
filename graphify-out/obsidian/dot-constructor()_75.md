@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/common/mail/mailer.service.ts"
+source_file: "dpdp-platform/backend/src/modules/audit/audit-read.controller.ts"
 type: "code"
-community: "MailerService"
-location: "L40"
+community: "AuditReadController"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MailerService
+  - community/AuditReadController
 ---
 
 # .constructor()
 
 ## Connections
-- [[MailerService]] - `method` [EXTRACTED]
+- [[AuditReadController]] - `method` [EXTRACTED]
+- [[AuditReadService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MailerService
+#graphify/code #graphify/EXTRACTED #community/AuditReadController

@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/employees/roles.service.ts"
 type: "code"
-community: "roles.service.ts"
+community: "@prisma/client"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rolesservicets
+  - community/prisma/client
 ---
 
 # roles.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[NOTE the fixed AuditAction union (Task 4, spec lines 880-891) has]] - `rationale_for` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
@@ -23,4 +25,4 @@ tags:
 - [[roles.controller.ts]] - `imports_from` [EXTRACTED]
 - [[update-role-permissions.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rolesservicets
+#graphify/code #graphify/EXTRACTED #community/prisma/client

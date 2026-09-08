@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
+source_file: "dpdp-platform/backend/src/modules/consents/consents.controller.ts"
 type: "code"
-community: "notices.service.ts"
-location: "L158"
+community: "ImportConsentDto"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/noticesservicets
+  - community/ImportConsentDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[NoticesService]] - `method` [EXTRACTED]
+- [[ConsentsController]] - `method` [EXTRACTED]
+- [[ConsentsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/noticesservicets
+#graphify/code #graphify/EXTRACTED #community/ImportConsentDto

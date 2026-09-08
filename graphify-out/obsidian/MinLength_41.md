@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateSharingActivityDto"
+community: "CreateInformationRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSharingActivityDto
+  - community/CreateInformationRequestDto
 ---
 
 # MinLength
 
 ## Connections
-- [[UpdateSharingActivityDto]] - `references` [EXTRACTED]
+- [[CreateInformationRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

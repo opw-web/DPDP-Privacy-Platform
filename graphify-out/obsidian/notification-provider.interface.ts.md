@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notifications/notification-provider.interface.ts"
 type: "code"
-community: "NotificationSendInput"
+community: "notifications.e2e-spec.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationSendInput
+  - community/notificationse2e-spects
 ---
 
 # notification-provider.interface.ts
 
 ## Connections
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[NotificationAudience]] - `contains` [EXTRACTED]
 - [[NotificationChannel]] - `contains` [EXTRACTED]
 - [[NotificationProvider]] - `contains` [EXTRACTED]
@@ -26,4 +27,4 @@ tags:
 - [[pre-erasure-notice.service.ts]] - `imports_from` [EXTRACTED]
 - [[smtp.provider.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationSendInput
+#graphify/code #graphify/EXTRACTED #community/notificationse2e-spects

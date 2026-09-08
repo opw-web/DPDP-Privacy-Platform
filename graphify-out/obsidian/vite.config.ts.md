@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/tsconfig.node.json"
-type: "concept"
-community: "compilerOptions"
-location: "L10"
+source_file: "dpdp-platform/frontend/vite.config.ts"
+type: "code"
+community: "vite.config.ts"
+location: "L1"
 tags:
-  - graphify/concept
+  - graphify/code
   - graphify/EXTRACTED
-  - community/compilerOptions
+  - community/viteconfigts
 ---
 
 # vite.config.ts
 
 ## Connections
-- [[include]] - `extends` [EXTRACTED]
+- [[@vitejsplugin-react]] - `imports_from` [EXTRACTED]
+- [[vite]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/compilerOptions
+#graphify/code #graphify/EXTRACTED #community/viteconfigts

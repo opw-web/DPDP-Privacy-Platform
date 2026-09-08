@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "recipients.service.ts"
+community: "security-measures.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/security-measuresservicets
 ---
 
 # IsDateString
 
 ## Connections
-- [[UpdateRecipientDto]] - `references` [EXTRACTED]
+- [[UpdateSecurityMeasureDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/security-measuresservicets

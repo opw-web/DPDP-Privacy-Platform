@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/linking.service.ts"
+source_file: "dpdp-platform/backend/src/modules/breaches/breaches.controller.ts"
 type: "code"
-community: "ScopedTransactionClient"
-location: "L43"
+community: "BreachesController"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScopedTransactionClient
+  - community/BreachesController
 ---
 
 # .constructor()
 
 ## Connections
-- [[IdentifierOwnershipConflictError_1]] - `method` [EXTRACTED]
+- [[BreachService]] - `references` [EXTRACTED]
+- [[BreachesController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient
+#graphify/code #graphify/EXTRACTED #community/BreachesController

@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts"
+source_file: "dpdp-platform/backend/src/queues/sdf-cycle-scan.processor.ts"
 type: "code"
-community: "templates.service.ts"
-location: "L75"
+community: "sdf-cycle-scan.queue.ts"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatesservicets
+  - community/sdf-cycle-scanqueuets
 ---
 
 # .constructor()
 
 ## Connections
-- [[UnknownTemplateVariableError]] - `method` [EXTRACTED]
+- [[SdfCycleScanProcessor]] - `method` [EXTRACTED]
+- [[SdfCycleScanService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatesservicets
+#graphify/code #graphify/EXTRACTED #community/sdf-cycle-scanqueuets

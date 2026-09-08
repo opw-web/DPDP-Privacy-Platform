@@ -12,6 +12,7 @@ tags:
 # health.ts
 
 ## Connections
+- [[fastify_1]] - `imports_from` [EXTRACTED]
 - [[healthRoutes()]] - `contains` [EXTRACTED]
 - [[server.ts]] - `imports_from` [EXTRACTED]
 

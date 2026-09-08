@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "DeadlineScanProcessor"
+community: "sync.queue.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DeadlineScanProcessor
+  - community/syncqueuets
 ---
 
 # Processor
 
 ## Connections
-- [[DeadlineScanProcessor]] - `references` [EXTRACTED]
+- [[SyncProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DeadlineScanProcessor
+#graphify/code #graphify/EXTRACTED #community/syncqueuets

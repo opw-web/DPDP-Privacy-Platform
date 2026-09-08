@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-boardDetailed()]] - `calls` [INFERRED]
 - [[dot-boardInitial()]] - `calls` [INFERRED]
-- [[dot-get()_10]] - `calls` [EXTRACTED]
+- [[dot-get()_15]] - `calls` [EXTRACTED]
 - [[BreachService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/BreachesController

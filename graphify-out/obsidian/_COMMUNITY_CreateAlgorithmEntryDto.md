@@ -1,24 +1,27 @@
 ---
 type: community
-members: 11
+members: 14
 ---
 
 # CreateAlgorithmEntryDto
 
-**Members:** 11 nodes
+**Members:** 14 nodes
 
 ## Members
-- [[ApiProperty_4]] - code
+- [[dot-create()_4]] - code - dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts
+- [[dot-createAlgorithm()]] - code - dpdp-platform/backend/src/modules/sdf/sdf.controller.ts
+- [[ApiProperty_5]] - code
 - [[ApiPropertyOptional_6]] - code
 - [[ArrayMinSize]] - code
 - [[CreateAlgorithmEntryDto]] - code - dpdp-platform/backend/src/modules/sdf/dto/create-algorithm-entry.dto.ts
 - [[IsArray_1]] - code
 - [[IsBoolean_2]] - code
-- [[IsDateString_1]] - code
-- [[IsIn_3]] - code
+- [[IsDateString_2]] - code
+- [[IsIn_2]] - code
 - [[IsOptional_6]] - code
-- [[IsString_6]] - code
-- [[MinLength_3]] - code
+- [[IsString_7]] - code
+- [[MinLength_5]] - code
+- [[Post_5]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -28,9 +31,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_algorithm-register.service.ts]]
+- 3 edges to [[_COMMUNITY_@prismaclient]]
 - 2 edges to [[_COMMUNITY_dot-completeAssessment]]
-- 1 edge to [[_COMMUNITY_sdf.controller.ts]]
+- 1 edge to [[_COMMUNITY_AlgorithmRegisterService]]
+- 1 edge to [[_COMMUNITY_SdfController]]
+- 1 edge to [[_COMMUNITY_dot-record]]
+- 1 edge to [[_COMMUNITY_@nestjscommon]]
+- 1 edge to [[_COMMUNITY_CreateSdfAssessmentDto]]
 
 ## Top bridge nodes
-- [[CreateAlgorithmEntryDto]] - degree 15, connects to 3 communities
+- [[dot-createAlgorithm()]] - degree 6, connects to 3 communities
+- [[dot-create()_4]] - degree 4, connects to 2 communities
+- [[Post_5]] - degree 3, connects to 2 communities
+- [[CreateAlgorithmEntryDto]] - degree 15, connects to 1 community

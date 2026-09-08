@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/ConsentsPage.tsx"
 type: "code"
-community: "button.tsx"
+community: "react"
 location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react
 ---
 
 # ConsentsPage()
@@ -16,4 +16,4 @@ tags:
 - [[errorMessage()]] - `calls` [EXTRACTED]
 - [[router.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/react

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sync-pipeline.service.ts"
+community: "CampaignsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sync-pipelineservicets
+  - community/CampaignsService
 ---
 
 # Injectable
 
 ## Connections
-- [[SyncPipelineService]] - `references` [EXTRACTED]
+- [[CampaignsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sync-pipelineservicets
+#graphify/code #graphify/EXTRACTED #community/CampaignsService

@@ -12,6 +12,7 @@ tags:
 # tenant-scoped-models.spec.ts
 
 ## Connections
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[GLOBAL_MODELS]] - `imports` [EXTRACTED]
 - [[INDIRECT_TENANT_SCOPED_MODELS]] - `imports` [EXTRACTED]
 - [[SELF_SCOPED_MODELS]] - `imports` [EXTRACTED]

@@ -1,21 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/transfers.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.controller.ts"
 type: "code"
-community: "TransfersService"
-location: "L21"
+community: "AccessTokenPayload"
+location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TransfersService
+  - community/AccessTokenPayload
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_4]] - `calls` [INFERRED]
-- [[Get_6]] - `references` [EXTRACTED]
-- [[Param_4]] - `references` [EXTRACTED]
+- [[dot-get()_17]] - `calls` [INFERRED]
+- [[Get_4]] - `references` [EXTRACTED]
+- [[NoticesController]] - `method` [EXTRACTED]
+- [[Param_3]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[TransfersController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TransfersService
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

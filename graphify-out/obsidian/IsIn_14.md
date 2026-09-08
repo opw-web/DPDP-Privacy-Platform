@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "me-rights.service.ts"
+community: "ImportConsentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/me-rightsservicets
+  - community/ImportConsentDto
 ---
 
 # IsIn
 
 ## Connections
-- [[UpdateMeNominationDto]] - `references` [EXTRACTED]
+- [[ImportConsentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/me-rightsservicets
+#graphify/code #graphify/EXTRACTED #community/ImportConsentDto

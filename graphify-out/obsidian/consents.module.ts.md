@@ -12,6 +12,8 @@ tags:
 # consents.module.ts
 
 ## Connections
+- [[@nestjsbullmq]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[AuditModule]] - `imports` [EXTRACTED]
 - [[AuthModule]] - `imports` [EXTRACTED]
 - [[CONSENT_BACKFILL_QUEUE_NAME]] - `imports` [EXTRACTED]

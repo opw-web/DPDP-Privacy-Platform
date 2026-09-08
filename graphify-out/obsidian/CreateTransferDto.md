@@ -1,30 +1,30 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/dto/create-transfer.dto.ts"
 type: "code"
-community: "registers.module.ts"
+community: "CreateTransferDto"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/registersmodulets
+  - community/CreateTransferDto
 ---
 
 # CreateTransferDto
 
 ## Connections
-- [[dot-create()_5]] - `references` [EXTRACTED]
-- [[dot-create()_6]] - `references` [EXTRACTED]
-- [[ApiProperty_46]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_46]] - `references` [EXTRACTED]
-- [[IsArray_23]] - `references` [EXTRACTED]
-- [[IsBoolean_20]] - `references` [EXTRACTED]
-- [[IsDateString_18]] - `references` [EXTRACTED]
-- [[IsEnum_21]] - `references` [EXTRACTED]
-- [[IsOptional_48]] - `references` [EXTRACTED]
-- [[IsString_62]] - `references` [EXTRACTED]
-- [[MinLength_47]] - `references` [EXTRACTED]
+- [[dot-create()_8]] - `references` [EXTRACTED]
+- [[dot-create()_9]] - `references` [EXTRACTED]
+- [[ApiProperty_12]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_11]] - `references` [EXTRACTED]
+- [[IsArray_4]] - `references` [EXTRACTED]
+- [[IsBoolean_6]] - `references` [EXTRACTED]
+- [[IsDateString_3]] - `references` [EXTRACTED]
+- [[IsEnum_7]] - `references` [EXTRACTED]
+- [[IsOptional_11]] - `references` [EXTRACTED]
+- [[IsString_13]] - `references` [EXTRACTED]
+- [[MinLength_11]] - `references` [EXTRACTED]
 - [[create-transfer.dto.ts]] - `contains` [EXTRACTED]
 - [[transfers.controller.ts]] - `imports` [EXTRACTED]
 - [[transfers.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/registersmodulets
+#graphify/code #graphify/EXTRACTED #community/CreateTransferDto

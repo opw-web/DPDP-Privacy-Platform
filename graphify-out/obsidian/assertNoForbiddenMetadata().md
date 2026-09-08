@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/common/audit/audit.service.ts"
 type: "code"
-community: "prisma.service.ts"
+community: ".record"
 location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/record
 ---
 
 # assertNoForbiddenMetadata()
 
 ## Connections
-- [[dot-record()]] - `calls` [EXTRACTED]
+- [[dot-record()_1]] - `calls` [EXTRACTED]
 - [[audit.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/record

@@ -12,6 +12,8 @@ tags:
 # audience.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AudienceFilter_1]] - `imports` [EXTRACTED]
 - [[AudienceFilterError]] - `imports` [EXTRACTED]
 - [[AudiencePreviewResult]] - `contains` [EXTRACTED]

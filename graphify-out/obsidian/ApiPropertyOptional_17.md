@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdateAlgorithmEntryDto"
+community: "CreateMeRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateAlgorithmEntryDto
+  - community/CreateMeRequestDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[UpdateAlgorithmEntryDto]] - `references` [EXTRACTED]
+- [[CreateMeRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateAlgorithmEntryDto
+#graphify/code #graphify/EXTRACTED #community/CreateMeRequestDto

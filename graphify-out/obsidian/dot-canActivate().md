@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/common/guards/jwt-employee.guard.ts"
+source_file: "dpdp-platform/backend/src/common/guards/permissions.guard.ts"
 type: "code"
-community: "jwt-employee.guard.ts"
-location: "L35"
+community: "AccessTokenPayload"
+location: "L86"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/jwt-employeeguardts
+  - community/AccessTokenPayload
 ---
 
 # .canActivate()
 
 ## Connections
-- [[dot-verifyAccessToken()]] - `calls` [INFERRED]
-- [[JwtEmployeeGuard]] - `method` [EXTRACTED]
+- [[dot-resolvePermissions()]] - `calls` [EXTRACTED]
+- [[PermissionsGuard]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/jwt-employeeguardts
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

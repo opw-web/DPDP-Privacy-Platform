@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/health/health.controller.ts"
 type: "code"
-community: "HealthService"
+community: "health.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/HealthService
+  - community/healthservicets
 ---
 
 # health.controller.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[HealthController]] - `contains` [EXTRACTED]
 - [[HealthService]] - `imports` [EXTRACTED]
 - [[HealthStatus]] - `imports` [EXTRACTED]
@@ -21,4 +23,4 @@ tags:
 - [[health.service.ts]] - `imports_from` [EXTRACTED]
 - [[public.decorator.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/HealthService
+#graphify/code #graphify/EXTRACTED #community/healthservicets

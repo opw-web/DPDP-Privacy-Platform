@@ -12,7 +12,6 @@ tags:
 # @types/express
 
 ## Connections
-- [[@typesexpress_1]] - `imports` [EXTRACTED]
 - [[devDependencies_1]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/devDependencies

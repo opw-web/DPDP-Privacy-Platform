@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "TransfersService"
+community: "Public"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TransfersService
+  - community/Public
 ---
 
 # Get
 
 ## Connections
-- [[dot-get()_3]] - `references` [EXTRACTED]
-- [[dot-list()_5]] - `references` [EXTRACTED]
+- [[dot-me()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TransfersService
+#graphify/code #graphify/EXTRACTED #community/Public

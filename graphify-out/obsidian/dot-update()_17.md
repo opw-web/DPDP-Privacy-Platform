@@ -1,20 +1,28 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts"
+source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
 type: "code"
-community: ".completeAssessment"
-location: "L87"
+community: ".record"
+location: "L371"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/completeAssessment
+  - community/record
 ---
 
 # .update()
 
 ## Connections
-- [[dot-record()]] - `calls` [INFERRED]
-- [[dot-updateAlgorithm()]] - `calls` [INFERRED]
-- [[AlgorithmRegisterService]] - `method` [EXTRACTED]
-- [[UpdateAlgorithmEntryDto]] - `references` [EXTRACTED]
+- [[dot-addAffected()]] - `calls` [EXTRACTED]
+- [[dot-completeObligation()]] - `calls` [EXTRACTED]
+- [[dot-public()]] - `calls` [EXTRACTED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-recordExtension()]] - `calls` [EXTRACTED]
+- [[dot-scanClock()]] - `calls` [EXTRACTED]
+- [[dot-update()_20]] - `calls` [INFERRED]
+- [[AccessTokenPayload]] - `references` [EXTRACTED]
+- [[BreachService]] - `method` [EXTRACTED]
+- [[PublicBreach]] - `references` [EXTRACTED]
+- [[UpdateBreachDto]] - `references` [EXTRACTED]
+- [[asDate()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/completeAssessment
+#graphify/code #graphify/EXTRACTED #community/record

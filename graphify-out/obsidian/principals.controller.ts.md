@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principals/principals.controller.ts"
 type: "code"
-community: "access-report.service.ts"
+community: "@nestjs/common"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-reportservicets
+  - community/nestjs/common
 ---
 
 # principals.controller.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[CurrentActorPermissions]] - `imports` [EXTRACTED]
 - [[LineageService]] - `imports` [EXTRACTED]
 - [[ListPrincipalsDto]] - `imports` [EXTRACTED]
@@ -27,4 +29,4 @@ tags:
 - [[principals.service.ts]] - `imports_from` [EXTRACTED]
 - [[require-permission.decorator.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-reportservicets
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

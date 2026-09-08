@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/common/crypto/crypto.service.ts"
 type: "code"
-community: "data-sources.service.ts"
+community: "CryptoService"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesservicets
+  - community/CryptoService
 ---
 
 # InvalidEncryptionKeyError
 
 ## Connections
-- [[dot-constructor()_91]] - `calls` [EXTRACTED]
-- [[dot-constructor()_92]] - `method` [EXTRACTED]
+- [[dot-constructor()_94]] - `calls` [EXTRACTED]
+- [[dot-constructor()_95]] - `method` [EXTRACTED]
 - [[crypto.service.spec.ts]] - `imports` [EXTRACTED]
 - [[crypto.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets
+#graphify/code #graphify/EXTRACTED #community/CryptoService

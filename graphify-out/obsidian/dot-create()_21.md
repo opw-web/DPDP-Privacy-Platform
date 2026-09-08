@@ -1,28 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.service.ts"
+source_file: "dpdp-platform/backend/src/modules/board/information-requests.service.ts"
 type: "code"
-community: "CampaignsService"
-location: "L205"
+community: "CreateInformationRequestDto"
+location: "L124"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampaignsService
+  - community/CreateInformationRequestDto
 ---
 
 # .create()
 
 ## Connections
-- [[dot-compileFilter()]] - `calls` [EXTRACTED]
-- [[dot-create()_14]] - `calls` [INFERRED]
-- [[dot-deliverRecipient()]] - `calls` [EXTRACTED]
-- [[dot-extractAndValidateVariables()_1]] - `calls` [EXTRACTED]
-- [[dot-get()_9]] - `calls` [INFERRED]
-- [[dot-getConsentStatus()]] - `calls` [INFERRED]
-- [[dot-getPublishedVersion()]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[dot-send()_7]] - `calls` [EXTRACTED]
-- [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[CampaignsService]] - `method` [EXTRACTED]
-- [[CreateCampaignDto]] - `references` [EXTRACTED]
+- [[dot-assertAffectedPrincipals()]] - `calls` [EXTRACTED]
+- [[dot-assertDirectionHasAuthorisation()]] - `calls` [EXTRACTED]
+- [[dot-create()_20]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[CreateInformationRequestDto]] - `references` [EXTRACTED]
+- [[InformationRequestsService]] - `method` [EXTRACTED]
+- [[allocateCounterValue()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampaignsService
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

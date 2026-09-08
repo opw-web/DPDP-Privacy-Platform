@@ -1,24 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/transfers.controller.ts"
 type: "code"
-community: "CreateComplianceRuleDto"
-location: "L389"
+community: "CreateTransferDto"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateComplianceRuleDto
+  - community/CreateTransferDto
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_7]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[dot-update()_7]] - `calls` [EXTRACTED]
-- [[dot-validateGrievanceCeiling()]] - `calls` [EXTRACTED]
-- [[ComplianceService]] - `method` [EXTRACTED]
-- [[CreateComplianceRuleDto]] - `references` [EXTRACTED]
-- [[diffRules()]] - `calls` [EXTRACTED]
-- [[toPublicComplianceRule()]] - `calls` [EXTRACTED]
+- [[dot-create()_9]] - `calls` [INFERRED]
+- [[Body_8]] - `references` [EXTRACTED]
+- [[CreateTransferDto]] - `references` [EXTRACTED]
+- [[Post_9]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[TransfersController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto
+#graphify/code #graphify/EXTRACTED #community/CreateTransferDto

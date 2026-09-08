@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/ui/dialog.tsx"
 type: "code"
-community: "MeConsentsPage.tsx"
+community: "cn"
 location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeConsentsPagetsx
+  - community/cn
 ---
 
 # DialogHeader()
@@ -17,4 +17,4 @@ tags:
 - [[cn()]] - `calls` [EXTRACTED]
 - [[dialog.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeConsentsPagetsx
+#graphify/code #graphify/EXTRACTED #community/cn

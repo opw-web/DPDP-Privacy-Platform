@@ -12,6 +12,7 @@ tags:
 # source-purposes.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[AttachPurposesDto]] - `imports` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[DataSourcePurposesResult_1]] - `contains` [EXTRACTED]

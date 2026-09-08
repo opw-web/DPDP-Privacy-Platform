@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/SourceChip.tsx"
 type: "code"
-community: "MeDataPage.tsx"
+community: "EmployeesPage.tsx"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeDataPagetsx
+  - community/EmployeesPagetsx
 ---
 
 # SourceChip()
@@ -18,4 +18,4 @@ tags:
 - [[ValueCard.tsx]] - `imports` [EXTRACTED]
 - [[cn()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeDataPagetsx
+#graphify/code #graphify/EXTRACTED #community/EmployeesPagetsx

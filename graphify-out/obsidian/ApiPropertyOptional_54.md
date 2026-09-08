@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "compile-audience.ts"
+community: "CreateSharingActivityDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/compile-audiencets
+  - community/CreateSharingActivityDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[PreviewAudienceDto]] - `references` [EXTRACTED]
+- [[UpdateSharingActivityDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/compile-audiencets
+#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

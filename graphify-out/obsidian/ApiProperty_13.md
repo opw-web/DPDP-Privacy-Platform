@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "mappings.controller.ts"
+community: "CreateCampaignDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingscontrollerts
+  - community/CreateCampaignDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[AttachPurposesDto]] - `references` [EXTRACTED]
+- [[CreateCampaignDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingscontrollerts
+#graphify/code #graphify/EXTRACTED #community/CreateCampaignDto

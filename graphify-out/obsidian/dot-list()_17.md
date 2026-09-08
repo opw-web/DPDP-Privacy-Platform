@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/permissions.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts"
 type: "code"
-community: "PermissionsController"
-location: "L19"
+community: "SdfController"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PermissionsController
+  - community/SdfController
 ---
 
 # .list()
 
 ## Connections
-- [[Get_15]] - `references` [EXTRACTED]
-- [[PermissionsController]] - `method` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-listAlgorithms()]] - `calls` [INFERRED]
+- [[AlgorithmRegisterService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PermissionsController
+#graphify/code #graphify/EXTRACTED #community/SdfController

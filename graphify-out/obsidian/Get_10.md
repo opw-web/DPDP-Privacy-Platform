@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AuditChainService"
+community: "purposes.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditChainService
+  - community/purposesservicets
 ---
 
 # Get
 
 ## Connections
-- [[dot-exportCsv()_2]] - `references` [EXTRACTED]
-- [[dot-verifyChain()_1]] - `references` [EXTRACTED]
+- [[dot-list()_6]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditChainService
+#graphify/code #graphify/EXTRACTED #community/purposesservicets

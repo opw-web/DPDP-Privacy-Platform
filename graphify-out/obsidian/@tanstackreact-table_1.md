@@ -1,10 +1,10 @@
 ---
 source_file: "dpdp-platform/frontend/package.json"
-type: "concept"
+type: "code"
 community: "dependencies"
 location: "L25"
 tags:
-  - graphify/concept
+  - graphify/code
   - graphify/EXTRACTED
   - community/dependencies
 ---
@@ -12,6 +12,6 @@ tags:
 # @tanstack/react-table
 
 ## Connections
-- [[@tanstackreact-table]] - `imports` [EXTRACTED]
+- [[dependencies]] - `contains` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/dependencies
+#graphify/code #graphify/EXTRACTED #community/dependencies

@@ -12,7 +12,6 @@ tags:
 # @nestjs/common
 
 ## Connections
-- [[@nestjscommon_1]] - `imports` [EXTRACTED]
 - [[dependencies_1]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/dependencies

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "consent-backfill.queue.ts"
+community: "breach-principal-notice-dispatch.queue.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/consent-backfillqueuets
+  - community/breach-principal-notice-dispatchqueuets
 ---
 
 # Processor
 
 ## Connections
-- [[ConsentBackfillProcessor]] - `references` [EXTRACTED]
+- [[BreachPrincipalNoticeDispatchProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/consent-backfillqueuets
+#graphify/code #graphify/EXTRACTED #community/breach-principal-notice-dispatchqueuets

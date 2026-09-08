@@ -16,10 +16,10 @@ tags:
 - [[Demo dataset (`npm run seed`)]] - `contains` [EXTRACTED]
 - [[Endpoints — copy-paste table]] - `contains` [EXTRACTED]
 - [[Field names (deliberately messy — do not fix them)]] - `contains` [EXTRACTED]
-- [[README]] - `contains` [EXTRACTED]
 - [[Running]] - `contains` [EXTRACTED]
 - [[Schema]] - `contains` [EXTRACTED]
 - [[Testing]] - `contains` [EXTRACTED]
 - [[`updated_since` behaviour — per system]] - `contains` [EXTRACTED]
+- [[demo-company-serverREADME]] - `contains` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/demo-company-server

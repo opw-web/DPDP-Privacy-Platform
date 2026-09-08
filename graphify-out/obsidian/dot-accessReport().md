@@ -14,12 +14,12 @@ tags:
 ## Connections
 - [[dot-buildReport()]] - `calls` [INFERRED]
 - [[CurrentPrincipal]] - `references` [EXTRACTED]
-- [[Get_3]] - `references` [EXTRACTED]
+- [[Get_8]] - `references` [EXTRACTED]
 - [[MeController]] - `method` [EXTRACTED]
 - [[PrincipalActor]] - `references` [EXTRACTED]
 - [[Public()]] - `references` [EXTRACTED]
-- [[Res]] - `references` [EXTRACTED]
-- [[UseGuards_1]] - `references` [EXTRACTED]
+- [[Res_1]] - `references` [EXTRACTED]
+- [[UseGuards_2]] - `references` [EXTRACTED]
 - [[renderAccessReportPdf()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Public

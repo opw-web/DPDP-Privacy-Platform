@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sync/sync.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/transfers.controller.ts"
 type: "code"
-community: "sync.service.ts"
-location: "L34"
+community: "CreateTransferDto"
+location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/syncservicets
+  - community/CreateTransferDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[SyncJobsController]] - `method` [EXTRACTED]
-- [[SyncService]] - `references` [EXTRACTED]
+- [[TransfersController]] - `method` [EXTRACTED]
+- [[TransfersService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/syncservicets
+#graphify/code #graphify/EXTRACTED #community/CreateTransferDto

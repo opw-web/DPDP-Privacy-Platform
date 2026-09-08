@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sync/sync.service.ts"
 type: "code"
-community: "sync.service.ts"
+community: "SyncService"
 location: "L56"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/syncservicets
+  - community/SyncService
 ---
 
 # .getJob()
 
 ## Connections
-- [[dot-get()_6]] - `calls` [INFERRED]
+- [[dot-get()_7]] - `calls` [INFERRED]
 - [[SyncService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/syncservicets
+#graphify/code #graphify/EXTRACTED #community/SyncService

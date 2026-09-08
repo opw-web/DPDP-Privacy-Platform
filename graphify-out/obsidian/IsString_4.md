@@ -11,6 +11,6 @@ tags:
 # IsString
 
 ## Connections
-- [[CreateGuardianDto]] - `references` [EXTRACTED]
+- [[ListGuardiansDto]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/guardiansservicets

@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/common/guards/jwt-principal.guard.ts"
+source_file: "dpdp-platform/backend/src/queues/mvp2-schedules.ts"
 type: "code"
-community: "principal-auth.service.ts"
-location: "L75"
+community: "schedule-reconciliation.service.ts"
+location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principal-authservicets
+  - community/schedule-reconciliationservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[JwtPrincipalGuard]] - `method` [EXTRACTED]
-- [[TokenService]] - `references` [EXTRACTED]
+- [[InjectQueue]] - `references` [EXTRACTED]
+- [[Mvp2ScheduleReconciliationService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principal-authservicets
+#graphify/code #graphify/EXTRACTED #community/schedule-reconciliationservicets

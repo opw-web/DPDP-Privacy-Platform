@@ -1,23 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/consents/me-consents.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.service.ts"
 type: "code"
-community: "SetMyConsentDto"
-location: "L36"
+community: "AccessTokenPayload"
+location: "L171"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SetMyConsentDto
+  - community/AccessTokenPayload
 ---
 
 # .list()
 
 ## Connections
-- [[dot-listForPrincipal()_2]] - `calls` [INFERRED]
-- [[CurrentPrincipal]] - `references` [EXTRACTED]
-- [[Get_2]] - `references` [EXTRACTED]
-- [[MeConsentsController]] - `method` [EXTRACTED]
-- [[PrincipalActor]] - `references` [EXTRACTED]
-- [[Public()]] - `references` [EXTRACTED]
-- [[UseGuards]] - `references` [EXTRACTED]
+- [[dot-list()_1]] - `calls` [INFERRED]
+- [[CampaignsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SetMyConsentDto
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

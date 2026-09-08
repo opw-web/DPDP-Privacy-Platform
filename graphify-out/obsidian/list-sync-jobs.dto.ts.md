@@ -15,6 +15,8 @@ tags:
 - [[DEFAULT_SYNC_JOB_LIST_LIMIT]] - `contains` [EXTRACTED]
 - [[ListSyncJobsQueryDto]] - `contains` [EXTRACTED]
 - [[MAX_SYNC_JOB_LIST_LIMIT]] - `contains` [EXTRACTED]
+- [[class-transformer_1]] - `imports_from` [EXTRACTED]
+- [[class-validator_1]] - `imports_from` [EXTRACTED]
 - [[sync.controller.ts]] - `imports_from` [EXTRACTED]
 - [[sync.service.ts]] - `imports_from` [EXTRACTED]
 

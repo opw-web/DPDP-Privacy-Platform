@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sdf.controller.ts"
+community: "breach-principal-notice-dispatch.queue.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdfcontrollerts
+  - community/breach-principal-notice-dispatchqueuets
 ---
 
 # Injectable
 
 ## Connections
-- [[SdfAssessmentService]] - `references` [EXTRACTED]
+- [[BreachPrincipalNoticeDispatchQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdfcontrollerts
+#graphify/code #graphify/EXTRACTED #community/breach-principal-notice-dispatchqueuets

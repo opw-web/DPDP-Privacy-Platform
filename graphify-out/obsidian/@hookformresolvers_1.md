@@ -1,17 +1,17 @@
 ---
 source_file: "dpdp-platform/frontend/package.json"
 type: "concept"
-community: "@hookform/resolvers"
+community: "frontend/package.json"
 location: "L18"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/hookform/resolvers
+  - community/frontend/packagejson
 ---
 
 # @hookform/resolvers
 
 ## Connections
-- [[@hookformresolvers]] - `imports` [EXTRACTED]
+- [[frontendpackage.json]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/hookform/resolvers
+#graphify/concept #graphify/EXTRACTED #community/frontend/packagejson

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/retention.e2e-spec.ts"
 type: "code"
-community: "erasure-task.service.ts"
+community: "PrismaService"
 location: "L193"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/PrismaService
 ---
 
 # systemActorStore()
@@ -17,4 +17,4 @@ tags:
 - [[runPreErasureNotice()]] - `calls` [EXTRACTED]
 - [[runRetentionScan()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/PrismaService

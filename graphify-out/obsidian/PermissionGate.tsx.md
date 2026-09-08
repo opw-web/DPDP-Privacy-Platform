@@ -37,6 +37,7 @@ tags:
 - [[SharingTab.tsx]] - `imports_from` [EXTRACTED]
 - [[TransfersTab.tsx]] - `imports_from` [EXTRACTED]
 - [[libpermissions.ts]] - `imports_from` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
 - [[usePermission()]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/EmployeesPagetsx

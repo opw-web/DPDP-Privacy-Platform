@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "consent-backfill.queue.ts"
+community: "notifications.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/consent-backfillqueuets
+  - community/notificationscontrollerts
 ---
 
 # Injectable
 
 ## Connections
-- [[ConsentBackfillQueueService]] - `references` [EXTRACTED]
+- [[JwtAnyActorGuard]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/consent-backfillqueuets
+#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts

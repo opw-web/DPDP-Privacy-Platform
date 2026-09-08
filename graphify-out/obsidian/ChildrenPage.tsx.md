@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.tsx"
 type: "code"
-community: "card.tsx"
+community: "react"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cardtsx
+  - community/react
 ---
 
 # ChildrenPage.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[AgeStatus]] - `contains` [EXTRACTED]
 - [[ApiError]] - `imports` [EXTRACTED]
 - [[Badge()]] - `imports` [EXTRACTED]
@@ -37,11 +38,11 @@ tags:
 - [[GuardianForm.tsx]] - `imports_from` [EXTRACTED]
 - [[GuardianRelationship]] - `imports` [EXTRACTED]
 - [[Input]] - `imports` [EXTRACTED]
-- [[Label]] - `imports` [EXTRACTED]
+- [[Label_1]] - `imports` [EXTRACTED]
 - [[Notice]] - `imports` [EXTRACTED]
 - [[NoticeDetail]] - `imports` [EXTRACTED]
-- [[PrincipalListResponse]] - `contains` [EXTRACTED]
-- [[Purpose]] - `contains` [EXTRACTED]
+- [[PrincipalListResponse_1]] - `contains` [EXTRACTED]
+- [[Purpose_1]] - `contains` [EXTRACTED]
 - [[Select]] - `imports` [EXTRACTED]
 - [[Skeleton()]] - `imports` [EXTRACTED]
 - [[Skeleton.tsx]] - `imports_from` [EXTRACTED]
@@ -57,8 +58,11 @@ tags:
 - [[input.tsx]] - `imports_from` [EXTRACTED]
 - [[isGuardianConsentEligible()]] - `imports` [EXTRACTED]
 - [[label.tsx]] - `imports_from` [EXTRACTED]
+- [[lucide-react_1]] - `imports_from` [EXTRACTED]
 - [[noticestypes.ts]] - `imports_from` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 - [[select.tsx]] - `imports_from` [EXTRACTED]
+- [[sonner_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cardtsx
+#graphify/code #graphify/EXTRACTED #community/react

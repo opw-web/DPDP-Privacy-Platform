@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "mappings.controller.ts"
+community: "AffectedPrincipalsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingscontrollerts
+  - community/AffectedPrincipalsDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[DataSourcePurposeResponseDto]] - `references` [EXTRACTED]
+- [[AffectedPrincipalsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingscontrollerts
+#graphify/code #graphify/EXTRACTED #community/AffectedPrincipalsDto

@@ -12,7 +12,6 @@ tags:
 # class-transformer
 
 ## Connections
-- [[class-transformer_1]] - `imports` [EXTRACTED]
 - [[dependencies_1]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/dependencies

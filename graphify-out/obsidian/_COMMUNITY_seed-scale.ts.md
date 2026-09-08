@@ -19,7 +19,7 @@ members: 20
 - [[ScaleSeedResult]] - code - dpdp-platform/backend/scripts/seed-scale.ts
 - [[getOrCreateOrganization()]] - code - dpdp-platform/backend/scripts/seed-scale.ts
 - [[insertBatches()]] - code - dpdp-platform/backend/scripts/seed-scale.ts
-- [[main()_3]] - code - dpdp-platform/backend/scripts/seed-scale.ts
+- [[main()_4]] - code - dpdp-platform/backend/scripts/seed-scale.ts
 - [[performance.e2e-spec.ts]] - code - dpdp-platform/backend/test/performance.e2e-spec.ts
 - [[seed-scale.ts]] - code - dpdp-platform/backend/scripts/seed-scale.ts
 - [[seedConsents()]] - code - dpdp-platform/backend/scripts/seed-scale.ts
@@ -37,11 +37,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_PrismaService]]
-- 2 edges to [[_COMMUNITY_AppModule]]
-- 2 edges to [[_COMMUNITY_prisma.service.ts]]
+- 5 edges to [[_COMMUNITY_PrismaService]]
+- 4 edges to [[_COMMUNITY_supertest]]
+- 2 edges to [[_COMMUNITY_principals.e2e-spec.ts]]
+- 1 edge to [[_COMMUNITY_@nestjscommon]]
+- 1 edge to [[_COMMUNITY_argon2]]
 
 ## Top bridge nodes
-- [[seed-scale.ts]] - degree 23, connects to 3 communities
-- [[performance.e2e-spec.ts]] - degree 12, connects to 2 communities
-- [[main()_3]] - degree 3, connects to 1 community
+- [[seed-scale.ts]] - degree 24, connects to 3 communities
+- [[performance.e2e-spec.ts]] - degree 14, connects to 3 communities
+- [[main()_4]] - degree 3, connects to 1 community

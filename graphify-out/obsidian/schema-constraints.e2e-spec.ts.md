@@ -1,14 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/test/schema-constraints.e2e-spec.ts"
 type: "code"
-community: "schema-constraints.e2e-spec.ts"
+community: "health.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/schema-constraintse2e-spects
+  - community/healthservicets
 ---
 
 # schema-constraints.e2e-spec.ts
 
-#graphify/code #graphify/EXTRACTED #community/schema-constraintse2e-spects
+## Connections
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
+- [[pg_1]] - `imports_from` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/healthservicets

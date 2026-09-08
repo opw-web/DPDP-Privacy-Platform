@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "MeProfileTimezoneDto"
+community: "CreateSdfAssessmentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeProfileTimezoneDto
+  - community/CreateSdfAssessmentDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[MeProfileTimezoneDto]] - `references` [EXTRACTED]
+- [[CreateSdfAssessmentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeProfileTimezoneDto
+#graphify/code #graphify/EXTRACTED #community/CreateSdfAssessmentDto

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdateAlgorithmEntryDto"
+community: "EnvironmentVariables"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateAlgorithmEntryDto
+  - community/EnvironmentVariables
 ---
 
 # IsString
 
 ## Connections
-- [[UpdateAlgorithmEntryDto]] - `references` [EXTRACTED]
+- [[EnvironmentVariables]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateAlgorithmEntryDto
+#graphify/code #graphify/EXTRACTED #community/EnvironmentVariables

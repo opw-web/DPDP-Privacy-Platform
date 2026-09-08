@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeNominationPage.tsx"
 type: "code"
-community: "card.tsx"
+community: "router.tsx"
 location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cardtsx
+  - community/routertsx
 ---
 
 # MeNominationPage()
@@ -16,4 +16,4 @@ tags:
 - [[MeNominationPage.tsx]] - `contains` [EXTRACTED]
 - [[router.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cardtsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

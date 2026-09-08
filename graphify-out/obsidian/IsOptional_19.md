@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateTemplateDto"
+community: "audit-read.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTemplateDto
+  - community/audit-readservicets
 ---
 
 # IsOptional
 
 ## Connections
-- [[UpdateTemplateDto]] - `references` [EXTRACTED]
+- [[ListAuditEventsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTemplateDto
+#graphify/code #graphify/EXTRACTED #community/audit-readservicets

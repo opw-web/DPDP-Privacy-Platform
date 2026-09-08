@@ -1,17 +1,17 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "devDependencies"
+community: "backend/package.json"
 location: "L65"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/devDependencies
+  - community/backend/packagejson
 ---
 
 # @types/supertest
 
 ## Connections
-- [[@typessupertest]] - `imports` [EXTRACTED]
+- [[backendpackage.json]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/devDependencies
+#graphify/concept #graphify/EXTRACTED #community/backend/packagejson

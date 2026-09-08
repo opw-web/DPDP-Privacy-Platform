@@ -9,12 +9,13 @@ members: 20
 
 ## Members
 - [[dot-clearRefreshCookie()]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts
+- [[dot-constructor()_129]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts
 - [[dot-isProduction()]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts
-- [[dot-login()_2]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts
-- [[dot-logout()_2]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts
-- [[dot-refresh()_2]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts
+- [[dot-login()_1]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts
+- [[dot-logout()]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts
+- [[dot-refresh()]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts
 - [[dot-setRefreshCookie()]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts
-- [[ApiProperty_45]] - code
+- [[ApiProperty_48]] - code
 - [[ApiTags_35]] - code
 - [[Body_25]] - code
 - [[Controller_36]] - code
@@ -22,12 +23,11 @@ members: 20
 - [[EmployeeLoginDto]] - code - dpdp-platform/backend/src/modules/auth/dto/employee-login.dto.ts
 - [[HttpCode_4]] - code
 - [[IsEmail_5]] - code
-- [[IsString_61]] - code
-- [[MinLength_46]] - code
+- [[IsString_62]] - code
+- [[MinLength_47]] - code
 - [[Post_25]] - code
 - [[Req_2]] - code
 - [[Res_7]] - code
-- [[employee-login.dto.ts]] - code - dpdp-platform/backend/src/modules/auth/dto/employee-login.dto.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -37,15 +37,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_principal-auth.service.ts]]
-- 3 edges to [[_COMMUNITY_RequirePermission]]
 - 3 edges to [[_COMMUNITY_Public]]
+- 2 edges to [[_COMMUNITY_EmployeeAuthService]]
+- 2 edges to [[_COMMUNITY_token.service.ts]]
+- 2 edges to [[_COMMUNITY_PrincipalAuthService]]
+- 1 edge to [[_COMMUNITY_@prismaclient]]
 - 1 edge to [[_COMMUNITY_app.module.ts]]
-- 1 edge to [[_COMMUNITY_dot-me]]
+- 1 edge to [[_COMMUNITY_AccessTokenPayload]]
 
 ## Top bridge nodes
-- [[EmployeeAuthController]] - degree 12, connects to 4 communities
-- [[dot-login()_2]] - degree 10, connects to 2 communities
-- [[dot-refresh()_2]] - degree 9, connects to 2 communities
-- [[dot-logout()_2]] - degree 8, connects to 2 communities
-- [[EmployeeLoginDto]] - degree 7, connects to 1 community
+- [[EmployeeAuthController]] - degree 12, connects to 3 communities
+- [[dot-login()_1]] - degree 10, connects to 2 communities
+- [[dot-refresh()]] - degree 9, connects to 2 communities
+- [[dot-logout()]] - degree 8, connects to 2 communities
+- [[EmployeeLoginDto]] - degree 7, connects to 2 communities

@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
+community: "CreateNoticeVersionDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/CreateNoticeVersionDto
 ---
 
 # MinLength
 
 ## Connections
-- [[CreateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
+- [[CreateNoticeVersionDto]] - `references` [EXTRACTED]
+- [[ItemisedFieldInputDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/CreateNoticeVersionDto

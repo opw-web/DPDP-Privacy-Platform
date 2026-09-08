@@ -1,19 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/candidates.service.ts"
+source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
 type: "code"
-community: "merge-unmerge.e2e-spec.ts"
-location: "L130"
+community: ".record"
+location: "L151"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/merge-unmergee2e-spects
+  - community/record
 ---
 
 # .list()
 
 ## Connections
-- [[CandidatesService]] - `method` [EXTRACTED]
-- [[isoDate()]] - `calls` [EXTRACTED]
-- [[recordValueFor()]] - `calls` [EXTRACTED]
+- [[dot-list()_38]] - `calls` [INFERRED]
+- [[dot-public()]] - `calls` [EXTRACTED]
+- [[BreachService]] - `method` [EXTRACTED]
+- [[PublicBreach]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/merge-unmergee2e-spects
+#graphify/code #graphify/EXTRACTED #community/record

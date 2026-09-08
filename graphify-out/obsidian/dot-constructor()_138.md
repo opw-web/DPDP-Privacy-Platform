@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sync/sync.service.ts"
+source_file: "dpdp-platform/backend/src/modules/auth/principal-auth.service.ts"
 type: "code"
-community: "SyncQueueService"
-location: "L25"
+community: "PrincipalAuthService"
+location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/PrincipalAuthService
 ---
 
 # .constructor()
 
 ## Connections
-- [[DataSourcesService]] - `references` [EXTRACTED]
-- [[SyncQueueService]] - `references` [EXTRACTED]
-- [[SyncService]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[PrincipalAuthService]] - `method` [EXTRACTED]
+- [[TokenService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/PrincipalAuthService

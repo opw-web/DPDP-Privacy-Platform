@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.service.ts"
 type: "code"
-community: "principal-auth.service.ts"
+community: "EmployeeAuthService"
 location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principal-authservicets
+  - community/EmployeeAuthService
 ---
 
 # .storeFor()
@@ -16,4 +16,4 @@ tags:
 - [[EmployeeAuthService]] - `method` [EXTRACTED]
 - [[TenantStore]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principal-authservicets
+#graphify/code #graphify/EXTRACTED #community/EmployeeAuthService

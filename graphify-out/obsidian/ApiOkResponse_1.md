@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "MappingsController"
+community: "Public"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MappingsController
+  - community/Public
 ---
 
 # ApiOkResponse
 
 ## Connections
-- [[dot-getMappings()]] - `references` [EXTRACTED]
-- [[dot-getPurposes()]] - `references` [EXTRACTED]
+- [[dot-privacyContact()]] - `references` [EXTRACTED]
+- [[dot-profile()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MappingsController
+#graphify/code #graphify/EXTRACTED #community/Public

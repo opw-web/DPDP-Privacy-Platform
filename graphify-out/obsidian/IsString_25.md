@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ImportConsentDto"
+community: "audit-read.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ImportConsentDto
+  - community/audit-readservicets
 ---
 
 # IsString
 
 ## Connections
-- [[ImportConsentDto]] - `references` [EXTRACTED]
+- [[ListAuditEventsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ImportConsentDto
+#graphify/code #graphify/EXTRACTED #community/audit-readservicets

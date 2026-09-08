@@ -1,17 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/sdf-cycle-scan.service.ts"
 type: "code"
-community: "templates.service.ts"
-location: "L64"
+community: "sdf-cycle-scan.queue.ts"
+location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatesservicets
+  - community/sdf-cycle-scanqueuets
 ---
 
 # .constructor()
 
 ## Connections
-- [[TemplateRenderError]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[ComplianceService]] - `references` [EXTRACTED]
+- [[NotificationsService]] - `references` [EXTRACTED]
+- [[SdfCycleScanService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatesservicets
+#graphify/code #graphify/EXTRACTED #community/sdf-cycle-scanqueuets

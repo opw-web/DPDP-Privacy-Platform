@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/src/lib/api-client.ts"
 type: "code"
-community: "button.tsx"
+community: "react"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react
 ---
 
 # ApiError
 
 ## Connections
-- [[dot-constructor()_98]] - `method` [EXTRACTED]
+- [[dot-constructor()_101]] - `method` [EXTRACTED]
 - [[AccessReportPanel.tsx]] - `imports` [EXTRACTED]
 - [[AlgorithmRegisterPanel.tsx]] - `imports` [EXTRACTED]
 - [[AssessmentRow.tsx]] - `imports` [EXTRACTED]
@@ -59,4 +59,4 @@ tags:
 - [[rawRequest()]] - `calls` [EXTRACTED]
 - [[requestJson()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/react

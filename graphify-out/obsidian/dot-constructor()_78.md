@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/purpose-served.service.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/providers/smtp.provider.ts"
 type: "code"
-community: "erasure-task.service.ts"
-location: "L39"
+community: "MailerService"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/MailerService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[PurposeServedService]] - `method` [EXTRACTED]
+- [[MailerService]] - `references` [EXTRACTED]
+- [[SmtpProvider]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/MailerService

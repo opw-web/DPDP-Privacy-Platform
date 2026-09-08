@@ -12,8 +12,9 @@ tags:
 # BreachDetailPage.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[ApiError]] - `imports` [EXTRACTED]
-- [[Breach]] - `contains` [EXTRACTED]
+- [[Breach_1]] - `contains` [EXTRACTED]
 - [[BreachDetailPage()]] - `contains` [EXTRACTED]
 - [[BreachObligationCard()]] - `imports` [EXTRACTED]
 - [[BreachObligationCard.tsx]] - `imports_from` [EXTRACTED]
@@ -32,7 +33,10 @@ tags:
 - [[employeeApiClient]] - `imports` [EXTRACTED]
 - [[extensionErrorMessage()]] - `contains` [EXTRACTED]
 - [[originalBoardDetailDueAt()]] - `contains` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
+- [[react-router-dom_1]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 - [[saveBlob()_4]] - `contains` [EXTRACTED]
+- [[sonner_1]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/BreachWizardPagetsx

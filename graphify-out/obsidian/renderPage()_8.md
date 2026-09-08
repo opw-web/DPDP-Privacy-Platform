@@ -1,19 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/SdfPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/principal/pages/MeConsentsPage.test.tsx"
 type: "code"
-community: "SdfPage.test.tsx"
-location: "L140"
+community: "router.tsx"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SdfPagetesttsx
+  - community/routertsx
 ---
 
 # renderPage()
 
 ## Connections
-- [[SdfPage.test.tsx]] - `contains` [EXTRACTED]
-- [[employeeLogin()]] - `calls` [EXTRACTED]
-- [[mockFetch()]] - `calls` [EXTRACTED]
+- [[MeConsentsPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SdfPagetesttsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

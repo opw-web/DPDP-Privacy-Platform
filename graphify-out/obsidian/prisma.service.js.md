@@ -12,11 +12,13 @@ tags:
 # prisma.service.js
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[PrismaService_1]] - `contains` [EXTRACTED]
 - [[accept()]] - `contains` [EXTRACTED]
 - [[client_1]] - `contains` [EXTRACTED]
 - [[common_1]] - `contains` [EXTRACTED]
-- [[extendWithTenantScoping()_1]] - `contains` [EXTRACTED]
+- [[extendWithTenantScoping()]] - `contains` [EXTRACTED]
 - [[tenant.extension.ts]] - `imports_from` [EXTRACTED]
 - [[tenant_extension_1]] - `contains` [EXTRACTED]
 

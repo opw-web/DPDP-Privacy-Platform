@@ -12,15 +12,15 @@ tags:
 # UpdateSecurityMeasureDto
 
 ## Connections
-- [[dot-update()_27]] - `references` [EXTRACTED]
-- [[dot-update()_28]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_53]] - `references` [EXTRACTED]
-- [[IsBoolean_27]] - `references` [EXTRACTED]
-- [[IsDateString_23]] - `references` [EXTRACTED]
+- [[dot-update()_25]] - `references` [EXTRACTED]
+- [[dot-update()_26]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_52]] - `references` [EXTRACTED]
+- [[IsBoolean_25]] - `references` [EXTRACTED]
+- [[IsDateString_21]] - `references` [EXTRACTED]
 - [[IsIn_19]] - `references` [EXTRACTED]
-- [[IsString_69]] - `references` [EXTRACTED]
-- [[MinLength_54]] - `references` [EXTRACTED]
-- [[ValidateIf_5]] - `references` [EXTRACTED]
+- [[IsString_68]] - `references` [EXTRACTED]
+- [[MinLength_53]] - `references` [EXTRACTED]
+- [[ValidateIf_4]] - `references` [EXTRACTED]
 - [[security-measures.controller.ts]] - `imports` [EXTRACTED]
 - [[security-measures.service.ts]] - `imports` [EXTRACTED]
 - [[update-security-measure.dto.ts]] - `contains` [EXTRACTED]

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateLegalHoldDto"
+community: "mappings.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateLegalHoldDto
+  - community/mappingsservicets
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateLegalHoldDto]] - `references` [EXTRACTED]
+- [[AttachPurposesDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto
+#graphify/code #graphify/EXTRACTED #community/mappingsservicets

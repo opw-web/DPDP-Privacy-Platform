@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/common/guards/permissions.guard.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts"
 type: "code"
-community: "PermissionsGuard"
-location: "L81"
+community: "AlgorithmRegisterService"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PermissionsGuard
+  - community/AlgorithmRegisterService
 ---
 
 # .constructor()
 
 ## Connections
-- [[PermissionsGuard]] - `method` [EXTRACTED]
+- [[AlgorithmRegisterService]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PermissionsGuard
+#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterService

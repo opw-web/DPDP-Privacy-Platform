@@ -1,18 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/dto/employee-login.dto.ts"
 type: "code"
-community: "EmployeeAuthController"
+community: "@prisma/client"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeeAuthController
+  - community/prisma/client
 ---
 
 # employee-login.dto.ts
 
 ## Connections
+- [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[EmployeeLoginDto]] - `contains` [EXTRACTED]
+- [[class-validator_1]] - `imports_from` [EXTRACTED]
 - [[employee-auth.controller.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController
+#graphify/code #graphify/EXTRACTED #community/prisma/client

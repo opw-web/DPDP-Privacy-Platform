@@ -1,11 +1,11 @@
 ---
 type: community
-members: 71
+members: 75
 ---
 
 # common.sh
 
-**Members:** 71 nodes
+**Members:** 75 nodes
 
 ## Members
 - [[api()]] - code - demo-control/reset.sh
@@ -34,6 +34,7 @@ members: 71
 - [[http_code()]] - code - demo-control/common.sh
 - [[install-launchers.sh]] - code - demo-control/install-launchers.sh
 - [[install-launchers.sh script]] - code - demo-control/install-launchers.sh
+- [[install_packages()]] - code - demo-control/prepare.sh
 - [[is_running()]] - code - demo-control/common.sh
 - [[iso()]] - code - demo-control/stage-demo.sh
 - [[jnum()]] - code - demo-control/show-demo-proof.sh
@@ -55,8 +56,11 @@ members: 71
 - [[pid_of()]] - code - demo-control/stage-demo.sh
 - [[pids_for()]] - code - demo-control/common.sh
 - [[plogin()]] - code - demo-control/stage-demo.sh
+- [[prepare.sh]] - code - demo-control/prepare.sh
+- [[prepare.sh script]] - code - demo-control/prepare.sh
 - [[psql_count()]] - code - demo-control/show-demo-proof.sh
 - [[publish_notice()]] - code - demo-control/stage-demo.sh
+- [[require_command()]] - code - demo-control/prepare.sh
 - [[reset.sh]] - code - demo-control/reset.sh
 - [[reset.sh script]] - code - demo-control/reset.sh
 - [[say()]] - code - demo-control/common.sh

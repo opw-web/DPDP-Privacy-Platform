@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/transfers.service.ts"
+source_file: "dpdp-platform/backend/src/modules/auth/token.service.ts"
 type: "code"
-community: "TransfersService"
-location: "L45"
+community: "TokenService"
+location: "L65"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TransfersService
+  - community/TokenService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[TransfersService]] - `method` [EXTRACTED]
+- [[TokenService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TransfersService
+#graphify/code #graphify/EXTRACTED #community/TokenService

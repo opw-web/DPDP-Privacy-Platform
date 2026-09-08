@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/connectors/test-support/mock-http-server.ts"
 type: "code"
-community: "data-sources.e2e-spec.ts"
+community: "sync.e2e-spec.ts"
 location: "L45"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/data-sourcese2e-spects
+  - community/synce2e-spects
 ---
 
 # .listen()
@@ -18,4 +18,4 @@ tags:
 - [[startServer()_1]] - `calls` [INFERRED]
 - [[startServer()]] - `calls` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/data-sourcese2e-spects
+#graphify/code #graphify/INFERRED #community/synce2e-spects

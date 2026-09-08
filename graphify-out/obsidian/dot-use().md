@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/tenant/tenant.middleware.ts"
 type: "code"
-community: "TenantMiddleware"
+community: "TokenService"
 location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TenantMiddleware
+  - community/TokenService
 ---
 
 # .use()
@@ -15,4 +15,4 @@ tags:
 - [[dot-decodeActorAccessToken()]] - `calls` [INFERRED]
 - [[TenantMiddleware]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TenantMiddleware
+#graphify/code #graphify/EXTRACTED #community/TokenService

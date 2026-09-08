@@ -12,7 +12,7 @@ tags:
 # .rescrubFieldSample()
 
 ## Connections
-- [[dot-replace()_1]] - `calls` [INFERRED]
+- [[dot-replace()]] - `calls` [INFERRED]
 - [[DataSourcesService]] - `method` [EXTRACTED]
 - [[ScopedTransactionClient]] - `references` [EXTRACTED]
 - [[TenantScopedPrismaClient]] - `references` [EXTRACTED]

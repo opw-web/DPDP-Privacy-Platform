@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "data-sources.service.ts"
+community: "SdfAssessmentService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesservicets
+  - community/SdfAssessmentService
 ---
 
 # IsBoolean
 
 ## Connections
-- [[UpdateDataSourceDto]] - `references` [EXTRACTED]
+- [[CompleteSdfAssessmentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets
+#graphify/code #graphify/EXTRACTED #community/SdfAssessmentService

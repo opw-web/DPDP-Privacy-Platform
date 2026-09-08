@@ -1,17 +1,17 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "date-fns-tz"
+community: "backend/package.json"
 location: "L40"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/date-fns-tz
+  - community/backend/packagejson
 ---
 
 # date-fns-tz
 
 ## Connections
-- [[date-fns-tz_2]] - `imports` [EXTRACTED]
+- [[backendpackage.json]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/date-fns-tz
+#graphify/concept #graphify/EXTRACTED #community/backend/packagejson

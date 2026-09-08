@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/recipients.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/linking.service.ts"
 type: "code"
-community: "recipients.service.ts"
-location: "L16"
+community: "ScopedTransactionClient"
+location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/ScopedTransactionClient
 ---
 
 # .constructor()
 
 ## Connections
-- [[RecipientsController]] - `method` [EXTRACTED]
-- [[RecipientsService]] - `references` [EXTRACTED]
+- [[IdentifierOwnershipConflictError_1]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

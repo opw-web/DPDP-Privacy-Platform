@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/PrincipalLoginPage.tsx"
 type: "code"
-community: "button.tsx"
+community: "react"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react
 ---
 
 # PrincipalLoginPage.tsx
@@ -20,9 +20,9 @@ tags:
 - [[CardHeader]] - `imports` [EXTRACTED]
 - [[CardTitle]] - `imports` [EXTRACTED]
 - [[DEMO_PRINCIPALS]] - `contains` [EXTRACTED]
-- [[DemoCredentialsBanner()_1]] - `contains` [EXTRACTED]
+- [[DemoCredentialsBanner()]] - `contains` [EXTRACTED]
 - [[Input]] - `imports` [EXTRACTED]
-- [[Label]] - `imports` [EXTRACTED]
+- [[Label_1]] - `imports` [EXTRACTED]
 - [[LoginFormValues_1]] - `contains` [EXTRACTED]
 - [[PrincipalLoginPage()]] - `contains` [EXTRACTED]
 - [[PrincipalLoginPage.test.tsx]] - `imports_from` [EXTRACTED]
@@ -34,8 +34,13 @@ tags:
 - [[libauth.ts]] - `imports_from` [EXTRACTED]
 - [[loginSchema_1]] - `contains` [EXTRACTED]
 - [[principalLogin()]] - `imports` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
+- [[react-hook-form_1]] - `imports_from` [EXTRACTED]
+- [[react-router-dom_1]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
-- [[shouldShowDemoCredentials()_1]] - `contains` [EXTRACTED]
+- [[shouldShowDemoCredentials()]] - `contains` [EXTRACTED]
+- [[sonner_1]] - `imports_from` [EXTRACTED]
 - [[usePrincipalAuth()]] - `imports` [EXTRACTED]
+- [[zod_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/react

@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/breaches/breaches.controller.ts"
 type: "code"
-community: "RequirePermission"
+community: "@prisma/client"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/prisma/client
 ---
 
 # breaches.controller.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[AccessTokenPayload]] - `imports` [EXTRACTED]
 - [[AffectedPrincipalsDto]] - `imports` [EXTRACTED]
 - [[BreachService]] - `imports` [EXTRACTED]
@@ -36,4 +38,4 @@ tags:
 - [[token.service.ts]] - `imports_from` [EXTRACTED]
 - [[update-breach.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/prisma/client

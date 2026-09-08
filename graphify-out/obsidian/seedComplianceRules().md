@@ -1,21 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/prisma/seed/compliance-rules.ts"
+source_file: "dpdp-platform/backend/prisma/seed/compliance-rules.js"
 type: "code"
-community: "PrismaService"
-location: "L267"
+community: "compliance-rules.js"
+location: "L218"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/compliance-rulesjs
 ---
 
 # seedComplianceRules()
 
 ## Connections
-- [[compliance-rules.ts]] - `contains` [EXTRACTED]
-- [[makeSdfOrg()]] - `calls` [EXTRACTED]
-- [[runSeed()]] - `calls` [EXTRACTED]
-- [[sdf.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[seed.ts]] - `imports` [EXTRACTED]
+- [[compliance-rules.js]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/compliance-rulesjs

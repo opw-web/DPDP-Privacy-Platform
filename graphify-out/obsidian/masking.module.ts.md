@@ -12,6 +12,7 @@ tags:
 # masking.module.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[MaskingModule]] - `contains` [EXTRACTED]
 - [[MaskingService]] - `imports` [EXTRACTED]
 - [[app.module.ts]] - `imports_from` [EXTRACTED]

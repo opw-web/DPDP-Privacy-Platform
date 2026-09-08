@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/retention/types.ts"
 type: "code"
-community: "RetentionPage.tsx"
+community: "DateTime.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionPagetsx
+  - community/DateTimetsx
 ---
 
 # retention/types.ts
@@ -22,4 +22,4 @@ tags:
 - [[SystemChecklistEntry]] - `contains` [EXTRACTED]
 - [[retentionStateLabel()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionPagetsx
+#graphify/code #graphify/EXTRACTED #community/DateTimetsx

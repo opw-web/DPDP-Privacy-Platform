@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "employees.service.ts"
+community: "AssignRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeesservicets
+  - community/AssignRequestDto
 ---
 
 # IsString
 
 ## Connections
-- [[ResetEmployeePasswordDto]] - `references` [EXTRACTED]
+- [[AssignRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeesservicets
+#graphify/code #graphify/EXTRACTED #community/AssignRequestDto

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/breach-clock.processor.ts"
 type: "code"
-community: "breaches.module.ts"
+community: "app.module.ts"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breachesmodulets
+  - community/appmodulets
 ---
 
 # BREACH_CLOCK_QUEUE_NAME
@@ -17,4 +17,4 @@ tags:
 - [[mvp2-schedules.ts]] - `imports` [EXTRACTED]
 - [[queues.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breachesmodulets
+#graphify/code #graphify/EXTRACTED #community/appmodulets

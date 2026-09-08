@@ -1,12 +1,12 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/compliance/compliance.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
 type: "code"
-community: "CreateComplianceRuleDto"
-location: "L46"
+community: "AccessTokenPayload"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateComplianceRuleDto
+  - community/AccessTokenPayload
 ---
 
 # .review()
@@ -14,10 +14,10 @@ tags:
 ## Connections
 - [[dot-review()_2]] - `calls` [INFERRED]
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[ComplianceController]] - `method` [EXTRACTED]
 - [[CurrentActor]] - `references` [EXTRACTED]
 - [[Param_7]] - `references` [EXTRACTED]
-- [[Post_6]] - `references` [EXTRACTED]
+- [[Post_8]] - `references` [EXTRACTED]
+- [[PurposesController]] - `method` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/EmptyState.tsx"
 type: "code"
-community: "card.tsx"
+community: "react-router-dom"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cardtsx
+  - community/react-router-dom
 ---
 
 # EmptyStateProps
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[EmptyState.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cardtsx
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

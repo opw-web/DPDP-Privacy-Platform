@@ -12,12 +12,13 @@ tags:
 # Step3Mapping.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[ApiError]] - `imports` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
 - [[CANONICAL_FIELD_VALUES]] - `imports` [EXTRACTED]
 - [[CanonicalField]] - `imports` [EXTRACTED]
-- [[CheckboxOption]] - `imports` [EXTRACTED]
 - [[CheckboxOption_1]] - `imports` [EXTRACTED]
+- [[CheckboxOption]] - `imports` [EXTRACTED]
 - [[DATA_CATEGORY_VALUES]] - `imports` [EXTRACTED]
 - [[DataCategory]] - `imports` [EXTRACTED]
 - [[DataSourceDetailPage.tsx]] - `imports_from` [EXTRACTED]
@@ -30,7 +31,7 @@ tags:
 - [[PublicSourceFieldMapping]] - `imports` [EXTRACTED]
 - [[ReplaceMappingsResult]] - `imports` [EXTRACTED]
 - [[Select]] - `imports` [EXTRACTED]
-- [[SelectControl]] - `imports` [EXTRACTED]
+- [[SelectControl_1]] - `imports` [EXTRACTED]
 - [[Step3Mapping()]] - `contains` [EXTRACTED]
 - [[Step3Mapping.test.tsx]] - `imports_from` [EXTRACTED]
 - [[Step3MappingProps]] - `contains` [EXTRACTED]
@@ -42,8 +43,13 @@ tags:
 - [[enum-options.ts]] - `imports_from` [EXTRACTED]
 - [[form-controls.tsx]] - `imports_from` [EXTRACTED]
 - [[humanizeEnum()]] - `imports` [EXTRACTED]
+- [[lucide-react_1]] - `imports_from` [EXTRACTED]
 - [[mappingFormSchema]] - `contains` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
+- [[react-hook-form_1]] - `imports_from` [EXTRACTED]
 - [[rowSchema]] - `contains` [EXTRACTED]
 - [[rowsFor()]] - `contains` [EXTRACTED]
+- [[sonner_1]] - `imports_from` [EXTRACTED]
+- [[zod_1]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/data-sources-apits

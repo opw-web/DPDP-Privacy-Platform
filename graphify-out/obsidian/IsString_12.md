@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sync.service.ts"
+community: "CreateDataSourceDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/syncservicets
+  - community/CreateDataSourceDto
 ---
 
 # IsString
 
 ## Connections
-- [[ListSyncJobsQueryDto]] - `references` [EXTRACTED]
+- [[CreateDataSourceDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/syncservicets
+#graphify/code #graphify/EXTRACTED #community/CreateDataSourceDto

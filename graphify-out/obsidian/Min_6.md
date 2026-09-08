@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "data-sources.service.ts"
+community: "audit-read.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesservicets
+  - community/audit-readservicets
 ---
 
 # Min
 
 ## Connections
-- [[CreateDataSourceDto]] - `references` [EXTRACTED]
+- [[ListAuditEventsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets
+#graphify/code #graphify/EXTRACTED #community/audit-readservicets

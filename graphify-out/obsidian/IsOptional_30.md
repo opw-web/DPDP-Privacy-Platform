@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".record"
+community: "requests.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/requestsservicets
 ---
 
 # IsOptional
 
 ## Connections
-- [[UpdateBreachDto]] - `references` [EXTRACTED]
+- [[EscalateRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/requestsservicets

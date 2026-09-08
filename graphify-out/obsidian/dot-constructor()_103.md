@@ -1,17 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sync/sync-error.ts"
+source_file: "dpdp-platform/backend/src/queues/campaign-send.processor.ts"
 type: "code"
-community: "sync-pipeline.service.ts"
-location: "L80"
+community: "CampaignsService"
+location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sync-pipelineservicets
+  - community/CampaignsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[SyncLockUnavailableError]] - `method` [EXTRACTED]
+- [[CampaignSendProcessor]] - `method` [EXTRACTED]
+- [[CampaignsService]] - `references` [EXTRACTED]
+- [[NotificationsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sync-pipelineservicets
+#graphify/code #graphify/EXTRACTED #community/CampaignsService

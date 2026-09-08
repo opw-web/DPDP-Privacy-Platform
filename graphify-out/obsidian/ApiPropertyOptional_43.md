@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateSharingActivityDto"
+community: "me-rights.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSharingActivityDto
+  - community/me-rightsservicets
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[UpdateSharingActivityDto]] - `references` [EXTRACTED]
+- [[UpdateMeNominationDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto
+#graphify/code #graphify/EXTRACTED #community/me-rightsservicets

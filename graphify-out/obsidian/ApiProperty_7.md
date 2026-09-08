@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "requests.controller.ts"
+community: "Public"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/requestscontrollerts
+  - community/Public
 ---
 
 # ApiProperty
 
 ## Connections
-- [[VerifyIdentityDto]] - `references` [EXTRACTED]
+- [[AddMeRequestCommentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/requestscontrollerts
+#graphify/code #graphify/EXTRACTED #community/Public

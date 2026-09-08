@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "recipients.service.ts"
+community: "access-report.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/access-reportservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[RecipientsService]] - `references` [EXTRACTED]
+- [[AccessLogService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/access-reportservicets

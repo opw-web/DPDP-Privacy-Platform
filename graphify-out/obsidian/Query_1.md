@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sync.service.ts"
+community: "AccessTokenPayload"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/syncservicets
+  - community/AccessTokenPayload
 ---
 
 # Query
 
 ## Connections
-- [[dot-list()_7]] - `references` [EXTRACTED]
+- [[dot-preview()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/syncservicets
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AccessReportService"
+community: "LineageService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessReportService
+  - community/LineageService
 ---
 
 # Injectable
 
 ## Connections
-- [[AccessReportService]] - `references` [EXTRACTED]
+- [[MeService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessReportService
+#graphify/code #graphify/EXTRACTED #community/LineageService

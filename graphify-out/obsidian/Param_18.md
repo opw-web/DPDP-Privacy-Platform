@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "ConsentsService"
+community: ".completeAssessment"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ConsentsService
+  - community/completeAssessment
 ---
 
 # Param
 
 ## Connections
-- [[dot-getConsentStats()]] - `references` [EXTRACTED]
-- [[dot-listForPrincipal()_1]] - `references` [EXTRACTED]
-- [[dot-recordImportedConsent()]] - `references` [EXTRACTED]
+- [[dot-completeAssessment()]] - `references` [EXTRACTED]
+- [[dot-updateAlgorithm()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ConsentsService
+#graphify/code #graphify/EXTRACTED #community/completeAssessment

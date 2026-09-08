@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/campaign-send.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/deadline-scan.processor.ts"
 type: "code"
-community: "breaches.module.ts"
-location: "L72"
+community: "RequestsService"
+location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breachesmodulets
+  - community/RequestsService
 ---
 
 # .process()
 
 ## Connections
-- [[dot-deliverRecipient()]] - `calls` [INFERRED]
-- [[CampaignSendJobData]] - `references` [EXTRACTED]
-- [[CampaignSendProcessor]] - `method` [EXTRACTED]
+- [[dot-runScanCycle()]] - `calls` [EXTRACTED]
+- [[DeadlineScanJobData]] - `references` [EXTRACTED]
+- [[DeadlineScanProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breachesmodulets
+#graphify/code #graphify/EXTRACTED #community/RequestsService

@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/pre-erasure-notice.processor.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/retention.controller.ts"
 type: "code"
-community: "retention.module.ts"
-location: "L20"
+community: "erasure-task.service.ts"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionmodulets
+  - community/erasure-taskservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[PreErasureNoticeProcessor]] - `method` [EXTRACTED]
-- [[PreErasureNoticeService]] - `references` [EXTRACTED]
+- [[ErasureTaskService]] - `references` [EXTRACTED]
+- [[LegalHoldService]] - `references` [EXTRACTED]
+- [[RetentionController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionmodulets
+#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/ui/textarea.tsx"
 type: "code"
-community: "button.tsx"
+community: "react"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react
 ---
 
 # Textarea
@@ -33,4 +33,4 @@ tags:
 - [[form-controls.tsx]] - `imports` [EXTRACTED]
 - [[textarea.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/react

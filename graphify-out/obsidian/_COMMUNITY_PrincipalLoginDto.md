@@ -1,19 +1,18 @@
 ---
 type: community
-members: 6
+members: 5
 ---
 
 # PrincipalLoginDto
 
-**Members:** 6 nodes
+**Members:** 5 nodes
 
 ## Members
-- [[ApiProperty_25]] - code
+- [[ApiProperty_32]] - code
 - [[IsEmail_2]] - code
-- [[IsString_36]] - code
-- [[MinLength_24]] - code
+- [[IsString_45]] - code
+- [[MinLength_33]] - code
 - [[PrincipalLoginDto]] - code - dpdp-platform/backend/src/modules/auth/dto/principal-login.dto.ts
-- [[principal-login.dto.ts]] - code - dpdp-platform/backend/src/modules/auth/dto/principal-login.dto.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -23,9 +22,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Public]]
+- 1 edge to [[_COMMUNITY_Public]]
 - 1 edge to [[_COMMUNITY_PrincipalAuthController]]
+- 1 edge to [[_COMMUNITY_@prismaclient]]
 
 ## Top bridge nodes
-- [[PrincipalLoginDto]] - degree 7, connects to 2 communities
-- [[principal-login.dto.ts]] - degree 2, connects to 1 community
+- [[PrincipalLoginDto]] - degree 7, connects to 3 communities

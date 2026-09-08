@@ -27,6 +27,7 @@ tags:
 - [[campaigns.service.ts]] - `imports_from` [EXTRACTED]
 - [[engine]] - `contains` [EXTRACTED]
 - [[extractTemplateVariables()]] - `contains` [EXTRACTED]
+- [[handlebars_1]] - `imports_from` [EXTRACTED]
 - [[isWhitelistedTemplateVariable()]] - `imports` [EXTRACTED]
 - [[message-templates.ts]] - `imports_from` [EXTRACTED]
 - [[renderMessageTemplate()]] - `contains` [EXTRACTED]

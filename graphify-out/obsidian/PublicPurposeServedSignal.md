@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/purpose-served.service.ts"
 type: "code"
-community: "erasure-task.service.ts"
+community: "audit.service.ts"
 location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/auditservicets
 ---
 
 # PublicPurposeServedSignal
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[purpose-served.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/auditservicets

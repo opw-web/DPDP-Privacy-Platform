@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/SdfPage.test.tsx"
 type: "code"
-community: "SdfPage.test.tsx"
+community: "router.tsx"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SdfPagetesttsx
+  - community/routertsx
 ---
 
 # json()
@@ -15,4 +15,4 @@ tags:
 - [[SdfPage.test.tsx]] - `contains` [EXTRACTED]
 - [[mockFetch()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SdfPagetesttsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

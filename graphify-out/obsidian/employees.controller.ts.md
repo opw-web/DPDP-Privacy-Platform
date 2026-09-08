@@ -12,6 +12,8 @@ tags:
 # employees.controller.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[CreateEmployeeDto]] - `imports` [EXTRACTED]
 - [[EmployeesController]] - `contains` [EXTRACTED]
 - [[EmployeesService]] - `imports` [EXTRACTED]

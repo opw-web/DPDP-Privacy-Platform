@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
 type: "code"
-community: "erasure-task.service.ts"
+community: "RetentionScanService"
 location: "L274"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/erasure-taskservicets
+  - community/RetentionScanService
 ---
 
 # .computeDeadline()
 
 ## Connections
-- [[dot-create()_12]] - `calls` [INFERRED]
-- [[dot-create()_13]] - `calls` [INFERRED]
+- [[dot-create()_23]] - `calls` [INFERRED]
+- [[dot-create()_26]] - `calls` [INFERRED]
 - [[dot-createFromTrigger()]] - `calls` [INFERRED]
 - [[dot-createInactivityTasks()]] - `calls` [INFERRED]
 - [[dot-resolveCycleDeadline()]] - `calls` [INFERRED]
@@ -21,4 +21,4 @@ tags:
 - [[ComplianceService]] - `method` [EXTRACTED]
 - [[addByDeadlineUnit()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/erasure-taskservicets
+#graphify/code #graphify/INFERRED #community/RetentionScanService

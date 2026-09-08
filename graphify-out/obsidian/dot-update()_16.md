@@ -1,22 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/board/information-requests.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts"
 type: "code"
-community: "CreateInformationRequestDto"
-location: "L178"
+community: ".completeAssessment"
+location: "L87"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateInformationRequestDto
+  - community/completeAssessment
 ---
 
 # .update()
 
 ## Connections
-- [[dot-assertAffectedPrincipals()]] - `calls` [EXTRACTED]
-- [[dot-assertDirectionHasAuthorisation()]] - `calls` [EXTRACTED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[dot-update()_15]] - `calls` [INFERRED]
-- [[InformationRequestsService]] - `method` [EXTRACTED]
-- [[UpdateInformationRequestDto]] - `references` [EXTRACTED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-updateAlgorithm()]] - `calls` [INFERRED]
+- [[AlgorithmRegisterService]] - `method` [EXTRACTED]
+- [[UpdateAlgorithmEntryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto
+#graphify/code #graphify/EXTRACTED #community/completeAssessment

@@ -12,6 +12,7 @@ tags:
 # phoneVariant()
 
 ## Connections
+- [[dot-int()]] - `calls` [INFERRED]
 - [[buildLinkedPair()]] - `calls` [EXTRACTED]
 - [[fillSystemRecord()]] - `calls` [EXTRACTED]
 - [[generate.ts]] - `contains` [EXTRACTED]

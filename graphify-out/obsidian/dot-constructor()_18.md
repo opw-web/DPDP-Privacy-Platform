@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sync-lock.service.ts"
+source_file: "dpdp-platform/backend/src/modules/principals/principals.controller.ts"
 type: "code"
-community: "queues.module.ts"
-location: "L94"
+community: "LineageService"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/LineageService
 ---
 
 # .constructor()
 
 ## Connections
-- [[SyncLockService]] - `method` [EXTRACTED]
-- [[toRedisConnectionOptions()]] - `calls` [EXTRACTED]
+- [[LineageService]] - `references` [EXTRACTED]
+- [[PrincipalRecipientsService]] - `references` [EXTRACTED]
+- [[PrincipalsController]] - `method` [EXTRACTED]
+- [[PrincipalsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/LineageService

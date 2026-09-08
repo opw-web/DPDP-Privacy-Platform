@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/board/information-requests.service.ts"
 type: "code"
-community: "prisma.service.ts"
+community: "audit.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/auditservicets
 ---
 
 # information-requests.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[CreateInformationRequestDto]] - `imports` [EXTRACTED]
 - [[INFORMATION_REQUEST_PUBLIC_SELECT]] - `contains` [EXTRACTED]
@@ -31,4 +33,4 @@ tags:
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 - [[update-information-request.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/auditservicets

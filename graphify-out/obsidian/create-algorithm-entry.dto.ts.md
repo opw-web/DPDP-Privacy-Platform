@@ -1,21 +1,23 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sdf/dto/create-algorithm-entry.dto.ts"
 type: "code"
-community: "algorithm-register.service.ts"
+community: "@prisma/client"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/algorithm-registerservicets
+  - community/prisma/client
 ---
 
 # create-algorithm-entry.dto.ts
 
 ## Connections
-- [[ALGORITHM_OPERATIONS]] - `imports` [EXTRACTED]
+- [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
+- [[ALGORITHM_OPERATIONS_1]] - `imports` [EXTRACTED]
 - [[CreateAlgorithmEntryDto]] - `contains` [EXTRACTED]
 - [[algorithm-operations.ts]] - `imports_from` [EXTRACTED]
 - [[algorithm-register.service.ts]] - `imports_from` [EXTRACTED]
+- [[class-validator_1]] - `imports_from` [EXTRACTED]
 - [[sdf.controller.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/algorithm-registerservicets
+#graphify/code #graphify/EXTRACTED #community/prisma/client

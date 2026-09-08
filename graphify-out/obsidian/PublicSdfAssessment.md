@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sdf/sdf-assessment.service.ts"
 type: "code"
-community: "AuditService"
+community: "sdf-assessment.service.ts"
 location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/sdf-assessmentservicets
 ---
 
 # PublicSdfAssessment
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sdf-assessment.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/sdf-assessmentservicets

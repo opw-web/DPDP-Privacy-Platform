@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/requests/RequestWorkPanel.tsx"
 type: "code"
-community: "employeeApiClient"
+community: "RequestDetailPage.tsx"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeeApiClient
+  - community/RequestDetailPagetsx
 ---
 
 # ErasureCompletionEvidence
@@ -15,4 +15,4 @@ tags:
 - [[RequestDetailPage.tsx]] - `imports` [EXTRACTED]
 - [[RequestWorkPanel.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeeApiClient
+#graphify/code #graphify/EXTRACTED #community/RequestDetailPagetsx

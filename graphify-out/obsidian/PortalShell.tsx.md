@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/components/PortalShell.tsx"
 type: "code"
-community: "api-client.ts"
+community: "router.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/routertsx
 ---
 
 # PortalShell.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
 - [[DateTime.tsx]] - `imports_from` [EXTRACTED]
 - [[MeProfileTimezone]] - `contains` [EXTRACTED]
@@ -25,9 +26,11 @@ tags:
 - [[button.tsx]] - `imports_from` [EXTRACTED]
 - [[cn()]] - `imports` [EXTRACTED]
 - [[libauth.ts]] - `imports_from` [EXTRACTED]
+- [[lucide-react_1]] - `imports_from` [EXTRACTED]
 - [[principalApiClient]] - `imports` [EXTRACTED]
+- [[react-router-dom_1]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 - [[usePrincipalAuth()]] - `imports` [EXTRACTED]
 - [[utils.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/routertsx

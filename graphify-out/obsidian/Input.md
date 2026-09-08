@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/ui/input.tsx"
 type: "code"
-community: "button.tsx"
+community: "react"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react
 ---
 
 # Input
@@ -47,4 +47,4 @@ tags:
 - [[cn()]] - `calls` [EXTRACTED]
 - [[input.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/react

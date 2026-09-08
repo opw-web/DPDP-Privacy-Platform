@@ -1,25 +1,25 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/boot-registration.registry.ts"
 type: "code"
-community: "SyncQueueService"
+community: "BootRegistrationRegistry"
 location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/BootRegistrationRegistry
 ---
 
 # BootRegistrationRegistry
 
 ## Connections
-- [[dot-constructor()_139]] - `references` [EXTRACTED]
-- [[dot-constructor()_140]] - `references` [EXTRACTED]
-- [[dot-constructor()_142]] - `references` [EXTRACTED]
-- [[dot-constructor()_143]] - `references` [EXTRACTED]
-- [[dot-constructor()_144]] - `references` [EXTRACTED]
-- [[dot-onModuleInit()_1]] - `method` [EXTRACTED]
+- [[dot-constructor()_148]] - `references` [EXTRACTED]
+- [[dot-constructor()_149]] - `references` [EXTRACTED]
+- [[dot-constructor()_150]] - `references` [EXTRACTED]
+- [[dot-constructor()_151]] - `references` [EXTRACTED]
+- [[dot-constructor()_152]] - `references` [EXTRACTED]
+- [[dot-onModuleInit()]] - `method` [EXTRACTED]
 - [[dot-register()]] - `method` [EXTRACTED]
-- [[Injectable_78]] - `references` [EXTRACTED]
+- [[Injectable_83]] - `references` [EXTRACTED]
 - [[boot-registration.registry.ts]] - `contains` [EXTRACTED]
 - [[consent-backfill.queue.ts]] - `imports` [EXTRACTED]
 - [[deadline-scan.queue.ts]] - `imports` [EXTRACTED]
@@ -28,4 +28,4 @@ tags:
 - [[schedule-reconciliation.service.ts]] - `imports` [EXTRACTED]
 - [[sdf-cycle-scan.queue.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/BootRegistrationRegistry

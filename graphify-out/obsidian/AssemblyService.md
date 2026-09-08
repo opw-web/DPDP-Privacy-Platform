@@ -12,12 +12,12 @@ tags:
 # AssemblyService
 
 ## Connections
-- [[dot-constructor()_5]] - `references` [EXTRACTED]
-- [[dot-constructor()_8]] - `references` [EXTRACTED]
+- [[dot-constructor()_50]] - `references` [EXTRACTED]
 - [[dot-constructor()_9]] - `references` [EXTRACTED]
-- [[dot-constructor()_127]] - `references` [EXTRACTED]
+- [[dot-constructor()_10]] - `references` [EXTRACTED]
+- [[dot-constructor()_100]] - `references` [EXTRACTED]
 - [[dot-rebuild()]] - `method` [EXTRACTED]
-- [[Injectable_5]] - `references` [EXTRACTED]
+- [[Injectable_4]] - `references` [EXTRACTED]
 - [[assembly.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[assembly.service.ts]] - `contains` [EXTRACTED]
 - [[identity.module.ts]] - `imports` [EXTRACTED]

@@ -1,99 +1,81 @@
 ---
 type: community
-members: 86
+members: 68
 ---
 
 # PrismaService
 
-**Members:** 86 nodes
+**Members:** 68 nodes
 
 ## Members
-- [[dot-constructor()_23]] - code - dpdp-platform/backend/src/common/prisma/prisma.service.ts
+- [[dot-constructor()_76]] - code - dpdp-platform/backend/src/common/prisma/prisma.service.ts
 - [[dot-onModuleDestroy()_1]] - code - dpdp-platform/backend/src/common/prisma/prisma.service.ts
-- [[dot-onModuleInit()]] - code - dpdp-platform/backend/src/common/prisma/prisma.service.ts
+- [[dot-onModuleInit()_1]] - code - dpdp-platform/backend/src/common/prisma/prisma.service.ts
 - [[dot-scoped()]] - code - dpdp-platform/backend/src/common/prisma/prisma.service.ts
-- [[COMPLIANCE_RULE_SEEDS]] - code - dpdp-platform/backend/prisma/seed/compliance-rules.ts
-- [[ComplianceRuleSeed]] - code - dpdp-platform/backend/prisma/seed/compliance-rules.ts
-- [[EXPECTED_BASIS_BY_RULE_CODE]] - code - dpdp-platform/backend/test/compliance-rules.e2e-spec.ts
-- [[GRIEVANCE_STATUTORY_BASELINE_RULE_CODE]] - code - dpdp-platform/backend/prisma/seed/compliance-rules.ts
-- [[Injectable_13]] - code
-- [[OrgWithEmployee]] - code - dpdp-platform/backend/test/support/e2e-harness.ts
+- [[ASSESSMENT_KINDS]] - code - dpdp-platform/backend/src/modules/sdf/sdf-cycle-scan.service.ts
+- [[AuditChainVerifyJobData]] - code - dpdp-platform/backend/src/queues/audit-chain-verify.processor.ts
+- [[AuditChainVerifySummary]] - code - dpdp-platform/backend/src/queues/audit-chain-verify.processor.ts
+- [[CAMPAIGN_SEND_MAX_ATTEMPTS]] - code - dpdp-platform/backend/src/queues/campaign-send.queue.ts
+- [[CAMPAIGN_SEND_QUEUE_NAME]] - code - dpdp-platform/backend/src/queues/campaign-send.queue.ts
+- [[CAMPAIGN_SEND_WORKER_CONCURRENCY]] - code - dpdp-platform/backend/src/queues/campaign-send.queue.ts
+- [[ConsentBackfillSummary]] - code - dpdp-platform/backend/src/modules/consents/consent-backfill.service.ts
+- [[Global]] - code
+- [[Injectable_48]] - code
+- [[Module_31]] - code
+- [[OPEN_ERASURE_TASK_STATES_2]] - code - dpdp-platform/backend/src/modules/retention/retention-scan.service.ts
+- [[PreErasureNoticeSummary]] - code - dpdp-platform/backend/src/modules/retention/pre-erasure-notice.service.ts
+- [[PrismaModule]] - code - dpdp-platform/backend/src/common/prisma/prisma.module.ts
 - [[PrismaService]] - code - dpdp-platform/backend/src/common/prisma/prisma.service.ts
-- [[TestApp]] - code - dpdp-platform/backend/test/support/e2e-harness.ts
-- [[addEmployee()]] - code - dpdp-platform/backend/test/evidence.e2e-spec.ts
-- [[addEmployeeToOrg()]] - code - dpdp-platform/backend/test/campaigns.e2e-spec.ts
-- [[ageStatusFilter()]] - code - dpdp-platform/backend/test/audiences.e2e-spec.ts
-- [[attachPurposeAndMapping()]] - code - dpdp-platform/backend/test/notices.e2e-spec.ts
-- [[audiences.e2e-spec.ts]] - code - dpdp-platform/backend/test/audiences.e2e-spec.ts
-- [[authed()]] - code - dpdp-platform/backend/test/templates.e2e-spec.ts
-- [[boardnon-disclosure.ts]] - code - dpdp-platform/backend/src/modules/board/non-disclosure.ts
-- [[bootstrapTestApp()]] - code - dpdp-platform/backend/test/support/e2e-harness.ts
-- [[breaches.e2e-spec.ts]] - code - dpdp-platform/backend/test/breaches.e2e-spec.ts
-- [[bufferBinaryResponse()]] - code - dpdp-platform/backend/test/evidence.e2e-spec.ts
-- [[campaigns.e2e-spec.ts]] - code - dpdp-platform/backend/test/campaigns.e2e-spec.ts
-- [[children.e2e-spec.ts]] - code - dpdp-platform/backend/test/children.e2e-spec.ts
-- [[cleanupOrgs()]] - code - dpdp-platform/backend/test/support/e2e-harness.ts
-- [[completePurpose()]] - code - dpdp-platform/backend/test/notices.e2e-spec.ts
-- [[compliance-rules.e2e-spec.ts]] - code - dpdp-platform/backend/test/compliance-rules.e2e-spec.ts
-- [[compliance-rules.ts]] - code - dpdp-platform/backend/prisma/seed/compliance-rules.ts
-- [[createAdmin()]] - code - dpdp-platform/backend/test/notices.e2e-spec.ts
-- [[createBreach()]] - code - dpdp-platform/backend/test/campaigns.e2e-spec.ts
-- [[createConsentPurpose()]] - code - dpdp-platform/backend/test/campaigns.e2e-spec.ts
-- [[createDataSource()_2]] - code - dpdp-platform/backend/test/notices.e2e-spec.ts
-- [[createEmployeeWithPermissions()]] - code - dpdp-platform/backend/test/retention.e2e-spec.ts
-- [[createNotice()]] - code - dpdp-platform/backend/test/campaigns.e2e-spec.ts
-- [[createNotice()_1]] - code - dpdp-platform/backend/test/notices.e2e-spec.ts
-- [[createOrgWithEmployee()]] - code - dpdp-platform/backend/test/compliance-rules.e2e-spec.ts
-- [[createOrgWithEmployee()_1]] - code - dpdp-platform/backend/test/support/e2e-harness.ts
-- [[createPrincipal()]] - code - dpdp-platform/backend/test/campaigns.e2e-spec.ts
-- [[createPrincipal()_1]] - code - dpdp-platform/backend/test/evidence.e2e-spec.ts
-- [[createPrincipal()_2]] - code - dpdp-platform/backend/test/information-requests.e2e-spec.ts
-- [[createPrincipal()_3]] - code - dpdp-platform/backend/test/mvp2-schema-constraints.e2e-spec.ts
-- [[createPrincipal()_4]] - code - dpdp-platform/backend/test/principal-portal-mvp2.e2e-spec.ts
-- [[createPurpose()_1]] - code - dpdp-platform/backend/test/notices.e2e-spec.ts
-- [[e2e-harness.ts]] - code - dpdp-platform/backend/test/support/e2e-harness.ts
-- [[ensurePermission()_3]] - code - dpdp-platform/backend/test/support/e2e-harness.ts
-- [[evidence.e2e-spec.ts]] - code - dpdp-platform/backend/test/evidence.e2e-spec.ts
-- [[extendWithTenantScoping()]] - code - dpdp-platform/backend/src/common/prisma/prisma.service.ts
-- [[extractPdfText()]] - code - dpdp-platform/backend/test/evidence.e2e-spec.ts
-- [[findActiveNonDisclosureDirections()]] - code - dpdp-platform/backend/src/modules/board/non-disclosure.ts
-- [[fixture()]] - code - dpdp-platform/backend/test/breaches.e2e-spec.ts
-- [[fixtureWithBoardInitial()]] - code - dpdp-platform/backend/test/breaches.e2e-spec.ts
-- [[getRecipients()]] - code - dpdp-platform/backend/test/campaigns.e2e-spec.ts
-- [[grievancePayload()]] - code - dpdp-platform/backend/test/compliance-rules.e2e-spec.ts
-- [[information-requests.e2e-spec.ts]] - code - dpdp-platform/backend/test/information-requests.e2e-spec.ts
-- [[isUnderActiveNonDisclosure()]] - code - dpdp-platform/backend/src/modules/board/non-disclosure.ts
-- [[makeNoPermActor()]] - code - dpdp-platform/backend/test/children.e2e-spec.ts
-- [[makeOrg()]] - code - dpdp-platform/backend/test/children.e2e-spec.ts
-- [[makePrincipal()]] - code - dpdp-platform/backend/test/children.e2e-spec.ts
-- [[makeSdfOrg()]] - code - dpdp-platform/backend/test/sdf.e2e-spec.ts
-- [[markAffected()]] - code - dpdp-platform/backend/test/campaigns.e2e-spec.ts
-- [[mvp2-rbac.e2e-spec.ts]] - code - dpdp-platform/backend/test/mvp2-rbac.e2e-spec.ts
-- [[mvp2-schema-constraints.e2e-spec.ts]] - code - dpdp-platform/backend/test/mvp2-schema-constraints.e2e-spec.ts
-- [[mvp2-tenant-isolation.e2e-spec.ts]] - code - dpdp-platform/backend/test/mvp2-tenant-isolation.e2e-spec.ts
-- [[notices.e2e-spec.ts]] - code - dpdp-platform/backend/test/notices.e2e-spec.ts
-- [[obligations()]] - code - dpdp-platform/backend/test/breaches.e2e-spec.ts
-- [[orgWithSender()]] - code - dpdp-platform/backend/test/templates.e2e-spec.ts
-- [[parseStoreZip()]] - code - dpdp-platform/backend/test/evidence.e2e-spec.ts
-- [[permissions.controller.ts]] - code - dpdp-platform/backend/src/modules/employees/permissions.controller.ts
-- [[principal-portal-mvp2.e2e-spec.ts]] - code - dpdp-platform/backend/test/principal-portal-mvp2.e2e-spec.ts
+- [[RetentionScanSummary]] - code - dpdp-platform/backend/src/modules/retention/retention-scan.service.ts
+- [[SDF_FIELD_NAMES]] - code - dpdp-platform/backend/src/modules/organizations/organizations.service.ts
+- [[SdfCycleScanSummary]] - code - dpdp-platform/backend/src/modules/sdf/sdf-cycle-scan.service.ts
+- [[THIRD_SCHEDULE_FIELD_NAMES]] - code - dpdp-platform/backend/src/modules/organizations/organizations.service.ts
+- [[TenantContext]] - code - dpdp-platform/backend/src/common/tenant/tenant-context.ts
+- [[TenantStore]] - code - dpdp-platform/backend/src/common/tenant/tenant-context.ts
+- [[access-log.e2e-spec.ts]] - code - dpdp-platform/backend/test/access-log.e2e-spec.ts
+- [[addByDeadlineUnit()]] - code - dpdp-platform/backend/src/modules/compliance/compliance.service.ts
+- [[audit-chain-verify.processor.ts]] - code - dpdp-platform/backend/src/queues/audit-chain-verify.processor.ts
+- [[audit-chain.service.ts]] - code - dpdp-platform/backend/src/modules/evidence/audit-chain.service.ts
+- [[audit.e2e-spec.ts]] - code - dpdp-platform/backend/test/audit.e2e-spec.ts
+- [[authed()_3]] - code - dpdp-platform/backend/test/retention.e2e-spec.ts
+- [[breach-principal-notice-dispatch.processor.ts]] - code - dpdp-platform/backend/src/queues/breach-principal-notice-dispatch.processor.ts
+- [[campaign-send.processor.ts]] - code - dpdp-platform/backend/src/queues/campaign-send.processor.ts
+- [[campaign-send.queue.ts]] - code - dpdp-platform/backend/src/queues/campaign-send.queue.ts
+- [[campaignSendJobId()]] - code - dpdp-platform/backend/src/queues/campaign-send.queue.ts
+- [[consent-backfill.service.ts]] - code - dpdp-platform/backend/src/modules/consents/consent-backfill.service.ts
+- [[consents.e2e-spec.ts]] - code - dpdp-platform/backend/test/consents.e2e-spec.ts
+- [[createComplianceRule()]] - code - dpdp-platform/backend/test/retention.e2e-spec.ts
+- [[createConsentPurpose()_1]] - code - dpdp-platform/backend/test/consents.e2e-spec.ts
+- [[createIdentityLinkAsAService()]] - code - dpdp-platform/backend/test/tenant-isolation.e2e-spec.ts
+- [[createLegitimateUsePurpose()]] - code - dpdp-platform/backend/test/consents.e2e-spec.ts
+- [[createOrg()_2]] - code - dpdp-platform/backend/test/access-log.e2e-spec.ts
+- [[createOrg()_3]] - code - dpdp-platform/backend/test/audit.e2e-spec.ts
+- [[createOrg()_4]] - code - dpdp-platform/backend/test/retention.e2e-spec.ts
+- [[createPrincipal()_7]] - code - dpdp-platform/backend/test/consents.e2e-spec.ts
+- [[createPrincipal()_8]] - code - dpdp-platform/backend/test/retention.e2e-spec.ts
+- [[createPublishedNotice()]] - code - dpdp-platform/backend/test/consents.e2e-spec.ts
+- [[createTask()]] - code - dpdp-platform/backend/test/retention.e2e-spec.ts
+- [[extendWithTenantScoping()_1]] - code - dpdp-platform/backend/src/common/prisma/prisma.service.ts
+- [[isThenable()_1]] - code - dpdp-platform/backend/src/common/tenant/tenant-context.ts
+- [[lazyThenable()]] - code - dpdp-platform/backend/src/common/tenant/tenant-context.spec.ts
+- [[listPrincipalsAsAService()]] - code - dpdp-platform/backend/test/tenant-isolation.e2e-spec.ts
+- [[organizations.service.ts]] - code - dpdp-platform/backend/src/modules/organizations/organizations.service.ts
+- [[pre-erasure-notice.service.ts]] - code - dpdp-platform/backend/src/modules/retention/pre-erasure-notice.service.ts
+- [[principalPortalToken()]] - code - dpdp-platform/backend/test/consents.e2e-spec.ts
 - [[prisma.module.ts]] - code - dpdp-platform/backend/src/common/prisma/prisma.module.ts
-- [[rulePayload()]] - code - dpdp-platform/backend/test/compliance-rules.e2e-spec.ts
-- [[rulePayload_forVersionTest()]] - code - dpdp-platform/backend/test/compliance-rules.e2e-spec.ts
-- [[sdf.e2e-spec.ts]] - code - dpdp-platform/backend/test/sdf.e2e-spec.ts
-- [[seedComplianceRules()]] - code - dpdp-platform/backend/prisma/seed/compliance-rules.ts
-- [[seedGrievanceStatutoryBaseline()]] - code - dpdp-platform/backend/prisma/seed/compliance-rules.ts
-- [[setConsent()]] - code - dpdp-platform/backend/test/campaigns.e2e-spec.ts
-- [[setupFixture()]] - code - dpdp-platform/backend/test/notices.e2e-spec.ts
-- [[setupOrg()]] - code - dpdp-platform/backend/test/campaigns.e2e-spec.ts
-- [[systemActorStore()]] - code - dpdp-platform/backend/test/information-requests.e2e-spec.ts
-- [[systemActorStore()_1]] - code - dpdp-platform/backend/test/sdf.e2e-spec.ts
-- [[templates.e2e-spec.ts]] - code - dpdp-platform/backend/test/templates.e2e-spec.ts
-- [[tenantStoreFor()]] - code - dpdp-platform/backend/test/evidence.e2e-spec.ts
-- [[validExemptionPayload()]] - code - dpdp-platform/backend/test/children.e2e-spec.ts
-- [[validGuardianPayload()]] - code - dpdp-platform/backend/test/children.e2e-spec.ts
-- [[waitUntil()_1]] - code - dpdp-platform/backend/test/support/e2e-harness.ts
-- [[{   seedComplianceRules,   seedGrievanceStatutoryBaseline, }]] - code - dpdp-platform/backend/test/compliance-rules.e2e-spec.ts
+- [[prisma.service.ts]] - code - dpdp-platform/backend/src/common/prisma/prisma.service.ts
+- [[retention-scan.service.ts]] - code - dpdp-platform/backend/src/modules/retention/retention-scan.service.ts
+- [[retention.e2e-spec.ts]] - code - dpdp-platform/backend/test/retention.e2e-spec.ts
+- [[runPreErasureNotice()]] - code - dpdp-platform/backend/test/retention.e2e-spec.ts
+- [[runRetentionScan()]] - code - dpdp-platform/backend/test/retention.e2e-spec.ts
+- [[sdf-cycle-scan.service.ts]] - code - dpdp-platform/backend/src/modules/sdf/sdf-cycle-scan.service.ts
+- [[storage_1]] - code - dpdp-platform/backend/src/common/tenant/tenant-context.ts
+- [[systemActorStore()_2]] - code - dpdp-platform/backend/test/retention.e2e-spec.ts
+- [[systemStore()]] - code - dpdp-platform/backend/test/consents.e2e-spec.ts
+- [[tenant-context.spec.ts]] - code - dpdp-platform/backend/src/common/tenant/tenant-context.spec.ts
+- [[tenant-context.ts]] - code - dpdp-platform/backend/src/common/tenant/tenant-context.ts
+- [[tenant-isolation.e2e-spec.ts]] - code - dpdp-platform/backend/test/tenant-isolation.e2e-spec.ts
+- [[tenant.middleware.ts]] - code - dpdp-platform/backend/src/common/tenant/tenant.middleware.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -103,81 +85,80 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 59 edges to [[_COMMUNITY_prisma.service.ts]]
-- 10 edges to [[_COMMUNITY_erasure-task.service.ts]]
-- 8 edges to [[_COMMUNITY_AuditService]]
-- 8 edges to [[_COMMUNITY_AppModule]]
-- 7 edges to [[_COMMUNITY_requests.service.ts]]
-- 7 edges to [[_COMMUNITY_notifications.e2e-spec.ts]]
-- 6 edges to [[_COMMUNITY_seed-scale.ts]]
-- 6 edges to [[_COMMUNITY_templates.service.ts]]
-- 6 edges to [[_COMMUNITY_access-report-render.ts]]
-- 5 edges to [[_COMMUNITY_seed.ts]]
+- 64 edges to [[_COMMUNITY_supertest]]
+- 38 edges to [[_COMMUNITY_audit.service.ts]]
+- 37 edges to [[_COMMUNITY_@nestjscommon]]
+- 24 edges to [[_COMMUNITY_app.module.ts]]
+- 19 edges to [[_COMMUNITY_AppModule]]
+- 17 edges to [[_COMMUNITY_argon2]]
+- 13 edges to [[_COMMUNITY_erasure-task.service.ts]]
+- 12 edges to [[_COMMUNITY_@prismaclient]]
+- 11 edges to [[_COMMUNITY_token.service.ts]]
+- 11 edges to [[_COMMUNITY_sync.e2e-spec.ts]]
+- 10 edges to [[_COMMUNITY_compliance.service.ts]]
+- 10 edges to [[_COMMUNITY_principal-auth.service.ts]]
+- 10 edges to [[_COMMUNITY_principals.e2e-spec.ts]]
+- 9 edges to [[_COMMUNITY_AuditService]]
+- 8 edges to [[_COMMUNITY_notifications.service.ts]]
+- 8 edges to [[_COMMUNITY_principals.service.ts]]
+- 8 edges to [[_COMMUNITY_mvp2-schedules.ts]]
+- 7 edges to [[_COMMUNITY_NotificationsService]]
+- 7 edges to [[_COMMUNITY_sdf-assessment.service.ts]]
+- 7 edges to [[_COMMUNITY_sync-pipeline.service.ts]]
+- 6 edges to [[_COMMUNITY_RetentionScanService]]
+- 5 edges to [[_COMMUNITY_breach-principal-notice-dispatch.queue.ts]]
+- 5 edges to [[_COMMUNITY_seed-scale.ts]]
 - 5 edges to [[_COMMUNITY_access-report.service.ts]]
-- 5 edges to [[_COMMUNITY_breaches.module.ts]]
-- 4 edges to [[_COMMUNITY_RequirePermission]]
+- 5 edges to [[_COMMUNITY_deadline-scan.processor.ts]]
+- 5 edges to [[_COMMUNITY_audit-read.e2e-spec.ts]]
+- 5 edges to [[_COMMUNITY_merge-unmerge.e2e-spec.ts]]
+- 5 edges to [[_COMMUNITY_notifications.e2e-spec.ts]]
+- 5 edges to [[_COMMUNITY_step6-conflict-acceptance.e2e-spec.ts]]
+- 5 edges to [[_COMMUNITY_CampaignsService]]
+- 5 edges to [[_COMMUNITY_canonicalJson]]
+- 5 edges to [[_COMMUNITY_tenant.extension.ts]]
+- 4 edges to [[_COMMUNITY_AuditChainService]]
+- 4 edges to [[_COMMUNITY_compliance-rules.e2e-spec.ts]]
+- 4 edges to [[_COMMUNITY_children.module.ts]]
+- 4 edges to [[_COMMUNITY_mappings.service.ts]]
 - 4 edges to [[_COMMUNITY_campaigns.service.ts]]
-- 4 edges to [[_COMMUNITY_app.module.ts]]
+- 4 edges to [[_COMMUNITY_me-rights.service.ts]]
+- 4 edges to [[_COMMUNITY_purposes.service.ts]]
+- 4 edges to [[_COMMUNITY_requests.service.ts]]
+- 4 edges to [[_COMMUNITY_sync.service.ts]]
 - 3 edges to [[_COMMUNITY_guardians.service.ts]]
-- 3 edges to [[_COMMUNITY_seed-principals.ts]]
-- 3 edges to [[_COMMUNITY_dot-record]]
-- 3 edges to [[_COMMUNITY_principal-evidence.service.ts]]
-- 3 edges to [[_COMMUNITY_notifications.service.ts]]
-- 2 edges to [[_COMMUNITY_mvp2-demo.ts]]
-- 2 edges to [[_COMMUNITY_principal-auth.service.ts]]
-- 2 edges to [[_COMMUNITY_mappings.service.ts]]
-- 2 edges to [[_COMMUNITY_merge-unmerge.e2e-spec.ts]]
-- 2 edges to [[_COMMUNITY_principals.service.ts]]
-- 2 edges to [[_COMMUNITY_purposes.service.ts]]
-- 2 edges to [[_COMMUNITY_audit-chain-verify.processor.ts]]
-- 2 edges to [[_COMMUNITY_assembly.service.ts]]
-- 2 edges to [[_COMMUNITY_data-sources.e2e-spec.ts]]
-- 2 edges to [[_COMMUNITY_ScopedTransactionClient]]
-- 2 edges to [[_COMMUNITY_MaskingService]]
-- 2 edges to [[_COMMUNITY_CampaignsService]]
-- 1 edge to [[_COMMUNITY_AccessReportService]]
-- 1 edge to [[_COMMUNITY_Public]]
-- 1 edge to [[_COMMUNITY_audit-read.service.ts]]
-- 1 edge to [[_COMMUNITY_CreateVoluntaryUndertakingDto]]
-- 1 edge to [[_COMMUNITY_age-status.service.ts]]
-- 1 edge to [[_COMMUNITY_child-exemptions.service.ts]]
-- 1 edge to [[_COMMUNITY_data-sources.service.ts]]
-- 1 edge to [[_COMMUNITY_employees.service.ts]]
-- 1 edge to [[_COMMUNITY_roles.service.ts]]
-- 1 edge to [[_COMMUNITY_AuditChainService]]
-- 1 edge to [[_COMMUNITY_csv-writer.ts]]
-- 1 edge to [[_COMMUNITY_evidence-pack.service.ts]]
-- 1 edge to [[_COMMUNITY_inventory.service.ts]]
-- 1 edge to [[_COMMUNITY_ropa-export.service.ts]]
-- 1 edge to [[_COMMUNITY_compile-audience.ts]]
-- 1 edge to [[_COMMUNITY_notices.service.ts]]
-- 1 edge to [[_COMMUNITY_notifications.controller.ts]]
-- 1 edge to [[_COMMUNITY_NotificationSendInput]]
-- 1 edge to [[_COMMUNITY_me-rights.service.ts]]
-- 1 edge to [[_COMMUNITY_recipients.service.ts]]
-- 1 edge to [[_COMMUNITY_retention.service.ts]]
-- 1 edge to [[_COMMUNITY_security-measures.service.ts]]
-- 1 edge to [[_COMMUNITY_CreateSharingActivityDto]]
-- 1 edge to [[_COMMUNITY_registers.module.ts]]
-- 1 edge to [[_COMMUNITY_algorithm-register.service.ts]]
-- 1 edge to [[_COMMUNITY_sync-pipeline.service.ts]]
-- 1 edge to [[_COMMUNITY_sync.service.ts]]
-- 1 edge to [[_COMMUNITY_SyncQueueService]]
-- 1 edge to [[_COMMUNITY_canonicalJson]]
-- 1 edge to [[_COMMUNITY_inventory.e2e-spec.ts]]
-- 1 edge to [[_COMMUNITY_principal-auth.e2e-spec.ts]]
-- 1 edge to [[_COMMUNITY_principal-portal.e2e-spec.ts]]
-- 1 edge to [[_COMMUNITY_registers.e2e-spec.ts]]
-- 1 edge to [[_COMMUNITY_step6-conflict-acceptance.e2e-spec.ts]]
-- 1 edge to [[_COMMUNITY_queues.module.ts]]
-- 1 edge to [[_COMMUNITY_PrismaModule]]
-- 1 edge to [[_COMMUNITY_PermissionsController]]
-- 1 edge to [[_COMMUNITY_mvp2-schedules.ts]]
+- 3 edges to [[_COMMUNITY_PreErasureNoticeService]]
+- 3 edges to [[_COMMUNITY_consent-backfill.queue.ts]]
+- 3 edges to [[_COMMUNITY_audit-read.service.ts]]
+- 3 edges to [[_COMMUNITY_breach.service.ts]]
+- 3 edges to [[_COMMUNITY_sdf-cycle-scan.queue.ts]]
+- 2 edges to [[_COMMUNITY_UpdateOrganizationDto]]
+- 2 edges to [[_COMMUNITY_TokenService]]
+- 2 edges to [[_COMMUNITY_CampaignSendQueueService]]
+- 2 edges to [[_COMMUNITY_Public]]
+- 2 edges to [[_COMMUNITY_CreateVoluntaryUndertakingDto]]
+- 2 edges to [[_COMMUNITY_employees.service.ts]]
+- 2 edges to [[_COMMUNITY_candidates.service.ts]]
+- 2 edges to [[_COMMUNITY_inventory.service.ts]]
+- 2 edges to [[_COMMUNITY_compile-audience.ts]]
+- 2 edges to [[_COMMUNITY_templates.service.ts]]
+- 2 edges to [[_COMMUNITY_notices.service.ts]]
+- 2 edges to [[_COMMUNITY_notifications.controller.ts]]
+- 2 edges to [[_COMMUNITY_retention.service.ts]]
+- 2 edges to [[_COMMUNITY_security-measures.service.ts]]
+- 2 edges to [[_COMMUNITY_schedule-reconciliation.service.ts]]
+- 2 edges to [[_COMMUNITY_principal-portal.e2e-spec.ts]]
+- 2 edges to [[_COMMUNITY_registers.e2e-spec.ts]]
+- 1 edge to [[_COMMUNITY_EmployeeAuthService]]
+- 1 edge to [[_COMMUNITY_PrincipalAuthService]]
+- 1 edge to [[_COMMUNITY_dot-record]]
+- 1 edge to [[_COMMUNITY_ConsentsService]]
 - 1 edge to [[_COMMUNITY_csvDocument]]
+- 1 edge to [[_COMMUNITY_SdfController]]
 
 ## Top bridge nodes
-- [[PrismaService]] - degree 132, connects to 62 communities
-- [[e2e-harness.ts]] - degree 31, connects to 7 communities
-- [[evidence.e2e-spec.ts]] - degree 25, connects to 6 communities
-- [[campaigns.e2e-spec.ts]] - degree 26, connects to 5 communities
-- [[bootstrapTestApp()]] - degree 20, connects to 5 communities
+- [[prisma.service.ts]] - degree 129, connects to 51 communities
+- [[PrismaService]] - degree 132, connects to 50 communities
+- [[tenant-context.ts]] - degree 53, connects to 18 communities
+- [[TenantContext]] - degree 49, connects to 18 communities
+- [[TenantStore]] - degree 36, connects to 14 communities

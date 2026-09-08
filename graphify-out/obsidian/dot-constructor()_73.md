@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/evidence-pack.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/sdf.controller.ts"
 type: "code"
-community: "EvidencePackController"
-location: "L11"
+community: "AlgorithmRegisterService"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EvidencePackController
+  - community/AlgorithmRegisterService
 ---
 
 # .constructor()
 
 ## Connections
-- [[EvidencePackController]] - `method` [EXTRACTED]
-- [[EvidencePackService]] - `references` [EXTRACTED]
+- [[AlgorithmRegisterService]] - `references` [EXTRACTED]
+- [[SdfAssessmentService]] - `references` [EXTRACTED]
+- [[SdfController]] - `method` [EXTRACTED]
+- [[SdfGapsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EvidencePackController
+#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterService

@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sdf/dto/algorithm-operations.ts"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/sdf/types.ts"
 type: "code"
-community: "algorithm-register.service.ts"
+community: "react-router-dom"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/algorithm-registerservicets
+  - community/react-router-dom
 ---
 
 # ALGORITHM_OPERATIONS
 
 ## Connections
-- [[algorithm-operations.ts]] - `contains` [EXTRACTED]
-- [[create-algorithm-entry.dto.ts]] - `imports` [EXTRACTED]
-- [[update-algorithm-entry.dto.ts]] - `imports` [EXTRACTED]
+- [[AlgorithmFormFields.tsx]] - `imports` [EXTRACTED]
+- [[sdftypes.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/algorithm-registerservicets
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

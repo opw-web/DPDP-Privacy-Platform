@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".record"
+community: "TemplatesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/TemplatesService
 ---
 
 # IsOptional
 
 ## Connections
-- [[AffectedPrincipalsDto]] - `references` [EXTRACTED]
+- [[UpdateTemplateDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

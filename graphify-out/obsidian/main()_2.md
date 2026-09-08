@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/prisma/seed-principals.ts"
+source_file: "dpdp-platform/backend/prisma/seed/mvp2-demo.ts"
 type: "code"
-community: "seed-principals.ts"
-location: "L238"
+community: "argon2"
+location: "L321"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/seed-principalsts
+  - community/argon2
 ---
 
 # main()
 
 ## Connections
 - [[PrismaService]] - `calls` [EXTRACTED]
-- [[runSeedPrincipals()]] - `calls` [EXTRACTED]
-- [[seed-principals.ts]] - `contains` [EXTRACTED]
+- [[mvp2-demo.ts]] - `contains` [EXTRACTED]
+- [[seedMvp2Demo()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/seed-principalsts
+#graphify/code #graphify/EXTRACTED #community/argon2

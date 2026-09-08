@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/notices/NoticePreview.tsx"
 type: "code"
-community: "button.tsx"
+community: "react"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react
 ---
 
 # NoticeStandalonePreview()
@@ -16,4 +16,4 @@ tags:
 - [[NoticePreview.test.tsx]] - `imports` [EXTRACTED]
 - [[NoticePreview.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/react

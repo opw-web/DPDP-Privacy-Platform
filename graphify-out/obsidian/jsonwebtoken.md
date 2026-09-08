@@ -13,6 +13,5 @@ tags:
 
 ## Connections
 - [[dependencies_1]] - `contains` [EXTRACTED]
-- [[jsonwebtoken_1]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/dependencies

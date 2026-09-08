@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/support/e2e-harness.ts"
 type: "code"
-community: "PrismaService"
+community: "supertest"
 location: "L224"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/supertest
 ---
 
 # waitUntil()
@@ -19,4 +19,4 @@ tags:
 - [[notifications.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[performance.e2e-spec.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/supertest

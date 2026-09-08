@@ -12,6 +12,7 @@ tags:
 # .list()
 
 ## Connections
+- [[dot-listTasks()]] - `calls` [INFERRED]
 - [[ErasureTaskService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/erasure-taskservicets

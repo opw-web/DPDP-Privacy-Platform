@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CandidatesService"
+community: ".record"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CandidatesService
+  - community/record
 ---
 
 # Injectable
 
 ## Connections
-- [[CandidatesService]] - `references` [EXTRACTED]
+- [[BreachService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CandidatesService
+#graphify/code #graphify/EXTRACTED #community/record

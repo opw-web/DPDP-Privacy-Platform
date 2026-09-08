@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateNoticeVersionDto"
+community: "compliance.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateNoticeVersionDto
+  - community/complianceservicets
 ---
 
 # IsOptional
 
 ## Connections
-- [[CreateNoticeVersionDto]] - `references` [EXTRACTED]
-- [[ItemisedFieldInputDto]] - `references` [EXTRACTED]
+- [[UpdateComplianceRuleDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateNoticeVersionDto
+#graphify/code #graphify/EXTRACTED #community/complianceservicets

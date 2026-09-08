@@ -1,18 +1,16 @@
 ---
-source_file: "dpdp-platform/frontend/package.json"
+source_file: "tailwindcss"
 type: "code"
-community: "devDependencies"
-location: "L57"
+community: "tailwind.config.js"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/devDependencies
+  - community/tailwindconfigjs
 ---
 
 # tailwindcss
 
 ## Connections
-- [[devDependencies_2]] - `contains` [EXTRACTED]
-- [[tailwindcss_2]] - `imports` [EXTRACTED]
+- [[tailwind.config.js]] - `dynamic_import` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/devDependencies
+#graphify/code #graphify/EXTRACTED #community/tailwindconfigjs

@@ -1,23 +1,24 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/requests/RequestWorkPanel.tsx"
 type: "code"
-community: "button.tsx"
+community: "react"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react
 ---
 
 # RequestWorkPanel.tsx
 
 ## Connections
+- [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
 - [[ApiError]] - `imports` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
 - [[Checkbox]] - `imports` [EXTRACTED]
 - [[ErasureCompletionEvidence]] - `contains` [EXTRACTED]
 - [[Input]] - `imports` [EXTRACTED]
-- [[Label]] - `imports` [EXTRACTED]
+- [[Label_1]] - `imports` [EXTRACTED]
 - [[REQUEST_TRANSITIONS]] - `imports` [EXTRACTED]
 - [[RequestDetailPage.tsx]] - `imports_from` [EXTRACTED]
 - [[RequestRecord]] - `imports` [EXTRACTED]
@@ -34,8 +35,10 @@ tags:
 - [[input.tsx]] - `imports_from` [EXTRACTED]
 - [[label.tsx]] - `imports_from` [EXTRACTED]
 - [[message()]] - `contains` [EXTRACTED]
+- [[react_1]] - `imports_from` [EXTRACTED]
 - [[requeststypes.ts]] - `imports_from` [EXTRACTED]
 - [[select.tsx]] - `imports_from` [EXTRACTED]
+- [[sonner_1]] - `imports_from` [EXTRACTED]
 - [[textarea.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/react

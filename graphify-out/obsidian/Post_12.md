@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "employees.service.ts"
+community: "TemplatesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeesservicets
+  - community/TemplatesService
 ---
 
 # Post
 
 ## Connections
-- [[dot-create()_17]] - `references` [EXTRACTED]
-- [[dot-resetPassword()]] - `references` [EXTRACTED]
+- [[dot-create()_12]] - `references` [EXTRACTED]
+- [[dot-preview()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeesservicets
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

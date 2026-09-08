@@ -1,21 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/employees.service.ts"
+source_file: "dpdp-platform/backend/src/modules/board/information-requests.controller.ts"
 type: "code"
-community: "employees.service.ts"
-location: "L98"
+community: "CreateInformationRequestDto"
+location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeesservicets
+  - community/CreateInformationRequestDto
 ---
 
 # .update()
 
 ## Connections
-- [[dot-record()]] - `calls` [INFERRED]
-- [[dot-resetPassword()_1]] - `calls` [EXTRACTED]
-- [[dot-update()_13]] - `calls` [INFERRED]
-- [[EmployeesService]] - `method` [EXTRACTED]
-- [[UpdateEmployeeDto]] - `references` [EXTRACTED]
+- [[dot-update()_15]] - `calls` [INFERRED]
+- [[Body_16]] - `references` [EXTRACTED]
+- [[InformationRequestsController]] - `method` [EXTRACTED]
+- [[Param_17]] - `references` [EXTRACTED]
+- [[Patch_7]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[UpdateInformationRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeesservicets
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

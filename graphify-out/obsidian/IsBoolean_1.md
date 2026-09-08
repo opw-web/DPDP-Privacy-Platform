@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ChangeStatusDto"
+community: "CreateComplianceRuleDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ChangeStatusDto
+  - community/CreateComplianceRuleDto
 ---
 
 # IsBoolean
 
 ## Connections
-- [[ChangeStatusDto]] - `references` [EXTRACTED]
-- [[ErasureProcessorChecklistDto]] - `references` [EXTRACTED]
-- [[ErasureSystemChecklistDto]] - `references` [EXTRACTED]
+- [[CreateComplianceRuleDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ChangeStatusDto
+#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto

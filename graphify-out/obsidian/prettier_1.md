@@ -1,17 +1,17 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "prettier"
+community: "backend/package.json"
 location: "L72"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/prettier
+  - community/backend/packagejson
 ---
 
 # prettier
 
 ## Connections
-- [[prettier]] - `imports` [EXTRACTED]
+- [[backendpackage.json]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/prettier
+#graphify/concept #graphify/EXTRACTED #community/backend/packagejson

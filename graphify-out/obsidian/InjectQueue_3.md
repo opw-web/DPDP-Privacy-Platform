@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SyncQueueService"
+community: "breach-principal-notice-dispatch.queue.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/breach-principal-notice-dispatchqueuets
 ---
 
 # InjectQueue
 
 ## Connections
-- [[dot-constructor()_139]] - `references` [EXTRACTED]
+- [[dot-constructor()_65]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/breach-principal-notice-dispatchqueuets

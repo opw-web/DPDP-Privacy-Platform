@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CampaignsService"
+community: "normalization.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampaignsService
+  - community/normalizationservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[CampaignsService]] - `references` [EXTRACTED]
+- [[NormalizationService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampaignsService
+#graphify/code #graphify/EXTRACTED #community/normalizationservicets

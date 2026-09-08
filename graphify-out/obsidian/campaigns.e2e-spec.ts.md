@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/test/campaigns.e2e-spec.ts"
 type: "code"
-community: "PrismaService"
+community: "supertest"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/supertest
 ---
 
 # campaigns.e2e-spec.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[CampaignSendJobData]] - `imports` [EXTRACTED]
 - [[CampaignsService]] - `imports` [EXTRACTED]
 - [[NotificationsService]] - `imports` [EXTRACTED]
@@ -19,6 +20,7 @@ tags:
 - [[TenantContext]] - `imports` [EXTRACTED]
 - [[TenantStore]] - `imports` [EXTRACTED]
 - [[addEmployeeToOrg()]] - `contains` [EXTRACTED]
+- [[argon2_1]] - `imports_from` [EXTRACTED]
 - [[bootstrapTestApp()]] - `imports` [EXTRACTED]
 - [[campaign-send.queue.ts]] - `imports_from` [EXTRACTED]
 - [[campaigns.service.ts]] - `imports_from` [EXTRACTED]
@@ -26,7 +28,7 @@ tags:
 - [[createBreach()]] - `contains` [EXTRACTED]
 - [[createConsentPurpose()]] - `contains` [EXTRACTED]
 - [[createNotice()]] - `contains` [EXTRACTED]
-- [[createOrgWithEmployee()_1]] - `imports` [EXTRACTED]
+- [[createOrgWithEmployee()]] - `imports` [EXTRACTED]
 - [[createPrincipal()]] - `contains` [EXTRACTED]
 - [[e2e-harness.ts]] - `imports_from` [EXTRACTED]
 - [[ensurePermission()_3]] - `imports` [EXTRACTED]
@@ -36,7 +38,8 @@ tags:
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[setConsent()]] - `contains` [EXTRACTED]
 - [[setupOrg()]] - `contains` [EXTRACTED]
+- [[supertest]] - `imports_from` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 - [[waitUntil()_1]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/supertest

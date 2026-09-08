@@ -1,20 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sdf/sdf.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts"
 type: "code"
-community: "AlgorithmRegisterService"
-location: "L28"
+community: "TemplatesService"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AlgorithmRegisterService
+  - community/TemplatesService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AlgorithmRegisterService]] - `references` [EXTRACTED]
-- [[SdfAssessmentService]] - `references` [EXTRACTED]
-- [[SdfController]] - `method` [EXTRACTED]
-- [[SdfGapsService]] - `references` [EXTRACTED]
+- [[TemplatesController]] - `method` [EXTRACTED]
+- [[TemplatesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterService
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

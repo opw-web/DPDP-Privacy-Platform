@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "audit-read.service.ts"
+community: "CreateTransferDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-readservicets
+  - community/CreateTransferDto
 ---
 
 # IsString
 
 ## Connections
-- [[AccessLogExportDto]] - `references` [EXTRACTED]
+- [[UpdateTransferDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-readservicets
+#graphify/code #graphify/EXTRACTED #community/CreateTransferDto

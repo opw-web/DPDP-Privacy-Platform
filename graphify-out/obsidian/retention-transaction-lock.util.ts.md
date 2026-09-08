@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/retention-transaction-lock.util.ts"
 type: "code"
-community: "erasure-task.service.ts"
+community: "audit.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/auditservicets
 ---
 
 # retention-transaction-lock.util.ts
@@ -20,4 +20,4 @@ tags:
 - [[retention-scan.service.ts]] - `imports_from` [EXTRACTED]
 - [[scoped-transaction-client.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/auditservicets

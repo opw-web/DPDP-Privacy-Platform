@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/schedule-reconciliation.service.ts"
 type: "code"
-community: "SyncQueueService"
+community: "schedule-reconciliation.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/schedule-reconciliationservicets
 ---
 
 # schedule-reconciliation.service.ts
 
 ## Connections
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[BootRegistrationRegistry]] - `imports` [EXTRACTED]
 - [[Mvp2ScheduleReconciliationService]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
@@ -27,4 +28,4 @@ tags:
 - [[sync.queue.ts]] - `imports_from` [EXTRACTED]
 - [[withBootTimeout()]] - `re_exports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/schedule-reconciliationservicets

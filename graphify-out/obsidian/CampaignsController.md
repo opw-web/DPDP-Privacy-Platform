@@ -1,27 +1,27 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
 type: "code"
-community: "RequirePermission"
+community: "AccessTokenPayload"
 location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/AccessTokenPayload
 ---
 
 # CampaignsController
 
 ## Connections
 - [[dot-approve()]] - `method` [EXTRACTED]
-- [[dot-constructor()_99]] - `method` [EXTRACTED]
-- [[dot-create()_14]] - `method` [EXTRACTED]
-- [[dot-get()_11]] - `method` [EXTRACTED]
-- [[dot-list()_21]] - `method` [EXTRACTED]
+- [[dot-constructor()_102]] - `method` [EXTRACTED]
+- [[dot-create()_1]] - `method` [EXTRACTED]
+- [[dot-get()_2]] - `method` [EXTRACTED]
+- [[dot-list()_1]] - `method` [EXTRACTED]
 - [[dot-listRecipients()]] - `method` [EXTRACTED]
-- [[dot-send()_6]] - `method` [EXTRACTED]
-- [[ApiTags_19]] - `references` [EXTRACTED]
-- [[Controller_20]] - `references` [EXTRACTED]
+- [[dot-send()]] - `method` [EXTRACTED]
+- [[ApiTags_2]] - `references` [EXTRACTED]
+- [[Controller_2]] - `references` [EXTRACTED]
 - [[campaigns.controller.ts]] - `contains` [EXTRACTED]
 - [[campaigns.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

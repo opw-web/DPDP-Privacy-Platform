@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "erasure-task.service.ts"
+community: "MailerService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/MailerService
 ---
 
 # Injectable
 
 ## Connections
-- [[ErasureTaskService]] - `references` [EXTRACTED]
+- [[MailerService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/MailerService

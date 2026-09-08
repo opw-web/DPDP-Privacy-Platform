@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateInformationRequestDto"
+community: "@nestjs/common"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateInformationRequestDto
+  - community/nestjs/common
 ---
 
 # Get
 
 ## Connections
-- [[dot-getById()_6]] - `references` [EXTRACTED]
-- [[dot-list()_26]] - `references` [EXTRACTED]
+- [[dot-list()_22]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

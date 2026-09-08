@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "age-status.service.ts"
+community: "employees.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/age-statusservicets
+  - community/employeesservicets
 ---
 
 # ApiProperty
 
 ## Connections
-- [[SetAgeStatusDto]] - `references` [EXTRACTED]
+- [[ResetEmployeePasswordDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/age-statusservicets
+#graphify/code #graphify/EXTRACTED #community/employeesservicets

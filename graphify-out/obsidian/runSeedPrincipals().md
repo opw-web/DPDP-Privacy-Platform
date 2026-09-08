@@ -1,21 +1,21 @@
 ---
 source_file: "dpdp-platform/backend/prisma/seed-principals.ts"
 type: "code"
-community: "seed-principals.ts"
+community: "argon2"
 location: "L220"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/seed-principalsts
+  - community/argon2
 ---
 
 # runSeedPrincipals()
 
 ## Connections
 - [[claimDemoPrincipalAccounts()]] - `calls` [EXTRACTED]
-- [[main()_2]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 - [[resolveDemoOrganizationId()]] - `calls` [EXTRACTED]
 - [[seed-principals.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[seed-principals.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/seed-principalsts
+#graphify/code #graphify/EXTRACTED #community/argon2

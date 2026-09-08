@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "notices.service.ts"
+community: "CandidatesController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/noticesservicets
+  - community/CandidatesController
 ---
 
 # ApiTags
 
 ## Connections
-- [[NoticesController]] - `references` [EXTRACTED]
+- [[CandidatesController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/noticesservicets
+#graphify/code #graphify/EXTRACTED #community/CandidatesController

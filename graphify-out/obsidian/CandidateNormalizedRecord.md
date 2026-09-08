@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/candidates.service.ts"
 type: "code"
-community: "merge-unmerge.e2e-spec.ts"
+community: "candidates.service.ts"
 location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/merge-unmergee2e-spects
+  - community/candidatesservicets
 ---
 
 # CandidateNormalizedRecord
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[candidates.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/merge-unmergee2e-spects
+#graphify/code #graphify/EXTRACTED #community/candidatesservicets

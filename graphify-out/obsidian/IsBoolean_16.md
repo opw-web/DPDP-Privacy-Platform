@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateInformationRequestDto"
+community: "CreateSdfAssessmentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateInformationRequestDto
+  - community/CreateSdfAssessmentDto
 ---
 
 # IsBoolean
 
 ## Connections
-- [[UpdateInformationRequestDto]] - `references` [EXTRACTED]
+- [[CreateSdfAssessmentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto
+#graphify/code #graphify/EXTRACTED #community/CreateSdfAssessmentDto

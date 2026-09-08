@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "notices.service.ts"
+community: "DataSourcesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/noticesservicets
+  - community/DataSourcesService
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_25]] - `references` [EXTRACTED]
-- [[dot-createVersion()]] - `references` [EXTRACTED]
-- [[dot-upsertTranslation()]] - `references` [EXTRACTED]
+- [[dot-create()_24]] - `references` [EXTRACTED]
+- [[dot-update()_18]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/noticesservicets
+#graphify/code #graphify/EXTRACTED #community/DataSourcesService

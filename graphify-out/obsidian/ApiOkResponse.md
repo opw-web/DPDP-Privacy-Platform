@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Public"
+community: "AccessTokenPayload"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/AccessTokenPayload
 ---
 
 # ApiOkResponse
 
 ## Connections
-- [[dot-privacyContact()]] - `references` [EXTRACTED]
-- [[dot-profile()]] - `references` [EXTRACTED]
+- [[dot-me()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload

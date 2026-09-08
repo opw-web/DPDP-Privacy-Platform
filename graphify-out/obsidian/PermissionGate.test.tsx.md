@@ -12,8 +12,10 @@ tags:
 # PermissionGate.test.tsx
 
 ## Connections
+- [[@testing-libraryreact_1]] - `imports_from` [EXTRACTED]
 - [[PermissionGate.tsx]] - `dynamic_import` [EXTRACTED]
 - [[libauth.ts]] - `dynamic_import` [EXTRACTED]
 - [[loginAs()]] - `contains` [EXTRACTED]
+- [[vitest_1]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/routertsx

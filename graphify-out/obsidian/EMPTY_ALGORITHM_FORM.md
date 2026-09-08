@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/sdf/AlgorithmFormFields.tsx"
 type: "code"
-community: "AlgorithmRegisterPanel.tsx"
+community: "react-router-dom"
 location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AlgorithmRegisterPaneltsx
+  - community/react-router-dom
 ---
 
 # EMPTY_ALGORITHM_FORM
@@ -15,4 +15,4 @@ tags:
 - [[AlgorithmFormFields.tsx]] - `contains` [EXTRACTED]
 - [[AlgorithmRegisterPanel.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterPaneltsx
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

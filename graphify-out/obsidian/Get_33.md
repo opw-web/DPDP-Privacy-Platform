@@ -1,19 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "BreachesController"
+community: "children.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BreachesController
+  - community/childrenmodulets
 ---
 
 # Get
 
 ## Connections
-- [[dot-boardDetailed()]] - `references` [EXTRACTED]
-- [[dot-boardInitial()]] - `references` [EXTRACTED]
-- [[dot-get()_18]] - `references` [EXTRACTED]
-- [[dot-list()_39]] - `references` [EXTRACTED]
+- [[dot-list()_36]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BreachesController
+#graphify/code #graphify/EXTRACTED #community/childrenmodulets

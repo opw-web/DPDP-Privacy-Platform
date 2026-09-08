@@ -12,14 +12,14 @@ tags:
 # PrincipalsController
 
 ## Connections
-- [[dot-constructor()_151]] - `method` [EXTRACTED]
+- [[dot-constructor()_18]] - `method` [EXTRACTED]
 - [[dot-detail()]] - `method` [EXTRACTED]
 - [[dot-lineage()]] - `method` [EXTRACTED]
 - [[dot-list()_15]] - `method` [EXTRACTED]
 - [[dot-recipients()_1]] - `method` [EXTRACTED]
 - [[dot-sourceRecords()]] - `method` [EXTRACTED]
-- [[ApiTags_12]] - `references` [EXTRACTED]
-- [[Controller_13]] - `references` [EXTRACTED]
+- [[ApiTags_16]] - `references` [EXTRACTED]
+- [[Controller_17]] - `references` [EXTRACTED]
 - [[principals.controller.ts]] - `contains` [EXTRACTED]
 - [[principals.module.ts]] - `imports` [EXTRACTED]
 

@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "EvidencePackController"
+community: "TemplatesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EvidencePackController
+  - community/TemplatesService
 ---
 
 # Get
 
 ## Connections
-- [[dot-packZip()]] - `references` [EXTRACTED]
+- [[dot-get()_10]] - `references` [EXTRACTED]
+- [[dot-list()_13]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EvidencePackController
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

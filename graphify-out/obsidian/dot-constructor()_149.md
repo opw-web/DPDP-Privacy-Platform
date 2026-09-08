@@ -1,17 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principals/lineage.service.ts"
+source_file: "dpdp-platform/backend/src/queues/deadline-scan.queue.ts"
 type: "code"
-community: "access-report.service.ts"
-location: "L34"
+community: "BootRegistrationRegistry"
+location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-reportservicets
+  - community/BootRegistrationRegistry
 ---
 
 # .constructor()
 
 ## Connections
-- [[LineageService]] - `method` [EXTRACTED]
+- [[dot-register()]] - `calls` [INFERRED]
+- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
+- [[DeadlineScanQueueService]] - `method` [EXTRACTED]
+- [[InjectQueue_6]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-reportservicets
+#graphify/code #graphify/EXTRACTED #community/BootRegistrationRegistry

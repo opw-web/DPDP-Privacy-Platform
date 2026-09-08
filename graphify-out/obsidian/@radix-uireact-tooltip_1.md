@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/package.json"
 type: "concept"
-community: "@radix-ui/react-tooltip"
+community: "DateTime.tsx"
 location: "L23"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/radix-ui/react-tooltip
+  - community/DateTimetsx
 ---
 
 # @radix-ui/react-tooltip
 
 ## Connections
-- [[@radix-uireact-tooltip]] - `imports` [EXTRACTED]
+- [[frontendpackage.json]] - `imports` [EXTRACTED]
+- [[tooltip.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/radix-ui/react-tooltip
+#graphify/concept #graphify/EXTRACTED #community/DateTimetsx
