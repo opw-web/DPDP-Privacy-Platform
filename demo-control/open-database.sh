@@ -25,7 +25,7 @@ step "Database browser"
 ensure_studio_up || exit 1
 
 step "Opening it in your browser"
-xdg-open "$STUDIO_URL" >/dev/null 2>&1 &
+open_url "$STUDIO_URL"
 ok "Opened $STUDIO_URL"
 
 echo

@@ -44,7 +44,7 @@ failed() { STAGED+=("  [FAILED]  $*"); warn "COULD NOT STAGE: $*"; }
 
 jq_py() {
   # jq_py EXPR -- reads JSON on stdin, prints the expression, "" on any error.
-  python3 -c "
+  py_run -c "
 import json,sys
 try:
     d=json.load(sys.stdin)

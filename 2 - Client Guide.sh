@@ -7,6 +7,8 @@ if [ ! -f "$GUIDE" ]; then
   read -r -p "Press Enter to close..." _ignored || true
   exit 1
 fi
-xdg-open "$GUIDE" >/dev/null 2>&1 &
+# shellcheck disable=SC1091
+. "$ROOT/demo-control/platform.sh"
+open_url "$GUIDE"
 echo "Opening the standalone client guide in your browser."
 sleep 2

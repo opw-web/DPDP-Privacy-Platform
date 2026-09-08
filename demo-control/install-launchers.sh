@@ -15,15 +15,74 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 . ./common.sh
 trap on_error EXIT
 
-DESKTOP_DIR="${XDG_DESKTOP_DIR:-$HOME/Desktop}"
-APPS_DIR="$HOME/.local/share/applications"
-SRC_DIR="$COMMON_SH_DIR/desktop"
-
 echo "======================================================"
 echo " Installing the demo buttons"
 echo "======================================================"
 echo
 say "Repo location: $REPO_ROOT"
+
+# ---------------------------------------------------------------------
+# Windows: put a shortcut to each numbered .cmd launcher on the Desktop.
+# There is no menu system to register with and no "trusted launcher" flag
+# to set, so this is the whole job.
+# ---------------------------------------------------------------------
+if [ "$IS_WINDOWS" = "1" ]; then
+  DESKTOP_DIR="$(powershell -NoProfile -Command '[Environment]::GetFolderPath("Desktop")' 2>/dev/null | tr -d '\r')"
+  if [ -z "$DESKTOP_DIR" ]; then
+    warn "Could not find your Desktop folder."
+    exit 1
+  fi
+  say "Desktop:       $DESKTOP_DIR"
+
+  count=0
+  for src in "$REPO_ROOT"/*" (Windows).cmd"; do
+    [ -f "$src" ] || continue
+    base="$(basename "$src" ".cmd")"
+    # "1 - Start Privacy Demo (Windows)" -> "1 - Start Privacy Demo"
+    label="${base% (Windows)}"
+    target_win="$(winpath "$src")"
+    icon_dir_win="$(winpath "$REPO_ROOT")"
+    if powershell -NoProfile -Command "
+        \$s = (New-Object -ComObject WScript.Shell).CreateShortcut('$DESKTOP_DIR\\$label.lnk')
+        \$s.TargetPath       = '$target_win'
+        \$s.WorkingDirectory = '$icon_dir_win'
+        \$s.Description      = 'DPDP Privacy Platform -- $label'
+        \$s.Save()
+      " >/dev/null 2>&1; then
+      ok "$label"
+      count=$((count + 1))
+    else
+      warn "Could not create a shortcut for $label"
+    fi
+  done
+
+  echo
+  say "Installed $count buttons on your Desktop, in this order:"
+  echo
+  say "  0 - Prepare This Computer       one-time setup after downloading"
+  say "  1 - Start Privacy Demo          starts everything, opens the website"
+  say "  2 - Client Guide                the step-by-step guide"
+  say "  3 - Open Database               browse the tables"
+  say "  4 - Show Demo Proof             live counts in a window"
+  say "  5 - Demo Status                 what is up, what is down"
+  say "  6 - Stop Privacy Demo           shut it all down"
+  say "  9 - Reset Demo to Fresh State   DESTROYS everything and rebuilds"
+  echo
+  say "If Windows shows a blue 'Windows protected your PC' box the first time,"
+  say "choose 'More info' and then 'Run anyway'. That only needs doing once."
+
+  trap - EXIT
+  pause_before_exit
+  exit 0
+fi
+
+# ---------------------------------------------------------------------
+# Linux: XDG desktop entries, unchanged.
+# ---------------------------------------------------------------------
+DESKTOP_DIR="${XDG_DESKTOP_DIR:-$HOME/Desktop}"
+APPS_DIR="$HOME/.local/share/applications"
+SRC_DIR="$COMMON_SH_DIR/desktop"
+
 say "Desktop:       $DESKTOP_DIR"
 say "Menu:          $APPS_DIR"
 

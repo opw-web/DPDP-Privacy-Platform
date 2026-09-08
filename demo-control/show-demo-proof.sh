@@ -30,7 +30,9 @@ fi
 # --- counts straight from Postgres -----------------------------------
 psql_count() {
   # psql_count SQL -- prints the single number, or "?" if the query fails.
-  PGPASSWORD=dpdp psql -h 127.0.0.1 -p 5432 -U dpdp -d dpdp -tAc "$1" 2>/dev/null | tr -d ' ' || echo "?"
+  # psql_q runs inside the postgres container, so no PostgreSQL client tools
+  # need to be installed on this computer.
+  psql_q "$1"
 }
 
 say "Counting..."
@@ -41,11 +43,11 @@ say "Counting..."
 LOGIN_JSON=$(curl -s -X POST "$BACKEND_URL/api/auth/employee/login" \
   -H 'Content-Type: application/json' \
   -d "{\"email\":\"$ADMIN_EMAIL\",\"password\":\"$ADMIN_PASSWORD\"}")
-TOKEN=$(printf '%s' "$LOGIN_JSON" | python3 -c "import json,sys; print(json.load(sys.stdin)['accessToken'])" 2>/dev/null || true)
+TOKEN=$(printf '%s' "$LOGIN_JSON" | py_run -c "import json,sys; print(json.load(sys.stdin)['accessToken'])" 2>/dev/null || true)
 
 if [ -n "$TOKEN" ]; then
   SUMMARY=$(curl -s "$BACKEND_URL/api/inventory/summary" -H "Authorization: Bearer $TOKEN")
-  jnum() { printf '%s' "$SUMMARY" | python3 -c "import json,sys; print(json.load(sys.stdin).get('$1','?'))" 2>/dev/null || echo "?"; }
+  jnum() { printf '%s' "$SUMMARY" | py_run -c "import json,sys; print(json.load(sys.stdin).get('$1','?'))" 2>/dev/null || echo "?"; }
   RAW=$(jnum rawRecordCount)
   PRINCIPALS=$(jnum uniquePrincipalCount)
   PENDING=$(jnum pendingReviewCount)

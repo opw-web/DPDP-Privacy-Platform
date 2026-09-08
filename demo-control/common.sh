@@ -18,6 +18,11 @@ set -uo pipefail
 COMMON_SH_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$COMMON_SH_DIR/.." && pwd)"
 
+# Every OS difference lives in platform.sh. Sourcing it first means the rest
+# of this file -- and every control script -- can stay OS-agnostic.
+# shellcheck disable=SC1091
+. "$COMMON_SH_DIR/platform.sh"
+
 BACKEND_DIR="$REPO_ROOT/dpdp-platform/backend"
 FRONTEND_DIR="$REPO_ROOT/dpdp-platform/frontend"
 COMPOSE_DIR="$REPO_ROOT/dpdp-platform"
@@ -38,6 +43,15 @@ MAILHOG_URL="http://localhost:8025"
 # Not a service the app needs; started on demand, stopped by stop.sh.
 STUDIO_PORT="5555"
 STUDIO_URL="http://localhost:5555"
+
+# Ports the demo owns. On Windows a service is identified by the port it
+# listens on rather than by a process pattern, so these are needed by name.
+BACKEND_PORT="4000"
+FRONTEND_PORT="5173"
+DEMO_PORT="5001"
+
+# The postgres container, named by docker compose's default convention.
+PG_CONTAINER="dpdp-platform-postgres-1"
 
 # The demo runbook, opened by the "Demo Runbook" button.
 RUNBOOK_FILE="$REPO_ROOT/docs/demo-runbook/RUNBOOK.html"
@@ -67,7 +81,8 @@ on_error() {
   if [ "$exit_code" -ne 0 ]; then
     echo
     warn "Something went wrong (exit code $exit_code)."
-    warn "Full logs are in: $LOG_DIR"
+    # Show the path in the form this computer's file manager understands.
+    warn "Full logs are in: $(winpath "$LOG_DIR")"
   fi
   pause_before_exit
 }
@@ -75,25 +90,9 @@ on_error() {
 # ---------------------------------------------------------------------
 # Node / Docker setup
 # ---------------------------------------------------------------------
-setup_node() {
-  export NVM_DIR="$HOME/.nvm"
-  # shellcheck disable=SC1091
-  . "$NVM_DIR/nvm.sh"
-  nvm use 20 >/dev/null
-}
-
-# Runs a docker command as a member of the `docker` group -- never sudo,
-# never a password prompt.
-docker_run() {
-  sg docker -c "docker $*"
-}
-
-# Runs `docker compose` scoped to dpdp-platform/docker-compose.yml,
-# without ever `cd`-ing (avoids nested-quoting problems with the space
-# in the repo path).
-compose() {
-  sg docker -c "docker compose --project-directory \"$COMPOSE_DIR\" -f \"$COMPOSE_FILE\" $*"
-}
+# setup_node, docker_run, compose and psql_q are defined in platform.sh --
+# they are the four helpers whose implementation differs per operating
+# system. Everything below this point is identical on Linux and Windows.
 
 # ---------------------------------------------------------------------
 # HTTP helpers
@@ -134,9 +133,21 @@ studio_healthy()   { [ "$(http_code "$STUDIO_URL")" = "200" ]; }
 # the exact same "node dist/server.js" command line but out of a
 # different working directory and must be left alone).
 # ---------------------------------------------------------------------
+# pids_for PATTERN EXPECTED_CWD [PORT]
+#
+# Linux keeps the original pattern+cwd identification. Windows has no /proc
+# and no pgrep, so there the service is identified by the port it listens on
+# -- which is a stronger guarantee anyway, since only one process can hold a
+# port, and it is exactly the "don't signal an unrelated node process"
+# property the cwd check was written to provide.
 pids_for() {
-  local pattern="$1" expected_cwd="$2"
+  local pattern="$1" expected_cwd="$2" port="${3:-}"
   local pid cwd
+  if [ "$IS_WINDOWS" = "1" ]; then
+    [ -n "$port" ] || return 0
+    port_pid "$port"
+    return 0
+  fi
   for pid in $(pgrep -f "$pattern" 2>/dev/null); do
     cwd=$(readlink -f "/proc/$pid/cwd" 2>/dev/null || true)
     if [ "$cwd" = "$expected_cwd" ]; then
@@ -146,31 +157,38 @@ pids_for() {
 }
 
 is_running() {
-  local pattern="$1" expected_cwd="$2"
-  [ -n "$(pids_for "$pattern" "$expected_cwd")" ]
+  local pattern="$1" expected_cwd="$2" port="${3:-}"
+  [ -n "$(pids_for "$pattern" "$expected_cwd" "$port")" ]
 }
 
+# stop_by_cwd PATTERN EXPECTED_CWD LABEL [PORT]
 stop_by_cwd() {
-  local pattern="$1" expected_cwd="$2" label="$3"
-  local pids
-  pids=$(pids_for "$pattern" "$expected_cwd")
+  local pattern="$1" expected_cwd="$2" label="$3" port="${4:-}"
+  local pids pid
+  pids=$(pids_for "$pattern" "$expected_cwd" "$port")
   if [ -z "$pids" ]; then
     ok "$label was not running."
     return 0
   fi
   say "Stopping $label..."
-  # shellcheck disable=SC2086
-  kill $pids 2>/dev/null || true
+  for pid in $pids; do
+    kill_pid "$pid"
+  done
+  # Windows kills outright (see kill_pid), so it needs a moment to settle,
+  # not the long grace period a SIGTERM deserves on Linux.
+  local grace=15
+  [ "$IS_WINDOWS" = "1" ] && grace=5
   local waited=0
-  while [ -n "$(pids_for "$pattern" "$expected_cwd")" ] && [ "$waited" -lt 15 ]; do
+  while [ -n "$(pids_for "$pattern" "$expected_cwd" "$port")" ] && [ "$waited" -lt "$grace" ]; do
     sleep 1
     waited=$((waited + 1))
   done
-  pids=$(pids_for "$pattern" "$expected_cwd")
+  pids=$(pids_for "$pattern" "$expected_cwd" "$port")
   if [ -n "$pids" ]; then
     warn "$label did not stop gracefully, forcing it to stop..."
-    # shellcheck disable=SC2086
-    kill -9 $pids 2>/dev/null || true
+    for pid in $pids; do
+      kill_pid "$pid" force
+    done
   fi
   ok "$label stopped."
 }
@@ -181,17 +199,22 @@ stop_by_cwd() {
 free_port_if_stale() {
   local port="$1" label="$2"
   local pid
-  pid=$(fuser "${port}/tcp" 2>/dev/null | tr -d ' ')
+  pid=$(port_pid "$port")
   if [ -z "$pid" ]; then
     return 0
   fi
   warn "Port $port ($label) is occupied by an unrecognised process (PID $pid). Stopping it so the demo can use this port..."
-  kill $pid 2>/dev/null || true
+  kill_pid "$pid"
   sleep 2
-  if fuser "${port}/tcp" >/dev/null 2>&1; then
-    kill -9 $pid 2>/dev/null || true
+  if [ -n "$(port_pid "$port")" ]; then
+    kill_pid "$pid" force
     sleep 1
   fi
+}
+
+# True when something is listening on the port at all.
+port_in_use() {
+  [ -n "$(port_pid "$1")" ]
 }
 
 # ---------------------------------------------------------------------
@@ -205,7 +228,7 @@ ensure_database_up() {
   compose up -d postgres redis mailhog >>"$LOG_DIR/containers.log" 2>&1
   say "Waiting for the database to be ready..."
   local waited=0
-  until docker_run exec dpdp-platform-postgres-1 pg_isready -U dpdp >/dev/null 2>&1; do
+  until docker_run exec "$PG_CONTAINER" pg_isready -U dpdp >/dev/null 2>&1; do
     sleep 2
     waited=$((waited + 2))
     if [ "$waited" -ge 60 ]; then
@@ -221,8 +244,8 @@ ensure_backend_up() {
     ok "Backend API is already running."
     return 0
   fi
-  if fuser "4000/tcp" >/dev/null 2>&1 && ! backend_healthy; then
-    free_port_if_stale 4000 "backend API"
+  if port_in_use "$BACKEND_PORT" && ! backend_healthy; then
+    free_port_if_stale "$BACKEND_PORT" "backend API"
   fi
   say "Applying any pending database changes..."
   ( cd "$BACKEND_DIR" && npx prisma migrate deploy ) >>"$LOG_DIR/backend.log" 2>&1
@@ -231,7 +254,7 @@ ensure_backend_up() {
     ( cd "$BACKEND_DIR" && npm run build ) >>"$LOG_DIR/backend.log" 2>&1
   fi
   say "Starting the backend API..."
-  ( cd "$BACKEND_DIR" && setsid node dist/main.js >>"$LOG_DIR/backend.log" 2>&1 </dev/null & )
+  run_detached "$BACKEND_DIR" "$LOG_DIR/backend.log" node dist/main.js
   say "Waiting for the backend API to come up (this takes about 20 seconds)..."
   if wait_for_http "$BACKEND_URL/api/health" "the backend API" 60; then
     ok "Backend API is ready."
@@ -246,15 +269,15 @@ ensure_demo_company_up() {
     ok "Demo company server is already running."
     return 0
   fi
-  if fuser "5001/tcp" >/dev/null 2>&1 && ! demo_healthy; then
-    free_port_if_stale 5001 "demo company server"
+  if port_in_use "$DEMO_PORT" && ! demo_healthy; then
+    free_port_if_stale "$DEMO_PORT" "demo company server"
   fi
   if [ ! -f "$DEMO_DIR/dist/server.js" ]; then
     say "Building the demo company server (first run only)..."
     ( cd "$DEMO_DIR" && npm run build ) >>"$LOG_DIR/demo-company.log" 2>&1
   fi
   say "Starting the demo company server..."
-  ( cd "$DEMO_DIR" && setsid node dist/server.js >>"$LOG_DIR/demo-company.log" 2>&1 </dev/null & )
+  run_detached "$DEMO_DIR" "$LOG_DIR/demo-company.log" node dist/server.js
   say "Waiting for the demo company server to come up..."
   if wait_for_http "$DEMO_URL/health" "the demo company server" 30; then
     ok "Demo company server is ready."
@@ -269,11 +292,11 @@ ensure_frontend_up() {
     ok "Platform website is already running."
     return 0
   fi
-  if fuser "5173/tcp" >/dev/null 2>&1 && ! frontend_healthy; then
-    free_port_if_stale 5173 "platform website"
+  if port_in_use "$FRONTEND_PORT" && ! frontend_healthy; then
+    free_port_if_stale "$FRONTEND_PORT" "platform website"
   fi
   say "Starting the platform website..."
-  ( cd "$FRONTEND_DIR" && setsid npm run dev >>"$LOG_DIR/frontend.log" 2>&1 </dev/null & )
+  run_detached "$FRONTEND_DIR" "$LOG_DIR/frontend.log" npm run dev
   say "Waiting for the platform website to come up (this takes about 20 seconds)..."
   if wait_for_http "$FRONTEND_URL" "the platform website" 60; then
     ok "Platform website is ready."
@@ -292,12 +315,12 @@ ensure_studio_up() {
     ok "Database browser is already running."
     return 0
   fi
-  if fuser "$STUDIO_PORT/tcp" >/dev/null 2>&1 && ! studio_healthy; then
+  if port_in_use "$STUDIO_PORT" && ! studio_healthy; then
     free_port_if_stale "$STUDIO_PORT" "database browser"
   fi
   say "Starting the database browser..."
-  ( cd "$BACKEND_DIR" && setsid npx prisma studio --port "$STUDIO_PORT" --browser none \
-      >>"$LOG_DIR/studio.log" 2>&1 </dev/null & )
+  run_detached "$BACKEND_DIR" "$LOG_DIR/studio.log" \
+    npx prisma studio --port "$STUDIO_PORT" --browser none
   say "Waiting for the database browser to come up (about 15 seconds)..."
   if wait_for_http "$STUDIO_URL" "the database browser" 60; then
     ok "Database browser is ready."

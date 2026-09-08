@@ -28,7 +28,7 @@ if [ "$(http_code "$DEMO_URL/health")" = "200" ]; then demo_up=1; else demo_up=0
 if [ "$(http_code "$MAILHOG_URL")" = "200" ]; then mailhog_up=1; else mailhog_up=0; fi
 if [ "$(http_code "$STUDIO_URL")" = "200" ]; then studio_up=1; else studio_up=0; fi
 
-if docker_run exec dpdp-platform-postgres-1 pg_isready -U dpdp >/dev/null 2>&1; then
+if docker_run exec "$PG_CONTAINER" pg_isready -U dpdp >/dev/null 2>&1; then
   db_up=1
 else
   db_up=0

@@ -52,9 +52,9 @@ setup_node
 # database step needs postgres up anyway).
 # -----------------------------------------------------------------
 step "1/9 -- Stopping the demo application"
-stop_by_cwd "dist/main.js"   "$BACKEND_DIR"  "the backend API"
-stop_by_cwd "vite"           "$FRONTEND_DIR" "the platform website"
-stop_by_cwd "dist/server.js" "$DEMO_DIR"     "the demo company server"
+stop_by_cwd "dist/main.js"   "$BACKEND_DIR"  "the backend API"          "$BACKEND_PORT"
+stop_by_cwd "vite"           "$FRONTEND_DIR" "the platform website"     "$FRONTEND_PORT"
+stop_by_cwd "dist/server.js" "$DEMO_DIR"     "the demo company server"  "$DEMO_PORT"
 
 # -----------------------------------------------------------------
 # 2/7 -- drop and recreate the database via the supported Prisma path.
@@ -119,7 +119,7 @@ api() {
 
 json_get() {
   # json_get PYTHON_EXPR  -- reads JSON from stdin, prints the expression's value.
-  python3 -c "import json,sys; d=json.load(sys.stdin); print($1)"
+  py_run -c "import json,sys; d=json.load(sys.stdin); print($1)"
 }
 
 say "Signing in as the demo admin..."
@@ -248,7 +248,7 @@ sync_and_wait() {
   local waited=0
   while [ "$waited" -lt 240 ]; do
     local status
-    status=$(api GET "/api/sync-jobs?dataSourceId=${SOURCE_ID[$key]}&limit=1" | python3 -c "
+    status=$(api GET "/api/sync-jobs?dataSourceId=${SOURCE_ID[$key]}&limit=1" | py_run -c "
 import json,sys
 d=json.load(sys.stdin)
 rows = d if isinstance(d, list) else d.get('data', d.get('items', []))
@@ -368,12 +368,9 @@ PRINCIPALS=$(printf '%s' "$SUMMARY_JSON" | json_get "d['uniquePrincipalCount']" 
 PENDING=$(printf '%s' "$SUMMARY_JSON" | json_get "d['pendingReviewCount']" 2>/dev/null || echo "?")
 CONFLICTS=$(printf '%s' "$SUMMARY_JSON" | json_get "d['conflictCount']" 2>/dev/null || echo "?")
 
-UNDER18=$(PGPASSWORD=dpdp psql -h 127.0.0.1 -p 5432 -U dpdp -d dpdp -tAc \
-  "SELECT COUNT(*) FROM \"DataPrincipal\" WHERE \"ageStatus\" = 'CHILD';" 2>/dev/null || echo "?")
-NOTICE_VERSIONS=$(PGPASSWORD=dpdp psql -h 127.0.0.1 -p 5432 -U dpdp -d dpdp -tAc \
-  "SELECT COUNT(*) FROM \"NoticeVersion\";" 2>/dev/null || echo "?")
-PRINCIPAL_ACCOUNTS=$(PGPASSWORD=dpdp psql -h 127.0.0.1 -p 5432 -U dpdp -d dpdp -tAc \
-  "SELECT COUNT(*) FROM \"PrincipalAccount\";" 2>/dev/null || echo "?")
+UNDER18=$(psql_q "SELECT COUNT(*) FROM \"DataPrincipal\" WHERE \"ageStatus\" = 'CHILD';")
+NOTICE_VERSIONS=$(psql_q "SELECT COUNT(*) FROM \"NoticeVersion\";")
+PRINCIPAL_ACCOUNTS=$(psql_q "SELECT COUNT(*) FROM \"PrincipalAccount\";")
 
 echo
 say "Observed numbers for this reset (target for reference: 500 / 327 / 4 / 12 / 6):"

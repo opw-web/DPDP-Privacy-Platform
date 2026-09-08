@@ -34,8 +34,10 @@ ensure_frontend_up || exit 1
 
 step "All set"
 say "Opening the demo in your browser..."
-xdg-open "$FRONTEND_URL" >/dev/null 2>&1 &
-disown || true
+open_url "$FRONTEND_URL"
+# open_url backgrounds the browser itself; there is not always a job left in
+# this shell to disown, so never let that complaint reach the user.
+disown 2>/dev/null || true
 
 echo
 say "The Privacy Demo is up:"

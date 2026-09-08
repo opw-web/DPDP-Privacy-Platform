@@ -14,7 +14,7 @@ if [ ! -f "$RUNBOOK_FILE" ]; then
   exit 1
 fi
 
-xdg-open "$RUNBOOK_FILE" >/dev/null 2>&1 &
+open_url "$RUNBOOK_FILE"
 sleep 1
 echo "Opening the demo runbook in your browser."
 echo "  $RUNBOOK_FILE"

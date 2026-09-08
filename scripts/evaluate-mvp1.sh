@@ -29,14 +29,19 @@
 
 set -euo pipefail
 
-export NVM_DIR="$HOME/.nvm"
+# common.sh brings in setup_node, py_run and the platform helpers, so this
+# script picks up Node the same way the demo buttons do -- nvm on Linux, the
+# system Node on Windows -- instead of hard-coding an nvm path.
+EVAL_SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # shellcheck disable=SC1091
-. "$NVM_DIR/nvm.sh"
-nvm use 20 >/dev/null
+. "$EVAL_SCRIPT_DIR/../demo-control/common.sh"
+setup_node
 
 BACKEND_URL="http://localhost:4000"
 DEMO_URL="http://localhost:5001"
-SCRATCH="${EVAL_SCRATCH:-/tmp/dpdp-eval-scratch}"
+# Default under the demo's own state directory rather than /tmp, which does
+# not exist as a durable location on Windows.
+SCRATCH="${EVAL_SCRATCH:-$SCRATCH_DIR/dpdp-eval-scratch}"
 mkdir -p "$SCRATCH"
 
 echo "=== 1. Reset database, apply migrations, run base seed ==="
@@ -45,7 +50,7 @@ echo "=== 1. Reset database, apply migrations, run base seed ==="
 echo "=== 2. Log in as admin ==="
 curl -s -X POST "$BACKEND_URL/api/auth/employee/login" -H 'Content-Type: application/json' \
   -d '{"email":"admin@acmeretail.demo","password":"Password123!"}' > "$SCRATCH/admin_login.json"
-TOKEN=$(python3 -c "import json;print(json.load(open('$SCRATCH/admin_login.json'))['accessToken'])")
+TOKEN=$(py_run -c "import json;print(json.load(open('$SCRATCH/admin_login.json'))['accessToken'])")
 echo "$TOKEN" > "$SCRATCH/admin_token.txt"
 
 auth() { echo "Authorization: Bearer $TOKEN"; }
@@ -56,7 +61,7 @@ create_source() {
     -H "$(auth)" -H 'Content-Type: application/json' \
     -d "{\"name\":\"$name\",\"systemType\":\"$system\",\"baseUrl\":\"$DEMO_URL$path\",\"recordsPath\":\"data\",\"externalIdField\":\"$extid\",\"authType\":\"BEARER\",\"credential\":\"$cred\",\"pageSize\":100}" \
     > "$SCRATCH/ds_$varname.json"
-  python3 -c "import json;print(json.load(open('$SCRATCH/ds_$varname.json'))['id'])" > "$SCRATCH/id_$varname.txt"
+  py_run -c "import json;print(json.load(open('$SCRATCH/ds_$varname.json'))['id'])" > "$SCRATCH/id_$varname.txt"
 }
 
 echo "=== 3. Register the four demo sources (keys from demo-company-server/README.md) ==="
@@ -137,8 +142,8 @@ create_purpose() {
 attach_purpose() {
   local s="$1" p="$2"
   local sid pid
-  sid=$(python3 -c "import json;print(json.load(open('$SCRATCH/ds_$s.json'))['id'])")
-  pid=$(python3 -c "import json;print(json.load(open('$SCRATCH/purpose_$p.json'))['id'])")
+  sid=$(py_run -c "import json;print(json.load(open('$SCRATCH/ds_$s.json'))['id'])")
+  pid=$(py_run -c "import json;print(json.load(open('$SCRATCH/purpose_$p.json'))['id'])")
   curl -s -X PUT "$BACKEND_URL/api/data-sources/$sid/purposes" -H "$(auth)" -H 'Content-Type: application/json' -d "{\"purposeIds\":[\"$pid\"]}" > /dev/null
 }
 
@@ -160,7 +165,7 @@ sync_and_wait() {
   curl -s -X POST "$BACKEND_URL/api/data-sources/$id/sync" -H "$(auth)" > /dev/null
   for _ in $(seq 1 120); do
     local status
-    status=$(curl -s "$BACKEND_URL/api/sync-jobs?dataSourceId=$id&limit=1" -H "$(auth)" | python3 -c "
+    status=$(curl -s "$BACKEND_URL/api/sync-jobs?dataSourceId=$id&limit=1" -H "$(auth)" | py_run -c "
 import json,sys
 d=json.load(sys.stdin)
 rows = d if isinstance(d, list) else d.get('data', d.get('items', []))
