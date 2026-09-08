@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
 type: "code"
-community: "compliance.service.ts"
+community: "AuditService"
 location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/complianceservicets
+  - community/AuditService
 ---
 
 # COMPLIANCE_RULE_PUBLIC_SELECT
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[compliance.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/complianceservicets
+#graphify/code #graphify/EXTRACTED #community/AuditService

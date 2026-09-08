@@ -1,21 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "BreachesController"
+community: "CreateRecipientDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BreachesController
+  - community/CreateRecipientDto
 ---
 
 # Post
 
 ## Connections
-- [[dot-addAffected()_1]] - `references` [EXTRACTED]
-- [[dot-completeObligation()_1]] - `references` [EXTRACTED]
-- [[dot-create()_30]] - `references` [EXTRACTED]
-- [[dot-extension()]] - `references` [EXTRACTED]
-- [[dot-notify()]] - `references` [EXTRACTED]
-- [[dot-previewAffected()_1]] - `references` [EXTRACTED]
+- [[dot-create()_31]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BreachesController
+#graphify/code #graphify/EXTRACTED #community/CreateRecipientDto

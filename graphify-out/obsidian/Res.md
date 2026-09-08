@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "csvDocument"
+community: "AuditReadService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/csvDocument
+  - community/AuditReadService
 ---
 
 # Res
 
 ## Connections
-- [[dot-packZip()]] - `references` [EXTRACTED]
+- [[dot-accessLogCsv()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/csvDocument
+#graphify/code #graphify/EXTRACTED #community/AuditReadService

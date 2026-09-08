@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "requests.service.ts"
+community: "EscalateRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/requestsservicets
+  - community/EscalateRequestDto
 ---
 
 # IsOptional
 
 ## Connections
-- [[ChangeStatusDto]] - `references` [EXTRACTED]
-- [[ErasureProcessorChecklistDto]] - `references` [EXTRACTED]
+- [[EscalateRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/requestsservicets
+#graphify/code #graphify/EXTRACTED #community/EscalateRequestDto

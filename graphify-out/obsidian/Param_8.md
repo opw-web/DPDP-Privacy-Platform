@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateTransferDto"
+community: "SdfAssessmentService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTransferDto
+  - community/SdfAssessmentService
 ---
 
 # Param
 
 ## Connections
-- [[dot-get()_4]] - `references` [EXTRACTED]
-- [[dot-update()_4]] - `references` [EXTRACTED]
+- [[dot-completeAssessment()]] - `references` [EXTRACTED]
+- [[dot-updateAlgorithm()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTransferDto
+#graphify/code #graphify/EXTRACTED #community/SdfAssessmentService

@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/roles.service.ts"
+source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts"
 type: "code"
-community: "UpdateRolePermissionsDto"
-location: "L9"
+community: "EmployeeAuthController"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateRolePermissionsDto
+  - community/EmployeeAuthController
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[RolesService]] - `method` [EXTRACTED]
+- [[EmployeeAuthController]] - `method` [EXTRACTED]
+- [[EmployeeAuthService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto
+#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController

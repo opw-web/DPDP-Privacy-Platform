@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notifications/notifications.module.ts"
 type: "code"
-community: "app.module.ts"
+community: "@nestjs/common"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/appmodulets
+  - community/nestjs/common
 ---
 
 # notifications.module.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@nestjsconfig_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjsconfig]] - `imports_from` [EXTRACTED]
 - [[AuthModule]] - `imports` [EXTRACTED]
 - [[ConsoleProvider]] - `imports` [EXTRACTED]
 - [[EMAIL_PROVIDER]] - `imports` [EXTRACTED]
@@ -45,4 +45,4 @@ tags:
 - [[selectEmailProvider()]] - `imports` [EXTRACTED]
 - [[smtp.provider.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/appmodulets
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

@@ -13,10 +13,10 @@ tags:
 
 ## Connections
 - [[dot-constructor()_3]] - `references` [EXTRACTED]
-- [[dot-constructor()_9]] - `references` [EXTRACTED]
 - [[dot-constructor()_10]] - `references` [EXTRACTED]
-- [[dot-constructor()_154]] - `references` [EXTRACTED]
-- [[dot-constructor()_12]] - `references` [EXTRACTED]
+- [[dot-constructor()_11]] - `references` [EXTRACTED]
+- [[dot-constructor()_13]] - `references` [EXTRACTED]
+- [[dot-constructor()_14]] - `references` [EXTRACTED]
 - [[dot-constructor()_2]] - `method` [EXTRACTED]
 - [[dot-next()]] - `method` [EXTRACTED]
 - [[dot-nextPrincipalReference()]] - `method` [EXTRACTED]

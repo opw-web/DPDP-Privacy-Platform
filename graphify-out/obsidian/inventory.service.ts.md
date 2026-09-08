@@ -12,7 +12,7 @@ tags:
 # inventory.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[InventoryGap]] - `contains` [EXTRACTED]
 - [[InventoryService]] - `contains` [EXTRACTED]
 - [[InventorySummary]] - `contains` [EXTRACTED]

@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "AccessTokenPayload"
+community: "PurposesController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/PurposesController
 ---
 
 # Post
 
 ## Connections
-- [[dot-cancel()_1]] - `references` [EXTRACTED]
-- [[dot-complete()_1]] - `references` [EXTRACTED]
-- [[dot-createLegalHold()]] - `references` [EXTRACTED]
+- [[dot-create()_6]] - `references` [EXTRACTED]
+- [[dot-review()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/PurposesController

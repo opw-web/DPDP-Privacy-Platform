@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "children.module.ts"
+community: "data-sources.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/childrenmodulets
+  - community/data-sourcesservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[AgeStatusService]] - `references` [EXTRACTED]
+- [[MappingsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/childrenmodulets
+#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets

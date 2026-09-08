@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "mappings.service.ts"
+community: "CreatePurposeDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingsservicets
+  - community/CreatePurposeDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[MappingWarningPurposeSummaryResponseDto]] - `references` [EXTRACTED]
-- [[MappingWarningResponseDto]] - `references` [EXTRACTED]
+- [[CreatePurposeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/EXTRACTED #community/CreatePurposeDto

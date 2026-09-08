@@ -1,23 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts"
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
-location: "L41"
+community: "TemplatesService"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/TemplatesService
 ---
 
 # .update()
 
 ## Connections
 - [[dot-update()_11]] - `calls` [INFERRED]
-- [[Body_14]] - `references` [EXTRACTED]
-- [[Param_15]] - `references` [EXTRACTED]
+- [[Body_8]] - `references` [EXTRACTED]
+- [[Param_7]] - `references` [EXTRACTED]
 - [[Patch_5]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[UpdateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
-- [[VoluntaryUndertakingsController]] - `method` [EXTRACTED]
+- [[TemplatesController]] - `method` [EXTRACTED]
+- [[UpdateTemplateDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

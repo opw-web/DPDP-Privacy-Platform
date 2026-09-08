@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/NotificationBell.test.tsx"
 type: "code"
-community: "api-client.ts"
+community: "cn"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/cn
 ---
 
 # NotificationBell.test.tsx
@@ -26,4 +26,4 @@ tags:
 - [[renderBell()]] - `contains` [EXTRACTED]
 - [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/cn

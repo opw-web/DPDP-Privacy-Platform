@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.service.ts"
 type: "code"
-community: "mappings.service.ts"
+community: "purposes.service.ts"
 location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingsservicets
+  - community/purposesservicets
 ---
 
 # ReplaceMappingsResult
@@ -15,4 +15,4 @@ tags:
 - [[MappingWarning_1]] - `references` [EXTRACTED]
 - [[mappings.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/EXTRACTED #community/purposesservicets

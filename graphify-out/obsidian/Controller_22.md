@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "@nestjs/common"
+community: "RequirePermission"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/RequirePermission
 ---
 
 # Controller
 
 ## Connections
-- [[PermissionsController]] - `references` [EXTRACTED]
+- [[PrincipalsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

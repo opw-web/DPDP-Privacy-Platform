@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/token.service.ts"
 type: "code"
-community: "token.service.ts"
+community: "RequirePermission"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tokenservicets
+  - community/RequirePermission
 ---
 
 # RefreshTokenPayload
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[token.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tokenservicets
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/sharing.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts"
 type: "code"
-community: "CreateSharingActivityDto"
-location: "L11"
+community: "read-only-http.client.ts"
+location: "L55"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSharingActivityDto
+  - community/read-only-httpclientts
 ---
 
 # .constructor()
 
 ## Connections
-- [[SharingController]] - `method` [EXTRACTED]
-- [[SharingService]] - `references` [EXTRACTED]
+- [[ReadOnlyHttpStatusError]] - `method` [EXTRACTED]
+- [[stripQuery()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto
+#graphify/code #graphify/EXTRACTED #community/read-only-httpclientts

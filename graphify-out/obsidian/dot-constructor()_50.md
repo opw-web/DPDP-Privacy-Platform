@@ -1,20 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync.service.ts"
 type: "code"
-community: "mappings.service.ts"
-location: "L71"
+community: "SyncService"
+location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingsservicets
+  - community/SyncService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AssemblyService]] - `references` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
 - [[DataSourcesService]] - `references` [EXTRACTED]
-- [[MappingsService]] - `method` [EXTRACTED]
+- [[SyncQueueService]] - `references` [EXTRACTED]
+- [[SyncService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/EXTRACTED #community/SyncService

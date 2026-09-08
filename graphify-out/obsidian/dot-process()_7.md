@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/retention-scan.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/campaign-send.processor.ts"
 type: "code"
-community: "mvp2-schedules.ts"
-location: "L24"
+community: "CampaignsService"
+location: "L72"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mvp2-schedulests
+  - community/CampaignsService
 ---
 
 # .process()
 
 ## Connections
-- [[dot-runForAllOrganizations()_3]] - `calls` [INFERRED]
-- [[RetentionScanJobData]] - `references` [EXTRACTED]
-- [[RetentionScanProcessor]] - `method` [EXTRACTED]
+- [[dot-deliverRecipient()]] - `calls` [INFERRED]
+- [[CampaignSendJobData]] - `references` [EXTRACTED]
+- [[CampaignSendProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mvp2-schedulests
+#graphify/code #graphify/EXTRACTED #community/CampaignsService

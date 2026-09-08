@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/DataSourceDetailPage.test.tsx"
 type: "code"
-community: "router.tsx"
+community: "@tanstack/react-query"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/tanstack/react-query
 ---
 
 # DataSourceDetailPage.test.tsx
@@ -21,11 +21,11 @@ tags:
 - [[ORDER_FULFILMENT_PURPOSE]] - `contains` [EXTRACTED]
 - [[employeeLogin()]] - `imports` [EXTRACTED]
 - [[employeeLogout()]] - `imports` [EXTRACTED]
-- [[jsonResponse()_13]] - `contains` [EXTRACTED]
+- [[jsonResponse()_10]] - `contains` [EXTRACTED]
 - [[libauth.ts]] - `imports_from` [EXTRACTED]
 - [[loginAndRenderDetailPage()]] - `contains` [EXTRACTED]
 - [[react-router-dom_1]] - `imports_from` [EXTRACTED]
 - [[renderDetailPage()]] - `contains` [EXTRACTED]
 - [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

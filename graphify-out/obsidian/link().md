@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[assembly.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[tenant()_2]] - `calls` [EXTRACTED]
+- [[tenant()_4]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/AppModule

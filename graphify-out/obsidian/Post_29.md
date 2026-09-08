@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalAuthController"
+community: "AgeStatusService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalAuthController
+  - community/AgeStatusService
 ---
 
 # Post
 
 ## Connections
-- [[dot-login()_3]] - `references` [EXTRACTED]
-- [[dot-logout()_3]] - `references` [EXTRACTED]
-- [[dot-refresh()_3]] - `references` [EXTRACTED]
+- [[dot-setAgeStatus()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalAuthController
+#graphify/code #graphify/EXTRACTED #community/AgeStatusService

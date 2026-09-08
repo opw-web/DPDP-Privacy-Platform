@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CampaignsService"
+community: "queues.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampaignsService
+  - community/queuesmodulets
 ---
 
 # Processor
 
 ## Connections
-- [[CampaignSendProcessor]] - `references` [EXTRACTED]
+- [[SyncProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampaignsService
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/common/tenant/tenant.middleware.ts"
+source_file: "dpdp-platform/backend/src/common/prisma/prisma.service.ts"
 type: "code"
-community: "TokenService"
-location: "L46"
+community: "PrismaService"
+location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TokenService
+  - community/PrismaService
 ---
 
 # .constructor()
 
 ## Connections
-- [[TenantMiddleware]] - `method` [EXTRACTED]
-- [[TokenService]] - `references` [EXTRACTED]
+- [[PrismaService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TokenService
+#graphify/code #graphify/EXTRACTED #community/PrismaService

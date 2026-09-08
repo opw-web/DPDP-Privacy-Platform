@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CandidatesController"
+community: "MeRightsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CandidatesController
+  - community/MeRightsService
 ---
 
 # Query
 
 ## Connections
-- [[dot-list()_34]] - `references` [EXTRACTED]
+- [[dot-getPublishedNotice()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CandidatesController
+#graphify/code #graphify/EXTRACTED #community/MeRightsService

@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "AffectedPrincipalsDto"
+community: "ProcessorChecklistTickDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AffectedPrincipalsDto
+  - community/ProcessorChecklistTickDto
 ---
 
 # IsBoolean
 
 ## Connections
-- [[AffectedPrincipalsDto]] - `references` [EXTRACTED]
+- [[ProcessorChecklistTickDto]] - `references` [EXTRACTED]
+- [[SystemChecklistTickDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AffectedPrincipalsDto
+#graphify/code #graphify/EXTRACTED #community/ProcessorChecklistTickDto

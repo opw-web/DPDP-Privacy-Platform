@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notifications/guards/jwt-any-actor.guard.ts"
 type: "code"
-community: "notifications.controller.ts"
+community: "TokenService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationscontrollerts
+  - community/TokenService
 ---
 
 # jwt-any-actor.guard.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[JwtAnyActorGuard]] - `contains` [EXTRACTED]
 - [[NotificationCallerActor]] - `contains` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[token.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts
+#graphify/code #graphify/EXTRACTED #community/TokenService

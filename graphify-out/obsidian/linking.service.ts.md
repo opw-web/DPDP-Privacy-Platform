@@ -12,8 +12,8 @@ tags:
 # linking.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@prismaclient]] - `imports_from` [EXTRACTED]
 - [[AgeService]] - `imports` [EXTRACTED]
 - [[ApplyMatchResult]] - `contains` [EXTRACTED]
 - [[AssemblyService]] - `imports` [EXTRACTED]

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "compliance.service.ts"
+community: "AffectedPrincipalsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/complianceservicets
+  - community/AffectedPrincipalsDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[UpdateComplianceRuleDto]] - `references` [EXTRACTED]
+- [[AffectedPrincipalsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/complianceservicets
+#graphify/code #graphify/EXTRACTED #community/AffectedPrincipalsDto

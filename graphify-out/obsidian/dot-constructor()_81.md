@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/retention-scan.processor.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/unmerge.controller.ts"
 type: "code"
-community: "mvp2-schedules.ts"
+community: "RequirePermission"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mvp2-schedulests
+  - community/RequirePermission
 ---
 
 # .constructor()
 
 ## Connections
-- [[RetentionScanProcessor]] - `method` [EXTRACTED]
-- [[RetentionScanService]] - `references` [EXTRACTED]
+- [[MergeService]] - `references` [EXTRACTED]
+- [[UnmergeController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mvp2-schedulests
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

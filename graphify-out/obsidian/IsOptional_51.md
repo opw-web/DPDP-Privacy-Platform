@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "security-measures.service.ts"
+community: "PreviewAudienceDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/security-measuresservicets
+  - community/PreviewAudienceDto
 ---
 
 # IsOptional
 
 ## Connections
-- [[CreateSecurityMeasureDto]] - `references` [EXTRACTED]
+- [[PreviewAudienceDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/security-measuresservicets
+#graphify/code #graphify/EXTRACTED #community/PreviewAudienceDto

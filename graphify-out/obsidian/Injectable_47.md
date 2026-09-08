@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AlgorithmRegisterService"
+community: "erasure-task.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AlgorithmRegisterService
+  - community/erasure-taskservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[SdfGapsService]] - `references` [EXTRACTED]
+- [[PurposeServedService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterService
+#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets

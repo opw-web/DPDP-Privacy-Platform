@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PreviewAudienceDto"
+community: "AssignRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PreviewAudienceDto
+  - community/AssignRequestDto
 ---
 
 # MinLength
 
 ## Connections
-- [[PreviewAudienceDto]] - `references` [EXTRACTED]
+- [[AssignRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PreviewAudienceDto
+#graphify/code #graphify/EXTRACTED #community/AssignRequestDto

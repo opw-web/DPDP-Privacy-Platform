@@ -2,7 +2,7 @@
 source_file: "demo-control/common.sh"
 type: "code"
 community: "common.sh"
-location: "L54"
+location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -30,6 +30,6 @@ tags:
 - [[start.sh script]] - `calls` [EXTRACTED]
 - [[stop.sh script]] - `calls` [EXTRACTED]
 - [[stop_by_cwd()]] - `calls` [EXTRACTED]
-- [[sync_and_wait()_1]] - `calls` [EXTRACTED]
+- [[sync_and_wait()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/commonsh

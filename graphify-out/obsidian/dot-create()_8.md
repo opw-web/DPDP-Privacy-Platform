@@ -1,22 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/transfers.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/compliance/compliance.controller.ts"
 type: "code"
-community: "CreateTransferDto"
-location: "L27"
+community: "CreateComplianceRuleDto"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTransferDto
+  - community/CreateComplianceRuleDto
 ---
 
 # .create()
 
 ## Connections
 - [[dot-create()_9]] - `calls` [INFERRED]
-- [[Body_8]] - `references` [EXTRACTED]
-- [[CreateTransferDto]] - `references` [EXTRACTED]
-- [[Post_9]] - `references` [EXTRACTED]
+- [[Body_7]] - `references` [EXTRACTED]
+- [[ComplianceController]] - `method` [EXTRACTED]
+- [[CreateComplianceRuleDto]] - `references` [EXTRACTED]
+- [[Post_5]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[TransfersController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTransferDto
+#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto

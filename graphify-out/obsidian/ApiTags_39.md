@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "security-measures.service.ts"
+community: "PrincipalAuthController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/security-measuresservicets
+  - community/PrincipalAuthController
 ---
 
 # ApiTags
 
 ## Connections
-- [[SecurityMeasuresController]] - `references` [EXTRACTED]
+- [[PrincipalAuthController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/security-measuresservicets
+#graphify/code #graphify/EXTRACTED #community/PrincipalAuthController

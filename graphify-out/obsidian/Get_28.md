@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ImportConsentDto"
+community: "notifications.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ImportConsentDto
+  - community/notificationscontrollerts
 ---
 
 # Get
 
 ## Connections
-- [[dot-getConsentStats()]] - `references` [EXTRACTED]
-- [[dot-listForPrincipal()_1]] - `references` [EXTRACTED]
+- [[dot-list()_32]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ImportConsentDto
+#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts

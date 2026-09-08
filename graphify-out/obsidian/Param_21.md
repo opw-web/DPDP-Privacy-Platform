@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "ImportConsentDto"
+community: "ConsentsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ImportConsentDto
+  - community/ConsentsService
 ---
 
 # Param
@@ -15,4 +15,4 @@ tags:
 - [[dot-listForPrincipal()_1]] - `references` [EXTRACTED]
 - [[dot-recordImportedConsent()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ImportConsentDto
+#graphify/code #graphify/EXTRACTED #community/ConsentsService

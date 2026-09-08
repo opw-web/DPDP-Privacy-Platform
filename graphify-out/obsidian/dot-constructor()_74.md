@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sdf/sdf-gaps.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/sdf.controller.ts"
 type: "code"
 community: "AlgorithmRegisterService"
-location: "L34"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,9 @@ tags:
 # .constructor()
 
 ## Connections
-- [[ComplianceService]] - `references` [EXTRACTED]
-- [[SdfGapsService]] - `method` [EXTRACTED]
+- [[AlgorithmRegisterService]] - `references` [EXTRACTED]
+- [[SdfAssessmentService]] - `references` [EXTRACTED]
+- [[SdfController]] - `method` [EXTRACTED]
+- [[SdfGapsService]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterService

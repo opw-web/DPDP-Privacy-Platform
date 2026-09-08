@@ -12,10 +12,10 @@ tags:
 # .preview()
 
 ## Connections
-- [[dot-preview()_2]] - `calls` [INFERRED]
-- [[Body_11]] - `references` [EXTRACTED]
-- [[Param_12]] - `references` [EXTRACTED]
-- [[Post_12]] - `references` [EXTRACTED]
+- [[dot-preview()]] - `calls` [INFERRED]
+- [[Body_8]] - `references` [EXTRACTED]
+- [[Param_7]] - `references` [EXTRACTED]
+- [[Post_6]] - `references` [EXTRACTED]
 - [[PreviewTemplateDto]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[TemplatesController]] - `method` [EXTRACTED]

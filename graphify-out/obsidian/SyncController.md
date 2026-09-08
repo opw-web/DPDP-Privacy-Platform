@@ -12,10 +12,10 @@ tags:
 # SyncController
 
 ## Connections
-- [[dot-constructor()_44]] - `method` [EXTRACTED]
-- [[dot-trigger()_1]] - `method` [EXTRACTED]
-- [[ApiTags_11]] - `references` [EXTRACTED]
-- [[Controller_12]] - `references` [EXTRACTED]
+- [[dot-constructor()_48]] - `method` [EXTRACTED]
+- [[dot-trigger()]] - `method` [EXTRACTED]
+- [[ApiTags_7]] - `references` [EXTRACTED]
+- [[Controller_7]] - `references` [EXTRACTED]
 - [[sync.controller.ts]] - `contains` [EXTRACTED]
 - [[sync.module.ts]] - `imports` [EXTRACTED]
 

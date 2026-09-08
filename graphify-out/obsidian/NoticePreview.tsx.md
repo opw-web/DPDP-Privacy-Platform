@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/notices/NoticePreview.tsx"
 type: "code"
-community: "react"
+community: "MessagingCampaignBuilderPage.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/MessagingCampaignBuilderPagetsx
 ---
 
 # NoticePreview.tsx
@@ -21,4 +21,4 @@ tags:
 - [[NoticeStandalonePreview()]] - `contains` [EXTRACTED]
 - [[noticestypes.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/MessagingCampaignBuilderPagetsx

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateNoticeVersionDto"
+community: "EnvironmentVariables"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateNoticeVersionDto
+  - community/EnvironmentVariables
 ---
 
 # Type
 
 ## Connections
-- [[CreateNoticeVersionDto]] - `references` [EXTRACTED]
+- [[EnvironmentVariables]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateNoticeVersionDto
+#graphify/code #graphify/EXTRACTED #community/EnvironmentVariables

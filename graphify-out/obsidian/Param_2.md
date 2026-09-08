@@ -1,19 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "AccessTokenPayload"
+community: "transfers.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/transfersservicets
 ---
 
 # Param
 
 ## Connections
-- [[dot-approve()]] - `references` [EXTRACTED]
 - [[dot-get()_2]] - `references` [EXTRACTED]
-- [[dot-listRecipients()]] - `references` [EXTRACTED]
-- [[dot-send()]] - `references` [EXTRACTED]
+- [[dot-update()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/transfersservicets

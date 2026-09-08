@@ -8,11 +8,11 @@ members: 7
 **Members:** 7 nodes
 
 ## Members
-- [[ApiProperty_44]] - code
-- [[ApiPropertyOptional_45]] - code
-- [[IsBoolean_19]] - code
-- [[IsOptional_47]] - code
-- [[IsString_58]] - code
+- [[ApiProperty_18]] - code
+- [[ApiPropertyOptional_21]] - code
+- [[IsBoolean_10]] - code
+- [[IsOptional_22]] - code
+- [[IsString_26]] - code
 - [[ProcessorChecklistTickDto]] - code - dpdp-platform/backend/src/modules/retention/dto/complete-erasure-task.dto.ts
 - [[SystemChecklistTickDto]] - code - dpdp-platform/backend/src/modules/retention/dto/complete-erasure-task.dto.ts
 
@@ -24,10 +24,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_@prismaclient]]
-- 1 edge to [[_COMMUNITY_AccessTokenPayload]]
+- 2 edges to [[_COMMUNITY_@nestjsswagger]]
+- 1 edge to [[_COMMUNITY_RetentionController]]
 
 ## Top bridge nodes
 - [[ProcessorChecklistTickDto]] - degree 6, connects to 1 community
 - [[SystemChecklistTickDto]] - degree 4, connects to 1 community
-- [[ApiProperty_44]] - degree 3, connects to 1 community
+- [[ApiProperty_18]] - degree 3, connects to 1 community

@@ -1,23 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.service.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts"
 type: "code"
-community: "ConsentsService"
-location: "L161"
+community: "read-only-http.client.ts"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ConsentsService
+  - community/read-only-httpclientts
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[CampaignSendQueueService]] - `references` [EXTRACTED]
-- [[CampaignsService]] - `method` [EXTRACTED]
-- [[ConsentsService]] - `references` [EXTRACTED]
-- [[NoticesService]] - `references` [EXTRACTED]
-- [[ReferenceService]] - `references` [EXTRACTED]
-- [[TemplatesService]] - `references` [EXTRACTED]
+- [[ReadOnlyHttpMethodError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ConsentsService
+#graphify/code #graphify/EXTRACTED #community/read-only-httpclientts

@@ -12,8 +12,8 @@ tags:
 # audit-read.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@prismaclient]] - `imports_from` [EXTRACTED]
 - [[ACCESS_LOG_CSV_HEADER]] - `contains` [EXTRACTED]
 - [[ACCESS_LOG_ENTRY_SELECT]] - `contains` [EXTRACTED]
 - [[AUDIT_EVENTS_PAGE_SIZE]] - `imports` [EXTRACTED]

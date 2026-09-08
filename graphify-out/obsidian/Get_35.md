@@ -11,6 +11,6 @@ tags:
 # Get
 
 ## Connections
-- [[dot-list()_39]] - `references` [EXTRACTED]
+- [[dot-list()_40]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto

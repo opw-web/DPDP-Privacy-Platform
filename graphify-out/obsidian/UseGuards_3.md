@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Public"
+community: "MeRightsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/MeRightsService
 ---
 
 # UseGuards
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[MeRightsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/MeRightsService

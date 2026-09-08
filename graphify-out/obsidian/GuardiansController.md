@@ -1,24 +1,24 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/children/guardians.controller.ts"
 type: "code"
-community: "AccessTokenPayload"
+community: "RequirePermission"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/RequirePermission
 ---
 
 # GuardiansController
 
 ## Connections
-- [[dot-constructor()_14]] - `method` [EXTRACTED]
-- [[dot-create()]] - `method` [EXTRACTED]
-- [[dot-list()]] - `method` [EXTRACTED]
-- [[dot-verify()]] - `method` [EXTRACTED]
-- [[ApiTags_1]] - `references` [EXTRACTED]
-- [[Controller_1]] - `references` [EXTRACTED]
+- [[dot-constructor()_79]] - `method` [EXTRACTED]
+- [[dot-create()_14]] - `method` [EXTRACTED]
+- [[dot-list()_2]] - `method` [EXTRACTED]
+- [[dot-verify()_1]] - `method` [EXTRACTED]
+- [[ApiTags_18]] - `references` [EXTRACTED]
+- [[Controller_18]] - `references` [EXTRACTED]
 - [[children.module.ts]] - `imports` [EXTRACTED]
 - [[guardians.controller.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

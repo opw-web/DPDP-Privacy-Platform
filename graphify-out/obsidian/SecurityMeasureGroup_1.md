@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/registers/SecurityMeasuresTab.tsx"
+source_file: "dpdp-platform/backend/src/modules/registers/security-measures.service.ts"
 type: "code"
-community: "react"
+community: "@prisma/client"
 location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/prisma/client
 ---
 
 # SecurityMeasureGroup
 
 ## Connections
-- [[SecurityMeasuresTab.tsx]] - `contains` [EXTRACTED]
+- [[security-measures.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/prisma/client

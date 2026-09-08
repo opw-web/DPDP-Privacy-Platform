@@ -1,25 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/requests/requests.service.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
 type: "code"
-community: "RetentionScanService"
-location: "L259"
+community: "notices.service.ts"
+location: "L191"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/RetentionScanService
+  - graphify/EXTRACTED
+  - community/noticesservicets
 ---
 
 # .create()
 
 ## Connections
-- [[dot-computeDeadline()]] - `calls` [INFERRED]
-- [[dot-createRequest()_1]] - `calls` [INFERRED]
-- [[dot-next()]] - `calls` [INFERRED]
+- [[dot-create()_13]] - `calls` [INFERRED]
+- [[dot-createVersion()_1]] - `calls` [EXTRACTED]
 - [[dot-record()_1]] - `calls` [INFERRED]
-- [[dot-resolveRule()]] - `calls` [INFERRED]
-- [[dot-scanOrgDeadlines()]] - `calls` [EXTRACTED]
-- [[dot-snapshotOnto()]] - `calls` [INFERRED]
-- [[dot-writeTransition()]] - `calls` [EXTRACTED]
-- [[RequestsService]] - `method` [EXTRACTED]
+- [[CreateNoticeDto]] - `references` [EXTRACTED]
+- [[NoticesService]] - `method` [EXTRACTED]
+- [[duplicateCodeMessage()_2]] - `calls` [EXTRACTED]
+- [[isUniqueConstraintViolation()_3]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/RetentionScanService
+#graphify/code #graphify/EXTRACTED #community/noticesservicets

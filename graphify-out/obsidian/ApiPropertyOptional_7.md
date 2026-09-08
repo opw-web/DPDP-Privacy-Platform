@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AddNoteDto"
+community: "CreateDataSourceDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AddNoteDto
+  - community/CreateDataSourceDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[AddNoteDto]] - `references` [EXTRACTED]
+- [[CreateDataSourceDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AddNoteDto
+#graphify/code #graphify/EXTRACTED #community/CreateDataSourceDto

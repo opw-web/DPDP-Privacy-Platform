@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/boot-registration.registry.ts"
 type: "code"
-community: "schedule-reconciliation.service.ts"
+community: "queues.module.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/schedule-reconciliationservicets
+  - community/queuesmodulets
 ---
 
 # boot-registration.registry.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[BootRegistration]] - `contains` [EXTRACTED]
 - [[BootRegistrationRegistry]] - `contains` [EXTRACTED]
 - [[RECONCILE_BOOT_TIMEOUT_MS]] - `imports` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[sdf-cycle-scan.queue.ts]] - `imports_from` [EXTRACTED]
 - [[withBootTimeout()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/schedule-reconciliationservicets
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

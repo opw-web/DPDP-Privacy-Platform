@@ -1,21 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/transfers.controller.ts"
 type: "code"
-community: "AccessTokenPayload"
-location: "L40"
+community: "transfers.service.ts"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/transfersservicets
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_13]] - `calls` [INFERRED]
-- [[CampaignsController]] - `method` [EXTRACTED]
-- [[Get_3]] - `references` [EXTRACTED]
+- [[dot-get()_3]] - `calls` [INFERRED]
+- [[Get_9]] - `references` [EXTRACTED]
 - [[Param_2]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
+- [[TransfersController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/transfersservicets

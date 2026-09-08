@@ -1,22 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts"
 type: "code"
-community: "TemplatesService"
-location: "L207"
+community: "UpdateAlgorithmEntryDto"
+location: "L87"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/UpdateAlgorithmEntryDto
 ---
 
 # .update()
 
 ## Connections
-- [[dot-extractAndValidateVariables()]] - `calls` [EXTRACTED]
 - [[dot-record()_1]] - `calls` [INFERRED]
-- [[dot-update()_8]] - `calls` [INFERRED]
-- [[dot-validateRequiredSubsetOfReferenced()]] - `calls` [EXTRACTED]
-- [[TemplatesService]] - `method` [EXTRACTED]
-- [[UpdateTemplateDto]] - `references` [EXTRACTED]
+- [[dot-updateAlgorithm()]] - `calls` [INFERRED]
+- [[AlgorithmRegisterService]] - `method` [EXTRACTED]
+- [[UpdateAlgorithmEntryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/UpdateAlgorithmEntryDto

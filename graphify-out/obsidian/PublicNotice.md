@@ -12,7 +12,7 @@ tags:
 # PublicNotice
 
 ## Connections
-- [[NoticeDetail_1]] - `inherits` [EXTRACTED]
+- [[NoticeDetail]] - `inherits` [EXTRACTED]
 - [[notices.service.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/noticesservicets

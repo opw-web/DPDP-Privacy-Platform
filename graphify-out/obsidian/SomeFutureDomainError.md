@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sync/sync-error.spec.ts"
 type: "code"
-community: "sync-pipeline.service.ts"
+community: "SyncPipelineService"
 location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sync-pipelineservicets
+  - community/SyncPipelineService
 ---
 
 # SomeFutureDomainError
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sync-error.spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sync-pipelineservicets
+#graphify/code #graphify/EXTRACTED #community/SyncPipelineService

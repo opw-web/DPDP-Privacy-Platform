@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/campaign-send.queue.ts"
 type: "code"
-community: "CampaignSendQueueService"
+community: "queues.module.ts"
 location: "L72"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampaignSendQueueService
+  - community/queuesmodulets
 ---
 
 # .enqueue()
@@ -16,4 +16,4 @@ tags:
 - [[CampaignSendQueueService]] - `method` [EXTRACTED]
 - [[campaignSendJobId()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampaignSendQueueService
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

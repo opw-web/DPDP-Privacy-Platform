@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/common/crypto/crypto.module.ts"
 type: "code"
-community: "token.service.ts"
+community: "crypto.service.ts"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tokenservicets
+  - community/cryptoservicets
 ---
 
 # CryptoModule
 
 ## Connections
-- [[Module_37]] - `references` [EXTRACTED]
+- [[Module_34]] - `references` [EXTRACTED]
 - [[crypto.module.ts]] - `contains` [EXTRACTED]
 - [[data-sources.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tokenservicets
+#graphify/code #graphify/EXTRACTED #community/cryptoservicets

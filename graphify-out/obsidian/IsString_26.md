@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "VerifyIdentityDto"
+community: "ProcessorChecklistTickDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/VerifyIdentityDto
+  - community/ProcessorChecklistTickDto
 ---
 
 # IsString
 
 ## Connections
-- [[VerifyIdentityDto]] - `references` [EXTRACTED]
+- [[ProcessorChecklistTickDto]] - `references` [EXTRACTED]
+- [[SystemChecklistTickDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/VerifyIdentityDto
+#graphify/code #graphify/EXTRACTED #community/ProcessorChecklistTickDto

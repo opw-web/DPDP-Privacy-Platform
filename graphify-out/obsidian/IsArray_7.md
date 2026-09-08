@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateBreachDto"
+community: "CreateLegalHoldDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateBreachDto
+  - community/CreateLegalHoldDto
 ---
 
 # IsArray
 
 ## Connections
-- [[CreateBreachDto]] - `references` [EXTRACTED]
+- [[LegalHoldScopeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateBreachDto
+#graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto

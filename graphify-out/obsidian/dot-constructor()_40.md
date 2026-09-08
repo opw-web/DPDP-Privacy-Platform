@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/transfers.controller.ts"
+source_file: "dpdp-platform/backend/src/queues/pre-erasure-notice.processor.ts"
 type: "code"
-community: "CreateTransferDto"
-location: "L11"
+community: "NotificationsService"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTransferDto
+  - community/NotificationsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[TransfersController]] - `method` [EXTRACTED]
-- [[TransfersService]] - `references` [EXTRACTED]
+- [[PreErasureNoticeProcessor]] - `method` [EXTRACTED]
+- [[PreErasureNoticeService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTransferDto
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

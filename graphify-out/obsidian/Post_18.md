@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: ".unmerge"
+community: "notifications.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/unmerge
+  - community/notificationscontrollerts
 ---
 
 # Post
 
 ## Connections
-- [[dot-unmerge()]] - `references` [EXTRACTED]
+- [[dot-markAllRead()]] - `references` [EXTRACTED]
+- [[dot-markRead()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/unmerge
+#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts

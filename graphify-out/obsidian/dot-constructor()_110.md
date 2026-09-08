@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/unmerge.controller.ts"
+source_file: "dpdp-platform/backend/src/queues/sync.processor.ts"
 type: "code"
-community: ".unmerge"
-location: "L20"
+community: "SyncPipelineService"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/unmerge
+  - community/SyncPipelineService
 ---
 
 # .constructor()
 
 ## Connections
-- [[MergeService]] - `references` [EXTRACTED]
-- [[UnmergeController]] - `method` [EXTRACTED]
+- [[SyncPipelineService]] - `references` [EXTRACTED]
+- [[SyncProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/unmerge
+#graphify/code #graphify/EXTRACTED #community/SyncPipelineService

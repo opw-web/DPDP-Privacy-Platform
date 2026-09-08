@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/PurposeForm.tsx"
 type: "code"
-community: "router.tsx"
+community: "@tanstack/react-query"
 location: "L94"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/tanstack/react-query
 ---
 
 # PurposeForm()
@@ -16,4 +16,4 @@ tags:
 - [[PurposeForm.tsx]] - `contains` [EXTRACTED]
 - [[PurposesPage.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

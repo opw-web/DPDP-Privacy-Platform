@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/audit-chain-verify.processor.ts"
 type: "code"
-community: "PrismaService"
+community: "queues.module.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/queuesmodulets
 ---
 
 # audit-chain-verify.processor.ts
 
 ## Connections
-- [[@nestjsbullmq]] - `imports_from` [EXTRACTED]
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsbullmq_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[ACCESS_LOG_RETENTION_QUEUE_NAME]] - `contains` [EXTRACTED]
 - [[AUDIT_CHAIN_VERIFY_QUEUE_NAME]] - `contains` [EXTRACTED]
 - [[AuditChainService]] - `imports` [EXTRACTED]
@@ -34,4 +34,4 @@ tags:
 - [[scheduled-jobs.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

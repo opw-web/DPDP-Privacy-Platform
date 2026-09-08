@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "app.module.ts"
+community: "principals.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/appmodulets
+  - community/principalsservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[SdfCycleScanQueueService]] - `references` [EXTRACTED]
+- [[PrincipalEvidenceService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/appmodulets
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

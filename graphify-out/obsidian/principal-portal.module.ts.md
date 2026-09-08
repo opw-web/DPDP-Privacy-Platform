@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principal-portal/principal-portal.module.ts"
 type: "code"
-community: "app.module.ts"
+community: "@nestjs/common"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/appmodulets
+  - community/nestjs/common
 ---
 
 # principal-portal.module.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[AuditModule]] - `imports` [EXTRACTED]
 - [[AuthModule]] - `imports` [EXTRACTED]
 - [[EvidenceModule]] - `imports` [EXTRACTED]
@@ -38,4 +38,4 @@ tags:
 - [[principals.module.ts]] - `imports_from` [EXTRACTED]
 - [[requests.module.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/appmodulets
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

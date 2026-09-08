@@ -1,22 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/support/e2e-harness.ts"
+source_file: "dpdp-platform/backend/test/sync.e2e-spec.ts"
 type: "code"
-community: "supertest"
-location: "L224"
+community: "queues.module.ts"
+location: "L215"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/supertest
+  - community/queuesmodulets
 ---
 
 # waitUntil()
 
 ## Connections
-- [[breaches.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[campaigns.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[e2e-harness.ts]] - `contains` [EXTRACTED]
-- [[mvp2-schema-constraints.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[notifications.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[performance.e2e-spec.ts]] - `imports` [EXTRACTED]
+- [[sync.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/supertest
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.service.ts"
 type: "code"
-community: "mappings.service.ts"
+community: "data-sources.service.ts"
 location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingsservicets
+  - community/data-sourcesservicets
 ---
 
 # PublicSourceFieldMapping
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[mappings.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets

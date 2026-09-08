@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdateDataSourceDto"
+community: "CompleteObligationDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateDataSourceDto
+  - community/CompleteObligationDto
 ---
 
 # IsString
 
 ## Connections
-- [[UpdateDataSourceDto]] - `references` [EXTRACTED]
+- [[CompleteObligationDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateDataSourceDto
+#graphify/code #graphify/EXTRACTED #community/CompleteObligationDto

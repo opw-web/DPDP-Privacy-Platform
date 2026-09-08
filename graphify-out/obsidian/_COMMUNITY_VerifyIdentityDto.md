@@ -8,11 +8,11 @@ members: 6
 **Members:** 6 nodes
 
 ## Members
-- [[ApiProperty_21]] - code
-- [[ApiPropertyOptional_19]] - code
-- [[IsOptional_20]] - code
-- [[IsString_26]] - code
-- [[MinLength_20]] - code
+- [[ApiProperty_20]] - code
+- [[ApiPropertyOptional_26]] - code
+- [[IsOptional_28]] - code
+- [[IsString_31]] - code
+- [[MinLength_23]] - code
 - [[VerifyIdentityDto]] - code - dpdp-platform/backend/src/modules/requests/dto/verify-identity.dto.ts
 
 ## Live Query (requires Dataview plugin)
@@ -23,7 +23,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_@prismaclient]]
+- 2 edges to [[_COMMUNITY_@nestjsswagger]]
 - 1 edge to [[_COMMUNITY_requests.service.ts]]
 - 1 edge to [[_COMMUNITY_RequestsController]]
 - 1 edge to [[_COMMUNITY_RequestsService]]

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "@prisma/client"
+community: "EmployeesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/EmployeesService
 ---
 
 # IsString
 
 ## Connections
-- [[UpsertTranslationDto]] - `references` [EXTRACTED]
+- [[ResetEmployeePasswordDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prisma/client
+#graphify/code #graphify/EXTRACTED #community/EmployeesService

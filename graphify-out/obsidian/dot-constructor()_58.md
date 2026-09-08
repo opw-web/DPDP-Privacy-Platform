@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
+source_file: "dpdp-platform/backend/src/modules/compliance/compliance.controller.ts"
 type: "code"
-community: "compliance.service.ts"
-location: "L217"
+community: "CreateComplianceRuleDto"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/complianceservicets
+  - community/CreateComplianceRuleDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[ComplianceService]] - `method` [EXTRACTED]
+- [[ComplianceController]] - `method` [EXTRACTED]
+- [[ComplianceService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/complianceservicets
+#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto

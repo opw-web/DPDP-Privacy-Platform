@@ -9,12 +9,12 @@ members: 7
 
 ## Members
 - [[AffectedPrincipalsDto]] - code - dpdp-platform/backend/src/modules/breaches/dto/affected-principals.dto.ts
-- [[ApiPropertyOptional_18]] - code
-- [[IsArray_10]] - code
-- [[IsBoolean_10]] - code
+- [[ApiPropertyOptional_20]] - code
+- [[IsArray_11]] - code
+- [[IsBoolean_9]] - code
 - [[IsObject_4]] - code
-- [[IsOptional_18]] - code
-- [[IsString_23]] - code
+- [[IsOptional_21]] - code
+- [[IsString_25]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -24,10 +24,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 3 edges to [[_COMMUNITY_@nestjsswagger]]
 - 3 edges to [[_COMMUNITY_dot-record]]
-- 2 edges to [[_COMMUNITY_@prismaclient]]
 - 2 edges to [[_COMMUNITY_BreachesController]]
-- 1 edge to [[_COMMUNITY_breach.service.ts]]
 
 ## Top bridge nodes
-- [[AffectedPrincipalsDto]] - degree 14, connects to 4 communities
+- [[AffectedPrincipalsDto]] - degree 14, connects to 3 communities

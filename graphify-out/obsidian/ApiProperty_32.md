@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalLoginDto"
+community: "@nestjs/swagger"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalLoginDto
+  - community/nestjs/swagger
 ---
 
 # ApiProperty
 
 ## Connections
-- [[PrincipalLoginDto]] - `references` [EXTRACTED]
+- [[DataSourcePurposeResponseDto]] - `references` [EXTRACTED]
+- [[DataSourcePurposesResponseDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalLoginDto
+#graphify/code #graphify/EXTRACTED #community/nestjs/swagger

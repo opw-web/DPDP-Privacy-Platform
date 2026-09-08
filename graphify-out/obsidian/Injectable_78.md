@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateRecipientDto"
+community: "TokenService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateRecipientDto
+  - community/TokenService
 ---
 
 # Injectable
 
 ## Connections
-- [[RecipientsService]] - `references` [EXTRACTED]
+- [[JwtEmployeeGuard]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateRecipientDto
+#graphify/code #graphify/EXTRACTED #community/TokenService

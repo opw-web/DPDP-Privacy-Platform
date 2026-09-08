@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "children.module.ts"
+community: "UpdateRolePermissionsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/childrenmodulets
+  - community/UpdateRolePermissionsDto
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_28]] - `references` [EXTRACTED]
+- [[dot-replacePermissions()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/childrenmodulets
+#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto

@@ -1,25 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sync/sync-pipeline.service.ts"
+source_file: "dpdp-platform/backend/src/queues/campaign-send.queue.ts"
 type: "code"
-community: "normalization.service.ts"
-location: "L172"
+community: "queues.module.ts"
+location: "L67"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/normalizationservicets
+  - community/queuesmodulets
 ---
 
 # .constructor()
 
 ## Connections
-- [[AgeService]] - `references` [EXTRACTED]
-- [[AssemblyService]] - `references` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
-- [[DataSourcesService]] - `references` [EXTRACTED]
-- [[LinkingService]] - `references` [EXTRACTED]
-- [[MatchingService]] - `references` [EXTRACTED]
-- [[NormalizationService]] - `references` [EXTRACTED]
-- [[SyncLockService]] - `references` [EXTRACTED]
-- [[SyncPipelineService]] - `method` [EXTRACTED]
+- [[CampaignSendQueueService]] - `method` [EXTRACTED]
+- [[InjectQueue_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/normalizationservicets
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

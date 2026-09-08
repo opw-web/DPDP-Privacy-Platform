@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "employees.service.ts"
+community: "CreateInformationRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeesservicets
+  - community/CreateInformationRequestDto
 ---
 
 # MinLength
 
 ## Connections
-- [[UpdateEmployeeDto]] - `references` [EXTRACTED]
+- [[UpdateInformationRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeesservicets
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

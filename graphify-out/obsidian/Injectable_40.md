@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CampaignSendQueueService"
+community: "principals.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampaignSendQueueService
+  - community/principalsservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[CampaignSendQueueService]] - `references` [EXTRACTED]
+- [[PrincipalRecipientsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampaignSendQueueService
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "compliance.service.ts"
+community: "RequirePermission"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/complianceservicets
+  - community/RequirePermission
 ---
 
 # Param
 
 ## Connections
-- [[dot-getById()]] - `references` [EXTRACTED]
-- [[dot-review()]] - `references` [EXTRACTED]
-- [[dot-update()_6]] - `references` [EXTRACTED]
+- [[dot-verify()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/complianceservicets
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/tenant/tenant-context.ts"
 type: "code"
-community: "PrismaService"
+community: "@prisma/client"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/prisma/client
 ---
 
 # tenant-context.ts
@@ -38,7 +38,7 @@ tags:
 - [[identity-matching.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[information-requests.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[information-requests.service.ts]] - `imports_from` [EXTRACTED]
-- [[isThenable()_1]] - `contains` [EXTRACTED]
+- [[isThenable()]] - `contains` [EXTRACTED]
 - [[me-rights.service.ts]] - `imports_from` [EXTRACTED]
 - [[merge-unmerge.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[normalization.e2e-spec.ts]] - `imports_from` [EXTRACTED]
@@ -56,7 +56,7 @@ tags:
 - [[sdf-cycle-scan.service.ts]] - `imports_from` [EXTRACTED]
 - [[sdf.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[step6-conflict-acceptance.e2e-spec.ts]] - `imports_from` [EXTRACTED]
-- [[storage_1]] - `contains` [EXTRACTED]
+- [[storage]] - `contains` [EXTRACTED]
 - [[sync-pipeline.service.ts]] - `imports_from` [EXTRACTED]
 - [[sync.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[sync.service.ts]] - `imports_from` [EXTRACTED]
@@ -66,4 +66,4 @@ tags:
 - [[tenant.extension.ts]] - `imports_from` [EXTRACTED]
 - [[tenant.middleware.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/prisma/client

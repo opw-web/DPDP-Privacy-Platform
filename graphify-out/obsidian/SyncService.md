@@ -12,13 +12,13 @@ tags:
 # SyncService
 
 ## Connections
-- [[dot-constructor()_44]] - `references` [EXTRACTED]
-- [[dot-constructor()_45]] - `references` [EXTRACTED]
-- [[dot-constructor()_46]] - `method` [EXTRACTED]
+- [[dot-constructor()_48]] - `references` [EXTRACTED]
+- [[dot-constructor()_49]] - `references` [EXTRACTED]
+- [[dot-constructor()_50]] - `method` [EXTRACTED]
 - [[dot-getJob()]] - `method` [EXTRACTED]
 - [[dot-listJobs()]] - `method` [EXTRACTED]
 - [[dot-triggerSync()]] - `method` [EXTRACTED]
-- [[Injectable_25]] - `references` [EXTRACTED]
+- [[Injectable_31]] - `references` [EXTRACTED]
 - [[sync.controller.ts]] - `imports` [EXTRACTED]
 - [[sync.module.ts]] - `imports` [EXTRACTED]
 - [[sync.service.ts]] - `contains` [EXTRACTED]

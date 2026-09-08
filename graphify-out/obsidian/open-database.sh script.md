@@ -18,7 +18,6 @@ tags:
 - [[open-database.sh]] - `contains` [EXTRACTED]
 - [[pause_before_exit()]] - `calls` [EXTRACTED]
 - [[say()]] - `calls` [EXTRACTED]
-- [[setup_node()]] - `calls` [EXTRACTED]
 - [[step()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/commonsh

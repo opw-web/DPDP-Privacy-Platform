@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "security-measures.service.ts"
+community: "CreateSecurityMeasureDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/security-measuresservicets
+  - community/CreateSecurityMeasureDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[CreateSecurityMeasureDto]] - `references` [EXTRACTED]
+- [[UpdateSecurityMeasureDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/security-measuresservicets
+#graphify/code #graphify/EXTRACTED #community/CreateSecurityMeasureDto

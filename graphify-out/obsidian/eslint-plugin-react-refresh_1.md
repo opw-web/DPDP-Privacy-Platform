@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/package.json"
-type: "code"
-community: "devDependencies"
+type: "concept"
+community: "eslint.config.js"
 location: "L53"
 tags:
-  - graphify/code
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/devDependencies
+  - community/eslintconfigjs
 ---
 
 # eslint-plugin-react-refresh
 
 ## Connections
-- [[devDependencies_2]] - `contains` [EXTRACTED]
+- [[eslint.config.js]] - `imports_from` [EXTRACTED]
+- [[frontendpackage.json]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/devDependencies
+#graphify/concept #graphify/EXTRACTED #community/eslintconfigjs

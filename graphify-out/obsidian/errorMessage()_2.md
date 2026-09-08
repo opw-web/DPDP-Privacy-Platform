@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/SettingsCompliancePage.tsx"
 type: "code"
-community: "SettingsPage.tsx"
+community: "PrincipalDetailPage.tsx"
 location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SettingsPagetsx
+  - community/PrincipalDetailPagetsx
 ---
 
 # errorMessage()
@@ -15,4 +15,4 @@ tags:
 - [[RuleCard()]] - `calls` [EXTRACTED]
 - [[SettingsCompliancePage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SettingsPagetsx
+#graphify/code #graphify/EXTRACTED #community/PrincipalDetailPagetsx

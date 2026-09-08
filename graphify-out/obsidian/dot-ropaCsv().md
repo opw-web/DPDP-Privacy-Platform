@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-exportCsv()_1]] - `calls` [INFERRED]
-- [[Get_12]] - `references` [EXTRACTED]
+- [[Get_10]] - `references` [EXTRACTED]
 - [[InventoryController]] - `method` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[Res_2]] - `references` [EXTRACTED]

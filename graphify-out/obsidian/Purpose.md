@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/PurposesPage.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.tsx"
 type: "code"
-community: "react-router-dom"
-location: "L18"
+community: "api-client.ts"
+location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react-router-dom
+  - community/api-clientts
 ---
 
 # Purpose
 
 ## Connections
-- [[PurposesPage.tsx]] - `contains` [EXTRACTED]
+- [[ChildrenPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react-router-dom
+#graphify/code #graphify/EXTRACTED #community/api-clientts

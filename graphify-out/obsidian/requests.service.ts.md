@@ -12,8 +12,8 @@ tags:
 # requests.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@prismaclient]] - `imports_from` [EXTRACTED]
 - [[APPLIES_TO_BY_REQUEST_TYPE]] - `imports` [EXTRACTED]
 - [[AddNoteDto]] - `imports` [EXTRACTED]
 - [[AuditAction]] - `imports` [EXTRACTED]
@@ -35,7 +35,7 @@ tags:
 - [[ListRequestsDto]] - `imports` [EXTRACTED]
 - [[NotificationsService]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
-- [[ProcessorChecklistEntry_1]] - `imports` [EXTRACTED]
+- [[ProcessorChecklistEntry]] - `imports` [EXTRACTED]
 - [[PublicAssignedEmployee]] - `contains` [EXTRACTED]
 - [[PublicRequest]] - `contains` [EXTRACTED]
 - [[PublicRequestDetail]] - `contains` [EXTRACTED]
@@ -48,7 +48,7 @@ tags:
 - [[RequestStats]] - `contains` [EXTRACTED]
 - [[RequestsService]] - `contains` [EXTRACTED]
 - [[ScopedTransactionClient]] - `imports` [EXTRACTED]
-- [[SystemChecklistEntry_1]] - `imports` [EXTRACTED]
+- [[SystemChecklistEntry]] - `imports` [EXTRACTED]
 - [[TERMINAL_REQUEST_STATUSES]] - `imports` [EXTRACTED]
 - [[TRANSITIONS]] - `imports` [EXTRACTED]
 - [[TenantContext]] - `imports` [EXTRACTED]

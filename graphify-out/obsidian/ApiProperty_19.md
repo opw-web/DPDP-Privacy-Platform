@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateMeRequestDto"
+community: "CreateComplianceRuleDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateMeRequestDto
+  - community/CreateComplianceRuleDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateMeRequestDto]] - `references` [EXTRACTED]
+- [[CreateComplianceRuleDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateMeRequestDto
+#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto

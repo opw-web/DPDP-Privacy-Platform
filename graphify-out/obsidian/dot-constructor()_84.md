@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/permissions.controller.ts"
+source_file: "dpdp-platform/backend/src/queues/sdf-cycle-scan.processor.ts"
 type: "code"
-community: "@nestjs/common"
-location: "L9"
+community: "SdfCycleScanService"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/SdfCycleScanService
 ---
 
 # .constructor()
 
 ## Connections
-- [[PermissionsController]] - `method` [EXTRACTED]
+- [[SdfCycleScanProcessor]] - `method` [EXTRACTED]
+- [[SdfCycleScanService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/SdfCycleScanService

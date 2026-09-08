@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "SyncService"
+community: "CreateLegalHoldDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncService
+  - community/CreateLegalHoldDto
 ---
 
 # IsOptional
 
 ## Connections
-- [[ListSyncJobsQueryDto]] - `references` [EXTRACTED]
+- [[CreateLegalHoldDto]] - `references` [EXTRACTED]
+- [[LegalHoldScopeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncService
+#graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto

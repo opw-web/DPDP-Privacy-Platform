@@ -1,24 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
+source_file: "dpdp-platform/backend/src/common/mail/mailer.service.ts"
 type: "code"
-community: "AccessTokenPayload"
-location: "L61"
+community: "NotificationsService"
+location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/NotificationsService
 ---
 
 # .send()
 
 ## Connections
-- [[dot-send()_7]] - `calls` [INFERRED]
-- [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[CampaignsController]] - `method` [EXTRACTED]
-- [[CurrentActor]] - `references` [EXTRACTED]
-- [[CurrentActorPermissions]] - `references` [EXTRACTED]
-- [[Param_2]] - `references` [EXTRACTED]
-- [[Post_2]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-getTransporter()]] - `calls` [EXTRACTED]
+- [[dot-send()_5]] - `calls` [INFERRED]
+- [[MailerService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

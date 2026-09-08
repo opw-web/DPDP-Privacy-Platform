@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Public"
+community: "PurposesController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/PurposesController
 ---
 
 # Body
 
 ## Connections
-- [[dot-commentOnRequest()]] - `references` [EXTRACTED]
-- [[dot-createRequest()]] - `references` [EXTRACTED]
-- [[dot-upsertNomination()]] - `references` [EXTRACTED]
+- [[dot-create()_6]] - `references` [EXTRACTED]
+- [[dot-update()_5]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/PurposesController

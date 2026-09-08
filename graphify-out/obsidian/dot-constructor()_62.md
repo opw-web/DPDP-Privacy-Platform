@@ -1,20 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/notifications.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts"
 type: "code"
-community: "notifications.service.ts"
-location: "L58"
+community: "TemplatesService"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationsservicets
+  - community/TemplatesService
 ---
 
 # .constructor()
 
 ## Connections
-- [[Inject]] - `references` [EXTRACTED]
-- [[NotificationProvider]] - `references` [EXTRACTED]
-- [[NotificationsService]] - `method` [EXTRACTED]
-- [[PortalProvider]] - `references` [EXTRACTED]
+- [[TemplatesController]] - `method` [EXTRACTED]
+- [[TemplatesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationsservicets
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateRecipientDto"
+community: "PrincipalAuthController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateRecipientDto
+  - community/PrincipalAuthController
 ---
 
 # IsEmail
 
 ## Connections
-- [[UpdateRecipientDto]] - `references` [EXTRACTED]
+- [[PrincipalLoginDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateRecipientDto
+#graphify/code #graphify/EXTRACTED #community/PrincipalAuthController

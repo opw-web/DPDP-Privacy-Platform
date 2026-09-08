@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/notices/types.ts"
 type: "code"
-community: "notices.service.ts"
-location: "L97"
+community: "MessagingCampaignBuilderPage.tsx"
+location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/noticesservicets
+  - community/MessagingCampaignBuilderPagetsx
 ---
 
 # NoticeDetail
 
 ## Connections
-- [[PublicNotice]] - `inherits` [EXTRACTED]
-- [[notices.service.ts]] - `contains` [EXTRACTED]
+- [[ChildrenPage.tsx]] - `imports` [EXTRACTED]
+- [[Notice]] - `inherits` [EXTRACTED]
+- [[NoticeBuilderPage.tsx]] - `imports` [EXTRACTED]
+- [[noticestypes.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/noticesservicets
+#graphify/code #graphify/EXTRACTED #community/MessagingCampaignBuilderPagetsx

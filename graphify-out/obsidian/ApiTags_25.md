@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".unmerge"
+community: "CreateInformationRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/unmerge
+  - community/CreateInformationRequestDto
 ---
 
 # ApiTags
 
 ## Connections
-- [[UnmergeController]] - `references` [EXTRACTED]
+- [[InformationRequestsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/unmerge
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

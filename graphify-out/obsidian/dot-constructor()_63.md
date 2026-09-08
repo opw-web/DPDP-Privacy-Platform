@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/providers/portal.provider.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts"
 type: "code"
-community: "notifications.service.ts"
-location: "L27"
+community: "TemplatesService"
+location: "L72"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationsservicets
+  - community/TemplatesService
 ---
 
 # .constructor()
 
 ## Connections
-- [[PortalProvider]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[TemplatesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationsservicets
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

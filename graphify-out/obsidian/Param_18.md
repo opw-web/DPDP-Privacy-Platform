@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: ".completeAssessment"
+community: "CreateInformationRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/completeAssessment
+  - community/CreateInformationRequestDto
 ---
 
 # Param
 
 ## Connections
-- [[dot-completeAssessment()]] - `references` [EXTRACTED]
-- [[dot-updateAlgorithm()]] - `references` [EXTRACTED]
+- [[dot-getById()_6]] - `references` [EXTRACTED]
+- [[dot-update()_16]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/completeAssessment
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

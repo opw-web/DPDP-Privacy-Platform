@@ -1,20 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/notices/types.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
 type: "code"
-community: "react"
-location: "L55"
+community: "notices.service.ts"
+location: "L117"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/noticesservicets
 ---
 
 # EligibleItemisedField
 
 ## Connections
-- [[NoticeBuilderPage.tsx]] - `imports` [EXTRACTED]
-- [[NoticeComposer.tsx]] - `imports` [EXTRACTED]
-- [[NoticeComposerProps]] - `references` [EXTRACTED]
-- [[noticestypes.ts]] - `contains` [EXTRACTED]
+- [[notices.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/noticesservicets

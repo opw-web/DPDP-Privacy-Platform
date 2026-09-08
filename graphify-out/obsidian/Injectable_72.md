@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "children.module.ts"
+community: ".record"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/childrenmodulets
+  - community/record
 ---
 
 # Injectable
 
 ## Connections
-- [[ChildExemptionsService]] - `references` [EXTRACTED]
+- [[BreachService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/childrenmodulets
+#graphify/code #graphify/EXTRACTED #community/record

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/SdfPage.tsx"
 type: "code"
-community: "react-router-dom"
+community: "api-client.ts"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react-router-dom
+  - community/api-clientts
 ---
 
 # SdfData
@@ -15,4 +15,4 @@ tags:
 - [[AssessmentRowData]] - `references` [EXTRACTED]
 - [[SdfPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react-router-dom
+#graphify/code #graphify/EXTRACTED #community/api-clientts

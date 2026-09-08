@@ -1,24 +1,24 @@
 ---
 source_file: "dpdp-platform/backend/test/mvp2-tenant-isolation.e2e-spec.ts"
 type: "code"
-community: "supertest"
+community: "PrismaService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/supertest
+  - community/PrismaService
 ---
 
 # mvp2-tenant-isolation.e2e-spec.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[bootstrapTestApp()]] - `imports` [EXTRACTED]
 - [[cleanupOrgs()]] - `imports` [EXTRACTED]
-- [[createOrgWithEmployee()]] - `imports` [EXTRACTED]
+- [[createOrgWithEmployee()_2]] - `imports` [EXTRACTED]
 - [[e2e-harness.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[supertest]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/supertest
+#graphify/code #graphify/EXTRACTED #community/PrismaService

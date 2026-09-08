@@ -1,24 +1,24 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/dto/replace-mappings.dto.ts"
 type: "code"
-community: "SourceFieldMappingDto"
+community: "ReplaceMappingsDto"
 location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SourceFieldMappingDto
+  - community/ReplaceMappingsDto
 ---
 
 # SourceFieldMappingDto
 
 ## Connections
-- [[ApiProperty_15]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_15]] - `references` [EXTRACTED]
-- [[IsBoolean_8]] - `references` [EXTRACTED]
-- [[IsEnum_11]] - `references` [EXTRACTED]
-- [[IsOptional_15]] - `references` [EXTRACTED]
-- [[IsString_18]] - `references` [EXTRACTED]
-- [[MinLength_15]] - `references` [EXTRACTED]
+- [[ApiProperty_8]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_6]] - `references` [EXTRACTED]
+- [[IsBoolean_3]] - `references` [EXTRACTED]
+- [[IsEnum_2]] - `references` [EXTRACTED]
+- [[IsOptional_7]] - `references` [EXTRACTED]
+- [[IsString_8]] - `references` [EXTRACTED]
+- [[MinLength_5]] - `references` [EXTRACTED]
 - [[replace-mappings.dto.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SourceFieldMappingDto
+#graphify/code #graphify/EXTRACTED #community/ReplaceMappingsDto

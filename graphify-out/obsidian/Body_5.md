@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Public"
+community: "AttachPurposesDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/AttachPurposesDto
 ---
 
 # Body
 
 ## Connections
-- [[dot-setStatus()]] - `references` [EXTRACTED]
+- [[dot-replaceMappings()]] - `references` [EXTRACTED]
+- [[dot-replacePurposes()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/AttachPurposesDto

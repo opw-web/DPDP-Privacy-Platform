@@ -10,7 +10,7 @@ members: 26
 ## Members
 - [[@nestjscli]] - code - dpdp-platform/backend/package.json
 - [[@nestjsschematics]] - code - dpdp-platform/backend/package.json
-- [[@nestjstesting_1]] - code - dpdp-platform/backend/package.json
+- [[@nestjstesting]] - code - dpdp-platform/backend/package.json
 - [[@typescookie-parser]] - code - dpdp-platform/backend/package.json
 - [[@typesexpress]] - code - dpdp-platform/backend/package.json
 - [[@typesjest]] - code - dpdp-platform/backend/package.json

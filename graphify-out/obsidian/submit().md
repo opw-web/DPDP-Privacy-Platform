@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/retention/LegalHoldForm.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/children/ExemptionClaimForm.tsx"
 type: "code"
-community: "DateTime.tsx"
-location: "L18"
+community: "react"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DateTimetsx
+  - community/react
 ---
 
 # submit()
 
 ## Connections
-- [[LegalHoldForm()]] - `contains` [EXTRACTED]
+- [[ExemptionClaimForm()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DateTimetsx
+#graphify/code #graphify/EXTRACTED #community/react

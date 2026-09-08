@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/sdf/AlgorithmRegisterPanel.tsx"
 type: "code"
-community: "react-router-dom"
+community: "api-client.ts"
 location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react-router-dom
+  - community/api-clientts
 ---
 
 # ALGORITHMS_QUERY_KEY
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[AlgorithmRegisterPanel.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react-router-dom
+#graphify/code #graphify/EXTRACTED #community/api-clientts

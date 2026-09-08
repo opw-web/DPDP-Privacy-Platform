@@ -1,23 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
+source_file: "dpdp-platform/backend/src/modules/breaches/breaches.controller.ts"
 type: "code"
-community: ".record"
-location: "L194"
+community: "BreachesController"
+location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/BreachesController
 ---
 
 # .previewAffected()
 
 ## Connections
-- [[dot-addAffected()]] - `calls` [EXTRACTED]
-- [[dot-candidateWhere()]] - `calls` [EXTRACTED]
-- [[dot-create()_23]] - `calls` [EXTRACTED]
 - [[dot-previewAffected()_1]] - `calls` [INFERRED]
-- [[AffectedPreview]] - `references` [EXTRACTED]
 - [[AffectedPrincipalsDto]] - `references` [EXTRACTED]
-- [[BreachService]] - `method` [EXTRACTED]
+- [[Body_20]] - `references` [EXTRACTED]
+- [[BreachesController]] - `method` [EXTRACTED]
+- [[Post_21]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/BreachesController

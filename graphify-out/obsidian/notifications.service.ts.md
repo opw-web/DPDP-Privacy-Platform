@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notifications/notifications.service.ts"
 type: "code"
-community: "notifications.service.ts"
+community: "@prisma/client"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationsservicets
+  - community/prisma/client
 ---
 
 # notifications.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@prismaclient]] - `imports_from` [EXTRACTED]
 - [[EMAIL_PROVIDER]] - `imports` [EXTRACTED]
 - [[NOTIFICATION_PUBLIC_SELECT]] - `contains` [EXTRACTED]
 - [[NotificationCallerActor]] - `imports` [EXTRACTED]
@@ -45,4 +45,4 @@ tags:
 - [[sdf-cycle-scan.service.ts]] - `imports_from` [EXTRACTED]
 - [[toPublicNotification()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationsservicets
+#graphify/code #graphify/EXTRACTED #community/prisma/client

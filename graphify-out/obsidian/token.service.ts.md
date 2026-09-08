@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/token.service.ts"
 type: "code"
-community: "token.service.ts"
+community: "RequirePermission"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tokenservicets
+  - community/RequirePermission
 ---
 
 # token.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@nestjsconfig_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjsconfig]] - `imports_from` [EXTRACTED]
 - [[ACCESS_TOKEN_AUDIENCES]] - `contains` [EXTRACTED]
 - [[AccessTokenAudience]] - `contains` [EXTRACTED]
 - [[AccessTokenPayload]] - `contains` [EXTRACTED]
@@ -58,4 +58,4 @@ tags:
 - [[tenant.middleware.ts]] - `imports_from` [EXTRACTED]
 - [[unmerge.controller.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tokenservicets
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

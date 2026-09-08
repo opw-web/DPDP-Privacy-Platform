@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
 type: "code"
-community: "compliance.service.ts"
+community: "AuditService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/complianceservicets
+  - community/AuditService
 ---
 
 # compliance.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@prismaclient]] - `imports_from` [EXTRACTED]
 - [[AccessTokenPayload]] - `imports` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[COMPLIANCE_RULE_PUBLIC_SELECT]] - `contains` [EXTRACTED]
@@ -49,4 +49,4 @@ tags:
 - [[update-compliance-rule.dto.ts]] - `imports_from` [EXTRACTED]
 - [[worstCaseDeadlineDays()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/complianceservicets
+#graphify/code #graphify/EXTRACTED #community/AuditService

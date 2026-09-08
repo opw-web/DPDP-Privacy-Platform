@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/linking.service.ts"
+source_file: "dpdp-platform/backend/src/queues/retention-scan.processor.ts"
 type: "code"
-community: "ScopedTransactionClient"
-location: "L43"
+community: "RetentionScanService"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScopedTransactionClient
+  - community/RetentionScanService
 ---
 
 # .constructor()
 
 ## Connections
-- [[IdentifierOwnershipConflictError_1]] - `method` [EXTRACTED]
+- [[RetentionScanProcessor]] - `method` [EXTRACTED]
+- [[RetentionScanService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient
+#graphify/code #graphify/EXTRACTED #community/RetentionScanService

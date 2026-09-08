@@ -1,21 +1,21 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notices/notices.controller.ts"
 type: "code"
-community: "AccessTokenPayload"
+community: "NoticesService"
 location: "L56"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/NoticesService
 ---
 
 # .listEligibleFields()
 
 ## Connections
 - [[dot-listEligibleFields()_1]] - `calls` [INFERRED]
-- [[Get_4]] - `references` [EXTRACTED]
+- [[Get_20]] - `references` [EXTRACTED]
 - [[NoticesController]] - `method` [EXTRACTED]
-- [[Param_3]] - `references` [EXTRACTED]
+- [[Param_10]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/NoticesService

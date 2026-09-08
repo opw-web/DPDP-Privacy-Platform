@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/retention-scan.queue.ts"
 type: "code"
-community: "mvp2-schedules.ts"
+community: "queues.module.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mvp2-schedulests
+  - community/queuesmodulets
 ---
 
 # retention-scan.queue.ts
 
 ## Connections
-- [[@nestjsbullmq]] - `imports_from` [EXTRACTED]
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsbullmq_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[BootRegistrationRegistry]] - `imports` [EXTRACTED]
 - [[PRE_ERASURE_NOTICE_QUEUE_NAME]] - `contains` [EXTRACTED]
 - [[PreErasureNoticeJobData]] - `contains` [EXTRACTED]
@@ -29,4 +29,4 @@ tags:
 - [[retention-scan.processor.ts]] - `imports_from` [EXTRACTED]
 - [[retention.module.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mvp2-schedulests
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

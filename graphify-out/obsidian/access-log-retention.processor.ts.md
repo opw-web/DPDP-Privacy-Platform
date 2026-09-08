@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/access-log-retention.processor.ts"
 type: "code"
-community: "token.service.ts"
+community: "employee-auth.controller.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tokenservicets
+  - community/employee-authcontrollerts
 ---
 
 # access-log-retention.processor.ts
 
 ## Connections
-- [[@nestjsbullmq]] - `imports_from` [EXTRACTED]
-- [[@nestjsconfig_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsbullmq_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsconfig]] - `imports_from` [EXTRACTED]
 - [[ACCESS_LOG_RETENTION_FLOOR_DAYS]] - `imports` [EXTRACTED]
 - [[ACCESS_LOG_RETENTION_QUEUE_NAME]] - `re_exports` [EXTRACTED]
 - [[AccessLogRetentionJobData]] - `contains` [EXTRACTED]
@@ -29,4 +29,4 @@ tags:
 - [[queues.module.ts]] - `imports_from` [EXTRACTED]
 - [[scheduled-jobs.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tokenservicets
+#graphify/code #graphify/EXTRACTED #community/employee-authcontrollerts

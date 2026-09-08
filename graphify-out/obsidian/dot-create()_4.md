@@ -1,20 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/transfers.controller.ts"
 type: "code"
-community: "CreateAlgorithmEntryDto"
-location: "L58"
+community: "transfers.service.ts"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateAlgorithmEntryDto
+  - community/transfersservicets
 ---
 
 # .create()
 
 ## Connections
-- [[dot-createAlgorithm()]] - `calls` [INFERRED]
-- [[dot-record()_1]] - `calls` [INFERRED]
-- [[AlgorithmRegisterService]] - `method` [EXTRACTED]
-- [[CreateAlgorithmEntryDto]] - `references` [EXTRACTED]
+- [[dot-create()_5]] - `calls` [INFERRED]
+- [[Body_4]] - `references` [EXTRACTED]
+- [[CreateTransferDto]] - `references` [EXTRACTED]
+- [[Post_2]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[TransfersController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto
+#graphify/code #graphify/EXTRACTED #community/transfersservicets

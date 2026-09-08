@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sdf-cycle-scan.processor.ts"
+source_file: "dpdp-platform/backend/src/common/crypto/crypto.service.ts"
 type: "code"
-community: "sdf-cycle-scan.queue.ts"
-location: "L21"
+community: "crypto.service.ts"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdf-cycle-scanqueuets
+  - community/cryptoservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[SdfCycleScanProcessor]] - `method` [EXTRACTED]
-- [[SdfCycleScanService]] - `references` [EXTRACTED]
+- [[MalformedCiphertextError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdf-cycle-scanqueuets
+#graphify/code #graphify/EXTRACTED #community/cryptoservicets

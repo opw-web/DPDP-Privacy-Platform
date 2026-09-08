@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/principal/components/PortalShell.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.test.tsx"
 type: "code"
-community: "DateTime.tsx"
-location: "L8"
+community: "AuditPage.tsx"
+location: "L110"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DateTimetsx
+  - community/AuditPagetsx
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[PortalShell.test.tsx]] - `contains` [EXTRACTED]
+- [[MessagingCampaignDetailPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DateTimetsx
+#graphify/code #graphify/EXTRACTED #community/AuditPagetsx

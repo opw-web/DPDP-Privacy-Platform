@@ -12,7 +12,7 @@ tags:
 # RegistersModule
 
 ## Connections
-- [[Module_35]] - `references` [EXTRACTED]
+- [[Module_27]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[registers.module.ts]] - `contains` [EXTRACTED]
 

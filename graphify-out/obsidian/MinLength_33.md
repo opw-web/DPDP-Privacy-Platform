@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalLoginDto"
+community: "CreateVoluntaryUndertakingDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalLoginDto
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # MinLength
 
 ## Connections
-- [[PrincipalLoginDto]] - `references` [EXTRACTED]
+- [[CreateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalLoginDto
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

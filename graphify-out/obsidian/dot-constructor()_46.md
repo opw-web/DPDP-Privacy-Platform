@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sync/sync.service.ts"
+source_file: "dpdp-platform/backend/src/modules/inventory/inventory.controller.ts"
 type: "code"
-community: "SyncService"
-location: "L25"
+community: "inventory.service.ts"
+location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncService
+  - community/inventoryservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[DataSourcesService]] - `references` [EXTRACTED]
-- [[SyncQueueService]] - `references` [EXTRACTED]
-- [[SyncService]] - `method` [EXTRACTED]
+- [[InventoryController]] - `method` [EXTRACTED]
+- [[InventoryService]] - `references` [EXTRACTED]
+- [[RopaExportService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncService
+#graphify/code #graphify/EXTRACTED #community/inventoryservicets

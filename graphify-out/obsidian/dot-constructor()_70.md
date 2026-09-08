@@ -1,17 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/consents/consent-backfill.service.ts"
+source_file: "dpdp-platform/backend/src/modules/principals/principals.controller.ts"
 type: "code"
-community: "consent-backfill.queue.ts"
-location: "L48"
+community: "principals.service.ts"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/consent-backfillqueuets
+  - community/principalsservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[ConsentBackfillService]] - `method` [EXTRACTED]
+- [[LineageService]] - `references` [EXTRACTED]
+- [[PrincipalRecipientsService]] - `references` [EXTRACTED]
+- [[PrincipalsController]] - `method` [EXTRACTED]
+- [[PrincipalsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/consent-backfillqueuets
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

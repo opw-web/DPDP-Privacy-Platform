@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
+community: "RequirePermission"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/RequirePermission
 ---
 
 # ApiTags
 
 ## Connections
-- [[VoluntaryUndertakingsController]] - `references` [EXTRACTED]
+- [[PrincipalsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

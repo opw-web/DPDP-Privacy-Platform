@@ -1,20 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
+source_file: "dpdp-platform/backend/src/modules/board/information-requests.controller.ts"
 type: "code"
-community: ".record"
-location: "L151"
+community: "CreateInformationRequestDto"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/CreateInformationRequestDto
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_38]] - `calls` [INFERRED]
-- [[dot-public()]] - `calls` [EXTRACTED]
-- [[BreachService]] - `method` [EXTRACTED]
-- [[PublicBreach]] - `references` [EXTRACTED]
+- [[dot-list()_30]] - `calls` [INFERRED]
+- [[Get_26]] - `references` [EXTRACTED]
+- [[InformationRequestsController]] - `method` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

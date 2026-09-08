@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/board/information-requests.service.ts"
+source_file: "dpdp-platform/backend/src/queues/breach-principal-notice-dispatch.queue.ts"
 type: "code"
-community: "CreateInformationRequestDto"
-location: "L61"
+community: "queues.module.ts"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateInformationRequestDto
+  - community/queuesmodulets
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[InformationRequestsService]] - `method` [EXTRACTED]
+- [[BreachPrincipalNoticeDispatchQueueService]] - `method` [EXTRACTED]
+- [[InjectQueue_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

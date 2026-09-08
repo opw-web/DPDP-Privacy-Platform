@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/RetentionPage.tsx"
 type: "code"
-community: "DateTime.tsx"
+community: "api-client.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DateTimetsx
+  - community/api-clientts
 ---
 
 # RetentionPage.tsx
@@ -47,4 +47,4 @@ tags:
 - [[retentionStateLabel()]] - `imports` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DateTimetsx
+#graphify/code #graphify/EXTRACTED #community/api-clientts

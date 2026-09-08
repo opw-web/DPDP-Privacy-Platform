@@ -1,23 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/guardians.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/children/guardians.service.ts"
 type: "code"
-community: "AccessTokenPayload"
-location: "L28"
+community: "GuardiansService"
+location: "L167"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/GuardiansService
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_3]] - `calls` [INFERRED]
-- [[Body_1]] - `references` [EXTRACTED]
+- [[dot-assertPwdAppointmentValid()]] - `calls` [EXTRACTED]
+- [[dot-create()_14]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-toResponse()]] - `calls` [EXTRACTED]
 - [[CreateGuardianDto]] - `references` [EXTRACTED]
-- [[CurrentActorPermissions]] - `references` [EXTRACTED]
-- [[GuardiansController]] - `method` [EXTRACTED]
-- [[Post]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[GuardiansService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/GuardiansService

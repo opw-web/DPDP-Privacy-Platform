@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SourceFieldMappingDto"
+community: "CreatePurposeDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SourceFieldMappingDto
+  - community/CreatePurposeDto
 ---
 
 # IsEnum
 
 ## Connections
-- [[SourceFieldMappingDto]] - `references` [EXTRACTED]
+- [[CreatePurposeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SourceFieldMappingDto
+#graphify/code #graphify/EXTRACTED #community/CreatePurposeDto

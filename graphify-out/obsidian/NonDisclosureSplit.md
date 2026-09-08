@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/non-disclosure.ts"
 type: "code"
-community: "access-report.service.ts"
+community: "principals.service.ts"
 location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-reportservicets
+  - community/principalsservicets
 ---
 
 # NonDisclosureSplit
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[evidencenon-disclosure.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-reportservicets
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

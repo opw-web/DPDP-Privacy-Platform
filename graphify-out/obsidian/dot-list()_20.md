@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/erasure-task.service.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
 type: "code"
-community: "erasure-task.service.ts"
-location: "L482"
+community: "NoticesService"
+location: "L163"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/NoticesService
 ---
 
 # .list()
 
 ## Connections
-- [[dot-listTasks()]] - `calls` [INFERRED]
-- [[ErasureTaskService]] - `method` [EXTRACTED]
+- [[dot-list()_19]] - `calls` [INFERRED]
+- [[NoticesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/NoticesService

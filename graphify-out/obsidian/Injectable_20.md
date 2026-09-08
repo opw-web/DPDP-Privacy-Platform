@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "TokenService"
+community: "NotificationsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TokenService
+  - community/NotificationsService
 ---
 
 # Injectable
 
 ## Connections
-- [[TenantMiddleware]] - `references` [EXTRACTED]
+- [[MailerService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TokenService
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

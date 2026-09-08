@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/erasure-task.service.ts"
 type: "code"
-community: "erasure-task.service.ts"
+community: "ErasureTaskService"
 location: "L108"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/ErasureTaskService
 ---
 
 # ErasureTaskService
@@ -16,18 +16,18 @@ tags:
 - [[dot-buildRequestCompletionChecklists()]] - `method` [EXTRACTED]
 - [[dot-cancel()]] - `method` [EXTRACTED]
 - [[dot-complete()]] - `method` [EXTRACTED]
+- [[dot-constructor()_25]] - `references` [EXTRACTED]
+- [[dot-constructor()_14]] - `references` [EXTRACTED]
 - [[dot-constructor()_21]] - `references` [EXTRACTED]
-- [[dot-constructor()_12]] - `references` [EXTRACTED]
-- [[dot-constructor()_80]] - `references` [EXTRACTED]
-- [[dot-constructor()_60]] - `references` [EXTRACTED]
-- [[dot-constructor()_59]] - `method` [EXTRACTED]
+- [[dot-constructor()_16]] - `references` [EXTRACTED]
+- [[dot-constructor()_15]] - `method` [EXTRACTED]
 - [[dot-createFromTrigger()]] - `method` [EXTRACTED]
 - [[dot-findApplicableLegalHold()]] - `method` [EXTRACTED]
-- [[dot-list()_20]] - `method` [EXTRACTED]
+- [[dot-list()]] - `method` [EXTRACTED]
 - [[dot-mergeCompletionChecklist()]] - `method` [EXTRACTED]
 - [[dot-resolveLastInboundContactAt()]] - `method` [EXTRACTED]
 - [[dot-resolveLastProcessingAt()]] - `method` [EXTRACTED]
-- [[Injectable_50]] - `references` [EXTRACTED]
+- [[Injectable_12]] - `references` [EXTRACTED]
 - [[consents.service.ts]] - `imports` [EXTRACTED]
 - [[erasure-task.service.ts]] - `contains` [EXTRACTED]
 - [[requests.service.ts]] - `imports` [EXTRACTED]
@@ -36,4 +36,4 @@ tags:
 - [[retention.module.ts]] - `imports` [EXTRACTED]
 - [[retentionretention.controller.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/ErasureTaskService

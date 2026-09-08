@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[retention.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[systemActorStore()_2]] - `calls` [EXTRACTED]
+- [[systemActorStore()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PrismaService

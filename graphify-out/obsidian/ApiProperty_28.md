@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "requests.service.ts"
+community: "AssignRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/requestsservicets
+  - community/AssignRequestDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[FlagFrivolousDto]] - `references` [EXTRACTED]
+- [[AssignRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/requestsservicets
+#graphify/code #graphify/EXTRACTED #community/AssignRequestDto

@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "NotificationCallerActor"
+community: "ConsentsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationCallerActor
+  - community/ConsentsService
 ---
 
 # Post
 
 ## Connections
-- [[dot-markAllRead()]] - `references` [EXTRACTED]
-- [[dot-markRead()]] - `references` [EXTRACTED]
+- [[dot-recordImportedConsent()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationCallerActor
+#graphify/code #graphify/EXTRACTED #community/ConsentsService

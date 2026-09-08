@@ -12,7 +12,7 @@ tags:
 # renderOrganizationMessageTemplate()
 
 ## Connections
-- [[dot-preview()_2]] - `calls` [EXTRACTED]
+- [[dot-preview()]] - `calls` [EXTRACTED]
 - [[dot-send()_7]] - `calls` [EXTRACTED]
 - [[campaigns.service.ts]] - `imports` [EXTRACTED]
 - [[renderMessageTemplate()]] - `calls` [EXTRACTED]

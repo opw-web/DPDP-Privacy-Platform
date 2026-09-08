@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
 type: "code"
-community: "rest-api.connector.ts"
+community: "RestApiConnector"
 location: "L324"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rest-apiconnectorts
+  - community/RestApiConnector
 ---
 
 # .ping()
@@ -17,4 +17,4 @@ tags:
 - [[dot-testConnection()_3]] - `calls` [EXTRACTED]
 - [[RestApiConnector]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts
+#graphify/code #graphify/EXTRACTED #community/RestApiConnector

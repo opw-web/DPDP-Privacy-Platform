@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateBreachDto"
+community: "UpdateBreachDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateBreachDto
+  - community/UpdateBreachDto
 ---
 
 # IsOptional
 
 ## Connections
-- [[CreateBreachDto]] - `references` [EXTRACTED]
+- [[UpdateBreachDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateBreachDto
+#graphify/code #graphify/EXTRACTED #community/UpdateBreachDto

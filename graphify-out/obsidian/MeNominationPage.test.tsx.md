@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeNominationPage.test.tsx"
 type: "code"
-community: "router.tsx"
+community: "@tanstack/react-query"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/tanstack/react-query
 ---
 
 # MeNominationPage.test.tsx
@@ -18,7 +18,7 @@ tags:
 - [[MeNominationPage()]] - `imports` [EXTRACTED]
 - [[MeNominationPage.tsx]] - `imports_from` [EXTRACTED]
 - [[react-router-dom_1]] - `imports_from` [EXTRACTED]
-- [[renderPage()_9]] - `contains` [EXTRACTED]
+- [[renderPage()_8]] - `contains` [EXTRACTED]
 - [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

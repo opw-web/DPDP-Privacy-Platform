@@ -12,7 +12,7 @@ tags:
 # installFetchMock()
 
 ## Connections
-- [[jsonResponse()_26]] - `calls` [EXTRACTED]
+- [[jsonResponse()_2]] - `calls` [EXTRACTED]
 - [[router.test.tsx]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/routertsx

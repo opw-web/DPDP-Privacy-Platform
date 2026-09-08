@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/common/reference/reference.module.ts"
 type: "code"
-community: "app.module.ts"
+community: "@nestjs/common"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/appmodulets
+  - community/nestjs/common
 ---
 
 # ReferenceModule
 
 ## Connections
-- [[Module_6]] - `references` [EXTRACTED]
+- [[Module_4]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[board.module.ts]] - `imports` [EXTRACTED]
 - [[breaches.module.ts]] - `imports` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[reference.module.ts]] - `contains` [EXTRACTED]
 - [[requests.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/appmodulets
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/LinkedRecordsPanel.tsx"
 type: "code"
-community: "EmployeesPage.tsx"
+community: "cn"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeesPagetsx
+  - community/cn
 ---
 
 # LinkedRecordsPanel.tsx
@@ -42,4 +42,4 @@ tags:
 - [[unmergeErrorMessage()]] - `contains` [EXTRACTED]
 - [[usePermission()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeesPagetsx
+#graphify/code #graphify/EXTRACTED #community/cn

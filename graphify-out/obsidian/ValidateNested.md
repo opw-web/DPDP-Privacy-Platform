@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "AccessTokenPayload"
+community: "RetentionController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/RetentionController
 ---
 
 # ValidateNested
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[CompleteErasureTaskDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/RetentionController

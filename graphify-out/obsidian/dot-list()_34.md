@@ -1,23 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/candidates.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
 type: "code"
-community: "CandidatesController"
-location: "L47"
+community: "DataSourcesController"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CandidatesController
+  - community/DataSourcesController
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_47]] - `calls` [INFERRED]
-- [[CandidatesController]] - `method` [EXTRACTED]
-- [[CurrentActorPermissions]] - `references` [EXTRACTED]
+- [[dot-list()_35]] - `calls` [INFERRED]
+- [[DataSourcesController]] - `method` [EXTRACTED]
 - [[Get_30]] - `references` [EXTRACTED]
-- [[ListMatchCandidatesQueryDto]] - `references` [EXTRACTED]
-- [[Query_7]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CandidatesController
+#graphify/code #graphify/EXTRACTED #community/DataSourcesController

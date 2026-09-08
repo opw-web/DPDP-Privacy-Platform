@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "candidates.service.ts"
+community: "TokenService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/candidatesservicets
+  - community/TokenService
 ---
 
 # Injectable
 
 ## Connections
-- [[CandidatesService]] - `references` [EXTRACTED]
+- [[TokenService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/candidatesservicets
+#graphify/code #graphify/EXTRACTED #community/TokenService

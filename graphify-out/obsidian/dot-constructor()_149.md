@@ -1,20 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/deadline-scan.queue.ts"
+source_file: "dpdp-platform/backend/src/modules/children/age-status.controller.ts"
 type: "code"
-community: "BootRegistrationRegistry"
-location: "L68"
+community: "AgeStatusService"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BootRegistrationRegistry
+  - community/AgeStatusService
 ---
 
 # .constructor()
 
 ## Connections
-- [[dot-register()]] - `calls` [INFERRED]
-- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
-- [[DeadlineScanQueueService]] - `method` [EXTRACTED]
-- [[InjectQueue_6]] - `references` [EXTRACTED]
+- [[AgeStatusController]] - `method` [EXTRACTED]
+- [[AgeStatusService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BootRegistrationRegistry
+#graphify/code #graphify/EXTRACTED #community/AgeStatusService

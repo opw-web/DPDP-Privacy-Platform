@@ -2,7 +2,7 @@
 source_file: "demo-control/show-demo-proof.sh"
 type: "code"
 community: "common.sh"
-location: "L48"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED

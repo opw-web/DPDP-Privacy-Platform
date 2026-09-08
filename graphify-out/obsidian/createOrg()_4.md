@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/retention.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/reference.e2e-spec.ts"
 type: "code"
-community: "PrismaService"
-location: "L131"
+community: "@prisma/client"
+location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/prisma/client
 ---
 
 # createOrg()
 
 ## Connections
-- [[retention.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[reference.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/prisma/client

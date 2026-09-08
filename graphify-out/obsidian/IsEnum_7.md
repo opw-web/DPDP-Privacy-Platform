@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateTransferDto"
+community: "UpdateDataSourceDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTransferDto
+  - community/UpdateDataSourceDto
 ---
 
 # IsEnum
 
 ## Connections
-- [[CreateTransferDto]] - `references` [EXTRACTED]
+- [[UpdateDataSourceDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTransferDto
+#graphify/code #graphify/EXTRACTED #community/UpdateDataSourceDto

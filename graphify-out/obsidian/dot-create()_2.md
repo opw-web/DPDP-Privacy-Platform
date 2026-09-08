@@ -1,22 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notices/notices.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/connector.factory.ts"
 type: "code"
-community: "AccessTokenPayload"
-location: "L50"
+community: "connector.factory.ts"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/connectorfactoryts
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_27]] - `calls` [INFERRED]
-- [[Body_3]] - `references` [EXTRACTED]
-- [[CreateNoticeDto]] - `references` [EXTRACTED]
-- [[NoticesController]] - `method` [EXTRACTED]
-- [[Post_3]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-buildConnector()]] - `calls` [INFERRED]
+- [[Connector]] - `references` [EXTRACTED]
+- [[ConnectorFactory]] - `method` [EXTRACTED]
+- [[RestApiConnector]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/connectorfactoryts

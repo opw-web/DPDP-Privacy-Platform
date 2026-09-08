@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/DashboardPage.test.tsx"
 type: "code"
-community: "EmployeesPage.tsx"
+community: "@tanstack/react-query"
 location: "L141"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeesPagetsx
+  - community/tanstack/react-query
 ---
 
 # mockRoutesAndLogin()
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[DashboardPage.test.tsx]] - `contains` [EXTRACTED]
 - [[employeeLogin()]] - `calls` [EXTRACTED]
-- [[jsonResponse()_7]] - `calls` [EXTRACTED]
-- [[loginAndRender()_1]] - `calls` [EXTRACTED]
+- [[jsonResponse()_9]] - `calls` [EXTRACTED]
+- [[loginAndRender()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeesPagetsx
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "mappings.service.ts"
+community: "me-rights.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingsservicets
+  - community/me-rightsservicets
 ---
 
 # Put
 
 ## Connections
-- [[dot-replaceMappings()]] - `references` [EXTRACTED]
-- [[dot-replacePurposes()]] - `references` [EXTRACTED]
+- [[dot-upsertNomination()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/EXTRACTED #community/me-rightsservicets

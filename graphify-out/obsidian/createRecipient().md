@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/test/registers.e2e-spec.ts"
 type: "code"
-community: "registers.e2e-spec.ts"
+community: "AppModule"
 location: "L193"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/registerse2e-spects
+  - community/AppModule
 ---
 
 # createRecipient()
 
 ## Connections
-- [[authed()_2]] - `calls` [EXTRACTED]
+- [[authed()_3]] - `calls` [EXTRACTED]
 - [[recipientPayload()]] - `calls` [EXTRACTED]
 - [[registers.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/registerse2e-spects
+#graphify/code #graphify/EXTRACTED #community/AppModule

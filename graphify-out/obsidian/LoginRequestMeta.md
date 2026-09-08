@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/login-request-meta.ts"
 type: "code"
-community: "principal-auth.service.ts"
+community: "@prisma/client"
 location: "L2"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principal-authservicets
+  - community/prisma/client
 ---
 
 # LoginRequestMeta
 
 ## Connections
-- [[dot-login()]] - `references` [EXTRACTED]
+- [[dot-login()_1]] - `references` [EXTRACTED]
 - [[dot-login()_2]] - `references` [EXTRACTED]
 - [[dot-refresh()_1]] - `references` [EXTRACTED]
 - [[dot-refresh()_2]] - `references` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[principal-auth.service.ts]] - `imports` [EXTRACTED]
 - [[refresh-rotation.util.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principal-authservicets
+#graphify/code #graphify/EXTRACTED #community/prisma/client

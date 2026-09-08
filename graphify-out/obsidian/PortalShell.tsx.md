@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/components/PortalShell.tsx"
 type: "code"
-community: "router.tsx"
+community: "cn"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/cn
 ---
 
 # PortalShell.tsx
@@ -16,7 +16,7 @@ tags:
 - [[Button]] - `imports` [EXTRACTED]
 - [[DateTime.tsx]] - `imports_from` [EXTRACTED]
 - [[MeProfileTimezone]] - `contains` [EXTRACTED]
-- [[NAV_ITEMS_1]] - `contains` [EXTRACTED]
+- [[NAV_ITEMS]] - `contains` [EXTRACTED]
 - [[NotificationBell()]] - `imports` [EXTRACTED]
 - [[NotificationBell.tsx]] - `imports_from` [EXTRACTED]
 - [[OrgTimezoneProvider]] - `imports` [EXTRACTED]
@@ -33,4 +33,4 @@ tags:
 - [[usePrincipalAuth()]] - `imports` [EXTRACTED]
 - [[utils.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/cn

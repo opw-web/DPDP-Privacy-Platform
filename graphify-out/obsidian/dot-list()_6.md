@@ -1,20 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/audit/audit-read.service.ts"
 type: "code"
-community: "purposes.service.ts"
-location: "L17"
+community: "AuditReadService"
+location: "L157"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposesservicets
+  - community/AuditReadService
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_7]] - `calls` [INFERRED]
-- [[Get_10]] - `references` [EXTRACTED]
-- [[PurposesController]] - `method` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-buildWhere()]] - `calls` [EXTRACTED]
+- [[dot-hasFullPersonalDataAccess()]] - `calls` [INFERRED]
+- [[dot-list()_5]] - `calls` [INFERRED]
+- [[AuditReadService]] - `method` [EXTRACTED]
+- [[ListAuditEventsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposesservicets
+#graphify/code #graphify/EXTRACTED #community/AuditReadService

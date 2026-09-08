@@ -1,25 +1,25 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
 type: "code"
-community: "purposes.service.ts"
+community: "PurposesController"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposesservicets
+  - community/PurposesController
 ---
 
 # PurposesController
 
 ## Connections
-- [[dot-constructor()_38]] - `method` [EXTRACTED]
+- [[dot-constructor()_53]] - `method` [EXTRACTED]
 - [[dot-create()_6]] - `method` [EXTRACTED]
-- [[dot-list()_6]] - `method` [EXTRACTED]
-- [[dot-review()_1]] - `method` [EXTRACTED]
-- [[dot-update()_2]] - `method` [EXTRACTED]
-- [[ApiTags_8]] - `references` [EXTRACTED]
-- [[Controller_9]] - `references` [EXTRACTED]
+- [[dot-list()_7]] - `method` [EXTRACTED]
+- [[dot-review()_3]] - `method` [EXTRACTED]
+- [[dot-update()_5]] - `method` [EXTRACTED]
+- [[ApiTags_10]] - `references` [EXTRACTED]
+- [[Controller_10]] - `references` [EXTRACTED]
 - [[purposes.controller.ts]] - `contains` [EXTRACTED]
 - [[purposes.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposesservicets
+#graphify/code #graphify/EXTRACTED #community/PurposesController

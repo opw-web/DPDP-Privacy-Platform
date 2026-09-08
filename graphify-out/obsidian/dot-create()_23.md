@@ -1,28 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
+source_file: "dpdp-platform/backend/src/modules/board/information-requests.service.ts"
 type: "code"
-community: ".record"
-location: "L206"
+community: "CreateInformationRequestDto"
+location: "L124"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/CreateInformationRequestDto
 ---
 
 # .create()
 
 ## Connections
-- [[dot-computeDeadline()]] - `calls` [INFERRED]
-- [[dot-create()_30]] - `calls` [INFERRED]
-- [[dot-next()]] - `calls` [INFERRED]
-- [[dot-previewAffected()]] - `calls` [EXTRACTED]
-- [[dot-public()]] - `calls` [EXTRACTED]
+- [[dot-assertAffectedPrincipals()]] - `calls` [EXTRACTED]
+- [[dot-assertDirectionHasAuthorisation()]] - `calls` [EXTRACTED]
+- [[dot-create()_22]] - `calls` [INFERRED]
 - [[dot-record()_1]] - `calls` [INFERRED]
-- [[dot-resolveRule()]] - `calls` [INFERRED]
-- [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[BreachService]] - `method` [EXTRACTED]
-- [[CreateBreachDto]] - `references` [EXTRACTED]
-- [[PublicBreach]] - `references` [EXTRACTED]
-- [[asDate()]] - `calls` [EXTRACTED]
+- [[CreateInformationRequestDto]] - `references` [EXTRACTED]
+- [[InformationRequestsService]] - `method` [EXTRACTED]
+- [[allocateCounterValue()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

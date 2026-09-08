@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "inventory.service.ts"
+community: "PermissionsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/inventoryservicets
+  - community/PermissionsController
 ---
 
 # Controller
 
 ## Connections
-- [[InventoryController]] - `references` [EXTRACTED]
+- [[PermissionsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/inventoryservicets
+#graphify/code #graphify/EXTRACTED #community/PermissionsController

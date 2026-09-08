@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ProcessorChecklistTickDto"
+community: "UpdateRolePermissionsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ProcessorChecklistTickDto
+  - community/UpdateRolePermissionsDto
 ---
 
 # IsString
 
 ## Connections
-- [[ProcessorChecklistTickDto]] - `references` [EXTRACTED]
-- [[SystemChecklistTickDto]] - `references` [EXTRACTED]
+- [[UpdateRolePermissionsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ProcessorChecklistTickDto
+#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto

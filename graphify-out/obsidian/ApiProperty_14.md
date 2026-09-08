@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateBreachDto"
+community: "AttachPurposesDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateBreachDto
+  - community/AttachPurposesDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateBreachDto]] - `references` [EXTRACTED]
+- [[AttachPurposesDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateBreachDto
+#graphify/code #graphify/EXTRACTED #community/AttachPurposesDto

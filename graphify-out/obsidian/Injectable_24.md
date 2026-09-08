@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "inventory.service.ts"
+community: "NotificationsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/inventoryservicets
+  - community/NotificationsService
 ---
 
 # Injectable
 
 ## Connections
-- [[InventoryService]] - `references` [EXTRACTED]
+- [[SmtpProvider]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/inventoryservicets
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

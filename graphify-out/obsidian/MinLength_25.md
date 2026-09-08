@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateNoticeVersionDto"
+community: "AddMeRequestCommentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateNoticeVersionDto
+  - community/AddMeRequestCommentDto
 ---
 
 # MinLength
 
 ## Connections
-- [[CreateNoticeVersionDto]] - `references` [EXTRACTED]
-- [[ItemisedFieldInputDto]] - `references` [EXTRACTED]
+- [[AddMeRequestCommentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateNoticeVersionDto
+#graphify/code #graphify/EXTRACTED #community/AddMeRequestCommentDto

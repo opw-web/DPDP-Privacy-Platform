@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "children.module.ts"
+community: "CreateSecurityMeasureDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/childrenmodulets
+  - community/CreateSecurityMeasureDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[SetAgeStatusDto]] - `references` [EXTRACTED]
+- [[CreateSecurityMeasureDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/childrenmodulets
+#graphify/code #graphify/EXTRACTED #community/CreateSecurityMeasureDto

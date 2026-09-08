@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-create()_32]] - `calls` [INFERRED]
-- [[Body_26]] - `references` [EXTRACTED]
+- [[Body_24]] - `references` [EXTRACTED]
 - [[CreateRecipientDto]] - `references` [EXTRACTED]
-- [[Post_26]] - `references` [EXTRACTED]
+- [[Post_24]] - `references` [EXTRACTED]
 - [[RecipientsController]] - `method` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 

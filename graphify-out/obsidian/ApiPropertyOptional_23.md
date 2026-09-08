@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateNoticeVersionDto"
+community: "CreateComplianceRuleDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateNoticeVersionDto
+  - community/CreateComplianceRuleDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[CreateNoticeVersionDto]] - `references` [EXTRACTED]
-- [[ItemisedFieldInputDto]] - `references` [EXTRACTED]
+- [[UpdateComplianceRuleDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateNoticeVersionDto
+#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto

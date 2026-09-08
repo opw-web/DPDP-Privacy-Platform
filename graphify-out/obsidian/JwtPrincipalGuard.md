@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[dot-canActivate()_2]] - `method` [EXTRACTED]
-- [[dot-constructor()_33]] - `method` [EXTRACTED]
-- [[Injectable_17]] - `references` [EXTRACTED]
+- [[dot-constructor()_134]] - `method` [EXTRACTED]
+- [[Injectable_27]] - `references` [EXTRACTED]
 - [[auth.module.ts]] - `imports` [EXTRACTED]
 - [[jwt-principal.guard.ts]] - `contains` [EXTRACTED]
 - [[me-consents.controller.ts]] - `imports` [EXTRACTED]

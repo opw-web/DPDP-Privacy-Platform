@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateTemplateDto"
+community: "ProcessorChecklistTickDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTemplateDto
+  - community/ProcessorChecklistTickDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[CreateTemplateDto]] - `references` [EXTRACTED]
+- [[ProcessorChecklistTickDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTemplateDto
+#graphify/code #graphify/EXTRACTED #community/ProcessorChecklistTickDto

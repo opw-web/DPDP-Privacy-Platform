@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/ReviewQueuePage.test.tsx"
 type: "code"
-community: "CandidateComparison.tsx"
+community: "@tanstack/react-query"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CandidateComparisontsx
+  - community/tanstack/react-query
 ---
 
 # ReviewQueuePage.test.tsx
@@ -17,18 +17,18 @@ tags:
 - [[@testing-libraryuser-event_1]] - `imports_from` [EXTRACTED]
 - [[CANDIDATE]] - `contains` [EXTRACTED]
 - [[CandidateComparison.tsx]] - `imports_from` [EXTRACTED]
-- [[MatchCandidateListItem]] - `imports` [EXTRACTED]
-- [[MockRoutes]] - `contains` [EXTRACTED]
+- [[MatchCandidateListItem_1]] - `imports` [EXTRACTED]
+- [[MockRoutes_1]] - `contains` [EXTRACTED]
 - [[ReviewQueuePage()]] - `imports` [EXTRACTED]
 - [[ReviewQueuePage.tsx]] - `imports_from` [EXTRACTED]
 - [[employeeLogin()]] - `imports` [EXTRACTED]
 - [[employeeLogout()]] - `imports` [EXTRACTED]
-- [[jsonResponse()_4]] - `contains` [EXTRACTED]
+- [[jsonResponse()_19]] - `contains` [EXTRACTED]
 - [[libauth.ts]] - `imports_from` [EXTRACTED]
-- [[loginAndRender()]] - `contains` [EXTRACTED]
+- [[loginAndRender()_6]] - `contains` [EXTRACTED]
 - [[react-router-dom_1]] - `imports_from` [EXTRACTED]
 - [[signalBadgeVariant()]] - `imports` [EXTRACTED]
 - [[sonner_1]] - `imports_from` [EXTRACTED]
 - [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CandidateComparisontsx
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

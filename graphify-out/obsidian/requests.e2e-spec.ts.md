@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/test/requests.e2e-spec.ts"
 type: "code"
-community: "supertest"
+community: "requests.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/supertest
+  - community/requestsservicets
 ---
 
 # requests.e2e-spec.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[CreateRequestInput]] - `imports` [EXTRACTED]
 - [[DEADLINE_WARNING_EVENT_NOTE]] - `imports` [EXTRACTED]
 - [[DeadlineScanProcessor]] - `imports` [EXTRACTED]
@@ -21,12 +21,12 @@ tags:
 - [[RequestsService]] - `imports` [EXTRACTED]
 - [[TenantContext]] - `imports` [EXTRACTED]
 - [[TenantStore]] - `imports` [EXTRACTED]
-- [[authed()]] - `contains` [EXTRACTED]
+- [[authed()_2]] - `contains` [EXTRACTED]
 - [[bootstrapTestApp()]] - `imports` [EXTRACTED]
 - [[cleanupOrgs()]] - `imports` [EXTRACTED]
 - [[createDpoEmployee()]] - `contains` [EXTRACTED]
-- [[createOrgWithEmployee()]] - `imports` [EXTRACTED]
-- [[createPrincipal()_4]] - `contains` [EXTRACTED]
+- [[createOrgWithEmployee()_2]] - `imports` [EXTRACTED]
+- [[createPrincipal()_9]] - `contains` [EXTRACTED]
 - [[createRequest()]] - `contains` [EXTRACTED]
 - [[deadline-scan.processor.ts]] - `imports_from` [EXTRACTED]
 - [[e2e-harness.ts]] - `imports_from` [EXTRACTED]
@@ -36,4 +36,4 @@ tags:
 - [[supertest]] - `imports_from` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/supertest
+#graphify/code #graphify/EXTRACTED #community/requestsservicets

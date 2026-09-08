@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/notifications.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/principal-portal-mvp2.e2e-spec.ts"
 type: "code"
-community: "notifications.e2e-spec.ts"
-location: "L78"
+community: "PrismaService"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationse2e-spects
+  - community/PrismaService
 ---
 
 # createPrincipal()
 
 ## Connections
-- [[notifications.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[principal-portal-mvp2.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationse2e-spects
+#graphify/code #graphify/EXTRACTED #community/PrismaService

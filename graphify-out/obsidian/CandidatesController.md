@@ -1,24 +1,24 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/candidates.controller.ts"
 type: "code"
-community: "CandidatesController"
+community: "RequirePermission"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CandidatesController
+  - community/RequirePermission
 ---
 
 # CandidatesController
 
 ## Connections
 - [[dot-confirm()]] - `method` [EXTRACTED]
-- [[dot-constructor()_114]] - `method` [EXTRACTED]
-- [[dot-list()_34]] - `method` [EXTRACTED]
+- [[dot-constructor()_80]] - `method` [EXTRACTED]
+- [[dot-list()_21]] - `method` [EXTRACTED]
 - [[dot-reject()]] - `method` [EXTRACTED]
-- [[ApiTags_29]] - `references` [EXTRACTED]
-- [[Controller_30]] - `references` [EXTRACTED]
+- [[ApiTags_19]] - `references` [EXTRACTED]
+- [[Controller_19]] - `references` [EXTRACTED]
 - [[candidates.controller.ts]] - `contains` [EXTRACTED]
 - [[identity.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CandidatesController
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

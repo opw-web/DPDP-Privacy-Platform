@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sdf/dto/algorithm-operations.ts"
 type: "code"
-community: "@prisma/client"
+community: "@nestjs/swagger"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/nestjs/swagger
 ---
 
 # ALGORITHM_OPERATIONS
@@ -16,4 +16,4 @@ tags:
 - [[create-algorithm-entry.dto.ts]] - `imports` [EXTRACTED]
 - [[update-algorithm-entry.dto.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prisma/client
+#graphify/code #graphify/EXTRACTED #community/nestjs/swagger

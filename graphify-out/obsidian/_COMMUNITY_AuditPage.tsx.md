@@ -1,11 +1,11 @@
 ---
 type: community
-members: 50
+members: 51
 ---
 
 # AuditPage.tsx
 
-**Members:** 50 nodes
+**Members:** 51 nodes
 
 ## Members
 - [[AUDIT_ACTION_VALUES]] - code - dpdp-platform/frontend/src/fiduciary/pages/AuditPage.tsx
@@ -29,9 +29,10 @@ members: 50
 - [[MessagingCampaignDetailPage()]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
 - [[MessagingCampaignDetailPage.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.test.tsx
 - [[MessagingCampaignDetailPage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
-- [[MockRoutes_1]] - code - dpdp-platform/frontend/src/fiduciary/pages/AuditPage.test.tsx
+- [[MockRoutes]] - code - dpdp-platform/frontend/src/fiduciary/pages/AuditPage.test.tsx
 - [[PrincipalEvidenceBreachInclusion]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
 - [[PrincipalEvidenceConsentEvent]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
+- [[PrincipalEvidenceFile_1]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
 - [[PrincipalEvidenceMessage]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
 - [[PrincipalEvidenceNoticeVersion]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
 - [[PrincipalEvidencePage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
@@ -50,9 +51,9 @@ members: 50
 - [[deliveredToNobody()]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
 - [[download()]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
 - [[hasVisibleMetadata()]] - code - dpdp-platform/frontend/src/fiduciary/components/AuditEventRow.tsx
-- [[jsonResponse()_6]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.test.tsx
+- [[jsonResponse()_3]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.test.tsx
 - [[recipientReasonText()]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
-- [[renderPage()_2]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.test.tsx
+- [[renderPage()_1]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.test.tsx
 - [[saveBlob()_1]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx
 - [[shouldShowCampaignApproval()]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
 - [[statusBadgeVariant()]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx
@@ -67,20 +68,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 45 edges to [[_COMMUNITY_react-router-dom]]
-- 42 edges to [[_COMMUNITY_react]]
-- 22 edges to [[_COMMUNITY_router.tsx]]
-- 7 edges to [[_COMMUNITY_cn]]
+- 53 edges to [[_COMMUNITY_api-client.ts]]
+- 37 edges to [[_COMMUNITY_react]]
+- 21 edges to [[_COMMUNITY_@tanstackreact-query]]
+- 11 edges to [[_COMMUNITY_cn]]
 - 6 edges to [[_COMMUNITY_data-sources-api.ts]]
-- 6 edges to [[_COMMUNITY_DateTime.tsx]]
-- 6 edges to [[_COMMUNITY_SettingsPage.tsx]]
+- 6 edges to [[_COMMUNITY_PrincipalDetailPage.tsx]]
+- 4 edges to [[_COMMUNITY_router.tsx]]
 - 3 edges to [[_COMMUNITY_AuditPage]]
-- 3 edges to [[_COMMUNITY_EmployeesPage.tsx]]
-- 3 edges to [[_COMMUNITY_api-client.ts]]
+- 1 edge to [[_COMMUNITY_RequestDetailPage.tsx]]
+- 1 edge to [[_COMMUNITY_EmployeesPage.tsx]]
 
 ## Top bridge nodes
-- [[AuditPage.tsx]] - degree 49, connects to 7 communities
-- [[PrincipalEvidencePage.tsx]] - degree 49, connects to 7 communities
+- [[AuditPage.tsx]] - degree 49, connects to 6 communities
+- [[PrincipalEvidencePage.tsx]] - degree 49, connects to 6 communities
 - [[MessagingCampaignDetailPage.tsx]] - degree 43, connects to 6 communities
-- [[DataTable.tsx]] - degree 27, connects to 5 communities
+- [[DataTable.tsx]] - degree 27, connects to 6 communities
 - [[AuditEventRow.tsx]] - degree 15, connects to 4 communities

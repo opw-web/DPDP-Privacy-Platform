@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PreviewAudienceDto"
+community: "me-rights.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PreviewAudienceDto
+  - community/me-rightsservicets
 ---
 
 # IsObject
 
 ## Connections
-- [[PreviewAudienceDto]] - `references` [EXTRACTED]
+- [[CreateMeRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PreviewAudienceDto
+#graphify/code #graphify/EXTRACTED #community/me-rightsservicets

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "mvp2-schedules.ts"
+community: "CampaignsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mvp2-schedulests
+  - community/CampaignsService
 ---
 
 # Processor
 
 ## Connections
-- [[RetentionScanProcessor]] - `references` [EXTRACTED]
+- [[CampaignSendProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mvp2-schedulests
+#graphify/code #graphify/EXTRACTED #community/CampaignsService

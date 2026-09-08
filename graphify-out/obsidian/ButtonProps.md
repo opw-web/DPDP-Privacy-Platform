@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/ui/button.tsx"
 type: "code"
-community: "react"
+community: "api-client.ts"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/api-clientts
 ---
 
 # ButtonProps
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[button.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/api-clientts

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/identifier-ownership-lock.ts"
 type: "code"
-community: "sync-pipeline.service.ts"
+community: "ScopedTransactionClient"
 location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sync-pipelineservicets
+  - community/ScopedTransactionClient
 ---
 
 # acquireAdvisoryLock()
@@ -16,4 +16,4 @@ tags:
 - [[lockIdentifiersForOwnership()]] - `calls` [EXTRACTED]
 - [[lockNameKeyForOwnership()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sync-pipelineservicets
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

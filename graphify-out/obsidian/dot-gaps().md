@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-getGaps()]] - `calls` [INFERRED]
-- [[Get_12]] - `references` [EXTRACTED]
+- [[Get_10]] - `references` [EXTRACTED]
 - [[InventoryController]] - `method` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 

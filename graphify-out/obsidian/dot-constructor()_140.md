@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/retention.service.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/guards/jwt-any-actor.guard.ts"
 type: "code"
-community: "retention.service.ts"
-location: "L63"
+community: "TokenService"
+location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/TokenService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[RetentionService]] - `method` [EXTRACTED]
+- [[JwtAnyActorGuard]] - `method` [EXTRACTED]
+- [[TokenService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/TokenService

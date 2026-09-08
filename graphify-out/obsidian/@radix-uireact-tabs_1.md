@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/package.json"
 type: "concept"
-community: "cn"
+community: "frontend/package.json"
 location: "L22"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/cn
+  - community/frontend/packagejson
 ---
 
 # @radix-ui/react-tabs
@@ -15,4 +15,4 @@ tags:
 - [[frontendpackage.json]] - `imports` [EXTRACTED]
 - [[tabs.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/cn
+#graphify/concept #graphify/EXTRACTED #community/frontend/packagejson

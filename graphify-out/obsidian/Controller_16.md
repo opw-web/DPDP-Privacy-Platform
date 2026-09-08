@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "TemplatesService"
+community: "SdfController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/SdfController
 ---
 
 # Controller
 
 ## Connections
-- [[TemplatesController]] - `references` [EXTRACTED]
+- [[SdfController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/SdfController

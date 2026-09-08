@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/PurposesPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.test.tsx"
 type: "code"
-community: "router.tsx"
-location: "L13"
+community: "@tanstack/react-query"
+location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/tanstack/react-query
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[PurposesPage.test.tsx]] - `contains` [EXTRACTED]
-- [[loginAndRenderThroughShell()_2]] - `calls` [EXTRACTED]
+- [[SettingsPage.test.tsx]] - `contains` [EXTRACTED]
+- [[loginAndRenderThroughShell()_3]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

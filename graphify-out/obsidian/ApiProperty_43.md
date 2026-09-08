@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "ImportConsentDto"
+community: "ChangeStatusDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ImportConsentDto
+  - community/ChangeStatusDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[ImportConsentDto]] - `references` [EXTRACTED]
+- [[ChangeStatusDto]] - `references` [EXTRACTED]
+- [[ErasureProcessorChecklistDto]] - `references` [EXTRACTED]
+- [[ErasureSystemChecklistDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ImportConsentDto
+#graphify/code #graphify/EXTRACTED #community/ChangeStatusDto

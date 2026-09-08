@@ -1,19 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: ".completeAssessment"
+community: "MeRightsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/completeAssessment
+  - community/MeRightsService
 ---
 
 # Body
 
 ## Connections
-- [[dot-completeAssessment()]] - `references` [EXTRACTED]
-- [[dot-createAlgorithm()]] - `references` [EXTRACTED]
-- [[dot-createAssessment()]] - `references` [EXTRACTED]
-- [[dot-updateAlgorithm()]] - `references` [EXTRACTED]
+- [[dot-commentOnRequest()]] - `references` [EXTRACTED]
+- [[dot-createRequest()]] - `references` [EXTRACTED]
+- [[dot-upsertNomination()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/completeAssessment
+#graphify/code #graphify/EXTRACTED #community/MeRightsService

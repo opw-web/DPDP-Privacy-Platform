@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "guardians.service.ts"
+community: "SetMyConsentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/SetMyConsentDto
 ---
 
 # IsString
 
 ## Connections
-- [[ListGuardiansDto]] - `references` [EXTRACTED]
+- [[SetMyConsentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/SetMyConsentDto

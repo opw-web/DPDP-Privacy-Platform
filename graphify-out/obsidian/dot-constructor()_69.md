@@ -1,19 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sdf/sdf-assessment.service.ts"
+source_file: "dpdp-platform/backend/src/modules/principals/principal-recipients.service.ts"
 type: "code"
-community: "SdfAssessmentService"
-location: "L78"
+community: "principals.service.ts"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SdfAssessmentService
+  - community/principalsservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[ComplianceService]] - `references` [EXTRACTED]
-- [[SdfAssessmentService]] - `method` [EXTRACTED]
+- [[PrincipalRecipientsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SdfAssessmentService
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

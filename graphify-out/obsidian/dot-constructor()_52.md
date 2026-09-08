@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/purpose-served.service.ts"
+source_file: "dpdp-platform/backend/src/modules/evidence/evidence-pack.controller.ts"
 type: "code"
-community: "audit.service.ts"
-location: "L39"
+community: "EvidencePackController"
+location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/auditservicets
+  - community/EvidencePackController
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[PurposeServedService]] - `method` [EXTRACTED]
+- [[EvidencePackController]] - `method` [EXTRACTED]
+- [[EvidencePackService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/auditservicets
+#graphify/code #graphify/EXTRACTED #community/EvidencePackController

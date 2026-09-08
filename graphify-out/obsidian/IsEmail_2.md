@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalLoginDto"
+community: "EmployeesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalLoginDto
+  - community/EmployeesService
 ---
 
 # IsEmail
 
 ## Connections
-- [[PrincipalLoginDto]] - `references` [EXTRACTED]
+- [[CreateEmployeeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalLoginDto
+#graphify/code #graphify/EXTRACTED #community/EmployeesService

@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
+source_file: "dpdp-platform/backend/src/modules/evidence/principal-evidence.controller.ts"
 type: "code"
-community: "NoticesService"
-location: "L158"
+community: "PrincipalEvidenceController"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NoticesService
+  - community/PrincipalEvidenceController
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[NoticesService]] - `method` [EXTRACTED]
+- [[PrincipalEvidenceController]] - `method` [EXTRACTED]
+- [[PrincipalEvidenceService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NoticesService
+#graphify/code #graphify/EXTRACTED #community/PrincipalEvidenceController

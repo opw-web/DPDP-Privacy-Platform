@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/test/evidence.e2e-spec.ts"
 type: "code"
-community: "supertest"
+community: "PrismaService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/supertest
+  - community/PrismaService
 ---
 
 # evidence.e2e-spec.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[AccessReportService]] - `imports` [EXTRACTED]
 - [[OrgWithEmployee]] - `imports` [EXTRACTED]
 - [[PrincipalEvidenceService]] - `imports` [EXTRACTED]
@@ -21,14 +21,14 @@ tags:
 - [[access-report-render.ts]] - `imports_from` [EXTRACTED]
 - [[access-report.service.ts]] - `imports_from` [EXTRACTED]
 - [[addEmployee()]] - `contains` [EXTRACTED]
-- [[argon2_1]] - `imports_from` [EXTRACTED]
+- [[argon2]] - `imports_from` [EXTRACTED]
 - [[bootstrapTestApp()]] - `imports` [EXTRACTED]
 - [[bufferBinaryResponse()]] - `contains` [EXTRACTED]
 - [[cleanupOrgs()]] - `imports` [EXTRACTED]
-- [[createOrgWithEmployee()]] - `imports` [EXTRACTED]
-- [[createPrincipal()_1]] - `contains` [EXTRACTED]
+- [[createOrgWithEmployee()_2]] - `imports` [EXTRACTED]
+- [[createPrincipal()_2]] - `contains` [EXTRACTED]
 - [[e2e-harness.ts]] - `imports_from` [EXTRACTED]
-- [[ensurePermission()_3]] - `imports` [EXTRACTED]
+- [[ensurePermission()_4]] - `imports` [EXTRACTED]
 - [[extractPdfText()]] - `contains` [EXTRACTED]
 - [[parseStoreZip()]] - `contains` [EXTRACTED]
 - [[principal-evidence-render.ts]] - `imports_from` [EXTRACTED]
@@ -41,4 +41,4 @@ tags:
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 - [[tenantStoreFor()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/supertest
+#graphify/code #graphify/EXTRACTED #community/PrismaService

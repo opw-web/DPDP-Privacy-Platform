@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Public"
+community: "inventory.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/inventoryservicets
 ---
 
 # Controller
 
 ## Connections
-- [[MeConsentsController]] - `references` [EXTRACTED]
+- [[InventoryController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/inventoryservicets

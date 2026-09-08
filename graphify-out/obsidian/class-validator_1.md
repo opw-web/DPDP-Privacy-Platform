@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "@prisma/client"
+community: "@nestjs/swagger"
 location: "L37"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/nestjs/swagger
 ---
 
 # class-validator
@@ -89,4 +89,4 @@ tags:
 - [[verify-guardian.dto.ts]] - `imports_from` [EXTRACTED]
 - [[verify-identity.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/prisma/client
+#graphify/concept #graphify/EXTRACTED #community/nestjs/swagger

@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/audience/audience.service.ts"
 type: "code"
-community: "read-only-http.client.ts"
-location: "L66"
+community: "PreviewAudienceDto"
+location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/read-only-httpclientts
+  - community/PreviewAudienceDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[ReadOnlyHttpTimeoutError]] - `method` [EXTRACTED]
-- [[stripQuery()_1]] - `calls` [EXTRACTED]
+- [[AudienceService]] - `method` [EXTRACTED]
+- [[MaskingService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/read-only-httpclientts
+#graphify/code #graphify/EXTRACTED #community/PreviewAudienceDto

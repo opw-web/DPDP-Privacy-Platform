@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SourceFieldMappingDto"
+community: "UpdatePurposeDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SourceFieldMappingDto
+  - community/UpdatePurposeDto
 ---
 
 # IsBoolean
 
 ## Connections
-- [[SourceFieldMappingDto]] - `references` [EXTRACTED]
+- [[UpdatePurposeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SourceFieldMappingDto
+#graphify/code #graphify/EXTRACTED #community/UpdatePurposeDto

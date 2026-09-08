@@ -13,6 +13,5 @@ tags:
 
 ## Connections
 - [[MVP2 Evaluation Against Spec Sections 6 and 7]] - `contains` [EXTRACTED]
-- [[live-step-06-rerun-current-head-network-results]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/MVP2_Evaluation_Against_Spec_Sections_6_and_7

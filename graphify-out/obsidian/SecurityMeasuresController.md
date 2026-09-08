@@ -1,25 +1,25 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/security-measures.controller.ts"
 type: "code"
-community: "security-measures.service.ts"
+community: "CreateSecurityMeasureDto"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/security-measuresservicets
+  - community/CreateSecurityMeasureDto
 ---
 
 # SecurityMeasuresController
 
 ## Connections
-- [[dot-constructor()_141]] - `method` [EXTRACTED]
+- [[dot-constructor()_143]] - `method` [EXTRACTED]
 - [[dot-create()_35]] - `method` [EXTRACTED]
 - [[dot-get()_23]] - `method` [EXTRACTED]
-- [[dot-list()_45]] - `method` [EXTRACTED]
+- [[dot-list()_46]] - `method` [EXTRACTED]
 - [[dot-update()_25]] - `method` [EXTRACTED]
-- [[ApiTags_39]] - `references` [EXTRACTED]
-- [[Controller_40]] - `references` [EXTRACTED]
+- [[ApiTags_37]] - `references` [EXTRACTED]
+- [[Controller_38]] - `references` [EXTRACTED]
 - [[registers.module.ts]] - `imports` [EXTRACTED]
 - [[security-measures.controller.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/security-measuresservicets
+#graphify/code #graphify/EXTRACTED #community/CreateSecurityMeasureDto

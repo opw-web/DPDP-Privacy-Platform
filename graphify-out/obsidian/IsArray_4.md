@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateTransferDto"
+community: "transfers.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTransferDto
+  - community/transfersservicets
 ---
 
 # IsArray
 
 ## Connections
-- [[CreateTransferDto]] - `references` [EXTRACTED]
+- [[UpdateTransferDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTransferDto
+#graphify/code #graphify/EXTRACTED #community/transfersservicets

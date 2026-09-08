@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "consent-backfill.queue.ts"
+community: "AlgorithmRegisterService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/consent-backfillqueuets
+  - community/AlgorithmRegisterService
 ---
 
 # Injectable
 
 ## Connections
-- [[ConsentBackfillService]] - `references` [EXTRACTED]
+- [[SdfGapsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/consent-backfillqueuets
+#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterService

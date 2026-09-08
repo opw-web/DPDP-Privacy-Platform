@@ -15,6 +15,6 @@ tags:
 - [[dot-applyStatusChange()]] - `calls` [EXTRACTED]
 - [[ConsentsService]] - `method` [EXTRACTED]
 - [[ScopedTransactionClient]] - `references` [EXTRACTED]
-- [[isUniqueConstraintViolation()_6]] - `calls` [EXTRACTED]
+- [[isUniqueConstraintViolation()_2]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/ConsentsService

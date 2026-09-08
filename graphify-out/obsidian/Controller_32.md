@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "children.module.ts"
+community: "BreachesController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/childrenmodulets
+  - community/BreachesController
 ---
 
 # Controller
 
 ## Connections
-- [[AgeStatusController]] - `references` [EXTRACTED]
+- [[BreachesController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/childrenmodulets
+#graphify/code #graphify/EXTRACTED #community/BreachesController

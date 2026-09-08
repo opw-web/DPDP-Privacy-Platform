@@ -1,22 +1,22 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/boot-registration.registry.ts"
 type: "code"
-community: "BootRegistrationRegistry"
+community: "queues.module.ts"
 location: "L50"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/BootRegistrationRegistry
+  - community/queuesmodulets
 ---
 
 # .register()
 
 ## Connections
-- [[dot-constructor()_148]] - `calls` [INFERRED]
-- [[dot-constructor()_149]] - `calls` [INFERRED]
-- [[dot-constructor()_150]] - `calls` [INFERRED]
-- [[dot-constructor()_151]] - `calls` [INFERRED]
-- [[dot-constructor()_152]] - `calls` [INFERRED]
+- [[dot-constructor()_101]] - `calls` [INFERRED]
+- [[dot-constructor()_102]] - `calls` [INFERRED]
+- [[dot-constructor()_104]] - `calls` [INFERRED]
+- [[dot-constructor()_105]] - `calls` [INFERRED]
+- [[dot-constructor()_106]] - `calls` [INFERRED]
 - [[BootRegistrationRegistry]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/BootRegistrationRegistry
+#graphify/code #graphify/INFERRED #community/queuesmodulets

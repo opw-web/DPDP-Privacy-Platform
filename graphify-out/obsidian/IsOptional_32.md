@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "breach.service.ts"
+community: "SdfAssessmentService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breachservicets
+  - community/SdfAssessmentService
 ---
 
 # IsOptional
 
 ## Connections
-- [[CompleteObligationDto]] - `references` [EXTRACTED]
+- [[CompleteSdfAssessmentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breachservicets
+#graphify/code #graphify/EXTRACTED #community/SdfAssessmentService

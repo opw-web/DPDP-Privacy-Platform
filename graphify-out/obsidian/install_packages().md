@@ -2,7 +2,7 @@
 source_file: "demo-control/prepare.sh"
 type: "code"
 community: "common.sh"
-location: "L62"
+location: "L94"
 tags:
   - graphify/code
   - graphify/EXTRACTED

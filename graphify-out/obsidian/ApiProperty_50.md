@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "retention.service.ts"
+community: "PrincipalAuthController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/PrincipalAuthController
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateRetentionPolicyDto]] - `references` [EXTRACTED]
+- [[PrincipalLoginDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/PrincipalAuthController

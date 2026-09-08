@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/deadline-scan.queue.ts"
 type: "code"
-community: "deadline-scan.processor.ts"
+community: "queues.module.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/deadline-scanprocessorts
+  - community/queuesmodulets
 ---
 
 # deadline-scan.queue.ts
 
 ## Connections
-- [[@nestjsbullmq]] - `imports_from` [EXTRACTED]
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsbullmq_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[BootRegistrationRegistry]] - `imports` [EXTRACTED]
 - [[DEADLINE_SCAN_CRON_PATTERN]] - `contains` [EXTRACTED]
 - [[DEADLINE_SCAN_JOB_NAME]] - `contains` [EXTRACTED]
@@ -29,4 +29,4 @@ tags:
 - [[queues.module.ts]] - `imports_from` [EXTRACTED]
 - [[requests.module.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/deadline-scanprocessorts
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

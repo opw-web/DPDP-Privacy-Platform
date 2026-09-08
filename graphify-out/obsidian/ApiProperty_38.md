@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "employees.service.ts"
+community: "notifications.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeesservicets
+  - community/notificationscontrollerts
 ---
 
 # ApiProperty
 
 ## Connections
-- [[ResetEmployeePasswordDto]] - `references` [EXTRACTED]
+- [[MarkAllReadResponseDto]] - `references` [EXTRACTED]
+- [[NotificationDto_1]] - `references` [EXTRACTED]
+- [[NotificationListResponseDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeesservicets
+#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts

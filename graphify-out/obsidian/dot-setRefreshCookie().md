@@ -12,7 +12,7 @@ tags:
 # .setRefreshCookie()
 
 ## Connections
-- [[dot-login()_1]] - `calls` [EXTRACTED]
+- [[dot-login()]] - `calls` [EXTRACTED]
 - [[dot-refresh()]] - `calls` [EXTRACTED]
 - [[EmployeeAuthController]] - `method` [EXTRACTED]
 

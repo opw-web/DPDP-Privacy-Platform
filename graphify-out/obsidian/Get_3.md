@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AccessTokenPayload"
+community: "employee-auth.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/employee-authcontrollerts
 ---
 
 # Get
 
 ## Connections
-- [[dot-get()_2]] - `references` [EXTRACTED]
-- [[dot-list()_1]] - `references` [EXTRACTED]
-- [[dot-listRecipients()]] - `references` [EXTRACTED]
+- [[dot-me()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/employee-authcontrollerts

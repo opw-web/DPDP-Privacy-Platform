@@ -12,16 +12,11 @@ tags:
 # DPDP Privacy Platform — Client Evaluation
 
 ## Connections
-- [[Download and unzip]] - `contains` [EXTRACTED]
-- [[If double-click opens the file as text]] - `contains` [EXTRACTED]
-- [[Prepare it once after downloading]] - `contains` [EXTRACTED]
-- [[Quick help]] - `contains` [EXTRACTED]
+- [[1. What you need]] - `contains` [EXTRACTED]
+- [[2. Download and unzip]] - `contains` [EXTRACTED]
+- [[3. Open the client guide and follow it]] - `contains` [EXTRACTED]
 - [[README]] - `contains` [EXTRACTED]
-- [[Share the guides as single files]] - `contains` [EXTRACTED]
 - [[Sign-in details]] - `contains` [EXTRACTED]
-- [[Start in four simple steps]] - `contains` [EXTRACTED]
-- [[The only files you need]] - `contains` [EXTRACTED]
-- [[What you need]] - `contains` [EXTRACTED]
-- [[When you finish]] - `contains` [EXTRACTED]
+- [[The two shareable guides]] - `contains` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/DPDP_Privacy_Platform__Client_Evaluation

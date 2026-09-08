@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/app.module.ts"
 type: "code"
-community: "app.module.ts"
+community: "@nestjs/common"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/appmodulets
+  - community/nestjs/common
 ---
 
 # app.module.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@nestjsconfig_1]] - `imports_from` [EXTRACTED]
-- [[@nestjscore_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjsconfig]] - `imports_from` [EXTRACTED]
+- [[@nestjscore]] - `imports_from` [EXTRACTED]
 - [[AppModule]] - `contains` [EXTRACTED]
 - [[AudienceModule]] - `imports` [EXTRACTED]
 - [[AuditModule]] - `imports` [EXTRACTED]
@@ -87,7 +87,7 @@ tags:
 - [[mappings.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[masking.module.ts]] - `imports_from` [EXTRACTED]
 - [[merge-unmerge.e2e-spec.ts]] - `imports_from` [EXTRACTED]
-- [[nestjs-pino_1]] - `imports_from` [EXTRACTED]
+- [[nestjs-pino]] - `imports_from` [EXTRACTED]
 - [[normalization.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[notices.module.ts]] - `imports_from` [EXTRACTED]
 - [[notifications.module.ts]] - `imports_from` [EXTRACTED]
@@ -117,4 +117,4 @@ tags:
 - [[tenant.module.ts]] - `imports_from` [EXTRACTED]
 - [[validate()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/appmodulets
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

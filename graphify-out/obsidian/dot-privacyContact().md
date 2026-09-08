@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-getPrivacyContact()]] - `calls` [INFERRED]
 - [[ApiOkResponse_1]] - `references` [EXTRACTED]
-- [[Get_8]] - `references` [EXTRACTED]
+- [[Get_7]] - `references` [EXTRACTED]
 - [[MeController]] - `method` [EXTRACTED]
 - [[MePrivacyContactDto]] - `references` [EXTRACTED]
 - [[Public()]] - `references` [EXTRACTED]

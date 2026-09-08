@@ -1,24 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "RequestsController"
+community: "RequirePermission"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestsController
+  - community/RequirePermission
 ---
 
 # Param
 
 ## Connections
-- [[dot-accessReport()_1]] - `references` [EXTRACTED]
-- [[dot-addNote()_1]] - `references` [EXTRACTED]
-- [[dot-assign()_1]] - `references` [EXTRACTED]
-- [[dot-changeStatus()_1]] - `references` [EXTRACTED]
-- [[dot-erasureCompletionHolders()]] - `references` [EXTRACTED]
-- [[dot-escalate()_1]] - `references` [EXTRACTED]
-- [[dot-flagFrivolous()_1]] - `references` [EXTRACTED]
-- [[dot-getByReference()]] - `references` [EXTRACTED]
-- [[dot-verifyIdentity()_1]] - `references` [EXTRACTED]
+- [[dot-approve()]] - `references` [EXTRACTED]
+- [[dot-get()_10]] - `references` [EXTRACTED]
+- [[dot-listRecipients()]] - `references` [EXTRACTED]
+- [[dot-send()_6]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestsController
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

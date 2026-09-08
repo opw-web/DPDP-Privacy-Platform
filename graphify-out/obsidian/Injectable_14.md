@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "notifications.e2e-spec.ts"
+community: "PermissionsGuard"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationse2e-spects
+  - community/PermissionsGuard
 ---
 
 # Injectable
 
 ## Connections
-- [[ConsoleProvider]] - `references` [EXTRACTED]
+- [[PermissionsGuard]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationse2e-spects
+#graphify/code #graphify/EXTRACTED #community/PermissionsGuard

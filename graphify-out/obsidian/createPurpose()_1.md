@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/notices.e2e-spec.ts"
 type: "code"
-community: "supertest"
+community: "PrismaService"
 location: "L87"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/supertest
+  - community/PrismaService
 ---
 
 # createPurpose()
@@ -15,4 +15,4 @@ tags:
 - [[notices.e2e-spec.ts]] - `contains` [EXTRACTED]
 - [[setupFixture()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/supertest
+#graphify/code #graphify/EXTRACTED #community/PrismaService

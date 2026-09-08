@@ -12,7 +12,7 @@ tags:
 # tenant.extension.js
 
 ## Connections
-- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient]] - `imports_from` [EXTRACTED]
 - [[ALL_SCOPED_MODEL_NAMES]] - `contains` [EXTRACTED]
 - [[PRIMARY_KEY_FIELDS]] - `contains` [EXTRACTED]
 - [[RELATION_TARGET_MODEL]] - `contains` [EXTRACTED]

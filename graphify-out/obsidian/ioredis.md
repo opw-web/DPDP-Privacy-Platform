@@ -1,17 +1,21 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
-type: "code"
-community: "dependencies"
+type: "concept"
+community: "employee-auth.controller.ts"
 location: "L42"
 tags:
-  - graphify/code
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/employee-authcontrollerts
 ---
 
 # ioredis
 
 ## Connections
-- [[dependencies_1]] - `contains` [EXTRACTED]
+- [[backendpackage.json]] - `imports` [EXTRACTED]
+- [[flushTestRedis()]] - `imports_from` [EXTRACTED]
+- [[health.service.ts]] - `imports_from` [EXTRACTED]
+- [[redis-connection.util.ts]] - `imports_from` [EXTRACTED]
+- [[sync-lock.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dependencies
+#graphify/concept #graphify/EXTRACTED #community/employee-authcontrollerts

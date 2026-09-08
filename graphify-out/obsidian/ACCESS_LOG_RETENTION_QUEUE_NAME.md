@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/audit-chain-verify.processor.ts"
 type: "code"
-community: "token.service.ts"
+community: "queues.module.ts"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tokenservicets
+  - community/queuesmodulets
 ---
 
 # ACCESS_LOG_RETENTION_QUEUE_NAME
@@ -17,4 +17,4 @@ tags:
 - [[mvp2-schedules.ts]] - `imports` [EXTRACTED]
 - [[queues.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tokenservicets
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

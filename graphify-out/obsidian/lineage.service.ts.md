@@ -12,8 +12,8 @@ tags:
 # lineage.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@prismaclient]] - `imports_from` [EXTRACTED]
 - [[LineageService]] - `contains` [EXTRACTED]
 - [[PRINCIPAL_FIELD_SELECT]] - `contains` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]

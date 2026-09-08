@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/principal-auth.service.ts"
 type: "code"
-community: "PrincipalAuthService"
+community: "TokenService"
 location: "L230"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalAuthService
+  - community/TokenService
 ---
 
 # .refresh()
@@ -20,4 +20,4 @@ tags:
 - [[PrincipalAuthService]] - `method` [EXTRACTED]
 - [[rotateRefreshToken()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalAuthService
+#graphify/code #graphify/EXTRACTED #community/TokenService

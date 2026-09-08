@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AssignRequestDto"
+community: "RequirePermission"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AssignRequestDto
+  - community/RequirePermission
 ---
 
 # IsOptional
 
 ## Connections
-- [[AssignRequestDto]] - `references` [EXTRACTED]
+- [[ListMatchCandidatesQueryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AssignRequestDto
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

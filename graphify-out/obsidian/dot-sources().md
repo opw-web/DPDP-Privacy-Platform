@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-getSources()]] - `calls` [INFERRED]
 - [[CurrentPrincipal]] - `references` [EXTRACTED]
-- [[Get_8]] - `references` [EXTRACTED]
+- [[Get_7]] - `references` [EXTRACTED]
 - [[MeController]] - `method` [EXTRACTED]
 - [[PrincipalActor]] - `references` [EXTRACTED]
 - [[Public()]] - `references` [EXTRACTED]

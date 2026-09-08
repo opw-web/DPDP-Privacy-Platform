@@ -11,11 +11,11 @@ tags:
 # Actor
 
 ## Connections
-- [[dot-addAffected()_1]] - `references` [EXTRACTED]
-- [[dot-completeObligation()_1]] - `references` [EXTRACTED]
-- [[dot-create()_30]] - `references` [EXTRACTED]
+- [[dot-addAffected()]] - `references` [EXTRACTED]
+- [[dot-completeObligation()]] - `references` [EXTRACTED]
+- [[dot-create()_27]] - `references` [EXTRACTED]
 - [[dot-extension()]] - `references` [EXTRACTED]
 - [[dot-notify()]] - `references` [EXTRACTED]
-- [[dot-update()_20]] - `references` [EXTRACTED]
+- [[dot-update()_19]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/BreachesController

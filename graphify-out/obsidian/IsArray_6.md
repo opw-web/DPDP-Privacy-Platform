@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateCampaignDto"
+community: "CreateNoticeVersionDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateCampaignDto
+  - community/CreateNoticeVersionDto
 ---
 
 # IsArray
 
 ## Connections
-- [[CreateCampaignDto]] - `references` [EXTRACTED]
+- [[CreateNoticeVersionDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateCampaignDto
+#graphify/code #graphify/EXTRACTED #community/CreateNoticeVersionDto

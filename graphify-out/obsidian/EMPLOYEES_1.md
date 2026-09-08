@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/router.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/EmployeesPage.test.tsx"
 type: "code"
-community: "router.tsx"
-location: "L102"
+community: "@tanstack/react-query"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/tanstack/react-query
 ---
 
 # EMPLOYEES
 
 ## Connections
-- [[router.test.tsx]] - `contains` [EXTRACTED]
+- [[EmployeesPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

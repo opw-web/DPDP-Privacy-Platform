@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/campaigns.e2e-spec.ts"
 type: "code"
-community: "supertest"
+community: "PrismaService"
 location: "L269"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/supertest
+  - community/PrismaService
 ---
 
 # getRecipients()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[campaigns.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/supertest
+#graphify/code #graphify/EXTRACTED #community/PrismaService

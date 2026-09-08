@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/consents/consent-backfill.service.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/pre-erasure-notice.service.ts"
 type: "code"
-community: "consent-backfill.queue.ts"
-location: "L78"
+community: "NotificationsService"
+location: "L98"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/consent-backfillqueuets
+  - community/NotificationsService
 ---
 
 # .runForCurrentOrganization()
 
 ## Connections
+- [[dot-cancelOnContact()]] - `calls` [EXTRACTED]
 - [[dot-runForAllOrganizations()_1]] - `calls` [EXTRACTED]
-- [[ConsentBackfillService]] - `method` [EXTRACTED]
+- [[dot-sendDueNotices()]] - `calls` [EXTRACTED]
+- [[PreErasureNoticeService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/consent-backfillqueuets
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

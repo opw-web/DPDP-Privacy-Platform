@@ -1,18 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "AccessTokenPayload"
+community: "CreateAlgorithmEntryDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/CreateAlgorithmEntryDto
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_2]] - `references` [EXTRACTED]
-- [[dot-createVersion()]] - `references` [EXTRACTED]
-- [[dot-upsertTranslation()]] - `references` [EXTRACTED]
+- [[dot-completeAssessment()]] - `references` [EXTRACTED]
+- [[dot-createAlgorithm()]] - `references` [EXTRACTED]
+- [[dot-createAssessment()]] - `references` [EXTRACTED]
+- [[dot-updateAlgorithm()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto

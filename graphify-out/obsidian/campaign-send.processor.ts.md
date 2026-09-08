@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/campaign-send.processor.ts"
 type: "code"
-community: "PrismaService"
+community: "@prisma/client"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/prisma/client
 ---
 
 # campaign-send.processor.ts
 
 ## Connections
-- [[@nestjsbullmq]] - `imports_from` [EXTRACTED]
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsbullmq_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[CAMPAIGN_SEND_MAX_ATTEMPTS]] - `imports` [EXTRACTED]
 - [[CAMPAIGN_SEND_QUEUE_NAME]] - `imports` [EXTRACTED]
 - [[CAMPAIGN_SEND_WORKER_CONCURRENCY]] - `imports` [EXTRACTED]
@@ -32,4 +32,4 @@ tags:
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/prisma/client

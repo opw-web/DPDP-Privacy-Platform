@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SdfAssessmentService"
+community: "VerifyIdentityDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SdfAssessmentService
+  - community/VerifyIdentityDto
 ---
 
 # IsOptional
 
 ## Connections
-- [[CompleteSdfAssessmentDto]] - `references` [EXTRACTED]
+- [[VerifyIdentityDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SdfAssessmentService
+#graphify/code #graphify/EXTRACTED #community/VerifyIdentityDto

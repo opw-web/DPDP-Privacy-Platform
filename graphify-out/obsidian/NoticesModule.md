@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notices/notices.module.ts"
 type: "code"
-community: "app.module.ts"
+community: "@nestjs/common"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/appmodulets
+  - community/nestjs/common
 ---
 
 # NoticesModule
@@ -19,4 +19,4 @@ tags:
 - [[notices.module.ts]] - `contains` [EXTRACTED]
 - [[principal-portal.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/appmodulets
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

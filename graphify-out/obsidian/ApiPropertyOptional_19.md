@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "VerifyIdentityDto"
+community: "CreatePurposeDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/VerifyIdentityDto
+  - community/CreatePurposeDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[VerifyIdentityDto]] - `references` [EXTRACTED]
+- [[CreatePurposeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/VerifyIdentityDto
+#graphify/code #graphify/EXTRACTED #community/CreatePurposeDto

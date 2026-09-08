@@ -1,31 +1,31 @@
 ---
 source_file: "dpdp-platform/backend/test/children.e2e-spec.ts"
 type: "code"
-community: "supertest"
+community: "PrismaService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/supertest
+  - community/PrismaService
 ---
 
 # children.e2e-spec.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@prismaclient]] - `imports_from` [EXTRACTED]
 - [[AgeService]] - `imports` [EXTRACTED]
 - [[GuardiansService]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[TenantContext]] - `imports` [EXTRACTED]
 - [[TenantStore]] - `imports` [EXTRACTED]
 - [[age.service.ts]] - `imports_from` [EXTRACTED]
-- [[argon2_1]] - `imports_from` [EXTRACTED]
+- [[argon2]] - `imports_from` [EXTRACTED]
 - [[bootstrapTestApp()]] - `imports` [EXTRACTED]
 - [[cleanupOrgs()]] - `imports` [EXTRACTED]
-- [[createOrgWithEmployee()]] - `imports` [EXTRACTED]
+- [[createOrgWithEmployee()_2]] - `imports` [EXTRACTED]
 - [[e2e-harness.ts]] - `imports_from` [EXTRACTED]
-- [[ensurePermission()_3]] - `imports` [EXTRACTED]
+- [[ensurePermission()_4]] - `imports` [EXTRACTED]
 - [[guardians.service.ts]] - `imports_from` [EXTRACTED]
 - [[makeNoPermActor()]] - `contains` [EXTRACTED]
 - [[makeOrg()]] - `contains` [EXTRACTED]
@@ -36,4 +36,4 @@ tags:
 - [[validExemptionPayload()]] - `contains` [EXTRACTED]
 - [[validGuardianPayload()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/supertest
+#graphify/code #graphify/EXTRACTED #community/PrismaService

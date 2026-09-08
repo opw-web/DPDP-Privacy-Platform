@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SourceFieldMappingDto"
+community: "CreateGuardianDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SourceFieldMappingDto
+  - community/CreateGuardianDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[ReplaceMappingsDto]] - `references` [EXTRACTED]
-- [[SourceFieldMappingDto]] - `references` [EXTRACTED]
+- [[CreateGuardianDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SourceFieldMappingDto
+#graphify/code #graphify/EXTRACTED #community/CreateGuardianDto

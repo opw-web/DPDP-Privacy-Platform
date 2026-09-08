@@ -1,17 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
 type: "code"
-community: "rest-api.connector.ts"
-location: "L40"
+community: "data-sources.service.ts"
+location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rest-apiconnectorts
+  - community/data-sourcesservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[UnsupportedPaginationStyleError]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[ConnectorFactory]] - `references` [EXTRACTED]
+- [[CryptoService]] - `references` [EXTRACTED]
+- [[DataSourcesService]] - `method` [EXTRACTED]
+- [[SyncQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts
+#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets

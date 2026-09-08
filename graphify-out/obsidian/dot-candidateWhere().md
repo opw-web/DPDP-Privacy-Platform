@@ -12,7 +12,7 @@ tags:
 # .candidateWhere()
 
 ## Connections
-- [[dot-previewAffected()]] - `calls` [EXTRACTED]
+- [[dot-previewAffected()_1]] - `calls` [EXTRACTED]
 - [[AffectedPrincipalsDto]] - `references` [EXTRACTED]
 - [[BreachService]] - `method` [EXTRACTED]
 - [[compileAudience()]] - `calls` [EXTRACTED]

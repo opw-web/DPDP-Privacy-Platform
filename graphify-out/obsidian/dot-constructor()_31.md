@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sync.queue.ts"
+source_file: "dpdp-platform/backend/src/modules/consents/me-consents.controller.ts"
 type: "code"
-community: "SyncLockService"
-location: "L68"
+community: "SetMyConsentDto"
+location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncLockService
+  - community/SetMyConsentDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[InjectQueue_1]] - `references` [EXTRACTED]
-- [[SyncLockService]] - `references` [EXTRACTED]
-- [[SyncQueueService]] - `method` [EXTRACTED]
+- [[ConsentsService]] - `references` [EXTRACTED]
+- [[MeConsentsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncLockService
+#graphify/code #graphify/EXTRACTED #community/SetMyConsentDto

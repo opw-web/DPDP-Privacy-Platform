@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/information-requests/InformationRequestForm.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.tsx"
 type: "code"
-community: "react"
-location: "L42"
+community: "api-client.ts"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/api-clientts
 ---
 
 # PrincipalListResponse
 
 ## Connections
-- [[InformationRequestForm.tsx]] - `contains` [EXTRACTED]
+- [[ChildrenPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/api-clientts

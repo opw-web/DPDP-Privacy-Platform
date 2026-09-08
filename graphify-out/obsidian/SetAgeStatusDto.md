@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/children/dto/set-age-status.dto.ts"
 type: "code"
-community: "children.module.ts"
+community: "AgeStatusService"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/childrenmodulets
+  - community/AgeStatusService
 ---
 
 # SetAgeStatusDto
@@ -14,10 +14,10 @@ tags:
 ## Connections
 - [[dot-setAgeStatus()]] - `references` [EXTRACTED]
 - [[dot-setAgeStatus()_1]] - `references` [EXTRACTED]
-- [[ApiProperty_46]] - `references` [EXTRACTED]
-- [[IsEnum_20]] - `references` [EXTRACTED]
+- [[ApiProperty_51]] - `references` [EXTRACTED]
+- [[IsEnum_22]] - `references` [EXTRACTED]
 - [[age-status.controller.ts]] - `imports` [EXTRACTED]
 - [[age-status.service.ts]] - `imports` [EXTRACTED]
 - [[set-age-status.dto.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/childrenmodulets
+#graphify/code #graphify/EXTRACTED #community/AgeStatusService

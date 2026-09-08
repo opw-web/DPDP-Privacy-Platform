@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sync/sync.module.ts"
 type: "code"
-community: "app.module.ts"
+community: "@nestjs/common"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/appmodulets
+  - community/nestjs/common
 ---
 
 # sync.module.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[AuditModule]] - `imports` [EXTRACTED]
 - [[DataSourcesModule]] - `imports` [EXTRACTED]
 - [[IdentityModule]] - `imports` [EXTRACTED]
@@ -35,4 +35,4 @@ tags:
 - [[sync.processor.ts]] - `imports_from` [EXTRACTED]
 - [[sync.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/appmodulets
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

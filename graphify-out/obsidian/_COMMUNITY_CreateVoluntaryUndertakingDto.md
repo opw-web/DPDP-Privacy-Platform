@@ -1,68 +1,60 @@
 ---
 type: community
-members: 55
+members: 47
 ---
 
 # CreateVoluntaryUndertakingDto
 
-**Members:** 55 nodes
+**Members:** 47 nodes
 
 ## Members
-- [[dot-constructor()_87]] - code - dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts
-- [[dot-constructor()_88]] - code - dpdp-platform/backend/src/modules/board/voluntary-undertakings.service.ts
-- [[dot-create()_16]] - code - dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts
-- [[dot-create()_17]] - code - dpdp-platform/backend/src/modules/board/voluntary-undertakings.service.ts
+- [[dot-constructor()_82]] - code - dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts
+- [[dot-constructor()_83]] - code - dpdp-platform/backend/src/modules/board/voluntary-undertakings.service.ts
+- [[dot-create()_17]] - code - dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts
+- [[dot-create()_18]] - code - dpdp-platform/backend/src/modules/board/voluntary-undertakings.service.ts
 - [[dot-getById()_4]] - code - dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts
 - [[dot-getById()_5]] - code - dpdp-platform/backend/src/modules/board/voluntary-undertakings.service.ts
-- [[dot-list()_23]] - code - dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts
-- [[dot-list()_24]] - code - dpdp-platform/backend/src/modules/board/voluntary-undertakings.service.ts
-- [[dot-update()_10]] - code - dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts
-- [[dot-update()_11]] - code - dpdp-platform/backend/src/modules/board/voluntary-undertakings.service.ts
-- [[ApiProperty_33]] - code
-- [[ApiProperty_34]] - code
+- [[dot-list()_25]] - code - dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts
+- [[dot-list()_26]] - code - dpdp-platform/backend/src/modules/board/voluntary-undertakings.service.ts
+- [[dot-update()_12]] - code - dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts
+- [[dot-update()_13]] - code - dpdp-platform/backend/src/modules/board/voluntary-undertakings.service.ts
+- [[ApiProperty_30]] - code
+- [[ApiProperty_31]] - code
+- [[ApiPropertyOptional_34]] - code
+- [[ApiPropertyOptional_35]] - code
 - [[ApiPropertyOptional_36]] - code
-- [[ApiPropertyOptional_37]] - code
-- [[ApiPropertyOptional_38]] - code
-- [[ApiTags_22]] - code
+- [[ApiTags_23]] - code
 - [[Body_14]] - code
-- [[COMMITMENT_STATUSES]] - code - dpdp-platform/backend/src/modules/board/dto/undertaking-commitment.dto.ts
 - [[Controller_23]] - code
 - [[CreateVoluntaryUndertakingDto]] - code - dpdp-platform/backend/src/modules/board/dto/create-voluntary-undertaking.dto.ts
 - [[Get_24]] - code
-- [[Injectable_57]] - code
-- [[IsArray_18]] - code
-- [[IsArray_19]] - code
+- [[Injectable_49]] - code
+- [[IsArray_16]] - code
+- [[IsArray_17]] - code
 - [[IsDateString_13]] - code
 - [[IsDateString_14]] - code
 - [[IsDateString_15]] - code
-- [[IsIn_10]] - code
+- [[IsIn_9]] - code
 - [[IsOptional_38]] - code
 - [[IsOptional_39]] - code
 - [[IsOptional_40]] - code
+- [[IsString_45]] - code
 - [[IsString_46]] - code
 - [[IsString_47]] - code
-- [[IsString_48]] - code
+- [[MinLength_33]] - code
 - [[MinLength_34]] - code
 - [[MinLength_35]] - code
-- [[MinLength_36]] - code
-- [[Param_15]] - code
-- [[Patch_5]] - code
-- [[Post_15]] - code
-- [[PublicVoluntaryUndertaking]] - code - dpdp-platform/backend/src/modules/board/voluntary-undertakings.service.ts
+- [[Param_16]] - code
+- [[Patch_6]] - code
+- [[Post_14]] - code
+- [[Type_7]] - code
 - [[Type_8]] - code
-- [[Type_9]] - code
 - [[UndertakingCommitmentDto]] - code - dpdp-platform/backend/src/modules/board/dto/undertaking-commitment.dto.ts
 - [[UpdateVoluntaryUndertakingDto]] - code - dpdp-platform/backend/src/modules/board/dto/update-voluntary-undertaking.dto.ts
-- [[VOLUNTARY_UNDERTAKING_PUBLIC_SELECT]] - code - dpdp-platform/backend/src/modules/board/voluntary-undertakings.service.ts
+- [[ValidateNested_4]] - code
 - [[ValidateNested_5]] - code
-- [[ValidateNested_6]] - code
 - [[VoluntaryUndertakingsController]] - code - dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts
 - [[VoluntaryUndertakingsService]] - code - dpdp-platform/backend/src/modules/board/voluntary-undertakings.service.ts
-- [[create-voluntary-undertaking.dto.ts]] - code - dpdp-platform/backend/src/modules/board/dto/create-voluntary-undertaking.dto.ts
-- [[undertaking-commitment.dto.ts]] - code - dpdp-platform/backend/src/modules/board/dto/undertaking-commitment.dto.ts
-- [[update-voluntary-undertaking.dto.ts]] - code - dpdp-platform/backend/src/modules/board/dto/update-voluntary-undertaking.dto.ts
-- [[voluntary-undertakings.controller.ts]] - code - dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts
-- [[voluntary-undertakings.service.ts]] - code - dpdp-platform/backend/src/modules/board/voluntary-undertakings.service.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -72,17 +64,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_@prismaclient]]
-- 8 edges to [[_COMMUNITY_@nestjscommon]]
-- 4 edges to [[_COMMUNITY_app.module.ts]]
-- 2 edges to [[_COMMUNITY_AuditService]]
-- 2 edges to [[_COMMUNITY_PrismaService]]
+- 9 edges to [[_COMMUNITY_@nestjsswagger]]
+- 4 edges to [[_COMMUNITY_RequirePermission]]
+- 3 edges to [[_COMMUNITY_@prismaclient]]
+- 2 edges to [[_COMMUNITY_@nestjscommon]]
 - 2 edges to [[_COMMUNITY_dot-record]]
-- 1 edge to [[_COMMUNITY_audit.service.ts]]
+- 1 edge to [[_COMMUNITY_AuditService]]
 
 ## Top bridge nodes
-- [[voluntary-undertakings.service.ts]] - degree 15, connects to 6 communities
-- [[voluntary-undertakings.controller.ts]] - degree 12, connects to 3 communities
-- [[VoluntaryUndertakingsService]] - degree 10, connects to 1 community
-- [[VoluntaryUndertakingsController]] - degree 9, connects to 1 community
-- [[create-voluntary-undertaking.dto.ts]] - degree 8, connects to 1 community
+- [[VoluntaryUndertakingsService]] - degree 10, connects to 3 communities
+- [[CreateVoluntaryUndertakingDto]] - degree 15, connects to 2 communities
+- [[UpdateVoluntaryUndertakingDto]] - degree 14, connects to 2 communities
+- [[VoluntaryUndertakingsController]] - degree 9, connects to 2 communities
+- [[UndertakingCommitmentDto]] - degree 12, connects to 1 community

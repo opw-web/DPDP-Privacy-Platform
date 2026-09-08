@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/principal/pages/MeDataPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/PurposeForm.test.tsx"
 type: "code"
-community: "MeDataPage.tsx"
-location: "L7"
+community: "@tanstack/react-query"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeDataPagetsx
+  - community/tanstack/react-query
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[MeDataPage.test.tsx]] - `contains` [EXTRACTED]
+- [[PurposeForm.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeDataPagetsx
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

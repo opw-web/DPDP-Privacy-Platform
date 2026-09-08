@@ -1,20 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/retention-scan.queue.ts"
+source_file: "dpdp-platform/backend/src/modules/children/age-status.service.ts"
 type: "code"
-community: "BootRegistrationRegistry"
-location: "L75"
+community: "AgeStatusService"
+location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BootRegistrationRegistry
+  - community/AgeStatusService
 ---
 
 # .constructor()
 
 ## Connections
-- [[dot-register()]] - `calls` [INFERRED]
-- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
-- [[InjectQueue_7]] - `references` [EXTRACTED]
-- [[RetentionScanQueueService]] - `method` [EXTRACTED]
+- [[AgeStatusService]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BootRegistrationRegistry
+#graphify/code #graphify/EXTRACTED #community/AgeStatusService

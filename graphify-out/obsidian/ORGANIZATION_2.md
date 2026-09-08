@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.test.tsx"
+source_file: "dpdp-platform/frontend/src/router.test.tsx"
 type: "code"
 community: "router.tsx"
-location: "L10"
+location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # ORGANIZATION
 
 ## Connections
-- [[SdfDeclarationCard.test.tsx]] - `contains` [EXTRACTED]
+- [[router.test.tsx]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/routertsx

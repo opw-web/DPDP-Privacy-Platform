@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.test.tsx"
 type: "code"
-community: "router.tsx"
+community: "@tanstack/react-query"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/tanstack/react-query
 ---
 
 # BASE_ORGANIZATION
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[SettingsPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

@@ -1,40 +1,169 @@
 ---
 type: community
-members: 27
+members: 156
 ---
 
 # api-client.ts
 
-**Members:** 27 nodes
+**Members:** 156 nodes
 
 ## Members
-- [[API_BASE]] - code - dpdp-platform/frontend/src/lib/api-client.ts
-- [[ApiClient]] - code - dpdp-platform/frontend/src/lib/api-client.ts
+- [[ALGORITHMS_QUERY_KEY]] - code - dpdp-platform/frontend/src/fiduciary/components/sdf/AlgorithmRegisterPanel.tsx
+- [[ALGORITHM_OPERATIONS]] - code - dpdp-platform/frontend/src/fiduciary/components/sdf/types.ts
+- [[AccessReportPanel.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/requests/AccessReportPanel.tsx
+- [[AgeStatus]] - code - dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.tsx
+- [[AlgorithmEntry]] - code - dpdp-platform/frontend/src/fiduciary/components/sdf/types.ts
+- [[AlgorithmEntryRow()]] - code - dpdp-platform/frontend/src/fiduciary/components/sdf/AlgorithmRegisterPanel.tsx
+- [[AlgorithmOperation]] - code - dpdp-platform/frontend/src/fiduciary/components/sdf/types.ts
+- [[AlgorithmRegisterPanel()]] - code - dpdp-platform/frontend/src/fiduciary/components/sdf/AlgorithmRegisterPanel.tsx
+- [[AlgorithmRegisterPanel.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/sdf/AlgorithmRegisterPanel.tsx
 - [[ApiClientConfig]] - code - dpdp-platform/frontend/src/lib/api-client.ts
-- [[EMPTY]] - code - dpdp-platform/frontend/src/components/shared/NotificationBell.test.tsx
-- [[MarkAllReadResponse]] - code - dpdp-platform/frontend/src/lib/mvp2-api.ts
-- [[NotificationBell()]] - code - dpdp-platform/frontend/src/components/shared/NotificationBell.tsx
-- [[NotificationBell.test.tsx]] - code - dpdp-platform/frontend/src/components/shared/NotificationBell.test.tsx
-- [[NotificationBell.tsx]] - code - dpdp-platform/frontend/src/components/shared/NotificationBell.tsx
-- [[NotificationBellProps]] - code - dpdp-platform/frontend/src/components/shared/NotificationBell.tsx
-- [[NotificationDto_1]] - code - dpdp-platform/frontend/src/lib/mvp2-api.ts
-- [[NotificationListResponse]] - code - dpdp-platform/frontend/src/lib/mvp2-api.ts
-- [[NotificationRow()]] - code - dpdp-platform/frontend/src/components/shared/NotificationBell.tsx
-- [[PrincipalLoginPage.test.tsx]] - code - dpdp-platform/frontend/src/principal/pages/PrincipalLoginPage.test.tsx
+- [[AssessmentRowData]] - code - dpdp-platform/frontend/src/fiduciary/components/sdf/AssessmentRow.tsx
+- [[Badge()]] - code - dpdp-platform/frontend/src/components/ui/badge.tsx
+- [[Breach]] - code - dpdp-platform/frontend/src/fiduciary/pages/BreachesPage.tsx
+- [[BreachObligationCard.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/breaches/BreachObligationCard.tsx
+- [[BreachesPage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/BreachesPage.tsx
+- [[Button]] - code - dpdp-platform/frontend/src/components/ui/button.tsx
+- [[ButtonProps]] - code - dpdp-platform/frontend/src/components/ui/button.tsx
+- [[CHILD_AGE_STATUSES]] - code - dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.tsx
+- [[Campaign]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignsPage.tsx
+- [[Card]] - code - dpdp-platform/frontend/src/components/ui/card.tsx
+- [[CardContent]] - code - dpdp-platform/frontend/src/components/ui/card.tsx
+- [[CardDescription]] - code - dpdp-platform/frontend/src/components/ui/card.tsx
+- [[CardHeader]] - code - dpdp-platform/frontend/src/components/ui/card.tsx
+- [[CardTitle]] - code - dpdp-platform/frontend/src/components/ui/card.tsx
+- [[ChildrenPage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.tsx
+- [[ComingSoonSlot()]] - code - dpdp-platform/frontend/src/principal/components/ComingSoonSlot.tsx
+- [[ComingSoonSlot.tsx]] - code - dpdp-platform/frontend/src/principal/components/ComingSoonSlot.tsx
+- [[ComingSoonSlotProps]] - code - dpdp-platform/frontend/src/principal/components/ComingSoonSlot.tsx
+- [[ComplianceRuleSummary]] - code - dpdp-platform/frontend/src/fiduciary/components/sdf/types.ts
+- [[ConsentHistoryItem]] - code - dpdp-platform/frontend/src/principal/pages/MeConsentsPage.tsx
+- [[ConsentStatus]] - code - dpdp-platform/frontend/src/principal/pages/MeConsentsPage.tsx
+- [[DEMO_PRINCIPALS]] - code - dpdp-platform/frontend/src/principal/pages/PrincipalLoginPage.tsx
+- [[DateTime()]] - code - dpdp-platform/frontend/src/components/shared/DateTime.tsx
+- [[DemoCredentialsBanner()]] - code - dpdp-platform/frontend/src/principal/pages/PrincipalLoginPage.tsx
+- [[EMPTY_NOMINATION]] - code - dpdp-platform/frontend/src/principal/pages/MeNominationPage.tsx
+- [[EmptyState()]] - code - dpdp-platform/frontend/src/components/shared/EmptyState.tsx
+- [[EmptyState.tsx]] - code - dpdp-platform/frontend/src/components/shared/EmptyState.tsx
+- [[EmptyStateAction]] - code - dpdp-platform/frontend/src/components/shared/EmptyState.tsx
+- [[EmptyStateProps]] - code - dpdp-platform/frontend/src/components/shared/EmptyState.tsx
+- [[ErasureTask]] - code - dpdp-platform/frontend/src/fiduciary/components/retention/types.ts
+- [[ExemptionClaim]] - code - dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.tsx
+- [[GAP_RESOLUTION_LINK]] - code - dpdp-platform/frontend/src/fiduciary/components/GapsPanel.tsx
+- [[GapsPanel.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/GapsPanel.tsx
+- [[HomeLinkCard()]] - code - dpdp-platform/frontend/src/principal/pages/MeHomePage.tsx
+- [[HomeLinkCardProps]] - code - dpdp-platform/frontend/src/principal/pages/MeHomePage.tsx
+- [[InformationRequestsPage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/InformationRequestsPage.tsx
+- [[LANGUAGES]] - code - dpdp-platform/frontend/src/principal/pages/MePrivacyPage.tsx
+- [[LegalHold]] - code - dpdp-platform/frontend/src/fiduciary/components/retention/types.ts
+- [[LegitimateUsePurpose]] - code - dpdp-platform/frontend/src/principal/pages/MeConsentsPage.tsx
+- [[LoginFormValues]] - code - dpdp-platform/frontend/src/fiduciary/pages/LoginPage.tsx
+- [[LoginFormValues_1]] - code - dpdp-platform/frontend/src/principal/pages/PrincipalLoginPage.tsx
+- [[LoginPage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/LoginPage.tsx
+- [[MeConsent]] - code - dpdp-platform/frontend/src/principal/pages/MeConsentsPage.tsx
+- [[MeConsentsPage.tsx]] - code - dpdp-platform/frontend/src/principal/pages/MeConsentsPage.tsx
+- [[MeConsentsResponse]] - code - dpdp-platform/frontend/src/principal/pages/MeConsentsPage.tsx
+- [[MeHomePage.tsx]] - code - dpdp-platform/frontend/src/principal/pages/MeHomePage.tsx
+- [[MeMessage]] - code - dpdp-platform/frontend/src/principal/pages/MeMessagesPage.tsx
+- [[MeMessagesPage.tsx]] - code - dpdp-platform/frontend/src/principal/pages/MeMessagesPage.tsx
+- [[MeNominationPage.tsx]] - code - dpdp-platform/frontend/src/principal/pages/MeNominationPage.tsx
+- [[MePrivacyPage.tsx]] - code - dpdp-platform/frontend/src/principal/pages/MePrivacyPage.tsx
+- [[MeProfile]] - code - dpdp-platform/frontend/src/principal/pages/MeHomePage.tsx
+- [[MeRecipientDto]] - code - dpdp-platform/frontend/src/principal/pages/MeRecipientsPage.tsx
+- [[MeRecipientsPage()]] - code - dpdp-platform/frontend/src/principal/pages/MeRecipientsPage.tsx
+- [[MeRecipientsPage.tsx]] - code - dpdp-platform/frontend/src/principal/pages/MeRecipientsPage.tsx
+- [[MeRequest]] - code - dpdp-platform/frontend/src/principal/pages/MeRequestsPage.tsx
+- [[MeRequestDetail]] - code - dpdp-platform/frontend/src/principal/pages/MeRequestDetailPage.tsx
+- [[MeRequestDetailPage.tsx]] - code - dpdp-platform/frontend/src/principal/pages/MeRequestDetailPage.tsx
+- [[MeRequestsPage()]] - code - dpdp-platform/frontend/src/principal/pages/MeRequestsPage.tsx
+- [[MeRequestsPage.tsx]] - code - dpdp-platform/frontend/src/principal/pages/MeRequestsPage.tsx
+- [[MeSourceDto]] - code - dpdp-platform/frontend/src/principal/pages/MeSourcesPage.tsx
+- [[MeSourcesPage.tsx]] - code - dpdp-platform/frontend/src/principal/pages/MeSourcesPage.tsx
+- [[MessagingCampaignsPage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignsPage.tsx
+- [[MessagingTemplatesPage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingTemplatesPage.tsx
+- [[Nomination]] - code - dpdp-platform/frontend/src/principal/pages/MeNominationPage.tsx
+- [[NoticeDialog()]] - code - dpdp-platform/frontend/src/principal/pages/MeConsentsPage.tsx
+- [[NoticeSummary]] - code - dpdp-platform/frontend/src/principal/pages/MePrivacyPage.tsx
+- [[NoticeVersion]] - code - dpdp-platform/frontend/src/principal/pages/MeConsentsPage.tsx
+- [[NoticeView]] - code - dpdp-platform/frontend/src/principal/pages/MePrivacyPage.tsx
+- [[NoticesPage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/NoticesPage.tsx
+- [[PortalHelpLink()]] - code - dpdp-platform/frontend/src/principal/components/PortalHelpLink.tsx
+- [[PortalHelpLink.tsx]] - code - dpdp-platform/frontend/src/principal/components/PortalHelpLink.tsx
+- [[PortalPageHeader()]] - code - dpdp-platform/frontend/src/principal/components/PortalPageHeader.tsx
+- [[PortalPageHeader.tsx]] - code - dpdp-platform/frontend/src/principal/components/PortalPageHeader.tsx
+- [[PortalPageHeaderProps]] - code - dpdp-platform/frontend/src/principal/components/PortalPageHeader.tsx
+- [[PrincipalListResponse]] - code - dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.tsx
+- [[PrincipalLoginPage.tsx]] - code - dpdp-platform/frontend/src/principal/pages/PrincipalLoginPage.tsx
+- [[PrivacyContact]] - code - dpdp-platform/frontend/src/principal/pages/MePrivacyPage.tsx
+- [[ProcessorChecklistEntry_1]] - code - dpdp-platform/frontend/src/fiduciary/components/retention/types.ts
+- [[PublishedPurpose]] - code - dpdp-platform/frontend/src/principal/pages/MePrivacyPage.tsx
+- [[Purpose]] - code - dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.tsx
+- [[Purpose_1]] - code - dpdp-platform/frontend/src/fiduciary/pages/PurposesPage.tsx
+- [[PurposesPage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/PurposesPage.tsx
+- [[RECIPIENT_CATEGORY_LABELS]] - code - dpdp-platform/frontend/src/principal/pages/MeRecipientsPage.tsx
+- [[RECIPIENT_TYPE_LABELS]] - code - dpdp-platform/frontend/src/principal/pages/MeRecipientsPage.tsx
+- [[RETENTION_STATES]] - code - dpdp-platform/frontend/src/fiduciary/components/retention/types.ts
+- [[RecentAuditStrip.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/RecentAuditStrip.tsx
+- [[Request]] - code - dpdp-platform/frontend/src/fiduciary/pages/InformationRequestsPage.tsx
+- [[RequestEvent]] - code - dpdp-platform/frontend/src/principal/pages/MeRequestDetailPage.tsx
 - [[RequestOptions]] - code - dpdp-platform/frontend/src/lib/api-client.ts
-- [[api-client.test.ts]] - code - dpdp-platform/frontend/src/lib/api-client.test.ts
+- [[RequestType]] - code - dpdp-platform/frontend/src/principal/pages/MeRequestsPage.tsx
+- [[RetentionPage()]] - code - dpdp-platform/frontend/src/fiduciary/pages/RetentionPage.tsx
+- [[RetentionPage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/RetentionPage.tsx
+- [[RetentionState]] - code - dpdp-platform/frontend/src/fiduciary/components/retention/types.ts
+- [[RetentionTaskCard()]] - code - dpdp-platform/frontend/src/fiduciary/components/retention/RetentionTaskCard.tsx
+- [[RetentionTaskCard.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/retention/RetentionTaskCard.tsx
+- [[RuleBasisChip()]] - code - dpdp-platform/frontend/src/components/shared/RuleBasisChip.tsx
+- [[SDF_CYCLE_APPLIES_TO_1]] - code - dpdp-platform/frontend/src/fiduciary/components/sdf/types.ts
+- [[STATUS_COPY]] - code - dpdp-platform/frontend/src/principal/pages/MeConsentsPage.tsx
+- [[SdfData]] - code - dpdp-platform/frontend/src/fiduciary/pages/SdfPage.tsx
+- [[SdfGapsData]] - code - dpdp-platform/frontend/src/fiduciary/components/sdf/types.ts
+- [[SdfGapsPage()]] - code - dpdp-platform/frontend/src/fiduciary/pages/SdfGapsPage.tsx
+- [[SdfGapsPage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/SdfGapsPage.tsx
+- [[SdfGapsSection()]] - code - dpdp-platform/frontend/src/fiduciary/components/sdf/SdfGapsSection.tsx
+- [[SdfGapsSection.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/sdf/SdfGapsSection.tsx
+- [[SdfPage()]] - code - dpdp-platform/frontend/src/fiduciary/pages/SdfPage.tsx
+- [[SdfPage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/SdfPage.tsx
+- [[Skeleton()]] - code - dpdp-platform/frontend/src/components/shared/Skeleton.tsx
+- [[Skeleton.tsx]] - code - dpdp-platform/frontend/src/components/shared/Skeleton.tsx
+- [[StatCard.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/StatCard.tsx
+- [[StatCardProps]] - code - dpdp-platform/frontend/src/fiduciary/components/StatCard.tsx
+- [[StatusBadge()]] - code - dpdp-platform/frontend/src/principal/pages/MeConsentsPage.tsx
+- [[SystemChecklistEntry_1]] - code - dpdp-platform/frontend/src/fiduciary/components/retention/types.ts
+- [[TERMINAL_STATUSES]] - code - dpdp-platform/frontend/src/principal/pages/MeRequestDetailPage.tsx
+- [[TYPES]] - code - dpdp-platform/frontend/src/principal/pages/MeRequestsPage.tsx
+- [[Template]] - code - dpdp-platform/frontend/src/fiduciary/pages/MessagingTemplatesPage.tsx
+- [[VerificationEditor()]] - code - dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.tsx
+- [[WizardStep]] - code - dpdp-platform/frontend/src/principal/pages/MeRequestsPage.tsx
 - [[api-client.ts]] - code - dpdp-platform/frontend/src/lib/api-client.ts
-- [[authHeaderOf()]] - code - dpdp-platform/frontend/src/lib/api-client.test.ts
+- [[badge.tsx]] - code - dpdp-platform/frontend/src/components/ui/badge.tsx
+- [[badgeVariants]] - code - dpdp-platform/frontend/src/components/ui/badge.tsx
+- [[button.tsx]] - code - dpdp-platform/frontend/src/components/ui/button.tsx
+- [[buttonVariants]] - code - dpdp-platform/frontend/src/components/ui/button.tsx
+- [[card.tsx]] - code - dpdp-platform/frontend/src/components/ui/card.tsx
+- [[categoryLabel()]] - code - dpdp-platform/frontend/src/principal/pages/MeRecipientsPage.tsx
+- [[class-variance-authority_1]] - concept - dpdp-platform/frontend/package.json
+- [[correctionBody()]] - code - dpdp-platform/frontend/src/principal/pages/MeRequestsPage.tsx
 - [[createTokenStore()]] - code - dpdp-platform/frontend/src/lib/api-client.ts
-- [[jsonResponse()_27]] - code - dpdp-platform/frontend/src/lib/api-client.test.ts
-- [[listNotifications()]] - code - dpdp-platform/frontend/src/lib/mvp2-api.ts
-- [[makeFakeApiClient()]] - code - dpdp-platform/frontend/src/components/shared/NotificationBell.test.tsx
-- [[markAllNotificationsRead()]] - code - dpdp-platform/frontend/src/lib/mvp2-api.ts
-- [[markNotificationRead()]] - code - dpdp-platform/frontend/src/lib/mvp2-api.ts
-- [[mvp2-api.ts]] - code - dpdp-platform/frontend/src/lib/mvp2-api.ts
-- [[principalTokenStore]] - code - dpdp-platform/frontend/src/lib/api-client.ts
-- [[renderBell()]] - code - dpdp-platform/frontend/src/components/shared/NotificationBell.test.tsx
-- [[renderPrincipalLoginPage()]] - code - dpdp-platform/frontend/src/principal/pages/PrincipalLoginPage.test.tsx
+- [[describeError()]] - code - dpdp-platform/frontend/src/fiduciary/components/sdf/AlgorithmRegisterPanel.tsx
+- [[detailsValid()]] - code - dpdp-platform/frontend/src/principal/pages/MeRequestsPage.tsx
+- [[findSdfCycleRule()]] - code - dpdp-platform/frontend/src/fiduciary/components/sdf/types.ts
+- [[hasIncompleteChecklist()]] - code - dpdp-platform/frontend/src/fiduciary/components/retention/RetentionTaskCard.tsx
+- [[labelForType()]] - code - dpdp-platform/frontend/src/principal/pages/MeRequestsPage.tsx
+- [[loginSchema]] - code - dpdp-platform/frontend/src/fiduciary/pages/LoginPage.tsx
+- [[loginSchema_1]] - code - dpdp-platform/frontend/src/principal/pages/PrincipalLoginPage.tsx
+- [[lucide-react_1]] - concept - dpdp-platform/frontend/package.json
+- [[principalApiClient]] - code - dpdp-platform/frontend/src/lib/api-client.ts
+- [[recipientTypeLabel()]] - code - dpdp-platform/frontend/src/principal/pages/MeRecipientsPage.tsx
+- [[retentiontypes.ts]] - code - dpdp-platform/frontend/src/fiduciary/components/retention/types.ts
+- [[retentionStateLabel()]] - code - dpdp-platform/frontend/src/fiduciary/components/retention/types.ts
+- [[sdftypes.ts]] - code - dpdp-platform/frontend/src/fiduciary/components/sdf/types.ts
+- [[shouldShowDemoCredentials()]] - code - dpdp-platform/frontend/src/principal/pages/PrincipalLoginPage.tsx
+- [[toAlgorithmFormValues()]] - code - dpdp-platform/frontend/src/fiduciary/components/sdf/AlgorithmFormFields.tsx
+- [[toCreatePayload()]] - code - dpdp-platform/frontend/src/fiduciary/components/sdf/AlgorithmRegisterPanel.tsx
+- [[toggleProcessor()]] - code - dpdp-platform/frontend/src/fiduciary/components/retention/RetentionTaskCard.tsx
+- [[toggleSystem()]] - code - dpdp-platform/frontend/src/fiduciary/components/retention/RetentionTaskCard.tsx
+- [[typeSubject()]] - code - dpdp-platform/frontend/src/principal/pages/MeRequestsPage.tsx
 
 ## Live Query (requires Dataview plugin)
 
@@ -44,26 +173,27 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 33 edges to [[_COMMUNITY_react-router-dom]]
-- 32 edges to [[_COMMUNITY_react]]
-- 27 edges to [[_COMMUNITY_router.tsx]]
-- 13 edges to [[_COMMUNITY_data-sources-api.ts]]
-- 4 edges to [[_COMMUNITY_DateTime.tsx]]
-- 4 edges to [[_COMMUNITY_cn]]
-- 3 edges to [[_COMMUNITY_AuditPage.tsx]]
-- 3 edges to [[_COMMUNITY_EmployeesPage.tsx]]
-- 3 edges to [[_COMMUNITY_BreachWizardPage.tsx]]
-- 3 edges to [[_COMMUNITY_SettingsPage.tsx]]
+- 274 edges to [[_COMMUNITY_react]]
+- 90 edges to [[_COMMUNITY_@tanstackreact-query]]
+- 87 edges to [[_COMMUNITY_cn]]
+- 53 edges to [[_COMMUNITY_AuditPage.tsx]]
+- 51 edges to [[_COMMUNITY_data-sources-api.ts]]
+- 49 edges to [[_COMMUNITY_router.tsx]]
+- 30 edges to [[_COMMUNITY_RequestDetailPage.tsx]]
+- 29 edges to [[_COMMUNITY_PrincipalDetailPage.tsx]]
+- 26 edges to [[_COMMUNITY_EmployeesPage.tsx]]
+- 23 edges to [[_COMMUNITY_MessagingCampaignBuilderPage.tsx]]
+- 21 edges to [[_COMMUNITY_BreachWizardPage.tsx]]
+- 16 edges to [[_COMMUNITY_CandidateComparison.tsx]]
+- 8 edges to [[_COMMUNITY_childrentypes.ts]]
+- 8 edges to [[_COMMUNITY_AudienceBuilder.tsx]]
+- 4 edges to [[_COMMUNITY_DeadlinePill.tsx]]
+- 3 edges to [[_COMMUNITY_frontendpackage.json]]
 - 2 edges to [[_COMMUNITY_createApiClient]]
-- 2 edges to [[_COMMUNITY_RequestDetailPage.tsx]]
-- 2 edges to [[_COMMUNITY_MessagingCampaignBuilderPage.tsx]]
-- 1 edge to [[_COMMUNITY_CandidateComparison.tsx]]
-- 1 edge to [[_COMMUNITY_MeDataPage.tsx]]
-- 1 edge to [[_COMMUNITY_AudienceBuilder.tsx]]
 
 ## Top bridge nodes
-- [[api-client.ts]] - degree 101, connects to 16 communities
-- [[NotificationBell.tsx]] - degree 23, connects to 4 communities
-- [[api-client.test.ts]] - degree 11, connects to 4 communities
-- [[PrincipalLoginPage.test.tsx]] - degree 10, connects to 3 communities
-- [[API_BASE]] - degree 5, connects to 3 communities
+- [[api-client.ts]] - degree 101, connects to 14 communities
+- [[button.tsx]] - degree 75, connects to 13 communities
+- [[Button]] - degree 70, connects to 12 communities
+- [[card.tsx]] - degree 62, connects to 11 communities
+- [[Card]] - degree 56, connects to 11 communities

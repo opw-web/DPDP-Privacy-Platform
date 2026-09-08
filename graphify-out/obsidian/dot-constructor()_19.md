@@ -1,17 +1,25 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/test-support/mock-http-server.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync-pipeline.service.ts"
 type: "code"
-community: "sync.e2e-spec.ts"
-location: "L26"
+community: "AuditService"
+location: "L172"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/synce2e-spects
+  - community/AuditService
 ---
 
 # .constructor()
 
 ## Connections
-- [[MockHttpServer]] - `method` [EXTRACTED]
+- [[AgeService]] - `references` [EXTRACTED]
+- [[AssemblyService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[DataSourcesService]] - `references` [EXTRACTED]
+- [[LinkingService]] - `references` [EXTRACTED]
+- [[MatchingService]] - `references` [EXTRACTED]
+- [[NormalizationService]] - `references` [EXTRACTED]
+- [[SyncLockService]] - `references` [EXTRACTED]
+- [[SyncPipelineService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/synce2e-spects
+#graphify/code #graphify/EXTRACTED #community/AuditService

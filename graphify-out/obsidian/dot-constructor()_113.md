@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/notifications.controller.ts"
 type: "code"
-community: "DataSourcesService"
-location: "L26"
+community: "notifications.controller.ts"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesService
+  - community/notificationscontrollerts
 ---
 
 # .constructor()
 
 ## Connections
-- [[DataSourcesController]] - `method` [EXTRACTED]
-- [[DataSourcesService]] - `references` [EXTRACTED]
+- [[NotificationsController]] - `method` [EXTRACTED]
+- [[NotificationsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesService
+#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts

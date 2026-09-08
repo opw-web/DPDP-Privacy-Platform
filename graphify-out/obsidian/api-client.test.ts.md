@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/lib/api-client.test.ts"
 type: "code"
-community: "api-client.ts"
+community: "@tanstack/react-query"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/tanstack/react-query
 ---
 
 # api-client.test.ts
@@ -18,10 +18,10 @@ tags:
 - [[employeeApiClient]] - `imports` [EXTRACTED]
 - [[employeeLogin()]] - `imports` [EXTRACTED]
 - [[employeeTokenStore]] - `imports` [EXTRACTED]
-- [[jsonResponse()_27]] - `contains` [EXTRACTED]
+- [[jsonResponse()_21]] - `contains` [EXTRACTED]
 - [[libauth.ts]] - `imports_from` [EXTRACTED]
 - [[principalApiClient]] - `imports` [EXTRACTED]
 - [[principalTokenStore]] - `imports` [EXTRACTED]
 - [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

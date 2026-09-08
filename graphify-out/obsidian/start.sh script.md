@@ -19,7 +19,6 @@ tags:
 - [[ok()]] - `calls` [EXTRACTED]
 - [[pause_before_exit()]] - `calls` [EXTRACTED]
 - [[say()]] - `calls` [EXTRACTED]
-- [[setup_node()]] - `calls` [EXTRACTED]
 - [[start.sh]] - `contains` [EXTRACTED]
 - [[step()]] - `calls` [EXTRACTED]
 

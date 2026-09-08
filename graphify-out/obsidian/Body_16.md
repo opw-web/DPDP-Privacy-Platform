@@ -11,7 +11,7 @@ tags:
 # Body
 
 ## Connections
-- [[dot-create()_20]] - `references` [EXTRACTED]
-- [[dot-update()_14]] - `references` [EXTRACTED]
+- [[dot-create()_22]] - `references` [EXTRACTED]
+- [[dot-update()_16]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

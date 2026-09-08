@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CandidatesController"
+community: "PrincipalEvidenceController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CandidatesController
+  - community/PrincipalEvidenceController
 ---
 
 # Controller
 
 ## Connections
-- [[CandidatesController]] - `references` [EXTRACTED]
+- [[PrincipalEvidenceController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CandidatesController
+#graphify/code #graphify/EXTRACTED #community/PrincipalEvidenceController

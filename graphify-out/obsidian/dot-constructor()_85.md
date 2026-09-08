@@ -1,21 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/evidence-pack.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts"
 type: "code"
-community: "@nestjs/common"
-location: "L36"
+community: "templates.service.ts"
+location: "L87"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/templatesservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditExportService]] - `references` [EXTRACTED]
-- [[AuditReadService]] - `references` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
-- [[EvidencePackService]] - `method` [EXTRACTED]
-- [[RopaExportService]] - `references` [EXTRACTED]
+- [[MissingRequiredVariableError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/templatesservicets

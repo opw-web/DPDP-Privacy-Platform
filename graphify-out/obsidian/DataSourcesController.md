@@ -1,24 +1,24 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
 type: "code"
-community: "DataSourcesService"
+community: "DataSourcesController"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesService
+  - community/DataSourcesController
 ---
 
 # DataSourcesController
 
 ## Connections
-- [[dot-constructor()_113]] - `method` [EXTRACTED]
-- [[dot-create()_24]] - `method` [EXTRACTED]
-- [[dot-discoverSchema()_2]] - `method` [EXTRACTED]
-- [[dot-get()_16]] - `method` [EXTRACTED]
-- [[dot-list()_32]] - `method` [EXTRACTED]
+- [[dot-constructor()_115]] - `method` [EXTRACTED]
+- [[dot-create()_25]] - `method` [EXTRACTED]
+- [[dot-discoverSchema()_1]] - `method` [EXTRACTED]
+- [[dot-get()_14]] - `method` [EXTRACTED]
+- [[dot-list()_34]] - `method` [EXTRACTED]
 - [[dot-listFields()]] - `method` [EXTRACTED]
-- [[dot-remove()]] - `method` [EXTRACTED]
+- [[dot-remove()_1]] - `method` [EXTRACTED]
 - [[dot-testConnection()_1]] - `method` [EXTRACTED]
 - [[dot-update()_18]] - `method` [EXTRACTED]
 - [[ApiTags_28]] - `references` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[data-sources.controller.ts]] - `contains` [EXTRACTED]
 - [[data-sources.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesService
+#graphify/code #graphify/EXTRACTED #community/DataSourcesController

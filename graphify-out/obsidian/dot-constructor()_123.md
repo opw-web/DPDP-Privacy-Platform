@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
 type: "code"
 community: "rest-api.connector.ts"
-location: "L51"
+location: "L142"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,8 @@ tags:
 # .constructor()
 
 ## Connections
-- [[PageCapExceededError_1]] - `method` [EXTRACTED]
+- [[ReadOnlyHttpClient]] - `references` [EXTRACTED]
+- [[RestApiConnector]] - `method` [EXTRACTED]
+- [[UnsupportedPaginationStyleError]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts

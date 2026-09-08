@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PreviewAudienceDto"
+community: "RequirePermission"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PreviewAudienceDto
+  - community/RequirePermission
 ---
 
 # Controller
 
 ## Connections
-- [[AudienceController]] - `references` [EXTRACTED]
+- [[CampaignsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PreviewAudienceDto
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/board/dto/update-voluntary-undertaking.dto.ts"
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
+community: "@nestjs/swagger"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/nestjs/swagger
 ---
 
 # update-voluntary-undertaking.dto.ts
@@ -21,4 +21,4 @@ tags:
 - [[voluntary-undertakings.controller.ts]] - `imports_from` [EXTRACTED]
 - [[voluntary-undertakings.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/nestjs/swagger

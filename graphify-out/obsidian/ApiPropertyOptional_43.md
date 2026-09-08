@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "me-rights.service.ts"
+community: "notifications.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/me-rightsservicets
+  - community/notificationscontrollerts
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[UpdateMeNominationDto]] - `references` [EXTRACTED]
+- [[NotificationDto_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/me-rightsservicets
+#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts

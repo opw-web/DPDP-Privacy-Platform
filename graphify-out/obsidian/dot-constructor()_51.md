@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/source-purposes.service.ts"
+source_file: "dpdp-platform/backend/src/queues/deadline-scan.processor.ts"
 type: "code"
-community: "mappings.service.ts"
-location: "L36"
+community: "RequestsService"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingsservicets
+  - community/RequestsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[SourcePurposesService]] - `method` [EXTRACTED]
+- [[DeadlineScanProcessor]] - `method` [EXTRACTED]
+- [[RequestsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/EXTRACTED #community/RequestsService

@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/employee-auth.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/principal-auth.e2e-spec.ts"
 type: "code"
-community: "argon2"
-location: "L161"
+community: "AppModule"
+location: "L171"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/argon2
+  - community/AppModule
 ---
 
 # decodeJwtPayload()
 
 ## Connections
-- [[employee-auth.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[principal-auth.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/argon2
+#graphify/code #graphify/EXTRACTED #community/AppModule

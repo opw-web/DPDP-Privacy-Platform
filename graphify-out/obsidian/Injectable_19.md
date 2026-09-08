@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "TokenService"
+community: "PrismaService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TokenService
+  - community/PrismaService
 ---
 
 # Injectable
 
 ## Connections
-- [[JwtEmployeeGuard]] - `references` [EXTRACTED]
+- [[PrismaService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TokenService
+#graphify/code #graphify/EXTRACTED #community/PrismaService

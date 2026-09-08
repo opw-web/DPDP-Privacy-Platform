@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/inventory/inventory.service.ts"
+source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.ts"
 type: "code"
-community: "inventory.service.ts"
-location: "L78"
+community: "PurposesService"
+location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/inventoryservicets
+  - community/PurposesService
 ---
 
 # .constructor()
 
 ## Connections
-- [[InventoryService]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[PurposesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/inventoryservicets
+#graphify/code #graphify/EXTRACTED #community/PurposesService

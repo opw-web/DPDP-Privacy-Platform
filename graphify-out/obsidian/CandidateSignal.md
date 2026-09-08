@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/CandidateComparison.tsx"
+source_file: "dpdp-platform/backend/src/modules/identity/candidates.service.ts"
 type: "code"
-community: "CandidateComparison.tsx"
-location: "L20"
+community: "AuditService"
+location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CandidateComparisontsx
+  - community/AuditService
 ---
 
 # CandidateSignal
 
 ## Connections
-- [[CandidateComparison.tsx]] - `contains` [EXTRACTED]
+- [[candidates.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CandidateComparisontsx
+#graphify/code #graphify/EXTRACTED #community/AuditService

@@ -1,24 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts"
 type: "code"
-community: "AccessTokenPayload"
-location: "L46"
+community: "CreateAlgorithmEntryDto"
+location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/CreateAlgorithmEntryDto
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_22]] - `calls` [INFERRED]
-- [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[Body_2]] - `references` [EXTRACTED]
-- [[CampaignsController]] - `method` [EXTRACTED]
-- [[CreateCampaignDto]] - `references` [EXTRACTED]
-- [[CurrentActor]] - `references` [EXTRACTED]
-- [[Post_2]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-createAlgorithm()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[AlgorithmRegisterService]] - `method` [EXTRACTED]
+- [[CreateAlgorithmEntryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto

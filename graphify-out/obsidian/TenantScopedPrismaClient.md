@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/prisma/prisma.service.ts"
 type: "code"
-community: "guardians.service.ts"
+community: "data-sources.service.ts"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/data-sourcesservicets
 ---
 
 # TenantScopedPrismaClient
@@ -19,4 +19,4 @@ tags:
 - [[prisma.service.ts]] - `contains` [EXTRACTED]
 - [[scoped-transaction-client.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets

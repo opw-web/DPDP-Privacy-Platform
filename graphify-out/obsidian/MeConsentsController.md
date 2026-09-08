@@ -1,23 +1,23 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/consents/me-consents.controller.ts"
 type: "code"
-community: "Public"
+community: "SetMyConsentDto"
 location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/SetMyConsentDto
 ---
 
 # MeConsentsController
 
 ## Connections
-- [[dot-constructor()_29]] - `method` [EXTRACTED]
-- [[dot-list()_5]] - `method` [EXTRACTED]
+- [[dot-constructor()_31]] - `method` [EXTRACTED]
+- [[dot-list()_4]] - `method` [EXTRACTED]
 - [[dot-setStatus()]] - `method` [EXTRACTED]
-- [[ApiTags_6]] - `references` [EXTRACTED]
-- [[Controller_6]] - `references` [EXTRACTED]
+- [[ApiTags_2]] - `references` [EXTRACTED]
+- [[Controller_2]] - `references` [EXTRACTED]
 - [[consents.module.ts]] - `imports` [EXTRACTED]
 - [[me-consents.controller.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/SetMyConsentDto

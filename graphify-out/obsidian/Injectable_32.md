@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "deadline-scan.processor.ts"
+community: "RequestsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/deadline-scanprocessorts
+  - community/RequestsService
 ---
 
 # Injectable
 
 ## Connections
-- [[DeadlineScanQueueService]] - `references` [EXTRACTED]
+- [[RequestsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/deadline-scanprocessorts
+#graphify/code #graphify/EXTRACTED #community/RequestsService

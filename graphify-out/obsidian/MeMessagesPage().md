@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeMessagesPage.tsx"
 type: "code"
-community: "react-router-dom"
+community: "router.tsx"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react-router-dom
+  - community/routertsx
 ---
 
 # MeMessagesPage()
@@ -18,4 +18,4 @@ tags:
 - [[messageKind()]] - `calls` [EXTRACTED]
 - [[router.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react-router-dom
+#graphify/code #graphify/EXTRACTED #community/routertsx

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".unmerge"
+community: "EmployeeAuthController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/unmerge
+  - community/EmployeeAuthController
 ---
 
 # ApiProperty
 
 ## Connections
-- [[UnmergeDto]] - `references` [EXTRACTED]
+- [[EmployeeLoginDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/unmerge
+#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController

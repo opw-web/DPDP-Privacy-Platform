@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/legal-hold.service.ts"
+source_file: "dpdp-platform/backend/src/modules/children/guardians.controller.ts"
 type: "code"
-community: "erasure-task.service.ts"
-location: "L35"
+community: "RequirePermission"
+location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/RequirePermission
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[LegalHoldService]] - `method` [EXTRACTED]
+- [[GuardiansController]] - `method` [EXTRACTED]
+- [[GuardiansService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

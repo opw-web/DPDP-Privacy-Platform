@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RetentionScanService"
+community: "health.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionScanService
+  - community/healthservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[RetentionScanService]] - `references` [EXTRACTED]
+- [[HealthService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionScanService
+#graphify/code #graphify/EXTRACTED #community/healthservicets

@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "AccessTokenPayload"
+community: "AttachPurposesDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/AttachPurposesDto
 ---
 
 # Put
 
 ## Connections
-- [[dot-upsertTranslation()]] - `references` [EXTRACTED]
+- [[dot-replaceMappings()]] - `references` [EXTRACTED]
+- [[dot-replacePurposes()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/AttachPurposesDto

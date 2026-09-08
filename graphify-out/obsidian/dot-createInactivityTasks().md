@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/retention-scan.service.ts"
 type: "code"
-community: "RetentionScanService"
+community: "SdfCycleScanService"
 location: "L111"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionScanService
+  - community/SdfCycleScanService
 ---
 
 # .createInactivityTasks()
@@ -19,4 +19,4 @@ tags:
 - [[RetentionScanService]] - `method` [EXTRACTED]
 - [[lockRetentionWorkflow()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionScanService
+#graphify/code #graphify/EXTRACTED #community/SdfCycleScanService

@@ -1,19 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "mappings.service.ts"
+community: "NoticesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingsservicets
+  - community/NoticesService
 ---
 
 # Param
 
 ## Connections
-- [[dot-getMappings()]] - `references` [EXTRACTED]
-- [[dot-getPurposes()]] - `references` [EXTRACTED]
-- [[dot-replaceMappings()]] - `references` [EXTRACTED]
-- [[dot-replacePurposes()]] - `references` [EXTRACTED]
+- [[dot-createVersion()]] - `references` [EXTRACTED]
+- [[dot-get()_8]] - `references` [EXTRACTED]
+- [[dot-listEligibleFields()]] - `references` [EXTRACTED]
+- [[dot-preview()_2]] - `references` [EXTRACTED]
+- [[dot-publish()]] - `references` [EXTRACTED]
+- [[dot-upsertTranslation()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/EXTRACTED #community/NoticesService

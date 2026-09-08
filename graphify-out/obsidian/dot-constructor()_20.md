@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/guardians.service.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/legal-hold.service.ts"
 type: "code"
-community: "guardians.service.ts"
-location: "L76"
+community: "RetentionController"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/RetentionController
 ---
 
 # .constructor()
 
 ## Connections
 - [[AuditService]] - `references` [EXTRACTED]
-- [[GuardiansService]] - `method` [EXTRACTED]
-- [[MaskingService]] - `references` [EXTRACTED]
+- [[LegalHoldService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/RetentionController

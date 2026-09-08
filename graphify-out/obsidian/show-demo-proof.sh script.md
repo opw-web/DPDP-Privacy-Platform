@@ -17,7 +17,6 @@ tags:
 - [[pause_before_exit()]] - `calls` [EXTRACTED]
 - [[psql_count()]] - `calls` [EXTRACTED]
 - [[say()]] - `calls` [EXTRACTED]
-- [[setup_node()]] - `calls` [EXTRACTED]
 - [[show-demo-proof.sh]] - `contains` [EXTRACTED]
 - [[warn()]] - `calls` [EXTRACTED]
 

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-notifyPrincipals()]] - `calls` [EXTRACTED]
-- [[dot-process()_5]] - `calls` [INFERRED]
+- [[dot-process()_8]] - `calls` [INFERRED]
 - [[dot-send()_7]] - `calls` [INFERRED]
 - [[BreachService]] - `method` [EXTRACTED]
 

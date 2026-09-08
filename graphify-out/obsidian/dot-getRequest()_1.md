@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principal-portal/me-rights.service.ts"
 type: "code"
-community: "me-rights.service.ts"
+community: "MeRightsService"
 location: "L101"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/me-rightsservicets
+  - community/MeRightsService
 ---
 
 # .getRequest()
@@ -16,4 +16,4 @@ tags:
 - [[dot-ownRequest()]] - `calls` [EXTRACTED]
 - [[MeRightsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/me-rightsservicets
+#graphify/code #graphify/EXTRACTED #community/MeRightsService

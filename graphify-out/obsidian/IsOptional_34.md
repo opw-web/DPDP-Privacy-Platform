@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AuditReadController"
+community: "CreateBreachDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditReadController
+  - community/CreateBreachDto
 ---
 
 # IsOptional
 
 ## Connections
-- [[AccessLogExportDto]] - `references` [EXTRACTED]
+- [[CreateBreachDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditReadController
+#graphify/code #graphify/EXTRACTED #community/CreateBreachDto

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-createVersion()_1]] - `calls` [EXTRACTED]
-- [[dot-get()_17]] - `calls` [EXTRACTED]
+- [[dot-get()_9]] - `calls` [EXTRACTED]
 - [[NoticesService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/NoticesService

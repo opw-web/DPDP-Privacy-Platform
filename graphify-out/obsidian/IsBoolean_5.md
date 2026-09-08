@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateDataSourceDto"
+community: "transfers.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateDataSourceDto
+  - community/transfersservicets
 ---
 
 # IsBoolean
 
 ## Connections
-- [[CreateDataSourceDto]] - `references` [EXTRACTED]
+- [[CreateTransferDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateDataSourceDto
+#graphify/code #graphify/EXTRACTED #community/transfersservicets

@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts"
+source_file: "dpdp-platform/backend/src/queues/sync.queue.ts"
 type: "code"
-community: "AlgorithmRegisterService"
-location: "L35"
+community: "SyncQueueService"
+location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AlgorithmRegisterService
+  - community/SyncQueueService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AlgorithmRegisterService]] - `method` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
+- [[InjectQueue]] - `references` [EXTRACTED]
+- [[SyncLockService]] - `references` [EXTRACTED]
+- [[SyncQueueService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterService
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

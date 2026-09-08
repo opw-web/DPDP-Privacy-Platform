@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/test/breaches.e2e-spec.ts"
 type: "code"
-community: "supertest"
+community: "PrismaService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/supertest
+  - community/PrismaService
 ---
 
 # breaches.e2e-spec.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[BreachService]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[TenantContext]] - `imports` [EXTRACTED]
@@ -28,6 +28,6 @@ tags:
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[renderBoardDetailedPdf()]] - `imports` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
-- [[waitUntil()_1]] - `imports` [EXTRACTED]
+- [[waitUntil()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/supertest
+#graphify/code #graphify/EXTRACTED #community/PrismaService

@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "erasure-task.service.ts"
+community: "RequirePermission"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/RequirePermission
 ---
 
 # Get
 
 ## Connections
-- [[dot-listLegalHolds()]] - `references` [EXTRACTED]
-- [[dot-listTasks()]] - `references` [EXTRACTED]
+- [[dot-get()_10]] - `references` [EXTRACTED]
+- [[dot-list()_23]] - `references` [EXTRACTED]
+- [[dot-listRecipients()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

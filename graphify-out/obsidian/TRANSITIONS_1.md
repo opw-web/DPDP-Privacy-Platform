@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
 type: "code"
-community: "breach.service.ts"
+community: "@nestjs/swagger"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breachservicets
+  - community/nestjs/swagger
 ---
 
 # TRANSITIONS
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[breach.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breachservicets
+#graphify/code #graphify/EXTRACTED #community/nestjs/swagger

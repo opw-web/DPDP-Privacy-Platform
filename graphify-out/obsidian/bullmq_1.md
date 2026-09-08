@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "mvp2-schedules.ts"
+community: "queues.module.ts"
 location: "L35"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/mvp2-schedulests
+  - community/queuesmodulets
 ---
 
 # bullmq
@@ -35,4 +35,4 @@ tags:
 - [[sync.processor.ts]] - `imports_from` [EXTRACTED]
 - [[sync.queue.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/mvp2-schedulests
+#graphify/concept #graphify/EXTRACTED #community/queuesmodulets

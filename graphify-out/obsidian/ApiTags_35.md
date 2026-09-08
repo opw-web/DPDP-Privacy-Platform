@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EmployeeAuthController"
+community: "CreateRecipientDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeeAuthController
+  - community/CreateRecipientDto
 ---
 
 # ApiTags
 
 ## Connections
-- [[EmployeeAuthController]] - `references` [EXTRACTED]
+- [[RecipientsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController
+#graphify/code #graphify/EXTRACTED #community/CreateRecipientDto

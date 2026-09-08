@@ -1,20 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/candidates.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/security-measures.service.ts"
 type: "code"
-community: "candidates.service.ts"
-location: "L130"
+community: "CreateSecurityMeasureDto"
+location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/candidatesservicets
+  - community/CreateSecurityMeasureDto
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_34]] - `calls` [INFERRED]
-- [[CandidatesService]] - `method` [EXTRACTED]
-- [[isoDate()]] - `calls` [EXTRACTED]
-- [[recordValueFor()]] - `calls` [EXTRACTED]
+- [[dot-list()_46]] - `calls` [INFERRED]
+- [[SecurityMeasuresService]] - `method` [EXTRACTED]
+- [[groupByRuleReference()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/candidatesservicets
+#graphify/code #graphify/EXTRACTED #community/CreateSecurityMeasureDto

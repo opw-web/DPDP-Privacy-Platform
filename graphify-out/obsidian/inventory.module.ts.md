@@ -12,7 +12,7 @@ tags:
 # inventory.module.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[AuditModule]] - `imports` [EXTRACTED]
 - [[InventoryController]] - `imports` [EXTRACTED]
 - [[InventoryModule]] - `contains` [EXTRACTED]

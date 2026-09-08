@@ -12,9 +12,9 @@ tags:
 # TenantMiddleware
 
 ## Connections
-- [[dot-constructor()_34]] - `method` [EXTRACTED]
+- [[dot-constructor()_135]] - `method` [EXTRACTED]
 - [[dot-use()]] - `method` [EXTRACTED]
-- [[Injectable_20]] - `references` [EXTRACTED]
+- [[Injectable_79]] - `references` [EXTRACTED]
 - [[tenant.middleware.ts]] - `contains` [EXTRACTED]
 - [[tenant.module.ts]] - `imports` [EXTRACTED]
 

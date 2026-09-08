@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SyncService"
+community: "audit-chain.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncService
+  - community/audit-chainservicets
 ---
 
 # Controller
 
 ## Connections
-- [[SyncController]] - `references` [EXTRACTED]
-- [[SyncJobsController]] - `references` [EXTRACTED]
+- [[AuditEventsEvidenceController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncService
+#graphify/code #graphify/EXTRACTED #community/audit-chainservicets

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EnvironmentVariables"
+community: "ImportConsentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EnvironmentVariables
+  - community/ImportConsentDto
 ---
 
 # MinLength
 
 ## Connections
-- [[EnvironmentVariables]] - `references` [EXTRACTED]
+- [[ImportConsentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EnvironmentVariables
+#graphify/code #graphify/EXTRACTED #community/ImportConsentDto

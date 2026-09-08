@@ -12,7 +12,7 @@ tags:
 # .hasFullPersonalDataAccess()
 
 ## Connections
-- [[dot-list()_19]] - `calls` [INFERRED]
+- [[dot-list()_6]] - `calls` [INFERRED]
 - [[dot-maskIfNeeded()]] - `calls` [EXTRACTED]
 - [[MaskingService]] - `method` [EXTRACTED]
 

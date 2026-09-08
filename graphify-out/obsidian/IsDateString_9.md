@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateLegalHoldDto"
+community: "ExtensionDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateLegalHoldDto
+  - community/ExtensionDto
 ---
 
 # IsDateString
 
 ## Connections
-- [[CreateLegalHoldDto]] - `references` [EXTRACTED]
+- [[ExtensionDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto
+#graphify/code #graphify/EXTRACTED #community/ExtensionDto

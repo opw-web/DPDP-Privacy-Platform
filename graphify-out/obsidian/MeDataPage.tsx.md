@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeDataPage.tsx"
 type: "code"
-community: "MeDataPage.tsx"
+community: "router.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeDataPagetsx
+  - community/routertsx
 ---
 
 # MeDataPage.tsx
@@ -31,4 +31,4 @@ tags:
 - [[principalApiClient]] - `imports` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeDataPagetsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "BreachesController"
+community: "UpdateRolePermissionsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BreachesController
+  - community/UpdateRolePermissionsDto
 ---
 
 # Controller
 
 ## Connections
-- [[BreachesController]] - `references` [EXTRACTED]
+- [[RolesController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BreachesController
+#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto

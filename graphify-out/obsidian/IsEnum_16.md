@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "breach.service.ts"
+community: "ListPrincipalsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breachservicets
+  - community/ListPrincipalsDto
 ---
 
 # IsEnum
 
 ## Connections
-- [[UpdateBreachDto]] - `references` [EXTRACTED]
+- [[ListPrincipalsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breachservicets
+#graphify/code #graphify/EXTRACTED #community/ListPrincipalsDto

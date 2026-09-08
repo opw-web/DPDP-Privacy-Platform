@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.service.ts"
 type: "code"
-community: "principal-auth.service.ts"
+community: "@prisma/client"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principal-authservicets
+  - community/prisma/client
 ---
 
 # EmployeeLoginResult
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[employee-auth.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principal-authservicets
+#graphify/code #graphify/EXTRACTED #community/prisma/client

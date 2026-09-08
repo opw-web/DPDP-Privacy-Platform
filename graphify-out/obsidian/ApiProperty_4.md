@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SetMyConsentDto"
+community: "CreateAlgorithmEntryDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SetMyConsentDto
+  - community/CreateAlgorithmEntryDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[SetMyConsentDto]] - `references` [EXTRACTED]
+- [[CreateAlgorithmEntryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SetMyConsentDto
+#graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto

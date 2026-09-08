@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts"
+source_file: "demo-company-server/src/seed/rng.ts"
 type: "code"
-community: "read-only-http.client.ts"
-location: "L38"
+community: "generateDataset"
+location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/read-only-httpclientts
+  - community/generateDataset
 ---
 
 # .constructor()
 
 ## Connections
-- [[ReadOnlyHttpMethodError]] - `method` [EXTRACTED]
+- [[Rng]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/read-only-httpclientts
+#graphify/code #graphify/EXTRACTED #community/generateDataset

@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sync/sync-pipeline.service.ts"
 type: "code"
-community: "sync-pipeline.service.ts"
+community: "ScopedTransactionClient"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sync-pipelineservicets
+  - community/ScopedTransactionClient
 ---
 
 # sync-pipeline.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@prismaclient]] - `imports_from` [EXTRACTED]
 - [[AgeService]] - `imports` [EXTRACTED]
 - [[AssemblyService]] - `imports` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
@@ -60,4 +60,4 @@ tags:
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 - [[zeroCounts()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sync-pipelineservicets
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

@@ -12,13 +12,13 @@ tags:
 # RecipientsController
 
 ## Connections
-- [[dot-constructor()_136]] - `method` [EXTRACTED]
+- [[dot-constructor()_131]] - `method` [EXTRACTED]
 - [[dot-create()_31]] - `method` [EXTRACTED]
 - [[dot-get()_19]] - `method` [EXTRACTED]
-- [[dot-list()_41]] - `method` [EXTRACTED]
+- [[dot-list()_42]] - `method` [EXTRACTED]
 - [[dot-update()_21]] - `method` [EXTRACTED]
-- [[ApiTags_37]] - `references` [EXTRACTED]
-- [[Controller_38]] - `references` [EXTRACTED]
+- [[ApiTags_35]] - `references` [EXTRACTED]
+- [[Controller_36]] - `references` [EXTRACTED]
 - [[recipients.controller.ts]] - `contains` [EXTRACTED]
 - [[registers.module.ts]] - `imports` [EXTRACTED]
 

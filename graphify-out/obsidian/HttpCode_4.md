@@ -11,7 +11,7 @@ tags:
 # HttpCode
 
 ## Connections
-- [[dot-login()_1]] - `references` [EXTRACTED]
+- [[dot-login()]] - `references` [EXTRACTED]
 - [[dot-logout()]] - `references` [EXTRACTED]
 - [[dot-refresh()]] - `references` [EXTRACTED]
 

@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/consents/consents.controller.ts"
 type: "code"
-community: "ImportConsentDto"
+community: "ConsentsService"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ImportConsentDto
+  - community/ConsentsService
 ---
 
 # ConsentsController
 
 ## Connections
-- [[dot-constructor()_112]] - `method` [EXTRACTED]
+- [[dot-constructor()_114]] - `method` [EXTRACTED]
 - [[dot-getConsentStats()]] - `method` [EXTRACTED]
 - [[dot-listForPrincipal()_1]] - `method` [EXTRACTED]
 - [[dot-recordImportedConsent()]] - `method` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[consents.controller.ts]] - `contains` [EXTRACTED]
 - [[consents.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ImportConsentDto
+#graphify/code #graphify/EXTRACTED #community/ConsentsService

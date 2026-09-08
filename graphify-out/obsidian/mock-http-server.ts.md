@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/connectors/test-support/mock-http-server.ts"
 type: "code"
-community: "sync.e2e-spec.ts"
+community: "rest-api.connector.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/synce2e-spects
+  - community/rest-apiconnectorts
 ---
 
 # mock-http-server.ts
@@ -22,4 +22,4 @@ tags:
 - [[step6-conflict-acceptance.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[sync.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/synce2e-spects
+#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts

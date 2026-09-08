@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".record"
+community: "MeRightsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/MeRightsService
 ---
 
 # Injectable
 
 ## Connections
-- [[BreachService]] - `references` [EXTRACTED]
+- [[MeRightsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/MeRightsService

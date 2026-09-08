@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "health.service.ts"
+community: "data-sources.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/healthservicets
+  - community/data-sourcesservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[HealthService]] - `references` [EXTRACTED]
+- [[DataSourcesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/healthservicets
+#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets

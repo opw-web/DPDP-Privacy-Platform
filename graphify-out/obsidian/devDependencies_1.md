@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[@nestjscli]] - `contains` [EXTRACTED]
 - [[@nestjsschematics]] - `contains` [EXTRACTED]
-- [[@nestjstesting_1]] - `contains` [EXTRACTED]
+- [[@nestjstesting]] - `contains` [EXTRACTED]
 - [[@typescookie-parser]] - `contains` [EXTRACTED]
 - [[@typesexpress]] - `contains` [EXTRACTED]
 - [[@typesjest]] - `contains` [EXTRACTED]

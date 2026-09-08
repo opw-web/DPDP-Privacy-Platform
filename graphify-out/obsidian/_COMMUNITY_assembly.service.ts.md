@@ -36,19 +36,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_ScopedTransactionClient]]
+- 6 edges to [[_COMMUNITY_ScopedTransactionClient]]
 - 4 edges to [[_COMMUNITY_AuditService]]
-- 1 edge to [[_COMMUNITY_mappings.service.ts]]
-- 1 edge to [[_COMMUNITY_@nestjscommon]]
-- 1 edge to [[_COMMUNITY_@prismaclient]]
-- 1 edge to [[_COMMUNITY_audit.service.ts]]
-- 1 edge to [[_COMMUNITY_app.module.ts]]
-- 1 edge to [[_COMMUNITY_sync-pipeline.service.ts]]
+- 2 edges to [[_COMMUNITY_@nestjscommon]]
+- 2 edges to [[_COMMUNITY_@prismaclient]]
+- 1 edge to [[_COMMUNITY_data-sources.service.ts]]
 - 1 edge to [[_COMMUNITY_AppModule]]
 - 1 edge to [[_COMMUNITY_merge-unmerge.e2e-spec.ts]]
 
 ## Top bridge nodes
-- [[assembly.service.ts]] - degree 27, connects to 10 communities
+- [[assembly.service.ts]] - degree 27, connects to 7 communities
 - [[ageStatusFor()]] - degree 3, connects to 2 communities
 - [[assembleFields()]] - degree 8, connects to 1 community
 - [[assembly.service.spec.ts]] - degree 7, connects to 1 community

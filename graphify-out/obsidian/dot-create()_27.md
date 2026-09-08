@@ -1,23 +1,24 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
+source_file: "dpdp-platform/backend/src/modules/breaches/breaches.controller.ts"
 type: "code"
-community: "NoticesService"
-location: "L191"
+community: "BreachesController"
+location: "L65"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NoticesService
+  - community/BreachesController
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_2]] - `calls` [INFERRED]
-- [[dot-createVersion()_1]] - `calls` [EXTRACTED]
-- [[dot-record()_1]] - `calls` [INFERRED]
-- [[CreateNoticeDto]] - `references` [EXTRACTED]
-- [[NoticesService]] - `method` [EXTRACTED]
-- [[duplicateCodeMessage()_2]] - `calls` [EXTRACTED]
-- [[isUniqueConstraintViolation()_3]] - `calls` [EXTRACTED]
+- [[dot-create()_30]] - `calls` [INFERRED]
+- [[AccessTokenPayload]] - `references` [EXTRACTED]
+- [[Actor]] - `references` [EXTRACTED]
+- [[Body_20]] - `references` [EXTRACTED]
+- [[BreachesController]] - `method` [EXTRACTED]
+- [[CreateBreachDto]] - `references` [EXTRACTED]
+- [[Post_21]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NoticesService
+#graphify/code #graphify/EXTRACTED #community/BreachesController

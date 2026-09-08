@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/decorators/current-actor.decorator.ts"
 type: "code"
-community: "AccessTokenPayload"
+community: "RequirePermission"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/RequirePermission
 ---
 
 # CurrentActor
@@ -17,18 +17,18 @@ tags:
 - [[dot-complete()_1]] - `references` [EXTRACTED]
 - [[dot-confirm()]] - `references` [EXTRACTED]
 - [[dot-create()_28]] - `references` [EXTRACTED]
-- [[dot-create()_1]] - `references` [EXTRACTED]
+- [[dot-create()_15]] - `references` [EXTRACTED]
 - [[dot-createLegalHold()]] - `references` [EXTRACTED]
 - [[dot-createVersion()]] - `references` [EXTRACTED]
 - [[dot-me()]] - `references` [EXTRACTED]
 - [[dot-publish()]] - `references` [EXTRACTED]
 - [[dot-reject()]] - `references` [EXTRACTED]
-- [[dot-review()]] - `references` [EXTRACTED]
-- [[dot-review()_1]] - `references` [EXTRACTED]
-- [[dot-send()]] - `references` [EXTRACTED]
+- [[dot-review()_2]] - `references` [EXTRACTED]
+- [[dot-review()_3]] - `references` [EXTRACTED]
+- [[dot-send()_6]] - `references` [EXTRACTED]
 - [[dot-unmerge()]] - `references` [EXTRACTED]
 - [[dot-upsertTranslation()]] - `references` [EXTRACTED]
-- [[dot-verify()]] - `references` [EXTRACTED]
+- [[dot-verify()_1]] - `references` [EXTRACTED]
 - [[breaches.controller.ts]] - `imports` [EXTRACTED]
 - [[campaigns.controller.ts]] - `imports` [EXTRACTED]
 - [[candidates.controller.ts]] - `imports` [EXTRACTED]
@@ -42,4 +42,4 @@ tags:
 - [[retentionretention.controller.ts]] - `imports` [EXTRACTED]
 - [[unmerge.controller.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

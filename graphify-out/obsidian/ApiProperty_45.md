@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "children.module.ts"
+community: "retention.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/childrenmodulets
+  - community/retentionservicets
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateExemptionClaimDto]] - `references` [EXTRACTED]
+- [[CreateRetentionPolicyDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/childrenmodulets
+#graphify/code #graphify/EXTRACTED #community/retentionservicets

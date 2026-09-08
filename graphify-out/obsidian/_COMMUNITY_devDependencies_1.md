@@ -8,7 +8,7 @@ members: 21
 **Members:** 21 nodes
 
 ## Members
-- [[@eslintjs_1]] - code - dpdp-platform/frontend/package.json
+- [[@eslintjs]] - code - dpdp-platform/frontend/package.json
 - [[@testing-libraryjest-dom_1]] - code - dpdp-platform/frontend/package.json
 - [[@testing-libraryreact]] - code - dpdp-platform/frontend/package.json
 - [[@testing-libraryuser-event]] - code - dpdp-platform/frontend/package.json
@@ -19,14 +19,14 @@ members: 21
 - [[autoprefixer_1]] - code - dpdp-platform/frontend/package.json
 - [[devDependencies_2]] - code - dpdp-platform/frontend/package.json
 - [[eslint_3]] - code - dpdp-platform/frontend/package.json
-- [[eslint-plugin-react-hooks_1]] - code - dpdp-platform/frontend/package.json
-- [[eslint-plugin-react-refresh_1]] - code - dpdp-platform/frontend/package.json
-- [[globals_1]] - code - dpdp-platform/frontend/package.json
+- [[eslint-plugin-react-hooks]] - code - dpdp-platform/frontend/package.json
+- [[eslint-plugin-react-refresh]] - code - dpdp-platform/frontend/package.json
+- [[globals]] - code - dpdp-platform/frontend/package.json
 - [[jsdom_1]] - code - dpdp-platform/frontend/package.json
 - [[postcss_1]] - code - dpdp-platform/frontend/package.json
 - [[tailwindcss_2]] - code - dpdp-platform/frontend/package.json
 - [[typescript_5]] - code - dpdp-platform/frontend/package.json
-- [[typescript-eslint_1]] - code - dpdp-platform/frontend/package.json
+- [[typescript-eslint]] - code - dpdp-platform/frontend/package.json
 - [[vite_1]] - code - dpdp-platform/frontend/package.json
 - [[vitest]] - code - dpdp-platform/frontend/package.json
 

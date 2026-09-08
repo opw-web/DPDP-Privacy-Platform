@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "notifications.controller.ts"
+community: "SyncQueueService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationscontrollerts
+  - community/SyncQueueService
 ---
 
 # Injectable
 
 ## Connections
-- [[JwtAnyActorGuard]] - `references` [EXTRACTED]
+- [[SyncQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/common/guards/jwt-principal.guard.ts"
+source_file: "dpdp-platform/backend/src/modules/audit/audit-read.service.ts"
 type: "code"
-community: "TokenService"
-location: "L75"
+community: "AuditReadService"
+location: "L102"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TokenService
+  - community/AuditReadService
 ---
 
 # .constructor()
 
 ## Connections
-- [[JwtPrincipalGuard]] - `method` [EXTRACTED]
-- [[TokenService]] - `references` [EXTRACTED]
+- [[AuditReadService]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[MaskingService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TokenService
+#graphify/code #graphify/EXTRACTED #community/AuditReadService

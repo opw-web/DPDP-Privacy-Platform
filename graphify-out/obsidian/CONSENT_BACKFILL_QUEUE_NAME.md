@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/consent-backfill.queue.ts"
 type: "code"
-community: "consent-backfill.queue.ts"
+community: "queues.module.ts"
 location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/consent-backfillqueuets
+  - community/queuesmodulets
 ---
 
 # CONSENT_BACKFILL_QUEUE_NAME
@@ -18,4 +18,4 @@ tags:
 - [[mvp2-schedules.ts]] - `imports` [EXTRACTED]
 - [[queues.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/consent-backfillqueuets
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "retention.service.ts"
+community: "TokenService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/TokenService
 ---
 
 # Injectable
 
 ## Connections
-- [[RetentionService]] - `references` [EXTRACTED]
+- [[EmployeeAuthService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/TokenService

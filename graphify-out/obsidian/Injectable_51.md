@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "erasure-task.service.ts"
+community: "crypto.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/cryptoservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[LegalHoldService]] - `references` [EXTRACTED]
+- [[CryptoService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/cryptoservicets

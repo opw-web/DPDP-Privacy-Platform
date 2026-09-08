@@ -12,8 +12,8 @@ tags:
 # UnsupportedPaginationStyleError
 
 ## Connections
-- [[dot-constructor()_124]] - `calls` [EXTRACTED]
-- [[dot-constructor()_125]] - `method` [EXTRACTED]
+- [[dot-constructor()_123]] - `calls` [EXTRACTED]
+- [[dot-constructor()_124]] - `method` [EXTRACTED]
 - [[rest-api.connector.spec.ts]] - `imports` [EXTRACTED]
 - [[rest-api.connector.ts]] - `contains` [EXTRACTED]
 

@@ -1,21 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/audit/audit-read.service.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.controller.ts"
 type: "code"
-community: "AuditReadController"
-location: "L157"
+community: "NoticesService"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditReadController
+  - community/NoticesService
 ---
 
 # .list()
 
 ## Connections
-- [[dot-buildWhere()]] - `calls` [EXTRACTED]
-- [[dot-hasFullPersonalDataAccess()]] - `calls` [INFERRED]
-- [[dot-list()_18]] - `calls` [INFERRED]
-- [[AuditReadService]] - `method` [EXTRACTED]
-- [[ListAuditEventsDto]] - `references` [EXTRACTED]
+- [[dot-list()_20]] - `calls` [INFERRED]
+- [[Get_20]] - `references` [EXTRACTED]
+- [[NoticesController]] - `method` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditReadController
+#graphify/code #graphify/EXTRACTED #community/NoticesService

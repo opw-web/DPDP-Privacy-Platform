@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/retention/RetentionTaskCard.tsx"
 type: "code"
-community: "DateTime.tsx"
+community: "api-client.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DateTimetsx
+  - community/api-clientts
 ---
 
 # RetentionTaskCard.tsx
@@ -26,10 +26,10 @@ tags:
 - [[DateTime.tsx]] - `imports_from` [EXTRACTED]
 - [[ErasureTask]] - `imports` [EXTRACTED]
 - [[Input]] - `imports` [EXTRACTED]
-- [[ProcessorChecklistEntry]] - `imports` [EXTRACTED]
+- [[ProcessorChecklistEntry_1]] - `imports` [EXTRACTED]
 - [[RetentionPage.tsx]] - `imports_from` [EXTRACTED]
 - [[RetentionTaskCard()]] - `contains` [EXTRACTED]
-- [[SystemChecklistEntry]] - `imports` [EXTRACTED]
+- [[SystemChecklistEntry_1]] - `imports` [EXTRACTED]
 - [[api-client.ts]] - `imports_from` [EXTRACTED]
 - [[badge.tsx]] - `imports_from` [EXTRACTED]
 - [[button.tsx]] - `imports_from` [EXTRACTED]
@@ -43,4 +43,4 @@ tags:
 - [[retentionStateLabel()]] - `imports` [EXTRACTED]
 - [[sonner_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DateTimetsx
+#graphify/code #graphify/EXTRACTED #community/api-clientts

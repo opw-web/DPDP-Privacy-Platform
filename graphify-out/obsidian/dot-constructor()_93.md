@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts"
+source_file: "dpdp-platform/backend/src/modules/board/information-requests.controller.ts"
 type: "code"
-community: "templates.service.ts"
-location: "L75"
+community: "CreateInformationRequestDto"
+location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatesservicets
+  - community/CreateInformationRequestDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[UnknownTemplateVariableError]] - `method` [EXTRACTED]
+- [[InformationRequestsController]] - `method` [EXTRACTED]
+- [[InformationRequestsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatesservicets
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

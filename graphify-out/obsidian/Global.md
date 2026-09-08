@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "PrismaService"
+community: "PrismaModule"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/PrismaModule
 ---
 
 # Global
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[PrismaModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/PrismaModule

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateMeRequestDto"
+community: "audit-read.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateMeRequestDto
+  - community/audit-readservicets
 ---
 
 # IsIn
 
 ## Connections
-- [[CreateMeRequestDto]] - `references` [EXTRACTED]
+- [[ListAuditEventsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateMeRequestDto
+#graphify/code #graphify/EXTRACTED #community/audit-readservicets

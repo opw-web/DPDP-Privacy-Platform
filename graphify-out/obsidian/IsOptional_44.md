@@ -11,6 +11,6 @@ tags:
 # IsOptional
 
 ## Connections
-- [[UpdateMeNominationDto]] - `references` [EXTRACTED]
+- [[CreateMeRequestDto]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/me-rightsservicets

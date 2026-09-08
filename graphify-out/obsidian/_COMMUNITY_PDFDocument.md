@@ -9,7 +9,7 @@ members: 15
 
 ## Members
 - [[dot-addPage()]] - code - dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts
-- [[dot-constructor()_37]] - code - dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts
+- [[dot-constructor()_42]] - code - dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts
 - [[dot-end()]] - code - dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts
 - [[dot-fillColor()]] - code - dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts
 - [[dot-fontSize()]] - code - dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts

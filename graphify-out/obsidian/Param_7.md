@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "purposes.service.ts"
+community: "TemplatesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposesservicets
+  - community/TemplatesService
 ---
 
 # Param
 
 ## Connections
-- [[dot-review()_1]] - `references` [EXTRACTED]
-- [[dot-update()_2]] - `references` [EXTRACTED]
+- [[dot-get()_6]] - `references` [EXTRACTED]
+- [[dot-preview()_1]] - `references` [EXTRACTED]
+- [[dot-update()_10]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposesservicets
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

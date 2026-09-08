@@ -12,7 +12,7 @@ tags:
 # EmployeesModule
 
 ## Connections
-- [[Module_33]] - `references` [EXTRACTED]
+- [[Module_14]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[employees.module.ts]] - `contains` [EXTRACTED]
 

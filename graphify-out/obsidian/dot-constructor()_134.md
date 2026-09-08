@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/principal-evidence.service.ts"
+source_file: "dpdp-platform/backend/src/common/guards/jwt-principal.guard.ts"
 type: "code"
-community: "access-report.service.ts"
-location: "L129"
+community: "TokenService"
+location: "L75"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-reportservicets
+  - community/TokenService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AccessLogService]] - `references` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
-- [[PrincipalEvidenceService]] - `method` [EXTRACTED]
+- [[JwtPrincipalGuard]] - `method` [EXTRACTED]
+- [[TokenService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-reportservicets
+#graphify/code #graphify/EXTRACTED #community/TokenService

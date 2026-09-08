@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ImportConsentDto"
+community: "CreateExemptionClaimDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ImportConsentDto
+  - community/CreateExemptionClaimDto
 ---
 
 # IsString
 
 ## Connections
-- [[ImportConsentDto]] - `references` [EXTRACTED]
+- [[ListExemptionClaimsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ImportConsentDto
+#graphify/code #graphify/EXTRACTED #community/CreateExemptionClaimDto

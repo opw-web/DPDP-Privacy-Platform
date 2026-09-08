@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/common/mail/mailer.service.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
 type: "code"
-community: "MailerService"
-location: "L40"
+community: "NoticesService"
+location: "L158"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MailerService
+  - community/NoticesService
 ---
 
 # .constructor()
 
 ## Connections
-- [[MailerService]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[NoticesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MailerService
+#graphify/code #graphify/EXTRACTED #community/NoticesService

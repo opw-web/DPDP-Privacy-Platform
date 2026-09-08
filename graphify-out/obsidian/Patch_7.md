@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateInformationRequestDto"
+community: "EmployeesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateInformationRequestDto
+  - community/EmployeesService
 ---
 
 # Patch
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-update()_14]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto
+#graphify/code #graphify/EXTRACTED #community/EmployeesService

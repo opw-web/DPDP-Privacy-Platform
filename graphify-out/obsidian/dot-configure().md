@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/tenant/tenant.module.ts"
 type: "code"
-community: "app.module.ts"
+community: "@nestjs/common"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/appmodulets
+  - community/nestjs/common
 ---
 
 # .configure()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[TenantModule]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/appmodulets
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

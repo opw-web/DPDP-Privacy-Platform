@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "erasure-task.service.ts"
+community: "SdfCycleScanService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/SdfCycleScanService
 ---
 
 # Injectable
 
 ## Connections
-- [[ErasureTaskService]] - `references` [EXTRACTED]
+- [[SdfCycleScanService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/SdfCycleScanService

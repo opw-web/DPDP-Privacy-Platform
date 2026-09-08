@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "NoticesService"
+community: "CreateExemptionClaimDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NoticesService
+  - community/CreateExemptionClaimDto
 ---
 
 # Injectable
 
 ## Connections
-- [[NoticesService]] - `references` [EXTRACTED]
+- [[ChildExemptionsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NoticesService
+#graphify/code #graphify/EXTRACTED #community/CreateExemptionClaimDto

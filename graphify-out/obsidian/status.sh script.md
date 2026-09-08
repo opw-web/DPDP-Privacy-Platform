@@ -12,7 +12,6 @@ tags:
 # status.sh script
 
 ## Connections
-- [[docker_run()]] - `calls` [EXTRACTED]
 - [[line()]] - `calls` [EXTRACTED]
 - [[pause_before_exit()]] - `calls` [EXTRACTED]
 - [[say()]] - `calls` [EXTRACTED]

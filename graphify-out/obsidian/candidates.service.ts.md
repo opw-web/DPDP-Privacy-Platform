@@ -1,30 +1,30 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/candidates.service.ts"
 type: "code"
-community: "candidates.service.ts"
+community: "AuditService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/candidatesservicets
+  - community/AuditService
 ---
 
 # candidates.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@prismaclient]] - `imports_from` [EXTRACTED]
 - [[AccessTokenPayload]] - `imports` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[CandidateNormalizedRecord]] - `contains` [EXTRACTED]
-- [[CandidateSignal_1]] - `contains` [EXTRACTED]
+- [[CandidateSignal]] - `contains` [EXTRACTED]
 - [[CandidatesService]] - `contains` [EXTRACTED]
-- [[MatchCandidateListItem_1]] - `contains` [EXTRACTED]
+- [[MatchCandidateListItem]] - `contains` [EXTRACTED]
 - [[MergeService]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[SIGNAL_FIELDS]] - `contains` [EXTRACTED]
 - [[ScopedTransactionClient]] - `imports` [EXTRACTED]
-- [[SignalAgreement_1]] - `contains` [EXTRACTED]
+- [[SignalAgreement]] - `contains` [EXTRACTED]
 - [[audit.service.ts]] - `imports_from` [EXTRACTED]
 - [[candidates.controller.ts]] - `imports_from` [EXTRACTED]
 - [[identity.module.ts]] - `imports_from` [EXTRACTED]
@@ -36,4 +36,4 @@ tags:
 - [[scoped-transaction-client.ts]] - `imports_from` [EXTRACTED]
 - [[token.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/candidatesservicets
+#graphify/code #graphify/EXTRACTED #community/AuditService

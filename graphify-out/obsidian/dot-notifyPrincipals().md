@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-dispatchPrincipalNoticeCampaign()]] - `calls` [EXTRACTED]
 - [[dot-enqueue()_1]] - `calls` [INFERRED]
-- [[dot-get()_15]] - `calls` [EXTRACTED]
+- [[dot-get()_18]] - `calls` [EXTRACTED]
 - [[dot-notify()]] - `calls` [INFERRED]
 - [[dot-record()_1]] - `calls` [INFERRED]
 - [[AccessTokenPayload]] - `references` [EXTRACTED]

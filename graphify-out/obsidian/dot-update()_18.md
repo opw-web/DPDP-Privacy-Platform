@@ -1,23 +1,23 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
 type: "code"
-community: "DataSourcesService"
+community: "DataSourcesController"
 location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesService
+  - community/DataSourcesController
 ---
 
 # .update()
 
 ## Connections
-- [[dot-update()_19]] - `calls` [INFERRED]
-- [[Body_20]] - `references` [EXTRACTED]
+- [[dot-update()_6]] - `calls` [INFERRED]
+- [[Body_19]] - `references` [EXTRACTED]
 - [[DataSourcesController]] - `method` [EXTRACTED]
 - [[Param_22]] - `references` [EXTRACTED]
 - [[Patch_9]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[UpdateDataSourceDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesService
+#graphify/code #graphify/EXTRACTED #community/DataSourcesController

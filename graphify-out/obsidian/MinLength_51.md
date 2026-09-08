@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "retention.service.ts"
+community: "CreateSecurityMeasureDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/CreateSecurityMeasureDto
 ---
 
 # MinLength
 
 ## Connections
-- [[UpdateRetentionPolicyDto]] - `references` [EXTRACTED]
+- [[UpdateSecurityMeasureDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/CreateSecurityMeasureDto

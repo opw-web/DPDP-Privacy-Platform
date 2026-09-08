@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "ProcessorChecklistTickDto"
+community: "ChangeStatusDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ProcessorChecklistTickDto
+  - community/ChangeStatusDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[ProcessorChecklistTickDto]] - `references` [EXTRACTED]
+- [[ChangeStatusDto]] - `references` [EXTRACTED]
+- [[ErasureProcessorChecklistDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ProcessorChecklistTickDto
+#graphify/code #graphify/EXTRACTED #community/ChangeStatusDto

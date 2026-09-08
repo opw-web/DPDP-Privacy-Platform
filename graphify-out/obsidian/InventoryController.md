@@ -12,12 +12,12 @@ tags:
 # InventoryController
 
 ## Connections
-- [[dot-constructor()_42]] - `method` [EXTRACTED]
+- [[dot-constructor()_46]] - `method` [EXTRACTED]
 - [[dot-gaps()]] - `method` [EXTRACTED]
 - [[dot-ropaCsv()]] - `method` [EXTRACTED]
 - [[dot-summary()]] - `method` [EXTRACTED]
-- [[ApiTags_10]] - `references` [EXTRACTED]
-- [[Controller_11]] - `references` [EXTRACTED]
+- [[ApiTags_6]] - `references` [EXTRACTED]
+- [[Controller_6]] - `references` [EXTRACTED]
 - [[inventory.controller.ts]] - `contains` [EXTRACTED]
 - [[inventory.module.ts]] - `imports` [EXTRACTED]
 

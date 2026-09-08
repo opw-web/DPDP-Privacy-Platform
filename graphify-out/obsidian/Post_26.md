@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateRecipientDto"
+community: "CreateSecurityMeasureDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateRecipientDto
+  - community/CreateSecurityMeasureDto
 ---
 
 # Post
 
 ## Connections
-- [[dot-create()_31]] - `references` [EXTRACTED]
+- [[dot-create()_35]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateRecipientDto
+#graphify/code #graphify/EXTRACTED #community/CreateSecurityMeasureDto

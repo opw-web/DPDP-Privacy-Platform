@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalAuthService"
+community: "TokenService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalAuthService
+  - community/TokenService
 ---
 
 # Injectable
 
 ## Connections
-- [[PrincipalAuthService]] - `references` [EXTRACTED]
+- [[TenantMiddleware]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalAuthService
+#graphify/code #graphify/EXTRACTED #community/TokenService

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/mappings.e2e-spec.ts"
 type: "code"
-community: "sync.e2e-spec.ts"
+community: "MockHttpServer"
 location: "L118"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/synce2e-spects
+  - community/MockHttpServer
 ---
 
 # startRecordsServer()
@@ -17,4 +17,4 @@ tags:
 - [[jsonHandler()]] - `calls` [EXTRACTED]
 - [[mappings.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/synce2e-spects
+#graphify/code #graphify/EXTRACTED #community/MockHttpServer

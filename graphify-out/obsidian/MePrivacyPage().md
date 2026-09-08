@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MePrivacyPage.tsx"
 type: "code"
-community: "react-router-dom"
+community: "router.tsx"
 location: "L67"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react-router-dom
+  - community/routertsx
 ---
 
 # MePrivacyPage()
@@ -16,4 +16,4 @@ tags:
 - [[router.tsx]] - `imports` [EXTRACTED]
 - [[stringOrUndefined()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react-router-dom
+#graphify/code #graphify/EXTRACTED #community/routertsx

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/audit/dto/access-log-export.dto.ts"
 type: "code"
-community: "@prisma/client"
+community: "RequirePermission"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/RequirePermission
 ---
 
 # access-log-export.dto.ts
@@ -17,4 +17,4 @@ tags:
 - [[audit-read.service.ts]] - `imports_from` [EXTRACTED]
 - [[class-validator_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prisma/client
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

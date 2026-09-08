@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/consents/consents.service.ts"
 type: "code"
-community: "ImportConsentDto"
+community: "ConsentsService"
 location: "L264"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ImportConsentDto
+  - community/ConsentsService
 ---
 
 # .getConsentStats()
@@ -15,4 +15,4 @@ tags:
 - [[dot-getConsentStats()]] - `calls` [INFERRED]
 - [[ConsentsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ImportConsentDto
+#graphify/code #graphify/EXTRACTED #community/ConsentsService

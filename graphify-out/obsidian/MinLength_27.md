@@ -11,6 +11,6 @@ tags:
 # MinLength
 
 ## Connections
-- [[UpdateTemplateDto]] - `references` [EXTRACTED]
+- [[CreateTemplateDto]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/TemplatesService

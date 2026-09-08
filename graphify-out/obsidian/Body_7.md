@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "purposes.service.ts"
+community: "CreateComplianceRuleDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposesservicets
+  - community/CreateComplianceRuleDto
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_6]] - `references` [EXTRACTED]
-- [[dot-update()_2]] - `references` [EXTRACTED]
+- [[dot-create()_8]] - `references` [EXTRACTED]
+- [[dot-update()_7]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposesservicets
+#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto

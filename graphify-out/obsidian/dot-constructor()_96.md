@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/common/crypto/crypto.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
 type: "code"
-community: "CryptoService"
-location: "L38"
+community: "CampaignsService"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CryptoService
+  - community/CampaignsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[MalformedCiphertextError]] - `method` [EXTRACTED]
+- [[CampaignsController]] - `method` [EXTRACTED]
+- [[CampaignsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CryptoService
+#graphify/code #graphify/EXTRACTED #community/CampaignsService

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "purposes.service.ts"
+community: "ReplaceMappingsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposesservicets
+  - community/ReplaceMappingsDto
 ---
 
 # IsArray
 
 ## Connections
-- [[CreatePurposeDto]] - `references` [EXTRACTED]
+- [[ReplaceMappingsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposesservicets
+#graphify/code #graphify/EXTRACTED #community/ReplaceMappingsDto

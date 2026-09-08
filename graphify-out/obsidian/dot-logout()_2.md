@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/principal-auth.service.ts"
 type: "code"
-community: "PrincipalAuthService"
+community: "TokenService"
 location: "L306"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/PrincipalAuthService
+  - community/TokenService
 ---
 
 # .logout()
@@ -17,4 +17,4 @@ tags:
 - [[dot-verifyRefreshToken()]] - `calls` [INFERRED]
 - [[PrincipalAuthService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/PrincipalAuthService
+#graphify/code #graphify/INFERRED #community/TokenService

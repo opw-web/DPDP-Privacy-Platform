@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AffectedPrincipalsDto"
+community: "CreatePurposeDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AffectedPrincipalsDto
+  - community/CreatePurposeDto
 ---
 
 # IsArray
 
 ## Connections
-- [[AffectedPrincipalsDto]] - `references` [EXTRACTED]
+- [[CreatePurposeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AffectedPrincipalsDto
+#graphify/code #graphify/EXTRACTED #community/CreatePurposeDto

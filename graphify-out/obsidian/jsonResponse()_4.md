@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/ReviewQueuePage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/LinkedRecordsPanel.test.tsx"
 type: "code"
-community: "CandidateComparison.tsx"
-location: "L15"
+community: "@tanstack/react-query"
+location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CandidateComparisontsx
+  - community/tanstack/react-query
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[ReviewQueuePage.test.tsx]] - `contains` [EXTRACTED]
+- [[LinkedRecordsPanel.test.tsx]] - `contains` [EXTRACTED]
 - [[loginAndRender()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CandidateComparisontsx
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

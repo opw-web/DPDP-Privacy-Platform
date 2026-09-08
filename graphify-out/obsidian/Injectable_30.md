@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "audit.service.ts"
+community: "inventory.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/auditservicets
+  - community/inventoryservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[PurposeServedService]] - `references` [EXTRACTED]
+- [[InventoryService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/auditservicets
+#graphify/code #graphify/EXTRACTED #community/inventoryservicets

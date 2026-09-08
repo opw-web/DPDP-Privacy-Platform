@@ -1,19 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/pre-erasure-notice.service.ts"
+source_file: "dpdp-platform/backend/src/modules/consents/consents.service.ts"
 type: "code"
-community: "PreErasureNoticeService"
-location: "L69"
+community: "GuardiansService"
+location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PreErasureNoticeService
+  - community/GuardiansService
 ---
 
 # .constructor()
 
 ## Connections
 - [[AuditService]] - `references` [EXTRACTED]
-- [[NotificationsService]] - `references` [EXTRACTED]
-- [[PreErasureNoticeService]] - `method` [EXTRACTED]
+- [[ConsentsService]] - `method` [EXTRACTED]
+- [[ErasureTaskService]] - `references` [EXTRACTED]
+- [[GuardiansService]] - `references` [EXTRACTED]
+- [[NoticesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PreErasureNoticeService
+#graphify/code #graphify/EXTRACTED #community/GuardiansService

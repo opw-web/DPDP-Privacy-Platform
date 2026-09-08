@@ -12,9 +12,9 @@ tags:
 # asDate()
 
 ## Connections
-- [[dot-create()_23]] - `calls` [EXTRACTED]
+- [[dot-create()_30]] - `calls` [EXTRACTED]
 - [[dot-recordExtension()]] - `calls` [EXTRACTED]
-- [[dot-update()_17]] - `calls` [EXTRACTED]
+- [[dot-update()_20]] - `calls` [EXTRACTED]
 - [[breach.service.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/record

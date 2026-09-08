@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RequestsService"
+community: "connector.factory.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestsService
+  - community/connectorfactoryts
 ---
 
 # Injectable
 
 ## Connections
-- [[RequestsService]] - `references` [EXTRACTED]
+- [[ConnectorFactory]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestsService
+#graphify/code #graphify/EXTRACTED #community/connectorfactoryts

@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/children/children.module.ts"
 type: "code"
-community: "children.module.ts"
+community: "@nestjs/common"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/childrenmodulets
+  - community/nestjs/common
 ---
 
 # children.module.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[AgeStatusController]] - `imports` [EXTRACTED]
 - [[AgeStatusService]] - `imports` [EXTRACTED]
 - [[AuditModule]] - `imports` [EXTRACTED]
@@ -33,4 +33,4 @@ tags:
 - [[guardians.service.ts]] - `imports_from` [EXTRACTED]
 - [[masking.module.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/childrenmodulets
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

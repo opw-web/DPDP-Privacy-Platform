@@ -1,21 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "RequestsController"
+community: "RequirePermission"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestsController
+  - community/RequirePermission
 ---
 
 # Post
 
 ## Connections
-- [[dot-addNote()_1]] - `references` [EXTRACTED]
-- [[dot-assign()_1]] - `references` [EXTRACTED]
-- [[dot-changeStatus()_1]] - `references` [EXTRACTED]
-- [[dot-escalate()_1]] - `references` [EXTRACTED]
-- [[dot-flagFrivolous()_1]] - `references` [EXTRACTED]
-- [[dot-verifyIdentity()_1]] - `references` [EXTRACTED]
+- [[dot-approve()]] - `references` [EXTRACTED]
+- [[dot-create()_15]] - `references` [EXTRACTED]
+- [[dot-send()_6]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestsController
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

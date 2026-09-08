@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
 type: "code"
-community: "audit.service.ts"
+community: "data-sources.service.ts"
 location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/auditservicets
+  - community/data-sourcesservicets
 ---
 
 # CONNECTOR_SOURCE_SELECT
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[data-sources.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/auditservicets
+#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets

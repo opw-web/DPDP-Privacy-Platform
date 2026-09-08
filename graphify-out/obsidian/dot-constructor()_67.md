@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/principal-portal/me.service.ts"
 type: "code"
-community: "TemplatesService"
-location: "L18"
+community: "principals.service.ts"
+location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/principalsservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[TemplatesController]] - `method` [EXTRACTED]
-- [[TemplatesService]] - `references` [EXTRACTED]
+- [[LineageService]] - `references` [EXTRACTED]
+- [[MeService]] - `method` [EXTRACTED]
+- [[PrincipalRecipientsService]] - `references` [EXTRACTED]
+- [[PrincipalsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

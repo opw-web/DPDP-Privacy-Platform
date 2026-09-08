@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AuditReadController"
+community: "RequirePermission"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditReadController
+  - community/RequirePermission
 ---
 
 # Query
 
 ## Connections
-- [[dot-accessLogCsv()_1]] - `references` [EXTRACTED]
-- [[dot-list()_18]] - `references` [EXTRACTED]
+- [[dot-list()_21]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditReadController
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

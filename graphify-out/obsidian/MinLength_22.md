@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "compliance.service.ts"
+community: "UpdateAlgorithmEntryDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/complianceservicets
+  - community/UpdateAlgorithmEntryDto
 ---
 
 # MinLength
 
 ## Connections
-- [[UpdateComplianceRuleDto]] - `references` [EXTRACTED]
+- [[UpdateAlgorithmEntryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/complianceservicets
+#graphify/code #graphify/EXTRACTED #community/UpdateAlgorithmEntryDto

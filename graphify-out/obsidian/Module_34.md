@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "@nestjs/common"
+community: "crypto.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/cryptoservicets
 ---
 
 # Module
 
 ## Connections
-- [[InventoryModule]] - `references` [EXTRACTED]
+- [[CryptoModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/cryptoservicets

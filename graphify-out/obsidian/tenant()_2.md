@@ -1,21 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/assembly.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/sync.e2e-spec.ts"
 type: "code"
-community: "AppModule"
-location: "L23"
+community: "queues.module.ts"
+location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AppModule
+  - community/queuesmodulets
 ---
 
 # tenant()
 
 ## Connections
-- [[assembly.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[link()]] - `calls` [EXTRACTED]
-- [[normalized()]] - `calls` [EXTRACTED]
-- [[principal()]] - `calls` [EXTRACTED]
-- [[source()]] - `calls` [EXTRACTED]
+- [[createDataSource()_3]] - `calls` [EXTRACTED]
+- [[sync.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AppModule
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ConsentsService"
+community: "CreateSecurityMeasureDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ConsentsService
+  - community/CreateSecurityMeasureDto
 ---
 
 # Injectable
 
 ## Connections
-- [[ConsentsService]] - `references` [EXTRACTED]
+- [[SecurityMeasuresService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ConsentsService
+#graphify/code #graphify/EXTRACTED #community/CreateSecurityMeasureDto

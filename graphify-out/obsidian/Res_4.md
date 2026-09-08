@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RequestsController"
+community: "audit-chain.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestsController
+  - community/audit-chainservicets
 ---
 
 # Res
 
 ## Connections
-- [[dot-accessReport()_1]] - `references` [EXTRACTED]
+- [[dot-exportCsv()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestsController
+#graphify/code #graphify/EXTRACTED #community/audit-chainservicets

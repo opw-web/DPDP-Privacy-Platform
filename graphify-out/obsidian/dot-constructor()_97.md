@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/employees.controller.ts"
+source_file: "dpdp-platform/backend/src/queues/breach-principal-notice-dispatch.processor.ts"
 type: "code"
-community: "employees.service.ts"
-location: "L12"
+community: "CampaignsService"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeesservicets
+  - community/CampaignsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[EmployeesController]] - `method` [EXTRACTED]
-- [[EmployeesService]] - `references` [EXTRACTED]
+- [[BreachPrincipalNoticeDispatchProcessor]] - `method` [EXTRACTED]
+- [[BreachService]] - `references` [EXTRACTED]
+- [[CampaignSendJobData]] - `references` [EXTRACTED]
+- [[InjectQueue_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeesservicets
+#graphify/code #graphify/EXTRACTED #community/CampaignsService

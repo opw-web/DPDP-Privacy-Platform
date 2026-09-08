@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/components/ComingSoonSlot.tsx"
 type: "code"
-community: "react-router-dom"
+community: "api-client.ts"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react-router-dom
+  - community/api-clientts
 ---
 
 # ComingSoonSlot()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ComingSoonSlot.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react-router-dom
+#graphify/code #graphify/EXTRACTED #community/api-clientts

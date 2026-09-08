@@ -12,8 +12,8 @@ tags:
 # campaigns.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@prismaclient]] - `imports_from` [EXTRACTED]
 - [[AccessTokenPayload]] - `imports` [EXTRACTED]
 - [[ActiveNonDisclosureDirection]] - `imports` [EXTRACTED]
 - [[AudienceFilter_1]] - `imports` [EXTRACTED]
@@ -21,7 +21,7 @@ tags:
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[CAMPAIGN_PUBLIC_SELECT]] - `contains` [EXTRACTED]
 - [[CAMPAIGN_RECIPIENT_PUBLIC_SELECT]] - `contains` [EXTRACTED]
-- [[CHILD_LIKE_AGE_STATUSES_1]] - `contains` [EXTRACTED]
+- [[CHILD_LIKE_AGE_STATUSES]] - `contains` [EXTRACTED]
 - [[COMPLIANCE_CATEGORIES]] - `contains` [EXTRACTED]
 - [[CampaignSendJobData]] - `imports` [EXTRACTED]
 - [[CampaignSendQueueService]] - `imports` [EXTRACTED]

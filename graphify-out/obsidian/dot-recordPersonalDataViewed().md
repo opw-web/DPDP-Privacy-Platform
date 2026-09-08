@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/audit/access-log.service.ts"
 type: "code"
-community: "access-report.service.ts"
+community: "principals.service.ts"
 location: "L52"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/access-reportservicets
+  - community/principalsservicets
 ---
 
 # .recordPersonalDataViewed()
@@ -20,4 +20,4 @@ tags:
 - [[AccessLogService]] - `method` [EXTRACTED]
 - [[ScopedTransactionClient]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/access-reportservicets
+#graphify/code #graphify/INFERRED #community/principalsservicets

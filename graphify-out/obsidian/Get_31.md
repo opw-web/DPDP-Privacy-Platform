@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "health.service.ts"
+community: "PrincipalEvidenceController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/healthservicets
+  - community/PrincipalEvidenceController
 ---
 
 # Get
 
 ## Connections
-- [[dot-check()]] - `references` [EXTRACTED]
+- [[dot-evidence()]] - `references` [EXTRACTED]
+- [[dot-evidencePdf()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/healthservicets
+#graphify/code #graphify/EXTRACTED #community/PrincipalEvidenceController

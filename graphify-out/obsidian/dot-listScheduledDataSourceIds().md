@@ -12,7 +12,7 @@ tags:
 # .listScheduledDataSourceIds()
 
 ## Connections
-- [[dot-reconcile()_1]] - `calls` [INFERRED]
+- [[dot-reconcile()]] - `calls` [INFERRED]
 - [[SyncQueueService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/SyncQueueService

@@ -12,7 +12,7 @@ tags:
 # .get()
 
 ## Connections
-- [[dot-get()_2]] - `calls` [INFERRED]
+- [[dot-get()_10]] - `calls` [INFERRED]
 - [[dot-resolveRecipients()]] - `calls` [EXTRACTED]
 - [[CampaignsService]] - `method` [EXTRACTED]
 - [[notFoundCampaign()]] - `calls` [EXTRACTED]

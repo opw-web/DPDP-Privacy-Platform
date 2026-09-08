@@ -1,21 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/consents/consents.service.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/retention.controller.ts"
 type: "code"
-community: "guardians.service.ts"
-location: "L114"
+community: "RetentionController"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/RetentionController
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[ConsentsService]] - `method` [EXTRACTED]
 - [[ErasureTaskService]] - `references` [EXTRACTED]
-- [[GuardiansService]] - `references` [EXTRACTED]
-- [[NoticesService]] - `references` [EXTRACTED]
+- [[LegalHoldService]] - `references` [EXTRACTED]
+- [[RetentionController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/RetentionController

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/candidates.service.ts"
 type: "code"
-community: "candidates.service.ts"
+community: "AuditService"
 location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/candidatesservicets
+  - community/AuditService
 ---
 
 # CandidateNormalizedRecord
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[candidates.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/candidatesservicets
+#graphify/code #graphify/EXTRACTED #community/AuditService

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "employees.service.ts"
+community: "CreateVoluntaryUndertakingDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeesservicets
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # ApiTags
 
 ## Connections
-- [[EmployeesController]] - `references` [EXTRACTED]
+- [[VoluntaryUndertakingsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeesservicets
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

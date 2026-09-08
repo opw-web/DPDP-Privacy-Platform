@@ -27,10 +27,10 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 2 edges to [[_COMMUNITY_RequestsController]]
-- 2 edges to [[_COMMUNITY_@prismaclient]]
+- 2 edges to [[_COMMUNITY_@nestjsswagger]]
 - 1 edge to [[_COMMUNITY_RequestsService]]
 - 1 edge to [[_COMMUNITY_requests.service.ts]]
-- 1 edge to [[_COMMUNITY_@nestjscommon]]
+- 1 edge to [[_COMMUNITY_RequirePermission]]
 
 ## Top bridge nodes
 - [[ListRequestsDto]] - degree 10, connects to 2 communities

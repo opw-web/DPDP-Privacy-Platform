@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/children/ExemptionClaimForm.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/children/GuardianForm.tsx"
 type: "code"
 community: "react"
-location: "L24"
+location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # submit()
 
 ## Connections
-- [[ExemptionClaimForm()]] - `contains` [EXTRACTED]
+- [[GuardianForm()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/react

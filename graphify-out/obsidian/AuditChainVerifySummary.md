@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/audit-chain-verify.processor.ts"
 type: "code"
-community: "PrismaService"
+community: "queues.module.ts"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/queuesmodulets
 ---
 
 # AuditChainVerifySummary
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[audit-chain-verify.processor.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

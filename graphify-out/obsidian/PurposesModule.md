@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/purposes/purposes.module.ts"
 type: "code"
-community: "purposes.service.ts"
+community: "@nestjs/common"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposesservicets
+  - community/nestjs/common
 ---
 
 # PurposesModule
 
 ## Connections
-- [[Module]] - `references` [EXTRACTED]
+- [[Module_26]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[purposes.module.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposesservicets
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

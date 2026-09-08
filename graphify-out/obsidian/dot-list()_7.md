@@ -1,19 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.ts"
+source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
 type: "code"
-community: "purposes.service.ts"
-location: "L82"
+community: "PurposesService"
+location: "L17"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/purposesservicets
+  - graphify/EXTRACTED
+  - community/PurposesService
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_6]] - `calls` [INFERRED]
-- [[PurposesService]] - `method` [EXTRACTED]
-- [[toPublicPurpose()]] - `indirect_call` [INFERRED]
+- [[dot-list()_8]] - `calls` [INFERRED]
+- [[Get_8]] - `references` [EXTRACTED]
+- [[PurposesController]] - `method` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/purposesservicets
+#graphify/code #graphify/EXTRACTED #community/PurposesService

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "me-rights.service.ts"
+community: "notices.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/me-rightsservicets
+  - community/noticesservicets
 ---
 
 # MinLength
 
 ## Connections
-- [[UpdateMeNominationDto]] - `references` [EXTRACTED]
+- [[CreateNoticeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/me-rightsservicets
+#graphify/code #graphify/EXTRACTED #community/noticesservicets

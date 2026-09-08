@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "compliance.service.ts"
+community: "CreateComplianceRuleDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/complianceservicets
+  - community/CreateComplianceRuleDto
 ---
 
 # IsBoolean
 
 ## Connections
-- [[UpdateComplianceRuleDto]] - `references` [EXTRACTED]
+- [[CreateComplianceRuleDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/complianceservicets
+#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto

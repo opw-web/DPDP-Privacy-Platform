@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "audit-read.service.ts"
+community: "UpdatePurposeDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-readservicets
+  - community/UpdatePurposeDto
 ---
 
 # IsOptional
 
 ## Connections
-- [[ListAuditEventsDto]] - `references` [EXTRACTED]
+- [[UpdatePurposeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-readservicets
+#graphify/code #graphify/EXTRACTED #community/UpdatePurposeDto

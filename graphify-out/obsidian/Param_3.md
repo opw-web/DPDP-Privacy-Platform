@@ -1,21 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "AccessTokenPayload"
+community: "SyncService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/SyncService
 ---
 
 # Param
 
 ## Connections
-- [[dot-createVersion()]] - `references` [EXTRACTED]
-- [[dot-get()_3]] - `references` [EXTRACTED]
-- [[dot-listEligibleFields()]] - `references` [EXTRACTED]
-- [[dot-preview()]] - `references` [EXTRACTED]
-- [[dot-publish()]] - `references` [EXTRACTED]
-- [[dot-upsertTranslation()]] - `references` [EXTRACTED]
+- [[dot-get()_4]] - `references` [EXTRACTED]
+- [[dot-trigger()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/SyncService

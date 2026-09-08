@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "EmployeeAuthController"
+community: "mapping-warning-response.dto.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeeAuthController
+  - community/mapping-warning-responsedtots
 ---
 
 # ApiProperty
 
 ## Connections
-- [[EmployeeLoginDto]] - `references` [EXTRACTED]
+- [[MappingsResponseDto]] - `references` [EXTRACTED]
+- [[SourceFieldMappingResponseDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController
+#graphify/code #graphify/EXTRACTED #community/mapping-warning-responsedtots

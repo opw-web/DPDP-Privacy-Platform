@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "purposes.service.ts"
+community: "NotificationsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposesservicets
+  - community/NotificationsService
 ---
 
 # Injectable
 
 ## Connections
-- [[PurposesService]] - `references` [EXTRACTED]
+- [[ConsoleProvider]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposesservicets
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

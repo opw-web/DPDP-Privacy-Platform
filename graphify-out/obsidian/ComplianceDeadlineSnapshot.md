@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
 type: "code"
-community: "RetentionScanService"
+community: "AuditService"
 location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionScanService
+  - community/AuditService
 ---
 
 # ComplianceDeadlineSnapshot
@@ -17,4 +17,4 @@ tags:
 - [[requests.service.ts]] - `imports` [EXTRACTED]
 - [[sdf-assessment.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionScanService
+#graphify/code #graphify/EXTRACTED #community/AuditService

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/audit-events-evidence.controller.ts"
 type: "code"
-community: "AuditChainService"
+community: "audit-chain.service.ts"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditChainService
+  - community/audit-chainservicets
 ---
 
 # .constructor()
@@ -16,4 +16,4 @@ tags:
 - [[AuditEventsEvidenceController]] - `method` [EXTRACTED]
 - [[AuditExportService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditChainService
+#graphify/code #graphify/EXTRACTED #community/audit-chainservicets

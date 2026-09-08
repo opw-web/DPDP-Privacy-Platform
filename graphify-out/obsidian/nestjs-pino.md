@@ -1,17 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
-type: "code"
-community: "dependencies"
+type: "concept"
+community: "employee-auth.controller.ts"
 location: "L44"
 tags:
-  - graphify/code
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/employee-authcontrollerts
 ---
 
 # nestjs-pino
 
 ## Connections
-- [[dependencies_1]] - `contains` [EXTRACTED]
+- [[app.module.ts]] - `imports_from` [EXTRACTED]
+- [[backendpackage.json]] - `imports` [EXTRACTED]
+- [[main.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dependencies
+#graphify/concept #graphify/EXTRACTED #community/employee-authcontrollerts

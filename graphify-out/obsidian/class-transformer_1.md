@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "@prisma/client"
+community: "@nestjs/swagger"
 location: "L36"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/nestjs/swagger
 ---
 
 # class-transformer
@@ -26,4 +26,4 @@ tags:
 - [[replace-mappings.dto.ts]] - `imports_from` [EXTRACTED]
 - [[update-voluntary-undertaking.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/prisma/client
+#graphify/concept #graphify/EXTRACTED #community/nestjs/swagger

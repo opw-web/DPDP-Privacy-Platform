@@ -19,14 +19,14 @@ members: 19
 - [[dot-getByReference()_1]] - code - dpdp-platform/backend/src/modules/requests/requests.service.ts
 - [[dot-stats()_1]] - code - dpdp-platform/backend/src/modules/requests/requests.controller.ts
 - [[dot-verifyIdentity()_1]] - code - dpdp-platform/backend/src/modules/requests/requests.controller.ts
-- [[ApiTags_17]] - code
-- [[Body_12]] - code
-- [[Controller_18]] - code
-- [[Get_19]] - code
-- [[Param_14]] - code
-- [[Post_13]] - code
+- [[ApiTags_15]] - code
+- [[Body_9]] - code
+- [[Controller_15]] - code
+- [[Get_18]] - code
+- [[Param_9]] - code
+- [[Post_8]] - code
 - [[RequestsController]] - code - dpdp-platform/backend/src/modules/requests/requests.controller.ts
-- [[Res_4]] - code
+- [[Res_5]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -36,16 +36,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_@nestjscommon]]
+- 10 edges to [[_COMMUNITY_RequirePermission]]
 - 9 edges to [[_COMMUNITY_RequestsService]]
-- 3 edges to [[_COMMUNITY_requests.service.ts]]
 - 2 edges to [[_COMMUNITY_AccessReportService]]
 - 2 edges to [[_COMMUNITY_ListRequestsDto]]
 - 1 edge to [[_COMMUNITY_AddNoteDto]]
 - 1 edge to [[_COMMUNITY_VerifyIdentityDto]]
-- 1 edge to [[_COMMUNITY_app.module.ts]]
-- 1 edge to [[_COMMUNITY_@prismaclient]]
+- 1 edge to [[_COMMUNITY_EscalateRequestDto]]
+- 1 edge to [[_COMMUNITY_FlagFrivolousDto]]
+- 1 edge to [[_COMMUNITY_@nestjscommon]]
+- 1 edge to [[_COMMUNITY_@nestjsswagger]]
 - 1 edge to [[_COMMUNITY_AssignRequestDto]]
+- 1 edge to [[_COMMUNITY_ChangeStatusDto]]
 - 1 edge to [[_COMMUNITY_access-report-render.ts]]
 
 ## Top bridge nodes

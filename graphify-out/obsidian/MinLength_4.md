@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SetMyConsentDto"
+community: "AddNoteDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SetMyConsentDto
+  - community/AddNoteDto
 ---
 
 # MinLength
 
 ## Connections
-- [[SetMyConsentDto]] - `references` [EXTRACTED]
+- [[AddNoteDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SetMyConsentDto
+#graphify/code #graphify/EXTRACTED #community/AddNoteDto

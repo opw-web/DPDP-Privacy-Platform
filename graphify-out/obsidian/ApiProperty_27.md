@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "requests.service.ts"
+community: "NoticesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/requestsservicets
+  - community/NoticesService
 ---
 
 # ApiProperty
 
 ## Connections
-- [[ChangeStatusDto]] - `references` [EXTRACTED]
-- [[ErasureProcessorChecklistDto]] - `references` [EXTRACTED]
-- [[ErasureSystemChecklistDto]] - `references` [EXTRACTED]
+- [[UpsertTranslationDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/requestsservicets
+#graphify/code #graphify/EXTRACTED #community/NoticesService

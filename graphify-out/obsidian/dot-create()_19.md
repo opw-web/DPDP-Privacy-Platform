@@ -1,20 +1,25 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/employees.service.ts"
+source_file: "dpdp-platform/backend/src/modules/requests/requests.service.ts"
 type: "code"
-community: "employees.service.ts"
-location: "L66"
+community: "SdfCycleScanService"
+location: "L259"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/employeesservicets
+  - graphify/INFERRED
+  - community/SdfCycleScanService
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_18]] - `calls` [INFERRED]
+- [[dot-computeDeadline()]] - `calls` [INFERRED]
+- [[dot-createRequest()_1]] - `calls` [INFERRED]
+- [[dot-next()]] - `calls` [INFERRED]
 - [[dot-record()_1]] - `calls` [INFERRED]
-- [[CreateEmployeeDto]] - `references` [EXTRACTED]
-- [[EmployeesService]] - `method` [EXTRACTED]
+- [[dot-resolveRule()]] - `calls` [INFERRED]
+- [[dot-scanOrgDeadlines()]] - `calls` [EXTRACTED]
+- [[dot-snapshotOnto()]] - `calls` [INFERRED]
+- [[dot-writeTransition()]] - `calls` [EXTRACTED]
+- [[RequestsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeesservicets
+#graphify/code #graphify/INFERRED #community/SdfCycleScanService

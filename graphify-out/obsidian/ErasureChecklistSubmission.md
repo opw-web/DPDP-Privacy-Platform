@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/erasure-task.service.ts"
 type: "code"
-community: "erasure-task.service.ts"
+community: "ErasureTaskService"
 location: "L100"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/ErasureTaskService
 ---
 
 # ErasureChecklistSubmission
 
 ## Connections
-- [[ProcessorChecklistEntry_1]] - `references` [EXTRACTED]
-- [[SystemChecklistEntry_1]] - `references` [EXTRACTED]
+- [[ProcessorChecklistEntry]] - `references` [EXTRACTED]
+- [[SystemChecklistEntry]] - `references` [EXTRACTED]
 - [[erasure-task.service.ts]] - `contains` [EXTRACTED]
 - [[requests.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/ErasureTaskService

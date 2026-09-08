@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "TemplatesService"
+community: "UpdateAlgorithmEntryDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/UpdateAlgorithmEntryDto
 ---
 
 # Patch
 
 ## Connections
-- [[dot-update()_8]] - `references` [EXTRACTED]
+- [[dot-updateAlgorithm()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/UpdateAlgorithmEntryDto

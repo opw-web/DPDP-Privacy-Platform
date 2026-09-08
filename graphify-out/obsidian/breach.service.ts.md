@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
 type: "code"
-community: "breach.service.ts"
+community: "@nestjs/swagger"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breachservicets
+  - community/nestjs/swagger
 ---
 
 # breach.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@prismaclient]] - `imports_from` [EXTRACTED]
 - [[AccessTokenPayload]] - `imports` [EXTRACTED]
 - [[AffectedPreview]] - `imports` [EXTRACTED]
 - [[AffectedPrincipalsDto]] - `imports` [EXTRACTED]
@@ -61,4 +61,4 @@ tags:
 - [[token.service.ts]] - `imports_from` [EXTRACTED]
 - [[update-breach.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breachservicets
+#graphify/code #graphify/EXTRACTED #community/nestjs/swagger

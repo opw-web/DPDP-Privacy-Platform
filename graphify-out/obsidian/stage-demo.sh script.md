@@ -32,7 +32,6 @@ tags:
 - [[plogin()]] - `calls` [EXTRACTED]
 - [[publish_notice()]] - `calls` [EXTRACTED]
 - [[say()]] - `calls` [EXTRACTED]
-- [[setup_node()]] - `calls` [EXTRACTED]
 - [[sid_of()]] - `calls` [EXTRACTED]
 - [[stage-demo.sh]] - `contains` [EXTRACTED]
 - [[step()]] - `calls` [EXTRACTED]

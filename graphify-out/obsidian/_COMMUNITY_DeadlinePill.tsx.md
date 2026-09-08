@@ -36,16 +36,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_DateTime.tsx]]
-- 5 edges to [[_COMMUNITY_router.tsx]]
-- 4 edges to [[_COMMUNITY_react]]
-- 2 edges to [[_COMMUNITY_react-router-dom]]
-- 2 edges to [[_COMMUNITY_cn]]
+- 6 edges to [[_COMMUNITY_cn]]
+- 5 edges to [[_COMMUNITY_@tanstackreact-query]]
+- 4 edges to [[_COMMUNITY_api-client.ts]]
+- 3 edges to [[_COMMUNITY_react]]
 - 1 edge to [[_COMMUNITY_CandidateComparison.tsx]]
 
 ## Top bridge nodes
 - [[DeadlinePill.tsx]] - degree 16, connects to 4 communities
 - [[DeadlinePill()]] - degree 7, connects to 2 communities
+- [[formatInOrgTimezone()]] - degree 4, connects to 2 communities
+- [[formatUtcTooltip()]] - degree 4, connects to 2 communities
 - [[format.ts]] - degree 7, connects to 1 community
-- [[useCountdown.ts]] - degree 6, connects to 1 community
-- [[DeadlinePill.test.tsx]] - degree 5, connects to 1 community

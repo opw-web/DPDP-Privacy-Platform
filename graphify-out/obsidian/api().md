@@ -12,10 +12,10 @@ tags:
 # api()
 
 ## Connections
-- [[create_purpose()_1]] - `calls` [EXTRACTED]
-- [[create_source()_1]] - `calls` [EXTRACTED]
+- [[create_purpose()]] - `calls` [EXTRACTED]
+- [[create_source()]] - `calls` [EXTRACTED]
 - [[reset.sh]] - `defines` [EXTRACTED]
 - [[reset.sh script]] - `calls` [EXTRACTED]
-- [[sync_and_wait()_1]] - `calls` [EXTRACTED]
+- [[sync_and_wait()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/commonsh

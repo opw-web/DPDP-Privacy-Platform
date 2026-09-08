@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "notifications.controller.ts"
+community: "CreateBreachDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationscontrollerts
+  - community/CreateBreachDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[MarkAllReadResponseDto]] - `references` [EXTRACTED]
-- [[NotificationDto]] - `references` [EXTRACTED]
-- [[NotificationListResponseDto]] - `references` [EXTRACTED]
+- [[CreateBreachDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts
+#graphify/code #graphify/EXTRACTED #community/CreateBreachDto

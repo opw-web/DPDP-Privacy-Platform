@@ -11,7 +11,7 @@ tags:
 # Body
 
 ## Connections
-- [[dot-create()_16]] - `references` [EXTRACTED]
-- [[dot-update()_10]] - `references` [EXTRACTED]
+- [[dot-create()_17]] - `references` [EXTRACTED]
+- [[dot-update()_12]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

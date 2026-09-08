@@ -1,20 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sync.queue.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync.controller.ts"
 type: "code"
-community: "SyncLockService"
-location: "L97"
+community: "SyncService"
+location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncLockService
+  - community/SyncService
 ---
 
 # .trigger()
 
 ## Connections
-- [[dot-isLocked()]] - `calls` [INFERRED]
 - [[dot-triggerSync()]] - `calls` [INFERRED]
-- [[SyncQueueService]] - `method` [EXTRACTED]
-- [[syncJobId()]] - `calls` [EXTRACTED]
+- [[HttpCode]] - `references` [EXTRACTED]
+- [[Param_3]] - `references` [EXTRACTED]
+- [[Post_3]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[SyncController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncLockService
+#graphify/code #graphify/EXTRACTED #community/SyncService

@@ -1,16 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "NotificationCallerActor"
+community: "MeRightsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationCallerActor
+  - community/MeRightsService
 ---
 
 # Get
 
 ## Connections
-- [[dot-list()_30]] - `references` [EXTRACTED]
+- [[dot-getNomination()]] - `references` [EXTRACTED]
+- [[dot-getPublishedNotice()]] - `references` [EXTRACTED]
+- [[dot-getRequest()]] - `references` [EXTRACTED]
+- [[dot-listMessages()]] - `references` [EXTRACTED]
+- [[dot-listPublishedNotices()]] - `references` [EXTRACTED]
+- [[dot-listRequests()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationCallerActor
+#graphify/code #graphify/EXTRACTED #community/MeRightsService

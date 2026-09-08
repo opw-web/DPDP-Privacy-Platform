@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/requests/dto/change-status.dto.ts"
 type: "code"
-community: "requests.service.ts"
+community: "ChangeStatusDto"
 location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/requestsservicets
+  - community/ChangeStatusDto
 ---
 
 # ChangeStatusDto
@@ -14,19 +14,19 @@ tags:
 ## Connections
 - [[dot-changeStatus()_1]] - `references` [EXTRACTED]
 - [[dot-changeStatus()]] - `references` [EXTRACTED]
-- [[ApiProperty_27]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_29]] - `references` [EXTRACTED]
+- [[ApiProperty_43]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_45]] - `references` [EXTRACTED]
 - [[ErasureStatutoryGround]] - `references` [EXTRACTED]
-- [[IsArray_17]] - `references` [EXTRACTED]
-- [[IsBoolean_15]] - `references` [EXTRACTED]
-- [[IsEnum_15]] - `references` [EXTRACTED]
-- [[IsIn_7]] - `references` [EXTRACTED]
-- [[IsOptional_29]] - `references` [EXTRACTED]
-- [[IsString_35]] - `references` [EXTRACTED]
-- [[Type_7]] - `references` [EXTRACTED]
-- [[ValidateNested_4]] - `references` [EXTRACTED]
+- [[IsArray_22]] - `references` [EXTRACTED]
+- [[IsBoolean_19]] - `references` [EXTRACTED]
+- [[IsEnum_19]] - `references` [EXTRACTED]
+- [[IsIn_15]] - `references` [EXTRACTED]
+- [[IsOptional_47]] - `references` [EXTRACTED]
+- [[IsString_60]] - `references` [EXTRACTED]
+- [[Type_10]] - `references` [EXTRACTED]
+- [[ValidateNested_6]] - `references` [EXTRACTED]
 - [[change-status.dto.ts]] - `contains` [EXTRACTED]
 - [[requests.controller.ts]] - `imports` [EXTRACTED]
 - [[requests.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/requestsservicets
+#graphify/code #graphify/EXTRACTED #community/ChangeStatusDto

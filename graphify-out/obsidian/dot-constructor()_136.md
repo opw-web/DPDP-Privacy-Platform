@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/recipients.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.service.ts"
 type: "code"
-community: "CreateRecipientDto"
-location: "L16"
+community: "TokenService"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateRecipientDto
+  - community/TokenService
 ---
 
 # .constructor()
 
 ## Connections
-- [[RecipientsController]] - `method` [EXTRACTED]
-- [[RecipientsService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[EmployeeAuthService]] - `method` [EXTRACTED]
+- [[TokenService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateRecipientDto
+#graphify/code #graphify/EXTRACTED #community/TokenService

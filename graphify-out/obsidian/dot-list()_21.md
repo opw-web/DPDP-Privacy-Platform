@@ -1,18 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/legal-hold.service.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/candidates.controller.ts"
 type: "code"
-community: "erasure-task.service.ts"
-location: "L40"
+community: "RequirePermission"
+location: "L47"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/RequirePermission
 ---
 
 # .list()
 
 ## Connections
-- [[dot-listLegalHolds()]] - `calls` [INFERRED]
-- [[LegalHoldService]] - `method` [EXTRACTED]
+- [[dot-list()_22]] - `calls` [INFERRED]
+- [[CandidatesController]] - `method` [EXTRACTED]
+- [[CurrentActorPermissions]] - `references` [EXTRACTED]
+- [[Get_21]] - `references` [EXTRACTED]
+- [[ListMatchCandidatesQueryDto]] - `references` [EXTRACTED]
+- [[Query_5]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

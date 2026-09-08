@@ -12,7 +12,7 @@ tags:
 # .runForAllOrganizations()
 
 ## Connections
-- [[dot-process()_7]] - `calls` [INFERRED]
+- [[dot-process()_10]] - `calls` [INFERRED]
 - [[dot-runForCurrentOrganization()_3]] - `calls` [EXTRACTED]
 - [[RetentionScanService]] - `method` [EXTRACTED]
 

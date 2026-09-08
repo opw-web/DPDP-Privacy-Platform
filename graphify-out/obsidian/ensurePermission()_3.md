@@ -1,25 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/support/e2e-harness.ts"
+source_file: "dpdp-platform/backend/test/rbac.e2e-spec.ts"
 type: "code"
-community: "supertest"
-location: "L77"
+community: "PrismaService"
+location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/supertest
+  - community/PrismaService
 ---
 
 # ensurePermission()
 
 ## Connections
-- [[addEmployee()]] - `calls` [EXTRACTED]
-- [[addEmployeeToOrg()]] - `calls` [EXTRACTED]
-- [[campaigns.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[children.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[createEmployeeWithPermissions()]] - `calls` [EXTRACTED]
-- [[createOrgWithEmployee()]] - `calls` [EXTRACTED]
-- [[e2e-harness.ts]] - `contains` [EXTRACTED]
-- [[evidence.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[retention.e2e-spec.ts]] - `imports` [EXTRACTED]
+- [[createOrgWithEmployee()_1]] - `calls` [EXTRACTED]
+- [[rbac.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/supertest
+#graphify/code #graphify/EXTRACTED #community/PrismaService

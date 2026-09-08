@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/mvp2-schedules.ts"
 type: "code"
-community: "mvp2-schedules.ts"
+community: "queues.module.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mvp2-schedulests
+  - community/queuesmodulets
 ---
 
 # mvp2-schedules.ts
 
 ## Connections
-- [[@nestjsbullmq]] - `imports_from` [EXTRACTED]
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsbullmq_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[ACCESS_LOG_RETENTION_QUEUE_NAME]] - `imports` [EXTRACTED]
 - [[AUDIT_CHAIN_VERIFY_QUEUE_NAME]] - `imports` [EXTRACTED]
 - [[BREACH_CLOCK_QUEUE_NAME]] - `imports` [EXTRACTED]
@@ -42,4 +42,4 @@ tags:
 - [[scheduled-jobs.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[sdf-cycle-scan.queue.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mvp2-schedulests
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

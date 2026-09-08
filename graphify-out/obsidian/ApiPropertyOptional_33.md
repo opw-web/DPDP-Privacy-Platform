@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "breach.service.ts"
+community: "AssignRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breachservicets
+  - community/AssignRequestDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[UpdateBreachDto]] - `references` [EXTRACTED]
+- [[AssignRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breachservicets
+#graphify/code #graphify/EXTRACTED #community/AssignRequestDto

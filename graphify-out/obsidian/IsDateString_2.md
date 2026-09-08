@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateAlgorithmEntryDto"
+community: "transfers.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateAlgorithmEntryDto
+  - community/transfersservicets
 ---
 
 # IsDateString
 
 ## Connections
-- [[CreateAlgorithmEntryDto]] - `references` [EXTRACTED]
+- [[CreateTransferDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto
+#graphify/code #graphify/EXTRACTED #community/transfersservicets

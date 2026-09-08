@@ -58,24 +58,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_token.service.ts]]
-- 4 edges to [[_COMMUNITY_@prismaclient]]
-- 2 edges to [[_COMMUNITY_app.module.ts]]
+- 5 edges to [[_COMMUNITY_employee-auth.controller.ts]]
+- 3 edges to [[_COMMUNITY_@nestjscommon]]
+- 3 edges to [[_COMMUNITY_@nestjsswagger]]
+- 2 edges to [[_COMMUNITY_PrismaService]]
+- 2 edges to [[_COMMUNITY_queues.module.ts]]
 - 1 edge to [[_COMMUNITY_scripts]]
-- 1 edge to [[_COMMUNITY_supertest]]
 - 1 edge to [[_COMMUNITY_jest.config.ts]]
 - 1 edge to [[_COMMUNITY_access-report-render.ts]]
+- 1 edge to [[_COMMUNITY_@prismaclient]]
 - 1 edge to [[_COMMUNITY_dependencies_1]]
-- 1 edge to [[_COMMUNITY_mvp2-schedules.ts]]
-- 1 edge to [[_COMMUNITY_@nestjscommon]]
-- 1 edge to [[_COMMUNITY_AppModule]]
+- 1 edge to [[_COMMUNITY_RequirePermission]]
 - 1 edge to [[_COMMUNITY_templates.service.ts]]
 - 1 edge to [[_COMMUNITY_devDependencies]]
-- 1 edge to [[_COMMUNITY_health.service.ts]]
-- 1 edge to [[_COMMUNITY_argon2]]
+- 1 edge to [[_COMMUNITY_test-database.ts]]
+- 1 edge to [[_COMMUNITY_AppModule]]
 
 ## Top bridge nodes
-- [[backendpackage.json]] - degree 60, connects to 14 communities
+- [[backendpackage.json]] - degree 60, connects to 13 communities
 - [[cookie-parser_1]] - degree 2, connects to 1 community
 - [[handlebars_1]] - degree 2, connects to 1 community
 - [[jsonwebtoken_1]] - degree 2, connects to 1 community

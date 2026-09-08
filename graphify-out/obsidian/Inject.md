@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "notifications.service.ts"
+community: "NotificationsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationsservicets
+  - community/NotificationsService
 ---
 
 # Inject
 
 ## Connections
-- [[dot-constructor()_62]] - `references` [EXTRACTED]
+- [[dot-constructor()_36]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationsservicets
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

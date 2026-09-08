@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/sync.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/organizations.e2e-spec.ts"
 type: "code"
-community: "sync.e2e-spec.ts"
-location: "L63"
+community: "PrismaService"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/synce2e-spects
+  - community/PrismaService
 ---
 
 # ensurePermission()
 
 ## Connections
-- [[employeeWithPermissions()]] - `calls` [EXTRACTED]
-- [[sync.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[createOrgWithSettingsManager()]] - `calls` [EXTRACTED]
+- [[organizations.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/synce2e-spects
+#graphify/code #graphify/EXTRACTED #community/PrismaService

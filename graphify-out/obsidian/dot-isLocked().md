@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/sync-lock.service.ts"
 type: "code"
-community: "SyncLockService"
+community: "employee-auth.controller.ts"
 location: "L112"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncLockService
+  - community/employee-authcontrollerts
 ---
 
 # .isLocked()
 
 ## Connections
-- [[dot-trigger()]] - `calls` [INFERRED]
+- [[dot-trigger()_1]] - `calls` [INFERRED]
 - [[SyncLockService]] - `method` [EXTRACTED]
 - [[lockKey()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncLockService
+#graphify/code #graphify/EXTRACTED #community/employee-authcontrollerts

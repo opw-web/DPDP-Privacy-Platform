@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "TemplatesService"
+community: "VerifyIdentityDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/VerifyIdentityDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[UpdateTemplateDto]] - `references` [EXTRACTED]
+- [[VerifyIdentityDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/VerifyIdentityDto

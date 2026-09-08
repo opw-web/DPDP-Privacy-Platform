@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/PurposesPage.tsx"
 type: "code"
-community: "react"
-location: "L39"
+community: "api-client.ts"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/api-clientts
 ---
 
 # Purpose
 
 ## Connections
-- [[ChildrenPage.tsx]] - `contains` [EXTRACTED]
+- [[PurposesPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/api-clientts

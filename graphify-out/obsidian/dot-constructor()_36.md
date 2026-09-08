@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/guards/jwt-any-actor.guard.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/notifications.service.ts"
 type: "code"
-community: "TokenService"
-location: "L51"
+community: "NotificationsService"
+location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TokenService
+  - community/NotificationsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[JwtAnyActorGuard]] - `method` [EXTRACTED]
-- [[TokenService]] - `references` [EXTRACTED]
+- [[Inject]] - `references` [EXTRACTED]
+- [[NotificationProvider]] - `references` [EXTRACTED]
+- [[NotificationsService]] - `method` [EXTRACTED]
+- [[PortalProvider]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TokenService
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

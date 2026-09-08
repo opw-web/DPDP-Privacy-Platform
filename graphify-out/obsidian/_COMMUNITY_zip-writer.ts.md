@@ -23,7 +23,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_@nestjscommon]]
+- 3 edges to [[_COMMUNITY_AuditService]]
 - 1 edge to [[_COMMUNITY_csvDocument]]
 
 ## Top bridge nodes

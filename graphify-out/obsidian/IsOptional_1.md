@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AccessTokenPayload"
+community: "GuardiansService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/GuardiansService
 ---
 
 # IsOptional
 
 ## Connections
-- [[VerifyGuardianDto]] - `references` [EXTRACTED]
+- [[ListGuardiansDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/GuardiansService

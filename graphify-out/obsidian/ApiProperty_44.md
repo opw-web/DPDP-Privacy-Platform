@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ProcessorChecklistTickDto"
+community: "CreateRecipientDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ProcessorChecklistTickDto
+  - community/CreateRecipientDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CompleteErasureTaskDto]] - `references` [EXTRACTED]
-- [[ProcessorChecklistTickDto]] - `references` [EXTRACTED]
-- [[SystemChecklistTickDto]] - `references` [EXTRACTED]
+- [[CreateRecipientDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ProcessorChecklistTickDto
+#graphify/code #graphify/EXTRACTED #community/CreateRecipientDto

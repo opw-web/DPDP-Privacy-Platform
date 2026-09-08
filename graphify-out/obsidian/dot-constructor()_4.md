@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/child-exemptions.service.ts"
+source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
 type: "code"
 community: "AuditService"
-location: "L47"
+location: "L217"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[AuditService]] - `references` [EXTRACTED]
-- [[ChildExemptionsService]] - `method` [EXTRACTED]
+- [[ComplianceService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/AuditService

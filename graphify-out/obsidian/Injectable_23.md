@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateTransferDto"
+community: "NotificationsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTransferDto
+  - community/NotificationsService
 ---
 
 # Injectable
 
 ## Connections
-- [[TransfersService]] - `references` [EXTRACTED]
+- [[PortalProvider]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTransferDto
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

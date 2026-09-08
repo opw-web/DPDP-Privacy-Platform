@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/retention.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/candidates.controller.ts"
 type: "code"
-community: "erasure-task.service.ts"
+community: "RequirePermission"
 location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/RequirePermission
 ---
 
 # .constructor()
 
 ## Connections
-- [[ErasureTaskService]] - `references` [EXTRACTED]
-- [[LegalHoldService]] - `references` [EXTRACTED]
-- [[RetentionController]] - `method` [EXTRACTED]
+- [[CandidatesController]] - `method` [EXTRACTED]
+- [[CandidatesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

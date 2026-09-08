@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/common/mail/mail.module.ts"
 type: "code"
-community: "app.module.ts"
+community: "@nestjs/common"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/appmodulets
+  - community/nestjs/common
 ---
 
 # MailModule
 
 ## Connections
-- [[Module_4]] - `references` [EXTRACTED]
+- [[Module_2]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[mail.module.ts]] - `contains` [EXTRACTED]
 - [[notifications.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/appmodulets
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

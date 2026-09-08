@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/age-status.service.ts"
+source_file: "dpdp-platform/backend/src/modules/children/child-exemptions.controller.ts"
 type: "code"
-community: "children.module.ts"
-location: "L32"
+community: "CreateExemptionClaimDto"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/childrenmodulets
+  - community/CreateExemptionClaimDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[AgeStatusService]] - `method` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
+- [[ChildExemptionsController]] - `method` [EXTRACTED]
+- [[ChildExemptionsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/childrenmodulets
+#graphify/code #graphify/EXTRACTED #community/CreateExemptionClaimDto

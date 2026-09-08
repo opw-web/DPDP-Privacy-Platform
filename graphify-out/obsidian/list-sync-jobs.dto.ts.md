@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sync/dto/list-sync-jobs.dto.ts"
 type: "code"
-community: "sync.service.ts"
+community: "data-sources.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/syncservicets
+  - community/data-sourcesservicets
 ---
 
 # list-sync-jobs.dto.ts
@@ -20,4 +20,4 @@ tags:
 - [[sync.controller.ts]] - `imports_from` [EXTRACTED]
 - [[sync.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/syncservicets
+#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets

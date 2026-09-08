@@ -1,8 +1,8 @@
 ---
-source_file: "demo-control/common.sh"
+source_file: "demo-control/platform.sh"
 type: "code"
 community: "common.sh"
-location: "L87"
+location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,9 +12,7 @@ tags:
 # docker_run()
 
 ## Connections
-- [[common.sh]] - `defines` [EXTRACTED]
 - [[ensure_database_up()]] - `calls` [EXTRACTED]
-- [[prepare.sh script]] - `calls` [EXTRACTED]
-- [[status.sh script]] - `calls` [EXTRACTED]
+- [[platform.sh]] - `defines` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/commonsh

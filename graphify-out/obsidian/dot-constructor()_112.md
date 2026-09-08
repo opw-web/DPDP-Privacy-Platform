@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/consents/consents.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/principal-portal/me-rights.service.ts"
 type: "code"
-community: "ImportConsentDto"
-location: "L26"
+community: "MeRightsService"
+location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ImportConsentDto
+  - community/MeRightsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[ConsentsController]] - `method` [EXTRACTED]
-- [[ConsentsService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[MeRightsService]] - `method` [EXTRACTED]
+- [[NotificationsService]] - `references` [EXTRACTED]
+- [[RequestsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ImportConsentDto
+#graphify/code #graphify/EXTRACTED #community/MeRightsService

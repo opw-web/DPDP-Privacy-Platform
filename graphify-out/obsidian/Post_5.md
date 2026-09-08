@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateAlgorithmEntryDto"
+community: "CreateComplianceRuleDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateAlgorithmEntryDto
+  - community/CreateComplianceRuleDto
 ---
 
 # Post
 
 ## Connections
-- [[dot-completeAssessment()]] - `references` [EXTRACTED]
-- [[dot-createAlgorithm()]] - `references` [EXTRACTED]
-- [[dot-createAssessment()]] - `references` [EXTRACTED]
+- [[dot-create()_8]] - `references` [EXTRACTED]
+- [[dot-review()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto
+#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto

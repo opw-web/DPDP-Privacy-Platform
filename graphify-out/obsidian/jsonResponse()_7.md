@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/DashboardPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/AuditPage.test.tsx"
 type: "code"
-community: "EmployeesPage.tsx"
-location: "L10"
+community: "@tanstack/react-query"
+location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeesPagetsx
+  - community/tanstack/react-query
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[DashboardPage.test.tsx]] - `contains` [EXTRACTED]
-- [[mockRoutesAndLogin()]] - `calls` [EXTRACTED]
+- [[AuditPage.test.tsx]] - `contains` [EXTRACTED]
+- [[loginAndRenderThroughShell()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeesPagetsx
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

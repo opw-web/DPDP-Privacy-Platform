@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/board/information-requests.controller.ts"
+source_file: "dpdp-platform/backend/src/queues/campaign-send.processor.ts"
 type: "code"
-community: "CreateInformationRequestDto"
-location: "L15"
+community: "CampaignsService"
+location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateInformationRequestDto
+  - community/CampaignsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[InformationRequestsController]] - `method` [EXTRACTED]
-- [[InformationRequestsService]] - `references` [EXTRACTED]
+- [[CampaignSendProcessor]] - `method` [EXTRACTED]
+- [[CampaignsService]] - `references` [EXTRACTED]
+- [[NotificationsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto
+#graphify/code #graphify/EXTRACTED #community/CampaignsService

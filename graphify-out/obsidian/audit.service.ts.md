@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/common/audit/audit.service.ts"
 type: "code"
-community: "audit.service.ts"
+community: "@prisma/client"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/auditservicets
+  - community/prisma/client
 ---
 
 # audit.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@prismaclient]] - `imports_from` [EXTRACTED]
 - [[AUDIT_COUNTER_NAME]] - `imports` [EXTRACTED]
 - [[AuditAction]] - `imports` [EXTRACTED]
 - [[AuditRecordInput]] - `contains` [EXTRACTED]
@@ -87,4 +87,4 @@ tags:
 - [[transfers.service.ts]] - `imports_from` [EXTRACTED]
 - [[voluntary-undertakings.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/auditservicets
+#graphify/code #graphify/EXTRACTED #community/prisma/client

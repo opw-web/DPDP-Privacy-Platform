@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "token.service.ts"
+community: "CreateExemptionClaimDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tokenservicets
+  - community/CreateExemptionClaimDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[EmployeeMeResponseDto]] - `references` [EXTRACTED]
-- [[EmployeeMeRoleDto]] - `references` [EXTRACTED]
+- [[CreateExemptionClaimDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tokenservicets
+#graphify/code #graphify/EXTRACTED #community/CreateExemptionClaimDto

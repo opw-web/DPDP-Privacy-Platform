@@ -1,17 +1,17 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sync/sync-error.ts"
 type: "code"
-community: "sync-pipeline.service.ts"
-location: "L80"
+community: "SyncPipelineService"
+location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sync-pipelineservicets
+  - community/SyncPipelineService
 ---
 
 # .constructor()
 
 ## Connections
-- [[SyncLockUnavailableError]] - `method` [EXTRACTED]
+- [[MissingRecordKeyError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sync-pipelineservicets
+#graphify/code #graphify/EXTRACTED #community/SyncPipelineService

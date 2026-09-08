@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "requests.service.ts"
+community: "FlagFrivolousDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/requestsservicets
+  - community/FlagFrivolousDto
 ---
 
 # IsString
 
 ## Connections
-- [[ChangeStatusDto]] - `references` [EXTRACTED]
-- [[ErasureProcessorChecklistDto]] - `references` [EXTRACTED]
-- [[ErasureSystemChecklistDto]] - `references` [EXTRACTED]
+- [[FlagFrivolousDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/requestsservicets
+#graphify/code #graphify/EXTRACTED #community/FlagFrivolousDto

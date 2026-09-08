@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "breach-principal-notice-dispatch.queue.ts"
+community: "BreachClockProcessor"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breach-principal-notice-dispatchqueuets
+  - community/BreachClockProcessor
 ---
 
 # Processor
 
 ## Connections
-- [[BreachPrincipalNoticeDispatchProcessor]] - `references` [EXTRACTED]
+- [[BreachClockProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breach-principal-notice-dispatchqueuets
+#graphify/code #graphify/EXTRACTED #community/BreachClockProcessor

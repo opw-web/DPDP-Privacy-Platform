@@ -8,9 +8,9 @@ members: 32
 **Members:** 32 nodes
 
 ## Members
-- [[dot-constructor()_91]] - code - dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts
-- [[dot-constructor()_92]] - code - dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts
-- [[dot-constructor()_93]] - code - dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts
+- [[dot-constructor()_85]] - code - dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts
+- [[dot-constructor()_86]] - code - dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts
+- [[dot-constructor()_87]] - code - dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts
 - [[BREACH_NOTIFICATION_REQUIRED_ELEMENTS]] - code - dpdp-platform/backend/src/modules/messaging/templates/whitelisted-variables.ts
 - [[DisallowedTemplateSyntaxError]] - code - dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts
 - [[MESSAGE_TEMPLATE_PUBLIC_SELECT]] - code - dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts
@@ -50,21 +50,19 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 11 edges to [[_COMMUNITY_campaigns.service.ts]]
-- 9 edges to [[_COMMUNITY_TemplatesService]]
-- 5 edges to [[_COMMUNITY_@prismaclient]]
+- 6 edges to [[_COMMUNITY_TemplatesService]]
+- 4 edges to [[_COMMUNITY_PrismaService]]
+- 4 edges to [[_COMMUNITY_PreviewTemplateDto]]
+- 4 edges to [[_COMMUNITY_@nestjsswagger]]
 - 3 edges to [[_COMMUNITY_CampaignsService]]
-- 3 edges to [[_COMMUNITY_argon2]]
-- 2 edges to [[_COMMUNITY_PrismaService]]
-- 2 edges to [[_COMMUNITY_supertest]]
+- 3 edges to [[_COMMUNITY_seed.ts]]
+- 2 edges to [[_COMMUNITY_@prismaclient]]
+- 2 edges to [[_COMMUNITY_@nestjscommon]]
 - 1 edge to [[_COMMUNITY_AuditService]]
-- 1 edge to [[_COMMUNITY_CreateTemplateDto]]
-- 1 edge to [[_COMMUNITY_audit.service.ts]]
-- 1 edge to [[_COMMUNITY_app.module.ts]]
-- 1 edge to [[_COMMUNITY_@nestjscommon]]
 - 1 edge to [[_COMMUNITY_backendpackage.json]]
 
 ## Top bridge nodes
-- [[templates.service.ts]] - degree 32, connects to 9 communities
+- [[templates.service.ts]] - degree 32, connects to 8 communities
 - [[extractTemplateVariables()]] - degree 10, connects to 4 communities
 - [[template-renderer.ts]] - degree 26, connects to 3 communities
 - [[TemplateVariableName]] - degree 8, connects to 3 communities

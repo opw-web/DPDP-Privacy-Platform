@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/lib/mvp2-api.ts"
 type: "code"
-community: "DateTime.tsx"
+community: "cn"
 location: "L71"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DateTimetsx
+  - community/cn
 ---
 
 # RuleBasis
@@ -18,4 +18,4 @@ tags:
 - [[mvp2-api.ts]] - `contains` [EXTRACTED]
 - [[sdftypes.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DateTimetsx
+#graphify/code #graphify/EXTRACTED #community/cn

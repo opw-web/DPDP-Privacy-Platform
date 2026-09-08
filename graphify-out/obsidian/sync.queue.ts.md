@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/sync.queue.ts"
 type: "code"
-community: "sync.queue.ts"
+community: "queues.module.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/syncqueuets
+  - community/queuesmodulets
 ---
 
 # sync.queue.ts
 
 ## Connections
-- [[@nestjsbullmq]] - `imports_from` [EXTRACTED]
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsbullmq_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@prismaclient]] - `imports_from` [EXTRACTED]
 - [[FREQUENCY_CRON_PATTERNS]] - `contains` [EXTRACTED]
 - [[SYNC_QUEUE_NAME]] - `contains` [EXTRACTED]
 - [[SYNC_SCHEDULE_TRIGGERED_BY]] - `contains` [EXTRACTED]
@@ -34,4 +34,4 @@ tags:
 - [[syncJobId()]] - `contains` [EXTRACTED]
 - [[syncSchedulerId()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/syncqueuets
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

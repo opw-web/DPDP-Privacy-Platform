@@ -12,9 +12,9 @@ tags:
 # SystemChecklistTickDto
 
 ## Connections
-- [[ApiProperty_44]] - `references` [EXTRACTED]
-- [[IsBoolean_19]] - `references` [EXTRACTED]
-- [[IsString_58]] - `references` [EXTRACTED]
+- [[ApiProperty_18]] - `references` [EXTRACTED]
+- [[IsBoolean_10]] - `references` [EXTRACTED]
+- [[IsString_26]] - `references` [EXTRACTED]
 - [[complete-erasure-task.dto.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/ProcessorChecklistTickDto

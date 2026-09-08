@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "TemplatesService"
+community: "RequirePermission"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/RequirePermission
 ---
 
 # Post
 
 ## Connections
-- [[dot-create()_12]] - `references` [EXTRACTED]
-- [[dot-preview()_1]] - `references` [EXTRACTED]
+- [[dot-unmerge()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

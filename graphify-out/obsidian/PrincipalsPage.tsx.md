@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalsPage.tsx"
 type: "code"
-community: "SettingsPage.tsx"
+community: "PrincipalDetailPage.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SettingsPagetsx
+  - community/PrincipalDetailPagetsx
 ---
 
 # PrincipalsPage.tsx
@@ -45,4 +45,4 @@ tags:
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 - [[useDebouncedValue()_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SettingsPagetsx
+#graphify/code #graphify/EXTRACTED #community/PrincipalDetailPagetsx

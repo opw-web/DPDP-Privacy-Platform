@@ -1,20 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notices/notices.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/children/guardians.service.ts"
 type: "code"
-community: "AccessTokenPayload"
-location: "L38"
+community: "GuardiansService"
+location: "L117"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/GuardiansService
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_35]] - `calls` [INFERRED]
-- [[Get_4]] - `references` [EXTRACTED]
-- [[NoticesController]] - `method` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-list()_2]] - `calls` [INFERRED]
+- [[dot-toResponse()]] - `calls` [EXTRACTED]
+- [[GuardiansService]] - `method` [EXTRACTED]
+- [[ListGuardiansDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/GuardiansService

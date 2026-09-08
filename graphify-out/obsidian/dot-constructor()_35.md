@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/auth/token.service.ts"
+source_file: "dpdp-platform/backend/src/common/mail/mailer.service.ts"
 type: "code"
-community: "TokenService"
-location: "L65"
+community: "NotificationsService"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TokenService
+  - community/NotificationsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[TokenService]] - `method` [EXTRACTED]
+- [[MailerService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TokenService
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

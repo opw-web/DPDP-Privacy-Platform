@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/audit-read.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/inventory.e2e-spec.ts"
 type: "code"
-community: "audit-read.e2e-spec.ts"
-location: "L111"
+community: "AppModule"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-reade2e-spects
+  - community/AppModule
 ---
 
 # Fixture
 
 ## Connections
-- [[audit-read.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[inventory.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-reade2e-spects
+#graphify/code #graphify/EXTRACTED #community/AppModule

@@ -1,23 +1,23 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sdf/sdf.controller.ts"
 type: "code"
-community: ".completeAssessment"
+community: "UpdateAlgorithmEntryDto"
 location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/completeAssessment
+  - community/UpdateAlgorithmEntryDto
 ---
 
 # .updateAlgorithm()
 
 ## Connections
-- [[dot-update()_16]] - `calls` [INFERRED]
-- [[Body_17]] - `references` [EXTRACTED]
-- [[Param_18]] - `references` [EXTRACTED]
-- [[Patch_8]] - `references` [EXTRACTED]
+- [[dot-update()_9]] - `calls` [INFERRED]
+- [[Body_3]] - `references` [EXTRACTED]
+- [[Param_8]] - `references` [EXTRACTED]
+- [[Patch_4]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[SdfController]] - `method` [EXTRACTED]
 - [[UpdateAlgorithmEntryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/completeAssessment
+#graphify/code #graphify/EXTRACTED #community/UpdateAlgorithmEntryDto

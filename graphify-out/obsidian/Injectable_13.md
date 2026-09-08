@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "schedule-reconciliation.service.ts"
+community: "GuardiansService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/schedule-reconciliationservicets
+  - community/GuardiansService
 ---
 
 # Injectable
 
 ## Connections
-- [[Mvp2ScheduleReconciliationService]] - `references` [EXTRACTED]
+- [[GuardiansService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/schedule-reconciliationservicets
+#graphify/code #graphify/EXTRACTED #community/GuardiansService

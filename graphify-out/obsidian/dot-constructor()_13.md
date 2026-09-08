@@ -1,17 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/common/guards/permissions.guard.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.service.ts"
 type: "code"
-community: "AccessTokenPayload"
-location: "L81"
+community: "AuditService"
+location: "L161"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/AuditService
 ---
 
 # .constructor()
 
 ## Connections
-- [[PermissionsGuard]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[CampaignSendQueueService]] - `references` [EXTRACTED]
+- [[CampaignsService]] - `method` [EXTRACTED]
+- [[ConsentsService]] - `references` [EXTRACTED]
+- [[NoticesService]] - `references` [EXTRACTED]
+- [[ReferenceService]] - `references` [EXTRACTED]
+- [[TemplatesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/AuditService

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Public"
+community: "CreateDataSourceDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/CreateDataSourceDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[MeProfileTimezoneDto]] - `references` [EXTRACTED]
+- [[CreateDataSourceDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/CreateDataSourceDto

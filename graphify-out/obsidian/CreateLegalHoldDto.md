@@ -12,15 +12,15 @@ tags:
 # CreateLegalHoldDto
 
 ## Connections
-- [[dot-create()_15]] - `references` [EXTRACTED]
+- [[dot-create()_16]] - `references` [EXTRACTED]
 - [[dot-createLegalHold()]] - `references` [EXTRACTED]
-- [[ApiProperty_25]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_24]] - `references` [EXTRACTED]
-- [[IsDateString_9]] - `references` [EXTRACTED]
-- [[IsOptional_25]] - `references` [EXTRACTED]
-- [[IsString_32]] - `references` [EXTRACTED]
-- [[MinLength_26]] - `references` [EXTRACTED]
-- [[Type_6]] - `references` [EXTRACTED]
+- [[ApiProperty_13]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_12]] - `references` [EXTRACTED]
+- [[IsDateString_4]] - `references` [EXTRACTED]
+- [[IsOptional_12]] - `references` [EXTRACTED]
+- [[IsString_14]] - `references` [EXTRACTED]
+- [[MinLength_11]] - `references` [EXTRACTED]
+- [[Type_3]] - `references` [EXTRACTED]
 - [[ValidateNested_3]] - `references` [EXTRACTED]
 - [[create-legal-hold.dto.ts]] - `contains` [EXTRACTED]
 - [[legal-hold.service.ts]] - `imports` [EXTRACTED]

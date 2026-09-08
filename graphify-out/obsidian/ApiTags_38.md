@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "retention.service.ts"
+community: "PreviewAudienceDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/PreviewAudienceDto
 ---
 
 # ApiTags
 
 ## Connections
-- [[RetentionController_1]] - `references` [EXTRACTED]
+- [[AudienceController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/PreviewAudienceDto

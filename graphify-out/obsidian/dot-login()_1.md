@@ -1,26 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.service.ts"
 type: "code"
-community: "EmployeeAuthController"
-location: "L62"
+community: "TokenService"
+location: "L104"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeeAuthController
+  - community/TokenService
 ---
 
 # .login()
 
 ## Connections
+- [[dot-issueTokenPair()]] - `calls` [EXTRACTED]
 - [[dot-login()]] - `calls` [INFERRED]
-- [[dot-setRefreshCookie()]] - `calls` [EXTRACTED]
-- [[Body_25]] - `references` [EXTRACTED]
-- [[EmployeeAuthController]] - `method` [EXTRACTED]
-- [[EmployeeLoginDto]] - `references` [EXTRACTED]
-- [[HttpCode_4]] - `references` [EXTRACTED]
-- [[Post_25]] - `references` [EXTRACTED]
-- [[Public()]] - `references` [EXTRACTED]
-- [[Req_2]] - `references` [EXTRACTED]
-- [[Res_7]] - `references` [EXTRACTED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-storeFor()]] - `calls` [EXTRACTED]
+- [[EmployeeAuthService]] - `method` [EXTRACTED]
+- [[LoginRequestMeta]] - `references` [EXTRACTED]
+- [[getDummyHash()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController
+#graphify/code #graphify/EXTRACTED #community/TokenService

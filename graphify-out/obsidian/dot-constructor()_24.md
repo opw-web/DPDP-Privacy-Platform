@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/evidence-pack.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/children/guardians.service.ts"
 type: "code"
-community: "csvDocument"
-location: "L11"
+community: "GuardiansService"
+location: "L76"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/csvDocument
+  - community/GuardiansService
 ---
 
 # .constructor()
 
 ## Connections
-- [[EvidencePackController]] - `method` [EXTRACTED]
-- [[EvidencePackService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[GuardiansService]] - `method` [EXTRACTED]
+- [[MaskingService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/csvDocument
+#graphify/code #graphify/EXTRACTED #community/GuardiansService

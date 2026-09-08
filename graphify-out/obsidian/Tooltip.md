@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/ui/tooltip.tsx"
 type: "code"
-community: "DateTime.tsx"
+community: "cn"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DateTimetsx
+  - community/cn
 ---
 
 # Tooltip
@@ -16,4 +16,4 @@ tags:
 - [[RuleBasisChip.tsx]] - `imports` [EXTRACTED]
 - [[tooltip.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DateTimetsx
+#graphify/code #graphify/EXTRACTED #community/cn

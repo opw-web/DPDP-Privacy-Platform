@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "security-measures.service.ts"
+community: "AgeStatusService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/security-measuresservicets
+  - community/AgeStatusService
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateSecurityMeasureDto]] - `references` [EXTRACTED]
+- [[SetAgeStatusDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/security-measuresservicets
+#graphify/code #graphify/EXTRACTED #community/AgeStatusService

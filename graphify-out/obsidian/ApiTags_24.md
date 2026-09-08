@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateInformationRequestDto"
+community: "EmployeesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateInformationRequestDto
+  - community/EmployeesService
 ---
 
 # ApiTags
 
 ## Connections
-- [[InformationRequestsController]] - `references` [EXTRACTED]
+- [[EmployeesController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto
+#graphify/code #graphify/EXTRACTED #community/EmployeesService

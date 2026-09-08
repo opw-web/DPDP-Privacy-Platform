@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateTemplateDto"
+community: "FlagFrivolousDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTemplateDto
+  - community/FlagFrivolousDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateTemplateDto]] - `references` [EXTRACTED]
+- [[FlagFrivolousDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTemplateDto
+#graphify/code #graphify/EXTRACTED #community/FlagFrivolousDto

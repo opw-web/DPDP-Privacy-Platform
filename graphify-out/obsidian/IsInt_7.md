@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "compliance.service.ts"
+community: "ListSyncJobsQueryDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/complianceservicets
+  - community/ListSyncJobsQueryDto
 ---
 
 # IsInt
 
 ## Connections
-- [[UpdateComplianceRuleDto]] - `references` [EXTRACTED]
+- [[ListSyncJobsQueryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/complianceservicets
+#graphify/code #graphify/EXTRACTED #community/ListSyncJobsQueryDto

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AddNoteDto"
+community: "Public"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AddNoteDto
+  - community/Public
 ---
 
 # ApiProperty
 
 ## Connections
-- [[AddNoteDto]] - `references` [EXTRACTED]
+- [[MePrivacyContactDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AddNoteDto
+#graphify/code #graphify/EXTRACTED #community/Public

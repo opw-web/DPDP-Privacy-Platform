@@ -1,22 +1,22 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/requests/dto/list-requests.dto.ts"
 type: "code"
-community: "@prisma/client"
+community: "@nestjs/swagger"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/nestjs/swagger
 ---
 
 # list-requests.dto.ts
 
 ## Connections
-- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient]] - `imports_from` [EXTRACTED]
 - [[ListRequestsDto]] - `contains` [EXTRACTED]
 - [[class-transformer_1]] - `imports_from` [EXTRACTED]
 - [[class-validator_1]] - `imports_from` [EXTRACTED]
 - [[requests.controller.ts]] - `imports_from` [EXTRACTED]
 - [[requests.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prisma/client
+#graphify/code #graphify/EXTRACTED #community/nestjs/swagger

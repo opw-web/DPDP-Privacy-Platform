@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/ui/checkbox.tsx"
 type: "code"
-community: "react"
+community: "RequestDetailPage.tsx"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/RequestDetailPagetsx
 ---
 
 # Checkbox
@@ -20,4 +20,4 @@ tags:
 - [[checkbox.tsx]] - `contains` [EXTRACTED]
 - [[cn()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/RequestDetailPagetsx

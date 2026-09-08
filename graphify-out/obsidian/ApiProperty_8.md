@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Public"
+community: "ReplaceMappingsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/ReplaceMappingsDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[MePrivacyContactDto]] - `references` [EXTRACTED]
+- [[ReplaceMappingsDto]] - `references` [EXTRACTED]
+- [[SourceFieldMappingDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/ReplaceMappingsDto

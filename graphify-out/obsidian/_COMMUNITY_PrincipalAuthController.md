@@ -1,26 +1,30 @@
 ---
 type: community
-members: 15
+members: 19
 ---
 
 # PrincipalAuthController
 
-**Members:** 15 nodes
+**Members:** 19 nodes
 
 ## Members
 - [[dot-clearRefreshCookie()_1]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
-- [[dot-constructor()_153]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
 - [[dot-isProduction()_1]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
 - [[dot-login()_3]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
 - [[dot-logout()_3]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
 - [[dot-refresh()_3]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
 - [[dot-setRefreshCookie()_1]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
-- [[ApiTags_40]] - code
-- [[Body_29]] - code
-- [[Controller_41]] - code
+- [[ApiProperty_50]] - code
+- [[ApiTags_39]] - code
+- [[Body_28]] - code
+- [[Controller_40]] - code
 - [[HttpCode_5]] - code
-- [[Post_29]] - code
+- [[IsEmail_7]] - code
+- [[IsString_68]] - code
+- [[MinLength_53]] - code
+- [[Post_28]] - code
 - [[PrincipalAuthController]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
+- [[PrincipalLoginDto]] - code - dpdp-platform/backend/src/modules/auth/dto/principal-login.dto.ts
 - [[Req_3]] - code
 - [[Res_9]] - code
 
@@ -32,14 +36,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Public]]
-- 4 edges to [[_COMMUNITY_PrincipalAuthService]]
-- 1 edge to [[_COMMUNITY_PrincipalLoginDto]]
-- 1 edge to [[_COMMUNITY_app.module.ts]]
+- 6 edges to [[_COMMUNITY_Public]]
+- 4 edges to [[_COMMUNITY_TokenService]]
+- 1 edge to [[_COMMUNITY_@nestjsswagger]]
+- 1 edge to [[_COMMUNITY_@nestjscommon]]
 
 ## Top bridge nodes
-- [[dot-login()_3]] - degree 10, connects to 3 communities
-- [[PrincipalAuthController]] - degree 12, connects to 2 communities
+- [[PrincipalAuthController]] - degree 12, connects to 3 communities
+- [[dot-login()_3]] - degree 10, connects to 2 communities
 - [[dot-refresh()_3]] - degree 9, connects to 2 communities
 - [[dot-logout()_3]] - degree 8, connects to 2 communities
-- [[dot-constructor()_153]] - degree 2, connects to 1 community
+- [[PrincipalLoginDto]] - degree 7, connects to 2 communities

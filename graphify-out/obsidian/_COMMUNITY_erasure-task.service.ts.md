@@ -1,49 +1,44 @@
 ---
 type: community
-members: 36
+members: 31
 ---
 
 # erasure-task.service.ts
 
-**Members:** 36 nodes
+**Members:** 31 nodes
 
 ## Members
-- [[dot-buildChecklists()]] - code - dpdp-platform/backend/src/modules/retention/erasure-task.service.ts
-- [[dot-buildRequestCompletionChecklists()]] - code - dpdp-platform/backend/src/modules/retention/erasure-task.service.ts
-- [[dot-constructor()_79]] - code - dpdp-platform/backend/src/modules/retention/legal-hold.service.ts
-- [[dot-constructor()_80]] - code - dpdp-platform/backend/src/modules/retention/retention.controller.ts
-- [[dot-create()_15]] - code - dpdp-platform/backend/src/modules/retention/legal-hold.service.ts
-- [[dot-createFromTrigger()]] - code - dpdp-platform/backend/src/modules/retention/erasure-task.service.ts
-- [[dot-findApplicableLegalHold()]] - code - dpdp-platform/backend/src/modules/retention/erasure-task.service.ts
-- [[dot-list()_20]] - code - dpdp-platform/backend/src/modules/retention/erasure-task.service.ts
-- [[dot-list()_21]] - code - dpdp-platform/backend/src/modules/retention/legal-hold.service.ts
-- [[dot-listLegalHolds()]] - code - dpdp-platform/backend/src/modules/retention/retention.controller.ts
-- [[dot-listTasks()]] - code - dpdp-platform/backend/src/modules/retention/retention.controller.ts
-- [[dot-mergeCompletionChecklist()]] - code - dpdp-platform/backend/src/modules/retention/erasure-task.service.ts
-- [[dot-resolveLastInboundContactAt()]] - code - dpdp-platform/backend/src/modules/retention/erasure-task.service.ts
-- [[dot-resolveLastProcessingAt()]] - code - dpdp-platform/backend/src/modules/retention/erasure-task.service.ts
+- [[dot-constructor()_78]] - code - dpdp-platform/backend/src/modules/retention/purpose-served.service.ts
+- [[dot-record()]] - code - dpdp-platform/backend/src/modules/retention/purpose-served.service.ts
 - [[ACCOUNT_ACCESS_CANONICAL_FIELDS]] - code - dpdp-platform/backend/src/modules/retention/erasure-task.service.ts
 - [[CreateFromTriggerInput]] - code - dpdp-platform/backend/src/modules/retention/erasure-task.service.ts
 - [[ERASURE_TASK_PUBLIC_SELECT]] - code - dpdp-platform/backend/src/modules/retention/erasure-task.service.ts
-- [[ErasureChecklistSubmission]] - code - dpdp-platform/backend/src/modules/retention/erasure-task.service.ts
-- [[ErasureTaskService]] - code - dpdp-platform/backend/src/modules/retention/erasure-task.service.ts
 - [[ErasureTrigger]] - code - dpdp-platform/backend/src/modules/retention/erasure-task.service.ts
-- [[Get_22]] - code
-- [[Injectable_50]] - code
-- [[Injectable_51]] - code
+- [[Injectable_47]] - code
+- [[LEGAL_HOLD_PUBLIC_SELECT]] - code - dpdp-platform/backend/src/modules/retention/legal-hold.service.ts
 - [[LegalHoldScope]] - code - dpdp-platform/backend/src/modules/retention/legal-hold-scope.util.ts
-- [[LegalHoldService]] - code - dpdp-platform/backend/src/modules/retention/legal-hold.service.ts
-- [[ProcessorChecklistEntry_1]] - code - dpdp-platform/backend/src/modules/retention/checklist.types.ts
+- [[OPEN_ERASURE_TASK_STATES_1]] - code - dpdp-platform/backend/src/modules/retention/legal-hold.service.ts
+- [[OPEN_ERASURE_TASK_STATES_2]] - code - dpdp-platform/backend/src/modules/retention/retention-scan.service.ts
+- [[PURPOSE_SERVED_SIGNAL_PUBLIC_SELECT]] - code - dpdp-platform/backend/src/modules/retention/purpose-served.service.ts
+- [[PreErasureNoticeSummary]] - code - dpdp-platform/backend/src/modules/retention/pre-erasure-notice.service.ts
 - [[PublicErasureTask]] - code - dpdp-platform/backend/src/modules/retention/erasure-task.service.ts
-- [[Query_6]] - code
-- [[SystemChecklistEntry_1]] - code - dpdp-platform/backend/src/modules/retention/checklist.types.ts
+- [[PublicLegalHold]] - code - dpdp-platform/backend/src/modules/retention/legal-hold.service.ts
+- [[PublicPurposeServedSignal]] - code - dpdp-platform/backend/src/modules/retention/purpose-served.service.ts
+- [[PurposeServedService]] - code - dpdp-platform/backend/src/modules/retention/purpose-served.service.ts
+- [[RecordPurposeServedInput]] - code - dpdp-platform/backend/src/modules/retention/purpose-served.service.ts
+- [[RetentionScanSummary]] - code - dpdp-platform/backend/src/modules/retention/retention-scan.service.ts
 - [[TERMINAL_STATES]] - code - dpdp-platform/backend/src/modules/retention/erasure-task.service.ts
 - [[addByRetentionUnit()]] - code - dpdp-platform/backend/src/modules/retention/retention-dates.util.ts
-- [[checklist.types.ts]] - code - dpdp-platform/backend/src/modules/retention/checklist.types.ts
 - [[erasure-task.service.ts]] - code - dpdp-platform/backend/src/modules/retention/erasure-task.service.ts
 - [[legal-hold-scope.util.ts]] - code - dpdp-platform/backend/src/modules/retention/legal-hold-scope.util.ts
+- [[legal-hold.service.ts]] - code - dpdp-platform/backend/src/modules/retention/legal-hold.service.ts
 - [[legalHoldCovers()]] - code - dpdp-platform/backend/src/modules/retention/legal-hold-scope.util.ts
+- [[lockRetentionWorkflow()]] - code - dpdp-platform/backend/src/modules/retention/retention-transaction-lock.util.ts
+- [[pre-erasure-notice.service.ts]] - code - dpdp-platform/backend/src/modules/retention/pre-erasure-notice.service.ts
+- [[purpose-served.service.ts]] - code - dpdp-platform/backend/src/modules/retention/purpose-served.service.ts
 - [[retention-dates.util.ts]] - code - dpdp-platform/backend/src/modules/retention/retention-dates.util.ts
+- [[retention-scan.service.ts]] - code - dpdp-platform/backend/src/modules/retention/retention-scan.service.ts
+- [[retention-transaction-lock.util.ts]] - code - dpdp-platform/backend/src/modules/retention/retention-transaction-lock.util.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -53,27 +48,26 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_PrismaService]]
-- 10 edges to [[_COMMUNITY_AccessTokenPayload]]
-- 8 edges to [[_COMMUNITY_audit.service.ts]]
-- 6 edges to [[_COMMUNITY_requests.service.ts]]
-- 6 edges to [[_COMMUNITY_@prismaclient]]
-- 6 edges to [[_COMMUNITY_ScopedTransactionClient]]
-- 6 edges to [[_COMMUNITY_RetentionScanService]]
-- 4 edges to [[_COMMUNITY_compliance.service.ts]]
-- 3 edges to [[_COMMUNITY_AuditService]]
-- 3 edges to [[_COMMUNITY_app.module.ts]]
-- 3 edges to [[_COMMUNITY_@nestjscommon]]
-- 2 edges to [[_COMMUNITY_RequestsService]]
-- 2 edges to [[_COMMUNITY_dot-record]]
+- 22 edges to [[_COMMUNITY_@prismaclient]]
+- 17 edges to [[_COMMUNITY_PrismaService]]
+- 12 edges to [[_COMMUNITY_AuditService]]
+- 11 edges to [[_COMMUNITY_@nestjscommon]]
+- 8 edges to [[_COMMUNITY_ErasureTaskService]]
+- 8 edges to [[_COMMUNITY_NotificationsService]]
+- 8 edges to [[_COMMUNITY_RequirePermission]]
+- 4 edges to [[_COMMUNITY_ScopedTransactionClient]]
+- 4 edges to [[_COMMUNITY_RetentionScanService]]
+- 3 edges to [[_COMMUNITY_RetentionController]]
+- 3 edges to [[_COMMUNITY_@nestjsswagger]]
+- 2 edges to [[_COMMUNITY_queues.module.ts]]
 - 1 edge to [[_COMMUNITY_CreateLegalHoldDto]]
-- 1 edge to [[_COMMUNITY_guardians.service.ts]]
-- 1 edge to [[_COMMUNITY_ConsentsService]]
-- 1 edge to [[_COMMUNITY_token.service.ts]]
+- 1 edge to [[_COMMUNITY_dot-record]]
+- 1 edge to [[_COMMUNITY_SdfCycleScanService]]
+- 1 edge to [[_COMMUNITY_requests.service.ts]]
 
 ## Top bridge nodes
-- [[erasure-task.service.ts]] - degree 39, connects to 11 communities
-- [[ErasureTaskService]] - degree 23, connects to 9 communities
-- [[dot-createFromTrigger()]] - degree 16, connects to 6 communities
-- [[dot-create()_15]] - degree 7, connects to 4 communities
-- [[LegalHoldService]] - degree 8, connects to 3 communities
+- [[erasure-task.service.ts]] - degree 39, connects to 10 communities
+- [[legal-hold.service.ts]] - degree 21, connects to 8 communities
+- [[retention-scan.service.ts]] - degree 27, connects to 7 communities
+- [[pre-erasure-notice.service.ts]] - degree 21, connects to 6 communities
+- [[purpose-served.service.ts]] - degree 14, connects to 5 communities

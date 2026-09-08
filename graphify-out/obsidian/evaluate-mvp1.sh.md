@@ -1,24 +1,24 @@
 ---
 source_file: "scripts/evaluate-mvp1.sh"
 type: "code"
-community: "evaluate-mvp1.sh"
+community: "common.sh"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/evaluate-mvp1sh
+  - community/commonsh
 ---
 
 # evaluate-mvp1.sh
 
 ## Connections
-- [[NVM_DIR]] - `defines` [EXTRACTED]
 - [[attach_purpose()]] - `defines` [EXTRACTED]
 - [[auth()]] - `defines` [EXTRACTED]
-- [[create_purpose()]] - `defines` [EXTRACTED]
-- [[create_source()]] - `defines` [EXTRACTED]
+- [[common.sh]] - `imports_from` [INFERRED]
+- [[create_purpose()_1]] - `defines` [EXTRACTED]
+- [[create_source()_1]] - `defines` [EXTRACTED]
 - [[evaluate-mvp1.sh script]] - `contains` [EXTRACTED]
 - [[map_source()]] - `defines` [EXTRACTED]
-- [[sync_and_wait()]] - `defines` [EXTRACTED]
+- [[sync_and_wait()_1]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/evaluate-mvp1sh
+#graphify/code #graphify/EXTRACTED #community/commonsh

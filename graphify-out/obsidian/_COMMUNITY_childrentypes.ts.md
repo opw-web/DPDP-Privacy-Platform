@@ -29,11 +29,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_react]]
-- 2 edges to [[_COMMUNITY_router.tsx]]
+- 8 edges to [[_COMMUNITY_api-client.ts]]
+- 1 edge to [[_COMMUNITY_@tanstackreact-query]]
+- 1 edge to [[_COMMUNITY_router.tsx]]
 
 ## Top bridge nodes
-- [[ChildrenPage()]] - degree 6, connects to 2 communities
+- [[ChildrenPage()]] - degree 6, connects to 3 communities
 - [[childrentypes.ts]] - degree 8, connects to 1 community
 - [[GuardianConsentSelector.tsx]] - degree 7, connects to 1 community
 - [[guardianVerificationLabel()]] - degree 5, connects to 1 community

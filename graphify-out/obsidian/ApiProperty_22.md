@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ExtensionDto"
+community: "AddMeRequestCommentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ExtensionDto
+  - community/AddMeRequestCommentDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[ExtensionDto]] - `references` [EXTRACTED]
+- [[AddMeRequestCommentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ExtensionDto
+#graphify/code #graphify/EXTRACTED #community/AddMeRequestCommentDto

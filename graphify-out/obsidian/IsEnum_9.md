@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateCampaignDto"
+community: "CreateGuardianDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateCampaignDto
+  - community/CreateGuardianDto
 ---
 
 # IsEnum
 
 ## Connections
-- [[CreateCampaignDto]] - `references` [EXTRACTED]
+- [[CreateGuardianDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateCampaignDto
+#graphify/code #graphify/EXTRACTED #community/CreateGuardianDto

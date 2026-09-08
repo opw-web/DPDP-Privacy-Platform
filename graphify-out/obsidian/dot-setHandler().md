@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/connectors/test-support/mock-http-server.ts"
 type: "code"
-community: "sync.e2e-spec.ts"
+community: "MockHttpServer"
 location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/synce2e-spects
+  - community/MockHttpServer
 ---
 
 # .setHandler()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[MockHttpServer]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/synce2e-spects
+#graphify/code #graphify/EXTRACTED #community/MockHttpServer

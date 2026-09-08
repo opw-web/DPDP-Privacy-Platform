@@ -12,9 +12,9 @@ tags:
 # .deliverRecipient()
 
 ## Connections
-- [[dot-create()_22]] - `calls` [EXTRACTED]
+- [[dot-create()_24]] - `calls` [EXTRACTED]
 - [[dot-maybeFinalizeCampaign()]] - `calls` [EXTRACTED]
-- [[dot-process()_9]] - `calls` [INFERRED]
+- [[dot-process()_7]] - `calls` [INFERRED]
 - [[dot-send()_7]] - `calls` [EXTRACTED]
 - [[CampaignSendJobData]] - `references` [EXTRACTED]
 - [[CampaignsService]] - `method` [EXTRACTED]

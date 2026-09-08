@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/SettingsCompliancePage.test.tsx"
 type: "code"
-community: "router.tsx"
+community: "@tanstack/react-query"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/tanstack/react-query
 ---
 
 # SettingsCompliancePage.test.tsx
@@ -21,9 +21,9 @@ tags:
 - [[employeeLogout()]] - `imports` [EXTRACTED]
 - [[libauth.ts]] - `imports_from` [EXTRACTED]
 - [[react-router-dom_1]] - `imports_from` [EXTRACTED]
-- [[renderPage()_7]] - `contains` [EXTRACTED]
+- [[renderPage()_5]] - `contains` [EXTRACTED]
 - [[response()_1]] - `contains` [EXTRACTED]
 - [[rule]] - `contains` [EXTRACTED]
 - [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

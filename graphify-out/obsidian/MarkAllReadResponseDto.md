@@ -12,7 +12,7 @@ tags:
 # MarkAllReadResponseDto
 
 ## Connections
-- [[ApiProperty_26]] - `references` [EXTRACTED]
+- [[ApiProperty_38]] - `references` [EXTRACTED]
 - [[notification.dto.ts]] - `contains` [EXTRACTED]
 - [[notifications.controller.ts]] - `imports` [EXTRACTED]
 

@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/schedule-reconciliation.service.ts"
 type: "code"
-community: "SyncQueueService"
+community: "queues.module.ts"
 location: "L96"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/queuesmodulets
 ---
 
 # .reconcileAtBoot()
 
 ## Connections
-- [[dot-constructor()_151]] - `calls` [EXTRACTED]
-- [[dot-reconcile()_1]] - `calls` [EXTRACTED]
-- [[dot-reconcile()]] - `calls` [INFERRED]
+- [[dot-constructor()_105]] - `calls` [EXTRACTED]
+- [[dot-reconcile()]] - `calls` [EXTRACTED]
+- [[dot-reconcile()_1]] - `calls` [INFERRED]
 - [[ScheduleReconciliationService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

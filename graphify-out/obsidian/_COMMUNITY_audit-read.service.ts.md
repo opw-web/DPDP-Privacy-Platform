@@ -1,11 +1,11 @@
 ---
 type: community
-members: 23
+members: 21
 ---
 
 # audit-read.service.ts
 
-**Members:** 23 nodes
+**Members:** 21 nodes
 
 ## Members
 - [[ACCESS_LOG_CSV_HEADER]] - code - dpdp-platform/backend/src/modules/audit/audit-read.service.ts
@@ -18,17 +18,15 @@ members: 23
 - [[AuditEventListResult]] - code - dpdp-platform/backend/src/modules/audit/audit-read.service.ts
 - [[AuditEventListRow]] - code - dpdp-platform/backend/src/modules/audit/audit-read.service.ts
 - [[IsISO8601]] - code
-- [[IsIn_5]] - code
-- [[IsInt_6]] - code
-- [[IsOptional_19]] - code
-- [[IsString_25]] - code
+- [[IsIn_4]] - code
+- [[IsInt_4]] - code
+- [[IsOptional_16]] - code
+- [[IsString_20]] - code
 - [[ListAuditEventsDto]] - code - dpdp-platform/backend/src/modules/audit/dto/list-audit-events.dto.ts
 - [[MAX_AUDIT_EVENTS_PAGE]] - code - dpdp-platform/backend/src/modules/audit/dto/list-audit-events.dto.ts
-- [[Max_1]] - code
-- [[Min_6]] - code
-- [[NOTE the spec's §4.7 prose claims 33 MVP 1 action names, but the]] - rationale - dpdp-platform/backend/src/common/audit/audit-actions.ts
+- [[Max]] - code
+- [[Min_4]] - code
 - [[Transform]] - code
-- [[audit-actions.ts]] - code - dpdp-platform/backend/src/common/audit/audit-actions.ts
 - [[audit-read.service.ts]] - code - dpdp-platform/backend/src/modules/audit/audit-read.service.ts
 - [[list-audit-events.dto.ts]] - code - dpdp-platform/backend/src/modules/audit/dto/list-audit-events.dto.ts
 
@@ -40,21 +38,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_@nestjscommon]]
-- 4 edges to [[_COMMUNITY_audit.service.ts]]
-- 4 edges to [[_COMMUNITY_@prismaclient]]
-- 3 edges to [[_COMMUNITY_AuditReadController]]
-- 3 edges to [[_COMMUNITY_PrismaService]]
-- 3 edges to [[_COMMUNITY_audit-read.e2e-spec.ts]]
+- 6 edges to [[_COMMUNITY_@prismaclient]]
+- 4 edges to [[_COMMUNITY_AuditReadService]]
+- 4 edges to [[_COMMUNITY_RequirePermission]]
+- 2 edges to [[_COMMUNITY_AuditService]]
+- 2 edges to [[_COMMUNITY_PrismaService]]
 - 2 edges to [[_COMMUNITY_MaskingService]]
-- 1 edge to [[_COMMUNITY_AuditService]]
+- 2 edges to [[_COMMUNITY_@nestjscommon]]
+- 2 edges to [[_COMMUNITY_@nestjsswagger]]
 - 1 edge to [[_COMMUNITY_csvDocument]]
-- 1 edge to [[_COMMUNITY_requests.service.ts]]
 - 1 edge to [[_COMMUNITY_csv-writer.ts]]
 
 ## Top bridge nodes
 - [[audit-read.service.ts]] - degree 26, connects to 9 communities
-- [[audit-actions.ts]] - degree 9, connects to 4 communities
 - [[list-audit-events.dto.ts]] - degree 10, connects to 3 communities
 - [[ListAuditEventsDto]] - degree 14, connects to 2 communities
+- [[AUDIT_ACTIONS]] - degree 3, connects to 1 community
 - [[AUDIT_EVENTS_PAGE_SIZE]] - degree 3, connects to 1 community

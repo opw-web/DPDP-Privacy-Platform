@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[ChildrenPage.tsx]] - `imports` [EXTRACTED]
 - [[ExemptionClaimForm.tsx]] - `contains` [EXTRACTED]
-- [[submit()_1]] - `contains` [EXTRACTED]
+- [[submit()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/react

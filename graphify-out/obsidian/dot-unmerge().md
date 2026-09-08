@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/unmerge.controller.ts"
 type: "code"
-community: ".unmerge"
+community: "RequirePermission"
 location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/unmerge
+  - community/RequirePermission
 ---
 
 # .unmerge()
@@ -14,12 +14,12 @@ tags:
 ## Connections
 - [[dot-unmerge()_1]] - `calls` [INFERRED]
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[Body_18]] - `references` [EXTRACTED]
+- [[Body_12]] - `references` [EXTRACTED]
 - [[CurrentActor]] - `references` [EXTRACTED]
-- [[Param_19]] - `references` [EXTRACTED]
-- [[Post_18]] - `references` [EXTRACTED]
+- [[Param_13]] - `references` [EXTRACTED]
+- [[Post_12]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[UnmergeController]] - `method` [EXTRACTED]
 - [[UnmergeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/unmerge
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

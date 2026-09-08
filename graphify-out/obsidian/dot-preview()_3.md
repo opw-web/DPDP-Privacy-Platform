@@ -1,23 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/audience/audience.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
 type: "code"
-community: "PreviewAudienceDto"
-location: "L21"
+community: "NoticesService"
+location: "L679"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PreviewAudienceDto
+  - community/NoticesService
 ---
 
 # .preview()
 
 ## Connections
-- [[dot-preview()_4]] - `calls` [INFERRED]
-- [[AudienceController]] - `method` [EXTRACTED]
-- [[Body_13]] - `references` [EXTRACTED]
-- [[CurrentActorPermissions]] - `references` [EXTRACTED]
-- [[Post_14]] - `references` [EXTRACTED]
-- [[PreviewAudienceDto]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-getVersionOrThrow()]] - `calls` [EXTRACTED]
+- [[dot-preview()_2]] - `calls` [INFERRED]
+- [[NoticesService]] - `method` [EXTRACTED]
+- [[isNoticeLanguageCode()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PreviewAudienceDto
+#graphify/code #graphify/EXTRACTED #community/NoticesService

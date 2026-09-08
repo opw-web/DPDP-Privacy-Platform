@@ -12,7 +12,7 @@ tags:
 # employees.module.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[AuditModule]] - `imports` [EXTRACTED]
 - [[EmployeesController]] - `imports` [EXTRACTED]
 - [[EmployeesModule]] - `contains` [EXTRACTED]

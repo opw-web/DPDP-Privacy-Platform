@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "BootRegistrationRegistry"
+community: "retention.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BootRegistrationRegistry
+  - community/retentionservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[RetentionScanQueueService]] - `references` [EXTRACTED]
+- [[RetentionService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BootRegistrationRegistry
+#graphify/code #graphify/EXTRACTED #community/retentionservicets

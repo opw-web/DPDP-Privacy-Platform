@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "requests.service.ts"
+community: "CreateBreachDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/requestsservicets
+  - community/CreateBreachDto
 ---
 
 # IsEnum
 
 ## Connections
-- [[ChangeStatusDto]] - `references` [EXTRACTED]
+- [[CreateBreachDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/requestsservicets
+#graphify/code #graphify/EXTRACTED #community/CreateBreachDto

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "security-measures.service.ts"
+community: "TokenService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/security-measuresservicets
+  - community/TokenService
 ---
 
 # Injectable
 
 ## Connections
-- [[SecurityMeasuresService]] - `references` [EXTRACTED]
+- [[PrincipalAuthService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/security-measuresservicets
+#graphify/code #graphify/EXTRACTED #community/TokenService

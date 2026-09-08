@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PrismaService"
+community: "@nestjs/common"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/nestjs/common
 ---
 
 # Module
 
 ## Connections
-- [[PrismaModule]] - `references` [EXTRACTED]
+- [[SyncModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

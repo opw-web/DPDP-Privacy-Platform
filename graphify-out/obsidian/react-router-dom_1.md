@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/package.json"
 type: "concept"
-community: "react-router-dom"
+community: "@tanstack/react-query"
 location: "L36"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/react-router-dom
+  - community/tanstack/react-query
 ---
 
 # react-router-dom
@@ -90,4 +90,4 @@ tags:
 - [[router.test.tsx]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/react-router-dom
+#graphify/concept #graphify/EXTRACTED #community/tanstack/react-query

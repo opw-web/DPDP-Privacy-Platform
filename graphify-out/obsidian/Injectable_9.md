@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "guardians.service.ts"
+community: "RetentionController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/RetentionController
 ---
 
 # Injectable
 
 ## Connections
-- [[GuardiansService]] - `references` [EXTRACTED]
+- [[LegalHoldService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/RetentionController

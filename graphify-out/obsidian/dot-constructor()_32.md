@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/common/guards/jwt-employee.guard.ts"
+source_file: "dpdp-platform/backend/src/modules/audit/audit-read.controller.ts"
 type: "code"
-community: "TokenService"
-location: "L30"
+community: "AuditReadService"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TokenService
+  - community/AuditReadService
 ---
 
 # .constructor()
 
 ## Connections
-- [[JwtEmployeeGuard]] - `method` [EXTRACTED]
-- [[TokenService]] - `references` [EXTRACTED]
+- [[AuditReadController]] - `method` [EXTRACTED]
+- [[AuditReadService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TokenService
+#graphify/code #graphify/EXTRACTED #community/AuditReadService

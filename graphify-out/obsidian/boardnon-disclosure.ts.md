@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/board/non-disclosure.ts"
 type: "code"
-community: "audit.service.ts"
+community: "PrismaService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/auditservicets
+  - community/PrismaService
 ---
 
 # board/non-disclosure.ts
@@ -23,4 +23,4 @@ tags:
 - [[recordNonDisclosureSuppression()]] - `contains` [EXTRACTED]
 - [[scoped-transaction-client.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/auditservicets
+#graphify/code #graphify/EXTRACTED #community/PrismaService

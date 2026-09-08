@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "csvDocument"
+community: "AccessReportService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/csvDocument
+  - community/AccessReportService
 ---
 
 # Injectable
 
 ## Connections
-- [[EvidencePackService]] - `references` [EXTRACTED]
+- [[MeService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/csvDocument
+#graphify/code #graphify/EXTRACTED #community/AccessReportService

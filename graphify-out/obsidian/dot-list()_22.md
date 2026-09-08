@@ -1,19 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/permissions.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/candidates.service.ts"
 type: "code"
-community: "@nestjs/common"
-location: "L19"
+community: "RequirePermission"
+location: "L130"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/RequirePermission
 ---
 
 # .list()
 
 ## Connections
-- [[Get_23]] - `references` [EXTRACTED]
-- [[PermissionsController]] - `method` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-list()_21]] - `calls` [INFERRED]
+- [[CandidatesService]] - `method` [EXTRACTED]
+- [[isoDate()]] - `calls` [EXTRACTED]
+- [[recordValueFor()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

@@ -1,18 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.service.ts"
+source_file: "dpdp-platform/backend/src/modules/children/guardians.controller.ts"
 type: "code"
-community: "AccessTokenPayload"
-location: "L171"
+community: "GuardiansService"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/GuardiansService
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_1]] - `calls` [INFERRED]
-- [[CampaignsService]] - `method` [EXTRACTED]
+- [[dot-list()_3]] - `calls` [INFERRED]
+- [[CurrentActorPermissions]] - `references` [EXTRACTED]
+- [[Get_2]] - `references` [EXTRACTED]
+- [[GuardiansController]] - `method` [EXTRACTED]
+- [[ListGuardiansDto]] - `references` [EXTRACTED]
+- [[Query_1]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/GuardiansService

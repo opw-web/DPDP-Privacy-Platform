@@ -9,8 +9,8 @@ members: 3
 
 ## Members
 - [[compliance-rules.js]] - code - dpdp-platform/backend/prisma/seed/compliance-rules.js
-- [[seedComplianceRules()]] - code - dpdp-platform/backend/prisma/seed/compliance-rules.js
-- [[seedGrievanceStatutoryBaseline()]] - code - dpdp-platform/backend/prisma/seed/compliance-rules.js
+- [[seedComplianceRules()_1]] - code - dpdp-platform/backend/prisma/seed/compliance-rules.js
+- [[seedGrievanceStatutoryBaseline()_1]] - code - dpdp-platform/backend/prisma/seed/compliance-rules.js
 
 ## Live Query (requires Dataview plugin)
 

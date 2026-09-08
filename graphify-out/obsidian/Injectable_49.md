@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "MailerService"
+community: "CreateVoluntaryUndertakingDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MailerService
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # Injectable
 
 ## Connections
-- [[MailerService]] - `references` [EXTRACTED]
+- [[VoluntaryUndertakingsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MailerService
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

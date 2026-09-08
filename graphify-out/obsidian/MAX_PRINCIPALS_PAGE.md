@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principals/dto/list-principals.dto.ts"
 type: "code"
-community: "@prisma/client"
+community: "principals.service.ts"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/principalsservicets
 ---
 
 # MAX_PRINCIPALS_PAGE
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[list-principals.dto.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prisma/client
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

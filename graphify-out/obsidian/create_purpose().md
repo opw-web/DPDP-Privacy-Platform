@@ -1,18 +1,21 @@
 ---
-source_file: "scripts/evaluate-mvp1.sh"
+source_file: "demo-control/reset.sh"
 type: "code"
-community: "evaluate-mvp1.sh"
-location: "L129"
+community: "common.sh"
+location: "L214"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/evaluate-mvp1sh
+  - community/commonsh
 ---
 
 # create_purpose()
 
 ## Connections
-- [[evaluate-mvp1.sh]] - `defines` [EXTRACTED]
-- [[evaluate-mvp1.sh script]] - `calls` [EXTRACTED]
+- [[api()]] - `calls` [EXTRACTED]
+- [[json_get()]] - `calls` [EXTRACTED]
+- [[reset.sh]] - `defines` [EXTRACTED]
+- [[reset.sh script]] - `calls` [EXTRACTED]
+- [[warn()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/evaluate-mvp1sh
+#graphify/code #graphify/EXTRACTED #community/commonsh

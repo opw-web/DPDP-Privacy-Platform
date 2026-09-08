@@ -1,19 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts"
 type: "code"
-community: "SyncService"
-location: "L195"
+community: "TemplatesService"
+location: "L28"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/SyncService
+  - graphify/EXTRACTED
+  - community/TemplatesService
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_16]] - `calls` [INFERRED]
-- [[dot-triggerSync()]] - `calls` [INFERRED]
-- [[DataSourcesService]] - `method` [EXTRACTED]
+- [[dot-get()_7]] - `calls` [INFERRED]
+- [[Get_17]] - `references` [EXTRACTED]
+- [[Param_7]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[TemplatesController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/SyncService
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

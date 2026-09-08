@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/lib/auth.ts"
 type: "code"
-community: "router.tsx"
+community: "@tanstack/react-query"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/tanstack/react-query
 ---
 
 # lib/auth.ts
@@ -72,4 +72,4 @@ tags:
 - [[useEmployeeAuth()]] - `contains` [EXTRACTED]
 - [[usePrincipalAuth()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-assertConsentPurpose()]] - `calls` [EXTRACTED]
-- [[dot-create()_22]] - `calls` [INFERRED]
+- [[dot-create()_24]] - `calls` [INFERRED]
 - [[ConsentsService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/ConsentsService

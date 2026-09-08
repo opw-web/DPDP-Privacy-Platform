@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "breach.service.ts"
+community: "CreateVoluntaryUndertakingDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breachservicets
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # IsIn
 
 ## Connections
-- [[CompleteObligationDto]] - `references` [EXTRACTED]
+- [[UndertakingCommitmentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breachservicets
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

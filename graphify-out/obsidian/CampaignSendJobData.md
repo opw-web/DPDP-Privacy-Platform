@@ -12,9 +12,9 @@ tags:
 # CampaignSendJobData
 
 ## Connections
-- [[dot-constructor()_65]] - `references` [EXTRACTED]
+- [[dot-constructor()_97]] - `references` [EXTRACTED]
 - [[dot-deliverRecipient()]] - `references` [EXTRACTED]
-- [[dot-process()_9]] - `references` [EXTRACTED]
+- [[dot-process()_7]] - `references` [EXTRACTED]
 - [[breach-principal-notice-dispatch.processor.ts]] - `imports` [EXTRACTED]
 - [[campaign-send.processor.ts]] - `imports` [EXTRACTED]
 - [[campaign-send.queue.ts]] - `contains` [EXTRACTED]

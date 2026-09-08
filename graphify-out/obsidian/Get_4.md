@@ -1,19 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AccessTokenPayload"
+community: "SetMyConsentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/SetMyConsentDto
 ---
 
 # Get
 
 ## Connections
-- [[dot-get()_3]] - `references` [EXTRACTED]
-- [[dot-list()_3]] - `references` [EXTRACTED]
-- [[dot-listEligibleFields()]] - `references` [EXTRACTED]
-- [[dot-preview()]] - `references` [EXTRACTED]
+- [[dot-list()_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/SetMyConsentDto

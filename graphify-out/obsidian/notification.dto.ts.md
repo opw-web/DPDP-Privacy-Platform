@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
-- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient]] - `imports_from` [EXTRACTED]
 - [[MarkAllReadResponseDto]] - `contains` [EXTRACTED]
-- [[NotificationDto]] - `contains` [EXTRACTED]
+- [[NotificationDto_1]] - `contains` [EXTRACTED]
 - [[NotificationListResponseDto]] - `contains` [EXTRACTED]
 - [[notifications.controller.ts]] - `imports_from` [EXTRACTED]
 

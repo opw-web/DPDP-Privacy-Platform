@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/retention.controller.ts"
 type: "code"
-community: "@prisma/client"
+community: "RequirePermission"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/RequirePermission
 ---
 
 # ERASURE_STATE_VALUES
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[retentionretention.controller.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prisma/client
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

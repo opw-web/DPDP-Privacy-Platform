@@ -1,18 +1,17 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
-type: "concept"
-community: "token.service.ts"
+type: "code"
+community: "dependencies"
 location: "L51"
 tags:
-  - graphify/concept
+  - graphify/code
   - graphify/EXTRACTED
-  - community/tokenservicets
+  - community/dependencies
 ---
 
 # reflect-metadata
 
 ## Connections
-- [[backendpackage.json]] - `imports` [EXTRACTED]
-- [[env.validation.spec.ts]] - `imports_from` [EXTRACTED]
+- [[dependencies_1]] - `contains` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/tokenservicets
+#graphify/code #graphify/EXTRACTED #community/dependencies

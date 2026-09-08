@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CandidatesController"
+community: "ChangeStatusDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CandidatesController
+  - community/ChangeStatusDto
 ---
 
 # IsEnum
 
 ## Connections
-- [[ListMatchCandidatesQueryDto]] - `references` [EXTRACTED]
+- [[ChangeStatusDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CandidatesController
+#graphify/code #graphify/EXTRACTED #community/ChangeStatusDto

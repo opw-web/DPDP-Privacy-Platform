@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/security-measures.service.ts"
 type: "code"
-community: "security-measures.service.ts"
+community: "CreateSecurityMeasureDto"
 location: "L172"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/security-measuresservicets
+  - community/CreateSecurityMeasureDto
 ---
 
 # .update()
@@ -19,4 +19,4 @@ tags:
 - [[SecurityMeasuresService]] - `method` [EXTRACTED]
 - [[UpdateSecurityMeasureDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/security-measuresservicets
+#graphify/code #graphify/EXTRACTED #community/CreateSecurityMeasureDto

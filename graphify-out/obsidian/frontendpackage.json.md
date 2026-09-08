@@ -12,7 +12,7 @@ tags:
 # frontend/package.json
 
 ## Connections
-- [[@eslintjs]] - `imports` [EXTRACTED]
+- [[@eslintjs_1]] - `imports` [EXTRACTED]
 - [[@hookformresolvers_1]] - `imports` [EXTRACTED]
 - [[@radix-uireact-dialog_1]] - `imports` [EXTRACTED]
 - [[@radix-uireact-label_1]] - `imports` [EXTRACTED]
@@ -38,9 +38,9 @@ tags:
 - [[description]] - `contains` [EXTRACTED]
 - [[devDependencies_2]] - `contains` [EXTRACTED]
 - [[eslint]] - `imports` [EXTRACTED]
-- [[eslint-plugin-react-hooks]] - `imports` [EXTRACTED]
-- [[eslint-plugin-react-refresh]] - `imports` [EXTRACTED]
-- [[globals]] - `imports` [EXTRACTED]
+- [[eslint-plugin-react-hooks_1]] - `imports` [EXTRACTED]
+- [[eslint-plugin-react-refresh_1]] - `imports` [EXTRACTED]
+- [[globals_1]] - `imports` [EXTRACTED]
 - [[jsdom]] - `imports` [EXTRACTED]
 - [[license]] - `contains` [EXTRACTED]
 - [[lucide-react_1]] - `imports` [EXTRACTED]
@@ -56,9 +56,9 @@ tags:
 - [[sonner_1]] - `imports` [EXTRACTED]
 - [[tailwind-merge_1]] - `imports` [EXTRACTED]
 - [[tailwindcss]] - `imports` [EXTRACTED]
-- [[type_2]] - `contains` [EXTRACTED]
+- [[type_4]] - `contains` [EXTRACTED]
 - [[typescript]] - `imports` [EXTRACTED]
-- [[typescript-eslint]] - `imports` [EXTRACTED]
+- [[typescript-eslint_1]] - `imports` [EXTRACTED]
 - [[version]] - `contains` [EXTRACTED]
 - [[vite]] - `imports` [EXTRACTED]
 - [[vitest_1]] - `imports` [EXTRACTED]

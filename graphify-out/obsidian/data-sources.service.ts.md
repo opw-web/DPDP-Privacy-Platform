@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
 type: "code"
-community: "audit.service.ts"
+community: "data-sources.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/auditservicets
+  - community/data-sourcesservicets
 ---
 
 # data-sources.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@prismaclient]] - `imports_from` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[CONNECTOR_SOURCE_SELECT]] - `contains` [EXTRACTED]
 - [[Connector]] - `imports` [EXTRACTED]
@@ -41,7 +41,7 @@ tags:
 - [[data-sources.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[data-sources.module.ts]] - `imports_from` [EXTRACTED]
 - [[duplicateNameMessage()]] - `contains` [EXTRACTED]
-- [[isUniqueConstraintViolation()_2]] - `contains` [EXTRACTED]
+- [[isUniqueConstraintViolation()_1]] - `contains` [EXTRACTED]
 - [[mappings.service.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[scoped-transaction-client.ts]] - `imports_from` [EXTRACTED]
@@ -50,4 +50,4 @@ tags:
 - [[sync.service.ts]] - `imports_from` [EXTRACTED]
 - [[update-data-source.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/auditservicets
+#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets

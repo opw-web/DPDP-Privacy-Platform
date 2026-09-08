@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/security-measures.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/retention.service.ts"
 type: "code"
-community: "security-measures.service.ts"
-location: "L69"
+community: "retention.service.ts"
+location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/security-measuresservicets
+  - community/retentionservicets
 ---
 
 # .constructor()
 
 ## Connections
 - [[AuditService]] - `references` [EXTRACTED]
-- [[SecurityMeasuresService]] - `method` [EXTRACTED]
+- [[RetentionService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/security-measuresservicets
+#graphify/code #graphify/EXTRACTED #community/retentionservicets

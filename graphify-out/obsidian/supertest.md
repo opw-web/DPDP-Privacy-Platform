@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "supertest"
+community: "PrismaService"
 location: "L74"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/supertest
+  - community/PrismaService
 ---
 
 # supertest
@@ -50,4 +50,4 @@ tags:
 - [[sync.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[templates.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/supertest
+#graphify/concept #graphify/EXTRACTED #community/PrismaService

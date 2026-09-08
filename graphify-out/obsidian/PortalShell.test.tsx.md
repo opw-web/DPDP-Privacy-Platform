@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/components/PortalShell.test.tsx"
 type: "code"
-community: "DateTime.tsx"
+community: "@tanstack/react-query"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DateTimetsx
+  - community/tanstack/react-query
 ---
 
 # PortalShell.test.tsx
@@ -18,9 +18,9 @@ tags:
 - [[DateTime.tsx]] - `imports_from` [EXTRACTED]
 - [[PortalShell()]] - `imports` [EXTRACTED]
 - [[PortalShell.tsx]] - `imports_from` [EXTRACTED]
-- [[jsonResponse()_3]] - `contains` [EXTRACTED]
+- [[jsonResponse()_22]] - `contains` [EXTRACTED]
 - [[react-router-dom_1]] - `imports_from` [EXTRACTED]
 - [[renderThroughPortalShell()]] - `contains` [EXTRACTED]
 - [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DateTimetsx
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

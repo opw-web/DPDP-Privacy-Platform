@@ -12,10 +12,10 @@ tags:
 # .createAlgorithm()
 
 ## Connections
-- [[dot-create()_4]] - `calls` [INFERRED]
-- [[Body_17]] - `references` [EXTRACTED]
+- [[dot-create()_1]] - `calls` [INFERRED]
+- [[Body_3]] - `references` [EXTRACTED]
 - [[CreateAlgorithmEntryDto]] - `references` [EXTRACTED]
-- [[Post_5]] - `references` [EXTRACTED]
+- [[Post_7]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[SdfController]] - `method` [EXTRACTED]
 

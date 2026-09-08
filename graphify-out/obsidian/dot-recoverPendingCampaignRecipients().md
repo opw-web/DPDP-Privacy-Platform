@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/breach-principal-notice-dispatch.processor.ts"
 type: "code"
-community: "breach-principal-notice-dispatch.queue.ts"
+community: "queues.module.ts"
 location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breach-principal-notice-dispatchqueuets
+  - community/queuesmodulets
 ---
 
 # .recoverPendingCampaignRecipients()
 
 ## Connections
-- [[dot-process()_5]] - `calls` [EXTRACTED]
+- [[dot-process()_8]] - `calls` [EXTRACTED]
 - [[BreachPrincipalNoticeDispatchProcessor]] - `method` [EXTRACTED]
 - [[campaignSendJobId()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breach-principal-notice-dispatchqueuets
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

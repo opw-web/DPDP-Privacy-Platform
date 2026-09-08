@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/PrincipalLoginPage.tsx"
 type: "code"
-community: "react"
+community: "api-client.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/api-clientts
 ---
 
 # PrincipalLoginPage.tsx
@@ -43,4 +43,4 @@ tags:
 - [[usePrincipalAuth()]] - `imports` [EXTRACTED]
 - [[zod_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/api-clientts

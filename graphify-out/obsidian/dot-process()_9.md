@@ -1,19 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/campaign-send.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/sync.processor.ts"
 type: "code"
-community: "CampaignsService"
-location: "L72"
+community: "queues.module.ts"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampaignsService
+  - community/queuesmodulets
 ---
 
 # .process()
 
 ## Connections
-- [[dot-deliverRecipient()]] - `calls` [INFERRED]
-- [[CampaignSendJobData]] - `references` [EXTRACTED]
-- [[CampaignSendProcessor]] - `method` [EXTRACTED]
+- [[dot-run()]] - `calls` [INFERRED]
+- [[SyncJobData]] - `references` [EXTRACTED]
+- [[SyncProcessor]] - `method` [EXTRACTED]
+- [[SyncRunSummary]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampaignsService
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/common/crypto/crypto.service.ts"
+source_file: "dpdp-platform/frontend/src/lib/api-client.ts"
 type: "code"
-community: "CryptoService"
-location: "L21"
+community: "react"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CryptoService
+  - community/react
 ---
 
 # .constructor()
 
 ## Connections
-- [[InvalidEncryptionKeyError]] - `method` [EXTRACTED]
+- [[ApiError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CryptoService
+#graphify/code #graphify/EXTRACTED #community/react

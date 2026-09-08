@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/messaging/audience/dto/preview-audience.dto.ts"
 type: "code"
-community: "@prisma/client"
+community: "@nestjs/swagger"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/nestjs/swagger
 ---
 
 # preview-audience.dto.ts
@@ -18,4 +18,4 @@ tags:
 - [[audience.service.ts]] - `imports_from` [EXTRACTED]
 - [[class-validator_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prisma/client
+#graphify/code #graphify/EXTRACTED #community/nestjs/swagger

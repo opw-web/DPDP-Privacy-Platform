@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/linking.service.ts"
 type: "code"
-community: "EmployeeAuthController"
-location: "L30"
+community: "ScopedTransactionClient"
+location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeeAuthController
+  - community/ScopedTransactionClient
 ---
 
 # .constructor()
 
 ## Connections
-- [[EmployeeAuthController]] - `method` [EXTRACTED]
-- [[EmployeeAuthService]] - `references` [EXTRACTED]
+- [[IdentifierOwnershipConflictError_1]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

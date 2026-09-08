@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-list()_49]] - `calls` [INFERRED]
-- [[Get_19]] - `references` [EXTRACTED]
+- [[Get_18]] - `references` [EXTRACTED]
 - [[ListRequestsDto]] - `references` [EXTRACTED]
 - [[Query_9]] - `references` [EXTRACTED]
 - [[RequestsController]] - `method` [EXTRACTED]

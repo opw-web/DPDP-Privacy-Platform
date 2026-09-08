@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/recipients.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/recipients.controller.ts"
 type: "code"
 community: "CreateRecipientDto"
-location: "L60"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,9 @@ tags:
 # .list()
 
 ## Connections
-- [[dot-list()_41]] - `calls` [INFERRED]
-- [[RecipientsService]] - `method` [EXTRACTED]
+- [[dot-list()_43]] - `calls` [INFERRED]
+- [[Get_36]] - `references` [EXTRACTED]
+- [[RecipientsController]] - `method` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CreateRecipientDto

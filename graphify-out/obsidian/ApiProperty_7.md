@@ -11,6 +11,6 @@ tags:
 # ApiProperty
 
 ## Connections
-- [[AddMeRequestCommentDto]] - `references` [EXTRACTED]
+- [[MeProfileTimezoneDto]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Public

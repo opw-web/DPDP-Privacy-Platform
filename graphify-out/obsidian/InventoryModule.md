@@ -12,7 +12,7 @@ tags:
 # InventoryModule
 
 ## Connections
-- [[Module_34]] - `references` [EXTRACTED]
+- [[Module_17]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[evidence.module.ts]] - `imports` [EXTRACTED]
 - [[inventory.module.ts]] - `contains` [EXTRACTED]

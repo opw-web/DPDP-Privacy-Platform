@@ -12,7 +12,7 @@ tags:
 # AuditReadModule
 
 ## Connections
-- [[Module_32]] - `references` [EXTRACTED]
+- [[Module_6]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[audit-read.module.ts]] - `contains` [EXTRACTED]
 - [[evidence.module.ts]] - `imports` [EXTRACTED]

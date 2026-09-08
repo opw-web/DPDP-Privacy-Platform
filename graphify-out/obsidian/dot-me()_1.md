@@ -18,6 +18,6 @@ tags:
 - [[PrincipalActor]] - `references` [EXTRACTED]
 - [[PrincipalAuthController]] - `method` [EXTRACTED]
 - [[Public()]] - `references` [EXTRACTED]
-- [[UseGuards]] - `references` [EXTRACTED]
+- [[UseGuards_1]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Public

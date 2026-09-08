@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/principal-auth.service.ts"
 type: "code"
-community: "PrincipalAuthService"
+community: "TokenService"
 location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalAuthService
+  - community/TokenService
 ---
 
 # .storeFor()
@@ -16,4 +16,4 @@ tags:
 - [[PrincipalAuthService]] - `method` [EXTRACTED]
 - [[TenantStore]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalAuthService
+#graphify/code #graphify/EXTRACTED #community/TokenService

@@ -1,32 +1,17 @@
 ---
 type: community
-members: 40
+members: 25
 ---
 
 # compile-audience.ts
 
-**Members:** 40 nodes
+**Members:** 25 nodes
 
 ## Members
 - [[dot-constructor()_157]] - code - dpdp-platform/backend/src/modules/messaging/audience/audience-filter.error.ts
-- [[AUDIENCE_FILTER_FIELDS]] - code - dpdp-platform/backend/src/modules/messaging/audience/audience-filter.types.ts
-- [[AUDIENCE_FILTER_OPERATORS]] - code - dpdp-platform/backend/src/modules/messaging/audience/audience-filter.types.ts
-- [[AudienceFilter_1]] - code - dpdp-platform/backend/src/modules/messaging/audience/audience-filter.types.ts
 - [[AudienceFilterError]] - code - dpdp-platform/backend/src/modules/messaging/audience/audience-filter.error.ts
-- [[AudienceFilterField]] - code - dpdp-platform/backend/src/modules/messaging/audience/audience-filter.types.ts
-- [[AudienceFilterGroup]] - code - dpdp-platform/backend/src/modules/messaging/audience/audience-filter.types.ts
-- [[AudienceFilterNode]] - code - dpdp-platform/backend/src/modules/messaging/audience/audience-filter.types.ts
-- [[AudienceFilterOperator]] - code - dpdp-platform/backend/src/modules/messaging/audience/audience-filter.types.ts
-- [[AudienceFilterRule]] - code - dpdp-platform/backend/src/modules/messaging/audience/audience-filter.types.ts
-- [[AudiencePreviewResult]] - code - dpdp-platform/backend/src/modules/messaging/audience/audience.service.ts
-- [[CHILD_LIKE_AGE_STATUSES_2]] - code - dpdp-platform/backend/src/modules/messaging/audience/audience.service.ts
-- [[audience-filter.error.ts]] - code - dpdp-platform/backend/src/modules/messaging/audience/audience-filter.error.ts
-- [[audience-filter.types.ts]] - code - dpdp-platform/backend/src/modules/messaging/audience/audience-filter.types.ts
-- [[audience.service.ts]] - code - dpdp-platform/backend/src/modules/messaging/audience/audience.service.ts
-- [[compile-audience.spec.ts]] - code - dpdp-platform/backend/src/modules/messaging/audience/compile-audience.spec.ts
 - [[compile-audience.ts]] - code - dpdp-platform/backend/src/modules/messaging/audience/compile-audience.ts
 - [[compileAgeStatus()]] - code - dpdp-platform/backend/src/modules/messaging/audience/compile-audience.ts
-- [[compileAudience()]] - code - dpdp-platform/backend/src/modules/messaging/audience/compile-audience.ts
 - [[compileBreachAffected()]] - code - dpdp-platform/backend/src/modules/messaging/audience/compile-audience.ts
 - [[compileCanonicalFieldStringValue()]] - code - dpdp-platform/backend/src/modules/messaging/audience/compile-audience.ts
 - [[compileConsent()]] - code - dpdp-platform/backend/src/modules/messaging/audience/compile-audience.ts
@@ -57,20 +42,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_campaigns.service.ts]]
-- 4 edges to [[_COMMUNITY_breach.service.ts]]
-- 3 edges to [[_COMMUNITY_PreviewAudienceDto]]
-- 3 edges to [[_COMMUNITY_@prismaclient]]
-- 2 edges to [[_COMMUNITY_MaskingService]]
-- 2 edges to [[_COMMUNITY_PrismaService]]
-- 2 edges to [[_COMMUNITY_@nestjscommon]]
-- 1 edge to [[_COMMUNITY_CampaignsService]]
-- 1 edge to [[_COMMUNITY_dot-record]]
-- 1 edge to [[_COMMUNITY_app.module.ts]]
+- 14 edges to [[_COMMUNITY_audience.service.ts]]
+- 2 edges to [[_COMMUNITY_@nestjsswagger]]
+- 2 edges to [[_COMMUNITY_campaigns.service.ts]]
+- 1 edge to [[_COMMUNITY_@prismaclient]]
 
 ## Top bridge nodes
-- [[audience.service.ts]] - degree 19, connects to 6 communities
-- [[compileAudience()]] - degree 9, connects to 5 communities
-- [[compile-audience.ts]] - degree 36, connects to 3 communities
-- [[AudienceFilterError]] - degree 18, connects to 2 communities
-- [[audience-filter.error.ts]] - degree 6, connects to 2 communities
+- [[compile-audience.ts]] - degree 36, connects to 4 communities
+- [[AudienceFilterError]] - degree 18, connects to 3 communities
+- [[compileGroup()]] - degree 5, connects to 1 community

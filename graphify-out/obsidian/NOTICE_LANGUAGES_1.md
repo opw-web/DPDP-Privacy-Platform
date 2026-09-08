@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/notices/types.ts"
 type: "code"
-community: "react"
+community: "MessagingCampaignBuilderPage.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/MessagingCampaignBuilderPagetsx
 ---
 
 # NOTICE_LANGUAGES
@@ -15,4 +15,4 @@ tags:
 - [[NoticeBuilderPage.tsx]] - `imports` [EXTRACTED]
 - [[noticestypes.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/MessagingCampaignBuilderPagetsx

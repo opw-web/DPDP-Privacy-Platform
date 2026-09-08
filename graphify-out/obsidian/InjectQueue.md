@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "schedule-reconciliation.service.ts"
+community: "SyncQueueService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/schedule-reconciliationservicets
+  - community/SyncQueueService
 ---
 
 # InjectQueue
 
 ## Connections
-- [[dot-constructor()_27]] - `references` [EXTRACTED]
+- [[dot-constructor()_72]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/schedule-reconciliationservicets
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

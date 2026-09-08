@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EmployeeAuthService"
+community: "audit-chain.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeeAuthService
+  - community/audit-chainservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[EmployeeAuthService]] - `references` [EXTRACTED]
+- [[AuditChainService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeeAuthService
+#graphify/code #graphify/EXTRACTED #community/audit-chainservicets

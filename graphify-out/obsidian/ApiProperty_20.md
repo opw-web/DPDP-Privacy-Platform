@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateNoticeDto"
+community: "VerifyIdentityDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateNoticeDto
+  - community/VerifyIdentityDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateNoticeDto]] - `references` [EXTRACTED]
+- [[VerifyIdentityDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateNoticeDto
+#graphify/code #graphify/EXTRACTED #community/VerifyIdentityDto

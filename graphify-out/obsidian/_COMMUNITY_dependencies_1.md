@@ -8,14 +8,14 @@ members: 27
 **Members:** 27 nodes
 
 ## Members
-- [[@nestjsbullmq_1]] - code - dpdp-platform/backend/package.json
-- [[@nestjscommon]] - code - dpdp-platform/backend/package.json
-- [[@nestjsconfig]] - code - dpdp-platform/backend/package.json
-- [[@nestjscore]] - code - dpdp-platform/backend/package.json
+- [[@nestjsbullmq]] - code - dpdp-platform/backend/package.json
+- [[@nestjscommon_1]] - code - dpdp-platform/backend/package.json
+- [[@nestjsconfig_1]] - code - dpdp-platform/backend/package.json
+- [[@nestjscore_1]] - code - dpdp-platform/backend/package.json
 - [[@nestjsplatform-express]] - code - dpdp-platform/backend/package.json
 - [[@nestjsswagger]] - code - dpdp-platform/backend/package.json
-- [[@prismaclient]] - code - dpdp-platform/backend/package.json
-- [[argon2]] - code - dpdp-platform/backend/package.json
+- [[@prismaclient_1]] - code - dpdp-platform/backend/package.json
+- [[argon2_1]] - code - dpdp-platform/backend/package.json
 - [[bullmq]] - code - dpdp-platform/backend/package.json
 - [[class-transformer]] - code - dpdp-platform/backend/package.json
 - [[class-validator]] - code - dpdp-platform/backend/package.json
@@ -24,16 +24,16 @@ members: 27
 - [[date-fns-tz_2]] - code - dpdp-platform/backend/package.json
 - [[dependencies_1]] - code - dpdp-platform/backend/package.json
 - [[handlebars]] - code - dpdp-platform/backend/package.json
-- [[ioredis]] - code - dpdp-platform/backend/package.json
+- [[ioredis_1]] - code - dpdp-platform/backend/package.json
 - [[jsonwebtoken]] - code - dpdp-platform/backend/package.json
-- [[nestjs-pino]] - code - dpdp-platform/backend/package.json
+- [[nestjs-pino_1]] - code - dpdp-platform/backend/package.json
 - [[nodemailer]] - code - dpdp-platform/backend/package.json
 - [[pdfkit_2]] - code - dpdp-platform/backend/package.json
 - [[pg]] - code - dpdp-platform/backend/package.json
 - [[pino-http]] - code - dpdp-platform/backend/package.json
 - [[pino-pretty]] - code - dpdp-platform/backend/package.json
 - [[prisma]] - code - dpdp-platform/backend/package.json
-- [[reflect-metadata]] - code - dpdp-platform/backend/package.json
+- [[reflect-metadata_1]] - code - dpdp-platform/backend/package.json
 - [[rxjs]] - code - dpdp-platform/backend/package.json
 
 ## Live Query (requires Dataview plugin)

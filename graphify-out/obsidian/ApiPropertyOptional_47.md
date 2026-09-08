@@ -11,6 +11,6 @@ tags:
 # ApiPropertyOptional
 
 ## Connections
-- [[CreateRecipientDto]] - `references` [EXTRACTED]
+- [[UpdateRecipientDto]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CreateRecipientDto

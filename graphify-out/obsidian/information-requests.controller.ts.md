@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/board/information-requests.controller.ts"
 type: "code"
-community: "@prisma/client"
+community: "@nestjs/swagger"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/nestjs/swagger
 ---
 
 # information-requests.controller.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[CreateInformationRequestDto]] - `imports` [EXTRACTED]
 - [[InformationRequestsController]] - `contains` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[require-permission.decorator.ts]] - `imports_from` [EXTRACTED]
 - [[update-information-request.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prisma/client
+#graphify/code #graphify/EXTRACTED #community/nestjs/swagger

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/health-degraded.e2e-spec.ts"
 type: "code"
-community: "sync.queue.ts"
+community: "queues.module.ts"
 location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/syncqueuets
+  - community/queuesmodulets
 ---
 
 # closeQueueAndWorker()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[health-degraded.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/syncqueuets
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

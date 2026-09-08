@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/evidence.module.ts"
 type: "code"
-community: "app.module.ts"
+community: "@nestjs/common"
 location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/appmodulets
+  - community/nestjs/common
 ---
 
 # EvidenceModule
@@ -19,4 +19,4 @@ tags:
 - [[queues.module.ts]] - `imports` [EXTRACTED]
 - [[requests.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/appmodulets
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

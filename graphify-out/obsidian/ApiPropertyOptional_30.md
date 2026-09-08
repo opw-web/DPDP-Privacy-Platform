@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "requests.service.ts"
+community: "SdfAssessmentService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/requestsservicets
+  - community/SdfAssessmentService
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[EscalateRequestDto]] - `references` [EXTRACTED]
+- [[CompleteSdfAssessmentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/requestsservicets
+#graphify/code #graphify/EXTRACTED #community/SdfAssessmentService

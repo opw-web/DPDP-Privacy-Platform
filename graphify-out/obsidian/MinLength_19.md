@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateNoticeDto"
+community: "CreatePurposeDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateNoticeDto
+  - community/CreatePurposeDto
 ---
 
 # MinLength
 
 ## Connections
-- [[CreateNoticeDto]] - `references` [EXTRACTED]
+- [[CreatePurposeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateNoticeDto
+#graphify/code #graphify/EXTRACTED #community/CreatePurposeDto

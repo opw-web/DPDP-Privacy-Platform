@@ -12,7 +12,7 @@ tags:
 # PageCapExceededError
 
 ## Connections
-- [[dot-constructor()_123]] - `method` [EXTRACTED]
+- [[dot-constructor()_122]] - `method` [EXTRACTED]
 - [[dot-fetchPage()]] - `calls` [EXTRACTED]
 - [[rest-api.connector.spec.ts]] - `imports` [EXTRACTED]
 - [[rest-api.connector.ts]] - `contains` [EXTRACTED]

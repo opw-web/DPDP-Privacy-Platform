@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.ts"
 type: "code"
-community: "purposes.service.ts"
+community: "PurposesService"
 location: "L103"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposesservicets
+  - community/PurposesService
 ---
 
 # .validateBasis()
 
 ## Connections
-- [[dot-create()_7]] - `calls` [EXTRACTED]
-- [[dot-update()_3]] - `calls` [EXTRACTED]
+- [[dot-create()_3]] - `calls` [EXTRACTED]
+- [[dot-update()_2]] - `calls` [EXTRACTED]
 - [[PurposesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposesservicets
+#graphify/code #graphify/EXTRACTED #community/PurposesService

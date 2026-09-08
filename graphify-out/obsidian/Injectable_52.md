@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PreviewAudienceDto"
+community: "EmployeesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PreviewAudienceDto
+  - community/EmployeesService
 ---
 
 # Injectable
 
 ## Connections
-- [[AudienceService]] - `references` [EXTRACTED]
+- [[EmployeesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PreviewAudienceDto
+#graphify/code #graphify/EXTRACTED #community/EmployeesService

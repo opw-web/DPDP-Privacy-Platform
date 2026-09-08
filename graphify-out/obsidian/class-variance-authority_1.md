@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/package.json"
 type: "concept"
-community: "react-router-dom"
+community: "api-client.ts"
 location: "L27"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/react-router-dom
+  - community/api-clientts
 ---
 
 # class-variance-authority
@@ -16,4 +16,4 @@ tags:
 - [[button.tsx]] - `imports_from` [EXTRACTED]
 - [[frontendpackage.json]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/react-router-dom
+#graphify/concept #graphify/EXTRACTED #community/api-clientts

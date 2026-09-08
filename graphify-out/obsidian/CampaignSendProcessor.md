@@ -12,9 +12,9 @@ tags:
 # CampaignSendProcessor
 
 ## Connections
-- [[dot-constructor()_103]] - `method` [EXTRACTED]
-- [[dot-process()_9]] - `method` [EXTRACTED]
-- [[Processor_9]] - `references` [EXTRACTED]
+- [[dot-constructor()_98]] - `method` [EXTRACTED]
+- [[dot-process()_7]] - `method` [EXTRACTED]
+- [[Processor_7]] - `references` [EXTRACTED]
 - [[campaign-send.processor.ts]] - `contains` [EXTRACTED]
 - [[campaigns.module.ts]] - `imports` [EXTRACTED]
 

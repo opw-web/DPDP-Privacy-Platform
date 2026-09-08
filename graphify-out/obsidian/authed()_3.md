@@ -1,17 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/test/retention.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/registers.e2e-spec.ts"
 type: "code"
-community: "PrismaService"
-location: "L281"
+community: "AppModule"
+location: "L127"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/AppModule
 ---
 
 # authed()
 
 ## Connections
-- [[retention.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[createDataSource()_4]] - `calls` [EXTRACTED]
+- [[createPurpose()_2]] - `calls` [EXTRACTED]
+- [[createRecipient()]] - `calls` [EXTRACTED]
+- [[registers.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/AppModule

@@ -1,8 +1,8 @@
 ---
-source_file: "demo-control/reset.sh"
+source_file: "scripts/evaluate-mvp1.sh"
 type: "code"
 community: "common.sh"
-location: "L244"
+location: "L161"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,11 +12,8 @@ tags:
 # sync_and_wait()
 
 ## Connections
-- [[api()]] - `calls` [EXTRACTED]
-- [[ok()]] - `calls` [EXTRACTED]
-- [[reset.sh]] - `defines` [EXTRACTED]
-- [[reset.sh script]] - `calls` [EXTRACTED]
-- [[say()]] - `calls` [EXTRACTED]
-- [[warn()]] - `calls` [EXTRACTED]
+- [[auth()]] - `calls` [EXTRACTED]
+- [[evaluate-mvp1.sh]] - `defines` [EXTRACTED]
+- [[evaluate-mvp1.sh script]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/commonsh

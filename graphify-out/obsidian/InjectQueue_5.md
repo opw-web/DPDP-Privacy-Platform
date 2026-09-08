@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "BootRegistrationRegistry"
+community: "queues.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BootRegistrationRegistry
+  - community/queuesmodulets
 ---
 
 # InjectQueue
 
 ## Connections
-- [[dot-constructor()_148]] - `references` [EXTRACTED]
+- [[dot-constructor()_102]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BootRegistrationRegistry
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

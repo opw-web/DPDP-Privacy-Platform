@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
+community: "@nestjs/swagger"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/nestjs/swagger
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[UndertakingCommitmentDto]] - `references` [EXTRACTED]
+- [[DataSourcePurposeResponseDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/nestjs/swagger

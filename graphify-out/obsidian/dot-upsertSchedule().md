@@ -12,7 +12,7 @@ tags:
 # .upsertSchedule()
 
 ## Connections
-- [[dot-reconcile()_1]] - `calls` [INFERRED]
+- [[dot-reconcile()]] - `calls` [INFERRED]
 - [[dot-scheduleSync()]] - `calls` [INFERRED]
 - [[SyncQueueService]] - `method` [EXTRACTED]
 - [[syncSchedulerId()]] - `calls` [EXTRACTED]

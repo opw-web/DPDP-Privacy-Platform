@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principals/principals.service.ts"
 type: "code"
-community: "PrincipalsService"
+community: "principals.service.ts"
 location: "L154"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalsService
+  - community/principalsservicets
 ---
 
 # .getDetail()
@@ -17,4 +17,4 @@ tags:
 - [[dot-recordPersonalDataViewed()]] - `calls` [INFERRED]
 - [[PrincipalsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalsService
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

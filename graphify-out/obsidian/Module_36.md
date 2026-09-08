@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AppModule"
+community: "queues.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AppModule
+  - community/queuesmodulets
 ---
 
 # Module
 
 ## Connections
-- [[AppModule]] - `references` [EXTRACTED]
+- [[CampaignsModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AppModule
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

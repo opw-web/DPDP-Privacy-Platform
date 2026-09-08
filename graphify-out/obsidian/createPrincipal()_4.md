@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/requests.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/mvp2-schema-constraints.e2e-spec.ts"
 type: "code"
-community: "supertest"
-location: "L93"
+community: "PrismaService"
+location: "L59"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/supertest
+  - community/PrismaService
 ---
 
 # createPrincipal()
 
 ## Connections
-- [[requests.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[mvp2-schema-constraints.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/supertest
+#graphify/code #graphify/EXTRACTED #community/PrismaService

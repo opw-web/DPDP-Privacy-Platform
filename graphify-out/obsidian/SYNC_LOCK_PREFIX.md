@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/sync-lock.service.ts"
 type: "code"
-community: "token.service.ts"
+community: "employee-auth.controller.ts"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tokenservicets
+  - community/employee-authcontrollerts
 ---
 
 # SYNC_LOCK_PREFIX
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sync-lock.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tokenservicets
+#graphify/code #graphify/EXTRACTED #community/employee-authcontrollerts

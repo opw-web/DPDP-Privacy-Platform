@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "DataSourcesService"
+community: "DataSourcesController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesService
+  - community/DataSourcesController
 ---
 
 # Controller
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[DataSourcesController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesService
+#graphify/code #graphify/EXTRACTED #community/DataSourcesController

@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/consent-backfill.queue.ts"
 type: "code"
-community: "consent-backfill.queue.ts"
+community: "queues.module.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/consent-backfillqueuets
+  - community/queuesmodulets
 ---
 
 # consent-backfill.queue.ts
 
 ## Connections
-- [[@nestjsbullmq]] - `imports_from` [EXTRACTED]
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsbullmq_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[BootRegistrationRegistry]] - `imports` [EXTRACTED]
 - [[CONSENT_BACKFILL_QUEUE_NAME]] - `contains` [EXTRACTED]
 - [[CONSENT_BACKFILL_SCHEDULE_TRIGGERED_BY]] - `contains` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[mvp2-schedules.ts]] - `imports_from` [EXTRACTED]
 - [[queues.module.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/consent-backfillqueuets
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

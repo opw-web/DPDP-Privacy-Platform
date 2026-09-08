@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "@nestjs/common"
+community: "CampaignsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/CampaignsService
 ---
 
 # Injectable
 
 ## Connections
-- [[RopaExportService]] - `references` [EXTRACTED]
+- [[CampaignsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/CampaignsService

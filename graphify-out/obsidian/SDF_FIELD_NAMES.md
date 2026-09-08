@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/organizations/organizations.service.ts"
 type: "code"
-community: "PrismaService"
+community: "@prisma/client"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/prisma/client
 ---
 
 # SDF_FIELD_NAMES
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[organizations.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/prisma/client

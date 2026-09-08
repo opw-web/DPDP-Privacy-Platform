@@ -3357,3 +3357,5 @@ _Earlier entries archived to .claude/journal/archive/JOURNAL-2026-08.md._
 **Why:** commit and push everything
 
 - `17:37` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git status --short | wc -l && echo "--- untracked:" && git status --sho...`
+- `17:37` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git add -A -- README.md JOURNAL.md docs/demo-runbook && git status --sh...`
+- `17:37` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git commit -q -F - <<'MSG' docs(guide): start the client guide at the u...`

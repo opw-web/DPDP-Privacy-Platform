@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "@nestjs/common"
+community: "normalization.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/normalizationservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[AuditExportService]] - `references` [EXTRACTED]
+- [[NormalizationService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/normalizationservicets

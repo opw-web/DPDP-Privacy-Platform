@@ -1,20 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/consent-backfill.queue.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
 type: "code"
-community: "BootRegistrationRegistry"
-location: "L70"
+community: "RestApiConnector"
+location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BootRegistrationRegistry
+  - community/RestApiConnector
 ---
 
 # .constructor()
 
 ## Connections
-- [[dot-register()]] - `calls` [INFERRED]
-- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
-- [[ConsentBackfillQueueService]] - `method` [EXTRACTED]
-- [[InjectQueue_5]] - `references` [EXTRACTED]
+- [[InvalidCursorError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BootRegistrationRegistry
+#graphify/code #graphify/EXTRACTED #community/RestApiConnector

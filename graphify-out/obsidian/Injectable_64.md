@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sync-pipeline.service.ts"
+community: "queues.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sync-pipelineservicets
+  - community/queuesmodulets
 ---
 
 # Injectable
 
 ## Connections
-- [[SyncPipelineService]] - `references` [EXTRACTED]
+- [[SdfCycleScanQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sync-pipelineservicets
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

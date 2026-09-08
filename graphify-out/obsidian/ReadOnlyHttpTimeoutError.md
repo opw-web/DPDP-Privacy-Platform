@@ -12,7 +12,7 @@ tags:
 # ReadOnlyHttpTimeoutError
 
 ## Connections
-- [[dot-constructor()_147]] - `method` [EXTRACTED]
+- [[dot-constructor()_156]] - `method` [EXTRACTED]
 - [[dot-performRequest()]] - `calls` [EXTRACTED]
 - [[read-only-http.client.spec.ts]] - `imports` [EXTRACTED]
 - [[read-only-http.client.ts]] - `contains` [EXTRACTED]

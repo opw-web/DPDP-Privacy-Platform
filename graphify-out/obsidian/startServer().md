@@ -1,12 +1,12 @@
 ---
-source_file: "dpdp-platform/backend/test/sync.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/step6-conflict-acceptance.e2e-spec.ts"
 type: "code"
-community: "sync.e2e-spec.ts"
-location: "L153"
+community: "MockHttpServer"
+location: "L156"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/synce2e-spects
+  - community/MockHttpServer
 ---
 
 # startServer()
@@ -15,6 +15,6 @@ tags:
 - [[dot-listen()]] - `calls` [INFERRED]
 - [[MockHttpServer]] - `calls` [EXTRACTED]
 - [[pagedHandler()]] - `calls` [EXTRACTED]
-- [[sync.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[step6-conflict-acceptance.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/synce2e-spects
+#graphify/code #graphify/EXTRACTED #community/MockHttpServer

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/components/PortalShell.tsx"
 type: "code"
-community: "router.tsx"
+community: "cn"
 location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/cn
 ---
 
 # PortalShell()
@@ -18,4 +18,4 @@ tags:
 - [[router.tsx]] - `imports` [EXTRACTED]
 - [[usePrincipalAuth()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/cn

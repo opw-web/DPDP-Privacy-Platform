@@ -1,22 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/child-exemptions.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/breaches/breaches.controller.ts"
 type: "code"
-community: "children.module.ts"
-location: "L17"
+community: "BreachesController"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/childrenmodulets
+  - community/BreachesController
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_37]] - `calls` [INFERRED]
-- [[ChildExemptionsController]] - `method` [EXTRACTED]
+- [[dot-list()_39]] - `calls` [INFERRED]
+- [[BreachesController]] - `method` [EXTRACTED]
 - [[Get_33]] - `references` [EXTRACTED]
-- [[ListExemptionClaimsDto]] - `references` [EXTRACTED]
-- [[Query_8]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/childrenmodulets
+#graphify/code #graphify/EXTRACTED #community/BreachesController

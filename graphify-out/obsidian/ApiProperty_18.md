@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "mappings.service.ts"
+community: "ProcessorChecklistTickDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingsservicets
+  - community/ProcessorChecklistTickDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[MappingsResponseDto]] - `references` [EXTRACTED]
-- [[SourceFieldMappingResponseDto]] - `references` [EXTRACTED]
+- [[CompleteErasureTaskDto]] - `references` [EXTRACTED]
+- [[ProcessorChecklistTickDto]] - `references` [EXTRACTED]
+- [[SystemChecklistTickDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/EXTRACTED #community/ProcessorChecklistTickDto

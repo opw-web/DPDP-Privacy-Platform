@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Connector"
+community: "employee-auth.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Connector
+  - community/employee-authcontrollerts
 ---
 
 # Injectable
 
 ## Connections
-- [[ConnectorFactory]] - `references` [EXTRACTED]
+- [[SyncLockService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Connector
+#graphify/code #graphify/EXTRACTED #community/employee-authcontrollerts

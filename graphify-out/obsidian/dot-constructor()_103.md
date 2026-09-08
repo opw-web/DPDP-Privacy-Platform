@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/campaign-send.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/mvp2-schedules.ts"
 type: "code"
-community: "CampaignsService"
-location: "L64"
+community: "queues.module.ts"
+location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampaignsService
+  - community/queuesmodulets
 ---
 
 # .constructor()
 
 ## Connections
-- [[CampaignSendProcessor]] - `method` [EXTRACTED]
-- [[CampaignsService]] - `references` [EXTRACTED]
-- [[NotificationsService]] - `references` [EXTRACTED]
+- [[InjectQueue_6]] - `references` [EXTRACTED]
+- [[Mvp2ScheduleReconciliationService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampaignsService
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

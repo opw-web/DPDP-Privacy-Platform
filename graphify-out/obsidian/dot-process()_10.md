@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/access-log-retention.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/retention-scan.processor.ts"
 type: "code"
-community: "token.service.ts"
+community: "RetentionScanService"
 location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tokenservicets
+  - community/RetentionScanService
 ---
 
 # .process()
 
 ## Connections
-- [[dot-runRetention()]] - `calls` [EXTRACTED]
-- [[AccessLogRetentionProcessor]] - `method` [EXTRACTED]
+- [[dot-runForAllOrganizations()_3]] - `calls` [INFERRED]
+- [[RetentionScanJobData]] - `references` [EXTRACTED]
+- [[RetentionScanProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tokenservicets
+#graphify/code #graphify/EXTRACTED #community/RetentionScanService

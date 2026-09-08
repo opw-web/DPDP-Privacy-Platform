@@ -12,9 +12,9 @@ tags:
 # assembly.e2e-spec.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@nestjstesting]] - `imports_from` [EXTRACTED]
-- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjstesting_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient]] - `imports_from` [EXTRACTED]
 - [[AgeService]] - `imports` [EXTRACTED]
 - [[AppModule]] - `imports` [EXTRACTED]
 - [[AssemblyService]] - `imports` [EXTRACTED]
@@ -28,11 +28,11 @@ tags:
 - [[link()]] - `contains` [EXTRACTED]
 - [[linking.service.ts]] - `imports_from` [EXTRACTED]
 - [[normalized()]] - `contains` [EXTRACTED]
-- [[organization()_2]] - `contains` [EXTRACTED]
-- [[principal()]] - `contains` [EXTRACTED]
+- [[organization()_3]] - `contains` [EXTRACTED]
+- [[principal()_1]] - `contains` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[source()]] - `contains` [EXTRACTED]
-- [[tenant()_2]] - `contains` [EXTRACTED]
+- [[tenant()_4]] - `contains` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/AppModule

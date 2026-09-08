@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/transfers.service.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/test-support/mock-http-server.ts"
 type: "code"
-community: "CreateTransferDto"
-location: "L45"
+community: "MockHttpServer"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTransferDto
+  - community/MockHttpServer
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[TransfersService]] - `method` [EXTRACTED]
+- [[MockHttpServer]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTransferDto
+#graphify/code #graphify/EXTRACTED #community/MockHttpServer

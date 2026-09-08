@@ -12,7 +12,7 @@ tags:
 # matching.service.spec.ts
 
 ## Connections
-- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient]] - `imports_from` [EXTRACTED]
 - [[MatchingService]] - `imports` [EXTRACTED]
 - [[NormalizationMapping]] - `imports` [EXTRACTED]
 - [[baseRecord]] - `contains` [EXTRACTED]

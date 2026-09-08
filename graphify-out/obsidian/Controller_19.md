@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SdfController"
+community: "RequirePermission"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SdfController
+  - community/RequirePermission
 ---
 
 # Controller
 
 ## Connections
-- [[SdfController]] - `references` [EXTRACTED]
+- [[CandidatesController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SdfController
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

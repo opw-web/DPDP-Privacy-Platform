@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/breach-clock.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/audit-chain-verify.processor.ts"
 type: "code"
-community: "BreachClockProcessor"
-location: "L31"
+community: "audit-chain.service.ts"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BreachClockProcessor
+  - community/audit-chainservicets
 ---
 
 # .process()
 
 ## Connections
-- [[dot-runClockCycle()]] - `calls` [EXTRACTED]
-- [[BreachClockProcessor]] - `method` [EXTRACTED]
+- [[dot-runVerificationCycle()]] - `calls` [EXTRACTED]
+- [[AuditChainVerifyProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BreachClockProcessor
+#graphify/code #graphify/EXTRACTED #community/audit-chainservicets

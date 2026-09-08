@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/audit-chain.service.ts"
 type: "code"
-community: "AuditChainService"
+community: "audit-chain.service.ts"
 location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditChainService
+  - community/audit-chainservicets
 ---
 
 # .verifyChain()
@@ -17,4 +17,4 @@ tags:
 - [[AuditChainService]] - `method` [EXTRACTED]
 - [[canonicalJson()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditChainService
+#graphify/code #graphify/EXTRACTED #community/audit-chainservicets

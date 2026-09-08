@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/test/health-degraded.e2e-spec.ts"
 type: "code"
-community: "sync.queue.ts"
+community: "queues.module.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/syncqueuets
+  - community/queuesmodulets
 ---
 
 # health-degraded.e2e-spec.ts
 
 ## Connections
-- [[@nestjsbullmq]] - `imports_from` [EXTRACTED]
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@nestjstesting]] - `imports_from` [EXTRACTED]
+- [[@nestjsbullmq_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjstesting_1]] - `imports_from` [EXTRACTED]
 - [[AppModule]] - `imports` [EXTRACTED]
 - [[SYNC_QUEUE_NAME]] - `imports` [EXTRACTED]
 - [[SyncProcessor]] - `imports` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[sync.processor.ts]] - `imports_from` [EXTRACTED]
 - [[sync.queue.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/syncqueuets
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

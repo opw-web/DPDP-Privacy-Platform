@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PrismaService"
+community: "RequirePermission"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/RequirePermission
 ---
 
 # Injectable
 
 ## Connections
-- [[PrismaService]] - `references` [EXTRACTED]
+- [[CandidatesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

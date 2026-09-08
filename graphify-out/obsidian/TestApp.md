@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/support/e2e-harness.ts"
 type: "code"
-community: "supertest"
+community: "PrismaService"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/supertest
+  - community/PrismaService
 ---
 
 # TestApp
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[e2e-harness.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/supertest
+#graphify/code #graphify/EXTRACTED #community/PrismaService

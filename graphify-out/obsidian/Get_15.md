@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "AuditChainService"
+community: "audit-chain.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditChainService
+  - community/audit-chainservicets
 ---
 
 # Get
@@ -14,4 +14,4 @@ tags:
 - [[dot-exportCsv()_2]] - `references` [EXTRACTED]
 - [[dot-verifyChain()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditChainService
+#graphify/code #graphify/EXTRACTED #community/audit-chainservicets

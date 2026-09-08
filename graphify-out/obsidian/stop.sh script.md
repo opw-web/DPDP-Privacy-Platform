@@ -12,7 +12,6 @@ tags:
 # stop.sh script
 
 ## Connections
-- [[compose()]] - `calls` [EXTRACTED]
 - [[ok()]] - `calls` [EXTRACTED]
 - [[pause_before_exit()]] - `calls` [EXTRACTED]
 - [[say()]] - `calls` [EXTRACTED]

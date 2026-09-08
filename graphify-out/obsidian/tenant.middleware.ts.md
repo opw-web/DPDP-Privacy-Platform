@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/common/tenant/tenant.middleware.ts"
 type: "code"
-community: "PrismaService"
+community: "@prisma/client"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/prisma/client
 ---
 
 # tenant.middleware.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[TenantContext]] - `imports` [EXTRACTED]
 - [[TenantMiddleware]] - `contains` [EXTRACTED]
@@ -23,4 +23,4 @@ tags:
 - [[tenant.module.ts]] - `imports_from` [EXTRACTED]
 - [[token.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/prisma/client

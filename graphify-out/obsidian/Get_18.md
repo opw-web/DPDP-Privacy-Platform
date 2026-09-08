@@ -1,20 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalsController"
+community: "RequestsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalsController
+  - community/RequestsController
 ---
 
 # Get
 
 ## Connections
-- [[dot-detail()]] - `references` [EXTRACTED]
-- [[dot-lineage()]] - `references` [EXTRACTED]
-- [[dot-list()_15]] - `references` [EXTRACTED]
-- [[dot-recipients()_1]] - `references` [EXTRACTED]
-- [[dot-sourceRecords()]] - `references` [EXTRACTED]
+- [[dot-accessReport()_1]] - `references` [EXTRACTED]
+- [[dot-erasureCompletionHolders()]] - `references` [EXTRACTED]
+- [[dot-getByReference()]] - `references` [EXTRACTED]
+- [[dot-list()_48]] - `references` [EXTRACTED]
+- [[dot-stats()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalsController
+#graphify/code #graphify/EXTRACTED #community/RequestsController

@@ -12,7 +12,7 @@ tags:
 # SharingController
 
 ## Connections
-- [[dot-constructor()_155]] - `method` [EXTRACTED]
+- [[dot-constructor()_151]] - `method` [EXTRACTED]
 - [[dot-create()_37]] - `method` [EXTRACTED]
 - [[dot-get()_25]] - `method` [EXTRACTED]
 - [[dot-list()_50]] - `method` [EXTRACTED]

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "TemplatesService"
+community: "PreviewTemplateDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/PreviewTemplateDto
 ---
 
 # IsObject
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[PreviewTemplateDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/PreviewTemplateDto

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateDataSourceDto"
+community: "CreateCampaignDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateDataSourceDto
+  - community/CreateCampaignDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[CreateDataSourceDto]] - `references` [EXTRACTED]
+- [[CreateCampaignDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateDataSourceDto
+#graphify/code #graphify/EXTRACTED #community/CreateCampaignDto

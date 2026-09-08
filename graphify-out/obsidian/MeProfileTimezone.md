@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/components/PortalShell.tsx"
 type: "code"
-community: "router.tsx"
+community: "cn"
 location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/cn
 ---
 
 # MeProfileTimezone
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[PortalShell.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/cn

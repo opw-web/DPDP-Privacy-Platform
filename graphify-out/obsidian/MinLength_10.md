@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateDataSourceDto"
+community: "CreateNoticeVersionDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateDataSourceDto
+  - community/CreateNoticeVersionDto
 ---
 
 # MinLength
 
 ## Connections
-- [[CreateDataSourceDto]] - `references` [EXTRACTED]
+- [[CreateNoticeVersionDto]] - `references` [EXTRACTED]
+- [[ItemisedFieldInputDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateDataSourceDto
+#graphify/code #graphify/EXTRACTED #community/CreateNoticeVersionDto

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/NotificationBell.tsx"
 type: "code"
-community: "api-client.ts"
+community: "cn"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/cn
 ---
 
 # NotificationBell.tsx
@@ -20,7 +20,7 @@ tags:
 - [[NotificationBell()]] - `contains` [EXTRACTED]
 - [[NotificationBell.test.tsx]] - `imports_from` [EXTRACTED]
 - [[NotificationBellProps]] - `contains` [EXTRACTED]
-- [[NotificationDto_1]] - `imports` [EXTRACTED]
+- [[NotificationDto]] - `imports` [EXTRACTED]
 - [[NotificationRow()]] - `contains` [EXTRACTED]
 - [[PortalShell.tsx]] - `imports_from` [EXTRACTED]
 - [[api-client.ts]] - `imports_from` [EXTRACTED]
@@ -36,4 +36,4 @@ tags:
 - [[react-router-dom_1]] - `imports_from` [EXTRACTED]
 - [[utils.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/cn

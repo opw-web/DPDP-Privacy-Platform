@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "guardians.service.ts"
+community: "employee-auth.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/employee-authcontrollerts
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateGuardianDto]] - `references` [EXTRACTED]
+- [[EmployeeMeResponseDto]] - `references` [EXTRACTED]
+- [[EmployeeMeRoleDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/employee-authcontrollerts

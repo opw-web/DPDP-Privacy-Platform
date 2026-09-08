@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "TemplatesService"
+community: "CreateVoluntaryUndertakingDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # IsArray
 
 ## Connections
-- [[UpdateTemplateDto]] - `references` [EXTRACTED]
+- [[CreateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

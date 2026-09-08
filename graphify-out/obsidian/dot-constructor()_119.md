@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/age-status.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/breaches/breaches.controller.ts"
 type: "code"
-community: "children.module.ts"
-location: "L20"
+community: "BreachesController"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/childrenmodulets
+  - community/BreachesController
 ---
 
 # .constructor()
 
 ## Connections
-- [[AgeStatusController]] - `method` [EXTRACTED]
-- [[AgeStatusService]] - `references` [EXTRACTED]
+- [[BreachService]] - `references` [EXTRACTED]
+- [[BreachesController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/childrenmodulets
+#graphify/code #graphify/EXTRACTED #community/BreachesController

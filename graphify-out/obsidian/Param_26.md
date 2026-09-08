@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "access-report.service.ts"
+community: "CreateRecipientDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-reportservicets
+  - community/CreateRecipientDto
 ---
 
 # Param
 
 ## Connections
-- [[dot-evidence()]] - `references` [EXTRACTED]
-- [[dot-evidencePdf()]] - `references` [EXTRACTED]
+- [[dot-get()_19]] - `references` [EXTRACTED]
+- [[dot-update()_21]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-reportservicets
+#graphify/code #graphify/EXTRACTED #community/CreateRecipientDto

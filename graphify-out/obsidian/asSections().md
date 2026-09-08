@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeConsentsPage.tsx"
 type: "code"
-community: "cn"
+community: "router.tsx"
 location: "L92"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/routertsx
 ---
 
 # asSections()
@@ -15,4 +15,4 @@ tags:
 - [[MeConsentsPage()]] - `calls` [EXTRACTED]
 - [[MeConsentsPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/routertsx

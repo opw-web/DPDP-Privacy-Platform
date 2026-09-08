@@ -1,16 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: ".unmerge"
+community: "MeRightsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/unmerge
+  - community/MeRightsService
 ---
 
 # Param
 
 ## Connections
-- [[dot-unmerge()]] - `references` [EXTRACTED]
+- [[dot-cancelRequest()]] - `references` [EXTRACTED]
+- [[dot-commentOnRequest()]] - `references` [EXTRACTED]
+- [[dot-getPublishedNotice()]] - `references` [EXTRACTED]
+- [[dot-getRequest()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/unmerge
+#graphify/code #graphify/EXTRACTED #community/MeRightsService

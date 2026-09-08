@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/PurposesPage.tsx"
 type: "code"
-community: "react-router-dom"
+community: "api-client.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react-router-dom
+  - community/api-clientts
 ---
 
 # PurposesPage.tsx
@@ -30,7 +30,7 @@ tags:
 - [[NotReviewedChip.tsx]] - `imports_from` [EXTRACTED]
 - [[PermissionGate()]] - `imports` [EXTRACTED]
 - [[PermissionGate.tsx]] - `imports_from` [EXTRACTED]
-- [[Purpose]] - `contains` [EXTRACTED]
+- [[Purpose_1]] - `contains` [EXTRACTED]
 - [[PurposeForm()]] - `imports` [EXTRACTED]
 - [[PurposeForm.tsx]] - `imports_from` [EXTRACTED]
 - [[PurposesPage()]] - `contains` [EXTRACTED]
@@ -47,4 +47,4 @@ tags:
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 - [[sonner_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react-router-dom
+#graphify/code #graphify/EXTRACTED #community/api-clientts

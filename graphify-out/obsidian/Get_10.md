@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "purposes.service.ts"
+community: "inventory.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposesservicets
+  - community/inventoryservicets
 ---
 
 # Get
 
 ## Connections
-- [[dot-list()_6]] - `references` [EXTRACTED]
+- [[dot-gaps()]] - `references` [EXTRACTED]
+- [[dot-ropaCsv()]] - `references` [EXTRACTED]
+- [[dot-summary()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposesservicets
+#graphify/code #graphify/EXTRACTED #community/inventoryservicets

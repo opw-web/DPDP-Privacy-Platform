@@ -1,18 +1,25 @@
 ---
-source_file: "dpdp-platform/backend/test/step6-conflict-acceptance.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/support/e2e-harness.ts"
 type: "code"
-community: "step6-conflict-acceptance.e2e-spec.ts"
-location: "L72"
+community: "PrismaService"
+location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/step6-conflict-acceptancee2e-spects
+  - community/PrismaService
 ---
 
 # ensurePermission()
 
 ## Connections
-- [[employeeWithPermissions()_1]] - `calls` [EXTRACTED]
-- [[step6-conflict-acceptance.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[addEmployee()]] - `calls` [EXTRACTED]
+- [[addEmployeeToOrg()]] - `calls` [EXTRACTED]
+- [[campaigns.e2e-spec.ts]] - `imports` [EXTRACTED]
+- [[children.e2e-spec.ts]] - `imports` [EXTRACTED]
+- [[createEmployeeWithPermissions()]] - `calls` [EXTRACTED]
+- [[createOrgWithEmployee()_2]] - `calls` [EXTRACTED]
+- [[e2e-harness.ts]] - `contains` [EXTRACTED]
+- [[evidence.e2e-spec.ts]] - `imports` [EXTRACTED]
+- [[retention.e2e-spec.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects
+#graphify/code #graphify/EXTRACTED #community/PrismaService

@@ -12,7 +12,7 @@ tags:
 # compliance-rules.js
 
 ## Connections
-- [[seedComplianceRules()]] - `contains` [EXTRACTED]
-- [[seedGrievanceStatutoryBaseline()]] - `contains` [EXTRACTED]
+- [[seedComplianceRules()_1]] - `contains` [EXTRACTED]
+- [[seedGrievanceStatutoryBaseline()_1]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/compliance-rulesjs

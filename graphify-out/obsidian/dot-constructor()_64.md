@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/campaign-send.queue.ts"
+source_file: "dpdp-platform/backend/src/common/audit/access-log.service.ts"
 type: "code"
-community: "CampaignSendQueueService"
-location: "L67"
+community: "principals.service.ts"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampaignSendQueueService
+  - community/principalsservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[CampaignSendQueueService]] - `method` [EXTRACTED]
-- [[InjectQueue_2]] - `references` [EXTRACTED]
+- [[AccessLogService]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampaignSendQueueService
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

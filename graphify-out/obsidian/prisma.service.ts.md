@@ -12,8 +12,8 @@ tags:
 # prisma.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@prismaclient]] - `imports_from` [EXTRACTED]
 - [[PrismaService]] - `contains` [EXTRACTED]
 - [[TenantScopedPrismaClient]] - `contains` [EXTRACTED]
 - [[access-log-retention.processor.ts]] - `imports_from` [EXTRACTED]
@@ -58,7 +58,7 @@ tags:
 - [[erasure-task.service.ts]] - `imports_from` [EXTRACTED]
 - [[evidence-pack.service.ts]] - `imports_from` [EXTRACTED]
 - [[evidence.e2e-spec.ts]] - `imports_from` [EXTRACTED]
-- [[extendWithTenantScoping()_1]] - `contains` [EXTRACTED]
+- [[extendWithTenantScoping()]] - `contains` [EXTRACTED]
 - [[guardians.service.ts]] - `imports_from` [EXTRACTED]
 - [[identity-matching.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[information-requests.e2e-spec.ts]] - `imports_from` [EXTRACTED]

@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principals/principal-recipients.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts"
 type: "code"
-community: "@nestjs/common"
-location: "L7"
+community: "templates.service.ts"
+location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/templatesservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[PrincipalRecipientsService]] - `method` [EXTRACTED]
+- [[TemplateRenderError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/templatesservicets

@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/candidates.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/consents/consents.controller.ts"
 type: "code"
-community: "CandidatesController"
-location: "L27"
+community: "ConsentsService"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CandidatesController
+  - community/ConsentsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[CandidatesController]] - `method` [EXTRACTED]
-- [[CandidatesService]] - `references` [EXTRACTED]
+- [[ConsentsController]] - `method` [EXTRACTED]
+- [[ConsentsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CandidatesController
+#graphify/code #graphify/EXTRACTED #community/ConsentsService

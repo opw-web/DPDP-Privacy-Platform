@@ -12,8 +12,8 @@ tags:
 # health.controller.spec.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@nestjstesting]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjstesting_1]] - `imports_from` [EXTRACTED]
 - [[HealthController]] - `imports` [EXTRACTED]
 - [[HealthService]] - `imports` [EXTRACTED]
 - [[health.controller.ts]] - `imports_from` [EXTRACTED]

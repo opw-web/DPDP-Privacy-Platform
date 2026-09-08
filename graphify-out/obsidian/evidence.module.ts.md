@@ -12,7 +12,7 @@ tags:
 # evidence.module.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[AccessReportService]] - `imports` [EXTRACTED]
 - [[AuditChainService]] - `imports` [EXTRACTED]
 - [[AuditEventsEvidenceController]] - `imports` [EXTRACTED]

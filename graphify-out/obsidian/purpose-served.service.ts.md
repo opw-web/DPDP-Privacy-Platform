@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/purpose-served.service.ts"
 type: "code"
-community: "audit.service.ts"
+community: "erasure-task.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/auditservicets
+  - community/erasure-taskservicets
 ---
 
 # purpose-served.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@prismaclient]] - `imports_from` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[PURPOSE_SERVED_SIGNAL_PUBLIC_SELECT]] - `contains` [EXTRACTED]
 - [[PublicPurposeServedSignal]] - `contains` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[retention.module.ts]] - `imports_from` [EXTRACTED]
 - [[scoped-transaction-client.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/auditservicets
+#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets

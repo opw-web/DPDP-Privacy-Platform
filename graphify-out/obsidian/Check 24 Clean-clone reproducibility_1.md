@@ -2,7 +2,7 @@
 source_file: "docs/EVALUATION_MVP1.md"
 type: "document"
 community: "MVP1 Evaluation Against Spec Section 6"
-location: "L1065"
+location: "L1083"
 tags:
   - graphify/document
   - graphify/EXTRACTED
@@ -13,5 +13,6 @@ tags:
 
 ## Connections
 - [[MVP1 Evaluation Against Spec Section 6]] - `contains` [EXTRACTED]
+- [[Re-verified 2026-09-08 — PASS]] - `contains` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/MVP1_Evaluation_Against_Spec_Section_6

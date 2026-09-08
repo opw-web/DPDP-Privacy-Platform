@@ -12,7 +12,7 @@ tags:
 # audit-read.module.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[AuditModule]] - `imports` [EXTRACTED]
 - [[AuditReadController]] - `imports` [EXTRACTED]
 - [[AuditReadModule]] - `contains` [EXTRACTED]

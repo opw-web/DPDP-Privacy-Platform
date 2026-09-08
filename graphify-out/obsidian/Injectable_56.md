@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "@nestjs/common"
+community: "queues.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/queuesmodulets
 ---
 
 # Injectable
 
 ## Connections
-- [[PrincipalRecipientsService]] - `references` [EXTRACTED]
+- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

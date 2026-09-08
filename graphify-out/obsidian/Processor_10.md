@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "token.service.ts"
+community: "RetentionScanService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tokenservicets
+  - community/RetentionScanService
 ---
 
 # Processor
 
 ## Connections
-- [[AccessLogRetentionProcessor]] - `references` [EXTRACTED]
+- [[RetentionScanProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tokenservicets
+#graphify/code #graphify/EXTRACTED #community/RetentionScanService

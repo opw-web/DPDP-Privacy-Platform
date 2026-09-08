@@ -11,6 +11,6 @@ tags:
 # Module
 
 ## Connections
-- [[AuditReadModule]] - `references` [EXTRACTED]
+- [[QueuesModule]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/nestjs/common

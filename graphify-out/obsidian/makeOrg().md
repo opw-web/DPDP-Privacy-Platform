@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/test/children.e2e-spec.ts"
 type: "code"
-community: "supertest"
+community: "PrismaService"
 location: "L86"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/supertest
+  - community/PrismaService
 ---
 
 # makeOrg()
 
 ## Connections
 - [[children.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[createOrgWithEmployee()]] - `calls` [EXTRACTED]
+- [[createOrgWithEmployee()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/supertest
+#graphify/code #graphify/EXTRACTED #community/PrismaService

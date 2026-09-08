@@ -1,20 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/legal-hold.service.ts"
 type: "code"
-community: "AccessTokenPayload"
-location: "L34"
+community: "RetentionController"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/RetentionController
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_2]] - `calls` [INFERRED]
-- [[CampaignsController]] - `method` [EXTRACTED]
-- [[Get_3]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-listLegalHolds()]] - `calls` [INFERRED]
+- [[LegalHoldService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/RetentionController

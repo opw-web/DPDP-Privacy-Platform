@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "mappings.service.ts"
+community: "ImportConsentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingsservicets
+  - community/ImportConsentDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[AttachPurposesDto]] - `references` [EXTRACTED]
+- [[ImportConsentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/EXTRACTED #community/ImportConsentDto

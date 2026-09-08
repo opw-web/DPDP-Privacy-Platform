@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "DataSourcesService"
+community: "ConsentsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesService
+  - community/ConsentsService
 ---
 
 # Injectable
 
 ## Connections
-- [[DataSourcesService]] - `references` [EXTRACTED]
+- [[ConsentsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesService
+#graphify/code #graphify/EXTRACTED #community/ConsentsService

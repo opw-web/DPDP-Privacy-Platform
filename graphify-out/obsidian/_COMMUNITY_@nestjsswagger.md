@@ -1,0 +1,214 @@
+---
+type: community
+members: 100
+---
+
+# @nestjs/swagger
+
+**Members:** 100 nodes
+
+## Members
+- [[@nestjsswagger_1]] - concept - dpdp-platform/backend/package.json
+- [[ALGORITHM_ENTRY_PUBLIC_SELECT]] - code - dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts
+- [[ALGORITHM_OPERATIONS_1]] - code - dpdp-platform/backend/src/modules/sdf/dto/algorithm-operations.ts
+- [[AlgorithmOperation_1]] - code - dpdp-platform/backend/src/modules/sdf/dto/algorithm-operations.ts
+- [[ApiProperty_32]] - code
+- [[ApiPropertyOptional_37]] - code
+- [[BREACH_PUBLIC_SELECT]] - code - dpdp-platform/backend/src/modules/breaches/breach.service.ts
+- [[BREACH_RULES]] - code - dpdp-platform/backend/src/modules/breaches/breach.service.ts
+- [[COMMITMENT_STATUSES]] - code - dpdp-platform/backend/src/modules/board/dto/undertaking-commitment.dto.ts
+- [[DataSourcePurposeResponseDto]] - code - dpdp-platform/backend/src/modules/data-sources/dto/purposes-response.dto.ts
+- [[DataSourcePurposesResponseDto]] - code - dpdp-platform/backend/src/modules/data-sources/dto/purposes-response.dto.ts
+- [[KIND_VALUES]] - code - dpdp-platform/backend/src/modules/sdf/dto/create-sdf-assessment.dto.ts
+- [[PublicAlgorithmEntry]] - code - dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts
+- [[REQUESTING_BODIES]] - code - dpdp-platform/backend/src/modules/board/dto/requesting-body.ts
+- [[RequestingBody]] - code - dpdp-platform/backend/src/modules/board/dto/requesting-body.ts
+- [[SCHEDULE_PARTS]] - code - dpdp-platform/backend/src/modules/children/dto/create-exemption-claim.dto.ts
+- [[SECURITY_MEASURE_TYPES]] - code - dpdp-platform/backend/src/modules/registers/dto/create-security-measure.dto.ts
+- [[SECURITY_RULE_REFERENCES]] - code - dpdp-platform/backend/src/modules/registers/dto/create-security-measure.dto.ts
+- [[TRANSITIONS_1]] - code - dpdp-platform/backend/src/modules/breaches/breach.service.ts
+- [[add-me-request-comment.dto.ts]] - code - dpdp-platform/backend/src/modules/principal-portal/dto/add-me-request-comment.dto.ts
+- [[add-note.dto.ts]] - code - dpdp-platform/backend/src/modules/requests/dto/add-note.dto.ts
+- [[affected-principals.dto.ts]] - code - dpdp-platform/backend/src/modules/breaches/dto/affected-principals.dto.ts
+- [[algorithm-operations.ts]] - code - dpdp-platform/backend/src/modules/sdf/dto/algorithm-operations.ts
+- [[algorithm-register.service.ts]] - code - dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts
+- [[assign-request.dto.ts]] - code - dpdp-platform/backend/src/modules/requests/dto/assign-request.dto.ts
+- [[attach-purposes.dto.ts]] - code - dpdp-platform/backend/src/modules/data-sources/dto/attach-purposes.dto.ts
+- [[breach.service.ts]] - code - dpdp-platform/backend/src/modules/breaches/breach.service.ts
+- [[breaches.controller.ts]] - code - dpdp-platform/backend/src/modules/breaches/breaches.controller.ts
+- [[cancel-erasure-task.dto.ts]] - code - dpdp-platform/backend/src/modules/retention/dto/cancel-erasure-task.dto.ts
+- [[class-transformer_1]] - concept - dpdp-platform/backend/package.json
+- [[class-validator_1]] - concept - dpdp-platform/backend/package.json
+- [[complete-erasure-task.dto.ts]] - code - dpdp-platform/backend/src/modules/retention/dto/complete-erasure-task.dto.ts
+- [[complete-obligation.dto.ts]] - code - dpdp-platform/backend/src/modules/breaches/dto/complete-obligation.dto.ts
+- [[complete-sdf-assessment.dto.ts]] - code - dpdp-platform/backend/src/modules/sdf/dto/complete-sdf-assessment.dto.ts
+- [[create-algorithm-entry.dto.ts]] - code - dpdp-platform/backend/src/modules/sdf/dto/create-algorithm-entry.dto.ts
+- [[create-breach.dto.ts]] - code - dpdp-platform/backend/src/modules/breaches/dto/create-breach.dto.ts
+- [[create-campaign.dto.ts]] - code - dpdp-platform/backend/src/modules/messaging/campaigns/dto/create-campaign.dto.ts
+- [[create-compliance-rule.dto.ts]] - code - dpdp-platform/backend/src/modules/compliance/dto/create-compliance-rule.dto.ts
+- [[create-data-source.dto.ts]] - code - dpdp-platform/backend/src/modules/data-sources/dto/create-data-source.dto.ts
+- [[create-employee.dto.ts]] - code - dpdp-platform/backend/src/modules/employees/dto/create-employee.dto.ts
+- [[create-exemption-claim.dto.ts]] - code - dpdp-platform/backend/src/modules/children/dto/create-exemption-claim.dto.ts
+- [[create-information-request.dto.ts]] - code - dpdp-platform/backend/src/modules/board/dto/create-information-request.dto.ts
+- [[create-legal-hold.dto.ts]] - code - dpdp-platform/backend/src/modules/retention/dto/create-legal-hold.dto.ts
+- [[create-notice-version.dto.ts]] - code - dpdp-platform/backend/src/modules/notices/dto/create-notice-version.dto.ts
+- [[create-notice.dto.ts]] - code - dpdp-platform/backend/src/modules/notices/dto/create-notice.dto.ts
+- [[create-purpose.dto.ts]] - code - dpdp-platform/backend/src/modules/purposes/dto/create-purpose.dto.ts
+- [[create-recipient.dto.ts]] - code - dpdp-platform/backend/src/modules/registers/dto/create-recipient.dto.ts
+- [[create-sdf-assessment.dto.ts]] - code - dpdp-platform/backend/src/modules/sdf/dto/create-sdf-assessment.dto.ts
+- [[create-security-measure.dto.ts]] - code - dpdp-platform/backend/src/modules/registers/dto/create-security-measure.dto.ts
+- [[create-sharing-activity.dto.ts]] - code - dpdp-platform/backend/src/modules/registers/dto/create-sharing-activity.dto.ts
+- [[create-template.dto.ts]] - code - dpdp-platform/backend/src/modules/messaging/templates/dto/create-template.dto.ts
+- [[create-voluntary-undertaking.dto.ts]] - code - dpdp-platform/backend/src/modules/board/dto/create-voluntary-undertaking.dto.ts
+- [[data-sources.controller.ts]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts
+- [[employee-login.dto.ts]] - code - dpdp-platform/backend/src/modules/auth/dto/employee-login.dto.ts
+- [[employees.controller.ts]] - code - dpdp-platform/backend/src/modules/employees/employees.controller.ts
+- [[escalate-request.dto.ts]] - code - dpdp-platform/backend/src/modules/requests/dto/escalate-request.dto.ts
+- [[extension.dto.ts]] - code - dpdp-platform/backend/src/modules/breaches/dto/extension.dto.ts
+- [[flag-frivolous.dto.ts]] - code - dpdp-platform/backend/src/modules/requests/dto/flag-frivolous.dto.ts
+- [[import-consent.dto.ts]] - code - dpdp-platform/backend/src/modules/consents/dto/import-consent.dto.ts
+- [[information-requests.controller.ts]] - code - dpdp-platform/backend/src/modules/board/information-requests.controller.ts
+- [[list-exemption-claims.dto.ts]] - code - dpdp-platform/backend/src/modules/children/dto/list-exemption-claims.dto.ts
+- [[list-guardians.dto.ts]] - code - dpdp-platform/backend/src/modules/children/dto/list-guardians.dto.ts
+- [[list-requests.dto.ts]] - code - dpdp-platform/backend/src/modules/requests/dto/list-requests.dto.ts
+- [[mappings.controller.ts]] - code - dpdp-platform/backend/src/modules/data-sources/mappings.controller.ts
+- [[preview-audience.dto.ts]] - code - dpdp-platform/backend/src/modules/messaging/audience/dto/preview-audience.dto.ts
+- [[preview-template.dto.ts]] - code - dpdp-platform/backend/src/modules/messaging/templates/dto/preview-template.dto.ts
+- [[principal-login.dto.ts]] - code - dpdp-platform/backend/src/modules/auth/dto/principal-login.dto.ts
+- [[purposes-response.dto.ts]] - code - dpdp-platform/backend/src/modules/data-sources/dto/purposes-response.dto.ts
+- [[recipients.controller.ts]] - code - dpdp-platform/backend/src/modules/registers/recipients.controller.ts
+- [[replace-mappings.dto.ts]] - code - dpdp-platform/backend/src/modules/data-sources/dto/replace-mappings.dto.ts
+- [[requesting-body.ts]] - code - dpdp-platform/backend/src/modules/board/dto/requesting-body.ts
+- [[requests.controller.ts]] - code - dpdp-platform/backend/src/modules/requests/requests.controller.ts
+- [[reset-employee-password.dto.ts]] - code - dpdp-platform/backend/src/modules/employees/dto/reset-employee-password.dto.ts
+- [[roles.controller.ts]] - code - dpdp-platform/backend/src/modules/employees/roles.controller.ts
+- [[sdf.controller.ts]] - code - dpdp-platform/backend/src/modules/sdf/sdf.controller.ts
+- [[security-measures.controller.ts]] - code - dpdp-platform/backend/src/modules/registers/security-measures.controller.ts
+- [[set-age-status.dto.ts]] - code - dpdp-platform/backend/src/modules/children/dto/set-age-status.dto.ts
+- [[set-my-consent.dto.ts]] - code - dpdp-platform/backend/src/modules/consents/dto/set-my-consent.dto.ts
+- [[sharing.controller.ts]] - code - dpdp-platform/backend/src/modules/registers/sharing.controller.ts
+- [[templates.controller.ts]] - code - dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts
+- [[undertaking-commitment.dto.ts]] - code - dpdp-platform/backend/src/modules/board/dto/undertaking-commitment.dto.ts
+- [[unmerge.dto.ts]] - code - dpdp-platform/backend/src/modules/identity/dto/unmerge.dto.ts
+- [[update-algorithm-entry.dto.ts]] - code - dpdp-platform/backend/src/modules/sdf/dto/update-algorithm-entry.dto.ts
+- [[update-breach.dto.ts]] - code - dpdp-platform/backend/src/modules/breaches/dto/update-breach.dto.ts
+- [[update-compliance-rule.dto.ts]] - code - dpdp-platform/backend/src/modules/compliance/dto/update-compliance-rule.dto.ts
+- [[update-data-source.dto.ts]] - code - dpdp-platform/backend/src/modules/data-sources/dto/update-data-source.dto.ts
+- [[update-employee.dto.ts]] - code - dpdp-platform/backend/src/modules/employees/dto/update-employee.dto.ts
+- [[update-information-request.dto.ts]] - code - dpdp-platform/backend/src/modules/board/dto/update-information-request.dto.ts
+- [[update-organization.dto.ts]] - code - dpdp-platform/backend/src/modules/organizations/dto/update-organization.dto.ts
+- [[update-purpose.dto.ts]] - code - dpdp-platform/backend/src/modules/purposes/dto/update-purpose.dto.ts
+- [[update-recipient.dto.ts]] - code - dpdp-platform/backend/src/modules/registers/dto/update-recipient.dto.ts
+- [[update-role-permissions.dto.ts]] - code - dpdp-platform/backend/src/modules/employees/dto/update-role-permissions.dto.ts
+- [[update-security-measure.dto.ts]] - code - dpdp-platform/backend/src/modules/registers/dto/update-security-measure.dto.ts
+- [[update-sharing-activity.dto.ts]] - code - dpdp-platform/backend/src/modules/registers/dto/update-sharing-activity.dto.ts
+- [[update-template.dto.ts]] - code - dpdp-platform/backend/src/modules/messaging/templates/dto/update-template.dto.ts
+- [[update-voluntary-undertaking.dto.ts]] - code - dpdp-platform/backend/src/modules/board/dto/update-voluntary-undertaking.dto.ts
+- [[upsert-translation.dto.ts]] - code - dpdp-platform/backend/src/modules/notices/dto/upsert-translation.dto.ts
+- [[verify-guardian.dto.ts]] - code - dpdp-platform/backend/src/modules/children/dto/verify-guardian.dto.ts
+- [[verify-identity.dto.ts]] - code - dpdp-platform/backend/src/modules/requests/dto/verify-identity.dto.ts
+- [[voluntary-undertakings.controller.ts]] - code - dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/nestjs/swagger
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 76 edges to [[_COMMUNITY_RequirePermission]]
+- 50 edges to [[_COMMUNITY_@prismaclient]]
+- 28 edges to [[_COMMUNITY_@nestjscommon]]
+- 11 edges to [[_COMMUNITY_AuditService]]
+- 10 edges to [[_COMMUNITY_PrismaService]]
+- 10 edges to [[_COMMUNITY_requests.service.ts]]
+- 9 edges to [[_COMMUNITY_CreateVoluntaryUndertakingDto]]
+- 9 edges to [[_COMMUNITY_data-sources.service.ts]]
+- 8 edges to [[_COMMUNITY_EmployeesService]]
+- 8 edges to [[_COMMUNITY_Public]]
+- 7 edges to [[_COMMUNITY_access-report-render.ts]]
+- 7 edges to [[_COMMUNITY_dot-record]]
+- 6 edges to [[_COMMUNITY_TemplatesService]]
+- 6 edges to [[_COMMUNITY_CreateInformationRequestDto]]
+- 6 edges to [[_COMMUNITY_queues.module.ts]]
+- 6 edges to [[_COMMUNITY_CreateRecipientDto]]
+- 6 edges to [[_COMMUNITY_CreateSecurityMeasureDto]]
+- 6 edges to [[_COMMUNITY_CreateSharingActivityDto]]
+- 6 edges to [[_COMMUNITY_employee-auth.controller.ts]]
+- 5 edges to [[_COMMUNITY_transfers.service.ts]]
+- 4 edges to [[_COMMUNITY_notices.service.ts]]
+- 4 edges to [[_COMMUNITY_UpdateRolePermissionsDto]]
+- 4 edges to [[_COMMUNITY_mapping-warning-response.dto.ts]]
+- 4 edges to [[_COMMUNITY_purposes.service.ts]]
+- 4 edges to [[_COMMUNITY_guardians.service.ts]]
+- 4 edges to [[_COMMUNITY_templates.service.ts]]
+- 4 edges to [[_COMMUNITY_me-rights.service.ts]]
+- 4 edges to [[_COMMUNITY_retention.service.ts]]
+- 3 edges to [[_COMMUNITY_CreateAlgorithmEntryDto]]
+- 3 edges to [[_COMMUNITY_ReplaceMappingsDto]]
+- 3 edges to [[_COMMUNITY_UpdateBreachDto]]
+- 3 edges to [[_COMMUNITY_AttachPurposesDto]]
+- 3 edges to [[_COMMUNITY_CompleteObligationDto]]
+- 3 edges to [[_COMMUNITY_AffectedPrincipalsDto]]
+- 3 edges to [[_COMMUNITY_UpdateAlgorithmEntryDto]]
+- 3 edges to [[_COMMUNITY_ExtensionDto]]
+- 3 edges to [[_COMMUNITY_SdfAssessmentService]]
+- 3 edges to [[_COMMUNITY_AlgorithmRegisterService]]
+- 3 edges to [[_COMMUNITY_CreateBreachDto]]
+- 3 edges to [[_COMMUNITY_audience.service.ts]]
+- 3 edges to [[_COMMUNITY_principals.service.ts]]
+- 3 edges to [[_COMMUNITY_erasure-task.service.ts]]
+- 3 edges to [[_COMMUNITY_backendpackage.json]]
+- 2 edges to [[_COMMUNITY_RetentionController]]
+- 2 edges to [[_COMMUNITY_GuardiansService]]
+- 2 edges to [[_COMMUNITY_AddNoteDto]]
+- 2 edges to [[_COMMUNITY_CreateDataSourceDto]]
+- 2 edges to [[_COMMUNITY_CreateNoticeVersionDto]]
+- 2 edges to [[_COMMUNITY_CreateLegalHoldDto]]
+- 2 edges to [[_COMMUNITY_UpdateDataSourceDto]]
+- 2 edges to [[_COMMUNITY_ProcessorChecklistTickDto]]
+- 2 edges to [[_COMMUNITY_CreateComplianceRuleDto]]
+- 2 edges to [[_COMMUNITY_PreviewTemplateDto]]
+- 2 edges to [[_COMMUNITY_VerifyIdentityDto]]
+- 2 edges to [[_COMMUNITY_EscalateRequestDto]]
+- 2 edges to [[_COMMUNITY_FlagFrivolousDto]]
+- 2 edges to [[_COMMUNITY_CreateSdfAssessmentDto]]
+- 2 edges to [[_COMMUNITY_AssignRequestDto]]
+- 2 edges to [[_COMMUNITY_CreateExemptionClaimDto]]
+- 2 edges to [[_COMMUNITY_ListRequestsDto]]
+- 2 edges to [[_COMMUNITY_compile-audience.ts]]
+- 2 edges to [[_COMMUNITY_campaigns.service.ts]]
+- 2 edges to [[_COMMUNITY_audit-read.service.ts]]
+- 2 edges to [[_COMMUNITY_notifications.controller.ts]]
+- 1 edge to [[_COMMUNITY_UpdateOrganizationDto]]
+- 1 edge to [[_COMMUNITY_AccessReportService]]
+- 1 edge to [[_COMMUNITY_SetMyConsentDto]]
+- 1 edge to [[_COMMUNITY_NotificationsService]]
+- 1 edge to [[_COMMUNITY_CreateCampaignDto]]
+- 1 edge to [[_COMMUNITY_RequestsService]]
+- 1 edge to [[_COMMUNITY_ImportConsentDto]]
+- 1 edge to [[_COMMUNITY_UpdatePurposeDto]]
+- 1 edge to [[_COMMUNITY_CreatePurposeDto]]
+- 1 edge to [[_COMMUNITY_SourcePurposesService]]
+- 1 edge to [[_COMMUNITY_AddMeRequestCommentDto]]
+- 1 edge to [[_COMMUNITY_RequestsController]]
+- 1 edge to [[_COMMUNITY_SdfController]]
+- 1 edge to [[_COMMUNITY_NoticesService]]
+- 1 edge to [[_COMMUNITY_CampaignsService]]
+- 1 edge to [[_COMMUNITY_DataSourcesController]]
+- 1 edge to [[_COMMUNITY_BreachesController]]
+- 1 edge to [[_COMMUNITY_EmployeeAuthController]]
+- 1 edge to [[_COMMUNITY_ChangeStatusDto]]
+- 1 edge to [[_COMMUNITY_PreviewAudienceDto]]
+- 1 edge to [[_COMMUNITY_PrincipalAuthController]]
+- 1 edge to [[_COMMUNITY_AgeStatusService]]
+- 1 edge to [[_COMMUNITY_audit-chain.service.ts]]
+- 1 edge to [[_COMMUNITY_health.service.ts]]
+
+## Top bridge nodes
+- [[breach.service.ts]] - degree 48, connects to 18 communities
+- [[requests.controller.ts]] - degree 26, connects to 15 communities
+- [[@nestjsswagger_1]] - degree 119, connects to 13 communities
+- [[class-validator_1]] - degree 76, connects to 11 communities
+- [[breaches.controller.ts]] - degree 25, connects to 11 communities

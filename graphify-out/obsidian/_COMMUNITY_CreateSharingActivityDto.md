@@ -11,8 +11,8 @@ members: 45
 - [[dot-assertPurposeExists()_1]] - code - dpdp-platform/backend/src/modules/registers/sharing.service.ts
 - [[dot-assertRecipientExists()_1]] - code - dpdp-platform/backend/src/modules/registers/sharing.service.ts
 - [[dot-assertSourceIdsExist()]] - code - dpdp-platform/backend/src/modules/registers/sharing.service.ts
-- [[dot-constructor()_155]] - code - dpdp-platform/backend/src/modules/registers/sharing.controller.ts
-- [[dot-constructor()_156]] - code - dpdp-platform/backend/src/modules/registers/sharing.service.ts
+- [[dot-constructor()_151]] - code - dpdp-platform/backend/src/modules/registers/sharing.controller.ts
+- [[dot-constructor()_152]] - code - dpdp-platform/backend/src/modules/registers/sharing.service.ts
 - [[dot-create()_37]] - code - dpdp-platform/backend/src/modules/registers/sharing.controller.ts
 - [[dot-create()_38]] - code - dpdp-platform/backend/src/modules/registers/sharing.service.ts
 - [[dot-get()_25]] - code - dpdp-platform/backend/src/modules/registers/sharing.controller.ts
@@ -31,7 +31,7 @@ members: 45
 - [[Controller_42]] - code
 - [[CreateSharingActivityDto]] - code - dpdp-platform/backend/src/modules/registers/dto/create-sharing-activity.dto.ts
 - [[Get_40]] - code
-- [[Injectable_86]] - code
+- [[Injectable_88]] - code
 - [[IsArray_23]] - code
 - [[IsArray_24]] - code
 - [[IsBoolean_27]] - code
@@ -62,14 +62,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 14 edges to [[_COMMUNITY_@nestjscommon]]
-- 2 edges to [[_COMMUNITY_@prismaclient]]
+- 6 edges to [[_COMMUNITY_@nestjsswagger]]
+- 4 edges to [[_COMMUNITY_@prismaclient]]
+- 4 edges to [[_COMMUNITY_RequirePermission]]
+- 2 edges to [[_COMMUNITY_@nestjscommon]]
 - 2 edges to [[_COMMUNITY_dot-record]]
 - 1 edge to [[_COMMUNITY_AuditService]]
 
 ## Top bridge nodes
+- [[SharingService]] - degree 13, connects to 3 communities
 - [[CreateSharingActivityDto]] - degree 15, connects to 2 communities
 - [[UpdateSharingActivityDto]] - degree 14, connects to 2 communities
-- [[SharingService]] - degree 13, connects to 1 community
-- [[SharingController]] - degree 9, connects to 1 community
+- [[SharingController]] - degree 9, connects to 2 communities
 - [[dot-create()_38]] - degree 8, connects to 1 community

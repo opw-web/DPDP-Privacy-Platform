@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/audit/audit-read.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/sdf-gaps.service.ts"
 type: "code"
-community: "AuditReadController"
-location: "L19"
+community: "AlgorithmRegisterService"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditReadController
+  - community/AlgorithmRegisterService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditReadController]] - `method` [EXTRACTED]
-- [[AuditReadService]] - `references` [EXTRACTED]
+- [[ComplianceService]] - `references` [EXTRACTED]
+- [[SdfGapsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditReadController
+#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterService

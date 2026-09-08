@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/mail/mailer.service.ts"
 type: "code"
-community: "MailerService"
+community: "NotificationsService"
 location: "L42"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MailerService
+  - community/NotificationsService
 ---
 
 # .mailConfig()
@@ -15,4 +15,4 @@ tags:
 - [[MailConfig]] - `references` [EXTRACTED]
 - [[MailerService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MailerService
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

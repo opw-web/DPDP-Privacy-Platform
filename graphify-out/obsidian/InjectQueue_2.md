@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CampaignSendQueueService"
+community: "queues.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampaignSendQueueService
+  - community/queuesmodulets
 ---
 
 # InjectQueue
 
 ## Connections
-- [[dot-constructor()_64]] - `references` [EXTRACTED]
+- [[dot-constructor()_99]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampaignSendQueueService
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

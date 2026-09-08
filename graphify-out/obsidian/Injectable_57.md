@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
+community: "queues.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/queuesmodulets
 ---
 
 # Injectable
 
 ## Connections
-- [[VoluntaryUndertakingsService]] - `references` [EXTRACTED]
+- [[BreachPrincipalNoticeDispatchQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

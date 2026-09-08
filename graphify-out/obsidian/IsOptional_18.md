@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AffectedPrincipalsDto"
+community: "ImportConsentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AffectedPrincipalsDto
+  - community/ImportConsentDto
 ---
 
 # IsOptional
 
 ## Connections
-- [[AffectedPrincipalsDto]] - `references` [EXTRACTED]
+- [[ImportConsentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AffectedPrincipalsDto
+#graphify/code #graphify/EXTRACTED #community/ImportConsentDto

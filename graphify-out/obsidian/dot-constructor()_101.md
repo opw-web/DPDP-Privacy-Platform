@@ -1,17 +1,20 @@
 ---
-source_file: "dpdp-platform/frontend/src/lib/api-client.ts"
+source_file: "dpdp-platform/backend/src/queues/consent-backfill.queue.ts"
 type: "code"
-community: "react"
-location: "L30"
+community: "queues.module.ts"
+location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/queuesmodulets
 ---
 
 # .constructor()
 
 ## Connections
-- [[ApiError]] - `method` [EXTRACTED]
+- [[dot-register()]] - `calls` [INFERRED]
+- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
+- [[ConsentBackfillQueueService]] - `method` [EXTRACTED]
+- [[InjectQueue_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

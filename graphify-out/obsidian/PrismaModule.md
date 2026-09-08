@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/common/prisma/prisma.module.ts"
 type: "code"
-community: "PrismaService"
+community: "PrismaModule"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/PrismaModule
 ---
 
 # PrismaModule
 
 ## Connections
 - [[Global]] - `references` [EXTRACTED]
-- [[Module_31]] - `references` [EXTRACTED]
+- [[Module_33]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[prisma.module.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/PrismaModule

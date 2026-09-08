@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/consents/consents.service.ts"
 type: "code"
-community: "audit.service.ts"
+community: "@prisma/client"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/auditservicets
+  - community/prisma/client
 ---
 
 # CONSENT_RECORD_PUBLIC_SELECT
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[consents.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/auditservicets
+#graphify/code #graphify/EXTRACTED #community/prisma/client

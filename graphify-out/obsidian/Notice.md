@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/notices/types.ts"
 type: "code"
-community: "react"
+community: "MessagingCampaignBuilderPage.tsx"
 location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/MessagingCampaignBuilderPagetsx
 ---
 
 # Notice
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[ChildrenPage.tsx]] - `imports` [EXTRACTED]
 - [[MessagingCampaignBuilderPage.tsx]] - `imports` [EXTRACTED]
-- [[NoticeDetail]] - `inherits` [EXTRACTED]
+- [[NoticeDetail_1]] - `inherits` [EXTRACTED]
 - [[NoticesPage.tsx]] - `imports` [EXTRACTED]
 - [[noticestypes.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/MessagingCampaignBuilderPagetsx

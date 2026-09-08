@@ -1,23 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/audit/audit-read.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts"
 type: "code"
-community: "AuditReadController"
-location: "L23"
+community: "SdfController"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditReadController
+  - community/SdfController
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_19]] - `calls` [INFERRED]
-- [[AuditReadController]] - `method` [EXTRACTED]
-- [[CurrentActorPermissions]] - `references` [EXTRACTED]
-- [[Get_21]] - `references` [EXTRACTED]
-- [[ListAuditEventsDto]] - `references` [EXTRACTED]
-- [[Query_5]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-listAlgorithms()]] - `calls` [INFERRED]
+- [[AlgorithmRegisterService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditReadController
+#graphify/code #graphify/EXTRACTED #community/SdfController

@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/assembly.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/merge-unmerge.e2e-spec.ts"
 type: "code"
-community: "AppModule"
-location: "L32"
+community: "merge-unmerge.e2e-spec.ts"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AppModule
+  - community/merge-unmergee2e-spects
 ---
 
 # organization()
 
 ## Connections
-- [[assembly.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[merge-unmerge.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AppModule
+#graphify/code #graphify/EXTRACTED #community/merge-unmergee2e-spects

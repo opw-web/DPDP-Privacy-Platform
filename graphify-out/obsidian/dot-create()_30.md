@@ -1,24 +1,28 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/breaches/breaches.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
 type: "code"
-community: "BreachesController"
-location: "L65"
+community: ".record"
+location: "L206"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BreachesController
+  - community/record
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_23]] - `calls` [INFERRED]
+- [[dot-computeDeadline()]] - `calls` [INFERRED]
+- [[dot-create()_27]] - `calls` [INFERRED]
+- [[dot-next()]] - `calls` [INFERRED]
+- [[dot-previewAffected()_1]] - `calls` [EXTRACTED]
+- [[dot-public()]] - `calls` [EXTRACTED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-resolveRule()]] - `calls` [INFERRED]
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[Actor]] - `references` [EXTRACTED]
-- [[Body_23]] - `references` [EXTRACTED]
-- [[BreachesController]] - `method` [EXTRACTED]
+- [[BreachService]] - `method` [EXTRACTED]
 - [[CreateBreachDto]] - `references` [EXTRACTED]
-- [[Post_24]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[PublicBreach]] - `references` [EXTRACTED]
+- [[asDate()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BreachesController
+#graphify/code #graphify/EXTRACTED #community/record

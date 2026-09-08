@@ -17,5 +17,6 @@ tags:
 - [[pause_before_exit()]] - `calls` [EXTRACTED]
 - [[say()]] - `calls` [EXTRACTED]
 - [[step()]] - `calls` [EXTRACTED]
+- [[warn()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/commonsh

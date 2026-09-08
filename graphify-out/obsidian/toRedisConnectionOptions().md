@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/redis-connection.util.ts"
 type: "code"
-community: "token.service.ts"
+community: "employee-auth.controller.ts"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tokenservicets
+  - community/employee-authcontrollerts
 ---
 
 # toRedisConnectionOptions()
@@ -17,4 +17,4 @@ tags:
 - [[redis-connection.util.ts]] - `contains` [EXTRACTED]
 - [[sync-lock.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tokenservicets
+#graphify/code #graphify/EXTRACTED #community/employee-authcontrollerts

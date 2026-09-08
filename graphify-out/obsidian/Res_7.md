@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "EmployeeAuthController"
+community: "BreachesController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeeAuthController
+  - community/BreachesController
 ---
 
 # Res
 
 ## Connections
-- [[dot-login()_1]] - `references` [EXTRACTED]
-- [[dot-logout()]] - `references` [EXTRACTED]
-- [[dot-refresh()]] - `references` [EXTRACTED]
+- [[dot-boardDetailed()]] - `references` [EXTRACTED]
+- [[dot-boardInitial()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController
+#graphify/code #graphify/EXTRACTED #community/BreachesController

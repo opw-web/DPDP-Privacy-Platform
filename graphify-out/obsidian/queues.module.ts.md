@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/queues.module.ts"
 type: "code"
-community: "app.module.ts"
+community: "queues.module.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/appmodulets
+  - community/queuesmodulets
 ---
 
 # queues.module.ts
 
 ## Connections
-- [[@nestjsbullmq]] - `imports_from` [EXTRACTED]
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@nestjsconfig_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsbullmq_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjsconfig]] - `imports_from` [EXTRACTED]
 - [[ACCESS_LOG_RETENTION_QUEUE_NAME]] - `imports` [EXTRACTED]
 - [[AUDIT_CHAIN_VERIFY_QUEUE_NAME]] - `imports` [EXTRACTED]
 - [[AccessLogRetentionProcessor]] - `imports` [EXTRACTED]
@@ -64,4 +64,4 @@ tags:
 - [[sync.queue.ts]] - `imports_from` [EXTRACTED]
 - [[toRedisConnectionOptions()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/appmodulets
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

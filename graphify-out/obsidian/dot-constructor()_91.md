@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/employees.controller.ts"
 type: "code"
-community: "templates.service.ts"
-location: "L87"
+community: "EmployeesService"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatesservicets
+  - community/EmployeesService
 ---
 
 # .constructor()
 
 ## Connections
-- [[MissingRequiredVariableError]] - `method` [EXTRACTED]
+- [[EmployeesController]] - `method` [EXTRACTED]
+- [[EmployeesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatesservicets
+#graphify/code #graphify/EXTRACTED #community/EmployeesService

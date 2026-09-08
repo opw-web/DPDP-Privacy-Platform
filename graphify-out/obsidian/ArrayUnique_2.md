@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateNoticeDto"
+community: "TemplatesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateNoticeDto
+  - community/TemplatesService
 ---
 
 # ArrayUnique
 
 ## Connections
-- [[CreateNoticeDto]] - `references` [EXTRACTED]
+- [[CreateTemplateDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateNoticeDto
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

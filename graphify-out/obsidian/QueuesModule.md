@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/queues.module.ts"
 type: "code"
-community: "app.module.ts"
+community: "@nestjs/common"
 location: "L100"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/appmodulets
+  - community/nestjs/common
 ---
 
 # QueuesModule
 
 ## Connections
-- [[Module_30]] - `references` [EXTRACTED]
+- [[Module_32]] - `references` [EXTRACTED]
 - [[breaches.module.ts]] - `imports` [EXTRACTED]
 - [[consents.module.ts]] - `imports` [EXTRACTED]
 - [[data-sources.module.ts]] - `imports` [EXTRACTED]
@@ -22,4 +22,4 @@ tags:
 - [[sdf.module.ts]] - `imports` [EXTRACTED]
 - [[sync.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/appmodulets
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

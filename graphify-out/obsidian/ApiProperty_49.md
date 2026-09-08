@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateRecipientDto"
+community: "PreviewAudienceDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateRecipientDto
+  - community/PreviewAudienceDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateRecipientDto]] - `references` [EXTRACTED]
+- [[PreviewAudienceDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateRecipientDto
+#graphify/code #graphify/EXTRACTED #community/PreviewAudienceDto

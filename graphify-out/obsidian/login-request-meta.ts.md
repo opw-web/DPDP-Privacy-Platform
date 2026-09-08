@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/login-request-meta.ts"
 type: "code"
-community: "principal-auth.service.ts"
+community: "@prisma/client"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principal-authservicets
+  - community/prisma/client
 ---
 
 # login-request-meta.ts
@@ -17,4 +17,4 @@ tags:
 - [[principal-auth.service.ts]] - `imports_from` [EXTRACTED]
 - [[refresh-rotation.util.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principal-authservicets
+#graphify/code #graphify/EXTRACTED #community/prisma/client

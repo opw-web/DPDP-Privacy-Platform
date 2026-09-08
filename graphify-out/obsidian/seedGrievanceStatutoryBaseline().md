@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/prisma/seed/compliance-rules.js"
+source_file: "dpdp-platform/backend/prisma/seed/compliance-rules.ts"
 type: "code"
-community: "compliance-rules.js"
-location: "L248"
+community: "PrismaService"
+location: "L302"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/compliance-rulesjs
+  - community/PrismaService
 ---
 
 # seedGrievanceStatutoryBaseline()
 
 ## Connections
-- [[compliance-rules.js]] - `contains` [EXTRACTED]
+- [[compliance-rules.ts]] - `contains` [EXTRACTED]
+- [[createOrgWithEmployee()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/compliance-rulesjs
+#graphify/code #graphify/EXTRACTED #community/PrismaService

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/PrincipalLoginPage.tsx"
 type: "code"
-community: "react"
+community: "api-client.ts"
 location: "L42"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/api-clientts
 ---
 
 # DemoCredentialsBanner()
@@ -15,4 +15,4 @@ tags:
 - [[PrincipalLoginPage.tsx]] - `contains` [EXTRACTED]
 - [[shouldShowDemoCredentials()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/api-clientts

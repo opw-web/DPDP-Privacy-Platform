@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeRequestDetailPage.test.tsx"
 type: "code"
-community: "router.tsx"
+community: "@tanstack/react-query"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/tanstack/react-query
 ---
 
 # MeRequestDetailPage.test.tsx
@@ -20,8 +20,8 @@ tags:
 - [[initial]] - `contains` [EXTRACTED]
 - [[principalApiClient]] - `imports` [EXTRACTED]
 - [[react-router-dom_1]] - `imports_from` [EXTRACTED]
-- [[renderPage()_10]] - `contains` [EXTRACTED]
+- [[renderPage()_9]] - `contains` [EXTRACTED]
 - [[updated]] - `contains` [EXTRACTED]
 - [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SyncLockService"
+community: "AuditReadService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncLockService
+  - community/AuditReadService
 ---
 
 # Injectable
 
 ## Connections
-- [[SyncLockService]] - `references` [EXTRACTED]
+- [[AuditReadService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncLockService
+#graphify/code #graphify/EXTRACTED #community/AuditReadService

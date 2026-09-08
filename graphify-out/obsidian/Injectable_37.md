@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "app.module.ts"
+community: "principals.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/appmodulets
+  - community/principalsservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[ConsentBackfillQueueService]] - `references` [EXTRACTED]
+- [[AccessLogService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/appmodulets
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

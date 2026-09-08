@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/providers/portal.provider.ts"
 type: "code"
-community: "PDFDocument"
+community: "NotificationsService"
 location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PDFDocument
+  - community/NotificationsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[PDFDocument]] - `method` [EXTRACTED]
+- [[PortalProvider]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PDFDocument
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

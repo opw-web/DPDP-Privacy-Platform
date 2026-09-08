@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/sdf/AlgorithmFormFields.tsx"
 type: "code"
-community: "react-router-dom"
+community: "react"
 location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react-router-dom
+  - community/react
 ---
 
 # toggleOperation()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[AlgorithmFormFields()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react-router-dom
+#graphify/code #graphify/EXTRACTED #community/react

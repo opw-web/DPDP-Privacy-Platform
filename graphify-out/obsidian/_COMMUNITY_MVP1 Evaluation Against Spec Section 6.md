@@ -1,11 +1,11 @@
 ---
 type: community
-members: 29
+members: 30
 ---
 
 # MVP1 Evaluation Against Spec Section 6
 
-**Members:** 29 nodes
+**Members:** 30 nodes
 
 ## Members
 - [[Check 10 Conflicts are surfaced, not silently resolved (GO-03)_1]] - document - docs/EVALUATION_MVP1.md
@@ -34,6 +34,7 @@ members: 29
 - [[Check 9 Merges are reversible_1]] - document - docs/EVALUATION_MVP1.md
 - [[EVALUATION_MVP1]] - document - docs/EVALUATION_MVP1.md
 - [[MVP1 Evaluation Against Spec Section 6]] - document - docs/EVALUATION_MVP1.md
+- [[Re-verified 2026-09-08 — PASS]] - document - docs/EVALUATION_MVP1.md
 - [[Setup performed]] - document - docs/EVALUATION_MVP1.md
 - [[Summary table]] - document - docs/EVALUATION_MVP1.md
 - [[The required numbers (sequential-sync baseline)]] - document - docs/EVALUATION_MVP1.md

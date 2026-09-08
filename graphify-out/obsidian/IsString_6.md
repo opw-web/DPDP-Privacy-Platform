@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SetMyConsentDto"
+community: "AuditReadService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SetMyConsentDto
+  - community/AuditReadService
 ---
 
 # IsString
 
 ## Connections
-- [[SetMyConsentDto]] - `references` [EXTRACTED]
+- [[AccessLogExportDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SetMyConsentDto
+#graphify/code #graphify/EXTRACTED #community/AuditReadService

@@ -1,23 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/guardians.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/erasure-task.service.ts"
 type: "code"
-community: "AccessTokenPayload"
-location: "L19"
+community: "RetentionController"
+location: "L482"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/RetentionController
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_4]] - `calls` [INFERRED]
-- [[CurrentActorPermissions]] - `references` [EXTRACTED]
-- [[Get_2]] - `references` [EXTRACTED]
-- [[GuardiansController]] - `method` [EXTRACTED]
-- [[ListGuardiansDto]] - `references` [EXTRACTED]
-- [[Query]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-listTasks()]] - `calls` [INFERRED]
+- [[ErasureTaskService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/RetentionController

@@ -27,7 +27,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_@nestjscommon]]
+- 5 edges to [[_COMMUNITY_AuditService]]
 - 4 edges to [[_COMMUNITY_csvDocument]]
 - 2 edges to [[_COMMUNITY_access-report-render.ts]]
 - 1 edge to [[_COMMUNITY_audit-read.service.ts]]

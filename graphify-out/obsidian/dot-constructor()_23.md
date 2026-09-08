@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sync.processor.ts"
+source_file: "dpdp-platform/backend/src/modules/requests/requests.controller.ts"
 type: "code"
-community: "sync.queue.ts"
-location: "L46"
+community: "AccessReportService"
+location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/syncqueuets
+  - community/AccessReportService
 ---
 
 # .constructor()
 
 ## Connections
-- [[SyncPipelineService]] - `references` [EXTRACTED]
-- [[SyncProcessor]] - `method` [EXTRACTED]
+- [[AccessReportService]] - `references` [EXTRACTED]
+- [[RequestsController]] - `method` [EXTRACTED]
+- [[RequestsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/syncqueuets
+#graphify/code #graphify/EXTRACTED #community/AccessReportService

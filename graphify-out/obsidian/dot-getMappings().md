@@ -1,22 +1,22 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.controller.ts"
 type: "code"
-community: "mappings.service.ts"
+community: "AttachPurposesDto"
 location: "L56"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingsservicets
+  - community/AttachPurposesDto
 ---
 
 # .getMappings()
 
 ## Connections
-- [[dot-get()_8]] - `calls` [INFERRED]
+- [[dot-get()_17]] - `calls` [INFERRED]
 - [[ApiOkResponse_2]] - `references` [EXTRACTED]
-- [[Get_14]] - `references` [EXTRACTED]
+- [[Get_13]] - `references` [EXTRACTED]
 - [[MappingsController]] - `method` [EXTRACTED]
-- [[Param_10]] - `references` [EXTRACTED]
+- [[Param_4]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/EXTRACTED #community/AttachPurposesDto

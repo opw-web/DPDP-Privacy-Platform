@@ -1,21 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/access-report.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/recipients.service.ts"
 type: "code"
-community: "access-report.service.ts"
-location: "L115"
+community: "CreateRecipientDto"
+location: "L55"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-reportservicets
+  - community/CreateRecipientDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[AccessLogService]] - `references` [EXTRACTED]
-- [[AccessReportService]] - `method` [EXTRACTED]
 - [[AuditService]] - `references` [EXTRACTED]
-- [[LineageService]] - `references` [EXTRACTED]
-- [[PrincipalRecipientsService]] - `references` [EXTRACTED]
+- [[RecipientsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-reportservicets
+#graphify/code #graphify/EXTRACTED #community/CreateRecipientDto

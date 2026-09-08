@@ -1,25 +1,25 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.service.ts"
 type: "code"
-community: "mappings.service.ts"
+community: "data-sources.service.ts"
 location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingsservicets
+  - community/data-sourcesservicets
 ---
 
 # MappingsService
 
 ## Connections
-- [[dot-constructor()_49]] - `references` [EXTRACTED]
-- [[dot-constructor()_50]] - `method` [EXTRACTED]
-- [[dot-get()_8]] - `method` [EXTRACTED]
-- [[dot-replace()]] - `method` [EXTRACTED]
+- [[dot-constructor()_60]] - `references` [EXTRACTED]
+- [[dot-constructor()_5]] - `method` [EXTRACTED]
+- [[dot-get()_17]] - `method` [EXTRACTED]
+- [[dot-replace()_1]] - `method` [EXTRACTED]
 - [[dot-validateVerifiedCustomerId()]] - `method` [EXTRACTED]
-- [[Injectable_28]] - `references` [EXTRACTED]
+- [[Injectable_71]] - `references` [EXTRACTED]
 - [[data-sources.module.ts]] - `imports` [EXTRACTED]
 - [[mappings.controller.ts]] - `imports` [EXTRACTED]
 - [[mappings.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets

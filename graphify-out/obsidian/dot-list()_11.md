@@ -1,20 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/compliance/compliance.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync.controller.ts"
 type: "code"
-community: "compliance.service.ts"
-location: "L22"
+community: "SyncService"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/complianceservicets
+  - community/SyncService
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_12]] - `calls` [INFERRED]
-- [[ComplianceController]] - `method` [EXTRACTED]
-- [[Get_16]] - `references` [EXTRACTED]
+- [[dot-listJobs()]] - `calls` [INFERRED]
+- [[Get_11]] - `references` [EXTRACTED]
+- [[ListSyncJobsQueryDto]] - `references` [EXTRACTED]
+- [[Query_3]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
+- [[SyncJobsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/complianceservicets
+#graphify/code #graphify/EXTRACTED #community/SyncService

@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/breach-clock.processor.ts"
 type: "code"
-community: "app.module.ts"
+community: "queues.module.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/appmodulets
+  - community/queuesmodulets
 ---
 
 # breach-clock.processor.ts
 
 ## Connections
-- [[@nestjsbullmq]] - `imports_from` [EXTRACTED]
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsbullmq_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[BREACH_CLOCK_QUEUE_NAME]] - `contains` [EXTRACTED]
 - [[BreachClockJobData]] - `contains` [EXTRACTED]
 - [[BreachClockProcessor]] - `contains` [EXTRACTED]
@@ -30,4 +30,4 @@ tags:
 - [[queues.module.ts]] - `imports_from` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/appmodulets
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

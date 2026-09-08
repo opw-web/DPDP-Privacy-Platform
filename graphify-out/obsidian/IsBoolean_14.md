@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SdfAssessmentService"
+community: "TemplatesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SdfAssessmentService
+  - community/TemplatesService
 ---
 
 # IsBoolean
 
 ## Connections
-- [[CompleteSdfAssessmentDto]] - `references` [EXTRACTED]
+- [[UpdateTemplateDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SdfAssessmentService
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/sync.processor.ts"
 type: "code"
-community: "sync.queue.ts"
+community: "queues.module.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/syncqueuets
+  - community/queuesmodulets
 ---
 
 # sync.processor.ts
 
 ## Connections
-- [[@nestjsbullmq]] - `imports_from` [EXTRACTED]
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjsbullmq_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[SYNC_QUEUE_NAME]] - `imports` [EXTRACTED]
 - [[SYNC_WORKER_CONCURRENCY]] - `imports` [EXTRACTED]
 - [[SyncJobData]] - `imports` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[sync.module.ts]] - `imports_from` [EXTRACTED]
 - [[sync.queue.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/syncqueuets
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

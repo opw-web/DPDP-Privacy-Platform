@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AuditChainService"
+community: "TemplatesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditChainService
+  - community/TemplatesService
 ---
 
 # Controller
 
 ## Connections
-- [[AuditEventsEvidenceController]] - `references` [EXTRACTED]
+- [[TemplatesController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditChainService
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

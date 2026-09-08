@@ -1,27 +1,27 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/employees/employees.service.ts"
 type: "code"
-community: "employees.service.ts"
+community: "EmployeesService"
 location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeesservicets
+  - community/EmployeesService
 ---
 
 # EmployeesService
 
 ## Connections
-- [[dot-constructor()_97]] - `references` [EXTRACTED]
-- [[dot-constructor()_5]] - `method` [EXTRACTED]
-- [[dot-create()_19]] - `method` [EXTRACTED]
+- [[dot-constructor()_91]] - `references` [EXTRACTED]
+- [[dot-constructor()_92]] - `method` [EXTRACTED]
+- [[dot-create()_21]] - `method` [EXTRACTED]
 - [[dot-get()_12]] - `method` [EXTRACTED]
-- [[dot-list()_26]] - `method` [EXTRACTED]
+- [[dot-list()_28]] - `method` [EXTRACTED]
 - [[dot-resetPassword()_1]] - `method` [EXTRACTED]
-- [[dot-update()_13]] - `method` [EXTRACTED]
-- [[Injectable_60]] - `references` [EXTRACTED]
+- [[dot-update()_15]] - `method` [EXTRACTED]
+- [[Injectable_52]] - `references` [EXTRACTED]
 - [[employees.controller.ts]] - `imports` [EXTRACTED]
 - [[employees.module.ts]] - `imports` [EXTRACTED]
 - [[employees.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeesservicets
+#graphify/code #graphify/EXTRACTED #community/EmployeesService

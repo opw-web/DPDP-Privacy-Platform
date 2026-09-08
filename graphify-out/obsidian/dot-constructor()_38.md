@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/providers/smtp.provider.ts"
 type: "code"
-community: "purposes.service.ts"
-location: "L13"
+community: "NotificationsService"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposesservicets
+  - community/NotificationsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[PurposesController]] - `method` [EXTRACTED]
-- [[PurposesService]] - `references` [EXTRACTED]
+- [[MailerService]] - `references` [EXTRACTED]
+- [[SmtpProvider]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposesservicets
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

@@ -12,8 +12,8 @@ tags:
 # health.e2e-spec.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@nestjstesting]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjstesting_1]] - `imports_from` [EXTRACTED]
 - [[AppModule]] - `imports` [EXTRACTED]
 - [[app.module.ts]] - `imports_from` [EXTRACTED]
 - [[supertest]] - `imports_from` [EXTRACTED]

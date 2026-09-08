@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "employees.service.ts"
+community: "me-rights.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeesservicets
+  - community/me-rightsservicets
 ---
 
 # IsEmail
 
 ## Connections
-- [[CreateEmployeeDto]] - `references` [EXTRACTED]
+- [[UpdateMeNominationDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeesservicets
+#graphify/code #graphify/EXTRACTED #community/me-rightsservicets

@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/consents.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/notifications.e2e-spec.ts"
 type: "code"
-community: "PrismaService"
-location: "L71"
+community: "NotificationsService"
+location: "L78"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/NotificationsService
 ---
 
 # createPrincipal()
 
 ## Connections
-- [[consents.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[notifications.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

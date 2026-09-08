@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "notifications.controller.ts"
+community: "EscalateRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationscontrollerts
+  - community/EscalateRequestDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[NotificationDto]] - `references` [EXTRACTED]
+- [[EscalateRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts
+#graphify/code #graphify/EXTRACTED #community/EscalateRequestDto

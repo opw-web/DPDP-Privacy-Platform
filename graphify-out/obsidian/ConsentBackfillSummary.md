@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/consents/consent-backfill.service.ts"
 type: "code"
-community: "PrismaService"
+community: "@prisma/client"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/prisma/client
 ---
 
 # ConsentBackfillSummary
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[consent-backfill.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/prisma/client

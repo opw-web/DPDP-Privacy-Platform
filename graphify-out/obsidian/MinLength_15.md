@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SourceFieldMappingDto"
+community: "CompleteObligationDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SourceFieldMappingDto
+  - community/CompleteObligationDto
 ---
 
 # MinLength
 
 ## Connections
-- [[SourceFieldMappingDto]] - `references` [EXTRACTED]
+- [[CompleteObligationDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SourceFieldMappingDto
+#graphify/code #graphify/EXTRACTED #community/CompleteObligationDto

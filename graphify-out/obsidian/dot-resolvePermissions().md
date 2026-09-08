@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/guards/permissions.guard.ts"
 type: "code"
-community: "AccessTokenPayload"
+community: "PermissionsGuard"
 location: "L122"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/PermissionsGuard
 ---
 
 # .resolvePermissions()
@@ -16,4 +16,4 @@ tags:
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
 - [[PermissionsGuard]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/PermissionsGuard

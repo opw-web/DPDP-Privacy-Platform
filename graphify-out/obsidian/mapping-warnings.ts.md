@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/mapping-warnings.ts"
 type: "code"
-community: "mappings.service.ts"
+community: "data-sources.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingsservicets
+  - community/data-sourcesservicets
 ---
 
 # mapping-warnings.ts
 
 ## Connections
-- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient]] - `imports_from` [EXTRACTED]
 - [[MappingForWarningCheck]] - `contains` [EXTRACTED]
 - [[MappingWarning_1]] - `contains` [EXTRACTED]
 - [[MappingWarningPurposeSummary_1]] - `contains` [EXTRACTED]
@@ -24,4 +24,4 @@ tags:
 - [[scoped-transaction-client.ts]] - `imports_from` [EXTRACTED]
 - [[source-purposes.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets

@@ -8,7 +8,7 @@ members: 8
 **Members:** 8 nodes
 
 ## Members
-- [[IsEnum_17]] - code
+- [[IsEnum_16]] - code
 - [[IsInt_8]] - code
 - [[IsOptional_35]] - code
 - [[IsString_42]] - code
@@ -25,9 +25,8 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_@nestjscommon]]
-- 1 edge to [[_COMMUNITY_PrincipalsController]]
-- 1 edge to [[_COMMUNITY_@prismaclient]]
+- 2 edges to [[_COMMUNITY_RequirePermission]]
+- 1 edge to [[_COMMUNITY_principals.service.ts]]
 
 ## Top bridge nodes
-- [[ListPrincipalsDto]] - degree 10, connects to 3 communities
+- [[ListPrincipalsDto]] - degree 10, connects to 2 communities

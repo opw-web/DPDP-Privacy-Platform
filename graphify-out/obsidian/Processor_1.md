@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sync.queue.ts"
+community: "employee-auth.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/syncqueuets
+  - community/employee-authcontrollerts
 ---
 
 # Processor
 
 ## Connections
-- [[SyncProcessor]] - `references` [EXTRACTED]
+- [[AccessLogRetentionProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/syncqueuets
+#graphify/code #graphify/EXTRACTED #community/employee-authcontrollerts

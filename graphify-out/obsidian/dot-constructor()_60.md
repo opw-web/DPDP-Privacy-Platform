@@ -1,20 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/retention-scan.service.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.controller.ts"
 type: "code"
-community: "compliance.service.ts"
-location: "L56"
+community: "SourcePurposesService"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/complianceservicets
+  - community/SourcePurposesService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[ComplianceService]] - `references` [EXTRACTED]
-- [[ErasureTaskService]] - `references` [EXTRACTED]
-- [[RetentionScanService]] - `method` [EXTRACTED]
+- [[MappingsController]] - `method` [EXTRACTED]
+- [[MappingsService]] - `references` [EXTRACTED]
+- [[SourcePurposesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/complianceservicets
+#graphify/code #graphify/EXTRACTED #community/SourcePurposesService

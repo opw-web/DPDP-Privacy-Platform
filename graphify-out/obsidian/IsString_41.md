@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AuditReadController"
+community: "NoticesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditReadController
+  - community/NoticesService
 ---
 
 # IsString
 
 ## Connections
-- [[AccessLogExportDto]] - `references` [EXTRACTED]
+- [[UpsertTranslationDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditReadController
+#graphify/code #graphify/EXTRACTED #community/NoticesService

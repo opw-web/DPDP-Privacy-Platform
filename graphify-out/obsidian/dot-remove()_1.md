@@ -1,20 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
 type: "code"
-community: "DataSourcesService"
-location: "L464"
+community: "DataSourcesController"
+location: "L55"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesService
+  - community/DataSourcesController
 ---
 
 # .remove()
 
 ## Connections
-- [[dot-record()_1]] - `calls` [INFERRED]
 - [[dot-remove()]] - `calls` [INFERRED]
-- [[dot-removeScheduleBestEffort()]] - `calls` [EXTRACTED]
-- [[DataSourcesService]] - `method` [EXTRACTED]
+- [[DataSourcesController]] - `method` [EXTRACTED]
+- [[Delete]] - `references` [EXTRACTED]
+- [[HttpCode_2]] - `references` [EXTRACTED]
+- [[Param_22]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesService
+#graphify/code #graphify/EXTRACTED #community/DataSourcesController

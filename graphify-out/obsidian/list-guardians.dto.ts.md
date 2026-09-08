@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/children/dto/list-guardians.dto.ts"
 type: "code"
-community: "@prisma/client"
+community: "@nestjs/swagger"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/nestjs/swagger
 ---
 
 # list-guardians.dto.ts
@@ -18,4 +18,4 @@ tags:
 - [[guardians.controller.ts]] - `imports_from` [EXTRACTED]
 - [[guardians.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prisma/client
+#graphify/code #graphify/EXTRACTED #community/nestjs/swagger

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "children.module.ts"
+community: "CreateRecipientDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/childrenmodulets
+  - community/CreateRecipientDto
 ---
 
 # IsEnum
 
 ## Connections
-- [[SetAgeStatusDto]] - `references` [EXTRACTED]
+- [[CreateRecipientDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/childrenmodulets
+#graphify/code #graphify/EXTRACTED #community/CreateRecipientDto

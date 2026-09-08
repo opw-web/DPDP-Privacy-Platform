@@ -1,19 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "BreachesController"
+community: "CreateExemptionClaimDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BreachesController
+  - community/CreateExemptionClaimDto
 ---
 
 # Get
 
 ## Connections
-- [[dot-boardDetailed()]] - `references` [EXTRACTED]
-- [[dot-boardInitial()]] - `references` [EXTRACTED]
-- [[dot-get()_18]] - `references` [EXTRACTED]
-- [[dot-list()_38]] - `references` [EXTRACTED]
+- [[dot-list()_37]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BreachesController
+#graphify/code #graphify/EXTRACTED #community/CreateExemptionClaimDto

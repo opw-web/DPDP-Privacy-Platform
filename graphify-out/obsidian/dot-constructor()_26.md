@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/pre-erasure-notice.processor.ts"
+source_file: "dpdp-platform/backend/src/common/guards/permissions.guard.ts"
 type: "code"
-community: "PreErasureNoticeService"
-location: "L20"
+community: "PermissionsGuard"
+location: "L81"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PreErasureNoticeService
+  - community/PermissionsGuard
 ---
 
 # .constructor()
 
 ## Connections
-- [[PreErasureNoticeProcessor]] - `method` [EXTRACTED]
-- [[PreErasureNoticeService]] - `references` [EXTRACTED]
+- [[PermissionsGuard]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PreErasureNoticeService
+#graphify/code #graphify/EXTRACTED #community/PermissionsGuard

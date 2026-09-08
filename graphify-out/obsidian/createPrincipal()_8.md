@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/retention.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/principals.e2e-spec.ts"
 type: "code"
-community: "PrismaService"
-location: "L143"
+community: "principals.service.ts"
+location: "L137"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/principalsservicets
 ---
 
 # createPrincipal()
 
 ## Connections
-- [[retention.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[createFixture()_1]] - `calls` [EXTRACTED]
+- [[principals.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

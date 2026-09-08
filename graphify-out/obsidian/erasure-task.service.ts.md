@@ -12,8 +12,8 @@ tags:
 # erasure-task.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@prismaclient]] - `imports_from` [EXTRACTED]
 - [[ACCOUNT_ACCESS_CANONICAL_FIELDS]] - `contains` [EXTRACTED]
 - [[AccessTokenPayload]] - `imports` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
@@ -27,10 +27,10 @@ tags:
 - [[ErasureTrigger]] - `contains` [EXTRACTED]
 - [[LegalHoldScope]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
-- [[ProcessorChecklistEntry_1]] - `imports` [EXTRACTED]
+- [[ProcessorChecklistEntry]] - `imports` [EXTRACTED]
 - [[PublicErasureTask]] - `contains` [EXTRACTED]
 - [[ScopedTransactionClient]] - `imports` [EXTRACTED]
-- [[SystemChecklistEntry_1]] - `imports` [EXTRACTED]
+- [[SystemChecklistEntry]] - `imports` [EXTRACTED]
 - [[TERMINAL_STATES]] - `contains` [EXTRACTED]
 - [[addByDeadlineUnit()]] - `imports` [EXTRACTED]
 - [[addByRetentionUnit()]] - `imports` [EXTRACTED]

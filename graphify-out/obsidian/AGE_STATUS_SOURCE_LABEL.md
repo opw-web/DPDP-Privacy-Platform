@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.tsx"
 type: "code"
-community: "SettingsPage.tsx"
+community: "PrincipalDetailPage.tsx"
 location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SettingsPagetsx
+  - community/PrincipalDetailPagetsx
 ---
 
 # AGE_STATUS_SOURCE_LABEL
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[PrincipalDetailPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SettingsPagetsx
+#graphify/code #graphify/EXTRACTED #community/PrincipalDetailPagetsx

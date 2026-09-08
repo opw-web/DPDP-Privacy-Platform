@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
 type: "code"
-community: "PrismaService"
+community: "AuditService"
 location: "L193"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/AuditService
 ---
 
 # addByDeadlineUnit()
@@ -27,4 +27,4 @@ tags:
 - [[sdf-gaps.service.ts]] - `imports` [EXTRACTED]
 - [[sdf.e2e-spec.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/AuditService

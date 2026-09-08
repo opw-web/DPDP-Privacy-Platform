@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AuditChainService"
+community: "CreateComplianceRuleDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditChainService
+  - community/CreateComplianceRuleDto
 ---
 
 # ApiTags
 
 ## Connections
-- [[AuditEventsEvidenceController]] - `references` [EXTRACTED]
+- [[ComplianceController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditChainService
+#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto

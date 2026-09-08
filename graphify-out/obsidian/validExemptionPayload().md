@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/children.e2e-spec.ts"
 type: "code"
-community: "supertest"
+community: "PrismaService"
 location: "L159"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/supertest
+  - community/PrismaService
 ---
 
 # validExemptionPayload()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[children.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/supertest
+#graphify/code #graphify/EXTRACTED #community/PrismaService

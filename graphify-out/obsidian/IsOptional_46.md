@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CandidatesController"
+community: "CreateExemptionClaimDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CandidatesController
+  - community/CreateExemptionClaimDto
 ---
 
 # IsOptional
 
 ## Connections
-- [[ListMatchCandidatesQueryDto]] - `references` [EXTRACTED]
+- [[ListExemptionClaimsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CandidatesController
+#graphify/code #graphify/EXTRACTED #community/CreateExemptionClaimDto

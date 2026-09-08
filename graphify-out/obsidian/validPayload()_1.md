@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/purposes.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/data-sources.e2e-spec.ts"
 type: "code"
-community: "principals.e2e-spec.ts"
-location: "L97"
+community: "data-sources.service.ts"
+location: "L121"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principalse2e-spects
+  - community/data-sourcesservicets
 ---
 
 # validPayload()
 
 ## Connections
-- [[purposes.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[data-sources.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principalse2e-spects
+#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets

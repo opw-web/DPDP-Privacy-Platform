@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
 type: "code"
-community: "compliance.service.ts"
+community: "CreateComplianceRuleDto"
 location: "L374"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/complianceservicets
+  - community/CreateComplianceRuleDto
 ---
 
 # .getById()
@@ -16,4 +16,4 @@ tags:
 - [[ComplianceService]] - `method` [EXTRACTED]
 - [[toPublicComplianceRule()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/complianceservicets
+#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto

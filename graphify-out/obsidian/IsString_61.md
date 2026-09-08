@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdateRolePermissionsDto"
+community: "CreateRecipientDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateRolePermissionsDto
+  - community/CreateRecipientDto
 ---
 
 # IsString
 
 ## Connections
-- [[UpdateRolePermissionsDto]] - `references` [EXTRACTED]
+- [[CreateRecipientDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto
+#graphify/code #graphify/EXTRACTED #community/CreateRecipientDto

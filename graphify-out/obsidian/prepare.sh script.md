@@ -12,14 +12,12 @@ tags:
 # prepare.sh script
 
 ## Connections
-- [[docker_run()]] - `calls` [EXTRACTED]
 - [[install_packages()]] - `calls` [EXTRACTED]
 - [[ok()]] - `calls` [EXTRACTED]
 - [[pause_before_exit()]] - `calls` [EXTRACTED]
 - [[prepare.sh]] - `contains` [EXTRACTED]
 - [[require_command()]] - `calls` [EXTRACTED]
 - [[say()]] - `calls` [EXTRACTED]
-- [[setup_node()]] - `calls` [EXTRACTED]
 - [[step()]] - `calls` [EXTRACTED]
 - [[warn()]] - `calls` [EXTRACTED]
 

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/DataSourceDetailPage.tsx"
 type: "code"
-community: "router.tsx"
+community: "data-sources-api.ts"
 location: "L208"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/data-sources-apits
 ---
 
 # DataSourceDetailPage()
@@ -16,4 +16,4 @@ tags:
 - [[DataSourceDetailPage.tsx]] - `contains` [EXTRACTED]
 - [[router.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/data-sources-apits

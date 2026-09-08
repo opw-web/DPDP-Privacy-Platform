@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/candidates.controller.ts"
 type: "code"
-community: "AccessTokenPayload"
+community: "RequirePermission"
 location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessTokenPayload
+  - community/RequirePermission
 ---
 
 # .confirm()
@@ -16,8 +16,8 @@ tags:
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
 - [[CandidatesController]] - `method` [EXTRACTED]
 - [[CurrentActor]] - `references` [EXTRACTED]
-- [[Param_1]] - `references` [EXTRACTED]
-- [[Post_1]] - `references` [EXTRACTED]
+- [[Param_12]] - `references` [EXTRACTED]
+- [[Post_11]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessTokenPayload
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

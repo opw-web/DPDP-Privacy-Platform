@@ -1,19 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/inventory/inventory.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts"
 type: "code"
-community: "inventory.service.ts"
-location: "L17"
+community: "PDFDocument"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/inventoryservicets
+  - community/PDFDocument
 ---
 
 # .constructor()
 
 ## Connections
-- [[InventoryController]] - `method` [EXTRACTED]
-- [[InventoryService]] - `references` [EXTRACTED]
-- [[RopaExportService]] - `references` [EXTRACTED]
+- [[PDFDocument]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/inventoryservicets
+#graphify/code #graphify/EXTRACTED #community/PDFDocument

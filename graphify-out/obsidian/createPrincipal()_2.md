@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/information-requests.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/evidence.e2e-spec.ts"
 type: "code"
-community: "supertest"
-location: "L77"
+community: "PrismaService"
+location: "L84"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/supertest
+  - community/PrismaService
 ---
 
 # createPrincipal()
 
 ## Connections
-- [[information-requests.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[evidence.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/supertest
+#graphify/code #graphify/EXTRACTED #community/PrismaService

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[NOTICE_LANGUAGE_CODES]] - `contains` [EXTRACTED]
-- [[NoticeLanguageCode_2]] - `contains` [EXTRACTED]
+- [[NoticeLanguageCode_1]] - `contains` [EXTRACTED]
 - [[isNoticeLanguageCode()]] - `contains` [EXTRACTED]
 - [[me-rights.service.ts]] - `imports_from` [EXTRACTED]
 - [[notices.service.ts]] - `imports_from` [EXTRACTED]

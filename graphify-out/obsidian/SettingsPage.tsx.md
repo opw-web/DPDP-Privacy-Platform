@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.tsx"
 type: "code"
-community: "SettingsPage.tsx"
+community: "react"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SettingsPagetsx
+  - community/react
 ---
 
 # SettingsPage.tsx
@@ -20,8 +20,8 @@ tags:
 - [[CardDescription]] - `imports` [EXTRACTED]
 - [[CardHeader]] - `imports` [EXTRACTED]
 - [[CardTitle]] - `imports` [EXTRACTED]
-- [[CheckboxOption_1]] - `imports` [EXTRACTED]
 - [[CheckboxOption]] - `imports` [EXTRACTED]
+- [[CheckboxOption_1]] - `imports` [EXTRACTED]
 - [[DpoContactSection()]] - `contains` [EXTRACTED]
 - [[DpoContactValues]] - `contains` [EXTRACTED]
 - [[ENTITY_ROLES]] - `contains` [EXTRACTED]
@@ -29,7 +29,7 @@ tags:
 - [[Input]] - `imports` [EXTRACTED]
 - [[Label_1]] - `imports` [EXTRACTED]
 - [[OrgDetailsValues]] - `contains` [EXTRACTED]
-- [[Organization_1]] - `contains` [EXTRACTED]
+- [[Organization]] - `contains` [EXTRACTED]
 - [[OrganizationDetailsSection()]] - `contains` [EXTRACTED]
 - [[PermissionGate()]] - `imports` [EXTRACTED]
 - [[PermissionGate.tsx]] - `imports_from` [EXTRACTED]
@@ -63,4 +63,4 @@ tags:
 - [[toOrgDetailsValues()]] - `contains` [EXTRACTED]
 - [[zod_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SettingsPagetsx
+#graphify/code #graphify/EXTRACTED #community/react

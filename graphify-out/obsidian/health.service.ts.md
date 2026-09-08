@@ -12,8 +12,8 @@ tags:
 # health.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@nestjsconfig_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjsconfig]] - `imports_from` [EXTRACTED]
 - [[AppConfig]] - `imports` [EXTRACTED]
 - [[HealthService]] - `contains` [EXTRACTED]
 - [[HealthStatus]] - `contains` [EXTRACTED]
@@ -21,7 +21,7 @@ tags:
 - [[health.controller.spec.ts]] - `imports_from` [EXTRACTED]
 - [[health.controller.ts]] - `imports_from` [EXTRACTED]
 - [[health.module.ts]] - `imports_from` [EXTRACTED]
-- [[ioredis_1]] - `imports_from` [EXTRACTED]
+- [[ioredis]] - `imports_from` [EXTRACTED]
 - [[pg_1]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/healthservicets

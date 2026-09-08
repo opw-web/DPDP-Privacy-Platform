@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/requests/requests.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync.controller.ts"
 type: "code"
-community: "AccessReportService"
-location: "L51"
+community: "SyncService"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessReportService
+  - community/SyncService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AccessReportService]] - `references` [EXTRACTED]
-- [[RequestsController]] - `method` [EXTRACTED]
-- [[RequestsService]] - `references` [EXTRACTED]
+- [[SyncController]] - `method` [EXTRACTED]
+- [[SyncService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessReportService
+#graphify/code #graphify/EXTRACTED #community/SyncService

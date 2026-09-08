@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
-- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient]] - `imports_from` [EXTRACTED]
 - [[ChangeStatusDto]] - `contains` [EXTRACTED]
 - [[ERASURE_STATUTORY_GROUNDS]] - `imports` [EXTRACTED]
 - [[ErasureProcessorChecklistDto]] - `contains` [EXTRACTED]

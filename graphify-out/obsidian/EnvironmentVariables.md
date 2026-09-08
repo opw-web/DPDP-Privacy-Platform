@@ -12,13 +12,13 @@ tags:
 # EnvironmentVariables
 
 ## Connections
-- [[IsIn_3]] - `references` [EXTRACTED]
-- [[IsInt_5]] - `references` [EXTRACTED]
+- [[IsIn_2]] - `references` [EXTRACTED]
+- [[IsInt_3]] - `references` [EXTRACTED]
 - [[IsNotEmpty_1]] - `references` [EXTRACTED]
-- [[IsString_20]] - `references` [EXTRACTED]
-- [[Min_5]] - `references` [EXTRACTED]
-- [[MinLength_17]] - `references` [EXTRACTED]
-- [[Type_3]] - `references` [EXTRACTED]
+- [[IsString_17]] - `references` [EXTRACTED]
+- [[Min_3]] - `references` [EXTRACTED]
+- [[MinLength_14]] - `references` [EXTRACTED]
+- [[Type_5]] - `references` [EXTRACTED]
 - [[env.validation.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/EnvironmentVariables

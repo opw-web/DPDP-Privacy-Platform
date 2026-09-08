@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EnvironmentVariables"
+community: "CompleteObligationDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EnvironmentVariables
+  - community/CompleteObligationDto
 ---
 
 # IsIn
 
 ## Connections
-- [[EnvironmentVariables]] - `references` [EXTRACTED]
+- [[CompleteObligationDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EnvironmentVariables
+#graphify/code #graphify/EXTRACTED #community/CompleteObligationDto

@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
 type: "code"
-community: "NoticesService"
-location: "L163"
+community: "DataSourcesController"
+location: "L188"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NoticesService
+  - community/DataSourcesController
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_3]] - `calls` [INFERRED]
-- [[NoticesService]] - `method` [EXTRACTED]
+- [[dot-list()_34]] - `calls` [INFERRED]
+- [[DataSourcesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NoticesService
+#graphify/code #graphify/EXTRACTED #community/DataSourcesController

@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/audit/audit-read.service.ts"
+source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
 type: "code"
-community: "MaskingService"
-location: "L102"
+community: "PurposesController"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MaskingService
+  - community/PurposesController
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditReadService]] - `method` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
-- [[MaskingService]] - `references` [EXTRACTED]
+- [[PurposesController]] - `method` [EXTRACTED]
+- [[PurposesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MaskingService
+#graphify/code #graphify/EXTRACTED #community/PurposesController

@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/retention.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/auth/token.service.ts"
 type: "code"
-community: "retention.service.ts"
-location: "L11"
+community: "TokenService"
+location: "L65"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/TokenService
 ---
 
 # .constructor()
 
 ## Connections
-- [[RetentionController_1]] - `method` [EXTRACTED]
-- [[RetentionService]] - `references` [EXTRACTED]
+- [[TokenService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/TokenService

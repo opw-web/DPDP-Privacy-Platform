@@ -8,16 +8,16 @@ members: 10
 **Members:** 10 nodes
 
 ## Members
-- [[ApiProperty_11]] - code
-- [[ApiPropertyOptional_10]] - code
+- [[ApiProperty_9]] - code
+- [[ApiPropertyOptional_7]] - code
 - [[CreateDataSourceDto]] - code - dpdp-platform/backend/src/modules/data-sources/dto/create-data-source.dto.ts
-- [[IsBoolean_5]] - code
-- [[IsEnum_6]] - code
-- [[IsInt_2]] - code
-- [[IsOptional_10]] - code
-- [[IsString_12]] - code
-- [[Min_2]] - code
-- [[MinLength_10]] - code
+- [[IsBoolean_4]] - code
+- [[IsEnum_3]] - code
+- [[IsInt_1]] - code
+- [[IsOptional_8]] - code
+- [[IsString_9]] - code
+- [[Min_1]] - code
+- [[MinLength_6]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -27,9 +27,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_@prismaclient]]
-- 2 edges to [[_COMMUNITY_DataSourcesService]]
-- 1 edge to [[_COMMUNITY_audit.service.ts]]
+- 2 edges to [[_COMMUNITY_@nestjsswagger]]
+- 1 edge to [[_COMMUNITY_data-sources.service.ts]]
+- 1 edge to [[_COMMUNITY_DataSourcesController]]
+- 1 edge to [[_COMMUNITY_dot-update]]
 
 ## Top bridge nodes
-- [[CreateDataSourceDto]] - degree 14, connects to 3 communities
+- [[CreateDataSourceDto]] - degree 14, connects to 4 communities

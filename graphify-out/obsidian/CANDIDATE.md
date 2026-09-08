@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/ReviewQueuePage.test.tsx"
 type: "code"
-community: "CandidateComparison.tsx"
+community: "@tanstack/react-query"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CandidateComparisontsx
+  - community/tanstack/react-query
 ---
 
 # CANDIDATE
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ReviewQueuePage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CandidateComparisontsx
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

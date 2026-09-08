@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[PrismaService]] - `method` [EXTRACTED]
-- [[extendWithTenantScoping()_1]] - `calls` [EXTRACTED]
+- [[extendWithTenantScoping()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PrismaService

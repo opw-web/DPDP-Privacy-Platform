@@ -2,7 +2,7 @@
 source_file: "docs/EVALUATION_MVP1.md"
 type: "document"
 community: "MVP1 Evaluation Against Spec Section 6"
-location: "L453"
+location: "L471"
 tags:
   - graphify/document
   - graphify/EXTRACTED

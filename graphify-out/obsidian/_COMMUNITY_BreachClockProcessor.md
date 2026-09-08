@@ -8,11 +8,11 @@ members: 5
 **Members:** 5 nodes
 
 ## Members
-- [[dot-constructor()_61]] - code - dpdp-platform/backend/src/queues/breach-clock.processor.ts
-- [[dot-process()_4]] - code - dpdp-platform/backend/src/queues/breach-clock.processor.ts
+- [[dot-constructor()_59]] - code - dpdp-platform/backend/src/queues/breach-clock.processor.ts
+- [[dot-process()_5]] - code - dpdp-platform/backend/src/queues/breach-clock.processor.ts
 - [[dot-runClockCycle()]] - code - dpdp-platform/backend/src/queues/breach-clock.processor.ts
 - [[BreachClockProcessor]] - code - dpdp-platform/backend/src/queues/breach-clock.processor.ts
-- [[Processor_4]] - code
+- [[Processor_5]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -22,10 +22,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_app.module.ts]]
+- 2 edges to [[_COMMUNITY_queues.module.ts]]
 - 2 edges to [[_COMMUNITY_dot-record]]
 
 ## Top bridge nodes
 - [[BreachClockProcessor]] - degree 6, connects to 1 community
 - [[dot-runClockCycle()]] - degree 3, connects to 1 community
-- [[dot-constructor()_61]] - degree 2, connects to 1 community
+- [[dot-constructor()_59]] - degree 2, connects to 1 community

@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/common/crypto/crypto.service.ts"
+source_file: "dpdp-platform/backend/src/modules/board/information-requests.service.ts"
 type: "code"
-community: "CryptoService"
-location: "L70"
+community: "CreateInformationRequestDto"
+location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CryptoService
+  - community/CreateInformationRequestDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[CryptoService]] - `method` [EXTRACTED]
-- [[InvalidEncryptionKeyError]] - `calls` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[InformationRequestsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CryptoService
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

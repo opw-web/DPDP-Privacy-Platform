@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "breach.service.ts"
+community: "NoticesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breachservicets
+  - community/NoticesService
 ---
 
 # MinLength
 
 ## Connections
-- [[UpdateBreachDto]] - `references` [EXTRACTED]
+- [[UpsertTranslationDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breachservicets
+#graphify/code #graphify/EXTRACTED #community/NoticesService

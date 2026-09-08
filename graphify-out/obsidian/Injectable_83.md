@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "BootRegistrationRegistry"
+community: "TokenService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BootRegistrationRegistry
+  - community/TokenService
 ---
 
 # Injectable
 
 ## Connections
-- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
+- [[JwtAnyActorGuard]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BootRegistrationRegistry
+#graphify/code #graphify/EXTRACTED #community/TokenService

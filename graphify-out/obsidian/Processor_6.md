@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "consent-backfill.queue.ts"
+community: "SdfCycleScanService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/consent-backfillqueuets
+  - community/SdfCycleScanService
 ---
 
 # Processor
 
 ## Connections
-- [[ConsentBackfillProcessor]] - `references` [EXTRACTED]
+- [[SdfCycleScanProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/consent-backfillqueuets
+#graphify/code #graphify/EXTRACTED #community/SdfCycleScanService

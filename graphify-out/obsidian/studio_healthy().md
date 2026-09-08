@@ -2,7 +2,7 @@
 source_file: "demo-control/common.sh"
 type: "code"
 community: "common.sh"
-location: "L128"
+location: "L127"
 tags:
   - graphify/code
   - graphify/EXTRACTED

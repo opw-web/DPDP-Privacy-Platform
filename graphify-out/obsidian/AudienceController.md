@@ -12,10 +12,10 @@ tags:
 # AudienceController
 
 ## Connections
-- [[dot-constructor()_82]] - `method` [EXTRACTED]
-- [[dot-preview()_3]] - `method` [EXTRACTED]
-- [[ApiTags_20]] - `references` [EXTRACTED]
-- [[Controller_21]] - `references` [EXTRACTED]
+- [[dot-constructor()_146]] - `method` [EXTRACTED]
+- [[dot-preview()_4]] - `method` [EXTRACTED]
+- [[ApiTags_38]] - `references` [EXTRACTED]
+- [[Controller_39]] - `references` [EXTRACTED]
 - [[audience.controller.ts]] - `contains` [EXTRACTED]
 - [[audience.module.ts]] - `imports` [EXTRACTED]
 

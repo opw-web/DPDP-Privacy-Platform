@@ -1,23 +1,24 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/legal-hold.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
 type: "code"
-community: "erasure-task.service.ts"
-location: "L56"
+community: "RequirePermission"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/RequirePermission
 ---
 
 # .create()
 
 ## Connections
-- [[dot-createLegalHold()]] - `calls` [INFERRED]
-- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-create()_24]] - `calls` [INFERRED]
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[CreateLegalHoldDto]] - `references` [EXTRACTED]
-- [[LegalHoldService]] - `method` [EXTRACTED]
-- [[legalHoldCovers()]] - `calls` [EXTRACTED]
-- [[lockRetentionWorkflow()]] - `calls` [EXTRACTED]
+- [[Body_13]] - `references` [EXTRACTED]
+- [[CampaignsController]] - `method` [EXTRACTED]
+- [[CreateCampaignDto]] - `references` [EXTRACTED]
+- [[CurrentActor]] - `references` [EXTRACTED]
+- [[Post_13]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

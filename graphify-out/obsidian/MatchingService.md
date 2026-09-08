@@ -12,7 +12,7 @@ tags:
 # MatchingService
 
 ## Connections
-- [[dot-constructor()_100]] - `references` [EXTRACTED]
+- [[dot-constructor()_19]] - `references` [EXTRACTED]
 - [[dot-match()]] - `method` [EXTRACTED]
 - [[dot-resolveSignal()]] - `method` [EXTRACTED]
 - [[dot-supportingCandidates()]] - `method` [EXTRACTED]

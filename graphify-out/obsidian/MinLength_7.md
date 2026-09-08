@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Public"
+community: "transfers.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/transfersservicets
 ---
 
 # MinLength
 
 ## Connections
-- [[AddMeRequestCommentDto]] - `references` [EXTRACTED]
+- [[CreateTransferDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/transfersservicets

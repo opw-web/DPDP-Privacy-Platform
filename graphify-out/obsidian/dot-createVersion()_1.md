@@ -12,7 +12,7 @@ tags:
 # .createVersion()
 
 ## Connections
-- [[dot-create()_27]] - `calls` [EXTRACTED]
+- [[dot-create()_26]] - `calls` [EXTRACTED]
 - [[dot-createVersion()]] - `calls` [INFERRED]
 - [[dot-record()_1]] - `calls` [INFERRED]
 - [[dot-resolveItemisedFields()]] - `calls` [EXTRACTED]

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ListPrincipalsDto"
+community: "RequirePermission"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ListPrincipalsDto
+  - community/RequirePermission
 ---
 
 # IsEnum
 
 ## Connections
-- [[ListPrincipalsDto]] - `references` [EXTRACTED]
+- [[ListMatchCandidatesQueryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ListPrincipalsDto
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

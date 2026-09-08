@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/breach-clock.processor.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/source-purposes.service.ts"
 type: "code"
-community: "BreachClockProcessor"
-location: "L24"
+community: "SourcePurposesService"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BreachClockProcessor
+  - community/SourcePurposesService
 ---
 
 # .constructor()
 
 ## Connections
-- [[BreachClockProcessor]] - `method` [EXTRACTED]
-- [[BreachService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[SourcePurposesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BreachClockProcessor
+#graphify/code #graphify/EXTRACTED #community/SourcePurposesService

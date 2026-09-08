@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateLegalHoldDto"
+community: "FlagFrivolousDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateLegalHoldDto
+  - community/FlagFrivolousDto
 ---
 
 # MinLength
 
 ## Connections
-- [[CreateLegalHoldDto]] - `references` [EXTRACTED]
+- [[FlagFrivolousDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto
+#graphify/code #graphify/EXTRACTED #community/FlagFrivolousDto

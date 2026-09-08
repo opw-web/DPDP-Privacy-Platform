@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "BreachClockProcessor"
+community: "audit-chain.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BreachClockProcessor
+  - community/audit-chainservicets
 ---
 
 # Processor
 
 ## Connections
-- [[BreachClockProcessor]] - `references` [EXTRACTED]
+- [[AuditChainVerifyProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BreachClockProcessor
+#graphify/code #graphify/EXTRACTED #community/audit-chainservicets

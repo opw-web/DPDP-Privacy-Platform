@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CryptoService"
+community: "queues.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CryptoService
+  - community/queuesmodulets
 ---
 
 # Injectable
 
 ## Connections
-- [[CryptoService]] - `references` [EXTRACTED]
+- [[ConsentBackfillQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CryptoService
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

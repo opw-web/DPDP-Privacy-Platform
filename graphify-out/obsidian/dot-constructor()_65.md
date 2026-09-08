@@ -1,20 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/breach-principal-notice-dispatch.processor.ts"
+source_file: "dpdp-platform/backend/src/modules/evidence/access-report.service.ts"
 type: "code"
-community: "breach-principal-notice-dispatch.queue.ts"
-location: "L35"
+community: "principals.service.ts"
+location: "L115"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breach-principal-notice-dispatchqueuets
+  - community/principalsservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[BreachPrincipalNoticeDispatchProcessor]] - `method` [EXTRACTED]
-- [[BreachService]] - `references` [EXTRACTED]
-- [[CampaignSendJobData]] - `references` [EXTRACTED]
-- [[InjectQueue_3]] - `references` [EXTRACTED]
+- [[AccessLogService]] - `references` [EXTRACTED]
+- [[AccessReportService]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[LineageService]] - `references` [EXTRACTED]
+- [[PrincipalRecipientsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breach-principal-notice-dispatchqueuets
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

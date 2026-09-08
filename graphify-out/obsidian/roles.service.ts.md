@@ -12,8 +12,8 @@ tags:
 # roles.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@prismaclient]] - `imports_from` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[NOTE the fixed AuditAction union (Task 4, spec lines 880-891) has]] - `rationale_for` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]

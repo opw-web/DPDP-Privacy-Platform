@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/evidence.e2e-spec.ts"
 type: "code"
-community: "supertest"
+community: "PrismaService"
 location: "L789"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/supertest
+  - community/PrismaService
 ---
 
 # parseStoreZip()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[evidence.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/supertest
+#graphify/code #graphify/EXTRACTED #community/PrismaService
