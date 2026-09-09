@@ -31,8 +31,8 @@ members: 25
 - [[9.2 To the Data Protection Board — two stages]] - document - DPDP_COMPLIANCE_CHECKLIST.md
 - [[DPDP COMPLIANCE CHECKLIST]] - document - DPDP_COMPLIANCE_CHECKLIST.md
 - [[DPDP_COMPLIANCE_CHECKLIST]] - document - DPDP_COMPLIANCE_CHECKLIST.md
-- [[Every obligation the DPDP Act, 2023 and the DPDP Rules, 2025 place on a business — and which part of the platform serves it.]] - document - DPDP_COMPLIANCE_CHECKLIST.md
-- [[This document is the objective specification. MVP 1 and MVP 2 exist to satisfy the IDs in this file.]] - document - DPDP_COMPLIANCE_CHECKLIST.md
+- [[Every obligation the DPDP Act, 2023 and the DPDP Rules, 2025 place on a business-78e10e95]] - document - DPDP_COMPLIANCE_CHECKLIST.md
+- [[This document is the objective specification. MVP 1 and MVP 2 exist to satisfy th-cade7b1d]] - document - DPDP_COMPLIANCE_CHECKLIST.md
 
 ## Live Query (requires Dataview plugin)
 

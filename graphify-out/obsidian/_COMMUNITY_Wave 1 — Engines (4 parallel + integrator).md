@@ -10,7 +10,7 @@ members: 6
 ## Members
 - [[Integrator I1]] - document - docs/superpowers/plans/2026-08-31-dpdp-mvp2.md
 - [[Task 2 — ComplianceService, rule versioning and the compliance-rules API]] - document - docs/superpowers/plans/2026-08-31-dpdp-mvp2.md
-- [[Task 3 — Template storage, whitelisted Handlebars rendering, and the fifteen system templates]] - document - docs/superpowers/plans/2026-08-31-dpdp-mvp2.md
+- [[Task 3 — Template storage, whitelisted Handlebars rendering, and the fifteen syst-d8c81eed]] - document - docs/superpowers/plans/2026-08-31-dpdp-mvp2.md
 - [[Task 4 — The audience compiler and preview endpoint]] - document - docs/superpowers/plans/2026-08-31-dpdp-mvp2.md
 - [[Task 5 — Mail transport, notification providers and the notifications API]] - document - docs/superpowers/plans/2026-08-31-dpdp-mvp2.md
 - [[Wave 1 — Engines (4 parallel + integrator)]] - document - docs/superpowers/plans/2026-08-31-dpdp-mvp2.md

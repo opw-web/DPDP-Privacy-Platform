@@ -1,33 +1,44 @@
 #!/usr/bin/env python3
-"""Rename case-colliding notes in the generated Obsidian vault.
+"""Make the generated Obsidian vault safe to check out and unzip on Windows.
 
-graphify names a note after the symbol it describes, so a vault can contain
-both `Module_5.md` and `module_5.md`. Git tracks those as two files; Windows
-and macOS cannot hold both. The symptoms are a `git clone` that aborts
-mid-checkout, an Explorer "Extract All" that stops to ask about overwriting,
-and -- on a Windows working tree -- files that stay modified no matter how
-often they are checked out.
+graphify names a note after the thing it describes, which produces two kinds
+of filename Windows cannot live with:
 
-This renames the loser of each collision to a distinct name and rewrites the
-`[[wikilinks]]` that pointed at it. Run it after every `graphify update .`;
-it is a no-op when there is nothing to fix.
+* **Case collisions.** A vault can contain both `Module_5.md` and
+  `module_5.md`. Git tracks two files; Windows and macOS can hold only one.
+  A `git clone` aborts mid-checkout, Explorer's "Extract All" stops to ask
+  about overwriting, and on a Windows working tree those files stay modified
+  no matter how often they are checked out.
+* **Over-long names.** A note titled after a whole sentence can run past 150
+  characters. Added to the folder someone unzipped into, that crosses the
+  260-character path limit and the extraction fails part-way through.
 
-It reads the working tree, so on Windows or macOS it can only report what the
+This renames both kinds apart and rewrites the `[[wikilinks]]` that pointed at
+them. Run it after any regeneration of the vault; it is a no-op when there is
+nothing to fix.
+
+It reads the working tree, so on Windows or macOS it can only see what the
 filesystem was able to keep -- a vault regenerated there has already collapsed
-each pair into one file. It is on Linux that both twins survive to be renamed,
-and that is where a colliding pair would otherwise be committed.
+each colliding pair into one file. It is on Linux that both twins survive to be
+renamed, and that is where a colliding pair would otherwise be committed.
 
     python scripts/dedupe-vault-names.py [vault-dir]
 """
 
 from __future__ import annotations
 
+import hashlib
 import re
 import sys
 from collections import defaultdict
 from pathlib import Path
 
 DEFAULT_VAULT = Path(__file__).resolve().parent.parent / "graphify-out" / "obsidian"
+
+# A note's own filename, at most. The repository path in front of it is about
+# 40 characters, and the folder a client unzips into has to fit in what is left
+# of Windows' 260-character limit.
+MAX_STEM = 90
 
 
 def winner(paths: list[Path]) -> Path:
@@ -49,6 +60,31 @@ def rename_target(path: Path, taken: set[str]) -> Path:
         candidate = path.with_name(f"{stem}{suffix}{n}{path.suffix}")
         n += 1
     return candidate
+
+
+def shorten(vault: Path, taken: set[str]) -> dict[str, str]:
+    """Trim any note whose name would blow the Windows path limit.
+
+    The trimmed name keeps the readable start of the title and ends with a
+    hash of the original, so two notes that share a long prefix still land on
+    different filenames -- and the same note trims to the same name on every
+    machine.
+    """
+    renames: dict[str, str] = {}
+    for note in sorted(vault.rglob("*.md")):
+        if len(note.stem) <= MAX_STEM:
+            continue
+        digest = hashlib.sha1(note.stem.encode("utf-8")).hexdigest()[:8]
+        stem = note.stem[: MAX_STEM - 9].rstrip(" -_.") + "-" + digest
+        new_path = note.with_name(stem + note.suffix)
+        if new_path.name.lower() in taken:
+            continue
+        note.rename(new_path)
+        taken.discard(note.name.lower())
+        taken.add(new_path.name.lower())
+        renames[note.stem] = new_path.stem
+        print(f"{note.name} -> {new_path.name}")
+    return renames
 
 
 def relink(vault: Path, renames: dict[str, str]) -> int:
@@ -97,8 +133,10 @@ def main() -> int:
             renames[loser.stem] = new_path.stem
             print(f"{loser.name} -> {new_path.name}")
 
+    renames.update(shorten(vault, taken))
+
     if not renames:
-        print("No case-colliding vault filenames.")
+        print("Every vault filename is already Windows-safe.")
         return 0
 
     touched = relink(vault, renames)

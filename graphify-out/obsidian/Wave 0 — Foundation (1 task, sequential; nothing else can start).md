@@ -12,7 +12,7 @@ tags:
 # Wave 0 — Foundation (1 task, sequential; nothing else can start)
 
 ## Connections
-- [[Task 1 — Schema, migrations, triggers, tenancy registration, audit actions, packages, test harness]] - `contains` [EXTRACTED]
+- [[Task 1 — Schema, migrations, triggers, tenancy registration, audit actions, packa-4c993a67]] - `contains` [EXTRACTED]
 - [[Waves and Tasks]] - `contains` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Waves_and_Tasks

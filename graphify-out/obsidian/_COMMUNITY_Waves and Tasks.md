@@ -8,7 +8,7 @@ members: 8
 **Members:** 8 nodes
 
 ## Members
-- [[Task 1 — Schema, migrations, triggers, tenancy registration, audit actions, packages, test harness]] - document - docs/superpowers/plans/2026-08-31-dpdp-mvp2.md
+- [[Task 1 — Schema, migrations, triggers, tenancy registration, audit actions, packa-4c993a67]] - document - docs/superpowers/plans/2026-08-31-dpdp-mvp2.md
 - [[Task 16 — Promoted UI primitives, compliance chips, countdowns and notification polling]] - document - docs/superpowers/plans/2026-08-31-dpdp-mvp2.md
 - [[Task 25 — MVP 2 demo seed and the performance dataset]] - document - docs/superpowers/plans/2026-08-31-dpdp-mvp2.md
 - [[Task 26 — The full evaluation run]] - document - docs/superpowers/plans/2026-08-31-dpdp-mvp2.md

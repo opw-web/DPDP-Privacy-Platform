@@ -21,7 +21,7 @@ tags:
 - [[7. MVP 2 GOAL (definition of done)]] - `contains` [EXTRACTED]
 - [[DPDP_MVP2_COMPLIANCE_OPERATIONS]] - `contains` [EXTRACTED]
 - [[Notice · Consent · Children · Rights · Retention · Breach · Evidence]] - `contains` [EXTRACTED]
-- [[Read `DPDP_COMPLIANCE_CHECKLIST.md` alongside this. Every module below names the IDs it satisfies.]] - `contains` [EXTRACTED]
+- [[Read `DPDP_COMPLIANCE_CHECKLIST.md` alongside this. Every module below names the-19183068]] - `contains` [EXTRACTED]
 - [[Self-contained build document. Paste this entire file as your vibe-coding prompt._1]] - `contains` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/DPDP_PLATFORM__MVP_2_COMPLIANCE_OPERATIONS

@@ -32,7 +32,7 @@ tags:
 - [[8. REASONABLE SECURITY SAFEGUARDS (Rule 6)]] - `contains` [EXTRACTED]
 - [[9. PERSONAL DATA BREACH (Section 8(6), Rule 7)]] - `contains` [EXTRACTED]
 - [[DPDP_COMPLIANCE_CHECKLIST]] - `contains` [EXTRACTED]
-- [[Every obligation the DPDP Act, 2023 and the DPDP Rules, 2025 place on a business — and which part of the platform serves it.]] - `contains` [EXTRACTED]
-- [[This document is the objective specification. MVP 1 and MVP 2 exist to satisfy the IDs in this file.]] - `contains` [EXTRACTED]
+- [[Every obligation the DPDP Act, 2023 and the DPDP Rules, 2025 place on a business-78e10e95]] - `contains` [EXTRACTED]
+- [[This document is the objective specification. MVP 1 and MVP 2 exist to satisfy th-cade7b1d]] - `contains` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/DPDP_Compliance_Checklist

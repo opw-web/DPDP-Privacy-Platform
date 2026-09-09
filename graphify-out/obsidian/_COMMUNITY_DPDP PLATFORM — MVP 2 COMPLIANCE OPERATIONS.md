@@ -17,7 +17,7 @@ members: 12
 - [[Non-negotiable rules (carried from MVP 1, still binding)]] - document - DPDP_MVP2_COMPLIANCE_OPERATIONS.md
 - [[Notice · Consent · Children · Rights · Retention · Breach · Evidence]] - document - DPDP_MVP2_COMPLIANCE_OPERATIONS.md
 - [[One new rule, specific to MVP 2]] - document - DPDP_MVP2_COMPLIANCE_OPERATIONS.md
-- [[Read `DPDP_COMPLIANCE_CHECKLIST.md` alongside this. Every module below names the IDs it satisfies.]] - document - DPDP_MVP2_COMPLIANCE_OPERATIONS.md
+- [[Read `DPDP_COMPLIANCE_CHECKLIST.md` alongside this. Every module below names the-19183068]] - document - DPDP_MVP2_COMPLIANCE_OPERATIONS.md
 - [[Self-contained build document. Paste this entire file as your vibe-coding prompt._1]] - document - DPDP_MVP2_COMPLIANCE_OPERATIONS.md
 - [[The legal shape you are encoding (plain language)]] - document - DPDP_MVP2_COMPLIANCE_OPERATIONS.md
 

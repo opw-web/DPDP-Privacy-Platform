@@ -13,7 +13,7 @@ members: 7
 - [[7. MVP 1 GOAL (definition of done)]] - document - DPDP_MVP1_FOUNDATION_AND_DISCOVERY.md
 - [[DPDP PLATFORM — MVP 1 FOUNDATION, DISCOVERY & THE RECORD OF PROCESSING]] - document - DPDP_MVP1_FOUNDATION_AND_DISCOVERY.md
 - [[DPDP_MVP1_FOUNDATION_AND_DISCOVERY]] - document - DPDP_MVP1_FOUNDATION_AND_DISCOVERY.md
-- [[Read `DPDP_COMPLIANCE_CHECKLIST.md` alongside this. Every feature here exists to satisfy a checklist ID.]] - document - DPDP_MVP1_FOUNDATION_AND_DISCOVERY.md
+- [[Read `DPDP_COMPLIANCE_CHECKLIST.md` alongside this. Every feature here exists to-cfd9517c]] - document - DPDP_MVP1_FOUNDATION_AND_DISCOVERY.md
 - [[Self-contained build document. Paste this entire file as your vibe-coding prompt.]] - document - DPDP_MVP1_FOUNDATION_AND_DISCOVERY.md
 
 ## Live Query (requires Dataview plugin)

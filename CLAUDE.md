@@ -46,11 +46,11 @@ Rules:
 - If graphify-out/wiki/index.md exists, use it for broad navigation instead of raw source browsing.
 - Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
 - After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost),
-  then `python scripts/dedupe-vault-names.py`. The vault writer emits filenames that
-  differ only by case (`Module_5.md` / `module_5.md`); Windows collapses those to one
-  file, which breaks `git clone`, makes Explorer's Extract All prompt, and leaves files
-  permanently modified in the working tree. The script renames the collisions apart and
-  fixes the wikilinks pointing at them.
+  then `python scripts/dedupe-vault-names.py`. The vault writer emits two kinds of
+  filename Windows cannot take: names differing only by case (`Module_5.md` /
+  `module_5.md`), which break `git clone` and leave files permanently modified in the
+  working tree; and names long enough to push a client's unzip past the 260-character
+  path limit. The script renames both apart and fixes the wikilinks pointing at them.
 
 ## Process journal
 

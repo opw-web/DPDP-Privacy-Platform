@@ -20,7 +20,7 @@ tags:
 - [[6. DEVELOPER EVALUATION CHECKLIST (beginner-friendly — do every step)_1]] - `contains` [EXTRACTED]
 - [[7. MVP 1 GOAL (definition of done)]] - `contains` [EXTRACTED]
 - [[DPDP_MVP1_FOUNDATION_AND_DISCOVERY]] - `contains` [EXTRACTED]
-- [[Read `DPDP_COMPLIANCE_CHECKLIST.md` alongside this. Every feature here exists to satisfy a checklist ID.]] - `contains` [EXTRACTED]
+- [[Read `DPDP_COMPLIANCE_CHECKLIST.md` alongside this. Every feature here exists to-cfd9517c]] - `contains` [EXTRACTED]
 - [[Self-contained build document. Paste this entire file as your vibe-coding prompt.]] - `contains` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/DPDP_PLATFORM__MVP_1_FOUNDATION_DISCOVERY__THE_RECORD_OF_PROCESSING
