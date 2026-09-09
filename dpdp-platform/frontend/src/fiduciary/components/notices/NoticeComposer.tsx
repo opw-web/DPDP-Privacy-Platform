@@ -47,7 +47,13 @@ export function NoticeComposer({ eligibleFields, purposeStatements, initialValue
     })), [eligibleFields, labels, selectedIds]);
 
   if (previewing) {
-    return <NoticeStandalonePreview bodyMarkdown={bodyMarkdown} itemisedDataFields={itemisedDataFields} purposeStatements={purposeStatements} withdrawalUrl={withdrawalUrl} rightsUrl={rightsUrl} boardComplaintUrl={boardComplaintUrl} />;
+    // The return control sits outside the preview: NoticeStandalonePreview is
+    // the Rule 3(a) render boundary and must carry no editing chrome of its own.
+    return <div className="space-y-3">
+      <Button type="button" variant="outline" onClick={() => setPreviewing(false)}>Back to editing</Button>
+      {bodyMarkdown.trim().length === 0 ? <p className="rounded-md border border-amber-300 bg-amber-50 p-3 text-sm">This draft has no body text yet, so the preview below shows only its data, purposes and links.</p> : null}
+      <NoticeStandalonePreview bodyMarkdown={bodyMarkdown} itemisedDataFields={itemisedDataFields} purposeStatements={purposeStatements} withdrawalUrl={withdrawalUrl} rightsUrl={rightsUrl} boardComplaintUrl={boardComplaintUrl} />
+    </div>;
   }
 
   function toggleField(id: string, checked: boolean) {
@@ -57,7 +63,7 @@ export function NoticeComposer({ eligibleFields, purposeStatements, initialValue
   return (
     <form className="space-y-8" onSubmit={(event) => { event.preventDefault(); onSave({ bodyMarkdown, itemisedDataFields, withdrawalUrl, rightsUrl, boardComplaintUrl }); }}>
       <section className="space-y-3">
-        <div><h2 className="text-base font-semibold">Notice body</h2><p className="text-sm text-muted-foreground">Write plain-language content. The preview is deliberately rendered on its own.</p></div>
+        <div><h2 className="text-base font-semibold">Notice body</h2><p className="text-sm text-muted-foreground">Write plain-language content. Use “Standalone preview” below to see it exactly as a person would, with none of this console around it.</p></div>
         <div data-color-mode="light"><MDEditor value={bodyMarkdown} onChange={(value) => setBodyMarkdown(value ?? "")} height={280} textareaProps={{ "aria-label": "Notice body" }} /></div>
       </section>
 

@@ -14,6 +14,7 @@ import { CreateNoticeDto } from "./dto/create-notice.dto";
 import { CreateNoticeVersionDto } from "./dto/create-notice-version.dto";
 import { UpsertTranslationDto } from "./dto/upsert-translation.dto";
 import { NOTICE_LANGUAGE_CODES, isNoticeLanguageCode } from "./languages";
+import { humanizeCanonicalField, isItemisableCanonicalField } from "./canonical-field-label";
 
 /**
  * The JSON shape stored in `NoticeVersion.itemisedDataFields` (Rule
@@ -139,18 +140,6 @@ function isUniqueConstraintViolation(err: unknown): boolean {
 
 function duplicateCodeMessage(code: string): string {
   return `A notice with code "${code}" already exists in this organization.`;
-}
-
-/**
- * "DATE_OF_BIRTH" -> "Date of birth". Used ONLY as the default itemised
- * field label when the admin ticking the field does not supply one --
- * never overrides an admin-supplied label.
- */
-function humanizeCanonicalField(field: string): string {
-  const words = field.toLowerCase().split("_");
-  return words
-    .map((word, index) => (index === 0 ? word.charAt(0).toUpperCase() + word.slice(1) : word))
-    .join(" ");
 }
 
 @Injectable()
@@ -297,15 +286,20 @@ export class NoticesService {
       orderBy: [{ dataSourceId: "asc" }, { sourceField: "asc" }],
     });
 
-    return mappings.map((m) => ({
-      sourceFieldMappingId: m.id,
-      dataSourceId: m.dataSourceId,
-      dataSourceName: m.dataSource.name,
-      sourceField: m.sourceField,
-      canonicalField: m.canonicalField,
-      dataCategory: m.dataCategory,
-      suggestedLabel: humanizeCanonicalField(m.canonicalField),
-    }));
+    // A column with no canonical meaning cannot be itemised in a notice: it
+    // would reach the reader as the literal word "Ignore". Offering it to the
+    // DPO as a tickable field only invites that mistake.
+    return mappings
+      .filter((m) => isItemisableCanonicalField(m.canonicalField))
+      .map((m) => ({
+        sourceFieldMappingId: m.id,
+        dataSourceId: m.dataSourceId,
+        dataSourceName: m.dataSource.name,
+        sourceField: m.sourceField,
+        canonicalField: m.canonicalField,
+        dataCategory: m.dataCategory,
+        suggestedLabel: humanizeCanonicalField(m.canonicalField),
+      }));
   }
 
   /**

@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { toast } from "sonner";
@@ -10,10 +10,25 @@ import { Label } from "../../components/ui/label";
 import { Textarea } from "../../components/ui/textarea";
 import { PermissionGate } from "../../components/shared/PermissionGate";
 import { NoticeComposer, type NoticeDraftValues } from "../components/notices/NoticeComposer";
+import { NoticeStandalonePreview } from "../components/notices/NoticePreview";
 import { NOTICE_LANGUAGES, type EligibleItemisedField, type NoticeDetail, type NoticePurposeStatement, type NoticeVersion } from "../components/notices/types";
 
 interface Purpose { id: string; name: string; description: string; goodsOrServicesDescription: string | null; }
 function errorMessage(error: unknown, fallback: string) { return error instanceof ApiError && error.message ? error.message : fallback; }
+function languageName(code: string) { return NOTICE_LANGUAGES.find(([entry]) => entry === code)?.[1] ?? code; }
+
+/**
+ * Resolve the body a reader would be shown in `code`. A published version
+ * carries its translations with it, so this needs no request; the backend's
+ * `/versions/:v/preview?lang=` endpoint answers the same question for callers
+ * that do not already hold the version. Falling back to the English body
+ * mirrors that endpoint's `isFallback` behaviour.
+ */
+export function bodyForLanguage(version: NoticeVersion, code: string) {
+  if (code === "en") return { body: version.bodyMarkdown, isFallback: false };
+  const translation = version.translations.find((entry) => entry.languageCode === code);
+  return { body: translation?.bodyMarkdown ?? version.bodyMarkdown, isFallback: !translation };
+}
 
 async function putTranslation(path: string, body: unknown) {
   const response = await fetch(`${API_BASE}${path}`, {
@@ -34,6 +49,7 @@ export function NoticeBuilderPage() {
   const queryClient = useQueryClient();
   const [newCode, setNewCode] = useState(""); const [newName, setNewName] = useState(""); const [newPurposeIds, setNewPurposeIds] = useState<string[]>([]);
   const [translationLanguage, setTranslationLanguage] = useState("hi"); const [translationBody, setTranslationBody] = useState("");
+  const [viewLanguage, setViewLanguage] = useState("en");
   const { data: purposes = [] } = useQuery({ queryKey: ["purposes"], queryFn: () => employeeApiClient.get<Purpose[]>("/purposes") });
   const detail = useQuery({ queryKey: ["notice", noticeId], enabled: Boolean(noticeId), queryFn: () => employeeApiClient.get<NoticeDetail>(`/notices/${noticeId}`) });
   const fields = useQuery({ queryKey: ["notice-eligible-fields", noticeId], enabled: Boolean(noticeId), queryFn: () => employeeApiClient.get<EligibleItemisedField[]>(`/notices/${noticeId}/eligible-fields`) });
@@ -41,11 +57,85 @@ export function NoticeBuilderPage() {
   const createVersion = useMutation({ mutationFn: (values: NoticeDraftValues) => employeeApiClient.post<NoticeVersion>(`/notices/${noticeId}/versions`, { bodyMarkdown: values.bodyMarkdown, itemisedDataFields: values.itemisedDataFields.map((field) => ({ sourceFieldMappingId: field.sourceFieldMappingId, label: field.label })), withdrawalUrl: values.withdrawalUrl || undefined, rightsUrl: values.rightsUrl || undefined, boardComplaintUrl: values.boardComplaintUrl || undefined }), onSuccess: () => { toast.success("Draft version saved."); void queryClient.invalidateQueries({ queryKey: ["notice", noticeId] }); }, onError: (error) => toast.error(errorMessage(error, "Could not save draft version.")) });
   const latest = detail.data?.versions.at(-1);
   const publish = useMutation({ mutationFn: (version: number) => employeeApiClient.post(`/notices/${noticeId}/versions/${version}/publish`), onSuccess: () => { toast.success("Notice published and frozen."); void queryClient.invalidateQueries({ queryKey: ["notice", noticeId] }); void queryClient.invalidateQueries({ queryKey: ["notices"] }); }, onError: (error) => toast.error(errorMessage(error, "Could not publish notice.")) });
-  const saveTranslation = useMutation({ mutationFn: () => putTranslation(`/notices/${noticeId}/versions/${latest?.version}/translations/${translationLanguage}`, { bodyMarkdown: translationBody }), onSuccess: () => { toast.success("Human-authored translation saved."); setTranslationBody(""); void queryClient.invalidateQueries({ queryKey: ["notice", noticeId] }); }, onError: (error) => toast.error(errorMessage(error, "Could not save translation.")) });
+  const saveTranslation = useMutation({ mutationFn: () => putTranslation(`/notices/${noticeId}/versions/${latest?.version}/translations/${translationLanguage}`, { bodyMarkdown: translationBody }), onSuccess: () => { toast.success("Human-authored translation saved."); void queryClient.invalidateQueries({ queryKey: ["notice", noticeId] }); }, onError: (error) => toast.error(errorMessage(error, "Could not save translation.")) });
   const purposeStatements: NoticePurposeStatement[] = useMemo(() => (detail.data?.purposeIds ?? []).map((id) => { const purpose = purposes.find((entry) => entry.id === id); return { purposeId: id, purposeName: purpose?.name ?? id, goodsOrServices: purpose?.goodsOrServicesDescription ?? null }; }), [detail.data?.purposeIds, purposes]);
+
+  // A published version is frozen and carries its own translations, so what a
+  // reader would be shown can be resolved here without another request.
+  const published = latest?.publishedAt ? latest : undefined;
+  const publishedLanguages = useMemo(() => {
+    const available = new Set(["en", ...(published?.translations ?? []).map((entry) => entry.languageCode)]);
+    return NOTICE_LANGUAGES.filter(([code]) => available.has(code));
+  }, [published]);
+  const rendered = published ? bodyForLanguage(published, viewLanguage) : null;
+
+  // Show the translator what is already stored for the chosen language rather
+  // than an empty box, which reads as "nothing has been written yet".
+  useEffect(() => {
+    setTranslationBody(latest?.translations.find((entry) => entry.languageCode === translationLanguage)?.bodyMarkdown ?? "");
+  }, [latest, translationLanguage]);
 
   if (!noticeId) return <div className="space-y-6"><div><h1 className="text-xl font-semibold">New privacy notice</h1><p className="text-sm text-muted-foreground">Select the purposes the notice will cover. Versioned content comes next.</p></div><Card><CardContent className="p-6"><form className="space-y-4" onSubmit={(event) => { event.preventDefault(); createNotice.mutate(); }}><div className="grid gap-4 md:grid-cols-2"><div className="space-y-1"><Label htmlFor="notice-code">Code</Label><Input id="notice-code" value={newCode} onChange={(event) => setNewCode(event.target.value)} placeholder="MARKETING_OPTIN" required /></div><div className="space-y-1"><Label htmlFor="notice-name">Name</Label><Input id="notice-name" value={newName} onChange={(event) => setNewName(event.target.value)} required /></div></div><fieldset className="space-y-2"><legend className="text-sm font-medium">Purposes covered</legend>{purposes.map((purpose) => <label key={purpose.id} className="flex items-start gap-2 rounded-md border p-3 text-sm"><input type="checkbox" checked={newPurposeIds.includes(purpose.id)} onChange={(event) => setNewPurposeIds((current) => event.target.checked ? [...current, purpose.id] : current.filter((id) => id !== purpose.id))} /><span><span className="font-medium">{purpose.name}</span><span className="block text-muted-foreground">{purpose.description}</span></span></label>)}</fieldset><Button type="submit" disabled={createNotice.isPending || newPurposeIds.length === 0}>{createNotice.isPending ? "Creating…" : "Create notice"}</Button></form></CardContent></Card></div>;
   if (detail.isLoading) return <p className="text-sm text-muted-foreground">Loading notice…</p>;
   if (!detail.data) return <p className="text-sm text-destructive">Notice could not be loaded.</p>;
-  return <div className="space-y-6"><div className="flex items-start justify-between"><div><h1 className="text-xl font-semibold">{detail.data.name}</h1><p className="text-sm text-muted-foreground">{detail.data.code}. Saving changes creates a new version; published bodies cannot be edited.</p></div><Button variant="outline" asChild><Link to="/app/notices">All notices</Link></Button></div><PermissionGate permission="CAN_MANAGE_NOTICES" fallback={<p className="rounded-md border p-4 text-sm">You can view this notice, but cannot create or publish versions.</p>}><Card><CardHeader><CardTitle>Compose version {(latest?.version ?? 0) + 1}</CardTitle><CardDescription>Publication checks itemised data, each purpose’s goods/services description, and all three Rule 3(c) links.</CardDescription></CardHeader><CardContent><NoticeComposer eligibleFields={fields.data ?? []} purposeStatements={purposeStatements} onSave={(values) => createVersion.mutate(values)} saving={createVersion.isPending} /></CardContent></Card></PermissionGate>{latest ? <Card><CardHeader><CardTitle>Latest version: {latest.version}</CardTitle><CardDescription>{latest.publishedAt ? "Published versions are immutable." : "This draft can be published once it is complete."}</CardDescription></CardHeader><CardContent className="space-y-4">{latest.publishedAt ? <p className="text-sm">Content hash: <code className="break-all">{latest.contentHash}</code></p> : <PermissionGate permission="CAN_MANAGE_NOTICES"><Button onClick={() => publish.mutate(latest.version)} disabled={publish.isPending}>{publish.isPending ? "Publishing…" : "Publish version"}</Button></PermissionGate>}<div className="border-t pt-4"><h3 className="font-medium">Translations (23 supported language codes)</h3><p className="mt-1 text-sm text-muted-foreground">Translations are written and stored by people; this product does not translate the notice.</p><div className="mt-3 flex flex-wrap gap-2 text-xs">{NOTICE_LANGUAGES.map(([code, name]) => <span key={code} className="rounded border px-2 py-1">{name} ({code}){latest.translations.some((translation) => translation.languageCode === code) ? " ✓" : ""}</span>)}</div><form className="mt-4 space-y-2" onSubmit={(event) => { event.preventDefault(); saveTranslation.mutate(); }}><Label htmlFor="translation-language">Language</Label><select id="translation-language" value={translationLanguage} onChange={(event) => setTranslationLanguage(event.target.value)} className="ml-2 rounded-md border bg-background px-2 py-1 text-sm">{NOTICE_LANGUAGES.filter(([code]) => code !== "en").map(([code, name]) => <option key={code} value={code}>{name}</option>)}</select><Textarea value={translationBody} onChange={(event) => setTranslationBody(event.target.value)} aria-label="Translated notice body" placeholder="Human-authored translation" required /><PermissionGate permission="CAN_MANAGE_NOTICES"><Button type="submit" variant="outline" disabled={saveTranslation.isPending}>{saveTranslation.isPending ? "Saving…" : "Save translation"}</Button></PermissionGate></form></div></CardContent></Card> : null}</div>;
+
+  const composer = <NoticeComposer key={latest?.id ?? "first"} eligibleFields={fields.data ?? []} purposeStatements={purposeStatements} initialValues={latest ? { bodyMarkdown: latest.bodyMarkdown, itemisedDataFields: latest.itemisedDataFields, withdrawalUrl: latest.withdrawalUrl, rightsUrl: latest.rightsUrl, boardComplaintUrl: latest.boardComplaintUrl } : undefined} onSave={(values) => createVersion.mutate(values)} saving={createVersion.isPending} />;
+
+  return <div className="space-y-6">
+    <div className="flex items-start justify-between"><div><h1 className="text-xl font-semibold">{detail.data.name}</h1><p className="text-sm text-muted-foreground">{detail.data.code}. Saving changes creates a new version; published bodies cannot be edited.</p></div><Button variant="outline" asChild><Link to="/app/notices">All notices</Link></Button></div>
+
+    {published && rendered ? <Card>
+      <CardHeader>
+        <CardTitle>Published notice, as the person sees it</CardTitle>
+        <CardDescription>Version {published.version}, frozen on publication. This is the exact wording shown to a Data Principal, with no editing controls, because a published version cannot be changed.</CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <div className="flex flex-wrap items-center gap-2">
+          <Label htmlFor="notice-view-language">Show this notice in</Label>
+          <select id="notice-view-language" value={viewLanguage} onChange={(event) => setViewLanguage(event.target.value)} className="rounded-md border bg-background px-2 py-1 text-sm">
+            {publishedLanguages.map(([code, name]) => <option key={code} value={code}>{name}</option>)}
+          </select>
+          <span className="text-xs text-muted-foreground">Only languages this version has been translated into are listed.</span>
+        </div>
+        {rendered.isFallback ? <p className="rounded-md border border-amber-300 bg-amber-50 p-3 text-sm">No {languageName(viewLanguage)} translation is stored for this version, so the English body is shown.</p> : null}
+        <div className="rounded-md border bg-background">
+          <NoticeStandalonePreview bodyMarkdown={rendered.body} itemisedDataFields={published.itemisedDataFields} purposeStatements={published.purposeStatements} withdrawalUrl={published.withdrawalUrl} rightsUrl={published.rightsUrl} boardComplaintUrl={published.boardComplaintUrl} languageLabel={languageName(viewLanguage)} />
+        </div>
+        <p className="text-sm text-muted-foreground">Content hash: <code className="break-all">{published.contentHash}</code><br />A fingerprint of the wording above. If a single character of the published notice ever changed, this value would change with it, which is how the organisation can later prove what a person was actually shown.</p>
+      </CardContent>
+    </Card> : null}
+
+    <PermissionGate permission="CAN_MANAGE_NOTICES" fallback={<p className="rounded-md border p-4 text-sm">You can view this notice, but cannot create or publish versions.</p>}>
+      {published ? <Card>
+        <CardContent className="p-6">
+          <details>
+            <summary className="cursor-pointer text-base font-semibold">Compose version {published.version + 1}</summary>
+            <p className="mt-1 text-sm text-muted-foreground">A correction is a new version, not an edit: this starts from the published wording above and leaves version {published.version} untouched. Publication checks itemised data, each purpose’s goods/services description, and all three Rule 3(c) links.</p>
+            <div className="mt-4">{composer}</div>
+          </details>
+        </CardContent>
+      </Card> : <Card>
+        <CardHeader><CardTitle>Compose version {(latest?.version ?? 0) + 1}</CardTitle><CardDescription>Publication checks itemised data, each purpose’s goods/services description, and all three Rule 3(c) links.</CardDescription></CardHeader>
+        <CardContent>{composer}</CardContent>
+      </Card>}
+    </PermissionGate>
+
+    {latest ? <Card>
+      <CardHeader><CardTitle>Latest version: {latest.version}</CardTitle><CardDescription>{latest.publishedAt ? "Published versions are immutable." : "This draft can be published once it is complete."}</CardDescription></CardHeader>
+      <CardContent className="space-y-4">
+        {latest.publishedAt ? null : <PermissionGate permission="CAN_MANAGE_NOTICES"><Button onClick={() => publish.mutate(latest.version)} disabled={publish.isPending}>{publish.isPending ? "Publishing…" : "Publish version"}</Button></PermissionGate>}
+        <div className="border-t pt-4">
+          <h3 className="font-medium">Translations (23 supported language codes)</h3>
+          <p className="mt-1 text-sm text-muted-foreground">Translations are written and stored by people; this product does not translate the notice. A tick marks a language this version already has.</p>
+          <div className="mt-3 flex flex-wrap gap-2 text-xs">{NOTICE_LANGUAGES.map(([code, name]) => <span key={code} className="rounded border px-2 py-1">{name} ({code}){latest.translations.some((translation) => translation.languageCode === code) ? " ✓" : ""}</span>)}</div>
+          <form className="mt-4 space-y-2" onSubmit={(event) => { event.preventDefault(); saveTranslation.mutate(); }}>
+            <Label htmlFor="translation-language">Language</Label>
+            <select id="translation-language" value={translationLanguage} onChange={(event) => setTranslationLanguage(event.target.value)} className="ml-2 rounded-md border bg-background px-2 py-1 text-sm">{NOTICE_LANGUAGES.filter(([code]) => code !== "en").map(([code, name]) => <option key={code} value={code}>{name}</option>)}</select>
+            <Textarea value={translationBody} onChange={(event) => setTranslationBody(event.target.value)} aria-label="Translated notice body" placeholder="Human-authored translation" required />
+            <PermissionGate permission="CAN_MANAGE_NOTICES"><Button type="submit" variant="outline" disabled={saveTranslation.isPending}>{saveTranslation.isPending ? "Saving…" : "Save translation"}</Button></PermissionGate>
+          </form>
+        </div>
+      </CardContent>
+    </Card> : null}
+  </div>;
 }

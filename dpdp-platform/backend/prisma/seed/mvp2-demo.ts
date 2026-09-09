@@ -11,6 +11,10 @@ import { createHash } from "crypto";
 import { Prisma } from "@prisma/client";
 import { PrismaService } from "../../src/common/prisma/prisma.service";
 import { DEMO_ORG } from "./demo-org";
+import {
+  humanizeCanonicalField,
+  isItemisableCanonicalField,
+} from "../../src/modules/notices/canonical-field-label";
 
 export const DEMO_NOTICE_CODES = [
   "ACCOUNT_SIGNUP",
@@ -110,12 +114,25 @@ async function seedNotices(
       })
     : [];
 
-  const itemisedDataFields = mappings.map((mapping) => ({
-    sourceFieldMappingId: mapping.id,
-    canonicalField: mapping.canonicalField,
-    dataCategory: mapping.dataCategory,
-    label: mapping.canonicalField.replaceAll("_", " "),
-  }));
+  // A notice itemises personal data for the person reading it, so two kinds
+  // of mapping must not reach it. `IGNORE` is the sentinel for a column with
+  // no canonical meaning -- it has no label a reader could understand. And
+  // the same canonical field is mapped in several source systems (EMAIL in
+  // four of them), which would otherwise list "Email" once per system.
+  const seenCanonicalFields = new Set<string>();
+  const itemisedDataFields = mappings
+    .filter((mapping) => {
+      if (!isItemisableCanonicalField(mapping.canonicalField)) return false;
+      if (seenCanonicalFields.has(mapping.canonicalField)) return false;
+      seenCanonicalFields.add(mapping.canonicalField);
+      return true;
+    })
+    .map((mapping) => ({
+      sourceFieldMappingId: mapping.id,
+      canonicalField: mapping.canonicalField,
+      dataCategory: mapping.dataCategory,
+      label: humanizeCanonicalField(mapping.canonicalField),
+    }));
   const purposeStatements = purposeRows.map((purpose) => ({
     purposeId: purpose.id,
     purposeName: purpose.name,
