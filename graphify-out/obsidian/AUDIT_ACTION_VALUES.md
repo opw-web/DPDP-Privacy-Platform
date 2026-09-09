@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/AuditPage.tsx"
 type: "code"
-community: "AuditPage.tsx"
+community: "button.tsx"
 location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditPagetsx
+  - community/buttontsx
 ---
 
 # AUDIT_ACTION_VALUES
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[AuditPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditPagetsx
+#graphify/code #graphify/EXTRACTED #community/buttontsx

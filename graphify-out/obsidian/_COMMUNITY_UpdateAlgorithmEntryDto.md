@@ -10,14 +10,14 @@ members: 13
 ## Members
 - [[dot-update()_9]] - code - dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts
 - [[dot-updateAlgorithm()]] - code - dpdp-platform/backend/src/modules/sdf/sdf.controller.ts
-- [[ApiPropertyOptional_24]] - code
-- [[ArrayMinSize_1]] - code
+- [[ApiPropertyOptional_22]] - code
+- [[ArrayMinSize_2]] - code
 - [[IsArray_12]] - code
-- [[IsBoolean_13]] - code
-- [[IsDateString_8]] - code
-- [[IsIn_7]] - code
-- [[IsOptional_26]] - code
-- [[IsString_30]] - code
+- [[IsBoolean_11]] - code
+- [[IsDateString_7]] - code
+- [[IsIn_6]] - code
+- [[IsOptional_24]] - code
+- [[IsString_29]] - code
 - [[MinLength_22]] - code
 - [[Patch_4]] - code
 - [[UpdateAlgorithmEntryDto]] - code - dpdp-platform/backend/src/modules/sdf/dto/update-algorithm-entry.dto.ts
@@ -30,7 +30,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_@nestjsswagger]]
+- 3 edges to [[_COMMUNITY_compliance.service.ts]]
 - 1 edge to [[_COMMUNITY_AlgorithmRegisterService]]
 - 1 edge to [[_COMMUNITY_SdfController]]
 - 1 edge to [[_COMMUNITY_dot-record]]

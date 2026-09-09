@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "RequirePermission"
+community: "EmployeesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/EmployeesService
 ---
 
 # Post
 
 ## Connections
-- [[dot-approve()]] - `references` [EXTRACTED]
-- [[dot-create()_15]] - `references` [EXTRACTED]
-- [[dot-send()_6]] - `references` [EXTRACTED]
+- [[dot-create()_19]] - `references` [EXTRACTED]
+- [[dot-resetPassword()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/EmployeesService

@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/sync.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/step6-conflict-acceptance.e2e-spec.ts"
 type: "code"
-community: "queues.module.ts"
-location: "L87"
+community: "step6-conflict-acceptance.e2e-spec.ts"
+location: "L96"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/step6-conflict-acceptancee2e-spects
 ---
 
 # employeeWithPermissions()
 
 ## Connections
-- [[ensurePermission()_7]] - `calls` [EXTRACTED]
-- [[sync.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[ensurePermission()_13]] - `calls` [EXTRACTED]
+- [[step6-conflict-acceptance.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects

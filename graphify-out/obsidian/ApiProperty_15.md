@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateGuardianDto"
+community: "CreateTemplateDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateGuardianDto
+  - community/CreateTemplateDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateGuardianDto]] - `references` [EXTRACTED]
+- [[CreateTemplateDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateGuardianDto
+#graphify/code #graphify/EXTRACTED #community/CreateTemplateDto

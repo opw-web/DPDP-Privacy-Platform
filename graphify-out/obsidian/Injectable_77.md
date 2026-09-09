@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateRecipientDto"
+community: "matching.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateRecipientDto
+  - community/matchingservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[RecipientsService]] - `references` [EXTRACTED]
+- [[MatchingService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateRecipientDto
+#graphify/code #graphify/EXTRACTED #community/matchingservicets

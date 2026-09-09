@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/data-sources.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/purposes.e2e-spec.ts"
 type: "code"
-community: "data-sources.service.ts"
-location: "L121"
+community: "step6-conflict-acceptance.e2e-spec.ts"
+location: "L97"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesservicets
+  - community/step6-conflict-acceptancee2e-spects
 ---
 
 # validPayload()
 
 ## Connections
-- [[data-sources.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[purposes.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets
+#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects

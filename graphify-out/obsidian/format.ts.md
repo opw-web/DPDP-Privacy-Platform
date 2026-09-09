@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/lib/format.ts"
 type: "code"
-community: "DeadlinePill.tsx"
+community: "cn"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DeadlinePilltsx
+  - community/cn
 ---
 
 # format.ts
@@ -20,4 +20,4 @@ tags:
 - [[formatInOrgTimezone()]] - `contains` [EXTRACTED]
 - [[formatUtcTooltip()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DeadlinePilltsx
+#graphify/code #graphify/EXTRACTED #community/cn

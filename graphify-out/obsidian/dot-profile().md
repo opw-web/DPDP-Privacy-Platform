@@ -14,9 +14,9 @@ tags:
 ## Connections
 - [[dot-getProfile()]] - `calls` [INFERRED]
 - [[ApiExtraModels]] - `references` [EXTRACTED]
-- [[ApiOkResponse_1]] - `references` [EXTRACTED]
+- [[ApiOkResponse]] - `references` [EXTRACTED]
 - [[CurrentPrincipal]] - `references` [EXTRACTED]
-- [[Get_7]] - `references` [EXTRACTED]
+- [[Get_8]] - `references` [EXTRACTED]
 - [[MeController]] - `method` [EXTRACTED]
 - [[PrincipalActor]] - `references` [EXTRACTED]
 - [[Public()]] - `references` [EXTRACTED]

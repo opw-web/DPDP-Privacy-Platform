@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/evidence-pack.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/permissions.controller.ts"
 type: "code"
-community: "EvidencePackController"
-location: "L11"
+community: "PermissionsController"
+location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EvidencePackController
+  - community/PermissionsController
 ---
 
 # .constructor()
 
 ## Connections
-- [[EvidencePackController]] - `method` [EXTRACTED]
-- [[EvidencePackService]] - `references` [EXTRACTED]
+- [[PermissionsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EvidencePackController
+#graphify/code #graphify/EXTRACTED #community/PermissionsController

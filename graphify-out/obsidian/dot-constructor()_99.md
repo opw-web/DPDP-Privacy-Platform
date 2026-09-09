@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/breach-principal-notice-dispatch.queue.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/employees.controller.ts"
 type: "code"
-community: "queues.module.ts"
-location: "L29"
+community: "EmployeesService"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/EmployeesService
 ---
 
 # .constructor()
 
 ## Connections
-- [[BreachPrincipalNoticeDispatchQueueService]] - `method` [EXTRACTED]
-- [[InjectQueue_2]] - `references` [EXTRACTED]
+- [[EmployeesController]] - `method` [EXTRACTED]
+- [[EmployeesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/EmployeesService

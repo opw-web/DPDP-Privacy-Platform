@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateGuardianDto"
+community: "GuardiansService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateGuardianDto
+  - community/GuardiansService
 ---
 
 # IsEmail
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[CreateGuardianDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateGuardianDto
+#graphify/code #graphify/EXTRACTED #community/GuardiansService

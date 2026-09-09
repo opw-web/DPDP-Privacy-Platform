@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/guardians.service.ts"
+source_file: "dpdp-platform/backend/src/modules/children/guardians.controller.ts"
 type: "code"
 community: "GuardiansService"
-location: "L167"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,11 +12,12 @@ tags:
 # .create()
 
 ## Connections
-- [[dot-assertPwdAppointmentValid()]] - `calls` [EXTRACTED]
-- [[dot-create()_14]] - `calls` [INFERRED]
-- [[dot-record()_1]] - `calls` [INFERRED]
-- [[dot-toResponse()]] - `calls` [EXTRACTED]
+- [[dot-create()_1]] - `calls` [INFERRED]
+- [[Body_2]] - `references` [EXTRACTED]
 - [[CreateGuardianDto]] - `references` [EXTRACTED]
-- [[GuardiansService]] - `method` [EXTRACTED]
+- [[CurrentActorPermissions]] - `references` [EXTRACTED]
+- [[GuardiansController]] - `method` [EXTRACTED]
+- [[Post_1]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/GuardiansService

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/lib/format.test.ts"
 type: "code"
-community: "DeadlinePill.tsx"
+community: "cn"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DeadlinePilltsx
+  - community/cn
 ---
 
 # format.test.ts
@@ -17,4 +17,4 @@ tags:
 - [[formatUtcTooltip()]] - `imports` [EXTRACTED]
 - [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DeadlinePilltsx
+#graphify/code #graphify/EXTRACTED #community/cn

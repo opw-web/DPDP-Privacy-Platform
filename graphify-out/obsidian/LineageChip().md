@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/LineageChip.tsx"
 type: "code"
-community: "PrincipalDetailPage.tsx"
+community: "PrincipalsPage.tsx"
 location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalDetailPagetsx
+  - community/PrincipalsPagetsx
 ---
 
 # LineageChip()
@@ -18,4 +18,4 @@ tags:
 - [[PrincipalsPage.tsx]] - `imports` [EXTRACTED]
 - [[cn()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/PrincipalsPagetsx

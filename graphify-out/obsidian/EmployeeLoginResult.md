@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.service.ts"
 type: "code"
-community: "@prisma/client"
+community: "step6-conflict-acceptance.e2e-spec.ts"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/step6-conflict-acceptancee2e-spects
 ---
 
 # EmployeeLoginResult
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[employee-auth.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prisma/client
+#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects

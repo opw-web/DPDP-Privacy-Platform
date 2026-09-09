@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "inventory.service.ts"
+community: "evidence-pack.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/inventoryservicets
+  - community/evidence-packservicets
 ---
 
 # Controller
 
 ## Connections
-- [[InventoryController]] - `references` [EXTRACTED]
+- [[AuditEventsEvidenceController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/inventoryservicets
+#graphify/code #graphify/EXTRACTED #community/evidence-packservicets

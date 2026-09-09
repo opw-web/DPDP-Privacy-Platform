@@ -1,20 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/test/normalization.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/assembly.e2e-spec.ts"
 type: "code"
-community: "normalization.service.ts"
-location: "L26"
+community: "prisma.service.ts"
+location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/normalizationservicets
+  - community/prismaservicets
 ---
 
 # tenant()
 
 ## Connections
-- [[createSourceRecord()]] - `calls` [EXTRACTED]
-- [[normalization.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[persist()]] - `calls` [EXTRACTED]
-- [[persistMappings()]] - `calls` [EXTRACTED]
+- [[assembly.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[link()]] - `calls` [EXTRACTED]
+- [[normalized()]] - `calls` [EXTRACTED]
+- [[principal()]] - `calls` [EXTRACTED]
+- [[source()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/normalizationservicets
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

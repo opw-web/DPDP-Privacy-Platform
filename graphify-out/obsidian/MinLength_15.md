@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "CompleteObligationDto"
+community: "CreateNoticeVersionDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CompleteObligationDto
+  - community/CreateNoticeVersionDto
 ---
 
 # MinLength
 
 ## Connections
-- [[CompleteObligationDto]] - `references` [EXTRACTED]
+- [[CreateNoticeVersionDto]] - `references` [EXTRACTED]
+- [[ItemisedFieldInputDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CompleteObligationDto
+#graphify/code #graphify/EXTRACTED #community/CreateNoticeVersionDto

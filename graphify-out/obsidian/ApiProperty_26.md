@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateBreachDto"
+community: "CreateVoluntaryUndertakingDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateBreachDto
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateBreachDto]] - `references` [EXTRACTED]
+- [[CreateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateBreachDto
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

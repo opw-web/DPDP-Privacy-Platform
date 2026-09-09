@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "queues.module.ts"
+community: "CampaignsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/CampaignsService
 ---
 
 # Injectable
 
 ## Connections
-- [[RetentionScanQueueService]] - `references` [EXTRACTED]
+- [[CampaignsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/CampaignsService

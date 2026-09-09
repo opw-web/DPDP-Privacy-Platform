@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/merge.service.ts"
 type: "code"
-community: "AuditService"
+community: "prisma.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/prismaservicets
 ---
 
 # merge.service.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
-- [[@prismaclient]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AccessTokenPayload]] - `imports` [EXTRACTED]
 - [[AgeService]] - `imports` [EXTRACTED]
 - [[AssemblyService]] - `imports` [EXTRACTED]
@@ -39,4 +39,4 @@ tags:
 - [[token.service.ts]] - `imports_from` [EXTRACTED]
 - [[unmerge.controller.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

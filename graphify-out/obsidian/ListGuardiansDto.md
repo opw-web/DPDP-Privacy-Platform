@@ -14,9 +14,9 @@ tags:
 ## Connections
 - [[dot-list()_2]] - `references` [EXTRACTED]
 - [[dot-list()_3]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_1]] - `references` [EXTRACTED]
-- [[IsOptional_1]] - `references` [EXTRACTED]
-- [[IsString_2]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_4]] - `references` [EXTRACTED]
+- [[IsOptional_4]] - `references` [EXTRACTED]
+- [[IsString_5]] - `references` [EXTRACTED]
 - [[guardians.controller.ts]] - `imports` [EXTRACTED]
 - [[guardians.service.ts]] - `imports` [EXTRACTED]
 - [[list-guardians.dto.ts]] - `contains` [EXTRACTED]

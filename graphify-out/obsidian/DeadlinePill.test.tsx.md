@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/DeadlinePill.test.tsx"
 type: "code"
-community: "DeadlinePill.tsx"
+community: "@tanstack/react-query"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DeadlinePilltsx
+  - community/tanstack/react-query
 ---
 
 # DeadlinePill.test.tsx
@@ -18,4 +18,4 @@ tags:
 - [[isoIn()]] - `contains` [EXTRACTED]
 - [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DeadlinePilltsx
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateRecipientDto"
+community: "ChangeStatusDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateRecipientDto
+  - community/ChangeStatusDto
 ---
 
 # IsBoolean
 
 ## Connections
-- [[CreateRecipientDto]] - `references` [EXTRACTED]
+- [[ChangeStatusDto]] - `references` [EXTRACTED]
+- [[ErasureProcessorChecklistDto]] - `references` [EXTRACTED]
+- [[ErasureSystemChecklistDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateRecipientDto
+#graphify/code #graphify/EXTRACTED #community/ChangeStatusDto

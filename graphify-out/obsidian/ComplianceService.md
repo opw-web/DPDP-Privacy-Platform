@@ -1,38 +1,38 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
 type: "code"
-community: "AuditService"
+community: "ComplianceService"
 location: "L216"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/ComplianceService
 ---
 
 # ComplianceService
 
 ## Connections
 - [[dot-computeDeadline()]] - `method` [EXTRACTED]
-- [[dot-constructor()_3]] - `references` [EXTRACTED]
-- [[dot-constructor()_58]] - `references` [EXTRACTED]
-- [[dot-constructor()_14]] - `references` [EXTRACTED]
-- [[dot-constructor()_15]] - `references` [EXTRACTED]
-- [[dot-constructor()_16]] - `references` [EXTRACTED]
-- [[dot-constructor()_17]] - `references` [EXTRACTED]
-- [[dot-constructor()_18]] - `references` [EXTRACTED]
+- [[dot-constructor()_125]] - `references` [EXTRACTED]
+- [[dot-constructor()_60]] - `references` [EXTRACTED]
+- [[dot-constructor()_4]] - `references` [EXTRACTED]
+- [[dot-constructor()_5]] - `references` [EXTRACTED]
+- [[dot-constructor()_6]] - `references` [EXTRACTED]
 - [[dot-constructor()_75]] - `references` [EXTRACTED]
-- [[dot-constructor()_4]] - `method` [EXTRACTED]
-- [[dot-create()_9]] - `method` [EXTRACTED]
+- [[dot-constructor()_90]] - `references` [EXTRACTED]
+- [[dot-constructor()_84]] - `references` [EXTRACTED]
+- [[dot-constructor()_61]] - `method` [EXTRACTED]
+- [[dot-create()_12]] - `method` [EXTRACTED]
 - [[dot-getById()_1]] - `method` [EXTRACTED]
-- [[dot-list()_14]] - `method` [EXTRACTED]
+- [[dot-list()_12]] - `method` [EXTRACTED]
 - [[dot-resolveRule()]] - `method` [EXTRACTED]
-- [[dot-review()_1]] - `method` [EXTRACTED]
+- [[dot-review()_3]] - `method` [EXTRACTED]
 - [[dot-snapshotOnto()]] - `method` [EXTRACTED]
 - [[dot-update()_8]] - `method` [EXTRACTED]
 - [[dot-validateGrievanceCeiling()]] - `method` [EXTRACTED]
-- [[Injectable_3]] - `references` [EXTRACTED]
+- [[Injectable_38]] - `references` [EXTRACTED]
 - [[breach.service.ts]] - `imports` [EXTRACTED]
-- [[buildService()]] - `calls` [EXTRACTED]
+- [[buildService()_1]] - `calls` [EXTRACTED]
 - [[compliance.controller.ts]] - `imports` [EXTRACTED]
 - [[compliance.module.ts]] - `imports` [EXTRACTED]
 - [[compliance.service.spec.ts]] - `imports` [EXTRACTED]
@@ -44,4 +44,4 @@ tags:
 - [[sdf-cycle-scan.service.ts]] - `imports` [EXTRACTED]
 - [[sdf-gaps.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/ComplianceService

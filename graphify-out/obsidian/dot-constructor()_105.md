@@ -1,22 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/schedule-reconciliation.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync-error.ts"
 type: "code"
-community: "queues.module.ts"
-location: "L63"
+community: "SyncPipelineService"
+location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/SyncPipelineService
 ---
 
 # .constructor()
 
 ## Connections
-- [[dot-reconcileAtBoot()]] - `calls` [EXTRACTED]
-- [[dot-register()]] - `calls` [INFERRED]
-- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
-- [[Mvp2ScheduleReconciliationService]] - `references` [EXTRACTED]
-- [[ScheduleReconciliationService]] - `method` [EXTRACTED]
-- [[SyncQueueService]] - `references` [EXTRACTED]
+- [[MissingRecordKeyError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/SyncPipelineService

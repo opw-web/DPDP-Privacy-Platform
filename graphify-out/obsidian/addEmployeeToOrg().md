@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[campaigns.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[ensurePermission()_4]] - `calls` [EXTRACTED]
+- [[ensurePermission()]] - `calls` [EXTRACTED]
 - [[setupOrg()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PrismaService

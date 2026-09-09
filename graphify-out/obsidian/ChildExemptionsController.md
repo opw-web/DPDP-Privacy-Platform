@@ -12,11 +12,11 @@ tags:
 # ChildExemptionsController
 
 ## Connections
-- [[dot-constructor()_120]] - `method` [EXTRACTED]
-- [[dot-create()_28]] - `method` [EXTRACTED]
+- [[dot-constructor()_116]] - `method` [EXTRACTED]
+- [[dot-create()_27]] - `method` [EXTRACTED]
 - [[dot-list()_37]] - `method` [EXTRACTED]
-- [[ApiTags_32]] - `references` [EXTRACTED]
-- [[Controller_33]] - `references` [EXTRACTED]
+- [[ApiTags_31]] - `references` [EXTRACTED]
+- [[Controller_32]] - `references` [EXTRACTED]
 - [[child-exemptions.controller.ts]] - `contains` [EXTRACTED]
 - [[children.module.ts]] - `imports` [EXTRACTED]
 

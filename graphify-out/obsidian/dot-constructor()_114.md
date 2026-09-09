@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/consents/consents.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/health/health.controller.ts"
 type: "code"
-community: "ConsentsService"
-location: "L26"
+community: "test-database.ts"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ConsentsService
+  - community/test-databasets
 ---
 
 # .constructor()
 
 ## Connections
-- [[ConsentsController]] - `method` [EXTRACTED]
-- [[ConsentsService]] - `references` [EXTRACTED]
+- [[HealthController]] - `method` [EXTRACTED]
+- [[HealthService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ConsentsService
+#graphify/code #graphify/EXTRACTED #community/test-databasets

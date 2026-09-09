@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=0 - Prepare This Computer
+Comment=One-time setup after downloading: install, build and create the sample workspace
+Exec=/bin/bash "/home/linux/Coding stuff/DPDP app/demo-control/prepare.sh"
+Icon=system-software-install
+Terminal=true
+Categories=Utility;
+StartupNotify=true

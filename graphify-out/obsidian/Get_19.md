@@ -1,18 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "SdfController"
+community: "NoticesController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SdfController
+  - community/NoticesController
 ---
 
 # Get
 
 ## Connections
-- [[dot-getGaps()_1]] - `references` [EXTRACTED]
-- [[dot-listAlgorithms()]] - `references` [EXTRACTED]
-- [[dot-listAssessments()]] - `references` [EXTRACTED]
+- [[dot-get()_9]] - `references` [EXTRACTED]
+- [[dot-list()_19]] - `references` [EXTRACTED]
+- [[dot-listEligibleFields()]] - `references` [EXTRACTED]
+- [[dot-preview()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SdfController
+#graphify/code #graphify/EXTRACTED #community/NoticesController

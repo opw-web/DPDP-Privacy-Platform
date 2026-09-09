@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Public"
+community: "AuditReadService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/AuditReadService
 ---
 
 # Get
 
 ## Connections
-- [[dot-me()_1]] - `references` [EXTRACTED]
+- [[dot-accessLogCsv()]] - `references` [EXTRACTED]
+- [[dot-list()_5]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/AuditReadService

@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/access-log-retention.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/sync.processor.ts"
 type: "code"
-community: "employee-auth.controller.ts"
-location: "L22"
+community: "sync.e2e-spec.ts"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employee-authcontrollerts
+  - community/synce2e-spects
 ---
 
 # .constructor()
 
 ## Connections
-- [[AccessLogRetentionProcessor]] - `method` [EXTRACTED]
+- [[SyncPipelineService]] - `references` [EXTRACTED]
+- [[SyncProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employee-authcontrollerts
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

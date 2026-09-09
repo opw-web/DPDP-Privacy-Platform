@@ -15,6 +15,6 @@ tags:
 - [[InformationRequestsPage.test.tsx]] - `contains` [EXTRACTED]
 - [[employeeLogin()]] - `calls` [EXTRACTED]
 - [[jsonResponse()_13]] - `calls` [EXTRACTED]
-- [[renderPage()_3]] - `calls` [EXTRACTED]
+- [[renderPage()_4]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/tanstack/react-query

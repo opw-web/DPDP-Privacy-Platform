@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notifications/email-provider.factory.ts"
 type: "code"
-community: "NotificationsService"
+community: "notifications.module.ts"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/notificationsmodulets
 ---
 
 # selectEmailProvider()
@@ -16,4 +16,4 @@ tags:
 - [[email-provider.factory.ts]] - `contains` [EXTRACTED]
 - [[notifications.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/notificationsmodulets

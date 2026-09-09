@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "queues.module.ts"
+community: "sdf-cycle-scan.queue.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/sdf-cycle-scanqueuets
 ---
 
 # Injectable
 
 ## Connections
-- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
+- [[SdfCycleScanService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/sdf-cycle-scanqueuets

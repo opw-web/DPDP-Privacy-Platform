@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/ui/tabs.tsx"
 type: "code"
-community: "PrincipalDetailPage.tsx"
+community: "data-sources-api.ts"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalDetailPagetsx
+  - community/data-sources-apits
 ---
 
 # Tabs
@@ -16,4 +16,4 @@ tags:
 - [[RegistersPage.tsx]] - `imports` [EXTRACTED]
 - [[tabs.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/data-sources-apits

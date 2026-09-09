@@ -12,14 +12,14 @@ tags:
 # compliance-rules.e2e-spec.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
-- [[@prismaclient]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[EXPECTED_BASIS_BY_RULE_CODE]] - `contains` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[bootstrapTestApp()]] - `imports` [EXTRACTED]
 - [[cleanupOrgs()]] - `imports` [EXTRACTED]
 - [[compliance-rules.ts]] - `imports_from` [EXTRACTED]
-- [[createOrgWithEmployee()_2]] - `imports` [EXTRACTED]
+- [[createOrgWithEmployee()_1]] - `imports` [EXTRACTED]
 - [[createOrgWithEmployee()]] - `contains` [EXTRACTED]
 - [[e2e-harness.ts]] - `imports_from` [EXTRACTED]
 - [[grievancePayload()]] - `contains` [EXTRACTED]

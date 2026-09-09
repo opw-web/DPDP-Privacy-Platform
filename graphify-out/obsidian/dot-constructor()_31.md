@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/consents/me-consents.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts"
 type: "code"
-community: "SetMyConsentDto"
-location: "L31"
+community: "PDFDocument"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SetMyConsentDto
+  - community/PDFDocument
 ---
 
 # .constructor()
 
 ## Connections
-- [[ConsentsService]] - `references` [EXTRACTED]
-- [[MeConsentsController]] - `method` [EXTRACTED]
+- [[PDFDocument]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SetMyConsentDto
+#graphify/code #graphify/EXTRACTED #community/PDFDocument

@@ -8,24 +8,24 @@ members: 21
 **Members:** 21 nodes
 
 ## Members
-- [[dot-constructor()_31]] - code - dpdp-platform/backend/src/modules/consents/me-consents.controller.ts
+- [[dot-constructor()_19]] - code - dpdp-platform/backend/src/modules/consents/me-consents.controller.ts
 - [[dot-list()_4]] - code - dpdp-platform/backend/src/modules/consents/me-consents.controller.ts
 - [[dot-setStatus()]] - code - dpdp-platform/backend/src/modules/consents/me-consents.controller.ts
-- [[ApiProperty_3]] - code
-- [[ApiPropertyOptional_3]] - code
-- [[ApiTags_2]] - code
-- [[Body_2]] - code
-- [[Controller_2]] - code
-- [[Get_4]] - code
-- [[IsIn]] - code
+- [[ApiProperty_5]] - code
+- [[ApiPropertyOptional_6]] - code
+- [[ApiTags_4]] - code
+- [[Body_3]] - code
+- [[Controller_4]] - code
+- [[Get_5]] - code
+- [[IsIn_2]] - code
 - [[IsObject_1]] - code
-- [[IsOptional_3]] - code
-- [[IsString_4]] - code
+- [[IsOptional_6]] - code
+- [[IsString_8]] - code
 - [[IsUUID]] - code
 - [[MeConsentsController]] - code - dpdp-platform/backend/src/modules/consents/me-consents.controller.ts
-- [[MinLength_2]] - code
-- [[Param_1]] - code
-- [[Post_1]] - code
+- [[MinLength_5]] - code
+- [[Param_2]] - code
+- [[Post_2]] - code
 - [[Req]] - code
 - [[SetMyConsentDto]] - code - dpdp-platform/backend/src/modules/consents/dto/set-my-consent.dto.ts
 - [[UseGuards]] - code
@@ -40,12 +40,12 @@ SORT file.name ASC
 ## Connections to other communities
 - 8 edges to [[_COMMUNITY_Public]]
 - 3 edges to [[_COMMUNITY_ConsentsService]]
-- 1 edge to [[_COMMUNITY_@nestjsswagger]]
 - 1 edge to [[_COMMUNITY_@nestjscommon]]
+- 1 edge to [[_COMMUNITY_app.module.ts]]
 
 ## Top bridge nodes
 - [[SetMyConsentDto]] - degree 11, connects to 2 communities
 - [[dot-setStatus()]] - degree 11, connects to 2 communities
 - [[MeConsentsController]] - degree 7, connects to 2 communities
 - [[dot-list()_4]] - degree 7, connects to 2 communities
-- [[dot-constructor()_31]] - degree 2, connects to 1 community
+- [[dot-constructor()_19]] - degree 2, connects to 1 community

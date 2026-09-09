@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/audit-read.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/principals.e2e-spec.ts"
 type: "code"
-community: "@prisma/client"
-location: "L31"
+community: "principals.service.ts"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/principalsservicets
 ---
 
 # EmployeeSession
 
 ## Connections
-- [[audit-read.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[ensurePermission()_5]] - `calls` [EXTRACTED]
+- [[ensurePermission()_3]] - `calls` [EXTRACTED]
+- [[principals.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prisma/client
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

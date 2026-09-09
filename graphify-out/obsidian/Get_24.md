@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
+community: "EmployeesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/EmployeesService
 ---
 
 # Get
 
 ## Connections
-- [[dot-getById()_4]] - `references` [EXTRACTED]
-- [[dot-list()_25]] - `references` [EXTRACTED]
+- [[dot-get()_10]] - `references` [EXTRACTED]
+- [[dot-list()_26]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/EmployeesService

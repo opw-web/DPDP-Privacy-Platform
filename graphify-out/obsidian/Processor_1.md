@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "employee-auth.controller.ts"
+community: "configuration.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employee-authcontrollerts
+  - community/configurationts
 ---
 
 # Processor
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[AccessLogRetentionProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employee-authcontrollerts
+#graphify/code #graphify/EXTRACTED #community/configurationts

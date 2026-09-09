@@ -33,16 +33,16 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 14 edges to [[_COMMUNITY_compile-audience.ts]]
+- 6 edges to [[_COMMUNITY_@nestjscommon]]
 - 4 edges to [[_COMMUNITY_campaigns.service.ts]]
 - 3 edges to [[_COMMUNITY_PreviewAudienceDto]]
-- 3 edges to [[_COMMUNITY_@nestjsswagger]]
-- 2 edges to [[_COMMUNITY_PrismaService]]
-- 2 edges to [[_COMMUNITY_MaskingService]]
-- 2 edges to [[_COMMUNITY_@nestjscommon]]
+- 1 edge to [[_COMMUNITY_PrismaService]]
+- 1 edge to [[_COMMUNITY_MaskingService]]
 - 1 edge to [[_COMMUNITY_CampaignsService]]
-- 1 edge to [[_COMMUNITY_dot-record]]
-- 1 edge to [[_COMMUNITY_@prismaclient]]
-- 1 edge to [[_COMMUNITY_RequirePermission]]
+- 1 edge to [[_COMMUNITY_BreachService]]
+- 1 edge to [[_COMMUNITY_prisma.service.ts]]
+- 1 edge to [[_COMMUNITY_guardians.service.ts]]
+- 1 edge to [[_COMMUNITY_app.module.ts]]
 
 ## Top bridge nodes
 - [[audience.service.ts]] - degree 19, connects to 8 communities

@@ -1,5 +1,5 @@
 ---
-source_file: "0 - Prepare This Computer.sh"
+source_file: "demo-control/linux/0 - Prepare This Computer.sh"
 type: "code"
 community: "0 - Prepare This Computer.sh"
 location: "L1"

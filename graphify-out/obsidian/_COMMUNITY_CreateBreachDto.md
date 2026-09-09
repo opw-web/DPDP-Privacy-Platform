@@ -8,14 +8,14 @@ members: 9
 **Members:** 9 nodes
 
 ## Members
-- [[ApiProperty_26]] - code
-- [[ApiPropertyOptional_32]] - code
+- [[ApiProperty_24]] - code
+- [[ApiPropertyOptional_29]] - code
 - [[CreateBreachDto]] - code - dpdp-platform/backend/src/modules/breaches/dto/create-breach.dto.ts
-- [[IsArray_15]] - code
-- [[IsDateString_12]] - code
-- [[IsEnum_15]] - code
-- [[IsOptional_34]] - code
-- [[IsString_40]] - code
+- [[IsArray_14]] - code
+- [[IsDateString_11]] - code
+- [[IsEnum_14]] - code
+- [[IsOptional_31]] - code
+- [[IsString_39]] - code
 - [[MinLength_29]] - code
 
 ## Live Query (requires Dataview plugin)
@@ -26,9 +26,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_@nestjsswagger]]
-- 1 edge to [[_COMMUNITY_dot-record]]
-- 1 edge to [[_COMMUNITY_BreachesController]]
+- 3 edges to [[_COMMUNITY_@nestjscommon]]
+- 1 edge to [[_COMMUNITY_BreachService]]
+- 1 edge to [[_COMMUNITY_RequirePermission]]
 
 ## Top bridge nodes
 - [[CreateBreachDto]] - degree 13, connects to 3 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/access-log-retention.processor.ts"
 type: "code"
-community: "employee-auth.controller.ts"
+community: "configuration.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employee-authcontrollerts
+  - community/configurationts
 ---
 
 # access-log-retention.processor.ts
@@ -23,10 +23,10 @@ tags:
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[access-log-retention.constant.ts]] - `imports_from` [EXTRACTED]
 - [[audit-chain-verify.processor.ts]] - `re_exports` [EXTRACTED]
-- [[bullmq_1]] - `imports_from` [EXTRACTED]
+- [[bullmq]] - `imports_from` [EXTRACTED]
 - [[configuration.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[queues.module.ts]] - `imports_from` [EXTRACTED]
 - [[scheduled-jobs.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employee-authcontrollerts
+#graphify/code #graphify/EXTRACTED #community/configurationts

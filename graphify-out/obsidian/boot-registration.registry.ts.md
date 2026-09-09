@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/boot-registration.registry.ts"
 type: "code"
-community: "queues.module.ts"
+community: "SyncQueueService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/SyncQueueService
 ---
 
 # boot-registration.registry.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[BootRegistration]] - `contains` [EXTRACTED]
 - [[BootRegistrationRegistry]] - `contains` [EXTRACTED]
 - [[RECONCILE_BOOT_TIMEOUT_MS]] - `imports` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[sdf-cycle-scan.queue.ts]] - `imports_from` [EXTRACTED]
 - [[withBootTimeout()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

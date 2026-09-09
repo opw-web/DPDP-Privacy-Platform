@@ -1,20 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/compliance/compliance.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
 type: "code"
-community: "CreateComplianceRuleDto"
-location: "L22"
+community: "SourcePurposesService"
+location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateComplianceRuleDto
+  - community/SourcePurposesService
 ---
 
 # .list()
 
 ## Connections
 - [[dot-list()_14]] - `calls` [INFERRED]
-- [[ComplianceController]] - `method` [EXTRACTED]
-- [[Get_16]] - `references` [EXTRACTED]
+- [[Get_15]] - `references` [EXTRACTED]
+- [[PurposesController]] - `method` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto
+#graphify/code #graphify/EXTRACTED #community/SourcePurposesService

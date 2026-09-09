@@ -1,27 +1,27 @@
 ---
 source_file: "dpdp-platform/backend/src/common/reference/reference.service.ts"
 type: "code"
-community: "AuditService"
+community: "prisma.service.ts"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/prismaservicets
 ---
 
 # ReferenceService
 
 ## Connections
-- [[dot-constructor()_3]] - `references` [EXTRACTED]
-- [[dot-constructor()_10]] - `references` [EXTRACTED]
-- [[dot-constructor()_11]] - `references` [EXTRACTED]
-- [[dot-constructor()_13]] - `references` [EXTRACTED]
-- [[dot-constructor()_14]] - `references` [EXTRACTED]
-- [[dot-constructor()_2]] - `method` [EXTRACTED]
+- [[dot-constructor()_125]] - `references` [EXTRACTED]
+- [[dot-constructor()_46]] - `references` [EXTRACTED]
+- [[dot-constructor()_47]] - `references` [EXTRACTED]
+- [[dot-constructor()_95]] - `references` [EXTRACTED]
+- [[dot-constructor()_4]] - `references` [EXTRACTED]
+- [[dot-constructor()_42]] - `method` [EXTRACTED]
 - [[dot-next()]] - `method` [EXTRACTED]
 - [[dot-nextPrincipalReference()]] - `method` [EXTRACTED]
 - [[dot-nextPrincipalReferenceInTransaction()]] - `method` [EXTRACTED]
-- [[Injectable_2]] - `references` [EXTRACTED]
+- [[Injectable_26]] - `references` [EXTRACTED]
 - [[breach.service.ts]] - `imports` [EXTRACTED]
 - [[campaigns.service.ts]] - `imports` [EXTRACTED]
 - [[linking.service.ts]] - `imports` [EXTRACTED]
@@ -31,4 +31,4 @@ tags:
 - [[reference.service.ts]] - `contains` [EXTRACTED]
 - [[requests.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

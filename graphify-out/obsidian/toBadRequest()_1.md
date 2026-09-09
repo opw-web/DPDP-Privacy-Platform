@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-compileFilter()]] - `calls` [EXTRACTED]
-- [[dot-send()_7]] - `calls` [EXTRACTED]
+- [[dot-send()_6]] - `calls` [EXTRACTED]
 - [[campaigns.service.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CampaignsService

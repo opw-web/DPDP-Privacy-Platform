@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-commentOnRequest()]] - `references` [EXTRACTED]
-- [[ApiProperty_22]] - `references` [EXTRACTED]
+- [[ApiProperty_21]] - `references` [EXTRACTED]
 - [[IsString_33]] - `references` [EXTRACTED]
-- [[MinLength_25]] - `references` [EXTRACTED]
+- [[MinLength_26]] - `references` [EXTRACTED]
 - [[add-me-request-comment.dto.ts]] - `contains` [EXTRACTED]
 - [[me-rights.controller.ts]] - `imports` [EXTRACTED]
 

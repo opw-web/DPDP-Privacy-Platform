@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/common/tenant/tenant.module.ts"
+source_file: "dpdp-platform/backend/src/app.module.ts"
 type: "code"
-community: "@nestjs/common"
-location: "L13"
+community: "step6-conflict-acceptance.e2e-spec.ts"
+location: "L127"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/step6-conflict-acceptancee2e-spects
 ---
 
 # .configure()
 
 ## Connections
-- [[TenantModule]] - `method` [EXTRACTED]
+- [[AppModule]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects

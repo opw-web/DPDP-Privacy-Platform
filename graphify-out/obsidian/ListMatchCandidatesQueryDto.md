@@ -1,21 +1,21 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/dto/list-match-candidates.dto.ts"
 type: "code"
-community: "RequirePermission"
+community: "CandidatesService"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/CandidatesService
 ---
 
 # ListMatchCandidatesQueryDto
 
 ## Connections
-- [[dot-list()_21]] - `references` [EXTRACTED]
-- [[IsEnum_17]] - `references` [EXTRACTED]
-- [[IsOptional_37]] - `references` [EXTRACTED]
+- [[dot-list()_22]] - `references` [EXTRACTED]
+- [[IsEnum_16]] - `references` [EXTRACTED]
+- [[IsOptional_34]] - `references` [EXTRACTED]
 - [[candidates.controller.ts]] - `imports` [EXTRACTED]
 - [[list-match-candidates.dto.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/CandidatesService

@@ -10,11 +10,11 @@ members: 7
 ## Members
 - [[Build shareable, single-file copies of both HTML runbooks.]] - rationale - docs/demo-runbook/build-standalone.py
 - [[Match]] - code
-- [[Path]] - code
+- [[Path_1]] - code
 - [[build()]] - code - docs/demo-runbook/build-standalone.py
 - [[build-standalone.py]] - code - docs/demo-runbook/build-standalone.py
 - [[embed_image()]] - code - docs/demo-runbook/build-standalone.py
-- [[main()]] - code - docs/demo-runbook/build-standalone.py
+- [[main()_2]] - code - docs/demo-runbook/build-standalone.py
 
 ## Live Query (requires Dataview plugin)
 

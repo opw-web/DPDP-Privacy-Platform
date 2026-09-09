@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "queues.module.ts"
+community: "SyncQueueService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/SyncQueueService
 ---
 
 # InjectQueue
 
 ## Connections
-- [[dot-constructor()_99]] - `references` [EXTRACTED]
+- [[dot-constructor()_77]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

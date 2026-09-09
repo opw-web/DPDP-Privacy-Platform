@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/security-measures.controller.ts"
 type: "code"
-community: "@nestjs/swagger"
+community: "security-measures.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/swagger
+  - community/security-measuresservicets
 ---
 
 # security-measures.controller.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[CreateSecurityMeasureDto]] - `imports` [EXTRACTED]
 - [[RequirePermission()]] - `imports` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[security-measures.service.ts]] - `imports_from` [EXTRACTED]
 - [[update-security-measure.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/swagger
+#graphify/code #graphify/EXTRACTED #community/security-measuresservicets

@@ -1,21 +1,24 @@
 ---
 source_file: ""
 type: "code"
-community: "NoticesService"
+community: "RequestsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NoticesService
+  - community/RequestsController
 ---
 
 # Param
 
 ## Connections
-- [[dot-createVersion()]] - `references` [EXTRACTED]
-- [[dot-get()_8]] - `references` [EXTRACTED]
-- [[dot-listEligibleFields()]] - `references` [EXTRACTED]
-- [[dot-preview()_2]] - `references` [EXTRACTED]
-- [[dot-publish()]] - `references` [EXTRACTED]
-- [[dot-upsertTranslation()]] - `references` [EXTRACTED]
+- [[dot-accessReport()_1]] - `references` [EXTRACTED]
+- [[dot-addNote()_1]] - `references` [EXTRACTED]
+- [[dot-assign()_1]] - `references` [EXTRACTED]
+- [[dot-changeStatus()_1]] - `references` [EXTRACTED]
+- [[dot-erasureCompletionHolders()]] - `references` [EXTRACTED]
+- [[dot-escalate()_1]] - `references` [EXTRACTED]
+- [[dot-flagFrivolous()_1]] - `references` [EXTRACTED]
+- [[dot-getByReference()]] - `references` [EXTRACTED]
+- [[dot-verifyIdentity()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NoticesService
+#graphify/code #graphify/EXTRACTED #community/RequestsController

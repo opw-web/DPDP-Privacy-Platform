@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateSharingActivityDto"
+community: "SharingService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSharingActivityDto
+  - community/SharingService
 ---
 
 # Controller
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[SharingController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto
+#graphify/code #graphify/EXTRACTED #community/SharingService

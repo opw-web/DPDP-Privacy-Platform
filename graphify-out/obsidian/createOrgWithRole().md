@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/data-sources.e2e-spec.ts"
 type: "code"
-community: "data-sources.service.ts"
+community: "step6-conflict-acceptance.e2e-spec.ts"
 location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesservicets
+  - community/step6-conflict-acceptancee2e-spects
 ---
 
 # createOrgWithRole()
@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[createManager()]] - `calls` [EXTRACTED]
 - [[data-sources.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[ensurePermission()_13]] - `calls` [EXTRACTED]
+- [[ensurePermission()_5]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets
+#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects

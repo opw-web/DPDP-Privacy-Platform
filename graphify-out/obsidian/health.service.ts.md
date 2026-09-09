@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/health/health.service.ts"
 type: "code"
-community: "health.service.ts"
+community: "test-database.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/healthservicets
+  - community/test-databasets
 ---
 
 # health.service.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[@nestjsconfig]] - `imports_from` [EXTRACTED]
 - [[AppConfig]] - `imports` [EXTRACTED]
 - [[HealthService]] - `contains` [EXTRACTED]
@@ -24,4 +24,4 @@ tags:
 - [[ioredis]] - `imports_from` [EXTRACTED]
 - [[pg_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/healthservicets
+#graphify/code #graphify/EXTRACTED #community/test-databasets

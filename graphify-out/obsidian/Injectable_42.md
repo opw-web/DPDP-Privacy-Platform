@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SdfAssessmentService"
+community: "principals.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SdfAssessmentService
+  - community/principalsservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[SdfAssessmentService]] - `references` [EXTRACTED]
+- [[PrincipalEvidenceService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SdfAssessmentService
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

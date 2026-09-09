@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AgeStatusService"
+community: "CreateComplianceRuleDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AgeStatusService
+  - community/CreateComplianceRuleDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[SetAgeStatusDto]] - `references` [EXTRACTED]
+- [[CreateComplianceRuleDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AgeStatusService
+#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto

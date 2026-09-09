@@ -1,17 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/inventory/inventory.service.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/merge.service.ts"
 type: "code"
-community: "inventory.service.ts"
-location: "L78"
+community: "prisma.service.ts"
+location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/inventoryservicets
+  - community/prismaservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[InventoryService]] - `method` [EXTRACTED]
+- [[AgeService]] - `references` [EXTRACTED]
+- [[AssemblyService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[MergeService]] - `method` [EXTRACTED]
+- [[ReferenceService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/inventoryservicets
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

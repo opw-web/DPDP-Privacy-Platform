@@ -30,7 +30,7 @@ tags:
 - [[libauth.ts]] - `imports_from` [EXTRACTED]
 - [[mockFetch()]] - `contains` [EXTRACTED]
 - [[react-router-dom_1]] - `imports_from` [EXTRACTED]
-- [[renderPage()_4]] - `contains` [EXTRACTED]
+- [[renderPage()_5]] - `contains` [EXTRACTED]
 - [[sonner_1]] - `imports_from` [EXTRACTED]
 - [[vitest_1]] - `imports_from` [EXTRACTED]
 

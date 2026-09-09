@@ -1,30 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.service.ts"
+source_file: "dpdp-platform/backend/src/common/mail/mailer.service.ts"
 type: "code"
-community: "CampaignsService"
-location: "L479"
+community: "mailer.service.ts"
+location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampaignsService
+  - community/mailerservicets
 ---
 
 # .send()
 
 ## Connections
-- [[dot-create()_24]] - `calls` [EXTRACTED]
-- [[dot-deliverRecipient()]] - `calls` [EXTRACTED]
-- [[dot-dispatchPrincipalNoticeCampaign()]] - `calls` [INFERRED]
-- [[dot-enqueue()]] - `calls` [INFERRED]
-- [[dot-get()_7]] - `calls` [INFERRED]
-- [[dot-record()_1]] - `calls` [INFERRED]
-- [[dot-resolveRecipients()]] - `calls` [EXTRACTED]
-- [[dot-send()_6]] - `calls` [INFERRED]
-- [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[CampaignsService]] - `method` [EXTRACTED]
-- [[notFoundCampaign()]] - `calls` [EXTRACTED]
-- [[recordNonDisclosureSuppression()]] - `calls` [EXTRACTED]
-- [[renderOrganizationMessageTemplate()]] - `calls` [EXTRACTED]
-- [[toBadRequest()_1]] - `calls` [EXTRACTED]
+- [[dot-getTransporter()]] - `calls` [EXTRACTED]
+- [[dot-send()_2]] - `calls` [INFERRED]
+- [[MailerService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampaignsService
+#graphify/code #graphify/EXTRACTED #community/mailerservicets

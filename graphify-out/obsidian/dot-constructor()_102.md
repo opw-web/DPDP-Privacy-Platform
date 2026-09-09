@@ -1,20 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/deadline-scan.queue.ts"
+source_file: "dpdp-platform/backend/src/modules/board/information-requests.service.ts"
 type: "code"
-community: "queues.module.ts"
-location: "L68"
+community: "CreateInformationRequestDto"
+location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/CreateInformationRequestDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[dot-register()]] - `calls` [INFERRED]
-- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
-- [[DeadlineScanQueueService]] - `method` [EXTRACTED]
-- [[InjectQueue_5]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[InformationRequestsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

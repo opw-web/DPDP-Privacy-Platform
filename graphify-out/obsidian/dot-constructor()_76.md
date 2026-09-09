@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notices/notices.controller.ts"
+source_file: "dpdp-platform/backend/src/queues/consent-backfill.queue.ts"
 type: "code"
-community: "NoticesService"
-location: "L34"
+community: "SyncQueueService"
+location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NoticesService
+  - community/SyncQueueService
 ---
 
 # .constructor()
 
 ## Connections
-- [[NoticesController]] - `method` [EXTRACTED]
-- [[NoticesService]] - `references` [EXTRACTED]
+- [[dot-register()]] - `calls` [INFERRED]
+- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
+- [[ConsentBackfillQueueService]] - `method` [EXTRACTED]
+- [[InjectQueue_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NoticesService
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

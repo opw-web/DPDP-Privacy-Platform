@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateExemptionClaimDto"
+community: "test-database.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateExemptionClaimDto
+  - community/test-databasets
 ---
 
 # Injectable
 
 ## Connections
-- [[ChildExemptionsService]] - `references` [EXTRACTED]
+- [[HealthService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateExemptionClaimDto
+#graphify/code #graphify/EXTRACTED #community/test-databasets

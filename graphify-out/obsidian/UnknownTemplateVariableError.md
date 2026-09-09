@@ -12,7 +12,7 @@ tags:
 # UnknownTemplateVariableError
 
 ## Connections
-- [[dot-constructor()_87]] - `method` [EXTRACTED]
+- [[dot-constructor()_94]] - `method` [EXTRACTED]
 - [[TemplateRenderError]] - `inherits` [EXTRACTED]
 - [[assertSimpleWhitelistedMustache()]] - `calls` [EXTRACTED]
 - [[campaigns.service.ts]] - `imports` [EXTRACTED]

@@ -12,15 +12,15 @@ tags:
 # UpdatePurposeDto
 
 ## Connections
+- [[dot-update()_4]] - `references` [EXTRACTED]
 - [[dot-update()_5]] - `references` [EXTRACTED]
-- [[dot-update()_2]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_18]] - `references` [EXTRACTED]
-- [[IsArray_9]] - `references` [EXTRACTED]
-- [[IsBoolean_8]] - `references` [EXTRACTED]
-- [[IsEnum_10]] - `references` [EXTRACTED]
-- [[IsOptional_19]] - `references` [EXTRACTED]
-- [[IsString_23]] - `references` [EXTRACTED]
-- [[MinLength_18]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_20]] - `references` [EXTRACTED]
+- [[IsArray_10]] - `references` [EXTRACTED]
+- [[IsBoolean_10]] - `references` [EXTRACTED]
+- [[IsEnum_12]] - `references` [EXTRACTED]
+- [[IsOptional_21]] - `references` [EXTRACTED]
+- [[IsString_26]] - `references` [EXTRACTED]
+- [[MinLength_20]] - `references` [EXTRACTED]
 - [[ValidateIf_1]] - `references` [EXTRACTED]
 - [[purposes.controller.ts]] - `imports` [EXTRACTED]
 - [[purposes.service.ts]] - `imports` [EXTRACTED]

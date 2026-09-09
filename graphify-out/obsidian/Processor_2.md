@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "NotificationsService"
+community: "sync.e2e-spec.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/synce2e-spects
 ---
 
 # Processor
 
 ## Connections
-- [[PreErasureNoticeProcessor]] - `references` [EXTRACTED]
+- [[SyncProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/source-purposes.service.ts"
+source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
 type: "code"
-community: "SourcePurposesService"
-location: "L36"
+community: "ComplianceService"
+location: "L217"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SourcePurposesService
+  - community/ComplianceService
 ---
 
 # .constructor()
 
 ## Connections
 - [[AuditService]] - `references` [EXTRACTED]
-- [[SourcePurposesService]] - `method` [EXTRACTED]
+- [[ComplianceService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SourcePurposesService
+#graphify/code #graphify/EXTRACTED #community/ComplianceService

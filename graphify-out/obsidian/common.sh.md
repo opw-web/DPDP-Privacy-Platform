@@ -28,6 +28,7 @@ tags:
 - [[is_running()]] - `defines` [EXTRACTED]
 - [[ok()]] - `defines` [EXTRACTED]
 - [[on_error()]] - `defines` [EXTRACTED]
+- [[open-client-guide.sh]] - `imports_from` [EXTRACTED]
 - [[open-database.sh]] - `imports_from` [EXTRACTED]
 - [[open-runbook.sh]] - `imports_from` [EXTRACTED]
 - [[pause_before_exit()]] - `defines` [EXTRACTED]

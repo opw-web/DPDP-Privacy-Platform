@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sdf/dto/algorithm-operations.ts"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/sdf/types.ts"
 type: "code"
-community: "@nestjs/swagger"
+community: "AlgorithmRegisterPanel.tsx"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/swagger
+  - community/AlgorithmRegisterPaneltsx
 ---
 
 # ALGORITHM_OPERATIONS
 
 ## Connections
-- [[algorithm-operations.ts]] - `contains` [EXTRACTED]
-- [[create-algorithm-entry.dto.ts]] - `imports` [EXTRACTED]
-- [[update-algorithm-entry.dto.ts]] - `imports` [EXTRACTED]
+- [[AlgorithmFormFields.tsx]] - `imports` [EXTRACTED]
+- [[sdftypes.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/swagger
+#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterPaneltsx

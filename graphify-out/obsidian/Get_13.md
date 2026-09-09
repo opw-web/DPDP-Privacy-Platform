@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AttachPurposesDto"
+community: "PermissionsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AttachPurposesDto
+  - community/PermissionsController
 ---
 
 # Get
 
 ## Connections
-- [[dot-getMappings()]] - `references` [EXTRACTED]
-- [[dot-getPurposes()]] - `references` [EXTRACTED]
+- [[dot-list()_10]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AttachPurposesDto
+#graphify/code #graphify/EXTRACTED #community/PermissionsController

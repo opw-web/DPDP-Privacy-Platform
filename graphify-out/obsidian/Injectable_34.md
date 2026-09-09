@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "audit-chain.service.ts"
+community: "DataSourcesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-chainservicets
+  - community/DataSourcesService
 ---
 
 # Injectable
 
 ## Connections
-- [[AuditChainService]] - `references` [EXTRACTED]
+- [[DataSourcesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-chainservicets
+#graphify/code #graphify/EXTRACTED #community/DataSourcesService

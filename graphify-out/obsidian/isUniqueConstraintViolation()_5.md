@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/recipients.service.ts"
 type: "code"
-community: "CreateRecipientDto"
+community: "recipients.service.ts"
 location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateRecipientDto
+  - community/recipientsservicets
 ---
 
 # isUniqueConstraintViolation()
@@ -16,4 +16,4 @@ tags:
 - [[dot-update()_22]] - `calls` [EXTRACTED]
 - [[recipients.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateRecipientDto
+#graphify/code #graphify/EXTRACTED #community/recipientsservicets

@@ -14,9 +14,9 @@ tags:
 ## Connections
 - [[dot-replacePermissions()]] - `references` [EXTRACTED]
 - [[dot-replacePermissions()_1]] - `references` [EXTRACTED]
-- [[ApiProperty_41]] - `references` [EXTRACTED]
-- [[ArrayUnique_7]] - `references` [EXTRACTED]
-- [[IsArray_21]] - `references` [EXTRACTED]
+- [[ApiProperty_39]] - `references` [EXTRACTED]
+- [[ArrayUnique_9]] - `references` [EXTRACTED]
+- [[IsArray_23]] - `references` [EXTRACTED]
 - [[IsString_58]] - `references` [EXTRACTED]
 - [[roles.controller.ts]] - `imports` [EXTRACTED]
 - [[roles.service.ts]] - `imports` [EXTRACTED]

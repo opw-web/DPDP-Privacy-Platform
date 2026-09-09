@@ -12,7 +12,7 @@ tags:
 # evidence/non-disclosure.ts
 
 ## Connections
-- [[@prismaclient]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[INFORMATION_REQUEST_PUBLIC_SELECT_1]] - `contains` [EXTRACTED]
 - [[NonDisclosureSplit]] - `contains` [EXTRACTED]

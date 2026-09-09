@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/audit-events-evidence.controller.ts"
 type: "code"
-community: "audit-chain.service.ts"
+community: "evidence-pack.service.ts"
 location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-chainservicets
+  - community/evidence-packservicets
 ---
 
 # .verifyChain()
@@ -15,7 +15,7 @@ tags:
 - [[dot-verifyChain()]] - `calls` [INFERRED]
 - [[AuditEventsEvidenceController]] - `method` [EXTRACTED]
 - [[ChainVerificationResult]] - `references` [EXTRACTED]
-- [[Get_15]] - `references` [EXTRACTED]
+- [[Get_3]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-chainservicets
+#graphify/code #graphify/EXTRACTED #community/evidence-packservicets

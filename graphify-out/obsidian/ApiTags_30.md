@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "health.service.ts"
+community: "RequirePermission"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/healthservicets
+  - community/RequirePermission
 ---
 
 # ApiTags
 
 ## Connections
-- [[HealthController]] - `references` [EXTRACTED]
+- [[BreachesController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/healthservicets
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

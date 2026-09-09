@@ -15,7 +15,7 @@ tags:
 - [[dot-assertDataSourceExists()]] - `calls` [EXTRACTED]
 - [[dot-assertEmployeeExists()_1]] - `calls` [EXTRACTED]
 - [[dot-create()_35]] - `calls` [INFERRED]
-- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
 - [[CreateSecurityMeasureDto]] - `references` [EXTRACTED]
 - [[SecurityMeasuresService]] - `method` [EXTRACTED]
 

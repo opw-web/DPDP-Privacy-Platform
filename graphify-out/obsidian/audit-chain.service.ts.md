@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/audit-chain.service.ts"
 type: "code"
-community: "audit-chain.service.ts"
+community: "evidence-pack.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-chainservicets
+  - community/evidence-packservicets
 ---
 
 # audit-chain.service.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[AuditChainService]] - `contains` [EXTRACTED]
 - [[ChainVerificationResult]] - `contains` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
@@ -24,4 +24,4 @@ tags:
 - [[evidence.module.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-chainservicets
+#graphify/code #graphify/EXTRACTED #community/evidence-packservicets

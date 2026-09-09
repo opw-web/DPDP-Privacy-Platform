@@ -1,17 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/common/reference/reference.service.ts"
+source_file: "dpdp-platform/backend/src/modules/principal-portal/me.controller.ts"
 type: "code"
-community: "AuditService"
-location: "L18"
+community: "AccessReportService"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/AccessReportService
 ---
 
 # .constructor()
 
 ## Connections
-- [[ReferenceService]] - `method` [EXTRACTED]
+- [[AccessReportService]] - `references` [EXTRACTED]
+- [[MeController]] - `method` [EXTRACTED]
+- [[MeService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/AccessReportService

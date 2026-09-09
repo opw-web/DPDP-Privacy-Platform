@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/legal-hold.service.ts"
 type: "code"
-community: "RetentionController"
+community: "CreateLegalHoldDto"
 location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionController
+  - community/CreateLegalHoldDto
 ---
 
 # .list()
@@ -15,4 +15,4 @@ tags:
 - [[dot-listLegalHolds()]] - `calls` [INFERRED]
 - [[LegalHoldService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionController
+#graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalsPage.tsx"
 type: "code"
-community: "PrincipalDetailPage.tsx"
+community: "PrincipalsPage.tsx"
 location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalDetailPagetsx
+  - community/PrincipalsPagetsx
 ---
 
 # useDebouncedValue()
@@ -15,4 +15,4 @@ tags:
 - [[PrincipalsPage()]] - `calls` [EXTRACTED]
 - [[PrincipalsPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/PrincipalsPagetsx

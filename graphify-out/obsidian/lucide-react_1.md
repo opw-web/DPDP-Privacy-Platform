@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/package.json"
 type: "concept"
-community: "api-client.ts"
+community: "button.tsx"
 location: "L31"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/buttontsx
 ---
 
 # lucide-react
@@ -58,4 +58,4 @@ tags:
 - [[dialog.tsx]] - `imports_from` [EXTRACTED]
 - [[frontendpackage.json]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/api-clientts
+#graphify/concept #graphify/EXTRACTED #community/buttontsx

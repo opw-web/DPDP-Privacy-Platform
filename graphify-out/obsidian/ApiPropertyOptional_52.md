@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PreviewAudienceDto"
+community: "CreateSecurityMeasureDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PreviewAudienceDto
+  - community/CreateSecurityMeasureDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[PreviewAudienceDto]] - `references` [EXTRACTED]
+- [[UpdateSecurityMeasureDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PreviewAudienceDto
+#graphify/code #graphify/EXTRACTED #community/CreateSecurityMeasureDto

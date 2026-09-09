@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "queues.module.ts"
+community: "normalization.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/normalizationservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[Mvp2ScheduleReconciliationService]] - `references` [EXTRACTED]
+- [[NormalizationService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/normalizationservicets

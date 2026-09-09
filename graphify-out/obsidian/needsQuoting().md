@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/inventory/csv-writer.ts"
 type: "code"
-community: "csv-writer.ts"
+community: "csvDocument"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/csv-writerts
+  - community/csvDocument
 ---
 
 # needsQuoting()
@@ -15,4 +15,4 @@ tags:
 - [[csv-writer.ts]] - `contains` [EXTRACTED]
 - [[csvField()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/csv-writerts
+#graphify/code #graphify/EXTRACTED #community/csvDocument

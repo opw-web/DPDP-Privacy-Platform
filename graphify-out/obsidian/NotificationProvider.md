@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notifications/notification-provider.interface.ts"
 type: "code"
-community: "NotificationsService"
+community: "notifications.module.ts"
 location: "L84"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/notificationsmodulets
 ---
 
 # NotificationProvider
 
 ## Connections
-- [[dot-constructor()_36]] - `references` [EXTRACTED]
-- [[dot-send()_1]] - `method` [EXTRACTED]
+- [[dot-constructor()_55]] - `references` [EXTRACTED]
+- [[dot-send()_3]] - `method` [EXTRACTED]
 - [[ConsoleProvider]] - `implements` [EXTRACTED]
 - [[PortalProvider]] - `implements` [EXTRACTED]
 - [[SmtpProvider]] - `implements` [EXTRACTED]
@@ -24,4 +24,4 @@ tags:
 - [[portal.provider.ts]] - `imports` [EXTRACTED]
 - [[smtp.provider.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/notificationsmodulets

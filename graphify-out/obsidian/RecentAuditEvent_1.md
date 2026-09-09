@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/DashboardPage.tsx"
 type: "code"
-community: "EmployeesPage.tsx"
+community: "button.tsx"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeesPagetsx
+  - community/buttontsx
 ---
 
 # RecentAuditEvent
@@ -16,4 +16,4 @@ tags:
 - [[RecentAuditStrip.tsx]] - `imports` [EXTRACTED]
 - [[RecentAuditStripProps]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeesPagetsx
+#graphify/code #graphify/EXTRACTED #community/buttontsx

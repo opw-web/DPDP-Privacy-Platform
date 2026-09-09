@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "transfers.service.ts"
+community: "CreateAlgorithmEntryDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/transfersservicets
+  - community/CreateAlgorithmEntryDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[CreateTransferDto]] - `references` [EXTRACTED]
+- [[CreateAlgorithmEntryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/transfersservicets
+#graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto

@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-update()_17]] - `calls` [INFERRED]
-- [[Body_16]] - `references` [EXTRACTED]
+- [[Body_14]] - `references` [EXTRACTED]
 - [[InformationRequestsController]] - `method` [EXTRACTED]
-- [[Param_18]] - `references` [EXTRACTED]
+- [[Param_16]] - `references` [EXTRACTED]
 - [[Patch_8]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[UpdateInformationRequestDto]] - `references` [EXTRACTED]

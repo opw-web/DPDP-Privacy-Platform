@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/config/configuration.ts"
 type: "code"
-community: "employee-auth.controller.ts"
+community: "configuration.ts"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employee-authcontrollerts
+  - community/configurationts
 ---
 
 # AppConfig
@@ -23,4 +23,4 @@ tags:
 - [[sync-lock.service.ts]] - `imports` [EXTRACTED]
 - [[token.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employee-authcontrollerts
+#graphify/code #graphify/EXTRACTED #community/configurationts

@@ -12,15 +12,15 @@ tags:
 # PrincipalAuthService
 
 ## Connections
-- [[dot-constructor()_137]] - `references` [EXTRACTED]
+- [[dot-constructor()_148]] - `references` [EXTRACTED]
 - [[dot-constructor()_138]] - `method` [EXTRACTED]
 - [[dot-issueTokenPair()_1]] - `method` [EXTRACTED]
 - [[dot-login()_2]] - `method` [EXTRACTED]
 - [[dot-logout()_2]] - `method` [EXTRACTED]
-- [[dot-me()_2]] - `method` [EXTRACTED]
+- [[dot-me()_1]] - `method` [EXTRACTED]
 - [[dot-refresh()_2]] - `method` [EXTRACTED]
 - [[dot-storeFor()_1]] - `method` [EXTRACTED]
-- [[Injectable_81]] - `references` [EXTRACTED]
+- [[Injectable_82]] - `references` [EXTRACTED]
 - [[auth.module.ts]] - `imports` [EXTRACTED]
 - [[principal-auth.controller.ts]] - `imports` [EXTRACTED]
 - [[principal-auth.service.ts]] - `contains` [EXTRACTED]

@@ -1,17 +1,17 @@
 ---
-source_file: "demo-company-server/test/routes.test.ts"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalsPage.test.tsx"
 type: "code"
-community: "server.ts"
-location: "L27"
+community: "@tanstack/react-query"
+location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/serverts
+  - community/tanstack/react-query
 ---
 
-# ROUTES
+# Routes
 
 ## Connections
-- [[routes.test.ts]] - `contains` [EXTRACTED]
+- [[PrincipalsPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/serverts
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

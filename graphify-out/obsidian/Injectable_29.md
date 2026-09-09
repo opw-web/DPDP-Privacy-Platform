@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "transfers.service.ts"
+community: "prisma.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/transfersservicets
+  - community/prismaservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[TransfersService]] - `references` [EXTRACTED]
+- [[MergeService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/transfersservicets
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

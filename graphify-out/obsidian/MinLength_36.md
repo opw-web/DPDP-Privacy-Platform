@@ -11,6 +11,6 @@ tags:
 # MinLength
 
 ## Connections
-- [[CreateEmployeeDto]] - `references` [EXTRACTED]
+- [[UpdateEmployeeDto]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/EmployeesService

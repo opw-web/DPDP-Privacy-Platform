@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.service.ts"
 type: "code"
 community: "TokenService"
-location: "L41"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,8 @@ tags:
 # .constructor()
 
 ## Connections
-- [[PrincipalAuthController]] - `method` [EXTRACTED]
-- [[PrincipalAuthService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[EmployeeAuthService]] - `method` [EXTRACTED]
+- [[TokenService]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/TokenService

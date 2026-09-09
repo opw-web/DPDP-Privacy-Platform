@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts"
 type: "code"
-community: "notices.service.ts"
-location: "L140"
+community: "TemplatesService"
+location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/noticesservicets
+  - community/TemplatesService
 ---
 
 # duplicateCodeMessage()
 
 ## Connections
-- [[dot-create()_26]] - `calls` [EXTRACTED]
-- [[notices.service.ts]] - `contains` [EXTRACTED]
+- [[dot-create()_14]] - `calls` [EXTRACTED]
+- [[templates.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/noticesservicets
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

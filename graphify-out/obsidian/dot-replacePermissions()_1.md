@@ -12,7 +12,7 @@ tags:
 # .replacePermissions()
 
 ## Connections
-- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
 - [[dot-replacePermissions()]] - `calls` [INFERRED]
 - [[RolesService]] - `method` [EXTRACTED]
 - [[UpdateRolePermissionsDto]] - `references` [EXTRACTED]

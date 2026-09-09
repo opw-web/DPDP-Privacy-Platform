@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/requests/AccessReportPanel.tsx"
 type: "code"
-community: "RequestDetailPage.tsx"
+community: "router.tsx"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestDetailPagetsx
+  - community/routertsx
 ---
 
 # AccessReportPanel()
@@ -16,4 +16,4 @@ tags:
 - [[RequestDetailPage.tsx]] - `imports` [EXTRACTED]
 - [[generateAndDownload()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/audit/access-log.service.ts"
 type: "code"
-community: "principals.service.ts"
+community: "prisma.service.ts"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principalsservicets
+  - community/prismaservicets
 ---
 
 # RecordPersonalDataViewedInput
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[access-log.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principalsservicets
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

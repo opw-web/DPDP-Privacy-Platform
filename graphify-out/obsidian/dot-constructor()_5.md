@@ -1,20 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.service.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/erasure-task.service.ts"
 type: "code"
-community: "AuditService"
-location: "L71"
+community: "ErasureTaskService"
+location: "L109"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/ErasureTaskService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AssemblyService]] - `references` [EXTRACTED]
 - [[AuditService]] - `references` [EXTRACTED]
-- [[DataSourcesService]] - `references` [EXTRACTED]
-- [[MappingsService]] - `method` [EXTRACTED]
+- [[ComplianceService]] - `references` [EXTRACTED]
+- [[ErasureTaskService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/ErasureTaskService

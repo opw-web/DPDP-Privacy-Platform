@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "NoticesService"
+community: "AssignRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NoticesService
+  - community/AssignRequestDto
 ---
 
 # IsString
 
 ## Connections
-- [[UpsertTranslationDto]] - `references` [EXTRACTED]
+- [[AssignRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NoticesService
+#graphify/code #graphify/EXTRACTED #community/AssignRequestDto

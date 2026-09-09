@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/assembly.service.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/age.service.ts"
 type: "code"
-community: "assembly.service.ts"
-location: "L88"
+community: ".record"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/assemblyservicets
+  - community/record
 ---
 
 # compareNewest()
 
 ## Connections
-- [[assembleFields()]] - `indirect_call` [INFERRED]
-- [[assembly.service.ts]] - `contains` [EXTRACTED]
-- [[displayNameFrom()]] - `calls` [EXTRACTED]
+- [[dot-derive()]] - `indirect_call` [INFERRED]
+- [[age.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/assemblyservicets
+#graphify/code #graphify/EXTRACTED #community/record

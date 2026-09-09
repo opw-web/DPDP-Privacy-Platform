@@ -2,7 +2,7 @@
 source_file: "demo-control/common.sh"
 type: "code"
 community: "common.sh"
-location: "L67"
+location: "L71"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -25,6 +25,7 @@ tags:
 - [[install-launchers.sh script]] - `calls` [EXTRACTED]
 - [[install_packages()]] - `calls` [EXTRACTED]
 - [[on_error()]] - `calls` [EXTRACTED]
+- [[open-client-guide.sh script]] - `calls` [EXTRACTED]
 - [[open-runbook.sh script]] - `calls` [EXTRACTED]
 - [[prepare.sh script]] - `calls` [EXTRACTED]
 - [[require_command()]] - `calls` [EXTRACTED]

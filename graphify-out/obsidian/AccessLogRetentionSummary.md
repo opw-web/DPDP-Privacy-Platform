@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/access-log-retention.processor.ts"
 type: "code"
-community: "employee-auth.controller.ts"
+community: "configuration.ts"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employee-authcontrollerts
+  - community/configurationts
 ---
 
 # AccessLogRetentionSummary
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[access-log-retention.processor.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employee-authcontrollerts
+#graphify/code #graphify/EXTRACTED #community/configurationts

@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/SettingsCompliancePage.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/retention/LegalHoldForm.tsx"
 type: "code"
-community: "PrincipalDetailPage.tsx"
-location: "L24"
+community: "react"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalDetailPagetsx
+  - community/react
 ---
 
 # submit()
 
 ## Connections
-- [[RuleCard()]] - `contains` [EXTRACTED]
+- [[LegalHoldForm()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/react

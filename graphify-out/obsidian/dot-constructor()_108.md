@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sync/sync-error.spec.ts"
+source_file: "dpdp-platform/backend/src/modules/principal-portal/me-rights.controller.ts"
 type: "code"
-community: "SyncPipelineService"
-location: "L12"
+community: "MeRightsService"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncPipelineService
+  - community/MeRightsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[IdentifierOwnershipConflictError]] - `method` [EXTRACTED]
+- [[MeRightsController]] - `method` [EXTRACTED]
+- [[MeRightsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncPipelineService
+#graphify/code #graphify/EXTRACTED #community/MeRightsService

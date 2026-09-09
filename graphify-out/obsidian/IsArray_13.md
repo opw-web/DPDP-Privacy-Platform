@@ -11,6 +11,6 @@ tags:
 # IsArray
 
 ## Connections
-- [[CreateTemplateDto]] - `references` [EXTRACTED]
+- [[UpdateTemplateDto]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/TemplatesService

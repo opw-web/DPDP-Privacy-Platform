@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PreviewTemplateDto"
+community: "ConsentsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PreviewTemplateDto
+  - community/ConsentsService
 ---
 
 # IsObject
 
 ## Connections
-- [[PreviewTemplateDto]] - `references` [EXTRACTED]
+- [[ImportConsentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PreviewTemplateDto
+#graphify/code #graphify/EXTRACTED #community/ConsentsService

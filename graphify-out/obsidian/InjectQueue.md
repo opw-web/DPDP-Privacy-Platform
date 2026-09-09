@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SyncQueueService"
+community: "sync.e2e-spec.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/synce2e-spects
 ---
 
 # InjectQueue
 
 ## Connections
-- [[dot-constructor()_72]] - `references` [EXTRACTED]
+- [[dot-constructor()_30]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

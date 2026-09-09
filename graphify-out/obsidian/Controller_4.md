@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Public"
+community: "SetMyConsentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/SetMyConsentDto
 ---
 
 # Controller
 
 ## Connections
-- [[MeController]] - `references` [EXTRACTED]
+- [[MeConsentsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/SetMyConsentDto

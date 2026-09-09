@@ -19,12 +19,12 @@ members: 19
 - [[dot-getByReference()_1]] - code - dpdp-platform/backend/src/modules/requests/requests.service.ts
 - [[dot-stats()_1]] - code - dpdp-platform/backend/src/modules/requests/requests.controller.ts
 - [[dot-verifyIdentity()_1]] - code - dpdp-platform/backend/src/modules/requests/requests.controller.ts
-- [[ApiTags_15]] - code
-- [[Body_9]] - code
-- [[Controller_15]] - code
-- [[Get_18]] - code
-- [[Param_9]] - code
-- [[Post_8]] - code
+- [[ApiTags_16]] - code
+- [[Body_10]] - code
+- [[Controller_16]] - code
+- [[Get_17]] - code
+- [[Param_10]] - code
+- [[Post_9]] - code
 - [[RequestsController]] - code - dpdp-platform/backend/src/modules/requests/requests.controller.ts
 - [[Res_5]] - code
 
@@ -44,11 +44,11 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_VerifyIdentityDto]]
 - 1 edge to [[_COMMUNITY_EscalateRequestDto]]
 - 1 edge to [[_COMMUNITY_FlagFrivolousDto]]
+- 1 edge to [[_COMMUNITY_app.module.ts]]
 - 1 edge to [[_COMMUNITY_@nestjscommon]]
-- 1 edge to [[_COMMUNITY_@nestjsswagger]]
 - 1 edge to [[_COMMUNITY_AssignRequestDto]]
 - 1 edge to [[_COMMUNITY_ChangeStatusDto]]
-- 1 edge to [[_COMMUNITY_access-report-render.ts]]
+- 1 edge to [[_COMMUNITY_csvDocument]]
 
 ## Top bridge nodes
 - [[RequestsController]] - degree 16, connects to 4 communities

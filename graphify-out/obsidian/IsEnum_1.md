@@ -11,6 +11,6 @@ tags:
 # IsEnum
 
 ## Connections
-- [[VerifyGuardianDto]] - `references` [EXTRACTED]
+- [[CreateGuardianDto]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/GuardiansService

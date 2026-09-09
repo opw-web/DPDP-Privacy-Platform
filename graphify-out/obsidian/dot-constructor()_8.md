@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/age.service.ts"
+source_file: "dpdp-platform/backend/src/modules/children/guardians.controller.ts"
 type: "code"
-community: "AuditService"
-location: "L53"
+community: "GuardiansService"
+location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/GuardiansService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AgeService]] - `method` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
+- [[GuardiansController]] - `method` [EXTRACTED]
+- [[GuardiansService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/GuardiansService

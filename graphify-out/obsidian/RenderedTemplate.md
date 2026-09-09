@@ -12,7 +12,7 @@ tags:
 # RenderedTemplate
 
 ## Connections
-- [[dot-preview()]] - `references` [EXTRACTED]
+- [[dot-preview()_2]] - `references` [EXTRACTED]
 - [[template-renderer.ts]] - `contains` [EXTRACTED]
 - [[templates.service.ts]] - `imports` [EXTRACTED]
 

@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/test-support/mock-http-server.ts"
+source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.ts"
 type: "code"
-community: "MockHttpServer"
-location: "L26"
+community: "PurposesService"
+location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MockHttpServer
+  - community/PurposesService
 ---
 
 # .constructor()
 
 ## Connections
-- [[MockHttpServer]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[PurposesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MockHttpServer
+#graphify/code #graphify/EXTRACTED #community/PurposesService

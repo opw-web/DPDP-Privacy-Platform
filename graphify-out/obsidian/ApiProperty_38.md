@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "notifications.controller.ts"
+community: "ReplaceMappingsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationscontrollerts
+  - community/ReplaceMappingsDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[MarkAllReadResponseDto]] - `references` [EXTRACTED]
-- [[NotificationDto_1]] - `references` [EXTRACTED]
-- [[NotificationListResponseDto]] - `references` [EXTRACTED]
+- [[ReplaceMappingsDto]] - `references` [EXTRACTED]
+- [[SourceFieldMappingDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts
+#graphify/code #graphify/EXTRACTED #community/ReplaceMappingsDto

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "notifications.controller.ts"
+community: "notifications.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationscontrollerts
+  - community/notificationsservicets
 ---
 
 # Get
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-list()_32]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts
+#graphify/code #graphify/EXTRACTED #community/notificationsservicets

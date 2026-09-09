@@ -10,10 +10,10 @@ members: 9
 ## Members
 - [[dot-list()_48]] - code - dpdp-platform/backend/src/modules/requests/requests.controller.ts
 - [[dot-list()_49]] - code - dpdp-platform/backend/src/modules/requests/requests.service.ts
-- [[IsBoolean_26]] - code
-- [[IsEnum_23]] - code
-- [[IsOptional_52]] - code
-- [[IsString_69]] - code
+- [[IsBoolean_28]] - code
+- [[IsEnum_25]] - code
+- [[IsOptional_53]] - code
+- [[IsString_71]] - code
 - [[ListRequestsDto]] - code - dpdp-platform/backend/src/modules/requests/dto/list-requests.dto.ts
 - [[Query_9]] - code
 - [[Transform_2]] - code
@@ -27,7 +27,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 2 edges to [[_COMMUNITY_RequestsController]]
-- 2 edges to [[_COMMUNITY_@nestjsswagger]]
+- 2 edges to [[_COMMUNITY_@nestjscommon]]
 - 1 edge to [[_COMMUNITY_RequestsService]]
 - 1 edge to [[_COMMUNITY_requests.service.ts]]
 - 1 edge to [[_COMMUNITY_RequirePermission]]

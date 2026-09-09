@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.controller.ts"
 type: "code"
-community: "AttachPurposesDto"
+community: "MappingsController"
 location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AttachPurposesDto
+  - community/MappingsController
 ---
 
 # .replacePurposes()
@@ -14,10 +14,10 @@ tags:
 ## Connections
 - [[dot-replace()]] - `calls` [INFERRED]
 - [[AttachPurposesDto]] - `references` [EXTRACTED]
-- [[Body_5]] - `references` [EXTRACTED]
+- [[Body_6]] - `references` [EXTRACTED]
 - [[MappingsController]] - `method` [EXTRACTED]
-- [[Param_4]] - `references` [EXTRACTED]
+- [[Param_5]] - `references` [EXTRACTED]
 - [[Put]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AttachPurposesDto
+#graphify/code #graphify/EXTRACTED #community/MappingsController

@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/test/normalization.e2e-spec.ts"
 type: "code"
-community: "normalization.service.ts"
+community: "step6-conflict-acceptance.e2e-spec.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/normalizationservicets
+  - community/step6-conflict-acceptancee2e-spects
 ---
 
 # normalization.e2e-spec.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[@nestjstesting_1]] - `imports_from` [EXTRACTED]
 - [[AppModule]] - `imports` [EXTRACTED]
 - [[NormalizationMapping]] - `imports` [EXTRACTED]
@@ -26,7 +26,7 @@ tags:
 - [[persist()]] - `contains` [EXTRACTED]
 - [[persistMappings()]] - `contains` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
-- [[tenant()_1]] - `contains` [EXTRACTED]
+- [[tenant()_4]] - `contains` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/normalizationservicets
+#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects

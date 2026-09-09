@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/common/audit/audit.module.ts"
 type: "code"
-community: "@nestjs/common"
+community: "app.module.ts"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/appmodulets
 ---
 
 # AuditModule
 
 ## Connections
-- [[Module_1]] - `references` [EXTRACTED]
+- [[Module_3]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[audit-read.module.ts]] - `imports` [EXTRACTED]
 - [[audit.module.ts]] - `contains` [EXTRACTED]
@@ -40,4 +40,4 @@ tags:
 - [[sync.module.ts]] - `imports` [EXTRACTED]
 - [[templates.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/appmodulets

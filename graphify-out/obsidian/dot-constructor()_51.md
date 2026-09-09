@@ -1,18 +1,25 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/deadline-scan.processor.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync-pipeline.service.ts"
 type: "code"
-community: "RequestsService"
-location: "L50"
+community: "prisma.service.ts"
+location: "L172"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestsService
+  - community/prismaservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[DeadlineScanProcessor]] - `method` [EXTRACTED]
-- [[RequestsService]] - `references` [EXTRACTED]
+- [[AgeService]] - `references` [EXTRACTED]
+- [[AssemblyService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[DataSourcesService]] - `references` [EXTRACTED]
+- [[LinkingService]] - `references` [EXTRACTED]
+- [[MatchingService]] - `references` [EXTRACTED]
+- [[NormalizationService]] - `references` [EXTRACTED]
+- [[SyncLockService]] - `references` [EXTRACTED]
+- [[SyncPipelineService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestsService
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

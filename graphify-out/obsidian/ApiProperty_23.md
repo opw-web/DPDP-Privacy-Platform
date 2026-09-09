@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "FlagFrivolousDto"
+community: "CreateSdfAssessmentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/FlagFrivolousDto
+  - community/CreateSdfAssessmentDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[FlagFrivolousDto]] - `references` [EXTRACTED]
+- [[CreateSdfAssessmentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/FlagFrivolousDto
+#graphify/code #graphify/EXTRACTED #community/CreateSdfAssessmentDto

@@ -1,20 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/consent-backfill.queue.ts"
+source_file: "dpdp-platform/backend/src/modules/board/information-requests.controller.ts"
 type: "code"
-community: "queues.module.ts"
-location: "L70"
+community: "CreateInformationRequestDto"
+location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/CreateInformationRequestDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[dot-register()]] - `calls` [INFERRED]
-- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
-- [[ConsentBackfillQueueService]] - `method` [EXTRACTED]
-- [[InjectQueue_4]] - `references` [EXTRACTED]
+- [[InformationRequestsController]] - `method` [EXTRACTED]
+- [[InformationRequestsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

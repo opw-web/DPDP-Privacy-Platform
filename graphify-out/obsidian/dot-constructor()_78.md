@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/purpose-served.service.ts"
+source_file: "dpdp-platform/backend/src/queues/mvp2-schedules.ts"
 type: "code"
-community: "erasure-task.service.ts"
-location: "L39"
+community: "SyncQueueService"
+location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/SyncQueueService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[PurposeServedService]] - `method` [EXTRACTED]
+- [[InjectQueue_3]] - `references` [EXTRACTED]
+- [[Mvp2ScheduleReconciliationService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

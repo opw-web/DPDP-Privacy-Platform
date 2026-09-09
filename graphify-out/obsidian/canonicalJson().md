@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/common/audit/canonical-json.ts"
 type: "code"
-community: "canonicalJson"
+community: "evidence-pack.service.ts"
 location: "L56"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/canonicalJson
+  - community/evidence-packservicets
 ---
 
 # canonicalJson()
 
 ## Connections
-- [[dot-publish()_1]] - `calls` [EXTRACTED]
-- [[dot-record()_1]] - `calls` [EXTRACTED]
+- [[dot-publish()]] - `calls` [EXTRACTED]
+- [[dot-record()]] - `calls` [EXTRACTED]
 - [[dot-verifyChain()]] - `calls` [EXTRACTED]
 - [[Event]] - `calls` [EXTRACTED]
 - [[audit-chain.service.spec.ts]] - `imports` [EXTRACTED]
@@ -28,4 +28,4 @@ tags:
 - [[stringify()]] - `calls` [EXTRACTED]
 - [[verifyChainIntact()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/canonicalJson
+#graphify/code #graphify/EXTRACTED #community/evidence-packservicets

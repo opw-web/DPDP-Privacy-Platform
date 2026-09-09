@@ -1,21 +1,21 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/normalization/normalization.module.ts"
 type: "code"
-community: "@nestjs/common"
+community: "normalization.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/normalizationservicets
 ---
 
 # normalization.module.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[NormalizationModule]] - `contains` [EXTRACTED]
 - [[NormalizationService]] - `imports` [EXTRACTED]
 - [[normalization.service.ts]] - `imports_from` [EXTRACTED]
 - [[sync.module.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/normalizationservicets

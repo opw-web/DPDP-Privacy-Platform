@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/health/health.service.ts"
 type: "code"
-community: "health.service.ts"
+community: "test-database.ts"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/healthservicets
+  - community/test-databasets
 ---
 
 # HealthStatus
@@ -16,4 +16,4 @@ tags:
 - [[health.controller.ts]] - `imports` [EXTRACTED]
 - [[health.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/healthservicets
+#graphify/code #graphify/EXTRACTED #community/test-databasets

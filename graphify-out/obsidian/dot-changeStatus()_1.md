@@ -13,10 +13,10 @@ tags:
 
 ## Connections
 - [[dot-changeStatus()]] - `calls` [INFERRED]
-- [[Body_9]] - `references` [EXTRACTED]
+- [[Body_10]] - `references` [EXTRACTED]
 - [[ChangeStatusDto]] - `references` [EXTRACTED]
-- [[Param_9]] - `references` [EXTRACTED]
-- [[Post_8]] - `references` [EXTRACTED]
+- [[Param_10]] - `references` [EXTRACTED]
+- [[Post_9]] - `references` [EXTRACTED]
 - [[RequestsController]] - `method` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 

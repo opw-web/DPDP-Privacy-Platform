@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "connector.factory.ts"
+community: "prisma.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/connectorfactoryts
+  - community/prismaservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[ConnectorFactory]] - `references` [EXTRACTED]
+- [[ReferenceService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/connectorfactoryts
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

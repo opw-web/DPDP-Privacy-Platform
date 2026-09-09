@@ -1,24 +1,25 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/merge.service.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/unmerge.controller.ts"
 type: "code"
-community: "ScopedTransactionClient"
-location: "L191"
+community: ".unmerge"
+location: "L24"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/ScopedTransactionClient
+  - graphify/EXTRACTED
+  - community/unmerge
 ---
 
 # .unmerge()
 
 ## Connections
-- [[dot-derive()]] - `calls` [INFERRED]
-- [[dot-nextPrincipalReferenceInTransaction()]] - `calls` [INFERRED]
-- [[dot-rebuild()]] - `calls` [INFERRED]
-- [[dot-record()_1]] - `calls` [INFERRED]
 - [[dot-unmerge()]] - `calls` [INFERRED]
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[MergeService]] - `method` [EXTRACTED]
-- [[initialPrincipalDisplayName()]] - `calls` [EXTRACTED]
+- [[Body_26]] - `references` [EXTRACTED]
+- [[CurrentActor]] - `references` [EXTRACTED]
+- [[Param_28]] - `references` [EXTRACTED]
+- [[Post_26]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[UnmergeController]] - `method` [EXTRACTED]
+- [[UnmergeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/ScopedTransactionClient
+#graphify/code #graphify/EXTRACTED #community/unmerge

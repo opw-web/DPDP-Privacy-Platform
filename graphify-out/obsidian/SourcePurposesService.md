@@ -12,11 +12,11 @@ tags:
 # SourcePurposesService
 
 ## Connections
-- [[dot-constructor()_60]] - `references` [EXTRACTED]
-- [[dot-constructor()_61]] - `method` [EXTRACTED]
-- [[dot-get()_5]] - `method` [EXTRACTED]
+- [[dot-constructor()_63]] - `references` [EXTRACTED]
+- [[dot-constructor()_64]] - `method` [EXTRACTED]
+- [[dot-get()_7]] - `method` [EXTRACTED]
 - [[dot-replace()]] - `method` [EXTRACTED]
-- [[Injectable_35]] - `references` [EXTRACTED]
+- [[Injectable_39]] - `references` [EXTRACTED]
 - [[data-sources.module.ts]] - `imports` [EXTRACTED]
 - [[mappings.controller.ts]] - `imports` [EXTRACTED]
 - [[source-purposes.service.ts]] - `contains` [EXTRACTED]

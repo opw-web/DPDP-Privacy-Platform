@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "@nestjs/swagger"
+community: "CreateInformationRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/swagger
+  - community/CreateInformationRequestDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[DataSourcePurposeResponseDto]] - `references` [EXTRACTED]
-- [[DataSourcePurposesResponseDto]] - `references` [EXTRACTED]
+- [[CreateInformationRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/swagger
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

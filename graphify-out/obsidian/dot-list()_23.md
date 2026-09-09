@@ -1,20 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/candidates.service.ts"
 type: "code"
-community: "RequirePermission"
-location: "L34"
+community: "CandidatesService"
+location: "L130"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/CandidatesService
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_31]] - `calls` [INFERRED]
-- [[CampaignsController]] - `method` [EXTRACTED]
-- [[Get_22]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-list()_22]] - `calls` [INFERRED]
+- [[CandidatesService]] - `method` [EXTRACTED]
+- [[isoDate()]] - `calls` [EXTRACTED]
+- [[recordValueFor()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/CandidatesService

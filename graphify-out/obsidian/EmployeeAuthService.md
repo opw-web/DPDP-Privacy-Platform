@@ -12,14 +12,14 @@ tags:
 # EmployeeAuthService
 
 ## Connections
-- [[dot-constructor()_128]] - `references` [EXTRACTED]
-- [[dot-constructor()_136]] - `method` [EXTRACTED]
+- [[dot-constructor()_136]] - `references` [EXTRACTED]
+- [[dot-constructor()_137]] - `method` [EXTRACTED]
 - [[dot-issueTokenPair()]] - `method` [EXTRACTED]
 - [[dot-login()_1]] - `method` [EXTRACTED]
 - [[dot-logout()_1]] - `method` [EXTRACTED]
 - [[dot-refresh()_1]] - `method` [EXTRACTED]
 - [[dot-storeFor()]] - `method` [EXTRACTED]
-- [[Injectable_80]] - `references` [EXTRACTED]
+- [[Injectable_81]] - `references` [EXTRACTED]
 - [[auth.module.ts]] - `imports` [EXTRACTED]
 - [[employee-auth.controller.ts]] - `imports` [EXTRACTED]
 - [[employee-auth.service.ts]] - `contains` [EXTRACTED]

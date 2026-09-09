@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "employee-auth.controller.ts"
+community: "Public"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employee-authcontrollerts
+  - community/Public
 ---
 
 # ApiOkResponse
 
 ## Connections
-- [[dot-me()]] - `references` [EXTRACTED]
+- [[dot-privacyContact()]] - `references` [EXTRACTED]
+- [[dot-profile()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employee-authcontrollerts
+#graphify/code #graphify/EXTRACTED #community/Public

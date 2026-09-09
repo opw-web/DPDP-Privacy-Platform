@@ -1,22 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts"
 type: "code"
-community: "employee-auth.controller.ts"
-location: "L123"
+community: "Public"
+location: "L130"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employee-authcontrollerts
+  - community/Public
 ---
 
 # .me()
 
 ## Connections
-- [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[ApiOkResponse]] - `references` [EXTRACTED]
-- [[CurrentActor]] - `references` [EXTRACTED]
-- [[EmployeeAuthController]] - `method` [EXTRACTED]
-- [[EmployeeMeResponseDto]] - `references` [EXTRACTED]
-- [[Get_3]] - `references` [EXTRACTED]
+- [[dot-me()_1]] - `calls` [INFERRED]
+- [[CurrentPrincipal]] - `references` [EXTRACTED]
+- [[Get_7]] - `references` [EXTRACTED]
+- [[PrincipalActor]] - `references` [EXTRACTED]
+- [[PrincipalAuthController]] - `method` [EXTRACTED]
+- [[Public()]] - `references` [EXTRACTED]
+- [[UseGuards_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employee-authcontrollerts
+#graphify/code #graphify/EXTRACTED #community/Public

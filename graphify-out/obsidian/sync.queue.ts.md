@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/sync.queue.ts"
 type: "code"
-community: "queues.module.ts"
+community: "sync.e2e-spec.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/synce2e-spects
 ---
 
 # sync.queue.ts
 
 ## Connections
 - [[@nestjsbullmq_1]] - `imports_from` [EXTRACTED]
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
-- [[@prismaclient]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[FREQUENCY_CRON_PATTERNS]] - `contains` [EXTRACTED]
 - [[SYNC_QUEUE_NAME]] - `contains` [EXTRACTED]
 - [[SYNC_SCHEDULE_TRIGGERED_BY]] - `contains` [EXTRACTED]
@@ -22,7 +22,7 @@ tags:
 - [[SyncJobData]] - `contains` [EXTRACTED]
 - [[SyncLockService]] - `imports` [EXTRACTED]
 - [[SyncQueueService]] - `contains` [EXTRACTED]
-- [[bullmq_1]] - `imports_from` [EXTRACTED]
+- [[bullmq]] - `imports_from` [EXTRACTED]
 - [[data-sources.service.ts]] - `imports_from` [EXTRACTED]
 - [[health-degraded.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[queues.module.ts]] - `imports_from` [EXTRACTED]
@@ -34,4 +34,4 @@ tags:
 - [[syncJobId()]] - `contains` [EXTRACTED]
 - [[syncSchedulerId()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/providers/portal.provider.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync.controller.ts"
 type: "code"
-community: "NotificationsService"
-location: "L27"
+community: "SyncService"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/SyncService
 ---
 
 # .constructor()
 
 ## Connections
-- [[PortalProvider]] - `method` [EXTRACTED]
+- [[SyncJobsController]] - `method` [EXTRACTED]
+- [[SyncService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/SyncService

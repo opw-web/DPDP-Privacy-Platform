@@ -11,6 +11,6 @@ tags:
 # Injectable
 
 ## Connections
-- [[ScheduleReconciliationService]] - `references` [EXTRACTED]
+- [[ConsentBackfillQueueService]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/queuesmodulets

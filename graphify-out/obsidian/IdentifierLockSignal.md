@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/identifier-ownership-lock.ts"
 type: "code"
-community: "ScopedTransactionClient"
+community: "identifier-ownership-lock.ts"
 location: "L88"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScopedTransactionClient
+  - community/identifier-ownership-lockts
 ---
 
 # IdentifierLockSignal
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[identifier-ownership-lock.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient
+#graphify/code #graphify/EXTRACTED #community/identifier-ownership-lockts

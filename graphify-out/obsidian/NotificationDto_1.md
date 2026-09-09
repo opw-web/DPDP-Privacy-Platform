@@ -12,8 +12,8 @@ tags:
 # NotificationDto
 
 ## Connections
-- [[ApiProperty_38]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_43]] - `references` [EXTRACTED]
+- [[ApiProperty_41]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_45]] - `references` [EXTRACTED]
 - [[notification.dto.ts]] - `contains` [EXTRACTED]
 - [[notifications.controller.ts]] - `imports` [EXTRACTED]
 

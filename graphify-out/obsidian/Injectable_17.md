@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "csvDocument"
+community: "data-sources.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/csvDocument
+  - community/data-sourcesservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[EvidencePackService]] - `references` [EXTRACTED]
+- [[ConnectorFactory]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/csvDocument
+#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets

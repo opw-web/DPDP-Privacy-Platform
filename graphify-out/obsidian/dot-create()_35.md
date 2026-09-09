@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-create()_36]] - `calls` [INFERRED]
-- [[Body_26]] - `references` [EXTRACTED]
+- [[Body_25]] - `references` [EXTRACTED]
 - [[CreateSecurityMeasureDto]] - `references` [EXTRACTED]
-- [[Post_26]] - `references` [EXTRACTED]
+- [[Post_25]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[SecurityMeasuresController]] - `method` [EXTRACTED]
 

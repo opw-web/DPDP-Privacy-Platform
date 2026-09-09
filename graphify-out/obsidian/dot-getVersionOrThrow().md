@@ -12,9 +12,9 @@ tags:
 # .getVersionOrThrow()
 
 ## Connections
-- [[dot-preview()_3]] - `calls` [EXTRACTED]
-- [[dot-publish()_1]] - `calls` [EXTRACTED]
-- [[dot-upsertTranslation()_1]] - `calls` [EXTRACTED]
+- [[dot-preview()]] - `calls` [EXTRACTED]
+- [[dot-publish()]] - `calls` [EXTRACTED]
+- [[dot-upsertTranslation()]] - `calls` [EXTRACTED]
 - [[NoticesService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/NoticesService

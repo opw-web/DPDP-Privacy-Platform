@@ -8,8 +8,8 @@ members: 2
 **Members:** 2 nodes
 
 ## Members
-- [[0 - Prepare This Computer.sh]] - code - 0 - Prepare This Computer.sh
-- [[0 - Prepare This Computer.sh script]] - code - 0 - Prepare This Computer.sh
+- [[0 - Prepare This Computer.sh]] - code - demo-control/linux/0 - Prepare This Computer.sh
+- [[0 - Prepare This Computer.sh script]] - code - demo-control/linux/0 - Prepare This Computer.sh
 
 ## Live Query (requires Dataview plugin)
 

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateSecurityMeasureDto"
+community: ".unmerge"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSecurityMeasureDto
+  - community/unmerge
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateSecurityMeasureDto]] - `references` [EXTRACTED]
+- [[UnmergeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSecurityMeasureDto
+#graphify/code #graphify/EXTRACTED #community/unmerge

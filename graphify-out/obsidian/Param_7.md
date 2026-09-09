@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "TemplatesService"
+community: "ComplianceService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/ComplianceService
 ---
 
 # Param
 
 ## Connections
-- [[dot-get()_6]] - `references` [EXTRACTED]
-- [[dot-preview()_1]] - `references` [EXTRACTED]
-- [[dot-update()_10]] - `references` [EXTRACTED]
+- [[dot-getById()]] - `references` [EXTRACTED]
+- [[dot-review()_2]] - `references` [EXTRACTED]
+- [[dot-update()_7]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/ComplianceService

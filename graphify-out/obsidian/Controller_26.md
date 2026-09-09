@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "MeRightsService"
+community: "notifications.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeRightsService
+  - community/notificationsservicets
 ---
 
 # Controller
 
 ## Connections
-- [[MeRightsController]] - `references` [EXTRACTED]
+- [[NotificationsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeRightsService
+#graphify/code #graphify/EXTRACTED #community/notificationsservicets

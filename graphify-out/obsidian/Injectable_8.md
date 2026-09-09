@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AuditService"
+community: "configuration.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/configurationts
 ---
 
 # Injectable
 
 ## Connections
-- [[RopaExportService]] - `references` [EXTRACTED]
+- [[CryptoService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/configurationts

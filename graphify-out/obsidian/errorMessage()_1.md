@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/NoticeBuilderPage.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/ConsentsPage.tsx"
 type: "code"
 community: "react"
-location: "L16"
+location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # errorMessage()
 
 ## Connections
-- [[NoticeBuilderPage()]] - `calls` [EXTRACTED]
-- [[NoticeBuilderPage.tsx]] - `contains` [EXTRACTED]
+- [[ConsentsPage()]] - `calls` [EXTRACTED]
+- [[ConsentsPage.tsx]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/react

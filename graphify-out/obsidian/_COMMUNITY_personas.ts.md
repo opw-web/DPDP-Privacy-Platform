@@ -17,7 +17,7 @@ members: 11
 - [[RESERVED_PINCODES]] - code - demo-company-server/src/seed/personas.ts
 - [[SalesRecord]] - code - demo-company-server/src/seed/personas.ts
 - [[SupportRecord]] - code - demo-company-server/src/seed/personas.ts
-- [[personas_1]] - code - demo-company-server/src/seed/personas.ts
+- [[personas_1_lower]] - code - demo-company-server/src/seed/personas.ts
 - [[personas.ts]] - code - demo-company-server/src/seed/personas.ts
 
 ## Live Query (requires Dataview plugin)
@@ -35,5 +35,5 @@ SORT file.name ASC
 - [[personas.ts]] - degree 12, connects to 2 communities
 - [[DOB_REFERENCE_DATE]] - degree 3, connects to 2 communities
 - [[AnyRecord]] - degree 2, connects to 1 community
-- [[personas_1]] - degree 2, connects to 1 community
+- [[personas_1_lower]] - degree 2, connects to 1 community
 - [[RESERVED_NAMES]] - degree 2, connects to 1 community

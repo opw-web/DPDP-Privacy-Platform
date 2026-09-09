@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/LoginPage.tsx"
 type: "code"
-community: "api-client.ts"
+community: "react"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/react
 ---
 
 # LoginPage.tsx
@@ -41,4 +41,4 @@ tags:
 - [[useEmployeeAuth()]] - `imports` [EXTRACTED]
 - [[zod_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/react

@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/assembly.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/identity-matching.e2e-spec.ts"
 type: "code"
-community: "AppModule"
-location: "L32"
+community: "step6-conflict-acceptance.e2e-spec.ts"
+location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AppModule
+  - community/step6-conflict-acceptancee2e-spects
 ---
 
 # organization()
 
 ## Connections
-- [[assembly.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[identity-matching.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AppModule
+#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects

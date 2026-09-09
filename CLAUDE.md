@@ -7,10 +7,14 @@ port to keep in sync.
 - Every OS difference lives in `demo-control/platform.sh`, which `common.sh`
   sources first. When something needs an OS-specific tool, add a helper there
   rather than branching in a control script.
-- `demo-control/*.sh` and the root `N - Name.sh` files are the Linux entry
-  points; the root `N - Name (Windows).cmd` files are thin wrappers that find
-  Git Bash and run the very same `.sh`. Adding a control script means adding
-  both.
+- The delivered package is Windows-first: the repository root holds nothing but
+  the eight numbered `N - Name.cmd` launchers, which find Git Bash and run the
+  real script in `demo-control/`. The Linux entry points are the matching
+  wrappers in `demo-control/linux/`, kept out of the root so a client's unzipped
+  folder shows nothing Windows cannot open. Adding a control script means adding
+  three files: the script in `demo-control/`, the root `.cmd`, and the
+  `demo-control/linux/` wrapper (plus a `demo-control/desktop/*.desktop` entry
+  if it belongs on the Desktop).
 - Never call `xdg-open`, `sg docker`, `fuser`, `pgrep`, `/proc`, `setsid`,
   `psql` or `python3` directly. Use `open_url`, `docker_run`/`compose`,
   `port_pid`, `pids_for`, `kill_pid`, `run_detached`, `psql_q` and `py_run`.
@@ -41,7 +45,12 @@ Rules:
 - For codebase questions, first run `graphify query "<question>"` when graphify-out/graph.json exists. Use `graphify path "<A>" "<B>"` for relationships and `graphify explain "<concept>"` for focused concepts. These return a scoped subgraph, usually much smaller than GRAPH_REPORT.md or raw grep output.
 - If graphify-out/wiki/index.md exists, use it for broad navigation instead of raw source browsing.
 - Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
-- After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).
+- After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost),
+  then `python scripts/dedupe-vault-names.py`. The vault writer emits filenames that
+  differ only by case (`Module_5.md` / `module_5.md`); Windows collapses those to one
+  file, which breaks `git clone`, makes Explorer's Extract All prompt, and leaves files
+  permanently modified in the working tree. The script renames the collisions apart and
+  fixes the wikilinks pointing at them.
 
 ## Process journal
 

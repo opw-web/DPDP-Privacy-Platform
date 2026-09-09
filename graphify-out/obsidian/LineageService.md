@@ -12,14 +12,14 @@ tags:
 # LineageService
 
 ## Connections
-- [[dot-constructor()_65]] - `references` [EXTRACTED]
-- [[dot-constructor()_67]] - `references` [EXTRACTED]
+- [[dot-constructor()_68]] - `references` [EXTRACTED]
 - [[dot-constructor()_70]] - `references` [EXTRACTED]
-- [[dot-constructor()_68]] - `method` [EXTRACTED]
+- [[dot-constructor()_73]] - `references` [EXTRACTED]
+- [[dot-constructor()_71]] - `method` [EXTRACTED]
 - [[dot-getLineage()]] - `method` [EXTRACTED]
 - [[dot-getResolvedFields()]] - `method` [EXTRACTED]
 - [[dot-resolveFields()]] - `method` [EXTRACTED]
-- [[Injectable_39]] - `references` [EXTRACTED]
+- [[Injectable_43]] - `references` [EXTRACTED]
 - [[access-report.service.ts]] - `imports` [EXTRACTED]
 - [[lineage.service.ts]] - `contains` [EXTRACTED]
 - [[me.service.ts]] - `imports` [EXTRACTED]

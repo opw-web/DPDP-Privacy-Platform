@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sync/sync-pipeline.service.ts"
 type: "code"
-community: "ScopedTransactionClient"
+community: ".record"
 location: "L366"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScopedTransactionClient
+  - community/record
 ---
 
 # .persistAndLink()
@@ -25,4 +25,4 @@ tags:
 - [[lockIdentifiersForOwnership()]] - `calls` [EXTRACTED]
 - [[lockNameKeyForOwnership()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient
+#graphify/code #graphify/EXTRACTED #community/record

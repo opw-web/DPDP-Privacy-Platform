@@ -1,19 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/requests/requests.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/evidence/audit-chain.service.ts"
 type: "code"
-community: "AccessReportService"
-location: "L51"
+community: "evidence-pack.service.ts"
+location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessReportService
+  - community/evidence-packservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[AccessReportService]] - `references` [EXTRACTED]
-- [[RequestsController]] - `method` [EXTRACTED]
-- [[RequestsService]] - `references` [EXTRACTED]
+- [[AuditChainService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessReportService
+#graphify/code #graphify/EXTRACTED #community/evidence-packservicets

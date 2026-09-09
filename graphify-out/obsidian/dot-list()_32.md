@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notifications/notifications.controller.ts"
 type: "code"
-community: "notifications.controller.ts"
+community: "notifications.service.ts"
 location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationscontrollerts
+  - community/notificationsservicets
 ---
 
 # .list()
@@ -21,4 +21,4 @@ tags:
 - [[Public()]] - `references` [EXTRACTED]
 - [[UseGuards_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts
+#graphify/code #graphify/EXTRACTED #community/notificationsservicets

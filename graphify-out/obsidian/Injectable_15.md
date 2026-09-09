@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ConsentBackfillService"
+community: "notifications.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ConsentBackfillService
+  - community/notificationsmodulets
 ---
 
 # Injectable
 
 ## Connections
-- [[ConsentBackfillService]] - `references` [EXTRACTED]
+- [[ConsoleProvider]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ConsentBackfillService
+#graphify/code #graphify/EXTRACTED #community/notificationsmodulets

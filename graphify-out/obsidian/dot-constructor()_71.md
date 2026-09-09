@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principals/principals.service.ts"
+source_file: "dpdp-platform/backend/src/modules/principals/lineage.service.ts"
 type: "code"
 community: "principals.service.ts"
-location: "L69"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,8 +12,6 @@ tags:
 # .constructor()
 
 ## Connections
-- [[AccessLogService]] - `references` [EXTRACTED]
-- [[MaskingService]] - `references` [EXTRACTED]
-- [[PrincipalsService]] - `method` [EXTRACTED]
+- [[LineageService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/principalsservicets

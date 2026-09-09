@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/audit/audit-read.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/transfers.controller.ts"
 type: "code"
-community: "AuditReadService"
-location: "L19"
+community: "transfers.service.ts"
+location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditReadService
+  - community/transfersservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditReadController]] - `method` [EXTRACTED]
-- [[AuditReadService]] - `references` [EXTRACTED]
+- [[TransfersController]] - `method` [EXTRACTED]
+- [[TransfersService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditReadService
+#graphify/code #graphify/EXTRACTED #community/transfersservicets

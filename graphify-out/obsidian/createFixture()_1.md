@@ -12,7 +12,7 @@ tags:
 # createFixture()
 
 ## Connections
-- [[createPrincipal()_8]] - `calls` [EXTRACTED]
+- [[createPrincipal()_7]] - `calls` [EXTRACTED]
 - [[createSource()]] - `calls` [EXTRACTED]
 - [[principals.e2e-spec.ts]] - `contains` [EXTRACTED]
 

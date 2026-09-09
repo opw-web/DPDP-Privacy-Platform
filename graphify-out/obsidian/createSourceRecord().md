@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/test/normalization.e2e-spec.ts"
 type: "code"
-community: "normalization.service.ts"
+community: "step6-conflict-acceptance.e2e-spec.ts"
 location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/normalizationservicets
+  - community/step6-conflict-acceptancee2e-spects
 ---
 
 # createSourceRecord()
 
 ## Connections
 - [[normalization.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[tenant()_1]] - `calls` [EXTRACTED]
+- [[tenant()_4]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/normalizationservicets
+#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects

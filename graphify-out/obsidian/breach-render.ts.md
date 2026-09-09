@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/breaches/breach-render.ts"
 type: "code"
-community: "access-report-render.ts"
+community: "csvDocument"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-report-renderts
+  - community/csvDocument
 ---
 
 # breach-render.ts
@@ -17,7 +17,7 @@ tags:
 - [[breaches.controller.ts]] - `imports_from` [EXTRACTED]
 - [[breaches.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[pdf-utils.ts]] - `imports_from` [EXTRACTED]
-- [[pdfkit_1]] - `imports_from` [EXTRACTED]
+- [[pdfkit]] - `imports_from` [EXTRACTED]
 - [[renderBoardDetailedPdf()]] - `contains` [EXTRACTED]
 - [[renderBoardInitialPdf()]] - `contains` [EXTRACTED]
 - [[renderPdf()]] - `imports` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[writePdfLine()]] - `imports` [EXTRACTED]
 - [[writePdfSectionHeading()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-report-renderts
+#graphify/code #graphify/EXTRACTED #community/csvDocument

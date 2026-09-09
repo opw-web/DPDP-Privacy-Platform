@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/RequestDetailPage.tsx"
 type: "code"
-community: "RequestDetailPage.tsx"
+community: "router.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestDetailPagetsx
+  - community/routertsx
 ---
 
 # RequestDetailPage.tsx
@@ -26,7 +26,7 @@ tags:
 - [[CorrectionWorkflow()]] - `imports` [EXTRACTED]
 - [[CorrectionWorkflow.tsx]] - `imports_from` [EXTRACTED]
 - [[ErasureCompletionEvidence]] - `imports` [EXTRACTED]
-- [[ErasureCompletionHolders]] - `contains` [EXTRACTED]
+- [[ErasureCompletionHolders_1]] - `contains` [EXTRACTED]
 - [[RequestDetailPage()]] - `contains` [EXTRACTED]
 - [[RequestDetailPage.test.tsx]] - `imports_from` [EXTRACTED]
 - [[RequestPrincipal]] - `imports` [EXTRACTED]
@@ -46,4 +46,4 @@ tags:
 - [[requeststypes.ts]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

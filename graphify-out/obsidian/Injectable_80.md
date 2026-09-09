@@ -11,6 +11,6 @@ tags:
 # Injectable
 
 ## Connections
-- [[EmployeeAuthService]] - `references` [EXTRACTED]
+- [[TenantMiddleware]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/TokenService

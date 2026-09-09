@@ -11,6 +11,6 @@ tags:
 # ApiPropertyOptional
 
 ## Connections
-- [[UpdateRetentionPolicyDto]] - `references` [EXTRACTED]
+- [[CreateRetentionPolicyDto]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/retentionservicets

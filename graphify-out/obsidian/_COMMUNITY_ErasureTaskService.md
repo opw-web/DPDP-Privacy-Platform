@@ -1,15 +1,18 @@
 ---
 type: community
-members: 13
+members: 18
 ---
 
 # ErasureTaskService
 
-**Members:** 13 nodes
+**Members:** 18 nodes
 
 ## Members
 - [[dot-buildChecklists()]] - code - dpdp-platform/backend/src/modules/retention/erasure-task.service.ts
 - [[dot-buildRequestCompletionChecklists()]] - code - dpdp-platform/backend/src/modules/retention/erasure-task.service.ts
+- [[dot-constructor()_4]] - code - dpdp-platform/backend/src/modules/requests/requests.service.ts
+- [[dot-constructor()_5]] - code - dpdp-platform/backend/src/modules/retention/erasure-task.service.ts
+- [[dot-constructor()_6]] - code - dpdp-platform/backend/src/modules/retention/retention-scan.service.ts
 - [[dot-createFromTrigger()]] - code - dpdp-platform/backend/src/modules/retention/erasure-task.service.ts
 - [[dot-findApplicableLegalHold()]] - code - dpdp-platform/backend/src/modules/retention/erasure-task.service.ts
 - [[dot-mergeCompletionChecklist()]] - code - dpdp-platform/backend/src/modules/retention/erasure-task.service.ts
@@ -17,10 +20,12 @@ members: 13
 - [[dot-resolveLastProcessingAt()]] - code - dpdp-platform/backend/src/modules/retention/erasure-task.service.ts
 - [[ErasureChecklistSubmission]] - code - dpdp-platform/backend/src/modules/retention/erasure-task.service.ts
 - [[ErasureTaskService]] - code - dpdp-platform/backend/src/modules/retention/erasure-task.service.ts
-- [[Injectable_12]] - code
+- [[Injectable_3]] - code
 - [[ProcessorChecklistEntry]] - code - dpdp-platform/backend/src/modules/retention/checklist.types.ts
 - [[SystemChecklistEntry]] - code - dpdp-platform/backend/src/modules/retention/checklist.types.ts
+- [[addByRetentionUnit()]] - code - dpdp-platform/backend/src/modules/retention/retention-dates.util.ts
 - [[checklist.types.ts]] - code - dpdp-platform/backend/src/modules/retention/checklist.types.ts
+- [[retention-dates.util.ts]] - code - dpdp-platform/backend/src/modules/retention/retention-dates.util.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -30,25 +35,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_erasure-task.service.ts]]
+- 15 edges to [[_COMMUNITY_prisma.service.ts]]
+- 6 edges to [[_COMMUNITY_dot-record]]
 - 5 edges to [[_COMMUNITY_requests.service.ts]]
-- 5 edges to [[_COMMUNITY_ScopedTransactionClient]]
-- 4 edges to [[_COMMUNITY_AuditService]]
-- 4 edges to [[_COMMUNITY_RetentionController]]
-- 3 edges to [[_COMMUNITY_SdfCycleScanService]]
-- 2 edges to [[_COMMUNITY_RequestsService]]
-- 1 edge to [[_COMMUNITY_@prismaclient]]
-- 1 edge to [[_COMMUNITY_RequirePermission]]
+- 5 edges to [[_COMMUNITY_RetentionScanService]]
+- 3 edges to [[_COMMUNITY_CreateLegalHoldDto]]
+- 3 edges to [[_COMMUNITY_RequestsService]]
+- 3 edges to [[_COMMUNITY_ComplianceService]]
+- 1 edge to [[_COMMUNITY_guardians.service.ts]]
 - 1 edge to [[_COMMUNITY_@nestjscommon]]
-- 1 edge to [[_COMMUNITY_PrismaService]]
+- 1 edge to [[_COMMUNITY_queues.module.ts]]
 - 1 edge to [[_COMMUNITY_GuardiansService]]
+- 1 edge to [[_COMMUNITY_NotificationsService]]
+- 1 edge to [[_COMMUNITY_compliance.service.ts]]
 - 1 edge to [[_COMMUNITY_ConsentsService]]
-- 1 edge to [[_COMMUNITY_dot-record]]
-- 1 edge to [[_COMMUNITY_RetentionScanService]]
 
 ## Top bridge nodes
-- [[ErasureTaskService]] - degree 23, connects to 9 communities
-- [[dot-createFromTrigger()]] - degree 16, connects to 8 communities
+- [[ErasureTaskService]] - degree 23, connects to 7 communities
+- [[dot-createFromTrigger()]] - degree 16, connects to 5 communities
+- [[dot-constructor()_4]] - degree 6, connects to 4 communities
+- [[dot-constructor()_6]] - degree 4, connects to 3 communities
 - [[ProcessorChecklistEntry]] - degree 7, connects to 2 communities
-- [[SystemChecklistEntry]] - degree 7, connects to 2 communities
-- [[ErasureChecklistSubmission]] - degree 4, connects to 2 communities

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[ConsentsPage.tsx]] - `contains` [EXTRACTED]
-- [[errorMessage()]] - `calls` [EXTRACTED]
+- [[errorMessage()_1]] - `calls` [EXTRACTED]
 - [[router.tsx]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/react

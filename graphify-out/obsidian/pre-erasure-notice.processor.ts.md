@@ -13,12 +13,12 @@ tags:
 
 ## Connections
 - [[@nestjsbullmq_1]] - `imports_from` [EXTRACTED]
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[PRE_ERASURE_NOTICE_QUEUE_NAME]] - `imports` [EXTRACTED]
 - [[PreErasureNoticeJobData]] - `imports` [EXTRACTED]
 - [[PreErasureNoticeProcessor]] - `contains` [EXTRACTED]
 - [[PreErasureNoticeService]] - `imports` [EXTRACTED]
-- [[bullmq_1]] - `imports_from` [EXTRACTED]
+- [[bullmq]] - `imports_from` [EXTRACTED]
 - [[pre-erasure-notice.service.ts]] - `imports_from` [EXTRACTED]
 - [[retention-scan.queue.ts]] - `imports_from` [EXTRACTED]
 - [[retention.module.ts]] - `imports_from` [EXTRACTED]

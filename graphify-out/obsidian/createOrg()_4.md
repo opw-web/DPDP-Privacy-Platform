@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/reference.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/mappings.e2e-spec.ts"
 type: "code"
-community: "@prisma/client"
-location: "L23"
+community: "step6-conflict-acceptance.e2e-spec.ts"
+location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/step6-conflict-acceptancee2e-spects
 ---
 
 # createOrg()
 
 ## Connections
-- [[reference.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[createOrgWithBothPermissions()]] - `calls` [EXTRACTED]
+- [[mappings.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prisma/client
+#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects

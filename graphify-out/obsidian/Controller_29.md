@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "DataSourcesController"
+community: "PrincipalEvidenceController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesController
+  - community/PrincipalEvidenceController
 ---
 
 # Controller
 
 ## Connections
-- [[DataSourcesController]] - `references` [EXTRACTED]
+- [[PrincipalEvidenceController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesController
+#graphify/code #graphify/EXTRACTED #community/PrincipalEvidenceController

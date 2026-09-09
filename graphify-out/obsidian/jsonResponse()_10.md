@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/DataSourceDetailPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.test.tsx"
 type: "code"
 community: "@tanstack/react-query"
-location: "L13"
+location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,6 @@ tags:
 # jsonResponse()
 
 ## Connections
-- [[DataSourceDetailPage.test.tsx]] - `contains` [EXTRACTED]
-- [[loginAndRenderDetailPage()]] - `calls` [EXTRACTED]
+- [[ChildrenPage.test.tsx]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/tanstack/react-query

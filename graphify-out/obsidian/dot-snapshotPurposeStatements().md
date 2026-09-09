@@ -12,8 +12,8 @@ tags:
 # .snapshotPurposeStatements()
 
 ## Connections
-- [[dot-createVersion()_1]] - `calls` [EXTRACTED]
-- [[dot-get()_9]] - `calls` [EXTRACTED]
+- [[dot-createVersion()]] - `calls` [EXTRACTED]
+- [[dot-get()_2]] - `calls` [EXTRACTED]
 - [[NoticesService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/NoticesService

@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "SetMyConsentDto"
+community: "GuardiansService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SetMyConsentDto
+  - community/GuardiansService
 ---
 
 # Body
 
 ## Connections
-- [[dot-setStatus()]] - `references` [EXTRACTED]
+- [[dot-create()]] - `references` [EXTRACTED]
+- [[dot-verify()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SetMyConsentDto
+#graphify/code #graphify/EXTRACTED #community/GuardiansService

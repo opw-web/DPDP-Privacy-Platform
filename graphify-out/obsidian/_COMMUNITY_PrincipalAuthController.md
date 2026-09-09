@@ -1,14 +1,15 @@
 ---
 type: community
-members: 19
+members: 20
 ---
 
 # PrincipalAuthController
 
-**Members:** 19 nodes
+**Members:** 20 nodes
 
 ## Members
 - [[dot-clearRefreshCookie()_1]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
+- [[dot-constructor()_148]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
 - [[dot-isProduction()_1]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
 - [[dot-login()_3]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
 - [[dot-logout()_3]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
@@ -20,8 +21,8 @@ members: 19
 - [[Controller_40]] - code
 - [[HttpCode_5]] - code
 - [[IsEmail_7]] - code
-- [[IsString_68]] - code
-- [[MinLength_53]] - code
+- [[IsString_69]] - code
+- [[MinLength_54]] - code
 - [[Post_28]] - code
 - [[PrincipalAuthController]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
 - [[PrincipalLoginDto]] - code - dpdp-platform/backend/src/modules/auth/dto/principal-login.dto.ts
@@ -37,12 +38,11 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 6 edges to [[_COMMUNITY_Public]]
-- 4 edges to [[_COMMUNITY_TokenService]]
-- 1 edge to [[_COMMUNITY_@nestjsswagger]]
+- 5 edges to [[_COMMUNITY_TokenService]]
 - 1 edge to [[_COMMUNITY_@nestjscommon]]
 
 ## Top bridge nodes
-- [[PrincipalAuthController]] - degree 12, connects to 3 communities
+- [[PrincipalAuthController]] - degree 12, connects to 2 communities
 - [[dot-login()_3]] - degree 10, connects to 2 communities
 - [[dot-refresh()_3]] - degree 9, connects to 2 communities
 - [[dot-logout()_3]] - degree 8, connects to 2 communities

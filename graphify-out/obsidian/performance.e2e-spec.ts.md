@@ -12,7 +12,7 @@ tags:
 # performance.e2e-spec.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[SCALE_APPROVER_EMAIL]] - `imports` [EXTRACTED]
 - [[SCALE_CONSENT_COUNT]] - `imports` [EXTRACTED]

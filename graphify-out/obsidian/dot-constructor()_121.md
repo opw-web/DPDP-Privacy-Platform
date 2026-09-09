@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/child-exemptions.service.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
 type: "code"
-community: "CreateExemptionClaimDto"
-location: "L47"
+community: "rest-api.connector.ts"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateExemptionClaimDto
+  - community/rest-apiconnectorts
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[ChildExemptionsService]] - `method` [EXTRACTED]
+- [[UnsupportedPaginationStyleError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateExemptionClaimDto
+#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts

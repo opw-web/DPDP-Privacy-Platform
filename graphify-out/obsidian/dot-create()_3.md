@@ -1,24 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/connector.factory.ts"
 type: "code"
-community: "PurposesService"
-location: "L141"
+community: "data-sources.service.ts"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PurposesService
+  - community/data-sourcesservicets
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_6]] - `calls` [INFERRED]
-- [[dot-record()_1]] - `calls` [INFERRED]
-- [[dot-validateBasis()]] - `calls` [EXTRACTED]
-- [[CreatePurposeDto]] - `references` [EXTRACTED]
-- [[PurposesService]] - `method` [EXTRACTED]
-- [[duplicateCodeMessage()]] - `calls` [EXTRACTED]
-- [[isUniqueConstraintViolation()]] - `calls` [EXTRACTED]
-- [[toPublicPurpose()]] - `calls` [EXTRACTED]
+- [[dot-buildConnector()]] - `calls` [INFERRED]
+- [[Connector]] - `references` [EXTRACTED]
+- [[ConnectorFactory]] - `method` [EXTRACTED]
+- [[RestApiConnector]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PurposesService
+#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets

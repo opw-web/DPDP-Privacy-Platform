@@ -1,23 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "BreachesController"
+community: "UpdateRolePermissionsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BreachesController
+  - community/UpdateRolePermissionsDto
 ---
 
 # Param
 
 ## Connections
-- [[dot-addAffected()]] - `references` [EXTRACTED]
-- [[dot-boardDetailed()]] - `references` [EXTRACTED]
-- [[dot-boardInitial()]] - `references` [EXTRACTED]
-- [[dot-completeObligation()]] - `references` [EXTRACTED]
-- [[dot-extension()]] - `references` [EXTRACTED]
-- [[dot-get()_16]] - `references` [EXTRACTED]
-- [[dot-notify()]] - `references` [EXTRACTED]
-- [[dot-update()_19]] - `references` [EXTRACTED]
+- [[dot-replacePermissions()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BreachesController
+#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto

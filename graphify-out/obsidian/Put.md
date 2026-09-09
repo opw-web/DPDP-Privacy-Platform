@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "AttachPurposesDto"
+community: "MappingsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AttachPurposesDto
+  - community/MappingsController
 ---
 
 # Put
@@ -14,4 +14,4 @@ tags:
 - [[dot-replaceMappings()]] - `references` [EXTRACTED]
 - [[dot-replacePurposes()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AttachPurposesDto
+#graphify/code #graphify/EXTRACTED #community/MappingsController

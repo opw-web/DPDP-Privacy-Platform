@@ -1,20 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/retention-scan.service.ts"
+source_file: "dpdp-platform/backend/src/common/crypto/crypto.service.ts"
 type: "code"
-community: "AuditService"
-location: "L56"
+community: "configuration.ts"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/configurationts
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[ComplianceService]] - `references` [EXTRACTED]
-- [[ErasureTaskService]] - `references` [EXTRACTED]
-- [[RetentionScanService]] - `method` [EXTRACTED]
+- [[MalformedCiphertextError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/configurationts

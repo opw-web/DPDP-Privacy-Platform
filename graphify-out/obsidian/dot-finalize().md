@@ -12,7 +12,7 @@ tags:
 # .finalize()
 
 ## Connections
-- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
 - [[dot-runInTenantContext()]] - `calls` [EXTRACTED]
 - [[SyncPipelineService]] - `method` [EXTRACTED]
 

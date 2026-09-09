@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/employees/employees.module.ts"
 type: "code"
-community: "@nestjs/common"
+community: "app.module.ts"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/appmodulets
 ---
 
 # EmployeesModule
 
 ## Connections
-- [[Module_14]] - `references` [EXTRACTED]
+- [[Module_13]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[employees.module.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/appmodulets

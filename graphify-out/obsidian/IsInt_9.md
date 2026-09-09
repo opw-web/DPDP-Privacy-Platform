@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateExemptionClaimDto"
+community: "retention.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateExemptionClaimDto
+  - community/retentionservicets
 ---
 
 # IsInt
 
 ## Connections
-- [[CreateExemptionClaimDto]] - `references` [EXTRACTED]
+- [[CreateRetentionPolicyDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateExemptionClaimDto
+#graphify/code #graphify/EXTRACTED #community/retentionservicets

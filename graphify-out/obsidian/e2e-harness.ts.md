@@ -12,7 +12,7 @@ tags:
 # e2e-harness.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[@nestjstesting_1]] - `imports_from` [EXTRACTED]
 - [[AppModule]] - `imports` [EXTRACTED]
 - [[OrgWithEmployee]] - `contains` [EXTRACTED]
@@ -20,7 +20,7 @@ tags:
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[TestApp]] - `contains` [EXTRACTED]
 - [[app.module.ts]] - `imports_from` [EXTRACTED]
-- [[argon2]] - `imports_from` [EXTRACTED]
+- [[argon2_1]] - `imports_from` [EXTRACTED]
 - [[audiences.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[bootstrapTestApp()]] - `contains` [EXTRACTED]
 - [[breaches.e2e-spec.ts]] - `imports_from` [EXTRACTED]
@@ -29,8 +29,8 @@ tags:
 - [[cleanupOrgs()]] - `contains` [EXTRACTED]
 - [[compliance-rules.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[consents.e2e-spec.ts]] - `imports_from` [EXTRACTED]
-- [[createOrgWithEmployee()_2]] - `contains` [EXTRACTED]
-- [[ensurePermission()_4]] - `contains` [EXTRACTED]
+- [[createOrgWithEmployee()_1]] - `contains` [EXTRACTED]
+- [[ensurePermission()]] - `contains` [EXTRACTED]
 - [[evidence.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[information-requests.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[mvp2-rbac.e2e-spec.ts]] - `imports_from` [EXTRACTED]

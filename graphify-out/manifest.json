@@ -5232,9 +5232,9 @@
     "semantic_hash": ""
   },
   "demo-control/common.sh": {
-    "mtime": 1788849724.2098446,
-    "seen": 1788861713.2140884,
-    "ast_hash": "a92b6bfa9f8973fe6b71a932ad5e0ade",
+    "mtime": 1788927656.9093487,
+    "seen": 1788928654.6477978,
+    "ast_hash": "503370fbd425872752f54df97a81cbbe",
     "semantic_hash": ""
   },
   "demo-control/reset.sh": {
@@ -5262,9 +5262,9 @@
     "semantic_hash": ""
   },
   "demo-control/README.html": {
-    "mtime": 1788842252.9031687,
-    "seen": 1788842604.9355512,
-    "ast_hash": "af52c7489ea86cd7ecd28b27e7b407f8",
+    "mtime": 1788927831.0537298,
+    "seen": 1788928654.693381,
+    "ast_hash": "8a98b215582f2aebd4aee9562399b4af",
     "semantic_hash": ""
   },
   "docs/demo-screenshots/screens.json": {
@@ -5304,9 +5304,9 @@
     "semantic_hash": ""
   },
   "demo-control/install-launchers.sh": {
-    "mtime": 1788845256.187865,
-    "seen": 1788861713.2140896,
-    "ast_hash": "d41d6c91ffc7e271fc8e5dbf106e3fb3",
+    "mtime": 1788927696.2753248,
+    "seen": 1788928654.6478007,
+    "ast_hash": "df690f2f9feb86968387d3bc2991ab68",
     "semantic_hash": ""
   },
   "demo-control/open-database.sh": {
@@ -5334,63 +5334,15 @@
     "semantic_hash": ""
   },
   "docs/demo-runbook/RUNBOOK.html": {
-    "mtime": 1788845365.527782,
-    "seen": 1788861713.266942,
-    "ast_hash": "5842511c1074059a4993ba6f738f35a9",
-    "semantic_hash": ""
-  },
-  "0 - Prepare This Computer.sh": {
-    "mtime": 1788844690.0647027,
-    "seen": 1788861713.212583,
-    "ast_hash": "9d9cc69189dec95f763a653fdcba561f",
-    "semantic_hash": ""
-  },
-  "1 - Start Privacy Demo.sh": {
-    "mtime": 1788844690.1127574,
-    "seen": 1788861713.2126548,
-    "ast_hash": "c83ddab98549513ebbdaf0e5cd432f88",
-    "semantic_hash": ""
-  },
-  "2 - Client Guide.sh": {
-    "mtime": 1788844943.502734,
-    "seen": 1788861713.2126622,
-    "ast_hash": "4b6e9e4534fd1cbb22dd5169a2cb44c4",
-    "semantic_hash": ""
-  },
-  "3 - Open Database.sh": {
-    "mtime": 1788844690.2095592,
-    "seen": 1788861713.2126637,
-    "ast_hash": "5e58c4eab5c9c79b80226a23233197a9",
-    "semantic_hash": ""
-  },
-  "4 - Show Demo Proof.sh": {
-    "mtime": 1788844690.2616427,
-    "seen": 1788861713.2126648,
-    "ast_hash": "310f2754da7bb9830ef3d2b3fa5df1c1",
-    "semantic_hash": ""
-  },
-  "5 - Demo Status.sh": {
-    "mtime": 1788844690.3125658,
-    "seen": 1788861713.2126658,
-    "ast_hash": "b280dc66fa38ac82906e82a4b3b3c5fe",
-    "semantic_hash": ""
-  },
-  "6 - Stop Privacy Demo.sh": {
-    "mtime": 1788844690.3626912,
-    "seen": 1788861713.212667,
-    "ast_hash": "7cec775e5013c2ce22d322dee1dad30f",
-    "semantic_hash": ""
-  },
-  "9 - Reset Demo to Fresh State.sh": {
-    "mtime": 1788844690.413809,
-    "seen": 1788861713.2126682,
-    "ast_hash": "eafa737529d38ef27dc44d63eb5ac18e",
+    "mtime": 1788928768.3139293,
+    "seen": 1788929002.1287057,
+    "ast_hash": "d8e2e28e19c03179bd548caf38f4c16c",
     "semantic_hash": ""
   },
   "demo-control/prepare.sh": {
-    "mtime": 1788845020.89667,
-    "seen": 1788861713.2140949,
-    "ast_hash": "c2b8bf8b879a8f596518cee9ef1ccad1",
+    "mtime": 1788927710.7956533,
+    "seen": 1788928654.6480055,
+    "ast_hash": "9620c3bdf249a88ec53b2c15cbf67bfd",
     "semantic_hash": ""
   },
   "docs/demo-runbook/build-standalone.py": {
@@ -5400,27 +5352,27 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1788867228.4792628,
-    "seen": 1788867592.4340687,
-    "ast_hash": "d0a517727475fd000cb989c0fa87b1f4",
+    "mtime": 1788927859.7741973,
+    "seen": 1788928654.6932526,
+    "ast_hash": "df36687a9d44ddd1890874219769f6d2",
     "semantic_hash": ""
   },
   "docs/demo-runbook/CLIENT-GUIDE-standalone.html": {
-    "mtime": 1788867955.1344135,
-    "seen": 1788868245.2150943,
-    "ast_hash": "30c07ea5c60eb32568e478900f0cf1fd",
+    "mtime": 1788928979.1336432,
+    "seen": 1788929002.1287026,
+    "ast_hash": "94dadf70c993078ed114e07a4025953b",
     "semantic_hash": ""
   },
   "docs/demo-runbook/CLIENT-GUIDE.html": {
-    "mtime": 1788867242.3220673,
-    "seen": 1788867592.4344373,
-    "ast_hash": "8b3c5f398c14373f969f8e82a3e64a17",
+    "mtime": 1788928978.961615,
+    "seen": 1788929002.128704,
+    "ast_hash": "7a6b126b24e739bb7fc58524edcc2424",
     "semantic_hash": ""
   },
   "docs/demo-runbook/RUNBOOK-standalone.html": {
-    "mtime": 1788867955.0961895,
-    "seen": 1788868245.2151692,
-    "ast_hash": "a754718f082e2615d91d06d1eef2b29c",
+    "mtime": 1788928979.0667171,
+    "seen": 1788929002.1287048,
+    "ast_hash": "5606efd52bda02d70e5f3fc82aabb5ce",
     "semantic_hash": ""
   },
   "docs/demo-runbook/images/audit-chain.png": {
@@ -5475,18 +5427,6 @@
     "mtime": 1788842252.9941244,
     "seen": 1788842604.9356294,
     "ast_hash": "1f34187859609ecd63c7666a611491b4",
-    "semantic_hash": ""
-  },
-  "docs/demo-runbook/images/demo-proof.png": {
-    "mtime": 1788842252.9941244,
-    "seen": 1788842604.9356315,
-    "ast_hash": "f7ea9a036b0c6255d55cea11682914ed",
-    "semantic_hash": ""
-  },
-  "docs/demo-runbook/images/desktop-icons.png": {
-    "mtime": 1788842252.9941244,
-    "seen": 1788842604.935634,
-    "ast_hash": "e2eb136401380a08a8b3fe54e86a9963",
     "semantic_hash": ""
   },
   "docs/demo-runbook/images/evidence-pack.png": {
@@ -5573,18 +5513,6 @@
     "ast_hash": "fecda5d10746d5648dac53d75d7c51ee",
     "semantic_hash": ""
   },
-  "docs/demo-runbook/images/start-terminal.png": {
-    "mtime": 1788842253.0166461,
-    "seen": 1788842604.935669,
-    "ast_hash": "6acabe8d586646cb91e805068c1eba1f",
-    "semantic_hash": ""
-  },
-  "docs/demo-runbook/images/stop-terminal.png": {
-    "mtime": 1788842253.0166461,
-    "seen": 1788842604.9356713,
-    "ast_hash": "51ed25f4bf208ae4910f0d21627c5d22",
-    "semantic_hash": ""
-  },
   "demo-control/platform.sh": {
     "mtime": 1788849718.9180443,
     "seen": 1788861713.214094,
@@ -5616,9 +5544,9 @@
     "semantic_hash": ""
   },
   "docs/demo-runbook/images/folder-windows.png": {
-    "mtime": 1788866906.052602,
-    "seen": 1788867130.4368422,
-    "ast_hash": "bacdf3376922354d0c7cb18878b01040",
+    "mtime": 1788928536.8537915,
+    "seen": 1788928654.695605,
+    "ast_hash": "d4fd9f6ec0b03ebf25cc9300519e77f5",
     "semantic_hash": ""
   },
   "docs/demo-runbook/images/demo-proof-windows.png": {
@@ -5643,6 +5571,120 @@
     "mtime": 1788867747.5870516,
     "seen": 1788868245.2210426,
     "ast_hash": "f155df75848cac758c53e58fd5d3e2dd",
+    "semantic_hash": ""
+  },
+  "demo-control/linux/0 - Prepare This Computer.sh": {
+    "mtime": 1788927643.0791588,
+    "seen": 1788928654.6478024,
+    "ast_hash": "2ddd4bec18887d0cff3d2e7e7a4073d5",
+    "semantic_hash": ""
+  },
+  "demo-control/linux/1 - Start Privacy Demo.sh": {
+    "mtime": 1788927643.2143886,
+    "seen": 1788928654.647803,
+    "ast_hash": "c36097d1b014392a86050da3ca115456",
+    "semantic_hash": ""
+  },
+  "demo-control/linux/2 - Client Guide.sh": {
+    "mtime": 1788927643.2736876,
+    "seen": 1788928654.647804,
+    "ast_hash": "fca9b1957c16464c511e2a8d36208fdd",
+    "semantic_hash": ""
+  },
+  "demo-control/linux/3 - Open Database.sh": {
+    "mtime": 1788927643.309013,
+    "seen": 1788928654.647805,
+    "ast_hash": "b9414f938125a744418f98c46bfe5c64",
+    "semantic_hash": ""
+  },
+  "demo-control/linux/4 - Show Demo Proof.sh": {
+    "mtime": 1788927643.35277,
+    "seen": 1788928654.647806,
+    "ast_hash": "66ddb32b31a9a3d27dae97a92203e9ec",
+    "semantic_hash": ""
+  },
+  "demo-control/linux/5 - Demo Status.sh": {
+    "mtime": 1788927643.3897636,
+    "seen": 1788928654.6478066,
+    "ast_hash": "f18b39a909f1ef4138684fa4c4d5f485",
+    "semantic_hash": ""
+  },
+  "demo-control/linux/6 - Stop Privacy Demo.sh": {
+    "mtime": 1788927643.426204,
+    "seen": 1788928654.647808,
+    "ast_hash": "d24fbe397cabc136bd7ca6ffb0a06fbb",
+    "semantic_hash": ""
+  },
+  "demo-control/linux/9 - Reset Demo to Fresh State.sh": {
+    "mtime": 1788927643.4604363,
+    "seen": 1788928654.6478093,
+    "ast_hash": "30175ad24a827fdaece14ee17881f067",
+    "semantic_hash": ""
+  },
+  "demo-control/open-client-guide.sh": {
+    "mtime": 1788927656.8445055,
+    "seen": 1788928654.64781,
+    "ast_hash": "f4cac767ed6043e192a53101203a2c3f",
+    "semantic_hash": ""
+  },
+  "scripts/capture-guide-screenshots.mjs": {
+    "mtime": 1788928822.4425676,
+    "seen": 1788929002.1279879,
+    "ast_hash": "f780031eaba56eb8374b5e6572cdff83",
+    "semantic_hash": ""
+  },
+  "scripts/dedupe-vault-names.py": {
+    "mtime": 1788929016.2274034,
+    "seen": 1788929065.8042068,
+    "ast_hash": "5d38183bafab35c9e6330d1f59397a7e",
+    "semantic_hash": ""
+  },
+  "docs/demo-runbook/images/messaging-campaigns.png": {
+    "mtime": 1788928836.7438407,
+    "seen": 1788929002.130702,
+    "ast_hash": "42fb61366d03af4b0c522848b0ab273a",
+    "semantic_hash": ""
+  },
+  "docs/demo-runbook/images/portal-messages.png": {
+    "mtime": 1788928847.5530555,
+    "seen": 1788929002.1309571,
+    "ast_hash": "475fa6d0b12e07b3e84e470a502c6630",
+    "semantic_hash": ""
+  },
+  "docs/demo-runbook/images/portal-nomination.png": {
+    "mtime": 1788928850.3531778,
+    "seen": 1788929002.1309578,
+    "ast_hash": "7015112826b42592a00f1a2c7d633208",
+    "semantic_hash": ""
+  },
+  "docs/demo-runbook/images/portal-recipients.png": {
+    "mtime": 1788928844.7749581,
+    "seen": 1788929002.1309588,
+    "ast_hash": "91cf1ce306e7c8c537e580d409d69ff5",
+    "semantic_hash": ""
+  },
+  "docs/demo-runbook/images/registers.png": {
+    "mtime": 1788928828.289861,
+    "seen": 1788929002.1312153,
+    "ast_hash": "3402dd5d160bf2aaff2d42624b43c3da",
+    "semantic_hash": ""
+  },
+  "docs/demo-runbook/images/retention-erasure-engine.png": {
+    "mtime": 1788928839.603895,
+    "seen": 1788929002.131342,
+    "ast_hash": "c0cf095ef6ce786cd37178a8f4b07d1a",
+    "semantic_hash": ""
+  },
+  "docs/demo-runbook/images/sdf-gaps.png": {
+    "mtime": 1788928833.9044456,
+    "seen": 1788929002.13147,
+    "ast_hash": "cb4b99c9aeb5f2f6a6cedbea45b720e9",
+    "semantic_hash": ""
+  },
+  "docs/demo-runbook/images/sdf-register.png": {
+    "mtime": 1788928831.1030633,
+    "seen": 1788929002.1314712,
+    "ast_hash": "72d349659e27a2629477d7d8d0880c9e",
     "semantic_hash": ""
   }
 }

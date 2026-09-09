@@ -12,7 +12,7 @@ tags:
 # list-principals.dto.ts
 
 ## Connections
-- [[@prismaclient]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[ListPrincipalsDto]] - `contains` [EXTRACTED]
 - [[MAX_PRINCIPALS_PAGE]] - `contains` [EXTRACTED]
 - [[PRINCIPALS_PAGE_SIZE]] - `contains` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/audit/canonical-json.ts"
 type: "code"
-community: "canonicalJson"
+community: "evidence-pack.service.ts"
 location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/canonicalJson
+  - community/evidence-packservicets
 ---
 
 # stringify()
@@ -16,4 +16,4 @@ tags:
 - [[canonicalJson()]] - `calls` [EXTRACTED]
 - [[typeLabel()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/canonicalJson
+#graphify/code #graphify/EXTRACTED #community/evidence-packservicets

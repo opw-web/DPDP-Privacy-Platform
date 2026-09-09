@@ -13,14 +13,14 @@ tags:
 
 ## Connections
 - [[dot-accessReport()]] - `method` [EXTRACTED]
-- [[dot-constructor()_22]] - `method` [EXTRACTED]
+- [[dot-constructor()_2]] - `method` [EXTRACTED]
 - [[dot-data()]] - `method` [EXTRACTED]
 - [[dot-privacyContact()]] - `method` [EXTRACTED]
 - [[dot-profile()]] - `method` [EXTRACTED]
 - [[dot-recipients()]] - `method` [EXTRACTED]
 - [[dot-sources()]] - `method` [EXTRACTED]
-- [[ApiTags_4]] - `references` [EXTRACTED]
-- [[Controller_4]] - `references` [EXTRACTED]
+- [[ApiTags_7]] - `references` [EXTRACTED]
+- [[Controller_7]] - `references` [EXTRACTED]
 - [[me.controller.ts]] - `contains` [EXTRACTED]
 - [[principal-portal.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[principal-portal.module.ts]] - `imports` [EXTRACTED]

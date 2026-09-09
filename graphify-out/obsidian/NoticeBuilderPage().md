@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[NoticeBuilderPage.test.tsx]] - `imports` [EXTRACTED]
 - [[NoticeBuilderPage.tsx]] - `contains` [EXTRACTED]
-- [[errorMessage()_1]] - `calls` [EXTRACTED]
+- [[errorMessage()_2]] - `calls` [EXTRACTED]
 - [[putTranslation()]] - `calls` [EXTRACTED]
 - [[router.tsx]] - `imports` [EXTRACTED]
 

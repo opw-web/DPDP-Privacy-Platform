@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/messaging/AudienceBuilder.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/CandidateComparison.tsx"
 type: "code"
-community: "AudienceBuilder.tsx"
-location: "L11"
+community: "button.tsx"
+location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AudienceBuildertsx
+  - community/buttontsx
 ---
 
 # FIELD_LABELS
 
 ## Connections
-- [[AudienceBuilder.tsx]] - `contains` [EXTRACTED]
+- [[CandidateComparison.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AudienceBuildertsx
+#graphify/code #graphify/EXTRACTED #community/buttontsx

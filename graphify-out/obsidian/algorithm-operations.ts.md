@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sdf/dto/algorithm-operations.ts"
 type: "code"
-community: "@nestjs/swagger"
+community: "compliance.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/swagger
+  - community/complianceservicets
 ---
 
 # algorithm-operations.ts
 
 ## Connections
-- [[ALGORITHM_OPERATIONS_1]] - `contains` [EXTRACTED]
-- [[AlgorithmOperation_1]] - `contains` [EXTRACTED]
+- [[ALGORITHM_OPERATIONS]] - `contains` [EXTRACTED]
+- [[AlgorithmOperation]] - `contains` [EXTRACTED]
 - [[create-algorithm-entry.dto.ts]] - `imports_from` [EXTRACTED]
 - [[update-algorithm-entry.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/swagger
+#graphify/code #graphify/EXTRACTED #community/complianceservicets

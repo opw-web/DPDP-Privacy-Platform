@@ -1,26 +1,31 @@
 # DPDP Privacy Platform — Client Evaluation
 
-This repository contains a ready-to-explore sample of the DPDP Privacy Platform.
+A ready-to-explore sample of the DPDP Privacy Platform, packaged to run on a **Windows 10 or 11**
+laptop with nothing to configure.
 
-**The client guide is the document to follow.** It starts at the folder you unzip and runs all the way through setup, the guided tour and a clean shutdown. This page only gets you as far as opening it.
+**The client guide is the document to follow.** It starts at the folder you unzip and runs all the
+way through setup, a guided product tour and a clean shutdown. This page only gets you as far as
+opening it.
 
-> **This is a demonstration environment.** Acme Retail, its employees, customers, requests, consents, incidents and all other records are fictional. A real deployment is configured with your organisation's approved data sources, policies, roles, notices, languages and workflows.
+> **This is a demonstration environment.** Acme Retail, its employees, customers, requests,
+> consents, incidents and all other records are fictional. A real deployment is configured with your
+> organisation's approved data sources, policies, roles, notices, languages and workflows.
 
-## 1. What you need
+## 1. What this computer needs
 
-The platform runs on **Windows 10/11** or on **Ubuntu or a similar Linux computer**.
+If this laptop was supplied with the platform already prepared, everything is installed and you can
+skip to step 3.
 
-If this laptop was supplied with the platform already prepared, everything is installed. Otherwise, ask the person who manages the computer to install the items for your system.
+| Program | Where it comes from | Why it is needed |
+| --- | --- | --- |
+| **Docker Desktop** | <https://www.docker.com/products/docker-desktop/> | Runs the database, cache and mail catcher |
+| **Node.js 20** | <https://nodejs.org/> | Runs the application. Version 20 specifically — 22 and later are not what this platform is built against |
+| **Python 3** | <https://www.python.org/downloads/windows/> | Used by the setup control. Tick **Add python.exe to PATH** during installation |
+| **Git for Windows** | <https://git-scm.com/download/win> | Supplies Git Bash, which the numbered controls run through |
+| **Visual Studio Build Tools 2022** | <https://visualstudio.microsoft.com/downloads/>, under "Tools for Visual Studio" | Compiles one security component during setup. Choose the **Desktop development with C++** workload |
+| A web browser | Chrome, Edge or similar | Everything you look at is a web page served by this computer |
 
-### On Windows
-
-- **Docker Desktop**, installed and running — <https://www.docker.com/products/docker-desktop/>
-- **Node.js 20** — <https://nodejs.org/> (Node 20 specifically; 22 and later are not what this platform is built against)
-- **Python 3** — <https://www.python.org/downloads/windows/> (tick **Add python.exe to PATH** during setup)
-- **Git for Windows** — <https://git-scm.com/download/win> (this supplies Git Bash, which the controls run through)
-- **Visual Studio Build Tools 2022**, with the **Desktop development with C++** workload — <https://visualstudio.microsoft.com/downloads/> (under "Tools for Visual Studio")
-- Google Chrome or another web browser
-- An internet connection for the first setup
+An internet connection is needed for the one-time setup. After that the evaluation runs offline.
 
 An administrator can install most of these in one go from an **elevated** PowerShell window:
 
@@ -33,38 +38,57 @@ winget install -e --id Microsoft.VisualStudio.2022.BuildTools --source winget `
   --override "--quiet --wait --norestart --add Microsoft.VisualStudio.Workload.VCTools --includeRecommended"
 ```
 
-Node 20 is not in winget (it now carries only newer releases), so install it from the nodejs.org link above. After installing, close and reopen any terminal so the new PATH is picked up.
+Node 20 is not in winget, which now carries only newer releases, so install it from the nodejs.org
+link above. After installing anything, close and reopen any terminal window so the new PATH is
+picked up.
 
-> **Why Build Tools are needed:** one of the platform's security components (the `argon2` password hasher) has no usable pre-built Windows binary and is compiled during setup. Without the C++ workload, setup stops with a `gyp ERR! find VS` message. This is a one-time install of about 2–4 GB and needs an administrator.
+> **Why the C++ Build Tools are needed:** one of the platform's security components (the `argon2`
+> password hasher) has no usable pre-built Windows binary and is compiled during setup. Without that
+> workload, setup stops with a `gyp ERR! find VS` message. It is a one-time install of roughly
+> 2–4 GB and needs an administrator.
 
-> **If Python seems installed but nothing works:** Windows ships placeholder shortcuts named `python` and `python3` that only open the Microsoft Store. Turn them off under **Settings → Apps → Advanced app settings → App execution aliases**, and switch off both Python entries.
+> **If Python seems installed but nothing works:** Windows ships placeholder shortcuts named
+> `python` and `python3` that only open the Microsoft Store. Turn them off under **Settings → Apps →
+> Advanced app settings → App execution aliases**, switching off both Python entries.
 
-Docker Desktop turns on Windows Subsystem for Linux the first time it runs, and asks to restart the computer. That is expected.
-
-### On Linux
-
-- Docker Engine or Docker Desktop running
-- Node.js 20 through `nvm`
-- PostgreSQL client tools (`psql`)
-- Google Chrome or another web browser
-- An internet connection for the first setup
+Start Docker Desktop and leave it running before setup: the whale icon sits in the system tray and
+the window says **Engine running**. The first time Docker Desktop runs it turns on Windows Subsystem
+for Linux and asks to restart the computer. That is expected.
 
 ## 2. Download and unzip
 
 1. Sign in to GitHub and open this repository.
-2. Click the green **Code** button.
-3. Click **Download ZIP**.
-4. Open your **Downloads** folder.
-5. Right-click the downloaded ZIP and choose **Extract All…** on Windows, or **Extract Here** on Linux.
-6. Open the extracted `DPDP-Privacy-Platform-mvp2-compliance-operations` folder.
-
-On Windows, extract it somewhere short and local such as `C:\DPDP` — not inside OneDrive, and not left unopened inside the ZIP. Running the controls directly from a ZIP preview will not work.
+2. Click the green **Code** button, then **Download ZIP**.
+3. Open your **Downloads** folder, right-click the ZIP and choose **Extract All…**.
+4. Extract it somewhere short and local such as `C:\DPDP` — **not** inside OneDrive, and never left
+   unopened inside the ZIP. The controls cannot run from a ZIP preview.
+5. Open the extracted `DPDP-Privacy-Platform-…` folder.
 
 ## 3. Open the client guide and follow it
 
-Double-click **2 - Client Guide (Windows)** on Windows, or **2 - Client Guide.sh** on Linux. If neither runs, open [`docs/demo-runbook/CLIENT-GUIDE-standalone.html`](docs/demo-runbook/CLIENT-GUIDE-standalone.html) in a browser — it is a single self-contained file with its screenshots inside, and can be read before anything is installed.
+Double-click **2 - Client Guide**. If it does not open, open
+[`docs/demo-runbook/CLIENT-GUIDE-standalone.html`](docs/demo-runbook/CLIENT-GUIDE-standalone.html)
+in a browser — it is a single self-contained file with its screenshots inside, and can be read
+before anything is installed.
 
-The guide takes it from there: which numbered controls belong to your system, the one-time setup (button 0), starting the platform, a twelve-stop product tour, inspecting the underlying data, and stopping safely. It takes about 15 minutes of setup and about 20 minutes of guided reading.
+The guide takes it from there: the one-time setup (button 0), starting the platform, the guided
+product tour, inspecting the underlying data, and stopping safely. Allow about 15 minutes of setup
+and about 30 minutes of guided reading.
+
+## The eight controls
+
+They sit in the folder you unzipped, and setup also places them on your Desktop.
+
+| Button | What it does |
+| --- | --- |
+| **0 - Prepare This Computer** | One-time setup after downloading |
+| **1 - Start Privacy Demo** | Starts the platform and opens it in your browser |
+| **2 - Client Guide** | Opens the guided product evaluation |
+| **3 - Open Database** | Browses the sample database table by table |
+| **4 - Show Demo Proof** | Live counts read from the running environment |
+| **5 - Demo Status** | Shows what is running |
+| **6 - Stop Privacy Demo** | Stops everything, keeping the sample data |
+| **9 - Reset Demo to Fresh State** | Destroys and rebuilds the sample data — not during an evaluation |
 
 ## Sign-in details
 
@@ -86,7 +110,25 @@ These are sample accounts containing demonstration data only. The guide lists th
 
 Both contain their screenshots inside the HTML, so no image folder is required:
 
-- [Standalone client guide](docs/demo-runbook/CLIENT-GUIDE-standalone.html) — the self-guided evaluation, start to finish
-- [Standalone presenter runbook](docs/demo-runbook/RUNBOOK-standalone.html) — for someone demonstrating the platform to others
+- [Standalone client guide](docs/demo-runbook/CLIENT-GUIDE-standalone.html) — the self-guided
+  evaluation, start to finish
+- [Standalone presenter runbook](docs/demo-runbook/RUNBOOK-standalone.html) — for someone
+  demonstrating the platform to others
 
 The editable source files and image folder remain in `docs/demo-runbook/`.
+
+<details>
+<summary><b>Running it on Linux</b></summary>
+
+The demo control layer is the same set of `bash` scripts on both systems; only the entry points
+differ.
+
+- Prerequisites: Docker Engine or Docker Desktop running, Node.js 20 through `nvm`, the PostgreSQL
+  client tools (`psql`), `xdg-utils`, and a web browser. No compiler is needed.
+- The numbered `.cmd` files in the root are Windows launchers. The matching Linux entry points are
+  in `demo-control/linux/`, for example
+  `bash "demo-control/linux/0 - Prepare This Computer.sh"`.
+- `demo-control/install-launchers.sh` places the same eight buttons on the Desktop and in the
+  applications menu as trusted `.desktop` entries.
+
+</details>

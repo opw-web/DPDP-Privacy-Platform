@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RetentionScanService"
+community: "notifications.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionScanService
+  - community/notificationscontrollerts
 ---
 
 # Injectable
 
 ## Connections
-- [[RetentionScanService]] - `references` [EXTRACTED]
+- [[JwtAnyActorGuard]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionScanService
+#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts

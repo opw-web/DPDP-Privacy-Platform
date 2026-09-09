@@ -1,23 +1,23 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/compliance/compliance.controller.ts"
 type: "code"
-community: "CreateComplianceRuleDto"
+community: "ComplianceService"
 location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateComplianceRuleDto
+  - community/ComplianceService
 ---
 
 # .update()
 
 ## Connections
 - [[dot-update()_8]] - `calls` [INFERRED]
-- [[Body_7]] - `references` [EXTRACTED]
+- [[Body_8]] - `references` [EXTRACTED]
 - [[ComplianceController]] - `method` [EXTRACTED]
-- [[Param_6]] - `references` [EXTRACTED]
+- [[Param_7]] - `references` [EXTRACTED]
 - [[Patch_3]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[UpdateComplianceRuleDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto
+#graphify/code #graphify/EXTRACTED #community/ComplianceService

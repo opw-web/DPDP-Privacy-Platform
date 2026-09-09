@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[SdfPage.test.tsx]] - `contains` [EXTRACTED]
 - [[json()_1]] - `calls` [EXTRACTED]
-- [[renderPage()_4]] - `calls` [EXTRACTED]
+- [[renderPage()_5]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/tanstack/react-query

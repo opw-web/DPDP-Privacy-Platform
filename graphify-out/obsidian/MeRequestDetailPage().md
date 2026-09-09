@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeRequestDetailPage.tsx"
 type: "code"
-community: "@tanstack/react-query"
+community: "api-client.ts"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tanstack/react-query
+  - community/api-clientts
 ---
 
 # MeRequestDetailPage()
@@ -17,4 +17,4 @@ tags:
 - [[refresh()]] - `calls` [EXTRACTED]
 - [[router.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tanstack/react-query
+#graphify/code #graphify/EXTRACTED #community/api-clientts

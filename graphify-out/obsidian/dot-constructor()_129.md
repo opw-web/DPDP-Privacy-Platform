@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/linking.service.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/roles.service.ts"
 type: "code"
-community: "ScopedTransactionClient"
-location: "L43"
+community: "UpdateRolePermissionsDto"
+location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScopedTransactionClient
+  - community/UpdateRolePermissionsDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[IdentifierOwnershipConflictError_1]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[RolesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient
+#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto

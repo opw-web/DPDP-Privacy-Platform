@@ -12,12 +12,12 @@ tags:
 # PrincipalRecipientsService
 
 ## Connections
-- [[dot-constructor()_65]] - `references` [EXTRACTED]
-- [[dot-constructor()_67]] - `references` [EXTRACTED]
+- [[dot-constructor()_68]] - `references` [EXTRACTED]
 - [[dot-constructor()_70]] - `references` [EXTRACTED]
-- [[dot-constructor()_69]] - `method` [EXTRACTED]
+- [[dot-constructor()_73]] - `references` [EXTRACTED]
+- [[dot-constructor()_72]] - `method` [EXTRACTED]
 - [[dot-listForPrincipal()]] - `method` [EXTRACTED]
-- [[Injectable_40]] - `references` [EXTRACTED]
+- [[Injectable_44]] - `references` [EXTRACTED]
 - [[access-report.service.ts]] - `imports` [EXTRACTED]
 - [[me.service.ts]] - `imports` [EXTRACTED]
 - [[principal-recipients.service.ts]] - `contains` [EXTRACTED]

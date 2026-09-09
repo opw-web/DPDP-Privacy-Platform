@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/SdfPage.tsx"
 type: "code"
-community: "api-client.ts"
+community: "AlgorithmRegisterPanel.tsx"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/AlgorithmRegisterPaneltsx
 ---
 
 # SdfData
@@ -15,4 +15,4 @@ tags:
 - [[AssessmentRowData]] - `references` [EXTRACTED]
 - [[SdfPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterPaneltsx

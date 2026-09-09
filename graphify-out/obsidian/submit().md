@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/children/ExemptionClaimForm.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/SettingsCompliancePage.tsx"
 type: "code"
-community: "react"
+community: "router.tsx"
 location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/routertsx
 ---
 
 # submit()
 
 ## Connections
-- [[ExemptionClaimForm()]] - `contains` [EXTRACTED]
+- [[RuleCard()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/routertsx

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AgeStatusService"
+community: "recipients.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AgeStatusService
+  - community/recipientsservicets
 ---
 
 # IsEnum
 
 ## Connections
-- [[SetAgeStatusDto]] - `references` [EXTRACTED]
+- [[UpdateRecipientDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AgeStatusService
+#graphify/code #graphify/EXTRACTED #community/recipientsservicets

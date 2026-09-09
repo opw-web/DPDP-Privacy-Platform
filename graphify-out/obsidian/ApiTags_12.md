@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "audit-chain.service.ts"
+community: "PurposesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-chainservicets
+  - community/PurposesService
 ---
 
 # ApiTags
 
 ## Connections
-- [[AuditEventsEvidenceController]] - `references` [EXTRACTED]
+- [[PurposesController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-chainservicets
+#graphify/code #graphify/EXTRACTED #community/PurposesService

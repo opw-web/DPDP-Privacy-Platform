@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/router.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.test.tsx"
 type: "code"
-community: "router.tsx"
-location: "L67"
+community: "PrincipalEvidencePage.tsx"
+location: "L110"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/PrincipalEvidencePagetsx
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[installFetchMock()]] - `calls` [EXTRACTED]
-- [[router.test.tsx]] - `contains` [EXTRACTED]
+- [[MessagingCampaignDetailPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/PrincipalEvidencePagetsx

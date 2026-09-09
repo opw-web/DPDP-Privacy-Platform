@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "EmployeesService"
+community: "CampaignsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeesService
+  - community/CampaignsService
 ---
 
 # Post
 
 ## Connections
-- [[dot-create()_20]] - `references` [EXTRACTED]
-- [[dot-resetPassword()]] - `references` [EXTRACTED]
+- [[dot-approve()]] - `references` [EXTRACTED]
+- [[dot-create()_23]] - `references` [EXTRACTED]
+- [[dot-send()_5]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeesService
+#graphify/code #graphify/EXTRACTED #community/CampaignsService

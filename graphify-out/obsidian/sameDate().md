@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/match-rules/supporting-signal.ts"
 type: "code"
-community: "ScopedTransactionClient"
+community: "matching.service.ts"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScopedTransactionClient
+  - community/matchingservicets
 ---
 
 # sameDate()
@@ -15,4 +15,4 @@ tags:
 - [[supporting-signal.ts]] - `contains` [EXTRACTED]
 - [[supportingSignals()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient
+#graphify/code #graphify/EXTRACTED #community/matchingservicets

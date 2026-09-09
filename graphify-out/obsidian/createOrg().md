@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/mappings.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/access-log.e2e-spec.ts"
 type: "code"
-community: "mappings.e2e-spec.ts"
-location: "L49"
+community: "prisma.service.ts"
+location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingse2e-spects
+  - community/prismaservicets
 ---
 
 # createOrg()
 
 ## Connections
-- [[createOrgWithBothPermissions()]] - `calls` [EXTRACTED]
-- [[mappings.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[access-log.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingse2e-spects
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

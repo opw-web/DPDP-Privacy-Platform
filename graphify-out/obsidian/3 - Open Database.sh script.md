@@ -1,5 +1,5 @@
 ---
-source_file: "3 - Open Database.sh"
+source_file: "demo-control/linux/3 - Open Database.sh"
 type: "code"
 community: "3 - Open Database.sh"
 location: "L1"

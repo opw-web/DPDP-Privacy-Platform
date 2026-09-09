@@ -11,6 +11,6 @@ tags:
 # HttpCode
 
 ## Connections
-- [[dot-trigger()]] - `references` [EXTRACTED]
+- [[dot-trigger()_1]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/SyncService

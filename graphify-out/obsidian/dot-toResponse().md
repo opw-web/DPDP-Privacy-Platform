@@ -12,10 +12,10 @@ tags:
 # .toResponse()
 
 ## Connections
-- [[dot-create()]] - `calls` [EXTRACTED]
+- [[dot-create()_1]] - `calls` [EXTRACTED]
 - [[dot-list()_3]] - `calls` [EXTRACTED]
 - [[dot-maskIfNeeded()]] - `calls` [INFERRED]
-- [[dot-verify()]] - `calls` [EXTRACTED]
+- [[dot-verify()_1]] - `calls` [EXTRACTED]
 - [[GuardiansService]] - `method` [EXTRACTED]
 - [[toPublicGuardian()]] - `calls` [EXTRACTED]
 

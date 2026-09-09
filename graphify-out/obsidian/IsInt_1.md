@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateDataSourceDto"
+community: "configuration.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateDataSourceDto
+  - community/configurationts
 ---
 
 # IsInt
 
 ## Connections
-- [[CreateDataSourceDto]] - `references` [EXTRACTED]
+- [[EnvironmentVariables]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateDataSourceDto
+#graphify/code #graphify/EXTRACTED #community/configurationts

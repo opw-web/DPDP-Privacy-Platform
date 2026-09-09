@@ -1,22 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/transfers.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
 type: "code"
-community: "transfers.service.ts"
-location: "L27"
+community: "CreateNoticeDto"
+location: "L191"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/transfersservicets
+  - community/CreateNoticeDto
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_5]] - `calls` [INFERRED]
-- [[Body_4]] - `references` [EXTRACTED]
-- [[CreateTransferDto]] - `references` [EXTRACTED]
-- [[Post_2]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[TransfersController]] - `method` [EXTRACTED]
+- [[dot-create()_16]] - `calls` [INFERRED]
+- [[dot-createVersion()]] - `calls` [EXTRACTED]
+- [[dot-record()]] - `calls` [INFERRED]
+- [[CreateNoticeDto]] - `references` [EXTRACTED]
+- [[NoticesService]] - `method` [EXTRACTED]
+- [[duplicateCodeMessage()]] - `calls` [EXTRACTED]
+- [[isUniqueConstraintViolation()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/transfersservicets
+#graphify/code #graphify/EXTRACTED #community/CreateNoticeDto

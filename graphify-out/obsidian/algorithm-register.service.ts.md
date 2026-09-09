@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts"
 type: "code"
-community: "@nestjs/swagger"
+community: "compliance.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/swagger
+  - community/complianceservicets
 ---
 
 # algorithm-register.service.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
-- [[@prismaclient]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[ALGORITHM_ENTRY_PUBLIC_SELECT]] - `contains` [EXTRACTED]
 - [[AlgorithmRegisterService]] - `contains` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
@@ -28,4 +28,4 @@ tags:
 - [[sdf.module.ts]] - `imports_from` [EXTRACTED]
 - [[update-algorithm-entry.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/swagger
+#graphify/code #graphify/EXTRACTED #community/complianceservicets

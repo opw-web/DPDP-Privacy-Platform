@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-assertAffectedPrincipals()]] - `calls` [EXTRACTED]
 - [[dot-assertDirectionHasAuthorisation()]] - `calls` [EXTRACTED]
-- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
 - [[dot-update()_16]] - `calls` [INFERRED]
 - [[InformationRequestsService]] - `method` [EXTRACTED]
 - [[UpdateInformationRequestDto]] - `references` [EXTRACTED]

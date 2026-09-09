@@ -1,21 +1,24 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sdf/sdf-assessment.service.ts"
+source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
 type: "code"
-community: "CreateSdfAssessmentDto"
-location: "L155"
+community: "ComplianceService"
+location: "L389"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSdfAssessmentDto
+  - community/ComplianceService
 ---
 
 # .create()
 
 ## Connections
-- [[dot-createAssessment()]] - `calls` [INFERRED]
-- [[dot-record()_1]] - `calls` [INFERRED]
-- [[dot-resolveCycleDeadline()]] - `calls` [EXTRACTED]
-- [[CreateSdfAssessmentDto]] - `references` [EXTRACTED]
-- [[SdfAssessmentService]] - `method` [EXTRACTED]
+- [[dot-create()_11]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-update()_8]] - `calls` [EXTRACTED]
+- [[dot-validateGrievanceCeiling()]] - `calls` [EXTRACTED]
+- [[ComplianceService]] - `method` [EXTRACTED]
+- [[CreateComplianceRuleDto]] - `references` [EXTRACTED]
+- [[diffRules()]] - `calls` [EXTRACTED]
+- [[toPublicComplianceRule()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSdfAssessmentDto
+#graphify/code #graphify/EXTRACTED #community/ComplianceService

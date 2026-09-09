@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sync/sync-pipeline.service.ts"
 type: "code"
-community: "ScopedTransactionClient"
+community: "prisma.service.ts"
 location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScopedTransactionClient
+  - community/prismaservicets
 ---
 
 # SyncErrorLogEntry
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sync-pipeline.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

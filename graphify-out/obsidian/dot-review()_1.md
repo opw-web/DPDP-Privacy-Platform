@@ -1,22 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
+source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.ts"
 type: "code"
-community: "CreateComplianceRuleDto"
-location: "L562"
+community: "PurposesService"
+location: "L277"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateComplianceRuleDto
+  - community/PurposesService
 ---
 
 # .review()
 
 ## Connections
-- [[dot-record()_1]] - `calls` [INFERRED]
-- [[dot-review()_2]] - `calls` [INFERRED]
-- [[dot-update()_8]] - `calls` [EXTRACTED]
+- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-review()]] - `calls` [INFERRED]
+- [[dot-update()_5]] - `calls` [EXTRACTED]
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[ComplianceService]] - `method` [EXTRACTED]
-- [[toPublicComplianceRule()]] - `calls` [EXTRACTED]
+- [[PurposesService]] - `method` [EXTRACTED]
+- [[toPublicPurpose()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto
+#graphify/code #graphify/EXTRACTED #community/PurposesService

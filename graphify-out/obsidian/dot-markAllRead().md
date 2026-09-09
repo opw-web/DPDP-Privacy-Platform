@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notifications/notifications.controller.ts"
 type: "code"
-community: "notifications.controller.ts"
+community: "notifications.service.ts"
 location: "L65"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationscontrollerts
+  - community/notificationsservicets
 ---
 
 # .markAllRead()
@@ -18,8 +18,8 @@ tags:
 - [[HttpCode_1]] - `references` [EXTRACTED]
 - [[NotificationCallerActor]] - `references` [EXTRACTED]
 - [[NotificationsController]] - `method` [EXTRACTED]
-- [[Post_18]] - `references` [EXTRACTED]
+- [[Post_17]] - `references` [EXTRACTED]
 - [[Public()]] - `references` [EXTRACTED]
 - [[UseGuards_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts
+#graphify/code #graphify/EXTRACTED #community/notificationsservicets

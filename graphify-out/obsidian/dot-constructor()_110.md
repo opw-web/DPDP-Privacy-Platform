@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sync.processor.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/notifications.controller.ts"
 type: "code"
-community: "SyncPipelineService"
-location: "L46"
+community: "notifications.service.ts"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncPipelineService
+  - community/notificationsservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[SyncPipelineService]] - `references` [EXTRACTED]
-- [[SyncProcessor]] - `method` [EXTRACTED]
+- [[NotificationsController]] - `method` [EXTRACTED]
+- [[NotificationsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncPipelineService
+#graphify/code #graphify/EXTRACTED #community/notificationsservicets

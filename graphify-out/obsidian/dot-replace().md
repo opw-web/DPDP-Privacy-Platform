@@ -12,8 +12,8 @@ tags:
 # .replace()
 
 ## Connections
-- [[dot-get()_5]] - `calls` [EXTRACTED]
-- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-get()_7]] - `calls` [EXTRACTED]
+- [[dot-record()]] - `calls` [INFERRED]
 - [[dot-replacePurposes()]] - `calls` [INFERRED]
 - [[AttachPurposesDto]] - `references` [EXTRACTED]
 - [[SourcePurposesService]] - `method` [EXTRACTED]

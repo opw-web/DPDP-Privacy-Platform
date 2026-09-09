@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/sharing.service.ts"
 type: "code"
-community: "CreateSharingActivityDto"
+community: "SharingService"
 location: "L170"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSharingActivityDto
+  - community/SharingService
 ---
 
 # .update()
@@ -15,10 +15,10 @@ tags:
 - [[dot-assertPurposeExists()_1]] - `calls` [EXTRACTED]
 - [[dot-assertRecipientExists()_1]] - `calls` [EXTRACTED]
 - [[dot-assertSourceIdsExist()]] - `calls` [EXTRACTED]
-- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
 - [[dot-update()_27]] - `calls` [INFERRED]
 - [[SharingService]] - `method` [EXTRACTED]
 - [[UpdateSharingActivityDto]] - `references` [EXTRACTED]
 - [[assertNonBlankDescription()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto
+#graphify/code #graphify/EXTRACTED #community/SharingService

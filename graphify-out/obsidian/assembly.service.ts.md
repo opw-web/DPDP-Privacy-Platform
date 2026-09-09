@@ -12,8 +12,8 @@ tags:
 # assembly.service.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
-- [[@prismaclient]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AssembledField]] - `contains` [EXTRACTED]
 - [[AssemblyMapping]] - `contains` [EXTRACTED]
 - [[AssemblyRecord]] - `contains` [EXTRACTED]
@@ -26,7 +26,7 @@ tags:
 - [[assembleFields()]] - `contains` [EXTRACTED]
 - [[assembly.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[assembly.service.spec.ts]] - `imports_from` [EXTRACTED]
-- [[compareNewest()_1]] - `contains` [EXTRACTED]
+- [[compareNewest()]] - `contains` [EXTRACTED]
 - [[displayNameFrom()]] - `contains` [EXTRACTED]
 - [[extrasObject()]] - `contains` [EXTRACTED]
 - [[identity.module.ts]] - `imports_from` [EXTRACTED]

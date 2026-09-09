@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/pre-erasure-notice.processor.ts"
+source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
 type: "code"
-community: "NotificationsService"
-location: "L20"
+community: "PurposesService"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/PurposesService
 ---
 
 # .constructor()
 
 ## Connections
-- [[PreErasureNoticeProcessor]] - `method` [EXTRACTED]
-- [[PreErasureNoticeService]] - `references` [EXTRACTED]
+- [[PurposesController]] - `method` [EXTRACTED]
+- [[PurposesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/PurposesService

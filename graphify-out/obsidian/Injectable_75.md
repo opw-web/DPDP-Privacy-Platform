@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ScopedTransactionClient"
+community: "UpdateRolePermissionsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScopedTransactionClient
+  - community/UpdateRolePermissionsDto
 ---
 
 # Injectable
 
 ## Connections
-- [[MatchingService]] - `references` [EXTRACTED]
+- [[RolesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient
+#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto

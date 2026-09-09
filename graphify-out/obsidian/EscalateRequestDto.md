@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-escalate()_1]] - `references` [EXTRACTED]
 - [[dot-escalate()]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_27]] - `references` [EXTRACTED]
-- [[IsOptional_29]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_24]] - `references` [EXTRACTED]
+- [[IsOptional_26]] - `references` [EXTRACTED]
 - [[IsString_34]] - `references` [EXTRACTED]
 - [[escalate-request.dto.ts]] - `contains` [EXTRACTED]
 - [[requests.controller.ts]] - `imports` [EXTRACTED]

@@ -1,19 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/inventory/inventory.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/linking.service.ts"
 type: "code"
-community: "inventory.service.ts"
-location: "L17"
+community: "prisma.service.ts"
+location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/inventoryservicets
+  - community/prismaservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[InventoryController]] - `method` [EXTRACTED]
-- [[InventoryService]] - `references` [EXTRACTED]
-- [[RopaExportService]] - `references` [EXTRACTED]
+- [[AgeService]] - `references` [EXTRACTED]
+- [[AssemblyService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[LinkingService]] - `method` [EXTRACTED]
+- [[ReferenceService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/inventoryservicets
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

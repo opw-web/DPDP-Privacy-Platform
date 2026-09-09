@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/permissions.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
 type: "code"
-community: "PermissionsController"
-location: "L19"
+community: "ComplianceService"
+location: "L359"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/PermissionsController
+  - graphify/INFERRED
+  - community/ComplianceService
 ---
 
 # .list()
 
 ## Connections
-- [[Get_14]] - `references` [EXTRACTED]
-- [[PermissionsController]] - `method` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-list()_11]] - `calls` [INFERRED]
+- [[ComplianceService]] - `method` [EXTRACTED]
+- [[toPublicComplianceRule()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/PermissionsController
+#graphify/code #graphify/INFERRED #community/ComplianceService

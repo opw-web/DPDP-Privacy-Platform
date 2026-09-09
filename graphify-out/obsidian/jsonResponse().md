@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/wizard/Step1Connection.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/wizard/Step3Mapping.test.tsx"
 type: "code"
 community: "data-sources-api.ts"
-location: "L37"
+location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # jsonResponse()
 
 ## Connections
-- [[Step1Connection.test.tsx]] - `contains` [EXTRACTED]
+- [[Step3Mapping.test.tsx]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/data-sources-apits

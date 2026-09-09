@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
 type: "code"
-community: ".record"
+community: "BreachService"
 location: "L371"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/BreachService
 ---
 
 # .update()
@@ -15,7 +15,7 @@ tags:
 - [[dot-addAffected()_1]] - `calls` [EXTRACTED]
 - [[dot-completeObligation()_1]] - `calls` [EXTRACTED]
 - [[dot-public()]] - `calls` [EXTRACTED]
-- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
 - [[dot-recordExtension()]] - `calls` [EXTRACTED]
 - [[dot-scanClock()]] - `calls` [EXTRACTED]
 - [[dot-update()_19]] - `calls` [INFERRED]
@@ -25,4 +25,4 @@ tags:
 - [[UpdateBreachDto]] - `references` [EXTRACTED]
 - [[asDate()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/BreachService

@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/common/crypto/crypto.service.ts"
+source_file: "dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts"
 type: "code"
-community: "crypto.service.ts"
-location: "L70"
+community: "CreateVoluntaryUndertakingDto"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cryptoservicets
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[CryptoService]] - `method` [EXTRACTED]
-- [[InvalidEncryptionKeyError]] - `calls` [EXTRACTED]
+- [[VoluntaryUndertakingsController]] - `method` [EXTRACTED]
+- [[VoluntaryUndertakingsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cryptoservicets
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

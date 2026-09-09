@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/DashboardPage.test.tsx"
 type: "code"
-community: "@tanstack/react-query"
+community: "EmployeesPage.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tanstack/react-query
+  - community/EmployeesPagetsx
 ---
 
 # DashboardPage.test.tsx
@@ -23,18 +23,18 @@ tags:
 - [[FORBIDDEN_CLAIM_PATTERNS]] - `contains` [EXTRACTED]
 - [[InventoryGap_1]] - `imports` [EXTRACTED]
 - [[InventorySummary_1]] - `imports` [EXTRACTED]
-- [[MockRoutes_2]] - `contains` [EXTRACTED]
+- [[MockRoutes_1]] - `contains` [EXTRACTED]
 - [[POPULATED_GAPS]] - `contains` [EXTRACTED]
 - [[ZERO_GAPS]] - `contains` [EXTRACTED]
 - [[assertNoComplianceClaim()]] - `contains` [EXTRACTED]
 - [[employeeLogin()]] - `imports` [EXTRACTED]
 - [[employeeLogout()]] - `imports` [EXTRACTED]
-- [[jsonResponse()_9]] - `contains` [EXTRACTED]
+- [[jsonResponse()_3]] - `contains` [EXTRACTED]
 - [[libauth.ts]] - `imports_from` [EXTRACTED]
-- [[loginAndRender()_2]] - `contains` [EXTRACTED]
+- [[loginAndRender()]] - `contains` [EXTRACTED]
 - [[mockRoutesAndLogin()]] - `contains` [EXTRACTED]
 - [[react-router-dom_1]] - `imports_from` [EXTRACTED]
 - [[renderDashboard()]] - `contains` [EXTRACTED]
 - [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tanstack/react-query
+#graphify/code #graphify/EXTRACTED #community/EmployeesPagetsx

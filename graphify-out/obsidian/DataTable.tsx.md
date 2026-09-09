@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/DataTable.tsx"
 type: "code"
-community: "AuditPage.tsx"
+community: "PrincipalEvidencePage.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditPagetsx
+  - community/PrincipalEvidencePagetsx
 ---
 
 # DataTable.tsx
@@ -40,4 +40,4 @@ tags:
 - [[TransfersTab.tsx]] - `imports_from` [EXTRACTED]
 - [[table.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditPagetsx
+#graphify/code #graphify/EXTRACTED #community/PrincipalEvidencePagetsx

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "crypto.service.ts"
+community: "AlgorithmRegisterService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cryptoservicets
+  - community/AlgorithmRegisterService
 ---
 
 # Injectable
 
 ## Connections
-- [[CryptoService]] - `references` [EXTRACTED]
+- [[AlgorithmRegisterService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cryptoservicets
+#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterService

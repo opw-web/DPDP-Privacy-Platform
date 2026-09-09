@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/retention-scan.processor.ts"
 type: "code"
-community: "RetentionScanService"
+community: "queues.module.ts"
 location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionScanService
+  - community/queuesmodulets
 ---
 
 # .process()
@@ -16,4 +16,4 @@ tags:
 - [[RetentionScanJobData]] - `references` [EXTRACTED]
 - [[RetentionScanProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionScanService
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

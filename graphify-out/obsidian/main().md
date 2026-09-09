@@ -1,18 +1,19 @@
 ---
-source_file: "docs/demo-runbook/build-standalone.py"
+source_file: "scripts/capture-guide-screenshots.mjs"
 type: "code"
-community: "build-standalone.py"
-location: "L53"
+community: "capture-guide-screenshots.mjs"
+location: "L75"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/build-standalonepy
+  - community/capture-guide-screenshotsmjs
 ---
 
 # main()
 
 ## Connections
-- [[build()]] - `calls` [EXTRACTED]
-- [[build-standalone.py]] - `contains` [EXTRACTED]
+- [[capture-guide-screenshots.mjs]] - `contains` [EXTRACTED]
+- [[shoot()]] - `calls` [EXTRACTED]
+- [[signIn()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/build-standalonepy
+#graphify/code #graphify/EXTRACTED #community/capture-guide-screenshotsmjs

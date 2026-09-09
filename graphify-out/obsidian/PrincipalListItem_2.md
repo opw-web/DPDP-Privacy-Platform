@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalsPage.tsx"
 type: "code"
-community: "PrincipalDetailPage.tsx"
+community: "PrincipalsPage.tsx"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalDetailPagetsx
+  - community/PrincipalsPagetsx
 ---
 
 # PrincipalListItem
@@ -15,4 +15,4 @@ tags:
 - [[PrincipalsPage.tsx]] - `contains` [EXTRACTED]
 - [[SourceRef_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/PrincipalsPagetsx

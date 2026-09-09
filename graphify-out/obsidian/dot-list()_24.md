@@ -1,23 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principals/principals.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts"
 type: "code"
-community: "RequirePermission"
-location: "L21"
+community: "CreateVoluntaryUndertakingDto"
+location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_17]] - `calls` [INFERRED]
-- [[CurrentActorPermissions]] - `references` [EXTRACTED]
-- [[Get_23]] - `references` [EXTRACTED]
-- [[ListPrincipalsDto]] - `references` [EXTRACTED]
-- [[PrincipalsController]] - `method` [EXTRACTED]
-- [[Query_6]] - `references` [EXTRACTED]
+- [[dot-list()_25]] - `calls` [INFERRED]
+- [[Get_22]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
+- [[VoluntaryUndertakingsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

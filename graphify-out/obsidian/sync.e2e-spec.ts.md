@@ -1,23 +1,23 @@
 ---
 source_file: "dpdp-platform/backend/test/sync.e2e-spec.ts"
 type: "code"
-community: "queues.module.ts"
+community: "sync.e2e-spec.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/synce2e-spects
 ---
 
 # sync.e2e-spec.ts
 
 ## Connections
 - [[@nestjsbullmq_1]] - `imports_from` [EXTRACTED]
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[@nestjstesting_1]] - `imports_from` [EXTRACTED]
-- [[@prismaclient]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AppModule]] - `imports` [EXTRACTED]
-- [[FieldMapping_1]] - `contains` [EXTRACTED]
+- [[FieldMapping]] - `contains` [EXTRACTED]
 - [[MockHttpServer]] - `imports` [EXTRACTED]
 - [[PERMISSIONS]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
@@ -31,26 +31,26 @@ tags:
 - [[TenantContext]] - `imports` [EXTRACTED]
 - [[TenantStore]] - `imports` [EXTRACTED]
 - [[app.module.ts]] - `imports_from` [EXTRACTED]
-- [[argon2]] - `imports_from` [EXTRACTED]
-- [[bullmq_1]] - `imports_from` [EXTRACTED]
-- [[createDataSource()_3]] - `contains` [EXTRACTED]
-- [[employeeWithPermissions()_1]] - `contains` [EXTRACTED]
-- [[ensurePermission()_7]] - `contains` [EXTRACTED]
+- [[argon2_1]] - `imports_from` [EXTRACTED]
+- [[bullmq]] - `imports_from` [EXTRACTED]
+- [[createDataSource()_1]] - `contains` [EXTRACTED]
+- [[employeeWithPermissions()]] - `contains` [EXTRACTED]
+- [[ensurePermission()_1]] - `contains` [EXTRACTED]
 - [[mock-http-server.ts]] - `imports_from` [EXTRACTED]
-- [[organization()_1]] - `contains` [EXTRACTED]
-- [[pagedHandler()_1]] - `contains` [EXTRACTED]
+- [[organization()]] - `contains` [EXTRACTED]
+- [[pagedHandler()]] - `contains` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[schedule-reconciliation.service.ts]] - `imports_from` [EXTRACTED]
 - [[seedpermissions.ts]] - `imports_from` [EXTRACTED]
-- [[startServer()_1]] - `contains` [EXTRACTED]
+- [[startServer()]] - `contains` [EXTRACTED]
 - [[supertest]] - `imports_from` [EXTRACTED]
 - [[sync-lock.service.ts]] - `imports_from` [EXTRACTED]
 - [[sync-pipeline.service.ts]] - `imports_from` [EXTRACTED]
 - [[sync.processor.ts]] - `imports_from` [EXTRACTED]
 - [[sync.queue.ts]] - `imports_from` [EXTRACTED]
 - [[syncJobId()]] - `imports` [EXTRACTED]
-- [[tenant()_2]] - `contains` [EXTRACTED]
+- [[tenant()]] - `contains` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 - [[waitUntil()_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

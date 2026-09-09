@@ -12,15 +12,15 @@ tags:
 # CreateSdfAssessmentDto
 
 ## Connections
-- [[dot-create()_12]] - `references` [EXTRACTED]
+- [[dot-create()_15]] - `references` [EXTRACTED]
 - [[dot-createAssessment()]] - `references` [EXTRACTED]
-- [[ApiProperty_25]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_31]] - `references` [EXTRACTED]
-- [[IsBoolean_16]] - `references` [EXTRACTED]
-- [[IsDateString_11]] - `references` [EXTRACTED]
-- [[IsIn_8]] - `references` [EXTRACTED]
-- [[IsOptional_33]] - `references` [EXTRACTED]
-- [[IsString_39]] - `references` [EXTRACTED]
+- [[ApiProperty_23]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_28]] - `references` [EXTRACTED]
+- [[IsBoolean_14]] - `references` [EXTRACTED]
+- [[IsDateString_10]] - `references` [EXTRACTED]
+- [[IsIn_7]] - `references` [EXTRACTED]
+- [[IsOptional_30]] - `references` [EXTRACTED]
+- [[IsString_38]] - `references` [EXTRACTED]
 - [[create-sdf-assessment.dto.ts]] - `contains` [EXTRACTED]
 - [[sdf-assessment.service.ts]] - `imports` [EXTRACTED]
 - [[sdf.controller.ts]] - `imports` [EXTRACTED]

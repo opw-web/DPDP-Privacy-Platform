@@ -12,7 +12,7 @@ tags:
 # tenant.extension.ts
 
 ## Connections
-- [[@prismaclient]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[ALL_SCOPED_MODEL_NAMES_1]] - `contains` [EXTRACTED]
 - [[INDIRECT_TENANT_SCOPED_MODELS]] - `imports` [EXTRACTED]
 - [[OperationArgs]] - `contains` [EXTRACTED]

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "PreviewTemplateDto"
+community: "TemplatesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PreviewTemplateDto
+  - community/TemplatesService
 ---
 
 # ApiPropertyOptional
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[PreviewTemplateDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PreviewTemplateDto
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/AuditPage.tsx"
 type: "code"
-community: "AuditPage.tsx"
+community: "button.tsx"
 location: "L97"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditPagetsx
+  - community/buttontsx
 ---
 
 # AuditEventListResult
@@ -15,4 +15,4 @@ tags:
 - [[AuditEventListItem_1]] - `references` [EXTRACTED]
 - [[AuditPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditPagetsx
+#graphify/code #graphify/EXTRACTED #community/buttontsx

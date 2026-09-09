@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/audit-export.service.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/retention-scan.service.ts"
 type: "code"
-community: "AuditService"
-location: "L34"
+community: "ErasureTaskService"
+location: "L56"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/ErasureTaskService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditExportService]] - `method` [EXTRACTED]
 - [[AuditService]] - `references` [EXTRACTED]
+- [[ComplianceService]] - `references` [EXTRACTED]
+- [[ErasureTaskService]] - `references` [EXTRACTED]
+- [[RetentionScanService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/ErasureTaskService

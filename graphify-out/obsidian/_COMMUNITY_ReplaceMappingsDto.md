@@ -1,25 +1,26 @@
 ---
 type: community
-members: 12
+members: 13
 ---
 
 # ReplaceMappingsDto
 
-**Members:** 12 nodes
+**Members:** 13 nodes
 
 ## Members
-- [[ApiProperty_8]] - code
-- [[ApiPropertyOptional_6]] - code
-- [[IsArray_2]] - code
-- [[IsBoolean_3]] - code
-- [[IsEnum_2]] - code
-- [[IsOptional_7]] - code
-- [[IsString_8]] - code
-- [[MinLength_5]] - code
+- [[dot-get()_17]] - code - dpdp-platform/backend/src/modules/data-sources/mappings.service.ts
+- [[dot-replace()_1]] - code - dpdp-platform/backend/src/modules/data-sources/mappings.service.ts
+- [[dot-validateVerifiedCustomerId()]] - code - dpdp-platform/backend/src/modules/data-sources/mappings.service.ts
+- [[ApiProperty_38]] - code
+- [[Injectable_72]] - code
+- [[IsArray_21]] - code
+- [[MappingsService]] - code - dpdp-platform/backend/src/modules/data-sources/mappings.service.ts
 - [[ReplaceMappingsDto]] - code - dpdp-platform/backend/src/modules/data-sources/dto/replace-mappings.dto.ts
-- [[SourceFieldMappingDto]] - code - dpdp-platform/backend/src/modules/data-sources/dto/replace-mappings.dto.ts
-- [[Type_1]] - code
-- [[ValidateNested_1]] - code
+- [[Type_9]] - code
+- [[ValidateNested_5]] - code
+- [[computeMappingWarnings()]] - code - dpdp-platform/backend/src/modules/data-sources/mapping-warnings.ts
+- [[duplicateSourceFieldMessage()]] - code - dpdp-platform/backend/src/modules/data-sources/mappings.service.ts
+- [[isUniqueConstraintViolation()_4]] - code - dpdp-platform/backend/src/modules/data-sources/mappings.service.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -29,10 +30,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_@nestjsswagger]]
-- 3 edges to [[_COMMUNITY_data-sources.service.ts]]
-- 1 edge to [[_COMMUNITY_AttachPurposesDto]]
+- 7 edges to [[_COMMUNITY_mappings.service.ts]]
+- 3 edges to [[_COMMUNITY_@nestjscommon]]
+- 3 edges to [[_COMMUNITY_MappingsController]]
+- 3 edges to [[_COMMUNITY_dot-record]]
+- 2 edges to [[_COMMUNITY_SourcePurposesService]]
+- 1 edge to [[_COMMUNITY_SourceFieldMappingDto]]
+- 1 edge to [[_COMMUNITY_app.module.ts]]
+- 1 edge to [[_COMMUNITY_prisma.service.ts]]
 
 ## Top bridge nodes
+- [[MappingsService]] - degree 9, connects to 5 communities
 - [[ReplaceMappingsDto]] - degree 10, connects to 3 communities
-- [[SourceFieldMappingDto]] - degree 8, connects to 1 community
+- [[dot-replace()_1]] - degree 10, connects to 2 communities
+- [[computeMappingWarnings()]] - degree 6, connects to 2 communities
+- [[dot-get()_17]] - degree 3, connects to 1 community

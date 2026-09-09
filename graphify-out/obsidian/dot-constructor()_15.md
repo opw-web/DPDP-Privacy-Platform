@@ -1,19 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/erasure-task.service.ts"
+source_file: "dpdp-platform/backend/src/common/crypto/crypto.service.ts"
 type: "code"
-community: "AuditService"
-location: "L109"
+community: "configuration.ts"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/configurationts
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[ComplianceService]] - `references` [EXTRACTED]
-- [[ErasureTaskService]] - `method` [EXTRACTED]
+- [[InvalidEncryptionKeyError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/configurationts

@@ -12,7 +12,7 @@ tags:
 # public.decorator.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[IS_PUBLIC_KEY]] - `contains` [EXTRACTED]
 - [[Public()]] - `contains` [EXTRACTED]
 - [[employee-auth.controller.ts]] - `imports_from` [EXTRACTED]

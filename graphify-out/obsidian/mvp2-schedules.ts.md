@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[@nestjsbullmq_1]] - `imports_from` [EXTRACTED]
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[ACCESS_LOG_RETENTION_QUEUE_NAME]] - `imports` [EXTRACTED]
 - [[AUDIT_CHAIN_VERIFY_QUEUE_NAME]] - `imports` [EXTRACTED]
 - [[BREACH_CLOCK_QUEUE_NAME]] - `imports` [EXTRACTED]
@@ -33,7 +33,7 @@ tags:
 - [[SchedulableQueue]] - `contains` [EXTRACTED]
 - [[audit-chain-verify.processor.ts]] - `imports_from` [EXTRACTED]
 - [[breach-clock.processor.ts]] - `imports_from` [EXTRACTED]
-- [[bullmq_1]] - `imports_from` [EXTRACTED]
+- [[bullmq]] - `imports_from` [EXTRACTED]
 - [[consent-backfill.queue.ts]] - `imports_from` [EXTRACTED]
 - [[deadline-scan.queue.ts]] - `imports_from` [EXTRACTED]
 - [[queues.module.ts]] - `imports_from` [EXTRACTED]

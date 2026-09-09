@@ -12,7 +12,7 @@ tags:
 # .cancelOnContact()
 
 ## Connections
-- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
 - [[dot-runForCurrentOrganization()_1]] - `calls` [EXTRACTED]
 - [[PreErasureNoticeService]] - `method` [EXTRACTED]
 - [[buildCancellationReason()]] - `calls` [EXTRACTED]

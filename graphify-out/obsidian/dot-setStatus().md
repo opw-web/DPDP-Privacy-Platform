@@ -13,11 +13,11 @@ tags:
 
 ## Connections
 - [[dot-setMyConsentStatus()]] - `calls` [INFERRED]
-- [[Body_2]] - `references` [EXTRACTED]
+- [[Body_3]] - `references` [EXTRACTED]
 - [[CurrentPrincipal]] - `references` [EXTRACTED]
 - [[MeConsentsController]] - `method` [EXTRACTED]
-- [[Param_1]] - `references` [EXTRACTED]
-- [[Post_1]] - `references` [EXTRACTED]
+- [[Param_2]] - `references` [EXTRACTED]
+- [[Post_2]] - `references` [EXTRACTED]
 - [[PrincipalActor]] - `references` [EXTRACTED]
 - [[Public()]] - `references` [EXTRACTED]
 - [[Req]] - `references` [EXTRACTED]

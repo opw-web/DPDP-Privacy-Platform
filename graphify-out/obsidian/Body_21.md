@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateExemptionClaimDto"
+community: "UpdateRolePermissionsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateExemptionClaimDto
+  - community/UpdateRolePermissionsDto
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_28]] - `references` [EXTRACTED]
+- [[dot-replacePermissions()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateExemptionClaimDto
+#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto

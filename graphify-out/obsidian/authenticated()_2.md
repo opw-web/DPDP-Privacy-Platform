@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/inventory.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/step6-conflict-acceptance.e2e-spec.ts"
 type: "code"
-community: "AppModule"
-location: "L83"
+community: "step6-conflict-acceptance.e2e-spec.ts"
+location: "L139"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AppModule
+  - community/step6-conflict-acceptancee2e-spects
 ---
 
 # authenticated()
 
 ## Connections
-- [[inventory.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[putLegacyMappings()]] - `calls` [EXTRACTED]
+- [[step6-conflict-acceptance.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AppModule
+#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects

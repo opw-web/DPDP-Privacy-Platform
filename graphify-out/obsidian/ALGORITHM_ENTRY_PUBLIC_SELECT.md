@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts"
 type: "code"
-community: "@nestjs/swagger"
+community: "compliance.service.ts"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/swagger
+  - community/complianceservicets
 ---
 
 # ALGORITHM_ENTRY_PUBLIC_SELECT
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[algorithm-register.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/swagger
+#graphify/code #graphify/EXTRACTED #community/complianceservicets

@@ -11,6 +11,6 @@ tags:
 # Injectable
 
 ## Connections
-- [[SdfCycleScanQueueService]] - `references` [EXTRACTED]
+- [[DeadlineScanQueueService]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/queuesmodulets

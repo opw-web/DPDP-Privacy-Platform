@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sync/payload-hash.ts"
 type: "code"
-community: "canonicalJson"
+community: "evidence-pack.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/canonicalJson
+  - community/evidence-packservicets
 ---
 
 # payload-hash.ts
@@ -18,4 +18,4 @@ tags:
 - [[payload-hash.spec.ts]] - `imports_from` [EXTRACTED]
 - [[sync-pipeline.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/canonicalJson
+#graphify/code #graphify/EXTRACTED #community/evidence-packservicets

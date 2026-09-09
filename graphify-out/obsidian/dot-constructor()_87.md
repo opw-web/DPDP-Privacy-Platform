@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/candidates.controller.ts"
 type: "code"
-community: "templates.service.ts"
-location: "L75"
+community: "CandidatesService"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatesservicets
+  - community/CandidatesService
 ---
 
 # .constructor()
 
 ## Connections
-- [[UnknownTemplateVariableError]] - `method` [EXTRACTED]
+- [[CandidatesController]] - `method` [EXTRACTED]
+- [[CandidatesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatesservicets
+#graphify/code #graphify/EXTRACTED #community/CandidatesService

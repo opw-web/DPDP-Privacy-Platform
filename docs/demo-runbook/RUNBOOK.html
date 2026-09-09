@@ -157,7 +157,7 @@ hr{border:none;border-top:1px solid var(--line);margin:34px 0}
     <li><a class="sm" href="#law">The law, in plain English</a></li>
     <li><a class="sm" href="#what">What the software does</a></li>
     <li><a class="lead" href="#start">1 · Switching it on</a></li>
-    <li><a class="sm" href="#buttons">The seven buttons</a></li>
+    <li><a class="sm" href="#buttons">The eight buttons</a></li>
     <li><a class="sm" href="#signin">Signing in</a></li>
     <li><a class="lead" href="#demo">2 · The demo</a></li>
     <li><a class="sm" href="#act1">1 · Four systems, one company</a></li>
@@ -274,23 +274,25 @@ hr{border:none;border-top:1px solid var(--line);margin:34px 0}
 <ol>
   <li>Switch the laptop on and log in as normal.</li>
   <li>Close anything you do not need. The demo uses a web browser and nothing else.</li>
-  <li>Go to the <strong>Desktop</strong> — minimise everything, or press the show-desktop key.</li>
+  <li>Go to the <strong>Desktop</strong> — minimise everything, or press the show-desktop key. The eight buttons are there; they are also in the folder the platform was unzipped into.</li>
+  <li>Start <strong>Docker Desktop</strong> if it is not already running, and wait until it says <strong>Engine running</strong>. Button 1 checks for it and stops rather than half-starting.</li>
 </ol>
 
-<h3 id="buttons">The seven buttons</h3>
-<p>The Desktop has seven icons, numbered in the order you will use them. Numbering is deliberate: you never have to remember which is which, only what comes next.</p>
+<h3 id="buttons">The eight buttons</h3>
+<p>There are eight controls, numbered in the order you use them. Numbering is deliberate: you never have to remember which is which, only what comes next. Button 0 is the one-time setup and will already have been run on a demonstration laptop.</p>
 
 <figure>
-  <img src="images/desktop-icons.png" alt="The Desktop showing seven numbered demo launcher icons">
-  <figcaption>The seven demo buttons on the Desktop. Number 9 is last and separate because it destroys data.</figcaption>
+  <img src="images/folder-windows.png" alt="The unzipped folder showing its eight numbered controls">
+  <figcaption>The eight controls in the folder, below the folders. Setup puts the same eight on the Desktop. Number 9 is last and separate because it destroys data.</figcaption>
 </figure>
 
 <div class="scroll">
 <table>
   <thead><tr><th>Button</th><th>What it does</th><th>How long</th></tr></thead>
   <tbody>
+    <tr><td><span class="btn"><span class="n">0</span> Prepare This Computer</span></td><td>One-time setup on a newly downloaded copy: checks the computer, installs, builds and creates the sample workspace.</td><td class="num">~15 min</td></tr>
     <tr><td><span class="btn"><span class="n">1</span> Start Privacy Demo</span></td><td>Starts the database and the app, then opens the website for you.</td><td class="num">~2 min</td></tr>
-    <tr><td><span class="btn"><span class="n">2</span> Demo Runbook</span></td><td>Opens this document.</td><td class="num">instant</td></tr>
+    <tr><td><span class="btn"><span class="n">2</span> Client Guide</span></td><td>Opens the self-guided client version of this walkthrough.</td><td class="num">instant</td></tr>
     <tr><td><span class="btn"><span class="n">3</span> Open Database</span></td><td>Opens a table browser so you can look inside the database itself.</td><td class="num">~20 sec</td></tr>
     <tr><td><span class="btn"><span class="n">4</span> Show Demo Proof</span></td><td>Counts the live data and shows the numbers in a window.</td><td class="num">~10 sec</td></tr>
     <tr><td><span class="btn"><span class="n">5</span> Demo Status</span></td><td>Tells you what is running and what is not.</td><td class="num">~5 sec</td></tr>
@@ -302,8 +304,7 @@ hr{border:none;border-top:1px solid var(--line);margin:34px 0}
 
 <div class="block note">
   <span class="tag">The first time only</span>
-  <p><strong>On Windows:</strong> if a blue <em>“Windows protected your PC”</em> box appears, choose <strong>More info</strong>, then <strong>Run anyway</strong>. If a Windows Firewall prompt appears, accept it — the platform runs entirely on this computer.</p>
-  <p><strong>On Linux:</strong> if a button says something about an <em>untrusted application launcher</em>, right-click it once and choose <strong>Allow Launching</strong>. That only ever needs doing once per button.</p>
+  <p>If a blue <em>“Windows protected your PC”</em> box appears, choose <strong>More info</strong>, then <strong>Run anyway</strong>. If a Windows Firewall prompt appears, accept it — the platform runs entirely on this computer. Both appear once per file, never again.</p>
 </div>
 
 <h3>Starting it</h3>
@@ -320,7 +321,7 @@ hr{border:none;border-top:1px solid var(--line);margin:34px 0}
       <p>Lines appearing one by one: the database starting, the backend coming up, the website coming up. Each one ends with a short confirmation. It finishes with a list of addresses and the sign-in details.</p>
     </div>
     <figure>
-      <img src="images/start-terminal.png" alt="The startup window listing each service as it comes up">
+      <img src="images/start-windows.png" alt="The startup window listing each service as it comes up">
       <figcaption>What the startup window looks like when it has finished. Leave it open behind the browser.</figcaption>
     </figure>
     <div class="block note">
@@ -457,7 +458,13 @@ hr{border:none;border-top:1px solid var(--line);margin:34px 0}
     <div class="block do"><span class="tag">Then do</span><p>Click through <strong>My Data</strong>, then <strong>Where it came from</strong>, then <strong>Who has it</strong>.</p></div>
     <div class="block say"><span class="tag">Say, on the sources page</span><p>"Every single value tells him which of the company's systems it came from. His phone number is here because it is in the Sales CRM and the support desk. That is lineage, and it is what makes the next screen possible."</p></div>
     <div class="block say"><span class="tag">Say, on the recipients page</span><p>"And this is the question almost no company can answer: <em>who else has my data?</em> Not a generic list of 'trusted partners' — the actual recipients who hold <em>his</em> record, worked out from which systems his data is in and which of those feed which sharing arrangement."</p></div>
-    <div class="block law"><span class="tag">In law</span><p>Spec steps 9 and 10. Section 11(1) — the right to a summary of the data and the identities of those it was shared with.</p></div>
+    <figure><img src="images/portal-recipients.png" alt="The recipients page in the individual portal"><figcaption>Named recipients, what each one receives, and what it does not.</figcaption></figure>
+    <div class="block do"><span class="tag">Then do</span><p>Open <strong>Messages</strong>, then <strong>Nomination</strong>.</p></div>
+    <figure><img src="images/portal-messages.png" alt="The breach notice as the individual receives it"><figcaption>The breach notice from Act 10, delivered — this is the recipient's copy, not a reprint.</figcaption></figure>
+    <div class="block say"><span class="tag">Say, on Messages</span><p>"Whatever the company sends him lands here as well as in his inbox, so there is one record of what he was actually told, and when. You will see the breach notice arrive here later in the demo."</p></div>
+    <figure><img src="images/portal-nomination.png" alt="The Section 14 nomination form"><figcaption>Nomination: naming someone to exercise chosen rights, on a stated condition.</figcaption></figure>
+    <div class="block say"><span class="tag">Say, on Nomination</span><p>"And this one is Section 14, which most people have not read. He can name someone to exercise his rights if he dies or cannot act for himself. Note what the page itself says: saving this gives nobody access to his account. If it is ever used, an employee works through it."</p></div>
+    <div class="block law"><span class="tag">In law</span><p>Spec steps 9, 10 and 32. Section 11(1) — the right to a summary of the data and the identities of those it was shared with. Section 14 — nomination.</p></div>
     <div class="block note"><span class="tag">Guard against the obvious question</span><p>If asked "can he see anyone else's data?" — no, and it is structural rather than a filter someone remembered to write. Every database query in the system is scoped to the signed-in identity at a level below the application code.</p></div>
   </div>
 </div>
@@ -491,7 +498,9 @@ hr{border:none;border-top:1px solid var(--line);margin:34px 0}
     <figure><img src="images/retention.png" alt="The retention page showing a deferred erasure task"><figcaption>A withdrawal produced an erasure task — which the law then holds back.</figcaption></figure>
     <div class="block say"><span class="tag">Say</span><p>"Neha withdrew her consent. One click, exactly as many as it took to give it — the Act is explicit that withdrawing cannot be harder than agreeing. And the moment she did, the system created an erasure task on its own."</p></div>
     <div class="block say"><span class="tag">Then, pointing at the deferral</span><p>"But look — it has not run. It is deferred, with a release date and a citation. Because there is a rule that says certain records must be kept for at least a year. So the law pushes in both directions at once, and the platform holds both: erase this, but not yet, and here is exactly why."</p></div>
-    <div class="block law"><span class="tag">In law</span><p>Spec steps 15 to 18 and 29. Section 6(4) and 6(6) — withdrawal as easy as giving, and consequences follow. Rule 8(3) — the retention floor.</p></div>
+    <figure><img src="images/retention-erasure-engine.png" alt="The erasure task with its rule snapshot and checklists"><figcaption>One task, with the rule that defers it, the notice date, and the per-system and per-processor checklists.</figcaption></figure>
+    <div class="block say"><span class="tag">Then, pointing at the state filters</span><p>"Every task sits in a state you can point at — evaluated, notice sent, deferred, on legal hold, ready, erased, cancelled. Nothing is a silent failure. And before anything is erased, the person gets the forty-eight hour notice the rules require. If they sign in during that window, the task is cancelled under Rule 8(2) instead. Both of those are scheduled jobs, so neither depends on somebody remembering."</p></div>
+    <div class="block law"><span class="tag">In law</span><p>Spec steps 15 to 18, 29 and 30. Section 6(4) and 6(6) — withdrawal as easy as giving, and consequences follow. Rule 8(2) — the pre-erasure notice and its cancellation. Rule 8(3) — the retention floor.</p></div>
   </div>
 </div>
 
@@ -582,7 +591,7 @@ hr{border:none;border-top:1px solid var(--line);margin:34px 0}
   <header><span class="num">▶</span><h3>Double-click <span class="btn"><span class="n">4</span> Show Demo Proof</span></h3></header>
   <div class="body">
     <div class="block see"><span class="tag">You will see</span><p>A window of live counts, read from the database at the moment you clicked, grouped by what each one proves. Every number in Part 2 of this runbook appears here.</p></div>
-    <figure><img src="images/demo-proof.png" alt="The demo proof window showing live counts"><figcaption>Live counts, read at the moment you click. Nothing cached.</figcaption></figure>
+    <figure><img src="images/demo-proof-windows.png" alt="The demo proof window showing live counts"><figcaption>Live counts, read at the moment you click. Nothing cached.</figcaption></figure>
     <div class="block say"><span class="tag">Say</span><p>"That is not the app telling you about itself. That is a direct count out of the database, taken just now, next to the number we expected. If the two disagreed, you would see it."</p></div>
   </div>
 </div>
@@ -621,7 +630,7 @@ hr{border:none;border-top:1px solid var(--line);margin:34px 0}
   <header><span class="num">▶</span><h3>Double-click <span class="btn"><span class="n">6</span> Stop Privacy Demo</span></h3></header>
   <div class="body">
     <div class="block see"><span class="tag">You will see</span><p>Each part reported as stopped, then <em>Everything is stopped</em>, then a prompt to close the window.</p></div>
-    <figure><img src="images/stop-terminal.png" alt="The shutdown window confirming everything stopped"><figcaption>Press Enter to close the window when it says so.</figcaption></figure>
+    <figure><img src="images/stop-windows.png" alt="The shutdown window confirming everything stopped"><figcaption>Press Enter to close the window when it says so.</figcaption></figure>
     <div class="block note"><span class="tag">"Your demo data is kept"</span><p>The shutdown message says this, and it is literal. The database is paused, not emptied. Press button 1 tomorrow and every screen comes back exactly as you left it — same breach, same requests, same consents. The <strong>only</strong> thing that erases data is button 9.</p></div>
     <p>Afterwards it is safe to close the browser tabs, close the black windows, and shut the laptop down normally. Nothing needs saving.</p>
     <div class="block do"><span class="tag">To check</span><p>Double-click <span class="btn"><span class="n">5</span> Demo Status</span>. Everything should read <strong>DOWN</strong>. That is what a clean shutdown looks like.</p></div>
@@ -682,11 +691,17 @@ hr{border:none;border-top:1px solid var(--line);margin:34px 0}
 </div>
 
 <h3>Two extra screens worth knowing about</h3>
-<p>Neither is in the twelve acts, both are one click away if someone asks:</p>
-<ul>
-  <li><strong>SDF</strong> (left menu) — Acme is marked a Significant Data Fiduciary, so this page shows the twelve-month assessment and audit cycles, the register of algorithms used on personal data with their risk reviews, and the data-localisation gaps. That is spec step 31.</li>
-  <li><strong>Registers</strong> (left menu) — the processors, sharing activities, cross-border transfers, retention policies and security measures behind everything else. That is spec step 5, and it is where the "who has my data" answer in Act 6 comes from.</li>
-</ul>
+<p>Neither is in the twelve acts. Both are one click away, and both answer a question an evaluator is likely to ask.</p>
+
+<h4><strong>SDF readiness</strong> — left menu, spec step 31</h4>
+<p>Acme is marked a Significant Data Fiduciary, so this page carries the extra duties: the assessment and audit cycle (its length comes from the configured rule, never a constant in the code), the register of algorithms that operate on personal data with their risk reviews and mitigations, and the localisation gaps.</p>
+<figure><img src="images/sdf-register.png" alt="SDF readiness with the algorithm register"><figcaption>Two algorithms on the register, both flagged as needing their Rule 13(3) review.</figcaption></figure>
+<p>Say, if asked: "It flags this for a human. It never blocks a transfer and never marks a review as done by itself — which is the honest behaviour, because neither of those is a decision software should be making."</p>
+<figure><img src="images/sdf-gaps.png" alt="The SDF gaps register"><figcaption>The gaps register says what is outstanding — and, just as usefully, what is not.</figcaption></figure>
+
+<h4><strong>Registers</strong> — left menu, spec step 5</h4>
+<p>The processors, sharing activities, cross-border transfers, retention policies and security measures behind everything else. This is where the "who has my data" answer in Act 6 comes from.</p>
+<figure><img src="images/registers.png" alt="The compliance registers"><figcaption>A processor under contract in India, and another fiduciary in Singapore where s.8(2) puts the obligation elsewhere.</figcaption></figure>
 </section>
 
 <!-- ================================================================ -->
@@ -796,7 +811,7 @@ hr{border:none;border-top:1px solid var(--line);margin:34px 0}
     <tr><td>Sign-in says the details are wrong</td><td>Check the front door. Staff go to <code>/login</code>, members of the public to <code>/me/login</code>. The passwords are all <code>Password123!</code> — the exclamation mark is part of it.</td></tr>
     <tr><td>A screen that should have data is empty</td><td>Something did not stage. Finish the demo without it, then run <span class="btn danger"><span class="n">9</span> Reset</span> afterwards.</td></tr>
     <tr><td>The startup window shows an error</td><td>It stays open on purpose and names a log folder. Close it, run <span class="btn"><span class="n">6</span> Stop</span>, then <span class="btn"><span class="n">1</span> Start</span> again.</td></tr>
-    <tr><td>A button flashes and disappears</td><td>On Linux, right-click it once and choose <strong>Allow Launching</strong>. On Windows, this usually means Git for Windows is not installed — install it from git-scm.com and try again.</td></tr>
+    <tr><td>A button flashes and disappears</td><td>Git for Windows is not installed — the controls run through Git Bash. Install it from <code>git-scm.com/download/win</code> and try again.</td></tr>
     <tr><td>The database browser will not open</td><td>Only works while the demo is running. Press <span class="btn"><span class="n">1</span> Start</span> first.</td></tr>
     <tr><td>Numbers differ from this document</td><td>Say what is on the screen. The reset prints observed values, never expected ones, and so should you.</td></tr>
   </tbody>

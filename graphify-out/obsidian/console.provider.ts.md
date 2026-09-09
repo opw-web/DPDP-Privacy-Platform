@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notifications/providers/console.provider.ts"
 type: "code"
-community: "NotificationsService"
+community: "notifications.module.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/notificationsmodulets
 ---
 
 # console.provider.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[ConsoleProvider]] - `contains` [EXTRACTED]
 - [[NotificationProvider]] - `imports` [EXTRACTED]
 - [[NotificationSendInput]] - `imports` [EXTRACTED]
@@ -23,4 +23,4 @@ tags:
 - [[notifications.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[notifications.module.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/notificationsmodulets

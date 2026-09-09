@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-constructor()_135]] - `method` [EXTRACTED]
 - [[dot-use()]] - `method` [EXTRACTED]
-- [[Injectable_79]] - `references` [EXTRACTED]
+- [[Injectable_80]] - `references` [EXTRACTED]
 - [[tenant.middleware.ts]] - `contains` [EXTRACTED]
 - [[tenant.module.ts]] - `imports` [EXTRACTED]
 

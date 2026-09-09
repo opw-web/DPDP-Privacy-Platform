@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "BreachesController"
+community: "RequirePermission"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BreachesController
+  - community/RequirePermission
 ---
 
 # Res
@@ -14,4 +14,4 @@ tags:
 - [[dot-boardDetailed()]] - `references` [EXTRACTED]
 - [[dot-boardInitial()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BreachesController
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

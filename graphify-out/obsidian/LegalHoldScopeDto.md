@@ -12,10 +12,10 @@ tags:
 # LegalHoldScopeDto
 
 ## Connections
-- [[ApiPropertyOptional_12]] - `references` [EXTRACTED]
-- [[IsArray_7]] - `references` [EXTRACTED]
-- [[IsOptional_12]] - `references` [EXTRACTED]
-- [[IsString_14]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_2]] - `references` [EXTRACTED]
+- [[IsArray_1]] - `references` [EXTRACTED]
+- [[IsOptional_2]] - `references` [EXTRACTED]
+- [[IsString_3]] - `references` [EXTRACTED]
 - [[create-legal-hold.dto.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto

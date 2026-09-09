@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeRecipientsPage.tsx"
 type: "code"
-community: "api-client.ts"
+community: "button.tsx"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/buttontsx
 ---
 
 # RECIPIENT_CATEGORY_LABELS
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[MeRecipientsPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/buttontsx

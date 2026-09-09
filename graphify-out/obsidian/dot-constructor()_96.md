@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
+source_file: "dpdp-platform/backend/src/queues/breach-principal-notice-dispatch.processor.ts"
 type: "code"
-community: "CampaignsService"
-location: "L30"
+community: "breach-principal-notice-dispatch.processor.ts"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampaignsService
+  - community/breach-principal-notice-dispatchprocessorts
 ---
 
 # .constructor()
 
 ## Connections
-- [[CampaignsController]] - `method` [EXTRACTED]
-- [[CampaignsService]] - `references` [EXTRACTED]
+- [[BreachPrincipalNoticeDispatchProcessor]] - `method` [EXTRACTED]
+- [[BreachService]] - `references` [EXTRACTED]
+- [[CampaignSendJobData]] - `references` [EXTRACTED]
+- [[InjectQueue_6]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampaignsService
+#graphify/code #graphify/EXTRACTED #community/breach-principal-notice-dispatchprocessorts

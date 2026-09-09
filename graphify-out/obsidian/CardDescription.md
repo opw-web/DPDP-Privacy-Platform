@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/ui/card.tsx"
 type: "code"
-community: "api-client.ts"
+community: "react"
 location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/react
 ---
 
 # CardDescription
@@ -34,4 +34,4 @@ tags:
 - [[card.tsx]] - `contains` [EXTRACTED]
 - [[cn()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/react

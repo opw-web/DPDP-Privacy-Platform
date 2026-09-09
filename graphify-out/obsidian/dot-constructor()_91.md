@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/employees.controller.ts"
+source_file: "dpdp-platform/backend/src/queues/sdf-cycle-scan.processor.ts"
 type: "code"
-community: "EmployeesService"
-location: "L12"
+community: "sdf-cycle-scan.queue.ts"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeesService
+  - community/sdf-cycle-scanqueuets
 ---
 
 # .constructor()
 
 ## Connections
-- [[EmployeesController]] - `method` [EXTRACTED]
-- [[EmployeesService]] - `references` [EXTRACTED]
+- [[SdfCycleScanProcessor]] - `method` [EXTRACTED]
+- [[SdfCycleScanService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeesService
+#graphify/code #graphify/EXTRACTED #community/sdf-cycle-scanqueuets

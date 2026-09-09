@@ -8,33 +8,33 @@ members: 27
 **Members:** 27 nodes
 
 ## Members
-- [[dot-addAffected()_1]] - code - dpdp-platform/backend/src/modules/breaches/breach.service.ts
-- [[dot-candidateWhere()]] - code - dpdp-platform/backend/src/modules/breaches/breach.service.ts
-- [[dot-completeObligation()_1]] - code - dpdp-platform/backend/src/modules/breaches/breach.service.ts
-- [[dot-create()_30]] - code - dpdp-platform/backend/src/modules/breaches/breach.service.ts
-- [[dot-dispatchPrincipalNoticeCampaign()]] - code - dpdp-platform/backend/src/modules/breaches/breach.service.ts
-- [[dot-enqueue()_1]] - code - dpdp-platform/backend/src/queues/breach-principal-notice-dispatch.queue.ts
-- [[dot-get()_18]] - code - dpdp-platform/backend/src/modules/breaches/breach.service.ts
-- [[dot-list()_39]] - code - dpdp-platform/backend/src/modules/breaches/breach.service.ts
-- [[dot-notifyPrincipals()]] - code - dpdp-platform/backend/src/modules/breaches/breach.service.ts
-- [[dot-previewAffected()_1]] - code - dpdp-platform/backend/src/modules/breaches/breach.service.ts
-- [[dot-public()]] - code - dpdp-platform/backend/src/modules/breaches/breach.service.ts
-- [[dot-reconcilePrincipalNoticeDispatches()]] - code - dpdp-platform/backend/src/modules/breaches/breach.service.ts
-- [[dot-record()_1]] - code - dpdp-platform/backend/src/common/audit/audit.service.ts
-- [[dot-recordExtension()]] - code - dpdp-platform/backend/src/modules/breaches/breach.service.ts
-- [[dot-scanClock()]] - code - dpdp-platform/backend/src/modules/breaches/breach.service.ts
-- [[dot-update()_20]] - code - dpdp-platform/backend/src/modules/breaches/breach.service.ts
-- [[AffectedPreview]] - code - dpdp-platform/backend/src/modules/breaches/breach.types.ts
-- [[BreachService]] - code - dpdp-platform/backend/src/modules/breaches/breach.service.ts
-- [[Injectable_72]] - code
-- [[PublicBreach]] - code - dpdp-platform/backend/src/modules/breaches/breach.types.ts
-- [[PublicBreachAffectedPrincipal]] - code - dpdp-platform/backend/src/modules/breaches/breach.types.ts
-- [[PublicBreachObligation]] - code - dpdp-platform/backend/src/modules/breaches/breach.types.ts
-- [[asDate()]] - code - dpdp-platform/backend/src/modules/breaches/breach.service.ts
+- [[dot-applyMatch()]] - code - dpdp-platform/backend/src/modules/identity/linking.service.ts
+- [[dot-assertGuardianConsentEligible()]] - code - dpdp-platform/backend/src/modules/children/guardians.service.ts
+- [[dot-attachAvailableIdentifiers()]] - code - dpdp-platform/backend/src/modules/identity/linking.service.ts
+- [[dot-attachIdentifier()]] - code - dpdp-platform/backend/src/modules/identity/linking.service.ts
+- [[dot-candidateResults()]] - code - dpdp-platform/backend/src/modules/identity/linking.service.ts
+- [[dot-constructor()_86]] - code - dpdp-platform/backend/src/modules/identity/linking.service.ts
+- [[dot-createCandidate()]] - code - dpdp-platform/backend/src/modules/identity/linking.service.ts
+- [[dot-derive()]] - code - dpdp-platform/backend/src/modules/identity/age.service.ts
+- [[dot-mergeRecordIntoPrincipal()]] - code - dpdp-platform/backend/src/modules/identity/merge.service.ts
+- [[dot-nextPrincipalReferenceInTransaction()]] - code - dpdp-platform/backend/src/common/reference/reference.service.ts
+- [[dot-persistAndLink()]] - code - dpdp-platform/backend/src/modules/sync/sync-pipeline.service.ts
+- [[dot-rebuild()]] - code - dpdp-platform/backend/src/modules/identity/assembly.service.ts
+- [[dot-record()]] - code - dpdp-platform/backend/src/common/audit/audit.service.ts
+- [[dot-record()_1]] - code - dpdp-platform/backend/src/modules/retention/purpose-served.service.ts
+- [[dot-recordPersonalDataViewed()]] - code - dpdp-platform/backend/src/common/audit/access-log.service.ts
+- [[dot-rescrubFieldSample()]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts
+- [[dot-unmerge()]] - code - dpdp-platform/backend/src/modules/identity/merge.service.ts
+- [[dot-verifyScopedReferences()]] - code - dpdp-platform/backend/src/modules/identity/linking.service.ts
+- [[IdentifierOwnershipConflictError]] - code - dpdp-platform/backend/src/modules/identity/linking.service.ts
+- [[Injectable_53]] - code
+- [[LinkingService]] - code - dpdp-platform/backend/src/modules/identity/linking.service.ts
+- [[MatchResult]] - code - dpdp-platform/backend/src/modules/identity/matching.service.ts
+- [[ScopedTransactionClient]] - code - dpdp-platform/backend/src/common/prisma/scoped-transaction-client.ts
+- [[TenantScopedPrismaClient]] - code - dpdp-platform/backend/src/common/prisma/prisma.service.ts
 - [[assertNoForbiddenMetadata()]] - code - dpdp-platform/backend/src/common/audit/audit.service.ts
-- [[breach.types.ts]] - code - dpdp-platform/backend/src/modules/breaches/breach.types.ts
-- [[breachPrincipalNoticeDispatchJobId()]] - code - dpdp-platform/backend/src/queues/breach-principal-notice-dispatch.queue.ts
-- [[parseIds()]] - code - dpdp-platform/backend/src/modules/breaches/breach.service.ts
+- [[compareNewest()_1]] - code - dpdp-platform/backend/src/modules/identity/age.service.ts
+- [[initialPrincipalDisplayName()]] - code - dpdp-platform/backend/src/modules/identity/linking.service.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -44,68 +44,71 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_BreachesController]]
-- 9 edges to [[_COMMUNITY_RequirePermission]]
-- 7 edges to [[_COMMUNITY_@nestjsswagger]]
-- 6 edges to [[_COMMUNITY_queues.module.ts]]
-- 6 edges to [[_COMMUNITY_ScopedTransactionClient]]
-- 6 edges to [[_COMMUNITY_@prismaclient]]
-- 5 edges to [[_COMMUNITY_CampaignsService]]
-- 4 edges to [[_COMMUNITY_csvDocument]]
-- 4 edges to [[_COMMUNITY_SdfCycleScanService]]
-- 3 edges to [[_COMMUNITY_AffectedPrincipalsDto]]
+- 39 edges to [[_COMMUNITY_prisma.service.ts]]
+- 11 edges to [[_COMMUNITY_matching.service.ts]]
+- 7 edges to [[_COMMUNITY_principals.service.ts]]
+- 7 edges to [[_COMMUNITY_BreachService]]
+- 6 edges to [[_COMMUNITY_ErasureTaskService]]
+- 5 edges to [[_COMMUNITY_CandidatesService]]
+- 4 edges to [[_COMMUNITY_DataSourcesService]]
+- 4 edges to [[_COMMUNITY_guardians.service.ts]]
+- 4 edges to [[_COMMUNITY_step6-conflict-acceptance.e2e-spec.ts]]
+- 4 edges to [[_COMMUNITY_assembly.service.ts]]
+- 4 edges to [[_COMMUNITY_CampaignsService]]
+- 4 edges to [[_COMMUNITY_SyncPipelineService]]
+- 3 edges to [[_COMMUNITY_GuardiansService]]
+- 3 edges to [[_COMMUNITY_campaigns.service.ts]]
+- 3 edges to [[_COMMUNITY_identifier-ownership-lock.ts]]
+- 3 edges to [[_COMMUNITY_ConsentsService]]
 - 3 edges to [[_COMMUNITY_NotificationsService]]
-- 3 edges to [[_COMMUNITY_PurposesService]]
-- 3 edges to [[_COMMUNITY_CreateComplianceRuleDto]]
-- 3 edges to [[_COMMUNITY_principals.service.ts]]
+- 3 edges to [[_COMMUNITY_RequestsService]]
 - 3 edges to [[_COMMUNITY_NoticesService]]
-- 2 edges to [[_COMMUNITY_AuditService]]
-- 2 edges to [[_COMMUNITY_PrismaService]]
-- 2 edges to [[_COMMUNITY_BreachClockProcessor]]
-- 2 edges to [[_COMMUNITY_RetentionController]]
-- 2 edges to [[_COMMUNITY_GuardiansService]]
+- 3 edges to [[_COMMUNITY_csvDocument]]
+- 3 edges to [[_COMMUNITY_PurposesService]]
+- 3 edges to [[_COMMUNITY_ComplianceService]]
+- 3 edges to [[_COMMUNITY_ReplaceMappingsDto]]
+- 2 edges to [[_COMMUNITY_data-sources.service.ts]]
+- 2 edges to [[_COMMUNITY_CreateLegalHoldDto]]
+- 2 edges to [[_COMMUNITY_AccessReportService]]
+- 2 edges to [[_COMMUNITY_evidence-pack.service.ts]]
 - 2 edges to [[_COMMUNITY_transfers.service.ts]]
-- 2 edges to [[_COMMUNITY_RequestsService]]
-- 2 edges to [[_COMMUNITY_dot-update]]
 - 2 edges to [[_COMMUNITY_TemplatesService]]
+- 2 edges to [[_COMMUNITY_PrincipalEvidenceController]]
+- 2 edges to [[_COMMUNITY_TokenService]]
+- 2 edges to [[_COMMUNITY_CreateInformationRequestDto]]
 - 2 edges to [[_COMMUNITY_CreateVoluntaryUndertakingDto]]
 - 2 edges to [[_COMMUNITY_EmployeesService]]
-- 2 edges to [[_COMMUNITY_CreateInformationRequestDto]]
-- 2 edges to [[_COMMUNITY_SyncPipelineService]]
-- 2 edges to [[_COMMUNITY_TokenService]]
-- 2 edges to [[_COMMUNITY_CreateRecipientDto]]
+- 2 edges to [[_COMMUNITY_recipients.service.ts]]
 - 2 edges to [[_COMMUNITY_retention.service.ts]]
 - 2 edges to [[_COMMUNITY_CreateSecurityMeasureDto]]
-- 2 edges to [[_COMMUNITY_CreateSharingActivityDto]]
-- 1 edge to [[_COMMUNITY_access-report-render.ts]]
-- 1 edge to [[_COMMUNITY_UpdateBreachDto]]
-- 1 edge to [[_COMMUNITY_CompleteObligationDto]]
-- 1 edge to [[_COMMUNITY_ExtensionDto]]
-- 1 edge to [[_COMMUNITY_CreateBreachDto]]
+- 2 edges to [[_COMMUNITY_SharingService]]
+- 2 edges to [[_COMMUNITY_RetentionScanService]]
+- 1 edge to [[_COMMUNITY_mappings.service.ts]]
+- 1 edge to [[_COMMUNITY_notifications.service.ts]]
+- 1 edge to [[_COMMUNITY_requests.service.ts]]
+- 1 edge to [[_COMMUNITY_app.module.ts]]
+- 1 edge to [[_COMMUNITY_merge-unmerge.e2e-spec.ts]]
+- 1 edge to [[_COMMUNITY_@nestjscommon]]
 - 1 edge to [[_COMMUNITY_UpdateOrganizationDto]]
-- 1 edge to [[_COMMUNITY_AccessReportService]]
-- 1 edge to [[_COMMUNITY_ErasureTaskService]]
 - 1 edge to [[_COMMUNITY_CreateAlgorithmEntryDto]]
-- 1 edge to [[_COMMUNITY_canonicalJson]]
+- 1 edge to [[_COMMUNITY_AuditReadService]]
+- 1 edge to [[_COMMUNITY_CreateNoticeDto]]
 - 1 edge to [[_COMMUNITY_SourcePurposesService]]
 - 1 edge to [[_COMMUNITY_UpdateAlgorithmEntryDto]]
 - 1 edge to [[_COMMUNITY_SdfAssessmentService]]
-- 1 edge to [[_COMMUNITY_SyncQueueService]]
 - 1 edge to [[_COMMUNITY_CreateSdfAssessmentDto]]
-- 1 edge to [[_COMMUNITY_erasure-task.service.ts]]
-- 1 edge to [[_COMMUNITY_me-rights.service.ts]]
-- 1 edge to [[_COMMUNITY_ConsentsService]]
-- 1 edge to [[_COMMUNITY_audience.service.ts]]
-- 1 edge to [[_COMMUNITY_notices.service.ts]]
+- 1 edge to [[_COMMUNITY_ListPrincipalsDto]]
+- 1 edge to [[_COMMUNITY_age-status.service.ts]]
 - 1 edge to [[_COMMUNITY_CreateExemptionClaimDto]]
-- 1 edge to [[_COMMUNITY_data-sources.service.ts]]
-- 1 edge to [[_COMMUNITY_AgeStatusService]]
 - 1 edge to [[_COMMUNITY_UpdateRolePermissionsDto]]
-- 1 edge to [[_COMMUNITY_RetentionScanService]]
+- 1 edge to [[_COMMUNITY_me-rights.service.ts]]
+- 1 edge to [[_COMMUNITY_sdf-cycle-scan.queue.ts]]
+- 1 edge to [[_COMMUNITY_dot-unmerge]]
+- 1 edge to [[_COMMUNITY_normalization.service.ts]]
 
 ## Top bridge nodes
-- [[dot-record()_1]] - degree 94, connects to 47 communities
-- [[BreachService]] - degree 26, connects to 7 communities
-- [[dot-create()_30]] - degree 12, connects to 5 communities
-- [[dot-update()_20]] - degree 12, connects to 3 communities
-- [[dot-recordExtension()]] - degree 9, connects to 3 communities
+- [[dot-record()]] - degree 94, connects to 48 communities
+- [[ScopedTransactionClient]] - degree 58, connects to 18 communities
+- [[dot-persistAndLink()]] - degree 12, connects to 5 communities
+- [[LinkingService]] - degree 15, connects to 4 communities
+- [[dot-recordPersonalDataViewed()]] - degree 7, connects to 4 communities

@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/evidence-pack.service.ts"
 type: "code"
-community: "AuditService"
+community: "evidence-pack.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/evidence-packservicets
 ---
 
 # evidence-pack.service.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[AuditExportService]] - `imports` [EXTRACTED]
 - [[AuditReadService]] - `imports` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
@@ -38,4 +38,4 @@ tags:
 - [[withCsvLetterhead()]] - `imports` [EXTRACTED]
 - [[zip-writer.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/evidence-packservicets

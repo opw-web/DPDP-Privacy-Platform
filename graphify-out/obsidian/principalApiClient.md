@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/lib/api-client.ts"
 type: "code"
-community: "api-client.ts"
+community: "button.tsx"
 location: "L221"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/buttontsx
 ---
 
 # principalApiClient
@@ -29,4 +29,4 @@ tags:
 - [[api-client.ts]] - `contains` [EXTRACTED]
 - [[libauth.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/buttontsx

@@ -71,13 +71,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_@prismaclient]]
-- 2 edges to [[_COMMUNITY_PrismaService]]
-- 1 edge to [[_COMMUNITY_@nestjscommon]]
+- 6 edges to [[_COMMUNITY_@nestjscommon]]
+- 5 edges to [[_COMMUNITY_prisma.service.ts]]
 
 ## Top bridge nodes
 - [[tenant.extension.ts]] - degree 28, connects to 2 communities
-- [[prisma.service.js]] - degree 9, connects to 2 communities
-- [[tenant.extension.js]] - degree 22, connects to 1 community
+- [[tenant.extension.js]] - degree 22, connects to 2 communities
+- [[prisma.service.js]] - degree 9, connects to 1 community
 - [[tenant-scoped-models.ts]] - degree 9, connects to 1 community
 - [[tenant-scoped-models.spec.ts]] - degree 6, connects to 1 community

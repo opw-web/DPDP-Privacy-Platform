@@ -12,7 +12,7 @@ tags:
 # toPublicExemptionClaim()
 
 ## Connections
-- [[dot-create()_29]] - `calls` [EXTRACTED]
+- [[dot-create()_28]] - `calls` [EXTRACTED]
 - [[dot-list()_38]] - `indirect_call` [INFERRED]
 - [[child-exemptions.service.ts]] - `contains` [EXTRACTED]
 

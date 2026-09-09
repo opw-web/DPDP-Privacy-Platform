@@ -1,22 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notices/notices.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts"
 type: "code"
-community: "NoticesService"
-location: "L50"
+community: "TemplatesService"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NoticesService
+  - community/TemplatesService
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_26]] - `calls` [INFERRED]
-- [[Body_10]] - `references` [EXTRACTED]
-- [[CreateNoticeDto]] - `references` [EXTRACTED]
-- [[NoticesController]] - `method` [EXTRACTED]
-- [[Post_9]] - `references` [EXTRACTED]
+- [[dot-create()_14]] - `calls` [INFERRED]
+- [[Body_9]] - `references` [EXTRACTED]
+- [[CreateTemplateDto]] - `references` [EXTRACTED]
+- [[Post_7]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
+- [[TemplatesController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NoticesService
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

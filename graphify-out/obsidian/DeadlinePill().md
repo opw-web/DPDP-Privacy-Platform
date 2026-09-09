@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/DeadlinePill.tsx"
 type: "code"
-community: "DeadlinePill.tsx"
+community: "cn"
 location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DeadlinePilltsx
+  - community/cn
 ---
 
 # DeadlinePill()
@@ -20,4 +20,4 @@ tags:
 - [[formatDeadlineText()]] - `calls` [EXTRACTED]
 - [[useCountdown()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DeadlinePilltsx
+#graphify/code #graphify/EXTRACTED #community/cn

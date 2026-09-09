@@ -9,14 +9,14 @@ members: 27
 
 ## Members
 - [[@nestjsbullmq]] - code - dpdp-platform/backend/package.json
-- [[@nestjscommon_1]] - code - dpdp-platform/backend/package.json
+- [[@nestjscommon]] - code - dpdp-platform/backend/package.json
 - [[@nestjsconfig_1]] - code - dpdp-platform/backend/package.json
 - [[@nestjscore_1]] - code - dpdp-platform/backend/package.json
 - [[@nestjsplatform-express]] - code - dpdp-platform/backend/package.json
 - [[@nestjsswagger]] - code - dpdp-platform/backend/package.json
-- [[@prismaclient_1]] - code - dpdp-platform/backend/package.json
-- [[argon2_1]] - code - dpdp-platform/backend/package.json
-- [[bullmq]] - code - dpdp-platform/backend/package.json
+- [[@prismaclient]] - code - dpdp-platform/backend/package.json
+- [[argon2]] - code - dpdp-platform/backend/package.json
+- [[bullmq_1]] - code - dpdp-platform/backend/package.json
 - [[class-transformer]] - code - dpdp-platform/backend/package.json
 - [[class-validator]] - code - dpdp-platform/backend/package.json
 - [[cookie-parser]] - code - dpdp-platform/backend/package.json

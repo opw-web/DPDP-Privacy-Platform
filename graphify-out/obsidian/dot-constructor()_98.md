@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/campaign-send.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/campaign-send.queue.ts"
 type: "code"
-community: "CampaignsService"
-location: "L64"
+community: "breach-principal-notice-dispatch.processor.ts"
+location: "L67"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampaignsService
+  - community/breach-principal-notice-dispatchprocessorts
 ---
 
 # .constructor()
 
 ## Connections
-- [[CampaignSendProcessor]] - `method` [EXTRACTED]
-- [[CampaignsService]] - `references` [EXTRACTED]
-- [[NotificationsService]] - `references` [EXTRACTED]
+- [[CampaignSendQueueService]] - `method` [EXTRACTED]
+- [[InjectQueue_7]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampaignsService
+#graphify/code #graphify/EXTRACTED #community/breach-principal-notice-dispatchprocessorts

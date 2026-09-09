@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreatePurposeDto"
+community: "CompleteObligationDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreatePurposeDto
+  - community/CompleteObligationDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[CreatePurposeDto]] - `references` [EXTRACTED]
+- [[CompleteObligationDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreatePurposeDto
+#graphify/code #graphify/EXTRACTED #community/CompleteObligationDto

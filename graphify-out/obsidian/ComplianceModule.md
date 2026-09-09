@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/compliance/compliance.module.ts"
 type: "code"
-community: "@nestjs/common"
+community: "app.module.ts"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/appmodulets
 ---
 
 # ComplianceModule
@@ -20,4 +20,4 @@ tags:
 - [[retention.module.ts]] - `imports` [EXTRACTED]
 - [[sdf.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/appmodulets

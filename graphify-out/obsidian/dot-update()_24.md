@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-assertPurposeExists()]] - `calls` [EXTRACTED]
-- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
 - [[dot-update()_23]] - `calls` [INFERRED]
 - [[RetentionService]] - `method` [EXTRACTED]
 - [[UpdateRetentionPolicyDto]] - `references` [EXTRACTED]

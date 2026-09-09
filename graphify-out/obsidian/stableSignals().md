@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/matching.service.ts"
 type: "code"
-community: "ScopedTransactionClient"
+community: "matching.service.ts"
 location: "L97"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScopedTransactionClient
+  - community/matchingservicets
 ---
 
 # stableSignals()
@@ -15,4 +15,4 @@ tags:
 - [[dot-match()]] - `calls` [EXTRACTED]
 - [[matching.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient
+#graphify/code #graphify/EXTRACTED #community/matchingservicets

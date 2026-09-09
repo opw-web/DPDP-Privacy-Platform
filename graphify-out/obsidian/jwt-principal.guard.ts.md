@@ -12,7 +12,7 @@ tags:
 # jwt-principal.guard.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[JwtPrincipalGuard]] - `contains` [EXTRACTED]
 - [[PrincipalActor]] - `contains` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]

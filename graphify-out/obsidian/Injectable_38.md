@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "principals.service.ts"
+community: "ComplianceService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principalsservicets
+  - community/ComplianceService
 ---
 
 # Injectable
 
 ## Connections
-- [[PrincipalEvidenceService]] - `references` [EXTRACTED]
+- [[ComplianceService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principalsservicets
+#graphify/code #graphify/EXTRACTED #community/ComplianceService

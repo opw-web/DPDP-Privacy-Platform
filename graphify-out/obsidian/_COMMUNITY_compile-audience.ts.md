@@ -43,11 +43,10 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 14 edges to [[_COMMUNITY_audience.service.ts]]
-- 2 edges to [[_COMMUNITY_@nestjsswagger]]
+- 3 edges to [[_COMMUNITY_@nestjscommon]]
 - 2 edges to [[_COMMUNITY_campaigns.service.ts]]
-- 1 edge to [[_COMMUNITY_@prismaclient]]
 
 ## Top bridge nodes
-- [[compile-audience.ts]] - degree 36, connects to 4 communities
+- [[compile-audience.ts]] - degree 36, connects to 3 communities
 - [[AudienceFilterError]] - degree 18, connects to 3 communities
 - [[compileGroup()]] - degree 5, connects to 1 community

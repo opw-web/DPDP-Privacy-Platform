@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "AssignRequestDto"
+community: "@nestjs/common"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AssignRequestDto
+  - community/nestjs/common
 ---
 
 # ApiProperty
 
 ## Connections
-- [[AssignRequestDto]] - `references` [EXTRACTED]
+- [[EmployeeMeResponseDto]] - `references` [EXTRACTED]
+- [[EmployeeMeRoleDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AssignRequestDto
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

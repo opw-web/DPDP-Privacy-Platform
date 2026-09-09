@@ -11,6 +11,6 @@ tags:
 # Injectable
 
 ## Connections
-- [[PrincipalAuthService]] - `references` [EXTRACTED]
+- [[EmployeeAuthService]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/TokenService

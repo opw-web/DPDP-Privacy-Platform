@@ -12,7 +12,7 @@ tags:
 # sortedUnique()
 
 ## Connections
-- [[dot-exportCsv()_1]] - `calls` [EXTRACTED]
+- [[dot-exportCsv()_2]] - `calls` [EXTRACTED]
 - [[ropa-export.service.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/csvDocument

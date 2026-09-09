@@ -13,15 +13,15 @@ tags:
 
 ## Connections
 - [[dot-clearRefreshCookie()]] - `method` [EXTRACTED]
-- [[dot-constructor()_128]] - `method` [EXTRACTED]
+- [[dot-constructor()_136]] - `method` [EXTRACTED]
 - [[dot-isProduction()]] - `method` [EXTRACTED]
 - [[dot-login()]] - `method` [EXTRACTED]
 - [[dot-logout()]] - `method` [EXTRACTED]
-- [[dot-me()]] - `method` [EXTRACTED]
+- [[dot-me()_2]] - `method` [EXTRACTED]
 - [[dot-refresh()]] - `method` [EXTRACTED]
 - [[dot-setRefreshCookie()]] - `method` [EXTRACTED]
-- [[ApiTags_34]] - `references` [EXTRACTED]
-- [[Controller_35]] - `references` [EXTRACTED]
+- [[ApiTags_33]] - `references` [EXTRACTED]
+- [[Controller_34]] - `references` [EXTRACTED]
 - [[auth.module.ts]] - `imports` [EXTRACTED]
 - [[employee-auth.controller.ts]] - `contains` [EXTRACTED]
 

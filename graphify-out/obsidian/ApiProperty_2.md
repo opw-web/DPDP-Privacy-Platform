@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "employee-auth.controller.ts"
+community: "CreateLegalHoldDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employee-authcontrollerts
+  - community/CreateLegalHoldDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[EmployeeMeResponseDto]] - `references` [EXTRACTED]
-- [[EmployeeMeRoleDto]] - `references` [EXTRACTED]
+- [[CreateLegalHoldDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employee-authcontrollerts
+#graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateExemptionClaimDto"
+community: "EmployeeAuthController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateExemptionClaimDto
+  - community/EmployeeAuthController
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateExemptionClaimDto]] - `references` [EXTRACTED]
+- [[EmployeeLoginDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateExemptionClaimDto
+#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController

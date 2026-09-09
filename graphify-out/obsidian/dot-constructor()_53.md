@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
+source_file: "dpdp-platform/backend/src/common/guards/jwt-employee.guard.ts"
 type: "code"
-community: "PurposesController"
-location: "L13"
+community: "JwtEmployeeGuard"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PurposesController
+  - community/JwtEmployeeGuard
 ---
 
 # .constructor()
 
 ## Connections
-- [[PurposesController]] - `method` [EXTRACTED]
-- [[PurposesService]] - `references` [EXTRACTED]
+- [[JwtEmployeeGuard]] - `method` [EXTRACTED]
+- [[TokenService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PurposesController
+#graphify/code #graphify/EXTRACTED #community/JwtEmployeeGuard

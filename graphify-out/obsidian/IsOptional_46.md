@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateExemptionClaimDto"
+community: "BreachService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateExemptionClaimDto
+  - community/BreachService
 ---
 
 # IsOptional
 
 ## Connections
-- [[ListExemptionClaimsDto]] - `references` [EXTRACTED]
+- [[AffectedPrincipalsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateExemptionClaimDto
+#graphify/code #graphify/EXTRACTED #community/BreachService

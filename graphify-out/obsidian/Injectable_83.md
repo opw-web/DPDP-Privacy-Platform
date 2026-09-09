@@ -11,6 +11,6 @@ tags:
 # Injectable
 
 ## Connections
-- [[JwtAnyActorGuard]] - `references` [EXTRACTED]
+- [[TokenService]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/TokenService

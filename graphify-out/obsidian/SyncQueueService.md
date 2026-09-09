@@ -12,16 +12,16 @@ tags:
 # SyncQueueService
 
 ## Connections
-- [[dot-constructor()_125]] - `references` [EXTRACTED]
-- [[dot-constructor()_50]] - `references` [EXTRACTED]
-- [[dot-constructor()_105]] - `references` [EXTRACTED]
-- [[dot-constructor()_72]] - `method` [EXTRACTED]
+- [[dot-constructor()_54]] - `references` [EXTRACTED]
+- [[dot-constructor()_38]] - `references` [EXTRACTED]
+- [[dot-constructor()_80]] - `references` [EXTRACTED]
+- [[dot-constructor()_30]] - `method` [EXTRACTED]
 - [[dot-listScheduledDataSourceIds()]] - `method` [EXTRACTED]
 - [[dot-removeSchedule()]] - `method` [EXTRACTED]
 - [[dot-schedulerCount()]] - `method` [EXTRACTED]
-- [[dot-trigger()_1]] - `method` [EXTRACTED]
+- [[dot-trigger()]] - `method` [EXTRACTED]
 - [[dot-upsertSchedule()]] - `method` [EXTRACTED]
-- [[Injectable_43]] - `references` [EXTRACTED]
+- [[Injectable_50]] - `references` [EXTRACTED]
 - [[data-sources.service.ts]] - `imports` [EXTRACTED]
 - [[queues.module.ts]] - `imports` [EXTRACTED]
 - [[schedule-reconciliation.service.ts]] - `imports` [EXTRACTED]

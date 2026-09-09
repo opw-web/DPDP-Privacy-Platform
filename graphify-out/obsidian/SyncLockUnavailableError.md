@@ -12,7 +12,7 @@ tags:
 # SyncLockUnavailableError
 
 ## Connections
-- [[dot-constructor()_109]] - `method` [EXTRACTED]
+- [[dot-constructor()_107]] - `method` [EXTRACTED]
 - [[dot-runInTenantContext()]] - `calls` [EXTRACTED]
 - [[sync-error.spec.ts]] - `imports` [EXTRACTED]
 - [[sync-error.ts]] - `contains` [EXTRACTED]

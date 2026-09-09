@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/components/PortalPageHeader.tsx"
 type: "code"
-community: "api-client.ts"
+community: "button.tsx"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/buttontsx
 ---
 
 # PortalPageHeader()
@@ -20,4 +20,4 @@ tags:
 - [[MeRequestsPage.tsx]] - `imports` [EXTRACTED]
 - [[PortalPageHeader.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/buttontsx

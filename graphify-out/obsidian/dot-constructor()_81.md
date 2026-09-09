@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/unmerge.controller.ts"
+source_file: "dpdp-platform/backend/src/queues/sdf-cycle-scan.queue.ts"
 type: "code"
-community: "RequirePermission"
-location: "L20"
+community: "SyncQueueService"
+location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/SyncQueueService
 ---
 
 # .constructor()
 
 ## Connections
-- [[MergeService]] - `references` [EXTRACTED]
-- [[UnmergeController]] - `method` [EXTRACTED]
+- [[dot-register()]] - `calls` [INFERRED]
+- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
+- [[InjectQueue_5]] - `references` [EXTRACTED]
+- [[SdfCycleScanQueueService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

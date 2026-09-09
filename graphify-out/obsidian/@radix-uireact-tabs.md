@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/package.json"
-type: "code"
-community: "dependencies"
+type: "concept"
+community: "data-sources-api.ts"
 location: "L22"
 tags:
-  - graphify/code
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/data-sources-apits
 ---
 
 # @radix-ui/react-tabs
 
 ## Connections
-- [[dependencies]] - `contains` [EXTRACTED]
+- [[frontendpackage.json]] - `imports` [EXTRACTED]
+- [[tabs.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dependencies
+#graphify/concept #graphify/EXTRACTED #community/data-sources-apits

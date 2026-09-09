@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ListSyncJobsQueryDto"
+community: "UpdateAlgorithmEntryDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ListSyncJobsQueryDto
+  - community/UpdateAlgorithmEntryDto
 ---
 
 # IsString
 
 ## Connections
-- [[ListSyncJobsQueryDto]] - `references` [EXTRACTED]
+- [[UpdateAlgorithmEntryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ListSyncJobsQueryDto
+#graphify/code #graphify/EXTRACTED #community/UpdateAlgorithmEntryDto

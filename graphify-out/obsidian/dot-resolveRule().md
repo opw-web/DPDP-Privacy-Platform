@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
 type: "code"
-community: "SdfCycleScanService"
+community: "RetentionScanService"
 location: "L235"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/SdfCycleScanService
+  - community/RetentionScanService
 ---
 
 # .resolveRule()
 
 ## Connections
+- [[dot-create()_29]] - `calls` [INFERRED]
 - [[dot-create()_30]] - `calls` [INFERRED]
-- [[dot-create()_19]] - `calls` [INFERRED]
 - [[dot-createFromTrigger()]] - `calls` [INFERRED]
 - [[dot-createInactivityTasks()]] - `calls` [INFERRED]
 - [[dot-getGaps()_2]] - `calls` [INFERRED]
@@ -22,4 +22,4 @@ tags:
 - [[dot-runForCurrentOrganization()_2]] - `calls` [INFERRED]
 - [[ComplianceService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/SdfCycleScanService
+#graphify/code #graphify/INFERRED #community/RetentionScanService

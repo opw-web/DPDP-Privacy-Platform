@@ -12,8 +12,8 @@ tags:
 # data-sources.service.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
-- [[@prismaclient]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[CONNECTOR_SOURCE_SELECT]] - `contains` [EXTRACTED]
 - [[Connector]] - `imports` [EXTRACTED]
@@ -41,7 +41,7 @@ tags:
 - [[data-sources.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[data-sources.module.ts]] - `imports_from` [EXTRACTED]
 - [[duplicateNameMessage()]] - `contains` [EXTRACTED]
-- [[isUniqueConstraintViolation()_1]] - `contains` [EXTRACTED]
+- [[isUniqueConstraintViolation()_2]] - `contains` [EXTRACTED]
 - [[mappings.service.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[scoped-transaction-client.ts]] - `imports_from` [EXTRACTED]

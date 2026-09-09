@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdateBreachDto"
+community: "CreateCampaignDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateBreachDto
+  - community/CreateCampaignDto
 ---
 
 # IsEnum
 
 ## Connections
-- [[UpdateBreachDto]] - `references` [EXTRACTED]
+- [[CreateCampaignDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateBreachDto
+#graphify/code #graphify/EXTRACTED #community/CreateCampaignDto

@@ -12,8 +12,8 @@ tags:
 # requests.service.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
-- [[@prismaclient]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[APPLIES_TO_BY_REQUEST_TYPE]] - `imports` [EXTRACTED]
 - [[AddNoteDto]] - `imports` [EXTRACTED]
 - [[AuditAction]] - `imports` [EXTRACTED]
@@ -27,7 +27,7 @@ tags:
 - [[DeadlineScanOrgResult]] - `contains` [EXTRACTED]
 - [[ERASURE_STATUTORY_GROUND_TEXT]] - `imports` [EXTRACTED]
 - [[ErasureChecklistSubmission]] - `imports` [EXTRACTED]
-- [[ErasureCompletionHolders_1]] - `contains` [EXTRACTED]
+- [[ErasureCompletionHolders]] - `contains` [EXTRACTED]
 - [[ErasureStatutoryGround]] - `imports` [EXTRACTED]
 - [[ErasureTaskService]] - `imports` [EXTRACTED]
 - [[EscalateRequestDto]] - `imports` [EXTRACTED]

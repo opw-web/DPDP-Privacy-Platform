@@ -16,7 +16,7 @@ tags:
 - [[DataSourcesController]] - `method` [EXTRACTED]
 - [[Delete]] - `references` [EXTRACTED]
 - [[HttpCode_2]] - `references` [EXTRACTED]
-- [[Param_22]] - `references` [EXTRACTED]
+- [[Param_21]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/DataSourcesController

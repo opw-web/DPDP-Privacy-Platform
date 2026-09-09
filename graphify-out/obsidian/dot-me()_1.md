@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/auth/principal-auth.service.ts"
 type: "code"
 community: "Public"
-location: "L130"
+location: "L362"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,12 +12,8 @@ tags:
 # .me()
 
 ## Connections
-- [[dot-me()_2]] - `calls` [INFERRED]
-- [[CurrentPrincipal]] - `references` [EXTRACTED]
-- [[Get_6]] - `references` [EXTRACTED]
+- [[dot-me()]] - `calls` [INFERRED]
 - [[PrincipalActor]] - `references` [EXTRACTED]
-- [[PrincipalAuthController]] - `method` [EXTRACTED]
-- [[Public()]] - `references` [EXTRACTED]
-- [[UseGuards_1]] - `references` [EXTRACTED]
+- [[PrincipalAuthService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Public

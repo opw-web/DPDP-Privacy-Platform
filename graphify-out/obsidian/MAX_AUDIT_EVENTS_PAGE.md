@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/audit/dto/list-audit-events.dto.ts"
 type: "code"
-community: "audit-read.service.ts"
+community: "guardians.service.ts"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-readservicets
+  - community/guardiansservicets
 ---
 
 # MAX_AUDIT_EVENTS_PAGE
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[list-audit-events.dto.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-readservicets
+#graphify/code #graphify/EXTRACTED #community/guardiansservicets

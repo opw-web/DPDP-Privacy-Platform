@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/RuleBasisChip.tsx"
 type: "code"
-community: "api-client.ts"
+community: "AlgorithmRegisterPanel.tsx"
 location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/AlgorithmRegisterPaneltsx
 ---
 
 # RuleBasisChip()
@@ -20,4 +20,4 @@ tags:
 - [[SdfPage.tsx]] - `imports` [EXTRACTED]
 - [[cn()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterPaneltsx

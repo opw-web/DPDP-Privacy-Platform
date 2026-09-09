@@ -1,25 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sync/sync-pipeline.service.ts"
+source_file: "dpdp-platform/backend/src/modules/consents/me-consents.controller.ts"
 type: "code"
-community: "AuditService"
-location: "L172"
+community: "SetMyConsentDto"
+location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/SetMyConsentDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[AgeService]] - `references` [EXTRACTED]
-- [[AssemblyService]] - `references` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
-- [[DataSourcesService]] - `references` [EXTRACTED]
-- [[LinkingService]] - `references` [EXTRACTED]
-- [[MatchingService]] - `references` [EXTRACTED]
-- [[NormalizationService]] - `references` [EXTRACTED]
-- [[SyncLockService]] - `references` [EXTRACTED]
-- [[SyncPipelineService]] - `method` [EXTRACTED]
+- [[ConsentsService]] - `references` [EXTRACTED]
+- [[MeConsentsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/SetMyConsentDto

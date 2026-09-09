@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "MeRightsService"
+community: "ConsentsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeRightsService
+  - community/ConsentsService
 ---
 
 # Body
 
 ## Connections
-- [[dot-commentOnRequest()]] - `references` [EXTRACTED]
-- [[dot-createRequest()]] - `references` [EXTRACTED]
-- [[dot-upsertNomination()]] - `references` [EXTRACTED]
+- [[dot-recordImportedConsent()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeRightsService
+#graphify/code #graphify/EXTRACTED #community/ConsentsService

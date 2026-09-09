@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
 type: "code"
-community: "CreateComplianceRuleDto"
+community: "ComplianceService"
 location: "L129"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateComplianceRuleDto
+  - community/ComplianceService
 ---
 
 # serializeDiffValue()
@@ -15,4 +15,4 @@ tags:
 - [[compliance.service.ts]] - `contains` [EXTRACTED]
 - [[diffRules()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto
+#graphify/code #graphify/EXTRACTED #community/ComplianceService

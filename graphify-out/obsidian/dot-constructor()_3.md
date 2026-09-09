@@ -1,23 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
+source_file: "dpdp-platform/backend/src/modules/requests/requests.controller.ts"
 type: "code"
-community: "AuditService"
-location: "L133"
+community: "AccessReportService"
+location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/AccessReportService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[BreachPrincipalNoticeDispatchQueueService]] - `references` [EXTRACTED]
-- [[BreachService]] - `method` [EXTRACTED]
-- [[CampaignsService]] - `references` [EXTRACTED]
-- [[ComplianceService]] - `references` [EXTRACTED]
-- [[NotificationsService]] - `references` [EXTRACTED]
-- [[ReferenceService]] - `references` [EXTRACTED]
+- [[AccessReportService]] - `references` [EXTRACTED]
+- [[RequestsController]] - `method` [EXTRACTED]
+- [[RequestsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/AccessReportService

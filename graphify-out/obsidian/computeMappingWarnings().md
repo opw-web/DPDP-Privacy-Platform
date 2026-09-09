@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/mapping-warnings.ts"
 type: "code"
-community: "data-sources.service.ts"
+community: "ReplaceMappingsDto"
 location: "L87"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesservicets
+  - community/ReplaceMappingsDto
 ---
 
 # computeMappingWarnings()
@@ -19,4 +19,4 @@ tags:
 - [[mappings.service.ts]] - `imports` [EXTRACTED]
 - [[source-purposes.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets
+#graphify/code #graphify/EXTRACTED #community/ReplaceMappingsDto

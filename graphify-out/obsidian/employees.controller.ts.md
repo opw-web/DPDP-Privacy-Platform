@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/employees/employees.controller.ts"
 type: "code"
-community: "@nestjs/swagger"
+community: "@nestjs/common"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/swagger
+  - community/nestjs/common
 ---
 
 # employees.controller.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[CreateEmployeeDto]] - `imports` [EXTRACTED]
 - [[EmployeesController]] - `contains` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[reset-employee-password.dto.ts]] - `imports_from` [EXTRACTED]
 - [[update-employee.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/swagger
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

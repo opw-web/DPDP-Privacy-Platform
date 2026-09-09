@@ -1,24 +1,24 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/breaches/breaches.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/children/child-exemptions.controller.ts"
 type: "code"
-community: "BreachesController"
-location: "L65"
+community: "CreateExemptionClaimDto"
+location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BreachesController
+  - community/CreateExemptionClaimDto
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_30]] - `calls` [INFERRED]
+- [[dot-create()_28]] - `calls` [INFERRED]
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[Actor]] - `references` [EXTRACTED]
 - [[Body_20]] - `references` [EXTRACTED]
-- [[BreachesController]] - `method` [EXTRACTED]
-- [[CreateBreachDto]] - `references` [EXTRACTED]
+- [[ChildExemptionsController]] - `method` [EXTRACTED]
+- [[CreateExemptionClaimDto]] - `references` [EXTRACTED]
+- [[CurrentActor]] - `references` [EXTRACTED]
 - [[Post_21]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BreachesController
+#graphify/code #graphify/EXTRACTED #community/CreateExemptionClaimDto

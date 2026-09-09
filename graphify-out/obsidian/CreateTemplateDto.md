@@ -1,29 +1,29 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/messaging/templates/dto/create-template.dto.ts"
 type: "code"
-community: "TemplatesService"
+community: "CreateTemplateDto"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/CreateTemplateDto
 ---
 
 # CreateTemplateDto
 
 ## Connections
-- [[dot-create()_10]] - `references` [EXTRACTED]
-- [[dot-create()_11]] - `references` [EXTRACTED]
-- [[ApiProperty_24]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_28]] - `references` [EXTRACTED]
+- [[dot-create()_13]] - `references` [EXTRACTED]
+- [[dot-create()_14]] - `references` [EXTRACTED]
+- [[ApiProperty_15]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_18]] - `references` [EXTRACTED]
 - [[ArrayUnique_2]] - `references` [EXTRACTED]
-- [[IsArray_13]] - `references` [EXTRACTED]
-- [[IsEnum_14]] - `references` [EXTRACTED]
-- [[IsOptional_30]] - `references` [EXTRACTED]
-- [[IsString_36]] - `references` [EXTRACTED]
-- [[MinLength_27]] - `references` [EXTRACTED]
+- [[IsArray_8]] - `references` [EXTRACTED]
+- [[IsEnum_11]] - `references` [EXTRACTED]
+- [[IsOptional_19]] - `references` [EXTRACTED]
+- [[IsString_23]] - `references` [EXTRACTED]
+- [[MinLength_18]] - `references` [EXTRACTED]
 - [[create-template.dto.ts]] - `contains` [EXTRACTED]
 - [[templates.controller.ts]] - `imports` [EXTRACTED]
 - [[templates.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/CreateTemplateDto

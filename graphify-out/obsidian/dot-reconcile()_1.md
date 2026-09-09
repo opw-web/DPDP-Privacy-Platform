@@ -1,18 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/mvp2-schedules.ts"
+source_file: "dpdp-platform/backend/src/queues/schedule-reconciliation.service.ts"
 type: "code"
-community: "queues.module.ts"
-location: "L64"
+community: "SyncQueueService"
+location: "L113"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/queuesmodulets
+  - graphify/INFERRED
+  - community/SyncQueueService
 ---
 
 # .reconcile()
 
 ## Connections
-- [[dot-reconcileAtBoot()]] - `calls` [INFERRED]
-- [[Mvp2ScheduleReconciliationService]] - `method` [EXTRACTED]
+- [[dot-listScheduledDataSourceIds()]] - `calls` [INFERRED]
+- [[dot-reconcileAtBoot()]] - `calls` [EXTRACTED]
+- [[dot-removeSchedule()]] - `calls` [INFERRED]
+- [[dot-upsertSchedule()]] - `calls` [INFERRED]
+- [[ScheduleReconciliationService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/INFERRED #community/SyncQueueService

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx"
 type: "code"
-community: "AuditPage.tsx"
+community: "PrincipalEvidencePage.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditPagetsx
+  - community/PrincipalEvidencePagetsx
 ---
 
 # MessagingCampaignDetailPage.tsx
@@ -56,4 +56,4 @@ tags:
 - [[table.tsx]] - `imports_from` [EXTRACTED]
 - [[useEmployeeAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditPagetsx
+#graphify/code #graphify/EXTRACTED #community/PrincipalEvidencePagetsx

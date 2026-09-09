@@ -12,10 +12,10 @@ tags:
 # .ropaCsv()
 
 ## Connections
-- [[dot-exportCsv()_1]] - `calls` [INFERRED]
+- [[dot-exportCsv()_2]] - `calls` [INFERRED]
 - [[Get_10]] - `references` [EXTRACTED]
 - [[InventoryController]] - `method` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[Res_2]] - `references` [EXTRACTED]
+- [[Res_4]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/inventoryservicets

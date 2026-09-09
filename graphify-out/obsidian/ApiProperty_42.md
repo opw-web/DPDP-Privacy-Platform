@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "EmployeeAuthController"
+community: "ChangeStatusDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeeAuthController
+  - community/ChangeStatusDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[EmployeeLoginDto]] - `references` [EXTRACTED]
+- [[ChangeStatusDto]] - `references` [EXTRACTED]
+- [[ErasureProcessorChecklistDto]] - `references` [EXTRACTED]
+- [[ErasureSystemChecklistDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController
+#graphify/code #graphify/EXTRACTED #community/ChangeStatusDto

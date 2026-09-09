@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/campaign-send.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/sdf-cycle-scan.processor.ts"
 type: "code"
-community: "CampaignsService"
-location: "L72"
+community: "sdf-cycle-scan.queue.ts"
+location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampaignsService
+  - community/sdf-cycle-scanqueuets
 ---
 
 # .process()
 
 ## Connections
-- [[dot-deliverRecipient()]] - `calls` [INFERRED]
-- [[CampaignSendJobData]] - `references` [EXTRACTED]
-- [[CampaignSendProcessor]] - `method` [EXTRACTED]
+- [[dot-runForAllOrganizations()_2]] - `calls` [INFERRED]
+- [[SdfCycleScanJobData]] - `references` [EXTRACTED]
+- [[SdfCycleScanProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampaignsService
+#graphify/code #graphify/EXTRACTED #community/sdf-cycle-scanqueuets

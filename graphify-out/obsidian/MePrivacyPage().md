@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MePrivacyPage.tsx"
 type: "code"
-community: "router.tsx"
+community: "button.tsx"
 location: "L67"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/buttontsx
 ---
 
 # MePrivacyPage()
@@ -16,4 +16,4 @@ tags:
 - [[router.tsx]] - `imports` [EXTRACTED]
 - [[stringOrUndefined()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/buttontsx

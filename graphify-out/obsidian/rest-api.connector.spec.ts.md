@@ -12,7 +12,7 @@ tags:
 # rest-api.connector.spec.ts
 
 ## Connections
-- [[@prismaclient]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[InvalidCursorError]] - `imports` [EXTRACTED]
 - [[MockHttpServer]] - `imports` [EXTRACTED]
 - [[PageCapExceededError_1]] - `imports` [EXTRACTED]

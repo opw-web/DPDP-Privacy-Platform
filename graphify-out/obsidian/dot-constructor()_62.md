@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts"
+source_file: "dpdp-platform/backend/src/queues/breach-clock.processor.ts"
 type: "code"
-community: "TemplatesService"
-location: "L18"
+community: "BreachClockProcessor"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/BreachClockProcessor
 ---
 
 # .constructor()
 
 ## Connections
-- [[TemplatesController]] - `method` [EXTRACTED]
-- [[TemplatesService]] - `references` [EXTRACTED]
+- [[BreachClockProcessor]] - `method` [EXTRACTED]
+- [[BreachService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/BreachClockProcessor

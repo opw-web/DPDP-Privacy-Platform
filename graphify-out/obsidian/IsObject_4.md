@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AffectedPrincipalsDto"
+community: "me-rights.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AffectedPrincipalsDto
+  - community/me-rightsservicets
 ---
 
 # IsObject
 
 ## Connections
-- [[AffectedPrincipalsDto]] - `references` [EXTRACTED]
+- [[CreateMeRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AffectedPrincipalsDto
+#graphify/code #graphify/EXTRACTED #community/me-rightsservicets

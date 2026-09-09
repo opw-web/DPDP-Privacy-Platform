@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/board/information-requests.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/board/information-requests.service.ts"
 type: "code"
 community: "CreateInformationRequestDto"
-location: "L31"
+location: "L124"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,11 +12,12 @@ tags:
 # .create()
 
 ## Connections
-- [[dot-create()_23]] - `calls` [INFERRED]
-- [[Body_16]] - `references` [EXTRACTED]
+- [[dot-assertAffectedPrincipals()]] - `calls` [EXTRACTED]
+- [[dot-assertDirectionHasAuthorisation()]] - `calls` [EXTRACTED]
+- [[dot-create()_21]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
 - [[CreateInformationRequestDto]] - `references` [EXTRACTED]
-- [[InformationRequestsController]] - `method` [EXTRACTED]
-- [[Post_16]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[InformationRequestsService]] - `method` [EXTRACTED]
+- [[allocateCounterValue()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

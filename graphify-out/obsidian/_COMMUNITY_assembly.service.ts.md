@@ -19,7 +19,7 @@ members: 19
 - [[assembleFields()]] - code - dpdp-platform/backend/src/modules/identity/assembly.service.ts
 - [[assembly.service.spec.ts]] - code - dpdp-platform/backend/src/modules/identity/assembly.service.spec.ts
 - [[assembly.service.ts]] - code - dpdp-platform/backend/src/modules/identity/assembly.service.ts
-- [[compareNewest()_1]] - code - dpdp-platform/backend/src/modules/identity/assembly.service.ts
+- [[compareNewest()]] - code - dpdp-platform/backend/src/modules/identity/assembly.service.ts
 - [[displayNameFrom()]] - code - dpdp-platform/backend/src/modules/identity/assembly.service.ts
 - [[extrasObject()]] - code - dpdp-platform/backend/src/modules/identity/assembly.service.ts
 - [[jsonValue()]] - code - dpdp-platform/backend/src/modules/identity/assembly.service.ts
@@ -36,16 +36,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_ScopedTransactionClient]]
-- 4 edges to [[_COMMUNITY_AuditService]]
+- 8 edges to [[_COMMUNITY_prisma.service.ts]]
+- 4 edges to [[_COMMUNITY_dot-record]]
 - 2 edges to [[_COMMUNITY_@nestjscommon]]
-- 2 edges to [[_COMMUNITY_@prismaclient]]
-- 1 edge to [[_COMMUNITY_data-sources.service.ts]]
-- 1 edge to [[_COMMUNITY_AppModule]]
+- 1 edge to [[_COMMUNITY_mappings.service.ts]]
+- 1 edge to [[_COMMUNITY_app.module.ts]]
 - 1 edge to [[_COMMUNITY_merge-unmerge.e2e-spec.ts]]
 
 ## Top bridge nodes
-- [[assembly.service.ts]] - degree 27, connects to 7 communities
+- [[assembly.service.ts]] - degree 27, connects to 6 communities
 - [[ageStatusFor()]] - degree 3, connects to 2 communities
 - [[assembleFields()]] - degree 8, connects to 1 community
 - [[assembly.service.spec.ts]] - degree 7, connects to 1 community

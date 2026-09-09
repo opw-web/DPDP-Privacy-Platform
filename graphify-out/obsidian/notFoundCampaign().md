@@ -15,7 +15,7 @@ tags:
 - [[dot-approve()_1]] - `calls` [EXTRACTED]
 - [[dot-get()_13]] - `calls` [EXTRACTED]
 - [[dot-listRecipients()_1]] - `calls` [EXTRACTED]
-- [[dot-send()_7]] - `calls` [EXTRACTED]
+- [[dot-send()_6]] - `calls` [EXTRACTED]
 - [[campaigns.service.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CampaignsService

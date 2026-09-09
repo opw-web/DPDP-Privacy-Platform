@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/lib/api-client.ts"
 type: "code"
-community: "createApiClient"
+community: "api-client.ts"
 location: "L118"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/createApiClient
+  - community/api-clientts
 ---
 
 # onAuthExpired()
@@ -15,4 +15,4 @@ tags:
 - [[createApiClient()]] - `contains` [EXTRACTED]
 - [[rawRequest()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/createApiClient
+#graphify/code #graphify/EXTRACTED #community/api-clientts

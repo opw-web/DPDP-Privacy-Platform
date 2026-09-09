@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principals/principal-recipients.service.ts"
+source_file: "dpdp-platform/backend/src/modules/evidence/principal-evidence.service.ts"
 type: "code"
 community: "principals.service.ts"
-location: "L7"
+location: "L129"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,8 @@ tags:
 # .constructor()
 
 ## Connections
-- [[PrincipalRecipientsService]] - `method` [EXTRACTED]
+- [[AccessLogService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[PrincipalEvidenceService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/principalsservicets

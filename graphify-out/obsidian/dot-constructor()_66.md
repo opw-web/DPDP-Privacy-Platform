@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/principal-evidence.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts"
 type: "code"
-community: "principals.service.ts"
-location: "L129"
+community: "TemplatesService"
+location: "L72"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principalsservicets
+  - community/TemplatesService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AccessLogService]] - `references` [EXTRACTED]
 - [[AuditService]] - `references` [EXTRACTED]
-- [[PrincipalEvidenceService]] - `method` [EXTRACTED]
+- [[TemplatesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principalsservicets
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

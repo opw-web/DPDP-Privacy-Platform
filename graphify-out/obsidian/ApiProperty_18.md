@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ProcessorChecklistTickDto"
+community: "UpsertTranslationDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ProcessorChecklistTickDto
+  - community/UpsertTranslationDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CompleteErasureTaskDto]] - `references` [EXTRACTED]
-- [[ProcessorChecklistTickDto]] - `references` [EXTRACTED]
-- [[SystemChecklistTickDto]] - `references` [EXTRACTED]
+- [[UpsertTranslationDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ProcessorChecklistTickDto
+#graphify/code #graphify/EXTRACTED #community/UpsertTranslationDto

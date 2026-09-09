@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/breaches/BreachObligationCard.tsx"
 type: "code"
-community: "api-client.ts"
+community: "BreachWizardPage.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/BreachWizardPagetsx
 ---
 
 # BreachObligationCard.tsx
@@ -27,4 +27,4 @@ tags:
 - [[employeeApiClient]] - `imports` [EXTRACTED]
 - [[react_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/BreachWizardPagetsx

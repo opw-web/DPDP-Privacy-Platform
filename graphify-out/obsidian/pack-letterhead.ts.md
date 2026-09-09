@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/pack-letterhead.ts"
 type: "code"
-community: "csv-writer.ts"
+community: "csvDocument"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/csv-writerts
+  - community/csvDocument
 ---
 
 # pack-letterhead.ts
@@ -17,4 +17,4 @@ tags:
 - [[evidence-pack.service.ts]] - `imports_from` [EXTRACTED]
 - [[withCsvLetterhead()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/csv-writerts
+#graphify/code #graphify/EXTRACTED #community/csvDocument

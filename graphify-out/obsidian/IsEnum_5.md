@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "transfers.service.ts"
+community: "CreateDataSourceDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/transfersservicets
+  - community/CreateDataSourceDto
 ---
 
 # IsEnum
 
 ## Connections
-- [[UpdateTransferDto]] - `references` [EXTRACTED]
+- [[CreateDataSourceDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/transfersservicets
+#graphify/code #graphify/EXTRACTED #community/CreateDataSourceDto

@@ -53,8 +53,12 @@ DEMO_PORT="5001"
 # The postgres container, named by docker compose's default convention.
 PG_CONTAINER="dpdp-platform-postgres-1"
 
-# The demo runbook, opened by the "Demo Runbook" button.
+# The presenter runbook, opened by demo-control/open-runbook.sh.
 RUNBOOK_FILE="$REPO_ROOT/docs/demo-runbook/RUNBOOK.html"
+
+# The client guide, opened by button 2. The standalone build carries its
+# screenshots inside the file, so it survives being copied elsewhere.
+CLIENT_GUIDE_FILE="$REPO_ROOT/docs/demo-runbook/CLIENT-GUIDE-standalone.html"
 
 ADMIN_EMAIL="admin@acmeretail.demo"
 ADMIN_PASSWORD="Password123!"

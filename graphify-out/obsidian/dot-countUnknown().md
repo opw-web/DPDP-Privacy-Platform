@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/children/age-status.service.ts"
 type: "code"
-community: "AgeStatusService"
+community: "age-status.service.ts"
 location: "L83"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AgeStatusService
+  - community/age-statusservicets
 ---
 
 # .countUnknown()
@@ -15,4 +15,4 @@ tags:
 - [[dot-unknownCount()]] - `calls` [INFERRED]
 - [[AgeStatusService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AgeStatusService
+#graphify/code #graphify/EXTRACTED #community/age-statusservicets

@@ -12,8 +12,8 @@ tags:
 # .deliverEmailBestEffort()
 
 ## Connections
-- [[dot-send()_2]] - `calls` [EXTRACTED]
-- [[dot-send()_1]] - `calls` [INFERRED]
+- [[dot-send()_4]] - `calls` [EXTRACTED]
+- [[dot-send()_3]] - `calls` [INFERRED]
 - [[dot-sendDueNotices()]] - `calls` [INFERRED]
 - [[NotificationSendInput]] - `references` [EXTRACTED]
 - [[NotificationsService]] - `method` [EXTRACTED]

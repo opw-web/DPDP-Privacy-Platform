@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/RequestsPage.test.tsx"
 type: "code"
-community: "AuditPage.tsx"
-location: "L114"
+community: "router.tsx"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditPagetsx
+  - community/routertsx
 ---
 
 # renderPage()
 
 ## Connections
-- [[MessagingCampaignDetailPage.test.tsx]] - `contains` [EXTRACTED]
+- [[RequestsPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditPagetsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

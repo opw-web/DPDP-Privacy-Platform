@@ -15,7 +15,7 @@ tags:
 - [[dot-rebuild()]] - `calls` [EXTRACTED]
 - [[assembly.service.spec.ts]] - `imports` [EXTRACTED]
 - [[assembly.service.ts]] - `contains` [EXTRACTED]
-- [[compareNewest()_1]] - `calls` [EXTRACTED]
+- [[compareNewest()]] - `calls` [EXTRACTED]
 - [[normalizedValue()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/assemblyservicets

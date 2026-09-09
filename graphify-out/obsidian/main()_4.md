@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/scripts/seed-scale.ts"
+source_file: "dpdp-platform/backend/prisma/seed/mvp2-demo.ts"
 type: "code"
-community: "seed-scale.ts"
-location: "L359"
+community: "seed.ts"
+location: "L321"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/seed-scalets
+  - community/seedts
 ---
 
 # main()
 
 ## Connections
 - [[PrismaService]] - `calls` [EXTRACTED]
-- [[seed-scale.ts]] - `contains` [EXTRACTED]
-- [[seedScale()]] - `calls` [EXTRACTED]
+- [[mvp2-demo.ts]] - `contains` [EXTRACTED]
+- [[seedMvp2Demo()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/seed-scalets
+#graphify/code #graphify/EXTRACTED #community/seedts

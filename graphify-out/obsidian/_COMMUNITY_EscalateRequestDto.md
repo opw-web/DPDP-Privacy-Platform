@@ -8,9 +8,9 @@ members: 4
 **Members:** 4 nodes
 
 ## Members
-- [[ApiPropertyOptional_27]] - code
+- [[ApiPropertyOptional_24]] - code
 - [[EscalateRequestDto]] - code - dpdp-platform/backend/src/modules/requests/dto/escalate-request.dto.ts
-- [[IsOptional_29]] - code
+- [[IsOptional_26]] - code
 - [[IsString_34]] - code
 
 ## Live Query (requires Dataview plugin)
@@ -21,7 +21,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_@nestjsswagger]]
+- 2 edges to [[_COMMUNITY_@nestjscommon]]
 - 1 edge to [[_COMMUNITY_requests.service.ts]]
 - 1 edge to [[_COMMUNITY_RequestsController]]
 - 1 edge to [[_COMMUNITY_RequestsService]]

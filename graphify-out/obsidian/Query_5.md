@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "RequirePermission"
+community: "ListPrincipalsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/ListPrincipalsDto
 ---
 
 # Query
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-list()_21]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/ListPrincipalsDto

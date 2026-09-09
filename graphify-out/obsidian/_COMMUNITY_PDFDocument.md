@@ -9,7 +9,7 @@ members: 15
 
 ## Members
 - [[dot-addPage()]] - code - dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts
-- [[dot-constructor()_42]] - code - dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts
+- [[dot-constructor()_31]] - code - dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts
 - [[dot-end()]] - code - dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts
 - [[dot-fillColor()]] - code - dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts
 - [[dot-fontSize()]] - code - dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts
@@ -21,7 +21,7 @@ members: 15
 - [[PDFDocument]] - code - dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts
 - [[PDFDocumentOptions]] - code - dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts
 - [[PDFTextOptions]] - code - dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts
-- [[pdfkit]] - code - dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts
+- [[pdfkit_1]] - code - dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts
 - [[pdfkit.d.ts]] - code - dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts
 
 ## Live Query (requires Dataview plugin)

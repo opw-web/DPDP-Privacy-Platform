@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-getById()_7]] - `calls` [INFERRED]
-- [[Get_26]] - `references` [EXTRACTED]
+- [[Get_25]] - `references` [EXTRACTED]
 - [[InformationRequestsController]] - `method` [EXTRACTED]
-- [[Param_18]] - `references` [EXTRACTED]
+- [[Param_16]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

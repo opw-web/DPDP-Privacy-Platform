@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/test/retention.e2e-spec.ts"
 type: "code"
-community: "PrismaService"
+community: "prisma.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/prismaservicets
 ---
 
 # retention.e2e-spec.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[CreateFromTriggerInput]] - `imports` [EXTRACTED]
 - [[ErasureTaskService]] - `imports` [EXTRACTED]
@@ -26,20 +26,20 @@ tags:
 - [[TenantContext]] - `imports` [EXTRACTED]
 - [[TenantStore]] - `imports` [EXTRACTED]
 - [[addByDeadlineUnit()]] - `imports` [EXTRACTED]
-- [[argon2]] - `imports_from` [EXTRACTED]
+- [[argon2_1]] - `imports_from` [EXTRACTED]
 - [[audit.service.ts]] - `imports_from` [EXTRACTED]
-- [[authed()]] - `contains` [EXTRACTED]
+- [[authed()_1]] - `contains` [EXTRACTED]
 - [[bootstrapTestApp()]] - `imports` [EXTRACTED]
 - [[cleanupOrgs()]] - `imports` [EXTRACTED]
 - [[compliance.service.ts]] - `imports_from` [EXTRACTED]
 - [[createComplianceRule()]] - `contains` [EXTRACTED]
 - [[createEmployeeWithPermissions()]] - `contains` [EXTRACTED]
-- [[createOrg()_1]] - `contains` [EXTRACTED]
-- [[createOrgWithEmployee()_2]] - `imports` [EXTRACTED]
+- [[createOrg()_3]] - `contains` [EXTRACTED]
+- [[createOrgWithEmployee()_1]] - `imports` [EXTRACTED]
 - [[createPrincipal()_6]] - `contains` [EXTRACTED]
 - [[createTask()]] - `contains` [EXTRACTED]
 - [[e2e-harness.ts]] - `imports_from` [EXTRACTED]
-- [[ensurePermission()_4]] - `imports` [EXTRACTED]
+- [[ensurePermission()]] - `imports` [EXTRACTED]
 - [[erasure-task.service.ts]] - `imports_from` [EXTRACTED]
 - [[pre-erasure-notice.service.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
@@ -48,7 +48,7 @@ tags:
 - [[runPreErasureNotice()]] - `contains` [EXTRACTED]
 - [[runRetentionScan()]] - `contains` [EXTRACTED]
 - [[supertest]] - `imports_from` [EXTRACTED]
-- [[systemActorStore()_1]] - `contains` [EXTRACTED]
+- [[systemActorStore()_2]] - `contains` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

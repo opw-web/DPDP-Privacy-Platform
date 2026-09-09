@@ -1,22 +1,22 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/dto/create-sharing-activity.dto.ts"
 type: "code"
-community: "@nestjs/swagger"
+community: "sharing.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/swagger
+  - community/sharingservicets
 ---
 
 # create-sharing-activity.dto.ts
 
 ## Connections
 - [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
-- [[@prismaclient]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[CreateSharingActivityDto]] - `contains` [EXTRACTED]
 - [[class-validator_1]] - `imports_from` [EXTRACTED]
 - [[sharing.controller.ts]] - `imports_from` [EXTRACTED]
 - [[sharing.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/swagger
+#graphify/code #graphify/EXTRACTED #community/sharingservicets

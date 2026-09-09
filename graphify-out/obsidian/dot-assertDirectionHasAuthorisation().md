@@ -12,7 +12,7 @@ tags:
 # .assertDirectionHasAuthorisation()
 
 ## Connections
-- [[dot-create()_23]] - `calls` [EXTRACTED]
+- [[dot-create()_22]] - `calls` [EXTRACTED]
 - [[dot-update()_17]] - `calls` [EXTRACTED]
 - [[InformationRequestsService]] - `method` [EXTRACTED]
 

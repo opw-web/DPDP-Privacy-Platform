@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-create()_34]] - `calls` [INFERRED]
-- [[Body_25]] - `references` [EXTRACTED]
+- [[Body_24]] - `references` [EXTRACTED]
 - [[CreateRetentionPolicyDto]] - `references` [EXTRACTED]
-- [[Post_25]] - `references` [EXTRACTED]
+- [[Post_24]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[RetentionController_1]] - `method` [EXTRACTED]
 

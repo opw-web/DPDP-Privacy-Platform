@@ -15,7 +15,7 @@ tags:
 - [[dot-getPublishedNotice()_1]] - `calls` [INFERRED]
 - [[Get_27]] - `references` [EXTRACTED]
 - [[MeRightsController]] - `method` [EXTRACTED]
-- [[Param_19]] - `references` [EXTRACTED]
+- [[Param_18]] - `references` [EXTRACTED]
 - [[Query_7]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/MeRightsService

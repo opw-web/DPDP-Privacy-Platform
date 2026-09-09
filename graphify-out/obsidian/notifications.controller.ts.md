@@ -12,7 +12,7 @@ tags:
 # notifications.controller.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[CurrentNotificationActor]] - `imports` [EXTRACTED]
 - [[JwtAnyActorGuard]] - `imports` [EXTRACTED]

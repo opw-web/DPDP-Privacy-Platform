@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/components/ComingSoonSlot.tsx"
 type: "code"
-community: "api-client.ts"
+community: "button.tsx"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/buttontsx
 ---
 
 # ComingSoonSlotProps
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ComingSoonSlot.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/buttontsx

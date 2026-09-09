@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdatePurposeDto"
+community: "transfers.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdatePurposeDto
+  - community/transfersservicets
 ---
 
 # IsBoolean
 
 ## Connections
-- [[UpdatePurposeDto]] - `references` [EXTRACTED]
+- [[UpdateTransferDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdatePurposeDto
+#graphify/code #graphify/EXTRACTED #community/transfersservicets

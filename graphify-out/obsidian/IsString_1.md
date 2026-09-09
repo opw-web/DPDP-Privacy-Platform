@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "RetentionController"
+community: "CreateLegalHoldDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionController
+  - community/CreateLegalHoldDto
 ---
 
 # IsString
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[CancelErasureTaskDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionController
+#graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto

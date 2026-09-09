@@ -1,21 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/linking.service.ts"
+source_file: "dpdp-platform/backend/src/modules/consents/consents.service.ts"
 type: "code"
-community: "AuditService"
-location: "L74"
+community: "GuardiansService"
+location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/GuardiansService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AgeService]] - `references` [EXTRACTED]
-- [[AssemblyService]] - `references` [EXTRACTED]
 - [[AuditService]] - `references` [EXTRACTED]
-- [[LinkingService]] - `method` [EXTRACTED]
-- [[ReferenceService]] - `references` [EXTRACTED]
+- [[ConsentsService]] - `method` [EXTRACTED]
+- [[ErasureTaskService]] - `references` [EXTRACTED]
+- [[GuardiansService]] - `references` [EXTRACTED]
+- [[NoticesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/GuardiansService

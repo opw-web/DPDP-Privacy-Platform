@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/retention.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/retention.service.ts"
 type: "code"
 community: "retention.service.ts"
-location: "L11"
+location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .constructor()
 
 ## Connections
-- [[RetentionController_1]] - `method` [EXTRACTED]
-- [[RetentionService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[RetentionService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/retentionservicets

@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/guardians.service.ts"
+source_file: "dpdp-platform/backend/src/modules/evidence/audit-events-evidence.controller.ts"
 type: "code"
-community: "GuardiansService"
-location: "L76"
+community: "evidence-pack.service.ts"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GuardiansService
+  - community/evidence-packservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[GuardiansService]] - `method` [EXTRACTED]
-- [[MaskingService]] - `references` [EXTRACTED]
+- [[AuditChainService]] - `references` [EXTRACTED]
+- [[AuditEventsEvidenceController]] - `method` [EXTRACTED]
+- [[AuditExportService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GuardiansService
+#graphify/code #graphify/EXTRACTED #community/evidence-packservicets

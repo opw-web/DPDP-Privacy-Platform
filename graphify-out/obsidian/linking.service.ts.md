@@ -1,24 +1,24 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/linking.service.ts"
 type: "code"
-community: "ScopedTransactionClient"
+community: "prisma.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScopedTransactionClient
+  - community/prismaservicets
 ---
 
 # linking.service.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
-- [[@prismaclient]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AgeService]] - `imports` [EXTRACTED]
 - [[ApplyMatchResult]] - `contains` [EXTRACTED]
 - [[AssemblyService]] - `imports` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
-- [[IdentifierOwnershipConflictError_1]] - `contains` [EXTRACTED]
+- [[IdentifierOwnershipConflictError]] - `contains` [EXTRACTED]
 - [[LinkableNormalizedRecord]] - `contains` [EXTRACTED]
 - [[LinkingService]] - `contains` [EXTRACTED]
 - [[MatchResult]] - `imports` [EXTRACTED]
@@ -44,4 +44,4 @@ tags:
 - [[sync-pipeline.service.ts]] - `imports_from` [EXTRACTED]
 - [[verifiedCustomerIdValue()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

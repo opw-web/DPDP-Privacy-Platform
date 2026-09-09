@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/transfers.service.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/permissions.controller.ts"
 type: "code"
-community: "transfers.service.ts"
-location: "L50"
+community: "PermissionsController"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/transfersservicets
+  - community/PermissionsController
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_9]] - `calls` [INFERRED]
-- [[TransfersService]] - `method` [EXTRACTED]
+- [[Get_13]] - `references` [EXTRACTED]
+- [[PermissionsController]] - `method` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/transfersservicets
+#graphify/code #graphify/EXTRACTED #community/PermissionsController

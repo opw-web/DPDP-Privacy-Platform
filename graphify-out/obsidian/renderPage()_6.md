@@ -1,5 +1,5 @@
 ---
-source_file: "dpdp-platform/frontend/src/principal/pages/MeConsentsPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/SettingsCompliancePage.test.tsx"
 type: "code"
 community: "@tanstack/react-query"
 location: "L12"
@@ -12,6 +12,8 @@ tags:
 # renderPage()
 
 ## Connections
-- [[MeConsentsPage.test.tsx]] - `contains` [EXTRACTED]
+- [[SettingsCompliancePage.test.tsx]] - `contains` [EXTRACTED]
+- [[employeeLogin()]] - `calls` [EXTRACTED]
+- [[response()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/tanstack/react-query

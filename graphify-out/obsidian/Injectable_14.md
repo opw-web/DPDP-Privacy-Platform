@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PermissionsGuard"
+community: "evidence-pack.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PermissionsGuard
+  - community/evidence-packservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[PermissionsGuard]] - `references` [EXTRACTED]
+- [[RopaExportService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PermissionsGuard
+#graphify/code #graphify/EXTRACTED #community/evidence-packservicets

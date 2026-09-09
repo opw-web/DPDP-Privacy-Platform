@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "inventory.service.ts"
+community: "prisma.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/inventoryservicets
+  - community/prismaservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[InventoryService]] - `references` [EXTRACTED]
+- [[LegalHoldService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/inventoryservicets
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

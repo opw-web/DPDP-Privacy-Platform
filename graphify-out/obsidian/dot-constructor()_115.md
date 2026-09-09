@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/health/health.service.ts"
 type: "code"
-community: "DataSourcesController"
-location: "L26"
+community: "test-database.ts"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesController
+  - community/test-databasets
 ---
 
 # .constructor()
 
 ## Connections
-- [[DataSourcesController]] - `method` [EXTRACTED]
-- [[DataSourcesService]] - `references` [EXTRACTED]
+- [[HealthService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesController
+#graphify/code #graphify/EXTRACTED #community/test-databasets

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principals/principals.service.ts"
 type: "code"
-community: "principals.service.ts"
+community: "ListPrincipalsDto"
 location: "L174"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/principalsservicets
+  - community/ListPrincipalsDto
 ---
 
 # .getSourceRecords()
@@ -16,4 +16,4 @@ tags:
 - [[dot-sourceRecords()]] - `calls` [INFERRED]
 - [[PrincipalsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/principalsservicets
+#graphify/code #graphify/INFERRED #community/ListPrincipalsDto

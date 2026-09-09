@@ -12,7 +12,7 @@ tags:
 # compliance-rules.ts
 
 ## Connections
-- [[@prismaclient]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[COMPLIANCE_RULE_SEEDS]] - `contains` [EXTRACTED]
 - [[ComplianceRuleSeed]] - `contains` [EXTRACTED]
 - [[GRIEVANCE_STATUTORY_BASELINE_RULE_CODE]] - `contains` [EXTRACTED]

@@ -1,5 +1,5 @@
 ---
-source_file: "6 - Stop Privacy Demo.sh"
+source_file: "demo-control/linux/6 - Stop Privacy Demo.sh"
 type: "code"
 community: "6 - Stop Privacy Demo.sh"
 location: "L1"

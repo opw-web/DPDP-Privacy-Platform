@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "notifications.controller.ts"
+community: "notifications.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationscontrollerts
+  - community/notificationsservicets
 ---
 
 # HttpCode
@@ -14,4 +14,4 @@ tags:
 - [[dot-markAllRead()]] - `references` [EXTRACTED]
 - [[dot-markRead()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts
+#graphify/code #graphify/EXTRACTED #community/notificationsservicets

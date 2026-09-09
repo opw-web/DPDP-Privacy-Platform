@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/audit/audit-read.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/audit/audit-read.service.ts"
 type: "code"
 community: "AuditReadService"
-location: "L32"
+location: "L189"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,11 +13,10 @@ tags:
 
 ## Connections
 - [[dot-accessLogCsv()]] - `calls` [INFERRED]
+- [[dot-buildPack()]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
 - [[AccessLogExportDto]] - `references` [EXTRACTED]
-- [[AuditReadController]] - `method` [EXTRACTED]
-- [[Get_5]] - `references` [EXTRACTED]
-- [[Query_2]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[Res]] - `references` [EXTRACTED]
+- [[AuditReadService]] - `method` [EXTRACTED]
+- [[csvDocument()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/AuditReadService

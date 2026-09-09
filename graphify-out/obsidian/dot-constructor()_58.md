@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/compliance/compliance.controller.ts"
+source_file: "dpdp-platform/backend/src/queues/audit-chain-verify.processor.ts"
 type: "code"
-community: "CreateComplianceRuleDto"
+community: "NotificationsService"
 location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateComplianceRuleDto
+  - community/NotificationsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[ComplianceController]] - `method` [EXTRACTED]
-- [[ComplianceService]] - `references` [EXTRACTED]
+- [[AuditChainService]] - `references` [EXTRACTED]
+- [[AuditChainVerifyProcessor]] - `method` [EXTRACTED]
+- [[NotificationsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

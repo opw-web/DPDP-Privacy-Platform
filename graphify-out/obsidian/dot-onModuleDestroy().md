@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sync-lock.service.ts"
+source_file: "dpdp-platform/backend/src/common/prisma/prisma.service.ts"
 type: "code"
-community: "employee-auth.controller.ts"
-location: "L179"
+community: "PrismaService"
+location: "L82"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employee-authcontrollerts
+  - community/PrismaService
 ---
 
 # .onModuleDestroy()
 
 ## Connections
-- [[SyncLockService]] - `method` [EXTRACTED]
+- [[PrismaService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employee-authcontrollerts
+#graphify/code #graphify/EXTRACTED #community/PrismaService

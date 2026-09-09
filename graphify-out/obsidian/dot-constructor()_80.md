@@ -1,18 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/candidates.controller.ts"
+source_file: "dpdp-platform/backend/src/queues/schedule-reconciliation.service.ts"
 type: "code"
-community: "RequirePermission"
-location: "L27"
+community: "SyncQueueService"
+location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/SyncQueueService
 ---
 
 # .constructor()
 
 ## Connections
-- [[CandidatesController]] - `method` [EXTRACTED]
-- [[CandidatesService]] - `references` [EXTRACTED]
+- [[dot-reconcileAtBoot()]] - `calls` [EXTRACTED]
+- [[dot-register()]] - `calls` [INFERRED]
+- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
+- [[Mvp2ScheduleReconciliationService]] - `references` [EXTRACTED]
+- [[ScheduleReconciliationService]] - `method` [EXTRACTED]
+- [[SyncQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

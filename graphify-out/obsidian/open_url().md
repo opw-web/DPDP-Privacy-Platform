@@ -12,7 +12,6 @@ tags:
 # open_url()
 
 ## Connections
-- [[2 - Client Guide.sh script]] - `calls` [EXTRACTED]
 - [[platform.sh]] - `defines` [EXTRACTED]
 - [[winpath()]] - `calls` [EXTRACTED]
 

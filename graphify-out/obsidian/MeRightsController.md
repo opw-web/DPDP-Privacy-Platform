@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-cancelRequest()]] - `method` [EXTRACTED]
 - [[dot-commentOnRequest()]] - `method` [EXTRACTED]
-- [[dot-constructor()_111]] - `method` [EXTRACTED]
+- [[dot-constructor()_108]] - `method` [EXTRACTED]
 - [[dot-createRequest()]] - `method` [EXTRACTED]
 - [[dot-getNomination()]] - `method` [EXTRACTED]
 - [[dot-getPublishedNotice()]] - `method` [EXTRACTED]
@@ -23,7 +23,7 @@ tags:
 - [[dot-listPublishedNotices()]] - `method` [EXTRACTED]
 - [[dot-listRequests()]] - `method` [EXTRACTED]
 - [[dot-upsertNomination()]] - `method` [EXTRACTED]
-- [[Controller_26]] - `references` [EXTRACTED]
+- [[Controller_25]] - `references` [EXTRACTED]
 - [[Public()]] - `references` [EXTRACTED]
 - [[UseGuards_3]] - `references` [EXTRACTED]
 - [[me-rights.controller.ts]] - `contains` [EXTRACTED]

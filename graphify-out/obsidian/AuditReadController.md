@@ -12,11 +12,11 @@ tags:
 # AuditReadController
 
 ## Connections
-- [[dot-accessLogCsv()_1]] - `method` [EXTRACTED]
-- [[dot-constructor()_32]] - `method` [EXTRACTED]
+- [[dot-accessLogCsv()]] - `method` [EXTRACTED]
+- [[dot-constructor()_20]] - `method` [EXTRACTED]
 - [[dot-list()_5]] - `method` [EXTRACTED]
-- [[ApiTags_3]] - `references` [EXTRACTED]
-- [[Controller_3]] - `references` [EXTRACTED]
+- [[ApiTags_5]] - `references` [EXTRACTED]
+- [[Controller_5]] - `references` [EXTRACTED]
 - [[audit-read.controller.ts]] - `contains` [EXTRACTED]
 - [[audit-read.module.ts]] - `imports` [EXTRACTED]
 

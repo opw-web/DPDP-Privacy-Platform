@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sync/sync-error.spec.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/linking.service.ts"
 type: "code"
-community: "SyncPipelineService"
-location: "L11"
+community: ".record"
+location: "L42"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncPipelineService
+  - community/record
 ---
 
 # IdentifierOwnershipConflictError
 
 ## Connections
-- [[dot-constructor()_108]] - `method` [EXTRACTED]
-- [[sync-error.spec.ts]] - `contains` [EXTRACTED]
+- [[dot-attachIdentifier()]] - `calls` [EXTRACTED]
+- [[dot-constructor()_86]] - `method` [EXTRACTED]
+- [[linking.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncPipelineService
+#graphify/code #graphify/EXTRACTED #community/record

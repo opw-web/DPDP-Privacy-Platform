@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/mail/mailer.service.ts"
 type: "code"
-community: "employee-auth.controller.ts"
+community: "mailer.service.ts"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employee-authcontrollerts
+  - community/mailerservicets
 ---
 
 # MailMessage
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[mailer.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employee-authcontrollerts
+#graphify/code #graphify/EXTRACTED #community/mailerservicets

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PrismaModule"
+community: "normalization.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaModule
+  - community/normalizationservicets
 ---
 
 # Module
 
 ## Connections
-- [[PrismaModule]] - `references` [EXTRACTED]
+- [[NormalizationModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaModule
+#graphify/code #graphify/EXTRACTED #community/normalizationservicets

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "NotificationsService"
+community: "PortalProvider"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/PortalProvider
 ---
 
 # Inject
 
 ## Connections
-- [[dot-constructor()_36]] - `references` [EXTRACTED]
+- [[dot-constructor()_55]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/PortalProvider

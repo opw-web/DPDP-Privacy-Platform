@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AuditService"
+community: "ErasureTaskService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/ErasureTaskService
 ---
 
 # Injectable
 
 ## Connections
-- [[ComplianceService]] - `references` [EXTRACTED]
+- [[ErasureTaskService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/ErasureTaskService

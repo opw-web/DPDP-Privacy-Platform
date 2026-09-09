@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/transfers.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/age.service.ts"
 type: "code"
-community: "transfers.service.ts"
-location: "L11"
+community: "prisma.service.ts"
+location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/transfersservicets
+  - community/prismaservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[TransfersController]] - `method` [EXTRACTED]
-- [[TransfersService]] - `references` [EXTRACTED]
+- [[AgeService]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/transfersservicets
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "RetentionScanService"
+community: "queues.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionScanService
+  - community/queuesmodulets
 ---
 
 # Processor
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[RetentionScanProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionScanService
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

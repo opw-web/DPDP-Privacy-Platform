@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdateBreachDto"
+community: "transfers.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateBreachDto
+  - community/transfersservicets
 ---
 
 # MinLength
 
 ## Connections
-- [[UpdateBreachDto]] - `references` [EXTRACTED]
+- [[UpdateTransferDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateBreachDto
+#graphify/code #graphify/EXTRACTED #community/transfersservicets

@@ -1,21 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/consents/consents.service.ts"
+source_file: "dpdp-platform/backend/src/modules/evidence/audit-export.service.ts"
 type: "code"
-community: "GuardiansService"
-location: "L114"
+community: "evidence-pack.service.ts"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GuardiansService
+  - community/evidence-packservicets
 ---
 
 # .constructor()
 
 ## Connections
+- [[AuditExportService]] - `method` [EXTRACTED]
 - [[AuditService]] - `references` [EXTRACTED]
-- [[ConsentsService]] - `method` [EXTRACTED]
-- [[ErasureTaskService]] - `references` [EXTRACTED]
-- [[GuardiansService]] - `references` [EXTRACTED]
-- [[NoticesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GuardiansService
+#graphify/code #graphify/EXTRACTED #community/evidence-packservicets

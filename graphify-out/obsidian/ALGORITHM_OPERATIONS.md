@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/sdf/types.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/dto/algorithm-operations.ts"
 type: "code"
-community: "api-client.ts"
+community: "compliance.service.ts"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/complianceservicets
 ---
 
 # ALGORITHM_OPERATIONS
 
 ## Connections
-- [[AlgorithmFormFields.tsx]] - `imports` [EXTRACTED]
-- [[sdftypes.ts]] - `contains` [EXTRACTED]
+- [[algorithm-operations.ts]] - `contains` [EXTRACTED]
+- [[create-algorithm-entry.dto.ts]] - `imports` [EXTRACTED]
+- [[update-algorithm-entry.dto.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/complianceservicets

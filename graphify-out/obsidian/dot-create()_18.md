@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-create()_17]] - `calls` [INFERRED]
-- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
 - [[CreateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
 - [[VoluntaryUndertakingsService]] - `method` [EXTRACTED]
 

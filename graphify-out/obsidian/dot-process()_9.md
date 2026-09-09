@@ -1,20 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sync.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/campaign-send.processor.ts"
 type: "code"
-community: "queues.module.ts"
-location: "L50"
+community: "breach-principal-notice-dispatch.processor.ts"
+location: "L72"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/breach-principal-notice-dispatchprocessorts
 ---
 
 # .process()
 
 ## Connections
-- [[dot-run()]] - `calls` [INFERRED]
-- [[SyncJobData]] - `references` [EXTRACTED]
-- [[SyncProcessor]] - `method` [EXTRACTED]
-- [[SyncRunSummary]] - `references` [EXTRACTED]
+- [[dot-deliverRecipient()]] - `calls` [INFERRED]
+- [[CampaignSendJobData]] - `references` [EXTRACTED]
+- [[CampaignSendProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/breach-principal-notice-dispatchprocessorts

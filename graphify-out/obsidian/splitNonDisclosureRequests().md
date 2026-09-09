@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-buildEvidenceFile()]] - `calls` [EXTRACTED]
 - [[dot-buildReport()]] - `calls` [EXTRACTED]
-- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
 - [[access-report.service.ts]] - `imports` [EXTRACTED]
 - [[evidencenon-disclosure.ts]] - `contains` [EXTRACTED]
 - [[principal-evidence.service.ts]] - `imports` [EXTRACTED]

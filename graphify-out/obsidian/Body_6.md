@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "PurposesController"
+community: "MappingsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PurposesController
+  - community/MappingsController
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_6]] - `references` [EXTRACTED]
-- [[dot-update()_5]] - `references` [EXTRACTED]
+- [[dot-replaceMappings()]] - `references` [EXTRACTED]
+- [[dot-replacePurposes()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PurposesController
+#graphify/code #graphify/EXTRACTED #community/MappingsController

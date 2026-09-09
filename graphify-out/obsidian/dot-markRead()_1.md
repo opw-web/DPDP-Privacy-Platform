@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notifications/notifications.service.ts"
 type: "code"
-community: "notifications.controller.ts"
+community: "notifications.service.ts"
 location: "L172"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationscontrollerts
+  - community/notificationsservicets
 ---
 
 # .markRead()
@@ -18,4 +18,4 @@ tags:
 - [[ownershipWhere()]] - `calls` [EXTRACTED]
 - [[toPublicNotification()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts
+#graphify/code #graphify/EXTRACTED #community/notificationsservicets

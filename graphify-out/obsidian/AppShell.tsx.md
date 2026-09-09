@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/AppShell.tsx"
 type: "code"
-community: "@tanstack/react-query"
+community: "cn"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tanstack/react-query
+  - community/cn
 ---
 
 # AppShell.tsx
@@ -19,7 +19,7 @@ tags:
 - [[DashboardPage.test.tsx]] - `imports_from` [EXTRACTED]
 - [[DateTime.tsx]] - `imports_from` [EXTRACTED]
 - [[EmployeesPage.test.tsx]] - `imports_from` [EXTRACTED]
-- [[NAV_ITEMS_1]] - `contains` [EXTRACTED]
+- [[NAV_ITEMS]] - `contains` [EXTRACTED]
 - [[NotificationBell()]] - `imports` [EXTRACTED]
 - [[NotificationBell.tsx]] - `imports_from` [EXTRACTED]
 - [[OrgTimezoneProvider]] - `imports` [EXTRACTED]
@@ -40,4 +40,4 @@ tags:
 - [[useEmployeeAuth()]] - `imports` [EXTRACTED]
 - [[utils.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tanstack/react-query
+#graphify/code #graphify/EXTRACTED #community/cn

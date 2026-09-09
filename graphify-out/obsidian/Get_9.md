@@ -11,7 +11,7 @@ tags:
 # Get
 
 ## Connections
-- [[dot-get()_2]] - `references` [EXTRACTED]
-- [[dot-list()_9]] - `references` [EXTRACTED]
+- [[dot-get()_3]] - `references` [EXTRACTED]
+- [[dot-list()_7]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/transfersservicets

@@ -11,6 +11,6 @@ tags:
 # UseGuards
 
 ## Connections
-- [[dot-me()_1]] - `references` [EXTRACTED]
+- [[dot-me()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Public

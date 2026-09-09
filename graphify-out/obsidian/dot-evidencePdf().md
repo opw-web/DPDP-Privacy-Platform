@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-buildEvidenceFile()]] - `calls` [INFERRED]
 - [[Get_31]] - `references` [EXTRACTED]
-- [[Param_23]] - `references` [EXTRACTED]
+- [[Param_22]] - `references` [EXTRACTED]
 - [[PrincipalEvidenceController]] - `method` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[Res_6]] - `references` [EXTRACTED]

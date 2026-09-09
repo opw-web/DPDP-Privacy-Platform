@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateCampaignDto"
+community: "transfers.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateCampaignDto
+  - community/transfersservicets
 ---
 
 # IsEnum
 
 ## Connections
-- [[CreateCampaignDto]] - `references` [EXTRACTED]
+- [[CreateTransferDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateCampaignDto
+#graphify/code #graphify/EXTRACTED #community/transfersservicets

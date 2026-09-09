@@ -5,17 +5,15 @@ automatically by Claude Code hooks. Humans and future sessions read the "Now" bl
 
 <!-- journal:pinned:start -->
 ## Now
-- **Working on:** the client guide now covers the whole journey (2026-09-08). `CLIENT-GUIDE.html` starts at the unzipped folder: new sections *What this computer needs*, *The folder you unzipped* and *Prepare this computer once* sit ahead of *Start and sign in*, Windows-first with Linux inline. Six real Windows captures replace/extend the Linux ones (`folder-windows`, `prepare-windows`, `start-windows`, `demo-proof-windows`, `stop-windows`, `docker-running`) — taken from a genuine button 0 -> 6 -> 1 -> 4 -> 6 run in a throwaway `git archive` copy at `C:\DPDP` (since deleted). `README.md` trimmed to prerequisites + unzip + "open the guide"; both standalone files rebuilt (client guide: 29 images).
-- **Known drift left:** no SmartScreen figure — a `Zone.Identifier` ADS on a launcher copy did not trigger the dialog on this machine, so the prose warning stands alone. `RUNBOOK.html` (presenter) is untouched and still Linux-framed, still pointing at `desktop-icons.png` / `start-terminal.png` / `stop-terminal.png` / `demo-proof.png`, which are now stale for Windows.
-- **Acceptance closure (earlier today):** acceptance closure for both specs (2026-09-08). MVP2 Section 7 is now **34 PASS, 0 PARTIAL, 0 OUTSTANDING**; MVP1 is **24 PASS, 0 FAIL**. Both evaluation docs updated. Step 6 closed by button 4 reporting 500/327/4/12/6 live. Step 30 re-driven end to end (Raj withdraws in the portal -> real `pre-erasure-notice` job -> NOTICE_SENT -> he logs in -> CANCELLED under Rule 8(2)), no bespoke job names; the two shortened rules were restored.
-- **Ruling 45 is CLOSED — and the cumulative-DB-volume theory was the lesser half.** The e2e suite had no database of its own (ran against the live demo DB, cleaned by targeted `deleteMany`), AND shared Redis with the running demo app: fixed queue names mean the demo's workers eat jobs the tests enqueue, look for the row in the demo DB, and drop it -> `waitUntil: timed out`. Which suite loses that race is timing, hence the migration between files. Now isolated by `test/support/test-database.ts` + `test/global-setup.ts` + `test/setup-env.ts`: own `dpdp_test` DB (created/migrated/truncated per run) and Redis index 1 (flushed). Shared stack: 4 suites / 10 tests failed. Isolated: runs 1 and 3 fully green (45 suites, 455 passed / 4 skipped), run 2 green but one test.
-- **One flake left, narrower:** `principals.e2e-spec.ts` "SQL query budget" failed once in three at 16 vs a budget of 15. Instrumentation defect, not a route defect — `queryCount` uses a client-wide `$on("query")` listener gated by a boolean, so it counts every query on the shared PrismaService in the window, including background jobs. Not request-scoped. Fix before trusting it as a gate.
-- **MVP1 Check 24 re-verified PASS.** `327f796` had fixed it (runtime image now copies `prisma/`, `prisma` moved to dependencies) but nobody re-ran it. Clean clone -> compose build -> backend **running** (was exited 1), 14 migrations, health 200, seed, admin login 200. Run as `-p dpdp-cleanclone` with a host-port override so the live demo was never touched.
-- **Two findings neither evaluation had:** (1) `git clone` FAILS on Windows — `graphify-out/obsidian/` has over-long filenames and 8 case-colliding pairs (`Module_14.md`/`module_14.md`, `ROUTES.md`/`Routes.md`, ...). Also why those files sit permanently "modified" in a Windows tree. Had to sparse-checkout around it. (2) `dpdp-platform/.env` and `backend/.env` are COMMITTED (`153a069`) including `ENCRYPTION_KEY` and both JWT secrets — in tension with MVP1 Check 14.
-- **Also fixed:** `schema-constraints.e2e-spec.ts` compared a `.sql` migration byte-for-byte against an LF literal; `.gitattributes` pinned `*.sh` but not `*.sql`, so it failed on Windows only. Assertion now normalizes EOL, and `*.sql text eol=lf` added.
-- **Next up:** decide on the two findings above (graphify-out Windows-unsafe filenames; committed .env secrets), and the query-budget instrumentation. Nothing is committed yet — all of today's changes are working-tree only.
+- **Working on:** the delivered package is Windows-only in what a client sees (2026-09-09). The root now holds eight numbered `.cmd` launchers and no `.sh` at all -- the Linux entry points moved to `demo-control/linux/`, the `(Windows)` suffix is gone, `2 - Client Guide.sh`'s logic became `demo-control/open-client-guide.sh`, and button 0 now installs the same eight buttons on the Desktop. `README.md`, `demo-control/README.html`, `CLIENT-GUIDE.html` and `RUNBOOK.html` are Windows-only with one Linux appendix each.
+- **Guide extended to the product as it stands:** the client tour is 17 stops (was 12), with five new ones -- Registers, the portal's own controls (recipients / messages / Section 14 nomination), the erasure engine and its Rule 8(2) lifecycle, campaign governance, and SDF readiness + gaps. Nine new real captures via `scripts/capture-guide-screenshots.mjs` (Playwright, not a repo dependency -- point `PLAYWRIGHT_DIR` at an install). `folder-windows.png` retaken for the new launcher names; the four stale Linux figures deleted.
+- **Windows checkout fixed:** the 8 case-colliding `graphify-out/obsidian/` pairs are renamed apart (`module_14_lower.md`, `Routes_upper.md`, ...) with wikilinks rewritten, so `git clone` and Explorer's Extract All no longer stumble and nothing sits permanently modified. `scripts/dedupe-vault-names.py` keeps it that way after a vault regeneration.
+- **Deliberately not staged:** the pre-erasure-notice run. The seeded state has one erasure task, deferred by the Rule 8(3) floor, so `NOTICE_SENT` is not something an evaluator can reach; the guide describes the 48-hour notice and the Rule 8(2) cancellation in prose against the real deferred task rather than shortening rules to fake a screen the reader could not reproduce.
+- **Verified:** buttons 5, 2, 4 run from a launched process and exit cleanly; `install-launchers.sh` writes all eight `.lnk` files, `5 - Demo Status.lnk` targets the renamed `.cmd`; the moved Linux wrapper still resolves; button 4 reports 500/327/4/12/6; both standalone files rebuild (37 and 32 images).
+- **Known drift left:** still no SmartScreen figure. `docs/EVALUATION_MVP1.md` records `git clone` on Windows as a live gap against Check 24 -- the filename half is now fixed, so that entry is stale. Committed `.env` secrets (`153a069`) and the `principals.e2e-spec.ts` query-budget instrumentation are both still open.
+- **Next up:** re-check MVP1 Check 24's Windows-clone finding now the filenames are fixed; decide on the committed `.env` secrets; fix the request-scoping of `queryCount`.
 - **Blocked:** nothing.
-- **Tried and rejected:** `git stash` in this shared tree (live grenade); raising a test timeout to cure contention (Ruling 24); cumulative DB volume as the *sole* Ruling 45 cause (shared Redis mattered more); running the clean-clone compose on default ports (would have collided with, and adopted, the live demo's project name and pgdata volume).
+- **Tried and rejected:** deleting the Linux entry points outright (hidden in `demo-control/linux/` instead, so Linux keeps working); driving a real withdrawal -> pre-erasure-notice -> Rule 8(2) cancellation just to capture two figures (needs statutory rule values shortened and restored, and shows a state the reader cannot reproduce); the Chrome extension for captures (not connected -- Playwright from the scratchpad instead); `git stash` in this shared tree.
 <!-- journal:pinned:end -->
 
 ---
@@ -3361,3 +3359,120 @@ _Earlier entries archived to .claude/journal/archive/JOURNAL-2026-08.md._
 - `17:37` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git commit -q -F - <<'MSG' docs(guide): start the client guide at the u...`
 - `17:37` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git add -A && git status --short | grep -v '^M graphify-out\|^A graphif...`
 - `17:38` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git commit -q -F - <<'MSG' chore(graphify): refresh the generated knowl...`
+- `17:38` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git add -A && git diff --cached --name-only | cat && git commit -q -m "...`
+- `17:38` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git push origin windows-support 2>&1 | tail -8`
+- `17:38` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git log --oneline origin/windows-support -4 | cat && git status -sb | h...`
+
+### 2026-09-09 09:39 - session `fbfe7b35`
+
+**Why:** give me a handoff document of everything you've done in this session
+
+- `09:40` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git show --stat --oneline 7cf73f54 | cat && echo "=== images ===" && ls...`
+- `09:42` wrote `C:\Users\ompuri\AppData\Local\Temp\claude\C--Coding-stuff-DPDP-Privacy-Platform\fbfe7b35-6288-4329-8d58-7c78e14f7783\scratchpad\client-guide-handoff.html` (~353 lines)
+
+### 2026-09-09 09:44 - session `fd0bd078`
+
+**Why:** this is a handoff from the previous session- https://claude.ai/code/artifact/f91efb30-8dae-41dd-9894-d7a29829f7fc This is still linux oriented. I need it to be primarily windows, forget linux. the rea...
+
+- `09:44` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && ls -la && echo "--- root sh/cmd ---" && ls -1 *.sh *.cmd 2>/dev/null`
+- `09:44` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && ls -la demo-control/ 2>/dev/null && echo "--- docs ---" && ls -la docs/...`
+- `09:44` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && ls -la docs/demo-runbook/ && echo "--- screenshots ---" && ls -1 docs/d...`
+- `09:45` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git log --oneline -40`
+- `09:45` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && head -c 3000 demo-control/README.html && echo "=== install-launchers he...`
+- `09:45` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && graphify query "frontend navigation pages and modules in the staff cons...`
+- `09:45` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git show --stat bcea44bc 7cf73f54 | head -60`
+- `09:45` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && ls dpdp-platform/frontend/src/fiduciary/pages/ && echo "=== nav ===" &&...`
+- `09:45` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && ls graphify-out/obsidian/ | awk '{print length": "$0}' | sort -rn | hea...`
+- `09:45` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && echo "=== index case collisions ===" && git ls-files graphify-out/ | tr...`
+- `09:45` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -rln "NavLink\|sidebar\|Sidebar" dpdp-platform/frontend/src/fiduci...`
+- `09:45` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && cat graphify-out/obsidian/ROUTES.md 2>/dev/null | head -80`
+- `09:45` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -rn "path=" dpdp-platform/frontend/src/App.tsx 2>/dev/null | head ...`
+- `09:46` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && ls dpdp-platform/frontend/src/ && grep -rn "path:" dpdp-platform/fronte...`
+- `09:46` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -n "path\|label\|NAV" dpdp-platform/frontend/src/router.tsx | head...`
+- `09:46` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -n "install-launchers\|desktop\|IS_WINDOWS" demo-control/prepare.s...`
+- `09:46` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -n "set \"SCRIPT=" *.cmd`
+- `09:48` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && for f in Module_14 Module_5 Personas Personas_1 ROUTES SEED_2 SEED_3 Ty...`
+- `09:48` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && ls scripts/ && ls -d dpdp-platform/*/node_modules 2>/dev/null; echo "==...`
+- `09:48` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -n "RUNBOOK_FILE\|GUIDE" demo-control/common.sh | head && echo "==...`
+- `09:48` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -o 'images/[a-z0-9-]*\.png' docs/demo-runbook/RUNBOOK.html | sort ...`
+- `09:50` wrote `C:\Users\ompuri\.claude\plans\this-is-a-handoff-witty-fountain.md` (~213 lines)
+- `09:50` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && mkdir -p demo-control/linux && for f in "0 - Prepare This Computer" "1 ...`
+- `09:50` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/demo-control/linux" && cat "0 - Prepare This Computer.sh" && echo "---" && ...`
+- `09:50` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && write_wrapper() { cat > "demo-control/linux/$1.sh" <<EOF #!/usr/bin/env...`
+- `09:50` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && sed -n '50,62p' demo-control/common.sh && echo "=== pause_before_exit =...`
+- `09:50` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && cat > demo-control/open-client-guide.sh <<'EOF' #!/usr/bin/env bash # "...`
+- `09:51` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && sed -i 's|^set "SCRIPT=2 - Client Guide.sh"$|set "SCRIPT=demo-control/o...`
+- `09:51` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PY' import pathlib old_a = """rem This hands over to 2 - Cl...`
+- `09:51` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PY' import pathlib, re bad = """rem script the Linux entry ...`
+- `09:51` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && cat demo-control/install-launchers.sh && echo "=== desktop files ===" &...`
+- `09:51` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git mv demo-control/desktop/2-demo-runbook.desktop demo-control/desktop...`
+- `09:51` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PY' import pathlib p = pathlib.Path("demo-control/install-l...`
+- `09:51` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && sed -n '100,200p' demo-control/prepare.sh`
+- `09:51` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PY' import pathlib p = pathlib.Path("demo-control/prepare.s...`
+- `09:53` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -rn "(Windows)" --include=*.sh --include=*.cmd --include=*.md --in...`
+- `09:53` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && sed -n '38,200p' demo-control/README.html`
+- `09:53` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PY' import pathlib p = pathlib.Path("demo-control/README.ht...`
+- `09:54` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && cat > README.md <<'MD' # DPDP Privacy Platform â€” Client Evaluation A ...`
+- `09:54` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PY' import pathlib p = pathlib.Path("CLAUDE.md"); s = p.rea...`
+- `09:54` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && cat > scripts/dedupe-vault-names.py <<'PY' #!/usr/bin/env python3 """Re...`
+- `09:55` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && for pair in "Module_14 module_14" "Module_5 module_5" "Personas persona...`
+- `09:55` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && for pair in "Module_14 module_14" "Module_5 module_5" "Personas persona...`
+- `09:55` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && for n in module_14 module_5 personas personas_1 Routes seed_2 seed_3 ty...`
+- `09:55` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PY' import re, pathlib renames = {"module_14":"module_14_lo...`
+- `09:55` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git add -A graphify-out && git status --porcelain | head -40 && echo "=...`
+- `09:56` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook" && python - <<'PY' import pathlib p = pathlib.Path("CLIE...`
+- `09:56` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook" && grep -n -i "linux" CLIENT-GUIDE.html && echo "=== fol...`
+- `09:56` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && docker info --format "{{.ServerVersion}}" 2>&1 | head -3 && docker ps -...`
+- `09:58` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && timeout 600 bash demo-control/start.sh < /dev/null 2>&1 | tail -40`
+- `09:58` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && ls docs/demo-screenshots/ 2>/dev/null | head && find . -maxdepth 3 -nam...`
+- `09:58` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && head -40 docs/demo-screenshots/screens.json && echo "=== playwright any...`
+- `10:00` ran `cd "C:/Users/ompuri/AppData/Local/Temp/claude/C--Coding-stuff-DPDP-Privacy-Platform/fd0bd078-ce0c-463d-a645-4ca4e9c55...`
+- `10:00` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -n "input\|name=\|type=\"password\"\|placeholder" dpdp-platform/fr...`
+- `10:00` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && sed -n '80,120p' dpdp-platform/frontend/src/fiduciary/pages/LoginPage.tsx`
+- `10:01` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && cat > scripts/capture-guide-screenshots.mjs <<'JS' #!/usr/bin/env node ...`
+- `10:01` ran `cd "C:/Users/ompuri/AppData/Local/Temp/claude/C--Coding-stuff-DPDP-Privacy-Platform/fd0bd078-ce0c-463d-a645-4ca4e9c55...`
+- `10:01` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PY' import pathlib p = pathlib.Path("scripts/capture-guide-...`
+- `10:01` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && SCRATCH="C:/Users/ompuri/AppData/Local/Temp/claude/C--Coding-stuff-DPDP...`
+- `10:02` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PY' import pathlib p = pathlib.Path("scripts/capture-guide-...`
+- `10:02` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -rn "pre-erasure-notice\|PRE_ERASURE_NOTICE" --include=*.ts dpdp-p...`
+- `10:03` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -n "pre-erasure" JOURNAL.md | head -20`
+- `10:03` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && sed -n '1870,1900p' JOURNAL.md`
+- `10:03` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && cat > /tmp/q.sh <<'EOF' . demo-control/common.sh >/dev/null 2>&1 psql_q...`
+- `10:03` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook/images" && rm -f mail-pre-erasure-notice.png && mv retent...`
+- `10:03` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PY' import pathlib p = pathlib.Path("scripts/capture-guide-...`
+- `10:07` wrote `C:\Users\ompuri\AppData\Local\Temp\claude\C--Coding-stuff-DPDP-Privacy-Platform\fd0bd078-ce0c-463d-a645-4ca4e9c558b0\scratchpad\add_stops.py` (~66 lines)
+- `10:07` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python "C:/Users/ompuri/AppData/Local/Temp/claude/C--Coding-stuff-DPDP-...`
+- `10:07` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook" && grep -o 'class="act" id="a[0-9]*"><header><span class...`
+- `10:07` wrote `C:\Users\ompuri\AppData\Local\Temp\claude\C--Coding-stuff-DPDP-Privacy-Platform\fd0bd078-ce0c-463d-a645-4ca4e9c558b0\scratchpad\finish_guide.py` (~66 lines)
+- `10:07` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python "C:/Users/ompuri/AppData/Local/Temp/claude/C--Coding-stuff-DPDP-...`
+- `10:08` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - "$@" <<'PYEOF' import pathlib p = pathlib.Path("docs/demo-runb...`
+- `10:08` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook" && grep -n -i "linux\|\.sh\|terminal\|desktop\|seven but...`
+- `10:08` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook" && sed -n '265,335p' RUNBOOK.html`
+- `10:08` wrote `C:\Users\ompuri\AppData\Local\Temp\claude\C--Coding-stuff-DPDP-Privacy-Platform\fd0bd078-ce0c-463d-a645-4ca4e9c558b0\scratchpad\fix_runbook.py` (~62 lines)
+- `10:08` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python "C:/Users/ompuri/AppData/Local/Temp/claude/C--Coding-stuff-DPDP-...`
+- `10:08` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook" && grep -n -i "linux" RUNBOOK.html | head && echo "=== p...`
+- `10:08` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook" && sed -n '483,520p' RUNBOOK.html`
+- `10:08` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook" && sed -n '452,470p' RUNBOOK.html`
+- `10:09` wrote `C:\Users\ompuri\AppData\Local\Temp\claude\C--Coding-stuff-DPDP-Privacy-Platform\fd0bd078-ce0c-463d-a645-4ca4e9c558b0\scratchpad\runbook_content.py` (~51 lines)
+- `10:09` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python "C:/Users/ompuri/AppData/Local/Temp/claude/C--Coding-stuff-DPDP-...`
+- `10:09` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook" && for f in images/*.png; do n=$(basename "$f"); c=$(gre...`
+- `10:09` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git rm --quiet docs/demo-runbook/images/demo-proof.png docs/demo-runboo...`
+- `10:09` wrote `C:\Users\ompuri\AppData\Local\Temp\claude\C--Coding-stuff-DPDP-Privacy-Platform\fd0bd078-ce0c-463d-a645-4ca4e9c558b0\scratchpad\shoot_docs.mjs` (~27 lines)
+- `10:10` ran `cd "C:/Users/ompuri/AppData/Local/Temp/claude/C--Coding-stuff-DPDP-Privacy-Platform/fd0bd078-ce0c-463d-a645-4ca4e9c55...`
+- `10:10` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PYEOF' import pathlib p = pathlib.Path("scripts/capture-gui...`
+- `10:11` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python docs/demo-runbook/build-standalone.py && cd "C:/Users/ompuri/App...`
+- `10:11` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && echo "=== linux wrapper ===" && timeout 120 bash "demo-control/linux/5 ...`
+- `10:12` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && timeout 180 bash demo-control/install-launchers.sh </dev/null 2>&1 | ta...`
+- `10:12` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -n -i "twelve stops\|12 stops\|(Windows)\|Demo Runbook\|seven butt...`
+- `10:12` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && PYTHONIOENCODING=utf-8 python - <<'PYEOF' import re, pathlib s = pathli...`
+- `10:12` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PYEOF' import pathlib p = pathlib.Path("docs/demo-runbook/C...`
+- `10:13` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && timeout 900 graphify update . 2>&1 | tail -8 && echo "=== dedupe ===" &...`
+- `10:13` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PYEOF' import pathlib p = pathlib.Path("scripts/dedupe-vaul...`
+- `10:13` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && timeout 300 bash demo-control/stop.sh </dev/null 2>&1 | tail -8`
+- `10:13` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && sed -n '/journal:pinned/,/journal:pinned end/p' JOURNAL.md | head -30`
+- `10:14` wrote `C:\Users\ompuri\AppData\Local\Temp\claude\C--Coding-stuff-DPDP-Privacy-Platform\fd0bd078-ce0c-463d-a645-4ca4e9c558b0\scratchpad\journal.py` (~23 lines)
+- `10:14` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python "C:/Users/ompuri/AppData/Local/Temp/claude/C--Coding-stuff-DPDP-...`
+- `10:14` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git status --porcelain graphify-out | awk '{print $2}' | sed 's|graphif...`
+- `10:14` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git diff --cached --stat graphify-out/obsidian | tail -3 && echo "=== s...`
+- `10:14` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git diff --cached --name-only graphify-out/obsidian | tr 'A-Z' 'a-z' | ...`
+- `10:14` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && for f in demo-control/common.sh demo-control/install-launchers.sh demo-...`

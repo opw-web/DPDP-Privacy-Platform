@@ -12,17 +12,17 @@ tags:
 # seed-principals.ts
 
 ## Connections
-- [[@prismaclient]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[ClaimResult]] - `contains` [EXTRACTED]
 - [[DEMO_ORG]] - `imports` [EXTRACTED]
 - [[DEMO_PASSWORD]] - `imports` [EXTRACTED]
 - [[DEMO_PRINCIPALS_TO_CLAIM]] - `contains` [EXTRACTED]
 - [[DemoPrincipalToClaim]] - `contains` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
-- [[argon2]] - `imports_from` [EXTRACTED]
+- [[argon2_1]] - `imports_from` [EXTRACTED]
 - [[claimDemoPrincipalAccounts()]] - `contains` [EXTRACTED]
 - [[demo-org.ts]] - `imports_from` [EXTRACTED]
-- [[main()_3]] - `contains` [EXTRACTED]
+- [[main()_5]] - `contains` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[resolveDemoOrganizationId()]] - `contains` [EXTRACTED]
 - [[runSeedPrincipals()]] - `contains` [EXTRACTED]

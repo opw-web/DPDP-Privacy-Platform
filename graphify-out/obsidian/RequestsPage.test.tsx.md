@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/RequestsPage.test.tsx"
 type: "code"
-community: "RequestDetailPage.tsx"
+community: "router.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestDetailPagetsx
+  - community/routertsx
 ---
 
 # RequestsPage.test.tsx
@@ -19,8 +19,8 @@ tags:
 - [[api-client.ts]] - `imports_from` [EXTRACTED]
 - [[employeeApiClient]] - `imports` [EXTRACTED]
 - [[react-router-dom_1]] - `imports_from` [EXTRACTED]
-- [[renderPage()]] - `contains` [EXTRACTED]
+- [[renderPage()_1]] - `contains` [EXTRACTED]
 - [[submittedRequest]] - `contains` [EXTRACTED]
 - [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

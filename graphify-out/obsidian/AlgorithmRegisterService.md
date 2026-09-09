@@ -12,13 +12,13 @@ tags:
 # AlgorithmRegisterService
 
 ## Connections
-- [[dot-constructor()_74]] - `references` [EXTRACTED]
-- [[dot-constructor()_73]] - `method` [EXTRACTED]
-- [[dot-create()_1]] - `method` [EXTRACTED]
+- [[dot-constructor()_83]] - `references` [EXTRACTED]
+- [[dot-constructor()_82]] - `method` [EXTRACTED]
+- [[dot-create()_2]] - `method` [EXTRACTED]
 - [[dot-getById()_3]] - `method` [EXTRACTED]
 - [[dot-list()_18]] - `method` [EXTRACTED]
 - [[dot-update()_9]] - `method` [EXTRACTED]
-- [[Injectable_44]] - `references` [EXTRACTED]
+- [[Injectable_51]] - `references` [EXTRACTED]
 - [[algorithm-register.service.ts]] - `contains` [EXTRACTED]
 - [[sdf.controller.ts]] - `imports` [EXTRACTED]
 - [[sdf.module.ts]] - `imports` [EXTRACTED]

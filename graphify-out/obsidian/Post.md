@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "RetentionController"
+community: "CreateLegalHoldDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionController
+  - community/CreateLegalHoldDto
 ---
 
 # Post
@@ -15,4 +15,4 @@ tags:
 - [[dot-complete()_1]] - `references` [EXTRACTED]
 - [[dot-createLegalHold()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionController
+#graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto

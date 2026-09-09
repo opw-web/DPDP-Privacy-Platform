@@ -12,7 +12,6 @@ tags:
 # platform.sh
 
 ## Connections
-- [[2 - Client Guide.sh]] - `imports_from` [INFERRED]
 - [[common.sh]] - `imports_from` [INFERRED]
 - [[compose()]] - `defines` [EXTRACTED]
 - [[docker_run()]] - `defines` [EXTRACTED]

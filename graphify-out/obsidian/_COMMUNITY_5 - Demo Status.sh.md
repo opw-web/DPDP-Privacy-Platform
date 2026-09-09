@@ -8,8 +8,8 @@ members: 2
 **Members:** 2 nodes
 
 ## Members
-- [[5 - Demo Status.sh]] - code - 5 - Demo Status.sh
-- [[5 - Demo Status.sh script]] - code - 5 - Demo Status.sh
+- [[5 - Demo Status.sh]] - code - demo-control/linux/5 - Demo Status.sh
+- [[5 - Demo Status.sh script]] - code - demo-control/linux/5 - Demo Status.sh
 
 ## Live Query (requires Dataview plugin)
 

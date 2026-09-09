@@ -8,8 +8,8 @@ members: 2
 **Members:** 2 nodes
 
 ## Members
-- [[6 - Stop Privacy Demo.sh]] - code - 6 - Stop Privacy Demo.sh
-- [[6 - Stop Privacy Demo.sh script]] - code - 6 - Stop Privacy Demo.sh
+- [[6 - Stop Privacy Demo.sh]] - code - demo-control/linux/6 - Stop Privacy Demo.sh
+- [[6 - Stop Privacy Demo.sh script]] - code - demo-control/linux/6 - Stop Privacy Demo.sh
 
 ## Live Query (requires Dataview plugin)
 

@@ -12,8 +12,8 @@ tags:
 # .validateBasis()
 
 ## Connections
-- [[dot-create()_3]] - `calls` [EXTRACTED]
-- [[dot-update()_2]] - `calls` [EXTRACTED]
+- [[dot-create()_8]] - `calls` [EXTRACTED]
+- [[dot-update()_5]] - `calls` [EXTRACTED]
 - [[PurposesService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PurposesService

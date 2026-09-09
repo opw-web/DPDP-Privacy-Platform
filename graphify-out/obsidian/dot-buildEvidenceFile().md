@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/principal-evidence.service.ts"
 type: "code"
-community: "principals.service.ts"
+community: "PrincipalEvidenceController"
 location: "L135"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/principalsservicets
+  - community/PrincipalEvidenceController
 ---
 
 # .buildEvidenceFile()
@@ -14,9 +14,9 @@ tags:
 ## Connections
 - [[dot-evidence()]] - `calls` [INFERRED]
 - [[dot-evidencePdf()]] - `calls` [INFERRED]
-- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
 - [[dot-recordPersonalDataViewed()]] - `calls` [INFERRED]
 - [[PrincipalEvidenceService]] - `method` [EXTRACTED]
 - [[splitNonDisclosureRequests()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/principalsservicets
+#graphify/code #graphify/INFERRED #community/PrincipalEvidenceController

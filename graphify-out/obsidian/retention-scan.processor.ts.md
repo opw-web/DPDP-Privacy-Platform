@@ -13,12 +13,12 @@ tags:
 
 ## Connections
 - [[@nestjsbullmq_1]] - `imports_from` [EXTRACTED]
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[RETENTION_SCAN_QUEUE_NAME]] - `imports` [EXTRACTED]
 - [[RetentionScanJobData]] - `imports` [EXTRACTED]
 - [[RetentionScanProcessor]] - `contains` [EXTRACTED]
 - [[RetentionScanService]] - `imports` [EXTRACTED]
-- [[bullmq_1]] - `imports_from` [EXTRACTED]
+- [[bullmq]] - `imports_from` [EXTRACTED]
 - [[retention-scan.queue.ts]] - `imports_from` [EXTRACTED]
 - [[retention-scan.service.ts]] - `imports_from` [EXTRACTED]
 - [[retention.module.ts]] - `imports_from` [EXTRACTED]

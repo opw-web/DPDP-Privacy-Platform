@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/messaging/audience/audience.controller.ts"
 type: "code"
-community: "RequirePermission"
+community: "@nestjs/common"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/nestjs/common
 ---
 
 # audience.controller.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[AudienceController]] - `contains` [EXTRACTED]
 - [[AudienceService]] - `imports` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[preview-audience.dto.ts]] - `imports_from` [EXTRACTED]
 - [[require-permission.decorator.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

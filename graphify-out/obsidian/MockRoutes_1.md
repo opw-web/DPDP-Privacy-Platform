@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/ReviewQueuePage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/DashboardPage.test.tsx"
 type: "code"
-community: "CandidateComparison.tsx"
-location: "L58"
+community: "EmployeesPage.tsx"
+location: "L129"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CandidateComparisontsx
+  - community/EmployeesPagetsx
 ---
 
 # MockRoutes
 
 ## Connections
-- [[MatchCandidateListItem_1]] - `references` [EXTRACTED]
-- [[ReviewQueuePage.test.tsx]] - `contains` [EXTRACTED]
+- [[DashboardPage.test.tsx]] - `contains` [EXTRACTED]
+- [[InventoryGap_1]] - `references` [EXTRACTED]
+- [[InventorySummary_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CandidateComparisontsx
+#graphify/code #graphify/EXTRACTED #community/EmployeesPagetsx

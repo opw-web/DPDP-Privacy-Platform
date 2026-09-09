@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "transfers.service.ts"
+community: "UpdateComplianceRuleDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/transfersservicets
+  - community/UpdateComplianceRuleDto
 ---
 
 # IsDateString
 
 ## Connections
-- [[CreateTransferDto]] - `references` [EXTRACTED]
+- [[UpdateComplianceRuleDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/transfersservicets
+#graphify/code #graphify/EXTRACTED #community/UpdateComplianceRuleDto

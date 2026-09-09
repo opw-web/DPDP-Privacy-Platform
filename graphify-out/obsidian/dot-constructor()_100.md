@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/campaign-send.queue.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/employees.service.ts"
 type: "code"
-community: "queues.module.ts"
-location: "L67"
+community: "EmployeesService"
+location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/EmployeesService
 ---
 
 # .constructor()
 
 ## Connections
-- [[CampaignSendQueueService]] - `method` [EXTRACTED]
-- [[InjectQueue_3]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[EmployeesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/EmployeesService

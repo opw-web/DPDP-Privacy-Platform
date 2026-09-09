@@ -1,5 +1,5 @@
 ---
-source_file: "5 - Demo Status.sh"
+source_file: "demo-control/linux/5 - Demo Status.sh"
 type: "code"
 community: "5 - Demo Status.sh"
 location: "L1"

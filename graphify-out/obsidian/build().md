@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[build-standalone.py]] - `contains` [EXTRACTED]
 - [[embed_image()]] - `calls` [EXTRACTED]
-- [[main()]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/build-standalonepy

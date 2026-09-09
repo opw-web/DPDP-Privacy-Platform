@@ -12,10 +12,10 @@ tags:
 # .createAssessment()
 
 ## Connections
-- [[dot-create()_12]] - `calls` [INFERRED]
-- [[Body_3]] - `references` [EXTRACTED]
+- [[dot-create()_15]] - `calls` [INFERRED]
+- [[Body_4]] - `references` [EXTRACTED]
 - [[CreateSdfAssessmentDto]] - `references` [EXTRACTED]
-- [[Post_7]] - `references` [EXTRACTED]
+- [[Post_8]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[SdfController]] - `method` [EXTRACTED]
 

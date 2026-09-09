@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/inventory/csv-writer.spec.ts"
 type: "code"
-community: "csv-writer.ts"
+community: "csvDocument"
 location: "L87"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/csv-writerts
+  - community/csvDocument
 ---
 
 # parseCsv()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[csv-writer.spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/csv-writerts
+#graphify/code #graphify/EXTRACTED #community/csvDocument

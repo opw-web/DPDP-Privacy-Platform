@@ -14,9 +14,9 @@ members: 10
 - [[dot-listAlgorithms()]] - code - dpdp-platform/backend/src/modules/sdf/sdf.controller.ts
 - [[dot-listAssessments()]] - code - dpdp-platform/backend/src/modules/sdf/sdf.controller.ts
 - [[dot-listWithReadiness()]] - code - dpdp-platform/backend/src/modules/sdf/sdf-assessment.service.ts
-- [[ApiTags_16]] - code
-- [[Controller_16]] - code
-- [[Get_19]] - code
+- [[ApiTags_17]] - code
+- [[Controller_17]] - code
+- [[Get_18]] - code
 - [[SdfController]] - code - dpdp-platform/backend/src/modules/sdf/sdf.controller.ts
 
 ## Live Query (requires Dataview plugin)
@@ -30,13 +30,12 @@ SORT file.name ASC
 - 3 edges to [[_COMMUNITY_AlgorithmRegisterService]]
 - 3 edges to [[_COMMUNITY_RequirePermission]]
 - 2 edges to [[_COMMUNITY_SdfAssessmentService]]
-- 1 edge to [[_COMMUNITY_@nestjscommon]]
-- 1 edge to [[_COMMUNITY_@nestjsswagger]]
+- 2 edges to [[_COMMUNITY_compliance.service.ts]]
+- 1 edge to [[_COMMUNITY_app.module.ts]]
 - 1 edge to [[_COMMUNITY_CreateSdfAssessmentDto]]
 - 1 edge to [[_COMMUNITY_CreateAlgorithmEntryDto]]
 - 1 edge to [[_COMMUNITY_UpdateAlgorithmEntryDto]]
-- 1 edge to [[_COMMUNITY_AuditService]]
-- 1 edge to [[_COMMUNITY_SdfCycleScanService]]
+- 1 edge to [[_COMMUNITY_RetentionScanService]]
 
 ## Top bridge nodes
 - [[SdfController]] - degree 12, connects to 7 communities

@@ -12,13 +12,13 @@ tags:
 # AuditReadService
 
 ## Connections
-- [[dot-accessLogCsv()]] - `method` [EXTRACTED]
+- [[dot-accessLogCsv()_1]] - `method` [EXTRACTED]
 - [[dot-buildWhere()]] - `method` [EXTRACTED]
-- [[dot-constructor()_32]] - `references` [EXTRACTED]
-- [[dot-constructor()_7]] - `references` [EXTRACTED]
-- [[dot-constructor()_33]] - `method` [EXTRACTED]
+- [[dot-constructor()_20]] - `references` [EXTRACTED]
+- [[dot-constructor()_26]] - `references` [EXTRACTED]
+- [[dot-constructor()_21]] - `method` [EXTRACTED]
 - [[dot-list()_6]] - `method` [EXTRACTED]
-- [[Injectable_18]] - `references` [EXTRACTED]
+- [[Injectable_10]] - `references` [EXTRACTED]
 - [[audit-read.controller.ts]] - `imports` [EXTRACTED]
 - [[audit-read.module.ts]] - `imports` [EXTRACTED]
 - [[audit-read.service.ts]] - `contains` [EXTRACTED]

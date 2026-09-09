@@ -17,9 +17,9 @@ tags:
 - [[@testing-libraryuser-event_1]] - `imports_from` [EXTRACTED]
 - [[ChildrenPage()]] - `imports` [EXTRACTED]
 - [[ChildrenPage.tsx]] - `imports_from` [EXTRACTED]
-- [[jsonResponse()_8]] - `contains` [EXTRACTED]
+- [[jsonResponse()_10]] - `contains` [EXTRACTED]
 - [[react-router-dom_1]] - `imports_from` [EXTRACTED]
-- [[renderPage()_2]] - `contains` [EXTRACTED]
+- [[renderPage()_3]] - `contains` [EXTRACTED]
 - [[vitest_1]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/tanstack/react-query

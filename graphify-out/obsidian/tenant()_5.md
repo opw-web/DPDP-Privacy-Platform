@@ -1,20 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/test/identity-matching.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/step6-conflict-acceptance.e2e-spec.ts"
 type: "code"
-community: "ScopedTransactionClient"
-location: "L60"
+community: "step6-conflict-acceptance.e2e-spec.ts"
+location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScopedTransactionClient
+  - community/step6-conflict-acceptancee2e-spects
 ---
 
 # tenant()
 
 ## Connections
-- [[apply()]] - `calls` [EXTRACTED]
-- [[identity-matching.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[principal()_2]] - `calls` [EXTRACTED]
-- [[record()]] - `calls` [EXTRACTED]
+- [[bareDataSource()]] - `calls` [EXTRACTED]
+- [[createDataSource()_4]] - `calls` [EXTRACTED]
+- [[step6-conflict-acceptance.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient
+#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects

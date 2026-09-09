@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
 type: "code"
-community: "RestApiConnector"
+community: "rest-api.connector.ts"
 location: "L138"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RestApiConnector
+  - community/rest-apiconnectorts
 ---
 
 # RestApiConnector
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-buildAuthHeaders()]] - `method` [EXTRACTED]
 - [[dot-buildUrl()]] - `method` [EXTRACTED]
-- [[dot-constructor()_123]] - `method` [EXTRACTED]
-- [[dot-create()_2]] - `calls` [EXTRACTED]
+- [[dot-constructor()_120]] - `method` [EXTRACTED]
+- [[dot-create()_3]] - `calls` [EXTRACTED]
 - [[dot-decodeCursor()]] - `method` [EXTRACTED]
 - [[dot-discoverSchema()_3]] - `method` [EXTRACTED]
 - [[dot-encodeCursor()]] - `method` [EXTRACTED]
@@ -31,4 +31,4 @@ tags:
 - [[rest-api.connector.spec.ts]] - `imports` [EXTRACTED]
 - [[rest-api.connector.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RestApiConnector
+#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts

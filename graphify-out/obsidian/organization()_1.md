@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/sync.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/assembly.e2e-spec.ts"
 type: "code"
-community: "queues.module.ts"
-location: "L78"
+community: "prisma.service.ts"
+location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/prismaservicets
 ---
 
 # organization()
 
 ## Connections
-- [[sync.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[assembly.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

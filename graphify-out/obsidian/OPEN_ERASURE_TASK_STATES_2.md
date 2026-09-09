@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/retention-scan.service.ts"
+source_file: "dpdp-platform/backend/src/modules/consents/consents.service.ts"
 type: "code"
-community: "erasure-task.service.ts"
-location: "L24"
+community: "guardians.service.ts"
+location: "L84"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/guardiansservicets
 ---
 
 # OPEN_ERASURE_TASK_STATES
 
 ## Connections
-- [[retention-scan.service.ts]] - `contains` [EXTRACTED]
+- [[consents.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/guardiansservicets

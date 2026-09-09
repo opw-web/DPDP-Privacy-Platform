@@ -1,23 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.service.ts"
+source_file: "dpdp-platform/backend/src/queues/consent-backfill.processor.ts"
 type: "code"
-community: "AuditService"
-location: "L161"
+community: "ConsentBackfillService"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/ConsentBackfillService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[CampaignSendQueueService]] - `references` [EXTRACTED]
-- [[CampaignsService]] - `method` [EXTRACTED]
-- [[ConsentsService]] - `references` [EXTRACTED]
-- [[NoticesService]] - `references` [EXTRACTED]
-- [[ReferenceService]] - `references` [EXTRACTED]
-- [[TemplatesService]] - `references` [EXTRACTED]
+- [[ConsentBackfillProcessor]] - `method` [EXTRACTED]
+- [[ConsentBackfillService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/ConsentBackfillService

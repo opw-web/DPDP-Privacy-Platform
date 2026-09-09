@@ -13,11 +13,11 @@ tags:
 
 ## Connections
 - [[dot-computeShortfallCounts()]] - `method` [EXTRACTED]
-- [[dot-constructor()_46]] - `references` [EXTRACTED]
-- [[dot-constructor()_47]] - `method` [EXTRACTED]
+- [[dot-constructor()_34]] - `references` [EXTRACTED]
+- [[dot-constructor()_35]] - `method` [EXTRACTED]
 - [[dot-getGaps()]] - `method` [EXTRACTED]
 - [[dot-getSummary()]] - `method` [EXTRACTED]
-- [[Injectable_30]] - `references` [EXTRACTED]
+- [[Injectable_21]] - `references` [EXTRACTED]
 - [[inventory.controller.ts]] - `imports` [EXTRACTED]
 - [[inventory.module.ts]] - `imports` [EXTRACTED]
 - [[inventory.service.ts]] - `contains` [EXTRACTED]

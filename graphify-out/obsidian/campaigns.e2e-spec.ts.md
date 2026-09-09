@@ -12,7 +12,7 @@ tags:
 # campaigns.e2e-spec.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[CampaignSendJobData]] - `imports` [EXTRACTED]
 - [[CampaignsService]] - `imports` [EXTRACTED]
 - [[NotificationsService]] - `imports` [EXTRACTED]
@@ -20,7 +20,7 @@ tags:
 - [[TenantContext]] - `imports` [EXTRACTED]
 - [[TenantStore]] - `imports` [EXTRACTED]
 - [[addEmployeeToOrg()]] - `contains` [EXTRACTED]
-- [[argon2]] - `imports_from` [EXTRACTED]
+- [[argon2_1]] - `imports_from` [EXTRACTED]
 - [[bootstrapTestApp()]] - `imports` [EXTRACTED]
 - [[campaign-send.queue.ts]] - `imports_from` [EXTRACTED]
 - [[campaigns.service.ts]] - `imports_from` [EXTRACTED]
@@ -28,10 +28,10 @@ tags:
 - [[createBreach()]] - `contains` [EXTRACTED]
 - [[createConsentPurpose()]] - `contains` [EXTRACTED]
 - [[createNotice()]] - `contains` [EXTRACTED]
-- [[createOrgWithEmployee()_2]] - `imports` [EXTRACTED]
+- [[createOrgWithEmployee()_1]] - `imports` [EXTRACTED]
 - [[createPrincipal()]] - `contains` [EXTRACTED]
 - [[e2e-harness.ts]] - `imports_from` [EXTRACTED]
-- [[ensurePermission()_4]] - `imports` [EXTRACTED]
+- [[ensurePermission()]] - `imports` [EXTRACTED]
 - [[getRecipients()]] - `contains` [EXTRACTED]
 - [[markAffected()]] - `contains` [EXTRACTED]
 - [[notifications.service.ts]] - `imports_from` [EXTRACTED]

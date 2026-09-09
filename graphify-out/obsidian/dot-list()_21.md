@@ -1,23 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/candidates.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/principals/principals.controller.ts"
 type: "code"
-community: "RequirePermission"
-location: "L47"
+community: "ListPrincipalsDto"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/ListPrincipalsDto
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_22]] - `calls` [INFERRED]
-- [[CandidatesController]] - `method` [EXTRACTED]
+- [[dot-list()_17]] - `calls` [INFERRED]
 - [[CurrentActorPermissions]] - `references` [EXTRACTED]
-- [[Get_21]] - `references` [EXTRACTED]
-- [[ListMatchCandidatesQueryDto]] - `references` [EXTRACTED]
+- [[Get_20]] - `references` [EXTRACTED]
+- [[ListPrincipalsDto]] - `references` [EXTRACTED]
+- [[PrincipalsController]] - `method` [EXTRACTED]
 - [[Query_5]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/ListPrincipalsDto

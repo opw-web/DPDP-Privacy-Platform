@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "GuardiansService"
+community: "CreateLegalHoldDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GuardiansService
+  - community/CreateLegalHoldDto
 ---
 
 # IsOptional
 
 ## Connections
-- [[ListGuardiansDto]] - `references` [EXTRACTED]
+- [[ProcessorChecklistTickDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GuardiansService
+#graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto

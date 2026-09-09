@@ -12,17 +12,17 @@ tags:
 # notices.e2e-spec.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[attachPurposeAndMapping()]] - `contains` [EXTRACTED]
 - [[bootstrapTestApp()]] - `imports` [EXTRACTED]
 - [[cleanupOrgs()]] - `imports` [EXTRACTED]
 - [[completePurpose()]] - `contains` [EXTRACTED]
 - [[createAdmin()]] - `contains` [EXTRACTED]
-- [[createDataSource()_2]] - `contains` [EXTRACTED]
+- [[createDataSource()]] - `contains` [EXTRACTED]
 - [[createNotice()_1]] - `contains` [EXTRACTED]
-- [[createOrgWithEmployee()_2]] - `imports` [EXTRACTED]
-- [[createPurpose()_1]] - `contains` [EXTRACTED]
+- [[createOrgWithEmployee()_1]] - `imports` [EXTRACTED]
+- [[createPurpose()]] - `contains` [EXTRACTED]
 - [[e2e-harness.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[setupFixture()]] - `contains` [EXTRACTED]

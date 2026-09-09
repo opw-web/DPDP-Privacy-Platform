@@ -12,8 +12,8 @@ tags:
 # renderOrganizationMessageTemplate()
 
 ## Connections
-- [[dot-preview()]] - `calls` [EXTRACTED]
-- [[dot-send()_7]] - `calls` [EXTRACTED]
+- [[dot-preview()_2]] - `calls` [EXTRACTED]
+- [[dot-send()_6]] - `calls` [EXTRACTED]
 - [[campaigns.service.ts]] - `imports` [EXTRACTED]
 - [[renderMessageTemplate()]] - `calls` [EXTRACTED]
 - [[resolveOrganizationContactVariables()]] - `calls` [EXTRACTED]

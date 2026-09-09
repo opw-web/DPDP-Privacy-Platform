@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AuditReadService"
+community: "SetMyConsentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditReadService
+  - community/SetMyConsentDto
 ---
 
 # Get
 
 ## Connections
-- [[dot-accessLogCsv()_1]] - `references` [EXTRACTED]
-- [[dot-list()_5]] - `references` [EXTRACTED]
+- [[dot-list()_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditReadService
+#graphify/code #graphify/EXTRACTED #community/SetMyConsentDto

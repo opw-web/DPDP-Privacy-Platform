@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "AgeStatusService"
+community: "age-status.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AgeStatusService
+  - community/age-statusservicets
 ---
 
 # Injectable
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[AgeStatusService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AgeStatusService
+#graphify/code #graphify/EXTRACTED #community/age-statusservicets

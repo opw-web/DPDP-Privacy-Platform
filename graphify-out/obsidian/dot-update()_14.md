@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-update()_15]] - `calls` [INFERRED]
-- [[Body_15]] - `references` [EXTRACTED]
+- [[Body_13]] - `references` [EXTRACTED]
 - [[EmployeesController]] - `method` [EXTRACTED]
-- [[Param_17]] - `references` [EXTRACTED]
+- [[Param_15]] - `references` [EXTRACTED]
 - [[Patch_7]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[UpdateEmployeeDto]] - `references` [EXTRACTED]

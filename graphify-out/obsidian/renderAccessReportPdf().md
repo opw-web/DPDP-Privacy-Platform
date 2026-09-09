@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/access-report-render.ts"
 type: "code"
-community: "access-report-render.ts"
+community: "csvDocument"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-report-renderts
+  - community/csvDocument
 ---
 
 # renderAccessReportPdf()
@@ -23,4 +23,4 @@ tags:
 - [[writePdfLine()]] - `calls` [EXTRACTED]
 - [[writePdfSectionHeading()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-report-renderts
+#graphify/code #graphify/EXTRACTED #community/csvDocument

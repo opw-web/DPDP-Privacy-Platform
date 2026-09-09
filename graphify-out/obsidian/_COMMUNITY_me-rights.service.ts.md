@@ -10,22 +10,22 @@ members: 32
 ## Members
 - [[dot-upsertNomination()]] - code - dpdp-platform/backend/src/modules/principal-portal/me-rights.controller.ts
 - [[dot-upsertNomination()_1]] - code - dpdp-platform/backend/src/modules/principal-portal/me-rights.service.ts
-- [[ApiProperty_36]] - code
-- [[ApiProperty_37]] - code
-- [[ApiPropertyOptional_41]] - code
-- [[ApiPropertyOptional_42]] - code
+- [[ApiProperty_33]] - code
+- [[ApiProperty_34]] - code
+- [[ApiPropertyOptional_38]] - code
+- [[ApiPropertyOptional_39]] - code
 - [[CreateMeRequestDto]] - code - dpdp-platform/backend/src/modules/principal-portal/dto/create-me-request.dto.ts
 - [[IsEmail_3]] - code
+- [[IsIn_11]] - code
 - [[IsIn_12]] - code
-- [[IsIn_13]] - code
-- [[IsObject_6]] - code
-- [[IsOptional_44]] - code
-- [[IsOptional_45]] - code
-- [[IsString_53]] - code
-- [[IsString_54]] - code
+- [[IsObject_4]] - code
+- [[IsOptional_41]] - code
+- [[IsOptional_42]] - code
+- [[IsString_50]] - code
+- [[IsString_51]] - code
 - [[ME_REQUEST_EVENT_SELECT]] - code - dpdp-platform/backend/src/modules/principal-portal/me-rights.service.ts
-- [[MinLength_41]] - code
-- [[MinLength_42]] - code
+- [[MinLength_39]] - code
+- [[MinLength_40]] - code
 - [[NOMINATION_ACTIVATION]] - code - dpdp-platform/backend/src/modules/principal-portal/dto/update-me-nomination.dto.ts
 - [[NOMINATION_PUBLIC_SELECT]] - code - dpdp-platform/backend/src/modules/principal-portal/me-rights.service.ts
 - [[NOMINATION_SCOPES]] - code - dpdp-platform/backend/src/modules/principal-portal/dto/update-me-nomination.dto.ts
@@ -51,22 +51,20 @@ SORT file.name ASC
 ## Connections to other communities
 - 7 edges to [[_COMMUNITY_Public]]
 - 6 edges to [[_COMMUNITY_MeRightsService]]
-- 5 edges to [[_COMMUNITY_@prismaclient]]
-- 4 edges to [[_COMMUNITY_@nestjsswagger]]
+- 6 edges to [[_COMMUNITY_@nestjscommon]]
+- 5 edges to [[_COMMUNITY_prisma.service.ts]]
 - 3 edges to [[_COMMUNITY_requests.service.ts]]
-- 2 edges to [[_COMMUNITY_PrismaService]]
-- 2 edges to [[_COMMUNITY_@nestjscommon]]
-- 1 edge to [[_COMMUNITY_AuditService]]
-- 1 edge to [[_COMMUNITY_NotificationsService]]
+- 2 edges to [[_COMMUNITY_notifications.service.ts]]
+- 2 edges to [[_COMMUNITY_notices.service.ts]]
+- 1 edge to [[_COMMUNITY_PrismaService]]
 - 1 edge to [[_COMMUNITY_RequestsService]]
-- 1 edge to [[_COMMUNITY_notifications.controller.ts]]
-- 1 edge to [[_COMMUNITY_NoticesService]]
+- 1 edge to [[_COMMUNITY_NotificationsService]]
 - 1 edge to [[_COMMUNITY_dot-record]]
-- 1 edge to [[_COMMUNITY_notices.service.ts]]
-- 1 edge to [[_COMMUNITY_TokenService]]
+- 1 edge to [[_COMMUNITY_app.module.ts]]
+- 1 edge to [[_COMMUNITY_notifications.controller.ts]]
 
 ## Top bridge nodes
-- [[me-rights.service.ts]] - degree 29, connects to 13 communities
+- [[me-rights.service.ts]] - degree 29, connects to 12 communities
 - [[CreateMeRequestDto]] - degree 12, connects to 2 communities
 - [[dot-upsertNomination()]] - degree 7, connects to 2 communities
 - [[create-me-request.dto.ts]] - degree 7, connects to 2 communities

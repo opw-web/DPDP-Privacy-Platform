@@ -12,7 +12,7 @@ tags:
 # .list()
 
 ## Connections
-- [[dot-list()_23]] - `calls` [INFERRED]
+- [[dot-list()_30]] - `calls` [INFERRED]
 - [[CampaignsService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CampaignsService

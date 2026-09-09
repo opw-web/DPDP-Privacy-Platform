@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=2 - Client Guide
+Comment=Open the guided product evaluation in your browser
+Exec=/bin/bash "/home/linux/Coding stuff/DPDP app/demo-control/open-client-guide.sh"
+Icon=x-office-address-book
+Terminal=true
+Categories=Utility;
+StartupNotify=true

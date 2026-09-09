@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/requests/CorrectionWorkflow.tsx"
 type: "code"
-community: "RequestDetailPage.tsx"
+community: "router.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestDetailPagetsx
+  - community/routertsx
 ---
 
 # CorrectionWorkflow.tsx
@@ -24,4 +24,4 @@ tags:
 - [[requeststypes.ts]] - `imports_from` [EXTRACTED]
 - [[sonner_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/routertsx

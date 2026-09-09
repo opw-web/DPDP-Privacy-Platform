@@ -12,7 +12,7 @@ tags:
 # rest-api.connector.ts
 
 ## Connections
-- [[@prismaclient]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[Connector]] - `imports` [EXTRACTED]
 - [[DecodedCursor]] - `contains` [EXTRACTED]
 - [[InvalidCursorError]] - `contains` [EXTRACTED]

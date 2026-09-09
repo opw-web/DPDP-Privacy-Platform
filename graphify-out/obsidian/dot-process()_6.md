@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sdf-cycle-scan.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/breach-clock.processor.ts"
 type: "code"
-community: "SdfCycleScanService"
-location: "L25"
+community: "BreachClockProcessor"
+location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SdfCycleScanService
+  - community/BreachClockProcessor
 ---
 
 # .process()
 
 ## Connections
-- [[dot-runForAllOrganizations()_2]] - `calls` [INFERRED]
-- [[SdfCycleScanJobData]] - `references` [EXTRACTED]
-- [[SdfCycleScanProcessor]] - `method` [EXTRACTED]
+- [[dot-runClockCycle()]] - `calls` [EXTRACTED]
+- [[BreachClockProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SdfCycleScanService
+#graphify/code #graphify/EXTRACTED #community/BreachClockProcessor

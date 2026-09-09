@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/children/age-status.service.ts"
 type: "code"
-community: "PrismaService"
+community: "age-status.service.ts"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/age-statusservicets
 ---
 
 # AGE_STATUS_PUBLIC_SELECT
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[age-status.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/age-statusservicets

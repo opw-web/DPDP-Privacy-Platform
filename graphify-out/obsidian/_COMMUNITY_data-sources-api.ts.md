@@ -1,13 +1,14 @@
 ---
 type: community
-members: 94
+members: 92
 ---
 
 # data-sources-api.ts
 
-**Members:** 94 nodes
+**Members:** 92 nodes
 
 ## Members
+- [[@radix-uireact-tabs]] - concept - dpdp-platform/frontend/package.json
 - [[@tanstackreact-table]] - concept - dpdp-platform/frontend/package.json
 - [[AUTH_TYPE_VALUES]] - code - dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts
 - [[AttachedPurpose]] - code - dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts
@@ -15,10 +16,9 @@ members: 94
 - [[CANONICAL_FIELD_VALUES]] - code - dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts
 - [[CATEGORY_WARNING]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step3Mapping.test.tsx
 - [[CanonicalField]] - code - dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts
-- [[ConnectionFormValues]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step1Connection.tsx
 - [[DATA_CATEGORY_VALUES]] - code - dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts
-- [[DataSourceDetailPage()]] - code - dpdp-platform/frontend/src/fiduciary/pages/DataSourceDetailPage.tsx
 - [[DataSourceDetailPage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/DataSourceDetailPage.tsx
+- [[DataSourceNewPage()]] - code - dpdp-platform/frontend/src/fiduciary/pages/DataSourceNewPage.tsx
 - [[DataSourceNewPage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/DataSourceNewPage.tsx
 - [[DataSourcePurposesResult]] - code - dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts
 - [[DataSourceStatus]] - code - dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts
@@ -26,7 +26,6 @@ members: 94
 - [[DataSourcesPage.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/DataSourcesPage.tsx
 - [[DataTable()]] - code - dpdp-platform/frontend/src/components/shared/DataTable.tsx
 - [[DataTable.test.tsx]] - code - dpdp-platform/frontend/src/components/shared/DataTable.test.tsx
-- [[EXISTING_DATA_SOURCE]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step1Connection.test.tsx
 - [[FIELDS]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step3Mapping.test.tsx
 - [[FieldMappingTab()]] - code - dpdp-platform/frontend/src/fiduciary/pages/DataSourceDetailPage.tsx
 - [[MAPPING_COMPARISON_POLICY_VALUES]] - code - dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts
@@ -51,8 +50,6 @@ members: 94
 - [[SecurityMeasureGroup]] - code - dpdp-platform/frontend/src/fiduciary/pages/DataSourceDetailPage.tsx
 - [[SecurityMeasuresTab()]] - code - dpdp-platform/frontend/src/fiduciary/pages/DataSourceDetailPage.tsx
 - [[Step1Connection()]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step1Connection.tsx
-- [[Step1Connection.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step1Connection.test.tsx
-- [[Step1Connection.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step1Connection.tsx
 - [[Step1ConnectionProps]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step1Connection.tsx
 - [[Step2Schema()]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step2Schema.tsx
 - [[Step2Schema.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step2Schema.tsx
@@ -74,30 +71,31 @@ members: 94
 - [[SyncNowButton()]] - code - dpdp-platform/frontend/src/fiduciary/pages/DataSourcesPage.tsx
 - [[SyncNowButtonProps]] - code - dpdp-platform/frontend/src/fiduciary/pages/DataSourcesPage.tsx
 - [[SyncStatus]] - code - dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts
+- [[Tabs]] - code - dpdp-platform/frontend/src/components/ui/tabs.tsx
+- [[TabsContent]] - code - dpdp-platform/frontend/src/components/ui/tabs.tsx
+- [[TabsList]] - code - dpdp-platform/frontend/src/components/ui/tabs.tsx
+- [[TabsTrigger]] - code - dpdp-platform/frontend/src/components/ui/tabs.tsx
 - [[TestConnectionResult]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step1Connection.tsx
 - [[cacheMappingsResult()]] - code - dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts
 - [[cachePurposesResult()]] - code - dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts
 - [[clickAction]] - code - dpdp-platform/frontend/src/components/shared/DataTable.test.tsx
 - [[columns]] - code - dpdp-platform/frontend/src/components/shared/DataTable.test.tsx
 - [[columns_1]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step2Schema.tsx
-- [[connectionSchema]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step1Connection.tsx
 - [[data-sources-api.ts]] - code - dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts
 - [[defaultsFor()]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step1Connection.tsx
 - [[employeePut()]] - code - dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts
-- [[employeeTokenStore]] - code - dpdp-platform/frontend/src/lib/api-client.ts
 - [[errorLogEntries()]] - code - dpdp-platform/frontend/src/fiduciary/components/SyncHistoryTable.tsx
 - [[extractMessage()]] - code - dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts
 - [[handleSave()]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step4Purposes.tsx
-- [[jsonResponse()]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step1Connection.test.tsx
-- [[jsonResponse()_1]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step3Mapping.test.tsx
+- [[jsonResponse()]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step3Mapping.test.tsx
 - [[mappingFormSchema]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step3Mapping.tsx
 - [[mappingsQueryKey()]] - code - dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts
 - [[purposesQueryKey()]] - code - dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts
 - [[refreshEmployeeTokenForPut()]] - code - dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts
-- [[renderStep1()]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step1Connection.test.tsx
 - [[renderStep3()]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step3Mapping.test.tsx
 - [[rowSchema]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step3Mapping.tsx
 - [[rowsFor()]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step3Mapping.tsx
+- [[tabs.tsx]] - code - dpdp-platform/frontend/src/components/ui/tabs.tsx
 - [[toggle()]] - code - dpdp-platform/frontend/src/fiduciary/components/SyncHistoryTable.tsx
 - [[toggle()_1]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step4Purposes.tsx
 - [[useDataSourceMappings()]] - code - dpdp-platform/frontend/src/fiduciary/pages/DataSourceDetailPage.tsx
@@ -111,21 +109,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 61 edges to [[_COMMUNITY_react]]
-- 51 edges to [[_COMMUNITY_api-client.ts]]
-- 32 edges to [[_COMMUNITY_@tanstackreact-query]]
-- 11 edges to [[_COMMUNITY_PrincipalDetailPage.tsx]]
-- 6 edges to [[_COMMUNITY_AuditPage.tsx]]
-- 5 edges to [[_COMMUNITY_router.tsx]]
-- 5 edges to [[_COMMUNITY_cn]]
+- 60 edges to [[_COMMUNITY_react]]
+- 37 edges to [[_COMMUNITY_button.tsx]]
+- 28 edges to [[_COMMUNITY_@tanstackreact-query]]
+- 15 edges to [[_COMMUNITY_router.tsx]]
+- 11 edges to [[_COMMUNITY_cn]]
+- 8 edges to [[_COMMUNITY_api-client.ts]]
+- 6 edges to [[_COMMUNITY_PrincipalEvidencePage.tsx]]
 - 4 edges to [[_COMMUNITY_BreachWizardPage.tsx]]
-- 4 edges to [[_COMMUNITY_RequestDetailPage.tsx]]
 - 2 edges to [[_COMMUNITY_EmployeesPage.tsx]]
-- 1 edge to [[_COMMUNITY_frontendpackage.json]]
+- 2 edges to [[_COMMUNITY_PrincipalsPage.tsx]]
+- 2 edges to [[_COMMUNITY_frontendpackage.json]]
 
 ## Top bridge nodes
+- [[DataSourcesPage.tsx]] - degree 27, connects to 7 communities
 - [[@tanstackreact-table]] - degree 14, connects to 7 communities
 - [[DataSourceDetailPage.tsx]] - degree 47, connects to 6 communities
-- [[DataSourcesPage.tsx]] - degree 27, connects to 6 communities
-- [[DataTable()]] - degree 13, connects to 6 communities
-- [[Step3Mapping.tsx]] - degree 39, connects to 5 communities
+- [[Step3Mapping.tsx]] - degree 39, connects to 6 communities
+- [[SyncHistoryTable.tsx]] - degree 22, connects to 6 communities

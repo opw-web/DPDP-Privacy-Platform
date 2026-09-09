@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/compliance/compliance.controller.ts"
 type: "code"
-community: "SourcePurposesService"
-location: "L34"
+community: "ComplianceService"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SourcePurposesService
+  - community/ComplianceService
 ---
 
 # .constructor()
 
 ## Connections
-- [[MappingsController]] - `method` [EXTRACTED]
-- [[MappingsService]] - `references` [EXTRACTED]
-- [[SourcePurposesService]] - `references` [EXTRACTED]
+- [[ComplianceController]] - `method` [EXTRACTED]
+- [[ComplianceService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SourcePurposesService
+#graphify/code #graphify/EXTRACTED #community/ComplianceService

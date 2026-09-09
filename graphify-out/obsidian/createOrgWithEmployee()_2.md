@@ -1,40 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/support/e2e-harness.ts"
+source_file: "dpdp-platform/backend/test/rbac.e2e-spec.ts"
 type: "code"
-community: "PrismaService"
-location: "L116"
+community: "step6-conflict-acceptance.e2e-spec.ts"
+location: "L65"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/step6-conflict-acceptancee2e-spects
 ---
 
 # createOrgWithEmployee()
 
 ## Connections
-- [[audiences.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[campaigns.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[children.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[compliance-rules.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[consents.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[createAdmin()]] - `calls` [EXTRACTED]
-- [[createOrgWithEmployee()]] - `calls` [EXTRACTED]
-- [[e2e-harness.ts]] - `contains` [EXTRACTED]
-- [[ensurePermission()_4]] - `calls` [EXTRACTED]
-- [[evidence.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[information-requests.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[makeOrg()]] - `calls` [EXTRACTED]
-- [[makeSdfOrg()]] - `calls` [EXTRACTED]
-- [[mvp2-rbac.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[mvp2-schema-constraints.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[mvp2-tenant-isolation.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[notices.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[notifications.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[orgWithSender()]] - `calls` [EXTRACTED]
-- [[requests.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[retention.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[sdf.e2e-spec.ts]] - `imports` [EXTRACTED]
-- [[setupOrg()]] - `calls` [EXTRACTED]
-- [[templates.e2e-spec.ts]] - `imports` [EXTRACTED]
+- [[ensurePermission()_11]] - `calls` [EXTRACTED]
+- [[rbac.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects

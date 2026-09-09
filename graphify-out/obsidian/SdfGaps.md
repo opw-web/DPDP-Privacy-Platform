@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sdf/sdf-gaps.service.ts"
 type: "code"
-community: "AuditService"
+community: "compliance.service.ts"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/complianceservicets
 ---
 
 # SdfGaps
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sdf-gaps.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/complianceservicets

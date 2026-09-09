@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.controller.ts"
 type: "code"
-community: "templates.service.ts"
-location: "L87"
+community: "NoticesController"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatesservicets
+  - community/NoticesController
 ---
 
 # .constructor()
 
 ## Connections
-- [[MissingRequiredVariableError]] - `method` [EXTRACTED]
+- [[NoticesController]] - `method` [EXTRACTED]
+- [[NoticesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatesservicets
+#graphify/code #graphify/EXTRACTED #community/NoticesController

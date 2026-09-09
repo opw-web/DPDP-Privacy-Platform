@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/breaches/breach.types.ts"
 type: "code"
-community: ".record"
+community: "BreachService"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/BreachService
 ---
 
 # PublicBreach
 
 ## Connections
 - [[dot-completeObligation()_1]] - `references` [EXTRACTED]
-- [[dot-create()_30]] - `references` [EXTRACTED]
+- [[dot-create()_29]] - `references` [EXTRACTED]
 - [[dot-get()_18]] - `references` [EXTRACTED]
 - [[dot-list()_39]] - `references` [EXTRACTED]
 - [[dot-notifyPrincipals()]] - `references` [EXTRACTED]
@@ -24,4 +24,4 @@ tags:
 - [[breach.service.ts]] - `imports` [EXTRACTED]
 - [[breach.types.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/BreachService

@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts"
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
-location: "L19"
+community: "AlgorithmRegisterService"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/AlgorithmRegisterService
 ---
 
 # .constructor()
 
 ## Connections
-- [[VoluntaryUndertakingsController]] - `method` [EXTRACTED]
-- [[VoluntaryUndertakingsService]] - `references` [EXTRACTED]
+- [[AlgorithmRegisterService]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterService

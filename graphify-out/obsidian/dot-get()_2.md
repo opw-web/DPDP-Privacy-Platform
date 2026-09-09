@@ -1,21 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/transfers.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
 type: "code"
-community: "transfers.service.ts"
-location: "L21"
+community: "NoticesService"
+location: "L170"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/transfersservicets
+  - community/NoticesService
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_3]] - `calls` [INFERRED]
-- [[Get_9]] - `references` [EXTRACTED]
-- [[Param_2]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[TransfersController]] - `method` [EXTRACTED]
+- [[dot-get()_9]] - `calls` [INFERRED]
+- [[dot-publish()]] - `calls` [EXTRACTED]
+- [[dot-resolveItemisedFields()]] - `calls` [EXTRACTED]
+- [[dot-snapshotPurposeStatements()]] - `calls` [EXTRACTED]
+- [[NoticesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/transfersservicets
+#graphify/code #graphify/EXTRACTED #community/NoticesService

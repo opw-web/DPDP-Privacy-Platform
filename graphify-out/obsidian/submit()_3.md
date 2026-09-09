@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/retention/LegalHoldForm.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/information-requests/InformationRequestForm.tsx"
 type: "code"
 community: "react"
-location: "L18"
+location: "L209"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,7 @@ tags:
 # submit()
 
 ## Connections
-- [[LegalHoldForm()]] - `contains` [EXTRACTED]
+- [[InformationRequestForm()]] - `contains` [EXTRACTED]
+- [[isInformationRequestFormValid()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/react

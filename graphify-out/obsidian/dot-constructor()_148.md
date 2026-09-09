@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
+source_file: "dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts"
 type: "code"
-community: "RestApiConnector"
-location: "L62"
+community: "PrincipalAuthController"
+location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RestApiConnector
+  - community/PrincipalAuthController
 ---
 
 # .constructor()
 
 ## Connections
-- [[InvalidCursorError]] - `method` [EXTRACTED]
+- [[PrincipalAuthController]] - `method` [EXTRACTED]
+- [[PrincipalAuthService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RestApiConnector
+#graphify/code #graphify/EXTRACTED #community/PrincipalAuthController

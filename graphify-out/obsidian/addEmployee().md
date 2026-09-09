@@ -12,7 +12,7 @@ tags:
 # addEmployee()
 
 ## Connections
-- [[ensurePermission()_4]] - `calls` [EXTRACTED]
+- [[ensurePermission()]] - `calls` [EXTRACTED]
 - [[evidence.e2e-spec.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PrismaService

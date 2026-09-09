@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/security-measures.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/security-measures.service.ts"
 type: "code"
 community: "CreateSecurityMeasureDto"
-location: "L17"
+location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .constructor()
 
 ## Connections
-- [[SecurityMeasuresController]] - `method` [EXTRACTED]
-- [[SecurityMeasuresService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[SecurityMeasuresService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CreateSecurityMeasureDto

@@ -12,7 +12,7 @@ tags:
 # .buildPack()
 
 ## Connections
-- [[dot-accessLogCsv()]] - `calls` [INFERRED]
+- [[dot-accessLogCsv()_1]] - `calls` [INFERRED]
 - [[dot-buildBreachFileCsv()]] - `calls` [EXTRACTED]
 - [[dot-buildConsentLedgerCsv()]] - `calls` [EXTRACTED]
 - [[dot-buildDataInventoryCsv()]] - `calls` [EXTRACTED]
@@ -21,10 +21,10 @@ tags:
 - [[dot-buildRetentionScheduleCsv()]] - `calls` [EXTRACTED]
 - [[dot-buildSdfRecordsCsv()]] - `calls` [EXTRACTED]
 - [[dot-buildSharingRegisterCsv()]] - `calls` [EXTRACTED]
+- [[dot-exportCsv()_2]] - `calls` [INFERRED]
 - [[dot-exportCsv()_1]] - `calls` [INFERRED]
-- [[dot-exportCsv()]] - `calls` [INFERRED]
 - [[dot-packZip()]] - `calls` [INFERRED]
-- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
 - [[EvidencePackService]] - `method` [EXTRACTED]
 - [[buildZip()]] - `calls` [EXTRACTED]
 - [[withCsvLetterhead()]] - `calls` [EXTRACTED]

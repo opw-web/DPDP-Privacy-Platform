@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateComplianceRuleDto"
+community: "TemplatesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateComplianceRuleDto
+  - community/TemplatesService
 ---
 
 # Get
 
 ## Connections
-- [[dot-getById()]] - `references` [EXTRACTED]
-- [[dot-list()_13]] - `references` [EXTRACTED]
+- [[dot-get()_8]] - `references` [EXTRACTED]
+- [[dot-list()_15]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

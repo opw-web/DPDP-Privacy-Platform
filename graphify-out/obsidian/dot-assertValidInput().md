@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-createPortalInTransaction()]] - `calls` [EXTRACTED]
-- [[dot-send()_2]] - `calls` [EXTRACTED]
+- [[dot-send()_4]] - `calls` [EXTRACTED]
 - [[NotificationSendInput]] - `references` [EXTRACTED]
 - [[NotificationsService]] - `method` [EXTRACTED]
 

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "mapping-warning-response.dto.ts"
+community: "mappings.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mapping-warning-responsedtots
+  - community/mappingsservicets
 ---
 
 # ApiProperty
@@ -14,4 +14,4 @@ tags:
 - [[MappingWarningPurposeSummaryResponseDto]] - `references` [EXTRACTED]
 - [[MappingWarningResponseDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mapping-warning-responsedtots
+#graphify/code #graphify/EXTRACTED #community/mappingsservicets

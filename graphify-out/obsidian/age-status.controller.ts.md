@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/children/age-status.controller.ts"
 type: "code"
-community: "RequirePermission"
+community: "age-status.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/age-statusservicets
 ---
 
 # age-status.controller.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[AgeStatusController]] - `contains` [EXTRACTED]
 - [[AgeStatusService]] - `imports` [EXTRACTED]
@@ -23,4 +23,4 @@ tags:
 - [[require-permission.decorator.ts]] - `imports_from` [EXTRACTED]
 - [[set-age-status.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/age-statusservicets

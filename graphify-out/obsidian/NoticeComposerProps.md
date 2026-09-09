@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/notices/NoticeComposer.tsx"
 type: "code"
-community: "MessagingCampaignBuilderPage.tsx"
+community: "react"
 location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MessagingCampaignBuilderPagetsx
+  - community/react
 ---
 
 # NoticeComposerProps
 
 ## Connections
-- [[EligibleItemisedField_1]] - `references` [EXTRACTED]
+- [[EligibleItemisedField]] - `references` [EXTRACTED]
 - [[NoticeComposer.tsx]] - `contains` [EXTRACTED]
 - [[NoticePurposeStatement]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MessagingCampaignBuilderPagetsx
+#graphify/code #graphify/EXTRACTED #community/react

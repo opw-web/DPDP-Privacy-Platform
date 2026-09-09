@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/breaches/breach.types.ts"
 type: "code"
-community: ".record"
+community: "BreachService"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/BreachService
 ---
 
 # PublicBreachObligation
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[breach.types.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/BreachService

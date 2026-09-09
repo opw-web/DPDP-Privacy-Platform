@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/wizard/Step3Mapping.test.tsx"
+source_file: "dpdp-platform/frontend/src/router.test.tsx"
 type: "code"
-community: "data-sources-api.ts"
-location: "L14"
+community: "router.tsx"
+location: "L67"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sources-apits
+  - community/routertsx
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[Step3Mapping.test.tsx]] - `contains` [EXTRACTED]
+- [[installFetchMock()]] - `calls` [EXTRACTED]
+- [[router.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sources-apits
+#graphify/code #graphify/EXTRACTED #community/routertsx

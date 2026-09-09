@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/employees/employees.module.ts"
 type: "code"
-community: "@nestjs/common"
+community: "app.module.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/appmodulets
 ---
 
 # employees.module.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[AuditModule]] - `imports` [EXTRACTED]
 - [[EmployeesController]] - `imports` [EXTRACTED]
 - [[EmployeesModule]] - `contains` [EXTRACTED]
@@ -28,4 +28,4 @@ tags:
 - [[roles.controller.ts]] - `imports_from` [EXTRACTED]
 - [[roles.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/appmodulets

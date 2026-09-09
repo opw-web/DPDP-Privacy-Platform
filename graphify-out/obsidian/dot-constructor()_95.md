@@ -1,17 +1,23 @@
 ---
-source_file: "dpdp-platform/frontend/src/lib/api-client.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.service.ts"
 type: "code"
-community: "react"
-location: "L30"
+community: "breach-principal-notice-dispatch.processor.ts"
+location: "L161"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/breach-principal-notice-dispatchprocessorts
 ---
 
 # .constructor()
 
 ## Connections
-- [[ApiError]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[CampaignSendQueueService]] - `references` [EXTRACTED]
+- [[CampaignsService]] - `method` [EXTRACTED]
+- [[ConsentsService]] - `references` [EXTRACTED]
+- [[NoticesService]] - `references` [EXTRACTED]
+- [[ReferenceService]] - `references` [EXTRACTED]
+- [[TemplatesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/breach-principal-notice-dispatchprocessorts

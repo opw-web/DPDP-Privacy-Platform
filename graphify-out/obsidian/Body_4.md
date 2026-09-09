@@ -1,17 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "transfers.service.ts"
+community: "CreateAlgorithmEntryDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/transfersservicets
+  - community/CreateAlgorithmEntryDto
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_4]] - `references` [EXTRACTED]
-- [[dot-update()_3]] - `references` [EXTRACTED]
+- [[dot-completeAssessment()]] - `references` [EXTRACTED]
+- [[dot-createAlgorithm()]] - `references` [EXTRACTED]
+- [[dot-createAssessment()]] - `references` [EXTRACTED]
+- [[dot-updateAlgorithm()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/transfersservicets
+#graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto

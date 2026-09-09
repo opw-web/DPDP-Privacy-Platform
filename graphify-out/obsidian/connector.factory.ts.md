@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/connectors/connector.factory.ts"
 type: "code"
-community: "connector.factory.ts"
+community: "data-sources.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/connectorfactoryts
+  - community/data-sourcesservicets
 ---
 
 # connector.factory.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
-- [[@prismaclient]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[Connector]] - `imports` [EXTRACTED]
 - [[ConnectorFactory]] - `contains` [EXTRACTED]
 - [[DataSourceRowForConnector]] - `contains` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[data-sources.service.ts]] - `imports_from` [EXTRACTED]
 - [[rest-api.connector.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/connectorfactoryts
+#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets

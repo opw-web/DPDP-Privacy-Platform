@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "employee-auth.controller.ts"
+community: "configuration.ts"
 location: "L51"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/employee-authcontrollerts
+  - community/configurationts
 ---
 
 # reflect-metadata
@@ -15,4 +15,4 @@ tags:
 - [[backendpackage.json]] - `imports` [EXTRACTED]
 - [[env.validation.spec.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/employee-authcontrollerts
+#graphify/concept #graphify/EXTRACTED #community/configurationts

@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/mvp2-schedules.ts"
+source_file: "dpdp-platform/frontend/src/lib/api-client.ts"
 type: "code"
-community: "queues.module.ts"
-location: "L53"
+community: "react"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/react
 ---
 
 # .constructor()
 
 ## Connections
-- [[InjectQueue_6]] - `references` [EXTRACTED]
-- [[Mvp2ScheduleReconciliationService]] - `method` [EXTRACTED]
+- [[ApiError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/react

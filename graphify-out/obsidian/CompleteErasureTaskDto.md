@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/dto/complete-erasure-task.dto.ts"
 type: "code"
-community: "RetentionController"
+community: "CreateLegalHoldDto"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionController
+  - community/CreateLegalHoldDto
 ---
 
 # CompleteErasureTaskDto
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-complete()]] - `references` [EXTRACTED]
 - [[dot-complete()_1]] - `references` [EXTRACTED]
-- [[ApiProperty_18]] - `references` [EXTRACTED]
+- [[ApiProperty_1]] - `references` [EXTRACTED]
 - [[IsArray]] - `references` [EXTRACTED]
 - [[Type]] - `references` [EXTRACTED]
 - [[ValidateNested]] - `references` [EXTRACTED]
@@ -22,4 +22,4 @@ tags:
 - [[erasure-task.service.ts]] - `imports` [EXTRACTED]
 - [[retentionretention.controller.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionController
+#graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto

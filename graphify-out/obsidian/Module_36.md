@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "queues.module.ts"
+community: "step6-conflict-acceptance.e2e-spec.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/step6-conflict-acceptancee2e-spects
 ---
 
 # Module
 
 ## Connections
-- [[CampaignsModule]] - `references` [EXTRACTED]
+- [[AppModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects

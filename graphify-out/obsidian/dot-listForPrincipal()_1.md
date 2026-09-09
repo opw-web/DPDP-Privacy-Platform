@@ -15,7 +15,7 @@ tags:
 - [[dot-listForPrincipal()_2]] - `calls` [INFERRED]
 - [[ConsentsController]] - `method` [EXTRACTED]
 - [[Get_29]] - `references` [EXTRACTED]
-- [[Param_21]] - `references` [EXTRACTED]
+- [[Param_20]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/ConsentsService

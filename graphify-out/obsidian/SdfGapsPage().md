@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/SdfGapsPage.tsx"
 type: "code"
-community: "api-client.ts"
+community: "AlgorithmRegisterPanel.tsx"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/AlgorithmRegisterPaneltsx
 ---
 
 # SdfGapsPage()
@@ -16,4 +16,4 @@ tags:
 - [[findSdfCycleRule()]] - `calls` [EXTRACTED]
 - [[router.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterPaneltsx

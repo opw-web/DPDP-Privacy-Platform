@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RequestsController"
+community: "TemplatesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestsController
+  - community/TemplatesService
 ---
 
 # ApiTags
 
 ## Connections
-- [[RequestsController]] - `references` [EXTRACTED]
+- [[TemplatesController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestsController
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

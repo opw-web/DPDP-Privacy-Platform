@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/requests.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/principal-portal.e2e-spec.ts"
 type: "code"
-community: "requests.service.ts"
-location: "L93"
+community: "step6-conflict-acceptance.e2e-spec.ts"
+location: "L131"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/requestsservicets
+  - community/step6-conflict-acceptancee2e-spects
 ---
 
 # createPrincipal()
 
 ## Connections
-- [[requests.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[createFixture()_3]] - `calls` [EXTRACTED]
+- [[principal-portal.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/requestsservicets
+#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects

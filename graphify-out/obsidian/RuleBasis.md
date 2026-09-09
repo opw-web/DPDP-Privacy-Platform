@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/lib/mvp2-api.ts"
 type: "code"
-community: "cn"
+community: "AlgorithmRegisterPanel.tsx"
 location: "L71"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/AlgorithmRegisterPaneltsx
 ---
 
 # RuleBasis
@@ -18,4 +18,4 @@ tags:
 - [[mvp2-api.ts]] - `contains` [EXTRACTED]
 - [[sdftypes.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterPaneltsx

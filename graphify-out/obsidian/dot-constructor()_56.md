@@ -1,19 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/audit-events-evidence.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/providers/portal.provider.ts"
 type: "code"
-community: "audit-chain.service.ts"
-location: "L21"
+community: "PortalProvider"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-chainservicets
+  - community/PortalProvider
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditChainService]] - `references` [EXTRACTED]
-- [[AuditEventsEvidenceController]] - `method` [EXTRACTED]
-- [[AuditExportService]] - `references` [EXTRACTED]
+- [[PortalProvider]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-chainservicets
+#graphify/code #graphify/EXTRACTED #community/PortalProvider

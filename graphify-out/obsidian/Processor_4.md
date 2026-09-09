@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "audit-chain.service.ts"
+community: "NotificationsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-chainservicets
+  - community/NotificationsService
 ---
 
 # Processor
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[AuditChainVerifyProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-chainservicets
+#graphify/code #graphify/EXTRACTED #community/NotificationsService

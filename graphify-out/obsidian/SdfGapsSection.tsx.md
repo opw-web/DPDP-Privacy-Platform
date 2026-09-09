@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/sdf/SdfGapsSection.tsx"
 type: "code"
-community: "api-client.ts"
+community: "AlgorithmRegisterPanel.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/AlgorithmRegisterPaneltsx
 ---
 
 # SdfGapsSection.tsx
@@ -30,4 +30,4 @@ tags:
 - [[react-router-dom_1]] - `imports_from` [EXTRACTED]
 - [[sdftypes.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterPaneltsx

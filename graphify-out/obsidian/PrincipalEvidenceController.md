@@ -12,11 +12,11 @@ tags:
 # PrincipalEvidenceController
 
 ## Connections
-- [[dot-constructor()_116]] - `method` [EXTRACTED]
+- [[dot-constructor()_113]] - `method` [EXTRACTED]
 - [[dot-evidence()]] - `method` [EXTRACTED]
 - [[dot-evidencePdf()]] - `method` [EXTRACTED]
-- [[ApiTags_29]] - `references` [EXTRACTED]
-- [[Controller_30]] - `references` [EXTRACTED]
+- [[ApiTags_28]] - `references` [EXTRACTED]
+- [[Controller_29]] - `references` [EXTRACTED]
 - [[evidence.module.ts]] - `imports` [EXTRACTED]
 - [[principal-evidence.controller.ts]] - `contains` [EXTRACTED]
 

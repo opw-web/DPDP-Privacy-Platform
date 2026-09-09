@@ -12,7 +12,7 @@ tags:
 # .list()
 
 ## Connections
-- [[dot-list()_24]] - `calls` [INFERRED]
+- [[dot-list()_21]] - `calls` [INFERRED]
 - [[dot-maskIfNeeded()]] - `calls` [INFERRED]
 - [[PrincipalsService]] - `method` [EXTRACTED]
 - [[buildPrincipalSearchQuery()]] - `calls` [EXTRACTED]

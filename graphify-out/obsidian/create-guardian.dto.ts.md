@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
-- [[@prismaclient]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[APPOINTING_AUTHORITIES]] - `imports` [EXTRACTED]
 - [[CreateGuardianDto]] - `contains` [EXTRACTED]
 - [[appointing-authority.ts]] - `imports_from` [EXTRACTED]

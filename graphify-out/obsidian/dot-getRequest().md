@@ -16,7 +16,7 @@ tags:
 - [[CurrentPrincipal]] - `references` [EXTRACTED]
 - [[Get_27]] - `references` [EXTRACTED]
 - [[MeRightsController]] - `method` [EXTRACTED]
-- [[Param_19]] - `references` [EXTRACTED]
+- [[Param_18]] - `references` [EXTRACTED]
 - [[PrincipalActor]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/MeRightsService

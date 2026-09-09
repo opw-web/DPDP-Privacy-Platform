@@ -1,16 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "RequirePermission"
+community: "NoticesController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/NoticesController
 ---
 
 # Param
 
 ## Connections
-- [[dot-verify()_1]] - `references` [EXTRACTED]
+- [[dot-createVersion()_1]] - `references` [EXTRACTED]
+- [[dot-get()_9]] - `references` [EXTRACTED]
+- [[dot-listEligibleFields()]] - `references` [EXTRACTED]
+- [[dot-preview()_3]] - `references` [EXTRACTED]
+- [[dot-publish()_1]] - `references` [EXTRACTED]
+- [[dot-upsertTranslation()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/NoticesController

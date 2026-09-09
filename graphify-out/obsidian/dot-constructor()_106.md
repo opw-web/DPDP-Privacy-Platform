@@ -1,20 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sdf-cycle-scan.queue.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync-error.spec.ts"
 type: "code"
-community: "queues.module.ts"
-location: "L60"
+community: "SyncPipelineService"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/SyncPipelineService
 ---
 
 # .constructor()
 
 ## Connections
-- [[dot-register()]] - `calls` [INFERRED]
-- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
-- [[InjectQueue_8]] - `references` [EXTRACTED]
-- [[SdfCycleScanQueueService]] - `method` [EXTRACTED]
+- [[IdentifierOwnershipConflictError_1]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/SyncPipelineService

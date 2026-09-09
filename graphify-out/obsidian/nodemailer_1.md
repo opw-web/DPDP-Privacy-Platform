@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "backend/package.json"
+community: "mailer.service.ts"
 location: "L45"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/backend/packagejson
+  - community/mailerservicets
 ---
 
 # nodemailer
@@ -15,4 +15,4 @@ tags:
 - [[backendpackage.json]] - `imports` [EXTRACTED]
 - [[mailer.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/backend/packagejson
+#graphify/concept #graphify/EXTRACTED #community/mailerservicets

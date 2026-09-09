@@ -12,7 +12,7 @@ tags:
 # mvp2-demo.ts
 
 ## Connections
-- [[@prismaclient]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[DEMO_GUARDIAN_NAME]] - `contains` [EXTRACTED]
 - [[DEMO_NOTICE_CODES]] - `contains` [EXTRACTED]
 - [[DEMO_ORG]] - `imports` [EXTRACTED]
@@ -21,7 +21,7 @@ tags:
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[contentHash()]] - `contains` [EXTRACTED]
 - [[demo-org.ts]] - `imports_from` [EXTRACTED]
-- [[main()_2]] - `contains` [EXTRACTED]
+- [[main()_4]] - `contains` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[resolveOrganizationId()]] - `contains` [EXTRACTED]
 - [[seed.ts]] - `imports_from` [EXTRACTED]

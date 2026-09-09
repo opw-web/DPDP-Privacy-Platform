@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[dot-replacePermissions()_1]] - `calls` [INFERRED]
-- [[Body_22]] - `references` [EXTRACTED]
-- [[Param_25]] - `references` [EXTRACTED]
+- [[Body_21]] - `references` [EXTRACTED]
+- [[Param_24]] - `references` [EXTRACTED]
 - [[Patch_11]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[RolesController]] - `method` [EXTRACTED]

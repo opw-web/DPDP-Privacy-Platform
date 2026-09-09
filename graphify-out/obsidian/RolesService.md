@@ -12,11 +12,11 @@ tags:
 # RolesService
 
 ## Connections
-- [[dot-constructor()_126]] - `references` [EXTRACTED]
-- [[dot-constructor()_127]] - `method` [EXTRACTED]
+- [[dot-constructor()_128]] - `references` [EXTRACTED]
+- [[dot-constructor()_129]] - `method` [EXTRACTED]
 - [[dot-list()_41]] - `method` [EXTRACTED]
 - [[dot-replacePermissions()_1]] - `method` [EXTRACTED]
-- [[Injectable_73]] - `references` [EXTRACTED]
+- [[Injectable_75]] - `references` [EXTRACTED]
 - [[employees.module.ts]] - `imports` [EXTRACTED]
 - [[roles.controller.ts]] - `imports` [EXTRACTED]
 - [[roles.service.ts]] - `contains` [EXTRACTED]

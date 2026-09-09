@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/notifications.e2e-spec.ts"
 type: "code"
-community: "NotificationsService"
+community: "notifications.module.ts"
 location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/notificationsmodulets
 ---
 
 # principalSession()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[notifications.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/notificationsmodulets

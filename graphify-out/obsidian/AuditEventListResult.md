@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/audit/audit-read.service.ts"
 type: "code"
-community: "audit-read.service.ts"
+community: "guardians.service.ts"
 location: "L55"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-readservicets
+  - community/guardiansservicets
 ---
 
 # AuditEventListResult
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[audit-read.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-readservicets
+#graphify/code #graphify/EXTRACTED #community/guardiansservicets

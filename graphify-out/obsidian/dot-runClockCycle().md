@@ -12,7 +12,7 @@ tags:
 # .runClockCycle()
 
 ## Connections
-- [[dot-process()_5]] - `calls` [EXTRACTED]
+- [[dot-process()_6]] - `calls` [EXTRACTED]
 - [[dot-scanClock()]] - `calls` [INFERRED]
 - [[BreachClockProcessor]] - `method` [EXTRACTED]
 

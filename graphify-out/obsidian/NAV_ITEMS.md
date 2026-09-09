@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/frontend/src/principal/components/PortalShell.tsx"
+source_file: "dpdp-platform/frontend/src/components/shared/AppShell.tsx"
 type: "code"
 community: "cn"
-location: "L11"
+location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # NAV_ITEMS
 
 ## Connections
-- [[PortalShell.tsx]] - `contains` [EXTRACTED]
+- [[AppShell.tsx]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/cn

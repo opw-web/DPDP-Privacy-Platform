@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Public"
+community: "prisma.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/prismaservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[JwtPrincipalGuard]] - `references` [EXTRACTED]
+- [[AgeService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

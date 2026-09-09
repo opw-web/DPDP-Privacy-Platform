@@ -12,7 +12,7 @@ tags:
 # ReadOnlyHttpClient
 
 ## Connections
-- [[dot-constructor()_123]] - `references` [EXTRACTED]
+- [[dot-constructor()_120]] - `references` [EXTRACTED]
 - [[dot-constructor()_153]] - `method` [EXTRACTED]
 - [[dot-performRequest()]] - `method` [EXTRACTED]
 - [[dot-request()]] - `method` [EXTRACTED]

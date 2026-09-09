@@ -12,12 +12,12 @@ tags:
 # AccessLogService
 
 ## Connections
-- [[dot-constructor()_65]] - `references` [EXTRACTED]
-- [[dot-constructor()_66]] - `references` [EXTRACTED]
-- [[dot-constructor()_71]] - `references` [EXTRACTED]
-- [[dot-constructor()_64]] - `method` [EXTRACTED]
+- [[dot-constructor()_68]] - `references` [EXTRACTED]
+- [[dot-constructor()_69]] - `references` [EXTRACTED]
+- [[dot-constructor()_74]] - `references` [EXTRACTED]
+- [[dot-constructor()_67]] - `method` [EXTRACTED]
 - [[dot-recordPersonalDataViewed()]] - `method` [EXTRACTED]
-- [[Injectable_37]] - `references` [EXTRACTED]
+- [[Injectable_41]] - `references` [EXTRACTED]
 - [[access-log.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[access-log.service.ts]] - `contains` [EXTRACTED]
 - [[access-report.service.ts]] - `imports` [EXTRACTED]

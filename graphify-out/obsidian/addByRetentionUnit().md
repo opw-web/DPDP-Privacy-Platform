@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/retention-dates.util.ts"
 type: "code"
-community: "erasure-task.service.ts"
+community: "ErasureTaskService"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/ErasureTaskService
 ---
 
 # addByRetentionUnit()
@@ -16,4 +16,4 @@ tags:
 - [[erasure-task.service.ts]] - `imports` [EXTRACTED]
 - [[retention-dates.util.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/ErasureTaskService

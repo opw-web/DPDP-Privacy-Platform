@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/redis-connection.util.ts"
 type: "code"
-community: "employee-auth.controller.ts"
+community: "sync.e2e-spec.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employee-authcontrollerts
+  - community/synce2e-spects
 ---
 
 # redis-connection.util.ts
@@ -17,4 +17,4 @@ tags:
 - [[sync-lock.service.ts]] - `imports_from` [EXTRACTED]
 - [[toRedisConnectionOptions()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employee-authcontrollerts
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

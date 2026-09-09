@@ -1,20 +1,24 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/providers/smtp.provider.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
 type: "code"
-community: "NotificationsService"
-location: "L24"
+community: "@nestjs/common"
+location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/nestjs/common
 ---
 
 # .send()
 
 ## Connections
-- [[dot-send()]] - `calls` [INFERRED]
-- [[NotificationSendInput]] - `references` [EXTRACTED]
-- [[NotificationSendResult]] - `references` [EXTRACTED]
-- [[SmtpProvider]] - `method` [EXTRACTED]
+- [[dot-send()_6]] - `calls` [INFERRED]
+- [[AccessTokenPayload]] - `references` [EXTRACTED]
+- [[CampaignsController]] - `method` [EXTRACTED]
+- [[CurrentActor]] - `references` [EXTRACTED]
+- [[CurrentActorPermissions]] - `references` [EXTRACTED]
+- [[Param_17]] - `references` [EXTRACTED]
+- [[Post_15]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

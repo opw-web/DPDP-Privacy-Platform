@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/requests/requests.service.ts"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/RequestDetailPage.tsx"
 type: "code"
-community: "requests.service.ts"
-location: "L146"
+community: "router.tsx"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/requestsservicets
+  - community/routertsx
 ---
 
 # ErasureCompletionHolders
 
 ## Connections
-- [[requests.service.ts]] - `contains` [EXTRACTED]
+- [[RequestDetailPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/requestsservicets
+#graphify/code #graphify/EXTRACTED #community/routertsx

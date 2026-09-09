@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SdfCycleScanService"
+community: "SyncQueueService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SdfCycleScanService
+  - community/SyncQueueService
 ---
 
 # Injectable
 
 ## Connections
-- [[SdfCycleScanService]] - `references` [EXTRACTED]
+- [[SyncQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SdfCycleScanService
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

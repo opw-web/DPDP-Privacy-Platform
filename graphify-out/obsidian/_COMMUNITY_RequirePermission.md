@@ -1,125 +1,36 @@
 ---
 type: community
-members: 112
+members: 23
 ---
 
 # RequirePermission
 
-**Members:** 112 nodes
+**Members:** 23 nodes
 
 ## Members
-- [[dot-approve()]] - code - dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts
-- [[dot-claimPendingCandidate()]] - code - dpdp-platform/backend/src/modules/identity/candidates.service.ts
-- [[dot-confirm()]] - code - dpdp-platform/backend/src/modules/identity/candidates.controller.ts
-- [[dot-confirm()_1]] - code - dpdp-platform/backend/src/modules/identity/candidates.service.ts
-- [[dot-constructor()_79]] - code - dpdp-platform/backend/src/modules/children/guardians.controller.ts
-- [[dot-constructor()_80]] - code - dpdp-platform/backend/src/modules/identity/candidates.controller.ts
-- [[dot-constructor()_81]] - code - dpdp-platform/backend/src/modules/identity/unmerge.controller.ts
-- [[dot-create()_14]] - code - dpdp-platform/backend/src/modules/children/guardians.controller.ts
-- [[dot-create()_15]] - code - dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts
-- [[dot-create()_16]] - code - dpdp-platform/backend/src/modules/retention/legal-hold.service.ts
-- [[dot-createLegalHold()]] - code - dpdp-platform/backend/src/modules/retention/retention.controller.ts
-- [[dot-detail()]] - code - dpdp-platform/backend/src/modules/principals/principals.controller.ts
-- [[dot-get()_10]] - code - dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts
-- [[dot-lineage()]] - code - dpdp-platform/backend/src/modules/principals/principals.controller.ts
-- [[dot-list()_21]] - code - dpdp-platform/backend/src/modules/identity/candidates.controller.ts
-- [[dot-list()_22]] - code - dpdp-platform/backend/src/modules/identity/candidates.service.ts
-- [[dot-list()_23]] - code - dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts
-- [[dot-list()_24]] - code - dpdp-platform/backend/src/modules/principals/principals.controller.ts
-- [[dot-listRecipients()]] - code - dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts
-- [[dot-loadCandidate()]] - code - dpdp-platform/backend/src/modules/identity/candidates.service.ts
-- [[dot-recipients()_1]] - code - dpdp-platform/backend/src/modules/principals/principals.controller.ts
-- [[dot-reject()]] - code - dpdp-platform/backend/src/modules/identity/candidates.controller.ts
-- [[dot-reject()_1]] - code - dpdp-platform/backend/src/modules/identity/candidates.service.ts
-- [[dot-review()_2]] - code - dpdp-platform/backend/src/modules/compliance/compliance.controller.ts
-- [[dot-review()_3]] - code - dpdp-platform/backend/src/modules/purposes/purposes.controller.ts
-- [[dot-send()_6]] - code - dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts
-- [[dot-sourceRecords()]] - code - dpdp-platform/backend/src/modules/principals/principals.controller.ts
-- [[dot-unmerge()]] - code - dpdp-platform/backend/src/modules/identity/unmerge.controller.ts
-- [[dot-verify()_1]] - code - dpdp-platform/backend/src/modules/children/guardians.controller.ts
-- [[ACCESS_TOKEN_AUDIENCES]] - code - dpdp-platform/backend/src/modules/auth/token.service.ts
-- [[AccessTokenAudience]] - code - dpdp-platform/backend/src/modules/auth/token.service.ts
-- [[AccessTokenPayload]] - code - dpdp-platform/backend/src/modules/auth/token.service.ts
-- [[ApiProperty_29]] - code
-- [[ApiTags_18]] - code
-- [[ApiTags_19]] - code
-- [[ApiTags_20]] - code
-- [[ApiTags_21]] - code
-- [[ApiTags_22]] - code
-- [[Body_11]] - code
-- [[Body_12]] - code
-- [[Body_13]] - code
-- [[CampaignsController]] - code - dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts
-- [[CandidatesController]] - code - dpdp-platform/backend/src/modules/identity/candidates.controller.ts
-- [[CandidatesService]] - code - dpdp-platform/backend/src/modules/identity/candidates.service.ts
-- [[Controller_18]] - code
-- [[Controller_19]] - code
-- [[Controller_20]] - code
-- [[Controller_21]] - code
-- [[Controller_22]] - code
-- [[CurrentActor]] - code - dpdp-platform/backend/src/common/decorators/current-actor.decorator.ts
-- [[CurrentActorPermissions]] - code - dpdp-platform/backend/src/common/decorators/current-actor-permissions.decorator.ts
-- [[ERASURE_STATE_VALUES]] - code - dpdp-platform/backend/src/modules/retention/retention.controller.ts
-- [[Get_21]] - code
-- [[Get_22]] - code
-- [[Get_23]] - code
-- [[GuardiansController]] - code - dpdp-platform/backend/src/modules/children/guardians.controller.ts
-- [[Injectable_48]] - code
-- [[IsEnum_17]] - code
-- [[IsOptional_37]] - code
-- [[IsString_44]] - code
-- [[ListMatchCandidatesQueryDto]] - code - dpdp-platform/backend/src/modules/identity/dto/list-match-candidates.dto.ts
-- [[MinLength_32]] - code
-- [[PERMISSION_KEY]] - code - dpdp-platform/backend/src/common/decorators/require-permission.decorator.ts
-- [[Param_11]] - code
-- [[Param_12]] - code
-- [[Param_13]] - code
-- [[Param_14]] - code
-- [[Param_15]] - code
-- [[PermissionsRequest]] - code - dpdp-platform/backend/src/common/guards/permissions.guard.ts
-- [[Post_10]] - code
-- [[Post_11]] - code
-- [[Post_12]] - code
-- [[Post_13]] - code
-- [[PrincipalsController]] - code - dpdp-platform/backend/src/modules/principals/principals.controller.ts
-- [[Query_5]] - code
-- [[Query_6]] - code
-- [[REFRESH_TOKEN_AUDIENCES]] - code - dpdp-platform/backend/src/modules/auth/token.service.ts
-- [[RefreshTokenAudience]] - code - dpdp-platform/backend/src/modules/auth/token.service.ts
-- [[RefreshTokenPayload]] - code - dpdp-platform/backend/src/modules/auth/token.service.ts
+- [[dot-addAffected()]] - code - dpdp-platform/backend/src/modules/breaches/breaches.controller.ts
+- [[dot-boardDetailed()]] - code - dpdp-platform/backend/src/modules/breaches/breaches.controller.ts
+- [[dot-boardInitial()]] - code - dpdp-platform/backend/src/modules/breaches/breaches.controller.ts
+- [[dot-boardReport()]] - code - dpdp-platform/backend/src/modules/breaches/breach.service.ts
+- [[dot-completeObligation()]] - code - dpdp-platform/backend/src/modules/breaches/breaches.controller.ts
+- [[dot-create()_26]] - code - dpdp-platform/backend/src/modules/breaches/breaches.controller.ts
+- [[dot-extension()]] - code - dpdp-platform/backend/src/modules/breaches/breaches.controller.ts
+- [[dot-get()_16]] - code - dpdp-platform/backend/src/modules/breaches/breaches.controller.ts
+- [[dot-list()_36]] - code - dpdp-platform/backend/src/modules/breaches/breaches.controller.ts
+- [[dot-notify()]] - code - dpdp-platform/backend/src/modules/breaches/breaches.controller.ts
+- [[dot-previewAffected()]] - code - dpdp-platform/backend/src/modules/breaches/breaches.controller.ts
+- [[dot-update()_19]] - code - dpdp-platform/backend/src/modules/breaches/breaches.controller.ts
+- [[Actor]] - code
+- [[ApiTags_30]] - code
+- [[Body_19]] - code
+- [[BreachesController]] - code - dpdp-platform/backend/src/modules/breaches/breaches.controller.ts
+- [[Controller_31]] - code
+- [[Get_33]] - code
+- [[Param_23]] - code
+- [[Patch_10]] - code
+- [[Post_20]] - code
 - [[RequirePermission()]] - code - dpdp-platform/backend/src/common/decorators/require-permission.decorator.ts
-- [[UnmergeController]] - code - dpdp-platform/backend/src/modules/identity/unmerge.controller.ts
-- [[UnmergeDto]] - code - dpdp-platform/backend/src/modules/identity/dto/unmerge.dto.ts
-- [[access-log-export.dto.ts]] - code - dpdp-platform/backend/src/modules/audit/dto/access-log-export.dto.ts
-- [[age-status.controller.ts]] - code - dpdp-platform/backend/src/modules/children/age-status.controller.ts
-- [[audience.controller.ts]] - code - dpdp-platform/backend/src/modules/messaging/audience/audience.controller.ts
-- [[audit-read.controller.ts]] - code - dpdp-platform/backend/src/modules/audit/audit-read.controller.ts
-- [[campaigns.controller.ts]] - code - dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts
-- [[candidates.controller.ts]] - code - dpdp-platform/backend/src/modules/identity/candidates.controller.ts
-- [[child-exemptions.controller.ts]] - code - dpdp-platform/backend/src/modules/children/child-exemptions.controller.ts
-- [[compliance.controller.ts]] - code - dpdp-platform/backend/src/modules/compliance/compliance.controller.ts
-- [[consents.controller.ts]] - code - dpdp-platform/backend/src/modules/consents/consents.controller.ts
-- [[current-actor-permissions.decorator.ts]] - code - dpdp-platform/backend/src/common/decorators/current-actor-permissions.decorator.ts
-- [[current-actor.decorator.ts]] - code - dpdp-platform/backend/src/common/decorators/current-actor.decorator.ts
-- [[evidence-pack.controller.ts]] - code - dpdp-platform/backend/src/modules/evidence/evidence-pack.controller.ts
-- [[guardians.controller.ts]] - code - dpdp-platform/backend/src/modules/children/guardians.controller.ts
-- [[inventory.controller.ts]] - code - dpdp-platform/backend/src/modules/inventory/inventory.controller.ts
-- [[isoDate()]] - code - dpdp-platform/backend/src/modules/identity/candidates.service.ts
-- [[list-match-candidates.dto.ts]] - code - dpdp-platform/backend/src/modules/identity/dto/list-match-candidates.dto.ts
-- [[notices.controller.ts]] - code - dpdp-platform/backend/src/modules/notices/notices.controller.ts
-- [[organizations.controller.ts]] - code - dpdp-platform/backend/src/modules/organizations/organizations.controller.ts
-- [[permissions.controller.ts]] - code - dpdp-platform/backend/src/modules/employees/permissions.controller.ts
-- [[permissions.guard.ts]] - code - dpdp-platform/backend/src/common/guards/permissions.guard.ts
-- [[principal-evidence.controller.ts]] - code - dpdp-platform/backend/src/modules/evidence/principal-evidence.controller.ts
-- [[principals.controller.ts]] - code - dpdp-platform/backend/src/modules/principals/principals.controller.ts
-- [[purposes.controller.ts]] - code - dpdp-platform/backend/src/modules/purposes/purposes.controller.ts
-- [[recordValueFor()]] - code - dpdp-platform/backend/src/modules/identity/candidates.service.ts
-- [[registersretention.controller.ts]] - code - dpdp-platform/backend/src/modules/registers/retention.controller.ts
-- [[require-permission.decorator.ts]] - code - dpdp-platform/backend/src/common/decorators/require-permission.decorator.ts
-- [[retentionretention.controller.ts]] - code - dpdp-platform/backend/src/modules/retention/retention.controller.ts
-- [[sync.controller.ts]] - code - dpdp-platform/backend/src/modules/sync/sync.controller.ts
-- [[token.service.ts]] - code - dpdp-platform/backend/src/modules/auth/token.service.ts
-- [[unmerge.controller.ts]] - code - dpdp-platform/backend/src/modules/identity/unmerge.controller.ts
+- [[Res_7]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -129,85 +40,62 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 76 edges to [[_COMMUNITY_@nestjsswagger]]
-- 58 edges to [[_COMMUNITY_@nestjscommon]]
-- 20 edges to [[_COMMUNITY_NoticesService]]
-- 19 edges to [[_COMMUNITY_AuditService]]
-- 18 edges to [[_COMMUNITY_RetentionController]]
-- 17 edges to [[_COMMUNITY_BreachesController]]
-- 14 edges to [[_COMMUNITY_principals.service.ts]]
-- 12 edges to [[_COMMUNITY_CreateComplianceRuleDto]]
-- 11 edges to [[_COMMUNITY_GuardiansService]]
-- 11 edges to [[_COMMUNITY_@prismaclient]]
-- 11 edges to [[_COMMUNITY_CampaignsService]]
-- 11 edges to [[_COMMUNITY_retention.service.ts]]
+- 35 edges to [[_COMMUNITY_@nestjscommon]]
+- 14 edges to [[_COMMUNITY_BreachService]]
 - 10 edges to [[_COMMUNITY_RequestsController]]
-- 9 edges to [[_COMMUNITY_employee-auth.controller.ts]]
-- 9 edges to [[_COMMUNITY_dot-record]]
-- 9 edges to [[_COMMUNITY_CreateExemptionClaimDto]]
-- 8 edges to [[_COMMUNITY_erasure-task.service.ts]]
+- 8 edges to [[_COMMUNITY_NoticesController]]
 - 8 edges to [[_COMMUNITY_DataSourcesController]]
-- 7 edges to [[_COMMUNITY_AuditReadService]]
-- 6 edges to [[_COMMUNITY_PrismaService]]
-- 6 edges to [[_COMMUNITY_inventory.service.ts]]
-- 6 edges to [[_COMMUNITY_SyncService]]
-- 6 edges to [[_COMMUNITY_PurposesController]]
-- 6 edges to [[_COMMUNITY_transfers.service.ts]]
-- 5 edges to [[_COMMUNITY_UpdateOrganizationDto]]
-- 5 edges to [[_COMMUNITY_ScopedTransactionClient]]
-- 5 edges to [[_COMMUNITY_ConsentsService]]
-- 5 edges to [[_COMMUNITY_PreviewAudienceDto]]
-- 5 edges to [[_COMMUNITY_AgeStatusService]]
+- 5 edges to [[_COMMUNITY_CreateLegalHoldDto]]
+- 5 edges to [[_COMMUNITY_transfers.service.ts]]
+- 5 edges to [[_COMMUNITY_ComplianceService]]
 - 5 edges to [[_COMMUNITY_TemplatesService]]
+- 5 edges to [[_COMMUNITY_ListPrincipalsDto]]
 - 5 edges to [[_COMMUNITY_EmployeesService]]
-- 4 edges to [[_COMMUNITY_PurposesService]]
-- 4 edges to [[_COMMUNITY_audit-read.service.ts]]
-- 4 edges to [[_COMMUNITY_guardians.service.ts]]
-- 4 edges to [[_COMMUNITY_notices.service.ts]]
-- 4 edges to [[_COMMUNITY_AttachPurposesDto]]
-- 4 edges to [[_COMMUNITY_audit-chain.service.ts]]
-- 4 edges to [[_COMMUNITY_CreateInformationRequestDto]]
+- 5 edges to [[_COMMUNITY_CampaignsService]]
+- 5 edges to [[_COMMUNITY_recipients.service.ts]]
+- 5 edges to [[_COMMUNITY_retention.service.ts]]
+- 4 edges to [[_COMMUNITY_csvDocument]]
+- 4 edges to [[_COMMUNITY_MappingsController]]
 - 4 edges to [[_COMMUNITY_CreateVoluntaryUndertakingDto]]
-- 4 edges to [[_COMMUNITY_CreateRecipientDto]]
+- 4 edges to [[_COMMUNITY_CreateInformationRequestDto]]
 - 4 edges to [[_COMMUNITY_CreateSecurityMeasureDto]]
-- 4 edges to [[_COMMUNITY_CreateSharingActivityDto]]
-- 3 edges to [[_COMMUNITY_CreateLegalHoldDto]]
-- 3 edges to [[_COMMUNITY_campaigns.service.ts]]
-- 3 edges to [[_COMMUNITY_purposes.service.ts]]
-- 3 edges to [[_COMMUNITY_merge-unmerge.e2e-spec.ts]]
-- 3 edges to [[_COMMUNITY_PrincipalEvidenceController]]
+- 4 edges to [[_COMMUNITY_SharingService]]
+- 3 edges to [[_COMMUNITY_GuardiansService]]
+- 3 edges to [[_COMMUNITY_evidence-pack.service.ts]]
+- 3 edges to [[_COMMUNITY_inventory.service.ts]]
+- 3 edges to [[_COMMUNITY_SyncService]]
+- 3 edges to [[_COMMUNITY_PurposesService]]
 - 3 edges to [[_COMMUNITY_SdfController]]
-- 2 edges to [[_COMMUNITY_PermissionsGuard]]
-- 2 edges to [[_COMMUNITY_CreateCampaignDto]]
-- 2 edges to [[_COMMUNITY_EvidencePackController]]
-- 2 edges to [[_COMMUNITY_PermissionsController]]
-- 2 edges to [[_COMMUNITY_CreateGuardianDto]]
-- 2 edges to [[_COMMUNITY_ListPrincipalsDto]]
-- 2 edges to [[_COMMUNITY_TokenService]]
-- 2 edges to [[_COMMUNITY_access-report-render.ts]]
+- 3 edges to [[_COMMUNITY_CandidatesService]]
+- 3 edges to [[_COMMUNITY_ConsentsService]]
+- 3 edges to [[_COMMUNITY_age-status.service.ts]]
+- 2 edges to [[_COMMUNITY_UpdateOrganizationDto]]
+- 2 edges to [[_COMMUNITY_AuditReadService]]
+- 2 edges to [[_COMMUNITY_PrincipalEvidenceController]]
+- 2 edges to [[_COMMUNITY_CreateExemptionClaimDto]]
 - 2 edges to [[_COMMUNITY_UpdateRolePermissionsDto]]
-- 2 edges to [[_COMMUNITY_MaskingService]]
-- 2 edges to [[_COMMUNITY_data-sources.service.ts]]
-- 1 edge to [[_COMMUNITY_ErasureTaskService]]
-- 1 edge to [[_COMMUNITY_csvDocument]]
-- 1 edge to [[_COMMUNITY_CreateNoticeVersionDto]]
-- 1 edge to [[_COMMUNITY_ImportConsentDto]]
-- 1 edge to [[_COMMUNITY_UpdatePurposeDto]]
-- 1 edge to [[_COMMUNITY_CreatePurposeDto]]
-- 1 edge to [[_COMMUNITY_ListSyncJobsQueryDto]]
-- 1 edge to [[_COMMUNITY_AccessReportService]]
+- 1 edge to [[_COMMUNITY_UpdateBreachDto]]
+- 1 edge to [[_COMMUNITY_CompleteObligationDto]]
+- 1 edge to [[_COMMUNITY_ExtensionDto]]
+- 1 edge to [[_COMMUNITY_CreateBreachDto]]
+- 1 edge to [[_COMMUNITY_app.module.ts]]
 - 1 edge to [[_COMMUNITY_CreateAlgorithmEntryDto]]
+- 1 edge to [[_COMMUNITY_PermissionsController]]
+- 1 edge to [[_COMMUNITY_SourcePurposesService]]
 - 1 edge to [[_COMMUNITY_UpdateAlgorithmEntryDto]]
 - 1 edge to [[_COMMUNITY_SdfAssessmentService]]
 - 1 edge to [[_COMMUNITY_CreateSdfAssessmentDto]]
+- 1 edge to [[_COMMUNITY_dot-unmerge]]
+- 1 edge to [[_COMMUNITY_PreviewAudienceDto]]
 - 1 edge to [[_COMMUNITY_ListRequestsDto]]
-- 1 edge to [[_COMMUNITY_Public]]
-- 1 edge to [[_COMMUNITY_backendpackage.json]]
-- 1 edge to [[_COMMUNITY_audience.service.ts]]
+- 1 edge to [[_COMMUNITY_security-measures.service.ts]]
+- 1 edge to [[_COMMUNITY_sharing.service.ts]]
+- 1 edge to [[_COMMUNITY_compliance.service.ts]]
+- 1 edge to [[_COMMUNITY_sync.service.ts]]
 
 ## Top bridge nodes
-- [[RequirePermission()]] - degree 182, connects to 39 communities
-- [[AccessTokenPayload]] - degree 74, connects to 22 communities
-- [[token.service.ts]] - degree 45, connects to 14 communities
-- [[retentionretention.controller.ts]] - degree 22, connects to 7 communities
-- [[purposes.controller.ts]] - degree 16, connects to 7 communities
+- [[RequirePermission()]] - degree 182, connects to 46 communities
+- [[BreachesController]] - degree 16, connects to 3 communities
+- [[dot-completeObligation()]] - degree 9, connects to 3 communities
+- [[dot-extension()]] - degree 9, connects to 3 communities
+- [[dot-update()_19]] - degree 9, connects to 3 communities

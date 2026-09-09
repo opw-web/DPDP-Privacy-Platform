@@ -1,5 +1,5 @@
 ---
-source_file: "4 - Show Demo Proof.sh"
+source_file: "demo-control/linux/4 - Show Demo Proof.sh"
 type: "code"
 community: "4 - Show Demo Proof.sh"
 location: "L1"

@@ -13,12 +13,12 @@ tags:
 
 ## Connections
 - [[dot-cancelOnContact()]] - `method` [EXTRACTED]
-- [[dot-constructor()_40]] - `references` [EXTRACTED]
-- [[dot-constructor()_39]] - `method` [EXTRACTED]
+- [[dot-constructor()_59]] - `references` [EXTRACTED]
+- [[dot-constructor()_57]] - `method` [EXTRACTED]
 - [[dot-runForAllOrganizations()_1]] - `method` [EXTRACTED]
 - [[dot-runForCurrentOrganization()_1]] - `method` [EXTRACTED]
 - [[dot-sendDueNotices()]] - `method` [EXTRACTED]
-- [[Injectable_25]] - `references` [EXTRACTED]
+- [[Injectable_37]] - `references` [EXTRACTED]
 - [[pre-erasure-notice.processor.ts]] - `imports` [EXTRACTED]
 - [[pre-erasure-notice.service.ts]] - `contains` [EXTRACTED]
 - [[retention.e2e-spec.ts]] - `imports` [EXTRACTED]

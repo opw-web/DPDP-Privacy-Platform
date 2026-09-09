@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "NoticesService"
+community: "SdfAssessmentService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NoticesService
+  - community/SdfAssessmentService
 ---
 
 # Injectable
 
 ## Connections
-- [[NoticesService]] - `references` [EXTRACTED]
+- [[SdfAssessmentService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NoticesService
+#graphify/code #graphify/EXTRACTED #community/SdfAssessmentService

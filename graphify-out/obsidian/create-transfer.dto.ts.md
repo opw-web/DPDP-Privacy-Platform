@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
-- [[@prismaclient]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[CreateTransferDto]] - `contains` [EXTRACTED]
 - [[class-validator_1]] - `imports_from` [EXTRACTED]
 - [[transfers.controller.ts]] - `imports_from` [EXTRACTED]

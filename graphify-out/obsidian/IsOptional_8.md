@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateDataSourceDto"
+community: "CreateAlgorithmEntryDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateDataSourceDto
+  - community/CreateAlgorithmEntryDto
 ---
 
 # IsOptional
 
 ## Connections
-- [[CreateDataSourceDto]] - `references` [EXTRACTED]
+- [[CreateAlgorithmEntryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateDataSourceDto
+#graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto

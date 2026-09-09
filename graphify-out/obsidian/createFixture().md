@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/audit-read.e2e-spec.ts"
 type: "code"
-community: "@prisma/client"
+community: "guardians.service.ts"
 location: "L122"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/guardiansservicets
 ---
 
 # createFixture()
@@ -15,4 +15,4 @@ tags:
 - [[audit-read.e2e-spec.ts]] - `contains` [EXTRACTED]
 - [[seedEvent()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prisma/client
+#graphify/code #graphify/EXTRACTED #community/guardiansservicets

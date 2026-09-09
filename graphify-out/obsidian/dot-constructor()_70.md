@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principals/principals.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/principal-portal/me.service.ts"
 type: "code"
 community: "principals.service.ts"
-location: "L13"
+location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[LineageService]] - `references` [EXTRACTED]
+- [[MeService]] - `method` [EXTRACTED]
 - [[PrincipalRecipientsService]] - `references` [EXTRACTED]
-- [[PrincipalsController]] - `method` [EXTRACTED]
 - [[PrincipalsService]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/principalsservicets

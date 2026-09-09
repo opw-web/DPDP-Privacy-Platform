@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/boot-registration.registry.ts"
 type: "code"
-community: "queues.module.ts"
+community: "SyncQueueService"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/SyncQueueService
 ---
 
 # BootRegistration
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[boot-registration.registry.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

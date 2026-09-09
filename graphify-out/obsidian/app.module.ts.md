@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/app.module.ts"
 type: "code"
-community: "@nestjs/common"
+community: "app.module.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/appmodulets
 ---
 
 # app.module.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[@nestjsconfig]] - `imports_from` [EXTRACTED]
 - [[@nestjscore]] - `imports_from` [EXTRACTED]
 - [[AppModule]] - `contains` [EXTRACTED]
@@ -117,4 +117,4 @@ tags:
 - [[tenant.module.ts]] - `imports_from` [EXTRACTED]
 - [[validate()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/appmodulets

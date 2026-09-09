@@ -29,7 +29,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_api-client.ts]]
+- 8 edges to [[_COMMUNITY_button.tsx]]
 - 1 edge to [[_COMMUNITY_@tanstackreact-query]]
 - 1 edge to [[_COMMUNITY_router.tsx]]
 

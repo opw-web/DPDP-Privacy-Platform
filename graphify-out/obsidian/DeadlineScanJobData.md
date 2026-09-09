@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/deadline-scan.queue.ts"
 type: "code"
-community: "queues.module.ts"
+community: "RequestsService"
 location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/RequestsService
 ---
 
 # DeadlineScanJobData
@@ -16,4 +16,4 @@ tags:
 - [[deadline-scan.processor.ts]] - `imports` [EXTRACTED]
 - [[deadline-scan.queue.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/RequestsService

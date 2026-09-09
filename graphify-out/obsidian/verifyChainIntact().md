@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/audit.e2e-spec.ts"
 type: "code"
-community: "canonicalJson"
+community: "evidence-pack.service.ts"
 location: "L95"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/canonicalJson
+  - community/evidence-packservicets
 ---
 
 # verifyChainIntact()
@@ -15,4 +15,4 @@ tags:
 - [[audit.e2e-spec.ts]] - `contains` [EXTRACTED]
 - [[canonicalJson()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/canonicalJson
+#graphify/code #graphify/EXTRACTED #community/evidence-packservicets

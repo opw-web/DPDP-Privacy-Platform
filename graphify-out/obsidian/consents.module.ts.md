@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/consents/consents.module.ts"
 type: "code"
-community: "@nestjs/common"
+community: "app.module.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/appmodulets
 ---
 
 # consents.module.ts
 
 ## Connections
 - [[@nestjsbullmq_1]] - `imports_from` [EXTRACTED]
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[AuditModule]] - `imports` [EXTRACTED]
 - [[AuthModule]] - `imports` [EXTRACTED]
 - [[CONSENT_BACKFILL_QUEUE_NAME]] - `imports` [EXTRACTED]
@@ -43,4 +43,4 @@ tags:
 - [[queues.module.ts]] - `imports_from` [EXTRACTED]
 - [[retention.module.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/appmodulets

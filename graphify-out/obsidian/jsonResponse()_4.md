@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/LinkedRecordsPanel.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/EmployeesPage.test.tsx"
 type: "code"
-community: "@tanstack/react-query"
-location: "L14"
+community: "EmployeesPage.tsx"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tanstack/react-query
+  - community/EmployeesPagetsx
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[LinkedRecordsPanel.test.tsx]] - `contains` [EXTRACTED]
-- [[loginAndRender()]] - `calls` [EXTRACTED]
+- [[EmployeesPage.test.tsx]] - `contains` [EXTRACTED]
+- [[loginAndRenderThroughShell()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tanstack/react-query
+#graphify/code #graphify/EXTRACTED #community/EmployeesPagetsx

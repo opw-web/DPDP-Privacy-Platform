@@ -1,20 +1,110 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/purpose-served.service.ts"
+source_file: "dpdp-platform/backend/src/common/audit/audit.service.ts"
 type: "code"
-community: "erasure-task.service.ts"
-location: "L41"
+community: ".record"
+location: "L121"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - graphify/INFERRED
+  - community/record
 ---
 
 # .record()
 
 ## Connections
+- [[dot-accessLogCsv()_1]] - `calls` [INFERRED]
+- [[dot-addAffected()_1]] - `calls` [INFERRED]
+- [[dot-applyMatch()]] - `calls` [INFERRED]
+- [[dot-applyStatusChange()]] - `calls` [INFERRED]
+- [[dot-approve()_1]] - `calls` [INFERRED]
+- [[dot-buildEvidenceFile()]] - `calls` [INFERRED]
+- [[dot-buildPack()]] - `calls` [INFERRED]
+- [[dot-buildReport()]] - `calls` [INFERRED]
+- [[dot-cancel()]] - `calls` [INFERRED]
+- [[dot-cancelOnContact()]] - `calls` [INFERRED]
+- [[dot-complete()]] - `calls` [INFERRED]
+- [[dot-complete()_2]] - `calls` [INFERRED]
+- [[dot-completeObligation()_1]] - `calls` [INFERRED]
+- [[dot-confirm()_1]] - `calls` [INFERRED]
+- [[dot-create()_22]] - `calls` [INFERRED]
+- [[dot-create()_18]] - `calls` [INFERRED]
+- [[dot-create()_29]] - `calls` [INFERRED]
+- [[dot-create()_28]] - `calls` [INFERRED]
+- [[dot-create()_1]] - `calls` [INFERRED]
+- [[dot-create()_12]] - `calls` [INFERRED]
+- [[dot-create()_10]] - `calls` [INFERRED]
+- [[dot-create()_20]] - `calls` [INFERRED]
+- [[dot-create()_24]] - `calls` [INFERRED]
+- [[dot-create()_14]] - `calls` [INFERRED]
+- [[dot-create()_4]] - `calls` [INFERRED]
+- [[dot-create()_8]] - `calls` [INFERRED]
+- [[dot-create()_32]] - `calls` [INFERRED]
+- [[dot-create()_34]] - `calls` [INFERRED]
+- [[dot-create()_36]] - `calls` [INFERRED]
+- [[dot-create()_38]] - `calls` [INFERRED]
+- [[dot-create()_6]] - `calls` [INFERRED]
+- [[dot-create()_30]] - `calls` [INFERRED]
+- [[dot-create()_9]] - `calls` [INFERRED]
+- [[dot-create()_2]] - `calls` [INFERRED]
+- [[dot-create()_15]] - `calls` [INFERRED]
+- [[dot-createCandidate()]] - `calls` [INFERRED]
+- [[dot-createFromTrigger()]] - `calls` [INFERRED]
+- [[dot-createVersion()]] - `calls` [INFERRED]
+- [[dot-derive()]] - `calls` [INFERRED]
+- [[dot-exportCsv()_1]] - `calls` [INFERRED]
+- [[dot-exportCsv()_2]] - `calls` [INFERRED]
+- [[dot-finalize()]] - `calls` [INFERRED]
+- [[dot-login()_1]] - `calls` [INFERRED]
+- [[dot-login()_2]] - `calls` [INFERRED]
+- [[dot-mergeRecordIntoPrincipal()]] - `calls` [INFERRED]
+- [[dot-notifyPrincipals()]] - `calls` [INFERRED]
+- [[dot-publish()]] - `calls` [INFERRED]
 - [[dot-record()_1]] - `calls` [INFERRED]
-- [[PurposeServedService]] - `method` [EXTRACTED]
+- [[dot-recordExtension()]] - `calls` [INFERRED]
+- [[dot-recordPersonalDataViewed()]] - `calls` [INFERRED]
+- [[dot-reject()_1]] - `calls` [INFERRED]
+- [[dot-remove()]] - `calls` [INFERRED]
+- [[dot-replace()_1]] - `calls` [INFERRED]
+- [[dot-replace()]] - `calls` [INFERRED]
+- [[dot-replacePermissions()_1]] - `calls` [INFERRED]
+- [[dot-review()_3]] - `calls` [INFERRED]
+- [[dot-review()_1]] - `calls` [INFERRED]
+- [[dot-runForCurrentOrganization()_2]] - `calls` [INFERRED]
+- [[dot-scanClock()]] - `calls` [INFERRED]
+- [[dot-scanOrgDeadlines()]] - `calls` [INFERRED]
+- [[dot-send()_6]] - `calls` [INFERRED]
+- [[dot-sendDueNotices()]] - `calls` [INFERRED]
+- [[dot-setAgeStatus()_1]] - `calls` [INFERRED]
+- [[dot-startJob()]] - `calls` [INFERRED]
+- [[dot-transitionTask()]] - `calls` [INFERRED]
+- [[dot-unmerge()]] - `calls` [INFERRED]
+- [[dot-update()_17]] - `calls` [INFERRED]
+- [[dot-update()_13]] - `calls` [INFERRED]
+- [[dot-update()_20]] - `calls` [INFERRED]
+- [[dot-update()_8]] - `calls` [INFERRED]
+- [[dot-update()_6]] - `calls` [INFERRED]
+- [[dot-update()_15]] - `calls` [INFERRED]
+- [[dot-update()_11]] - `calls` [INFERRED]
+- [[dot-update()_1]] - `calls` [INFERRED]
+- [[dot-update()_5]] - `calls` [INFERRED]
+- [[dot-update()_22]] - `calls` [INFERRED]
+- [[dot-update()_24]] - `calls` [INFERRED]
+- [[dot-update()_26]] - `calls` [INFERRED]
+- [[dot-update()_28]] - `calls` [INFERRED]
+- [[dot-update()_3]] - `calls` [INFERRED]
+- [[dot-update()_9]] - `calls` [INFERRED]
+- [[dot-upsertNomination()_1]] - `calls` [INFERRED]
+- [[dot-upsertTranslation()]] - `calls` [INFERRED]
+- [[dot-verify()_1]] - `calls` [INFERRED]
+- [[dot-writeTransition()]] - `calls` [INFERRED]
+- [[AuditService]] - `method` [EXTRACTED]
 - [[ScopedTransactionClient]] - `references` [EXTRACTED]
-- [[lockRetentionWorkflow()]] - `calls` [EXTRACTED]
+- [[allocateCounterValue()]] - `calls` [EXTRACTED]
+- [[assertNoForbiddenMetadata()]] - `calls` [EXTRACTED]
+- [[canonicalJson()]] - `calls` [EXTRACTED]
+- [[recordNonDisclosureSuppression()]] - `calls` [INFERRED]
+- [[rotateRefreshToken()]] - `calls` [INFERRED]
+- [[seedEvent()]] - `calls` [INFERRED]
+- [[splitNonDisclosureRequests()]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/INFERRED #community/record

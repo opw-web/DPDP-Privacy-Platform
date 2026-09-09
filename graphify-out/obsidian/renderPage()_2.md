@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.test.tsx"
 type: "code"
-community: "@tanstack/react-query"
-location: "L12"
+community: "PrincipalEvidencePage.tsx"
+location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tanstack/react-query
+  - community/PrincipalEvidencePagetsx
 ---
 
 # renderPage()
 
 ## Connections
-- [[ChildrenPage.test.tsx]] - `contains` [EXTRACTED]
+- [[MessagingCampaignDetailPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tanstack/react-query
+#graphify/code #graphify/EXTRACTED #community/PrincipalEvidencePagetsx

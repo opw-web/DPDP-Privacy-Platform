@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[compliance-rules.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[createOrgWithEmployee()_2]] - `calls` [EXTRACTED]
+- [[createOrgWithEmployee()_1]] - `calls` [EXTRACTED]
 - [[seedGrievanceStatutoryBaseline()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PrismaService

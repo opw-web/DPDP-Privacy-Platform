@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "principals.service.ts"
+community: "TemplatesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principalsservicets
+  - community/TemplatesService
 ---
 
 # Injectable
 
 ## Connections
-- [[PrincipalRecipientsService]] - `references` [EXTRACTED]
+- [[TemplatesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principalsservicets
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

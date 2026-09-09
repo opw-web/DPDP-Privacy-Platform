@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EvidencePackController"
+community: "transfers.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EvidencePackController
+  - community/transfersservicets
 ---
 
 # ApiTags
 
 ## Connections
-- [[EvidencePackController]] - `references` [EXTRACTED]
+- [[TransfersController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EvidencePackController
+#graphify/code #graphify/EXTRACTED #community/transfersservicets

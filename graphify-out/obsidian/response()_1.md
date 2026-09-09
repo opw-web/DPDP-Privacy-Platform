@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[SettingsCompliancePage.test.tsx]] - `contains` [EXTRACTED]
-- [[renderPage()_5]] - `calls` [EXTRACTED]
+- [[renderPage()_6]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/tanstack/react-query

@@ -44,16 +44,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_RequirePermission]]
-- 2 edges to [[_COMMUNITY_@prismaclient]]
-- 2 edges to [[_COMMUNITY_@nestjscommon]]
-- 1 edge to [[_COMMUNITY_@nestjsswagger]]
-- 1 edge to [[_COMMUNITY_AuditService]]
+- 4 edges to [[_COMMUNITY_@nestjscommon]]
+- 3 edges to [[_COMMUNITY_prisma.service.ts]]
+- 2 edges to [[_COMMUNITY_app.module.ts]]
+- 2 edges to [[_COMMUNITY_RequirePermission]]
 - 1 edge to [[_COMMUNITY_dot-record]]
 
 ## Top bridge nodes
-- [[UpdateOrganizationDto]] - degree 17, connects to 3 communities
 - [[OrganizationsService]] - degree 8, connects to 3 communities
+- [[UpdateOrganizationDto]] - degree 17, connects to 2 communities
 - [[OrganizationsController]] - degree 7, connects to 2 communities
 - [[dot-update()]] - degree 6, connects to 1 community
 - [[dot-get()]] - degree 4, connects to 1 community

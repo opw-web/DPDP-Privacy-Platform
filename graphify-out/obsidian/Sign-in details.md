@@ -2,7 +2,7 @@
 source_file: "README.md"
 type: "document"
 community: "DPDP Privacy Platform — Client Evaluation"
-location: "L69"
+location: "L93"
 tags:
   - graphify/document
   - graphify/EXTRACTED

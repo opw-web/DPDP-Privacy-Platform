@@ -12,7 +12,7 @@ tags:
 # requests.constants.ts
 
 ## Connections
-- [[@prismaclient]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[APPLIES_TO_BY_REQUEST_TYPE]] - `contains` [EXTRACTED]
 - [[DEADLINE_SCAN_ACTOR_LABEL]] - `contains` [EXTRACTED]
 - [[DEADLINE_WARNING_EVENT_NOTE]] - `contains` [EXTRACTED]

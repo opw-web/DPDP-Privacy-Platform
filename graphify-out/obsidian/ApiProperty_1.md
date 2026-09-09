@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "GuardiansService"
+community: "CreateLegalHoldDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GuardiansService
+  - community/CreateLegalHoldDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[VerifyGuardianDto]] - `references` [EXTRACTED]
+- [[CompleteErasureTaskDto]] - `references` [EXTRACTED]
+- [[ProcessorChecklistTickDto]] - `references` [EXTRACTED]
+- [[SystemChecklistTickDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GuardiansService
+#graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto

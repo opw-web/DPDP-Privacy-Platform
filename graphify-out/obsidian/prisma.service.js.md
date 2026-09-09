@@ -12,8 +12,8 @@ tags:
 # prisma.service.js
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
-- [[@prismaclient]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[PrismaService_1]] - `contains` [EXTRACTED]
 - [[accept()]] - `contains` [EXTRACTED]
 - [[client_1]] - `contains` [EXTRACTED]

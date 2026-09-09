@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
 type: "code"
-community: ".record"
+community: "BreachService"
 location: "L159"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/BreachService
 ---
 
 # .get()
@@ -21,4 +21,4 @@ tags:
 - [[BreachService]] - `method` [EXTRACTED]
 - [[PublicBreach]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/BreachService

@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/ui/tabs.tsx"
 type: "code"
-community: "PrincipalDetailPage.tsx"
+community: "data-sources-api.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalDetailPagetsx
+  - community/data-sources-apits
 ---
 
 # tabs.tsx
 
 ## Connections
-- [[@radix-uireact-tabs_1]] - `imports_from` [EXTRACTED]
+- [[@radix-uireact-tabs]] - `imports_from` [EXTRACTED]
 - [[DataSourceDetailPage.tsx]] - `imports_from` [EXTRACTED]
 - [[RegistersPage.tsx]] - `imports_from` [EXTRACTED]
 - [[Tabs]] - `contains` [EXTRACTED]
@@ -23,4 +23,4 @@ tags:
 - [[react_1]] - `imports_from` [EXTRACTED]
 - [[utils.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/data-sources-apits

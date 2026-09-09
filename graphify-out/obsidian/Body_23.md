@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "EmployeeAuthController"
+community: "recipients.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeeAuthController
+  - community/recipientsservicets
 ---
 
 # Body
 
 ## Connections
-- [[dot-login()]] - `references` [EXTRACTED]
+- [[dot-create()_31]] - `references` [EXTRACTED]
+- [[dot-update()_21]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController
+#graphify/code #graphify/EXTRACTED #community/recipientsservicets

@@ -12,9 +12,9 @@ tags:
 # ErasureProcessorChecklistDto
 
 ## Connections
-- [[ApiProperty_43]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_45]] - `references` [EXTRACTED]
-- [[IsBoolean_19]] - `references` [EXTRACTED]
+- [[ApiProperty_42]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_46]] - `references` [EXTRACTED]
+- [[IsBoolean_20]] - `references` [EXTRACTED]
 - [[IsOptional_47]] - `references` [EXTRACTED]
 - [[IsString_60]] - `references` [EXTRACTED]
 - [[change-status.dto.ts]] - `contains` [EXTRACTED]

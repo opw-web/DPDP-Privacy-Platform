@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-issueTokenPair()]] - `calls` [EXTRACTED]
 - [[dot-login()]] - `calls` [INFERRED]
-- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
 - [[dot-storeFor()]] - `calls` [EXTRACTED]
 - [[EmployeeAuthService]] - `method` [EXTRACTED]
 - [[LoginRequestMeta]] - `references` [EXTRACTED]

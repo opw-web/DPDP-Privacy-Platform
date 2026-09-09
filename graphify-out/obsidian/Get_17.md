@@ -1,17 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "TemplatesService"
+community: "RequestsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/RequestsController
 ---
 
 # Get
 
 ## Connections
-- [[dot-get()_6]] - `references` [EXTRACTED]
-- [[dot-list()_15]] - `references` [EXTRACTED]
+- [[dot-accessReport()_1]] - `references` [EXTRACTED]
+- [[dot-erasureCompletionHolders()]] - `references` [EXTRACTED]
+- [[dot-getByReference()]] - `references` [EXTRACTED]
+- [[dot-list()_48]] - `references` [EXTRACTED]
+- [[dot-stats()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/RequestsController

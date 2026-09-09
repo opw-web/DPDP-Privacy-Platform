@@ -8,12 +8,12 @@ members: 6
 **Members:** 6 nodes
 
 ## Members
-- [[ApiPropertyOptional_15]] - code
+- [[ApiPropertyOptional_19]] - code
 - [[CompleteObligationDto]] - code - dpdp-platform/backend/src/modules/breaches/dto/complete-obligation.dto.ts
-- [[IsIn_3]] - code
-- [[IsOptional_15]] - code
-- [[IsString_19]] - code
-- [[MinLength_15]] - code
+- [[IsIn_5]] - code
+- [[IsOptional_20]] - code
+- [[IsString_24]] - code
+- [[MinLength_19]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -23,9 +23,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_@nestjsswagger]]
-- 1 edge to [[_COMMUNITY_dot-record]]
-- 1 edge to [[_COMMUNITY_BreachesController]]
+- 3 edges to [[_COMMUNITY_@nestjscommon]]
+- 1 edge to [[_COMMUNITY_BreachService]]
+- 1 edge to [[_COMMUNITY_RequirePermission]]
 
 ## Top bridge nodes
 - [[CompleteObligationDto]] - degree 10, connects to 3 communities

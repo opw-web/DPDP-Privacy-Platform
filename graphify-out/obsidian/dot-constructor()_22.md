@@ -1,19 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principal-portal/me.controller.ts"
+source_file: "dpdp-platform/backend/src/common/prisma/prisma.service.ts"
 type: "code"
-community: "AccessReportService"
-location: "L50"
+community: "PrismaService"
+location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessReportService
+  - community/PrismaService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AccessReportService]] - `references` [EXTRACTED]
-- [[MeController]] - `method` [EXTRACTED]
-- [[MeService]] - `references` [EXTRACTED]
+- [[PrismaService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessReportService
+#graphify/code #graphify/EXTRACTED #community/PrismaService

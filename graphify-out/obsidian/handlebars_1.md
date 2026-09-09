@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "backend/package.json"
+community: "templates.service.ts"
 location: "L41"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/backend/packagejson
+  - community/templatesservicets
 ---
 
 # handlebars
@@ -15,4 +15,4 @@ tags:
 - [[backendpackage.json]] - `imports` [EXTRACTED]
 - [[template-renderer.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/backend/packagejson
+#graphify/concept #graphify/EXTRACTED #community/templatesservicets

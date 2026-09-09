@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/frontend/src/principal/pages/MeMessagesPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/principal/pages/MeConsentsPage.test.tsx"
 type: "code"
 community: "@tanstack/react-query"
-location: "L7"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # renderPage()
 
 ## Connections
-- [[MeMessagesPage.test.tsx]] - `contains` [EXTRACTED]
+- [[MeConsentsPage.test.tsx]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/tanstack/react-query

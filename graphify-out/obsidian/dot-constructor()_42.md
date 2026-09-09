@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts"
+source_file: "dpdp-platform/backend/src/common/reference/reference.service.ts"
 type: "code"
-community: "PDFDocument"
-location: "L27"
+community: "prisma.service.ts"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PDFDocument
+  - community/prismaservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[PDFDocument]] - `method` [EXTRACTED]
+- [[ReferenceService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PDFDocument
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

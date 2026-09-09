@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/retention-scan.processor.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/guards/jwt-any-actor.guard.ts"
 type: "code"
-community: "RetentionScanService"
-location: "L20"
+community: "notifications.controller.ts"
+location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionScanService
+  - community/notificationscontrollerts
 ---
 
 # .constructor()
 
 ## Connections
-- [[RetentionScanProcessor]] - `method` [EXTRACTED]
-- [[RetentionScanService]] - `references` [EXTRACTED]
+- [[JwtAnyActorGuard]] - `method` [EXTRACTED]
+- [[TokenService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionScanService
+#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts

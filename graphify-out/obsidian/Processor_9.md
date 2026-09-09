@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "queues.module.ts"
+community: "breach-principal-notice-dispatch.processor.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/breach-principal-notice-dispatchprocessorts
 ---
 
 # Processor
 
 ## Connections
-- [[SyncProcessor]] - `references` [EXTRACTED]
+- [[CampaignSendProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/breach-principal-notice-dispatchprocessorts

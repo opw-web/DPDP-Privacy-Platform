@@ -12,8 +12,8 @@ tags:
 # normalization.service.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
-- [[@prismaclient]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[NormalizationMapping]] - `contains` [EXTRACTED]
 - [[NormalizationService]] - `contains` [EXTRACTED]
 - [[NormalizationSourceRecord]] - `contains` [EXTRACTED]

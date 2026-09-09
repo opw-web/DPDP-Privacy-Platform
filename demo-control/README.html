@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Privacy Demo — the seven buttons</title>
+<title>Privacy Demo — the eight buttons</title>
 <style>
   body { font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 680px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #1a1a1a; background: #fafafa; }
   h1 { font-size: 1.6em; }
@@ -15,29 +15,32 @@
 </style>
 </head>
 <body>
-<h1>Privacy Demo — the seven buttons</h1>
+<h1>Privacy Demo &mdash; the eight buttons</h1>
 
-<p class="lead"><b>Looking for the full walkthrough?</b> Double-click <b>2 - Demo Runbook</b>, or open
-<code>docs/demo-runbook/RUNBOOK.html</code>. It covers everything from switching the laptop on to
-shutting it down, with screenshots and a line to say at each step. This page is only the button list.</p>
+<p class="lead"><b>Looking for the full walkthrough?</b> Double-click <b>2 - Client Guide</b>, or open
+<code>docs/demo-runbook/CLIENT-GUIDE-standalone.html</code>. It covers everything from an unopened
+ZIP to a clean shutdown, with screenshots at every step. This page is only the button list.</p>
 
-<p class="lead"><b>Guide for prospective clients:</b> open
-<code>docs/demo-runbook/CLIENT-GUIDE.html</code>. It uses the same product journey and screenshots as
-the presenter runbook, but is written for clients to explore the sample environment themselves.</p>
+<p class="lead"><b>Presenting to an audience?</b> Open
+<code>docs/demo-runbook/RUNBOOK-standalone.html</code>. It follows the same product journey as the
+client guide, but is written for someone demonstrating the platform to other people, with a line to
+say at each step.</p>
 
-<p class="lead"><b>Sending either guide to someone?</b> Use
-<code>RUNBOOK-standalone.html</code> or <code>CLIENT-GUIDE-standalone.html</code>. Every screenshot is
-embedded inside those files, so the recipient only needs the one HTML file.</p>
+<p class="lead"><b>Sending either guide to someone?</b> Use the <code>-standalone.html</code>
+versions. Every screenshot is embedded inside those files, so the recipient needs the one file and
+nothing else.</p>
 
-<p>These seven icons are on your Desktop and in your applications menu, numbered in the order you use
-them. Double-click one, a black window pops up and tells you what it is doing in plain English — wait
-for it to finish, then press Enter to close it.</p>
+<p>These eight controls sit in the folder you unzipped, numbered in the order you use them. Setup
+also puts them on your Desktop. Double-click one, a black window pops up and tells you what it is
+doing in plain English &mdash; wait for it to finish, then press Enter to close it.</p>
+
+<div class="card"><b><span class="n">0</span> Prepare This Computer</b><br>One-time setup after downloading: checks this computer, installs and builds the platform, and creates the sample Acme workspace. About fifteen minutes, and needed only once per downloaded copy.</div>
 
 <div class="card"><b><span class="n">1</span> Start Privacy Demo</b><br>Turns everything on and opens the demo in your web browser when it is ready. Safe to click even if it is already running. About two minutes.</div>
 
-<div class="card"><b><span class="n">2</span> Demo Runbook</b><br>Opens the full step-by-step demo guide in your browser. Works whether or not the demo is running.</div>
+<div class="card"><b><span class="n">2</span> Client Guide</b><br>Opens the guided product evaluation in your browser. Works whether or not the demo is running.</div>
 
-<div class="card"><b><span class="n">3</span> Open Database</b><br>Opens a table browser so you can look inside the database itself — click a table name, see its rows. No SQL, no terminal.</div>
+<div class="card"><b><span class="n">3</span> Open Database</b><br>Opens a table browser so you can look inside the database itself &mdash; click a table name, see its rows. No SQL, no terminal.</div>
 
 <div class="card"><b><span class="n">4</span> Show Demo Proof</b><br>Counts the live demo data and shows the numbers in a window you can point at, next to the numbers that were expected.</div>
 
@@ -45,15 +48,20 @@ for it to finish, then press Enter to close it.</p>
 
 <div class="card"><b><span class="n">6</span> Stop Privacy Demo</b><br>Turns everything off cleanly. Your demo data is kept, so Start brings it back exactly as you left it.</div>
 
-<div class="card"><b><span class="n">9</span> Reset Demo to Fresh State</b><br><b>Destroys all demo data</b> and rebuilds it from scratch, including all the notices, consents, requests and the breach the demo needs. It asks you to confirm first. Takes about twelve minutes — never run it during a demo.</div>
+<div class="card"><b><span class="n">9</span> Reset Demo to Fresh State</b><br><b>Destroys all demo data</b> and rebuilds it from scratch, including all the notices, consents, requests and the breach the demo needs. It asks you to confirm first. Takes about twelve minutes &mdash; never run it during a demo.</div>
 
 <p class="warn">Sign in to the demo with <code>admin@acmeretail.demo</code> / <code>Password123!</code>.
-Members of the public sign in at <code>/me/login</code> — try <code>aman.sharma@gmail.com</code>, same password.</p>
+Members of the public sign in at <code>/me/login</code> &mdash; try <code>aman.sharma@gmail.com</code>, same password.</p>
 
 <p>If the buttons are not on your Desktop, or the folder has moved, run
 <code>demo-control/install-launchers.sh</code> once to put them there.</p>
 
-<p>Nothing here requires typing a command — if a button ever fails, the window tells you in plain
+<p>Nothing here requires typing a command &mdash; if a button ever fails, the window tells you in plain
 English what happened before you close it.</p>
+
+<p><small><b>On Linux:</b> the numbered <code>.cmd</code> files are Windows launchers. Use the matching
+entry points in <code>demo-control/linux/</code>, or run
+<code>demo-control/install-launchers.sh</code> to put the same eight buttons on your Desktop and in
+the applications menu.</small></p>
 </body>
 </html>

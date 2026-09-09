@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/masking/masking.service.spec.ts"
 type: "code"
-community: "MaskingService"
+community: "guardians.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MaskingService
+  - community/guardiansservicets
 ---
 
 # masking.service.spec.ts
@@ -16,4 +16,4 @@ tags:
 - [[MaskingService]] - `imports` [EXTRACTED]
 - [[masking.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MaskingService
+#graphify/code #graphify/EXTRACTED #community/guardiansservicets

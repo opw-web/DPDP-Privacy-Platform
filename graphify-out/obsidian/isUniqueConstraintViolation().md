@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
 type: "code"
-community: "purposes.service.ts"
-location: "L59"
+community: "CreateNoticeDto"
+location: "L134"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/purposesservicets
+  - community/CreateNoticeDto
 ---
 
 # isUniqueConstraintViolation()
 
 ## Connections
-- [[dot-create()_3]] - `calls` [EXTRACTED]
-- [[purposes.service.ts]] - `contains` [EXTRACTED]
+- [[dot-create()_4]] - `calls` [EXTRACTED]
+- [[notices.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/purposesservicets
+#graphify/code #graphify/EXTRACTED #community/CreateNoticeDto

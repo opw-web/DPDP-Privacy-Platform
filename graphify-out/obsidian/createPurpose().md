@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/mappings.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/notices.e2e-spec.ts"
 type: "code"
-community: "mappings.e2e-spec.ts"
-location: "L151"
+community: "PrismaService"
+location: "L87"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingse2e-spects
+  - community/PrismaService
 ---
 
 # createPurpose()
 
 ## Connections
-- [[mappings.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[notices.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[setupFixture()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingse2e-spects
+#graphify/code #graphify/EXTRACTED #community/PrismaService

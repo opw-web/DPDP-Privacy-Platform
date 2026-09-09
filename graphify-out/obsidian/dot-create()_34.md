@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-assertPurposeExists()]] - `calls` [EXTRACTED]
 - [[dot-create()_33]] - `calls` [INFERRED]
-- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
 - [[CreateRetentionPolicyDto]] - `references` [EXTRACTED]
 - [[RetentionService]] - `method` [EXTRACTED]
 - [[duplicateNameMessage()_2]] - `calls` [EXTRACTED]

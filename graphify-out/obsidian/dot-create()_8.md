@@ -1,22 +1,24 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/compliance/compliance.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.ts"
 type: "code"
-community: "CreateComplianceRuleDto"
-location: "L34"
+community: "PurposesService"
+location: "L141"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateComplianceRuleDto
+  - community/PurposesService
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_9]] - `calls` [INFERRED]
-- [[Body_7]] - `references` [EXTRACTED]
-- [[ComplianceController]] - `method` [EXTRACTED]
-- [[CreateComplianceRuleDto]] - `references` [EXTRACTED]
-- [[Post_5]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-create()_7]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-validateBasis()]] - `calls` [EXTRACTED]
+- [[CreatePurposeDto]] - `references` [EXTRACTED]
+- [[PurposesService]] - `method` [EXTRACTED]
+- [[duplicateCodeMessage()_1]] - `calls` [EXTRACTED]
+- [[isUniqueConstraintViolation()_1]] - `calls` [EXTRACTED]
+- [[toPublicPurpose()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto
+#graphify/code #graphify/EXTRACTED #community/PurposesService

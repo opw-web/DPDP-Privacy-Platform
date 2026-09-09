@@ -1,20 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/connector.factory.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts"
 type: "code"
-community: "connector.factory.ts"
-location: "L40"
+community: "CreateAlgorithmEntryDto"
+location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/connectorfactoryts
+  - community/CreateAlgorithmEntryDto
 ---
 
 # .create()
 
 ## Connections
-- [[dot-buildConnector()]] - `calls` [INFERRED]
-- [[Connector]] - `references` [EXTRACTED]
-- [[ConnectorFactory]] - `method` [EXTRACTED]
-- [[RestApiConnector]] - `calls` [EXTRACTED]
+- [[dot-createAlgorithm()]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
+- [[AlgorithmRegisterService]] - `method` [EXTRACTED]
+- [[CreateAlgorithmEntryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/connectorfactoryts
+#graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/crypto/crypto.service.ts"
 type: "code"
-community: "crypto.service.ts"
+community: "configuration.ts"
 location: "L94"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cryptoservicets
+  - community/configurationts
 ---
 
 # .decrypt()
@@ -16,4 +16,4 @@ tags:
 - [[CryptoService]] - `method` [EXTRACTED]
 - [[MalformedCiphertextError]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cryptoservicets
+#graphify/code #graphify/EXTRACTED #community/configurationts

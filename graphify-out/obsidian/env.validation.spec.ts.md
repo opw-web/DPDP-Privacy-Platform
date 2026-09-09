@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/config/env.validation.spec.ts"
 type: "code"
-community: "employee-auth.controller.ts"
+community: "configuration.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employee-authcontrollerts
+  - community/configurationts
 ---
 
 # env.validation.spec.ts
@@ -18,4 +18,4 @@ tags:
 - [[reflect-metadata]] - `imports_from` [EXTRACTED]
 - [[validate()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employee-authcontrollerts
+#graphify/code #graphify/EXTRACTED #community/configurationts

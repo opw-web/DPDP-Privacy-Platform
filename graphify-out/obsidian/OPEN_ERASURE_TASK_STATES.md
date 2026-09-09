@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/consents/consents.service.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/legal-hold.service.ts"
 type: "code"
-community: "@prisma/client"
-location: "L84"
+community: "prisma.service.ts"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/prismaservicets
 ---
 
 # OPEN_ERASURE_TASK_STATES
 
 ## Connections
-- [[consents.service.ts]] - `contains` [EXTRACTED]
+- [[legal-hold.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prisma/client
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-completeAssessment()]] - `calls` [INFERRED]
-- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
 - [[CompleteSdfAssessmentDto]] - `references` [EXTRACTED]
 - [[SdfAssessmentService]] - `method` [EXTRACTED]
 

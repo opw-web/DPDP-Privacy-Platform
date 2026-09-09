@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "transfers.service.ts"
+community: "AuditReadService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/transfersservicets
+  - community/AuditReadService
 ---
 
 # IsOptional
 
 ## Connections
-- [[CreateTransferDto]] - `references` [EXTRACTED]
+- [[AccessLogExportDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/transfersservicets
+#graphify/code #graphify/EXTRACTED #community/AuditReadService

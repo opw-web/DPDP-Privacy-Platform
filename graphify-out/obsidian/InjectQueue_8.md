@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "queues.module.ts"
+community: "BreachService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/BreachService
 ---
 
 # InjectQueue
 
 ## Connections
-- [[dot-constructor()_106]] - `references` [EXTRACTED]
+- [[dot-constructor()_127]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/BreachService

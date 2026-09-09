@@ -12,7 +12,7 @@ tags:
 # AlgorithmFormFields.tsx
 
 ## Connections
-- [[ALGORITHM_OPERATIONS]] - `imports` [EXTRACTED]
+- [[ALGORITHM_OPERATIONS_1]] - `imports` [EXTRACTED]
 - [[AlgorithmFormFields()]] - `contains` [EXTRACTED]
 - [[AlgorithmFormValues]] - `contains` [EXTRACTED]
 - [[AlgorithmRegisterPanel.tsx]] - `imports_from` [EXTRACTED]

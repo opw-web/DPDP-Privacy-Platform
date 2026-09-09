@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/guardians.controller.ts"
+source_file: "dpdp-platform/backend/src/queues/retention-scan.queue.ts"
 type: "code"
-community: "RequirePermission"
-location: "L15"
+community: "SyncQueueService"
+location: "L75"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/SyncQueueService
 ---
 
 # .constructor()
 
 ## Connections
-- [[GuardiansController]] - `method` [EXTRACTED]
-- [[GuardiansService]] - `references` [EXTRACTED]
+- [[dot-register()]] - `calls` [INFERRED]
+- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
+- [[InjectQueue_4]] - `references` [EXTRACTED]
+- [[RetentionScanQueueService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

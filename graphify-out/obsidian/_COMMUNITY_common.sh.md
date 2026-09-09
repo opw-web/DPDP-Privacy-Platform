@@ -8,8 +8,6 @@ members: 98
 **Members:** 98 nodes
 
 ## Members
-- [[2 - Client Guide.sh]] - code - 2 - Client Guide.sh
-- [[2 - Client Guide.sh script]] - code - 2 - Client Guide.sh
 - [[api()]] - code - demo-control/reset.sh
 - [[attach_purpose()]] - code - scripts/evaluate-mvp1.sh
 - [[auth()]] - code - scripts/evaluate-mvp1.sh
@@ -57,6 +55,8 @@ members: 98
 - [[nid_of()]] - code - demo-control/stage-demo.sh
 - [[ok()]] - code - demo-control/common.sh
 - [[on_error()]] - code - demo-control/common.sh
+- [[open-client-guide.sh]] - code - demo-control/open-client-guide.sh
+- [[open-client-guide.sh script]] - code - demo-control/open-client-guide.sh
 - [[open-database.sh]] - code - demo-control/open-database.sh
 - [[open-database.sh script]] - code - demo-control/open-database.sh
 - [[open-runbook.sh]] - code - demo-control/open-runbook.sh

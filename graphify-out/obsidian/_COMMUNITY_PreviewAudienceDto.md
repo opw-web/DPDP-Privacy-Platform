@@ -14,7 +14,7 @@ members: 19
 - [[dot-preview()_4]] - code - dpdp-platform/backend/src/modules/messaging/audience/audience.controller.ts
 - [[dot-preview()_5]] - code - dpdp-platform/backend/src/modules/messaging/audience/audience.service.ts
 - [[ApiProperty_49]] - code
-- [[ApiPropertyOptional_52]] - code
+- [[ApiPropertyOptional_53]] - code
 - [[ApiTags_38]] - code
 - [[AudienceController]] - code - dpdp-platform/backend/src/modules/messaging/audience/audience.controller.ts
 - [[AudienceService]] - code - dpdp-platform/backend/src/modules/messaging/audience/audience.service.ts
@@ -23,8 +23,8 @@ members: 19
 - [[Injectable_86]] - code
 - [[IsObject_7]] - code
 - [[IsOptional_51]] - code
-- [[IsString_67]] - code
-- [[MinLength_52]] - code
+- [[IsString_68]] - code
+- [[MinLength_53]] - code
 - [[Post_27]] - code
 - [[PreviewAudienceDto]] - code - dpdp-platform/backend/src/modules/messaging/audience/dto/preview-audience.dto.ts
 
@@ -36,15 +36,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_RequirePermission]]
+- 5 edges to [[_COMMUNITY_@nestjscommon]]
 - 3 edges to [[_COMMUNITY_audience.service.ts]]
 - 2 edges to [[_COMMUNITY_MaskingService]]
-- 2 edges to [[_COMMUNITY_@nestjscommon]]
-- 1 edge to [[_COMMUNITY_@nestjsswagger]]
+- 2 edges to [[_COMMUNITY_app.module.ts]]
+- 1 edge to [[_COMMUNITY_RequirePermission]]
 
 ## Top bridge nodes
-- [[PreviewAudienceDto]] - degree 11, connects to 3 communities
 - [[AudienceService]] - degree 8, connects to 3 communities
+- [[PreviewAudienceDto]] - degree 11, connects to 2 communities
+- [[dot-preview()_4]] - degree 7, connects to 2 communities
 - [[AudienceController]] - degree 6, connects to 2 communities
-- [[dot-preview()_4]] - degree 7, connects to 1 community
 - [[dot-preview()_5]] - degree 5, connects to 1 community

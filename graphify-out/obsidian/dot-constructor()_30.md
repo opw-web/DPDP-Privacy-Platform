@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sync-lock.service.ts"
+source_file: "dpdp-platform/backend/src/queues/sync.queue.ts"
 type: "code"
-community: "employee-auth.controller.ts"
-location: "L94"
+community: "sync.e2e-spec.ts"
+location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employee-authcontrollerts
+  - community/synce2e-spects
 ---
 
 # .constructor()
 
 ## Connections
-- [[SyncLockService]] - `method` [EXTRACTED]
-- [[toRedisConnectionOptions()]] - `calls` [EXTRACTED]
+- [[InjectQueue]] - `references` [EXTRACTED]
+- [[SyncLockService]] - `references` [EXTRACTED]
+- [[SyncQueueService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employee-authcontrollerts
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

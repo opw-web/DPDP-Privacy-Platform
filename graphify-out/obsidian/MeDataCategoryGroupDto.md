@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeDataPage.tsx"
 type: "code"
-community: "router.tsx"
+community: "cn"
 location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/cn
 ---
 
 # MeDataCategoryGroupDto
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[MeDataPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/cn

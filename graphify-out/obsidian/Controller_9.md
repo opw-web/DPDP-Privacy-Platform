@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AttachPurposesDto"
+community: "inventory.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AttachPurposesDto
+  - community/inventoryservicets
 ---
 
 # Controller
 
 ## Connections
-- [[MappingsController]] - `references` [EXTRACTED]
+- [[InventoryController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AttachPurposesDto
+#graphify/code #graphify/EXTRACTED #community/inventoryservicets

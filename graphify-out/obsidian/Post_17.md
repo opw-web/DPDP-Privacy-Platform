@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "MeRightsService"
+community: "notifications.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeRightsService
+  - community/notificationsservicets
 ---
 
 # Post
 
 ## Connections
-- [[dot-cancelRequest()]] - `references` [EXTRACTED]
-- [[dot-commentOnRequest()]] - `references` [EXTRACTED]
-- [[dot-createRequest()]] - `references` [EXTRACTED]
+- [[dot-markAllRead()]] - `references` [EXTRACTED]
+- [[dot-markRead()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeRightsService
+#graphify/code #graphify/EXTRACTED #community/notificationsservicets

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SdfCycleScanService"
+community: "BreachClockProcessor"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SdfCycleScanService
+  - community/BreachClockProcessor
 ---
 
 # Processor
 
 ## Connections
-- [[SdfCycleScanProcessor]] - `references` [EXTRACTED]
+- [[BreachClockProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SdfCycleScanService
+#graphify/code #graphify/EXTRACTED #community/BreachClockProcessor

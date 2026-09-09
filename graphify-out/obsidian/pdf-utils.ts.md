@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/pdf-utils.ts"
 type: "code"
-community: "access-report-render.ts"
+community: "csvDocument"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-report-renderts
+  - community/csvDocument
 ---
 
 # pdf-utils.ts
@@ -14,11 +14,11 @@ tags:
 ## Connections
 - [[access-report-render.ts]] - `imports_from` [EXTRACTED]
 - [[breach-render.ts]] - `imports_from` [EXTRACTED]
-- [[pdfkit_1]] - `imports_from` [EXTRACTED]
+- [[pdfkit]] - `imports_from` [EXTRACTED]
 - [[principal-evidence-render.ts]] - `imports_from` [EXTRACTED]
 - [[renderPdf()]] - `contains` [EXTRACTED]
 - [[writePdfLetterhead()]] - `contains` [EXTRACTED]
 - [[writePdfLine()]] - `contains` [EXTRACTED]
 - [[writePdfSectionHeading()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-report-renderts
+#graphify/code #graphify/EXTRACTED #community/csvDocument

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CampaignsService"
+community: "sdf-cycle-scan.queue.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampaignsService
+  - community/sdf-cycle-scanqueuets
 ---
 
 # Processor
 
 ## Connections
-- [[CampaignSendProcessor]] - `references` [EXTRACTED]
+- [[SdfCycleScanProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampaignsService
+#graphify/code #graphify/EXTRACTED #community/sdf-cycle-scanqueuets

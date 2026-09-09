@@ -14,9 +14,9 @@ tags:
 ## Connections
 - [[dot-list()_37]] - `references` [EXTRACTED]
 - [[dot-list()_38]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_44]] - `references` [EXTRACTED]
-- [[IsOptional_46]] - `references` [EXTRACTED]
-- [[IsString_57]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_43]] - `references` [EXTRACTED]
+- [[IsOptional_45]] - `references` [EXTRACTED]
+- [[IsString_56]] - `references` [EXTRACTED]
 - [[child-exemptions.controller.ts]] - `imports` [EXTRACTED]
 - [[child-exemptions.service.ts]] - `imports` [EXTRACTED]
 - [[list-exemption-claims.dto.ts]] - `contains` [EXTRACTED]

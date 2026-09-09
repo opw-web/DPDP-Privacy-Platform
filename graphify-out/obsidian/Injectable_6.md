@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AuditService"
+community: "PermissionsGuard"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/PermissionsGuard
 ---
 
 # Injectable
 
 ## Connections
-- [[AssemblyService]] - `references` [EXTRACTED]
+- [[PermissionsGuard]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/PermissionsGuard

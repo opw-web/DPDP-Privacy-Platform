@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/test/notifications.e2e-spec.ts"
 type: "code"
-community: "NotificationsService"
+community: "notifications.module.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/notificationsmodulets
 ---
 
 # notifications.e2e-spec.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[ConsoleProvider]] - `imports` [EXTRACTED]
 - [[EMAIL_PROVIDER]] - `imports` [EXTRACTED]
 - [[MailHogListResponse]] - `contains` [EXTRACTED]
@@ -23,12 +23,12 @@ tags:
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[SmtpProvider]] - `imports` [EXTRACTED]
 - [[TenantContext]] - `imports` [EXTRACTED]
-- [[argon2]] - `imports_from` [EXTRACTED]
+- [[argon2_1]] - `imports_from` [EXTRACTED]
 - [[bootstrapTestApp()]] - `imports` [EXTRACTED]
 - [[cleanupOrgs()]] - `imports` [EXTRACTED]
 - [[console.provider.ts]] - `imports_from` [EXTRACTED]
-- [[createOrgWithEmployee()_2]] - `imports` [EXTRACTED]
-- [[createPrincipal()_7]] - `contains` [EXTRACTED]
+- [[createOrgWithEmployee()_1]] - `imports` [EXTRACTED]
+- [[createPrincipal()_5]] - `contains` [EXTRACTED]
 - [[e2e-harness.ts]] - `imports_from` [EXTRACTED]
 - [[email-provider.factory.ts]] - `imports_from` [EXTRACTED]
 - [[notification-provider.interface.ts]] - `imports_from` [EXTRACTED]
@@ -42,4 +42,4 @@ tags:
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 - [[waitUntil()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/notificationsmodulets

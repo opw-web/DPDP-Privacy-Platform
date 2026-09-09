@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/health/health.controller.ts"
 type: "code"
-community: "health.service.ts"
+community: "test-database.ts"
 location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/healthservicets
+  - community/test-databasets
 ---
 
 # .check()
@@ -21,4 +21,4 @@ tags:
 - [[HttpCode_3]] - `references` [EXTRACTED]
 - [[Public()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/healthservicets
+#graphify/code #graphify/EXTRACTED #community/test-databasets

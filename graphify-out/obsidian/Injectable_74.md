@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ScopedTransactionClient"
+community: "BreachService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScopedTransactionClient
+  - community/BreachService
 ---
 
 # Injectable
 
 ## Connections
-- [[LinkingService]] - `references` [EXTRACTED]
+- [[BreachPrincipalNoticeDispatchQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient
+#graphify/code #graphify/EXTRACTED #community/BreachService

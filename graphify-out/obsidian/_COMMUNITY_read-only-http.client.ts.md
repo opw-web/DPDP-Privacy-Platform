@@ -35,14 +35,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_rest-api.connector.ts]]
-- 4 edges to [[_COMMUNITY_RestApiConnector]]
-- 2 edges to [[_COMMUNITY_MockHttpServer]]
+- 10 edges to [[_COMMUNITY_rest-api.connector.ts]]
+- 3 edges to [[_COMMUNITY_step6-conflict-acceptance.e2e-spec.ts]]
 - 2 edges to [[_COMMUNITY_@nestjscommon]]
 
 ## Top bridge nodes
-- [[read-only-http.client.spec.ts]] - degree 12, connects to 3 communities
 - [[read-only-http.client.ts]] - degree 13, connects to 2 communities
-- [[ReadOnlyHttpClient]] - degree 10, connects to 2 communities
-- [[stripQuery()_1]] - degree 8, connects to 2 communities
+- [[read-only-http.client.spec.ts]] - degree 12, connects to 2 communities
+- [[ReadOnlyHttpClient]] - degree 10, connects to 1 community
+- [[stripQuery()_1]] - degree 8, connects to 1 community
 - [[dot-request()]] - degree 6, connects to 1 community

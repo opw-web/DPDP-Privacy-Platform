@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/security-measures.service.ts"
+source_file: "demo-company-server/src/seed/rng.ts"
 type: "code"
-community: "CreateSecurityMeasureDto"
-location: "L69"
+community: "generateDataset"
+location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSecurityMeasureDto
+  - community/generateDataset
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[SecurityMeasuresService]] - `method` [EXTRACTED]
+- [[Rng]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSecurityMeasureDto
+#graphify/code #graphify/EXTRACTED #community/generateDataset

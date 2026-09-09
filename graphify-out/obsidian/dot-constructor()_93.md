@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/board/information-requests.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts"
 type: "code"
-community: "CreateInformationRequestDto"
-location: "L15"
+community: "templates.service.ts"
+location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateInformationRequestDto
+  - community/templatesservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[InformationRequestsController]] - `method` [EXTRACTED]
-- [[InformationRequestsService]] - `references` [EXTRACTED]
+- [[TemplateRenderError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto
+#graphify/code #graphify/EXTRACTED #community/templatesservicets

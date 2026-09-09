@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/consent-backfill.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/sync-lock.service.ts"
 type: "code"
-community: "ConsentBackfillService"
-location: "L21"
+community: "sync.e2e-spec.ts"
+location: "L94"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ConsentBackfillService
+  - community/synce2e-spects
 ---
 
 # .constructor()
 
 ## Connections
-- [[ConsentBackfillProcessor]] - `method` [EXTRACTED]
-- [[ConsentBackfillService]] - `references` [EXTRACTED]
+- [[SyncLockService]] - `method` [EXTRACTED]
+- [[toRedisConnectionOptions()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ConsentBackfillService
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

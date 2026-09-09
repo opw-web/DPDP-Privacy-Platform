@@ -12,7 +12,7 @@ tags:
 # current-notification-actor.decorator.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[CurrentNotificationActor]] - `contains` [EXTRACTED]
 - [[NotificationCallerActor]] - `imports` [EXTRACTED]
 - [[jwt-any-actor.guard.ts]] - `imports_from` [EXTRACTED]

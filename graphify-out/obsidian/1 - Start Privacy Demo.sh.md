@@ -1,5 +1,5 @@
 ---
-source_file: "1 - Start Privacy Demo.sh"
+source_file: "demo-control/linux/1 - Start Privacy Demo.sh"
 type: "code"
 community: "1 - Start Privacy Demo.sh"
 location: "L1"

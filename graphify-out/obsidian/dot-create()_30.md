@@ -1,28 +1,25 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
+source_file: "dpdp-platform/backend/src/modules/requests/requests.service.ts"
 type: "code"
-community: ".record"
-location: "L206"
+community: "RetentionScanService"
+location: "L259"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/record
+  - graphify/INFERRED
+  - community/RetentionScanService
 ---
 
 # .create()
 
 ## Connections
 - [[dot-computeDeadline()]] - `calls` [INFERRED]
-- [[dot-create()_27]] - `calls` [INFERRED]
+- [[dot-createRequest()_1]] - `calls` [INFERRED]
 - [[dot-next()]] - `calls` [INFERRED]
-- [[dot-previewAffected()_1]] - `calls` [EXTRACTED]
-- [[dot-public()]] - `calls` [EXTRACTED]
-- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
 - [[dot-resolveRule()]] - `calls` [INFERRED]
-- [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[BreachService]] - `method` [EXTRACTED]
-- [[CreateBreachDto]] - `references` [EXTRACTED]
-- [[PublicBreach]] - `references` [EXTRACTED]
-- [[asDate()]] - `calls` [EXTRACTED]
+- [[dot-scanOrgDeadlines()]] - `calls` [EXTRACTED]
+- [[dot-snapshotOnto()]] - `calls` [INFERRED]
+- [[dot-writeTransition()]] - `calls` [EXTRACTED]
+- [[RequestsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/INFERRED #community/RetentionScanService

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PrismaService"
+community: "sync.e2e-spec.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/synce2e-spects
 ---
 
 # Injectable
 
 ## Connections
-- [[PrismaService]] - `references` [EXTRACTED]
+- [[SyncLockService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

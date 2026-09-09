@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/matching.service.ts"
 type: "code"
-community: "ScopedTransactionClient"
+community: "matching.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScopedTransactionClient
+  - community/matchingservicets
 ---
 
 # matching.service.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
-- [[@prismaclient]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[CONFIDENCE_RANK]] - `contains` [EXTRACTED]
 - [[CandidateMatchResult]] - `contains` [EXTRACTED]
 - [[LinkMatchResult]] - `contains` [EXTRACTED]
@@ -50,4 +50,4 @@ tags:
 - [[supportingSignals()]] - `imports` [EXTRACTED]
 - [[sync-pipeline.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient
+#graphify/code #graphify/EXTRACTED #community/matchingservicets

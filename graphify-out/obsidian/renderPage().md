@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/RequestsPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/principal/pages/MeRequestDetailPage.test.tsx"
 type: "code"
-community: "RequestDetailPage.tsx"
-location: "L34"
+community: "api-client.ts"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestDetailPagetsx
+  - community/api-clientts
 ---
 
 # renderPage()
 
 ## Connections
-- [[RequestsPage.test.tsx]] - `contains` [EXTRACTED]
+- [[MeRequestDetailPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/api-clientts

@@ -1,18 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "DataSourcesController"
+community: "RequirePermission"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesController
+  - community/RequirePermission
 ---
 
 # Post
 
 ## Connections
-- [[dot-create()_25]] - `references` [EXTRACTED]
-- [[dot-discoverSchema()_1]] - `references` [EXTRACTED]
-- [[dot-testConnection()_1]] - `references` [EXTRACTED]
+- [[dot-addAffected()]] - `references` [EXTRACTED]
+- [[dot-completeObligation()]] - `references` [EXTRACTED]
+- [[dot-create()_26]] - `references` [EXTRACTED]
+- [[dot-extension()]] - `references` [EXTRACTED]
+- [[dot-notify()]] - `references` [EXTRACTED]
+- [[dot-previewAffected()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesController
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

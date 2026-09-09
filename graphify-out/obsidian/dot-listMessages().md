@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principal-portal/me-rights.controller.ts"
 type: "code"
-community: "notifications.controller.ts"
+community: "Public"
 location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationscontrollerts
+  - community/Public
 ---
 
 # .listMessages()
@@ -18,4 +18,4 @@ tags:
 - [[MeRightsController]] - `method` [EXTRACTED]
 - [[PrincipalActor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts
+#graphify/code #graphify/EXTRACTED #community/Public

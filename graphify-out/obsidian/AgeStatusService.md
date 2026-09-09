@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/children/age-status.service.ts"
 type: "code"
-community: "AgeStatusService"
+community: "age-status.service.ts"
 location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AgeStatusService
+  - community/age-statusservicets
 ---
 
 # AgeStatusService
@@ -21,4 +21,4 @@ tags:
 - [[age-status.service.ts]] - `contains` [EXTRACTED]
 - [[children.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AgeStatusService
+#graphify/code #graphify/EXTRACTED #community/age-statusservicets

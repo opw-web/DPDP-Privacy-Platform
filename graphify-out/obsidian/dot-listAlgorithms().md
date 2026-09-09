@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-list()_18]] - `calls` [INFERRED]
-- [[Get_19]] - `references` [EXTRACTED]
+- [[Get_18]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[SdfController]] - `method` [EXTRACTED]
 

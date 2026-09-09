@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/components/ValueCard.tsx"
 type: "code"
-community: "router.tsx"
+community: "cn"
 location: "L42"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/cn
 ---
 
 # ValueCardSource
@@ -16,4 +16,4 @@ tags:
 - [[MeDataValueDto]] - `references` [EXTRACTED]
 - [[ValueCard.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/cn

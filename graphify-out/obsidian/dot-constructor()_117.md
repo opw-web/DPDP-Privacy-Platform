@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/health/health.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/children/child-exemptions.service.ts"
 type: "code"
-community: "health.service.ts"
-location: "L19"
+community: "CreateExemptionClaimDto"
+location: "L47"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/healthservicets
+  - community/CreateExemptionClaimDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[HealthController]] - `method` [EXTRACTED]
-- [[HealthService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[ChildExemptionsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/healthservicets
+#graphify/code #graphify/EXTRACTED #community/CreateExemptionClaimDto

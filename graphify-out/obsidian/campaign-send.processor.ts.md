@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/campaign-send.processor.ts"
 type: "code"
-community: "@prisma/client"
+community: "breach-principal-notice-dispatch.processor.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/breach-principal-notice-dispatchprocessorts
 ---
 
 # campaign-send.processor.ts
 
 ## Connections
 - [[@nestjsbullmq_1]] - `imports_from` [EXTRACTED]
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[CAMPAIGN_SEND_MAX_ATTEMPTS]] - `imports` [EXTRACTED]
 - [[CAMPAIGN_SEND_QUEUE_NAME]] - `imports` [EXTRACTED]
 - [[CAMPAIGN_SEND_WORKER_CONCURRENCY]] - `imports` [EXTRACTED]
@@ -24,7 +24,7 @@ tags:
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[TenantContext]] - `imports` [EXTRACTED]
 - [[TenantStore]] - `imports` [EXTRACTED]
-- [[bullmq_1]] - `imports_from` [EXTRACTED]
+- [[bullmq]] - `imports_from` [EXTRACTED]
 - [[campaign-send.queue.ts]] - `imports_from` [EXTRACTED]
 - [[campaigns.module.ts]] - `imports_from` [EXTRACTED]
 - [[campaigns.service.ts]] - `imports_from` [EXTRACTED]
@@ -32,4 +32,4 @@ tags:
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prisma/client
+#graphify/code #graphify/EXTRACTED #community/breach-principal-notice-dispatchprocessorts

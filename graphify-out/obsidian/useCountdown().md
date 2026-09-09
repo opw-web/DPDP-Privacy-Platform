@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/hooks/useCountdown.ts"
 type: "code"
-community: "DeadlinePill.tsx"
+community: "cn"
 location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DeadlinePilltsx
+  - community/cn
 ---
 
 # useCountdown()
@@ -18,4 +18,4 @@ tags:
 - [[useCountdown.test.ts]] - `imports` [EXTRACTED]
 - [[useCountdown.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DeadlinePilltsx
+#graphify/code #graphify/EXTRACTED #community/cn

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "erasure-task.service.ts"
+community: "SyncQueueService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/SyncQueueService
 ---
 
 # Injectable
 
 ## Connections
-- [[PurposeServedService]] - `references` [EXTRACTED]
+- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

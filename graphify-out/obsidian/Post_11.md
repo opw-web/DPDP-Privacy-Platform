@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "RequirePermission"
+community: "CandidatesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/CandidatesService
 ---
 
 # Post
@@ -14,4 +14,4 @@ tags:
 - [[dot-confirm()]] - `references` [EXTRACTED]
 - [[dot-reject()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/CandidatesService

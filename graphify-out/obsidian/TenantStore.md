@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/tenant/tenant-context.ts"
 type: "code"
-community: "@prisma/client"
+community: "prisma.service.ts"
 location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/prismaservicets
 ---
 
 # TenantStore
@@ -49,4 +49,4 @@ tags:
 - [[tenant-isolation.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[tenant.middleware.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prisma/client
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/match-rules/customer-id.ts"
 type: "code"
-community: "ScopedTransactionClient"
+community: "matching.service.ts"
 location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScopedTransactionClient
+  - community/matchingservicets
 ---
 
 # verifiedCustomerIdValue()
@@ -18,4 +18,4 @@ tags:
 - [[hasSoleVerifiedCustomerIdMapping()]] - `calls` [EXTRACTED]
 - [[linking.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient
+#graphify/code #graphify/EXTRACTED #community/matchingservicets

@@ -12,8 +12,8 @@ tags:
 # DeadlineScanQueueService
 
 ## Connections
-- [[dot-constructor()_102]] - `method` [EXTRACTED]
-- [[Injectable_60]] - `references` [EXTRACTED]
+- [[dot-constructor()_77]] - `method` [EXTRACTED]
+- [[Injectable_64]] - `references` [EXTRACTED]
 - [[deadline-scan.queue.ts]] - `contains` [EXTRACTED]
 - [[queues.module.ts]] - `imports` [EXTRACTED]
 - [[requests.module.ts]] - `imports` [EXTRACTED]

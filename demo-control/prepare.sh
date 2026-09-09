@@ -126,12 +126,26 @@ if ! printf 'YES\n' | env -u DISPLAY bash "$COMMON_SH_DIR/reset.sh"; then
   exit 1
 fi
 
+# Shortcuts on the Desktop, so the numbered buttons are reachable without
+# hunting for the folder again. Setup has already succeeded by this point,
+# so a failure here is a warning, never a failed preparation.
+if [ "$IS_WINDOWS" = "1" ]; then
+  step "Putting the buttons on your Desktop"
+  if bash "$COMMON_SH_DIR/install-launchers.sh" </dev/null >>"$LOG_DIR/prepare.log" 2>&1; then
+    ok "The numbered buttons are on your Desktop."
+  else
+    warn "Could not create the Desktop shortcuts -- no matter."
+    warn "Use the numbered files in the folder you unzipped instead."
+  fi
+fi
+
 echo
 ok "Preparation complete."
 if [ "$IS_WINDOWS" = "1" ]; then
-  say "Next time, begin with '1 - Start Privacy Demo (Windows)'."
+  say "Next time, begin with '1 - Start Privacy Demo' -- on your Desktop,"
+  say "or in the folder you unzipped."
 else
-  say "Next time, begin with '1 - Start Privacy Demo.sh'."
+  say "Next time, begin with 'demo-control/linux/1 - Start Privacy Demo.sh'."
 fi
 
 trap - EXIT

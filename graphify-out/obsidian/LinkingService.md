@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/linking.service.ts"
 type: "code"
-community: "ScopedTransactionClient"
+community: ".record"
 location: "L73"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScopedTransactionClient
+  - community/record
 ---
 
 # LinkingService
@@ -16,11 +16,11 @@ tags:
 - [[dot-attachAvailableIdentifiers()]] - `method` [EXTRACTED]
 - [[dot-attachIdentifier()]] - `method` [EXTRACTED]
 - [[dot-candidateResults()]] - `method` [EXTRACTED]
-- [[dot-constructor()_19]] - `references` [EXTRACTED]
-- [[dot-constructor()_10]] - `method` [EXTRACTED]
+- [[dot-constructor()_51]] - `references` [EXTRACTED]
+- [[dot-constructor()_46]] - `method` [EXTRACTED]
 - [[dot-createCandidate()]] - `method` [EXTRACTED]
 - [[dot-verifyScopedReferences()]] - `method` [EXTRACTED]
-- [[Injectable_74]] - `references` [EXTRACTED]
+- [[Injectable_53]] - `references` [EXTRACTED]
 - [[assembly.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[identity-matching.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[identity.module.ts]] - `imports` [EXTRACTED]
@@ -28,4 +28,4 @@ tags:
 - [[merge-unmerge.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[sync-pipeline.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient
+#graphify/code #graphify/EXTRACTED #community/record

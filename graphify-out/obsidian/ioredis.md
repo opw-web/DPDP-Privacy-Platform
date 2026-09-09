@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "employee-auth.controller.ts"
+community: "sync.e2e-spec.ts"
 location: "L42"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/employee-authcontrollerts
+  - community/synce2e-spects
 ---
 
 # ioredis
@@ -18,4 +18,4 @@ tags:
 - [[redis-connection.util.ts]] - `imports_from` [EXTRACTED]
 - [[sync-lock.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/employee-authcontrollerts
+#graphify/concept #graphify/EXTRACTED #community/synce2e-spects

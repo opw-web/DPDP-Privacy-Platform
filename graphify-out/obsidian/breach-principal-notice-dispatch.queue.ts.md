@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/breach-principal-notice-dispatch.queue.ts"
 type: "code"
-community: "queues.module.ts"
+community: "breach-principal-notice-dispatch.processor.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/breach-principal-notice-dispatchprocessorts
 ---
 
 # breach-principal-notice-dispatch.queue.ts
 
 ## Connections
 - [[@nestjsbullmq_1]] - `imports_from` [EXTRACTED]
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[BREACH_PRINCIPAL_NOTICE_DISPATCH_QUEUE_NAME]] - `contains` [EXTRACTED]
 - [[BreachPrincipalNoticeDispatchJobData]] - `contains` [EXTRACTED]
 - [[BreachPrincipalNoticeDispatchQueueService]] - `contains` [EXTRACTED]
@@ -21,6 +21,6 @@ tags:
 - [[breach.service.ts]] - `imports_from` [EXTRACTED]
 - [[breachPrincipalNoticeDispatchJobId()]] - `contains` [EXTRACTED]
 - [[breaches.module.ts]] - `imports_from` [EXTRACTED]
-- [[bullmq_1]] - `imports_from` [EXTRACTED]
+- [[bullmq]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/breach-principal-notice-dispatchprocessorts

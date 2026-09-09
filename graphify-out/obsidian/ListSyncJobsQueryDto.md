@@ -12,13 +12,13 @@ tags:
 # ListSyncJobsQueryDto
 
 ## Connections
-- [[dot-list()_11]] - `references` [EXTRACTED]
-- [[IsInt_7]] - `references` [EXTRACTED]
-- [[IsOptional_25]] - `references` [EXTRACTED]
-- [[IsString_29]] - `references` [EXTRACTED]
+- [[dot-list()_9]] - `references` [EXTRACTED]
+- [[IsInt_6]] - `references` [EXTRACTED]
+- [[IsOptional_23]] - `references` [EXTRACTED]
+- [[IsString_28]] - `references` [EXTRACTED]
 - [[Max_1]] - `references` [EXTRACTED]
-- [[Min_7]] - `references` [EXTRACTED]
-- [[Type_6]] - `references` [EXTRACTED]
+- [[Min_6]] - `references` [EXTRACTED]
+- [[Type_5]] - `references` [EXTRACTED]
 - [[list-sync-jobs.dto.ts]] - `contains` [EXTRACTED]
 - [[sync.controller.ts]] - `imports` [EXTRACTED]
 

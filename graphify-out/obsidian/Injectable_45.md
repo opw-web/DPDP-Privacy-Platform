@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AlgorithmRegisterService"
+community: "principals.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AlgorithmRegisterService
+  - community/principalsservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[SdfGapsService]] - `references` [EXTRACTED]
+- [[PrincipalsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterService
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

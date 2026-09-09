@@ -8,8 +8,8 @@ members: 2
 **Members:** 2 nodes
 
 ## Members
-- [[4 - Show Demo Proof.sh]] - code - 4 - Show Demo Proof.sh
-- [[4 - Show Demo Proof.sh script]] - code - 4 - Show Demo Proof.sh
+- [[4 - Show Demo Proof.sh]] - code - demo-control/linux/4 - Show Demo Proof.sh
+- [[4 - Show Demo Proof.sh script]] - code - demo-control/linux/4 - Show Demo Proof.sh
 
 ## Live Query (requires Dataview plugin)
 

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "employee-auth.controller.ts"
+community: "configuration.ts"
 location: "L29"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/employee-authcontrollerts
+  - community/configurationts
 ---
 
 # @nestjs/config
@@ -27,4 +27,4 @@ tags:
 - [[sync-lock.service.ts]] - `imports_from` [EXTRACTED]
 - [[token.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/employee-authcontrollerts
+#graphify/concept #graphify/EXTRACTED #community/configurationts

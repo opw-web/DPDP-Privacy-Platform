@@ -1,24 +1,30 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.service.ts"
 type: "code"
-community: "RequirePermission"
-location: "L61"
+community: "CampaignsService"
+location: "L479"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/CampaignsService
 ---
 
 # .send()
 
 ## Connections
-- [[dot-send()_7]] - `calls` [INFERRED]
+- [[dot-create()_24]] - `calls` [EXTRACTED]
+- [[dot-deliverRecipient()]] - `calls` [EXTRACTED]
+- [[dot-dispatchPrincipalNoticeCampaign()]] - `calls` [INFERRED]
+- [[dot-enqueue()]] - `calls` [INFERRED]
+- [[dot-get()_14]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-resolveRecipients()]] - `calls` [EXTRACTED]
+- [[dot-send()_5]] - `calls` [INFERRED]
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[CampaignsController]] - `method` [EXTRACTED]
-- [[CurrentActor]] - `references` [EXTRACTED]
-- [[CurrentActorPermissions]] - `references` [EXTRACTED]
-- [[Param_14]] - `references` [EXTRACTED]
-- [[Post_13]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[CampaignsService]] - `method` [EXTRACTED]
+- [[notFoundCampaign()]] - `calls` [EXTRACTED]
+- [[recordNonDisclosureSuppression()]] - `calls` [EXTRACTED]
+- [[renderOrganizationMessageTemplate()]] - `calls` [EXTRACTED]
+- [[toBadRequest()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/CampaignsService

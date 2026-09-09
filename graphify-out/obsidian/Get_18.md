@@ -1,20 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "RequestsController"
+community: "SdfController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestsController
+  - community/SdfController
 ---
 
 # Get
 
 ## Connections
-- [[dot-accessReport()_1]] - `references` [EXTRACTED]
-- [[dot-erasureCompletionHolders()]] - `references` [EXTRACTED]
-- [[dot-getByReference()]] - `references` [EXTRACTED]
-- [[dot-list()_48]] - `references` [EXTRACTED]
-- [[dot-stats()_1]] - `references` [EXTRACTED]
+- [[dot-getGaps()_1]] - `references` [EXTRACTED]
+- [[dot-listAlgorithms()]] - `references` [EXTRACTED]
+- [[dot-listAssessments()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestsController
+#graphify/code #graphify/EXTRACTED #community/SdfController

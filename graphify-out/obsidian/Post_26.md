@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateSecurityMeasureDto"
+community: ".unmerge"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSecurityMeasureDto
+  - community/unmerge
 ---
 
 # Post
 
 ## Connections
-- [[dot-create()_35]] - `references` [EXTRACTED]
+- [[dot-unmerge()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSecurityMeasureDto
+#graphify/code #graphify/EXTRACTED #community/unmerge

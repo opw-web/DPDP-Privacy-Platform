@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/test/retention.e2e-spec.ts"
 type: "code"
-community: "PrismaService"
+community: "prisma.service.ts"
 location: "L238"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/prismaservicets
 ---
 
 # createEmployeeWithPermissions()
 
 ## Connections
-- [[ensurePermission()_4]] - `calls` [EXTRACTED]
+- [[ensurePermission()]] - `calls` [EXTRACTED]
 - [[retention.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

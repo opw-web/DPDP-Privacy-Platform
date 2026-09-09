@@ -1,25 +1,24 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/unmerge.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/merge.service.ts"
 type: "code"
-community: "RequirePermission"
-location: "L24"
+community: ".record"
+location: "L191"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/RequirePermission
+  - graphify/INFERRED
+  - community/record
 ---
 
 # .unmerge()
 
 ## Connections
+- [[dot-derive()]] - `calls` [INFERRED]
+- [[dot-nextPrincipalReferenceInTransaction()]] - `calls` [INFERRED]
+- [[dot-rebuild()]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
 - [[dot-unmerge()_1]] - `calls` [INFERRED]
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[Body_12]] - `references` [EXTRACTED]
-- [[CurrentActor]] - `references` [EXTRACTED]
-- [[Param_13]] - `references` [EXTRACTED]
-- [[Post_12]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[UnmergeController]] - `method` [EXTRACTED]
-- [[UnmergeDto]] - `references` [EXTRACTED]
+- [[MergeService]] - `method` [EXTRACTED]
+- [[initialPrincipalDisplayName()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/INFERRED #community/record

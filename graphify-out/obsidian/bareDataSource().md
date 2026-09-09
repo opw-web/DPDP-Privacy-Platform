@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[step6-conflict-acceptance.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[tenant()]] - `calls` [EXTRACTED]
+- [[tenant()_5]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects

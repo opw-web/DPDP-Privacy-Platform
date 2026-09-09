@@ -35,11 +35,10 @@ if [ "$IS_WINDOWS" = "1" ]; then
   say "Desktop:       $DESKTOP_DIR"
 
   count=0
-  for src in "$REPO_ROOT"/*" (Windows).cmd"; do
+  for src in "$REPO_ROOT"/[0-9]" - "*.cmd; do
     [ -f "$src" ] || continue
-    base="$(basename "$src" ".cmd")"
-    # "1 - Start Privacy Demo (Windows)" -> "1 - Start Privacy Demo"
-    label="${base% (Windows)}"
+    # "1 - Start Privacy Demo.cmd" -> "1 - Start Privacy Demo"
+    label="$(basename "$src" ".cmd")"
     target_win="$(winpath "$src")"
     icon_dir_win="$(winpath "$REPO_ROOT")"
     if powershell -NoProfile -Command "
@@ -109,7 +108,7 @@ for old in "${OLD_NAMES[@]}"; do
 done
 [ "$removed" = "0" ] && ok "None found -- nothing to remove."
 
-step "Installing the seven buttons"
+step "Installing the eight buttons"
 count=0
 for src in "$SRC_DIR"/*.desktop; do
   base=$(basename "$src")
@@ -132,8 +131,9 @@ done
 echo
 say "Installed $count buttons. They are on your Desktop, in this order:"
 echo
+say "  0 - Prepare This Computer       one-time setup after downloading"
 say "  1 - Start Privacy Demo          starts everything, opens the website"
-say "  2 - Demo Runbook                the step-by-step guide"
+say "  2 - Client Guide                the step-by-step guide"
 say "  3 - Open Database               browse the tables"
 say "  4 - Show Demo Proof             live counts in a window"
 say "  5 - Demo Status                 what is up, what is down"

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CompleteObligationDto"
+community: "CreateAlgorithmEntryDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CompleteObligationDto
+  - community/CreateAlgorithmEntryDto
 ---
 
 # IsIn
 
 ## Connections
-- [[CompleteObligationDto]] - `references` [EXTRACTED]
+- [[CreateAlgorithmEntryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CompleteObligationDto
+#graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto

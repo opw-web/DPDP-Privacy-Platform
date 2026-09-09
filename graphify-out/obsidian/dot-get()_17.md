@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.service.ts"
 type: "code"
-community: "data-sources.service.ts"
+community: "ReplaceMappingsDto"
 location: "L244"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesservicets
+  - community/ReplaceMappingsDto
 ---
 
 # .get()
@@ -16,4 +16,4 @@ tags:
 - [[MappingsService]] - `method` [EXTRACTED]
 - [[computeMappingWarnings()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets
+#graphify/code #graphify/EXTRACTED #community/ReplaceMappingsDto

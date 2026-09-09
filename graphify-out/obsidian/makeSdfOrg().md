@@ -12,7 +12,7 @@ tags:
 # makeSdfOrg()
 
 ## Connections
-- [[createOrgWithEmployee()_2]] - `calls` [EXTRACTED]
+- [[createOrgWithEmployee()_1]] - `calls` [EXTRACTED]
 - [[sdf.e2e-spec.ts]] - `contains` [EXTRACTED]
 - [[seedComplianceRules()]] - `calls` [EXTRACTED]
 

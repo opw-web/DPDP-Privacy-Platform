@@ -1,11 +1,11 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/inventory/ropa-export.service.ts"
+source_file: "dpdp-platform/backend/src/modules/evidence/audit-export.service.ts"
 type: "code"
 community: "csvDocument"
-location: "L51"
+location: "L39"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/csvDocument
 ---
 
@@ -13,10 +13,9 @@ tags:
 
 ## Connections
 - [[dot-buildPack()]] - `calls` [INFERRED]
-- [[dot-record()_1]] - `calls` [INFERRED]
-- [[dot-ropaCsv()]] - `calls` [INFERRED]
-- [[RopaExportService]] - `method` [EXTRACTED]
+- [[dot-exportCsv()]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
+- [[AuditExportService]] - `method` [EXTRACTED]
 - [[csvDocument()]] - `calls` [EXTRACTED]
-- [[sortedUnique()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/csvDocument
+#graphify/code #graphify/INFERRED #community/csvDocument

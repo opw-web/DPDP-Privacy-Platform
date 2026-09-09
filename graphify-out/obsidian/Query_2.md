@@ -11,7 +11,7 @@ tags:
 # Query
 
 ## Connections
-- [[dot-accessLogCsv()_1]] - `references` [EXTRACTED]
+- [[dot-accessLogCsv()]] - `references` [EXTRACTED]
 - [[dot-list()_5]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/AuditReadService

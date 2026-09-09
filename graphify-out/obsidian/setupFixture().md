@@ -14,9 +14,9 @@ tags:
 ## Connections
 - [[attachPurposeAndMapping()]] - `calls` [EXTRACTED]
 - [[createAdmin()]] - `calls` [EXTRACTED]
-- [[createDataSource()_2]] - `calls` [EXTRACTED]
+- [[createDataSource()]] - `calls` [EXTRACTED]
 - [[createNotice()_1]] - `calls` [EXTRACTED]
-- [[createPurpose()_1]] - `calls` [EXTRACTED]
+- [[createPurpose()]] - `calls` [EXTRACTED]
 - [[notices.e2e-spec.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PrismaService

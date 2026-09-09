@@ -1,23 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/legal-hold.service.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.controller.ts"
 type: "code"
-community: "RequirePermission"
-location: "L56"
+community: "NoticesController"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/NoticesController
 ---
 
 # .create()
 
 ## Connections
-- [[dot-createLegalHold()]] - `calls` [INFERRED]
-- [[dot-record()_1]] - `calls` [INFERRED]
-- [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[CreateLegalHoldDto]] - `references` [EXTRACTED]
-- [[LegalHoldService]] - `method` [EXTRACTED]
-- [[legalHoldCovers()]] - `calls` [EXTRACTED]
-- [[lockRetentionWorkflow()]] - `calls` [EXTRACTED]
+- [[dot-create()_4]] - `calls` [INFERRED]
+- [[Body_11]] - `references` [EXTRACTED]
+- [[CreateNoticeDto]] - `references` [EXTRACTED]
+- [[NoticesController]] - `method` [EXTRACTED]
+- [[Post_10]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/NoticesController

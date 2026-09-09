@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ErasureTaskService"
+community: "evidence-pack.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ErasureTaskService
+  - community/evidence-packservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[ErasureTaskService]] - `references` [EXTRACTED]
+- [[AuditChainService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ErasureTaskService
+#graphify/code #graphify/EXTRACTED #community/evidence-packservicets

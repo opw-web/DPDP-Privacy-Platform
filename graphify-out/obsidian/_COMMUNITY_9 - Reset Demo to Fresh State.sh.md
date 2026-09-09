@@ -8,8 +8,8 @@ members: 2
 **Members:** 2 nodes
 
 ## Members
-- [[9 - Reset Demo to Fresh State.sh]] - code - 9 - Reset Demo to Fresh State.sh
-- [[9 - Reset Demo to Fresh State.sh script]] - code - 9 - Reset Demo to Fresh State.sh
+- [[9 - Reset Demo to Fresh State.sh]] - code - demo-control/linux/9 - Reset Demo to Fresh State.sh
+- [[9 - Reset Demo to Fresh State.sh script]] - code - demo-control/linux/9 - Reset Demo to Fresh State.sh
 
 ## Live Query (requires Dataview plugin)
 

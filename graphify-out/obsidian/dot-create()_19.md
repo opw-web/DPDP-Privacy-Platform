@@ -1,25 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/requests/requests.service.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/employees.controller.ts"
 type: "code"
-community: "SdfCycleScanService"
-location: "L259"
+community: "EmployeesService"
+location: "L28"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/SdfCycleScanService
+  - graphify/EXTRACTED
+  - community/EmployeesService
 ---
 
 # .create()
 
 ## Connections
-- [[dot-computeDeadline()]] - `calls` [INFERRED]
-- [[dot-createRequest()_1]] - `calls` [INFERRED]
-- [[dot-next()]] - `calls` [INFERRED]
-- [[dot-record()_1]] - `calls` [INFERRED]
-- [[dot-resolveRule()]] - `calls` [INFERRED]
-- [[dot-scanOrgDeadlines()]] - `calls` [EXTRACTED]
-- [[dot-snapshotOnto()]] - `calls` [INFERRED]
-- [[dot-writeTransition()]] - `calls` [EXTRACTED]
-- [[RequestsService]] - `method` [EXTRACTED]
+- [[dot-create()_20]] - `calls` [INFERRED]
+- [[Body_13]] - `references` [EXTRACTED]
+- [[CreateEmployeeDto]] - `references` [EXTRACTED]
+- [[EmployeesController]] - `method` [EXTRACTED]
+- [[Post_13]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/SdfCycleScanService
+#graphify/code #graphify/EXTRACTED #community/EmployeesService

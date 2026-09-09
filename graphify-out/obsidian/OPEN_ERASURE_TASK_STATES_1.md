@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/legal-hold.service.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/retention-scan.service.ts"
 type: "code"
-community: "erasure-task.service.ts"
-location: "L26"
+community: "prisma.service.ts"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/prismaservicets
 ---
 
 # OPEN_ERASURE_TASK_STATES
 
 ## Connections
-- [[legal-hold.service.ts]] - `contains` [EXTRACTED]
+- [[retention-scan.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

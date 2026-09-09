@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".record"
+community: "ReplaceMappingsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/ReplaceMappingsDto
 ---
 
 # Injectable
 
 ## Connections
-- [[BreachService]] - `references` [EXTRACTED]
+- [[MappingsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/ReplaceMappingsDto

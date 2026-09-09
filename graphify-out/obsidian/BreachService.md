@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
 type: "code"
-community: ".record"
+community: "BreachService"
 location: "L132"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/BreachService
 ---
 
 # BreachService
@@ -16,11 +16,11 @@ tags:
 - [[dot-boardReport()]] - `method` [EXTRACTED]
 - [[dot-candidateWhere()]] - `method` [EXTRACTED]
 - [[dot-completeObligation()_1]] - `method` [EXTRACTED]
-- [[dot-constructor()_119]] - `references` [EXTRACTED]
-- [[dot-constructor()_59]] - `references` [EXTRACTED]
-- [[dot-constructor()_97]] - `references` [EXTRACTED]
-- [[dot-constructor()_3]] - `method` [EXTRACTED]
-- [[dot-create()_30]] - `method` [EXTRACTED]
+- [[dot-constructor()_126]] - `references` [EXTRACTED]
+- [[dot-constructor()_62]] - `references` [EXTRACTED]
+- [[dot-constructor()_96]] - `references` [EXTRACTED]
+- [[dot-constructor()_125]] - `method` [EXTRACTED]
+- [[dot-create()_29]] - `method` [EXTRACTED]
 - [[dot-dispatchPrincipalNoticeCampaign()]] - `method` [EXTRACTED]
 - [[dot-get()_18]] - `method` [EXTRACTED]
 - [[dot-list()_39]] - `method` [EXTRACTED]
@@ -31,7 +31,7 @@ tags:
 - [[dot-recordExtension()]] - `method` [EXTRACTED]
 - [[dot-scanClock()]] - `method` [EXTRACTED]
 - [[dot-update()_20]] - `method` [EXTRACTED]
-- [[Injectable_72]] - `references` [EXTRACTED]
+- [[Injectable_73]] - `references` [EXTRACTED]
 - [[breach-clock.processor.ts]] - `imports` [EXTRACTED]
 - [[breach-principal-notice-dispatch.processor.ts]] - `imports` [EXTRACTED]
 - [[breach.service.ts]] - `contains` [EXTRACTED]
@@ -39,4 +39,4 @@ tags:
 - [[breaches.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[breaches.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/BreachService

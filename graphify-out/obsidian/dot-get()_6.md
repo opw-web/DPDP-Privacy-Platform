@@ -1,21 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync.controller.ts"
 type: "code"
-community: "TemplatesService"
-location: "L28"
+community: "SyncService"
+location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/SyncService
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_7]] - `calls` [INFERRED]
-- [[Get_17]] - `references` [EXTRACTED]
-- [[Param_7]] - `references` [EXTRACTED]
+- [[dot-getJob()]] - `calls` [INFERRED]
+- [[Get_11]] - `references` [EXTRACTED]
+- [[Param_4]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[TemplatesController]] - `method` [EXTRACTED]
+- [[SyncJobsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/SyncService

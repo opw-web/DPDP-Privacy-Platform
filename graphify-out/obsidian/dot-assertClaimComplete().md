@@ -12,7 +12,7 @@ tags:
 # .assertClaimComplete()
 
 ## Connections
-- [[dot-create()_29]] - `calls` [EXTRACTED]
+- [[dot-create()_28]] - `calls` [EXTRACTED]
 - [[ChildExemptionsService]] - `method` [EXTRACTED]
 - [[CreateExemptionClaimDto]] - `references` [EXTRACTED]
 

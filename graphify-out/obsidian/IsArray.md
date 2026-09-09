@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "RetentionController"
+community: "CreateLegalHoldDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionController
+  - community/CreateLegalHoldDto
 ---
 
 # IsArray
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[CompleteErasureTaskDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionController
+#graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto

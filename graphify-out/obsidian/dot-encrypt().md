@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/common/crypto/crypto.service.ts"
 type: "code"
-community: ".update"
+community: "DataSourcesService"
 location: "L79"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/update
+  - community/DataSourcesService
 ---
 
 # .encrypt()
 
 ## Connections
-- [[dot-create()_7]] - `calls` [INFERRED]
+- [[dot-create()_10]] - `calls` [INFERRED]
 - [[dot-update()_6]] - `calls` [INFERRED]
 - [[CryptoService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/update
+#graphify/code #graphify/INFERRED #community/DataSourcesService

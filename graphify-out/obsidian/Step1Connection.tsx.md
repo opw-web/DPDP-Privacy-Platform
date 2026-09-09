@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/wizard/Step1Connection.tsx"
 type: "code"
-community: "data-sources-api.ts"
+community: "react"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sources-apits
+  - community/react
 ---
 
 # Step1Connection.tsx
@@ -49,4 +49,4 @@ tags:
 - [[sonner_1]] - `imports_from` [EXTRACTED]
 - [[zod_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sources-apits
+#graphify/code #graphify/EXTRACTED #community/react

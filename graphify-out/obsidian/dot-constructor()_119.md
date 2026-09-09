@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/breaches/breaches.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
 type: "code"
-community: "BreachesController"
-location: "L27"
+community: "rest-api.connector.ts"
+location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BreachesController
+  - community/rest-apiconnectorts
 ---
 
 # .constructor()
 
 ## Connections
-- [[BreachService]] - `references` [EXTRACTED]
-- [[BreachesController]] - `method` [EXTRACTED]
+- [[PageCapExceededError_1]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BreachesController
+#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts

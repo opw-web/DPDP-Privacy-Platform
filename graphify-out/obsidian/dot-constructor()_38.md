@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/providers/smtp.provider.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync.service.ts"
 type: "code"
-community: "NotificationsService"
-location: "L22"
+community: "SyncService"
+location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/SyncService
 ---
 
 # .constructor()
 
 ## Connections
-- [[MailerService]] - `references` [EXTRACTED]
-- [[SmtpProvider]] - `method` [EXTRACTED]
+- [[DataSourcesService]] - `references` [EXTRACTED]
+- [[SyncQueueService]] - `references` [EXTRACTED]
+- [[SyncService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/SyncService

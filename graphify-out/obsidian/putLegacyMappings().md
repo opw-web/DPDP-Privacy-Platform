@@ -12,7 +12,7 @@ tags:
 # putLegacyMappings()
 
 ## Connections
-- [[authenticated()]] - `calls` [EXTRACTED]
+- [[authenticated()_2]] - `calls` [EXTRACTED]
 - [[step6-conflict-acceptance.e2e-spec.ts]] - `contains` [EXTRACTED]
 - [[stripComparisonPolicy()]] - `calls` [EXTRACTED]
 

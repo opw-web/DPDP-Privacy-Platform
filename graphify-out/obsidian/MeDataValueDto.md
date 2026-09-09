@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeDataPage.tsx"
 type: "code"
-community: "router.tsx"
+community: "cn"
 location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/cn
 ---
 
 # MeDataValueDto
@@ -15,4 +15,4 @@ tags:
 - [[MeDataPage.tsx]] - `contains` [EXTRACTED]
 - [[ValueCardSource]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/cn

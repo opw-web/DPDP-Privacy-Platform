@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts"
 type: "code"
-community: "PreviewTemplateDto"
+community: "TemplatesService"
 location: "L59"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PreviewTemplateDto
+  - community/TemplatesService
 ---
 
 # toBadRequest()
 
 ## Connections
-- [[dot-preview()]] - `calls` [EXTRACTED]
+- [[dot-preview()_2]] - `calls` [EXTRACTED]
 - [[templates.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PreviewTemplateDto
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

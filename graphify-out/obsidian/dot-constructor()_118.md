@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/health/health.service.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
 type: "code"
-community: "health.service.ts"
-location: "L28"
+community: "rest-api.connector.ts"
+location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/healthservicets
+  - community/rest-apiconnectorts
 ---
 
 # .constructor()
 
 ## Connections
-- [[HealthService]] - `method` [EXTRACTED]
+- [[InvalidCursorError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/healthservicets
+#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts

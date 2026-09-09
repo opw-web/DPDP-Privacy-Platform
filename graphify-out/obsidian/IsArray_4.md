@@ -11,6 +11,6 @@ tags:
 # IsArray
 
 ## Connections
-- [[UpdateTransferDto]] - `references` [EXTRACTED]
+- [[CreateTransferDto]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/transfersservicets

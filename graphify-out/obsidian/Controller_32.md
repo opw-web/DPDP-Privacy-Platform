@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "BreachesController"
+community: "CreateExemptionClaimDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BreachesController
+  - community/CreateExemptionClaimDto
 ---
 
 # Controller
 
 ## Connections
-- [[BreachesController]] - `references` [EXTRACTED]
+- [[ChildExemptionsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BreachesController
+#graphify/code #graphify/EXTRACTED #community/CreateExemptionClaimDto

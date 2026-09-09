@@ -1,21 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts"
 type: "code"
-community: "DataSourcesController"
-location: "L36"
+community: "CampaignsService"
+location: "L84"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/DataSourcesController
+  - graphify/INFERRED
+  - community/CampaignsService
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_15]] - `calls` [INFERRED]
-- [[DataSourcesController]] - `method` [EXTRACTED]
-- [[Get_30]] - `references` [EXTRACTED]
-- [[Param_22]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-create()_24]] - `calls` [INFERRED]
+- [[dot-get()_8]] - `calls` [INFERRED]
+- [[dot-send()_6]] - `calls` [INFERRED]
+- [[TemplatesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesController
+#graphify/code #graphify/INFERRED #community/CampaignsService

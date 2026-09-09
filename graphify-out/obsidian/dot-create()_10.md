@@ -1,22 +1,25 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
 type: "code"
-community: "TemplatesService"
-location: "L34"
+community: "DataSourcesService"
+location: "L230"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/DataSourcesService
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_11]] - `calls` [INFERRED]
-- [[Body_8]] - `references` [EXTRACTED]
-- [[CreateTemplateDto]] - `references` [EXTRACTED]
-- [[Post_6]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[TemplatesController]] - `method` [EXTRACTED]
+- [[dot-assertPubliclyAvailableJustified()]] - `calls` [EXTRACTED]
+- [[dot-create()_25]] - `calls` [INFERRED]
+- [[dot-encrypt()]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-scheduleSync()]] - `calls` [EXTRACTED]
+- [[CreateDataSourceDto]] - `references` [EXTRACTED]
+- [[DataSourcesService]] - `method` [EXTRACTED]
+- [[duplicateNameMessage()]] - `calls` [EXTRACTED]
+- [[isUniqueConstraintViolation()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/DataSourcesService

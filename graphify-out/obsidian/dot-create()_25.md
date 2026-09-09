@@ -12,11 +12,11 @@ tags:
 # .create()
 
 ## Connections
-- [[dot-create()_7]] - `calls` [INFERRED]
-- [[Body_19]] - `references` [EXTRACTED]
+- [[dot-create()_10]] - `calls` [INFERRED]
+- [[Body_18]] - `references` [EXTRACTED]
 - [[CreateDataSourceDto]] - `references` [EXTRACTED]
 - [[DataSourcesController]] - `method` [EXTRACTED]
-- [[Post_20]] - `references` [EXTRACTED]
+- [[Post_19]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/DataSourcesController

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/campaign-send.queue.ts"
 type: "code"
-community: "@prisma/client"
+community: "breach-principal-notice-dispatch.processor.ts"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/breach-principal-notice-dispatchprocessorts
 ---
 
 # CAMPAIGN_SEND_WORKER_CONCURRENCY
@@ -15,4 +15,4 @@ tags:
 - [[campaign-send.processor.ts]] - `imports` [EXTRACTED]
 - [[campaign-send.queue.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prisma/client
+#graphify/code #graphify/EXTRACTED #community/breach-principal-notice-dispatchprocessorts

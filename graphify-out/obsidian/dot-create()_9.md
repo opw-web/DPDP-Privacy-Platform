@@ -1,24 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/legal-hold.service.ts"
 type: "code"
-community: "CreateComplianceRuleDto"
-location: "L389"
+community: "prisma.service.ts"
+location: "L56"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateComplianceRuleDto
+  - community/prismaservicets
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_8]] - `calls` [INFERRED]
-- [[dot-record()_1]] - `calls` [INFERRED]
-- [[dot-update()_8]] - `calls` [EXTRACTED]
-- [[dot-validateGrievanceCeiling()]] - `calls` [EXTRACTED]
-- [[ComplianceService]] - `method` [EXTRACTED]
-- [[CreateComplianceRuleDto]] - `references` [EXTRACTED]
-- [[diffRules()]] - `calls` [EXTRACTED]
-- [[toPublicComplianceRule()]] - `calls` [EXTRACTED]
+- [[dot-createLegalHold()]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
+- [[AccessTokenPayload]] - `references` [EXTRACTED]
+- [[CreateLegalHoldDto]] - `references` [EXTRACTED]
+- [[LegalHoldService]] - `method` [EXTRACTED]
+- [[legalHoldCovers()]] - `calls` [EXTRACTED]
+- [[lockRetentionWorkflow()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto
+#graphify/code #graphify/EXTRACTED #community/prismaservicets

@@ -12,14 +12,14 @@ tags:
 # VerifyGuardianDto
 
 ## Connections
-- [[dot-verify()_1]] - `references` [EXTRACTED]
 - [[dot-verify()]] - `references` [EXTRACTED]
-- [[ApiProperty_1]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_2]] - `references` [EXTRACTED]
-- [[IsEnum_1]] - `references` [EXTRACTED]
-- [[IsOptional_2]] - `references` [EXTRACTED]
-- [[IsString_3]] - `references` [EXTRACTED]
-- [[MinLength_1]] - `references` [EXTRACTED]
+- [[dot-verify()_1]] - `references` [EXTRACTED]
+- [[ApiProperty_4]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_5]] - `references` [EXTRACTED]
+- [[IsEnum_2]] - `references` [EXTRACTED]
+- [[IsOptional_5]] - `references` [EXTRACTED]
+- [[IsString_6]] - `references` [EXTRACTED]
+- [[MinLength_3]] - `references` [EXTRACTED]
 - [[guardians.controller.ts]] - `imports` [EXTRACTED]
 - [[guardians.service.ts]] - `imports` [EXTRACTED]
 - [[verify-guardian.dto.ts]] - `contains` [EXTRACTED]

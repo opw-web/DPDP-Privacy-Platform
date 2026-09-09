@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/recipients.service.ts"
 type: "code"
-community: "@prisma/client"
+community: "recipients.service.ts"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/recipientsservicets
 ---
 
 # RECIPIENT_PUBLIC_SELECT
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[recipients.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prisma/client
+#graphify/code #graphify/EXTRACTED #community/recipientsservicets

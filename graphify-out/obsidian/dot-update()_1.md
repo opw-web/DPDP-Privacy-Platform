@@ -12,7 +12,7 @@ tags:
 # .update()
 
 ## Connections
-- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
 - [[dot-update()]] - `calls` [INFERRED]
 - [[OrganizationsService]] - `method` [EXTRACTED]
 - [[UpdateOrganizationDto]] - `references` [EXTRACTED]

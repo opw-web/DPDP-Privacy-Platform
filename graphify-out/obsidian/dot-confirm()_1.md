@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/candidates.service.ts"
 type: "code"
-community: "RequirePermission"
+community: "CandidatesService"
 location: "L325"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/CandidatesService
 ---
 
 # .confirm()
@@ -15,8 +15,8 @@ tags:
 - [[dot-claimPendingCandidate()]] - `calls` [EXTRACTED]
 - [[dot-confirm()]] - `calls` [INFERRED]
 - [[dot-mergeRecordIntoPrincipal()]] - `calls` [INFERRED]
-- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-record()]] - `calls` [INFERRED]
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
 - [[CandidatesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/CandidatesService

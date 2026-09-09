@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SourcePurposesService"
+community: "PortalProvider"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SourcePurposesService
+  - community/PortalProvider
 ---
 
 # Injectable
 
 ## Connections
-- [[SourcePurposesService]] - `references` [EXTRACTED]
+- [[PortalProvider]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SourcePurposesService
+#graphify/code #graphify/EXTRACTED #community/PortalProvider

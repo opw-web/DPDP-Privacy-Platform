@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/dummy-hash.util.ts"
 type: "code"
-community: "@prisma/client"
+community: "step6-conflict-acceptance.e2e-spec.ts"
 location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/step6-conflict-acceptancee2e-spects
 ---
 
 # getDummyHash()
@@ -18,4 +18,4 @@ tags:
 - [[employee-auth.service.ts]] - `imports` [EXTRACTED]
 - [[principal-auth.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prisma/client
+#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects

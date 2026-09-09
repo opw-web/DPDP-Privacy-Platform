@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/main.ts"
 type: "code"
-community: "employee-auth.controller.ts"
+community: "configuration.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employee-authcontrollerts
+  - community/configurationts
 ---
 
 # main.ts
 
 ## Connections
-- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
 - [[@nestjsconfig]] - `imports_from` [EXTRACTED]
 - [[@nestjscore]] - `imports_from` [EXTRACTED]
 - [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
@@ -24,4 +24,4 @@ tags:
 - [[configuration.ts]] - `imports_from` [EXTRACTED]
 - [[nestjs-pino]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employee-authcontrollerts
+#graphify/code #graphify/EXTRACTED #community/configurationts

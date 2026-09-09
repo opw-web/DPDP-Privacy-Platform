@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/principal-evidence.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/children/child-exemptions.controller.ts"
 type: "code"
-community: "PrincipalEvidenceController"
-location: "L24"
+community: "CreateExemptionClaimDto"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalEvidenceController
+  - community/CreateExemptionClaimDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[PrincipalEvidenceController]] - `method` [EXTRACTED]
-- [[PrincipalEvidenceService]] - `references` [EXTRACTED]
+- [[ChildExemptionsController]] - `method` [EXTRACTED]
+- [[ChildExemptionsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalEvidenceController
+#graphify/code #graphify/EXTRACTED #community/CreateExemptionClaimDto

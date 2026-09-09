@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MePrivacyPage.tsx"
 type: "code"
-community: "api-client.ts"
+community: "button.tsx"
 location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/buttontsx
 ---
 
 # NoticeView
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[MePrivacyPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/buttontsx

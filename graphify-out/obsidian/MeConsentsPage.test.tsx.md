@@ -20,7 +20,7 @@ tags:
 - [[PAYLOAD]] - `contains` [EXTRACTED]
 - [[jsonResponse()_23]] - `contains` [EXTRACTED]
 - [[react-router-dom_1]] - `imports_from` [EXTRACTED]
-- [[renderPage()_6]] - `contains` [EXTRACTED]
+- [[renderPage()_7]] - `contains` [EXTRACTED]
 - [[vitest_1]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/tanstack/react-query

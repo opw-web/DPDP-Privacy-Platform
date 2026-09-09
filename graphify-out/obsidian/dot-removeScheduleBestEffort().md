@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
 type: "code"
-community: "SyncQueueService"
+community: "DataSourcesService"
 location: "L175"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/DataSourcesService
 ---
 
 # .removeScheduleBestEffort()
@@ -16,4 +16,4 @@ tags:
 - [[dot-removeSchedule()]] - `calls` [INFERRED]
 - [[DataSourcesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/DataSourcesService

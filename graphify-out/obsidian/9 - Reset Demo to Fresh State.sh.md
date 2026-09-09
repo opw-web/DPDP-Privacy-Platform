@@ -1,5 +1,5 @@
 ---
-source_file: "9 - Reset Demo to Fresh State.sh"
+source_file: "demo-control/linux/9 - Reset Demo to Fresh State.sh"
 type: "code"
 community: "9 - Reset Demo to Fresh State.sh"
 location: "L1"
