@@ -5,17 +5,15 @@ automatically by Claude Code hooks. Humans and future sessions read the "Now" bl
 
 <!-- journal:pinned:start -->
 ## Now
-## Now
-- **Working on:** the delivered package is Windows-only in what a client sees (2026-09-09). The root now holds eight numbered `.cmd` launchers and no `.sh` at all -- the Linux entry points moved to `demo-control/linux/`, the `(Windows)` suffix is gone, `2 - Client Guide.sh`'s logic became `demo-control/open-client-guide.sh`, and button 0 now installs the same eight buttons on the Desktop. `README.md`, `demo-control/README.html`, `CLIENT-GUIDE.html` and `RUNBOOK.html` are Windows-only with one Linux appendix each.
-- **Guide extended to the product as it stands:** the client tour is 17 stops (was 12), with five new ones -- Registers, the portal's own controls (recipients / messages / Section 14 nomination), the erasure engine and its Rule 8(2) lifecycle, campaign governance, and SDF readiness + gaps. Captures come from `scripts/capture-guide-screenshots.mjs` (Playwright, not a repo dependency -- point `PLAYWRIGHT_DIR` at an install). Stale Linux figures deleted; both standalone HTML files rebuild.
-- **Windows checkout fixed and now reproducible:** the graph and vault were regenerated with `graphify update .`, then `scripts/dedupe-vault-names.py` renamed the case-colliding pairs apart and trimmed over-long note names (90 chars + hash of the original), rewriting wikilinks for both. `git status` is clean after regeneration and no path exceeds the unzip limit.
-- **Deliberately not staged:** the pre-erasure-notice run. The seeded state has one erasure task, deferred by the Rule 8(3) floor, so `NOTICE_SENT` is not something an evaluator can reach; the guide describes the 48-hour notice and the Rule 8(2) cancellation in prose against the real deferred task rather than shortening rules to fake a screen the reader could not reproduce.
-- **Verified through the launchers themselves, with PATH stripped to `C:\Windows\system32;C:\Windows`** -- the closest reproduction of File Explorer's stale environment, which is the whole reason the `.cmd` files re-read PATH from the registry. Full cycle 1 -> 3 -> 5 -> 6 -> 5: every launcher exits 0 and *returns* rather than holding the console (start 195s, open-database 5s, stop 3s). Also verified: the Linux wrapper `demo-control/linux/5 - Demo Status.sh` runs and exits; `install-launchers.sh` writes all eight `.lnk` files and `5 - Demo Status.lnk` targets the renamed `.cmd`; button 4 reports 500/327/4/12/6; both standalone guides rebuild (37 and 32 images); a fresh `git archive` extracts into a 157-character destination; `git status` is clean.
-- **Found by that run:** button 3's detached Prisma Studio survives its launcher window closing on both platforms (`Start-Process` on Windows, `setsid` on Linux), so `open-database.sh` telling people to leave the window open, and that closing it stops the browser, was wrong on both. Fixed.
-- **Known drift left:** still no SmartScreen figure. `docs/EVALUATION_MVP1.md` records `git clone` on Windows as a live gap against Check 24 -- that entry is now stale. Committed `.env` secrets (`153a069`) and the `principals.e2e-spec.ts` query-budget instrumentation are both still open.
-- **Next up:** re-check MVP1 Check 24's Windows-clone finding now the filenames are fixed; decide on the committed `.env` secrets; fix the request-scoping of `queryCount`.
+- **Working on:** making the client guide survive a read-through by a non-expert (2026-09-09). Finished: the guide, the app bugs it exposed, and all 38 figures re-captured against a freshly reset demo. No figure is a duplicate and none is a placeholder.
+- **The notice bug, fixed:** `NoticeBuilderPage` mounted `NoticeComposer` with no `initialValues`, so opening a *published* notice landed in a blank "Compose version N+1" editor and the preview rendered that empty state. Now a read-only "Published notice, as the person sees it" card renders the frozen body through the existing `NoticeStandalonePreview`, the composer is folded away and prefilled, and the language switch works by resolving `translations[]` locally. The composer's preview also gained a "Back to editing" button -- it was a one-way trap.
+- **Two data defects the fix exposed, both fixed.** (1) The seeded notice itemised `IGNORE` three times and listed EMAIL/PHONE twice, because the seed took mappings unfiltered and labelled them from the raw canonical field. `humanizeCanonicalField` moved to `src/modules/notices/canonical-field-label.ts` with `isItemisableCanonicalField`; the seed and the `eligible-fields` endpoint now share it, so "Ignore" can no longer be ticked into a notice at all. (2) **The Hindi notice was stored as literal `?` characters on Windows** -- `stage-demo.sh` passed the JSON body as a *curl command-line argument*, and the MSYS->Win32 conversion re-encodes arguments into the ANSI codepage, destroying all Devanagari. `call()`/`pcall()` now pipe the body on stdin (`-d @-`). Verified: 304 Devanagari characters round-trip. This would have hit every client, since the package is Windows-first.
+- **Also fixed:** the principal portal rendered the notice body in a `<pre>`, so the person saw a literal `#` heading marker; it now uses `MDEditor.Markdown` like the staff side.
+- **Capture script rewritten:** `SHOTS` went from 8 to 30 figures, all at 1440x900, with declarative `steps` (click / clickButton / clickCardLink / clickCardButton / fill / select / scrollTo / scrollToText / scrollToHeading / waitFor / waitForHeading) and a `cardShot` mode that screenshots a single card. Several list pages share an `<h1>` with their detail page, so the old `waitFor: "h1"` passed *without navigating* -- that is why breach-detail and campaign-recipients were silently the list pages. One failure no longer aborts the run.
+- **Guide:** new `#words` glossary (6 cards, 21 terms, plain readings of Rules 3/7(1)/8(2)/8(3)/13(3) and Section 14), an "In plain terms" block in all 17 stops, stop 9 now has the reader raise a correction request and drive it through verification/assignment/notes, stop 7 gained the principal-side Hindi read. Sticky `nav` got `max-height`/`overflow-y` (it held 1264px of links in a 599px box) in both guides.
+- **Next up:** MVP1 Check 24's Windows-clone finding; the committed `.env` secrets (`153a069`); `queryCount` request-scoping. Consider whether `RequestWorkPanel` should show an employee *name* rather than the raw assignee UUID.
 - **Blocked:** nothing.
-- **Tried and rejected:** deleting the Linux entry points outright (hidden in `demo-control/linux/` instead, so Linux keeps working); driving a real withdrawal -> pre-erasure-notice -> Rule 8(2) cancellation just to capture two figures (needs statutory rule values shortened and restored, and shows a state the reader cannot reproduce); the Chrome extension for captures (not connected -- Playwright from the scratchpad instead); `git stash` in this shared tree.
+- **Tried and rejected:** wiring the frontend to the backend `/preview?lang=` endpoint (a published version already carries its translations); `psql_q` for inspecting whitespace (**it strips spaces** -- `<a b c>` comes back as `<abc>`, which briefly looked like a second labelling bug); heredocs through the Bash tool for multi-line UTF-8 (write the file, then run it).
 <!-- journal:pinned:end -->
 
 ---
@@ -3518,3 +3516,228 @@ _Earlier entries archived to .claude/journal/archive/JOURNAL-2026-08.md._
 - `10:38` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -n "MAX_STEM\|def shorten\|renames.update\|already Windows-safe" s...`
 - `10:40` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PYEOF' import pathlib p = pathlib.Path("scripts/dedupe-vaul...`
 - `10:40` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && PYTHONIOENCODING=utf-8 python -c " import pathlib v=pathlib.Path('graph...`
+- `10:40` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git add -A && git commit --quiet -F - <<'MSG' && git log --oneline -1 f...`
+- `10:40` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git push origin windows-support 2>&1 | tail -2 && git push origin windo...`
+- **Recap:** Pushed the Windows-only launcher work to origin/mvp2-compliance-operations so the GitHub README no longer shows the stale `0 - Prepare This Computer.sh` line, opened the updated client guide, and hardened `scripts/dedupe-vault-names.py` so regenerated vault names stay Windows-safe.
+
+### 2026-09-09 13:57 - session `7f7ea545`
+
+**Why:** At Part 6 of the guided tour, it tells you to open the published marketing notice and switch its language to Hindi. But first of all, the notice body within these notices, privacy notices, is not rend...
+
+- `13:57` ran `cd "/c/Coding stuff/DPDP-Privacy-Platform" && find . -iname "*CLIENT-GUIDE*" -o -iname "*guide*" -not -path "*/node_m...`
+- `13:58` ran `cd "/c/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook" && ls -la && wc -l CLIENT-GUIDE.html CLIENT-GUIDE-standa...`
+- `13:58` ran `cd "/c/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook" && ls -la images/ && echo "---BUILD---" && cat build-sta...`
+- `13:58` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && find . -iname "*guide*" -not -path "./node_modules/*" -not -path "./.gi...`
+- `13:58` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/frontend" && ls && echo "---SRC---" && ls src && echo "---PAG...`
+- `13:58` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && ls -la docs/demo-runbook/ && echo "---TOC CSS---" && grep -n "toc\|side...`
+- `13:58` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && graphify query "data principal request raise correction erasure portal ...`
+- `13:58` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/frontend/src" && ls principal/pages principal/components fidu...`
+- `13:58` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && awk 'NR>=1 && NR<=40' docs/demo-runbook/CLIENT-GUIDE.html | cut -c1-300...`
+- `13:58` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/frontend/src" && grep -n "Correction\|erasure\|Erasure\|newRe...`
+- `13:58` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -n 'id="a6"\|id="a9"\|id="a10"\|id="a17"\|id="a1"\|id="tour"' docs...`
+- `13:58` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/frontend/src" && find . -iname "*notice*" -not -path "*/node_...`
+- `13:58` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -rn "recompute\|hash chain\|hashChain\|Hash chain\|chain" --includ...`
+- `13:58` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook/images" && md5sum audit-chain.png evidence-pack.png notic...`
+- `13:58` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && echo "=== types.ts ===" && cat dpdp-platform/frontend/src/fiduciary/com...`
+- `13:58` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && cat dpdp-platform/frontend/vite.config.ts && echo "=== ports ===" && gr...`
+- `13:58` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -rn "me/login\|/me/requests\|Individual view\|principal portal\|51...`
+- `13:58` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -rn "VERIFICATION_REQUIRED\|Verification\|verified" dpdp-platform/...`
+- `13:58` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -rn "localhost:5173/me\|/me/login\|/me/requests" docs/demo-runbook...`
+- `13:58` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && ls prisma prisma/seed* 2>/dev/null; grep -rn "me/...`
+- `13:59` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && grep -rn "marketing\|MARKETING" prisma/seed.ts pr...`
+- `13:59` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -rn "type=GRIEVANCE\|requests?type\|Raise a grievance\|grievance" ...`
+- `13:59` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && grep -n "listPublishedNotices\|getPublishedNotice...`
+- `13:59` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -rn "\"requests\"\|'requests'\|@Post(\|@Get(\|@Controller(" dpdp-p...`
+- `13:59` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && grep -rn "noticeVersion\|privacyNotice\|noticeTra...`
+- `13:59` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook/images" && for f in *.png; do python -c " import struct,s...`
+- `13:59` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -n "shot(\|name:\|\.png\|async function shot\|await shot" scripts/...`
+- `13:59` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && grep -rn "noticeTranslation\|NoticeTranslation" p...`
+- `13:59` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -n "capture(\|'audit\|\"audit\|hindi\|portal-home\|evidence\|notic...`
+- `13:59` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -rn "publish\|PUBLISHED" dpdp-platform/backend/prisma/seed.ts | he...`
+- `13:59` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -rn "noticeTranslation" --include=*.ts --include=*.js --include=*....`
+- `13:59` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && sed -n '640,760p' src/modules/notices/notices.ser...`
+- `13:59` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -rn "publishedAt\|status: \"PUBLISHED\"\|currentVersionId" dpdp-pl...`
+- `13:59` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -n -i "notice" demo-control/stage-demo.sh | head -40`
+- `13:59` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -n "CLIENT-GUIDE\|standalone" demo-control/open-client-guide.sh`
+- `13:59` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/frontend/src" && grep -rn "preview" --include=*.tsx --include...`
+- `13:59` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -on "glossary\|Glossary\|what this means\|jargon\|<dl>\|class=\"te...`
+- `14:00` ran `cd "/c/Coding stuff/DPDP-Privacy-Platform" && grep -rn "CLIENT-GUIDE" --include=* -l . 2>/dev/null | grep -v node_mod...`
+- `14:00` wrote `C:\Users\ompuri\.claude\plans\at-part-6-of-dapper-sky.md` (~62 lines)
+
+**Why:** <task-notification> <task-id>adb6f12e915a27afd</task-id> <tool-use-id>toolu_015Rdc6BJfgxzoZqCdpLGicA</tool-use-id> <output-file>C:\Users\ompuri\AppData\Local\Temp\claude\C--Coding-stuff-DPDP-Privacy-P...
+
+- `14:00` ran `cd "/c/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook/images" && md5sum audit-chain.png evidence-pack.png`
+
+**Why:** <task-notification> <task-id>ac8bd2a0ae433d2df</task-id> <tool-use-id>toolu_01TBz1nYGgF45aZUq3kSbj9r</tool-use-id> <output-file>C:\Users\ompuri\AppData\Local\Temp\claude\C--Coding-stuff-DPDP-Privacy-P...
+
+- `14:02` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && curl -s -o /dev/null -w "5173:%{http_code}\n" --max-time 3 http://local...`
+
+**Why:** <task-notification> <task-id>aa85d96ee7efb2319</task-id> <tool-use-id>toolu_01GUF8C51P2zTUjiMUsu4BBX</tool-use-id> <output-file>C:\Users\ompuri\AppData\Local\Temp\claude\C--Coding-stuff-DPDP-Privacy-P...
+
+- `14:05` wrote `C:\Users\ompuri\.claude\plans\at-part-6-of-dapper-sky.md` (~243 lines)
+
+**Why:** <task-notification> <task-id>aa85d96ee7efb2319</task-id> <output-file>C:\Users\ompuri\AppData\Local\Temp\claude\C--Coding-stuff-DPDP-Privacy-Platform\7f7ea545-36ba-48f0-a701-e7c44abe779e\tasks\aa85d96...
+
+- `14:49` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/frontend/src/fiduciary/components/notices" && cat -n NoticeCo...`
+- `14:51` wrote `dpdp-platform\frontend\src\fiduciary\pages\NoticeBuilderPage.tsx` (~142 lines)
+- `14:51` edited `dpdp-platform\frontend\src\fiduciary\components\notices\NoticeComposer.tsx` +7/-1
+- `14:51` edited `dpdp-platform\frontend\src\fiduciary\components\notices\NoticeComposer.tsx` +1/-1
+- `14:51` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/frontend" && ls tsconfig*.json && npx tsc --noEmit 2>&1 | hea...`
+- `14:51` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/frontend" && cat -n src/fiduciary/components/notices/NoticePr...`
+- `14:52` edited `dpdp-platform\frontend\src\fiduciary\pages\NoticeBuilderPage.tsx` +1/-1
+- `14:52` wrote `dpdp-platform\frontend\src\fiduciary\pages\NoticeBuilderPage.test.tsx` (~51 lines)
+- `14:52` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/frontend" && npx vitest run src/fiduciary/pages/NoticeBuilder...`
+- `14:52` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/frontend/src" && sed -n '135,205p' router.tsx`
+- `14:52` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/frontend/src/fiduciary/pages" && grep -n "Download evidence p...`
+- `14:52` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/frontend/src/lib" && grep -n "employeeTokenStore\|localStorag...`
+- `14:52` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/frontend/src/lib" && sed -n '26,62p' api-client.ts`
+- `14:53` edited `dpdp-platform\frontend\src\fiduciary\pages\NoticesPage.tsx` +1/-1
+- `14:53` wrote `scripts\capture-guide-screenshots.mjs` (~248 lines)
+- `14:54` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && node --check scripts/capture-guide-screenshots.mjs && echo "SYNTAX OK" ...`
+- `14:54` edited `scripts\capture-guide-screenshots.mjs` +6/-1
+- `14:54` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook" && for f in CLIENT-GUIDE.html RUNBOOK.html; do perl -pi ...`
+- `14:54` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook" && perl -pi -e 's/\Qnav{position:static;margin-bottom:36...`
+- `14:54` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook" && sed -n '13p' CLIENT-GUIDE.html`
+- `14:54` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook" && perl -pi -e 's/\Q.notice,.action,.observe,.meaning,.l...`
+- `14:54` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook" && sed -n '47,56p' CLIENT-GUIDE.html | cut -c1-400`
+- `14:55` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook" && cat > _glossary.tmp <<'GEOF' <section id="words"><h2>...`
+- `14:55` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook" && perl -pi -e 's{\Q<li><a class="lead" href="#why">What...`
+- `14:56` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook" && grep -n 'class="act" id=' CLIENT-GUIDE.html | sed 's/...`
+- `14:57` wrote `docs\demo-runbook\_plain.py` (~38 lines)
+- `14:57` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook" && python _plain.py && rm _plain.py && grep -c 'In plain...`
+- `14:58` wrote `docs\demo-runbook\_rewrite.py` (~87 lines)
+- `14:58` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook" && grep -o '<figcaption>The staff queue[^<]*</figcaption...`
+- `14:58` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook" && perl -pi -e 's/\Q<figcaption>The staff request queue ...`
+- `14:58` wrote `docs\demo-runbook\_check.py` (~45 lines)
+- `14:58` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook" && python _check.py CLIENT-GUIDE.html RUNBOOK.html`
+- `14:59` wrote `docs\demo-runbook\_stop7.py` (~37 lines)
+- `14:59` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook" && python _stop7.py && rm _stop7.py && python _check.py ...`
+- `14:59` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python -c "import PIL; print('PIL', PIL.__version__)" 2>&1 | head -2`
+- `14:59` edited `docs\demo-runbook\build-standalone.py` +20/-3
+- `14:59` edited `docs\demo-runbook\build-standalone.py` +4/-0
+- `14:59` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook" && python build-standalone.py && rm -f _check.py`
+- `15:00` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook" && echo "=== nav rule in delivered file ===" && grep -o ...`
+- `15:00` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/frontend" && npm test 2>&1 | tail -25`
+- `15:00` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/frontend" && (npm run lint 2>&1 | tail -25)`
+- `15:01` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && (graphify update . 2>&1 | tail -15)`
+- `15:02` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python scripts/dedupe-vault-names.py 2>&1 | tail -8 && echo "=== change...`
+- `15:02` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git log --oneline -1 -- dpdp-platform/frontend/src/fiduciary/pages/Noti...`
+- `15:02` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git show HEAD:dpdp-platform/frontend/src/fiduciary/pages/NoticeBuilderP...`
+- `15:02` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git checkout HEAD -- dpdp-platform/frontend/src/fiduciary/pages/NoticeB...`
+- `15:02` edited `dpdp-platform\frontend\src\fiduciary\pages\NoticeBuilderPage.test.tsx` +3/-1
+- `15:03` edited `dpdp-platform\frontend\src\fiduciary\pages\NoticeBuilderPage.test.tsx` +39/-0
+- `15:03` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/frontend" && npx vitest run src/fiduciary/pages/NoticeBuilder...`
+- `15:03` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/frontend" && npm test 2>&1 | grep -E "Test Files|Tests |FAIL|...`
+- `15:03` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -n "journal:pinned" JOURNAL.md`
+- `15:03` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && sed -n '6,19p' JOURNAL.md`
+- `15:04` wrote `_pin.py` (~23 lines)
+- `15:04` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python _pin.py && rm _pin.py && sed -n '6,10p' JOURNAL.md | cut -c1-120`
+- `15:04` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && echo "=== leftover temp files ===" && ls _*.py _*.tmp docs/demo-runbook...`
+- **Recap:** Rewrote the client guide for a non-expert reader (glossary, per-stop plain-terms blocks, stop 7/9 rewrites), fixed the sticky contents menu overflow, made build-standalone.py tolerate missing figures, restored NoticeBuilderPage from HEAD and added tests covering the published-notice card and Hindi switch, then refreshed the graphify vault and the journal's Now block.
+
+### 2026-09-09 15:16 - session `7f7ea545`
+
+**Why:** call the browser extention again, it should work now. continue
+
+- `15:16` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook" && python -m http.server 8899 --bind 127.0.0.1`
+- `15:20` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && (taskkill //FI "WINDOWTITLE eq *http.server*" //F 2>/dev/null; for p in...`
+- **Recap:** Served the demo-runbook docs over a local HTTP server on 127.0.0.1:8899 for the browser extension to reach, then shut the server down and cleaned up its processes.
+
+### 2026-09-09 15:27 - session `7f7ea545`
+
+**Why:** do it yourself. get it done.
+
+- `15:28` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && bash demo-control/status.sh 2>&1 | tail -30`
+- `15:28` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && docker info --format '{{.ServerVersion}}' 2>&1 | head -3 && echo "--- n...`
+- `15:28` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && bash demo-control/start.sh 2>&1 | tail -40`
+- `15:28` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && head -40 demo-control/stage-demo.sh`
+- `15:29` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && bash demo-control/stage-demo.sh 2>&1 | tail -45`
+- `15:35` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook" && cp -r images ../../.images-before && ls ../../.images...`
+- `15:36` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook/images" && echo "=== duplicate check across all PNGs ==="...`
+- `15:36` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend/prisma/seed" && sed -n '170,200p' mvp2-demo.ts`
+- `15:36` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend/prisma/seed" && sed -n '130,172p' mvp2-demo.ts`
+- `15:36` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend/prisma/seed" && sed -n '95,130p' mvp2-demo.ts`
+- `15:36` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend/src/modules/notices" && grep -n "suggestedLabel" -B4 ...`
+- `15:36` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend/src" && grep -rn "humanizeCanonicalField" --include=*...`
+- `15:36` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend/src/modules/notices" && sed -n '145,165p' notices.ser...`
+- `15:36` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend/prisma/seed" && sed -n '80,100p' mvp2-demo.ts`
+- `15:36` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && bash -c '. demo-control/common.sh >/dev/null 2>&1; psql_q "SELECT \"can...`
+- `15:37` edited `dpdp-platform\backend\prisma\seed\mvp2-demo.ts` +19/-6
+- `15:37` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend/prisma/seed" && grep -n "^import\|^function\|^const D...`
+- `15:37` wrote `dpdp-platform\backend\src\modules\notices\canonical-field-label.ts` (~35 lines)
+- `15:37` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend/src/modules/notices" && python - <<'PYEOF' import io ...`
+- `15:37` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend/src/modules/notices" && grep -n "^import" notices.ser...`
+- `15:37` edited `dpdp-platform\backend\src\modules\notices\notices.service.ts` +1/-0
+- `15:38` edited `dpdp-platform\backend\src\modules\notices\notices.service.ts` +14/-9
+- `15:38` edited `dpdp-platform\backend\prisma\seed\mvp2-demo.ts` +4/-0
+- `15:38` edited `dpdp-platform\backend\prisma\seed\mvp2-demo.ts` +1/-1
+- `15:38` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && npx tsc --noEmit -p tsconfig.json 2>&1 | head -20...`
+- `15:38` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && npx jest --silent 2>&1 | tail -18`
+- `15:39` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && bash demo-control/reset.sh 2>&1 | tail -35`
+- `15:39` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -n "Cancelled\|read -r\|confirm\|RESET_YES\|-y\b" demo-control/res...`
+- `15:39` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && sed -n '20,45p' demo-control/reset.sh`
+- `15:41` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && echo "YES" | bash demo-control/reset.sh 2>&1 | tail -40`
+- `15:41` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && bash -c '. demo-control/common.sh >/dev/null 2>&1; psql_q "SELECT jsonb...`
+- `15:42` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && cat src/modules/notices/canonical-field-label.ts ...`
+- `15:42` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && bash -c '. demo-control/common.sh >/dev/null 2>&1; psql_q "SELECT '\''[...`
+- `15:42` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && bash -c '. demo-control/common.sh >/dev/null 2>&1; psql_q "SELECT DISTI...`
+- `15:42` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -rn "toLowerCase()" --include=*.ts --include=*.sh dpdp-platform/ba...`
+- `15:42` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && bash -c '. demo-control/common.sh >/dev/null 2>&1; psql_q "SELECT '\''<...`
+- `15:43` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/frontend/src/fiduciary" && echo "=== BreachDetail headings ==...`
+- `15:43` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/frontend/src/fiduciary/pages" && grep -o 'to={`/app/principal...`
+- `15:43` edited `scripts\capture-guide-screenshots.mjs` +3/-0
+- `15:43` edited `scripts\capture-guide-screenshots.mjs` +7/-0
+- `15:43` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PYEOF' import io p='scripts/capture-guide-screenshots.mjs' ...`
+- `15:46` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && PLAYWRIGHT_DIR="C:/Users/ompuri/AppData/Local/Temp/claude/C--Coding-stu...`
+- `15:47` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/frontend/src/components/ui" && grep -n "CardTitle" -A 6 card....`
+- `15:51` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PYEOF' import io p='scripts/capture-guide-screenshots.mjs' ...`
+- `15:51` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && PLAYWRIGHT_DIR="C:/Users/ompuri/AppData/Local/Temp/claude/C--Coding-stu...`
+- `15:52` edited `scripts\capture-guide-screenshots.mjs` +6/-4
+- `15:52` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && PLAYWRIGHT_DIR="C:/Users/ompuri/AppData/Local/Temp/claude/C--Coding-stu...`
+- `15:52` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook/images" && echo "=== duplicates ===" && dupes=$(md5sum *....`
+- `15:52` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/frontend/src/components/ui" && sed -n '1,22p' card.tsx`
+- `15:52` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && sed -n '/^async function shoot/,/^}/p' scripts/capture-guide-screenshot...`
+- `15:53` edited `scripts\capture-guide-screenshots.mjs` +13/-2
+- `15:53` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PYEOF' import io p='scripts/capture-guide-screenshots.mjs' ...`
+- `15:53` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook/images" && dupes=$(md5sum *.png | awk '{print $1}' | sort...`
+- `15:53` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && TOKEN=[REDACTED] -s -X POST http://localhost:4000/api/auth/employee/log...`
+- `15:53` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -n "translations/hi" -B 22 demo-control/stage-demo.sh | head -40`
+- `15:54` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && sed -n '386,398p' demo-control/stage-demo.sh && echo "=== the call() he...`
+- `15:54` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PYEOF' import io p='demo-control/stage-demo.sh' s=io.open(p...`
+- `15:54` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && sed -n '89,96p' demo-control/stage-demo.sh | cat -A | sed 's/\$$/<EOL>/...`
+- `15:54` wrote `_fixcurl.py` (~38 lines)
+- `15:54` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python _fixcurl.py && rm _fixcurl.py && bash -n demo-control/stage-demo...`
+- `15:55` wrote `_rehindi.py` (~46 lines)
+- `15:55` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && PYTHONIOENCODING=utf-8 python _rehindi.py && rm _rehindi.py`
+- `15:55` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && PLAYWRIGHT_DIR="C:/Users/ompuri/AppData/Local/Temp/claude/C--Coding-stu...`
+- `15:56` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PYEOF' import io p='scripts/capture-guide-screenshots.mjs' ...`
+- `15:57` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/frontend/src/principal/pages" && grep -n "whitespace-pre-wrap...`
+- `15:57` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/frontend/src/principal/pages" && python - <<'PYEOF' import io...`
+- `15:57` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PYEOF' import io p='scripts/capture-guide-screenshots.mjs' ...`
+- `15:57` edited `scripts\capture-guide-screenshots.mjs` +3/-1
+- `15:58` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && perl -pi -e 's/\Q{ scrollToHeading: "Privacy notices" },\E/{ scrollToTe...`
+- `15:58` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/docs/demo-runbook/images" && dupes=$(md5sum *.png | awk '{print $1}' | sort...`
+- `15:59` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && rm -rf .images-before && cd docs/demo-runbook && python build-standalon...`
+- `15:59` wrote `_pin.py` (~23 lines)
+- `16:00` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python _pin.py && rm _pin.py && graphify update . 2>&1 | tail -4 && pyt...`
+- `16:00` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/graphify-out/obsidian" && ls | grep -i "Re-apply\|pre-fix\|Send request bod...`
+- `16:01` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python -c " import json,io g=json.load(io.open('graphify-out/graph.json...`
+- `16:01` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python -c " import json,io g=json.load(io.open('graphify-out/graph.json...`
+- `16:01` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python scripts/dedupe-vault-names.py 2>&1 | tail -5; echo "exit=$?"`
+- `16:02` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform/dpdp-platform/backend" && npx jest --silent 2>&1 | grep -E "Test Suites|Tes...`
+
+### 2026-09-09 16:14 - session `7f7ea545`
+
+**Why:** done? commit, push, and merge everything if so
+
+- `16:14` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git branch -vv && echo "=== remotes ===" && git remote -v | head -2 && ...`
+- `16:14` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && echo "=== NON-graphify changes ===" && git status --porcelain -- ':!gra...`
+- `16:15` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && file demo-control/stage-demo.sh && printf 'CRLF lines in stage-demo.sh:...`
+- `16:15` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && for f in scripts/capture-guide-screenshots.mjs docs/demo-runbook/build-...`
+- `16:15` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git diff -- dpdp-platform/backend/src/modules/notices/notices.service.t...`
+- `16:15` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git add dpdp-platform/backend/src/modules/notices/canonical-field-label...`
+- `16:15` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git log -1 --format=%B | sed 's/laballed/labelled/' | git commit -q --a...`
+- `16:15` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git add demo-control/stage-demo.sh && git commit -q -F - <<'MSGEOF' && ...`
+- `16:16` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git add scripts/capture-guide-screenshots.mjs docs/demo-runbook/images ...`
+- `16:16` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git add docs/demo-runbook/build-standalone.py && git commit -q --amend ...`
+- `16:16` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git add docs/demo-runbook/CLIENT-GUIDE.html docs/demo-runbook/RUNBOOK.h...`
