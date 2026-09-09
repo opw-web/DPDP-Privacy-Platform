@@ -5,12 +5,13 @@ automatically by Claude Code hooks. Humans and future sessions read the "Now" bl
 
 <!-- journal:pinned:start -->
 ## Now
+## Now
 - **Working on:** the delivered package is Windows-only in what a client sees (2026-09-09). The root now holds eight numbered `.cmd` launchers and no `.sh` at all -- the Linux entry points moved to `demo-control/linux/`, the `(Windows)` suffix is gone, `2 - Client Guide.sh`'s logic became `demo-control/open-client-guide.sh`, and button 0 now installs the same eight buttons on the Desktop. `README.md`, `demo-control/README.html`, `CLIENT-GUIDE.html` and `RUNBOOK.html` are Windows-only with one Linux appendix each.
-- **Guide extended to the product as it stands:** the client tour is 17 stops (was 12), with five new ones -- Registers, the portal's own controls (recipients / messages / Section 14 nomination), the erasure engine and its Rule 8(2) lifecycle, campaign governance, and SDF readiness + gaps. Nine new real captures via `scripts/capture-guide-screenshots.mjs` (Playwright, not a repo dependency -- point `PLAYWRIGHT_DIR` at an install). `folder-windows.png` retaken for the new launcher names; the four stale Linux figures deleted.
-- **Windows checkout fixed:** the 8 case-colliding `graphify-out/obsidian/` pairs are renamed apart (`module_14_lower.md`, `Routes_upper.md`, ...) with wikilinks rewritten, and the six over-long note names are trimmed to 90 characters plus a hash of the original, so `git clone` and an unzip both complete and nothing sits permanently modified. Verified by extracting a fresh `git archive` into a 157-character destination -- twice any realistic client path. `scripts/dedupe-vault-names.py` handles both kinds after a vault regeneration.
+- **Guide extended to the product as it stands:** the client tour is 17 stops (was 12), with five new ones -- Registers, the portal's own controls (recipients / messages / Section 14 nomination), the erasure engine and its Rule 8(2) lifecycle, campaign governance, and SDF readiness + gaps. Captures come from `scripts/capture-guide-screenshots.mjs` (Playwright, not a repo dependency -- point `PLAYWRIGHT_DIR` at an install). Stale Linux figures deleted; both standalone HTML files rebuild.
+- **Windows checkout fixed and now reproducible:** the graph and vault were regenerated with `graphify update .`, then `scripts/dedupe-vault-names.py` renamed the case-colliding pairs apart and trimmed over-long note names (90 chars + hash of the original), rewriting wikilinks for both. `git status` is clean after regeneration and no path exceeds the unzip limit.
 - **Deliberately not staged:** the pre-erasure-notice run. The seeded state has one erasure task, deferred by the Rule 8(3) floor, so `NOTICE_SENT` is not something an evaluator can reach; the guide describes the 48-hour notice and the Rule 8(2) cancellation in prose against the real deferred task rather than shortening rules to fake a screen the reader could not reproduce.
-- **Verified:** buttons 5, 2, 4 run from a launched process and exit cleanly; `install-launchers.sh` writes all eight `.lnk` files, `5 - Demo Status.lnk` targets the renamed `.cmd`; the moved Linux wrapper still resolves; button 4 reports 500/327/4/12/6; both standalone files rebuild (37 and 32 images).
-- **Known drift left:** still no SmartScreen figure. `docs/EVALUATION_MVP1.md` records `git clone` on Windows as a live gap against Check 24 -- the filename half is now fixed, so that entry is stale. Committed `.env` secrets (`153a069`) and the `principals.e2e-spec.ts` query-budget instrumentation are both still open.
+- **Verified this session:** the Linux wrapper `demo-control/linux/5 - Demo Status.sh` runs and exits; `install-launchers.sh` writes all eight `.lnk` files; the standalone guides rebuild; `stop.sh` brings the stack down; `git status` is clean.
+- **Known drift left:** still no SmartScreen figure. `docs/EVALUATION_MVP1.md` records `git clone` on Windows as a live gap against Check 24 -- that entry is now stale. Committed `.env` secrets (`153a069`) and the `principals.e2e-spec.ts` query-budget instrumentation are both still open.
 - **Next up:** re-check MVP1 Check 24's Windows-clone finding now the filenames are fixed; decide on the committed `.env` secrets; fix the request-scoping of `queryCount`.
 - **Blocked:** nothing.
 - **Tried and rejected:** deleting the Linux entry points outright (hidden in `demo-control/linux/` instead, so Linux keeps working); driving a real withdrawal -> pre-erasure-notice -> Rule 8(2) cancellation just to capture two figures (needs statutory rule values shortened and restored, and shows a state the reader cannot reproduce); the Chrome extension for captures (not connected -- Playwright from the scratchpad instead); `git stash` in this shared tree.
@@ -3482,3 +3483,14 @@ _Earlier entries archived to .claude/journal/archive/JOURNAL-2026-08.md._
 - `10:16` wrote `C:\Users\ompuri\AppData\Local\Temp\claude\C--Coding-stuff-DPDP-Privacy-Platform\fd0bd078-ce0c-463d-a645-4ca4e9c558b0\scratchpad\extend_script.py` (~121 lines)
 - `10:18` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python "C:/Users/ompuri/AppData/Local/Temp/claude/C--Coding-stuff-DPDP-...`
 - `10:18` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git add -A graphify-out && git ls-files graphify-out | awk '{print leng...`
+- `10:18` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PYEOF' import pathlib p = pathlib.Path("CLAUDE.md"); s = p....`
+- `10:19` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && rm -rf "C:/Users/ompuri/AppData/Local/Temp/claude/C--Coding-stuff-DPDP-...`
+- **Recap:** Regenerated the graphify knowledge graph and vault, extended `scripts/dedupe-vault-names.py` to also trim over-long note names, retook the docs screenshots and rebuilt the standalone guides, and verified the Windows launchers, the Linux wrapper and a clean `git status`.
+
+### 2026-09-09 10:23 - session `fd0bd078`
+
+**Why:** continue
+
+- `10:27` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && cat demo-control/open-database.sh && echo "=== run_detached ===" && gre...`
+- `10:27` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && sed -n '246,270p' demo-control/platform.sh`
+- `10:28` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PYEOF' import pathlib p = pathlib.Path("demo-control/open-d...`

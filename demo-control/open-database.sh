@@ -46,8 +46,8 @@ say "                      the exact notice version the person was shown."
 say "  AuditEvent ........ the append-only log. Every row carries the hash of"
 say "                      the row before it, so a deletion or an edit shows."
 echo
-say "Leave this window open while you browse. Closing it stops the browser."
-say "You can also close it and double-click 'Stop Privacy Demo' at the end."
+say "The browser keeps running on its own -- this window can be closed"
+say "straight away. 'Stop Privacy Demo' shuts it down with everything else."
 
 trap - EXIT
 pause_before_exit
