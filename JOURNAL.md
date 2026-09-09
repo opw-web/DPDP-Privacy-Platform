@@ -3741,3 +3741,6 @@ _Earlier entries archived to .claude/journal/archive/JOURNAL-2026-08.md._
 - `16:16` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git add scripts/capture-guide-screenshots.mjs docs/demo-runbook/images ...`
 - `16:16` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git add docs/demo-runbook/build-standalone.py && git commit -q --amend ...`
 - `16:16` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git add docs/demo-runbook/CLIENT-GUIDE.html docs/demo-runbook/RUNBOOK.h...`
+- `16:16` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git add graphify-out && git commit -q -F - <<'MSGEOF' && git add JOURNA...`
+- `16:16` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && echo "=== working tree clean? ===" && git status --porcelain | head -5 ...`
+- `16:16` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git diff --stat JOURNAL.md && git diff JOURNAL.md | head -20`
