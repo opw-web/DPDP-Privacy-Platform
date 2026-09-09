@@ -76,8 +76,12 @@ call() {
   local method="$1" path="$2" body="${3:-}"
   local out
   if [ -n "$body" ]; then
-    out=$(curl -s -X "$method" "$BACKEND_URL$path" \
-      -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' -d "$body")
+    # The body goes in on stdin, never as an argument. On Windows the MSYS ->
+    # Win32 argument conversion re-encodes arguments into the ANSI codepage
+    # and replaces every character it cannot map -- which is all Devanagari --
+    # with "?", so the Hindi notice reached the database as question marks.
+    out=$(printf '%s' "$body" | curl -s -X "$method" "$BACKEND_URL$path" \
+      -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' -d @-)
   else
     out=$(curl -s -X "$method" "$BACKEND_URL$path" -H "Authorization: Bearer $TOKEN")
   fi
@@ -89,8 +93,9 @@ call() {
 pcall() {
   local method="$1" path="$2" body="${3:-}" out
   if [ -n "$body" ]; then
-    out=$(curl -s -X "$method" "$BACKEND_URL$path" \
-      -H "Authorization: Bearer $PTOKEN" -H 'Content-Type: application/json' -d "$body")
+    # See call(): the body must not travel as a command-line argument.
+    out=$(printf '%s' "$body" | curl -s -X "$method" "$BACKEND_URL$path" \
+      -H "Authorization: Bearer $PTOKEN" -H 'Content-Type: application/json' -d @-)
   else
     out=$(curl -s -X "$method" "$BACKEND_URL$path" -H "Authorization: Bearer $PTOKEN")
   fi
