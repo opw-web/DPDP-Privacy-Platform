@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "TokenService"
+community: "AppModule"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TokenService
+  - community/AppModule
 ---
 
 # Module
 
 ## Connections
-- [[AuthModule]] - `references` [EXTRACTED]
+- [[AppModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TokenService
+#graphify/code #graphify/EXTRACTED #community/AppModule

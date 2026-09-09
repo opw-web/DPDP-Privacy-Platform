@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/messaging/audience/audience-filter.types.ts"
 type: "code"
-community: "audience.service.ts"
+community: "compile-audience.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audienceservicets
+  - community/compile-audiencets
 ---
 
 # audience-filter.types.ts
@@ -25,4 +25,4 @@ tags:
 - [[compile-audience.spec.ts]] - `imports_from` [EXTRACTED]
 - [[compile-audience.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audienceservicets
+#graphify/code #graphify/EXTRACTED #community/compile-audiencets

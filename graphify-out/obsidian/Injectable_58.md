@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "breach-principal-notice-dispatch.processor.ts"
+community: "CampaignsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breach-principal-notice-dispatchprocessorts
+  - community/CampaignsService
 ---
 
 # Injectable
 
 ## Connections
-- [[CampaignSendQueueService]] - `references` [EXTRACTED]
+- [[CampaignsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breach-principal-notice-dispatchprocessorts
+#graphify/code #graphify/EXTRACTED #community/CampaignsService

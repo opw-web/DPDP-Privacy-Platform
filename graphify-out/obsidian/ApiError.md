@@ -12,7 +12,7 @@ tags:
 # ApiError
 
 ## Connections
-- [[dot-constructor()_103]] - `method` [EXTRACTED]
+- [[dot-constructor()_97]] - `method` [EXTRACTED]
 - [[AccessReportPanel.tsx]] - `imports` [EXTRACTED]
 - [[AlgorithmRegisterPanel.tsx]] - `imports` [EXTRACTED]
 - [[AssessmentRow.tsx]] - `imports` [EXTRACTED]

@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/common/guards/jwt-principal.guard.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/roles.controller.ts"
 type: "code"
-community: "TokenService"
-location: "L75"
+community: "UpdateRolePermissionsDto"
+location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TokenService
+  - community/UpdateRolePermissionsDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[JwtPrincipalGuard]] - `method` [EXTRACTED]
-- [[TokenService]] - `references` [EXTRACTED]
+- [[RolesController]] - `method` [EXTRACTED]
+- [[RolesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TokenService
+#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto

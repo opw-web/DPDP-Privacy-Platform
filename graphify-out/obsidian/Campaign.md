@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignsPage.tsx"
 type: "code"
-community: "button.tsx"
+community: "react-router-dom"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react-router-dom
 ---
 
 # Campaign
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[MessagingCampaignsPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

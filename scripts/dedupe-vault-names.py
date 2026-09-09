@@ -77,9 +77,12 @@ def shorten(vault: Path, taken: set[str]) -> dict[str, str]:
         digest = hashlib.sha1(note.stem.encode("utf-8")).hexdigest()[:8]
         stem = note.stem[: MAX_STEM - 9].rstrip(" -_.") + "-" + digest
         new_path = note.with_name(stem + note.suffix)
-        if new_path.name.lower() in taken:
-            continue
-        note.rename(new_path)
+        # A file already sitting at the trimmed name is, by construction, this
+        # same note trimmed on an earlier run: the name is a pure function of
+        # the long one. A regeneration reinstates the long name beside it, so
+        # the freshly written content replaces the older trim rather than the
+        # long name being left in place.
+        note.replace(new_path)
         taken.discard(note.name.lower())
         taken.add(new_path.name.lower())
         renames[note.stem] = new_path.stem

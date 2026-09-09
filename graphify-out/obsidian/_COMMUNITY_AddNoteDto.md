@@ -9,12 +9,12 @@ members: 7
 
 ## Members
 - [[AddNoteDto]] - code - dpdp-platform/backend/src/modules/requests/dto/add-note.dto.ts
-- [[ApiProperty_7]] - code
-- [[ApiPropertyOptional_9]] - code
+- [[ApiProperty_6]] - code
+- [[ApiPropertyOptional_8]] - code
 - [[IsBoolean_4]] - code
 - [[IsOptional_10]] - code
-- [[IsString_12]] - code
-- [[MinLength_8]] - code
+- [[IsString_11]] - code
+- [[MinLength_6]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -24,9 +24,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_@nestjscommon]]
+- 2 edges to [[_COMMUNITY_@prismaclient]]
 - 1 edge to [[_COMMUNITY_requests.service.ts]]
-- 1 edge to [[_COMMUNITY_RequestsController]]
+- 1 edge to [[_COMMUNITY_VerifyIdentityDto]]
 - 1 edge to [[_COMMUNITY_RequestsService]]
 
 ## Top bridge nodes

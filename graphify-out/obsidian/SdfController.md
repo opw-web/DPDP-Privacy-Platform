@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-completeAssessment()]] - `method` [EXTRACTED]
-- [[dot-constructor()_83]] - `method` [EXTRACTED]
+- [[dot-constructor()_80]] - `method` [EXTRACTED]
 - [[dot-createAlgorithm()]] - `method` [EXTRACTED]
 - [[dot-createAssessment()]] - `method` [EXTRACTED]
 - [[dot-getGaps()_1]] - `method` [EXTRACTED]
@@ -21,7 +21,7 @@ tags:
 - [[dot-listAssessments()]] - `method` [EXTRACTED]
 - [[dot-updateAlgorithm()]] - `method` [EXTRACTED]
 - [[ApiTags_17]] - `references` [EXTRACTED]
-- [[Controller_17]] - `references` [EXTRACTED]
+- [[Controller_18]] - `references` [EXTRACTED]
 - [[sdf.controller.ts]] - `contains` [EXTRACTED]
 - [[sdf.module.ts]] - `imports` [EXTRACTED]
 

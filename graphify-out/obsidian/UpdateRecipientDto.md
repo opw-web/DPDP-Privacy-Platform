@@ -12,8 +12,8 @@ tags:
 # UpdateRecipientDto
 
 ## Connections
-- [[dot-update()_21]] - `references` [EXTRACTED]
-- [[dot-update()_22]] - `references` [EXTRACTED]
+- [[dot-update()_23]] - `references` [EXTRACTED]
+- [[dot-update()_24]] - `references` [EXTRACTED]
 - [[ApiPropertyOptional_48]] - `references` [EXTRACTED]
 - [[IsBoolean_22]] - `references` [EXTRACTED]
 - [[IsDateString_20]] - `references` [EXTRACTED]

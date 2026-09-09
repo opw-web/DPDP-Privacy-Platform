@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/common/decorators/require-permission.decorator.ts"
 type: "code"
-community: "@nestjs/common"
+community: "RequirePermission"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/RequirePermission
 ---
 
 # require-permission.decorator.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[PERMISSION_KEY]] - `contains` [EXTRACTED]
 - [[RequirePermission()]] - `contains` [EXTRACTED]
 - [[age-status.controller.ts]] - `imports_from` [EXTRACTED]
@@ -53,4 +53,4 @@ tags:
 - [[unmerge.controller.ts]] - `imports_from` [EXTRACTED]
 - [[voluntary-undertakings.controller.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

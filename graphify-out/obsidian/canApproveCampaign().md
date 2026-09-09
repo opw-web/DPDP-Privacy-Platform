@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx"
 type: "code"
-community: "PrincipalEvidencePage.tsx"
+community: "AuditPage.tsx"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalEvidencePagetsx
+  - community/AuditPagetsx
 ---
 
 # canApproveCampaign()
@@ -17,4 +17,4 @@ tags:
 - [[MessagingCampaignDetailPage.tsx]] - `contains` [EXTRACTED]
 - [[shouldShowCampaignApproval()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalEvidencePagetsx
+#graphify/code #graphify/EXTRACTED #community/AuditPagetsx

@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/test/audit-read.e2e-spec.ts"
 type: "code"
-community: "guardians.service.ts"
+community: "consents.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/consentsservicets
 ---
 
 # audit-read.e2e-spec.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[@nestjstesting_1]] - `imports_from` [EXTRACTED]
 - [[AUDIT_EVENTS_PAGE_SIZE]] - `imports` [EXTRACTED]
 - [[AppModule]] - `imports` [EXTRACTED]
@@ -25,7 +25,7 @@ tags:
 - [[TenantContext]] - `imports` [EXTRACTED]
 - [[TenantStore]] - `imports` [EXTRACTED]
 - [[app.module.ts]] - `imports_from` [EXTRACTED]
-- [[argon2_1]] - `imports_from` [EXTRACTED]
+- [[argon2]] - `imports_from` [EXTRACTED]
 - [[audit-actions.ts]] - `imports_from` [EXTRACTED]
 - [[audit.service.ts]] - `imports_from` [EXTRACTED]
 - [[authenticated()]] - `contains` [EXTRACTED]
@@ -38,4 +38,4 @@ tags:
 - [[supertest]] - `imports_from` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/consentsservicets

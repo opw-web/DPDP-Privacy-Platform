@@ -1,24 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/sharing.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/security-measures.service.ts"
 type: "code"
-community: "SharingService"
-location: "L131"
+community: "security-measures.service.ts"
+location: "L126"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SharingService
+  - community/security-measuresservicets
 ---
 
 # .create()
 
 ## Connections
-- [[dot-assertPurposeExists()_1]] - `calls` [EXTRACTED]
-- [[dot-assertRecipientExists()_1]] - `calls` [EXTRACTED]
-- [[dot-assertSourceIdsExist()]] - `calls` [EXTRACTED]
+- [[dot-assertDataSourceExists()]] - `calls` [EXTRACTED]
+- [[dot-assertEmployeeExists()_1]] - `calls` [EXTRACTED]
 - [[dot-create()_37]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[CreateSharingActivityDto]] - `references` [EXTRACTED]
-- [[SharingService]] - `method` [EXTRACTED]
-- [[assertNonBlankDescription()]] - `calls` [EXTRACTED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[CreateSecurityMeasureDto]] - `references` [EXTRACTED]
+- [[SecurityMeasuresService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SharingService
+#graphify/code #graphify/EXTRACTED #community/security-measuresservicets

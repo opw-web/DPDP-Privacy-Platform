@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/ReviewQueuePage.test.tsx"
 type: "code"
-community: "@tanstack/react-query"
-location: "L49"
+community: "CandidateComparison.tsx"
+location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tanstack/react-query
+  - community/CandidateComparisontsx
 ---
 
 # MockRoutes
 
 ## Connections
-- [[SettingsPage.test.tsx]] - `contains` [EXTRACTED]
+- [[MatchCandidateListItem_1]] - `references` [EXTRACTED]
+- [[ReviewQueuePage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tanstack/react-query
+#graphify/code #graphify/EXTRACTED #community/CandidateComparisontsx

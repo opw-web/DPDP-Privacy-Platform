@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "UpsertTranslationDto"
+community: "FlagFrivolousDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpsertTranslationDto
+  - community/FlagFrivolousDto
 ---
 
 # MinLength
 
 ## Connections
-- [[UpsertTranslationDto]] - `references` [EXTRACTED]
+- [[FlagFrivolousDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpsertTranslationDto
+#graphify/code #graphify/EXTRACTED #community/FlagFrivolousDto

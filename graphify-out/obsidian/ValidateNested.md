@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateLegalHoldDto"
+community: "RetentionController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateLegalHoldDto
+  - community/RetentionController
 ---
 
 # ValidateNested
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[CompleteErasureTaskDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto
+#graphify/code #graphify/EXTRACTED #community/RetentionController

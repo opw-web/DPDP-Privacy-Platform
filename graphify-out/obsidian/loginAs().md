@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/PermissionGate.test.tsx"
 type: "code"
-community: "@tanstack/react-query"
+community: "router.tsx"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tanstack/react-query
+  - community/routertsx
 ---
 
 # loginAs()
@@ -15,4 +15,4 @@ tags:
 - [[PermissionGate.test.tsx]] - `contains` [EXTRACTED]
 - [[libauth.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tanstack/react-query
+#graphify/code #graphify/EXTRACTED #community/routertsx

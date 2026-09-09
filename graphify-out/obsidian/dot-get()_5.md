@@ -1,19 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync.controller.ts"
 type: "code"
 community: "SyncService"
-location: "L195"
+location: "L44"
 tags:
   - graphify/code
-  - graphify/INFERRED
+  - graphify/EXTRACTED
   - community/SyncService
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_15]] - `calls` [INFERRED]
-- [[dot-triggerSync()]] - `calls` [INFERRED]
-- [[DataSourcesService]] - `method` [EXTRACTED]
+- [[dot-getJob()]] - `calls` [INFERRED]
+- [[Get_13]] - `references` [EXTRACTED]
+- [[Param_6]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[SyncJobsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/SyncService
+#graphify/code #graphify/EXTRACTED #community/SyncService

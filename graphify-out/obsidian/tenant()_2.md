@@ -16,7 +16,7 @@ tags:
 - [[attachIdentifier()]] - `calls` [EXTRACTED]
 - [[dataSource()]] - `calls` [EXTRACTED]
 - [[merge-unmerge.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[principal()_1]] - `calls` [EXTRACTED]
+- [[principal()]] - `calls` [EXTRACTED]
 - [[rebuild()]] - `calls` [EXTRACTED]
 - [[sourceRecordAndNormalized()]] - `calls` [EXTRACTED]
 

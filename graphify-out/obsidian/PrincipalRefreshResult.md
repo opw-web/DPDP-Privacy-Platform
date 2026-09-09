@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/principal-auth.service.ts"
 type: "code"
-community: "step6-conflict-acceptance.e2e-spec.ts"
+community: "Public"
 location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/step6-conflict-acceptancee2e-spects
+  - community/Public
 ---
 
 # PrincipalRefreshResult
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[principal-auth.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects
+#graphify/code #graphify/EXTRACTED #community/Public

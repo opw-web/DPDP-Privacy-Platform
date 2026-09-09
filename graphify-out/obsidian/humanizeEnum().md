@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts"
 type: "code"
-community: "router.tsx"
+community: "SettingsPage.tsx"
 location: "L129"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/SettingsPagetsx
 ---
 
 # humanizeEnum()
@@ -57,4 +57,4 @@ tags:
 - [[enum-options.ts]] - `contains` [EXTRACTED]
 - [[titleCase()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/SettingsPagetsx

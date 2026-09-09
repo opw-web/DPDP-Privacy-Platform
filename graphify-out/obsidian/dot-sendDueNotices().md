@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-createPortalInTransaction()]] - `calls` [INFERRED]
 - [[dot-deliverEmailBestEffort()]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
 - [[dot-runForCurrentOrganization()_1]] - `calls` [EXTRACTED]
 - [[PreErasureNoticeService]] - `method` [EXTRACTED]
 - [[buildPreErasureNoticeBody()]] - `calls` [EXTRACTED]

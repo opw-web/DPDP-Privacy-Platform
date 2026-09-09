@@ -1,24 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.ts"
+source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
 type: "code"
-community: "PurposesService"
-location: "L141"
+community: "PurposesController"
+location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PurposesService
+  - community/PurposesController
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_7]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[dot-validateBasis()]] - `calls` [EXTRACTED]
+- [[dot-create()_10]] - `calls` [INFERRED]
+- [[Body_8]] - `references` [EXTRACTED]
 - [[CreatePurposeDto]] - `references` [EXTRACTED]
-- [[PurposesService]] - `method` [EXTRACTED]
-- [[duplicateCodeMessage()_1]] - `calls` [EXTRACTED]
-- [[isUniqueConstraintViolation()_1]] - `calls` [EXTRACTED]
-- [[toPublicPurpose()]] - `calls` [EXTRACTED]
+- [[Post_7]] - `references` [EXTRACTED]
+- [[PurposesController]] - `method` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PurposesService
+#graphify/code #graphify/EXTRACTED #community/PurposesController

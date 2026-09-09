@@ -12,12 +12,12 @@ tags:
 # guardians.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[APPOINTING_AUTHORITIES]] - `imports` [EXTRACTED]
 - [[AccessTokenPayload]] - `imports` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
-- [[CHILD_LIKE_AGE_STATUSES_1]] - `contains` [EXTRACTED]
+- [[CHILD_LIKE_AGE_STATUSES]] - `contains` [EXTRACTED]
 - [[CreateGuardianDto]] - `imports` [EXTRACTED]
 - [[GUARDIAN_PUBLIC_SELECT]] - `contains` [EXTRACTED]
 - [[GuardianRow]] - `contains` [EXTRACTED]

@@ -12,10 +12,10 @@ tags:
 # BreachClockProcessor
 
 ## Connections
-- [[dot-constructor()_62]] - `method` [EXTRACTED]
-- [[dot-process()_6]] - `method` [EXTRACTED]
+- [[dot-constructor()_66]] - `method` [EXTRACTED]
+- [[dot-process()_5]] - `method` [EXTRACTED]
 - [[dot-runClockCycle()]] - `method` [EXTRACTED]
-- [[Processor_6]] - `references` [EXTRACTED]
+- [[Processor_5]] - `references` [EXTRACTED]
 - [[breach-clock.processor.ts]] - `contains` [EXTRACTED]
 - [[breaches.module.ts]] - `imports` [EXTRACTED]
 

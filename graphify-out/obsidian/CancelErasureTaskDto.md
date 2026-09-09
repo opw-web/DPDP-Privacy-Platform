@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/dto/cancel-erasure-task.dto.ts"
 type: "code"
-community: "CreateLegalHoldDto"
+community: "RetentionController"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateLegalHoldDto
+  - community/RetentionController
 ---
 
 # CancelErasureTaskDto
@@ -21,4 +21,4 @@ tags:
 - [[erasure-task.service.ts]] - `imports` [EXTRACTED]
 - [[retentionretention.controller.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto
+#graphify/code #graphify/EXTRACTED #community/RetentionController

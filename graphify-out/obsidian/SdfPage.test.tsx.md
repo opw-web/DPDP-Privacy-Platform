@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/SdfPage.test.tsx"
 type: "code"
-community: "@tanstack/react-query"
+community: "router.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tanstack/react-query
+  - community/routertsx
 ---
 
 # SdfPage.test.tsx
@@ -30,8 +30,8 @@ tags:
 - [[libauth.ts]] - `imports_from` [EXTRACTED]
 - [[mockFetch()]] - `contains` [EXTRACTED]
 - [[react-router-dom_1]] - `imports_from` [EXTRACTED]
-- [[renderPage()_5]] - `contains` [EXTRACTED]
+- [[renderPage()_6]] - `contains` [EXTRACTED]
 - [[sonner_1]] - `imports_from` [EXTRACTED]
 - [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tanstack/react-query
+#graphify/code #graphify/EXTRACTED #community/routertsx

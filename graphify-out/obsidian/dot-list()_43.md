@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/recipients.service.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/roles.service.ts"
 type: "code"
-community: "recipients.service.ts"
-location: "L60"
+community: "UpdateRolePermissionsDto"
+location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/UpdateRolePermissionsDto
 ---
 
 # .list()
 
 ## Connections
 - [[dot-list()_42]] - `calls` [INFERRED]
-- [[RecipientsService]] - `method` [EXTRACTED]
+- [[RolesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto

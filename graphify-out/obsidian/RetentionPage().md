@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/RetentionPage.tsx"
 type: "code"
-community: "button.tsx"
+community: "DateTime.tsx"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/DateTimetsx
 ---
 
 # RetentionPage()
@@ -17,4 +17,4 @@ tags:
 - [[retentionStateLabel()]] - `calls` [EXTRACTED]
 - [[router.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/DateTimetsx

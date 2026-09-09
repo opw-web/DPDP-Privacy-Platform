@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
 type: "code"
-community: "BreachService"
+community: ".record"
 location: "L117"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BreachService
+  - community/record
 ---
 
 # parseIds()
@@ -15,4 +15,4 @@ tags:
 - [[dot-candidateWhere()]] - `calls` [EXTRACTED]
 - [[breach.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BreachService
+#graphify/code #graphify/EXTRACTED #community/record

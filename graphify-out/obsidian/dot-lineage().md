@@ -1,21 +1,21 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principals/principals.controller.ts"
 type: "code"
-community: "ListPrincipalsDto"
+community: "PrincipalsService"
 location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ListPrincipalsDto
+  - community/PrincipalsService
 ---
 
 # .lineage()
 
 ## Connections
 - [[dot-getLineage()]] - `calls` [INFERRED]
-- [[Get_20]] - `references` [EXTRACTED]
-- [[Param_12]] - `references` [EXTRACTED]
+- [[Get_23]] - `references` [EXTRACTED]
+- [[Param_14]] - `references` [EXTRACTED]
 - [[PrincipalsController]] - `method` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ListPrincipalsDto
+#graphify/code #graphify/EXTRACTED #community/PrincipalsService

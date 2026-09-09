@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.tsx"
 type: "code"
-community: "PrincipalEvidencePage.tsx"
+community: "AuditPage.tsx"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalEvidencePagetsx
+  - community/AuditPagetsx
 ---
 
 # RecipientStatusCounts
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[MessagingCampaignDetailPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalEvidencePagetsx
+#graphify/code #graphify/EXTRACTED #community/AuditPagetsx

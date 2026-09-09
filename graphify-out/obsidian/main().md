@@ -2,7 +2,7 @@
 source_file: "scripts/capture-guide-screenshots.mjs"
 type: "code"
 community: "capture-guide-screenshots.mjs"
-location: "L75"
+location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED

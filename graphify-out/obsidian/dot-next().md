@@ -1,21 +1,21 @@
 ---
 source_file: "dpdp-platform/backend/src/common/reference/reference.service.ts"
 type: "code"
-community: "prisma.service.ts"
+community: "RequestsService"
 location: "L26"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/prismaservicets
+  - community/RequestsService
 ---
 
 # .next()
 
 ## Connections
-- [[dot-create()_29]] - `calls` [INFERRED]
+- [[dot-create()_31]] - `calls` [INFERRED]
 - [[dot-create()_24]] - `calls` [INFERRED]
-- [[dot-create()_30]] - `calls` [INFERRED]
+- [[dot-create()_9]] - `calls` [INFERRED]
 - [[ReferenceService]] - `method` [EXTRACTED]
 - [[allocateCounterValue()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/prismaservicets
+#graphify/code #graphify/INFERRED #community/RequestsService

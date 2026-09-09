@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/compliance/compliance.controller.ts"
+source_file: "dpdp-platform/backend/src/queues/deadline-scan.processor.ts"
 type: "code"
-community: "ComplianceService"
-location: "L18"
+community: "DeadlineScanProcessor"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ComplianceService
+  - community/DeadlineScanProcessor
 ---
 
 # .constructor()
 
 ## Connections
-- [[ComplianceController]] - `method` [EXTRACTED]
-- [[ComplianceService]] - `references` [EXTRACTED]
+- [[DeadlineScanProcessor]] - `method` [EXTRACTED]
+- [[RequestsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ComplianceService
+#graphify/code #graphify/EXTRACTED #community/DeadlineScanProcessor

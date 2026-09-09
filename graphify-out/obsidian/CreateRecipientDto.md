@@ -12,9 +12,9 @@ tags:
 # CreateRecipientDto
 
 ## Connections
-- [[dot-create()_31]] - `references` [EXTRACTED]
-- [[dot-create()_32]] - `references` [EXTRACTED]
-- [[ApiProperty_43]] - `references` [EXTRACTED]
+- [[dot-create()_33]] - `references` [EXTRACTED]
+- [[dot-create()_34]] - `references` [EXTRACTED]
+- [[ApiProperty_44]] - `references` [EXTRACTED]
 - [[ApiPropertyOptional_47]] - `references` [EXTRACTED]
 - [[IsBoolean_21]] - `references` [EXTRACTED]
 - [[IsDateString_19]] - `references` [EXTRACTED]

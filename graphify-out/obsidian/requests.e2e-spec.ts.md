@@ -12,7 +12,7 @@ tags:
 # requests.e2e-spec.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[CreateRequestInput]] - `imports` [EXTRACTED]
 - [[DEADLINE_WARNING_EVENT_NOTE]] - `imports` [EXTRACTED]
 - [[DeadlineScanProcessor]] - `imports` [EXTRACTED]
@@ -25,7 +25,7 @@ tags:
 - [[bootstrapTestApp()]] - `imports` [EXTRACTED]
 - [[cleanupOrgs()]] - `imports` [EXTRACTED]
 - [[createDpoEmployee()]] - `contains` [EXTRACTED]
-- [[createOrgWithEmployee()_1]] - `imports` [EXTRACTED]
+- [[createOrgWithEmployee()]] - `imports` [EXTRACTED]
 - [[createPrincipal()_8]] - `contains` [EXTRACTED]
 - [[createRequest()]] - `contains` [EXTRACTED]
 - [[deadline-scan.processor.ts]] - `imports_from` [EXTRACTED]

@@ -12,8 +12,8 @@ tags:
 # notifications.module.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@nestjsconfig]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjsconfig_1]] - `imports_from` [EXTRACTED]
 - [[AuthModule]] - `imports` [EXTRACTED]
 - [[ConsoleProvider]] - `imports` [EXTRACTED]
 - [[EMAIL_PROVIDER]] - `imports` [EXTRACTED]

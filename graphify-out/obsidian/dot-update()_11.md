@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-extractAndValidateVariables()]] - `calls` [EXTRACTED]
-- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
 - [[dot-update()_10]] - `calls` [INFERRED]
 - [[dot-validateRequiredSubsetOfReferenced()]] - `calls` [EXTRACTED]
 - [[TemplatesService]] - `method` [EXTRACTED]

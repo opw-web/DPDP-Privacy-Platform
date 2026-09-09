@@ -1,21 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/test/assembly.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/step6-conflict-acceptance.e2e-spec.ts"
 type: "code"
-community: "prisma.service.ts"
-location: "L23"
+community: "step6-conflict-acceptance.e2e-spec.ts"
+location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/step6-conflict-acceptancee2e-spects
 ---
 
 # tenant()
 
 ## Connections
-- [[assembly.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[link()]] - `calls` [EXTRACTED]
-- [[normalized()]] - `calls` [EXTRACTED]
-- [[principal()]] - `calls` [EXTRACTED]
-- [[source()]] - `calls` [EXTRACTED]
+- [[bareDataSource()]] - `calls` [EXTRACTED]
+- [[createDataSource()_3]] - `calls` [EXTRACTED]
+- [[step6-conflict-acceptance.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects

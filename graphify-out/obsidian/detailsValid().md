@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeRequestsPage.tsx"
 type: "code"
-community: "button.tsx"
+community: "react-router-dom"
 location: "L83"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react-router-dom
 ---
 
 # detailsValid()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[MeRequestsPage()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

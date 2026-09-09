@@ -1,16 +1,15 @@
 # Graph Report - DPDP-Privacy-Platform  (2026-09-09)
 
 ## Corpus Check
-- 711 files · ~2,692,401 words
-- Verdict: corpus is large enough that graph structure adds value.
+- cluster-only mode — file stats not available
 
 ## Summary
-- 5308 nodes · 13520 edges · 221 communities (197 shown, 18 thin omitted)
+- 5310 nodes · 13524 edges · 211 communities (187 shown, 18 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 427 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c687a0f8`
+- Built from commit: `e4e76b38`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -21,7 +20,7 @@
 - 4. REQUIREMENTS
 - devDependencies
 - 2. ARCHITECTURE
-- step6-conflict-acceptance.e2e-spec.ts
+- AppModule
 - Tasks
 - compilerOptions
 - age-status.service.ts
@@ -30,27 +29,27 @@
 - nest-cli.json
 - jest.config.ts
 - tenant.extension.ts
-- prisma.service.ts
-- button.tsx
-- seed.ts
+- AuditService
+- react-router-dom
+- argon2
 - dependencies
-- AlgorithmRegisterPanel.tsx
+- DateTime.tsx
 - requests.service.ts
-- CreateBreachDto
-- NoticesController
-- router.tsx
+- step6-conflict-acceptance.e2e-spec.ts
+- RequirePermission
+- RequestDetailPage.tsx
 - CreateVoluntaryUndertakingDto
 - templates.service.ts
 - common.sh
 - breach-principal-notice-dispatch.processor.ts
-- EmployeesService
+- employees.service.ts
 - CreateInformationRequestDto
 - normalization.service.ts
 - react
 - CampaignsService
 - demo-company-server/package.json
 - queues.module.ts
-- PrincipalEvidencePage.tsx
+- AuditPage.tsx
 - SyncPipelineService
 - me-rights.service.ts
 - AudienceBuilder.tsx
@@ -59,19 +58,19 @@
 - server.ts
 - AuditPage
 - MeRightsService
-- notifications.service.ts
+- notifications.controller.ts
 - ConsentsService
 - compilerOptions
 - tsconfig.seed.json
 - DataSourcesController
-- audience.service.ts
-- PrincipalEvidenceController
+- cn
+- access-report-render.ts
 - notices.service.ts
-- test-database.ts
-- RequirePermission
+- health.service.ts
+- data-sources.module.ts
 - generate.ts
 - backend/package.json
-- CreateExemptionClaimDto
+- child-exemptions.service.ts
 - rest-api.connector.ts
 - demo-company-server
 - mailer.service.ts
@@ -80,130 +79,124 @@
 - devDependencies
 - DPDP PLATFORM — MVP 1: FOUNDATION, DISCOVERY & THE RECORD OF PROCESSING
 - EmployeesPage.tsx
-- BreachService
+- .record
 - 1. IDEA CONTEXT (read this first)
 - MVP1 Evaluation Against Spec Section 6
 - BreachWizardPage.tsx
 - UpdateRolePermissionsDto
 - EmployeeAuthController
-- notifications.controller.ts
+- notification.dto.ts
 - matching.service.ts
 - RetentionScanService
 - ChangeStatusDto
-- @tanstack/react-query
+- router.tsx
 - recipients.service.ts
-- TokenService
+- employee-auth.service.ts
 - retention.service.ts
-- CreateSecurityMeasureDto
+- security-measures.service.ts
 - DPDP PLATFORM — MVP 2: COMPLIANCE OPERATIONS
 - dataset.test.ts
 - generateDataset
 - .unmerge
 - mappings.service.ts
-- PreviewAudienceDto
-- PrincipalsPage.tsx
+- api-client.ts
+- SettingsPage.tsx
 - PrincipalAuthController
 - CreateComplianceRuleDto
 - seed-scale.ts
 - ListRequestsDto
-- eslint.config.js
-- SharingService
+- CandidateComparison.tsx
+- test-database.ts
 - read-only-http.client.ts
 - DPDP Platform MVP 2 — Compliance Operations — Implementation Plan
 - 2. ARCHITECTURE
 - compilerOptions
 - MessagingCampaignBuilderPage.tsx
 - compile-audience.ts
-- compliance.service.ts
-- assembly.service.ts
-- CreateLegalHoldDto
+- sdf-assessment.service.ts
+- MeDataPage.tsx
+- RetentionController
 - AccessReportService
 - DPDP Privacy Platform — Client Evaluation
-- ErasureTaskService
-- NoticesService
-- GuardiansService
+- erasure-task.service.ts
+- ComplianceController
+- guardians.service.ts
 - PermissionsGuard
 - ConsentBackfillService
 - data-sources-api.ts
 - configuration.ts
-- csvDocument
+- evidence-pack.service.ts
 - children/types.ts
 - SetMyConsentDto
 - UpdateComplianceRuleDto
 - CreateAlgorithmEntryDto
-- AuditReadService
+- audit-read.service.ts
 - PrismaService
-- evidence-pack.service.ts
+- canonicalJson
 - routes.test.ts
 - AddNoteDto
 - Waves and Tasks
 - dependencies
 - notifications.module.ts
 - data-sources.service.ts
-- Public
+- PrincipalActor
 - campaigns.service.ts
-- sync.e2e-spec.ts
+- sync-lock.service.ts
 - PDFDocument
 - SourceFieldMappingDto
-- CreateNoticeDto
+- NotificationsService
 - compilerOptions
-- CreateDataSourceDto
-- transfers.service.ts
+- CreateLegalHoldDto
+- CreateTransferDto
 - Wave 1 — Engines (4 parallel + integrator)
-- inventory.service.ts
+- inventory.controller.ts
 - SyncService
 - CreateCampaignDto
 - capture-guide-screenshots.mjs
-- CreateNoticeVersionDto
+- PurposesController
 - Wave 2 — Domain services, part one (4 parallel + integrator)
 - RequestsService
 - Wave 3 — Domain services, part two (4 parallel + integrator)
 - scripts
 - dedupe-vault-names.py
-- cn
+- DeadlinePill.tsx
 - frontend/package.json
-- ListAuditEventsDto
+- ImportConsentDto
 - UpdateDataSourceDto
 - Wave 6 — Frontend, part one (4 parallel + integrator)
 - Wave 7 — Frontend, part two (4 parallel + integrator)
-- UpdateBreachDto
+- EnvironmentVariables
 - CreateTemplateDto
-- security-measures.service.ts
+- UpdateTemplateDto
 - MappingsController
 - vite-env.d.ts
-- PurposesService
+- purposes.service.ts
 - build-standalone.py
 - Step 6 current-head live rerun — network results (FAILED acceptance)
-- CompleteObligationDto
+- information-requests.controller.ts
 - PermissionsController
-- guardians.service.ts
-- JwtEmployeeGuard
-- sync.service.ts
-- AttachPurposesDto
+- consents.service.ts
+- TokenService
+- DeadlineScanProcessor
 - Wave 4 — Breach and the remaining jobs (2 parallel + integrator)
-- MaskingService
 - UpdatePurposeDto
-- api-client.ts
+- createApiClient
 - vite.config.ts
 - CreatePurposeDto
 - DataSourcesService
-- identifier-ownership-lock.ts
-- PortalProvider
-- NotificationsService
-- ComplianceService
-- app.module.ts
-- ListSyncJobsQueryDto
+- notifications.service.ts
+- PreErasureNoticeService
+- compliance.service.ts
+- @nestjs/common
+- sync.service.ts
 - BreachClockProcessor
-- SourcePurposesService
+- AttachPurposesDto
 - UpdateAlgorithmEntryDto
-- UpsertTranslationDto
 - 0 - Prepare This Computer.sh
 - VerifyIdentityDto
-- ExtensionDto
 - 1 - Start Privacy Demo.sh
 - 2 - Client Guide.sh
-- AddMeRequestCommentDto
-- EscalateRequestDto
+- Public
 - MVP2 Evaluation Against Spec Sections 6 and 7
 - 3 - Open Database.sh
 - 4 - Show Demo Proof.sh
@@ -211,25 +204,21 @@
 - 6 - Stop Privacy Demo.sh
 - 9 - Reset Demo to Fresh State.sh
 - FlagFrivolousDto
-- PrismaModule
 - TemplatesService
-- prisma
 - principals.service.ts
-- SdfAssessmentService
+- CompleteSdfAssessmentDto
 - SyncQueueService
-- AlgorithmRegisterService
 - RequestsController
 - SdfController
 - tenant-context.js
 - CreateSdfAssessmentDto
 - Grievance statutory-baseline fix report
 - LanguageSelector.tsx
-- ListPrincipalsDto
-- .record
+- PrincipalsService
 - AssignRequestDto
 - CandidatesService
-- sdf-cycle-scan.queue.ts
-- @nestjs/common
+- SdfCycleScanService
+- @prisma/client
 
 ## God Nodes (most connected - your core abstractions)
 1. `@nestjs/common` - 233 edges
@@ -244,21 +233,21 @@
 10. `class-validator` - 76 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `createEmployeeWithPermissions()` --calls--> `ensurePermission()`  [EXTRACTED]
-  dpdp-platform/backend/test/retention.e2e-spec.ts → dpdp-platform/backend/test/support/e2e-harness.ts
-- `seedDatabase()` --calls--> `openDb()`  [EXTRACTED]
-  demo-company-server/src/seed/generate.ts → demo-company-server/src/db.ts
-- `ecommerceRoutes()` --indirect_call--> `onlyGet()`  [INFERRED]
-  demo-company-server/src/routes/ecommerce.ts → demo-company-server/src/methodGate.ts
-- `marketingRoutes()` --indirect_call--> `onlyGet()`  [INFERRED]
-  demo-company-server/src/routes/marketing.ts → demo-company-server/src/methodGate.ts
-- `salesRoutes()` --indirect_call--> `onlyGet()`  [INFERRED]
-  demo-company-server/src/routes/sales.ts → demo-company-server/src/methodGate.ts
+- `NotificationRow()` --calls--> `cn()`  [EXTRACTED]
+  dpdp-platform/frontend/src/components/shared/NotificationBell.tsx → dpdp-platform/frontend/src/lib/utils.ts
+- `Step1ConnectionProps` --references--> `PublicDataSource`  [EXTRACTED]
+  dpdp-platform/frontend/src/fiduciary/components/wizard/Step1Connection.tsx → dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts
+- `TestConnectionResult` --references--> `PublicDataSource`  [EXTRACTED]
+  dpdp-platform/frontend/src/fiduciary/components/wizard/Step1Connection.tsx → dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts
+- `Step2SchemaProps` --references--> `PublicDataSourceField`  [EXTRACTED]
+  dpdp-platform/frontend/src/fiduciary/components/wizard/Step2Schema.tsx → dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts
+- `Step5DeclarationsProps` --references--> `PublicDataSource`  [EXTRACTED]
+  dpdp-platform/frontend/src/fiduciary/components/wizard/Step5Declarations.tsx → dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts
 
 ## Import Cycles
 - None detected.
 
-## Communities (221 total, 18 thin omitted)
+## Communities (211 total, 18 thin omitted)
 
 ### Community 0 - "Consent & Breach Checklist"
 Cohesion: 0.05
@@ -284,9 +273,9 @@ Nodes (26): devDependencies, eslint, eslint-config-prettier, eslint-plugin-prett
 Cohesion: 0.22
 Nodes (9): 2.1 Tech stack (locked — do not substitute), 2.2 Machine setup — Linux Mint Cinnamon (run these exactly), 2.3 Ports (locked), 2.4 Folder structure, 2.5 Database schema — Prisma (source of truth), 2.6 Raw SQL Prisma cannot express (second migration), 2.7 docker-compose.yml and .env, 2.8 The sync pipeline (+1 more)
 
-### Community 6 - "step6-conflict-acceptance.e2e-spec.ts"
-Cohesion: 0.03
-Nodes (73): PERMISSIONS, PermissionSeed, AppModule, Module, getDummyHash(), EmployeeLoginResult, EmployeeRefreshResult, LoginRequestMeta (+65 more)
+### Community 6 - "AppModule"
+Cohesion: 0.05
+Nodes (45): PERMISSIONS, PermissionSeed, ALL_PERMISSION_CODES, ROLES, RoleSeed, AppModule, Module, link() (+37 more)
 
 ### Community 7 - "Tasks"
 Cohesion: 0.05
@@ -316,89 +305,89 @@ Nodes (5): collection, compilerOptions, deleteOutDir, $schema, sourceRoot
 Cohesion: 0.05
 Nodes (41): client_1, common_1, PrismaService, tenant_extension_1, client_1, ALL_SCOPED_MODEL_NAMES, buildModelOverrides(), lowerFirst() (+33 more)
 
-### Community 16 - "prisma.service.ts"
-Cohesion: 0.03
-Nodes (75): RecordPersonalDataViewedInput, AuditService, FORBIDDEN_METADATA_KEY_FRAGMENTS, Injectable, allocateCounterValue(), AUDIT_COUNTER_NAME, ReferenceService, Injectable (+67 more)
-
-### Community 17 - "button.tsx"
+### Community 16 - "AuditService"
 Cohesion: 0.04
-Nodes (104): DateTime(), EmptyState(), EmptyStateAction, EmptyStateProps, Skeleton(), Badge(), BadgeProps, badgeVariants (+96 more)
+Nodes (61): RecordPersonalDataViewedInput, AuditService, FORBIDDEN_METADATA_KEY_FRAGMENTS, Injectable, TenantScopedPrismaClient, ScopedTransactionClient, allocateCounterValue(), AUDIT_COUNTER_NAME (+53 more)
 
-### Community 18 - "seed.ts"
-Cohesion: 0.10
-Nodes (30): DEMO_EMPLOYEES, DEMO_ORG, DEMO_PASSWORD, DemoEmployeeSeed, main(), seedMessageTemplates(), contentHash(), DEMO_GUARDIAN_NAME (+22 more)
+### Community 17 - "react-router-dom"
+Cohesion: 0.04
+Nodes (85): EmptyState(), EmptyStateAction, EmptyStateProps, RuleBasisChip(), Skeleton(), UnreviewedRuleChip(), UnreviewedRuleChipProps, Badge() (+77 more)
+
+### Community 18 - "argon2"
+Cohesion: 0.07
+Nodes (37): COMPLIANCE_RULE_SEEDS, ComplianceRuleSeed, GRIEVANCE_STATUTORY_BASELINE_RULE_CODE, seedComplianceRules(), seedGrievanceStatutoryBaseline(), DEMO_EMPLOYEES, DEMO_ORG, DEMO_PASSWORD (+29 more)
 
 ### Community 19 - "dependencies"
 Cohesion: 0.07
 Nodes (27): dependencies, argon2, bullmq, class-transformer, class-validator, cookie-parser, date-fns, date-fns-tz (+19 more)
 
-### Community 20 - "AlgorithmRegisterPanel.tsx"
-Cohesion: 0.13
-Nodes (24): RuleBasisChip(), RuleBasisChipProps, AlgorithmFormFields(), AlgorithmFormValues, EMPTY_ALGORITHM_FORM, toAlgorithmFormValues(), AlgorithmEntryRow(), AlgorithmRegisterPanel() (+16 more)
+### Community 20 - "DateTime.tsx"
+Cohesion: 0.09
+Nodes (26): DateTime(), DateTimeProps, OrgTimezoneContext, OrgTimezoneProvider, useOrgTimezone(), IS_LEGAL_BASIS, LABEL, RuleBasisChipProps (+18 more)
 
 ### Community 21 - "requests.service.ts"
 Cohesion: 0.12
-Nodes (19): APPLIES_TO_BY_REQUEST_TYPE, DEADLINE_SCAN_ACTOR_LABEL, DEADLINE_WARNING_EVENT_NOTE, ERASURE_STATUTORY_GROUND_TEXT, ERASURE_STATUTORY_GROUNDS, ErasureStatutoryGround, REJECTION_REASON_MIN_LENGTH, TERMINAL_REQUEST_STATUSES (+11 more)
+Nodes (18): APPLIES_TO_BY_REQUEST_TYPE, DEADLINE_SCAN_ACTOR_LABEL, DEADLINE_WARNING_EVENT_NOTE, ERASURE_STATUTORY_GROUND_TEXT, ERASURE_STATUTORY_GROUNDS, ErasureStatutoryGround, REJECTION_REASON_MIN_LENGTH, TERMINAL_REQUEST_STATUSES (+10 more)
 
-### Community 22 - "CreateBreachDto"
-Cohesion: 0.22
-Nodes (9): CreateBreachDto, ApiProperty, ApiPropertyOptional, IsArray, IsDateString, IsEnum, IsOptional, IsString (+1 more)
+### Community 22 - "step6-conflict-acceptance.e2e-spec.ts"
+Cohesion: 0.07
+Nodes (26): jsonHandler(), MockHttpServer, createManager(), createOrgWithRole(), ensurePermission(), startRecordsServer(), createEmployee(), createOrg() (+18 more)
 
-### Community 23 - "NoticesController"
-Cohesion: 0.15
-Nodes (10): NoticesController, ApiTags, Body, Controller, Get, Param, Post, Put (+2 more)
+### Community 23 - "RequirePermission"
+Cohesion: 0.08
+Nodes (30): CurrentActor, CurrentActorPermissions, PERMISSION_KEY, RequirePermission(), PermissionsRequest, ApiOkResponse, Get, ACCESS_TOKEN_AUDIENCES (+22 more)
 
-### Community 24 - "router.tsx"
-Cohesion: 0.03
-Nodes (72): RecipientsTab(), RetentionTab(), RuleGroupCard(), SecurityMeasuresTab(), SharingTab(), TransfersTab(), AccessReportPanel(), generateAndDownload() (+64 more)
+### Community 24 - "RequestDetailPage.tsx"
+Cohesion: 0.11
+Nodes (20): NotReviewedChip(), NotReviewedChipProps, AccessReportPanel(), generateAndDownload(), saveBlob(), CorrectionWorkflow(), ErasureCompletionEvidence, message() (+12 more)
 
 ### Community 25 - "CreateVoluntaryUndertakingDto"
 Cohesion: 0.05
-Nodes (37): CreateVoluntaryUndertakingDto, ApiProperty, ApiPropertyOptional, IsArray, IsDateString, IsOptional, IsString, MinLength (+29 more)
+Nodes (40): CreateVoluntaryUndertakingDto, ApiProperty, ApiPropertyOptional, IsArray, IsDateString, IsOptional, IsString, MinLength (+32 more)
 
 ### Community 26 - "templates.service.ts"
-Cohesion: 0.12
-Nodes (28): SYSTEM_MESSAGE_TEMPLATES, SystemMessageTemplateSeed, assertSimpleWhitelistedMustache(), DisallowedTemplateSyntaxError, engine, extractTemplateVariables(), MissingOrganizationContactError, MissingRequiredVariableError (+20 more)
+Cohesion: 0.14
+Nodes (25): assertSimpleWhitelistedMustache(), DisallowedTemplateSyntaxError, engine, extractTemplateVariables(), MissingOrganizationContactError, MissingRequiredVariableError, OrganizationContactFields, RenderedTemplate (+17 more)
 
 ### Community 27 - "common.sh"
 Cohesion: 0.06
 Nodes (78): backend_healthy(), demo_healthy(), ensure_backend_up(), ensure_database_up(), ensure_demo_company_up(), ensure_frontend_up(), ensure_studio_up(), free_port_if_stale() (+70 more)
 
 ### Community 28 - "breach-principal-notice-dispatch.processor.ts"
-Cohesion: 0.11
-Nodes (16): BreachPrincipalNoticeDispatchProcessor, InjectQueue, Processor, BREACH_PRINCIPAL_NOTICE_DISPATCH_QUEUE_NAME, BreachPrincipalNoticeDispatchJobData, breachPrincipalNoticeDispatchJobId(), CampaignSendProcessor, Processor (+8 more)
+Cohesion: 0.16
+Nodes (13): BreachPrincipalNoticeDispatchProcessor, InjectQueue, Processor, BREACH_PRINCIPAL_NOTICE_DISPATCH_QUEUE_NAME, BreachPrincipalNoticeDispatchJobData, breachPrincipalNoticeDispatchJobId(), CampaignSendProcessor, Processor (+5 more)
 
-### Community 29 - "EmployeesService"
-Cohesion: 0.08
-Nodes (25): CreateEmployeeDto, ApiProperty, IsEmail, IsString, MinLength, ResetEmployeePasswordDto, ApiProperty, IsString (+17 more)
+### Community 29 - "employees.service.ts"
+Cohesion: 0.07
+Nodes (27): CreateEmployeeDto, ApiProperty, IsEmail, IsString, MinLength, ResetEmployeePasswordDto, ApiProperty, IsString (+19 more)
 
 ### Community 30 - "CreateInformationRequestDto"
 Cohesion: 0.06
 Nodes (31): CreateInformationRequestDto, ApiProperty, ApiPropertyOptional, ArrayUnique, IsArray, IsBoolean, IsDateString, IsIn (+23 more)
 
 ### Community 31 - "normalization.service.ts"
-Cohesion: 0.11
-Nodes (19): NormalizationModule, Module, asPayload(), copyJson(), NormalizationService, NormalizationSourceRecord, NormalizedRecordInput, nullableString() (+11 more)
+Cohesion: 0.13
+Nodes (17): asPayload(), copyJson(), NormalizationService, NormalizationSourceRecord, NormalizedRecordInput, nullableString(), RawPayload, rawString() (+9 more)
 
 ### Community 32 - "react"
 Cohesion: 0.03
-Nodes (169): PermissionGate(), PermissionGateProps, CardDescription, Checkbox, CheckboxOption, CheckboxOptionProps, Input, InputProps (+161 more)
+Nodes (145): PermissionGate(), Button, ButtonProps, buttonVariants, Checkbox, CheckboxOption, CheckboxOptionProps, Input (+137 more)
 
 ### Community 33 - "CampaignsService"
-Cohesion: 0.13
-Nodes (11): CampaignsController, ApiTags, Body, Controller, Get, Param, Post, CampaignsService (+3 more)
+Cohesion: 0.15
+Nodes (7): CampaignsService, notFoundCampaign(), toBadRequest(), Injectable, CampaignSendQueueService, Injectable, InjectQueue
 
 ### Community 34 - "demo-company-server/package.json"
 Cohesion: 0.08
 Nodes (24): dependencies, better-sqlite3, fastify, description, devDependencies, ts-node, @types/better-sqlite3, @types/node (+16 more)
 
 ### Community 35 - "queues.module.ts"
-Cohesion: 0.12
-Nodes (27): ACCESS_LOG_RETENTION_QUEUE_NAME, AUDIT_CHAIN_VERIFY_QUEUE_NAME, BREACH_CLOCK_QUEUE_NAME, CONSENT_BACKFILL_QUEUE_NAME, CONSENT_BACKFILL_SCHEDULE_TRIGGERED_BY, ConsentBackfillJobData, ConsentBackfillQueueService, Injectable (+19 more)
+Cohesion: 0.06
+Nodes (53): SyncCounts, SyncRunSummary, ACCESS_LOG_RETENTION_QUEUE_NAME, AUDIT_CHAIN_VERIFY_QUEUE_NAME, AuditChainVerifyJobData, AuditChainVerifySummary, BREACH_CLOCK_QUEUE_NAME, BreachClockJobData (+45 more)
 
-### Community 36 - "PrincipalEvidencePage.tsx"
-Cohesion: 0.10
-Nodes (30): DataTableProps, EmptyStateConfig, Table, TableBody, TableCell, TableHead, TableHeader, TableRow (+22 more)
+### Community 36 - "AuditPage.tsx"
+Cohesion: 0.08
+Nodes (39): DataTableProps, EmptyStateConfig, Table, TableBody, TableCell, TableHead, TableHeader, TableRow (+31 more)
 
 ### Community 37 - "SyncPipelineService"
 Cohesion: 0.13
@@ -406,15 +395,15 @@ Nodes (13): describeSyncError(), MESSAGE_SAFE_ERROR_CLASSES, MissingRecordKeyErr
 
 ### Community 38 - "me-rights.service.ts"
 Cohesion: 0.07
-Nodes (27): CreateMeRequestDto, PRINCIPAL_REQUEST_TYPES, PrincipalRequestType, ApiProperty, ApiPropertyOptional, IsIn, IsObject, IsOptional (+19 more)
+Nodes (26): CreateMeRequestDto, PRINCIPAL_REQUEST_TYPES, PrincipalRequestType, ApiProperty, ApiPropertyOptional, IsIn, IsObject, IsOptional (+18 more)
 
 ### Community 39 - "AudienceBuilder.tsx"
 Cohesion: 0.18
 Nodes (15): AGE_STATUSES, AudienceBuilder(), replaceRules(), AudienceField, AudienceFilter, AudiencePreview, AudienceRule, audienceRuleForField() (+7 more)
 
 ### Community 40 - "sharing.service.ts"
-Cohesion: 0.09
-Nodes (23): CreateSharingActivityDto, ApiProperty, ApiPropertyOptional, ArrayUnique, IsArray, IsBoolean, IsDateString, IsEnum (+15 more)
+Cohesion: 0.06
+Nodes (34): CreateSharingActivityDto, ApiProperty, ApiPropertyOptional, ArrayUnique, IsArray, IsBoolean, IsDateString, IsEnum (+26 more)
 
 ### Community 41 - "merge-unmerge.e2e-spec.ts"
 Cohesion: 0.24
@@ -428,17 +417,13 @@ Nodes (16): requireBearer(), System, SYSTEM_KEYS, openDb(), onlyGet(), envelope(
 Cohesion: 0.28
 Nodes (6): AuditPage(), downloadEvidencePack(), exportAccessLog(), exportAudit(), buildQueryString(), saveBlob()
 
-### Community 44 - "MeRightsService"
-Cohesion: 0.12
-Nodes (10): MeRightsController, Body, Controller, Get, Param, Post, Query, UseGuards (+2 more)
-
-### Community 45 - "notifications.service.ts"
-Cohesion: 0.14
-Nodes (15): NotificationCallerActor, NotificationsController, ApiOkResponse, ApiTags, Controller, Get, HttpCode, Param (+7 more)
+### Community 45 - "notifications.controller.ts"
+Cohesion: 0.15
+Nodes (15): CurrentNotificationActor, JwtAnyActorGuard, NotificationCallerActor, Injectable, NotificationsController, ApiOkResponse, ApiTags, Controller (+7 more)
 
 ### Community 46 - "ConsentsService"
-Cohesion: 0.08
-Nodes (20): ConsentsController, ApiTags, Body, Controller, Get, Param, Post, Req (+12 more)
+Cohesion: 0.12
+Nodes (11): ConsentsController, ApiTags, Body, Controller, Get, Param, Post, Req (+3 more)
 
 ### Community 47 - "compilerOptions"
 Cohesion: 0.12
@@ -452,25 +437,25 @@ Nodes (7): compilerOptions, noEmit, outDir, rootDir, exclude, extends, ../tsconf
 Cohesion: 0.14
 Nodes (10): Delete, DataSourcesController, ApiTags, Body, Controller, Get, HttpCode, Param (+2 more)
 
-### Community 50 - "audience.service.ts"
-Cohesion: 0.17
-Nodes (11): AUDIENCE_FILTER_FIELDS, AUDIENCE_FILTER_OPERATORS, AudienceFilter, AudienceFilterField, AudienceFilterGroup, AudienceFilterNode, AudienceFilterOperator, AudienceFilterRule (+3 more)
+### Community 50 - "cn"
+Cohesion: 0.09
+Nodes (31): ConfirmDialogProps, Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter(), DialogHeader(), DialogOverlay (+23 more)
 
-### Community 51 - "PrincipalEvidenceController"
-Cohesion: 0.27
-Nodes (6): PrincipalEvidenceController, ApiTags, Controller, Get, Param, Res
+### Community 51 - "access-report-render.ts"
+Cohesion: 0.15
+Nodes (21): renderBoardDetailedPdf(), renderBoardInitialPdf(), BoardBreachReport, ACCESS_REPORT_CSV_HEADER, renderAccessReportPdf(), splitNonDisclosureRequests(), renderPdf(), writePdfLetterhead() (+13 more)
 
 ### Community 52 - "notices.service.ts"
-Cohesion: 0.13
-Nodes (15): isNoticeLanguageCode(), NOTICE_LANGUAGE_CODES, NoticeLanguageCode, EligibleItemisedField, ItemisedDataField, NOTICE_PUBLIC_SELECT, NOTICE_TRANSLATION_PUBLIC_SELECT, NOTICE_VERSION_PUBLIC_SELECT (+7 more)
+Cohesion: 0.05
+Nodes (42): CreateNoticeDto, ApiProperty, ArrayMinSize, ArrayUnique, IsArray, IsString, MinLength, CreateNoticeVersionDto (+34 more)
 
-### Community 53 - "test-database.ts"
-Cohesion: 0.08
-Nodes (26): ApiServiceUnavailableResponse, HealthController, ApiOkResponse, ApiTags, Controller, Get, HttpCode, HealthModule (+18 more)
+### Community 53 - "health.service.ts"
+Cohesion: 0.14
+Nodes (12): ApiServiceUnavailableResponse, HealthController, ApiOkResponse, ApiTags, Controller, Get, HttpCode, HealthModule (+4 more)
 
-### Community 54 - "RequirePermission"
-Cohesion: 0.23
-Nodes (11): Actor, RequirePermission(), BreachesController, ApiTags, Body, Controller, Get, Param (+3 more)
+### Community 54 - "data-sources.module.ts"
+Cohesion: 0.10
+Nodes (19): CryptoModule, Module, CryptoService, InvalidEncryptionKeyError, MalformedCiphertextError, makeService(), VALID_KEY_B64, Injectable (+11 more)
 
 ### Community 55 - "generate.ts"
 Cohesion: 0.09
@@ -478,11 +463,11 @@ Nodes (24): ACCOUNT_STATUSES, Built, CAMPAIGN_SOURCES, CITY_POOL, EMAIL_FIELD, F
 
 ### Community 56 - "backend/package.json"
 Cohesion: 0.05
-Nodes (36): description, date-fns, date-fns-tz, eslint, ts-node, @types/node, typescript, license (+28 more)
+Nodes (39): description, date-fns, date-fns-tz, eslint, ts-node, @types/node, typescript, license (+31 more)
 
-### Community 57 - "CreateExemptionClaimDto"
-Cohesion: 0.09
-Nodes (21): ChildExemptionsController, ApiTags, Body, Controller, Get, Post, Query, ChildExemptionsService (+13 more)
+### Community 57 - "child-exemptions.service.ts"
+Cohesion: 0.08
+Nodes (24): ChildExemptionsController, ApiTags, Body, Controller, Get, Post, Query, ChildExemptionsService (+16 more)
 
 ### Community 58 - "rest-api.connector.ts"
 Cohesion: 0.13
@@ -493,12 +478,12 @@ Cohesion: 0.18
 Nodes (10): Access log, demo-company-server, Demo dataset (`npm run seed`), Endpoints — copy-paste table, Field names (deliberately messy — do not "fix" them), Personas, Running, Schema (+2 more)
 
 ### Community 60 - "mailer.service.ts"
-Cohesion: 0.18
-Nodes (6): MailModule, Module, MailerService, MailMessage, Injectable, nodemailer
+Cohesion: 0.20
+Nodes (4): MailerService, MailMessage, Injectable, nodemailer
 
 ### Community 61 - "ReplaceMappingsDto"
-Cohesion: 0.19
-Nodes (10): ReplaceMappingsDto, ApiProperty, IsArray, Type, ValidateNested, computeMappingWarnings(), duplicateSourceFieldMessage(), isUniqueConstraintViolation() (+2 more)
+Cohesion: 0.22
+Nodes (9): ReplaceMappingsDto, ApiProperty, IsArray, Type, ValidateNested, duplicateSourceFieldMessage(), isUniqueConstraintViolation(), MappingsService (+1 more)
 
 ### Community 62 - "4. REQUIREMENTS"
 Cohesion: 0.22
@@ -514,11 +499,11 @@ Nodes (6): 3. GOALS, 5. TASKS (build in this order — do not reorder), 7. MVP 1
 
 ### Community 65 - "EmployeesPage.tsx"
 Cohesion: 0.05
-Nodes (51): ExportButtons(), handleExport(), saveBlob(), GapsPanel(), GapsPanelProps, LinkedRecordsPanel(), LinkedRecordsPanelProps, SourceRecordItem (+43 more)
+Nodes (48): PermissionGateProps, SourceChip(), SourceChipProps, ExportButtons(), handleExport(), saveBlob(), GapsPanel(), GapsPanelProps (+40 more)
 
-### Community 66 - "BreachService"
-Cohesion: 0.10
-Nodes (18): asDate(), BreachService, parseIds(), Injectable, AffectedPreview, PublicBreach, PublicBreachAffectedPrincipal, PublicBreachObligation (+10 more)
+### Community 66 - ".record"
+Cohesion: 0.04
+Nodes (59): Actor, assertNoForbiddenMetadata(), asDate(), BREACH_PUBLIC_SELECT, BREACH_RULES, BreachService, parseIds(), TRANSITIONS (+51 more)
 
 ### Community 67 - "1. IDEA CONTEXT (read this first)"
 Cohesion: 0.50
@@ -530,19 +515,19 @@ Nodes (29): Check 10: Conflicts are surfaced, not silently resolved (GO-03), Che
 
 ### Community 69 - "BreachWizardPage.tsx"
 Cohesion: 0.10
-Nodes (24): BreachObligationCard(), countdown(), Obligation, DataCategory, Breach, BreachDetailPage(), downloadBoardReport(), buildExtensionPayload() (+16 more)
+Nodes (25): BreachObligationCard(), countdown(), Obligation, DataCategory, DATA_CATEGORY_OPTIONS, Breach, BreachDetailPage(), downloadBoardReport() (+17 more)
 
 ### Community 70 - "UpdateRolePermissionsDto"
 Cohesion: 0.12
 Nodes (14): ApiProperty, ArrayUnique, IsArray, IsString, UpdateRolePermissionsDto, RolesController, ApiTags, Body (+6 more)
 
 ### Community 71 - "EmployeeAuthController"
-Cohesion: 0.18
+Cohesion: 0.16
 Nodes (13): EmployeeLoginDto, ApiProperty, IsEmail, IsString, MinLength, EmployeeAuthController, ApiTags, Body (+5 more)
 
-### Community 72 - "notifications.controller.ts"
-Cohesion: 0.26
-Nodes (8): CurrentNotificationActor, MarkAllReadResponseDto, NotificationDto, NotificationListResponseDto, ApiProperty, ApiPropertyOptional, JwtAnyActorGuard, Injectable
+### Community 72 - "notification.dto.ts"
+Cohesion: 0.47
+Nodes (5): MarkAllReadResponseDto, NotificationDto, NotificationListResponseDto, ApiProperty, ApiPropertyOptional
 
 ### Community 73 - "matching.service.ts"
 Cohesion: 0.09
@@ -552,25 +537,25 @@ Nodes (28): customerIdSignal(), hasSoleVerifiedCustomerIdMapping(), verifiedCust
 Cohesion: 0.23
 Nodes (13): ChangeStatusDto, ErasureProcessorChecklistDto, ErasureSystemChecklistDto, ApiProperty, ApiPropertyOptional, IsArray, IsBoolean, IsEnum (+5 more)
 
-### Community 76 - "@tanstack/react-query"
+### Community 76 - "router.tsx"
 Cohesion: 0.02
-Nodes (113): AppShell(), loginAs(), MatchCandidateListItem, jsonResponse(), loginAndRender(), MockRoutes, SOURCE_RECORDS_RESPONSE, PurposeForm() (+105 more)
+Nodes (151): AppShell(), NAV_ITEMS, OrganizationSummary, loginAs(), jsonResponse(), loginAndRender(), MockRoutes, SOURCE_RECORDS_RESPONSE (+143 more)
 
 ### Community 77 - "recipients.service.ts"
 Cohesion: 0.06
 Nodes (33): CreateRecipientDto, ApiProperty, ApiPropertyOptional, IsBoolean, IsDateString, IsEmail, IsEnum, IsOptional (+25 more)
 
-### Community 78 - "TokenService"
-Cohesion: 0.09
-Nodes (12): TenantMiddleware, Injectable, TenantModule, Module, AuthModule, Module, EmployeeAuthService, Injectable (+4 more)
+### Community 78 - "employee-auth.service.ts"
+Cohesion: 0.13
+Nodes (10): getDummyHash(), EmployeeAuthService, EmployeeLoginResult, EmployeeRefreshResult, Injectable, LoginRequestMeta, PrincipalAuthService, Injectable (+2 more)
 
 ### Community 79 - "retention.service.ts"
 Cohesion: 0.06
 Nodes (36): CreateRetentionPolicyDto, RETENTION_LEGAL_BASIS_TYPES, RETENTION_TRIGGER_TYPES, RETENTION_UNITS, ApiProperty, ApiPropertyOptional, IsBoolean, IsIn (+28 more)
 
-### Community 80 - "CreateSecurityMeasureDto"
-Cohesion: 0.07
-Nodes (28): CreateSecurityMeasureDto, ApiProperty, ApiPropertyOptional, IsBoolean, IsDateString, IsIn, IsOptional, IsString (+20 more)
+### Community 80 - "security-measures.service.ts"
+Cohesion: 0.06
+Nodes (33): CreateSecurityMeasureDto, SECURITY_MEASURE_TYPES, SECURITY_RULE_REFERENCES, ApiProperty, ApiPropertyOptional, IsBoolean, IsDateString, IsIn (+25 more)
 
 ### Community 81 - "DPDP PLATFORM — MVP 2: COMPLIANCE OPERATIONS"
 Cohesion: 0.17
@@ -589,16 +574,16 @@ Cohesion: 0.17
 Nodes (10): ApiProperty, IsString, MinLength, UnmergeDto, ApiTags, Body, Controller, Param (+2 more)
 
 ### Community 85 - "mappings.service.ts"
-Cohesion: 0.14
-Nodes (18): MappingWarningPurposeSummaryResponseDto, MappingWarningResponseDto, ApiProperty, MappingsResponseDto, SourceFieldMappingResponseDto, ApiProperty, MappingForWarningCheck, MappingWarning (+10 more)
+Cohesion: 0.17
+Nodes (15): MappingWarningPurposeSummaryResponseDto, MappingWarningResponseDto, ApiProperty, computeMappingWarnings(), MappingForWarningCheck, MappingWarning, MappingWarningPurposeSummary, MappingWarningType (+7 more)
 
-### Community 86 - "PreviewAudienceDto"
-Cohesion: 0.12
-Nodes (14): AudienceController, ApiTags, Body, Controller, Post, AudienceService, Injectable, PreviewAudienceDto (+6 more)
+### Community 86 - "api-client.ts"
+Cohesion: 0.13
+Nodes (15): NotificationBell(), NotificationBellProps, NotificationRow(), EMPTY, API_BASE, ApiClient, ApiClientConfig, principalTokenStore (+7 more)
 
-### Community 87 - "PrincipalsPage.tsx"
-Cohesion: 0.16
-Nodes (15): ConflictBadge(), ConflictBadgeProps, ConflictingValue, LineageChip(), LineageChipProps, SourceRef, PrincipalDetail, PrincipalField (+7 more)
+### Community 87 - "SettingsPage.tsx"
+Cohesion: 0.05
+Nodes (50): ConflictBadge(), ConflictBadgeProps, ConflictingValue, LineageChip(), LineageChipProps, SourceRef, RuleGroupCard(), describeSaveError() (+42 more)
 
 ### Community 88 - "PrincipalAuthController"
 Cohesion: 0.16
@@ -616,13 +601,13 @@ Nodes (18): getOrCreateOrganization(), insertBatches(), main(), PERFORMANCE_PERM
 Cohesion: 0.25
 Nodes (7): ListRequestsDto, IsBoolean, IsEnum, IsOptional, IsString, Transform, Query
 
-### Community 92 - "eslint.config.js"
-Cohesion: 0.33
-Nodes (5): @eslint/js, eslint-plugin-react-hooks, eslint-plugin-react-refresh, globals, typescript-eslint
+### Community 92 - "CandidateComparison.tsx"
+Cohesion: 0.15
+Nodes (16): BadgeProps, AGREEMENT_LABEL, CandidateComparison(), CandidateComparisonProps, CandidateSignal, FIELD_LABELS, MatchCandidateListItem, SignalAgreement (+8 more)
 
-### Community 93 - "SharingService"
-Cohesion: 0.13
-Nodes (11): SharingController, ApiTags, Body, Controller, Get, Param, Patch, Post (+3 more)
+### Community 93 - "test-database.ts"
+Cohesion: 0.22
+Nodes (13): globalSetup(), withoutCredentials(), adminUrlFor(), createDatabaseIfMissing(), databaseNameOf(), loadEnvFile(), migrate(), prepareTestDatabase() (+5 more)
 
 ### Community 94 - "read-only-http.client.ts"
 Cohesion: 0.22
@@ -645,36 +630,40 @@ Cohesion: 0.20
 Nodes (15): MarkdownMessageEditor(), BREACH_NOTIFICATION_PLACEHOLDER_ELEMENTS, missingBreachPlaceholders(), missingPlaceholdersKey(), SEEDED_BODY, buildCampaignPayload(), CampaignCategory, campaignConfirmationText() (+7 more)
 
 ### Community 99 - "compile-audience.ts"
-Cohesion: 0.26
-Nodes (23): AudienceFilterError, compileAgeStatus(), compileBreachAffected(), compileCanonicalFieldStringValue(), compileConsent(), compileDataSource(), compileErasureState(), compileGroup() (+15 more)
-
-### Community 100 - "compliance.service.ts"
-Cohesion: 0.11
-Nodes (18): addByDeadlineUnit(), COMPLIANCE_RULE_PUBLIC_SELECT, ComplianceDeadlineSnapshot, ComplianceRuleRow, DIFF_FIELDS, PublicComplianceRule, ALGORITHM_ENTRY_PUBLIC_SELECT, PublicAlgorithmEntry (+10 more)
-
-### Community 101 - "assembly.service.ts"
-Cohesion: 0.16
-Nodes (15): ageStatusFor(), AssembledField, assembleFields(), AssemblyMapping, AssemblyRecord, compareNewest(), Contribution, displayNameFrom() (+7 more)
-
-### Community 102 - "CreateLegalHoldDto"
 Cohesion: 0.06
-Nodes (34): CancelErasureTaskDto, ApiProperty, IsString, MinLength, CompleteErasureTaskDto, ProcessorChecklistTickDto, SystemChecklistTickDto, ApiProperty (+26 more)
+Nodes (52): CAN_VIEW_ALL_PERSONAL_DATA, MaskingService, PASS_THROUGH_FIELDS, Injectable, AudienceController, ApiTags, Body, Controller (+44 more)
+
+### Community 100 - "sdf-assessment.service.ts"
+Cohesion: 0.12
+Nodes (11): ComplianceDeadlineSnapshot, PublicSdfAssessment, SDF_ASSESSMENT_PUBLIC_SELECT, SDF_CYCLE_APPLIES_TO, SDF_RULE_13_CITATION, SdfAssessmentService, SdfReadiness, Injectable (+3 more)
+
+### Community 101 - "MeDataPage.tsx"
+Cohesion: 0.16
+Nodes (11): FIELD_LABELS, fieldLabel(), ValueCard(), ValueCardProps, ValueCardSource, CATEGORY_LABELS, categoryLabel(), MeDataCategoryGroupDto (+3 more)
+
+### Community 102 - "RetentionController"
+Cohesion: 0.08
+Nodes (23): CancelErasureTaskDto, ApiProperty, IsString, MinLength, CompleteErasureTaskDto, ProcessorChecklistTickDto, SystemChecklistTickDto, ApiProperty (+15 more)
 
 ### Community 103 - "AccessReportService"
-Cohesion: 0.16
-Nodes (4): AccessReportService, Injectable, MeService, Injectable
+Cohesion: 0.12
+Nodes (8): AccessReportService, Injectable, MeService, Injectable, LineageService, Injectable, PrincipalRecipientsService, Injectable
 
 ### Community 104 - "DPDP Privacy Platform — Client Evaluation"
 Cohesion: 0.25
 Nodes (7): 1. What this computer needs, 2. Download and unzip, 3. Open the client guide and follow it, DPDP Privacy Platform — Client Evaluation, Sign-in details, The eight controls, The two shareable guides
 
-### Community 105 - "ErasureTaskService"
-Cohesion: 0.19
-Nodes (6): ProcessorChecklistEntry, SystemChecklistEntry, ErasureChecklistSubmission, ErasureTaskService, Injectable, addByRetentionUnit()
+### Community 105 - "erasure-task.service.ts"
+Cohesion: 0.07
+Nodes (27): ProcessorChecklistEntry, SystemChecklistEntry, ACCOUNT_ACCESS_CANONICAL_FIELDS, CreateFromTriggerInput, ERASURE_TASK_PUBLIC_SELECT, ErasureChecklistSubmission, ErasureTaskService, ErasureTrigger (+19 more)
 
-### Community 107 - "GuardiansService"
-Cohesion: 0.06
-Nodes (32): CreateGuardianDto, ApiProperty, ApiPropertyOptional, IsEmail, IsEnum, IsIn, IsOptional, IsString (+24 more)
+### Community 106 - "ComplianceController"
+Cohesion: 0.19
+Nodes (8): ComplianceController, ApiTags, Body, Controller, Get, Param, Patch, Post
+
+### Community 107 - "guardians.service.ts"
+Cohesion: 0.05
+Nodes (38): APPOINTING_AUTHORITIES, AppointingAuthority, CreateGuardianDto, ApiProperty, ApiPropertyOptional, IsEmail, IsEnum, IsIn (+30 more)
 
 ### Community 109 - "ConsentBackfillService"
 Cohesion: 0.28
@@ -682,15 +671,15 @@ Nodes (4): ConsentBackfillService, Injectable, ConsentBackfillProcessor, Process
 
 ### Community 110 - "data-sources-api.ts"
 Cohesion: 0.04
-Nodes (74): DataTable(), clickAction, columns, Row, Tabs, TabsContent, TabsList, TabsTrigger (+66 more)
+Nodes (73): DataTable(), clickAction, columns, Row, CheckboxOption, errorLogEntries(), STATUS_VARIANT, SyncHistoryTable() (+65 more)
 
 ### Community 111 - "configuration.ts"
-Cohesion: 0.06
-Nodes (29): CryptoModule, Module, CryptoService, InvalidEncryptionKeyError, MalformedCiphertextError, makeService(), VALID_KEY_B64, Injectable (+21 more)
+Cohesion: 0.15
+Nodes (10): ACCESS_LOG_RETENTION_FLOOR_DAYS, AppConfig, validate(), BigInt, AccessLogRetentionJobData, AccessLogRetentionProcessor, AccessLogRetentionSummary, Processor (+2 more)
 
-### Community 112 - "csvDocument"
+### Community 112 - "evidence-pack.service.ts"
 Cohesion: 0.07
-Nodes (35): renderBoardDetailedPdf(), renderBoardInitialPdf(), BoardBreachReport, ACCESS_REPORT_CSV_HEADER, renderAccessReportCsv(), renderAccessReportPdf(), Get, Res (+27 more)
+Nodes (28): renderAccessReportCsv(), AUDIT_LOG_CSV_HEADER, AuditExportService, Injectable, EvidencePackController, ApiTags, Controller, Get (+20 more)
 
 ### Community 113 - "children/types.ts"
 Cohesion: 0.27
@@ -708,17 +697,17 @@ Nodes (10): ApiPropertyOptional, IsBoolean, IsDateString, IsEnum, IsInt, IsOptio
 Cohesion: 0.15
 Nodes (12): CreateAlgorithmEntryDto, ApiProperty, ApiPropertyOptional, ArrayMinSize, IsArray, IsBoolean, IsDateString, IsIn (+4 more)
 
-### Community 117 - "AuditReadService"
-Cohesion: 0.15
-Nodes (11): AuditReadController, ApiTags, Controller, Get, Query, Res, AuditReadService, Injectable (+3 more)
+### Community 117 - "audit-read.service.ts"
+Cohesion: 0.07
+Nodes (28): AuditReadController, ApiTags, Controller, Get, Query, Res, ACCESS_LOG_CSV_HEADER, ACCESS_LOG_ENTRY_SELECT (+20 more)
 
 ### Community 118 - "PrismaService"
-Cohesion: 0.05
-Nodes (33): COMPLIANCE_RULE_SEEDS, ComplianceRuleSeed, GRIEVANCE_STATUTORY_BASELINE_RULE_CODE, seedComplianceRules(), seedGrievanceStatutoryBaseline(), extendWithTenantScoping(), PrismaService, Injectable (+25 more)
+Cohesion: 0.04
+Nodes (47): extendWithTenantScoping(), PrismaService, Injectable, TenantContext, TenantStore, storage, addByDeadlineUnit(), ConsentBackfillSummary (+39 more)
 
-### Community 119 - "evidence-pack.service.ts"
-Cohesion: 0.09
-Nodes (20): canonicalJson(), Custom, stringify(), typeLabel(), AuditChainService, ChainVerificationResult, Event, serviceWith() (+12 more)
+### Community 119 - "canonicalJson"
+Cohesion: 0.10
+Nodes (18): canonicalJson(), Custom, stringify(), typeLabel(), AuditChainService, ChainVerificationResult, Event, serviceWith() (+10 more)
 
 ### Community 120 - "routes.test.ts"
 Cohesion: 0.22
@@ -737,24 +726,24 @@ Cohesion: 0.09
 Nodes (23): dependencies, class-variance-authority, clsx, date-fns, date-fns-tz, @hookform/resolvers, lucide-react, papaparse (+15 more)
 
 ### Community 124 - "notifications.module.ts"
-Cohesion: 0.16
-Nodes (15): MailConfig, EMAIL_PROVIDER, selectEmailProvider(), NotificationAudience, NotificationChannel, NotificationProvider, NotificationSendInput, NotificationSendResult (+7 more)
+Cohesion: 0.22
+Nodes (9): MailConfig, EMAIL_PROVIDER, selectEmailProvider(), ConsoleProvider, Injectable, SmtpProvider, Injectable, MailHogListResponse (+1 more)
 
 ### Community 125 - "data-sources.service.ts"
 Cohesion: 0.13
 Nodes (12): ConnectorFactory, DataSourceRowForConnector, Injectable, Connector, ConnectorsModule, Module, CONNECTOR_SOURCE_SELECT, DATA_SOURCE_FIELD_SELECT (+4 more)
 
-### Community 126 - "Public"
-Cohesion: 0.14
-Nodes (19): ApiExtraModels, CurrentPrincipal, Public(), JwtPrincipalGuard, PrincipalActor, Injectable, Get, UseGuards (+11 more)
+### Community 126 - "PrincipalActor"
+Cohesion: 0.11
+Nodes (21): ApiExtraModels, CurrentPrincipal, PrincipalActor, Get, UseGuards, MeController, ApiOkResponse, ApiTags (+13 more)
 
 ### Community 127 - "campaigns.service.ts"
-Cohesion: 0.15
-Nodes (14): ActiveNonDisclosureDirection, findActiveNonDisclosureDirections(), isUnderActiveNonDisclosure(), recordNonDisclosureSuppression(), CAMPAIGN_PUBLIC_SELECT, CAMPAIGN_RECIPIENT_PUBLIC_SELECT, CHILD_LIKE_AGE_STATUSES, COMPLIANCE_CATEGORIES (+6 more)
+Cohesion: 0.18
+Nodes (11): ActiveNonDisclosureDirection, CAMPAIGN_PUBLIC_SELECT, CAMPAIGN_RECIPIENT_PUBLIC_SELECT, CHILD_LIKE_AGE_STATUSES, COMPLIANCE_CATEGORIES, PublicCampaign, PublicCampaignRecipient, ResolvedRecipient (+3 more)
 
-### Community 128 - "sync.e2e-spec.ts"
-Cohesion: 0.07
-Nodes (28): SyncCounts, SyncRunSummary, toRedisConnectionOptions(), lockKey(), SYNC_LOCK_HEARTBEAT_INTERVAL_MS, SYNC_LOCK_PREFIX, SYNC_LOCK_TTL_MS, SyncLockHandle (+20 more)
+### Community 128 - "sync-lock.service.ts"
+Cohesion: 0.13
+Nodes (11): toRedisConnectionOptions(), lockKey(), SYNC_LOCK_HEARTBEAT_INTERVAL_MS, SYNC_LOCK_PREFIX, SYNC_LOCK_TTL_MS, SyncLockHandle, SyncLockService, Injectable (+3 more)
 
 ### Community 129 - "PDFDocument"
 Cohesion: 0.13
@@ -764,33 +753,33 @@ Nodes (4): PDFDocument, PDFDocumentOptions, pdfkit, PDFTextOptions
 Cohesion: 0.29
 Nodes (7): SourceFieldMappingDto, ApiPropertyOptional, IsBoolean, IsEnum, IsOptional, IsString, MinLength
 
-### Community 131 - "CreateNoticeDto"
-Cohesion: 0.20
-Nodes (9): CreateNoticeDto, ApiProperty, ArrayMinSize, ArrayUnique, IsArray, IsString, MinLength, duplicateCodeMessage() (+1 more)
+### Community 131 - "NotificationsService"
+Cohesion: 0.30
+Nodes (5): NotificationSendInput, NotificationSendResult, NotificationsService, Injectable, buildPreErasureNoticeBody()
 
 ### Community 132 - "compilerOptions"
 Cohesion: 0.22
 Nodes (8): compilerOptions, allowSyntheticDefaultImports, composite, module, moduleResolution, skipLibCheck, strict, include
 
-### Community 133 - "CreateDataSourceDto"
-Cohesion: 0.20
-Nodes (10): CreateDataSourceDto, ApiProperty, ApiPropertyOptional, IsBoolean, IsEnum, IsInt, IsOptional, IsString (+2 more)
+### Community 133 - "CreateLegalHoldDto"
+Cohesion: 0.22
+Nodes (11): CreateLegalHoldDto, LegalHoldScopeDto, ApiProperty, ApiPropertyOptional, IsArray, IsDateString, IsOptional, IsString (+3 more)
 
-### Community 134 - "transfers.service.ts"
+### Community 134 - "CreateTransferDto"
 Cohesion: 0.06
-Nodes (31): CreateTransferDto, ApiProperty, ApiPropertyOptional, IsArray, IsBoolean, IsDateString, IsEnum, IsOptional (+23 more)
+Nodes (29): CreateTransferDto, ApiProperty, ApiPropertyOptional, IsArray, IsBoolean, IsDateString, IsEnum, IsOptional (+21 more)
 
 ### Community 135 - "Wave 1 — Engines (4 parallel + integrator)"
 Cohesion: 0.33
 Nodes (6): Integrator I1, Task 2 — ComplianceService, rule versioning and the compliance-rules API, Task 3 — Template storage, whitelisted Handlebars rendering, and the fifteen system templates, Task 4 — The audience compiler and preview endpoint, Task 5 — Mail transport, notification providers and the notifications API, Wave 1 — Engines (4 parallel + integrator)
 
-### Community 136 - "inventory.service.ts"
+### Community 136 - "inventory.controller.ts"
 Cohesion: 0.14
 Nodes (11): InventoryController, ApiTags, Controller, Get, Res, InventoryGap, InventoryService, InventorySummary (+3 more)
 
 ### Community 137 - "SyncService"
-Cohesion: 0.13
-Nodes (11): SyncController, SyncJobsController, ApiTags, Controller, Get, HttpCode, Param, Post (+3 more)
+Cohesion: 0.11
+Nodes (12): SyncController, SyncJobsController, ApiTags, Controller, Get, HttpCode, Param, Post (+4 more)
 
 ### Community 138 - "CreateCampaignDto"
 Cohesion: 0.20
@@ -800,17 +789,17 @@ Nodes (10): CreateCampaignDto, ApiProperty, ApiPropertyOptional, ArrayUnique, Is
 Cohesion: 0.24
 Nodes (9): main(), only, OUT, ROOT, shoot(), SHOTS, signIn(), STAFF (+1 more)
 
-### Community 140 - "CreateNoticeVersionDto"
-Cohesion: 0.25
-Nodes (11): CreateNoticeVersionDto, ItemisedFieldInputDto, ApiProperty, ApiPropertyOptional, IsArray, IsOptional, IsString, IsUrl (+3 more)
+### Community 140 - "PurposesController"
+Cohesion: 0.22
+Nodes (7): PurposesController, ApiTags, Body, Controller, Param, Patch, Post
 
 ### Community 141 - "Wave 2 — Domain services, part one (4 parallel + integrator)"
 Cohesion: 0.33
 Nodes (6): Integrator I2, Task 6 — The rights request engine and `deadline-scan`, Task 7 — The notice builder, Task 8 — Children, guardians and exemption claims, Task 9 — Retention core, the floor, legal holds and the retention jobs, Wave 2 — Domain services, part one (4 parallel + integrator)
 
 ### Community 142 - "RequestsService"
-Cohesion: 0.19
-Nodes (6): RequestsService, transitionTargets(), Injectable, DeadlineScanProcessor, Processor, DeadlineScanJobData
+Cohesion: 0.26
+Nodes (3): RequestsService, transitionTargets(), Injectable
 
 ### Community 143 - "Wave 3 — Domain services, part two (4 parallel + integrator)"
 Cohesion: 0.33
@@ -821,20 +810,20 @@ Cohesion: 0.25
 Nodes (8): scripts, build, dev, lint, preview, test, test:watch, typecheck
 
 ### Community 145 - "dedupe-vault-names.py"
-Cohesion: 0.33
-Nodes (9): main(), Path, Rename case-colliding notes in the generated Obsidian vault. graphify names a…, The name that keeps its spelling: the first in sorted order. Sorting is what…, A free name for the loser, marked by its own casing., Repoint every [[wikilink]] that named a renamed note., relink(), rename_target() (+1 more)
+Cohesion: 0.29
+Nodes (11): main(), Path, Make the generated Obsidian vault safe to check out and unzip on Windows.…, The name that keeps its spelling: the first in sorted order. Sorting is what…, A free name for the loser, marked by its own casing., Trim any note whose name would blow the Windows path limit. The trimmed name…, Repoint every [[wikilink]] that named a renamed note., relink() (+3 more)
 
-### Community 146 - "cn"
-Cohesion: 0.04
-Nodes (63): NAV_ITEMS, OrganizationSummary, ConfirmDialogProps, DateTimeProps, OrgTimezoneContext, OrgTimezoneProvider, useOrgTimezone(), BADGE_VARIANT (+55 more)
+### Community 146 - "DeadlinePill.tsx"
+Cohesion: 0.16
+Nodes (11): BADGE_VARIANT, Band, bandFor(), DeadlinePill(), DeadlinePillProps, computeRemaining(), CountdownState, useCountdown() (+3 more)
 
 ### Community 147 - "frontend/package.json"
 Cohesion: 0.07
-Nodes (27): description, date-fns, date-fns-tz, eslint, typescript, license, name, private (+19 more)
+Nodes (30): description, date-fns, date-fns-tz, eslint, typescript, license, name, private (+22 more)
 
-### Community 148 - "ListAuditEventsDto"
+### Community 148 - "ImportConsentDto"
 Cohesion: 0.22
-Nodes (9): ListAuditEventsDto, IsIn, IsInt, IsOptional, IsString, Max, Min, Transform (+1 more)
+Nodes (9): ImportConsentDto, ApiProperty, ApiPropertyOptional, IsIn, IsObject, IsOptional, IsString, IsUUID (+1 more)
 
 ### Community 149 - "UpdateDataSourceDto"
 Cohesion: 0.22
@@ -848,25 +837,25 @@ Nodes (6): Integrator I5, Task 17 — `/app/requests`, `/app/requests/:ref`, `/a
 Cohesion: 0.33
 Nodes (6): Integrator I6, Task 21 — `/app/messaging/templates`, `/app/messaging/campaigns`, the audience builder UI, Task 22 — `/app/breaches` and the creation wizard, Task 23 — `/app/sdf` and `/app/information-requests`, Task 24 — `/app/principals/:id/evidence`, audit UI and dashboard tiles, Wave 7 — Frontend, part two (4 parallel + integrator)
 
-### Community 152 - "UpdateBreachDto"
-Cohesion: 0.29
-Nodes (7): ApiPropertyOptional, IsDateString, IsEnum, IsOptional, IsString, MinLength, UpdateBreachDto
+### Community 152 - "EnvironmentVariables"
+Cohesion: 0.25
+Nodes (8): EnvironmentVariables, IsIn, IsInt, IsNotEmpty, IsString, Min, MinLength, Type
 
 ### Community 153 - "CreateTemplateDto"
 Cohesion: 0.22
 Nodes (9): CreateTemplateDto, ApiProperty, ApiPropertyOptional, ArrayUnique, IsArray, IsEnum, IsOptional, IsString (+1 more)
 
-### Community 154 - "security-measures.service.ts"
-Cohesion: 0.36
-Nodes (5): SECURITY_MEASURE_TYPES, SECURITY_RULE_REFERENCES, PublicSecurityMeasure, SECURITY_MEASURE_PUBLIC_SELECT, SecurityMeasureGroup
+### Community 154 - "UpdateTemplateDto"
+Cohesion: 0.25
+Nodes (8): ApiPropertyOptional, ArrayUnique, IsArray, IsBoolean, IsOptional, IsString, MinLength, UpdateTemplateDto
 
 ### Community 155 - "MappingsController"
 Cohesion: 0.27
 Nodes (8): MappingsController, ApiOkResponse, ApiTags, Body, Controller, Get, Param, Put
 
-### Community 157 - "PurposesService"
-Cohesion: 0.14
-Nodes (12): PurposesController, ApiTags, Body, Controller, Param, Patch, Post, duplicateCodeMessage() (+4 more)
+### Community 157 - "purposes.service.ts"
+Cohesion: 0.20
+Nodes (8): Get, duplicateCodeMessage(), isUniqueConstraintViolation(), PurposeRow, PurposesService, buildService(), toPublicPurpose(), Injectable
 
 ### Community 158 - "build-standalone.py"
 Cohesion: 0.38
@@ -876,25 +865,17 @@ Nodes (6): build(), embed_image(), main(), Path, Build shareable, single-file co
 Cohesion: 0.33
 Nodes (5): Diagnosis and stop condition, Post-sync browser observations, Screenshots, Serial source runs, Step 6 current-head live rerun — network results (FAILED acceptance)
 
-### Community 160 - "CompleteObligationDto"
-Cohesion: 0.33
-Nodes (6): CompleteObligationDto, ApiPropertyOptional, IsIn, IsOptional, IsString, MinLength
-
 ### Community 162 - "PermissionsController"
 Cohesion: 0.33
 Nodes (4): PermissionsController, ApiTags, Controller, Get
 
-### Community 163 - "guardians.service.ts"
-Cohesion: 0.06
-Nodes (33): AUDIT_ACTIONS, AuditAction, NOTE: the spec's §4.7 prose claims "33 MVP 1 action names", but the, AuditRecordInput, CAN_VIEW_ALL_PERSONAL_DATA, PASS_THROUGH_FIELDS, ACCESS_LOG_CSV_HEADER, ACCESS_LOG_ENTRY_SELECT (+25 more)
+### Community 163 - "consents.service.ts"
+Cohesion: 0.13
+Nodes (16): AUDIT_ACTIONS, AuditAction, NOTE: the spec's §4.7 prose claims "33 MVP 1 action names", but the, AuditRecordInput, ApplyStatusChangeInput, CONSENT_RECORD_PUBLIC_SELECT, ConsentRecordWithPurpose, ConsentStatsResponse (+8 more)
 
-### Community 165 - "sync.service.ts"
-Cohesion: 0.53
-Nodes (3): DEFAULT_SYNC_JOB_LIST_LIMIT, MAX_SYNC_JOB_LIST_LIMIT, TriggerSyncResult
-
-### Community 166 - "AttachPurposesDto"
-Cohesion: 0.40
-Nodes (5): AttachPurposesDto, ApiProperty, ArrayUnique, IsArray, IsString
+### Community 164 - "TokenService"
+Cohesion: 0.09
+Nodes (10): JwtEmployeeGuard, Injectable, TenantMiddleware, Injectable, TenantModule, Module, AuthModule, Module (+2 more)
 
 ### Community 167 - "Wave 4 — Breach and the remaining jobs (2 parallel + integrator)"
 Cohesion: 0.50
@@ -904,117 +885,93 @@ Nodes (4): Integrator I4, Task 14 — The breach module, Task 15 — The remaini
 Cohesion: 0.22
 Nodes (9): ApiPropertyOptional, IsArray, IsBoolean, IsEnum, IsOptional, IsString, MinLength, ValidateIf (+1 more)
 
-### Community 170 - "api-client.ts"
-Cohesion: 0.17
-Nodes (12): ApiClientConfig, createApiClient(), buildInit(), onAuthExpired(), rawRequest(), refresh(), requestJson(), extractMessage() (+4 more)
+### Community 170 - "createApiClient"
+Cohesion: 0.48
+Nodes (7): createApiClient(), buildInit(), onAuthExpired(), rawRequest(), refresh(), requestJson(), extractMessage()
 
 ### Community 174 - "CreatePurposeDto"
 Cohesion: 0.25
 Nodes (8): CreatePurposeDto, ApiProperty, ApiPropertyOptional, IsArray, IsEnum, IsOptional, IsString, MinLength
 
 ### Community 175 - "DataSourcesService"
-Cohesion: 0.24
-Nodes (4): DataSourcesService, duplicateNameMessage(), isUniqueConstraintViolation(), Injectable
-
-### Community 176 - "identifier-ownership-lock.ts"
-Cohesion: 0.60
-Nodes (4): acquireAdvisoryLock(), IdentifierLockSignal, lockIdentifiersForOwnership(), lockNameKeyForOwnership()
-
-### Community 177 - "PortalProvider"
-Cohesion: 0.40
-Nodes (3): PortalProvider, Injectable, Inject
-
-### Community 178 - "NotificationsService"
 Cohesion: 0.12
-Nodes (10): NotificationsService, Injectable, buildCancellationReason(), buildPreErasureNoticeBody(), PreErasureNoticeService, Injectable, AuditChainVerifyProcessor, Processor (+2 more)
+Nodes (14): DataSourcesService, duplicateNameMessage(), isUniqueConstraintViolation(), Injectable, CreateDataSourceDto, ApiProperty, ApiPropertyOptional, IsBoolean (+6 more)
 
-### Community 179 - "ComplianceService"
-Cohesion: 0.12
-Nodes (16): ComplianceController, ApiTags, Body, Controller, Get, Param, Patch, Post (+8 more)
+### Community 177 - "notifications.service.ts"
+Cohesion: 0.17
+Nodes (10): NotificationAudience, NotificationChannel, NotificationProvider, NotificationSeverity, NOTIFICATION_PUBLIC_SELECT, NotificationRow, PublicNotification, PortalProvider (+2 more)
 
-### Community 180 - "app.module.ts"
-Cohesion: 0.06
-Nodes (58): AuditModule, Module, MaskingModule, Module, ReferenceModule, Module, AuditReadModule, Module (+50 more)
-
-### Community 181 - "ListSyncJobsQueryDto"
-Cohesion: 0.29
-Nodes (7): ListSyncJobsQueryDto, IsInt, IsOptional, IsString, Max, Min, Type
-
-### Community 183 - "SourcePurposesService"
+### Community 178 - "PreErasureNoticeService"
 Cohesion: 0.24
-Nodes (4): SourcePurposesService, Injectable, Get, toPublicPurpose()
+Nodes (5): buildCancellationReason(), PreErasureNoticeService, Injectable, PreErasureNoticeProcessor, Processor
+
+### Community 179 - "compliance.service.ts"
+Cohesion: 0.16
+Nodes (12): COMPLIANCE_RULE_PUBLIC_SELECT, ComplianceRuleRow, ComplianceService, DIFF_FIELDS, diffRules(), PublicComplianceRule, serializeDiffValue(), buildRule() (+4 more)
+
+### Community 180 - "@nestjs/common"
+Cohesion: 0.07
+Nodes (57): AuditModule, Module, MailModule, Module, MaskingModule, Module, PrismaModule, Module (+49 more)
+
+### Community 181 - "sync.service.ts"
+Cohesion: 0.20
+Nodes (10): DEFAULT_SYNC_JOB_LIST_LIMIT, ListSyncJobsQueryDto, MAX_SYNC_JOB_LIST_LIMIT, IsInt, IsOptional, IsString, Max, Min (+2 more)
+
+### Community 183 - "AttachPurposesDto"
+Cohesion: 0.20
+Nodes (7): AttachPurposesDto, ApiProperty, ArrayUnique, IsArray, IsString, SourcePurposesService, Injectable
 
 ### Community 184 - "UpdateAlgorithmEntryDto"
 Cohesion: 0.17
 Nodes (11): ApiPropertyOptional, ArrayMinSize, IsArray, IsBoolean, IsDateString, IsIn, IsOptional, IsString (+3 more)
 
-### Community 185 - "UpsertTranslationDto"
-Cohesion: 0.50
-Nodes (4): ApiProperty, IsString, MinLength, UpsertTranslationDto
-
 ### Community 187 - "VerifyIdentityDto"
-Cohesion: 0.33
-Nodes (6): ApiProperty, ApiPropertyOptional, IsOptional, IsString, MinLength, VerifyIdentityDto
+Cohesion: 0.15
+Nodes (12): EscalateRequestDto, ApiPropertyOptional, IsOptional, IsString, ApiProperty, ApiPropertyOptional, IsOptional, IsString (+4 more)
 
-### Community 188 - "ExtensionDto"
-Cohesion: 0.40
-Nodes (5): ExtensionDto, ApiProperty, IsDateString, IsString, MinLength
-
-### Community 191 - "AddMeRequestCommentDto"
-Cohesion: 0.50
-Nodes (4): AddMeRequestCommentDto, ApiProperty, IsString, MinLength
-
-### Community 192 - "EscalateRequestDto"
-Cohesion: 0.50
-Nodes (4): EscalateRequestDto, ApiPropertyOptional, IsOptional, IsString
+### Community 191 - "Public"
+Cohesion: 0.12
+Nodes (17): IS_PUBLIC_KEY, Public(), JwtPrincipalGuard, Injectable, PRINCIPAL_ACCOUNT_PUBLIC_SELECT, PrincipalLoginResult, PrincipalRefreshResult, PublicPrincipalAccount (+9 more)
 
 ### Community 193 - "MVP2 Evaluation Against Spec Sections 6 and 7"
 Cohesion: 0.17
 Nodes (11): Concurrent Check 33 access-log evidence, Defects found and fixed during this evaluation, Executive result, Known gaps and follow-up, Live sync setup diagnosis, MVP2 Evaluation Against Spec Sections 6 and 7, Runtime pre-flight, Section 6 evidence totals (+3 more)
 
 ### Community 199 - "FlagFrivolousDto"
-Cohesion: 0.50
+Cohesion: 0.40
 Nodes (4): FlagFrivolousDto, ApiProperty, IsString, MinLength
 
-### Community 200 - "PrismaModule"
-Cohesion: 0.67
-Nodes (3): PrismaModule, Module, Global
-
 ### Community 201 - "TemplatesService"
-Cohesion: 0.08
-Nodes (24): PreviewTemplateDto, ApiPropertyOptional, IsObject, IsOptional, ApiPropertyOptional, ArrayUnique, IsArray, IsBoolean (+16 more)
+Cohesion: 0.10
+Nodes (16): PreviewTemplateDto, ApiPropertyOptional, IsObject, IsOptional, TemplatesController, ApiTags, Body, Controller (+8 more)
 
 ### Community 203 - "principals.service.ts"
-Cohesion: 0.04
-Nodes (49): AccessLogService, Injectable, AccessReportConsentEntry, AccessReportConsentHistoryEntry, AccessReportData, AccessReportProcessingActivity, AccessReportRecipient, AccessReportRetentionEntry (+41 more)
+Cohesion: 0.06
+Nodes (36): AccessLogService, Injectable, AccessReportConsentEntry, AccessReportConsentHistoryEntry, AccessReportData, AccessReportProcessingActivity, AccessReportRecipient, AccessReportRetentionEntry (+28 more)
 
-### Community 205 - "SdfAssessmentService"
-Cohesion: 0.15
-Nodes (10): CompleteSdfAssessmentDto, ApiPropertyOptional, IsBoolean, IsDateString, IsOptional, IsString, SdfAssessmentService, Injectable (+2 more)
+### Community 205 - "CompleteSdfAssessmentDto"
+Cohesion: 0.25
+Nodes (7): CompleteSdfAssessmentDto, ApiPropertyOptional, IsBoolean, IsDateString, IsOptional, IsString, Param
 
 ### Community 208 - "SyncQueueService"
 Cohesion: 0.10
 Nodes (17): BootRegistration, BootRegistrationRegistry, Injectable, RECONCILE_BOOT_TIMEOUT_MS, withBootTimeout(), InjectQueue, InjectQueue, Mvp2ScheduleReconciliationService (+9 more)
 
-### Community 210 - "AlgorithmRegisterService"
-Cohesion: 0.25
-Nodes (4): AlgorithmRegisterService, Injectable, SdfGapsService, Injectable
-
 ### Community 213 - "RequestsController"
-Cohesion: 0.23
-Nodes (8): RequestsController, ApiTags, Body, Controller, Get, Param, Post, Res
+Cohesion: 0.26
+Nodes (6): RequestsController, ApiTags, Controller, Get, Param, Res
 
 ### Community 215 - "SdfController"
-Cohesion: 0.24
-Nodes (4): SdfController, ApiTags, Controller, Get
+Cohesion: 0.14
+Nodes (8): AlgorithmRegisterService, Injectable, SdfController, ApiTags, Controller, Get, SdfGapsService, Injectable
 
 ### Community 216 - "tenant-context.js"
 Cohesion: 0.33
 Nodes (4): isThenable(), storage, node_async_hooks_1, run()
 
 ### Community 219 - "CreateSdfAssessmentDto"
-Cohesion: 0.22
-Nodes (8): CreateSdfAssessmentDto, ApiProperty, ApiPropertyOptional, IsBoolean, IsDateString, IsIn, IsOptional, IsString
+Cohesion: 0.20
+Nodes (9): CreateSdfAssessmentDto, ApiProperty, ApiPropertyOptional, IsBoolean, IsDateString, IsIn, IsOptional, IsString (+1 more)
 
 ### Community 230 - "Grievance statutory-baseline fix report"
 Cohesion: 0.50
@@ -1024,45 +981,37 @@ Nodes (3): Grievance statutory-baseline fix report, Implemented, Verification
 Cohesion: 0.40
 Nodes (3): LanguageSelectorProps, NOTICE_LANGUAGES, NoticeLanguageCode
 
-### Community 239 - "ListPrincipalsDto"
-Cohesion: 0.14
-Nodes (14): ListPrincipalsDto, IsEnum, IsInt, IsOptional, IsString, Max, Min, Transform (+6 more)
-
-### Community 242 - ".record"
-Cohesion: 0.16
-Nodes (9): assertNoForbiddenMetadata(), TenantScopedPrismaClient, ScopedTransactionClient, compareNewest(), IdentifierOwnershipConflictError, initialPrincipalDisplayName(), LinkingService, Injectable (+1 more)
+### Community 239 - "PrincipalsService"
+Cohesion: 0.09
+Nodes (19): ListPrincipalsDto, IsEnum, IsInt, IsOptional, IsString, Max, Min, Transform (+11 more)
 
 ### Community 245 - "AssignRequestDto"
-Cohesion: 0.33
+Cohesion: 0.29
 Nodes (6): AssignRequestDto, ApiProperty, ApiPropertyOptional, IsOptional, IsString, MinLength
 
 ### Community 246 - "CandidatesService"
 Cohesion: 0.12
 Nodes (14): CandidatesController, ApiTags, Controller, Get, Param, Post, Query, CandidatesService (+6 more)
 
-### Community 250 - "sdf-cycle-scan.queue.ts"
-Cohesion: 0.13
-Nodes (12): SdfCycleScanService, Injectable, SdfCycleScanProcessor, Processor, SDF_CYCLE_SCAN_CRON_PATTERN, SDF_CYCLE_SCAN_JOB_NAME, SDF_CYCLE_SCAN_QUEUE_NAME, SDF_CYCLE_SCAN_SCHEDULE_TRIGGERED_BY (+4 more)
-
-### Community 253 - "@nestjs/common"
-Cohesion: 0.04
-Nodes (42): CurrentActor, CurrentActorPermissions, PERMISSION_KEY, PermissionsRequest, EmployeeMeResponseDto, EmployeeMeRoleDto, ApiProperty, ApiOkResponse (+34 more)
+### Community 253 - "@prisma/client"
+Cohesion: 0.05
+Nodes (24): MAX_AUDIT_EVENTS_PAGE, EmployeeMeResponseDto, EmployeeMeRoleDto, ApiProperty, SCHEDULE_PARTS, MappingsResponseDto, SourceFieldMappingResponseDto, ApiProperty (+16 more)
 
 ## Knowledge Gaps
-- **1197 isolated node(s):** `name`, `version`, `private`, `description`, `main` (+1192 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2316 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **1197 isolated node(s):** `PublicSdfAssessment`, `SdfReadiness`, `LocalisationRequiredTransferGap`, `SdfGaps`, `UnreviewedAlgorithmGap` (+1192 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2317 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **18 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `@nestjs/common` connect `@nestjs/common` to `sync.e2e-spec.ts`, `step6-conflict-acceptance.e2e-spec.ts`, `transfers.service.ts`, `inventory.service.ts`, `age-status.service.ts`, `tenant.extension.ts`, `prisma.service.ts`, `requests.service.ts`, `templates.service.ts`, `security-measures.service.ts`, `breach-principal-notice-dispatch.processor.ts`, `normalization.service.ts`, `guardians.service.ts`, `queues.module.ts`, `sync.service.ts`, `me-rights.service.ts`, `sharing.service.ts`, `merge-unmerge.e2e-spec.ts`, `notifications.service.ts`, `audience.service.ts`, `app.module.ts`, `test-database.ts`, `notices.service.ts`, `backend/package.json`, `mailer.service.ts`, `notifications.controller.ts`, `matching.service.ts`, `principals.service.ts`, `recipients.service.ts`, `TokenService`, `retention.service.ts`, `SyncQueueService`, `mappings.service.ts`, `seed-scale.ts`, `read-only-http.client.ts`, `compliance.service.ts`, `assembly.service.ts`, `configuration.ts`, `PrismaService`, `evidence-pack.service.ts`, `sdf-cycle-scan.queue.ts`, `notifications.module.ts`, `data-sources.service.ts`, `Public`, `campaigns.service.ts`?**
-  _High betweenness centrality (0.144) - this node is a cross-community bridge._
-- **Why does `RequirePermission()` connect `RequirePermission` to `transfers.service.ts`, `inventory.service.ts`, `age-status.service.ts`, `UpdateOrganizationDto`, `SyncService`, `NoticesController`, `CreateVoluntaryUndertakingDto`, `security-measures.service.ts`, `MappingsController`, `EmployeesService`, `CreateInformationRequestDto`, `PurposesService`, `CampaignsService`, `PermissionsController`, `sync.service.ts`, `sharing.service.ts`, `ConsentsService`, `DataSourcesController`, `ComplianceService`, `PrincipalEvidenceController`, `SourcePurposesService`, `UpdateAlgorithmEntryDto`, `CreateExemptionClaimDto`, `UpdateRolePermissionsDto`, `TemplatesService`, `recipients.service.ts`, `SdfAssessmentService`, `retention.service.ts`, `CreateSecurityMeasureDto`, `.unmerge`, `RequestsController`, `PreviewAudienceDto`, `SdfController`, `ListRequestsDto`, `CreateSdfAssessmentDto`, `SharingService`, `compliance.service.ts`, `CreateLegalHoldDto`, `GuardiansService`, `ListPrincipalsDto`, `csvDocument`, `CreateAlgorithmEntryDto`, `AuditReadService`, `CandidatesService`, `evidence-pack.service.ts`, `@nestjs/common`?**
-  _High betweenness centrality (0.069) - this node is a cross-community bridge._
-- **Why does `@prisma/client` connect `@nestjs/common` to `sync.e2e-spec.ts`, `step6-conflict-acceptance.e2e-spec.ts`, `transfers.service.ts`, `age-status.service.ts`, `tenant.extension.ts`, `prisma.service.ts`, `seed.ts`, `requests.service.ts`, `templates.service.ts`, `security-measures.service.ts`, `breach-principal-notice-dispatch.processor.ts`, `normalization.service.ts`, `guardians.service.ts`, `sync.service.ts`, `me-rights.service.ts`, `sharing.service.ts`, `notifications.service.ts`, `audience.service.ts`, `notices.service.ts`, `test-database.ts`, `backend/package.json`, `rest-api.connector.ts`, `BreachService`, `notifications.controller.ts`, `matching.service.ts`, `principals.service.ts`, `recipients.service.ts`, `retention.service.ts`, `mappings.service.ts`, `compile-audience.ts`, `compliance.service.ts`, `assembly.service.ts`, `PrismaService`, `notifications.module.ts`, `data-sources.service.ts`, `campaigns.service.ts`?**
-  _High betweenness centrality (0.061) - this node is a cross-community bridge._
-- **What connects `name`, `version`, `private` to the rest of the system?**
+- **Why does `@nestjs/common` connect `@nestjs/common` to `sync-lock.service.ts`, `AppModule`, `inventory.controller.ts`, `age-status.service.ts`, `tenant.extension.ts`, `AuditService`, `argon2`, `requests.service.ts`, `step6-conflict-acceptance.e2e-spec.ts`, `RequirePermission`, `CreateVoluntaryUndertakingDto`, `templates.service.ts`, `breach-principal-notice-dispatch.processor.ts`, `employees.service.ts`, `purposes.service.ts`, `normalization.service.ts`, `information-requests.controller.ts`, `consents.service.ts`, `TokenService`, `queues.module.ts`, `me-rights.service.ts`, `sharing.service.ts`, `merge-unmerge.e2e-spec.ts`, `notifications.controller.ts`, `notifications.service.ts`, `compliance.service.ts`, `access-report-render.ts`, `health.service.ts`, `data-sources.module.ts`, `notices.service.ts`, `backend/package.json`, `child-exemptions.service.ts`, `sync.service.ts`, `mailer.service.ts`, `Public`, `.record`, `matching.service.ts`, `principals.service.ts`, `recipients.service.ts`, `employee-auth.service.ts`, `retention.service.ts`, `security-measures.service.ts`, `SyncQueueService`, `mappings.service.ts`, `canonicalJson`, `seed-scale.ts`, `read-only-http.client.ts`, `compile-audience.ts`, `sdf-assessment.service.ts`, `erasure-task.service.ts`, `guardians.service.ts`, `configuration.ts`, `evidence-pack.service.ts`, `audit-read.service.ts`, `PrismaService`, `data-sources.service.ts`, `notifications.module.ts`, `@prisma/client`, `campaigns.service.ts`?**
+  _High betweenness centrality (0.122) - this node is a cross-community bridge._
+- **Why does `RequirePermission()` connect `RequirePermission` to `CreateTransferDto`, `inventory.controller.ts`, `age-status.service.ts`, `UpdateOrganizationDto`, `SyncService`, `PurposesController`, `CreateVoluntaryUndertakingDto`, `MappingsController`, `employees.service.ts`, `CreateInformationRequestDto`, `purposes.service.ts`, `information-requests.controller.ts`, `PermissionsController`, `sharing.service.ts`, `ConsentsService`, `DataSourcesController`, `access-report-render.ts`, `UpdateAlgorithmEntryDto`, `child-exemptions.service.ts`, `VerifyIdentityDto`, `.record`, `UpdateRolePermissionsDto`, `FlagFrivolousDto`, `TemplatesService`, `recipients.service.ts`, `CompleteSdfAssessmentDto`, `retention.service.ts`, `security-measures.service.ts`, `.unmerge`, `RequestsController`, `SdfController`, `ListRequestsDto`, `CreateSdfAssessmentDto`, `compile-audience.ts`, `RetentionController`, `ComplianceController`, `guardians.service.ts`, `PrincipalsService`, `evidence-pack.service.ts`, `CreateAlgorithmEntryDto`, `audit-read.service.ts`, `CandidatesService`, `canonicalJson`, `AssignRequestDto`, `@prisma/client`?**
+  _High betweenness centrality (0.052) - this node is a cross-community bridge._
+- **Why does `@prisma/client` connect `@prisma/client` to `AppModule`, `age-status.service.ts`, `tenant.extension.ts`, `AuditService`, `argon2`, `requests.service.ts`, `step6-conflict-acceptance.e2e-spec.ts`, `RequirePermission`, `CreateVoluntaryUndertakingDto`, `templates.service.ts`, `breach-principal-notice-dispatch.processor.ts`, `employees.service.ts`, `purposes.service.ts`, `normalization.service.ts`, `consents.service.ts`, `queues.module.ts`, `me-rights.service.ts`, `sharing.service.ts`, `notifications.service.ts`, `compliance.service.ts`, `notices.service.ts`, `sync.service.ts`, `backend/package.json`, `child-exemptions.service.ts`, `rest-api.connector.ts`, `Public`, `.record`, `notification.dto.ts`, `matching.service.ts`, `principals.service.ts`, `recipients.service.ts`, `employee-auth.service.ts`, `retention.service.ts`, `security-measures.service.ts`, `mappings.service.ts`, `test-database.ts`, `compile-audience.ts`, `sdf-assessment.service.ts`, `erasure-task.service.ts`, `guardians.service.ts`, `audit-read.service.ts`, `PrismaService`, `data-sources.service.ts`, `campaigns.service.ts`?**
+  _High betweenness centrality (0.039) - this node is a cross-community bridge._
+- **What connects `PublicSdfAssessment`, `SdfReadiness`, `LocalisationRequiredTransferGap` to the rest of the system?**
   _1197 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Consent & Breach Checklist` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._

@@ -1,23 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/child-exemptions.service.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
 type: "code"
-community: "CreateExemptionClaimDto"
-location: "L88"
+community: "notices.service.ts"
+location: "L191"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateExemptionClaimDto
+  - community/noticesservicets
 ---
 
 # .create()
 
 ## Connections
-- [[dot-assertClaimComplete()]] - `calls` [EXTRACTED]
-- [[dot-create()_27]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[ChildExemptionsService]] - `method` [EXTRACTED]
-- [[CreateExemptionClaimDto]] - `references` [EXTRACTED]
-- [[toPublicExemptionClaim()]] - `calls` [EXTRACTED]
+- [[dot-create()_17]] - `calls` [INFERRED]
+- [[dot-createVersion()_1]] - `calls` [EXTRACTED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[CreateNoticeDto]] - `references` [EXTRACTED]
+- [[NoticesService]] - `method` [EXTRACTED]
+- [[duplicateCodeMessage()_2]] - `calls` [EXTRACTED]
+- [[isUniqueConstraintViolation()_3]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateExemptionClaimDto
+#graphify/code #graphify/EXTRACTED #community/noticesservicets

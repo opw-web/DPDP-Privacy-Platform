@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/age-status.service.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts"
 type: "code"
-community: "age-status.service.ts"
-location: "L32"
+community: "read-only-http.client.ts"
+location: "L107"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/age-statusservicets
+  - community/read-only-httpclientts
 ---
 
 # .constructor()
 
 ## Connections
-- [[AgeStatusService]] - `method` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
+- [[ReadOnlyHttpClient]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/age-statusservicets
+#graphify/code #graphify/EXTRACTED #community/read-only-httpclientts

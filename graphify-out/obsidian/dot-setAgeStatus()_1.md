@@ -12,7 +12,7 @@ tags:
 # .setAgeStatus()
 
 ## Connections
-- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
 - [[dot-setAgeStatus()]] - `calls` [INFERRED]
 - [[AgeStatusService]] - `method` [EXTRACTED]
 - [[SetAgeStatusDto]] - `references` [EXTRACTED]

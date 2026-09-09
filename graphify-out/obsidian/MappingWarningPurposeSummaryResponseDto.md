@@ -12,7 +12,7 @@ tags:
 # MappingWarningPurposeSummaryResponseDto
 
 ## Connections
-- [[ApiProperty_47]] - `references` [EXTRACTED]
+- [[ApiProperty_48]] - `references` [EXTRACTED]
 - [[mapping-warning-response.dto.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/mappingsservicets

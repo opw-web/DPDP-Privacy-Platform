@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[$on()]] - `contains` [EXTRACTED]
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[@nestjstesting_1]] - `imports_from` [EXTRACTED]
 - [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AppModule]] - `imports` [EXTRACTED]
@@ -23,7 +23,7 @@ tags:
 - [[PRINCIPALS_PAGE_SIZE]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[app.module.ts]] - `imports_from` [EXTRACTED]
-- [[argon2_1]] - `imports_from` [EXTRACTED]
+- [[argon2]] - `imports_from` [EXTRACTED]
 - [[buildPrincipalSearchQuery()]] - `imports` [EXTRACTED]
 - [[createFixture()_1]] - `contains` [EXTRACTED]
 - [[createPrincipal()_7]] - `contains` [EXTRACTED]

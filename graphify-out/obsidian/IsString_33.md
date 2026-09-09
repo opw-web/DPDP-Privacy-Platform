@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AddMeRequestCommentDto"
+community: "CreateSdfAssessmentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AddMeRequestCommentDto
+  - community/CreateSdfAssessmentDto
 ---
 
 # IsString
 
 ## Connections
-- [[AddMeRequestCommentDto]] - `references` [EXTRACTED]
+- [[CreateSdfAssessmentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AddMeRequestCommentDto
+#graphify/code #graphify/EXTRACTED #community/CreateSdfAssessmentDto

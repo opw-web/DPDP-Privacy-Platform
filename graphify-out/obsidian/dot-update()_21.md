@@ -1,23 +1,28 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/recipients.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
 type: "code"
-community: "recipients.service.ts"
-location: "L38"
+community: ".record"
+location: "L371"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/record
 ---
 
 # .update()
 
 ## Connections
+- [[dot-addAffected()]] - `calls` [EXTRACTED]
+- [[dot-completeObligation()]] - `calls` [EXTRACTED]
+- [[dot-public()]] - `calls` [EXTRACTED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-recordExtension()]] - `calls` [EXTRACTED]
+- [[dot-scanClock()]] - `calls` [EXTRACTED]
 - [[dot-update()_22]] - `calls` [INFERRED]
-- [[Body_23]] - `references` [EXTRACTED]
-- [[Param_25]] - `references` [EXTRACTED]
-- [[Patch_12]] - `references` [EXTRACTED]
-- [[RecipientsController]] - `method` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[UpdateRecipientDto]] - `references` [EXTRACTED]
+- [[AccessTokenPayload]] - `references` [EXTRACTED]
+- [[BreachService]] - `method` [EXTRACTED]
+- [[PublicBreach]] - `references` [EXTRACTED]
+- [[UpdateBreachDto]] - `references` [EXTRACTED]
+- [[asDate()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/record

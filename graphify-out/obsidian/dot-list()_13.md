@@ -1,20 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/permissions.controller.ts"
 type: "code"
-community: "SourcePurposesService"
-location: "L17"
+community: "PermissionsController"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SourcePurposesService
+  - community/PermissionsController
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_14]] - `calls` [INFERRED]
-- [[Get_15]] - `references` [EXTRACTED]
-- [[PurposesController]] - `method` [EXTRACTED]
+- [[Get_16]] - `references` [EXTRACTED]
+- [[PermissionsController]] - `method` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SourcePurposesService
+#graphify/code #graphify/EXTRACTED #community/PermissionsController

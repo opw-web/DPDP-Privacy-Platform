@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[@nestjsbullmq_1]] - `imports_from` [EXTRACTED]
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[CAMPAIGN_SEND_MAX_ATTEMPTS]] - `imports` [EXTRACTED]
 - [[CAMPAIGN_SEND_QUEUE_NAME]] - `imports` [EXTRACTED]
 - [[CAMPAIGN_SEND_WORKER_CONCURRENCY]] - `imports` [EXTRACTED]
@@ -24,7 +24,7 @@ tags:
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[TenantContext]] - `imports` [EXTRACTED]
 - [[TenantStore]] - `imports` [EXTRACTED]
-- [[bullmq]] - `imports_from` [EXTRACTED]
+- [[bullmq_1]] - `imports_from` [EXTRACTED]
 - [[campaign-send.queue.ts]] - `imports_from` [EXTRACTED]
 - [[campaigns.module.ts]] - `imports_from` [EXTRACTED]
 - [[campaigns.service.ts]] - `imports_from` [EXTRACTED]

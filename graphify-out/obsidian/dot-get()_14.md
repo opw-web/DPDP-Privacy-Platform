@@ -1,20 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/sharing.controller.ts"
 type: "code"
-community: "CampaignsService"
-location: "L84"
+community: "sharing.service.ts"
+location: "L21"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/CampaignsService
+  - graphify/EXTRACTED
+  - community/sharingservicets
 ---
 
 # .get()
 
 ## Connections
-- [[dot-create()_24]] - `calls` [INFERRED]
-- [[dot-get()_8]] - `calls` [INFERRED]
-- [[dot-send()_6]] - `calls` [INFERRED]
-- [[TemplatesService]] - `method` [EXTRACTED]
+- [[dot-get()_15]] - `calls` [INFERRED]
+- [[Get_28]] - `references` [EXTRACTED]
+- [[Param_19]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[SharingController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/CampaignsService
+#graphify/code #graphify/EXTRACTED #community/sharingservicets

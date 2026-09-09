@@ -8,12 +8,12 @@ members: 35
 **Members:** 35 nodes
 
 ## Members
-- [[dot-constructor()_76]] - code - dpdp-platform/backend/src/queues/consent-backfill.queue.ts
-- [[dot-constructor()_77]] - code - dpdp-platform/backend/src/queues/deadline-scan.queue.ts
-- [[dot-constructor()_78]] - code - dpdp-platform/backend/src/queues/mvp2-schedules.ts
-- [[dot-constructor()_79]] - code - dpdp-platform/backend/src/queues/retention-scan.queue.ts
-- [[dot-constructor()_80]] - code - dpdp-platform/backend/src/queues/schedule-reconciliation.service.ts
-- [[dot-constructor()_81]] - code - dpdp-platform/backend/src/queues/sdf-cycle-scan.queue.ts
+- [[dot-constructor()_73]] - code - dpdp-platform/backend/src/queues/consent-backfill.queue.ts
+- [[dot-constructor()_74]] - code - dpdp-platform/backend/src/queues/deadline-scan.queue.ts
+- [[dot-constructor()_75]] - code - dpdp-platform/backend/src/queues/mvp2-schedules.ts
+- [[dot-constructor()_76]] - code - dpdp-platform/backend/src/queues/retention-scan.queue.ts
+- [[dot-constructor()_77]] - code - dpdp-platform/backend/src/queues/schedule-reconciliation.service.ts
+- [[dot-constructor()_78]] - code - dpdp-platform/backend/src/queues/sdf-cycle-scan.queue.ts
 - [[dot-listScheduledDataSourceIds()]] - code - dpdp-platform/backend/src/queues/sync.queue.ts
 - [[dot-onModuleInit()_1]] - code - dpdp-platform/backend/src/queues/boot-registration.registry.ts
 - [[dot-reconcile()]] - code - dpdp-platform/backend/src/queues/mvp2-schedules.ts
@@ -30,10 +30,10 @@ members: 35
 - [[InjectQueue_3]] - code
 - [[InjectQueue_4]] - code
 - [[InjectQueue_5]] - code
+- [[Injectable_45]] - code
+- [[Injectable_46]] - code
 - [[Injectable_47]] - code
 - [[Injectable_48]] - code
-- [[Injectable_49]] - code
-- [[Injectable_50]] - code
 - [[Mvp2ScheduleReconciliationService]] - code - dpdp-platform/backend/src/queues/mvp2-schedules.ts
 - [[RECONCILE_BOOT_TIMEOUT_MS]] - code - dpdp-platform/backend/src/queues/boot-timeout.util.ts
 - [[ScheduleReconciliationService]] - code - dpdp-platform/backend/src/queues/schedule-reconciliation.service.ts
@@ -52,21 +52,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 17 edges to [[_COMMUNITY_queues.module.ts]]
-- 8 edges to [[_COMMUNITY_sync.e2e-spec.ts]]
-- 3 edges to [[_COMMUNITY_sdf-cycle-scan.queue.ts]]
-- 3 edges to [[_COMMUNITY_DataSourcesService]]
+- 23 edges to [[_COMMUNITY_queues.module.ts]]
+- 5 edges to [[_COMMUNITY_PrismaService]]
+- 2 edges to [[_COMMUNITY_data-sources.service.ts]]
+- 2 edges to [[_COMMUNITY_SyncService]]
+- 2 edges to [[_COMMUNITY_DataSourcesService]]
 - 2 edges to [[_COMMUNITY_@nestjscommon]]
-- 1 edge to [[_COMMUNITY_PrismaService]]
 - 1 edge to [[_COMMUNITY_configuration.ts]]
-- 1 edge to [[_COMMUNITY_data-sources.service.ts]]
 - 1 edge to [[_COMMUNITY_sync.service.ts]]
-- 1 edge to [[_COMMUNITY_SyncService]]
-- 1 edge to [[_COMMUNITY_prisma.service.ts]]
+- 1 edge to [[_COMMUNITY_sync-lock.service.ts]]
 
 ## Top bridge nodes
 - [[SyncQueueService]] - degree 16, connects to 6 communities
-- [[schedule-reconciliation.service.ts]] - degree 15, connects to 5 communities
-- [[boot-registration.registry.ts]] - degree 12, connects to 3 communities
-- [[BootRegistrationRegistry]] - degree 15, connects to 2 communities
+- [[schedule-reconciliation.service.ts]] - degree 15, connects to 3 communities
+- [[boot-registration.registry.ts]] - degree 12, connects to 2 communities
 - [[Mvp2ScheduleReconciliationService]] - degree 8, connects to 2 communities
+- [[ScheduleReconciliationService]] - degree 7, connects to 2 communities

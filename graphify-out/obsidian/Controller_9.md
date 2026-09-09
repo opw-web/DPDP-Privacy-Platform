@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "inventory.service.ts"
+community: "PrincipalActor"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/inventoryservicets
+  - community/PrincipalActor
 ---
 
 # Controller
 
 ## Connections
-- [[InventoryController]] - `references` [EXTRACTED]
+- [[MeRightsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/inventoryservicets
+#graphify/code #graphify/EXTRACTED #community/PrincipalActor

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-clearRefreshCookie()_1]] - `method` [EXTRACTED]
-- [[dot-constructor()_148]] - `method` [EXTRACTED]
+- [[dot-constructor()_147]] - `method` [EXTRACTED]
 - [[dot-isProduction()_1]] - `method` [EXTRACTED]
 - [[dot-login()_3]] - `method` [EXTRACTED]
 - [[dot-logout()_3]] - `method` [EXTRACTED]

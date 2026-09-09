@@ -8,16 +8,16 @@ members: 23
 **Members:** 23 nodes
 
 ## Members
-- [[dot-constructor()_105]] - code - dpdp-platform/backend/src/modules/sync/sync-error.ts
-- [[dot-constructor()_106]] - code - dpdp-platform/backend/src/modules/sync/sync-error.spec.ts
-- [[dot-constructor()_107]] - code - dpdp-platform/backend/src/modules/sync/sync-error.ts
+- [[dot-constructor()_104]] - code - dpdp-platform/backend/src/modules/sync/sync-error.ts
+- [[dot-constructor()_105]] - code - dpdp-platform/backend/src/modules/sync/sync-error.spec.ts
+- [[dot-constructor()_106]] - code - dpdp-platform/backend/src/modules/sync/sync-error.ts
 - [[dot-finalize()]] - code - dpdp-platform/backend/src/modules/sync/sync-pipeline.service.ts
 - [[dot-processRecord()]] - code - dpdp-platform/backend/src/modules/sync/sync-pipeline.service.ts
 - [[dot-run()]] - code - dpdp-platform/backend/src/modules/sync/sync-pipeline.service.ts
 - [[dot-runInTenantContext()]] - code - dpdp-platform/backend/src/modules/sync/sync-pipeline.service.ts
 - [[dot-startJob()]] - code - dpdp-platform/backend/src/modules/sync/sync-pipeline.service.ts
 - [[IdentifierOwnershipConflictError_1]] - code - dpdp-platform/backend/src/modules/sync/sync-error.spec.ts
-- [[Injectable_66]] - code
+- [[Injectable_64]] - code
 - [[MESSAGE_SAFE_ERROR_CLASSES]] - code - dpdp-platform/backend/src/modules/sync/sync-error.ts
 - [[MissingRecordKeyError]] - code - dpdp-platform/backend/src/modules/sync/sync-error.ts
 - [[NotFoundException]] - code - dpdp-platform/backend/src/modules/sync/sync-error.spec.ts
@@ -40,11 +40,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_prisma.service.ts]]
-- 5 edges to [[_COMMUNITY_sync.e2e-spec.ts]]
-- 4 edges to [[_COMMUNITY_dot-record]]
-- 1 edge to [[_COMMUNITY_app.module.ts]]
+- 10 edges to [[_COMMUNITY_AuditService]]
+- 3 edges to [[_COMMUNITY_queues.module.ts]]
+- 2 edges to [[_COMMUNITY_dot-record]]
+- 1 edge to [[_COMMUNITY_data-sources.module.ts]]
 - 1 edge to [[_COMMUNITY_step6-conflict-acceptance.e2e-spec.ts]]
+- 1 edge to [[_COMMUNITY_PrismaService]]
+- 1 edge to [[_COMMUNITY_sync-lock.service.ts]]
 - 1 edge to [[_COMMUNITY_DataSourcesService]]
 
 ## Top bridge nodes

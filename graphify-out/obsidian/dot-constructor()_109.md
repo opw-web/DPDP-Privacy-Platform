@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principal-portal/me-rights.service.ts"
+source_file: "dpdp-platform/backend/src/modules/principal-portal/me-rights.controller.ts"
 type: "code"
 community: "MeRightsService"
-location: "L77"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,9 +12,7 @@ tags:
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[MeRightsService]] - `method` [EXTRACTED]
-- [[NotificationsService]] - `references` [EXTRACTED]
-- [[RequestsService]] - `references` [EXTRACTED]
+- [[MeRightsController]] - `method` [EXTRACTED]
+- [[MeRightsService]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/MeRightsService

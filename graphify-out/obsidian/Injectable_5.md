@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "GuardiansService"
+community: "AccessReportService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GuardiansService
+  - community/AccessReportService
 ---
 
 # Injectable
 
 ## Connections
-- [[GuardiansService]] - `references` [EXTRACTED]
+- [[PrincipalRecipientsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GuardiansService
+#graphify/code #graphify/EXTRACTED #community/AccessReportService

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "NotificationsService"
+community: "BreachClockProcessor"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/BreachClockProcessor
 ---
 
 # Processor
 
 ## Connections
-- [[PreErasureNoticeProcessor]] - `references` [EXTRACTED]
+- [[BreachClockProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/BreachClockProcessor

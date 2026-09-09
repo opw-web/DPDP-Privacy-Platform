@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[addEmployeeToOrg()]] - `calls` [EXTRACTED]
 - [[campaigns.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[createOrgWithEmployee()_1]] - `calls` [EXTRACTED]
+- [[createOrgWithEmployee()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PrismaService

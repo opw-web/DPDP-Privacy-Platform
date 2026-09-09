@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principals/lineage.service.ts"
 type: "code"
-community: "@nestjs/common"
+community: "principals.service.ts"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/principalsservicets
 ---
 
 # PRINCIPAL_FIELD_SELECT
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[lineage.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

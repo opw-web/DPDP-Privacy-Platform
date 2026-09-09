@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.tsx"
 type: "code"
-community: "react"
+community: "SettingsPage.tsx"
 location: "L254"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/SettingsPagetsx
 ---
 
 # DpoContactSection()
@@ -16,4 +16,4 @@ tags:
 - [[describeSettingsError()]] - `calls` [EXTRACTED]
 - [[toDpoContactValues()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/SettingsPagetsx

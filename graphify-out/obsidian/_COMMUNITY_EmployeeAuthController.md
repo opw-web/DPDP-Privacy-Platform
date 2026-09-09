@@ -1,30 +1,31 @@
 ---
 type: community
-members: 19
+members: 20
 ---
 
 # EmployeeAuthController
 
-**Members:** 19 nodes
+**Members:** 20 nodes
 
 ## Members
 - [[dot-clearRefreshCookie()]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts
+- [[dot-constructor()_136]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts
 - [[dot-isProduction()]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts
 - [[dot-login()]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts
 - [[dot-logout()]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts
 - [[dot-refresh()]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts
 - [[dot-setRefreshCookie()]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts
-- [[ApiProperty_40]] - code
-- [[ApiTags_33]] - code
-- [[Body_22]] - code
-- [[Controller_34]] - code
+- [[ApiProperty_41]] - code
+- [[ApiTags_34]] - code
+- [[Body_23]] - code
+- [[Controller_35]] - code
 - [[EmployeeAuthController]] - code - dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts
 - [[EmployeeLoginDto]] - code - dpdp-platform/backend/src/modules/auth/dto/employee-login.dto.ts
 - [[HttpCode_4]] - code
 - [[IsEmail_4]] - code
 - [[IsString_59]] - code
 - [[MinLength_45]] - code
-- [[Post_22]] - code
+- [[Post_23]] - code
 - [[Req_2]] - code
 - [[Res_8]] - code
 
@@ -36,12 +37,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_TokenService]]
-- 4 edges to [[_COMMUNITY_@nestjscommon]]
-- 3 edges to [[_COMMUNITY_Public]]
+- 4 edges to [[_COMMUNITY_Public]]
+- 4 edges to [[_COMMUNITY_employee-auth.service.ts]]
+- 3 edges to [[_COMMUNITY_@prismaclient]]
+- 1 edge to [[_COMMUNITY_RequirePermission]]
 
 ## Top bridge nodes
-- [[EmployeeAuthController]] - degree 12, connects to 2 communities
+- [[EmployeeAuthController]] - degree 12, connects to 3 communities
 - [[dot-login()]] - degree 10, connects to 2 communities
 - [[dot-refresh()]] - degree 9, connects to 2 communities
 - [[dot-logout()]] - degree 8, connects to 2 communities

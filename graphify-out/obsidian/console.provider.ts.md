@@ -12,7 +12,7 @@ tags:
 # console.provider.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[ConsoleProvider]] - `contains` [EXTRACTED]
 - [[NotificationProvider]] - `imports` [EXTRACTED]
 - [[NotificationSendInput]] - `imports` [EXTRACTED]

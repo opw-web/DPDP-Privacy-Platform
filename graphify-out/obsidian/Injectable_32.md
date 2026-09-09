@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "JwtEmployeeGuard"
+community: "AuditService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/JwtEmployeeGuard
+  - community/AuditService
 ---
 
 # Injectable
 
 ## Connections
-- [[JwtEmployeeGuard]] - `references` [EXTRACTED]
+- [[LinkingService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/JwtEmployeeGuard
+#graphify/code #graphify/EXTRACTED #community/AuditService

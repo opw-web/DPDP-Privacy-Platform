@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/board/dto/create-information-request.dto.ts"
 type: "code"
-community: "@nestjs/common"
+community: "information-requests.controller.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/information-requestscontrollerts
 ---
 
 # create-information-request.dto.ts
@@ -20,4 +20,4 @@ tags:
 - [[information-requests.service.ts]] - `imports_from` [EXTRACTED]
 - [[requesting-body.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/information-requestscontrollerts

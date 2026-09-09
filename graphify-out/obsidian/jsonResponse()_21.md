@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/lib/api-client.test.ts"
+source_file: "dpdp-platform/frontend/src/principal/pages/MeConsentsPage.test.tsx"
 type: "code"
-community: "@tanstack/react-query"
-location: "L11"
+community: "router.tsx"
+location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tanstack/react-query
+  - community/routertsx
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[api-client.test.ts]] - `contains` [EXTRACTED]
+- [[MeConsentsPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tanstack/react-query
+#graphify/code #graphify/EXTRACTED #community/routertsx

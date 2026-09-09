@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/guards/jwt-employee.guard.ts"
 type: "code"
-community: "JwtEmployeeGuard"
+community: "TokenService"
 location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/JwtEmployeeGuard
+  - community/TokenService
 ---
 
 # .canActivate()
@@ -15,4 +15,4 @@ tags:
 - [[dot-verifyAccessToken()]] - `calls` [INFERRED]
 - [[JwtEmployeeGuard]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/JwtEmployeeGuard
+#graphify/code #graphify/EXTRACTED #community/TokenService

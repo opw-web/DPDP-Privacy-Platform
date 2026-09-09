@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PurposesService"
+community: "inventory.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PurposesService
+  - community/inventorycontrollerts
 ---
 
 # Injectable
 
 ## Connections
-- [[PurposesService]] - `references` [EXTRACTED]
+- [[InventoryService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PurposesService
+#graphify/code #graphify/EXTRACTED #community/inventorycontrollerts

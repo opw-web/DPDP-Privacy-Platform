@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
+source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.ts"
 type: "code"
-community: "ComplianceService"
-location: "L359"
+community: "purposes.service.ts"
+location: "L82"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/ComplianceService
+  - community/purposesservicets
 ---
 
 # .list()
 
 ## Connections
 - [[dot-list()_11]] - `calls` [INFERRED]
-- [[ComplianceService]] - `method` [EXTRACTED]
-- [[toPublicComplianceRule()]] - `indirect_call` [INFERRED]
+- [[PurposesService]] - `method` [EXTRACTED]
+- [[toPublicPurpose()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/ComplianceService
+#graphify/code #graphify/INFERRED #community/purposesservicets

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/principal-auth.service.ts"
 type: "code"
-community: "Public"
+community: "PrincipalActor"
 location: "L362"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/PrincipalActor
 ---
 
 # .me()
@@ -16,4 +16,4 @@ tags:
 - [[PrincipalActor]] - `references` [EXTRACTED]
 - [[PrincipalAuthService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/PrincipalActor

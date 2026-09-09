@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/providers/portal.provider.ts"
+source_file: "dpdp-platform/backend/src/common/guards/jwt-principal.guard.ts"
 type: "code"
-community: "PortalProvider"
-location: "L27"
+community: "TokenService"
+location: "L75"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PortalProvider
+  - community/TokenService
 ---
 
 # .constructor()
 
 ## Connections
-- [[PortalProvider]] - `method` [EXTRACTED]
+- [[JwtPrincipalGuard]] - `method` [EXTRACTED]
+- [[TokenService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PortalProvider
+#graphify/code #graphify/EXTRACTED #community/TokenService

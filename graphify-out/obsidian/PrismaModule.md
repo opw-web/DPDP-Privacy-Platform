@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/common/prisma/prisma.module.ts"
 type: "code"
-community: "PrismaModule"
+community: "@nestjs/common"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaModule
+  - community/nestjs/common
 ---
 
 # PrismaModule
 
 ## Connections
 - [[Global]] - `references` [EXTRACTED]
-- [[Module_32]] - `references` [EXTRACTED]
+- [[Module_7]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[prisma.module.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaModule
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

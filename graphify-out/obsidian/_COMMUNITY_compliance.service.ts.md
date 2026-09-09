@@ -1,39 +1,35 @@
 ---
 type: community
-members: 26
+members: 22
 ---
 
 # compliance.service.ts
 
-**Members:** 26 nodes
+**Members:** 22 nodes
 
 ## Members
-- [[ALGORITHM_ENTRY_PUBLIC_SELECT]] - code - dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts
-- [[ALGORITHM_OPERATIONS]] - code - dpdp-platform/backend/src/modules/sdf/dto/algorithm-operations.ts
-- [[AlgorithmOperation]] - code - dpdp-platform/backend/src/modules/sdf/dto/algorithm-operations.ts
+- [[dot-constructor()_65]] - code - dpdp-platform/backend/src/modules/compliance/compliance.service.ts
+- [[dot-create()_12]] - code - dpdp-platform/backend/src/modules/compliance/compliance.service.ts
+- [[dot-getById()_2]] - code - dpdp-platform/backend/src/modules/compliance/compliance.service.ts
+- [[dot-list()_14]] - code - dpdp-platform/backend/src/modules/compliance/compliance.service.ts
+- [[dot-review()_1]] - code - dpdp-platform/backend/src/modules/compliance/compliance.service.ts
+- [[dot-update()_8]] - code - dpdp-platform/backend/src/modules/compliance/compliance.service.ts
+- [[dot-validateGrievanceCeiling()]] - code - dpdp-platform/backend/src/modules/compliance/compliance.service.ts
 - [[COMPLIANCE_RULE_PUBLIC_SELECT]] - code - dpdp-platform/backend/src/modules/compliance/compliance.service.ts
-- [[ComplianceDeadlineSnapshot]] - code - dpdp-platform/backend/src/modules/compliance/compliance.service.ts
 - [[ComplianceRuleRow]] - code - dpdp-platform/backend/src/modules/compliance/compliance.service.ts
+- [[ComplianceService]] - code - dpdp-platform/backend/src/modules/compliance/compliance.service.ts
 - [[DIFF_FIELDS]] - code - dpdp-platform/backend/src/modules/compliance/compliance.service.ts
-- [[LocalisationRequiredTransferGap]] - code - dpdp-platform/backend/src/modules/sdf/sdf-gaps.service.ts
-- [[PublicAlgorithmEntry]] - code - dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts
+- [[Injectable_40]] - code
 - [[PublicComplianceRule]] - code - dpdp-platform/backend/src/modules/compliance/compliance.service.ts
-- [[PublicSdfAssessment]] - code - dpdp-platform/backend/src/modules/sdf/sdf-assessment.service.ts
-- [[SDF_ASSESSMENT_PUBLIC_SELECT]] - code - dpdp-platform/backend/src/modules/sdf/sdf-assessment.service.ts
-- [[SDF_CYCLE_APPLIES_TO]] - code - dpdp-platform/backend/src/modules/sdf/sdf-assessment.service.ts
-- [[SDF_RULE_13_CITATION]] - code - dpdp-platform/backend/src/modules/sdf/sdf-assessment.service.ts
-- [[SdfGaps]] - code - dpdp-platform/backend/src/modules/sdf/sdf-gaps.service.ts
-- [[SdfReadiness]] - code - dpdp-platform/backend/src/modules/sdf/sdf-assessment.service.ts
-- [[UnreviewedAlgorithmGap]] - code - dpdp-platform/backend/src/modules/sdf/sdf-gaps.service.ts
-- [[addByDeadlineUnit()]] - code - dpdp-platform/backend/src/modules/compliance/compliance.service.ts
-- [[algorithm-operations.ts]] - code - dpdp-platform/backend/src/modules/sdf/dto/algorithm-operations.ts
-- [[algorithm-register.service.ts]] - code - dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts
+- [[buildRule()]] - code - dpdp-platform/backend/src/modules/compliance/compliance.service.spec.ts
+- [[buildService()_1]] - code - dpdp-platform/backend/src/modules/compliance/compliance.service.spec.ts
+- [[compliance.service.spec.ts]] - code - dpdp-platform/backend/src/modules/compliance/compliance.service.spec.ts
 - [[compliance.service.ts]] - code - dpdp-platform/backend/src/modules/compliance/compliance.service.ts
-- [[create-algorithm-entry.dto.ts]] - code - dpdp-platform/backend/src/modules/sdf/dto/create-algorithm-entry.dto.ts
-- [[sdf-assessment.service.ts]] - code - dpdp-platform/backend/src/modules/sdf/sdf-assessment.service.ts
-- [[sdf-gaps.service.ts]] - code - dpdp-platform/backend/src/modules/sdf/sdf-gaps.service.ts
-- [[sdf.controller.ts]] - code - dpdp-platform/backend/src/modules/sdf/sdf.controller.ts
-- [[update-algorithm-entry.dto.ts]] - code - dpdp-platform/backend/src/modules/sdf/dto/update-algorithm-entry.dto.ts
+- [[computeInTimeZone()]] - code - dpdp-platform/backend/src/modules/compliance/compliance.service.spec.ts
+- [[diffRules()]] - code - dpdp-platform/backend/src/modules/compliance/compliance.service.ts
+- [[serializeDiffValue()]] - code - dpdp-platform/backend/src/modules/compliance/compliance.service.ts
+- [[toPublicComplianceRule()]] - code - dpdp-platform/backend/src/modules/compliance/compliance.service.ts
+- [[worstCaseDeadlineDays()]] - code - dpdp-platform/backend/src/modules/compliance/compliance.service.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -43,30 +39,26 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 24 edges to [[_COMMUNITY_@nestjscommon]]
-- 21 edges to [[_COMMUNITY_prisma.service.ts]]
-- 7 edges to [[_COMMUNITY_ComplianceService]]
-- 6 edges to [[_COMMUNITY_PrismaService]]
-- 5 edges to [[_COMMUNITY_app.module.ts]]
-- 4 edges to [[_COMMUNITY_SdfAssessmentService]]
-- 4 edges to [[_COMMUNITY_AlgorithmRegisterService]]
-- 3 edges to [[_COMMUNITY_RetentionScanService]]
-- 3 edges to [[_COMMUNITY_CreateAlgorithmEntryDto]]
-- 3 edges to [[_COMMUNITY_UpdateAlgorithmEntryDto]]
+- 9 edges to [[_COMMUNITY_PrismaService]]
+- 8 edges to [[_COMMUNITY_sdf-assessment.service.ts]]
+- 6 edges to [[_COMMUNITY_AuditService]]
+- 6 edges to [[_COMMUNITY_dot-record]]
+- 6 edges to [[_COMMUNITY_RequirePermission]]
+- 6 edges to [[_COMMUNITY_erasure-task.service.ts]]
+- 5 edges to [[_COMMUNITY_ComplianceController]]
+- 4 edges to [[_COMMUNITY_@prismaclient]]
+- 3 edges to [[_COMMUNITY_@nestjscommon]]
+- 2 edges to [[_COMMUNITY_UpdateComplianceRuleDto]]
 - 2 edges to [[_COMMUNITY_requests.service.ts]]
-- 2 edges to [[_COMMUNITY_SdfController]]
-- 2 edges to [[_COMMUNITY_CreateSdfAssessmentDto]]
-- 2 edges to [[_COMMUNITY_evidence-pack.service.ts]]
-- 1 edge to [[_COMMUNITY_UpdateComplianceRuleDto]]
-- 1 edge to [[_COMMUNITY_CreateComplianceRuleDto]]
-- 1 edge to [[_COMMUNITY_csvDocument]]
-- 1 edge to [[_COMMUNITY_ErasureTaskService]]
-- 1 edge to [[_COMMUNITY_sdf-cycle-scan.queue.ts]]
-- 1 edge to [[_COMMUNITY_RequirePermission]]
+- 2 edges to [[_COMMUNITY_CreateComplianceRuleDto]]
+- 1 edge to [[_COMMUNITY_SdfCycleScanService]]
+- 1 edge to [[_COMMUNITY_SdfController]]
+- 1 edge to [[_COMMUNITY_RetentionScanService]]
+- 1 edge to [[_COMMUNITY_evidence-pack.service.ts]]
 
 ## Top bridge nodes
-- [[compliance.service.ts]] - degree 36, connects to 9 communities
-- [[sdf.controller.ts]] - degree 20, connects to 9 communities
-- [[addByDeadlineUnit()]] - degree 14, connects to 8 communities
-- [[sdf-assessment.service.ts]] - degree 23, connects to 7 communities
-- [[algorithm-register.service.ts]] - degree 15, connects to 7 communities
+- [[compliance.service.ts]] - degree 36, connects to 12 communities
+- [[ComplianceService]] - degree 31, connects to 12 communities
+- [[compliance.service.spec.ts]] - degree 10, connects to 3 communities
+- [[dot-update()_8]] - degree 9, connects to 3 communities
+- [[dot-create()_12]] - degree 8, connects to 3 communities

@@ -12,7 +12,7 @@ tags:
 # audit-export.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[AUDIT_LOG_CSV_HEADER]] - `contains` [EXTRACTED]
 - [[AuditExportService]] - `contains` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]

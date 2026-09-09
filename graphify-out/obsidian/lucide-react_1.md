@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/package.json"
 type: "concept"
-community: "button.tsx"
+community: "react-router-dom"
 location: "L31"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react-router-dom
 ---
 
 # lucide-react
@@ -58,4 +58,4 @@ tags:
 - [[dialog.tsx]] - `imports_from` [EXTRACTED]
 - [[frontendpackage.json]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/buttontsx
+#graphify/concept #graphify/EXTRACTED #community/react-router-dom

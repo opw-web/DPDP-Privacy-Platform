@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/prisma/seed-principals.ts"
 type: "code"
-community: "seed.ts"
+community: "argon2"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/seedts
+  - community/argon2
 ---
 
 # seed-principals.ts
@@ -19,7 +19,7 @@ tags:
 - [[DEMO_PRINCIPALS_TO_CLAIM]] - `contains` [EXTRACTED]
 - [[DemoPrincipalToClaim]] - `contains` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
-- [[argon2_1]] - `imports_from` [EXTRACTED]
+- [[argon2]] - `imports_from` [EXTRACTED]
 - [[claimDemoPrincipalAccounts()]] - `contains` [EXTRACTED]
 - [[demo-org.ts]] - `imports_from` [EXTRACTED]
 - [[main()_5]] - `contains` [EXTRACTED]
@@ -28,4 +28,4 @@ tags:
 - [[runSeedPrincipals()]] - `contains` [EXTRACTED]
 - [[seed-principals.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/seedts
+#graphify/code #graphify/EXTRACTED #community/argon2

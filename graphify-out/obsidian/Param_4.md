@@ -1,17 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "SyncService"
+community: "PrincipalActor"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncService
+  - community/PrincipalActor
 ---
 
 # Param
 
 ## Connections
-- [[dot-get()_6]] - `references` [EXTRACTED]
-- [[dot-trigger()_1]] - `references` [EXTRACTED]
+- [[dot-cancelRequest()]] - `references` [EXTRACTED]
+- [[dot-commentOnRequest()]] - `references` [EXTRACTED]
+- [[dot-getPublishedNotice()]] - `references` [EXTRACTED]
+- [[dot-getRequest()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncService
+#graphify/code #graphify/EXTRACTED #community/PrincipalActor

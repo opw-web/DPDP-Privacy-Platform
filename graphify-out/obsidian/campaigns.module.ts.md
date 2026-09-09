@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.module.ts"
 type: "code"
-community: "app.module.ts"
+community: "@nestjs/common"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/appmodulets
+  - community/nestjs/common
 ---
 
 # campaigns.module.ts
 
 ## Connections
 - [[@nestjsbullmq_1]] - `imports_from` [EXTRACTED]
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[AuditModule]] - `imports` [EXTRACTED]
 - [[CAMPAIGN_SEND_QUEUE_NAME]] - `imports` [EXTRACTED]
 - [[CampaignSendProcessor]] - `imports` [EXTRACTED]
@@ -39,4 +39,4 @@ tags:
 - [[reference.module.ts]] - `imports_from` [EXTRACTED]
 - [[templates.module.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/appmodulets
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

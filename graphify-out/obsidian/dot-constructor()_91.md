@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sdf-cycle-scan.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/breach-principal-notice-dispatch.processor.ts"
 type: "code"
-community: "sdf-cycle-scan.queue.ts"
-location: "L21"
+community: "breach-principal-notice-dispatch.processor.ts"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdf-cycle-scanqueuets
+  - community/breach-principal-notice-dispatchprocessorts
 ---
 
 # .constructor()
 
 ## Connections
-- [[SdfCycleScanProcessor]] - `method` [EXTRACTED]
-- [[SdfCycleScanService]] - `references` [EXTRACTED]
+- [[BreachPrincipalNoticeDispatchProcessor]] - `method` [EXTRACTED]
+- [[BreachService]] - `references` [EXTRACTED]
+- [[CampaignSendJobData]] - `references` [EXTRACTED]
+- [[InjectQueue_6]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdf-cycle-scanqueuets
+#graphify/code #graphify/EXTRACTED #community/breach-principal-notice-dispatchprocessorts

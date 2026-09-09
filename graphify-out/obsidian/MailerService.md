@@ -12,12 +12,12 @@ tags:
 # MailerService
 
 ## Connections
-- [[dot-constructor()_124]] - `references` [EXTRACTED]
-- [[dot-constructor()_123]] - `method` [EXTRACTED]
+- [[dot-constructor()_130]] - `references` [EXTRACTED]
+- [[dot-constructor()_129]] - `method` [EXTRACTED]
 - [[dot-getTransporter()]] - `method` [EXTRACTED]
 - [[dot-mailConfig()]] - `method` [EXTRACTED]
-- [[dot-send()_7]] - `method` [EXTRACTED]
-- [[Injectable_71]] - `references` [EXTRACTED]
+- [[dot-send()_6]] - `method` [EXTRACTED]
+- [[Injectable_74]] - `references` [EXTRACTED]
 - [[mail.module.ts]] - `imports` [EXTRACTED]
 - [[mailer.service.ts]] - `contains` [EXTRACTED]
 - [[smtp.provider.ts]] - `imports` [EXTRACTED]

@@ -1,23 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/audit/audit-read.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/consents/me-consents.controller.ts"
 type: "code"
-community: "AuditReadService"
-location: "L23"
+community: "SetMyConsentDto"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditReadService
+  - community/SetMyConsentDto
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_6]] - `calls` [INFERRED]
-- [[AuditReadController]] - `method` [EXTRACTED]
-- [[CurrentActorPermissions]] - `references` [EXTRACTED]
-- [[Get_6]] - `references` [EXTRACTED]
-- [[ListAuditEventsDto]] - `references` [EXTRACTED]
-- [[Query_2]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-listForPrincipal()_2]] - `calls` [INFERRED]
+- [[CurrentPrincipal]] - `references` [EXTRACTED]
+- [[Get_5]] - `references` [EXTRACTED]
+- [[MeConsentsController]] - `method` [EXTRACTED]
+- [[PrincipalActor]] - `references` [EXTRACTED]
+- [[Public()]] - `references` [EXTRACTED]
+- [[UseGuards]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditReadService
+#graphify/code #graphify/EXTRACTED #community/SetMyConsentDto

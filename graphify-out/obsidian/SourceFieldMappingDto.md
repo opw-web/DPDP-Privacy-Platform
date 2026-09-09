@@ -12,13 +12,13 @@ tags:
 # SourceFieldMappingDto
 
 ## Connections
-- [[ApiProperty_38]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_10]] - `references` [EXTRACTED]
+- [[ApiProperty_37]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_9]] - `references` [EXTRACTED]
 - [[IsBoolean_5]] - `references` [EXTRACTED]
 - [[IsEnum_4]] - `references` [EXTRACTED]
 - [[IsOptional_11]] - `references` [EXTRACTED]
-- [[IsString_13]] - `references` [EXTRACTED]
-- [[MinLength_9]] - `references` [EXTRACTED]
+- [[IsString_12]] - `references` [EXTRACTED]
+- [[MinLength_7]] - `references` [EXTRACTED]
 - [[replace-mappings.dto.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/SourceFieldMappingDto

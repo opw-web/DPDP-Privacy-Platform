@@ -1,23 +1,25 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/legal-hold.service.ts"
+source_file: "dpdp-platform/backend/src/modules/requests/requests.service.ts"
 type: "code"
-community: "prisma.service.ts"
-location: "L56"
+community: "RequestsService"
+location: "L259"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/prismaservicets
+  - graphify/INFERRED
+  - community/RequestsService
 ---
 
 # .create()
 
 ## Connections
-- [[dot-createLegalHold()]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[CreateLegalHoldDto]] - `references` [EXTRACTED]
-- [[LegalHoldService]] - `method` [EXTRACTED]
-- [[legalHoldCovers()]] - `calls` [EXTRACTED]
-- [[lockRetentionWorkflow()]] - `calls` [EXTRACTED]
+- [[dot-computeDeadline()]] - `calls` [INFERRED]
+- [[dot-createRequest()_1]] - `calls` [INFERRED]
+- [[dot-next()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-resolveRule()]] - `calls` [INFERRED]
+- [[dot-scanOrgDeadlines()]] - `calls` [EXTRACTED]
+- [[dot-snapshotOnto()]] - `calls` [INFERRED]
+- [[dot-writeTransition()]] - `calls` [EXTRACTED]
+- [[RequestsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/INFERRED #community/RequestsService

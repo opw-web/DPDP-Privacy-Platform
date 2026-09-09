@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/identifier-ownership-lock.ts"
 type: "code"
-community: "identifier-ownership-lock.ts"
+community: "AuditService"
 location: "L121"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/identifier-ownership-lockts
+  - community/AuditService
 ---
 
 # lockIdentifiersForOwnership()
@@ -17,4 +17,4 @@ tags:
 - [[identifier-ownership-lock.ts]] - `contains` [EXTRACTED]
 - [[sync-pipeline.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/identifier-ownership-lockts
+#graphify/code #graphify/EXTRACTED #community/AuditService

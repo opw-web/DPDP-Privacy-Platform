@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/health/health.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/evidence/principal-evidence.controller.ts"
 type: "code"
-community: "test-database.ts"
-location: "L19"
+community: "access-report-render.ts"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test-databasets
+  - community/access-report-renderts
 ---
 
 # .constructor()
 
 ## Connections
-- [[HealthController]] - `method` [EXTRACTED]
-- [[HealthService]] - `references` [EXTRACTED]
+- [[PrincipalEvidenceController]] - `method` [EXTRACTED]
+- [[PrincipalEvidenceService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test-databasets
+#graphify/code #graphify/EXTRACTED #community/access-report-renderts

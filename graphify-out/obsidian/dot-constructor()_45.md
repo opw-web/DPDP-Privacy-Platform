@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/candidates.service.ts"
+source_file: "dpdp-platform/backend/src/modules/evidence/audit-export.service.ts"
 type: "code"
-community: "prisma.service.ts"
-location: "L124"
+community: "AuditService"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/AuditService
 ---
 
 # .constructor()
 
 ## Connections
+- [[AuditExportService]] - `method` [EXTRACTED]
 - [[AuditService]] - `references` [EXTRACTED]
-- [[CandidatesService]] - `method` [EXTRACTED]
-- [[MergeService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/AuditService

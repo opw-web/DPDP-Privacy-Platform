@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/pdf-utils.ts"
 type: "code"
-community: "csvDocument"
+community: "access-report-render.ts"
 location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/csvDocument
+  - community/access-report-renderts
 ---
 
 # writePdfLine()
@@ -21,4 +21,4 @@ tags:
 - [[renderBoardInitialPdf()]] - `calls` [EXTRACTED]
 - [[renderPrincipalEvidencePdf()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/csvDocument
+#graphify/code #graphify/EXTRACTED #community/access-report-renderts

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/refresh-rotation.util.ts"
 type: "code"
-community: "step6-conflict-acceptance.e2e-spec.ts"
+community: "employee-auth.service.ts"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/step6-conflict-acceptancee2e-spects
+  - community/employee-authservicets
 ---
 
 # RefreshRotationOutcome
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[refresh-rotation.util.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects
+#graphify/code #graphify/EXTRACTED #community/employee-authservicets

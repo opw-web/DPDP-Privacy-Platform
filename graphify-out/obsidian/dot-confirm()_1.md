@@ -15,7 +15,7 @@ tags:
 - [[dot-claimPendingCandidate()]] - `calls` [EXTRACTED]
 - [[dot-confirm()]] - `calls` [INFERRED]
 - [[dot-mergeRecordIntoPrincipal()]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
 - [[CandidatesService]] - `method` [EXTRACTED]
 

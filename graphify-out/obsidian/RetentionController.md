@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/retention.controller.ts"
 type: "code"
-community: "CreateLegalHoldDto"
+community: "RetentionController"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateLegalHoldDto
+  - community/RetentionController
 ---
 
 # RetentionController
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-cancel()_1]] - `method` [EXTRACTED]
 - [[dot-complete()_1]] - `method` [EXTRACTED]
-- [[dot-constructor()_50]] - `method` [EXTRACTED]
+- [[dot-constructor()_11]] - `method` [EXTRACTED]
 - [[dot-createLegalHold()]] - `method` [EXTRACTED]
 - [[dot-listLegalHolds()]] - `method` [EXTRACTED]
 - [[dot-listTasks()]] - `method` [EXTRACTED]
@@ -23,4 +23,4 @@ tags:
 - [[retention.module.ts]] - `imports` [EXTRACTED]
 - [[retentionretention.controller.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto
+#graphify/code #graphify/EXTRACTED #community/RetentionController

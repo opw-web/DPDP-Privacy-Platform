@@ -1,22 +1,22 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/purpose-served.service.ts"
 type: "code"
-community: "prisma.service.ts"
+community: "erasure-task.service.ts"
 location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/erasure-taskservicets
 ---
 
 # PurposeServedService
 
 ## Connections
-- [[dot-constructor()_49]] - `method` [EXTRACTED]
-- [[dot-record()_1]] - `method` [EXTRACTED]
-- [[Injectable_31]] - `references` [EXTRACTED]
+- [[dot-constructor()_10]] - `method` [EXTRACTED]
+- [[dot-record()]] - `method` [EXTRACTED]
+- [[Injectable_8]] - `references` [EXTRACTED]
 - [[purpose-served.service.ts]] - `contains` [EXTRACTED]
 - [[retention.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[retention.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets

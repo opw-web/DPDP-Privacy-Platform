@@ -1,25 +1,24 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/notifications.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
 type: "code"
-community: "NotificationsService"
-location: "L82"
+community: "RequirePermission"
+location: "L61"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/NotificationsService
+  - graphify/EXTRACTED
+  - community/RequirePermission
 ---
 
 # .send()
 
 ## Connections
-- [[dot-assertValidInput()]] - `calls` [EXTRACTED]
-- [[dot-deliverEmailBestEffort()]] - `calls` [EXTRACTED]
-- [[dot-runVerificationCycle()]] - `calls` [INFERRED]
-- [[dot-scanClock()]] - `calls` [INFERRED]
-- [[dot-scanOrgDeadlines()]] - `calls` [INFERRED]
-- [[dot-send()_1]] - `calls` [INFERRED]
-- [[dot-sendWarningsIfDue()]] - `calls` [INFERRED]
-- [[NotificationSendInput]] - `references` [EXTRACTED]
-- [[NotificationsService]] - `method` [EXTRACTED]
+- [[dot-send()_5]] - `calls` [INFERRED]
+- [[AccessTokenPayload]] - `references` [EXTRACTED]
+- [[CampaignsController]] - `method` [EXTRACTED]
+- [[CurrentActor]] - `references` [EXTRACTED]
+- [[CurrentActorPermissions]] - `references` [EXTRACTED]
+- [[Param_12]] - `references` [EXTRACTED]
+- [[Post_11]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

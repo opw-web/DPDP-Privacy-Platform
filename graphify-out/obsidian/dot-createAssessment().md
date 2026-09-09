@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-create()_15]] - `calls` [INFERRED]
-- [[Body_4]] - `references` [EXTRACTED]
+- [[Body_5]] - `references` [EXTRACTED]
 - [[CreateSdfAssessmentDto]] - `references` [EXTRACTED]
-- [[Post_8]] - `references` [EXTRACTED]
+- [[Post_10]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[SdfController]] - `method` [EXTRACTED]
 

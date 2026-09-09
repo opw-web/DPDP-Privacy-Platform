@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/CandidateComparison.tsx"
 type: "code"
-community: "button.tsx"
+community: "CandidateComparison.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/CandidateComparisontsx
 ---
 
 # CandidateComparison.tsx
@@ -24,7 +24,7 @@ tags:
 - [[CardHeader]] - `imports` [EXTRACTED]
 - [[DateTime()]] - `imports` [EXTRACTED]
 - [[DateTime.tsx]] - `imports_from` [EXTRACTED]
-- [[FIELD_LABELS_1]] - `contains` [EXTRACTED]
+- [[FIELD_LABELS_2]] - `contains` [EXTRACTED]
 - [[MatchCandidateListItem_1]] - `contains` [EXTRACTED]
 - [[ReviewQueuePage.test.tsx]] - `imports_from` [EXTRACTED]
 - [[ReviewQueuePage.tsx]] - `imports_from` [EXTRACTED]
@@ -36,4 +36,4 @@ tags:
 - [[lucide-react_1]] - `imports_from` [EXTRACTED]
 - [[signalBadgeVariant()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/CandidateComparisontsx

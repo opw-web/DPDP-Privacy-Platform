@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/prisma/seed/message-templates.ts"
 type: "code"
-community: "templates.service.ts"
+community: "argon2"
 location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatesservicets
+  - community/argon2
 ---
 
 # SYSTEM_MESSAGE_TEMPLATES
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[message-templates.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatesservicets
+#graphify/code #graphify/EXTRACTED #community/argon2

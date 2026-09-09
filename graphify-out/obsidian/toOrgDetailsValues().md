@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.tsx"
 type: "code"
-community: "react"
+community: "SettingsPage.tsx"
 location: "L79"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/SettingsPagetsx
 ---
 
 # toOrgDetailsValues()
@@ -15,4 +15,4 @@ tags:
 - [[OrganizationDetailsSection()]] - `calls` [EXTRACTED]
 - [[SettingsPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/SettingsPagetsx

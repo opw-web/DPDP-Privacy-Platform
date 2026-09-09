@@ -1,23 +1,23 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principal-portal/me-rights.controller.ts"
 type: "code"
-community: "MeRightsService"
+community: "PrincipalActor"
 location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeRightsService
+  - community/PrincipalActor
 ---
 
 # .createRequest()
 
 ## Connections
 - [[dot-createRequest()_1]] - `calls` [INFERRED]
-- [[Body_16]] - `references` [EXTRACTED]
+- [[Body_6]] - `references` [EXTRACTED]
 - [[CreateMeRequestDto]] - `references` [EXTRACTED]
 - [[CurrentPrincipal]] - `references` [EXTRACTED]
 - [[MeRightsController]] - `method` [EXTRACTED]
-- [[Post_16]] - `references` [EXTRACTED]
+- [[Post_4]] - `references` [EXTRACTED]
 - [[PrincipalActor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeRightsService
+#graphify/code #graphify/EXTRACTED #community/PrincipalActor

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ComplianceService"
+community: "notifications.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ComplianceService
+  - community/notificationsservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[ComplianceService]] - `references` [EXTRACTED]
+- [[PortalProvider]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ComplianceService
+#graphify/code #graphify/EXTRACTED #community/notificationsservicets

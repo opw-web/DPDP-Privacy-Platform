@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/test/inventory.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/step6-conflict-acceptance.e2e-spec.ts"
 type: "code"
 community: "step6-conflict-acceptance.e2e-spec.ts"
-location: "L21"
+location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,6 @@ tags:
 # EmployeeSession
 
 ## Connections
-- [[ensurePermission()_6]] - `calls` [EXTRACTED]
-- [[inventory.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[step6-conflict-acceptance.e2e-spec.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects

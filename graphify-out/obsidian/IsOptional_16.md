@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ListAuditEventsDto"
+community: "UpdateDataSourceDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ListAuditEventsDto
+  - community/UpdateDataSourceDto
 ---
 
 # IsOptional
 
 ## Connections
-- [[ListAuditEventsDto]] - `references` [EXTRACTED]
+- [[UpdateDataSourceDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ListAuditEventsDto
+#graphify/code #graphify/EXTRACTED #community/UpdateDataSourceDto

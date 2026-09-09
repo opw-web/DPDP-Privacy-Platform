@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/assembly.service.ts"
 type: "code"
-community: ".record"
+community: "AuditService"
 location: "L346"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/record
+  - community/AuditService
 ---
 
 # .rebuild()
@@ -22,4 +22,4 @@ tags:
 - [[assembleFields()]] - `calls` [EXTRACTED]
 - [[displayNameFrom()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/record
+#graphify/code #graphify/INFERRED #community/AuditService

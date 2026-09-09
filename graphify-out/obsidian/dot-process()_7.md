@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sdf-cycle-scan.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/campaign-send.processor.ts"
 type: "code"
-community: "sdf-cycle-scan.queue.ts"
-location: "L25"
+community: "breach-principal-notice-dispatch.processor.ts"
+location: "L72"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdf-cycle-scanqueuets
+  - community/breach-principal-notice-dispatchprocessorts
 ---
 
 # .process()
 
 ## Connections
-- [[dot-runForAllOrganizations()_2]] - `calls` [INFERRED]
-- [[SdfCycleScanJobData]] - `references` [EXTRACTED]
-- [[SdfCycleScanProcessor]] - `method` [EXTRACTED]
+- [[dot-deliverRecipient()]] - `calls` [INFERRED]
+- [[CampaignSendJobData]] - `references` [EXTRACTED]
+- [[CampaignSendProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdf-cycle-scanqueuets
+#graphify/code #graphify/EXTRACTED #community/breach-principal-notice-dispatchprocessorts

@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/common/mail/mailer.service.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/providers/smtp.provider.ts"
 type: "code"
 community: "mailer.service.ts"
-location: "L62"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,8 +12,9 @@ tags:
 # .send()
 
 ## Connections
-- [[dot-getTransporter()]] - `calls` [EXTRACTED]
-- [[dot-send()_2]] - `calls` [INFERRED]
-- [[MailerService]] - `method` [EXTRACTED]
+- [[dot-send()_6]] - `calls` [INFERRED]
+- [[NotificationSendInput]] - `references` [EXTRACTED]
+- [[NotificationSendResult]] - `references` [EXTRACTED]
+- [[SmtpProvider]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/mailerservicets

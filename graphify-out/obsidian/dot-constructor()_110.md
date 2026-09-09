@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/notifications.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/principal-portal/me-rights.service.ts"
 type: "code"
-community: "notifications.service.ts"
-location: "L38"
+community: "MeRightsService"
+location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationsservicets
+  - community/MeRightsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[NotificationsController]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[MeRightsService]] - `method` [EXTRACTED]
 - [[NotificationsService]] - `references` [EXTRACTED]
+- [[RequestsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationsservicets
+#graphify/code #graphify/EXTRACTED #community/MeRightsService

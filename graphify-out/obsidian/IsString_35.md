@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "FlagFrivolousDto"
+community: "AssignRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/FlagFrivolousDto
+  - community/AssignRequestDto
 ---
 
 # IsString
 
 ## Connections
-- [[FlagFrivolousDto]] - `references` [EXTRACTED]
+- [[AssignRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/FlagFrivolousDto
+#graphify/code #graphify/EXTRACTED #community/AssignRequestDto

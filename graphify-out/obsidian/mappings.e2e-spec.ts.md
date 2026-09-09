@@ -12,20 +12,20 @@ tags:
 # mappings.e2e-spec.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[@nestjstesting_1]] - `imports_from` [EXTRACTED]
 - [[AppModule]] - `imports` [EXTRACTED]
 - [[MockHttpServer]] - `imports` [EXTRACTED]
 - [[PERMISSIONS]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[app.module.ts]] - `imports_from` [EXTRACTED]
-- [[argon2_1]] - `imports_from` [EXTRACTED]
+- [[argon2]] - `imports_from` [EXTRACTED]
 - [[createDataSource()_2]] - `contains` [EXTRACTED]
 - [[createEmployee()]] - `contains` [EXTRACTED]
 - [[createOrg()_4]] - `contains` [EXTRACTED]
 - [[createOrgWithBothPermissions()]] - `contains` [EXTRACTED]
 - [[createPurpose()_1]] - `contains` [EXTRACTED]
-- [[ensurePermission()_7]] - `contains` [EXTRACTED]
+- [[ensurePermission()_5]] - `contains` [EXTRACTED]
 - [[getMappings()]] - `contains` [EXTRACTED]
 - [[getPurposes()]] - `contains` [EXTRACTED]
 - [[jsonHandler()]] - `imports` [EXTRACTED]

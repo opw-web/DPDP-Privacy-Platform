@@ -8,15 +8,15 @@ members: 10
 **Members:** 10 nodes
 
 ## Members
-- [[ApiPropertyOptional_7]] - code
+- [[ApiPropertyOptional_6]] - code
 - [[IsBoolean_2]] - code
-- [[IsDateString_2]] - code
+- [[IsDateString_1]] - code
 - [[IsEnum_3]] - code
-- [[IsInt_2]] - code
-- [[IsOptional_7]] - code
-- [[IsString_9]] - code
-- [[Min_2]] - code
-- [[MinLength_6]] - code
+- [[IsInt_1]] - code
+- [[IsOptional_6]] - code
+- [[IsString_7]] - code
+- [[Min_1]] - code
+- [[MinLength_4]] - code
 - [[UpdateComplianceRuleDto]] - code - dpdp-platform/backend/src/modules/compliance/dto/update-compliance-rule.dto.ts
 
 ## Live Query (requires Dataview plugin)
@@ -27,9 +27,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_@nestjscommon]]
-- 2 edges to [[_COMMUNITY_ComplianceService]]
-- 1 edge to [[_COMMUNITY_compliance.service.ts]]
+- 2 edges to [[_COMMUNITY_compliance.service.ts]]
+- 1 edge to [[_COMMUNITY_RequirePermission]]
+- 1 edge to [[_COMMUNITY_ComplianceController]]
+- 1 edge to [[_COMMUNITY_@prismaclient]]
 
 ## Top bridge nodes
-- [[UpdateComplianceRuleDto]] - degree 14, connects to 3 communities
+- [[UpdateComplianceRuleDto]] - degree 14, connects to 4 communities

@@ -12,11 +12,11 @@ tags:
 # .getMappings()
 
 ## Connections
-- [[dot-get()_17]] - `calls` [INFERRED]
+- [[dot-get()_26]] - `calls` [INFERRED]
 - [[ApiOkResponse_1]] - `references` [EXTRACTED]
-- [[Get_12]] - `references` [EXTRACTED]
+- [[Get_14]] - `references` [EXTRACTED]
 - [[MappingsController]] - `method` [EXTRACTED]
-- [[Param_5]] - `references` [EXTRACTED]
+- [[Param_8]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/MappingsController

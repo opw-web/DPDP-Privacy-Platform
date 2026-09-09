@@ -12,7 +12,7 @@ tags:
 # me.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[DATA_CATEGORY_ORDER]] - `contains` [EXTRACTED]
 - [[LineageService]] - `imports` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/package.json"
 type: "concept"
-community: "frontend/package.json"
+community: "DateTime.tsx"
 location: "L23"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/frontend/packagejson
+  - community/DateTimetsx
 ---
 
 # @radix-ui/react-tooltip
@@ -15,4 +15,4 @@ tags:
 - [[frontendpackage.json]] - `imports` [EXTRACTED]
 - [[tooltip.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/frontend/packagejson
+#graphify/concept #graphify/EXTRACTED #community/DateTimetsx

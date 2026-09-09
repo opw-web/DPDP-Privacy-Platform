@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/breaches/dto/update-breach.dto.ts"
 type: "code"
-community: "@nestjs/common"
+community: "@prisma/client"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/prisma/client
 ---
 
 # update-breach.dto.ts
@@ -19,4 +19,4 @@ tags:
 - [[breaches.controller.ts]] - `imports_from` [EXTRACTED]
 - [[class-validator_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/prisma/client

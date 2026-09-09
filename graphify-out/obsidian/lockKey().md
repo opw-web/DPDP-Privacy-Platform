@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/sync-lock.service.ts"
 type: "code"
-community: "sync.e2e-spec.ts"
+community: "sync-lock.service.ts"
 location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/synce2e-spects
+  - community/sync-lockservicets
 ---
 
 # lockKey()
@@ -16,4 +16,4 @@ tags:
 - [[dot-isLocked()]] - `calls` [EXTRACTED]
 - [[sync-lock.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/synce2e-spects
+#graphify/code #graphify/EXTRACTED #community/sync-lockservicets

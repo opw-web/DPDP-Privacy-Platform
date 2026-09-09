@@ -12,14 +12,14 @@ tags:
 # security-measures.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[CreateSecurityMeasureDto]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[PublicSecurityMeasure]] - `contains` [EXTRACTED]
 - [[SECURITY_MEASURE_PUBLIC_SELECT]] - `contains` [EXTRACTED]
-- [[SecurityMeasureGroup_1]] - `contains` [EXTRACTED]
+- [[SecurityMeasureGroup_2]] - `contains` [EXTRACTED]
 - [[SecurityMeasuresService]] - `contains` [EXTRACTED]
 - [[UpdateSecurityMeasureDto]] - `imports` [EXTRACTED]
 - [[audit.service.ts]] - `imports_from` [EXTRACTED]

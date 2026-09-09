@@ -26,9 +26,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_button.tsx]]
+- 3 edges to [[_COMMUNITY_AuditPage.tsx]]
 - 2 edges to [[_COMMUNITY_router.tsx]]
-- 1 edge to [[_COMMUNITY_@tanstackreact-query]]
+- 1 edge to [[_COMMUNITY_SettingsPage.tsx]]
 
 ## Top bridge nodes
 - [[AuditPage()]] - degree 11, connects to 3 communities

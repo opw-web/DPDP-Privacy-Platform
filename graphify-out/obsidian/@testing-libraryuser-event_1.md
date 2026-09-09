@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/package.json"
 type: "concept"
-community: "@tanstack/react-query"
+community: "router.tsx"
 location: "L45"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/tanstack/react-query
+  - community/routertsx
 ---
 
 # @testing-library/user-event
@@ -39,4 +39,4 @@ tags:
 - [[Step3Mapping.test.tsx]] - `imports_from` [EXTRACTED]
 - [[frontendpackage.json]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/tanstack/react-query
+#graphify/concept #graphify/EXTRACTED #community/routertsx

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/LineageChip.tsx"
 type: "code"
-community: "PrincipalsPage.tsx"
+community: "SettingsPage.tsx"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalsPagetsx
+  - community/SettingsPagetsx
 ---
 
 # SourceRef
@@ -21,4 +21,4 @@ tags:
 - [[PrincipalListItem_2]] - `references` [EXTRACTED]
 - [[PrincipalsPage.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalsPagetsx
+#graphify/code #graphify/EXTRACTED #community/SettingsPagetsx

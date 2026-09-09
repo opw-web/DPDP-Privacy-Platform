@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "PreviewAudienceDto"
+community: "compile-audience.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PreviewAudienceDto
+  - community/compile-audiencets
 ---
 
 # IsObject
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[PreviewAudienceDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PreviewAudienceDto
+#graphify/code #graphify/EXTRACTED #community/compile-audiencets

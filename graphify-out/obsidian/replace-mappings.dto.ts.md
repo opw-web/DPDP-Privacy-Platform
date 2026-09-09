@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/dto/replace-mappings.dto.ts"
 type: "code"
-community: "@nestjs/common"
+community: "@prisma/client"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/prisma/client
 ---
 
 # replace-mappings.dto.ts
@@ -21,4 +21,4 @@ tags:
 - [[mappings.controller.ts]] - `imports_from` [EXTRACTED]
 - [[mappings.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/prisma/client

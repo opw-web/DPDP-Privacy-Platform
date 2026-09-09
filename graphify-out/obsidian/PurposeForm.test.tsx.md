@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/PurposeForm.test.tsx"
 type: "code"
-community: "@tanstack/react-query"
+community: "router.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tanstack/react-query
+  - community/routertsx
 ---
 
 # PurposeForm.test.tsx
@@ -20,8 +20,8 @@ tags:
 - [[api-client.ts]] - `imports_from` [EXTRACTED]
 - [[employeeTokenStore]] - `imports` [EXTRACTED]
 - [[fillRequiredTextFields()]] - `contains` [EXTRACTED]
-- [[jsonResponse()_6]] - `contains` [EXTRACTED]
+- [[jsonResponse()_8]] - `contains` [EXTRACTED]
 - [[renderForm()]] - `contains` [EXTRACTED]
 - [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tanstack/react-query
+#graphify/code #graphify/EXTRACTED #community/routertsx

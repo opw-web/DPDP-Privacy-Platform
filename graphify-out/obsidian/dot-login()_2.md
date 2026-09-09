@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/principal-auth.service.ts"
 type: "code"
-community: "TokenService"
+community: "employee-auth.service.ts"
 location: "L129"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TokenService
+  - community/employee-authservicets
 ---
 
 # .login()
@@ -14,10 +14,10 @@ tags:
 ## Connections
 - [[dot-issueTokenPair()_1]] - `calls` [EXTRACTED]
 - [[dot-login()_3]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
 - [[dot-storeFor()_1]] - `calls` [EXTRACTED]
 - [[LoginRequestMeta]] - `references` [EXTRACTED]
 - [[PrincipalAuthService]] - `method` [EXTRACTED]
 - [[getDummyHash()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TokenService
+#graphify/code #graphify/EXTRACTED #community/employee-authservicets

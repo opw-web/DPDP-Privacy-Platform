@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync-error.ts"
 type: "code"
-community: "CampaignsService"
-location: "L30"
+community: "SyncPipelineService"
+location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampaignsService
+  - community/SyncPipelineService
 ---
 
 # .constructor()
 
 ## Connections
-- [[CampaignsController]] - `method` [EXTRACTED]
-- [[CampaignsService]] - `references` [EXTRACTED]
+- [[MissingRecordKeyError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampaignsService
+#graphify/code #graphify/EXTRACTED #community/SyncPipelineService

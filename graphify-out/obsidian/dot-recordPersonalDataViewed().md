@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/audit/access-log.service.ts"
 type: "code"
-community: ".record"
+community: "PrincipalsService"
 location: "L52"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/record
+  - community/PrincipalsService
 ---
 
 # .recordPersonalDataViewed()
@@ -16,8 +16,8 @@ tags:
 - [[dot-buildReport()]] - `calls` [INFERRED]
 - [[dot-getDetail()]] - `calls` [INFERRED]
 - [[dot-getSourceRecords()]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
 - [[AccessLogService]] - `method` [EXTRACTED]
 - [[ScopedTransactionClient]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/record
+#graphify/code #graphify/INFERRED #community/PrincipalsService

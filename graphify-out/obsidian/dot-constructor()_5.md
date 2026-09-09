@@ -1,19 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/erasure-task.service.ts"
+source_file: "dpdp-platform/backend/src/modules/principals/lineage.service.ts"
 type: "code"
-community: "ErasureTaskService"
-location: "L109"
+community: "AccessReportService"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ErasureTaskService
+  - community/AccessReportService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[ComplianceService]] - `references` [EXTRACTED]
-- [[ErasureTaskService]] - `method` [EXTRACTED]
+- [[LineageService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ErasureTaskService
+#graphify/code #graphify/EXTRACTED #community/AccessReportService

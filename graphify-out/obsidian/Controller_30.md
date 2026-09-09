@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "test-database.ts"
+community: "access-report-render.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test-databasets
+  - community/access-report-renderts
 ---
 
 # Controller
 
 ## Connections
-- [[HealthController]] - `references` [EXTRACTED]
+- [[PrincipalEvidenceController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test-databasets
+#graphify/code #graphify/EXTRACTED #community/access-report-renderts

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/retention/RetentionTaskCard.tsx"
 type: "code"
-community: "button.tsx"
+community: "DateTime.tsx"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/DateTimetsx
 ---
 
 # RetentionTaskCard()
@@ -19,4 +19,4 @@ tags:
 - [[toggleProcessor()]] - `contains` [EXTRACTED]
 - [[toggleSystem()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/DateTimetsx

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeMessagesPage.tsx"
 type: "code"
-community: "button.tsx"
+community: "react-router-dom"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react-router-dom
 ---
 
 # MeMessagesPage.tsx
@@ -25,7 +25,7 @@ tags:
 - [[MeMessage]] - `contains` [EXTRACTED]
 - [[MeMessagesPage()]] - `contains` [EXTRACTED]
 - [[MeMessagesPage.test.tsx]] - `imports_from` [EXTRACTED]
-- [[NotificationDto]] - `imports` [EXTRACTED]
+- [[NotificationDto_1]] - `imports` [EXTRACTED]
 - [[PortalPageHeader()]] - `imports` [EXTRACTED]
 - [[PortalPageHeader.tsx]] - `imports_from` [EXTRACTED]
 - [[Skeleton()]] - `imports` [EXTRACTED]
@@ -40,4 +40,4 @@ tags:
 - [[principalApiClient]] - `imports` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

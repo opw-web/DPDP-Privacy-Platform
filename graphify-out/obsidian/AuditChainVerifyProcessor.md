@@ -1,23 +1,23 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/audit-chain-verify.processor.ts"
 type: "code"
-community: "NotificationsService"
+community: "canonicalJson"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/canonicalJson
 ---
 
 # AuditChainVerifyProcessor
 
 ## Connections
-- [[dot-constructor()_58]] - `method` [EXTRACTED]
-- [[dot-process()_4]] - `method` [EXTRACTED]
+- [[dot-constructor()_29]] - `method` [EXTRACTED]
+- [[dot-process()_2]] - `method` [EXTRACTED]
 - [[dot-runVerificationCycle()]] - `method` [EXTRACTED]
-- [[Processor_4]] - `references` [EXTRACTED]
+- [[Processor_2]] - `references` [EXTRACTED]
 - [[audit-chain-verify.processor.ts]] - `contains` [EXTRACTED]
 - [[queues.module.ts]] - `imports` [EXTRACTED]
 - [[scheduled-jobs.e2e-spec.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/canonicalJson

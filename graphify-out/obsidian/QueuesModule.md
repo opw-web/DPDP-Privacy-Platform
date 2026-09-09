@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/queues.module.ts"
 type: "code"
-community: "app.module.ts"
+community: "data-sources.module.ts"
 location: "L100"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/appmodulets
+  - community/data-sourcesmodulets
 ---
 
 # QueuesModule
 
 ## Connections
-- [[Module_31]] - `references` [EXTRACTED]
+- [[Module_38]] - `references` [EXTRACTED]
 - [[breaches.module.ts]] - `imports` [EXTRACTED]
 - [[consents.module.ts]] - `imports` [EXTRACTED]
 - [[data-sources.module.ts]] - `imports` [EXTRACTED]
@@ -22,4 +22,4 @@ tags:
 - [[sdf.module.ts]] - `imports` [EXTRACTED]
 - [[sync.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/appmodulets
+#graphify/code #graphify/EXTRACTED #community/data-sourcesmodulets

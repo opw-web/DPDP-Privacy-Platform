@@ -24,7 +24,7 @@ tags:
 - [[NoticeLanguageCode_1]] - `contains` [EXTRACTED]
 - [[NoticePreview.tsx]] - `imports_from` [EXTRACTED]
 - [[NoticePurposeStatement]] - `contains` [EXTRACTED]
-- [[NoticeVersion_1]] - `contains` [EXTRACTED]
+- [[NoticeVersion]] - `contains` [EXTRACTED]
 - [[NoticesPage.tsx]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/react

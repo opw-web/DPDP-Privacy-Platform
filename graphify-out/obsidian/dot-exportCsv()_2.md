@@ -1,22 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/inventory/ropa-export.service.ts"
+source_file: "dpdp-platform/backend/src/modules/evidence/audit-events-evidence.controller.ts"
 type: "code"
-community: "csvDocument"
-location: "L51"
+community: "canonicalJson"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/csvDocument
+  - community/canonicalJson
 ---
 
 # .exportCsv()
 
 ## Connections
-- [[dot-buildPack()]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[dot-ropaCsv()]] - `calls` [INFERRED]
-- [[RopaExportService]] - `method` [EXTRACTED]
-- [[csvDocument()]] - `calls` [EXTRACTED]
-- [[sortedUnique()]] - `calls` [EXTRACTED]
+- [[dot-exportCsv()]] - `calls` [INFERRED]
+- [[AuditEventsEvidenceController]] - `method` [EXTRACTED]
+- [[Get_7]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[Res_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/csvDocument
+#graphify/code #graphify/EXTRACTED #community/canonicalJson

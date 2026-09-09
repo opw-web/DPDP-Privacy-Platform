@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/notices/types.ts"
+source_file: "dpdp-platform/frontend/src/principal/pages/MeConsentsPage.tsx"
 type: "code"
-community: "react"
-location: "L25"
+community: "cn"
+location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/cn
 ---
 
 # NoticeVersion
 
 ## Connections
-- [[NoticeBuilderPage.tsx]] - `imports` [EXTRACTED]
-- [[noticestypes.ts]] - `contains` [EXTRACTED]
+- [[MeConsentsPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/cn

@@ -12,7 +12,7 @@ tags:
 # principal-recipients.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[PrincipalRecipientsService]] - `contains` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[access-report.service.ts]] - `imports_from` [EXTRACTED]

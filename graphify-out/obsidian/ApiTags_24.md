@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CampaignsService"
+community: "CreateInformationRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampaignsService
+  - community/CreateInformationRequestDto
 ---
 
 # ApiTags
 
 ## Connections
-- [[CampaignsController]] - `references` [EXTRACTED]
+- [[InformationRequestsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampaignsService
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

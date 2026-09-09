@@ -12,10 +12,10 @@ tags:
 # RopaExportService
 
 ## Connections
-- [[dot-constructor()_26]] - `references` [EXTRACTED]
-- [[dot-constructor()_34]] - `references` [EXTRACTED]
-- [[dot-constructor()_27]] - `method` [EXTRACTED]
-- [[dot-exportCsv()_2]] - `method` [EXTRACTED]
+- [[dot-constructor()_22]] - `references` [EXTRACTED]
+- [[dot-constructor()_23]] - `references` [EXTRACTED]
+- [[dot-constructor()_51]] - `method` [EXTRACTED]
+- [[dot-exportCsv()_1]] - `method` [EXTRACTED]
 - [[Injectable_14]] - `references` [EXTRACTED]
 - [[evidence-pack.service.ts]] - `imports` [EXTRACTED]
 - [[inventory.controller.ts]] - `imports` [EXTRACTED]

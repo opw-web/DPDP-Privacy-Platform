@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "MappingsController"
+community: "inventory.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MappingsController
+  - community/inventorycontrollerts
 ---
 
 # Controller
 
 ## Connections
-- [[MappingsController]] - `references` [EXTRACTED]
+- [[InventoryController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MappingsController
+#graphify/code #graphify/EXTRACTED #community/inventorycontrollerts

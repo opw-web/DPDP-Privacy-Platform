@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/RecentAuditStrip.tsx"
 type: "code"
-community: "button.tsx"
+community: "react-router-dom"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react-router-dom
 ---
 
 # RecentAuditStripProps
@@ -15,4 +15,4 @@ tags:
 - [[RecentAuditEvent_1]] - `references` [EXTRACTED]
 - [[RecentAuditStrip.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

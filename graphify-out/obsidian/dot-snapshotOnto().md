@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
 type: "code"
-community: "RetentionScanService"
+community: "sdf-assessment.service.ts"
 location: "L299"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/RetentionScanService
+  - community/sdf-assessmentservicets
 ---
 
 # .snapshotOnto()
 
 ## Connections
-- [[dot-create()_30]] - `calls` [INFERRED]
+- [[dot-create()_9]] - `calls` [INFERRED]
 - [[dot-resolveCycleDeadline()]] - `calls` [INFERRED]
 - [[ComplianceService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/RetentionScanService
+#graphify/code #graphify/INFERRED #community/sdf-assessmentservicets

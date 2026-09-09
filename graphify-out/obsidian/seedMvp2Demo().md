@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/prisma/seed/mvp2-demo.ts"
 type: "code"
-community: "seed.ts"
+community: "argon2"
 location: "L205"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/seedts
+  - community/argon2
 ---
 
 # seedMvp2Demo()
@@ -19,4 +19,4 @@ tags:
 - [[seed.ts]] - `imports` [EXTRACTED]
 - [[seedNotices()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/seedts
+#graphify/code #graphify/EXTRACTED #community/argon2

@@ -1,25 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notices/notices.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
 type: "code"
-community: "NoticesController"
-location: "L92"
+community: "notices.service.ts"
+location: "L624"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NoticesController
+  - community/noticesservicets
 ---
 
 # .upsertTranslation()
 
 ## Connections
+- [[dot-getVersionOrThrow()]] - `calls` [EXTRACTED]
+- [[dot-record()_1]] - `calls` [INFERRED]
 - [[dot-upsertTranslation()]] - `calls` [INFERRED]
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[Body_11]] - `references` [EXTRACTED]
-- [[CurrentActor]] - `references` [EXTRACTED]
-- [[NoticesController]] - `method` [EXTRACTED]
-- [[Param_11]] - `references` [EXTRACTED]
-- [[Put_1]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[NoticesService]] - `method` [EXTRACTED]
 - [[UpsertTranslationDto]] - `references` [EXTRACTED]
+- [[isNoticeLanguageCode()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NoticesController
+#graphify/code #graphify/EXTRACTED #community/noticesservicets

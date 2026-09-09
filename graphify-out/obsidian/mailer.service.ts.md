@@ -12,8 +12,8 @@ tags:
 # mailer.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
-- [[@nestjsconfig]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
+- [[@nestjsconfig_1]] - `imports_from` [EXTRACTED]
 - [[MailConfig]] - `imports` [EXTRACTED]
 - [[MailMessage]] - `contains` [EXTRACTED]
 - [[MailerService]] - `contains` [EXTRACTED]

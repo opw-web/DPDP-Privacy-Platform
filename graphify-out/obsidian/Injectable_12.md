@@ -11,6 +11,6 @@ tags:
 # Injectable
 
 ## Connections
-- [[AuditChainService]] - `references` [EXTRACTED]
+- [[AuditExportService]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/evidence-packservicets

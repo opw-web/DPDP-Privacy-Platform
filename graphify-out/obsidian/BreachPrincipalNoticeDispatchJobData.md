@@ -12,7 +12,7 @@ tags:
 # BreachPrincipalNoticeDispatchJobData
 
 ## Connections
-- [[dot-process()_8]] - `references` [EXTRACTED]
+- [[dot-process()_6]] - `references` [EXTRACTED]
 - [[breach-principal-notice-dispatch.processor.ts]] - `imports` [EXTRACTED]
 - [[breach-principal-notice-dispatch.queue.ts]] - `contains` [EXTRACTED]
 

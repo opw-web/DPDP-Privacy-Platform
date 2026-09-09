@@ -12,7 +12,7 @@ tags:
 # ErasureSystemChecklistDto
 
 ## Connections
-- [[ApiProperty_42]] - `references` [EXTRACTED]
+- [[ApiProperty_43]] - `references` [EXTRACTED]
 - [[IsBoolean_20]] - `references` [EXTRACTED]
 - [[IsString_60]] - `references` [EXTRACTED]
 - [[change-status.dto.ts]] - `contains` [EXTRACTED]

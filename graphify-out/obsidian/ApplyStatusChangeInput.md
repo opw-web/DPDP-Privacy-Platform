@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/consents/consents.service.ts"
 type: "code"
-community: "guardians.service.ts"
+community: "consents.service.ts"
 location: "L92"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/consentsservicets
 ---
 
 # ApplyStatusChangeInput
@@ -15,4 +15,4 @@ tags:
 - [[AuditAction]] - `references` [EXTRACTED]
 - [[consents.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/consentsservicets

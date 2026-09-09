@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/login-request-meta.ts"
 type: "code"
-community: "step6-conflict-acceptance.e2e-spec.ts"
+community: "employee-auth.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/step6-conflict-acceptancee2e-spects
+  - community/employee-authservicets
 ---
 
 # login-request-meta.ts
@@ -17,4 +17,4 @@ tags:
 - [[principal-auth.service.ts]] - `imports_from` [EXTRACTED]
 - [[refresh-rotation.util.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects
+#graphify/code #graphify/EXTRACTED #community/employee-authservicets

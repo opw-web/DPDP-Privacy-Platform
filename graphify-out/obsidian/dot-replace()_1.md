@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-rebuild()]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
 - [[dot-replaceMappings()]] - `calls` [INFERRED]
 - [[dot-rescrubFieldSample()]] - `calls` [INFERRED]
 - [[dot-validateVerifiedCustomerId()]] - `calls` [EXTRACTED]

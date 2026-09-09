@@ -1,21 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sync/sync.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/source-purposes.service.ts"
 type: "code"
-community: "SyncService"
-location: "L44"
+community: "AttachPurposesDto"
+location: "L179"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncService
+  - community/AttachPurposesDto
 ---
 
 # .get()
 
 ## Connections
-- [[dot-getJob()]] - `calls` [INFERRED]
-- [[Get_11]] - `references` [EXTRACTED]
-- [[Param_4]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[SyncJobsController]] - `method` [EXTRACTED]
+- [[dot-getPurposes()]] - `calls` [INFERRED]
+- [[dot-replace()]] - `calls` [EXTRACTED]
+- [[SourcePurposesService]] - `method` [EXTRACTED]
+- [[toPublicPurpose()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncService
+#graphify/code #graphify/EXTRACTED #community/AttachPurposesDto

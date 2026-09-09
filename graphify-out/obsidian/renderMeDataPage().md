@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeDataPage.test.tsx"
 type: "code"
-community: "@tanstack/react-query"
+community: "MeDataPage.tsx"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tanstack/react-query
+  - community/MeDataPagetsx
 ---
 
 # renderMeDataPage()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[MeDataPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tanstack/react-query
+#graphify/code #graphify/EXTRACTED #community/MeDataPagetsx

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/LoginPage.tsx"
 type: "code"
-community: "react"
+community: "react-router-dom"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/react-router-dom
 ---
 
 # LoginPage.tsx
@@ -41,4 +41,4 @@ tags:
 - [[useEmployeeAuth()]] - `imports` [EXTRACTED]
 - [[zod_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

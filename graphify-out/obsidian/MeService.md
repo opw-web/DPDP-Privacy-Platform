@@ -12,15 +12,15 @@ tags:
 # MeService
 
 ## Connections
-- [[dot-constructor()_2]] - `references` [EXTRACTED]
-- [[dot-constructor()_70]] - `method` [EXTRACTED]
+- [[dot-constructor()_31]] - `references` [EXTRACTED]
+- [[dot-constructor()_4]] - `method` [EXTRACTED]
 - [[dot-getData()]] - `method` [EXTRACTED]
 - [[dot-getPrivacyContact()]] - `method` [EXTRACTED]
 - [[dot-getProfile()]] - `method` [EXTRACTED]
 - [[dot-getRecipients()]] - `method` [EXTRACTED]
 - [[dot-getSources()]] - `method` [EXTRACTED]
 - [[dot-loadPurposeNamesBySource()]] - `method` [EXTRACTED]
-- [[Injectable_2]] - `references` [EXTRACTED]
+- [[Injectable_3]] - `references` [EXTRACTED]
 - [[me.controller.ts]] - `imports` [EXTRACTED]
 - [[me.service.ts]] - `contains` [EXTRACTED]
 - [[principal-portal.module.ts]] - `imports` [EXTRACTED]

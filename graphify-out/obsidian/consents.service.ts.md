@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/consents/consents.service.ts"
 type: "code"
-community: "guardians.service.ts"
+community: "consents.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/consentsservicets
 ---
 
 # consents.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[ApplyStatusChangeInput]] - `contains` [EXTRACTED]
 - [[AuditAction]] - `imports` [EXTRACTED]
@@ -38,11 +38,11 @@ tags:
 - [[consents.module.ts]] - `imports_from` [EXTRACTED]
 - [[erasure-task.service.ts]] - `imports_from` [EXTRACTED]
 - [[guardians.service.ts]] - `imports_from` [EXTRACTED]
-- [[isUniqueConstraintViolation()_3]] - `contains` [EXTRACTED]
+- [[isUniqueConstraintViolation()_2]] - `contains` [EXTRACTED]
 - [[me-consents.controller.ts]] - `imports_from` [EXTRACTED]
 - [[notices.service.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[scoped-transaction-client.ts]] - `imports_from` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/consentsservicets

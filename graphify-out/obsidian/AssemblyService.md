@@ -1,23 +1,23 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/assembly.service.ts"
 type: "code"
-community: "prisma.service.ts"
+community: "AuditService"
 location: "L345"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/AuditService
 ---
 
 # AssemblyService
 
 ## Connections
-- [[dot-constructor()_43]] - `references` [EXTRACTED]
-- [[dot-constructor()_46]] - `references` [EXTRACTED]
-- [[dot-constructor()_47]] - `references` [EXTRACTED]
-- [[dot-constructor()_51]] - `references` [EXTRACTED]
+- [[dot-constructor()_44]] - `references` [EXTRACTED]
+- [[dot-constructor()_49]] - `references` [EXTRACTED]
+- [[dot-constructor()_50]] - `references` [EXTRACTED]
+- [[dot-constructor()_53]] - `references` [EXTRACTED]
 - [[dot-rebuild()]] - `method` [EXTRACTED]
-- [[Injectable_28]] - `references` [EXTRACTED]
+- [[Injectable_31]] - `references` [EXTRACTED]
 - [[assembly.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[assembly.service.ts]] - `contains` [EXTRACTED]
 - [[identity.module.ts]] - `imports` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[merge.service.ts]] - `imports` [EXTRACTED]
 - [[sync-pipeline.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/AuditService

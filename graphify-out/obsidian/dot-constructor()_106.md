@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sync/sync-error.spec.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync-error.ts"
 type: "code"
 community: "SyncPipelineService"
-location: "L12"
+location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # .constructor()
 
 ## Connections
-- [[IdentifierOwnershipConflictError_1]] - `method` [EXTRACTED]
+- [[SyncLockUnavailableError]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/SyncPipelineService

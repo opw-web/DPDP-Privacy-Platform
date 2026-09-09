@@ -13,11 +13,11 @@ tags:
 
 ## Connections
 - [[dot-assign()_1]] - `references` [EXTRACTED]
-- [[ApiProperty_25]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_30]] - `references` [EXTRACTED]
-- [[IsOptional_33]] - `references` [EXTRACTED]
-- [[IsString_41]] - `references` [EXTRACTED]
-- [[MinLength_30]] - `references` [EXTRACTED]
+- [[ApiProperty_21]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_27]] - `references` [EXTRACTED]
+- [[IsOptional_30]] - `references` [EXTRACTED]
+- [[IsString_35]] - `references` [EXTRACTED]
+- [[MinLength_24]] - `references` [EXTRACTED]
 - [[assign-request.dto.ts]] - `contains` [EXTRACTED]
 - [[requests.controller.ts]] - `imports` [EXTRACTED]
 

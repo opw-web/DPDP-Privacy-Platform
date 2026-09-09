@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/SettingsCompliancePage.tsx"
 type: "code"
-community: "router.tsx"
+community: "SettingsPage.tsx"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/SettingsPagetsx
 ---
 
 # RuleCard()
 
 ## Connections
 - [[SettingsCompliancePage.tsx]] - `contains` [EXTRACTED]
-- [[errorMessage()]] - `calls` [EXTRACTED]
+- [[errorMessage()_2]] - `calls` [EXTRACTED]
 - [[humanizeEnum()]] - `calls` [EXTRACTED]
-- [[submit()]] - `contains` [EXTRACTED]
+- [[submit()_4]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/SettingsPagetsx

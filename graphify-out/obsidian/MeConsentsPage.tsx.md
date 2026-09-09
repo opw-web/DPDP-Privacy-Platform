@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeConsentsPage.tsx"
 type: "code"
-community: "button.tsx"
+community: "cn"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/cn
 ---
 
 # MeConsentsPage.tsx
@@ -37,7 +37,7 @@ tags:
 - [[MeConsentsPage.test.tsx]] - `imports_from` [EXTRACTED]
 - [[MeConsentsResponse]] - `contains` [EXTRACTED]
 - [[NoticeDialog()]] - `contains` [EXTRACTED]
-- [[NoticeVersion]] - `contains` [EXTRACTED]
+- [[NoticeVersion_1]] - `contains` [EXTRACTED]
 - [[PortalPageHeader()]] - `imports` [EXTRACTED]
 - [[PortalPageHeader.tsx]] - `imports_from` [EXTRACTED]
 - [[STATUS_COPY]] - `contains` [EXTRACTED]
@@ -55,4 +55,4 @@ tags:
 - [[react_1]] - `imports_from` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/cn

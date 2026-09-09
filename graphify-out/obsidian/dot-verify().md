@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/children/guardians.controller.ts"
 type: "code"
-community: "GuardiansService"
+community: "guardians.service.ts"
 location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GuardiansService
+  - community/guardiansservicets
 ---
 
 # .verify()
@@ -14,13 +14,13 @@ tags:
 ## Connections
 - [[dot-verify()_1]] - `calls` [INFERRED]
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[Body_2]] - `references` [EXTRACTED]
+- [[Body_3]] - `references` [EXTRACTED]
 - [[CurrentActor]] - `references` [EXTRACTED]
 - [[CurrentActorPermissions]] - `references` [EXTRACTED]
 - [[GuardiansController]] - `method` [EXTRACTED]
-- [[Param_1]] - `references` [EXTRACTED]
-- [[Post_1]] - `references` [EXTRACTED]
+- [[Param_2]] - `references` [EXTRACTED]
+- [[Post_2]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[VerifyGuardianDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GuardiansService
+#graphify/code #graphify/EXTRACTED #community/guardiansservicets

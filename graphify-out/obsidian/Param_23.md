@@ -1,23 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "RequirePermission"
+community: "access-report-render.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/access-report-renderts
 ---
 
 # Param
 
 ## Connections
-- [[dot-addAffected()]] - `references` [EXTRACTED]
-- [[dot-boardDetailed()]] - `references` [EXTRACTED]
-- [[dot-boardInitial()]] - `references` [EXTRACTED]
-- [[dot-completeObligation()]] - `references` [EXTRACTED]
-- [[dot-extension()]] - `references` [EXTRACTED]
-- [[dot-get()_16]] - `references` [EXTRACTED]
-- [[dot-notify()]] - `references` [EXTRACTED]
-- [[dot-update()_19]] - `references` [EXTRACTED]
+- [[dot-evidence()]] - `references` [EXTRACTED]
+- [[dot-evidencePdf()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/access-report-renderts

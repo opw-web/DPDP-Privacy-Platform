@@ -1,22 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.controller.ts"
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
-location: "L35"
+community: "RequirePermission"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/RequirePermission
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_18]] - `calls` [INFERRED]
-- [[Body_12]] - `references` [EXTRACTED]
-- [[CreateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
+- [[dot-create()_28]] - `calls` [INFERRED]
+- [[Body_13]] - `references` [EXTRACTED]
+- [[CreateNoticeDto]] - `references` [EXTRACTED]
+- [[NoticesController]] - `method` [EXTRACTED]
 - [[Post_12]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[VoluntaryUndertakingsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

@@ -5232,9 +5232,9 @@
     "semantic_hash": ""
   },
   "demo-control/common.sh": {
-    "mtime": 1788927656.9093487,
-    "seen": 1788928654.6477978,
-    "ast_hash": "503370fbd425872752f54df97a81cbbe",
+    "mtime": 1788929095.9615219,
+    "seen": 1788929964.4508739,
+    "ast_hash": "a017f9b22bef9e2b87b36139c678cb41",
     "semantic_hash": ""
   },
   "demo-control/reset.sh": {
@@ -5304,15 +5304,15 @@
     "semantic_hash": ""
   },
   "demo-control/install-launchers.sh": {
-    "mtime": 1788927696.2753248,
-    "seen": 1788928654.6478007,
-    "ast_hash": "df690f2f9feb86968387d3bc2991ab68",
+    "mtime": 1788929096.044731,
+    "seen": 1788929964.4508758,
+    "ast_hash": "29bcc37aef4fd560db94701d73233c9b",
     "semantic_hash": ""
   },
   "demo-control/open-database.sh": {
-    "mtime": 1788844932.7801805,
-    "seen": 1788861713.214091,
-    "ast_hash": "304455dbee3bdd6b6f03c0926611f5a4",
+    "mtime": 1788929924.4478972,
+    "seen": 1788929964.4514909,
+    "ast_hash": "b53165c0554b85085a75112de3974307",
     "semantic_hash": ""
   },
   "demo-control/open-runbook.sh": {
@@ -5340,9 +5340,9 @@
     "semantic_hash": ""
   },
   "demo-control/prepare.sh": {
-    "mtime": 1788927710.7956533,
-    "seen": 1788928654.6480055,
-    "ast_hash": "9620c3bdf249a88ec53b2c15cbf67bfd",
+    "mtime": 1788929096.119972,
+    "seen": 1788929964.4516218,
+    "ast_hash": "d6e12773fa2499c8ea6f1803df5190dc",
     "semantic_hash": ""
   },
   "docs/demo-runbook/build-standalone.py": {
@@ -5628,15 +5628,15 @@
     "semantic_hash": ""
   },
   "scripts/capture-guide-screenshots.mjs": {
-    "mtime": 1788928822.4425676,
-    "seen": 1788929002.1279879,
-    "ast_hash": "f780031eaba56eb8374b5e6572cdff83",
+    "mtime": 1788929096.4368272,
+    "seen": 1788929964.501853,
+    "ast_hash": "39f6183c6edd4f85332ab16f3eda0b74",
     "semantic_hash": ""
   },
   "scripts/dedupe-vault-names.py": {
-    "mtime": 1788929016.2274034,
-    "seen": 1788929065.8042068,
-    "ast_hash": "5d38183bafab35c9e6330d1f59397a7e",
+    "mtime": 1788929222.0081356,
+    "seen": 1788929964.5018551,
+    "ast_hash": "0236d85dccd1f489b20702938229754b",
     "semantic_hash": ""
   },
   "docs/demo-runbook/images/messaging-campaigns.png": {

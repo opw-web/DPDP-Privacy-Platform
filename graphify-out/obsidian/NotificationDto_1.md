@@ -1,20 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/dto/notification.dto.ts"
+source_file: "dpdp-platform/frontend/src/lib/mvp2-api.ts"
 type: "code"
-community: "notifications.controller.ts"
-location: "L12"
+community: "api-client.ts"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationscontrollerts
+  - community/api-clientts
 ---
 
 # NotificationDto
 
 ## Connections
-- [[ApiProperty_41]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_45]] - `references` [EXTRACTED]
-- [[notification.dto.ts]] - `contains` [EXTRACTED]
-- [[notifications.controller.ts]] - `imports` [EXTRACTED]
+- [[MeMessagesPage.tsx]] - `imports` [EXTRACTED]
+- [[NotificationBell.tsx]] - `imports` [EXTRACTED]
+- [[mvp2-api.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts
+#graphify/code #graphify/EXTRACTED #community/api-clientts

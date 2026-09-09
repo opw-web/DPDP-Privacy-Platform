@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PortalProvider"
+community: "TokenService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PortalProvider
+  - community/TokenService
 ---
 
 # Injectable
 
 ## Connections
-- [[PortalProvider]] - `references` [EXTRACTED]
+- [[TenantMiddleware]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PortalProvider
+#graphify/code #graphify/EXTRACTED #community/TokenService

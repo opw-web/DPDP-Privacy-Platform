@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "retention.service.ts"
+community: "recipients.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/recipientsservicets
 ---
 
 # Body
@@ -14,4 +14,4 @@ tags:
 - [[dot-create()_33]] - `references` [EXTRACTED]
 - [[dot-update()_23]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/recipientsservicets

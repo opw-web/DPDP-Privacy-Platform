@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "BreachService"
+community: "mailer.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BreachService
+  - community/mailerservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[BreachPrincipalNoticeDispatchQueueService]] - `references` [EXTRACTED]
+- [[MailerService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BreachService
+#graphify/code #graphify/EXTRACTED #community/mailerservicets

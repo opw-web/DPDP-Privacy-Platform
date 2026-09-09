@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/audit-chain.service.ts"
 type: "code"
-community: "evidence-pack.service.ts"
+community: "canonicalJson"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/evidence-packservicets
+  - community/canonicalJson
 ---
 
 # ChainVerificationResult
@@ -16,4 +16,4 @@ tags:
 - [[audit-chain.service.ts]] - `contains` [EXTRACTED]
 - [[audit-events-evidence.controller.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/evidence-packservicets
+#graphify/code #graphify/EXTRACTED #community/canonicalJson

@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateBreachDto"
+community: "@prisma/client"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateBreachDto
+  - community/prisma/client
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreateBreachDto]] - `references` [EXTRACTED]
+- [[EmployeeMeResponseDto]] - `references` [EXTRACTED]
+- [[EmployeeMeRoleDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateBreachDto
+#graphify/code #graphify/EXTRACTED #community/prisma/client

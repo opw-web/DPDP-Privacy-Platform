@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.tsx"
 type: "code"
-community: "router.tsx"
+community: "SettingsPage.tsx"
 location: "L139"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/SettingsPagetsx
 ---
 
 # FieldGroupRow()
@@ -15,4 +15,4 @@ tags:
 - [[PrincipalDetailPage.tsx]] - `contains` [EXTRACTED]
 - [[humanizeEnum()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/SettingsPagetsx

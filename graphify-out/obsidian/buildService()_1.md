@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.spec.ts"
 type: "code"
-community: "ComplianceService"
+community: "compliance.service.ts"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ComplianceService
+  - community/complianceservicets
 ---
 
 # buildService()
@@ -16,4 +16,4 @@ tags:
 - [[buildRule()]] - `calls` [EXTRACTED]
 - [[compliance.service.spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ComplianceService
+#graphify/code #graphify/EXTRACTED #community/complianceservicets

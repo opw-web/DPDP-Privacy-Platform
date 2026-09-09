@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/health/health.service.ts"
 type: "code"
-community: "test-database.ts"
+community: "health.service.ts"
 location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test-databasets
+  - community/healthservicets
 ---
 
 # .checkDatabase()
@@ -15,4 +15,4 @@ tags:
 - [[dot-getHealth()]] - `calls` [EXTRACTED]
 - [[HealthService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test-databasets
+#graphify/code #graphify/EXTRACTED #community/healthservicets

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sdf-cycle-scan.queue.ts"
+community: "normalization.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdf-cycle-scanqueuets
+  - community/normalizationservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[SdfCycleScanQueueService]] - `references` [EXTRACTED]
+- [[NormalizationService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdf-cycle-scanqueuets
+#graphify/code #graphify/EXTRACTED #community/normalizationservicets

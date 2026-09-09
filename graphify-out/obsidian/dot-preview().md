@@ -1,20 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts"
 type: "code"
-community: "NoticesService"
-location: "L679"
+community: "TemplatesService"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NoticesService
+  - community/TemplatesService
 ---
 
 # .preview()
 
 ## Connections
-- [[dot-getVersionOrThrow()]] - `calls` [EXTRACTED]
-- [[dot-preview()_3]] - `calls` [INFERRED]
-- [[NoticesService]] - `method` [EXTRACTED]
-- [[isNoticeLanguageCode()]] - `calls` [EXTRACTED]
+- [[dot-preview()_1]] - `calls` [INFERRED]
+- [[Body_11]] - `references` [EXTRACTED]
+- [[Param_9]] - `references` [EXTRACTED]
+- [[Post_9]] - `references` [EXTRACTED]
+- [[PreviewTemplateDto]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[TemplatesController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NoticesService
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

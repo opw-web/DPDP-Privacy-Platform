@@ -1,22 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notices/notices.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
 type: "code"
-community: "NoticesController"
-location: "L82"
+community: "notices.service.ts"
+location: "L679"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NoticesController
+  - community/noticesservicets
 ---
 
 # .preview()
 
 ## Connections
-- [[dot-preview()]] - `calls` [INFERRED]
-- [[Get_19]] - `references` [EXTRACTED]
-- [[NoticesController]] - `method` [EXTRACTED]
-- [[Param_11]] - `references` [EXTRACTED]
-- [[Query_4]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-getVersionOrThrow()]] - `calls` [EXTRACTED]
+- [[dot-preview()_2]] - `calls` [INFERRED]
+- [[NoticesService]] - `method` [EXTRACTED]
+- [[isNoticeLanguageCode()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NoticesController
+#graphify/code #graphify/EXTRACTED #community/noticesservicets

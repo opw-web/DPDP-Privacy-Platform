@@ -24,7 +24,7 @@ tags:
 - [[private_1]] - `contains` [EXTRACTED]
 - [[scripts_2]] - `contains` [EXTRACTED]
 - [[ts-node_1]] - `imports` [EXTRACTED]
-- [[type_8]] - `contains` [EXTRACTED]
+- [[type_7]] - `contains` [EXTRACTED]
 - [[typescript_2]] - `imports` [EXTRACTED]
 - [[version_1]] - `contains` [EXTRACTED]
 

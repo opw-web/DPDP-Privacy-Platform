@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "RequestsService"
+community: "DeadlineScanProcessor"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestsService
+  - community/DeadlineScanProcessor
 ---
 
 # Processor
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[DeadlineScanProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestsService
+#graphify/code #graphify/EXTRACTED #community/DeadlineScanProcessor

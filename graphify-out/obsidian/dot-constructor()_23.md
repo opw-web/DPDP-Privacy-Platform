@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/audit-chain.service.ts"
+source_file: "dpdp-platform/backend/src/modules/inventory/inventory.controller.ts"
 type: "code"
 community: "evidence-pack.service.ts"
-location: "L48"
+location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,8 @@ tags:
 # .constructor()
 
 ## Connections
-- [[AuditChainService]] - `method` [EXTRACTED]
+- [[InventoryController]] - `method` [EXTRACTED]
+- [[InventoryService]] - `references` [EXTRACTED]
+- [[RopaExportService]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/evidence-packservicets

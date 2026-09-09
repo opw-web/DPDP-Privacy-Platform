@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[dot-list()_22]] - `references` [EXTRACTED]
-- [[IsEnum_16]] - `references` [EXTRACTED]
-- [[IsOptional_34]] - `references` [EXTRACTED]
+- [[IsEnum_14]] - `references` [EXTRACTED]
+- [[IsOptional_31]] - `references` [EXTRACTED]
 - [[candidates.controller.ts]] - `imports` [EXTRACTED]
 - [[list-match-candidates.dto.ts]] - `contains` [EXTRACTED]
 

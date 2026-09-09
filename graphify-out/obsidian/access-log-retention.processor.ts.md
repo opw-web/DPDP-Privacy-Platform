@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[@nestjsbullmq_1]] - `imports_from` [EXTRACTED]
-- [[@nestjsconfig]] - `imports_from` [EXTRACTED]
+- [[@nestjsconfig_1]] - `imports_from` [EXTRACTED]
 - [[ACCESS_LOG_RETENTION_FLOOR_DAYS]] - `imports` [EXTRACTED]
 - [[ACCESS_LOG_RETENTION_QUEUE_NAME]] - `re_exports` [EXTRACTED]
 - [[AccessLogRetentionJobData]] - `contains` [EXTRACTED]
@@ -23,7 +23,7 @@ tags:
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[access-log-retention.constant.ts]] - `imports_from` [EXTRACTED]
 - [[audit-chain-verify.processor.ts]] - `re_exports` [EXTRACTED]
-- [[bullmq]] - `imports_from` [EXTRACTED]
+- [[bullmq_1]] - `imports_from` [EXTRACTED]
 - [[configuration.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[queues.module.ts]] - `imports_from` [EXTRACTED]

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ComplianceService"
+community: "PurposesController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ComplianceService
+  - community/PurposesController
 ---
 
 # Patch
 
 ## Connections
-- [[dot-update()_7]] - `references` [EXTRACTED]
+- [[dot-update()_5]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ComplianceService
+#graphify/code #graphify/EXTRACTED #community/PurposesController

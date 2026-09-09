@@ -12,7 +12,7 @@ tags:
 # buildPrincipalSearchQuery()
 
 ## Connections
-- [[dot-list()_17]] - `calls` [EXTRACTED]
+- [[dot-list()_21]] - `calls` [EXTRACTED]
 - [[principal-search-query.ts]] - `contains` [EXTRACTED]
 - [[principals.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[principals.service.ts]] - `imports` [EXTRACTED]

@@ -12,9 +12,9 @@ tags:
 # ConnectorFactory
 
 ## Connections
-- [[dot-constructor()_54]] - `references` [EXTRACTED]
-- [[dot-create()_3]] - `method` [EXTRACTED]
-- [[Injectable_17]] - `references` [EXTRACTED]
+- [[dot-constructor()_30]] - `references` [EXTRACTED]
+- [[dot-create()_5]] - `method` [EXTRACTED]
+- [[Injectable_20]] - `references` [EXTRACTED]
 - [[connector.factory.spec.ts]] - `imports` [EXTRACTED]
 - [[connector.factory.ts]] - `contains` [EXTRACTED]
 - [[connectors.module.spec.ts]] - `imports` [EXTRACTED]

@@ -11,6 +11,6 @@ tags:
 # Injectable
 
 ## Connections
-- [[Mvp2ScheduleReconciliationService]] - `references` [EXTRACTED]
+- [[SyncQueueService]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/SyncQueueService

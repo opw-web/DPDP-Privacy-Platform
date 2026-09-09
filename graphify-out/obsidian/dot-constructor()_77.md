@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/deadline-scan.queue.ts"
+source_file: "dpdp-platform/backend/src/queues/schedule-reconciliation.service.ts"
 type: "code"
 community: "SyncQueueService"
-location: "L68"
+location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,9 +12,11 @@ tags:
 # .constructor()
 
 ## Connections
+- [[dot-reconcileAtBoot()]] - `calls` [EXTRACTED]
 - [[dot-register()]] - `calls` [INFERRED]
 - [[BootRegistrationRegistry]] - `references` [EXTRACTED]
-- [[DeadlineScanQueueService]] - `method` [EXTRACTED]
-- [[InjectQueue_2]] - `references` [EXTRACTED]
+- [[Mvp2ScheduleReconciliationService]] - `references` [EXTRACTED]
+- [[ScheduleReconciliationService]] - `method` [EXTRACTED]
+- [[SyncQueueService]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/SyncQueueService

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "transfers.service.ts"
+community: "ComplianceController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/transfersservicets
+  - community/ComplianceController
 ---
 
 # Patch
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-update()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/transfersservicets
+#graphify/code #graphify/EXTRACTED #community/ComplianceController

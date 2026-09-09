@@ -1,21 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/package.json"
-type: "concept"
-community: "csvDocument"
-location: "L46"
+source_file: "dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts"
+type: "code"
+community: "PDFDocument"
+location: "L8"
 tags:
-  - graphify/concept
+  - graphify/code
   - graphify/EXTRACTED
-  - community/csvDocument
+  - community/PDFDocument
 ---
 
 # pdfkit
 
 ## Connections
-- [[access-report-render.ts]] - `imports_from` [EXTRACTED]
-- [[backendpackage.json]] - `imports` [EXTRACTED]
-- [[breach-render.ts]] - `imports_from` [EXTRACTED]
-- [[pdf-utils.ts]] - `imports_from` [EXTRACTED]
-- [[principal-evidence-render.ts]] - `imports_from` [EXTRACTED]
+- [[pdfkit.d.ts]] - `contains` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/csvDocument
+#graphify/code #graphify/EXTRACTED #community/PDFDocument

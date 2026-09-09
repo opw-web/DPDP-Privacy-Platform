@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateNoticeDto"
+community: "UpdateAlgorithmEntryDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateNoticeDto
+  - community/UpdateAlgorithmEntryDto
 ---
 
 # ArrayMinSize
 
 ## Connections
-- [[CreateNoticeDto]] - `references` [EXTRACTED]
+- [[UpdateAlgorithmEntryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateNoticeDto
+#graphify/code #graphify/EXTRACTED #community/UpdateAlgorithmEntryDto

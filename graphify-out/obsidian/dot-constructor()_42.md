@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/common/reference/reference.service.ts"
+source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.ts"
 type: "code"
-community: "prisma.service.ts"
-location: "L18"
+community: "purposes.service.ts"
+location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/purposesservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[ReferenceService]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[PurposesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/purposesservicets

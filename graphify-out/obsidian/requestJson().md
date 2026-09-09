@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/lib/api-client.ts"
 type: "code"
-community: "api-client.ts"
+community: "createApiClient"
 location: "L144"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/createApiClient
 ---
 
 # requestJson()
@@ -17,4 +17,4 @@ tags:
 - [[extractMessage()_1]] - `calls` [EXTRACTED]
 - [[rawRequest()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/createApiClient

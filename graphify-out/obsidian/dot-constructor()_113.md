@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/principal-evidence.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
 type: "code"
-community: "PrincipalEvidenceController"
-location: "L24"
+community: "DataSourcesController"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalEvidenceController
+  - community/DataSourcesController
 ---
 
 # .constructor()
 
 ## Connections
-- [[PrincipalEvidenceController]] - `method` [EXTRACTED]
-- [[PrincipalEvidenceService]] - `references` [EXTRACTED]
+- [[DataSourcesController]] - `method` [EXTRACTED]
+- [[DataSourcesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalEvidenceController
+#graphify/code #graphify/EXTRACTED #community/DataSourcesController

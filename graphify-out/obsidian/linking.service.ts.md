@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/linking.service.ts"
 type: "code"
-community: "prisma.service.ts"
+community: "AuditService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/AuditService
 ---
 
 # linking.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AgeService]] - `imports` [EXTRACTED]
 - [[ApplyMatchResult]] - `contains` [EXTRACTED]
@@ -44,4 +44,4 @@ tags:
 - [[sync-pipeline.service.ts]] - `imports_from` [EXTRACTED]
 - [[verifiedCustomerIdValue()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/AuditService

@@ -1,20 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/source-purposes.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts"
 type: "code"
-community: "SourcePurposesService"
-location: "L179"
+community: "TemplatesService"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SourcePurposesService
+  - community/TemplatesService
 ---
 
 # .get()
 
 ## Connections
-- [[dot-getPurposes()]] - `calls` [INFERRED]
-- [[dot-replace()]] - `calls` [EXTRACTED]
-- [[SourcePurposesService]] - `method` [EXTRACTED]
-- [[toPublicPurpose()]] - `calls` [EXTRACTED]
+- [[dot-get()_8]] - `calls` [INFERRED]
+- [[Get_17]] - `references` [EXTRACTED]
+- [[Param_9]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[TemplatesController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SourcePurposesService
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 35
+members: 36
 ---
 
 # BreachWizardPage.tsx
 
-**Members:** 35 nodes
+**Members:** 36 nodes
 
 ## Members
 - [[AffectedPreviewResult]] - code - dpdp-platform/frontend/src/fiduciary/pages/BreachWizardPage.tsx
@@ -22,6 +22,7 @@ members: 35
 - [[BreachWizardValues]] - code - dpdp-platform/frontend/src/fiduciary/pages/BreachWizardPage.tsx
 - [[CategorySelector()]] - code - dpdp-platform/frontend/src/fiduciary/pages/BreachWizardPage.tsx
 - [[CreateBreachPayload]] - code - dpdp-platform/frontend/src/fiduciary/pages/BreachWizardPage.tsx
+- [[DATA_CATEGORY_OPTIONS]] - code - dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts
 - [[DataCategory]] - code - dpdp-platform/frontend/src/fiduciary/lib/data-sources-api.ts
 - [[NarrativeField()]] - code - dpdp-platform/frontend/src/fiduciary/pages/BreachWizardPage.tsx
 - [[Obligation]] - code - dpdp-platform/frontend/src/fiduciary/components/breaches/BreachObligationCard.tsx
@@ -52,18 +53,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 18 edges to [[_COMMUNITY_button.tsx]]
-- 12 edges to [[_COMMUNITY_react]]
-- 6 edges to [[_COMMUNITY_@tanstackreact-query]]
+- 21 edges to [[_COMMUNITY_react]]
+- 15 edges to [[_COMMUNITY_react-router-dom]]
+- 8 edges to [[_COMMUNITY_router.tsx]]
 - 4 edges to [[_COMMUNITY_data-sources-api.ts]]
-- 4 edges to [[_COMMUNITY_router.tsx]]
 - 3 edges to [[_COMMUNITY_api-client.ts]]
-- 1 edge to [[_COMMUNITY_AlgorithmRegisterPanel.tsx]]
-- 1 edge to [[_COMMUNITY_cn]]
+- 1 edge to [[_COMMUNITY_DateTime.tsx]]
 
 ## Top bridge nodes
-- [[BreachWizardPage.tsx]] - degree 35, connects to 6 communities
-- [[BreachDetailPage.tsx]] - degree 26, connects to 5 communities
-- [[BreachObligationCard.tsx]] - degree 14, connects to 5 communities
+- [[BreachWizardPage.tsx]] - degree 35, connects to 5 communities
+- [[BreachDetailPage.tsx]] - degree 26, connects to 4 communities
+- [[BreachObligationCard.tsx]] - degree 14, connects to 4 communities
 - [[BreachPages.test.tsx]] - degree 17, connects to 1 community
 - [[BreachWizardPage()]] - degree 10, connects to 1 community

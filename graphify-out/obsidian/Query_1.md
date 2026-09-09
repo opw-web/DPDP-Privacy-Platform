@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "GuardiansService"
+community: "guardians.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GuardiansService
+  - community/guardiansservicets
 ---
 
 # Query
 
 ## Connections
-- [[dot-list()_2]] - `references` [EXTRACTED]
+- [[dot-list()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GuardiansService
+#graphify/code #graphify/EXTRACTED #community/guardiansservicets

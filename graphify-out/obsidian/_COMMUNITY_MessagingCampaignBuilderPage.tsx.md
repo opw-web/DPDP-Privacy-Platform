@@ -38,16 +38,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 14 edges to [[_COMMUNITY_button.tsx]]
-- 11 edges to [[_COMMUNITY_react]]
-- 6 edges to [[_COMMUNITY_@tanstackreact-query]]
+- 15 edges to [[_COMMUNITY_react]]
+- 12 edges to [[_COMMUNITY_react-router-dom]]
+- 8 edges to [[_COMMUNITY_router.tsx]]
 - 5 edges to [[_COMMUNITY_AudienceBuilder.tsx]]
-- 4 edges to [[_COMMUNITY_router.tsx]]
 - 2 edges to [[_COMMUNITY_api-client.ts]]
 
 ## Top bridge nodes
-- [[MessagingCampaignBuilderPage.tsx]] - degree 36, connects to 6 communities
-- [[MessagingTemplateEditorPage.tsx]] - degree 20, connects to 5 communities
+- [[MessagingCampaignBuilderPage.tsx]] - degree 36, connects to 5 communities
+- [[MessagingTemplateEditorPage.tsx]] - degree 20, connects to 4 communities
 - [[MessagingCampaignBuilderPage()]] - degree 10, connects to 1 community
 - [[MessagingCampaignBuilderPage.test.tsx]] - degree 8, connects to 1 community
 - [[breach-notification-elements.test.ts]] - degree 6, connects to 1 community

@@ -1,19 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
+source_file: "dpdp-platform/backend/src/modules/compliance/compliance.controller.ts"
 type: "code"
-community: "ComplianceService"
-location: "L374"
+community: "ComplianceController"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ComplianceService
+  - community/ComplianceController
 ---
 
 # .getById()
 
 ## Connections
-- [[dot-getById()]] - `calls` [INFERRED]
-- [[ComplianceService]] - `method` [EXTRACTED]
-- [[toPublicComplianceRule()]] - `calls` [EXTRACTED]
+- [[dot-getById()_2]] - `calls` [INFERRED]
+- [[ComplianceController]] - `method` [EXTRACTED]
+- [[Get_2]] - `references` [EXTRACTED]
+- [[Param_1]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ComplianceService
+#graphify/code #graphify/EXTRACTED #community/ComplianceController

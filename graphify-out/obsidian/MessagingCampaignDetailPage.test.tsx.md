@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.test.tsx"
 type: "code"
-community: "PrincipalEvidencePage.tsx"
+community: "AuditPage.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalEvidencePagetsx
+  - community/AuditPagetsx
 ---
 
 # MessagingCampaignDetailPage.test.tsx
@@ -23,7 +23,7 @@ tags:
 - [[deliveredToNobody()]] - `imports` [EXTRACTED]
 - [[employeeLogin()]] - `imports` [EXTRACTED]
 - [[employeeLogout()]] - `imports` [EXTRACTED]
-- [[jsonResponse()_2]] - `contains` [EXTRACTED]
+- [[jsonResponse()_5]] - `contains` [EXTRACTED]
 - [[libauth.ts]] - `imports_from` [EXTRACTED]
 - [[react-router-dom_1]] - `imports_from` [EXTRACTED]
 - [[recipientReasonText()]] - `imports` [EXTRACTED]
@@ -32,4 +32,4 @@ tags:
 - [[summarizeRecipientStatuses()]] - `imports` [EXTRACTED]
 - [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalEvidencePagetsx
+#graphify/code #graphify/EXTRACTED #community/AuditPagetsx

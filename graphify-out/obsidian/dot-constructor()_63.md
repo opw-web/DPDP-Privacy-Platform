@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/pre-erasure-notice.service.ts"
 type: "code"
-community: "SourcePurposesService"
-location: "L34"
+community: "PreErasureNoticeService"
+location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SourcePurposesService
+  - community/PreErasureNoticeService
 ---
 
 # .constructor()
 
 ## Connections
-- [[MappingsController]] - `method` [EXTRACTED]
-- [[MappingsService]] - `references` [EXTRACTED]
-- [[SourcePurposesService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[NotificationsService]] - `references` [EXTRACTED]
+- [[PreErasureNoticeService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SourcePurposesService
+#graphify/code #graphify/EXTRACTED #community/PreErasureNoticeService

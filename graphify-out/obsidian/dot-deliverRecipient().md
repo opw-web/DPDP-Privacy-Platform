@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-create()_24]] - `calls` [EXTRACTED]
 - [[dot-maybeFinalizeCampaign()]] - `calls` [EXTRACTED]
-- [[dot-process()_9]] - `calls` [INFERRED]
-- [[dot-send()_6]] - `calls` [EXTRACTED]
+- [[dot-process()_7]] - `calls` [INFERRED]
+- [[dot-send()_5]] - `calls` [EXTRACTED]
 - [[CampaignSendJobData]] - `references` [EXTRACTED]
 - [[CampaignsService]] - `method` [EXTRACTED]
 

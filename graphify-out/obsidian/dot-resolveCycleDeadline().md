@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sdf/sdf-assessment.service.ts"
 type: "code"
-community: "RetentionScanService"
+community: "sdf-assessment.service.ts"
 location: "L126"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionScanService
+  - community/sdf-assessmentservicets
 ---
 
 # .resolveCycleDeadline()
@@ -19,4 +19,4 @@ tags:
 - [[ComplianceDeadlineSnapshot]] - `references` [EXTRACTED]
 - [[SdfAssessmentService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionScanService
+#graphify/code #graphify/EXTRACTED #community/sdf-assessmentservicets

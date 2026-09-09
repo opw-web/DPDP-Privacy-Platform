@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Public"
+community: "PrincipalActor"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/PrincipalActor
 ---
 
 # ApiOkResponse
@@ -14,4 +14,4 @@ tags:
 - [[dot-privacyContact()]] - `references` [EXTRACTED]
 - [[dot-profile()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/PrincipalActor

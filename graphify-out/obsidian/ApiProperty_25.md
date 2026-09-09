@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "AssignRequestDto"
+community: "@prisma/client"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AssignRequestDto
+  - community/prisma/client
 ---
 
 # ApiProperty
 
 ## Connections
-- [[AssignRequestDto]] - `references` [EXTRACTED]
+- [[MappingsResponseDto]] - `references` [EXTRACTED]
+- [[SourceFieldMappingResponseDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AssignRequestDto
+#graphify/code #graphify/EXTRACTED #community/prisma/client

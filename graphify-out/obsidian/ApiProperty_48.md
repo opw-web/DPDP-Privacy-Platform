@@ -11,7 +11,7 @@ tags:
 # ApiProperty
 
 ## Connections
-- [[MappingsResponseDto]] - `references` [EXTRACTED]
-- [[SourceFieldMappingResponseDto]] - `references` [EXTRACTED]
+- [[MappingWarningPurposeSummaryResponseDto]] - `references` [EXTRACTED]
+- [[MappingWarningResponseDto]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/mappingsservicets

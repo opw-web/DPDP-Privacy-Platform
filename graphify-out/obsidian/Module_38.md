@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "TokenService"
+community: "data-sources.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TokenService
+  - community/data-sourcesmodulets
 ---
 
 # Module
 
 ## Connections
-- [[TenantModule]] - `references` [EXTRACTED]
+- [[QueuesModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TokenService
+#graphify/code #graphify/EXTRACTED #community/data-sourcesmodulets

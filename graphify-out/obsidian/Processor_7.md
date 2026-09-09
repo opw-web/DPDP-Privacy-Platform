@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sdf-cycle-scan.queue.ts"
+community: "breach-principal-notice-dispatch.processor.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdf-cycle-scanqueuets
+  - community/breach-principal-notice-dispatchprocessorts
 ---
 
 # Processor
 
 ## Connections
-- [[SdfCycleScanProcessor]] - `references` [EXTRACTED]
+- [[CampaignSendProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdf-cycle-scanqueuets
+#graphify/code #graphify/EXTRACTED #community/breach-principal-notice-dispatchprocessorts

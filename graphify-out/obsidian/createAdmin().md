@@ -12,7 +12,7 @@ tags:
 # createAdmin()
 
 ## Connections
-- [[createOrgWithEmployee()_1]] - `calls` [EXTRACTED]
+- [[createOrgWithEmployee()]] - `calls` [EXTRACTED]
 - [[notices.e2e-spec.ts]] - `contains` [EXTRACTED]
 - [[setupFixture()]] - `calls` [EXTRACTED]
 

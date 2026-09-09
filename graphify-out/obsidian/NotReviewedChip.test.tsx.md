@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/NotReviewedChip.test.tsx"
 type: "code"
-community: "react"
+community: "RequestDetailPage.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/RequestDetailPagetsx
 ---
 
 # NotReviewedChip.test.tsx
@@ -17,4 +17,4 @@ tags:
 - [[NotReviewedChip.tsx]] - `imports_from` [EXTRACTED]
 - [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/RequestDetailPagetsx

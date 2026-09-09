@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/roles.service.ts"
+source_file: "dpdp-platform/backend/src/modules/breaches/breaches.controller.ts"
 type: "code"
-community: "UpdateRolePermissionsDto"
-location: "L14"
+community: ".record"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateRolePermissionsDto
+  - community/record
 ---
 
 # .list()
 
 ## Connections
 - [[dot-list()_40]] - `calls` [INFERRED]
-- [[RolesService]] - `method` [EXTRACTED]
+- [[BreachesController]] - `method` [EXTRACTED]
+- [[Get_35]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto
+#graphify/code #graphify/EXTRACTED #community/record

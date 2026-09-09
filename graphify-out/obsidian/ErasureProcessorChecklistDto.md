@@ -12,7 +12,7 @@ tags:
 # ErasureProcessorChecklistDto
 
 ## Connections
-- [[ApiProperty_42]] - `references` [EXTRACTED]
+- [[ApiProperty_43]] - `references` [EXTRACTED]
 - [[ApiPropertyOptional_46]] - `references` [EXTRACTED]
 - [[IsBoolean_20]] - `references` [EXTRACTED]
 - [[IsOptional_47]] - `references` [EXTRACTED]

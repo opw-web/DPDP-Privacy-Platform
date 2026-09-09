@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/transfers.service.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
 type: "code"
-community: "transfers.service.ts"
-location: "L57"
+community: "SyncService"
+location: "L195"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/transfersservicets
+  - graphify/INFERRED
+  - community/SyncService
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_3]] - `calls` [INFERRED]
-- [[TransfersService]] - `method` [EXTRACTED]
+- [[dot-get()_16]] - `calls` [INFERRED]
+- [[dot-triggerSync()]] - `calls` [INFERRED]
+- [[DataSourcesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/transfersservicets
+#graphify/code #graphify/INFERRED #community/SyncService

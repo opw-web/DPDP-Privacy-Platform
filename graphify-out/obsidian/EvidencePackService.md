@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/evidence-pack.service.ts"
 type: "code"
-community: "csvDocument"
+community: "evidence-pack.service.ts"
 location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/csvDocument
+  - community/evidence-packservicets
 ---
 
 # EvidencePackService
@@ -21,11 +21,11 @@ tags:
 - [[dot-buildRetentionScheduleCsv()]] - `method` [EXTRACTED]
 - [[dot-buildSdfRecordsCsv()]] - `method` [EXTRACTED]
 - [[dot-buildSharingRegisterCsv()]] - `method` [EXTRACTED]
-- [[dot-constructor()_18]] - `references` [EXTRACTED]
-- [[dot-constructor()_26]] - `method` [EXTRACTED]
-- [[Injectable_9]] - `references` [EXTRACTED]
+- [[dot-constructor()_21]] - `references` [EXTRACTED]
+- [[dot-constructor()_22]] - `method` [EXTRACTED]
+- [[Injectable_13]] - `references` [EXTRACTED]
 - [[evidence-pack.controller.ts]] - `imports` [EXTRACTED]
 - [[evidence-pack.service.ts]] - `contains` [EXTRACTED]
 - [[evidence.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/csvDocument
+#graphify/code #graphify/EXTRACTED #community/evidence-packservicets

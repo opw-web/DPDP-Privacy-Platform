@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/assembly.service.ts"
 type: "code"
-community: "assembly.service.ts"
+community: "AuditService"
 location: "L79"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/assemblyservicets
+  - community/AuditService
 ---
 
 # EXTRA_FIELDS
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[assembly.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/assemblyservicets
+#graphify/code #graphify/EXTRACTED #community/AuditService

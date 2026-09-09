@@ -9,20 +9,20 @@ members: 20
 
 ## Members
 - [[dot-clearRefreshCookie()_1]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
-- [[dot-constructor()_148]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
+- [[dot-constructor()_147]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
 - [[dot-isProduction()_1]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
 - [[dot-login()_3]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
 - [[dot-logout()_3]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
 - [[dot-refresh()_3]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
 - [[dot-setRefreshCookie()_1]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
-- [[ApiProperty_50]] - code
+- [[ApiProperty_49]] - code
 - [[ApiTags_39]] - code
 - [[Body_28]] - code
 - [[Controller_40]] - code
 - [[HttpCode_5]] - code
 - [[IsEmail_7]] - code
-- [[IsString_69]] - code
-- [[MinLength_54]] - code
+- [[IsString_68]] - code
+- [[MinLength_53]] - code
 - [[Post_28]] - code
 - [[PrincipalAuthController]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
 - [[PrincipalLoginDto]] - code - dpdp-platform/backend/src/modules/auth/dto/principal-login.dto.ts
@@ -38,8 +38,9 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 6 edges to [[_COMMUNITY_Public]]
-- 5 edges to [[_COMMUNITY_TokenService]]
-- 1 edge to [[_COMMUNITY_@nestjscommon]]
+- 4 edges to [[_COMMUNITY_employee-auth.service.ts]]
+- 1 edge to [[_COMMUNITY_@prismaclient]]
+- 1 edge to [[_COMMUNITY_PrincipalActor]]
 
 ## Top bridge nodes
 - [[PrincipalAuthController]] - degree 12, connects to 2 communities

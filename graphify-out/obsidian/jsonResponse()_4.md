@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/EmployeesPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/principal/components/PortalShell.test.tsx"
 type: "code"
-community: "EmployeesPage.tsx"
-location: "L16"
+community: "DateTime.tsx"
+location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeesPagetsx
+  - community/DateTimetsx
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[EmployeesPage.test.tsx]] - `contains` [EXTRACTED]
-- [[loginAndRenderThroughShell()]] - `calls` [EXTRACTED]
+- [[PortalShell.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeesPagetsx
+#graphify/code #graphify/EXTRACTED #community/DateTimetsx

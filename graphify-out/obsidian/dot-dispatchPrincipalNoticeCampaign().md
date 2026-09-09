@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
 type: "code"
-community: "BreachService"
+community: ".record"
 location: "L691"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BreachService
+  - community/record
 ---
 
 # .dispatchPrincipalNoticeCampaign()
 
 ## Connections
 - [[dot-notifyPrincipals()]] - `calls` [EXTRACTED]
-- [[dot-process()_8]] - `calls` [INFERRED]
-- [[dot-send()_6]] - `calls` [INFERRED]
+- [[dot-process()_6]] - `calls` [INFERRED]
+- [[dot-send()_5]] - `calls` [INFERRED]
 - [[BreachService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BreachService
+#graphify/code #graphify/EXTRACTED #community/record

@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[AuditPage.tsx]] - `imports_from` [EXTRACTED]
-- [[CheckboxOption]] - `imports` [EXTRACTED]
-- [[CheckboxOption_1]] - `contains` [EXTRACTED]
+- [[CheckboxOption_1]] - `imports` [EXTRACTED]
+- [[CheckboxOption]] - `contains` [EXTRACTED]
 - [[FieldShell()]] - `contains` [EXTRACTED]
 - [[FieldShellProps]] - `contains` [EXTRACTED]
 - [[Label_1]] - `imports` [EXTRACTED]

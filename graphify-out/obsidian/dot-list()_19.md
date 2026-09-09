@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notices/notices.controller.ts"
 type: "code"
-community: "NoticesController"
+community: "RequirePermission"
 location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NoticesController
+  - community/RequirePermission
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_20]] - `calls` [INFERRED]
-- [[Get_19]] - `references` [EXTRACTED]
+- [[dot-list()_37]] - `calls` [INFERRED]
+- [[Get_22]] - `references` [EXTRACTED]
 - [[NoticesController]] - `method` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NoticesController
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

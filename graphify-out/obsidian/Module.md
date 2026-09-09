@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "configuration.ts"
+community: "data-sources.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/configurationts
+  - community/data-sourcesservicets
 ---
 
 # Module
 
 ## Connections
-- [[CryptoModule]] - `references` [EXTRACTED]
+- [[ConnectorsModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/configurationts
+#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets

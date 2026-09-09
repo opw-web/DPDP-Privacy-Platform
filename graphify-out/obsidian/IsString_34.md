@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EscalateRequestDto"
+community: "PrincipalsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EscalateRequestDto
+  - community/PrincipalsService
 ---
 
 # IsString
 
 ## Connections
-- [[EscalateRequestDto]] - `references` [EXTRACTED]
+- [[ListPrincipalsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EscalateRequestDto
+#graphify/code #graphify/EXTRACTED #community/PrincipalsService

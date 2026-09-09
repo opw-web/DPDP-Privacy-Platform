@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeSourcesPage.test.tsx"
 type: "code"
-community: "@tanstack/react-query"
+community: "router.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tanstack/react-query
+  - community/routertsx
 ---
 
 # MeSourcesPage.test.tsx
@@ -16,9 +16,9 @@ tags:
 - [[@testing-libraryreact_1]] - `imports_from` [EXTRACTED]
 - [[MeSourcesPage()]] - `imports` [EXTRACTED]
 - [[MeSourcesPage.tsx]] - `imports_from` [EXTRACTED]
-- [[jsonResponse()_27]] - `contains` [EXTRACTED]
+- [[jsonResponse()_24]] - `contains` [EXTRACTED]
 - [[react-router-dom_1]] - `imports_from` [EXTRACTED]
 - [[renderMeSourcesPage()]] - `contains` [EXTRACTED]
 - [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tanstack/react-query
+#graphify/code #graphify/EXTRACTED #community/routertsx

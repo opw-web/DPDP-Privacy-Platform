@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/MessagingCampaignDetailPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/wizard/Step3Mapping.test.tsx"
 type: "code"
-community: "PrincipalEvidencePage.tsx"
-location: "L110"
+community: "data-sources-api.ts"
+location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalEvidencePagetsx
+  - community/data-sources-apits
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[MessagingCampaignDetailPage.test.tsx]] - `contains` [EXTRACTED]
+- [[Step3Mapping.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalEvidencePagetsx
+#graphify/code #graphify/EXTRACTED #community/data-sources-apits

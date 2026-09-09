@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/form-controls.tsx"
+source_file: "dpdp-platform/frontend/src/components/ui/checkbox.tsx"
 type: "code"
 community: "react"
-location: "L22"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,9 @@ tags:
 # CheckboxOption
 
 ## Connections
+- [[AlgorithmFormFields.tsx]] - `imports` [EXTRACTED]
+- [[AssessmentRow.tsx]] - `imports` [EXTRACTED]
+- [[InformationRequestForm.tsx]] - `imports` [EXTRACTED]
 - [[PurposeForm.tsx]] - `imports` [EXTRACTED]
 - [[RecipientsTab.tsx]] - `imports` [EXTRACTED]
 - [[RetentionTab.tsx]] - `imports` [EXTRACTED]
@@ -23,6 +26,7 @@ tags:
 - [[Step3Mapping.tsx]] - `imports` [EXTRACTED]
 - [[Step5Declarations.tsx]] - `imports` [EXTRACTED]
 - [[TransfersTab.tsx]] - `imports` [EXTRACTED]
-- [[form-controls.tsx]] - `contains` [EXTRACTED]
+- [[checkbox.tsx]] - `contains` [EXTRACTED]
+- [[form-controls.tsx]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/react

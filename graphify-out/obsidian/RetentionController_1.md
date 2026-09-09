@@ -12,13 +12,13 @@ tags:
 # RetentionController
 
 ## Connections
-- [[dot-constructor()_140]] - `method` [EXTRACTED]
-- [[dot-create()_33]] - `method` [EXTRACTED]
-- [[dot-get()_21]] - `method` [EXTRACTED]
-- [[dot-list()_44]] - `method` [EXTRACTED]
-- [[dot-update()_23]] - `method` [EXTRACTED]
-- [[ApiTags_35]] - `references` [EXTRACTED]
-- [[Controller_36]] - `references` [EXTRACTED]
+- [[dot-constructor()_141]] - `method` [EXTRACTED]
+- [[dot-create()_35]] - `method` [EXTRACTED]
+- [[dot-get()_22]] - `method` [EXTRACTED]
+- [[dot-list()_46]] - `method` [EXTRACTED]
+- [[dot-update()_25]] - `method` [EXTRACTED]
+- [[ApiTags_36]] - `references` [EXTRACTED]
+- [[Controller_37]] - `references` [EXTRACTED]
 - [[registers.module.ts]] - `imports` [EXTRACTED]
 - [[registersretention.controller.ts]] - `contains` [EXTRACTED]
 

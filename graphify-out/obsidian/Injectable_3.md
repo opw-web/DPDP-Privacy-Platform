@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ErasureTaskService"
+community: "AccessReportService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ErasureTaskService
+  - community/AccessReportService
 ---
 
 # Injectable
 
 ## Connections
-- [[ErasureTaskService]] - `references` [EXTRACTED]
+- [[MeService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ErasureTaskService
+#graphify/code #graphify/EXTRACTED #community/AccessReportService

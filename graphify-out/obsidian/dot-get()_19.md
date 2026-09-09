@@ -1,21 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/recipients.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/breaches/breaches.controller.ts"
 type: "code"
-community: "recipients.service.ts"
-location: "L26"
+community: ".record"
+location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/record
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_20]] - `calls` [INFERRED]
-- [[Get_36]] - `references` [EXTRACTED]
-- [[Param_25]] - `references` [EXTRACTED]
-- [[RecipientsController]] - `method` [EXTRACTED]
+- [[dot-get()_18]] - `calls` [INFERRED]
+- [[BreachesController]] - `method` [EXTRACTED]
+- [[Get_35]] - `references` [EXTRACTED]
+- [[Param_24]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/record

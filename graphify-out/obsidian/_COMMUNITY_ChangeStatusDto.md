@@ -8,7 +8,7 @@ members: 13
 **Members:** 13 nodes
 
 ## Members
-- [[ApiProperty_42]] - code
+- [[ApiProperty_43]] - code
 - [[ApiPropertyOptional_46]] - code
 - [[ChangeStatusDto]] - code - dpdp-platform/backend/src/modules/requests/dto/change-status.dto.ts
 - [[ErasureProcessorChecklistDto]] - code - dpdp-platform/backend/src/modules/requests/dto/change-status.dto.ts
@@ -30,9 +30,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_requests.service.ts]]
-- 1 edge to [[_COMMUNITY_@nestjscommon]]
-- 1 edge to [[_COMMUNITY_RequestsController]]
+- 4 edges to [[_COMMUNITY_@prismaclient]]
+- 2 edges to [[_COMMUNITY_requests.service.ts]]
+- 1 edge to [[_COMMUNITY_VerifyIdentityDto]]
 - 1 edge to [[_COMMUNITY_RequestsService]]
 
 ## Top bridge nodes

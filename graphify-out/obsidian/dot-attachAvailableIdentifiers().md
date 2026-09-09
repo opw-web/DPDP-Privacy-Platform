@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/linking.service.ts"
 type: "code"
-community: ".record"
+community: "AuditService"
 location: "L184"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/AuditService
 ---
 
 # .attachAvailableIdentifiers()
@@ -19,4 +19,4 @@ tags:
 - [[ScopedTransactionClient]] - `references` [EXTRACTED]
 - [[verifiedCustomerIdValue()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/AuditService

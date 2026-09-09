@@ -12,7 +12,7 @@ tags:
 # MeProfileTimezoneDto
 
 ## Connections
-- [[ApiProperty_9]] - `references` [EXTRACTED]
+- [[ApiProperty_18]] - `references` [EXTRACTED]
 - [[me-profile-timezone.dto.ts]] - `contains` [EXTRACTED]
 - [[me.controller.ts]] - `imports` [EXTRACTED]
 

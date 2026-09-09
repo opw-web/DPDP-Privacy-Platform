@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/assembly.service.spec.ts"
 type: "code"
-community: "assembly.service.ts"
+community: "AuditService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/assemblyservicets
+  - community/AuditService
 ---
 
 # assembly.service.spec.ts
@@ -20,4 +20,4 @@ tags:
 - [[nameRecord()]] - `contains` [EXTRACTED]
 - [[nameSources()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/assemblyservicets
+#graphify/code #graphify/EXTRACTED #community/AuditService

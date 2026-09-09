@@ -12,10 +12,10 @@ tags:
 # BreachPrincipalNoticeDispatchProcessor
 
 ## Connections
-- [[dot-constructor()_96]] - `method` [EXTRACTED]
-- [[dot-process()_8]] - `method` [EXTRACTED]
+- [[dot-constructor()_91]] - `method` [EXTRACTED]
+- [[dot-process()_6]] - `method` [EXTRACTED]
 - [[dot-recoverPendingCampaignRecipients()]] - `method` [EXTRACTED]
-- [[Processor_8]] - `references` [EXTRACTED]
+- [[Processor_6]] - `references` [EXTRACTED]
 - [[breach-principal-notice-dispatch.processor.ts]] - `contains` [EXTRACTED]
 - [[breaches.module.ts]] - `imports` [EXTRACTED]
 

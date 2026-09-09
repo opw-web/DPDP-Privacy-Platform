@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principal-portal/me-rights.service.ts"
 type: "code"
-community: "notices.service.ts"
+community: "MeRightsService"
 location: "L293"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/noticesservicets
+  - community/MeRightsService
 ---
 
 # .getPublishedNotice()
@@ -16,4 +16,4 @@ tags:
 - [[MeRightsService]] - `method` [EXTRACTED]
 - [[isNoticeLanguageCode()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/noticesservicets
+#graphify/code #graphify/EXTRACTED #community/MeRightsService

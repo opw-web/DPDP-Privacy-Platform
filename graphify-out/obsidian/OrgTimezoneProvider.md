@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/DateTime.tsx"
 type: "code"
-community: "cn"
+community: "DateTime.tsx"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/DateTimetsx
 ---
 
 # OrgTimezoneProvider
@@ -17,4 +17,4 @@ tags:
 - [[DateTime.tsx]] - `contains` [EXTRACTED]
 - [[PortalShell.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/DateTimetsx

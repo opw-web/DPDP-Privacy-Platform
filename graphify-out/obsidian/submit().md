@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/SettingsCompliancePage.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/retention/LegalHoldForm.tsx"
 type: "code"
-community: "router.tsx"
-location: "L24"
+community: "DateTime.tsx"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/DateTimetsx
 ---
 
 # submit()
 
 ## Connections
-- [[RuleCard()]] - `contains` [EXTRACTED]
+- [[LegalHoldForm()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/DateTimetsx

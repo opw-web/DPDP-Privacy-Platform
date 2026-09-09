@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts"
+source_file: "dpdp-platform/backend/package.json"
 type: "code"
-community: "PDFDocument"
-location: "L8"
+community: "dependencies"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PDFDocument
+  - community/dependencies
 ---
 
 # pdfkit
 
 ## Connections
-- [[pdfkit.d.ts]] - `contains` [EXTRACTED]
+- [[dependencies_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PDFDocument
+#graphify/code #graphify/EXTRACTED #community/dependencies

@@ -12,10 +12,10 @@ tags:
 # PermissionsController
 
 ## Connections
-- [[dot-constructor()_52]] - `method` [EXTRACTED]
-- [[dot-list()_10]] - `method` [EXTRACTED]
-- [[ApiTags_13]] - `references` [EXTRACTED]
-- [[Controller_13]] - `references` [EXTRACTED]
+- [[dot-constructor()_54]] - `method` [EXTRACTED]
+- [[dot-list()_13]] - `method` [EXTRACTED]
+- [[ApiTags_14]] - `references` [EXTRACTED]
+- [[Controller_15]] - `references` [EXTRACTED]
 - [[employees.module.ts]] - `imports` [EXTRACTED]
 - [[permissions.controller.ts]] - `contains` [EXTRACTED]
 

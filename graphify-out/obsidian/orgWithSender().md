@@ -12,7 +12,7 @@ tags:
 # orgWithSender()
 
 ## Connections
-- [[createOrgWithEmployee()_1]] - `calls` [EXTRACTED]
+- [[createOrgWithEmployee()]] - `calls` [EXTRACTED]
 - [[templates.e2e-spec.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PrismaService

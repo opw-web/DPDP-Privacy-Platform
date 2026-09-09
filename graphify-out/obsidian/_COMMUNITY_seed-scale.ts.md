@@ -37,12 +37,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_PrismaService]]
-- 3 edges to [[_COMMUNITY_step6-conflict-acceptance.e2e-spec.ts]]
-- 2 edges to [[_COMMUNITY_prisma.service.ts]]
+- 9 edges to [[_COMMUNITY_PrismaService]]
+- 2 edges to [[_COMMUNITY_AppModule]]
+- 1 edge to [[_COMMUNITY_argon2]]
 - 1 edge to [[_COMMUNITY_@nestjscommon]]
 
 ## Top bridge nodes
 - [[seed-scale.ts]] - degree 24, connects to 3 communities
-- [[performance.e2e-spec.ts]] - degree 14, connects to 3 communities
+- [[performance.e2e-spec.ts]] - degree 14, connects to 2 communities
 - [[main()_6]] - degree 3, connects to 1 community

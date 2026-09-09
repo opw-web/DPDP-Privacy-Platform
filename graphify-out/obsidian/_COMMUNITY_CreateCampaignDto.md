@@ -8,16 +8,16 @@ members: 10
 **Members:** 10 nodes
 
 ## Members
-- [[ApiProperty_13]] - code
-- [[ApiPropertyOptional_14]] - code
-- [[ArrayUnique_1]] - code
+- [[ApiProperty_9]] - code
+- [[ApiPropertyOptional_13]] - code
+- [[ArrayUnique]] - code
 - [[CreateCampaignDto]] - code - dpdp-platform/backend/src/modules/messaging/campaigns/dto/create-campaign.dto.ts
-- [[IsArray_6]] - code
-- [[IsEnum_8]] - code
+- [[IsArray_5]] - code
+- [[IsEnum_7]] - code
 - [[IsObject_2]] - code
 - [[IsOptional_14]] - code
-- [[IsString_18]] - code
-- [[MinLength_14]] - code
+- [[IsString_16]] - code
+- [[MinLength_11]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -27,9 +27,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_@nestjscommon]]
-- 2 edges to [[_COMMUNITY_CampaignsService]]
+- 2 edges to [[_COMMUNITY_RequirePermission]]
 - 1 edge to [[_COMMUNITY_campaigns.service.ts]]
+- 1 edge to [[_COMMUNITY_CampaignsService]]
+- 1 edge to [[_COMMUNITY_@prismaclient]]
 
 ## Top bridge nodes
-- [[CreateCampaignDto]] - degree 14, connects to 3 communities
+- [[CreateCampaignDto]] - degree 14, connects to 4 communities

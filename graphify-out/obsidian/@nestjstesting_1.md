@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "step6-conflict-acceptance.e2e-spec.ts"
+community: "AppModule"
 location: "L57"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/step6-conflict-acceptancee2e-spects
+  - community/AppModule
 ---
 
 # @nestjs/testing
@@ -38,4 +38,4 @@ tags:
 - [[step6-conflict-acceptance.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[sync.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects
+#graphify/concept #graphify/EXTRACTED #community/AppModule

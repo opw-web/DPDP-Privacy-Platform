@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/erasure-task.service.ts"
 type: "code"
-community: "ErasureTaskService"
+community: "erasure-task.service.ts"
 location: "L204"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ErasureTaskService
+  - community/erasure-taskservicets
 ---
 
 # .createFromTrigger()
@@ -20,7 +20,7 @@ tags:
 - [[dot-createPurposeServedTasks()]] - `calls` [INFERRED]
 - [[dot-findApplicableLegalHold()]] - `calls` [EXTRACTED]
 - [[dot-mergeCompletionChecklist()]] - `calls` [EXTRACTED]
-- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
 - [[dot-resolveLastInboundContactAt()]] - `calls` [EXTRACTED]
 - [[dot-resolveLastProcessingAt()]] - `calls` [EXTRACTED]
 - [[dot-resolveRule()]] - `calls` [INFERRED]
@@ -29,4 +29,4 @@ tags:
 - [[addByDeadlineUnit()]] - `calls` [EXTRACTED]
 - [[addByRetentionUnit()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ErasureTaskService
+#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/audit/dto/list-audit-events.dto.ts"
 type: "code"
-community: "guardians.service.ts"
+community: "@prisma/client"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/prisma/client
 ---
 
 # list-audit-events.dto.ts
@@ -23,4 +23,4 @@ tags:
 - [[class-transformer_1]] - `imports_from` [EXTRACTED]
 - [[class-validator_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/prisma/client

@@ -12,14 +12,14 @@ tags:
 # TemplatesController
 
 ## Connections
-- [[dot-constructor()_65]] - `method` [EXTRACTED]
+- [[dot-constructor()_69]] - `method` [EXTRACTED]
 - [[dot-create()_13]] - `method` [EXTRACTED]
-- [[dot-get()_8]] - `method` [EXTRACTED]
+- [[dot-get()_7]] - `method` [EXTRACTED]
 - [[dot-list()_15]] - `method` [EXTRACTED]
-- [[dot-preview()_1]] - `method` [EXTRACTED]
+- [[dot-preview()]] - `method` [EXTRACTED]
 - [[dot-update()_10]] - `method` [EXTRACTED]
 - [[ApiTags_15]] - `references` [EXTRACTED]
-- [[Controller_15]] - `references` [EXTRACTED]
+- [[Controller_16]] - `references` [EXTRACTED]
 - [[templates.controller.ts]] - `contains` [EXTRACTED]
 - [[templates.module.ts]] - `imports` [EXTRACTED]
 

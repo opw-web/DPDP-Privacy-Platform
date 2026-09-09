@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-testConnection()_1]] - `calls` [INFERRED]
 - [[DataSourcesController]] - `method` [EXTRACTED]
-- [[Param_21]] - `references` [EXTRACTED]
-- [[Post_19]] - `references` [EXTRACTED]
+- [[Param_22]] - `references` [EXTRACTED]
+- [[Post_20]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/DataSourcesController

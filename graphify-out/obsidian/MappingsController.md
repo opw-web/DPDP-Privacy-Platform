@@ -12,13 +12,13 @@ tags:
 # MappingsController
 
 ## Connections
-- [[dot-constructor()_63]] - `method` [EXTRACTED]
+- [[dot-constructor()_67]] - `method` [EXTRACTED]
 - [[dot-getMappings()]] - `method` [EXTRACTED]
 - [[dot-getPurposes()]] - `method` [EXTRACTED]
 - [[dot-replaceMappings()]] - `method` [EXTRACTED]
 - [[dot-replacePurposes()]] - `method` [EXTRACTED]
-- [[ApiTags_11]] - `references` [EXTRACTED]
-- [[Controller_11]] - `references` [EXTRACTED]
+- [[ApiTags_13]] - `references` [EXTRACTED]
+- [[Controller_14]] - `references` [EXTRACTED]
 - [[data-sources.module.ts]] - `imports` [EXTRACTED]
 - [[mappings.controller.ts]] - `contains` [EXTRACTED]
 

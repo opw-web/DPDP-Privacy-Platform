@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "step6-conflict-acceptance.e2e-spec.ts"
+community: "data-sources.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/step6-conflict-acceptancee2e-spects
+  - community/data-sourcesmodulets
 ---
 
 # Module
 
 ## Connections
-- [[AppModule]] - `references` [EXTRACTED]
+- [[NormalizationModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects
+#graphify/code #graphify/EXTRACTED #community/data-sourcesmodulets

@@ -1,51 +1,68 @@
 ---
 type: community
-members: 38
+members: 55
 ---
 
 # evidence-pack.service.ts
 
-**Members:** 38 nodes
+**Members:** 55 nodes
 
 ## Members
-- [[dot-constructor()_23]] - code - dpdp-platform/backend/src/modules/evidence/audit-chain.service.ts
-- [[dot-constructor()_24]] - code - dpdp-platform/backend/src/modules/evidence/audit-events-evidence.controller.ts
-- [[dot-constructor()_25]] - code - dpdp-platform/backend/src/modules/evidence/audit-export.service.ts
-- [[dot-constructor()_26]] - code - dpdp-platform/backend/src/modules/evidence/evidence-pack.service.ts
-- [[dot-constructor()_27]] - code - dpdp-platform/backend/src/modules/inventory/ropa-export.service.ts
-- [[dot-verifyChain()]] - code - dpdp-platform/backend/src/modules/evidence/audit-chain.service.ts
-- [[dot-verifyChain()_1]] - code - dpdp-platform/backend/src/modules/evidence/audit-events-evidence.controller.ts
+- [[dot-accessLogCsv()]] - code - dpdp-platform/backend/src/modules/audit/audit-read.service.ts
+- [[dot-buildBreachFileCsv()]] - code - dpdp-platform/backend/src/modules/evidence/evidence-pack.service.ts
+- [[dot-buildConsentLedgerCsv()]] - code - dpdp-platform/backend/src/modules/evidence/evidence-pack.service.ts
+- [[dot-buildDataInventoryCsv()]] - code - dpdp-platform/backend/src/modules/evidence/evidence-pack.service.ts
+- [[dot-buildGrievanceReportCsv()]] - code - dpdp-platform/backend/src/modules/evidence/evidence-pack.service.ts
+- [[dot-buildPack()]] - code - dpdp-platform/backend/src/modules/evidence/evidence-pack.service.ts
+- [[dot-buildRequestRegisterCsv()]] - code - dpdp-platform/backend/src/modules/evidence/evidence-pack.service.ts
+- [[dot-buildRetentionScheduleCsv()]] - code - dpdp-platform/backend/src/modules/evidence/evidence-pack.service.ts
+- [[dot-buildSdfRecordsCsv()]] - code - dpdp-platform/backend/src/modules/evidence/evidence-pack.service.ts
+- [[dot-buildSharingRegisterCsv()]] - code - dpdp-platform/backend/src/modules/evidence/evidence-pack.service.ts
+- [[dot-constructor()_21]] - code - dpdp-platform/backend/src/modules/evidence/evidence-pack.controller.ts
+- [[dot-constructor()_22]] - code - dpdp-platform/backend/src/modules/evidence/evidence-pack.service.ts
+- [[dot-constructor()_23]] - code - dpdp-platform/backend/src/modules/inventory/inventory.controller.ts
+- [[dot-exportCsv()]] - code - dpdp-platform/backend/src/modules/evidence/audit-export.service.ts
+- [[dot-exportCsv()_1]] - code - dpdp-platform/backend/src/modules/inventory/ropa-export.service.ts
+- [[dot-packZip()]] - code - dpdp-platform/backend/src/modules/evidence/evidence-pack.controller.ts
 - [[AUDIT_LOG_CSV_HEADER]] - code - dpdp-platform/backend/src/modules/evidence/audit-export.service.ts
-- [[ApiTags_6]] - code
-- [[AuditChainService]] - code - dpdp-platform/backend/src/modules/evidence/audit-chain.service.ts
-- [[AuditEventsEvidenceController]] - code - dpdp-platform/backend/src/modules/evidence/audit-events-evidence.controller.ts
+- [[ApiTags_4]] - code
 - [[AuditExportService]] - code - dpdp-platform/backend/src/modules/evidence/audit-export.service.ts
-- [[ChainVerificationResult]] - code - dpdp-platform/backend/src/modules/evidence/audit-chain.service.ts
-- [[Controller_6]] - code
-- [[Custom]] - code - dpdp-platform/backend/src/common/audit/canonical-json.spec.ts
-- [[Event]] - code - dpdp-platform/backend/src/modules/evidence/audit-chain.service.spec.ts
+- [[CRC_TABLE]] - code - dpdp-platform/backend/src/modules/evidence/zip-writer.ts
+- [[Controller_4]] - code
+- [[EvidencePackController]] - code - dpdp-platform/backend/src/modules/evidence/evidence-pack.controller.ts
+- [[EvidencePackService]] - code - dpdp-platform/backend/src/modules/evidence/evidence-pack.service.ts
+- [[Get_4]] - code
 - [[Injectable_12]] - code
 - [[Injectable_13]] - code
 - [[Injectable_14]] - code
+- [[RFC-4180]] - concept - dpdp-platform/backend/src/modules/inventory/csv-writer.spec.ts
+- [[RFC-4180_1]] - concept - dpdp-platform/backend/src/modules/inventory/csv-writer.ts
 - [[ROPA_CSV_HEADER]] - code - dpdp-platform/backend/src/modules/inventory/ropa-export.service.ts
+- [[Res]] - code
 - [[RopaExportService]] - code - dpdp-platform/backend/src/modules/inventory/ropa-export.service.ts
-- [[audit-chain.service.spec.ts]] - code - dpdp-platform/backend/src/modules/evidence/audit-chain.service.spec.ts
-- [[audit-chain.service.ts]] - code - dpdp-platform/backend/src/modules/evidence/audit-chain.service.ts
-- [[audit-events-evidence.controller.ts]] - code - dpdp-platform/backend/src/modules/evidence/audit-events-evidence.controller.ts
+- [[ZipEntryInput]] - code - dpdp-platform/backend/src/modules/evidence/zip-writer.ts
 - [[audit-export.service.ts]] - code - dpdp-platform/backend/src/modules/evidence/audit-export.service.ts
-- [[canonical-json.spec.ts]] - code - dpdp-platform/backend/src/common/audit/canonical-json.spec.ts
-- [[canonical-json.ts]] - code - dpdp-platform/backend/src/common/audit/canonical-json.ts
-- [[canonicalJson()]] - code - dpdp-platform/backend/src/common/audit/canonical-json.ts
+- [[buildZip()]] - code - dpdp-platform/backend/src/modules/evidence/zip-writer.ts
+- [[crc32()]] - code - dpdp-platform/backend/src/modules/evidence/zip-writer.ts
+- [[csv-writer.spec.ts]] - code - dpdp-platform/backend/src/modules/inventory/csv-writer.spec.ts
+- [[csv-writer.ts]] - code - dpdp-platform/backend/src/modules/inventory/csv-writer.ts
+- [[csvDocument()]] - code - dpdp-platform/backend/src/modules/inventory/csv-writer.ts
+- [[csvField()]] - code - dpdp-platform/backend/src/modules/inventory/csv-writer.ts
+- [[csvRow()]] - code - dpdp-platform/backend/src/modules/inventory/csv-writer.ts
+- [[evidence-pack.controller.ts]] - code - dpdp-platform/backend/src/modules/evidence/evidence-pack.controller.ts
 - [[evidence-pack.service.ts]] - code - dpdp-platform/backend/src/modules/evidence/evidence-pack.service.ts
-- [[hashPayload()]] - code - dpdp-platform/backend/src/modules/sync/payload-hash.ts
-- [[inventory.controller.ts]] - code - dpdp-platform/backend/src/modules/inventory/inventory.controller.ts
-- [[payload-hash.spec.ts]] - code - dpdp-platform/backend/src/modules/sync/payload-hash.spec.ts
-- [[payload-hash.ts]] - code - dpdp-platform/backend/src/modules/sync/payload-hash.ts
+- [[evidence-timestamp.spec.ts]] - code - dpdp-platform/backend/src/modules/evidence/evidence-timestamp.spec.ts
+- [[evidence-timestamp.ts]] - code - dpdp-platform/backend/src/modules/evidence/evidence-timestamp.ts
+- [[formatEvidenceTimestamp()]] - code - dpdp-platform/backend/src/modules/evidence/evidence-timestamp.ts
+- [[needsQuoting()]] - code - dpdp-platform/backend/src/modules/inventory/csv-writer.ts
+- [[pack-letterhead.ts]] - code - dpdp-platform/backend/src/modules/evidence/pack-letterhead.ts
+- [[parseCsv()]] - code - dpdp-platform/backend/src/modules/inventory/csv-writer.spec.ts
+- [[renderAccessReportCsv()]] - code - dpdp-platform/backend/src/modules/evidence/access-report-render.ts
 - [[ropa-export.service.ts]] - code - dpdp-platform/backend/src/modules/inventory/ropa-export.service.ts
-- [[serviceWith()]] - code - dpdp-platform/backend/src/modules/evidence/audit-chain.service.spec.ts
-- [[stringify()]] - code - dpdp-platform/backend/src/common/audit/canonical-json.ts
-- [[typeLabel()]] - code - dpdp-platform/backend/src/common/audit/canonical-json.ts
-- [[verifyChainIntact()]] - code - dpdp-platform/backend/test/audit.e2e-spec.ts
+- [[sortedUnique()]] - code - dpdp-platform/backend/src/modules/inventory/ropa-export.service.ts
+- [[toDosDateTime()]] - code - dpdp-platform/backend/src/modules/evidence/zip-writer.ts
+- [[withCsvLetterhead()]] - code - dpdp-platform/backend/src/modules/evidence/pack-letterhead.ts
+- [[zip-writer.ts]] - code - dpdp-platform/backend/src/modules/evidence/zip-writer.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -55,24 +72,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 22 edges to [[_COMMUNITY_prisma.service.ts]]
-- 20 edges to [[_COMMUNITY_csvDocument]]
-- 11 edges to [[_COMMUNITY_@nestjscommon]]
-- 10 edges to [[_COMMUNITY_app.module.ts]]
-- 4 edges to [[_COMMUNITY_PrismaService]]
-- 4 edges to [[_COMMUNITY_inventory.service.ts]]
+- 12 edges to [[_COMMUNITY_@nestjscommon]]
+- 9 edges to [[_COMMUNITY_AuditService]]
+- 9 edges to [[_COMMUNITY_PrismaService]]
+- 8 edges to [[_COMMUNITY_audit-read.service.ts]]
+- 5 edges to [[_COMMUNITY_inventory.controller.ts]]
+- 4 edges to [[_COMMUNITY_canonicalJson]]
+- 4 edges to [[_COMMUNITY_dot-record]]
+- 4 edges to [[_COMMUNITY_access-report-render.ts]]
 - 3 edges to [[_COMMUNITY_RequirePermission]]
-- 2 edges to [[_COMMUNITY_AuditReadService]]
-- 2 edges to [[_COMMUNITY_NotificationsService]]
-- 2 edges to [[_COMMUNITY_compliance.service.ts]]
-- 2 edges to [[_COMMUNITY_dot-record]]
-- 2 edges to [[_COMMUNITY_notices.service.ts]]
-- 1 edge to [[_COMMUNITY_NoticesService]]
-- 1 edge to [[_COMMUNITY_guardians.service.ts]]
+- 1 edge to [[_COMMUNITY_@prismaclient]]
+- 1 edge to [[_COMMUNITY_compliance.service.ts]]
 
 ## Top bridge nodes
-- [[evidence-pack.service.ts]] - degree 25, connects to 8 communities
-- [[ropa-export.service.ts]] - degree 13, connects to 5 communities
-- [[audit-export.service.ts]] - degree 12, connects to 5 communities
-- [[canonicalJson()]] - degree 15, connects to 4 communities
-- [[audit-chain.service.ts]] - degree 11, connects to 4 communities
+- [[evidence-pack.service.ts]] - degree 25, connects to 5 communities
+- [[ropa-export.service.ts]] - degree 13, connects to 4 communities
+- [[audit-export.service.ts]] - degree 12, connects to 4 communities
+- [[AuditExportService]] - degree 9, connects to 3 communities
+- [[RopaExportService]] - degree 9, connects to 3 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeConsentsPage.test.tsx"
 type: "code"
-community: "@tanstack/react-query"
+community: "router.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tanstack/react-query
+  - community/routertsx
 ---
 
 # MeConsentsPage.test.tsx
@@ -18,9 +18,9 @@ tags:
 - [[MeConsentsPage()]] - `imports` [EXTRACTED]
 - [[MeConsentsPage.tsx]] - `imports_from` [EXTRACTED]
 - [[PAYLOAD]] - `contains` [EXTRACTED]
-- [[jsonResponse()_23]] - `contains` [EXTRACTED]
+- [[jsonResponse()_21]] - `contains` [EXTRACTED]
 - [[react-router-dom_1]] - `imports_from` [EXTRACTED]
-- [[renderPage()_7]] - `contains` [EXTRACTED]
+- [[renderPage()_8]] - `contains` [EXTRACTED]
 - [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tanstack/react-query
+#graphify/code #graphify/EXTRACTED #community/routertsx

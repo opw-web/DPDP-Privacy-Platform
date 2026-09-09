@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principal-portal/me-rights.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/sharing.service.ts"
 type: "code"
-community: "MeRightsService"
-location: "L29"
+community: "sharing.service.ts"
+location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeRightsService
+  - community/sharingservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[MeRightsController]] - `method` [EXTRACTED]
-- [[MeRightsService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[SharingService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeRightsService
+#graphify/code #graphify/EXTRACTED #community/sharingservicets

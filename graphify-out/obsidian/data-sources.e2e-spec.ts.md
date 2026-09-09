@@ -12,7 +12,7 @@ tags:
 # data-sources.e2e-spec.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[@nestjstesting_1]] - `imports_from` [EXTRACTED]
 - [[AppModule]] - `imports` [EXTRACTED]
 - [[DataSourcesService]] - `imports` [EXTRACTED]
@@ -21,12 +21,12 @@ tags:
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[TenantContext]] - `imports` [EXTRACTED]
 - [[app.module.ts]] - `imports_from` [EXTRACTED]
-- [[argon2_1]] - `imports_from` [EXTRACTED]
+- [[argon2]] - `imports_from` [EXTRACTED]
 - [[assertNoCipherInTree()]] - `contains` [EXTRACTED]
 - [[createManager()]] - `contains` [EXTRACTED]
 - [[createOrgWithRole()]] - `contains` [EXTRACTED]
 - [[data-sources.service.ts]] - `imports_from` [EXTRACTED]
-- [[ensurePermission()_5]] - `contains` [EXTRACTED]
+- [[ensurePermission()_4]] - `contains` [EXTRACTED]
 - [[getStoredCipher()]] - `contains` [EXTRACTED]
 - [[jsonHandler()]] - `imports` [EXTRACTED]
 - [[mock-http-server.ts]] - `imports_from` [EXTRACTED]

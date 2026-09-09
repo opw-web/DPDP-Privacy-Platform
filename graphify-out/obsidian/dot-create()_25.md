@@ -1,22 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/sharing.controller.ts"
 type: "code"
-community: "DataSourcesController"
-location: "L42"
+community: "sharing.service.ts"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesController
+  - community/sharingservicets
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_10]] - `calls` [INFERRED]
-- [[Body_18]] - `references` [EXTRACTED]
-- [[CreateDataSourceDto]] - `references` [EXTRACTED]
-- [[DataSourcesController]] - `method` [EXTRACTED]
-- [[Post_19]] - `references` [EXTRACTED]
+- [[dot-create()_26]] - `calls` [INFERRED]
+- [[Body_17]] - `references` [EXTRACTED]
+- [[CreateSharingActivityDto]] - `references` [EXTRACTED]
+- [[Post_17]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
+- [[SharingController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesController
+#graphify/code #graphify/EXTRACTED #community/sharingservicets

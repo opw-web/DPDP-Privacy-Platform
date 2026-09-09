@@ -12,7 +12,7 @@ tags:
 # .update()
 
 ## Connections
-- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
 - [[dot-updateAlgorithm()]] - `calls` [INFERRED]
 - [[AlgorithmRegisterService]] - `method` [EXTRACTED]
 - [[UpdateAlgorithmEntryDto]] - `references` [EXTRACTED]

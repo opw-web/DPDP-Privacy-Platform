@@ -1,23 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notices/notices.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
 type: "code"
-community: "NoticesController"
-location: "L72"
+community: "notices.service.ts"
+location: "L498"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NoticesController
+  - community/noticesservicets
 ---
 
 # .publish()
 
 ## Connections
+- [[dot-get()_17]] - `calls` [EXTRACTED]
+- [[dot-getVersionOrThrow()]] - `calls` [EXTRACTED]
 - [[dot-publish()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[CurrentActor]] - `references` [EXTRACTED]
-- [[NoticesController]] - `method` [EXTRACTED]
-- [[Param_11]] - `references` [EXTRACTED]
-- [[Post_10]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[NoticesService]] - `method` [EXTRACTED]
+- [[canonicalJson()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NoticesController
+#graphify/code #graphify/EXTRACTED #community/noticesservicets

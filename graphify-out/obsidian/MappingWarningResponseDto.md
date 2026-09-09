@@ -12,7 +12,7 @@ tags:
 # MappingWarningResponseDto
 
 ## Connections
-- [[ApiProperty_47]] - `references` [EXTRACTED]
+- [[ApiProperty_48]] - `references` [EXTRACTED]
 - [[MappingWarningType_1]] - `references` [EXTRACTED]
 - [[MappingsResponseDto]] - `references` [EXTRACTED]
 - [[mapping-warning-response.dto.ts]] - `contains` [EXTRACTED]

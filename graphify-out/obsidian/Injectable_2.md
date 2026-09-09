@@ -11,6 +11,6 @@ tags:
 # Injectable
 
 ## Connections
-- [[MeService]] - `references` [EXTRACTED]
+- [[AccessReportService]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/AccessReportService

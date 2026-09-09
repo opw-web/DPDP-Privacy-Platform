@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
 type: "code"
-community: "RequirePermission"
+community: ".record"
 location: "L773"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/record
 ---
 
 # .boardReport()
@@ -17,4 +17,4 @@ tags:
 - [[dot-get()_18]] - `calls` [EXTRACTED]
 - [[BreachService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/record

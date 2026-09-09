@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SyncService"
+community: "inventory.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncService
+  - community/inventorycontrollerts
 ---
 
 # ApiTags
 
 ## Connections
-- [[SyncController]] - `references` [EXTRACTED]
-- [[SyncJobsController]] - `references` [EXTRACTED]
+- [[InventoryController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncService
+#graphify/code #graphify/EXTRACTED #community/inventorycontrollerts

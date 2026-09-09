@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/requests/requests.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/requests/requests.service.ts"
 type: "code"
 community: "RequestsController"
-location: "L64"
+location: "L236"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,8 +13,6 @@ tags:
 
 ## Connections
 - [[dot-stats()]] - `calls` [INFERRED]
-- [[Get_17]] - `references` [EXTRACTED]
-- [[RequestsController]] - `method` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[RequestsService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/RequestsController

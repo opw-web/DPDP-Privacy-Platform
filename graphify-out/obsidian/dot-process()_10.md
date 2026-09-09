@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/retention-scan.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/sync.processor.ts"
 type: "code"
 community: "queues.module.ts"
-location: "L24"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,8 +12,9 @@ tags:
 # .process()
 
 ## Connections
-- [[dot-runForAllOrganizations()_3]] - `calls` [INFERRED]
-- [[RetentionScanJobData]] - `references` [EXTRACTED]
-- [[RetentionScanProcessor]] - `method` [EXTRACTED]
+- [[dot-run()]] - `calls` [INFERRED]
+- [[SyncJobData]] - `references` [EXTRACTED]
+- [[SyncProcessor]] - `method` [EXTRACTED]
+- [[SyncRunSummary]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/queuesmodulets

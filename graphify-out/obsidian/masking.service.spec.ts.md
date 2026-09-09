@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/masking/masking.service.spec.ts"
 type: "code"
-community: "guardians.service.ts"
+community: "compile-audience.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/compile-audiencets
 ---
 
 # masking.service.spec.ts
@@ -16,4 +16,4 @@ tags:
 - [[MaskingService]] - `imports` [EXTRACTED]
 - [[masking.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/compile-audiencets

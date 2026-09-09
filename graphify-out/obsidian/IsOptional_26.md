@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EscalateRequestDto"
+community: "TemplatesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EscalateRequestDto
+  - community/TemplatesService
 ---
 
 # IsOptional
 
 ## Connections
-- [[EscalateRequestDto]] - `references` [EXTRACTED]
+- [[PreviewTemplateDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EscalateRequestDto
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

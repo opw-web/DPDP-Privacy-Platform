@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Public"
+community: "notifications.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/notificationsmodulets
 ---
 
 # Injectable
 
 ## Connections
-- [[JwtPrincipalGuard]] - `references` [EXTRACTED]
+- [[ConsoleProvider]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/notificationsmodulets

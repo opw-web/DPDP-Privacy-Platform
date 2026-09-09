@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/NoticeBuilderPage.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/SettingsCompliancePage.tsx"
 type: "code"
-community: "react"
-location: "L16"
+community: "SettingsPage.tsx"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/SettingsPagetsx
 ---
 
 # errorMessage()
 
 ## Connections
-- [[NoticeBuilderPage()]] - `calls` [EXTRACTED]
-- [[NoticeBuilderPage.tsx]] - `contains` [EXTRACTED]
+- [[RuleCard()]] - `calls` [EXTRACTED]
+- [[SettingsCompliancePage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/SettingsPagetsx

@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.service.ts"
 type: "code"
 community: "CampaignsService"
-location: "L34"
+location: "L171"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,9 +12,7 @@ tags:
 # .list()
 
 ## Connections
-- [[dot-list()_31]] - `calls` [INFERRED]
-- [[CampaignsController]] - `method` [EXTRACTED]
-- [[Get_26]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-list()_18]] - `calls` [INFERRED]
+- [[CampaignsService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CampaignsService

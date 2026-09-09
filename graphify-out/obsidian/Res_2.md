@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AuditReadService"
+community: "canonicalJson"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditReadService
+  - community/canonicalJson
 ---
 
 # Res
 
 ## Connections
-- [[dot-accessLogCsv()]] - `references` [EXTRACTED]
+- [[dot-exportCsv()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditReadService
+#graphify/code #graphify/EXTRACTED #community/canonicalJson

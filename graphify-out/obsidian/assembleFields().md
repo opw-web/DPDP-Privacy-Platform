@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/assembly.service.ts"
 type: "code"
-community: "assembly.service.ts"
+community: "AuditService"
 location: "L160"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/assemblyservicets
+  - community/AuditService
 ---
 
 # assembleFields()
@@ -15,10 +15,10 @@ tags:
 - [[dot-rebuild()]] - `calls` [EXTRACTED]
 - [[assembly.service.spec.ts]] - `imports` [EXTRACTED]
 - [[assembly.service.ts]] - `contains` [EXTRACTED]
-- [[compareNewest()]] - `indirect_call` [INFERRED]
+- [[compareNewest()_1]] - `indirect_call` [INFERRED]
 - [[extrasObject()]] - `calls` [EXTRACTED]
 - [[jsonValue()]] - `calls` [EXTRACTED]
 - [[mappingsForSource()]] - `calls` [EXTRACTED]
 - [[normalizedValue()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/assemblyservicets
+#graphify/code #graphify/EXTRACTED #community/AuditService

@@ -12,13 +12,13 @@ tags:
 # templates.e2e-spec.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[BREACH_NOTIFICATION_REQUIRED_ELEMENTS]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
-- [[authed()]] - `contains` [EXTRACTED]
+- [[authed()_1]] - `contains` [EXTRACTED]
 - [[bootstrapTestApp()]] - `imports` [EXTRACTED]
 - [[cleanupOrgs()]] - `imports` [EXTRACTED]
-- [[createOrgWithEmployee()_1]] - `imports` [EXTRACTED]
+- [[createOrgWithEmployee()]] - `imports` [EXTRACTED]
 - [[e2e-harness.ts]] - `imports_from` [EXTRACTED]
 - [[message-templates.ts]] - `imports_from` [EXTRACTED]
 - [[orgWithSender()]] - `contains` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "configuration.ts"
+community: "@nestjs/common"
 location: "L30"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/configurationts
+  - community/nestjs/common
 ---
 
 # @nestjs/core
@@ -18,4 +18,4 @@ tags:
 - [[main.ts]] - `imports_from` [EXTRACTED]
 - [[permissions.guard.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/configurationts
+#graphify/concept #graphify/EXTRACTED #community/nestjs/common

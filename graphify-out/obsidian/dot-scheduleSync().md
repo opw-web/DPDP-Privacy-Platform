@@ -12,8 +12,8 @@ tags:
 # .scheduleSync()
 
 ## Connections
-- [[dot-create()_10]] - `calls` [EXTRACTED]
-- [[dot-update()_6]] - `calls` [EXTRACTED]
+- [[dot-create()_11]] - `calls` [EXTRACTED]
+- [[dot-update()_7]] - `calls` [EXTRACTED]
 - [[dot-upsertSchedule()]] - `calls` [INFERRED]
 - [[DataSourcesService]] - `method` [EXTRACTED]
 

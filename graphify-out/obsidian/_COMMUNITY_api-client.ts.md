@@ -1,29 +1,40 @@
 ---
 type: community
-members: 16
+members: 27
 ---
 
 # api-client.ts
 
-**Members:** 16 nodes
+**Members:** 27 nodes
 
 ## Members
+- [[API_BASE]] - code - dpdp-platform/frontend/src/lib/api-client.ts
+- [[ApiClient]] - code - dpdp-platform/frontend/src/lib/api-client.ts
 - [[ApiClientConfig]] - code - dpdp-platform/frontend/src/lib/api-client.ts
-- [[MeRequestDetailPage()]] - code - dpdp-platform/frontend/src/principal/pages/MeRequestDetailPage.tsx
-- [[MeRequestDetailPage.test.tsx]] - code - dpdp-platform/frontend/src/principal/pages/MeRequestDetailPage.test.tsx
+- [[EMPTY]] - code - dpdp-platform/frontend/src/components/shared/NotificationBell.test.tsx
+- [[MarkAllReadResponse]] - code - dpdp-platform/frontend/src/lib/mvp2-api.ts
+- [[NotificationBell()]] - code - dpdp-platform/frontend/src/components/shared/NotificationBell.tsx
+- [[NotificationBell.test.tsx]] - code - dpdp-platform/frontend/src/components/shared/NotificationBell.test.tsx
+- [[NotificationBell.tsx]] - code - dpdp-platform/frontend/src/components/shared/NotificationBell.tsx
+- [[NotificationBellProps]] - code - dpdp-platform/frontend/src/components/shared/NotificationBell.tsx
+- [[NotificationDto_1]] - code - dpdp-platform/frontend/src/lib/mvp2-api.ts
+- [[NotificationListResponse]] - code - dpdp-platform/frontend/src/lib/mvp2-api.ts
+- [[NotificationRow()]] - code - dpdp-platform/frontend/src/components/shared/NotificationBell.tsx
+- [[PrincipalLoginPage.test.tsx]] - code - dpdp-platform/frontend/src/principal/pages/PrincipalLoginPage.test.tsx
 - [[RequestOptions]] - code - dpdp-platform/frontend/src/lib/api-client.ts
+- [[api-client.test.ts]] - code - dpdp-platform/frontend/src/lib/api-client.test.ts
 - [[api-client.ts]] - code - dpdp-platform/frontend/src/lib/api-client.ts
-- [[buildInit()]] - code - dpdp-platform/frontend/src/lib/api-client.ts
-- [[createApiClient()]] - code - dpdp-platform/frontend/src/lib/api-client.ts
+- [[authHeaderOf()]] - code - dpdp-platform/frontend/src/lib/api-client.test.ts
 - [[createTokenStore()]] - code - dpdp-platform/frontend/src/lib/api-client.ts
-- [[extractMessage()_1]] - code - dpdp-platform/frontend/src/lib/api-client.ts
-- [[initial]] - code - dpdp-platform/frontend/src/principal/pages/MeRequestDetailPage.test.tsx
-- [[onAuthExpired()]] - code - dpdp-platform/frontend/src/lib/api-client.ts
-- [[rawRequest()]] - code - dpdp-platform/frontend/src/lib/api-client.ts
-- [[refresh()]] - code - dpdp-platform/frontend/src/lib/api-client.ts
-- [[renderPage()]] - code - dpdp-platform/frontend/src/principal/pages/MeRequestDetailPage.test.tsx
-- [[requestJson()]] - code - dpdp-platform/frontend/src/lib/api-client.ts
-- [[updated]] - code - dpdp-platform/frontend/src/principal/pages/MeRequestDetailPage.test.tsx
+- [[jsonResponse()_26]] - code - dpdp-platform/frontend/src/lib/api-client.test.ts
+- [[listNotifications()]] - code - dpdp-platform/frontend/src/lib/mvp2-api.ts
+- [[makeFakeApiClient()]] - code - dpdp-platform/frontend/src/components/shared/NotificationBell.test.tsx
+- [[markAllNotificationsRead()]] - code - dpdp-platform/frontend/src/lib/mvp2-api.ts
+- [[markNotificationRead()]] - code - dpdp-platform/frontend/src/lib/mvp2-api.ts
+- [[mvp2-api.ts]] - code - dpdp-platform/frontend/src/lib/mvp2-api.ts
+- [[principalTokenStore]] - code - dpdp-platform/frontend/src/lib/api-client.ts
+- [[renderBell()]] - code - dpdp-platform/frontend/src/components/shared/NotificationBell.test.tsx
+- [[renderPrincipalLoginPage()]] - code - dpdp-platform/frontend/src/principal/pages/PrincipalLoginPage.test.tsx
 
 ## Live Query (requires Dataview plugin)
 
@@ -33,23 +44,26 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 27 edges to [[_COMMUNITY_react]]
-- 26 edges to [[_COMMUNITY_button.tsx]]
-- 14 edges to [[_COMMUNITY_@tanstackreact-query]]
-- 8 edges to [[_COMMUNITY_router.tsx]]
-- 8 edges to [[_COMMUNITY_data-sources-api.ts]]
-- 7 edges to [[_COMMUNITY_cn]]
-- 4 edges to [[_COMMUNITY_EmployeesPage.tsx]]
+- 33 edges to [[_COMMUNITY_react-router-dom]]
+- 32 edges to [[_COMMUNITY_react]]
+- 27 edges to [[_COMMUNITY_router.tsx]]
+- 13 edges to [[_COMMUNITY_data-sources-api.ts]]
+- 4 edges to [[_COMMUNITY_DateTime.tsx]]
+- 4 edges to [[_COMMUNITY_cn]]
+- 3 edges to [[_COMMUNITY_AuditPage.tsx]]
+- 3 edges to [[_COMMUNITY_EmployeesPage.tsx]]
 - 3 edges to [[_COMMUNITY_BreachWizardPage.tsx]]
-- 3 edges to [[_COMMUNITY_AlgorithmRegisterPanel.tsx]]
+- 3 edges to [[_COMMUNITY_SettingsPage.tsx]]
+- 2 edges to [[_COMMUNITY_createApiClient]]
+- 2 edges to [[_COMMUNITY_RequestDetailPage.tsx]]
 - 2 edges to [[_COMMUNITY_MessagingCampaignBuilderPage.tsx]]
-- 2 edges to [[_COMMUNITY_PrincipalEvidencePage.tsx]]
+- 1 edge to [[_COMMUNITY_MeDataPage.tsx]]
 - 1 edge to [[_COMMUNITY_AudienceBuilder.tsx]]
-- 1 edge to [[_COMMUNITY_PrincipalsPage.tsx]]
+- 1 edge to [[_COMMUNITY_CandidateComparison.tsx]]
 
 ## Top bridge nodes
-- [[api-client.ts]] - degree 101, connects to 13 communities
-- [[MeRequestDetailPage.test.tsx]] - degree 11, connects to 2 communities
-- [[MeRequestDetailPage()]] - degree 4, connects to 2 communities
-- [[rawRequest()]] - degree 6, connects to 1 community
-- [[refresh()]] - degree 4, connects to 1 community
+- [[api-client.ts]] - degree 101, connects to 16 communities
+- [[NotificationBell.tsx]] - degree 23, connects to 4 communities
+- [[api-client.test.ts]] - degree 11, connects to 4 communities
+- [[PrincipalLoginPage.test.tsx]] - degree 10, connects to 3 communities
+- [[API_BASE]] - degree 5, connects to 3 communities

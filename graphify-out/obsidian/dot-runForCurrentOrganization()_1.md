@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/pre-erasure-notice.service.ts"
 type: "code"
-community: "NotificationsService"
+community: "PreErasureNoticeService"
 location: "L98"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/PreErasureNoticeService
 ---
 
 # .runForCurrentOrganization()
@@ -17,4 +17,4 @@ tags:
 - [[dot-sendDueNotices()]] - `calls` [EXTRACTED]
 - [[PreErasureNoticeService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/PreErasureNoticeService

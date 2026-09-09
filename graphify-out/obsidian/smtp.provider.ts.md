@@ -12,7 +12,7 @@ tags:
 # smtp.provider.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[MailerService]] - `imports` [EXTRACTED]
 - [[NotificationProvider]] - `imports` [EXTRACTED]
 - [[NotificationSendInput]] - `imports` [EXTRACTED]

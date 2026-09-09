@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/inventory/inventory.service.ts"
 type: "code"
-community: "inventory.service.ts"
+community: "inventory.controller.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/inventoryservicets
+  - community/inventorycontrollerts
 ---
 
 # inventory.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[InventoryGap]] - `contains` [EXTRACTED]
 - [[InventoryService]] - `contains` [EXTRACTED]
 - [[InventorySummary]] - `contains` [EXTRACTED]
@@ -23,4 +23,4 @@ tags:
 - [[inventory.module.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/inventoryservicets
+#graphify/code #graphify/EXTRACTED #community/inventorycontrollerts

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/audit/audit-actions.ts"
 type: "code"
-community: "guardians.service.ts"
+community: "consents.service.ts"
 location: "L117"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/consentsservicets
 ---
 
 # AUDIT_ACTIONS
@@ -16,4 +16,4 @@ tags:
 - [[audit-actions.ts]] - `contains` [EXTRACTED]
 - [[list-audit-events.dto.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/consentsservicets

@@ -12,7 +12,7 @@ tags:
 # AudienceFilterError
 
 ## Connections
-- [[dot-constructor()_157]] - `method` [EXTRACTED]
+- [[dot-constructor()_156]] - `method` [EXTRACTED]
 - [[audience-filter.error.ts]] - `contains` [EXTRACTED]
 - [[audience.service.ts]] - `imports` [EXTRACTED]
 - [[breach.service.ts]] - `imports` [EXTRACTED]

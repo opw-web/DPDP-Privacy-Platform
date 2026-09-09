@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/common/tenant/tenant.module.ts"
+source_file: "dpdp-platform/backend/src/app.module.ts"
 type: "code"
-community: "TokenService"
-location: "L13"
+community: "AppModule"
+location: "L127"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TokenService
+  - community/AppModule
 ---
 
 # .configure()
 
 ## Connections
-- [[TenantModule]] - `method` [EXTRACTED]
+- [[AppModule]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TokenService
+#graphify/code #graphify/EXTRACTED #community/AppModule

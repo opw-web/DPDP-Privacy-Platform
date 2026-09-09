@@ -1,20 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/connector.factory.ts"
+source_file: "dpdp-platform/backend/src/modules/children/guardians.service.ts"
 type: "code"
-community: "data-sources.service.ts"
-location: "L40"
+community: "guardians.service.ts"
+location: "L167"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesservicets
+  - community/guardiansservicets
 ---
 
 # .create()
 
 ## Connections
-- [[dot-buildConnector()]] - `calls` [INFERRED]
-- [[Connector]] - `references` [EXTRACTED]
-- [[ConnectorFactory]] - `method` [EXTRACTED]
-- [[RestApiConnector]] - `calls` [EXTRACTED]
+- [[dot-assertPwdAppointmentValid()]] - `calls` [EXTRACTED]
+- [[dot-create()_2]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-toResponse()]] - `calls` [EXTRACTED]
+- [[CreateGuardianDto]] - `references` [EXTRACTED]
+- [[GuardiansService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets
+#graphify/code #graphify/EXTRACTED #community/guardiansservicets

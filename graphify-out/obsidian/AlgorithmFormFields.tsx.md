@@ -12,11 +12,11 @@ tags:
 # AlgorithmFormFields.tsx
 
 ## Connections
-- [[ALGORITHM_OPERATIONS_1]] - `imports` [EXTRACTED]
+- [[ALGORITHM_OPERATIONS]] - `imports` [EXTRACTED]
 - [[AlgorithmFormFields()]] - `contains` [EXTRACTED]
 - [[AlgorithmFormValues]] - `contains` [EXTRACTED]
 - [[AlgorithmRegisterPanel.tsx]] - `imports_from` [EXTRACTED]
-- [[CheckboxOption]] - `imports` [EXTRACTED]
+- [[CheckboxOption_1]] - `imports` [EXTRACTED]
 - [[EMPTY_ALGORITHM_FORM]] - `contains` [EXTRACTED]
 - [[Input]] - `imports` [EXTRACTED]
 - [[Label_1]] - `imports` [EXTRACTED]

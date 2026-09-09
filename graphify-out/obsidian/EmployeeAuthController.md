@@ -20,8 +20,8 @@ tags:
 - [[dot-me()_2]] - `method` [EXTRACTED]
 - [[dot-refresh()]] - `method` [EXTRACTED]
 - [[dot-setRefreshCookie()]] - `method` [EXTRACTED]
-- [[ApiTags_33]] - `references` [EXTRACTED]
-- [[Controller_34]] - `references` [EXTRACTED]
+- [[ApiTags_34]] - `references` [EXTRACTED]
+- [[Controller_35]] - `references` [EXTRACTED]
 - [[auth.module.ts]] - `imports` [EXTRACTED]
 - [[employee-auth.controller.ts]] - `contains` [EXTRACTED]
 

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/prisma/seed.ts"
 type: "code"
-community: "seed.ts"
+community: "argon2"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/seedts
+  - community/argon2
 ---
 
 # seed.ts
@@ -18,7 +18,7 @@ tags:
 - [[PERMISSIONS]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[ROLES]] - `imports` [EXTRACTED]
-- [[argon2_1]] - `imports_from` [EXTRACTED]
+- [[argon2]] - `imports_from` [EXTRACTED]
 - [[compliance-rules.ts]] - `imports_from` [EXTRACTED]
 - [[demo-org.ts]] - `imports_from` [EXTRACTED]
 - [[employee-auth.e2e-spec.ts]] - `imports_from` [EXTRACTED]
@@ -37,4 +37,4 @@ tags:
 - [[seedPermissions()]] - `contains` [EXTRACTED]
 - [[seedRoles()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/seedts
+#graphify/code #graphify/EXTRACTED #community/argon2

@@ -1,20 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/breach-principal-notice-dispatch.processor.ts"
+source_file: "dpdp-platform/backend/src/modules/board/information-requests.service.ts"
 type: "code"
-community: "breach-principal-notice-dispatch.processor.ts"
-location: "L35"
+community: "CreateInformationRequestDto"
+location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breach-principal-notice-dispatchprocessorts
+  - community/CreateInformationRequestDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[BreachPrincipalNoticeDispatchProcessor]] - `method` [EXTRACTED]
-- [[BreachService]] - `references` [EXTRACTED]
-- [[CampaignSendJobData]] - `references` [EXTRACTED]
-- [[InjectQueue_6]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[InformationRequestsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breach-principal-notice-dispatchprocessorts
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

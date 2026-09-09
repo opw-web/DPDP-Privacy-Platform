@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "mappings.service.ts"
+community: ".unmerge"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingsservicets
+  - community/unmerge
 ---
 
 # ApiProperty
 
 ## Connections
-- [[MappingWarningPurposeSummaryResponseDto]] - `references` [EXTRACTED]
-- [[MappingWarningResponseDto]] - `references` [EXTRACTED]
+- [[UnmergeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/EXTRACTED #community/unmerge

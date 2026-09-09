@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "csvDocument"
+community: "guardians.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/csvDocument
+  - community/guardiansservicets
 ---
 
 # Injectable
 
 ## Connections
-- [[EvidencePackService]] - `references` [EXTRACTED]
+- [[GuardiansService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/csvDocument
+#graphify/code #graphify/EXTRACTED #community/guardiansservicets

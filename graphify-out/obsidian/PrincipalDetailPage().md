@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.tsx"
 type: "code"
-community: "router.tsx"
+community: "SettingsPage.tsx"
 location: "L273"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/SettingsPagetsx
 ---
 
 # PrincipalDetailPage()
@@ -19,4 +19,4 @@ tags:
 - [[humanizeEnum()]] - `calls` [EXTRACTED]
 - [[router.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/SettingsPagetsx

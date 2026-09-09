@@ -1,22 +1,24 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/notifications.service.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/notifications.controller.ts"
 type: "code"
-community: "notifications.service.ts"
-location: "L149"
+community: "notifications.controller.ts"
+location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationsservicets
+  - community/notificationscontrollerts
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_32]] - `calls` [INFERRED]
-- [[dot-listMessages()_1]] - `calls` [INFERRED]
+- [[dot-list()_34]] - `calls` [INFERRED]
+- [[ApiOkResponse_3]] - `references` [EXTRACTED]
+- [[CurrentNotificationActor]] - `references` [EXTRACTED]
+- [[Get_29]] - `references` [EXTRACTED]
 - [[NotificationCallerActor]] - `references` [EXTRACTED]
-- [[NotificationsService]] - `method` [EXTRACTED]
-- [[ownershipWhere()]] - `calls` [EXTRACTED]
-- [[toPublicNotification()]] - `indirect_call` [INFERRED]
+- [[NotificationsController]] - `method` [EXTRACTED]
+- [[Public()]] - `references` [EXTRACTED]
+- [[UseGuards_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationsservicets
+#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts

@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-create()_14]] - `calls` [INFERRED]
-- [[Body_9]] - `references` [EXTRACTED]
+- [[Body_11]] - `references` [EXTRACTED]
 - [[CreateTemplateDto]] - `references` [EXTRACTED]
-- [[Post_7]] - `references` [EXTRACTED]
+- [[Post_9]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[TemplatesController]] - `method` [EXTRACTED]
 

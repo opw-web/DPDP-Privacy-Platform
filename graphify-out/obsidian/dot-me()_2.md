@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.controller.ts"
 type: "code"
-community: "@nestjs/common"
+community: "RequirePermission"
 location: "L123"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/RequirePermission
 ---
 
 # .me()
@@ -17,6 +17,6 @@ tags:
 - [[CurrentActor]] - `references` [EXTRACTED]
 - [[EmployeeAuthController]] - `method` [EXTRACTED]
 - [[EmployeeMeResponseDto]] - `references` [EXTRACTED]
-- [[Get_23]] - `references` [EXTRACTED]
+- [[Get_20]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

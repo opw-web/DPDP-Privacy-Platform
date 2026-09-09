@@ -11,6 +11,6 @@ tags:
 # Injectable
 
 ## Connections
-- [[ConsentBackfillQueueService]] - `references` [EXTRACTED]
+- [[SdfCycleScanQueueService]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/queuesmodulets

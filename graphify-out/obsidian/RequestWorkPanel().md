@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/requests/RequestWorkPanel.tsx"
 type: "code"
-community: "router.tsx"
+community: "RequestDetailPage.tsx"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/RequestDetailPagetsx
 ---
 
 # RequestWorkPanel()
@@ -18,4 +18,4 @@ tags:
 - [[message()]] - `calls` [EXTRACTED]
 - [[refresh()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/RequestDetailPagetsx

@@ -14,10 +14,10 @@ tags:
 ## Connections
 - [[dot-replace()]] - `calls` [INFERRED]
 - [[AttachPurposesDto]] - `references` [EXTRACTED]
-- [[Body_6]] - `references` [EXTRACTED]
+- [[Body_9]] - `references` [EXTRACTED]
 - [[MappingsController]] - `method` [EXTRACTED]
-- [[Param_5]] - `references` [EXTRACTED]
-- [[Put]] - `references` [EXTRACTED]
+- [[Param_8]] - `references` [EXTRACTED]
+- [[Put_1]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/MappingsController

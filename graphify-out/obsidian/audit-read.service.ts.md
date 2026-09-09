@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/audit/audit-read.service.ts"
 type: "code"
-community: "guardians.service.ts"
+community: "audit-read.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/audit-readservicets
 ---
 
 # audit-read.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[ACCESS_LOG_CSV_HEADER]] - `contains` [EXTRACTED]
 - [[ACCESS_LOG_ENTRY_SELECT]] - `contains` [EXTRACTED]
@@ -39,4 +39,4 @@ tags:
 - [[masking.service.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/audit-readservicets

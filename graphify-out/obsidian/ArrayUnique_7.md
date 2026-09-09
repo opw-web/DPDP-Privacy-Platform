@@ -11,6 +11,6 @@ tags:
 # ArrayUnique
 
 ## Connections
-- [[CreateSharingActivityDto]] - `references` [EXTRACTED]
+- [[UpdateSharingActivityDto]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/sharingservicets

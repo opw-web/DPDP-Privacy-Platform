@@ -12,8 +12,8 @@ tags:
 # TenantModule
 
 ## Connections
-- [[dot-configure()_1]] - `method` [EXTRACTED]
-- [[Module_38]] - `references` [EXTRACTED]
+- [[dot-configure()]] - `method` [EXTRACTED]
+- [[Module_2]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[tenant.module.ts]] - `contains` [EXTRACTED]
 

@@ -12,8 +12,8 @@ tags:
 # ConsoleProvider
 
 ## Connections
-- [[dot-send()]] - `method` [EXTRACTED]
-- [[Injectable_15]] - `references` [EXTRACTED]
+- [[dot-send()_1]] - `method` [EXTRACTED]
+- [[Injectable_18]] - `references` [EXTRACTED]
 - [[NotificationProvider]] - `implements` [EXTRACTED]
 - [[console.provider.ts]] - `contains` [EXTRACTED]
 - [[email-provider.factory.spec.ts]] - `imports` [EXTRACTED]

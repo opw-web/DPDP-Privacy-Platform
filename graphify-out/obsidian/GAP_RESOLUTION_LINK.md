@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/GapsPanel.tsx"
 type: "code"
-community: "button.tsx"
+community: "react-router-dom"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react-router-dom
 ---
 
 # GAP_RESOLUTION_LINK
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[GapsPanel.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

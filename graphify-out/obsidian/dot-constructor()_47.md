@@ -1,21 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/merge.service.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/candidates.service.ts"
 type: "code"
-community: "prisma.service.ts"
-location: "L54"
+community: "AuditService"
+location: "L124"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/AuditService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AgeService]] - `references` [EXTRACTED]
-- [[AssemblyService]] - `references` [EXTRACTED]
 - [[AuditService]] - `references` [EXTRACTED]
-- [[MergeService]] - `method` [EXTRACTED]
-- [[ReferenceService]] - `references` [EXTRACTED]
+- [[CandidatesService]] - `method` [EXTRACTED]
+- [[MergeService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/AuditService

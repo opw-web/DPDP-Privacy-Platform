@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/breach-clock.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/breach-principal-notice-dispatch.processor.ts"
 type: "code"
-community: "BreachClockProcessor"
-location: "L31"
+community: "breach-principal-notice-dispatch.processor.ts"
+location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BreachClockProcessor
+  - community/breach-principal-notice-dispatchprocessorts
 ---
 
 # .process()
 
 ## Connections
-- [[dot-runClockCycle()]] - `calls` [EXTRACTED]
-- [[BreachClockProcessor]] - `method` [EXTRACTED]
+- [[dot-dispatchPrincipalNoticeCampaign()]] - `calls` [INFERRED]
+- [[dot-recoverPendingCampaignRecipients()]] - `calls` [EXTRACTED]
+- [[BreachPrincipalNoticeDispatchJobData]] - `references` [EXTRACTED]
+- [[BreachPrincipalNoticeDispatchProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BreachClockProcessor
+#graphify/code #graphify/EXTRACTED #community/breach-principal-notice-dispatchprocessorts

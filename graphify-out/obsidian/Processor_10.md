@@ -11,6 +11,6 @@ tags:
 # Processor
 
 ## Connections
-- [[RetentionScanProcessor]] - `references` [EXTRACTED]
+- [[SyncProcessor]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/queuesmodulets

@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/DashboardPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/RetentionPage.test.tsx"
 type: "code"
-community: "EmployeesPage.tsx"
-location: "L10"
+community: "DateTime.tsx"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeesPagetsx
+  - community/DateTimetsx
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[DashboardPage.test.tsx]] - `contains` [EXTRACTED]
-- [[mockRoutesAndLogin()]] - `calls` [EXTRACTED]
+- [[RetentionPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeesPagetsx
+#graphify/code #graphify/EXTRACTED #community/DateTimetsx

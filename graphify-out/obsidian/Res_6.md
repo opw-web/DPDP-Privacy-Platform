@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalEvidenceController"
+community: "access-report-render.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalEvidenceController
+  - community/access-report-renderts
 ---
 
 # Res
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-evidencePdf()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalEvidenceController
+#graphify/code #graphify/EXTRACTED #community/access-report-renderts

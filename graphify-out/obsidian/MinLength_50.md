@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateSecurityMeasureDto"
+community: "security-measures.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSecurityMeasureDto
+  - community/security-measuresservicets
 ---
 
 # MinLength
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[CreateSecurityMeasureDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSecurityMeasureDto
+#graphify/code #graphify/EXTRACTED #community/security-measuresservicets

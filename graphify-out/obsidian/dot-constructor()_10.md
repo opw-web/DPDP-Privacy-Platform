@@ -1,21 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/consents/consents.service.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/purpose-served.service.ts"
 type: "code"
-community: "GuardiansService"
-location: "L114"
+community: "erasure-task.service.ts"
+location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GuardiansService
+  - community/erasure-taskservicets
 ---
 
 # .constructor()
 
 ## Connections
 - [[AuditService]] - `references` [EXTRACTED]
-- [[ConsentsService]] - `method` [EXTRACTED]
-- [[ErasureTaskService]] - `references` [EXTRACTED]
-- [[GuardiansService]] - `references` [EXTRACTED]
-- [[NoticesService]] - `references` [EXTRACTED]
+- [[PurposeServedService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GuardiansService
+#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets

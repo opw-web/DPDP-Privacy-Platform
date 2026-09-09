@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/test-support/mock-http-server.ts"
 type: "code"
-community: "AlgorithmRegisterService"
-location: "L35"
+community: "step6-conflict-acceptance.e2e-spec.ts"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AlgorithmRegisterService
+  - community/step6-conflict-acceptancee2e-spects
 ---
 
 # .constructor()
 
 ## Connections
-- [[AlgorithmRegisterService]] - `method` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
+- [[MockHttpServer]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterService
+#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects

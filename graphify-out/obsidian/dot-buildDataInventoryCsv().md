@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/evidence-pack.service.ts"
 type: "code"
-community: "csvDocument"
+community: "evidence-pack.service.ts"
 location: "L169"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/csvDocument
+  - community/evidence-packservicets
 ---
 
 # .buildDataInventoryCsv()
@@ -16,4 +16,4 @@ tags:
 - [[EvidencePackService]] - `method` [EXTRACTED]
 - [[csvDocument()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/csvDocument
+#graphify/code #graphify/EXTRACTED #community/evidence-packservicets

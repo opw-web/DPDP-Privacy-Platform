@@ -12,8 +12,8 @@ tags:
 # stripQuery()
 
 ## Connections
-- [[dot-constructor()_155]] - `calls` [EXTRACTED]
-- [[dot-constructor()_156]] - `calls` [EXTRACTED]
+- [[dot-constructor()_152]] - `calls` [EXTRACTED]
+- [[dot-constructor()_153]] - `calls` [EXTRACTED]
 - [[dot-fetchPage()]] - `calls` [EXTRACTED]
 - [[dot-performRequest()]] - `calls` [EXTRACTED]
 - [[dot-requestWithRetry()]] - `calls` [EXTRACTED]

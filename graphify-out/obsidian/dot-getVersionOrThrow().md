@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
 type: "code"
-community: "NoticesService"
+community: "notices.service.ts"
 location: "L466"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NoticesService
+  - community/noticesservicets
 ---
 
 # .getVersionOrThrow()
 
 ## Connections
-- [[dot-preview()]] - `calls` [EXTRACTED]
-- [[dot-publish()]] - `calls` [EXTRACTED]
-- [[dot-upsertTranslation()]] - `calls` [EXTRACTED]
+- [[dot-preview()_3]] - `calls` [EXTRACTED]
+- [[dot-publish()_1]] - `calls` [EXTRACTED]
+- [[dot-upsertTranslation()_1]] - `calls` [EXTRACTED]
 - [[NoticesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NoticesService
+#graphify/code #graphify/EXTRACTED #community/noticesservicets

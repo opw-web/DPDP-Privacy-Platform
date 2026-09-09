@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeDataPage.tsx"
 type: "code"
-community: "cn"
+community: "MeDataPage.tsx"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/MeDataPagetsx
 ---
 
 # CATEGORY_LABELS
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[MeDataPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/MeDataPagetsx

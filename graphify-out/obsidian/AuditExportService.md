@@ -12,11 +12,11 @@ tags:
 # AuditExportService
 
 ## Connections
-- [[dot-constructor()_24]] - `references` [EXTRACTED]
-- [[dot-constructor()_26]] - `references` [EXTRACTED]
-- [[dot-constructor()_25]] - `method` [EXTRACTED]
-- [[dot-exportCsv()_1]] - `method` [EXTRACTED]
-- [[Injectable_13]] - `references` [EXTRACTED]
+- [[dot-constructor()_28]] - `references` [EXTRACTED]
+- [[dot-constructor()_22]] - `references` [EXTRACTED]
+- [[dot-constructor()_45]] - `method` [EXTRACTED]
+- [[dot-exportCsv()]] - `method` [EXTRACTED]
+- [[Injectable_12]] - `references` [EXTRACTED]
 - [[audit-events-evidence.controller.ts]] - `imports` [EXTRACTED]
 - [[audit-export.service.ts]] - `contains` [EXTRACTED]
 - [[evidence-pack.service.ts]] - `imports` [EXTRACTED]

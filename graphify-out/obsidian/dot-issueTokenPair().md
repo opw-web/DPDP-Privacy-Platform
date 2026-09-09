@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.service.ts"
 type: "code"
-community: "TokenService"
+community: "employee-auth.service.ts"
 location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TokenService
+  - community/employee-authservicets
 ---
 
 # .issueTokenPair()
@@ -19,4 +19,4 @@ tags:
 - [[dot-signRefreshToken()]] - `calls` [INFERRED]
 - [[EmployeeAuthService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TokenService
+#graphify/code #graphify/EXTRACTED #community/employee-authservicets

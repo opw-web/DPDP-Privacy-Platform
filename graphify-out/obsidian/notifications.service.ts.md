@@ -12,7 +12,7 @@ tags:
 # notifications.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[EMAIL_PROVIDER]] - `imports` [EXTRACTED]
 - [[NOTIFICATION_PUBLIC_SELECT]] - `contains` [EXTRACTED]

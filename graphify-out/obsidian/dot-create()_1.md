@@ -1,22 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/guardians.service.ts"
+source_file: "dpdp-platform/backend/src/modules/compliance/compliance.controller.ts"
 type: "code"
-community: "GuardiansService"
-location: "L167"
+community: "ComplianceController"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GuardiansService
+  - community/ComplianceController
 ---
 
 # .create()
 
 ## Connections
-- [[dot-assertPwdAppointmentValid()]] - `calls` [EXTRACTED]
-- [[dot-create()]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[dot-toResponse()]] - `calls` [EXTRACTED]
-- [[CreateGuardianDto]] - `references` [EXTRACTED]
-- [[GuardiansService]] - `method` [EXTRACTED]
+- [[dot-create()_12]] - `calls` [INFERRED]
+- [[Body_2]] - `references` [EXTRACTED]
+- [[ComplianceController]] - `method` [EXTRACTED]
+- [[CreateComplianceRuleDto]] - `references` [EXTRACTED]
+- [[Post_1]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GuardiansService
+#graphify/code #graphify/EXTRACTED #community/ComplianceController

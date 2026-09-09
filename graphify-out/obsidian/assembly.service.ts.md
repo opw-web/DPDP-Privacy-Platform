@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/assembly.service.ts"
 type: "code"
-community: "assembly.service.ts"
+community: "AuditService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/assemblyservicets
+  - community/AuditService
 ---
 
 # assembly.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AssembledField]] - `contains` [EXTRACTED]
 - [[AssemblyMapping]] - `contains` [EXTRACTED]
@@ -26,7 +26,7 @@ tags:
 - [[assembleFields()]] - `contains` [EXTRACTED]
 - [[assembly.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[assembly.service.spec.ts]] - `imports_from` [EXTRACTED]
-- [[compareNewest()]] - `contains` [EXTRACTED]
+- [[compareNewest()_1]] - `contains` [EXTRACTED]
 - [[displayNameFrom()]] - `contains` [EXTRACTED]
 - [[extrasObject()]] - `contains` [EXTRACTED]
 - [[identity.module.ts]] - `imports_from` [EXTRACTED]
@@ -40,4 +40,4 @@ tags:
 - [[scoped-transaction-client.ts]] - `imports_from` [EXTRACTED]
 - [[sync-pipeline.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/assemblyservicets
+#graphify/code #graphify/EXTRACTED #community/AuditService

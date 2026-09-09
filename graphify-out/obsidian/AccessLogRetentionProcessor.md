@@ -12,7 +12,7 @@ tags:
 # AccessLogRetentionProcessor
 
 ## Connections
-- [[dot-constructor()_17]] - `method` [EXTRACTED]
+- [[dot-constructor()_20]] - `method` [EXTRACTED]
 - [[dot-process()_1]] - `method` [EXTRACTED]
 - [[dot-runRetention()]] - `method` [EXTRACTED]
 - [[Processor_1]] - `references` [EXTRACTED]

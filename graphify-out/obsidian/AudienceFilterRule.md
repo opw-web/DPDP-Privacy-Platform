@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/messaging/audience/audience-filter.types.ts"
 type: "code"
-community: "audience.service.ts"
+community: "compile-audience.ts"
 location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audienceservicets
+  - community/compile-audiencets
 ---
 
 # AudienceFilterRule
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[audience-filter.types.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audienceservicets
+#graphify/code #graphify/EXTRACTED #community/compile-audiencets

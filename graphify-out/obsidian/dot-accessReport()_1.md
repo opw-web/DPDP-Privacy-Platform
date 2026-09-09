@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-buildReport()]] - `calls` [INFERRED]
 - [[dot-getByReference()_1]] - `calls` [INFERRED]
-- [[Get_17]] - `references` [EXTRACTED]
-- [[Param_10]] - `references` [EXTRACTED]
+- [[Get_18]] - `references` [EXTRACTED]
+- [[Param_11]] - `references` [EXTRACTED]
 - [[RequestsController]] - `method` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[Res_5]] - `references` [EXTRACTED]

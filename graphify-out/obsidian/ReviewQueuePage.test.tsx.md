@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/ReviewQueuePage.test.tsx"
 type: "code"
-community: "@tanstack/react-query"
+community: "CandidateComparison.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tanstack/react-query
+  - community/CandidateComparisontsx
 ---
 
 # ReviewQueuePage.test.tsx
@@ -18,12 +18,12 @@ tags:
 - [[CANDIDATE]] - `contains` [EXTRACTED]
 - [[CandidateComparison.tsx]] - `imports_from` [EXTRACTED]
 - [[MatchCandidateListItem_1]] - `imports` [EXTRACTED]
-- [[MockRoutes_5]] - `contains` [EXTRACTED]
+- [[MockRoutes_6]] - `contains` [EXTRACTED]
 - [[ReviewQueuePage()]] - `imports` [EXTRACTED]
 - [[ReviewQueuePage.tsx]] - `imports_from` [EXTRACTED]
 - [[employeeLogin()]] - `imports` [EXTRACTED]
 - [[employeeLogout()]] - `imports` [EXTRACTED]
-- [[jsonResponse()_19]] - `contains` [EXTRACTED]
+- [[jsonResponse()_27]] - `contains` [EXTRACTED]
 - [[libauth.ts]] - `imports_from` [EXTRACTED]
 - [[loginAndRender()_6]] - `contains` [EXTRACTED]
 - [[react-router-dom_1]] - `imports_from` [EXTRACTED]
@@ -31,4 +31,4 @@ tags:
 - [[sonner_1]] - `imports_from` [EXTRACTED]
 - [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tanstack/react-query
+#graphify/code #graphify/EXTRACTED #community/CandidateComparisontsx

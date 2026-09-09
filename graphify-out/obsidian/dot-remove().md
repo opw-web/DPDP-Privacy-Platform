@@ -12,7 +12,7 @@ tags:
 # .remove()
 
 ## Connections
-- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
 - [[dot-remove()_1]] - `calls` [INFERRED]
 - [[dot-removeScheduleBestEffort()]] - `calls` [EXTRACTED]
 - [[DataSourcesService]] - `method` [EXTRACTED]

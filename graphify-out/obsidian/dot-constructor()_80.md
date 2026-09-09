@@ -1,22 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/schedule-reconciliation.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/sdf.controller.ts"
 type: "code"
-community: "SyncQueueService"
-location: "L63"
+community: "SdfController"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/SdfController
 ---
 
 # .constructor()
 
 ## Connections
-- [[dot-reconcileAtBoot()]] - `calls` [EXTRACTED]
-- [[dot-register()]] - `calls` [INFERRED]
-- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
-- [[Mvp2ScheduleReconciliationService]] - `references` [EXTRACTED]
-- [[ScheduleReconciliationService]] - `method` [EXTRACTED]
-- [[SyncQueueService]] - `references` [EXTRACTED]
+- [[AlgorithmRegisterService]] - `references` [EXTRACTED]
+- [[SdfAssessmentService]] - `references` [EXTRACTED]
+- [[SdfController]] - `method` [EXTRACTED]
+- [[SdfGapsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/SdfController

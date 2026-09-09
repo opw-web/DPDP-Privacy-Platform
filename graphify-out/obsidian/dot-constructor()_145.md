@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/unmerge.controller.ts"
+source_file: "demo-company-server/src/seed/rng.ts"
 type: "code"
-community: ".unmerge"
-location: "L20"
+community: "generateDataset"
+location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/unmerge
+  - community/generateDataset
 ---
 
 # .constructor()
 
 ## Connections
-- [[MergeService]] - `references` [EXTRACTED]
-- [[UnmergeController]] - `method` [EXTRACTED]
+- [[Rng]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/unmerge
+#graphify/code #graphify/EXTRACTED #community/generateDataset

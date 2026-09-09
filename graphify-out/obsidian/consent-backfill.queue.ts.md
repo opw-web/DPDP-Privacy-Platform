@@ -13,14 +13,14 @@ tags:
 
 ## Connections
 - [[@nestjsbullmq_1]] - `imports_from` [EXTRACTED]
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[BootRegistrationRegistry]] - `imports` [EXTRACTED]
 - [[CONSENT_BACKFILL_QUEUE_NAME]] - `contains` [EXTRACTED]
 - [[CONSENT_BACKFILL_SCHEDULE_TRIGGERED_BY]] - `contains` [EXTRACTED]
 - [[ConsentBackfillJobData]] - `contains` [EXTRACTED]
 - [[ConsentBackfillQueueService]] - `contains` [EXTRACTED]
 - [[boot-registration.registry.ts]] - `imports_from` [EXTRACTED]
-- [[bullmq]] - `imports_from` [EXTRACTED]
+- [[bullmq_1]] - `imports_from` [EXTRACTED]
 - [[consent-backfill.processor.ts]] - `imports_from` [EXTRACTED]
 - [[consents.module.ts]] - `imports_from` [EXTRACTED]
 - [[mvp2-schedules.ts]] - `imports_from` [EXTRACTED]

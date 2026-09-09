@@ -12,7 +12,7 @@ tags:
 # boot-registration.registry.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[BootRegistration]] - `contains` [EXTRACTED]
 - [[BootRegistrationRegistry]] - `contains` [EXTRACTED]
 - [[RECONCILE_BOOT_TIMEOUT_MS]] - `imports` [EXTRACTED]

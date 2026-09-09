@@ -1,28 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
 type: "code"
-community: "BreachService"
-location: "L371"
+community: "DataSourcesController"
+location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BreachService
+  - community/DataSourcesController
 ---
 
 # .update()
 
 ## Connections
-- [[dot-addAffected()_1]] - `calls` [EXTRACTED]
-- [[dot-completeObligation()_1]] - `calls` [EXTRACTED]
-- [[dot-public()]] - `calls` [EXTRACTED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[dot-recordExtension()]] - `calls` [EXTRACTED]
-- [[dot-scanClock()]] - `calls` [EXTRACTED]
-- [[dot-update()_19]] - `calls` [INFERRED]
-- [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[BreachService]] - `method` [EXTRACTED]
-- [[PublicBreach]] - `references` [EXTRACTED]
-- [[UpdateBreachDto]] - `references` [EXTRACTED]
-- [[asDate()]] - `calls` [EXTRACTED]
+- [[dot-update()_7]] - `calls` [INFERRED]
+- [[Body_19]] - `references` [EXTRACTED]
+- [[DataSourcesController]] - `method` [EXTRACTED]
+- [[Param_22]] - `references` [EXTRACTED]
+- [[Patch_10]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[UpdateDataSourceDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BreachService
+#graphify/code #graphify/EXTRACTED #community/DataSourcesController

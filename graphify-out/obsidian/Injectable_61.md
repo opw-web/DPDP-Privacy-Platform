@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "normalization.service.ts"
+community: "queues.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/normalizationservicets
+  - community/queuesmodulets
 ---
 
 # Injectable
 
 ## Connections
-- [[NormalizationService]] - `references` [EXTRACTED]
+- [[DeadlineScanQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/normalizationservicets
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

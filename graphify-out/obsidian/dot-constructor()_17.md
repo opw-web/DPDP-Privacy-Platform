@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/access-log-retention.processor.ts"
+source_file: "dpdp-platform/backend/src/common/guards/permissions.guard.ts"
 type: "code"
-community: "configuration.ts"
-location: "L22"
+community: "PermissionsGuard"
+location: "L81"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/configurationts
+  - community/PermissionsGuard
 ---
 
 # .constructor()
 
 ## Connections
-- [[AccessLogRetentionProcessor]] - `method` [EXTRACTED]
+- [[PermissionsGuard]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/configurationts
+#graphify/code #graphify/EXTRACTED #community/PermissionsGuard

@@ -12,13 +12,13 @@ tags:
 # notifications.controller.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[CurrentNotificationActor]] - `imports` [EXTRACTED]
 - [[JwtAnyActorGuard]] - `imports` [EXTRACTED]
 - [[MarkAllReadResponseDto]] - `imports` [EXTRACTED]
 - [[NotificationCallerActor]] - `imports` [EXTRACTED]
-- [[NotificationDto_1]] - `imports` [EXTRACTED]
+- [[NotificationDto]] - `imports` [EXTRACTED]
 - [[NotificationListResponseDto]] - `imports` [EXTRACTED]
 - [[NotificationsController]] - `contains` [EXTRACTED]
 - [[NotificationsService]] - `imports` [EXTRACTED]

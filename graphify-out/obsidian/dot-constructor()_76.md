@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/consent-backfill.queue.ts"
+source_file: "dpdp-platform/backend/src/queues/retention-scan.queue.ts"
 type: "code"
 community: "SyncQueueService"
-location: "L70"
+location: "L75"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-register()]] - `calls` [INFERRED]
 - [[BootRegistrationRegistry]] - `references` [EXTRACTED]
-- [[ConsentBackfillQueueService]] - `method` [EXTRACTED]
-- [[InjectQueue_1]] - `references` [EXTRACTED]
+- [[InjectQueue_4]] - `references` [EXTRACTED]
+- [[RetentionScanQueueService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/SyncQueueService

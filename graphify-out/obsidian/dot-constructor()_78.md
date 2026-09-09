@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/mvp2-schedules.ts"
+source_file: "dpdp-platform/backend/src/queues/sdf-cycle-scan.queue.ts"
 type: "code"
 community: "SyncQueueService"
-location: "L53"
+location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,9 @@ tags:
 # .constructor()
 
 ## Connections
-- [[InjectQueue_3]] - `references` [EXTRACTED]
-- [[Mvp2ScheduleReconciliationService]] - `method` [EXTRACTED]
+- [[dot-register()]] - `calls` [INFERRED]
+- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
+- [[InjectQueue_5]] - `references` [EXTRACTED]
+- [[SdfCycleScanQueueService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/SyncQueueService

@@ -1,23 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts"
 type: "code"
-community: "CreateNoticeDto"
-location: "L191"
+community: "CreateAlgorithmEntryDto"
+location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateNoticeDto
+  - community/CreateAlgorithmEntryDto
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_16]] - `calls` [INFERRED]
-- [[dot-createVersion()]] - `calls` [EXTRACTED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[CreateNoticeDto]] - `references` [EXTRACTED]
-- [[NoticesService]] - `method` [EXTRACTED]
-- [[duplicateCodeMessage()]] - `calls` [EXTRACTED]
-- [[isUniqueConstraintViolation()]] - `calls` [EXTRACTED]
+- [[dot-createAlgorithm()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[AlgorithmRegisterService]] - `method` [EXTRACTED]
+- [[CreateAlgorithmEntryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateNoticeDto
+#graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto

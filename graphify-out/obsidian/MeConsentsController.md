@@ -12,11 +12,11 @@ tags:
 # MeConsentsController
 
 ## Connections
-- [[dot-constructor()_19]] - `method` [EXTRACTED]
-- [[dot-list()_4]] - `method` [EXTRACTED]
+- [[dot-constructor()_24]] - `method` [EXTRACTED]
+- [[dot-list()_5]] - `method` [EXTRACTED]
 - [[dot-setStatus()]] - `method` [EXTRACTED]
-- [[ApiTags_4]] - `references` [EXTRACTED]
-- [[Controller_4]] - `references` [EXTRACTED]
+- [[ApiTags_5]] - `references` [EXTRACTED]
+- [[Controller_5]] - `references` [EXTRACTED]
 - [[consents.module.ts]] - `imports` [EXTRACTED]
 - [[me-consents.controller.ts]] - `contains` [EXTRACTED]
 

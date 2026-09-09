@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/messaging/audience/compile-audience.ts"
 type: "code"
-community: "audience.service.ts"
+community: "compile-audience.ts"
 location: "L496"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audienceservicets
+  - community/compile-audiencets
 ---
 
 # compileAudience()
@@ -22,4 +22,4 @@ tags:
 - [[compile-audience.ts]] - `contains` [EXTRACTED]
 - [[compileGroup()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audienceservicets
+#graphify/code #graphify/EXTRACTED #community/compile-audiencets

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "NoticesController"
+community: "RequirePermission"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NoticesController
+  - community/RequirePermission
 ---
 
 # ApiTags
 
 ## Connections
-- [[NoticesController]] - `references` [EXTRACTED]
+- [[CampaignsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NoticesController
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "csvDocument"
+community: "guardians.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/csvDocument
+  - community/guardiansservicets
 ---
 
 # Get
 
 ## Connections
-- [[dot-exportCsv()]] - `references` [EXTRACTED]
-- [[dot-verifyChain()_1]] - `references` [EXTRACTED]
+- [[dot-list()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/csvDocument
+#graphify/code #graphify/EXTRACTED #community/guardiansservicets

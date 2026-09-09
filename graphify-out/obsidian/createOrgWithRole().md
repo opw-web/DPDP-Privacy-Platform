@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[createManager()]] - `calls` [EXTRACTED]
 - [[data-sources.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[ensurePermission()_5]] - `calls` [EXTRACTED]
+- [[ensurePermission()_4]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects

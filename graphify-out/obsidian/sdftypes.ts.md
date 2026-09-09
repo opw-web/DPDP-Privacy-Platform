@@ -1,21 +1,21 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/sdf/types.ts"
 type: "code"
-community: "AlgorithmRegisterPanel.tsx"
+community: "react-router-dom"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AlgorithmRegisterPaneltsx
+  - community/react-router-dom
 ---
 
 # sdf/types.ts
 
 ## Connections
-- [[ALGORITHM_OPERATIONS_1]] - `contains` [EXTRACTED]
+- [[ALGORITHM_OPERATIONS]] - `contains` [EXTRACTED]
 - [[AlgorithmEntry]] - `contains` [EXTRACTED]
 - [[AlgorithmFormFields.tsx]] - `imports_from` [EXTRACTED]
-- [[AlgorithmOperation_1]] - `contains` [EXTRACTED]
+- [[AlgorithmOperation]] - `contains` [EXTRACTED]
 - [[AlgorithmRegisterPanel.tsx]] - `imports_from` [EXTRACTED]
 - [[ComplianceRuleSummary]] - `contains` [EXTRACTED]
 - [[RuleBasis]] - `imports` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[findSdfCycleRule()]] - `contains` [EXTRACTED]
 - [[mvp2-api.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterPaneltsx
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

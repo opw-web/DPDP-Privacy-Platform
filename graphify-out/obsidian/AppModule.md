@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/app.module.ts"
 type: "code"
-community: "step6-conflict-acceptance.e2e-spec.ts"
+community: "AppModule"
 location: "L126"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/step6-conflict-acceptancee2e-spects
+  - community/AppModule
 ---
 
 # AppModule
 
 ## Connections
-- [[dot-configure()]] - `method` [EXTRACTED]
-- [[Module_36]] - `references` [EXTRACTED]
+- [[dot-configure()_1]] - `method` [EXTRACTED]
+- [[Module_39]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `contains` [EXTRACTED]
 - [[assembly.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[audit-read.e2e-spec.ts]] - `imports` [EXTRACTED]
@@ -39,4 +39,4 @@ tags:
 - [[step6-conflict-acceptance.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[sync.e2e-spec.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects
+#graphify/code #graphify/EXTRACTED #community/AppModule

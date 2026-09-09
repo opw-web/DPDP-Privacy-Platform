@@ -13,7 +13,7 @@ members: 38
 - [[dot-supportingCandidates()]] - code - dpdp-platform/backend/src/modules/identity/matching.service.ts
 - [[CONFIDENCE_RANK]] - code - dpdp-platform/backend/src/modules/identity/matching.service.ts
 - [[CandidateMatchResult]] - code - dpdp-platform/backend/src/modules/identity/matching.service.ts
-- [[Injectable_77]] - code
+- [[Injectable_79]] - code
 - [[LinkMatchResult]] - code - dpdp-platform/backend/src/modules/identity/matching.service.ts
 - [[MatchRule]] - code - dpdp-platform/backend/src/modules/identity/matching.service.ts
 - [[MatchSignal]] - code - dpdp-platform/backend/src/modules/identity/matching.service.ts
@@ -55,17 +55,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 14 edges to [[_COMMUNITY_prisma.service.ts]]
-- 11 edges to [[_COMMUNITY_dot-record]]
-- 4 edges to [[_COMMUNITY_@nestjscommon]]
+- 25 edges to [[_COMMUNITY_AuditService]]
+- 3 edges to [[_COMMUNITY_@nestjscommon]]
+- 3 edges to [[_COMMUNITY_@prismaclient]]
 - 3 edges to [[_COMMUNITY_normalization.service.ts]]
-- 2 edges to [[_COMMUNITY_app.module.ts]]
-- 2 edges to [[_COMMUNITY_step6-conflict-acceptance.e2e-spec.ts]]
+- 2 edges to [[_COMMUNITY_AppModule]]
 - 2 edges to [[_COMMUNITY_merge-unmerge.e2e-spec.ts]]
 
 ## Top bridge nodes
-- [[matching.service.ts]] - degree 37, connects to 7 communities
+- [[matching.service.ts]] - degree 37, connects to 6 communities
 - [[MatchingService]] - degree 12, connects to 4 communities
 - [[matching.service.spec.ts]] - degree 8, connects to 3 communities
-- [[dot-match()]] - degree 10, connects to 2 communities
 - [[customer-id.ts]] - degree 8, connects to 2 communities
+- [[dot-match()]] - degree 10, connects to 1 community

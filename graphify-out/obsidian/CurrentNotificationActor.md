@@ -12,7 +12,7 @@ tags:
 # CurrentNotificationActor
 
 ## Connections
-- [[dot-list()_32]] - `references` [EXTRACTED]
+- [[dot-list()_33]] - `references` [EXTRACTED]
 - [[dot-markAllRead()]] - `references` [EXTRACTED]
 - [[dot-markRead()]] - `references` [EXTRACTED]
 - [[current-notification-actor.decorator.ts]] - `contains` [EXTRACTED]

@@ -12,7 +12,7 @@ tags:
 # AgeStatusController
 
 ## Connections
-- [[dot-constructor()_149]] - `method` [EXTRACTED]
+- [[dot-constructor()_148]] - `method` [EXTRACTED]
 - [[dot-setAgeStatus()]] - `method` [EXTRACTED]
 - [[dot-unknownCount()]] - `method` [EXTRACTED]
 - [[ApiTags_40]] - `references` [EXTRACTED]

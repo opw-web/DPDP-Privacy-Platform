@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principal-portal/me-rights.controller.ts"
 type: "code"
-community: "MeRightsService"
+community: "PrincipalActor"
 location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeRightsService
+  - community/PrincipalActor
 ---
 
 # .cancelRequest()
@@ -15,8 +15,8 @@ tags:
 - [[dot-cancelRequest()_1]] - `calls` [INFERRED]
 - [[CurrentPrincipal]] - `references` [EXTRACTED]
 - [[MeRightsController]] - `method` [EXTRACTED]
-- [[Param_18]] - `references` [EXTRACTED]
-- [[Post_16]] - `references` [EXTRACTED]
+- [[Param_4]] - `references` [EXTRACTED]
+- [[Post_4]] - `references` [EXTRACTED]
 - [[PrincipalActor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeRightsService
+#graphify/code #graphify/EXTRACTED #community/PrincipalActor

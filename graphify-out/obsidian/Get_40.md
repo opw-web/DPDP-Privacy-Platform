@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SharingService"
+community: "age-status.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SharingService
+  - community/age-statusservicets
 ---
 
 # Get
 
 ## Connections
-- [[dot-get()_25]] - `references` [EXTRACTED]
-- [[dot-list()_50]] - `references` [EXTRACTED]
+- [[dot-unknownCount()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SharingService
+#graphify/code #graphify/EXTRACTED #community/age-statusservicets

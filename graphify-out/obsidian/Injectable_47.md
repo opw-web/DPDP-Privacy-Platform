@@ -11,6 +11,6 @@ tags:
 # Injectable
 
 ## Connections
-- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
+- [[ScheduleReconciliationService]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/SyncQueueService

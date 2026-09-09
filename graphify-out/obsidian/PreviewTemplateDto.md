@@ -12,11 +12,11 @@ tags:
 # PreviewTemplateDto
 
 ## Connections
+- [[dot-preview()]] - `references` [EXTRACTED]
 - [[dot-preview()_1]] - `references` [EXTRACTED]
-- [[dot-preview()_2]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_25]] - `references` [EXTRACTED]
-- [[IsObject_3]] - `references` [EXTRACTED]
-- [[IsOptional_27]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_24]] - `references` [EXTRACTED]
+- [[IsObject_4]] - `references` [EXTRACTED]
+- [[IsOptional_26]] - `references` [EXTRACTED]
 - [[preview-template.dto.ts]] - `contains` [EXTRACTED]
 - [[templates.controller.ts]] - `imports` [EXTRACTED]
 - [[templates.service.ts]] - `imports` [EXTRACTED]

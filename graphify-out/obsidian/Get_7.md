@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Public"
+community: "canonicalJson"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/canonicalJson
 ---
 
 # Get
 
 ## Connections
-- [[dot-me()]] - `references` [EXTRACTED]
+- [[dot-exportCsv()_2]] - `references` [EXTRACTED]
+- [[dot-verifyChain()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/canonicalJson

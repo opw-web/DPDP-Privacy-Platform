@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/UnreviewedRuleChip.tsx"
 type: "code"
-community: "cn"
+community: "react-router-dom"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/react-router-dom
 ---
 
 # UnreviewedRuleChip()
@@ -17,4 +17,4 @@ tags:
 - [[UnreviewedRuleChip.tsx]] - `contains` [EXTRACTED]
 - [[cn()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

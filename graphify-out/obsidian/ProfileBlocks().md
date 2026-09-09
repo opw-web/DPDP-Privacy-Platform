@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.tsx"
 type: "code"
-community: "router.tsx"
+community: "SettingsPage.tsx"
 location: "L156"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/SettingsPagetsx
 ---
 
 # ProfileBlocks()
@@ -16,4 +16,4 @@ tags:
 - [[groupByCanonicalField()]] - `calls` [EXTRACTED]
 - [[humanizeEnum()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/SettingsPagetsx

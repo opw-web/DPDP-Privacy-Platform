@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "test-database.ts"
+community: "data-sources.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test-databasets
+  - community/data-sourcesmodulets
 ---
 
 # Module
 
 ## Connections
-- [[HealthModule]] - `references` [EXTRACTED]
+- [[IdentityModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test-databasets
+#graphify/code #graphify/EXTRACTED #community/data-sourcesmodulets

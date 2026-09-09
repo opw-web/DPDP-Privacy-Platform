@@ -12,8 +12,8 @@ tags:
 # UpdateRetentionPolicyDto
 
 ## Connections
-- [[dot-update()_23]] - `references` [EXTRACTED]
-- [[dot-update()_24]] - `references` [EXTRACTED]
+- [[dot-update()_25]] - `references` [EXTRACTED]
+- [[dot-update()_26]] - `references` [EXTRACTED]
 - [[ApiPropertyOptional_50]] - `references` [EXTRACTED]
 - [[IsBoolean_24]] - `references` [EXTRACTED]
 - [[IsIn_17]] - `references` [EXTRACTED]

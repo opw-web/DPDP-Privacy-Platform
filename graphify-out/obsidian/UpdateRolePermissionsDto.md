@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-replacePermissions()]] - `references` [EXTRACTED]
 - [[dot-replacePermissions()_1]] - `references` [EXTRACTED]
-- [[ApiProperty_39]] - `references` [EXTRACTED]
+- [[ApiProperty_40]] - `references` [EXTRACTED]
 - [[ArrayUnique_9]] - `references` [EXTRACTED]
 - [[IsArray_23]] - `references` [EXTRACTED]
 - [[IsString_58]] - `references` [EXTRACTED]

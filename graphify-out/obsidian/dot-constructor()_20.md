@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/audit/audit-read.controller.ts"
+source_file: "dpdp-platform/backend/src/queues/access-log-retention.processor.ts"
 type: "code"
-community: "AuditReadService"
-location: "L19"
+community: "configuration.ts"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditReadService
+  - community/configurationts
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditReadController]] - `method` [EXTRACTED]
-- [[AuditReadService]] - `references` [EXTRACTED]
+- [[AccessLogRetentionProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditReadService
+#graphify/code #graphify/EXTRACTED #community/configurationts

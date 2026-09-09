@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/erasure-task.service.ts"
 type: "code"
-community: "prisma.service.ts"
+community: "erasure-task.service.ts"
 location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/erasure-taskservicets
 ---
 
 # ERASURE_TASK_PUBLIC_SELECT
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[erasure-task.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets

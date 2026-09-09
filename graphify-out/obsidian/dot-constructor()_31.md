@@ -1,17 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/pdfkit.d.ts"
+source_file: "dpdp-platform/backend/src/modules/principal-portal/me.controller.ts"
 type: "code"
-community: "PDFDocument"
-location: "L27"
+community: "PrincipalActor"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PDFDocument
+  - community/PrincipalActor
 ---
 
 # .constructor()
 
 ## Connections
-- [[PDFDocument]] - `method` [EXTRACTED]
+- [[AccessReportService]] - `references` [EXTRACTED]
+- [[MeController]] - `method` [EXTRACTED]
+- [[MeService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PDFDocument
+#graphify/code #graphify/EXTRACTED #community/PrincipalActor

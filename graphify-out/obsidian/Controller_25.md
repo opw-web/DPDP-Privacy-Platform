@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "MeRightsService"
+community: "CreateInformationRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeRightsService
+  - community/CreateInformationRequestDto
 ---
 
 # Controller
 
 ## Connections
-- [[MeRightsController]] - `references` [EXTRACTED]
+- [[InformationRequestsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeRightsService
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

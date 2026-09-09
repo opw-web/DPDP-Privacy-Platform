@@ -1,19 +1,20 @@
 ---
 type: community
-members: 6
+members: 7
 ---
 
 # AssignRequestDto
 
-**Members:** 6 nodes
+**Members:** 7 nodes
 
 ## Members
-- [[ApiProperty_25]] - code
-- [[ApiPropertyOptional_30]] - code
+- [[dot-assign()_1]] - code - dpdp-platform/backend/src/modules/requests/requests.controller.ts
+- [[ApiProperty_21]] - code
+- [[ApiPropertyOptional_27]] - code
 - [[AssignRequestDto]] - code - dpdp-platform/backend/src/modules/requests/dto/assign-request.dto.ts
-- [[IsOptional_33]] - code
-- [[IsString_41]] - code
-- [[MinLength_30]] - code
+- [[IsOptional_30]] - code
+- [[IsString_35]] - code
+- [[MinLength_24]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -23,8 +24,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_@nestjscommon]]
-- 1 edge to [[_COMMUNITY_RequestsController]]
+- 2 edges to [[_COMMUNITY_RequestsController]]
+- 2 edges to [[_COMMUNITY_@prismaclient]]
+- 2 edges to [[_COMMUNITY_VerifyIdentityDto]]
+- 1 edge to [[_COMMUNITY_RequestsService]]
+- 1 edge to [[_COMMUNITY_RequirePermission]]
 
 ## Top bridge nodes
-- [[AssignRequestDto]] - degree 8, connects to 2 communities
+- [[dot-assign()_1]] - degree 7, connects to 4 communities
+- [[AssignRequestDto]] - degree 8, connects to 1 community

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeRequestDetailPage.test.tsx"
 type: "code"
-community: "api-client.ts"
+community: "router.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/routertsx
 ---
 
 # MeRequestDetailPage.test.tsx
@@ -20,8 +20,8 @@ tags:
 - [[initial]] - `contains` [EXTRACTED]
 - [[principalApiClient]] - `imports` [EXTRACTED]
 - [[react-router-dom_1]] - `imports_from` [EXTRACTED]
-- [[renderPage()]] - `contains` [EXTRACTED]
+- [[renderPage()_10]] - `contains` [EXTRACTED]
 - [[updated]] - `contains` [EXTRACTED]
 - [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/routertsx

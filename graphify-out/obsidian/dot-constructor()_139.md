@@ -1,17 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/auth/token.service.ts"
+source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.service.ts"
 type: "code"
-community: "TokenService"
-location: "L65"
+community: "employee-auth.service.ts"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TokenService
+  - community/employee-authservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[TokenService]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[EmployeeAuthService]] - `method` [EXTRACTED]
+- [[TokenService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TokenService
+#graphify/code #graphify/EXTRACTED #community/employee-authservicets

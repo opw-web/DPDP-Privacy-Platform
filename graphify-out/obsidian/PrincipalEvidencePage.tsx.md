@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.tsx"
 type: "code"
-community: "PrincipalEvidencePage.tsx"
+community: "AuditPage.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalEvidencePagetsx
+  - community/AuditPagetsx
 ---
 
 # PrincipalEvidencePage.tsx
@@ -62,4 +62,4 @@ tags:
 - [[sonner_1]] - `imports_from` [EXTRACTED]
 - [[table.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalEvidencePagetsx
+#graphify/code #graphify/EXTRACTED #community/AuditPagetsx

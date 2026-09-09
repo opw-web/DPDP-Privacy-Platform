@@ -2,7 +2,7 @@
 source_file: "scripts/dedupe-vault-names.py"
 type: "code"
 community: "dedupe-vault-names.py"
-location: "L70"
+location: "L111"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -16,6 +16,7 @@ tags:
 - [[dedupe-vault-names.py]] - `contains` [EXTRACTED]
 - [[relink()]] - `calls` [EXTRACTED]
 - [[rename_target()]] - `calls` [EXTRACTED]
+- [[shorten()]] - `calls` [EXTRACTED]
 - [[winner()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/dedupe-vault-namespy

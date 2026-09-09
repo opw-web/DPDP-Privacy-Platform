@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/test/assembly.e2e-spec.ts"
 type: "code"
-community: "prisma.service.ts"
+community: "AppModule"
 location: "L104"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/AppModule
 ---
 
 # link()
 
 ## Connections
 - [[assembly.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[tenant()_1]] - `calls` [EXTRACTED]
+- [[tenant()_3]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/AppModule

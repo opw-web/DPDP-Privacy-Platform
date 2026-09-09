@@ -12,7 +12,7 @@ tags:
 # evidence.e2e-spec.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[AccessReportService]] - `imports` [EXTRACTED]
 - [[OrgWithEmployee]] - `imports` [EXTRACTED]
 - [[PrincipalEvidenceService]] - `imports` [EXTRACTED]
@@ -21,11 +21,11 @@ tags:
 - [[access-report-render.ts]] - `imports_from` [EXTRACTED]
 - [[access-report.service.ts]] - `imports_from` [EXTRACTED]
 - [[addEmployee()]] - `contains` [EXTRACTED]
-- [[argon2_1]] - `imports_from` [EXTRACTED]
+- [[argon2]] - `imports_from` [EXTRACTED]
 - [[bootstrapTestApp()]] - `imports` [EXTRACTED]
 - [[bufferBinaryResponse()]] - `contains` [EXTRACTED]
 - [[cleanupOrgs()]] - `imports` [EXTRACTED]
-- [[createOrgWithEmployee()_1]] - `imports` [EXTRACTED]
+- [[createOrgWithEmployee()]] - `imports` [EXTRACTED]
 - [[createPrincipal()_2]] - `contains` [EXTRACTED]
 - [[e2e-harness.ts]] - `imports_from` [EXTRACTED]
 - [[ensurePermission()]] - `imports` [EXTRACTED]

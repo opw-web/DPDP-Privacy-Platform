@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/audit/audit-read.service.ts"
 type: "code"
-community: "AuditReadService"
+community: "audit-read.service.ts"
 location: "L108"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditReadService
+  - community/audit-readservicets
 ---
 
 # .buildWhere()
 
 ## Connections
-- [[dot-list()_6]] - `calls` [EXTRACTED]
+- [[dot-list()_7]] - `calls` [EXTRACTED]
 - [[AuditReadService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditReadService
+#graphify/code #graphify/EXTRACTED #community/audit-readservicets

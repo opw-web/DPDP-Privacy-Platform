@@ -12,8 +12,8 @@ tags:
 # .assertProcessorRule()
 
 ## Connections
-- [[dot-create()_32]] - `calls` [EXTRACTED]
-- [[dot-update()_22]] - `calls` [EXTRACTED]
+- [[dot-create()_34]] - `calls` [EXTRACTED]
+- [[dot-update()_24]] - `calls` [EXTRACTED]
 - [[RecipientsService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/recipientsservicets

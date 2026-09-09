@@ -12,7 +12,7 @@ tags:
 # assertNoForbiddenMetadata()
 
 ## Connections
-- [[dot-record()]] - `calls` [EXTRACTED]
+- [[dot-record()_1]] - `calls` [EXTRACTED]
 - [[audit.service.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/record

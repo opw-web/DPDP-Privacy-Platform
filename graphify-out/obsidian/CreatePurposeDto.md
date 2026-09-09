@@ -12,15 +12,15 @@ tags:
 # CreatePurposeDto
 
 ## Connections
-- [[dot-create()_7]] - `references` [EXTRACTED]
 - [[dot-create()_8]] - `references` [EXTRACTED]
-- [[ApiProperty_17]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_21]] - `references` [EXTRACTED]
-- [[IsArray_11]] - `references` [EXTRACTED]
-- [[IsEnum_13]] - `references` [EXTRACTED]
-- [[IsOptional_22]] - `references` [EXTRACTED]
-- [[IsString_27]] - `references` [EXTRACTED]
-- [[MinLength_21]] - `references` [EXTRACTED]
+- [[dot-create()_10]] - `references` [EXTRACTED]
+- [[ApiProperty_12]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_19]] - `references` [EXTRACTED]
+- [[IsArray_9]] - `references` [EXTRACTED]
+- [[IsEnum_11]] - `references` [EXTRACTED]
+- [[IsOptional_20]] - `references` [EXTRACTED]
+- [[IsString_23]] - `references` [EXTRACTED]
+- [[MinLength_18]] - `references` [EXTRACTED]
 - [[create-purpose.dto.ts]] - `contains` [EXTRACTED]
 - [[purposes.controller.ts]] - `imports` [EXTRACTED]
 - [[purposes.service.spec.ts]] - `imports` [EXTRACTED]

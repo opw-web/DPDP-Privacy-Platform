@@ -12,7 +12,7 @@ tags:
 # employeeWithPermissions()
 
 ## Connections
-- [[ensurePermission()_13]] - `calls` [EXTRACTED]
+- [[ensurePermission()_6]] - `calls` [EXTRACTED]
 - [[step6-conflict-acceptance.e2e-spec.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects

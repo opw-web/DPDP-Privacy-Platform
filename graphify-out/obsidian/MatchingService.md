@@ -12,11 +12,11 @@ tags:
 # MatchingService
 
 ## Connections
-- [[dot-constructor()_51]] - `references` [EXTRACTED]
+- [[dot-constructor()_53]] - `references` [EXTRACTED]
 - [[dot-match()]] - `method` [EXTRACTED]
 - [[dot-resolveSignal()]] - `method` [EXTRACTED]
 - [[dot-supportingCandidates()]] - `method` [EXTRACTED]
-- [[Injectable_77]] - `references` [EXTRACTED]
+- [[Injectable_79]] - `references` [EXTRACTED]
 - [[createService()]] - `calls` [EXTRACTED]
 - [[identity-matching.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[identity.module.ts]] - `imports` [EXTRACTED]

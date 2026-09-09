@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "ConsentsService"
+community: "ImportConsentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ConsentsService
+  - community/ImportConsentDto
 ---
 
 # IsUUID
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[ImportConsentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ConsentsService
+#graphify/code #graphify/EXTRACTED #community/ImportConsentDto

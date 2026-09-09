@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
 type: "code"
-community: "NoticesController"
+community: "notices.service.ts"
 location: "L149"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NoticesController
+  - community/noticesservicets
 ---
 
 # humanizeCanonicalField()
@@ -16,4 +16,4 @@ tags:
 - [[dot-resolveItemisedFields()]] - `calls` [EXTRACTED]
 - [[notices.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NoticesController
+#graphify/code #graphify/EXTRACTED #community/noticesservicets

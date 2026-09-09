@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
+source_file: "dpdp-platform/backend/src/common/crypto/crypto.service.ts"
 type: "code"
-community: "rest-api.connector.ts"
-location: "L142"
+community: "data-sources.module.ts"
+location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rest-apiconnectorts
+  - community/data-sourcesmodulets
 ---
 
 # .constructor()
 
 ## Connections
-- [[ReadOnlyHttpClient]] - `references` [EXTRACTED]
-- [[RestApiConnector]] - `method` [EXTRACTED]
-- [[UnsupportedPaginationStyleError]] - `calls` [EXTRACTED]
+- [[CryptoService]] - `method` [EXTRACTED]
+- [[InvalidEncryptionKeyError]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts
+#graphify/code #graphify/EXTRACTED #community/data-sourcesmodulets

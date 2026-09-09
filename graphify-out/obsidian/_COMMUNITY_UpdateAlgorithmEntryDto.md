@@ -10,15 +10,15 @@ members: 13
 ## Members
 - [[dot-update()_9]] - code - dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts
 - [[dot-updateAlgorithm()]] - code - dpdp-platform/backend/src/modules/sdf/sdf.controller.ts
-- [[ApiPropertyOptional_22]] - code
-- [[ArrayMinSize_2]] - code
-- [[IsArray_12]] - code
-- [[IsBoolean_11]] - code
-- [[IsDateString_7]] - code
+- [[ApiPropertyOptional_21]] - code
+- [[ArrayMinSize_1]] - code
+- [[IsArray_11]] - code
+- [[IsBoolean_12]] - code
+- [[IsDateString_6]] - code
 - [[IsIn_6]] - code
-- [[IsOptional_24]] - code
-- [[IsString_29]] - code
-- [[MinLength_22]] - code
+- [[IsOptional_23]] - code
+- [[IsString_27]] - code
+- [[MinLength_20]] - code
 - [[Patch_4]] - code
 - [[UpdateAlgorithmEntryDto]] - code - dpdp-platform/backend/src/modules/sdf/dto/update-algorithm-entry.dto.ts
 
@@ -30,13 +30,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_compliance.service.ts]]
-- 1 edge to [[_COMMUNITY_AlgorithmRegisterService]]
-- 1 edge to [[_COMMUNITY_SdfController]]
+- 3 edges to [[_COMMUNITY_@prismaclient]]
+- 2 edges to [[_COMMUNITY_SdfController]]
 - 1 edge to [[_COMMUNITY_dot-record]]
 - 1 edge to [[_COMMUNITY_RequirePermission]]
 - 1 edge to [[_COMMUNITY_CreateAlgorithmEntryDto]]
-- 1 edge to [[_COMMUNITY_SdfAssessmentService]]
+- 1 edge to [[_COMMUNITY_CompleteSdfAssessmentDto]]
 
 ## Top bridge nodes
 - [[dot-updateAlgorithm()]] - degree 7, connects to 4 communities

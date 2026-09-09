@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "PrismaModule"
+community: "@nestjs/common"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaModule
+  - community/nestjs/common
 ---
 
 # Global
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[PrismaModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaModule
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

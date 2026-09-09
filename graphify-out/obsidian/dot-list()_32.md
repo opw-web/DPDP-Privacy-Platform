@@ -1,24 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/notifications.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/sharing.service.ts"
 type: "code"
-community: "notifications.service.ts"
-location: "L44"
+community: "sharing.service.ts"
+location: "L59"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationsservicets
+  - community/sharingservicets
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_33]] - `calls` [INFERRED]
-- [[ApiOkResponse_3]] - `references` [EXTRACTED]
-- [[CurrentNotificationActor]] - `references` [EXTRACTED]
-- [[Get_28]] - `references` [EXTRACTED]
-- [[NotificationCallerActor]] - `references` [EXTRACTED]
-- [[NotificationsController]] - `method` [EXTRACTED]
-- [[Public()]] - `references` [EXTRACTED]
-- [[UseGuards_4]] - `references` [EXTRACTED]
+- [[dot-list()_31]] - `calls` [INFERRED]
+- [[SharingService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationsservicets
+#graphify/code #graphify/EXTRACTED #community/sharingservicets

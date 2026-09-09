@@ -12,9 +12,9 @@ tags:
 # CreateRetentionPolicyDto
 
 ## Connections
-- [[dot-create()_33]] - `references` [EXTRACTED]
-- [[dot-create()_34]] - `references` [EXTRACTED]
-- [[ApiProperty_44]] - `references` [EXTRACTED]
+- [[dot-create()_35]] - `references` [EXTRACTED]
+- [[dot-create()_36]] - `references` [EXTRACTED]
+- [[ApiProperty_45]] - `references` [EXTRACTED]
 - [[ApiPropertyOptional_49]] - `references` [EXTRACTED]
 - [[IsBoolean_23]] - `references` [EXTRACTED]
 - [[IsIn_16]] - `references` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/decorators/current-actor.decorator.ts"
 type: "code"
-community: "@nestjs/common"
+community: "RequirePermission"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/RequirePermission
 ---
 
 # CurrentActor
@@ -16,18 +16,18 @@ tags:
 - [[dot-cancel()_1]] - `references` [EXTRACTED]
 - [[dot-complete()_1]] - `references` [EXTRACTED]
 - [[dot-confirm()]] - `references` [EXTRACTED]
-- [[dot-create()_27]] - `references` [EXTRACTED]
-- [[dot-create()_23]] - `references` [EXTRACTED]
+- [[dot-create()_29]] - `references` [EXTRACTED]
+- [[dot-create()_16]] - `references` [EXTRACTED]
 - [[dot-createLegalHold()]] - `references` [EXTRACTED]
-- [[dot-createVersion()_1]] - `references` [EXTRACTED]
+- [[dot-createVersion()]] - `references` [EXTRACTED]
 - [[dot-me()_2]] - `references` [EXTRACTED]
-- [[dot-publish()_1]] - `references` [EXTRACTED]
+- [[dot-publish()]] - `references` [EXTRACTED]
 - [[dot-reject()]] - `references` [EXTRACTED]
 - [[dot-review()_2]] - `references` [EXTRACTED]
-- [[dot-review()]] - `references` [EXTRACTED]
-- [[dot-send()_5]] - `references` [EXTRACTED]
+- [[dot-review()_3]] - `references` [EXTRACTED]
+- [[dot-send()_4]] - `references` [EXTRACTED]
 - [[dot-unmerge()_1]] - `references` [EXTRACTED]
-- [[dot-upsertTranslation()_1]] - `references` [EXTRACTED]
+- [[dot-upsertTranslation()]] - `references` [EXTRACTED]
 - [[dot-verify()]] - `references` [EXTRACTED]
 - [[breaches.controller.ts]] - `imports` [EXTRACTED]
 - [[campaigns.controller.ts]] - `imports` [EXTRACTED]
@@ -42,4 +42,4 @@ tags:
 - [[retentionretention.controller.ts]] - `imports` [EXTRACTED]
 - [[unmerge.controller.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

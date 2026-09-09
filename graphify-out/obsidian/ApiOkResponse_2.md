@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "@nestjs/common"
+community: "RequirePermission"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/RequirePermission
 ---
 
 # ApiOkResponse
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-me()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

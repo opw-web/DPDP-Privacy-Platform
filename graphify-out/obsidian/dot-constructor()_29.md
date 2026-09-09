@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sync.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/audit-chain-verify.processor.ts"
 type: "code"
-community: "sync.e2e-spec.ts"
-location: "L46"
+community: "canonicalJson"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/synce2e-spects
+  - community/canonicalJson
 ---
 
 # .constructor()
 
 ## Connections
-- [[SyncPipelineService]] - `references` [EXTRACTED]
-- [[SyncProcessor]] - `method` [EXTRACTED]
+- [[AuditChainService]] - `references` [EXTRACTED]
+- [[AuditChainVerifyProcessor]] - `method` [EXTRACTED]
+- [[NotificationsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/synce2e-spects
+#graphify/code #graphify/EXTRACTED #community/canonicalJson

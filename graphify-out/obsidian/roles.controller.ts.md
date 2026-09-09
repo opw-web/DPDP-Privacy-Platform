@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/employees/roles.controller.ts"
 type: "code"
-community: "@nestjs/common"
+community: "@prisma/client"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/prisma/client
 ---
 
 # roles.controller.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[RequirePermission()]] - `imports` [EXTRACTED]
 - [[RolesController]] - `contains` [EXTRACTED]
@@ -23,4 +23,4 @@ tags:
 - [[roles.service.ts]] - `imports_from` [EXTRACTED]
 - [[update-role-permissions.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/prisma/client

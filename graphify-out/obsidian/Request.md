@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/InformationRequestsPage.tsx"
 type: "code"
-community: "button.tsx"
+community: "react-router-dom"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react-router-dom
 ---
 
 # Request
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[InformationRequestsPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

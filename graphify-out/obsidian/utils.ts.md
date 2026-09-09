@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/lib/utils.ts"
 type: "code"
-community: "cn"
+community: "react"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/react
 ---
 
 # utils.ts
@@ -39,4 +39,4 @@ tags:
 - [[textarea.tsx]] - `imports_from` [EXTRACTED]
 - [[tooltip.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/react

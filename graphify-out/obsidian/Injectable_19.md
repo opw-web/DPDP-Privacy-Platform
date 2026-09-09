@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sync.e2e-spec.ts"
+community: "notifications.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/synce2e-spects
+  - community/notificationsmodulets
 ---
 
 # Injectable
 
 ## Connections
-- [[SyncLockService]] - `references` [EXTRACTED]
+- [[SmtpProvider]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/synce2e-spects
+#graphify/code #graphify/EXTRACTED #community/notificationsmodulets

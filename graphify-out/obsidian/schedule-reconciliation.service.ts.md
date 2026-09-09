@@ -12,7 +12,7 @@ tags:
 # schedule-reconciliation.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[BootRegistrationRegistry]] - `imports` [EXTRACTED]
 - [[Mvp2ScheduleReconciliationService]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]

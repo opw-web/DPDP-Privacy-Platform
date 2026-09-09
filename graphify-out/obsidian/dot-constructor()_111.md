@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/consents/consents.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/notifications.controller.ts"
 type: "code"
-community: "ConsentsService"
-location: "L26"
+community: "notifications.controller.ts"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ConsentsService
+  - community/notificationscontrollerts
 ---
 
 # .constructor()
 
 ## Connections
-- [[ConsentsController]] - `method` [EXTRACTED]
-- [[ConsentsService]] - `references` [EXTRACTED]
+- [[NotificationsController]] - `method` [EXTRACTED]
+- [[NotificationsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ConsentsService
+#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts

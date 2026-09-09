@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.tsx"
 type: "code"
-community: "button.tsx"
+community: "react"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react
 ---
 
 # ChildrenPage.tsx
@@ -41,8 +41,8 @@ tags:
 - [[Label_1]] - `imports` [EXTRACTED]
 - [[Notice]] - `imports` [EXTRACTED]
 - [[NoticeDetail]] - `imports` [EXTRACTED]
-- [[PrincipalListResponse]] - `contains` [EXTRACTED]
-- [[Purpose]] - `contains` [EXTRACTED]
+- [[PrincipalListResponse_1]] - `contains` [EXTRACTED]
+- [[Purpose_1]] - `contains` [EXTRACTED]
 - [[Select]] - `imports` [EXTRACTED]
 - [[Skeleton()]] - `imports` [EXTRACTED]
 - [[Skeleton.tsx]] - `imports_from` [EXTRACTED]
@@ -65,4 +65,4 @@ tags:
 - [[select.tsx]] - `imports_from` [EXTRACTED]
 - [[sonner_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/react

@@ -1,20 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.service.ts"
+source_file: "dpdp-platform/backend/src/common/reference/reference.service.ts"
 type: "code"
-community: "prisma.service.ts"
-location: "L71"
+community: "AuditService"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/AuditService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AssemblyService]] - `references` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
-- [[DataSourcesService]] - `references` [EXTRACTED]
-- [[MappingsService]] - `method` [EXTRACTED]
+- [[ReferenceService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/AuditService

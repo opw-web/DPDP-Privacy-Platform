@@ -1,25 +1,24 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/breaches/breaches.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
 type: "code"
-community: "RequirePermission"
-location: "L98"
+community: ".record"
+location: "L450"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/record
 ---
 
 # .completeObligation()
 
 ## Connections
 - [[dot-completeObligation()_1]] - `calls` [INFERRED]
+- [[dot-get()_18]] - `calls` [EXTRACTED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-update()_21]] - `calls` [EXTRACTED]
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[Actor]] - `references` [EXTRACTED]
-- [[Body_19]] - `references` [EXTRACTED]
-- [[BreachesController]] - `method` [EXTRACTED]
+- [[BreachService]] - `method` [EXTRACTED]
 - [[CompleteObligationDto]] - `references` [EXTRACTED]
-- [[Param_23]] - `references` [EXTRACTED]
-- [[Post_20]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[PublicBreach]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/record

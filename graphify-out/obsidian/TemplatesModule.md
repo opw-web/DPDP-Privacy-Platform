@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.module.ts"
 type: "code"
-community: "app.module.ts"
+community: "@nestjs/common"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/appmodulets
+  - community/nestjs/common
 ---
 
 # TemplatesModule
 
 ## Connections
-- [[Module_19]] - `references` [EXTRACTED]
+- [[Module_20]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[campaigns.module.ts]] - `imports` [EXTRACTED]
 - [[templates.module.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/appmodulets
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

@@ -1,26 +1,26 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/compliance/compliance.controller.ts"
 type: "code"
-community: "ComplianceService"
+community: "ComplianceController"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ComplianceService
+  - community/ComplianceController
 ---
 
 # ComplianceController
 
 ## Connections
-- [[dot-constructor()_60]] - `method` [EXTRACTED]
-- [[dot-create()_11]] - `method` [EXTRACTED]
-- [[dot-getById()]] - `method` [EXTRACTED]
-- [[dot-list()_11]] - `method` [EXTRACTED]
+- [[dot-constructor()_13]] - `method` [EXTRACTED]
+- [[dot-create()_1]] - `method` [EXTRACTED]
+- [[dot-getById()_1]] - `method` [EXTRACTED]
+- [[dot-list()_2]] - `method` [EXTRACTED]
 - [[dot-review()_2]] - `method` [EXTRACTED]
-- [[dot-update()_7]] - `method` [EXTRACTED]
-- [[ApiTags_14]] - `references` [EXTRACTED]
-- [[Controller_14]] - `references` [EXTRACTED]
+- [[dot-update()_2]] - `method` [EXTRACTED]
+- [[ApiTags_2]] - `references` [EXTRACTED]
+- [[Controller_2]] - `references` [EXTRACTED]
 - [[compliance.controller.ts]] - `contains` [EXTRACTED]
 - [[compliance.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ComplianceService
+#graphify/code #graphify/EXTRACTED #community/ComplianceController

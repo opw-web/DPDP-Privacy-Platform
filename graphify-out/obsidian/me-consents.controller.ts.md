@@ -12,7 +12,7 @@ tags:
 # me-consents.controller.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[@nestjsswagger_1]] - `imports_from` [EXTRACTED]
 - [[ConsentsService]] - `imports` [EXTRACTED]
 - [[CurrentPrincipal]] - `imports` [EXTRACTED]

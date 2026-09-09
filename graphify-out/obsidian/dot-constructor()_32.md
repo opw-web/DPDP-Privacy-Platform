@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/transfers.controller.ts"
+source_file: "dpdp-platform/backend/src/queues/sync-lock.service.ts"
 type: "code"
-community: "transfers.service.ts"
-location: "L11"
+community: "sync-lock.service.ts"
+location: "L94"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/transfersservicets
+  - community/sync-lockservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[TransfersController]] - `method` [EXTRACTED]
-- [[TransfersService]] - `references` [EXTRACTED]
+- [[SyncLockService]] - `method` [EXTRACTED]
+- [[toRedisConnectionOptions()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/transfersservicets
+#graphify/code #graphify/EXTRACTED #community/sync-lockservicets

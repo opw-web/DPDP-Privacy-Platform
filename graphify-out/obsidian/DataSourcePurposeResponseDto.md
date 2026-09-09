@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/dto/purposes-response.dto.ts"
 type: "code"
-community: "@nestjs/common"
+community: "@prisma/client"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/prisma/client
 ---
 
 # DataSourcePurposeResponseDto
 
 ## Connections
-- [[ApiProperty_29]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_34]] - `references` [EXTRACTED]
+- [[ApiProperty_26]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_31]] - `references` [EXTRACTED]
 - [[purposes-response.dto.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/prisma/client

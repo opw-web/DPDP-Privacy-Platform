@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "ListPrincipalsDto"
+community: "PrincipalsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ListPrincipalsDto
+  - community/PrincipalsService
 ---
 
 # Transform
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[ListPrincipalsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ListPrincipalsDto
+#graphify/code #graphify/EXTRACTED #community/PrincipalsService

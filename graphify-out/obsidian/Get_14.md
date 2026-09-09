@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "ComplianceService"
+community: "MappingsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ComplianceService
+  - community/MappingsController
 ---
 
 # Get
 
 ## Connections
-- [[dot-getById()]] - `references` [EXTRACTED]
-- [[dot-list()_11]] - `references` [EXTRACTED]
+- [[dot-getMappings()]] - `references` [EXTRACTED]
+- [[dot-getPurposes()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ComplianceService
+#graphify/code #graphify/EXTRACTED #community/MappingsController

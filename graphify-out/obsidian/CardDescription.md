@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/ui/card.tsx"
 type: "code"
-community: "react"
+community: "react-router-dom"
 location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/react-router-dom
 ---
 
 # CardDescription
@@ -34,4 +34,4 @@ tags:
 - [[card.tsx]] - `contains` [EXTRACTED]
 - [[cn()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

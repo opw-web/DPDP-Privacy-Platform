@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "UpsertTranslationDto"
+community: "Public"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpsertTranslationDto
+  - community/Public
 ---
 
 # ApiProperty
 
 ## Connections
-- [[UpsertTranslationDto]] - `references` [EXTRACTED]
+- [[MeProfileTimezoneDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpsertTranslationDto
+#graphify/code #graphify/EXTRACTED #community/Public

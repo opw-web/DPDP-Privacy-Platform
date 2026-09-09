@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/normalization/normalization.service.ts"
 type: "code"
-community: "prisma.service.ts"
+community: "AuditService"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/AuditService
 ---
 
 # NormalizationMapping
@@ -26,4 +26,4 @@ tags:
 - [[normalization.service.ts]] - `contains` [EXTRACTED]
 - [[sync-pipeline.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/AuditService

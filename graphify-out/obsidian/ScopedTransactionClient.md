@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/prisma/scoped-transaction-client.ts"
 type: "code"
-community: ".record"
+community: "AuditService"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/AuditService
 ---
 
 # ScopedTransactionClient
@@ -32,8 +32,8 @@ tags:
 - [[dot-nextPrincipalReferenceInTransaction()]] - `references` [EXTRACTED]
 - [[dot-persistAndLink()]] - `references` [EXTRACTED]
 - [[dot-rebuild()]] - `references` [EXTRACTED]
-- [[dot-record()]] - `references` [EXTRACTED]
 - [[dot-record()_1]] - `references` [EXTRACTED]
+- [[dot-record()]] - `references` [EXTRACTED]
 - [[dot-recordPersonalDataViewed()]] - `references` [EXTRACTED]
 - [[dot-rescrubFieldSample()]] - `references` [EXTRACTED]
 - [[dot-resolveFieldsInTransaction()]] - `references` [EXTRACTED]
@@ -71,4 +71,4 @@ tags:
 - [[scoped-transaction-client.ts]] - `contains` [EXTRACTED]
 - [[sync-pipeline.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/AuditService

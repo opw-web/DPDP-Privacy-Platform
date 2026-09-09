@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "NoticesController"
+community: "TemplatesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NoticesController
+  - community/TemplatesService
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_16]] - `references` [EXTRACTED]
-- [[dot-createVersion()_1]] - `references` [EXTRACTED]
-- [[dot-upsertTranslation()_1]] - `references` [EXTRACTED]
+- [[dot-create()_13]] - `references` [EXTRACTED]
+- [[dot-preview()]] - `references` [EXTRACTED]
+- [[dot-update()_10]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NoticesController
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

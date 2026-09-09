@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateLegalHoldDto"
+community: "RetentionController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateLegalHoldDto
+  - community/RetentionController
 ---
 
 # IsString
@@ -14,4 +14,4 @@ tags:
 - [[ProcessorChecklistTickDto]] - `references` [EXTRACTED]
 - [[SystemChecklistTickDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateLegalHoldDto
+#graphify/code #graphify/EXTRACTED #community/RetentionController

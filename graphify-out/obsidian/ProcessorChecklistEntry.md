@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/checklist.types.ts"
 type: "code"
-community: "ErasureTaskService"
+community: "erasure-task.service.ts"
 location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ErasureTaskService
+  - community/erasure-taskservicets
 ---
 
 # ProcessorChecklistEntry
@@ -20,4 +20,4 @@ tags:
 - [[erasure-task.service.ts]] - `imports` [EXTRACTED]
 - [[requests.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ErasureTaskService
+#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets

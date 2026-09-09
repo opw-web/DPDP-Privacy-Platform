@@ -3498,3 +3498,23 @@ _Earlier entries archived to .claude/journal/archive/JOURNAL-2026-08.md._
 - `10:28` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python -c " import pathlib;p=pathlib.Path('demo-control/open-database.s...`
 - `10:28` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -n "Verified" JOURNAL.md | head -3`
 - `10:29` wrote `C:\Users\ompuri\AppData\Local\Temp\claude\C--Coding-stuff-DPDP-Privacy-Platform\fd0bd078-ce0c-463d-a645-4ca4e9c558b0\scratchpad\journal2.py` (~25 lines)
+- `10:29` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python "C:/Users/ompuri/AppData/Local/Temp/claude/C--Coding-stuff-DPDP-...`
+
+### 2026-09-09 10:33 - session `fd0bd078`
+
+**Why:** commited and pushed? I still see "Double-click 0 - Prepare This Computer.sh" in github readme also open and show me the updated client guide
+
+- `10:34` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git remote -v && echo "--- branch/upstream ---" && git status -sb | hea...`
+- `10:34` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && echo "=== default-branch README, the line you saw ===" && git show orig...`
+- `10:34` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git push origin windows-support 2>&1 | tail -5 && git status -sb | head -1`
+- `10:34` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git merge-base --is-ancestor origin/mvp2-compliance-operations windows-...`
+- `10:34` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && timeout 60 bash demo-control/open-client-guide.sh </dev/null 2>&1 | tai...`
+- `10:37` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git stash list | head -2; git status --porcelain | head -3; echo "--- f...`
+- `10:37` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git checkout mvp2-compliance-operations 2>&1 | head -25`
+- `10:38` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git push origin windows-support:mvp2-compliance-operations 2>&1 | tail ...`
+- `10:38` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && curl -s "https://raw.githubusercontent.com/opw-web/DPDP-Privacy-Platfor...`
+- `10:38` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python scripts/dedupe-vault-names.py && echo "--- collision check after...`
+- `10:38` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && PYTHONIOENCODING=utf-8 python -c " import pathlib v = pathlib.Path('gra...`
+- `10:38` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && grep -n "MAX_STEM\|def shorten\|renames.update\|already Windows-safe" s...`
+- `10:40` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && python - <<'PYEOF' import pathlib p = pathlib.Path("scripts/dedupe-vaul...`
+- `10:40` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && PYTHONIOENCODING=utf-8 python -c " import pathlib v=pathlib.Path('graph...`

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/board/dto/requesting-body.ts"
 type: "code"
-community: "@nestjs/common"
+community: "information-requests.controller.ts"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/information-requestscontrollerts
 ---
 
 # REQUESTING_BODIES
@@ -16,4 +16,4 @@ tags:
 - [[requesting-body.ts]] - `contains` [EXTRACTED]
 - [[update-information-request.dto.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/information-requestscontrollerts

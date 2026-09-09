@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/audience/audience.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/unmerge.controller.ts"
 type: "code"
-community: "PreviewAudienceDto"
-location: "L17"
+community: ".unmerge"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PreviewAudienceDto
+  - community/unmerge
 ---
 
 # .constructor()
 
 ## Connections
-- [[AudienceController]] - `method` [EXTRACTED]
-- [[AudienceService]] - `references` [EXTRACTED]
+- [[MergeService]] - `references` [EXTRACTED]
+- [[UnmergeController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PreviewAudienceDto
+#graphify/code #graphify/EXTRACTED #community/unmerge

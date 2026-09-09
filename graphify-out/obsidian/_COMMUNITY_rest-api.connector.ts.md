@@ -10,10 +10,10 @@ members: 29
 ## Members
 - [[dot-buildAuthHeaders()]] - code - dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts
 - [[dot-buildUrl()]] - code - dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts
-- [[dot-constructor()_118]] - code - dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts
-- [[dot-constructor()_119]] - code - dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts
-- [[dot-constructor()_120]] - code - dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts
-- [[dot-constructor()_121]] - code - dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts
+- [[dot-constructor()_125]] - code - dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts
+- [[dot-constructor()_126]] - code - dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts
+- [[dot-constructor()_127]] - code - dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts
+- [[dot-constructor()_128]] - code - dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts
 - [[dot-decodeCursor()]] - code - dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts
 - [[dot-discoverSchema()_3]] - code - dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts
 - [[dot-encodeCursor()]] - code - dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts
@@ -49,7 +49,7 @@ SORT file.name ASC
 - 10 edges to [[_COMMUNITY_read-only-http.client.ts]]
 - 9 edges to [[_COMMUNITY_data-sources.service.ts]]
 - 2 edges to [[_COMMUNITY_step6-conflict-acceptance.e2e-spec.ts]]
-- 2 edges to [[_COMMUNITY_@nestjscommon]]
+- 2 edges to [[_COMMUNITY_@prismaclient]]
 
 ## Top bridge nodes
 - [[rest-api.connector.ts]] - degree 21, connects to 3 communities

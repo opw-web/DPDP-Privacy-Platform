@@ -12,7 +12,7 @@ tags:
 # age-status.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[AGE_STATUS_PUBLIC_SELECT]] - `contains` [EXTRACTED]
 - [[AgeStatusService]] - `contains` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]

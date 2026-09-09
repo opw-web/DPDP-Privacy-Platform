@@ -12,13 +12,13 @@ tags:
 # RetentionService
 
 ## Connections
-- [[dot-assertPurposeExists()]] - `method` [EXTRACTED]
-- [[dot-constructor()_140]] - `references` [EXTRACTED]
-- [[dot-constructor()_141]] - `method` [EXTRACTED]
-- [[dot-create()_34]] - `method` [EXTRACTED]
-- [[dot-get()_22]] - `method` [EXTRACTED]
-- [[dot-list()_45]] - `method` [EXTRACTED]
-- [[dot-update()_24]] - `method` [EXTRACTED]
+- [[dot-assertPurposeExists()_1]] - `method` [EXTRACTED]
+- [[dot-constructor()_141]] - `references` [EXTRACTED]
+- [[dot-constructor()_142]] - `method` [EXTRACTED]
+- [[dot-create()_36]] - `method` [EXTRACTED]
+- [[dot-get()_23]] - `method` [EXTRACTED]
+- [[dot-list()_47]] - `method` [EXTRACTED]
+- [[dot-update()_26]] - `method` [EXTRACTED]
 - [[Injectable_84]] - `references` [EXTRACTED]
 - [[registers.module.ts]] - `imports` [EXTRACTED]
 - [[registersretention.controller.ts]] - `imports` [EXTRACTED]

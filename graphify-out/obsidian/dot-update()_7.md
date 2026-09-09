@@ -1,23 +1,26 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/compliance/compliance.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
 type: "code"
-community: "ComplianceService"
-location: "L40"
+community: "DataSourcesService"
+location: "L318"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ComplianceService
+  - community/DataSourcesService
 ---
 
 # .update()
 
 ## Connections
-- [[dot-update()_8]] - `calls` [INFERRED]
-- [[Body_8]] - `references` [EXTRACTED]
-- [[ComplianceController]] - `method` [EXTRACTED]
-- [[Param_7]] - `references` [EXTRACTED]
-- [[Patch_3]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[UpdateComplianceRuleDto]] - `references` [EXTRACTED]
+- [[dot-assertPubliclyAvailableJustified()]] - `calls` [EXTRACTED]
+- [[dot-encrypt()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-scheduleSync()]] - `calls` [EXTRACTED]
+- [[dot-testConnection()_1]] - `calls` [EXTRACTED]
+- [[dot-update()_20]] - `calls` [INFERRED]
+- [[DataSourcesService]] - `method` [EXTRACTED]
+- [[UpdateDataSourceDto]] - `references` [EXTRACTED]
+- [[duplicateNameMessage()]] - `calls` [EXTRACTED]
+- [[isUniqueConstraintViolation()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ComplianceService
+#graphify/code #graphify/EXTRACTED #community/DataSourcesService

@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/security-measures.service.ts"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/registers/SecurityMeasuresTab.tsx"
 type: "code"
-community: "security-measures.service.ts"
+community: "react"
 location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/security-measuresservicets
+  - community/react
 ---
 
 # SecurityMeasureGroup
 
 ## Connections
-- [[security-measures.service.ts]] - `contains` [EXTRACTED]
+- [[SecurityMeasuresTab.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/security-measuresservicets
+#graphify/code #graphify/EXTRACTED #community/react

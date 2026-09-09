@@ -8,14 +8,14 @@ members: 8
 **Members:** 8 nodes
 
 ## Members
-- [[ApiProperty_17]] - code
-- [[ApiPropertyOptional_21]] - code
+- [[ApiProperty_12]] - code
+- [[ApiPropertyOptional_19]] - code
 - [[CreatePurposeDto]] - code - dpdp-platform/backend/src/modules/purposes/dto/create-purpose.dto.ts
-- [[IsArray_11]] - code
-- [[IsEnum_13]] - code
-- [[IsOptional_22]] - code
-- [[IsString_27]] - code
-- [[MinLength_21]] - code
+- [[IsArray_9]] - code
+- [[IsEnum_11]] - code
+- [[IsOptional_20]] - code
+- [[IsString_23]] - code
+- [[MinLength_18]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -25,10 +25,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_@nestjscommon]]
-- 2 edges to [[_COMMUNITY_PurposesService]]
-- 1 edge to [[_COMMUNITY_mappings.service.ts]]
-- 1 edge to [[_COMMUNITY_prisma.service.ts]]
+- 3 edges to [[_COMMUNITY_purposes.service.ts]]
+- 1 edge to [[_COMMUNITY_RequirePermission]]
+- 1 edge to [[_COMMUNITY_PurposesController]]
+- 1 edge to [[_COMMUNITY_@prismaclient]]
 
 ## Top bridge nodes
 - [[CreatePurposeDto]] - degree 13, connects to 4 communities

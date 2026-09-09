@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
 type: "code"
-community: "ComplianceService"
+community: "compliance.service.ts"
 location: "L324"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ComplianceService
+  - community/complianceservicets
 ---
 
 # .validateGrievanceCeiling()
@@ -17,4 +17,4 @@ tags:
 - [[ComplianceService]] - `method` [EXTRACTED]
 - [[worstCaseDeadlineDays()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ComplianceService
+#graphify/code #graphify/EXTRACTED #community/complianceservicets

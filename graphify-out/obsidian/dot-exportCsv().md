@@ -1,21 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/audit-events-evidence.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/evidence/audit-export.service.ts"
 type: "code"
-community: "csvDocument"
-location: "L34"
+community: "evidence-pack.service.ts"
+location: "L39"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/csvDocument
+  - graphify/INFERRED
+  - community/evidence-packservicets
 ---
 
 # .exportCsv()
 
 ## Connections
-- [[dot-exportCsv()_1]] - `calls` [INFERRED]
-- [[AuditEventsEvidenceController]] - `method` [EXTRACTED]
-- [[Get_3]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[Res]] - `references` [EXTRACTED]
+- [[dot-buildPack()]] - `calls` [INFERRED]
+- [[dot-exportCsv()_2]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[AuditExportService]] - `method` [EXTRACTED]
+- [[csvDocument()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/csvDocument
+#graphify/code #graphify/INFERRED #community/evidence-packservicets

@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/pre-erasure-notice.service.ts"
 type: "code"
-community: "NotificationsService"
+community: "PreErasureNoticeService"
 location: "L75"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/PreErasureNoticeService
 ---
 
 # .runForAllOrganizations()
 
 ## Connections
-- [[dot-process()_5]] - `calls` [INFERRED]
+- [[dot-process()_4]] - `calls` [INFERRED]
 - [[dot-runForCurrentOrganization()_1]] - `calls` [EXTRACTED]
 - [[PreErasureNoticeService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/PreErasureNoticeService

@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/common/tenant/tenant.middleware.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/roles.service.ts"
 type: "code"
-community: "TokenService"
-location: "L46"
+community: "UpdateRolePermissionsDto"
+location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TokenService
+  - community/UpdateRolePermissionsDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[TenantMiddleware]] - `method` [EXTRACTED]
-- [[TokenService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[RolesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TokenService
+#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto

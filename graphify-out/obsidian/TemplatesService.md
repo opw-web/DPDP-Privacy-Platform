@@ -12,17 +12,17 @@ tags:
 # TemplatesService
 
 ## Connections
-- [[dot-constructor()_95]] - `references` [EXTRACTED]
-- [[dot-constructor()_65]] - `references` [EXTRACTED]
-- [[dot-constructor()_66]] - `method` [EXTRACTED]
+- [[dot-constructor()_99]] - `references` [EXTRACTED]
+- [[dot-constructor()_69]] - `references` [EXTRACTED]
+- [[dot-constructor()_70]] - `method` [EXTRACTED]
 - [[dot-create()_14]] - `method` [EXTRACTED]
 - [[dot-extractAndValidateVariables()]] - `method` [EXTRACTED]
-- [[dot-get()_14]] - `method` [EXTRACTED]
+- [[dot-get()_8]] - `method` [EXTRACTED]
 - [[dot-list()_16]] - `method` [EXTRACTED]
-- [[dot-preview()_2]] - `method` [EXTRACTED]
+- [[dot-preview()_1]] - `method` [EXTRACTED]
 - [[dot-update()_11]] - `method` [EXTRACTED]
 - [[dot-validateRequiredSubsetOfReferenced()]] - `method` [EXTRACTED]
-- [[Injectable_40]] - `references` [EXTRACTED]
+- [[Injectable_43]] - `references` [EXTRACTED]
 - [[campaigns.service.ts]] - `imports` [EXTRACTED]
 - [[templates.controller.ts]] - `imports` [EXTRACTED]
 - [[templates.module.ts]] - `imports` [EXTRACTED]

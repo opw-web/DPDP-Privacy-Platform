@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalEvidenceController"
+community: "DataSourcesController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalEvidenceController
+  - community/DataSourcesController
 ---
 
 # Get
 
 ## Connections
-- [[dot-evidence()]] - `references` [EXTRACTED]
-- [[dot-evidencePdf()]] - `references` [EXTRACTED]
+- [[dot-get()_16]] - `references` [EXTRACTED]
+- [[dot-list()_35]] - `references` [EXTRACTED]
+- [[dot-listFields()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalEvidenceController
+#graphify/code #graphify/EXTRACTED #community/DataSourcesController

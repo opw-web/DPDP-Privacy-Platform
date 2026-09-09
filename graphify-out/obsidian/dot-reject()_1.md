@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-claimPendingCandidate()]] - `calls` [EXTRACTED]
-- [[dot-record()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
 - [[dot-reject()]] - `calls` [INFERRED]
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
 - [[CandidatesService]] - `method` [EXTRACTED]

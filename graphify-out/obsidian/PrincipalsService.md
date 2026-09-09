@@ -1,30 +1,30 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principals/principals.service.ts"
 type: "code"
-community: "principals.service.ts"
+community: "PrincipalsService"
 location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principalsservicets
+  - community/PrincipalsService
 ---
 
 # PrincipalsService
 
 ## Connections
-- [[dot-constructor()_70]] - `references` [EXTRACTED]
-- [[dot-constructor()_73]] - `references` [EXTRACTED]
-- [[dot-constructor()_74]] - `method` [EXTRACTED]
+- [[dot-constructor()_4]] - `references` [EXTRACTED]
+- [[dot-constructor()_83]] - `references` [EXTRACTED]
+- [[dot-constructor()_72]] - `method` [EXTRACTED]
 - [[dot-getDetail()]] - `method` [EXTRACTED]
 - [[dot-getSourceRecords()]] - `method` [EXTRACTED]
 - [[dot-getUnmaskedProfile()]] - `method` [EXTRACTED]
-- [[dot-list()_17]] - `method` [EXTRACTED]
+- [[dot-list()_21]] - `method` [EXTRACTED]
 - [[dot-loadProfile()]] - `method` [EXTRACTED]
 - [[dot-resolveFieldsInTransaction()]] - `method` [EXTRACTED]
-- [[Injectable_45]] - `references` [EXTRACTED]
+- [[Injectable_51]] - `references` [EXTRACTED]
 - [[me.service.ts]] - `imports` [EXTRACTED]
 - [[principals.controller.ts]] - `imports` [EXTRACTED]
 - [[principals.module.ts]] - `imports` [EXTRACTED]
 - [[principals.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principalsservicets
+#graphify/code #graphify/EXTRACTED #community/PrincipalsService

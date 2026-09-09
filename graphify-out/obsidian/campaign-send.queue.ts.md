@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[@nestjsbullmq_1]] - `imports_from` [EXTRACTED]
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[CAMPAIGN_SEND_MAX_ATTEMPTS]] - `contains` [EXTRACTED]
 - [[CAMPAIGN_SEND_QUEUE_NAME]] - `contains` [EXTRACTED]
@@ -22,7 +22,7 @@ tags:
 - [[CampaignSendQueueService]] - `contains` [EXTRACTED]
 - [[breach-principal-notice-dispatch.processor.ts]] - `imports_from` [EXTRACTED]
 - [[breaches.module.ts]] - `imports_from` [EXTRACTED]
-- [[bullmq]] - `imports_from` [EXTRACTED]
+- [[bullmq_1]] - `imports_from` [EXTRACTED]
 - [[campaign-send.processor.ts]] - `imports_from` [EXTRACTED]
 - [[campaignSendJobId()]] - `contains` [EXTRACTED]
 - [[campaigns.e2e-spec.ts]] - `imports_from` [EXTRACTED]

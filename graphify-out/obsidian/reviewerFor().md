@@ -12,7 +12,7 @@ tags:
 # reviewerFor()
 
 ## Connections
-- [[ensurePermission()_4]] - `calls` [EXTRACTED]
+- [[ensurePermission()_7]] - `calls` [EXTRACTED]
 - [[merge-unmerge.e2e-spec.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/merge-unmergee2e-spects

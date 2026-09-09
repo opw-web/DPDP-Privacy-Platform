@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/messaging/audience/audience.service.ts"
 type: "code"
-community: "PreviewAudienceDto"
+community: "compile-audience.ts"
 location: "L134"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PreviewAudienceDto
+  - community/compile-audiencets
 ---
 
 # .compile()
@@ -16,4 +16,4 @@ tags:
 - [[AudienceService]] - `method` [EXTRACTED]
 - [[compileAudience()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PreviewAudienceDto
+#graphify/code #graphify/EXTRACTED #community/compile-audiencets

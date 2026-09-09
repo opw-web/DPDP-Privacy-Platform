@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "@nestjs/common"
+community: "@prisma/client"
 location: "L33"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/prisma/client
 ---
 
 # @prisma/client
@@ -138,4 +138,4 @@ tags:
 - [[verify-guardian.dto.ts]] - `imports_from` [EXTRACTED]
 - [[voluntary-undertakings.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/nestjs/common
+#graphify/concept #graphify/EXTRACTED #community/prisma/client

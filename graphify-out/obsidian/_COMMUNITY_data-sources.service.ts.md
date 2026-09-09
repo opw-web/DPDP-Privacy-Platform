@@ -1,14 +1,15 @@
 ---
 type: community
-members: 23
+members: 24
 ---
 
 # data-sources.service.ts
 
-**Members:** 23 nodes
+**Members:** 24 nodes
 
 ## Members
-- [[dot-create()_3]] - code - dpdp-platform/backend/src/modules/connectors/connector.factory.ts
+- [[dot-constructor()_30]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts
+- [[dot-create()_5]] - code - dpdp-platform/backend/src/modules/connectors/connector.factory.ts
 - [[dot-discoverSchema()]] - code - dpdp-platform/backend/src/modules/connectors/connector.interface.ts
 - [[dot-fetchChanges()]] - code - dpdp-platform/backend/src/modules/connectors/connector.interface.ts
 - [[dot-fetchRecords()]] - code - dpdp-platform/backend/src/modules/connectors/connector.interface.ts
@@ -20,8 +21,8 @@ members: 23
 - [[DATA_SOURCE_FIELD_SELECT]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts
 - [[DATA_SOURCE_PUBLIC_SELECT]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts
 - [[DataSourceRowForConnector]] - code - dpdp-platform/backend/src/modules/connectors/connector.factory.ts
-- [[Injectable_17]] - code
-- [[Module_1]] - code
+- [[Injectable_20]] - code
+- [[Module]] - code
 - [[PublicDataSource_1]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts
 - [[PublicDataSourceField_1]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts
 - [[TestConnectionResult_1]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts
@@ -41,24 +42,23 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 9 edges to [[_COMMUNITY_rest-api.connector.ts]]
-- 9 edges to [[_COMMUNITY_@nestjscommon]]
-- 6 edges to [[_COMMUNITY_DataSourcesService]]
-- 5 edges to [[_COMMUNITY_app.module.ts]]
-- 5 edges to [[_COMMUNITY_prisma.service.ts]]
-- 4 edges to [[_COMMUNITY_step6-conflict-acceptance.e2e-spec.ts]]
-- 2 edges to [[_COMMUNITY_configuration.ts]]
-- 2 edges to [[_COMMUNITY_dot-record]]
-- 1 edge to [[_COMMUNITY_PrismaService]]
-- 1 edge to [[_COMMUNITY_CreateDataSourceDto]]
+- 7 edges to [[_COMMUNITY_DataSourcesService]]
+- 7 edges to [[_COMMUNITY_AuditService]]
+- 6 edges to [[_COMMUNITY_data-sources.module.ts]]
+- 6 edges to [[_COMMUNITY_@prismaclient]]
+- 5 edges to [[_COMMUNITY_@nestjscommon]]
+- 3 edges to [[_COMMUNITY_step6-conflict-acceptance.e2e-spec.ts]]
+- 2 edges to [[_COMMUNITY_PrismaService]]
+- 2 edges to [[_COMMUNITY_SyncQueueService]]
 - 1 edge to [[_COMMUNITY_UpdateDataSourceDto]]
-- 1 edge to [[_COMMUNITY_SyncQueueService]]
-- 1 edge to [[_COMMUNITY_sync.e2e-spec.ts]]
+- 1 edge to [[_COMMUNITY_AppModule]]
+- 1 edge to [[_COMMUNITY_queues.module.ts]]
 - 1 edge to [[_COMMUNITY_mappings.service.ts]]
 - 1 edge to [[_COMMUNITY_sync.service.ts]]
 
 ## Top bridge nodes
-- [[data-sources.service.ts]] - degree 37, connects to 14 communities
+- [[data-sources.service.ts]] - degree 37, connects to 12 communities
+- [[dot-constructor()_30]] - degree 5, connects to 4 communities
+- [[connector.factory.ts]] - degree 13, connects to 3 communities
 - [[connector.factory.spec.ts]] - degree 8, connects to 3 communities
-- [[connector.factory.ts]] - degree 13, connects to 2 communities
 - [[Connector]] - degree 11, connects to 2 communities
-- [[connectors.module.ts]] - degree 7, connects to 2 communities

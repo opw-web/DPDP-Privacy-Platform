@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/children/guardians.service.ts"
 type: "code"
-community: "GuardiansService"
+community: "guardians.service.ts"
 location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GuardiansService
+  - community/guardiansservicets
 ---
 
 # isPwd()
@@ -15,4 +15,4 @@ tags:
 - [[dot-assertPwdAppointmentValid()]] - `calls` [EXTRACTED]
 - [[guardians.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GuardiansService
+#graphify/code #graphify/EXTRACTED #community/guardiansservicets

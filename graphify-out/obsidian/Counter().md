@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/RequestsPage.tsx"
 type: "code"
-community: "router.tsx"
+community: "react-router-dom"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/react-router-dom
 ---
 
 # Counter()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[RequestsPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/react-router-dom

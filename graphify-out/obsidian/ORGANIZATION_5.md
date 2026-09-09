@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/AuditPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/router.test.tsx"
 type: "code"
-community: "@tanstack/react-query"
-location: "L25"
+community: "router.tsx"
+location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tanstack/react-query
+  - community/routertsx
 ---
 
 # ORGANIZATION
 
 ## Connections
-- [[AuditPage.test.tsx]] - `contains` [EXTRACTED]
+- [[router.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tanstack/react-query
+#graphify/code #graphify/EXTRACTED #community/routertsx

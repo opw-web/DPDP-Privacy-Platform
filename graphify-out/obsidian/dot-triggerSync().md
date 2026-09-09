@@ -12,9 +12,9 @@ tags:
 # .triggerSync()
 
 ## Connections
-- [[dot-get()_5]] - `calls` [INFERRED]
-- [[dot-trigger()_1]] - `calls` [INFERRED]
+- [[dot-get()_4]] - `calls` [INFERRED]
 - [[dot-trigger()]] - `calls` [INFERRED]
+- [[dot-trigger()_1]] - `calls` [INFERRED]
 - [[SyncService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/SyncService

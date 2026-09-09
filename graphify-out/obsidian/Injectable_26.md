@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "prisma.service.ts"
+community: "RequestsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prismaservicets
+  - community/RequestsService
 ---
 
 # Injectable
 
 ## Connections
-- [[ReferenceService]] - `references` [EXTRACTED]
+- [[RequestsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prismaservicets
+#graphify/code #graphify/EXTRACTED #community/RequestsService

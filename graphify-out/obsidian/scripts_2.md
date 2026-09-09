@@ -15,7 +15,7 @@ tags:
 - [[build_2]] - `contains` [EXTRACTED]
 - [[demo-company-serverpackage.json]] - `contains` [EXTRACTED]
 - [[dev_1]] - `contains` [EXTRACTED]
-- [[seed_2]] - `contains` [EXTRACTED]
+- [[seed_1]] - `contains` [EXTRACTED]
 - [[start_1]] - `contains` [EXTRACTED]
 - [[test_2]] - `contains` [EXTRACTED]
 

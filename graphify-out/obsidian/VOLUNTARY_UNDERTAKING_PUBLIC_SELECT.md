@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/board/voluntary-undertakings.service.ts"
 type: "code"
-community: "@nestjs/common"
+community: "CreateVoluntaryUndertakingDto"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # VOLUNTARY_UNDERTAKING_PUBLIC_SELECT
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[voluntary-undertakings.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

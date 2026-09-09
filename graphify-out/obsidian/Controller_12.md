@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "PurposesService"
+community: "SyncService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PurposesService
+  - community/SyncService
 ---
 
 # Controller
 
 ## Connections
-- [[PurposesController]] - `references` [EXTRACTED]
+- [[SyncController]] - `references` [EXTRACTED]
+- [[SyncJobsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PurposesService
+#graphify/code #graphify/EXTRACTED #community/SyncService

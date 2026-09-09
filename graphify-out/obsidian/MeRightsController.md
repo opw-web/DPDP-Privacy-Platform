@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principal-portal/me-rights.controller.ts"
 type: "code"
-community: "MeRightsService"
+community: "PrincipalActor"
 location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeRightsService
+  - community/PrincipalActor
 ---
 
 # MeRightsController
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-cancelRequest()]] - `method` [EXTRACTED]
 - [[dot-commentOnRequest()]] - `method` [EXTRACTED]
-- [[dot-constructor()_108]] - `method` [EXTRACTED]
+- [[dot-constructor()_109]] - `method` [EXTRACTED]
 - [[dot-createRequest()]] - `method` [EXTRACTED]
 - [[dot-getNomination()]] - `method` [EXTRACTED]
 - [[dot-getPublishedNotice()]] - `method` [EXTRACTED]
@@ -23,10 +23,10 @@ tags:
 - [[dot-listPublishedNotices()]] - `method` [EXTRACTED]
 - [[dot-listRequests()]] - `method` [EXTRACTED]
 - [[dot-upsertNomination()]] - `method` [EXTRACTED]
-- [[Controller_25]] - `references` [EXTRACTED]
+- [[Controller_9]] - `references` [EXTRACTED]
 - [[Public()]] - `references` [EXTRACTED]
 - [[UseGuards_3]] - `references` [EXTRACTED]
 - [[me-rights.controller.ts]] - `contains` [EXTRACTED]
 - [[principal-portal.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeRightsService
+#graphify/code #graphify/EXTRACTED #community/PrincipalActor

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.service.ts"
 type: "code"
-community: "step6-conflict-acceptance.e2e-spec.ts"
+community: "employee-auth.service.ts"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/step6-conflict-acceptancee2e-spects
+  - community/employee-authservicets
 ---
 
 # EmployeeRefreshResult
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[employee-auth.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects
+#graphify/code #graphify/EXTRACTED #community/employee-authservicets

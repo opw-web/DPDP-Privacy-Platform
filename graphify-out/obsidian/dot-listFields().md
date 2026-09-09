@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-listFields()_1]] - `calls` [INFERRED]
 - [[DataSourcesController]] - `method` [EXTRACTED]
-- [[Get_30]] - `references` [EXTRACTED]
-- [[Param_21]] - `references` [EXTRACTED]
+- [[Get_31]] - `references` [EXTRACTED]
+- [[Param_22]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/DataSourcesController

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/lib/permissions.ts"
 type: "code"
-community: "react"
+community: "EmployeesPage.tsx"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/EmployeesPagetsx
 ---
 
 # PermissionCode
@@ -16,4 +16,4 @@ tags:
 - [[PermissionGateProps]] - `references` [EXTRACTED]
 - [[libpermissions.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/EmployeesPagetsx

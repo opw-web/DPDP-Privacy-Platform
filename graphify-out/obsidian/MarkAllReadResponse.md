@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/lib/mvp2-api.ts"
 type: "code"
-community: "cn"
+community: "api-client.ts"
 location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/api-clientts
 ---
 
 # MarkAllReadResponse
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[mvp2-api.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/api-clientts

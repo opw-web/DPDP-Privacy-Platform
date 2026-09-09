@@ -12,11 +12,11 @@ tags:
 # PrismaService
 
 ## Connections
-- [[dot-constructor()_22]] - `method` [EXTRACTED]
+- [[dot-constructor()_26]] - `method` [EXTRACTED]
 - [[dot-onModuleDestroy()]] - `method` [EXTRACTED]
 - [[dot-onModuleInit()]] - `method` [EXTRACTED]
 - [[dot-scoped()]] - `method` [EXTRACTED]
-- [[Injectable_11]] - `references` [EXTRACTED]
+- [[Injectable_16]] - `references` [EXTRACTED]
 - [[access-log-retention.processor.ts]] - `imports` [EXTRACTED]
 - [[access-log.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[access-report.service.ts]] - `imports` [EXTRACTED]

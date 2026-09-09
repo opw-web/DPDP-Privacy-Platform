@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/token.service.ts"
 type: "code"
-community: "TokenService"
+community: "employee-auth.service.ts"
 location: "L161"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/TokenService
+  - community/employee-authservicets
 ---
 
 # .hashRefreshToken()
@@ -20,4 +20,4 @@ tags:
 - [[dot-refresh()_2]] - `calls` [INFERRED]
 - [[TokenService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/TokenService
+#graphify/code #graphify/INFERRED #community/employee-authservicets

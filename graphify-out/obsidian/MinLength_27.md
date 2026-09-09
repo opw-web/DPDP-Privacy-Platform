@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "FlagFrivolousDto"
+community: "CreateVoluntaryUndertakingDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/FlagFrivolousDto
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # MinLength
 
 ## Connections
-- [[FlagFrivolousDto]] - `references` [EXTRACTED]
+- [[UpdateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/FlagFrivolousDto
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

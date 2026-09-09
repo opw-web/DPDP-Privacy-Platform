@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/ConsentsPage.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/NoticeBuilderPage.tsx"
 type: "code"
-community: "react"
-location: "L15"
+community: "router.tsx"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/routertsx
 ---
 
 # errorMessage()
 
 ## Connections
-- [[ConsentsPage()]] - `calls` [EXTRACTED]
-- [[ConsentsPage.tsx]] - `contains` [EXTRACTED]
+- [[NoticeBuilderPage()]] - `calls` [EXTRACTED]
+- [[NoticeBuilderPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/routertsx

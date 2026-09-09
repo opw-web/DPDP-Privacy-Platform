@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/wizard/Step1Connection.tsx"
 type: "code"
-community: "react"
+community: "data-sources-api.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/data-sources-apits
 ---
 
 # Step1Connection.tsx
@@ -17,8 +17,8 @@ tags:
 - [[ApiError]] - `imports` [EXTRACTED]
 - [[AuthType]] - `imports` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
-- [[CheckboxOption]] - `imports` [EXTRACTED]
 - [[CheckboxOption_1]] - `imports` [EXTRACTED]
+- [[CheckboxOption]] - `imports` [EXTRACTED]
 - [[ConnectionFormValues]] - `contains` [EXTRACTED]
 - [[DataSourceDetailPage.tsx]] - `imports_from` [EXTRACTED]
 - [[DataSourceNewPage.tsx]] - `imports_from` [EXTRACTED]
@@ -49,4 +49,4 @@ tags:
 - [[sonner_1]] - `imports_from` [EXTRACTED]
 - [[zod_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/data-sources-apits

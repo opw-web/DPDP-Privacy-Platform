@@ -1,24 +1,24 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/breaches/breaches.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/sharing.service.ts"
 type: "code"
-community: "RequirePermission"
-location: "L65"
+community: "sharing.service.ts"
+location: "L131"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/sharingservicets
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_29]] - `calls` [INFERRED]
-- [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[Actor]] - `references` [EXTRACTED]
-- [[Body_19]] - `references` [EXTRACTED]
-- [[BreachesController]] - `method` [EXTRACTED]
-- [[CreateBreachDto]] - `references` [EXTRACTED]
-- [[Post_20]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-assertPurposeExists()]] - `calls` [EXTRACTED]
+- [[dot-assertRecipientExists()_1]] - `calls` [EXTRACTED]
+- [[dot-assertSourceIdsExist()]] - `calls` [EXTRACTED]
+- [[dot-create()_25]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[CreateSharingActivityDto]] - `references` [EXTRACTED]
+- [[SharingService]] - `method` [EXTRACTED]
+- [[assertNonBlankDescription()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/sharingservicets

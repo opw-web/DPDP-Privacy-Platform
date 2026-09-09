@@ -12,7 +12,7 @@ tags:
 # read-only-http.client.spec.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[MockHttpServer]] - `imports` [EXTRACTED]
 - [[RETRY_BACKOFF_MS]] - `imports` [EXTRACTED]
 - [[ReadOnlyHttpClient]] - `imports` [EXTRACTED]

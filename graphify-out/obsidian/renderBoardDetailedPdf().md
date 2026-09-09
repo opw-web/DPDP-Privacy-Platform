@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/breaches/breach-render.ts"
 type: "code"
-community: "csvDocument"
+community: "access-report-render.ts"
 location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/csvDocument
+  - community/access-report-renderts
 ---
 
 # renderBoardDetailedPdf()
@@ -21,4 +21,4 @@ tags:
 - [[writePdfLine()]] - `calls` [EXTRACTED]
 - [[writePdfSectionHeading()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/csvDocument
+#graphify/code #graphify/EXTRACTED #community/access-report-renderts

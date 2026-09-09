@@ -12,9 +12,9 @@ tags:
 # SmtpProvider
 
 ## Connections
-- [[dot-constructor()_124]] - `method` [EXTRACTED]
-- [[dot-send()_2]] - `method` [EXTRACTED]
-- [[Injectable_16]] - `references` [EXTRACTED]
+- [[dot-constructor()_130]] - `method` [EXTRACTED]
+- [[dot-send()_7]] - `method` [EXTRACTED]
+- [[Injectable_19]] - `references` [EXTRACTED]
 - [[NotificationProvider]] - `implements` [EXTRACTED]
 - [[email-provider.factory.spec.ts]] - `imports` [EXTRACTED]
 - [[email-provider.factory.ts]] - `imports` [EXTRACTED]

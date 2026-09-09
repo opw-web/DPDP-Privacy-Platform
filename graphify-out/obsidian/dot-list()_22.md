@@ -15,9 +15,9 @@ tags:
 - [[dot-list()_23]] - `calls` [INFERRED]
 - [[CandidatesController]] - `method` [EXTRACTED]
 - [[CurrentActorPermissions]] - `references` [EXTRACTED]
-- [[Get_21]] - `references` [EXTRACTED]
+- [[Get_24]] - `references` [EXTRACTED]
 - [[ListMatchCandidatesQueryDto]] - `references` [EXTRACTED]
-- [[Query_6]] - `references` [EXTRACTED]
+- [[Query_7]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CandidatesService

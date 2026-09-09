@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
+source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.ts"
 type: "code"
-community: "CreateNoticeDto"
-location: "L140"
+community: "purposes.service.ts"
+location: "L71"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateNoticeDto
+  - community/purposesservicets
 ---
 
 # duplicateCodeMessage()
 
 ## Connections
-- [[dot-create()_4]] - `calls` [EXTRACTED]
-- [[notices.service.ts]] - `contains` [EXTRACTED]
+- [[dot-create()_10]] - `calls` [EXTRACTED]
+- [[purposes.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateNoticeDto
+#graphify/code #graphify/EXTRACTED #community/purposesservicets

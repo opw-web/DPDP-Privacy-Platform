@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/ReviewQueuePage.tsx"
 type: "code"
-community: "router.tsx"
+community: "CandidateComparison.tsx"
 location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/CandidateComparisontsx
 ---
 
 # ReviewQueuePage()
@@ -18,4 +18,4 @@ tags:
 - [[invalidate()]] - `contains` [EXTRACTED]
 - [[router.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/CandidateComparisontsx

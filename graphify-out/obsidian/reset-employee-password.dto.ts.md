@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/employees/dto/reset-employee-password.dto.ts"
 type: "code"
-community: "@nestjs/common"
+community: "employees.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/employeesservicets
 ---
 
 # reset-employee-password.dto.ts
@@ -17,4 +17,4 @@ tags:
 - [[class-validator_1]] - `imports_from` [EXTRACTED]
 - [[employees.controller.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/employeesservicets

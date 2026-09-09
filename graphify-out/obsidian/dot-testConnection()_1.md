@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-buildConnector()]] - `calls` [EXTRACTED]
 - [[dot-testConnection()_2]] - `calls` [INFERRED]
-- [[dot-update()_6]] - `calls` [EXTRACTED]
+- [[dot-update()_7]] - `calls` [EXTRACTED]
 - [[DataSourcesService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/DataSourcesService

@@ -1,21 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notices/notices.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
 type: "code"
-community: "NoticesController"
-location: "L44"
+community: "RequirePermission"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NoticesController
+  - community/RequirePermission
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_2]] - `calls` [INFERRED]
-- [[Get_19]] - `references` [EXTRACTED]
-- [[NoticesController]] - `method` [EXTRACTED]
-- [[Param_11]] - `references` [EXTRACTED]
+- [[dot-get()_13]] - `calls` [INFERRED]
+- [[CampaignsController]] - `method` [EXTRACTED]
+- [[Get_21]] - `references` [EXTRACTED]
+- [[Param_12]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NoticesController
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

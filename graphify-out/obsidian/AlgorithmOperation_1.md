@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/sdf/types.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/dto/algorithm-operations.ts"
 type: "code"
-community: "AlgorithmRegisterPanel.tsx"
-location: "L22"
+community: "@prisma/client"
+location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AlgorithmRegisterPaneltsx
+  - community/prisma/client
 ---
 
 # AlgorithmOperation
 
 ## Connections
-- [[sdftypes.ts]] - `contains` [EXTRACTED]
+- [[algorithm-operations.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AlgorithmRegisterPaneltsx
+#graphify/code #graphify/EXTRACTED #community/prisma/client

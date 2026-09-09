@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/DateTime.tsx"
 type: "code"
-community: "button.tsx"
+community: "DateTime.tsx"
 location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/DateTimetsx
 ---
 
 # DateTime()
@@ -45,4 +45,4 @@ tags:
 - [[formatUtcTooltip()]] - `calls` [EXTRACTED]
 - [[useOrgTimezone()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/DateTimetsx

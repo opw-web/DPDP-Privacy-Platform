@@ -11,6 +11,6 @@ tags:
 # Injectable
 
 ## Connections
-- [[PrincipalRecipientsService]] - `references` [EXTRACTED]
+- [[AccessLogService]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/principalsservicets

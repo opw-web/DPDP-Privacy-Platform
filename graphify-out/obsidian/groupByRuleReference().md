@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/security-measures.service.ts"
 type: "code"
-community: "CreateSecurityMeasureDto"
+community: "security-measures.service.ts"
 location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSecurityMeasureDto
+  - community/security-measuresservicets
 ---
 
 # groupByRuleReference()
 
 ## Connections
-- [[dot-get()_24]] - `calls` [EXTRACTED]
-- [[dot-list()_47]] - `calls` [EXTRACTED]
+- [[dot-get()_25]] - `calls` [EXTRACTED]
+- [[dot-list()_49]] - `calls` [EXTRACTED]
 - [[security-measures.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSecurityMeasureDto
+#graphify/code #graphify/EXTRACTED #community/security-measuresservicets

@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/employees/employees.service.ts"
 type: "code"
-community: "@nestjs/common"
+community: "employees.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/employeesservicets
 ---
 
 # employees.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[CreateEmployeeDto]] - `imports` [EXTRACTED]
@@ -21,7 +21,7 @@ tags:
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[PublicEmployee]] - `contains` [EXTRACTED]
 - [[UpdateEmployeeDto]] - `imports` [EXTRACTED]
-- [[argon2_1]] - `imports_from` [EXTRACTED]
+- [[argon2]] - `imports_from` [EXTRACTED]
 - [[audit.service.ts]] - `imports_from` [EXTRACTED]
 - [[create-employee.dto.ts]] - `imports_from` [EXTRACTED]
 - [[employees.controller.ts]] - `imports_from` [EXTRACTED]
@@ -29,4 +29,4 @@ tags:
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[update-employee.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/employeesservicets

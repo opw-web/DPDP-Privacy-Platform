@@ -1,24 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "RequestsController"
+community: "CompleteSdfAssessmentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestsController
+  - community/CompleteSdfAssessmentDto
 ---
 
 # Param
 
 ## Connections
-- [[dot-accessReport()_1]] - `references` [EXTRACTED]
-- [[dot-addNote()_1]] - `references` [EXTRACTED]
-- [[dot-assign()_1]] - `references` [EXTRACTED]
-- [[dot-changeStatus()_1]] - `references` [EXTRACTED]
-- [[dot-erasureCompletionHolders()]] - `references` [EXTRACTED]
-- [[dot-escalate()_1]] - `references` [EXTRACTED]
-- [[dot-flagFrivolous()_1]] - `references` [EXTRACTED]
-- [[dot-getByReference()]] - `references` [EXTRACTED]
-- [[dot-verifyIdentity()_1]] - `references` [EXTRACTED]
+- [[dot-completeAssessment()]] - `references` [EXTRACTED]
+- [[dot-updateAlgorithm()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestsController
+#graphify/code #graphify/EXTRACTED #community/CompleteSdfAssessmentDto

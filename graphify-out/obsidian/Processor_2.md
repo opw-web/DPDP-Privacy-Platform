@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sync.e2e-spec.ts"
+community: "canonicalJson"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/synce2e-spects
+  - community/canonicalJson
 ---
 
 # Processor
 
 ## Connections
-- [[SyncProcessor]] - `references` [EXTRACTED]
+- [[AuditChainVerifyProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/synce2e-spects
+#graphify/code #graphify/EXTRACTED #community/canonicalJson

@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "ChangeStatusDto"
+community: "notification.dto.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ChangeStatusDto
+  - community/notificationdtots
 ---
 
 # ApiProperty
 
 ## Connections
-- [[ChangeStatusDto]] - `references` [EXTRACTED]
-- [[ErasureProcessorChecklistDto]] - `references` [EXTRACTED]
-- [[ErasureSystemChecklistDto]] - `references` [EXTRACTED]
+- [[MarkAllReadResponseDto]] - `references` [EXTRACTED]
+- [[NotificationDto]] - `references` [EXTRACTED]
+- [[NotificationListResponseDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ChangeStatusDto
+#graphify/code #graphify/EXTRACTED #community/notificationdtots

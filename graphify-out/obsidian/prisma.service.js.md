@@ -12,7 +12,7 @@ tags:
 # prisma.service.js
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[PrismaService_1]] - `contains` [EXTRACTED]
 - [[accept()]] - `contains` [EXTRACTED]

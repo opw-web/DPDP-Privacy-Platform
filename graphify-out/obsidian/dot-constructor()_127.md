@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/breach-principal-notice-dispatch.queue.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
 type: "code"
-community: "BreachService"
-location: "L29"
+community: "rest-api.connector.ts"
+location: "L142"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BreachService
+  - community/rest-apiconnectorts
 ---
 
 # .constructor()
 
 ## Connections
-- [[BreachPrincipalNoticeDispatchQueueService]] - `method` [EXTRACTED]
-- [[InjectQueue_8]] - `references` [EXTRACTED]
+- [[ReadOnlyHttpClient]] - `references` [EXTRACTED]
+- [[RestApiConnector]] - `method` [EXTRACTED]
+- [[UnsupportedPaginationStyleError]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BreachService
+#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts

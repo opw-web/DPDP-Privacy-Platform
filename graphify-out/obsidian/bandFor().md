@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/DeadlinePill.tsx"
 type: "code"
-community: "cn"
+community: "DeadlinePill.tsx"
 location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cn
+  - community/DeadlinePilltsx
 ---
 
 # bandFor()
@@ -15,4 +15,4 @@ tags:
 - [[DeadlinePill()]] - `calls` [EXTRACTED]
 - [[DeadlinePill.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cn
+#graphify/code #graphify/EXTRACTED #community/DeadlinePilltsx

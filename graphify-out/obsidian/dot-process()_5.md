@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/pre-erasure-notice.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/breach-clock.processor.ts"
 type: "code"
-community: "NotificationsService"
-location: "L24"
+community: "BreachClockProcessor"
+location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/BreachClockProcessor
 ---
 
 # .process()
 
 ## Connections
-- [[dot-runForAllOrganizations()_1]] - `calls` [INFERRED]
-- [[PreErasureNoticeJobData]] - `references` [EXTRACTED]
-- [[PreErasureNoticeProcessor]] - `method` [EXTRACTED]
+- [[dot-runClockCycle()]] - `calls` [EXTRACTED]
+- [[BreachClockProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/BreachClockProcessor

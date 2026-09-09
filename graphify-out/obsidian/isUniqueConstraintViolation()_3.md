@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/consents/consents.service.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
 type: "code"
-community: "ConsentsService"
-location: "L106"
+community: "notices.service.ts"
+location: "L134"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ConsentsService
+  - community/noticesservicets
 ---
 
 # isUniqueConstraintViolation()
 
 ## Connections
-- [[dot-getOrCreateRecord()]] - `calls` [EXTRACTED]
-- [[consents.service.ts]] - `contains` [EXTRACTED]
+- [[dot-create()_28]] - `calls` [EXTRACTED]
+- [[notices.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ConsentsService
+#graphify/code #graphify/EXTRACTED #community/noticesservicets

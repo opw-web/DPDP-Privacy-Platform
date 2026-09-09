@@ -12,11 +12,11 @@ tags:
 # .register()
 
 ## Connections
+- [[dot-constructor()_73]] - `calls` [INFERRED]
+- [[dot-constructor()_74]] - `calls` [INFERRED]
 - [[dot-constructor()_76]] - `calls` [INFERRED]
 - [[dot-constructor()_77]] - `calls` [INFERRED]
-- [[dot-constructor()_79]] - `calls` [INFERRED]
-- [[dot-constructor()_80]] - `calls` [INFERRED]
-- [[dot-constructor()_81]] - `calls` [INFERRED]
+- [[dot-constructor()_78]] - `calls` [INFERRED]
 - [[BootRegistrationRegistry]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/SyncQueueService

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "ListSyncJobsQueryDto"
+community: "sync.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ListSyncJobsQueryDto
+  - community/syncservicets
 ---
 
 # Max
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[ListSyncJobsQueryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ListSyncJobsQueryDto
+#graphify/code #graphify/EXTRACTED #community/syncservicets

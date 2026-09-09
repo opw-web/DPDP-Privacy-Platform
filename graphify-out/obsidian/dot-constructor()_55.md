@@ -1,20 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/notifications.service.ts"
+source_file: "dpdp-platform/backend/src/common/guards/jwt-employee.guard.ts"
 type: "code"
-community: "PortalProvider"
-location: "L58"
+community: "TokenService"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PortalProvider
+  - community/TokenService
 ---
 
 # .constructor()
 
 ## Connections
-- [[Inject]] - `references` [EXTRACTED]
-- [[NotificationProvider]] - `references` [EXTRACTED]
-- [[NotificationsService]] - `method` [EXTRACTED]
-- [[PortalProvider]] - `references` [EXTRACTED]
+- [[JwtEmployeeGuard]] - `method` [EXTRACTED]
+- [[TokenService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PortalProvider
+#graphify/code #graphify/EXTRACTED #community/TokenService

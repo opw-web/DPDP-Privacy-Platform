@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/deadline-scan.processor.ts"
 type: "code"
-community: "RequestsService"
+community: "DeadlineScanProcessor"
 location: "L47"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestsService
+  - community/DeadlineScanProcessor
 ---
 
 # DeadlineScanProcessor
 
 ## Connections
-- [[dot-constructor()_39]] - `method` [EXTRACTED]
+- [[dot-constructor()_60]] - `method` [EXTRACTED]
 - [[dot-process()_3]] - `method` [EXTRACTED]
 - [[dot-runScanCycle()]] - `method` [EXTRACTED]
 - [[Processor_3]] - `references` [EXTRACTED]
@@ -20,4 +20,4 @@ tags:
 - [[requests.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[requests.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestsService
+#graphify/code #graphify/EXTRACTED #community/DeadlineScanProcessor

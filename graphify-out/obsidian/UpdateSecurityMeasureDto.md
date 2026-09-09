@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/dto/update-security-measure.dto.ts"
 type: "code"
-community: "CreateSecurityMeasureDto"
+community: "security-measures.service.ts"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSecurityMeasureDto
+  - community/security-measuresservicets
 ---
 
 # UpdateSecurityMeasureDto
 
 ## Connections
-- [[dot-update()_25]] - `references` [EXTRACTED]
-- [[dot-update()_26]] - `references` [EXTRACTED]
+- [[dot-update()_27]] - `references` [EXTRACTED]
+- [[dot-update()_28]] - `references` [EXTRACTED]
 - [[ApiPropertyOptional_52]] - `references` [EXTRACTED]
 - [[IsBoolean_26]] - `references` [EXTRACTED]
 - [[IsDateString_22]] - `references` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[security-measures.service.ts]] - `imports` [EXTRACTED]
 - [[update-security-measure.dto.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSecurityMeasureDto
+#graphify/code #graphify/EXTRACTED #community/security-measuresservicets

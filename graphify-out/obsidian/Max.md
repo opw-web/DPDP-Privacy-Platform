@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "ListAuditEventsDto"
+community: "audit-read.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ListAuditEventsDto
+  - community/audit-readservicets
 ---
 
 # Max
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[ListAuditEventsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ListAuditEventsDto
+#graphify/code #graphify/EXTRACTED #community/audit-readservicets

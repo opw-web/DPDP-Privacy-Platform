@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EmployeeAuthController"
+community: "UpdateRolePermissionsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeeAuthController
+  - community/UpdateRolePermissionsDto
 ---
 
 # ApiTags
 
 ## Connections
-- [[EmployeeAuthController]] - `references` [EXTRACTED]
+- [[RolesController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController
+#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto

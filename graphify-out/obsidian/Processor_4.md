@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "NotificationsService"
+community: "PreErasureNoticeService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/PreErasureNoticeService
 ---
 
 # Processor
 
 ## Connections
-- [[AuditChainVerifyProcessor]] - `references` [EXTRACTED]
+- [[PreErasureNoticeProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/PreErasureNoticeService

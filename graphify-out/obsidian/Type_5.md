@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ListSyncJobsQueryDto"
+community: "CreateVoluntaryUndertakingDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ListSyncJobsQueryDto
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # Type
 
 ## Connections
-- [[ListSyncJobsQueryDto]] - `references` [EXTRACTED]
+- [[CreateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ListSyncJobsQueryDto
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

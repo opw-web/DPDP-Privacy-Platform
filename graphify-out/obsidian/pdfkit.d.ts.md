@@ -15,6 +15,6 @@ tags:
 - [[PDFDocument]] - `contains` [EXTRACTED]
 - [[PDFDocumentOptions]] - `contains` [EXTRACTED]
 - [[PDFTextOptions]] - `contains` [EXTRACTED]
-- [[pdfkit_1]] - `contains` [EXTRACTED]
+- [[pdfkit]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PDFDocument

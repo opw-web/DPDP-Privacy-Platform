@@ -1,21 +1,21 @@
 ---
 source_file: "dpdp-platform/backend/src/common/masking/masking.service.ts"
 type: "code"
-community: "MaskingService"
+community: "compile-audience.ts"
 location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MaskingService
+  - community/compile-audiencets
 ---
 
 # MaskingService
 
 ## Connections
-- [[dot-constructor()_21]] - `references` [EXTRACTED]
-- [[dot-constructor()_9]] - `references` [EXTRACTED]
-- [[dot-constructor()_147]] - `references` [EXTRACTED]
-- [[dot-constructor()_74]] - `references` [EXTRACTED]
+- [[dot-constructor()_154]] - `references` [EXTRACTED]
+- [[dot-constructor()_15]] - `references` [EXTRACTED]
+- [[dot-constructor()_157]] - `references` [EXTRACTED]
+- [[dot-constructor()_72]] - `references` [EXTRACTED]
 - [[dot-hasFullPersonalDataAccess()]] - `method` [EXTRACTED]
 - [[dot-maskDigits()]] - `method` [EXTRACTED]
 - [[dot-maskDomain()]] - `method` [EXTRACTED]
@@ -25,7 +25,7 @@ tags:
 - [[dot-maskPhone()]] - `method` [EXTRACTED]
 - [[dot-maskSegment()]] - `method` [EXTRACTED]
 - [[dot-maskValue()]] - `method` [EXTRACTED]
-- [[Injectable_33]] - `references` [EXTRACTED]
+- [[Injectable_87]] - `references` [EXTRACTED]
 - [[audience.service.ts]] - `imports` [EXTRACTED]
 - [[audiences.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[audit-read.service.ts]] - `imports` [EXTRACTED]
@@ -35,4 +35,4 @@ tags:
 - [[masking.service.ts]] - `contains` [EXTRACTED]
 - [[principals.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MaskingService
+#graphify/code #graphify/EXTRACTED #community/compile-audiencets

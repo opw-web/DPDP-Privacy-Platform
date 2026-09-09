@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[dot-update()_11]] - `calls` [INFERRED]
-- [[Body_9]] - `references` [EXTRACTED]
-- [[Param_8]] - `references` [EXTRACTED]
+- [[Body_11]] - `references` [EXTRACTED]
+- [[Param_9]] - `references` [EXTRACTED]
 - [[Patch_5]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[TemplatesController]] - `method` [EXTRACTED]

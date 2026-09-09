@@ -1,22 +1,22 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notices/dto/create-notice-version.dto.ts"
 type: "code"
-community: "CreateNoticeVersionDto"
+community: "notices.service.ts"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateNoticeVersionDto
+  - community/noticesservicets
 ---
 
 # ItemisedFieldInputDto
 
 ## Connections
-- [[ApiProperty_14]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_15]] - `references` [EXTRACTED]
-- [[IsOptional_15]] - `references` [EXTRACTED]
-- [[IsString_19]] - `references` [EXTRACTED]
-- [[MinLength_15]] - `references` [EXTRACTED]
+- [[ApiProperty_34]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_39]] - `references` [EXTRACTED]
+- [[IsOptional_41]] - `references` [EXTRACTED]
+- [[IsString_49]] - `references` [EXTRACTED]
+- [[MinLength_38]] - `references` [EXTRACTED]
 - [[create-notice-version.dto.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateNoticeVersionDto
+#graphify/code #graphify/EXTRACTED #community/noticesservicets

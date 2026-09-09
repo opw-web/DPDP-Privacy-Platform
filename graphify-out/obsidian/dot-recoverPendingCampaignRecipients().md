@@ -12,7 +12,7 @@ tags:
 # .recoverPendingCampaignRecipients()
 
 ## Connections
-- [[dot-process()_8]] - `calls` [EXTRACTED]
+- [[dot-process()_6]] - `calls` [EXTRACTED]
 - [[BreachPrincipalNoticeDispatchProcessor]] - `method` [EXTRACTED]
 - [[campaignSendJobId()]] - `calls` [EXTRACTED]
 

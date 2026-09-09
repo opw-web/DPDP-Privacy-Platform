@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/inventory/ropa-export.service.ts"
 type: "code"
-community: "csvDocument"
+community: "evidence-pack.service.ts"
 location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/csvDocument
+  - community/evidence-packservicets
 ---
 
 # sortedUnique()
 
 ## Connections
-- [[dot-exportCsv()_2]] - `calls` [EXTRACTED]
+- [[dot-exportCsv()_1]] - `calls` [EXTRACTED]
 - [[ropa-export.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/csvDocument
+#graphify/code #graphify/EXTRACTED #community/evidence-packservicets

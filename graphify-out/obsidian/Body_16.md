@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "MeRightsService"
+community: "CreateInformationRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeRightsService
+  - community/CreateInformationRequestDto
 ---
 
 # Body
 
 ## Connections
-- [[dot-commentOnRequest()]] - `references` [EXTRACTED]
-- [[dot-createRequest()]] - `references` [EXTRACTED]
-- [[dot-upsertNomination()]] - `references` [EXTRACTED]
+- [[dot-create()_22]] - `references` [EXTRACTED]
+- [[dot-update()_16]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeRightsService
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

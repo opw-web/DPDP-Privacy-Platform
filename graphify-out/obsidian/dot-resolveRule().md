@@ -12,8 +12,8 @@ tags:
 # .resolveRule()
 
 ## Connections
-- [[dot-create()_29]] - `calls` [INFERRED]
-- [[dot-create()_30]] - `calls` [INFERRED]
+- [[dot-create()_31]] - `calls` [INFERRED]
+- [[dot-create()_9]] - `calls` [INFERRED]
 - [[dot-createFromTrigger()]] - `calls` [INFERRED]
 - [[dot-createInactivityTasks()]] - `calls` [INFERRED]
 - [[dot-getGaps()_2]] - `calls` [INFERRED]

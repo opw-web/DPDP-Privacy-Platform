@@ -1,21 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/audit-export.service.ts"
+source_file: "dpdp-platform/backend/src/modules/inventory/ropa-export.service.ts"
 type: "code"
-community: "csvDocument"
-location: "L39"
+community: "evidence-pack.service.ts"
+location: "L51"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/csvDocument
+  - graphify/EXTRACTED
+  - community/evidence-packservicets
 ---
 
 # .exportCsv()
 
 ## Connections
 - [[dot-buildPack()]] - `calls` [INFERRED]
-- [[dot-exportCsv()]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[AuditExportService]] - `method` [EXTRACTED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-ropaCsv()]] - `calls` [INFERRED]
+- [[RopaExportService]] - `method` [EXTRACTED]
 - [[csvDocument()]] - `calls` [EXTRACTED]
+- [[sortedUnique()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/csvDocument
+#graphify/code #graphify/EXTRACTED #community/evidence-packservicets

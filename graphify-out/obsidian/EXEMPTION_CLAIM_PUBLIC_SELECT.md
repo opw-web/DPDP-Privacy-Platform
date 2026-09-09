@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/children/child-exemptions.service.ts"
 type: "code"
-community: "@nestjs/common"
+community: "child-exemptions.service.ts"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/child-exemptionsservicets
 ---
 
 # EXEMPTION_CLAIM_PUBLIC_SELECT
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[child-exemptions.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/child-exemptionsservicets

@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/token.service.ts"
 type: "code"
-community: "@nestjs/common"
+community: "RequirePermission"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/RequirePermission
 ---
 
 # AccessTokenPayload
 
 ## Connections
-- [[dot-addAffected()_1]] - `references` [EXTRACTED]
 - [[dot-addAffected()]] - `references` [EXTRACTED]
+- [[dot-addAffected()_1]] - `references` [EXTRACTED]
 - [[dot-approve()]] - `references` [EXTRACTED]
 - [[dot-approve()_1]] - `references` [EXTRACTED]
 - [[dot-cancel()]] - `references` [EXTRACTED]
@@ -21,42 +21,42 @@ tags:
 - [[dot-claimPendingCandidate()]] - `references` [EXTRACTED]
 - [[dot-complete()]] - `references` [EXTRACTED]
 - [[dot-complete()_1]] - `references` [EXTRACTED]
-- [[dot-completeObligation()_1]] - `references` [EXTRACTED]
 - [[dot-completeObligation()]] - `references` [EXTRACTED]
+- [[dot-completeObligation()_1]] - `references` [EXTRACTED]
 - [[dot-confirm()]] - `references` [EXTRACTED]
 - [[dot-confirm()_1]] - `references` [EXTRACTED]
+- [[dot-create()_31]] - `references` [EXTRACTED]
+- [[dot-create()_32]] - `references` [EXTRACTED]
 - [[dot-create()_29]] - `references` [EXTRACTED]
-- [[dot-create()_26]] - `references` [EXTRACTED]
-- [[dot-create()_27]] - `references` [EXTRACTED]
-- [[dot-create()_28]] - `references` [EXTRACTED]
-- [[dot-create()_23]] - `references` [EXTRACTED]
+- [[dot-create()_30]] - `references` [EXTRACTED]
+- [[dot-create()_16]] - `references` [EXTRACTED]
 - [[dot-create()_24]] - `references` [EXTRACTED]
-- [[dot-create()_9]] - `references` [EXTRACTED]
+- [[dot-create()]] - `references` [EXTRACTED]
 - [[dot-createLegalHold()]] - `references` [EXTRACTED]
-- [[dot-createVersion()_1]] - `references` [EXTRACTED]
 - [[dot-createVersion()]] - `references` [EXTRACTED]
+- [[dot-createVersion()_1]] - `references` [EXTRACTED]
 - [[dot-extension()]] - `references` [EXTRACTED]
 - [[dot-me()_2]] - `references` [EXTRACTED]
 - [[dot-notify()]] - `references` [EXTRACTED]
 - [[dot-notifyPrincipals()]] - `references` [EXTRACTED]
-- [[dot-publish()_1]] - `references` [EXTRACTED]
 - [[dot-publish()]] - `references` [EXTRACTED]
+- [[dot-publish()_1]] - `references` [EXTRACTED]
 - [[dot-recordExtension()]] - `references` [EXTRACTED]
 - [[dot-reject()]] - `references` [EXTRACTED]
 - [[dot-reject()_1]] - `references` [EXTRACTED]
 - [[dot-resolvePermissions()]] - `references` [EXTRACTED]
 - [[dot-review()_2]] - `references` [EXTRACTED]
+- [[dot-review()_1]] - `references` [EXTRACTED]
 - [[dot-review()_3]] - `references` [EXTRACTED]
 - [[dot-review()]] - `references` [EXTRACTED]
-- [[dot-review()_1]] - `references` [EXTRACTED]
+- [[dot-send()_4]] - `references` [EXTRACTED]
 - [[dot-send()_5]] - `references` [EXTRACTED]
-- [[dot-send()_6]] - `references` [EXTRACTED]
 - [[dot-unmerge()]] - `references` [EXTRACTED]
 - [[dot-unmerge()_1]] - `references` [EXTRACTED]
-- [[dot-update()_20]] - `references` [EXTRACTED]
-- [[dot-update()_19]] - `references` [EXTRACTED]
-- [[dot-upsertTranslation()_1]] - `references` [EXTRACTED]
+- [[dot-update()_21]] - `references` [EXTRACTED]
+- [[dot-update()_22]] - `references` [EXTRACTED]
 - [[dot-upsertTranslation()]] - `references` [EXTRACTED]
+- [[dot-upsertTranslation()_1]] - `references` [EXTRACTED]
 - [[dot-verify()]] - `references` [EXTRACTED]
 - [[dot-verify()_1]] - `references` [EXTRACTED]
 - [[breach.service.ts]] - `imports` [EXTRACTED]
@@ -87,4 +87,4 @@ tags:
 - [[token.service.ts]] - `contains` [EXTRACTED]
 - [[unmerge.controller.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

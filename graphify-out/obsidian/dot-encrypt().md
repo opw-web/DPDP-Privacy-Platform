@@ -12,8 +12,8 @@ tags:
 # .encrypt()
 
 ## Connections
-- [[dot-create()_10]] - `calls` [INFERRED]
-- [[dot-update()_6]] - `calls` [INFERRED]
+- [[dot-create()_11]] - `calls` [INFERRED]
+- [[dot-update()_7]] - `calls` [INFERRED]
 - [[CryptoService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/DataSourcesService

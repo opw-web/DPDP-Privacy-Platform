@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SharingService"
+community: "compile-audience.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SharingService
+  - community/compile-audiencets
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_37]] - `references` [EXTRACTED]
-- [[dot-update()_27]] - `references` [EXTRACTED]
+- [[dot-preview()_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SharingService
+#graphify/code #graphify/EXTRACTED #community/compile-audiencets

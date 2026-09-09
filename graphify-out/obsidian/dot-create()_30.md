@@ -1,25 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/requests/requests.service.ts"
+source_file: "dpdp-platform/backend/src/modules/children/child-exemptions.service.ts"
 type: "code"
-community: "RetentionScanService"
-location: "L259"
+community: "child-exemptions.service.ts"
+location: "L88"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/RetentionScanService
+  - graphify/EXTRACTED
+  - community/child-exemptionsservicets
 ---
 
 # .create()
 
 ## Connections
-- [[dot-computeDeadline()]] - `calls` [INFERRED]
-- [[dot-createRequest()_1]] - `calls` [INFERRED]
-- [[dot-next()]] - `calls` [INFERRED]
-- [[dot-record()]] - `calls` [INFERRED]
-- [[dot-resolveRule()]] - `calls` [INFERRED]
-- [[dot-scanOrgDeadlines()]] - `calls` [EXTRACTED]
-- [[dot-snapshotOnto()]] - `calls` [INFERRED]
-- [[dot-writeTransition()]] - `calls` [EXTRACTED]
-- [[RequestsService]] - `method` [EXTRACTED]
+- [[dot-assertClaimComplete()]] - `calls` [EXTRACTED]
+- [[dot-create()_29]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[AccessTokenPayload]] - `references` [EXTRACTED]
+- [[ChildExemptionsService]] - `method` [EXTRACTED]
+- [[CreateExemptionClaimDto]] - `references` [EXTRACTED]
+- [[toPublicExemptionClaim()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/RetentionScanService
+#graphify/code #graphify/EXTRACTED #community/child-exemptionsservicets

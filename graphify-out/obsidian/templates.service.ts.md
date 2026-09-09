@@ -12,7 +12,7 @@ tags:
 # templates.service.ts
 
 ## Connections
-- [[@nestjscommon_1]] - `imports_from` [EXTRACTED]
+- [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
 - [[BREACH_NOTIFICATION_REQUIRED_ELEMENTS]] - `imports` [EXTRACTED]
@@ -33,7 +33,7 @@ tags:
 - [[audit.service.ts]] - `imports_from` [EXTRACTED]
 - [[campaigns.service.ts]] - `imports_from` [EXTRACTED]
 - [[create-template.dto.ts]] - `imports_from` [EXTRACTED]
-- [[duplicateCodeMessage()_2]] - `contains` [EXTRACTED]
+- [[duplicateCodeMessage()_1]] - `contains` [EXTRACTED]
 - [[extractTemplateVariables()]] - `imports` [EXTRACTED]
 - [[preview-template.dto.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/NotReviewedChip.tsx"
 type: "code"
-community: "react"
+community: "RequestDetailPage.tsx"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/RequestDetailPagetsx
 ---
 
 # NotReviewedChipProps
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[NotReviewedChip.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/RequestDetailPagetsx

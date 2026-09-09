@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/AuditEventRow.tsx"
 type: "code"
-community: "button.tsx"
+community: "AuditPage.tsx"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/AuditPagetsx
 ---
 
 # AuditEventListItem
@@ -18,4 +18,4 @@ tags:
 - [[AuditPage.tsx]] - `imports` [EXTRACTED]
 - [[MockRoutes]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/AuditPagetsx

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-close()]] - `method` [EXTRACTED]
-- [[dot-constructor()_122]] - `method` [EXTRACTED]
+- [[dot-constructor()_82]] - `method` [EXTRACTED]
 - [[dot-listen()]] - `method` [EXTRACTED]
 - [[dot-setHandler()]] - `method` [EXTRACTED]
 - [[connector.factory.spec.ts]] - `imports` [EXTRACTED]
@@ -24,8 +24,8 @@ tags:
 - [[rest-api.connector.spec.ts]] - `imports` [EXTRACTED]
 - [[startRecordsServer()]] - `calls` [EXTRACTED]
 - [[startRecordsServer()_1]] - `calls` [EXTRACTED]
-- [[startServer()_1]] - `calls` [EXTRACTED]
 - [[startServer()]] - `calls` [EXTRACTED]
+- [[startServer()_1]] - `calls` [EXTRACTED]
 - [[step6-conflict-acceptance.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[sync.e2e-spec.ts]] - `imports` [EXTRACTED]
 

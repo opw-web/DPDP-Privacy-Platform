@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/components/PortalPageHeader.tsx"
 type: "code"
-community: "button.tsx"
+community: "react-router-dom"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buttontsx
+  - community/react-router-dom
 ---
 
 # PortalPageHeaderProps
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[PortalPageHeader.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/buttontsx
+#graphify/code #graphify/EXTRACTED #community/react-router-dom
