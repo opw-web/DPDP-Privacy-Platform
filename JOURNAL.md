@@ -3744,3 +3744,8 @@ _Earlier entries archived to .claude/journal/archive/JOURNAL-2026-08.md._
 - `16:16` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git add graphify-out && git commit -q -F - <<'MSGEOF' && git add JOURNA...`
 - `16:16` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && echo "=== working tree clean? ===" && git status --porcelain | head -5 ...`
 - `16:16` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git diff --stat JOURNAL.md && git diff JOURNAL.md | head -20`
+- `16:17` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git stash push -q JOURNAL.md 2>/dev/null; git checkout -q mvp2-complian...`
+- `16:18` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git push origin mvp2-compliance-operations 2>&1 | tail -4`
+- `16:18` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git checkout -q windows-support && git stash pop -q 2>/dev/null; echo "...`
+- `16:18` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git stash list | cat && echo "=== status ===" && git status --porcelain...`
+- `16:18` ran `cd "C:/Coding stuff/DPDP-Privacy-Platform" && git diff JOURNAL.md | grep '^+' | grep -v '^+++' && echo "=== pinned bl...`
