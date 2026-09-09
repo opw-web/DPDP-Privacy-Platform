@@ -25,9 +25,9 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 2 edges to [[_COMMUNITY_react]]
-- 2 edges to [[_COMMUNITY_api-client.ts]]
-- 1 edge to [[_COMMUNITY_RequestDetailPage.tsx]]
-- 1 edge to [[_COMMUNITY_router.tsx]]
+- 2 edges to [[_COMMUNITY_@tanstackreact-query]]
+- 1 edge to [[_COMMUNITY_card.tsx]]
+- 1 edge to [[_COMMUNITY_cn]]
 
 ## Top bridge nodes
 - [[refresh()]] - degree 4, connects to 2 communities

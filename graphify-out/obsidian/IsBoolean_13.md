@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CompleteSdfAssessmentDto"
+community: "BreachesController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CompleteSdfAssessmentDto
+  - community/BreachesController
 ---
 
 # IsBoolean
 
 ## Connections
-- [[CompleteSdfAssessmentDto]] - `references` [EXTRACTED]
+- [[AffectedPrincipalsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CompleteSdfAssessmentDto
+#graphify/code #graphify/EXTRACTED #community/BreachesController

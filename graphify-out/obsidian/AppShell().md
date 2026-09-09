@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/AppShell.tsx"
 type: "code"
-community: "router.tsx"
+community: "@tanstack/react-query"
 location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/tanstack/react-query
 ---
 
 # AppShell()
@@ -23,4 +23,4 @@ tags:
 - [[router.tsx]] - `imports` [EXTRACTED]
 - [[useEmployeeAuth()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

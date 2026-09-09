@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PurposesController"
+community: "principals.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PurposesController
+  - community/principalscontrollerts
 ---
 
 # Controller
 
 ## Connections
-- [[PurposesController]] - `references` [EXTRACTED]
+- [[PrincipalsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PurposesController
+#graphify/code #graphify/EXTRACTED #community/principalscontrollerts

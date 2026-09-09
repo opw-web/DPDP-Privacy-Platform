@@ -1,21 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sdf/sdf-assessment.service.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
 type: "code"
-community: "CreateSdfAssessmentDto"
-location: "L155"
+community: "RequirePermission"
+location: "L180"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateSdfAssessmentDto
+  - community/RequirePermission
 ---
 
 # .create()
 
 ## Connections
-- [[dot-createAssessment()]] - `calls` [INFERRED]
+- [[dot-create()_14]] - `calls` [INFERRED]
+- [[dot-createVersion()_1]] - `calls` [EXTRACTED]
 - [[dot-record()_1]] - `calls` [INFERRED]
-- [[dot-resolveCycleDeadline()]] - `calls` [EXTRACTED]
-- [[CreateSdfAssessmentDto]] - `references` [EXTRACTED]
-- [[SdfAssessmentService]] - `method` [EXTRACTED]
+- [[CreateNoticeDto]] - `references` [EXTRACTED]
+- [[NoticesService]] - `method` [EXTRACTED]
+- [[duplicateCodeMessage()_2]] - `calls` [EXTRACTED]
+- [[isUniqueConstraintViolation()_3]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateSdfAssessmentDto
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

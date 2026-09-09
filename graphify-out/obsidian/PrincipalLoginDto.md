@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-login()_3]] - `references` [EXTRACTED]
-- [[ApiProperty_49]] - `references` [EXTRACTED]
+- [[ApiProperty_51]] - `references` [EXTRACTED]
 - [[IsEmail_7]] - `references` [EXTRACTED]
-- [[IsString_68]] - `references` [EXTRACTED]
+- [[IsString_69]] - `references` [EXTRACTED]
 - [[MinLength_53]] - `references` [EXTRACTED]
 - [[principal-auth.controller.ts]] - `imports` [EXTRACTED]
 - [[principal-login.dto.ts]] - `contains` [EXTRACTED]

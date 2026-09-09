@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeDataPage.test.tsx"
 type: "code"
-community: "MeDataPage.tsx"
+community: "@tanstack/react-query"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeDataPagetsx
+  - community/tanstack/react-query
 ---
 
 # MeDataPage.test.tsx
@@ -17,9 +17,9 @@ tags:
 - [[MOCK_PAYLOAD]] - `contains` [EXTRACTED]
 - [[MeDataPage()]] - `imports` [EXTRACTED]
 - [[MeDataPage.tsx]] - `imports_from` [EXTRACTED]
-- [[jsonResponse()]] - `contains` [EXTRACTED]
+- [[jsonResponse()_22]] - `contains` [EXTRACTED]
 - [[react-router-dom_1]] - `imports_from` [EXTRACTED]
 - [[renderMeDataPage()]] - `contains` [EXTRACTED]
 - [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeDataPagetsx
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

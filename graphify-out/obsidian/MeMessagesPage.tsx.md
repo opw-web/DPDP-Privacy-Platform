@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeMessagesPage.tsx"
 type: "code"
-community: "react-router-dom"
+community: "@tanstack/react-query"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react-router-dom
+  - community/tanstack/react-query
 ---
 
 # MeMessagesPage.tsx
@@ -40,4 +40,4 @@ tags:
 - [[principalApiClient]] - `imports` [EXTRACTED]
 - [[router.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react-router-dom
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

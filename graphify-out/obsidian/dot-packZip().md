@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/evidence-pack.controller.ts"
 type: "code"
-community: "evidence-pack.service.ts"
+community: "EvidencePackController"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/evidence-packservicets
+  - community/EvidencePackController
 ---
 
 # .packZip()
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-buildPack()]] - `calls` [INFERRED]
 - [[EvidencePackController]] - `method` [EXTRACTED]
-- [[Get_4]] - `references` [EXTRACTED]
+- [[Get_15]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[Res]] - `references` [EXTRACTED]
+- [[Res_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/evidence-packservicets
+#graphify/code #graphify/EXTRACTED #community/EvidencePackController

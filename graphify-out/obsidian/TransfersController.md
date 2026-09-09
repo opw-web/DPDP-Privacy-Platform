@@ -12,13 +12,13 @@ tags:
 # TransfersController
 
 ## Connections
-- [[dot-constructor()_35]] - `method` [EXTRACTED]
+- [[dot-constructor()_21]] - `method` [EXTRACTED]
 - [[dot-create()_6]] - `method` [EXTRACTED]
 - [[dot-get()_2]] - `method` [EXTRACTED]
-- [[dot-list()_8]] - `method` [EXTRACTED]
-- [[dot-update()_3]] - `method` [EXTRACTED]
-- [[ApiTags_9]] - `references` [EXTRACTED]
-- [[Controller_10]] - `references` [EXTRACTED]
+- [[dot-list()_7]] - `method` [EXTRACTED]
+- [[dot-update()_4]] - `method` [EXTRACTED]
+- [[ApiTags_7]] - `references` [EXTRACTED]
+- [[Controller_8]] - `references` [EXTRACTED]
 - [[registers.module.ts]] - `imports` [EXTRACTED]
 - [[transfers.controller.ts]] - `contains` [EXTRACTED]
 

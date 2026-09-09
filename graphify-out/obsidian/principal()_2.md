@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/test/identity-matching.e2e-spec.ts"
 type: "code"
-community: "AppModule"
+community: "ScopedTransactionClient"
 location: "L130"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AppModule
+  - community/ScopedTransactionClient
 ---
 
 # principal()
 
 ## Connections
 - [[identity-matching.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[tenant()_4]] - `calls` [EXTRACTED]
+- [[tenant()_5]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AppModule
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

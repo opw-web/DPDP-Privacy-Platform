@@ -1,24 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/notifications.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/board/information-requests.service.ts"
 type: "code"
-community: "notifications.controller.ts"
-location: "L44"
+community: "CreateInformationRequestDto"
+location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationscontrollerts
+  - community/CreateInformationRequestDto
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_34]] - `calls` [INFERRED]
-- [[ApiOkResponse_3]] - `references` [EXTRACTED]
-- [[CurrentNotificationActor]] - `references` [EXTRACTED]
-- [[Get_29]] - `references` [EXTRACTED]
-- [[NotificationCallerActor]] - `references` [EXTRACTED]
-- [[NotificationsController]] - `method` [EXTRACTED]
-- [[Public()]] - `references` [EXTRACTED]
-- [[UseGuards_4]] - `references` [EXTRACTED]
+- [[dot-list()_32]] - `calls` [INFERRED]
+- [[InformationRequestsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

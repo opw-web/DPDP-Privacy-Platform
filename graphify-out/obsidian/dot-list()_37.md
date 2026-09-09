@@ -1,18 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
+source_file: "dpdp-platform/backend/src/modules/consents/me-consents.controller.ts"
 type: "code"
-community: "notices.service.ts"
-location: "L163"
+community: "SetMyConsentDto"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/noticesservicets
+  - community/SetMyConsentDto
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_19]] - `calls` [INFERRED]
-- [[NoticesService]] - `method` [EXTRACTED]
+- [[dot-listForPrincipal()_2]] - `calls` [INFERRED]
+- [[CurrentPrincipal]] - `references` [EXTRACTED]
+- [[Get_27]] - `references` [EXTRACTED]
+- [[MeConsentsController]] - `method` [EXTRACTED]
+- [[PrincipalActor]] - `references` [EXTRACTED]
+- [[Public()]] - `references` [EXTRACTED]
+- [[UseGuards_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/noticesservicets
+#graphify/code #graphify/EXTRACTED #community/SetMyConsentDto

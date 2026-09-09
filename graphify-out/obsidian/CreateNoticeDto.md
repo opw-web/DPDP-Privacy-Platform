@@ -12,14 +12,14 @@ tags:
 # CreateNoticeDto
 
 ## Connections
-- [[dot-create()_17]] - `references` [EXTRACTED]
-- [[dot-create()_28]] - `references` [EXTRACTED]
-- [[ApiProperty_33]] - `references` [EXTRACTED]
-- [[ArrayMinSize_2]] - `references` [EXTRACTED]
-- [[ArrayUnique_8]] - `references` [EXTRACTED]
-- [[IsArray_18]] - `references` [EXTRACTED]
-- [[IsString_48]] - `references` [EXTRACTED]
-- [[MinLength_37]] - `references` [EXTRACTED]
+- [[dot-create()_14]] - `references` [EXTRACTED]
+- [[dot-create()_15]] - `references` [EXTRACTED]
+- [[ApiProperty_39]] - `references` [EXTRACTED]
+- [[ArrayMinSize_1]] - `references` [EXTRACTED]
+- [[ArrayUnique_7]] - `references` [EXTRACTED]
+- [[IsArray_19]] - `references` [EXTRACTED]
+- [[IsString_53]] - `references` [EXTRACTED]
+- [[MinLength_40]] - `references` [EXTRACTED]
 - [[create-notice.dto.ts]] - `contains` [EXTRACTED]
 - [[notices.controller.ts]] - `imports` [EXTRACTED]
 - [[notices.service.ts]] - `imports` [EXTRACTED]

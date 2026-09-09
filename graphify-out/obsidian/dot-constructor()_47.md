@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/candidates.service.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/legal-hold.service.ts"
 type: "code"
-community: "AuditService"
-location: "L124"
+community: "RequirePermission"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/RequirePermission
 ---
 
 # .constructor()
 
 ## Connections
 - [[AuditService]] - `references` [EXTRACTED]
-- [[CandidatesService]] - `method` [EXTRACTED]
-- [[MergeService]] - `references` [EXTRACTED]
+- [[LegalHoldService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

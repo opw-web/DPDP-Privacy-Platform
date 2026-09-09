@@ -1,22 +1,22 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/evidence-pack.controller.ts"
 type: "code"
-community: "evidence-pack.service.ts"
+community: "EvidencePackController"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/evidence-packservicets
+  - community/EvidencePackController
 ---
 
 # EvidencePackController
 
 ## Connections
-- [[dot-constructor()_21]] - `method` [EXTRACTED]
+- [[dot-constructor()_35]] - `method` [EXTRACTED]
 - [[dot-packZip()]] - `method` [EXTRACTED]
-- [[ApiTags_4]] - `references` [EXTRACTED]
-- [[Controller_4]] - `references` [EXTRACTED]
+- [[ApiTags_14]] - `references` [EXTRACTED]
+- [[Controller_15]] - `references` [EXTRACTED]
 - [[evidence-pack.controller.ts]] - `contains` [EXTRACTED]
 - [[evidence.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/evidence-packservicets
+#graphify/code #graphify/EXTRACTED #community/EvidencePackController

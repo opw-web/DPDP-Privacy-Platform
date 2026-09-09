@@ -1,23 +1,26 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/transfers.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
 type: "code"
-community: "CreateTransferDto"
-location: "L33"
+community: "DataSourcesService"
+location: "L318"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTransferDto
+  - community/DataSourcesService
 ---
 
 # .update()
 
 ## Connections
-- [[dot-update()_4]] - `calls` [INFERRED]
-- [[Body_7]] - `references` [EXTRACTED]
-- [[Param_5]] - `references` [EXTRACTED]
-- [[Patch_2]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[TransfersController]] - `method` [EXTRACTED]
-- [[UpdateTransferDto]] - `references` [EXTRACTED]
+- [[dot-assertPubliclyAvailableJustified()]] - `calls` [EXTRACTED]
+- [[dot-encrypt()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-scheduleSync()]] - `calls` [EXTRACTED]
+- [[dot-testConnection()]] - `calls` [EXTRACTED]
+- [[dot-update()_19]] - `calls` [INFERRED]
+- [[DataSourcesService]] - `method` [EXTRACTED]
+- [[UpdateDataSourceDto]] - `references` [EXTRACTED]
+- [[duplicateNameMessage()]] - `calls` [EXTRACTED]
+- [[isUniqueConstraintViolation()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTransferDto
+#graphify/code #graphify/EXTRACTED #community/DataSourcesService

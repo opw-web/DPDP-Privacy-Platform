@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "principals.service.ts"
+community: "PrincipalsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principalsservicets
+  - community/PrincipalsService
 ---
 
 # Injectable
 
 ## Connections
-- [[AccessLogService]] - `references` [EXTRACTED]
+- [[LineageService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principalsservicets
+#graphify/code #graphify/EXTRACTED #community/PrincipalsService

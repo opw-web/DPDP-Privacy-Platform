@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/common/audit/access-log.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync-error.spec.ts"
 type: "code"
-community: "principals.service.ts"
-location: "L50"
+community: "SyncPipelineService"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principalsservicets
+  - community/SyncPipelineService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AccessLogService]] - `method` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
+- [[IdentifierOwnershipConflictError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principalsservicets
+#graphify/code #graphify/EXTRACTED #community/SyncPipelineService

@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "access-report-render.ts"
+community: "AgeStatusService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-report-renderts
+  - community/AgeStatusService
 ---
 
 # Param
 
 ## Connections
-- [[dot-evidence()]] - `references` [EXTRACTED]
-- [[dot-evidencePdf()]] - `references` [EXTRACTED]
+- [[dot-setAgeStatus()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-report-renderts
+#graphify/code #graphify/EXTRACTED #community/AgeStatusService

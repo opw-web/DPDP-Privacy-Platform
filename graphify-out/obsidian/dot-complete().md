@@ -1,21 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/erasure-task.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/sdf-assessment.service.ts"
 type: "code"
-community: "RetentionController"
-location: "L512"
+community: "CreateAlgorithmEntryDto"
+location: "L205"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionController
+  - community/CreateAlgorithmEntryDto
 ---
 
 # .complete()
 
 ## Connections
-- [[dot-complete()_1]] - `calls` [INFERRED]
+- [[dot-completeAssessment()]] - `calls` [INFERRED]
 - [[dot-record()_1]] - `calls` [INFERRED]
-- [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[CompleteErasureTaskDto]] - `references` [EXTRACTED]
-- [[ErasureTaskService]] - `method` [EXTRACTED]
+- [[CompleteSdfAssessmentDto]] - `references` [EXTRACTED]
+- [[SdfAssessmentService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionController
+#graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/non-disclosure.ts"
 type: "code"
-community: "principals.service.ts"
+community: "AuditService"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principalsservicets
+  - community/AuditService
 ---
 
 # INFORMATION_REQUEST_PUBLIC_SELECT
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[evidencenon-disclosure.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principalsservicets
+#graphify/code #graphify/EXTRACTED #community/AuditService

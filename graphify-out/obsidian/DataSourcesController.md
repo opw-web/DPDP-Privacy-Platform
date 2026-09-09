@@ -12,15 +12,15 @@ tags:
 # DataSourcesController
 
 ## Connections
-- [[dot-constructor()_113]] - `method` [EXTRACTED]
-- [[dot-create()_27]] - `method` [EXTRACTED]
-- [[dot-discoverSchema()_2]] - `method` [EXTRACTED]
-- [[dot-get()_16]] - `method` [EXTRACTED]
-- [[dot-list()_35]] - `method` [EXTRACTED]
+- [[dot-constructor()_86]] - `method` [EXTRACTED]
+- [[dot-create()_28]] - `method` [EXTRACTED]
+- [[dot-discoverSchema()_1]] - `method` [EXTRACTED]
+- [[dot-get()_17]] - `method` [EXTRACTED]
+- [[dot-list()_38]] - `method` [EXTRACTED]
 - [[dot-listFields()]] - `method` [EXTRACTED]
-- [[dot-remove()_1]] - `method` [EXTRACTED]
-- [[dot-testConnection()_2]] - `method` [EXTRACTED]
-- [[dot-update()_20]] - `method` [EXTRACTED]
+- [[dot-remove()]] - `method` [EXTRACTED]
+- [[dot-testConnection()_1]] - `method` [EXTRACTED]
+- [[dot-update()_19]] - `method` [EXTRACTED]
 - [[ApiTags_28]] - `references` [EXTRACTED]
 - [[Controller_29]] - `references` [EXTRACTED]
 - [[data-sources.controller.ts]] - `contains` [EXTRACTED]

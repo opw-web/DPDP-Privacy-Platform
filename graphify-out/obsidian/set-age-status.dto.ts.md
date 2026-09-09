@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/children/dto/set-age-status.dto.ts"
 type: "code"
-community: "age-status.service.ts"
+community: "@nestjs/swagger"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/age-statusservicets
+  - community/nestjs/swagger
 ---
 
 # set-age-status.dto.ts
@@ -19,4 +19,4 @@ tags:
 - [[age-status.service.ts]] - `imports_from` [EXTRACTED]
 - [[class-validator_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/age-statusservicets
+#graphify/code #graphify/EXTRACTED #community/nestjs/swagger

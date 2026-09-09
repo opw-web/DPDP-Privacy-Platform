@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "evidence-pack.service.ts"
+community: "PrincipalEvidenceController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/evidence-packservicets
+  - community/PrincipalEvidenceController
 ---
 
 # Res
 
 ## Connections
-- [[dot-packZip()]] - `references` [EXTRACTED]
+- [[dot-evidencePdf()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/evidence-packservicets
+#graphify/code #graphify/EXTRACTED #community/PrincipalEvidenceController

@@ -1,23 +1,23 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/assembly.service.ts"
 type: "code"
-community: "AuditService"
+community: "ScopedTransactionClient"
 location: "L345"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/ScopedTransactionClient
 ---
 
 # AssemblyService
 
 ## Connections
-- [[dot-constructor()_44]] - `references` [EXTRACTED]
-- [[dot-constructor()_49]] - `references` [EXTRACTED]
-- [[dot-constructor()_50]] - `references` [EXTRACTED]
-- [[dot-constructor()_53]] - `references` [EXTRACTED]
+- [[dot-constructor()_113]] - `references` [EXTRACTED]
+- [[dot-constructor()_117]] - `references` [EXTRACTED]
+- [[dot-constructor()_118]] - `references` [EXTRACTED]
+- [[dot-constructor()_111]] - `references` [EXTRACTED]
 - [[dot-rebuild()]] - `method` [EXTRACTED]
-- [[Injectable_31]] - `references` [EXTRACTED]
+- [[Injectable_65]] - `references` [EXTRACTED]
 - [[assembly.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[assembly.service.ts]] - `contains` [EXTRACTED]
 - [[identity.module.ts]] - `imports` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[merge.service.ts]] - `imports` [EXTRACTED]
 - [[sync-pipeline.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

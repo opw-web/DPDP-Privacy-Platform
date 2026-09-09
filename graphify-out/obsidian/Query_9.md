@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "ListRequestsDto"
+community: "candidates.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ListRequestsDto
+  - community/candidatescontrollerts
 ---
 
 # Query
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-list()_50]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ListRequestsDto
+#graphify/code #graphify/EXTRACTED #community/candidatescontrollerts

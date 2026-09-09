@@ -1,18 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "RequirePermission"
+community: "BreachesController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/BreachesController
 ---
 
 # Post
 
 ## Connections
-- [[dot-approve()]] - `references` [EXTRACTED]
-- [[dot-create()_16]] - `references` [EXTRACTED]
-- [[dot-send()_4]] - `references` [EXTRACTED]
+- [[dot-addAffected()_1]] - `references` [EXTRACTED]
+- [[dot-completeObligation()]] - `references` [EXTRACTED]
+- [[dot-create()_12]] - `references` [EXTRACTED]
+- [[dot-extension()]] - `references` [EXTRACTED]
+- [[dot-notify()]] - `references` [EXTRACTED]
+- [[dot-previewAffected()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/BreachesController

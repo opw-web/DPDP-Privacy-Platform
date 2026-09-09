@@ -1,18 +1,25 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/notifications.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync-pipeline.service.ts"
 type: "code"
-community: "notifications.controller.ts"
-location: "L38"
+community: "normalization.service.ts"
+location: "L172"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationscontrollerts
+  - community/normalizationservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[NotificationsController]] - `method` [EXTRACTED]
-- [[NotificationsService]] - `references` [EXTRACTED]
+- [[AgeService]] - `references` [EXTRACTED]
+- [[AssemblyService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[DataSourcesService]] - `references` [EXTRACTED]
+- [[LinkingService]] - `references` [EXTRACTED]
+- [[MatchingService]] - `references` [EXTRACTED]
+- [[NormalizationService]] - `references` [EXTRACTED]
+- [[SyncLockService]] - `references` [EXTRACTED]
+- [[SyncPipelineService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts
+#graphify/code #graphify/EXTRACTED #community/normalizationservicets

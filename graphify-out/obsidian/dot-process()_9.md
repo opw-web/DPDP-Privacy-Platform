@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sdf-cycle-scan.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/access-log-retention.processor.ts"
 type: "code"
-community: "queues.module.ts"
-location: "L25"
+community: "access-log-retention.processor.ts"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/access-log-retentionprocessorts
 ---
 
 # .process()
 
 ## Connections
-- [[dot-runForAllOrganizations()_2]] - `calls` [INFERRED]
-- [[SdfCycleScanJobData]] - `references` [EXTRACTED]
-- [[SdfCycleScanProcessor]] - `method` [EXTRACTED]
+- [[dot-runRetention()]] - `calls` [EXTRACTED]
+- [[AccessLogRetentionProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/access-log-retentionprocessorts

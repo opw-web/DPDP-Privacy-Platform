@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sharing.service.ts"
+community: "CreateInformationRequestDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sharingservicets
+  - community/CreateInformationRequestDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[CreateSharingActivityDto]] - `references` [EXTRACTED]
+- [[UpdateInformationRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sharingservicets
+#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

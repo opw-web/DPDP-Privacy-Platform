@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/wizard/Step3Mapping.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/LinkedRecordsPanel.test.tsx"
 type: "code"
-community: "data-sources-api.ts"
+community: "@tanstack/react-query"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sources-apits
+  - community/tanstack/react-query
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[Step3Mapping.test.tsx]] - `contains` [EXTRACTED]
+- [[LinkedRecordsPanel.test.tsx]] - `contains` [EXTRACTED]
+- [[loginAndRender()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sources-apits
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

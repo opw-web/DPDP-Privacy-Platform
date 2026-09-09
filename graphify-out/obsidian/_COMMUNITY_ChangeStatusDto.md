@@ -8,19 +8,19 @@ members: 13
 **Members:** 13 nodes
 
 ## Members
-- [[ApiProperty_43]] - code
-- [[ApiPropertyOptional_46]] - code
+- [[ApiProperty_25]] - code
+- [[ApiPropertyOptional_29]] - code
 - [[ChangeStatusDto]] - code - dpdp-platform/backend/src/modules/requests/dto/change-status.dto.ts
 - [[ErasureProcessorChecklistDto]] - code - dpdp-platform/backend/src/modules/requests/dto/change-status.dto.ts
 - [[ErasureSystemChecklistDto]] - code - dpdp-platform/backend/src/modules/requests/dto/change-status.dto.ts
-- [[IsArray_24]] - code
-- [[IsBoolean_20]] - code
-- [[IsEnum_20]] - code
-- [[IsIn_15]] - code
-- [[IsOptional_47]] - code
-- [[IsString_60]] - code
-- [[Type_10]] - code
-- [[ValidateNested_6]] - code
+- [[IsArray_10]] - code
+- [[IsBoolean_14]] - code
+- [[IsEnum_16]] - code
+- [[IsIn_5]] - code
+- [[IsOptional_31]] - code
+- [[IsString_35]] - code
+- [[Type_2]] - code
+- [[ValidateNested]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -30,9 +30,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_@prismaclient]]
-- 2 edges to [[_COMMUNITY_requests.service.ts]]
-- 1 edge to [[_COMMUNITY_VerifyIdentityDto]]
+- 5 edges to [[_COMMUNITY_@prismaclient]]
+- 1 edge to [[_COMMUNITY_@nestjsswagger]]
+- 1 edge to [[_COMMUNITY_AddNoteDto]]
 - 1 edge to [[_COMMUNITY_RequestsService]]
 
 ## Top bridge nodes

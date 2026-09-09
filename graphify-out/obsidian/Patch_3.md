@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PurposesController"
+community: "CreatePurposeDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PurposesController
+  - community/CreatePurposeDto
 ---
 
 # Patch
 
 ## Connections
-- [[dot-update()_5]] - `references` [EXTRACTED]
+- [[dot-update()_6]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PurposesController
+#graphify/code #graphify/EXTRACTED #community/CreatePurposeDto

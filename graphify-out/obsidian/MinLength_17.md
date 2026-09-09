@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdatePurposeDto"
+community: "UpdateBreachDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdatePurposeDto
+  - community/UpdateBreachDto
 ---
 
 # MinLength
 
 ## Connections
-- [[UpdatePurposeDto]] - `references` [EXTRACTED]
+- [[ExtensionDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdatePurposeDto
+#graphify/code #graphify/EXTRACTED #community/UpdateBreachDto

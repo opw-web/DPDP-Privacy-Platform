@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "@prisma/client"
+community: "ChangeStatusDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/ChangeStatusDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[MappingsResponseDto]] - `references` [EXTRACTED]
-- [[SourceFieldMappingResponseDto]] - `references` [EXTRACTED]
+- [[ChangeStatusDto]] - `references` [EXTRACTED]
+- [[ErasureProcessorChecklistDto]] - `references` [EXTRACTED]
+- [[ErasureSystemChecklistDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prisma/client
+#graphify/code #graphify/EXTRACTED #community/ChangeStatusDto

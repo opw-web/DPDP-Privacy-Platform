@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/test/assembly.e2e-spec.ts"
 type: "code"
-community: "AppModule"
+community: "ScopedTransactionClient"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AppModule
+  - community/ScopedTransactionClient
 ---
 
 # assembly.e2e-spec.ts
 
 ## Connections
 - [[@nestjscommon]] - `imports_from` [EXTRACTED]
-- [[@nestjstesting_1]] - `imports_from` [EXTRACTED]
+- [[@nestjstesting]] - `imports_from` [EXTRACTED]
 - [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AgeService]] - `imports` [EXTRACTED]
 - [[AppModule]] - `imports` [EXTRACTED]
@@ -32,7 +32,7 @@ tags:
 - [[principal()_1]] - `contains` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[source()]] - `contains` [EXTRACTED]
-- [[tenant()_3]] - `contains` [EXTRACTED]
+- [[tenant()_4]] - `contains` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AppModule
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

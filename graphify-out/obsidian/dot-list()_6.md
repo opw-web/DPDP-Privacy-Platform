@@ -1,23 +1,23 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/audit/audit-read.controller.ts"
 type: "code"
-community: "audit-read.service.ts"
+community: "audit-read.controller.ts"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-readservicets
+  - community/audit-readcontrollerts
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_7]] - `calls` [INFERRED]
+- [[dot-list()]] - `calls` [INFERRED]
 - [[AuditReadController]] - `method` [EXTRACTED]
 - [[CurrentActorPermissions]] - `references` [EXTRACTED]
 - [[Get_6]] - `references` [EXTRACTED]
 - [[ListAuditEventsDto]] - `references` [EXTRACTED]
-- [[Query_2]] - `references` [EXTRACTED]
+- [[Query_1]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-readservicets
+#graphify/code #graphify/EXTRACTED #community/audit-readcontrollerts

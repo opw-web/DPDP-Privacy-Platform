@@ -1,24 +1,24 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/connectors/connector.factory.ts"
 type: "code"
-community: "data-sources.service.ts"
+community: "rest-api.connector.ts"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesservicets
+  - community/rest-apiconnectorts
 ---
 
 # ConnectorFactory
 
 ## Connections
-- [[dot-constructor()_30]] - `references` [EXTRACTED]
-- [[dot-create()_5]] - `method` [EXTRACTED]
-- [[Injectable_20]] - `references` [EXTRACTED]
+- [[dot-constructor()_38]] - `references` [EXTRACTED]
+- [[dot-create()_30]] - `method` [EXTRACTED]
+- [[Injectable_55]] - `references` [EXTRACTED]
 - [[connector.factory.spec.ts]] - `imports` [EXTRACTED]
 - [[connector.factory.ts]] - `contains` [EXTRACTED]
 - [[connectors.module.spec.ts]] - `imports` [EXTRACTED]
 - [[connectors.module.ts]] - `imports` [EXTRACTED]
 - [[data-sources.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets
+#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts

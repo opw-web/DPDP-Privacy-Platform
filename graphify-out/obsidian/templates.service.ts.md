@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts"
 type: "code"
-community: "templates.service.ts"
+community: "campaigns.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatesservicets
+  - community/campaignsservicets
 ---
 
 # templates.service.ts
@@ -45,4 +45,4 @@ tags:
 - [[update-template.dto.ts]] - `imports_from` [EXTRACTED]
 - [[whitelisted-variables.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatesservicets
+#graphify/code #graphify/EXTRACTED #community/campaignsservicets

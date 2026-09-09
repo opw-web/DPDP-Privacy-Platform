@@ -1,19 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/prisma/seed/mvp2-demo.ts"
+source_file: "scripts/dedupe-vault-names.py"
 type: "code"
-community: "argon2"
-location: "L321"
+community: "dedupe-vault-names.py"
+location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/argon2
+  - community/dedupe-vault-namespy
 ---
 
 # main()
 
 ## Connections
-- [[PrismaService]] - `calls` [EXTRACTED]
-- [[mvp2-demo.ts]] - `contains` [EXTRACTED]
-- [[seedMvp2Demo()]] - `calls` [EXTRACTED]
+- [[Path]] - `calls` [EXTRACTED]
+- [[dedupe-vault-names.py]] - `contains` [EXTRACTED]
+- [[relink()]] - `calls` [EXTRACTED]
+- [[rename_target()]] - `calls` [EXTRACTED]
+- [[shorten()]] - `calls` [EXTRACTED]
+- [[winner()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/argon2
+#graphify/code #graphify/EXTRACTED #community/dedupe-vault-namespy

@@ -1,21 +1,21 @@
 ---
 source_file: "dpdp-platform/backend/src/common/guards/jwt-employee.guard.ts"
 type: "code"
-community: "TokenService"
+community: "main.ts"
 location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TokenService
+  - community/maints
 ---
 
 # JwtEmployeeGuard
 
 ## Connections
-- [[dot-canActivate()_1]] - `method` [EXTRACTED]
-- [[dot-constructor()_55]] - `method` [EXTRACTED]
-- [[Injectable_34]] - `references` [EXTRACTED]
+- [[dot-canActivate()_3]] - `method` [EXTRACTED]
+- [[dot-constructor()_157]] - `method` [EXTRACTED]
+- [[Injectable_88]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[jwt-employee.guard.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TokenService
+#graphify/code #graphify/EXTRACTED #community/maints

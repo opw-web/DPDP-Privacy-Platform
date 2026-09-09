@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SyncService"
+community: "CreatePurposeDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncService
+  - community/CreatePurposeDto
 ---
 
 # Controller
 
 ## Connections
-- [[SyncController]] - `references` [EXTRACTED]
-- [[SyncJobsController]] - `references` [EXTRACTED]
+- [[PurposesController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncService
+#graphify/code #graphify/EXTRACTED #community/CreatePurposeDto

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "@prisma/client"
+community: "CreateVoluntaryUndertakingDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[DataSourcePurposeResponseDto]] - `references` [EXTRACTED]
+- [[CreateVoluntaryUndertakingDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prisma/client
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

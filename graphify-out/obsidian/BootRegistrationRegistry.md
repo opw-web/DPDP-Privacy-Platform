@@ -12,14 +12,14 @@ tags:
 # BootRegistrationRegistry
 
 ## Connections
-- [[dot-constructor()_73]] - `references` [EXTRACTED]
-- [[dot-constructor()_74]] - `references` [EXTRACTED]
-- [[dot-constructor()_76]] - `references` [EXTRACTED]
-- [[dot-constructor()_77]] - `references` [EXTRACTED]
-- [[dot-constructor()_78]] - `references` [EXTRACTED]
-- [[dot-onModuleInit()_1]] - `method` [EXTRACTED]
+- [[dot-constructor()_39]] - `references` [EXTRACTED]
+- [[dot-constructor()_40]] - `references` [EXTRACTED]
+- [[dot-constructor()_42]] - `references` [EXTRACTED]
+- [[dot-constructor()_43]] - `references` [EXTRACTED]
+- [[dot-constructor()_44]] - `references` [EXTRACTED]
+- [[dot-onModuleInit()]] - `method` [EXTRACTED]
 - [[dot-register()]] - `method` [EXTRACTED]
-- [[Injectable_45]] - `references` [EXTRACTED]
+- [[Injectable_23]] - `references` [EXTRACTED]
 - [[boot-registration.registry.ts]] - `contains` [EXTRACTED]
 - [[consent-backfill.queue.ts]] - `imports` [EXTRACTED]
 - [[deadline-scan.queue.ts]] - `imports` [EXTRACTED]

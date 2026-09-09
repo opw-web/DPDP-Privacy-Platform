@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/login-request-meta.ts"
 type: "code"
-community: "employee-auth.service.ts"
+community: "token.service.ts"
 location: "L2"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employee-authservicets
+  - community/tokenservicets
 ---
 
 # LoginRequestMeta
@@ -21,4 +21,4 @@ tags:
 - [[principal-auth.service.ts]] - `imports` [EXTRACTED]
 - [[refresh-rotation.util.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employee-authservicets
+#graphify/code #graphify/EXTRACTED #community/tokenservicets

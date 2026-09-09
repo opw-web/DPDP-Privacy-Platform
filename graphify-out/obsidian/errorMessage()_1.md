@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/NoticeBuilderPage.tsx"
 type: "code"
-community: "router.tsx"
-location: "L16"
+community: "NoticeBuilderPage.tsx"
+location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/NoticeBuilderPagetsx
 ---
 
 # errorMessage()
@@ -15,4 +15,4 @@ tags:
 - [[NoticeBuilderPage()]] - `calls` [EXTRACTED]
 - [[NoticeBuilderPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/NoticeBuilderPagetsx

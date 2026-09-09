@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/prisma/seed/roles.ts"
 type: "code"
-community: "AppModule"
+community: "seed.ts"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AppModule
+  - community/seedts
 ---
 
 # ALL_PERMISSION_CODES
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[roles.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AppModule
+#graphify/code #graphify/EXTRACTED #community/seedts

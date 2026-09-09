@@ -1,24 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/breaches/breaches.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/recipients.controller.ts"
 type: "code"
-community: ".record"
-location: "L65"
+community: "CreateRecipientDto"
+location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/CreateRecipientDto
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_31]] - `calls` [INFERRED]
-- [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[Actor]] - `references` [EXTRACTED]
-- [[Body_21]] - `references` [EXTRACTED]
-- [[BreachesController]] - `method` [EXTRACTED]
-- [[CreateBreachDto]] - `references` [EXTRACTED]
-- [[Post_22]] - `references` [EXTRACTED]
+- [[dot-create()_33]] - `calls` [INFERRED]
+- [[Body_27]] - `references` [EXTRACTED]
+- [[CreateRecipientDto]] - `references` [EXTRACTED]
+- [[Post_26]] - `references` [EXTRACTED]
+- [[RecipientsController]] - `method` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/CreateRecipientDto

@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/test/employee-auth.e2e-spec.ts"
 type: "code"
-community: "argon2"
+community: "sync.e2e-spec.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/argon2
+  - community/synce2e-spects
 ---
 
 # employee-auth.e2e-spec.ts
 
 ## Connections
 - [[@nestjscommon]] - `imports_from` [EXTRACTED]
-- [[@nestjstesting_1]] - `imports_from` [EXTRACTED]
+- [[@nestjstesting]] - `imports_from` [EXTRACTED]
 - [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AppModule]] - `imports` [EXTRACTED]
 - [[PERMISSIONS]] - `imports` [EXTRACTED]
@@ -30,4 +30,4 @@ tags:
 - [[seedpermissions.ts]] - `imports_from` [EXTRACTED]
 - [[supertest]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/argon2
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/notices/types.ts"
 type: "code"
-community: "react"
+community: "NoticeBuilderPage.tsx"
 location: "L55"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/NoticeBuilderPagetsx
 ---
 
 # EligibleItemisedField
@@ -17,4 +17,4 @@ tags:
 - [[NoticeComposerProps]] - `references` [EXTRACTED]
 - [[noticestypes.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/NoticeBuilderPagetsx

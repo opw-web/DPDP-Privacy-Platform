@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/components/ValueCard.tsx"
 type: "code"
-community: "MeDataPage.tsx"
+community: "cn"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeDataPagetsx
+  - community/cn
 ---
 
 # fieldLabel()
@@ -15,4 +15,4 @@ tags:
 - [[ValueCard()]] - `calls` [EXTRACTED]
 - [[ValueCard.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeDataPagetsx
+#graphify/code #graphify/EXTRACTED #community/cn

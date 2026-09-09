@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/sharing.service.ts"
 type: "code"
-community: "sharing.service.ts"
+community: "CreateSharingActivityDto"
 location: "L97"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sharingservicets
+  - community/CreateSharingActivityDto
 ---
 
 # .assertPurposeExists()
 
 ## Connections
-- [[dot-create()_26]] - `calls` [EXTRACTED]
-- [[dot-update()_19]] - `calls` [EXTRACTED]
+- [[dot-create()_27]] - `calls` [EXTRACTED]
+- [[dot-update()_18]] - `calls` [EXTRACTED]
 - [[SharingService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sharingservicets
+#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/matching.service.ts"
 type: "code"
-community: "matching.service.ts"
+community: "ScopedTransactionClient"
 location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/matchingservicets
+  - community/ScopedTransactionClient
 ---
 
 # CandidateMatchResult
@@ -15,4 +15,4 @@ tags:
 - [[RaisedCandidate]] - `inherits` [EXTRACTED]
 - [[matching.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/matchingservicets
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

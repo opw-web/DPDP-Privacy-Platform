@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
+community: "RequirePermission"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/RequirePermission
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_18]] - `references` [EXTRACTED]
-- [[dot-update()_12]] - `references` [EXTRACTED]
+- [[dot-cancel()_1]] - `references` [EXTRACTED]
+- [[dot-complete()_2]] - `references` [EXTRACTED]
+- [[dot-createLegalHold()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

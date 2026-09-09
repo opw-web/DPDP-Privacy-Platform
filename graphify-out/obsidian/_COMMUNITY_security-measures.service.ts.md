@@ -1,48 +1,48 @@
 ---
 type: community
-members: 48
+members: 49
 ---
 
 # security-measures.service.ts
 
-**Members:** 48 nodes
+**Members:** 49 nodes
 
 ## Members
 - [[dot-assertDataSourceExists()]] - code - dpdp-platform/backend/src/modules/registers/security-measures.service.ts
 - [[dot-assertEmployeeExists()_1]] - code - dpdp-platform/backend/src/modules/registers/security-measures.service.ts
-- [[dot-constructor()_143]] - code - dpdp-platform/backend/src/modules/registers/security-measures.controller.ts
-- [[dot-constructor()_144]] - code - dpdp-platform/backend/src/modules/registers/security-measures.service.ts
-- [[dot-create()_37]] - code - dpdp-platform/backend/src/modules/registers/security-measures.controller.ts
-- [[dot-create()_38]] - code - dpdp-platform/backend/src/modules/registers/security-measures.service.ts
-- [[dot-get()_24]] - code - dpdp-platform/backend/src/modules/registers/security-measures.controller.ts
-- [[dot-get()_25]] - code - dpdp-platform/backend/src/modules/registers/security-measures.service.ts
+- [[dot-constructor()_131]] - code - dpdp-platform/backend/src/modules/registers/security-measures.controller.ts
+- [[dot-constructor()_132]] - code - dpdp-platform/backend/src/modules/registers/security-measures.service.ts
+- [[dot-create()_36]] - code - dpdp-platform/backend/src/modules/registers/security-measures.controller.ts
+- [[dot-create()_37]] - code - dpdp-platform/backend/src/modules/registers/security-measures.service.ts
+- [[dot-get()_25]] - code - dpdp-platform/backend/src/modules/registers/security-measures.controller.ts
+- [[dot-get()_26]] - code - dpdp-platform/backend/src/modules/registers/security-measures.service.ts
 - [[dot-list()_48]] - code - dpdp-platform/backend/src/modules/registers/security-measures.controller.ts
 - [[dot-list()_49]] - code - dpdp-platform/backend/src/modules/registers/security-measures.service.ts
-- [[dot-update()_27]] - code - dpdp-platform/backend/src/modules/registers/security-measures.controller.ts
-- [[dot-update()_28]] - code - dpdp-platform/backend/src/modules/registers/security-measures.service.ts
-- [[ApiProperty_46]] - code
+- [[dot-update()_25]] - code - dpdp-platform/backend/src/modules/registers/security-measures.controller.ts
+- [[dot-update()_26]] - code - dpdp-platform/backend/src/modules/registers/security-measures.service.ts
+- [[ApiProperty_49]] - code
+- [[ApiPropertyOptional_50]] - code
 - [[ApiPropertyOptional_51]] - code
-- [[ApiPropertyOptional_52]] - code
-- [[ApiTags_37]] - code
-- [[Body_26]] - code
-- [[Controller_38]] - code
+- [[ApiTags_38]] - code
+- [[Body_29]] - code
+- [[Controller_39]] - code
 - [[CreateSecurityMeasureDto]] - code - dpdp-platform/backend/src/modules/registers/dto/create-security-measure.dto.ts
-- [[Get_39]] - code
-- [[Injectable_85]] - code
+- [[Get_38]] - code
+- [[Injectable_76]] - code
 - [[IsBoolean_25]] - code
 - [[IsBoolean_26]] - code
+- [[IsDateString_20]] - code
 - [[IsDateString_21]] - code
-- [[IsDateString_22]] - code
-- [[IsIn_18]] - code
-- [[IsIn_19]] - code
-- [[IsOptional_50]] - code
-- [[IsString_65]] - code
+- [[IsIn_16]] - code
+- [[IsIn_17]] - code
+- [[IsOptional_49]] - code
 - [[IsString_66]] - code
+- [[IsString_67]] - code
 - [[MinLength_50]] - code
 - [[MinLength_51]] - code
-- [[Param_28]] - code
-- [[Patch_15]] - code
-- [[Post_26]] - code
+- [[Param_29]] - code
+- [[Patch_14]] - code
+- [[Post_28]] - code
 - [[PublicSecurityMeasure]] - code - dpdp-platform/backend/src/modules/registers/security-measures.service.ts
 - [[SECURITY_MEASURE_PUBLIC_SELECT]] - code - dpdp-platform/backend/src/modules/registers/security-measures.service.ts
 - [[SECURITY_MEASURE_TYPES]] - code - dpdp-platform/backend/src/modules/registers/dto/create-security-measure.dto.ts
@@ -54,6 +54,7 @@ members: 48
 - [[ValidateIf_5]] - code
 - [[create-security-measure.dto.ts]] - code - dpdp-platform/backend/src/modules/registers/dto/create-security-measure.dto.ts
 - [[groupByRuleReference()]] - code - dpdp-platform/backend/src/modules/registers/security-measures.service.ts
+- [[security-measures.controller.ts]] - code - dpdp-platform/backend/src/modules/registers/security-measures.controller.ts
 - [[security-measures.service.ts]] - code - dpdp-platform/backend/src/modules/registers/security-measures.service.ts
 - [[update-security-measure.dto.ts]] - code - dpdp-platform/backend/src/modules/registers/dto/update-security-measure.dto.ts
 
@@ -65,16 +66,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_RequirePermission]]
-- 5 edges to [[_COMMUNITY_@prismaclient]]
-- 4 edges to [[_COMMUNITY_@nestjscommon]]
+- 10 edges to [[_COMMUNITY_@nestjsswagger]]
+- 5 edges to [[_COMMUNITY_RequirePermission]]
 - 3 edges to [[_COMMUNITY_AuditService]]
 - 2 edges to [[_COMMUNITY_PrismaService]]
 - 2 edges to [[_COMMUNITY_dot-record]]
+- 2 edges to [[_COMMUNITY_@nestjscommon]]
+- 1 edge to [[_COMMUNITY_@prismaclient]]
 
 ## Top bridge nodes
 - [[security-measures.service.ts]] - degree 17, connects to 5 communities
-- [[SecurityMeasuresService]] - degree 12, connects to 2 communities
-- [[SecurityMeasuresController]] - degree 9, connects to 2 communities
-- [[create-security-measure.dto.ts]] - degree 8, connects to 2 communities
-- [[update-security-measure.dto.ts]] - degree 8, connects to 2 communities
+- [[security-measures.controller.ts]] - degree 12, connects to 3 communities
+- [[SecurityMeasuresService]] - degree 12, connects to 1 community
+- [[SecurityMeasuresController]] - degree 9, connects to 1 community
+- [[create-security-measure.dto.ts]] - degree 8, connects to 1 community

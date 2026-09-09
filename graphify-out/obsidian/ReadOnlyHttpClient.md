@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/connectors/http/read-only-http.client.ts"
 type: "code"
-community: "read-only-http.client.ts"
+community: "rest-api.connector.ts"
 location: "L98"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/read-only-httpclientts
+  - community/rest-apiconnectorts
 ---
 
 # ReadOnlyHttpClient
 
 ## Connections
-- [[dot-constructor()_127]] - `references` [EXTRACTED]
-- [[dot-constructor()_150]] - `method` [EXTRACTED]
+- [[dot-constructor()_102]] - `references` [EXTRACTED]
+- [[dot-constructor()_96]] - `method` [EXTRACTED]
 - [[dot-performRequest()]] - `method` [EXTRACTED]
 - [[dot-request()]] - `method` [EXTRACTED]
 - [[dot-requestWithRetry()]] - `method` [EXTRACTED]
@@ -23,4 +23,4 @@ tags:
 - [[rest-api.connector.spec.ts]] - `imports` [EXTRACTED]
 - [[rest-api.connector.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/read-only-httpclientts
+#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts

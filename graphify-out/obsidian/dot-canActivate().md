@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/guards/permissions.guard.ts"
 type: "code"
-community: "PermissionsGuard"
+community: "audit-read.controller.ts"
 location: "L86"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PermissionsGuard
+  - community/audit-readcontrollerts
 ---
 
 # .canActivate()
@@ -15,4 +15,4 @@ tags:
 - [[dot-resolvePermissions()]] - `calls` [EXTRACTED]
 - [[PermissionsGuard]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PermissionsGuard
+#graphify/code #graphify/EXTRACTED #community/audit-readcontrollerts

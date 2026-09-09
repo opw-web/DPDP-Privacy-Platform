@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/audit/audit-read.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync.controller.ts"
 type: "code"
-community: "audit-read.service.ts"
-location: "L19"
+community: "SyncService"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-readservicets
+  - community/SyncService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditReadController]] - `method` [EXTRACTED]
-- [[AuditReadService]] - `references` [EXTRACTED]
+- [[SyncController]] - `method` [EXTRACTED]
+- [[SyncService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-readservicets
+#graphify/code #graphify/EXTRACTED #community/SyncService

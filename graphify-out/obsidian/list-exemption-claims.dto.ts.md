@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/children/dto/list-exemption-claims.dto.ts"
 type: "code"
-community: "child-exemptions.service.ts"
+community: "@nestjs/swagger"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/child-exemptionsservicets
+  - community/nestjs/swagger
 ---
 
 # list-exemption-claims.dto.ts
@@ -18,4 +18,4 @@ tags:
 - [[child-exemptions.service.ts]] - `imports_from` [EXTRACTED]
 - [[class-validator_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/child-exemptionsservicets
+#graphify/code #graphify/EXTRACTED #community/nestjs/swagger

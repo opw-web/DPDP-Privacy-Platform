@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/consent-backfill.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/deadline-scan.processor.ts"
 type: "code"
-community: "ConsentBackfillService"
-location: "L25"
+community: "DeadlineScanProcessor"
+location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ConsentBackfillService
+  - community/DeadlineScanProcessor
 ---
 
 # .process()
 
 ## Connections
-- [[dot-runForAllOrganizations()]] - `calls` [INFERRED]
-- [[ConsentBackfillJobData]] - `references` [EXTRACTED]
-- [[ConsentBackfillProcessor]] - `method` [EXTRACTED]
+- [[dot-runScanCycle()]] - `calls` [EXTRACTED]
+- [[DeadlineScanJobData]] - `references` [EXTRACTED]
+- [[DeadlineScanProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ConsentBackfillService
+#graphify/code #graphify/EXTRACTED #community/DeadlineScanProcessor

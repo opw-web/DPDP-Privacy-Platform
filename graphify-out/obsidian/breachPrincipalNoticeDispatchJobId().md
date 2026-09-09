@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/breach-principal-notice-dispatch.queue.ts"
 type: "code"
-community: "breach-principal-notice-dispatch.processor.ts"
+community: "BreachService"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breach-principal-notice-dispatchprocessorts
+  - community/BreachService
 ---
 
 # breachPrincipalNoticeDispatchJobId()
@@ -15,4 +15,4 @@ tags:
 - [[dot-enqueue()_1]] - `calls` [EXTRACTED]
 - [[breach-principal-notice-dispatch.queue.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breach-principal-notice-dispatchprocessorts
+#graphify/code #graphify/EXTRACTED #community/BreachService

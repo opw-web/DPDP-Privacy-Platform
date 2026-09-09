@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/breach-clock.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/campaign-send.processor.ts"
 type: "code"
-community: "BreachClockProcessor"
-location: "L24"
+community: "CampaignsService"
+location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BreachClockProcessor
+  - community/CampaignsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[BreachClockProcessor]] - `method` [EXTRACTED]
-- [[BreachService]] - `references` [EXTRACTED]
+- [[CampaignSendProcessor]] - `method` [EXTRACTED]
+- [[CampaignsService]] - `references` [EXTRACTED]
+- [[NotificationsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BreachClockProcessor
+#graphify/code #graphify/EXTRACTED #community/CampaignsService

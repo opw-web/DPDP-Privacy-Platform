@@ -12,12 +12,12 @@ tags:
 # MappingsService
 
 ## Connections
-- [[dot-constructor()_67]] - `references` [EXTRACTED]
-- [[dot-constructor()_44]] - `method` [EXTRACTED]
-- [[dot-get()_26]] - `method` [EXTRACTED]
-- [[dot-replace()_1]] - `method` [EXTRACTED]
+- [[dot-constructor()_104]] - `references` [EXTRACTED]
+- [[dot-constructor()_113]] - `method` [EXTRACTED]
+- [[dot-get()_19]] - `method` [EXTRACTED]
+- [[dot-replace()]] - `method` [EXTRACTED]
 - [[dot-validateVerifiedCustomerId()]] - `method` [EXTRACTED]
-- [[Injectable_75]] - `references` [EXTRACTED]
+- [[Injectable_57]] - `references` [EXTRACTED]
 - [[data-sources.module.ts]] - `imports` [EXTRACTED]
 - [[mappings.controller.ts]] - `imports` [EXTRACTED]
 - [[mappings.service.ts]] - `contains` [EXTRACTED]

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sharing.service.ts"
+community: "CreateSharingActivityDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sharingservicets
+  - community/CreateSharingActivityDto
 ---
 
 # ArrayUnique
 
 ## Connections
-- [[CreateSharingActivityDto]] - `references` [EXTRACTED]
+- [[UpdateSharingActivityDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sharingservicets
+#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

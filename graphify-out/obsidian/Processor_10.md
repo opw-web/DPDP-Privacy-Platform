@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "queues.module.ts"
+community: "AuditChainService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/AuditChainService
 ---
 
 # Processor
 
 ## Connections
-- [[SyncProcessor]] - `references` [EXTRACTED]
+- [[AuditChainVerifyProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/AuditChainService

@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "security-measures.service.ts"
+community: "EmployeeAuthController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/security-measuresservicets
+  - community/EmployeeAuthController
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_37]] - `references` [EXTRACTED]
-- [[dot-update()_27]] - `references` [EXTRACTED]
+- [[dot-login()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/security-measuresservicets
+#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController

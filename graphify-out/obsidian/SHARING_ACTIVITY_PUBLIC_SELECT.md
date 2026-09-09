@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/sharing.service.ts"
 type: "code"
-community: "sharing.service.ts"
+community: "AuditService"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sharingservicets
+  - community/AuditService
 ---
 
 # SHARING_ACTIVITY_PUBLIC_SELECT
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sharing.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sharingservicets
+#graphify/code #graphify/EXTRACTED #community/AuditService

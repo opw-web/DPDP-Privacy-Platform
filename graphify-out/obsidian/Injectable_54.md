@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SdfCycleScanService"
+community: "AgeStatusService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SdfCycleScanService
+  - community/AgeStatusService
 ---
 
 # Injectable
 
 ## Connections
-- [[SdfCycleScanService]] - `references` [EXTRACTED]
+- [[AgeStatusService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SdfCycleScanService
+#graphify/code #graphify/EXTRACTED #community/AgeStatusService

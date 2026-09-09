@@ -2,7 +2,7 @@
 source_file: "scripts/capture-guide-screenshots.mjs"
 type: "code"
 community: "capture-guide-screenshots.mjs"
-location: "L70"
+location: "L260"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,8 @@ tags:
 # shoot()
 
 ## Connections
+- [[applyStep()]] - `calls` [EXTRACTED]
 - [[capture-guide-screenshots.mjs]] - `contains` [EXTRACTED]
-- [[main()]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/capture-guide-screenshotsmjs

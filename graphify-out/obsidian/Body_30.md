@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "compile-audience.ts"
+community: "PrincipalAuthController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/compile-audiencets
+  - community/PrincipalAuthController
 ---
 
 # Body
 
 ## Connections
-- [[dot-preview()_4]] - `references` [EXTRACTED]
+- [[dot-login()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/compile-audiencets
+#graphify/code #graphify/EXTRACTED #community/PrincipalAuthController

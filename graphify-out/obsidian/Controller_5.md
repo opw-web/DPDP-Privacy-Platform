@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SetMyConsentDto"
+community: "audit-read.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SetMyConsentDto
+  - community/audit-readcontrollerts
 ---
 
 # Controller
 
 ## Connections
-- [[MeConsentsController]] - `references` [EXTRACTED]
+- [[AuditReadController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SetMyConsentDto
+#graphify/code #graphify/EXTRACTED #community/audit-readcontrollerts

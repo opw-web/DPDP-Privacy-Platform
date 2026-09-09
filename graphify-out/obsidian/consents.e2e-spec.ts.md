@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/consents.e2e-spec.ts"
 type: "code"
-community: "PrismaService"
+community: "supertest"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/supertest
 ---
 
 # consents.e2e-spec.ts
@@ -25,7 +25,7 @@ tags:
 - [[consents.service.ts]] - `imports_from` [EXTRACTED]
 - [[createConsentPurpose()_1]] - `contains` [EXTRACTED]
 - [[createLegitimateUsePurpose()]] - `contains` [EXTRACTED]
-- [[createOrgWithEmployee()]] - `imports` [EXTRACTED]
+- [[createOrgWithEmployee()_1]] - `imports` [EXTRACTED]
 - [[createPrincipal()_1]] - `contains` [EXTRACTED]
 - [[createPublishedNotice()]] - `contains` [EXTRACTED]
 - [[e2e-harness.ts]] - `imports_from` [EXTRACTED]
@@ -35,4 +35,4 @@ tags:
 - [[systemStore()]] - `contains` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/supertest

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "access-report-render.ts"
+community: "AudienceService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-report-renderts
+  - community/AudienceService
 ---
 
 # Controller
 
 ## Connections
-- [[PrincipalEvidenceController]] - `references` [EXTRACTED]
+- [[AudienceController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-report-renderts
+#graphify/code #graphify/EXTRACTED #community/AudienceService

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalActor"
+community: "CreateTransferDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalActor
+  - community/CreateTransferDto
 ---
 
 # Controller
 
 ## Connections
-- [[MeController]] - `references` [EXTRACTED]
+- [[TransfersController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalActor
+#graphify/code #graphify/EXTRACTED #community/CreateTransferDto

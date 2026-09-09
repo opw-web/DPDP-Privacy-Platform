@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/sync.queue.ts"
 type: "code"
-community: "SyncService"
+community: "sync-lock.service.ts"
 location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncService
+  - community/sync-lockservicets
 ---
 
 # syncJobId()
 
 ## Connections
-- [[dot-trigger()_1]] - `calls` [EXTRACTED]
+- [[dot-trigger()]] - `calls` [EXTRACTED]
 - [[sync.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[sync.queue.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncService
+#graphify/code #graphify/EXTRACTED #community/sync-lockservicets

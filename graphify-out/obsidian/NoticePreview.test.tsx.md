@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/notices/NoticePreview.test.tsx"
 type: "code"
-community: "react"
+community: "NoticeBuilderPage.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/NoticeBuilderPagetsx
 ---
 
 # NoticePreview.test.tsx
@@ -17,4 +17,4 @@ tags:
 - [[NoticeStandalonePreview()]] - `imports` [EXTRACTED]
 - [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/NoticeBuilderPagetsx

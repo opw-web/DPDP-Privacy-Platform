@@ -1,21 +1,21 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/inventory/inventory.controller.ts"
 type: "code"
-community: "inventory.controller.ts"
+community: "InventoryService"
 location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/inventorycontrollerts
+  - community/InventoryService
 ---
 
 # .ropaCsv()
 
 ## Connections
 - [[dot-exportCsv()_1]] - `calls` [INFERRED]
-- [[Get_12]] - `references` [EXTRACTED]
+- [[Get_8]] - `references` [EXTRACTED]
 - [[InventoryController]] - `method` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[Res_4]] - `references` [EXTRACTED]
+- [[Res_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/inventorycontrollerts
+#graphify/code #graphify/EXTRACTED #community/InventoryService

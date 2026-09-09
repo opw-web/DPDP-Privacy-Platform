@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[@nestjsbullmq_1]] - `imports_from` [EXTRACTED]
 - [[@nestjscommon]] - `imports_from` [EXTRACTED]
-- [[@nestjstesting_1]] - `imports_from` [EXTRACTED]
+- [[@nestjstesting]] - `imports_from` [EXTRACTED]
 - [[AppModule]] - `imports` [EXTRACTED]
 - [[SYNC_QUEUE_NAME]] - `imports` [EXTRACTED]
 - [[SyncProcessor]] - `imports` [EXTRACTED]

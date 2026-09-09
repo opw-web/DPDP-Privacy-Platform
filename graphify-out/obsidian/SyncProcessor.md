@@ -12,9 +12,9 @@ tags:
 # SyncProcessor
 
 ## Connections
-- [[dot-constructor()_103]] - `method` [EXTRACTED]
-- [[dot-process()_10]] - `method` [EXTRACTED]
-- [[Processor_10]] - `references` [EXTRACTED]
+- [[dot-constructor()_69]] - `method` [EXTRACTED]
+- [[dot-process()_6]] - `method` [EXTRACTED]
+- [[Processor_6]] - `references` [EXTRACTED]
 - [[health-degraded.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[sync.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[sync.module.ts]] - `imports` [EXTRACTED]

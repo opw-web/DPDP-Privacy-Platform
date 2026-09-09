@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/principal-portal.e2e-spec.ts"
+source_file: "dpdp-platform/frontend/src/lib/auth.ts"
 type: "code"
-community: "AppModule"
-location: "L36"
+community: "@tanstack/react-query"
+location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AppModule
+  - community/tanstack/react-query
 ---
 
 # EmployeeSession
 
 ## Connections
-- [[ensurePermission()_10]] - `calls` [EXTRACTED]
-- [[principal-portal.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[EmployeeSummary]] - `inherits` [EXTRACTED]
+- [[libauth.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AppModule
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

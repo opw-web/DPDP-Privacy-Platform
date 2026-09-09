@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdatePurposeDto"
+community: "CreatePurposeDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdatePurposeDto
+  - community/CreatePurposeDto
 ---
 
 # IsEnum
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[UpdatePurposeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdatePurposeDto
+#graphify/code #graphify/EXTRACTED #community/CreatePurposeDto

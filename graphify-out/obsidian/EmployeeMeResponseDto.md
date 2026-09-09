@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/dto/employee-me-response.dto.ts"
 type: "code"
-community: "@prisma/client"
+community: ".me"
 location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/me
 ---
 
 # EmployeeMeResponseDto
 
 ## Connections
-- [[dot-me()_2]] - `references` [EXTRACTED]
-- [[ApiProperty_24]] - `references` [EXTRACTED]
+- [[dot-me()]] - `references` [EXTRACTED]
+- [[ApiProperty_20]] - `references` [EXTRACTED]
 - [[employee-auth.controller.ts]] - `imports` [EXTRACTED]
 - [[employee-me-response.dto.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prisma/client
+#graphify/code #graphify/EXTRACTED #community/me

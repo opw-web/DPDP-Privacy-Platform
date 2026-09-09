@@ -1,20 +1,25 @@
 ---
 type: community
-members: 7
+members: 12
 ---
 
 # SdfCycleScanService
 
-**Members:** 7 nodes
+**Members:** 12 nodes
 
 ## Members
-- [[dot-constructor()_87]] - code - dpdp-platform/backend/src/modules/sdf/sdf-cycle-scan.service.ts
+- [[dot-constructor()_53]] - code - dpdp-platform/backend/src/queues/sdf-cycle-scan.processor.ts
 - [[dot-findSdfManagerEmployeeIds()]] - code - dpdp-platform/backend/src/modules/sdf/sdf-cycle-scan.service.ts
-- [[dot-runForAllOrganizations()_2]] - code - dpdp-platform/backend/src/modules/sdf/sdf-cycle-scan.service.ts
-- [[dot-runForCurrentOrganization()_2]] - code - dpdp-platform/backend/src/modules/sdf/sdf-cycle-scan.service.ts
+- [[dot-process()_2]] - code - dpdp-platform/backend/src/queues/sdf-cycle-scan.processor.ts
+- [[dot-runForAllOrganizations()]] - code - dpdp-platform/backend/src/modules/sdf/sdf-cycle-scan.service.ts
+- [[dot-runForCurrentOrganization()]] - code - dpdp-platform/backend/src/modules/sdf/sdf-cycle-scan.service.ts
 - [[dot-sendWarningsIfDue()]] - code - dpdp-platform/backend/src/modules/sdf/sdf-cycle-scan.service.ts
-- [[Injectable_54]] - code
+- [[Injectable_31]] - code
+- [[Processor_2]] - code
+- [[SdfCycleScanJobData]] - code - dpdp-platform/backend/src/queues/sdf-cycle-scan.queue.ts
+- [[SdfCycleScanProcessor]] - code - dpdp-platform/backend/src/queues/sdf-cycle-scan.processor.ts
 - [[SdfCycleScanService]] - code - dpdp-platform/backend/src/modules/sdf/sdf-cycle-scan.service.ts
+- [[sdf-cycle-scan.processor.ts]] - code - dpdp-platform/backend/src/queues/sdf-cycle-scan.processor.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -24,19 +29,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_queues.module.ts]]
-- 3 edges to [[_COMMUNITY_PrismaService]]
-- 2 edges to [[_COMMUNITY_NotificationsService]]
+- 5 edges to [[_COMMUNITY_queues.module.ts]]
+- 4 edges to [[_COMMUNITY_PrismaService]]
+- 3 edges to [[_COMMUNITY_app.module.ts]]
+- 2 edges to [[_COMMUNITY_RetentionScanService]]
 - 1 edge to [[_COMMUNITY_AuditService]]
-- 1 edge to [[_COMMUNITY_compliance.service.ts]]
-- 1 edge to [[_COMMUNITY_@nestjscommon]]
-- 1 edge to [[_COMMUNITY_sdf-assessment.service.ts]]
+- 1 edge to [[_COMMUNITY_notifications.module.ts]]
 - 1 edge to [[_COMMUNITY_dot-record]]
-- 1 edge to [[_COMMUNITY_RetentionScanService]]
+- 1 edge to [[_COMMUNITY_@nestjscommon]]
 
 ## Top bridge nodes
-- [[dot-runForCurrentOrganization()_2]] - degree 7, connects to 4 communities
+- [[sdf-cycle-scan.processor.ts]] - degree 10, connects to 4 communities
 - [[SdfCycleScanService]] - degree 11, connects to 3 communities
-- [[dot-constructor()_87]] - degree 4, connects to 3 communities
+- [[dot-runForCurrentOrganization()]] - degree 7, connects to 3 communities
+- [[SdfCycleScanProcessor]] - degree 5, connects to 1 community
 - [[dot-sendWarningsIfDue()]] - degree 4, connects to 1 community
-- [[dot-runForAllOrganizations()_2]] - degree 3, connects to 1 community

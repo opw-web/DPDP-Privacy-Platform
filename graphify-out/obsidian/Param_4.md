@@ -1,19 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalActor"
+community: ".unmerge"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalActor
+  - community/unmerge
 ---
 
 # Param
 
 ## Connections
-- [[dot-cancelRequest()]] - `references` [EXTRACTED]
-- [[dot-commentOnRequest()]] - `references` [EXTRACTED]
-- [[dot-getPublishedNotice()]] - `references` [EXTRACTED]
-- [[dot-getRequest()]] - `references` [EXTRACTED]
+- [[dot-unmerge()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalActor
+#graphify/code #graphify/EXTRACTED #community/unmerge

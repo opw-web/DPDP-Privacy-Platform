@@ -1,22 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/notifications.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.service.ts"
 type: "code"
-community: "notifications.controller.ts"
-location: "L149"
+community: "CampaignsService"
+location: "L171"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationscontrollerts
+  - community/CampaignsService
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_33]] - `calls` [INFERRED]
-- [[dot-listMessages()_1]] - `calls` [INFERRED]
-- [[NotificationCallerActor]] - `references` [EXTRACTED]
-- [[NotificationsService]] - `method` [EXTRACTED]
-- [[ownershipWhere()]] - `calls` [EXTRACTED]
-- [[toPublicNotification()]] - `indirect_call` [INFERRED]
+- [[dot-list()_20]] - `calls` [INFERRED]
+- [[CampaignsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts
+#graphify/code #graphify/EXTRACTED #community/CampaignsService

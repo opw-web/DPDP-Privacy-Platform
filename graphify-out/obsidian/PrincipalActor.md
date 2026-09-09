@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/guards/jwt-principal.guard.ts"
 type: "code"
-community: "PrincipalActor"
+community: "Public"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalActor
+  - community/Public
 ---
 
 # PrincipalActor
@@ -19,11 +19,11 @@ tags:
 - [[dot-data()]] - `references` [EXTRACTED]
 - [[dot-getNomination()]] - `references` [EXTRACTED]
 - [[dot-getRequest()]] - `references` [EXTRACTED]
-- [[dot-list()_5]] - `references` [EXTRACTED]
+- [[dot-list()_37]] - `references` [EXTRACTED]
 - [[dot-listMessages()]] - `references` [EXTRACTED]
 - [[dot-listRequests()]] - `references` [EXTRACTED]
-- [[dot-me()]] - `references` [EXTRACTED]
 - [[dot-me()_1]] - `references` [EXTRACTED]
+- [[dot-me()_2]] - `references` [EXTRACTED]
 - [[dot-profile()]] - `references` [EXTRACTED]
 - [[dot-recipients()]] - `references` [EXTRACTED]
 - [[dot-setStatus()]] - `references` [EXTRACTED]
@@ -37,4 +37,4 @@ tags:
 - [[principal-auth.controller.ts]] - `imports` [EXTRACTED]
 - [[principal-auth.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalActor
+#graphify/code #graphify/EXTRACTED #community/Public

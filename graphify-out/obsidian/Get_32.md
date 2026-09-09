@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "access-report-render.ts"
+community: ".markRead"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-report-renderts
+  - community/markRead
 ---
 
 # Get
 
 ## Connections
-- [[dot-evidence()]] - `references` [EXTRACTED]
-- [[dot-evidencePdf()]] - `references` [EXTRACTED]
+- [[dot-list()_41]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-report-renderts
+#graphify/code #graphify/EXTRACTED #community/markRead

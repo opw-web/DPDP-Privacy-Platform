@@ -11,6 +11,6 @@ tags:
 # IsOptional
 
 ## Connections
-- [[EscalateRequestDto]] - `references` [EXTRACTED]
+- [[VerifyIdentityDto]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/VerifyIdentityDto

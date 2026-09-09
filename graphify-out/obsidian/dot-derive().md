@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/age.service.ts"
 type: "code"
-community: "AuditService"
+community: "ScopedTransactionClient"
 location: "L55"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/AuditService
+  - community/ScopedTransactionClient
 ---
 
 # .derive()
@@ -16,10 +16,10 @@ tags:
 - [[dot-mergeRecordIntoPrincipal()]] - `calls` [INFERRED]
 - [[dot-persistAndLink()]] - `calls` [INFERRED]
 - [[dot-record()_1]] - `calls` [INFERRED]
-- [[dot-unmerge()]] - `calls` [INFERRED]
+- [[dot-unmerge()_1]] - `calls` [INFERRED]
 - [[AgeService]] - `method` [EXTRACTED]
 - [[ScopedTransactionClient]] - `references` [EXTRACTED]
 - [[ageStatusFor()]] - `calls` [EXTRACTED]
 - [[compareNewest()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/AuditService
+#graphify/code #graphify/INFERRED #community/ScopedTransactionClient

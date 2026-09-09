@@ -1,19 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.controller.ts"
 type: "code"
-community: "notices.service.ts"
-location: "L266"
+community: "RequirePermission"
+location: "L56"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/noticesservicets
+  - community/RequirePermission
 ---
 
 # .listEligibleFields()
 
 ## Connections
 - [[dot-listEligibleFields()]] - `calls` [INFERRED]
-- [[NoticesService]] - `method` [EXTRACTED]
-- [[humanizeCanonicalField()]] - `calls` [EXTRACTED]
+- [[Get_20]] - `references` [EXTRACTED]
+- [[NoticesController]] - `method` [EXTRACTED]
+- [[Param_14]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/noticesservicets
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

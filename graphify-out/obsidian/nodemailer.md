@@ -1,17 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
-type: "code"
-community: "dependencies"
+type: "concept"
+community: "notifications.module.ts"
 location: "L45"
 tags:
-  - graphify/code
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/notificationsmodulets
 ---
 
 # nodemailer
 
 ## Connections
-- [[dependencies_1]] - `contains` [EXTRACTED]
+- [[backendpackage.json]] - `imports` [EXTRACTED]
+- [[mailer.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dependencies
+#graphify/concept #graphify/EXTRACTED #community/notificationsmodulets

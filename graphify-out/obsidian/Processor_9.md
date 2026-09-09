@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "queues.module.ts"
+community: "access-log-retention.processor.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/access-log-retentionprocessorts
 ---
 
 # Processor
 
 ## Connections
-- [[SdfCycleScanProcessor]] - `references` [EXTRACTED]
+- [[AccessLogRetentionProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/access-log-retentionprocessorts

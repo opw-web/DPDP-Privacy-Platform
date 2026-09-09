@@ -1,23 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/legal-hold.service.ts"
+source_file: "dpdp-platform/backend/src/modules/compliance/compliance.controller.ts"
 type: "code"
-community: "erasure-task.service.ts"
-location: "L56"
+community: "UpdateComplianceRuleDto"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/UpdateComplianceRuleDto
 ---
 
 # .create()
 
 ## Connections
-- [[dot-createLegalHold()]] - `calls` [INFERRED]
-- [[dot-record()_1]] - `calls` [INFERRED]
-- [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[CreateLegalHoldDto]] - `references` [EXTRACTED]
-- [[LegalHoldService]] - `method` [EXTRACTED]
-- [[legalHoldCovers()]] - `calls` [EXTRACTED]
-- [[lockRetentionWorkflow()]] - `calls` [EXTRACTED]
+- [[dot-create()_38]] - `calls` [INFERRED]
+- [[Body_1]] - `references` [EXTRACTED]
+- [[ComplianceController]] - `method` [EXTRACTED]
+- [[CreateComplianceRuleDto]] - `references` [EXTRACTED]
+- [[Post]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/UpdateComplianceRuleDto

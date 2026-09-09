@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "evidence-pack.service.ts"
+community: "DataSourcesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/evidence-packservicets
+  - community/DataSourcesService
 ---
 
 # Injectable
 
 ## Connections
-- [[EvidencePackService]] - `references` [EXTRACTED]
+- [[DataSourcesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/evidence-packservicets
+#graphify/code #graphify/EXTRACTED #community/DataSourcesService

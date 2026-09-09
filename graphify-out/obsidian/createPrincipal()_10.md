@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/principal-portal-mvp2.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/requests.e2e-spec.ts"
 type: "code"
-community: "AppModule"
-location: "L21"
+community: "@prisma/client"
+location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AppModule
+  - community/prisma/client
 ---
 
 # createPrincipal()
 
 ## Connections
-- [[principal-portal-mvp2.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[requests.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AppModule
+#graphify/code #graphify/EXTRACTED #community/prisma/client

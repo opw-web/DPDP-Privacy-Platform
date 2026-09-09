@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/consents/consents.controller.ts"
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
-location: "L19"
+community: "ConsentsService"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/ConsentsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[VoluntaryUndertakingsController]] - `method` [EXTRACTED]
-- [[VoluntaryUndertakingsService]] - `references` [EXTRACTED]
+- [[ConsentsController]] - `method` [EXTRACTED]
+- [[ConsentsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/ConsentsService

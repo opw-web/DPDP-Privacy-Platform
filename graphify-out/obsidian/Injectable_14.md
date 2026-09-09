@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "evidence-pack.service.ts"
+community: "MeRightsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/evidence-packservicets
+  - community/MeRightsService
 ---
 
 # Injectable
 
 ## Connections
-- [[RopaExportService]] - `references` [EXTRACTED]
+- [[MeRightsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/evidence-packservicets
+#graphify/code #graphify/EXTRACTED #community/MeRightsService

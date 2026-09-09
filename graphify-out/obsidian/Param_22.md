@@ -11,11 +11,11 @@ tags:
 # Param
 
 ## Connections
-- [[dot-discoverSchema()_2]] - `references` [EXTRACTED]
-- [[dot-get()_16]] - `references` [EXTRACTED]
+- [[dot-discoverSchema()_1]] - `references` [EXTRACTED]
+- [[dot-get()_17]] - `references` [EXTRACTED]
 - [[dot-listFields()]] - `references` [EXTRACTED]
-- [[dot-remove()_1]] - `references` [EXTRACTED]
-- [[dot-testConnection()_2]] - `references` [EXTRACTED]
-- [[dot-update()_20]] - `references` [EXTRACTED]
+- [[dot-remove()]] - `references` [EXTRACTED]
+- [[dot-testConnection()_1]] - `references` [EXTRACTED]
+- [[dot-update()_19]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/DataSourcesController

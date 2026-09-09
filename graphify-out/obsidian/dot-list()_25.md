@@ -1,18 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/board/voluntary-undertakings.service.ts"
+source_file: "dpdp-platform/backend/src/modules/principals/principals.service.ts"
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
-location: "L42"
+community: "principals.service.ts"
+location: "L75"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/principalsservicets
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_24]] - `calls` [INFERRED]
-- [[VoluntaryUndertakingsService]] - `method` [EXTRACTED]
+- [[dot-list()_13]] - `calls` [INFERRED]
+- [[dot-maskIfNeeded()]] - `calls` [INFERRED]
+- [[PrincipalsService]] - `method` [EXTRACTED]
+- [[buildPrincipalSearchQuery()]] - `calls` [EXTRACTED]
+- [[pickDisplayName()]] - `calls` [EXTRACTED]
+- [[resolveProvenance()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

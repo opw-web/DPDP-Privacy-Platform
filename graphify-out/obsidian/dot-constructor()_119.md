@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/health/health.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/recipients.controller.ts"
 type: "code"
-community: "health.service.ts"
-location: "L28"
+community: "CreateRecipientDto"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/healthservicets
+  - community/CreateRecipientDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[HealthService]] - `method` [EXTRACTED]
+- [[RecipientsController]] - `method` [EXTRACTED]
+- [[RecipientsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/healthservicets
+#graphify/code #graphify/EXTRACTED #community/CreateRecipientDto

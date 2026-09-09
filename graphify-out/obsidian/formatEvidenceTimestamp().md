@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/evidence-timestamp.ts"
 type: "code"
-community: "evidence-pack.service.ts"
+community: "formatEvidenceTimestamp"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/evidence-packservicets
+  - community/formatEvidenceTimestamp
 ---
 
 # formatEvidenceTimestamp()
@@ -17,4 +17,4 @@ tags:
 - [[evidence-timestamp.spec.ts]] - `imports` [EXTRACTED]
 - [[evidence-timestamp.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/evidence-packservicets
+#graphify/code #graphify/EXTRACTED #community/formatEvidenceTimestamp

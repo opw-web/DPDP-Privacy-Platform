@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/data-sources/source-purposes.service.ts"
 type: "code"
-community: "mappings.service.ts"
+community: "data-sources.service.ts"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingsservicets
+  - community/data-sourcesservicets
 ---
 
 # ReplacePurposesResult
@@ -16,4 +16,4 @@ tags:
 - [[PublicPurpose]] - `references` [EXTRACTED]
 - [[source-purposes.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets

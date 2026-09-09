@@ -1,18 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/erasure-task.service.ts"
+source_file: "dpdp-platform/backend/src/modules/audit/audit-read.service.ts"
 type: "code"
-community: "RetentionController"
-location: "L482"
+community: "MaskingService"
+location: "L157"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionController
+  - community/MaskingService
 ---
 
 # .list()
 
 ## Connections
-- [[dot-listTasks()]] - `calls` [INFERRED]
-- [[ErasureTaskService]] - `method` [EXTRACTED]
+- [[dot-buildWhere()]] - `calls` [EXTRACTED]
+- [[dot-hasFullPersonalDataAccess()]] - `calls` [INFERRED]
+- [[dot-list()_6]] - `calls` [INFERRED]
+- [[AuditReadService]] - `method` [EXTRACTED]
+- [[ListAuditEventsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionController
+#graphify/code #graphify/EXTRACTED #community/MaskingService

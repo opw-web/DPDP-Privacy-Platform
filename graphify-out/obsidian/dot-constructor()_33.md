@@ -1,19 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sync.queue.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/permissions.controller.ts"
 type: "code"
-community: "sync-lock.service.ts"
-location: "L68"
+community: "PermissionsController"
+location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sync-lockservicets
+  - community/PermissionsController
 ---
 
 # .constructor()
 
 ## Connections
-- [[InjectQueue]] - `references` [EXTRACTED]
-- [[SyncLockService]] - `references` [EXTRACTED]
-- [[SyncQueueService]] - `method` [EXTRACTED]
+- [[PermissionsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sync-lockservicets
+#graphify/code #graphify/EXTRACTED #community/PermissionsController

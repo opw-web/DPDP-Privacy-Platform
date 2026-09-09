@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/refresh-rotation.util.ts"
 type: "code"
-community: "employee-auth.service.ts"
+community: "token.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employee-authservicets
+  - community/tokenservicets
 ---
 
 # refresh-rotation.util.ts
@@ -23,4 +23,4 @@ tags:
 - [[rotateRefreshToken()]] - `contains` [EXTRACTED]
 - [[scoped-transaction-client.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employee-authservicets
+#graphify/code #graphify/EXTRACTED #community/tokenservicets

@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "retention.service.ts"
+community: "UpdateRolePermissionsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/UpdateRolePermissionsDto
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_35]] - `references` [EXTRACTED]
-- [[dot-update()_25]] - `references` [EXTRACTED]
+- [[dot-replacePermissions()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto

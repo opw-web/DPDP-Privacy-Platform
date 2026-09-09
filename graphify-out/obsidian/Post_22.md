@@ -1,21 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: ".record"
+community: "DataSourcesController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/DataSourcesController
 ---
 
 # Post
 
 ## Connections
-- [[dot-addAffected()_1]] - `references` [EXTRACTED]
-- [[dot-completeObligation()_1]] - `references` [EXTRACTED]
-- [[dot-create()_32]] - `references` [EXTRACTED]
-- [[dot-extension()]] - `references` [EXTRACTED]
-- [[dot-notify()]] - `references` [EXTRACTED]
-- [[dot-previewAffected()_1]] - `references` [EXTRACTED]
+- [[dot-create()_28]] - `references` [EXTRACTED]
+- [[dot-discoverSchema()_1]] - `references` [EXTRACTED]
+- [[dot-testConnection()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/DataSourcesController

@@ -1,25 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/breaches/breaches.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/recipients.service.ts"
 type: "code"
-community: ".record"
-location: "L71"
+community: "CreateRecipientDto"
+location: "L167"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/CreateRecipientDto
 ---
 
 # .update()
 
 ## Connections
+- [[dot-assertProcessorRule()]] - `calls` [EXTRACTED]
+- [[dot-record()_1]] - `calls` [INFERRED]
 - [[dot-update()_21]] - `calls` [INFERRED]
-- [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[Actor]] - `references` [EXTRACTED]
-- [[Body_21]] - `references` [EXTRACTED]
-- [[BreachesController]] - `method` [EXTRACTED]
-- [[Param_24]] - `references` [EXTRACTED]
-- [[Patch_11]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[UpdateBreachDto]] - `references` [EXTRACTED]
+- [[RecipientsService]] - `method` [EXTRACTED]
+- [[UpdateRecipientDto]] - `references` [EXTRACTED]
+- [[duplicateNameMessage()_1]] - `calls` [EXTRACTED]
+- [[isUniqueConstraintViolation()_5]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/CreateRecipientDto

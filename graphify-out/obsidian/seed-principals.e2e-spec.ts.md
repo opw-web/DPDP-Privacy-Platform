@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/seed-principals.e2e-spec.ts"
 type: "code"
-community: "argon2"
+community: "seed.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/argon2
+  - community/seedts
 ---
 
 # seed-principals.e2e-spec.ts
@@ -23,4 +23,4 @@ tags:
 - [[runSeedPrincipals()]] - `imports` [EXTRACTED]
 - [[seed-principals.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/argon2
+#graphify/code #graphify/EXTRACTED #community/seedts

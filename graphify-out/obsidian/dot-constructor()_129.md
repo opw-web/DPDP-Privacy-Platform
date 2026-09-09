@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/common/mail/mailer.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/retention.controller.ts"
 type: "code"
-community: "mailer.service.ts"
-location: "L40"
+community: "CreateRetentionPolicyDto"
+location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mailerservicets
+  - community/CreateRetentionPolicyDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[MailerService]] - `method` [EXTRACTED]
+- [[RetentionController_1]] - `method` [EXTRACTED]
+- [[RetentionService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mailerservicets
+#graphify/code #graphify/EXTRACTED #community/CreateRetentionPolicyDto

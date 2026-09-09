@@ -12,10 +12,10 @@ tags:
 # SdfGapsService
 
 ## Connections
-- [[dot-constructor()_80]] - `references` [EXTRACTED]
-- [[dot-constructor()_81]] - `method` [EXTRACTED]
+- [[dot-constructor()_29]] - `references` [EXTRACTED]
+- [[dot-constructor()_30]] - `method` [EXTRACTED]
 - [[dot-getGaps()_2]] - `method` [EXTRACTED]
-- [[Injectable_50]] - `references` [EXTRACTED]
+- [[Injectable_20]] - `references` [EXTRACTED]
 - [[sdf-gaps.service.ts]] - `contains` [EXTRACTED]
 - [[sdf.controller.ts]] - `imports` [EXTRACTED]
 - [[sdf.module.ts]] - `imports` [EXTRACTED]

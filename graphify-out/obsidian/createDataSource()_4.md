@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/registers.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/sync.e2e-spec.ts"
 type: "code"
-community: "AppModule"
-location: "L165"
+community: "sync.e2e-spec.ts"
+location: "L187"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AppModule
+  - community/synce2e-spects
 ---
 
 # createDataSource()
 
 ## Connections
-- [[authed()_3]] - `calls` [EXTRACTED]
-- [[registers.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[sync.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[tenant()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AppModule
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

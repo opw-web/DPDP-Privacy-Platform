@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/prisma/seed/compliance-rules.ts"
 type: "code"
-community: "argon2"
+community: "PrismaService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/argon2
+  - community/PrismaService
 ---
 
 # compliance-rules.ts
@@ -21,7 +21,7 @@ tags:
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[sdf.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[seed.ts]] - `imports_from` [EXTRACTED]
-- [[seedComplianceRules()]] - `contains` [EXTRACTED]
+- [[seedComplianceRules()_1]] - `contains` [EXTRACTED]
 - [[seedGrievanceStatutoryBaseline()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/argon2
+#graphify/code #graphify/EXTRACTED #community/PrismaService

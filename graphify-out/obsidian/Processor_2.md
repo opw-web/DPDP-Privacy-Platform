@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "canonicalJson"
+community: "SdfCycleScanService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/canonicalJson
+  - community/SdfCycleScanService
 ---
 
 # Processor
 
 ## Connections
-- [[AuditChainVerifyProcessor]] - `references` [EXTRACTED]
+- [[SdfCycleScanProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/canonicalJson
+#graphify/code #graphify/EXTRACTED #community/SdfCycleScanService

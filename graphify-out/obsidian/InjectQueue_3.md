@@ -11,6 +11,6 @@ tags:
 # InjectQueue
 
 ## Connections
-- [[dot-constructor()_75]] - `references` [EXTRACTED]
+- [[dot-constructor()_39]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/SyncQueueService

@@ -1,25 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/notifications.service.ts"
+source_file: "dpdp-platform/backend/src/common/mail/mailer.service.ts"
 type: "code"
-community: "NotificationsService"
-location: "L82"
+community: "notifications.module.ts"
+location: "L62"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/NotificationsService
+  - graphify/EXTRACTED
+  - community/notificationsmodulets
 ---
 
 # .send()
 
 ## Connections
-- [[dot-assertValidInput()]] - `calls` [EXTRACTED]
-- [[dot-deliverEmailBestEffort()]] - `calls` [EXTRACTED]
-- [[dot-runVerificationCycle()]] - `calls` [INFERRED]
-- [[dot-scanClock()]] - `calls` [INFERRED]
-- [[dot-scanOrgDeadlines()]] - `calls` [INFERRED]
-- [[dot-send()_2]] - `calls` [INFERRED]
-- [[dot-sendWarningsIfDue()]] - `calls` [INFERRED]
-- [[NotificationSendInput]] - `references` [EXTRACTED]
-- [[NotificationsService]] - `method` [EXTRACTED]
+- [[dot-getTransporter()]] - `calls` [EXTRACTED]
+- [[dot-send()_5]] - `calls` [INFERRED]
+- [[MailerService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/notificationsmodulets

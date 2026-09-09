@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/assembly.e2e-spec.ts"
 type: "code"
-community: "AppModule"
+community: "ScopedTransactionClient"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AppModule
+  - community/ScopedTransactionClient
 ---
 
 # organization()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[assembly.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AppModule
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

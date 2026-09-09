@@ -44,9 +44,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_@prismaclient]]
+- 4 edges to [[_COMMUNITY_@nestjsswagger]]
 - 2 edges to [[_COMMUNITY_PrismaService]]
-- 2 edges to [[_COMMUNITY_@nestjscommon]]
+- 2 edges to [[_COMMUNITY_app.module.ts]]
 - 2 edges to [[_COMMUNITY_RequirePermission]]
 - 1 edge to [[_COMMUNITY_AuditService]]
 - 1 edge to [[_COMMUNITY_dot-record]]

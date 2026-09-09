@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/support/e2e-harness.ts"
 type: "code"
-community: "PrismaService"
+community: "supertest"
 location: "L190"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/supertest
 ---
 
 # cleanupOrgs()
@@ -31,4 +31,4 @@ tags:
 - [[sdf.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[templates.e2e-spec.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/supertest

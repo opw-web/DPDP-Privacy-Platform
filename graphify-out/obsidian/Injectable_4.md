@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AccessReportService"
+community: "@nestjs/common"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessReportService
+  - community/nestjs/common
 ---
 
 # Injectable
 
 ## Connections
-- [[LineageService]] - `references` [EXTRACTED]
+- [[NotificationsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessReportService
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/evidence.e2e-spec.ts"
 type: "code"
-community: "PrismaService"
+community: "supertest"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/supertest
 ---
 
 # evidence.e2e-spec.ts
@@ -25,10 +25,10 @@ tags:
 - [[bootstrapTestApp()]] - `imports` [EXTRACTED]
 - [[bufferBinaryResponse()]] - `contains` [EXTRACTED]
 - [[cleanupOrgs()]] - `imports` [EXTRACTED]
-- [[createOrgWithEmployee()]] - `imports` [EXTRACTED]
+- [[createOrgWithEmployee()_1]] - `imports` [EXTRACTED]
 - [[createPrincipal()_2]] - `contains` [EXTRACTED]
 - [[e2e-harness.ts]] - `imports_from` [EXTRACTED]
-- [[ensurePermission()]] - `imports` [EXTRACTED]
+- [[ensurePermission()_1]] - `imports` [EXTRACTED]
 - [[extractPdfText()]] - `contains` [EXTRACTED]
 - [[parseStoreZip()]] - `contains` [EXTRACTED]
 - [[principal-evidence-render.ts]] - `imports_from` [EXTRACTED]
@@ -41,4 +41,4 @@ tags:
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 - [[tenantStoreFor()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/supertest

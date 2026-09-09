@@ -1,21 +1,17 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
-type: "concept"
-community: "access-report-render.ts"
+type: "code"
+community: "dependencies"
 location: "L46"
 tags:
-  - graphify/concept
+  - graphify/code
   - graphify/EXTRACTED
-  - community/access-report-renderts
+  - community/dependencies
 ---
 
 # pdfkit
 
 ## Connections
-- [[access-report-render.ts]] - `imports_from` [EXTRACTED]
-- [[backendpackage.json]] - `imports` [EXTRACTED]
-- [[breach-render.ts]] - `imports_from` [EXTRACTED]
-- [[pdf-utils.ts]] - `imports_from` [EXTRACTED]
-- [[principal-evidence-render.ts]] - `imports_from` [EXTRACTED]
+- [[dependencies_1]] - `contains` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/access-report-renderts
+#graphify/code #graphify/EXTRACTED #community/dependencies

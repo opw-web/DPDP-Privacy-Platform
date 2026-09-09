@@ -12,7 +12,7 @@ tags:
 # .validateVerifiedCustomerId()
 
 ## Connections
-- [[dot-replace()_1]] - `calls` [EXTRACTED]
+- [[dot-replace()]] - `calls` [EXTRACTED]
 - [[MappingsService]] - `method` [EXTRACTED]
 - [[ReplaceMappingsDto]] - `references` [EXTRACTED]
 

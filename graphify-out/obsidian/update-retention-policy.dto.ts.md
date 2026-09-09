@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/dto/update-retention-policy.dto.ts"
 type: "code"
-community: "retention.service.ts"
+community: "@nestjs/swagger"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/nestjs/swagger
 ---
 
 # update-retention-policy.dto.ts
@@ -22,4 +22,4 @@ tags:
 - [[registersretention.controller.ts]] - `imports_from` [EXTRACTED]
 - [[retention.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/nestjs/swagger

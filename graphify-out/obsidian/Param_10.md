@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "CompleteSdfAssessmentDto"
+community: "TemplatesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CompleteSdfAssessmentDto
+  - community/TemplatesService
 ---
 
 # Param
 
 ## Connections
-- [[dot-completeAssessment()]] - `references` [EXTRACTED]
-- [[dot-updateAlgorithm()]] - `references` [EXTRACTED]
+- [[dot-get()_6]] - `references` [EXTRACTED]
+- [[dot-preview()]] - `references` [EXTRACTED]
+- [[dot-update()_8]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CompleteSdfAssessmentDto
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

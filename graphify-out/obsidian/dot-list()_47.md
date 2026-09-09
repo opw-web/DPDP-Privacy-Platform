@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/registers/retention.service.ts"
 type: "code"
-community: "retention.service.ts"
+community: "CreateRetentionPolicyDto"
 location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/CreateRetentionPolicyDto
 ---
 
 # .list()
@@ -15,4 +15,4 @@ tags:
 - [[dot-list()_46]] - `calls` [INFERRED]
 - [[RetentionService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/CreateRetentionPolicyDto

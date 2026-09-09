@@ -1,20 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/breach-principal-notice-dispatch.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/sync.processor.ts"
 type: "code"
-community: "breach-principal-notice-dispatch.processor.ts"
-location: "L44"
+community: "SyncPipelineService"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breach-principal-notice-dispatchprocessorts
+  - community/SyncPipelineService
 ---
 
 # .process()
 
 ## Connections
-- [[dot-dispatchPrincipalNoticeCampaign()]] - `calls` [INFERRED]
-- [[dot-recoverPendingCampaignRecipients()]] - `calls` [EXTRACTED]
-- [[BreachPrincipalNoticeDispatchJobData]] - `references` [EXTRACTED]
-- [[BreachPrincipalNoticeDispatchProcessor]] - `method` [EXTRACTED]
+- [[dot-run()]] - `calls` [INFERRED]
+- [[SyncJobData]] - `references` [EXTRACTED]
+- [[SyncProcessor]] - `method` [EXTRACTED]
+- [[SyncRunSummary]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breach-principal-notice-dispatchprocessorts
+#graphify/code #graphify/EXTRACTED #community/SyncPipelineService

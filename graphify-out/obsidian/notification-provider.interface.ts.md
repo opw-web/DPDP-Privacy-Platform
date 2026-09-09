@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notifications/notification-provider.interface.ts"
 type: "code"
-community: "notifications.service.ts"
+community: "notifications.module.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationsservicets
+  - community/notificationsmodulets
 ---
 
 # notification-provider.interface.ts
@@ -27,4 +27,4 @@ tags:
 - [[pre-erasure-notice.service.ts]] - `imports_from` [EXTRACTED]
 - [[smtp.provider.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationsservicets
+#graphify/code #graphify/EXTRACTED #community/notificationsmodulets

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalActor"
+community: "Public"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalActor
+  - community/Public
 ---
 
 # ApiExtraModels
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-profile()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalActor
+#graphify/code #graphify/EXTRACTED #community/Public

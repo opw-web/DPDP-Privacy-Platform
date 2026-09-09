@@ -12,7 +12,7 @@ tags:
 # isUniqueConstraintViolation()
 
 ## Connections
-- [[dot-replace()_1]] - `calls` [EXTRACTED]
+- [[dot-replace()]] - `calls` [EXTRACTED]
 - [[mappings.service.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/ReplaceMappingsDto

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "inventory.controller.ts"
+community: "SdfController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/inventorycontrollerts
+  - community/SdfController
 ---
 
 # ApiTags
 
 ## Connections
-- [[InventoryController]] - `references` [EXTRACTED]
+- [[SdfController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/inventorycontrollerts
+#graphify/code #graphify/EXTRACTED #community/SdfController

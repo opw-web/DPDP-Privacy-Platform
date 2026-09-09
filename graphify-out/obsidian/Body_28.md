@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalAuthController"
+community: "CreateRetentionPolicyDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalAuthController
+  - community/CreateRetentionPolicyDto
 ---
 
 # Body
 
 ## Connections
-- [[dot-login()_3]] - `references` [EXTRACTED]
+- [[dot-create()_34]] - `references` [EXTRACTED]
+- [[dot-update()_23]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalAuthController
+#graphify/code #graphify/EXTRACTED #community/CreateRetentionPolicyDto

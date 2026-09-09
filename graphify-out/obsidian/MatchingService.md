@@ -1,22 +1,22 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/matching.service.ts"
 type: "code"
-community: "matching.service.ts"
+community: "ScopedTransactionClient"
 location: "L187"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/matchingservicets
+  - community/ScopedTransactionClient
 ---
 
 # MatchingService
 
 ## Connections
-- [[dot-constructor()_53]] - `references` [EXTRACTED]
+- [[dot-constructor()_111]] - `references` [EXTRACTED]
 - [[dot-match()]] - `method` [EXTRACTED]
 - [[dot-resolveSignal()]] - `method` [EXTRACTED]
 - [[dot-supportingCandidates()]] - `method` [EXTRACTED]
-- [[Injectable_79]] - `references` [EXTRACTED]
+- [[Injectable_67]] - `references` [EXTRACTED]
 - [[createService()]] - `calls` [EXTRACTED]
 - [[identity-matching.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[identity.module.ts]] - `imports` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[merge-unmerge.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[sync-pipeline.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/matchingservicets
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

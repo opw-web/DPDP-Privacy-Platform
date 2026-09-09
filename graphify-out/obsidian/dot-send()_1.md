@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/providers/console.provider.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/notification-provider.interface.ts"
 type: "code"
-community: "NotificationsService"
-location: "L23"
+community: "notifications.module.ts"
+location: "L86"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/notificationsmodulets
 ---
 
 # .send()
 
 ## Connections
-- [[ConsoleProvider]] - `method` [EXTRACTED]
-- [[NotificationSendInput]] - `references` [EXTRACTED]
-- [[NotificationSendResult]] - `references` [EXTRACTED]
+- [[dot-deliverEmailBestEffort()]] - `calls` [INFERRED]
+- [[NotificationProvider]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/notificationsmodulets

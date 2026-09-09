@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Make the generated Obsidian vault safe to check out and unzip on Windows.…]] - `rationale_for` [EXTRACTED]
-- [[main()_1]] - `contains` [EXTRACTED]
+- [[main()_4]] - `contains` [EXTRACTED]
 - [[relink()]] - `contains` [EXTRACTED]
 - [[rename_target()]] - `contains` [EXTRACTED]
 - [[shorten()]] - `contains` [EXTRACTED]

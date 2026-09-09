@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-listRecipients()_1]] - `calls` [INFERRED]
 - [[CampaignsController]] - `method` [EXTRACTED]
-- [[Get_21]] - `references` [EXTRACTED]
-- [[Param_12]] - `references` [EXTRACTED]
+- [[Get_19]] - `references` [EXTRACTED]
+- [[Param_13]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/RequirePermission

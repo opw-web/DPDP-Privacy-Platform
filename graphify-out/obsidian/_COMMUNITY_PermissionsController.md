@@ -8,11 +8,11 @@ members: 6
 **Members:** 6 nodes
 
 ## Members
-- [[dot-constructor()_54]] - code - dpdp-platform/backend/src/modules/employees/permissions.controller.ts
-- [[dot-list()_13]] - code - dpdp-platform/backend/src/modules/employees/permissions.controller.ts
-- [[ApiTags_14]] - code
-- [[Controller_15]] - code
-- [[Get_16]] - code
+- [[dot-constructor()_33]] - code - dpdp-platform/backend/src/modules/employees/permissions.controller.ts
+- [[dot-list()_16]] - code - dpdp-platform/backend/src/modules/employees/permissions.controller.ts
+- [[ApiTags_13]] - code
+- [[Controller_14]] - code
+- [[Get_14]] - code
 - [[PermissionsController]] - code - dpdp-platform/backend/src/modules/employees/permissions.controller.ts
 
 ## Live Query (requires Dataview plugin)
@@ -23,9 +23,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_RequirePermission]]
-- 1 edge to [[_COMMUNITY_@nestjscommon]]
+- 1 edge to [[_COMMUNITY_app.module.ts]]
+- 1 edge to [[_COMMUNITY_@nestjsswagger]]
+- 1 edge to [[_COMMUNITY_RequirePermission]]
 
 ## Top bridge nodes
 - [[PermissionsController]] - degree 6, connects to 2 communities
-- [[dot-list()_13]] - degree 3, connects to 1 community
+- [[dot-list()_16]] - degree 3, connects to 1 community

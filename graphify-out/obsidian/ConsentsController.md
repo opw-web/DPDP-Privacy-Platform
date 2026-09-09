@@ -12,7 +12,7 @@ tags:
 # ConsentsController
 
 ## Connections
-- [[dot-constructor()_112]] - `method` [EXTRACTED]
+- [[dot-constructor()_85]] - `method` [EXTRACTED]
 - [[dot-getConsentStats()]] - `method` [EXTRACTED]
 - [[dot-listForPrincipal()_1]] - `method` [EXTRACTED]
 - [[dot-recordImportedConsent()]] - `method` [EXTRACTED]

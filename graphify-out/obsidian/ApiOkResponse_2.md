@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "RequirePermission"
+community: "ReplaceMappingsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/ReplaceMappingsDto
 ---
 
 # ApiOkResponse
 
 ## Connections
-- [[dot-me()_2]] - `references` [EXTRACTED]
+- [[dot-getMappings()]] - `references` [EXTRACTED]
+- [[dot-getPurposes()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/ReplaceMappingsDto

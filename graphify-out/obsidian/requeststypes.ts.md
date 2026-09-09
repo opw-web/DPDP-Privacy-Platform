@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/requests/types.ts"
 type: "code"
-community: "RequestDetailPage.tsx"
+community: "card.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestDetailPagetsx
+  - community/cardtsx
 ---
 
 # requests/types.ts
@@ -22,9 +22,9 @@ tags:
 - [[RequestPrincipal]] - `contains` [EXTRACTED]
 - [[RequestRecord]] - `contains` [EXTRACTED]
 - [[RequestStatus]] - `contains` [EXTRACTED]
-- [[RequestType_1]] - `contains` [EXTRACTED]
+- [[RequestType]] - `contains` [EXTRACTED]
 - [[RequestWorkPanel.tsx]] - `imports_from` [EXTRACTED]
 - [[RequestsPage.tsx]] - `imports_from` [EXTRACTED]
 - [[RulePanel.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/cardtsx

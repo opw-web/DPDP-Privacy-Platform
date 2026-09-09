@@ -12,7 +12,7 @@ tags:
 # .extractAndValidateVariables()
 
 ## Connections
-- [[dot-create()_24]] - `calls` [EXTRACTED]
+- [[dot-create()_25]] - `calls` [EXTRACTED]
 - [[CampaignsService]] - `method` [EXTRACTED]
 - [[TemplateVariableName]] - `references` [EXTRACTED]
 - [[extractTemplateVariables()]] - `calls` [EXTRACTED]

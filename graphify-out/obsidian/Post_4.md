@@ -1,18 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalActor"
+community: "AddNoteDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalActor
+  - community/AddNoteDto
 ---
 
 # Post
 
 ## Connections
-- [[dot-cancelRequest()]] - `references` [EXTRACTED]
-- [[dot-commentOnRequest()]] - `references` [EXTRACTED]
-- [[dot-createRequest()]] - `references` [EXTRACTED]
+- [[dot-addNote()]] - `references` [EXTRACTED]
+- [[dot-assign()_1]] - `references` [EXTRACTED]
+- [[dot-changeStatus()]] - `references` [EXTRACTED]
+- [[dot-escalate()_1]] - `references` [EXTRACTED]
+- [[dot-flagFrivolous()]] - `references` [EXTRACTED]
+- [[dot-verifyIdentity()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalActor
+#graphify/code #graphify/EXTRACTED #community/AddNoteDto

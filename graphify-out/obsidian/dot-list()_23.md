@@ -1,20 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/candidates.service.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/erasure-task.service.ts"
 type: "code"
-community: "CandidatesService"
-location: "L130"
+community: "RequirePermission"
+location: "L482"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CandidatesService
+  - community/RequirePermission
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_22]] - `calls` [INFERRED]
-- [[CandidatesService]] - `method` [EXTRACTED]
-- [[isoDate()]] - `calls` [EXTRACTED]
-- [[recordValueFor()]] - `calls` [EXTRACTED]
+- [[dot-listTasks()]] - `calls` [INFERRED]
+- [[ErasureTaskService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CandidatesService
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

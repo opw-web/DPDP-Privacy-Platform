@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principal-portal/me-rights.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/roles.controller.ts"
 type: "code"
-community: "MeRightsService"
-location: "L29"
+community: "UpdateRolePermissionsDto"
+location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeRightsService
+  - community/UpdateRolePermissionsDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[MeRightsController]] - `method` [EXTRACTED]
-- [[MeRightsService]] - `references` [EXTRACTED]
+- [[RolesController]] - `method` [EXTRACTED]
+- [[RolesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeRightsService
+#graphify/code #graphify/EXTRACTED #community/UpdateRolePermissionsDto

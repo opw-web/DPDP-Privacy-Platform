@@ -1,20 +1,25 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/connector.factory.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
 type: "code"
-community: "data-sources.service.ts"
-location: "L40"
+community: "DataSourcesService"
+location: "L230"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesservicets
+  - community/DataSourcesService
 ---
 
 # .create()
 
 ## Connections
-- [[dot-buildConnector()]] - `calls` [INFERRED]
-- [[Connector]] - `references` [EXTRACTED]
-- [[ConnectorFactory]] - `method` [EXTRACTED]
-- [[RestApiConnector]] - `calls` [EXTRACTED]
+- [[dot-assertPubliclyAvailableJustified()]] - `calls` [EXTRACTED]
+- [[dot-create()_28]] - `calls` [INFERRED]
+- [[dot-encrypt()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-scheduleSync()]] - `calls` [EXTRACTED]
+- [[CreateDataSourceDto]] - `references` [EXTRACTED]
+- [[DataSourcesService]] - `method` [EXTRACTED]
+- [[duplicateNameMessage()]] - `calls` [EXTRACTED]
+- [[isUniqueConstraintViolation()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets
+#graphify/code #graphify/EXTRACTED #community/DataSourcesService

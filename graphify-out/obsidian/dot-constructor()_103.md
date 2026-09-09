@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sync.processor.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
 type: "code"
-community: "queues.module.ts"
-location: "L46"
+community: "rest-api.connector.ts"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/rest-apiconnectorts
 ---
 
 # .constructor()
 
 ## Connections
-- [[SyncPipelineService]] - `references` [EXTRACTED]
-- [[SyncProcessor]] - `method` [EXTRACTED]
+- [[UnsupportedPaginationStyleError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts

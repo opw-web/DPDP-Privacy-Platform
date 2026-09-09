@@ -1,17 +1,18 @@
 ---
-source_file: "demo-company-server/src/seed/rng.ts"
+source_file: "dpdp-platform/backend/src/modules/evidence/audit-export.service.ts"
 type: "code"
-community: "generateDataset"
-location: "L10"
+community: "AuditService"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/generateDataset
+  - community/AuditService
 ---
 
 # .constructor()
 
 ## Connections
-- [[Rng]] - `method` [EXTRACTED]
+- [[AuditExportService]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/generateDataset
+#graphify/code #graphify/EXTRACTED #community/AuditService

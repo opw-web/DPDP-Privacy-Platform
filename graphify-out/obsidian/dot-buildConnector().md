@@ -12,11 +12,11 @@ tags:
 # .buildConnector()
 
 ## Connections
-- [[dot-create()_5]] - `calls` [INFERRED]
+- [[dot-create()_30]] - `calls` [INFERRED]
 - [[dot-decrypt()]] - `calls` [INFERRED]
-- [[dot-discoverSchema()_1]] - `calls` [EXTRACTED]
+- [[dot-discoverSchema()]] - `calls` [EXTRACTED]
 - [[dot-runInTenantContext()]] - `calls` [INFERRED]
-- [[dot-testConnection()_1]] - `calls` [EXTRACTED]
+- [[dot-testConnection()]] - `calls` [EXTRACTED]
 - [[Connector]] - `references` [EXTRACTED]
 - [[DataSourcesService]] - `method` [EXTRACTED]
 

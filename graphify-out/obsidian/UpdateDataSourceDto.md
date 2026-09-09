@@ -12,14 +12,14 @@ tags:
 # UpdateDataSourceDto
 
 ## Connections
-- [[dot-update()_20]] - `references` [EXTRACTED]
-- [[dot-update()_7]] - `references` [EXTRACTED]
+- [[dot-update()_19]] - `references` [EXTRACTED]
+- [[dot-update()_3]] - `references` [EXTRACTED]
 - [[ApiPropertyOptional_15]] - `references` [EXTRACTED]
 - [[IsBoolean_8]] - `references` [EXTRACTED]
 - [[IsEnum_8]] - `references` [EXTRACTED]
 - [[IsInt_3]] - `references` [EXTRACTED]
-- [[IsOptional_16]] - `references` [EXTRACTED]
-- [[IsString_18]] - `references` [EXTRACTED]
+- [[IsOptional_15]] - `references` [EXTRACTED]
+- [[IsString_19]] - `references` [EXTRACTED]
 - [[Min_3]] - `references` [EXTRACTED]
 - [[MinLength_13]] - `references` [EXTRACTED]
 - [[data-sources.controller.ts]] - `imports` [EXTRACTED]

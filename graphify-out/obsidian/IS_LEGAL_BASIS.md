@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/RuleBasisChip.tsx"
 type: "code"
-community: "DateTime.tsx"
+community: "card.tsx"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DateTimetsx
+  - community/cardtsx
 ---
 
 # IS_LEGAL_BASIS
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[RuleBasisChip.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DateTimetsx
+#graphify/code #graphify/EXTRACTED #community/cardtsx

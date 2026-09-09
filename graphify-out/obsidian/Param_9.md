@@ -1,18 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "TemplatesService"
+community: "principals.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/principalscontrollerts
 ---
 
 # Param
 
 ## Connections
-- [[dot-get()_7]] - `references` [EXTRACTED]
-- [[dot-preview()]] - `references` [EXTRACTED]
-- [[dot-update()_10]] - `references` [EXTRACTED]
+- [[dot-detail()]] - `references` [EXTRACTED]
+- [[dot-lineage()]] - `references` [EXTRACTED]
+- [[dot-recipients()_1]] - `references` [EXTRACTED]
+- [[dot-sourceRecords()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/principalscontrollerts

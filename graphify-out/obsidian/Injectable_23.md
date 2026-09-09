@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateTransferDto"
+community: "SyncQueueService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTransferDto
+  - community/SyncQueueService
 ---
 
 # Injectable
 
 ## Connections
-- [[TransfersService]] - `references` [EXTRACTED]
+- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTransferDto
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

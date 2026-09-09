@@ -1,18 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/transfers.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync.controller.ts"
 type: "code"
-community: "CreateTransferDto"
-location: "L50"
+community: "SyncService"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTransferDto
+  - community/SyncService
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_8]] - `calls` [INFERRED]
-- [[TransfersService]] - `method` [EXTRACTED]
+- [[dot-listJobs()]] - `calls` [INFERRED]
+- [[Get_9]] - `references` [EXTRACTED]
+- [[ListSyncJobsQueryDto]] - `references` [EXTRACTED]
+- [[Query_3]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[SyncJobsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTransferDto
+#graphify/code #graphify/EXTRACTED #community/SyncService

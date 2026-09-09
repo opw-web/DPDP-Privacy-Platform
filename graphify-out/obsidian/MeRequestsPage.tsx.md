@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeRequestsPage.tsx"
 type: "code"
-community: "react-router-dom"
+community: "router.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react-router-dom
+  - community/routertsx
 ---
 
 # MeRequestsPage.tsx
@@ -30,7 +30,7 @@ tags:
 - [[MeRequestsPage.test.tsx]] - `imports_from` [EXTRACTED]
 - [[PortalPageHeader()]] - `imports` [EXTRACTED]
 - [[PortalPageHeader.tsx]] - `imports_from` [EXTRACTED]
-- [[RequestType]] - `contains` [EXTRACTED]
+- [[RequestType_1]] - `contains` [EXTRACTED]
 - [[Select]] - `imports` [EXTRACTED]
 - [[Skeleton()]] - `imports` [EXTRACTED]
 - [[Skeleton.tsx]] - `imports_from` [EXTRACTED]
@@ -53,4 +53,4 @@ tags:
 - [[textarea.tsx]] - `imports_from` [EXTRACTED]
 - [[typeSubject()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react-router-dom
+#graphify/code #graphify/EXTRACTED #community/routertsx

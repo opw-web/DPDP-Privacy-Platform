@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/boot-registration.registry.ts"
+source_file: "dpdp-platform/backend/src/common/prisma/prisma.service.ts"
 type: "code"
-community: "SyncQueueService"
-location: "L54"
+community: "PrismaService"
+location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/PrismaService
 ---
 
 # .onModuleInit()
 
 ## Connections
-- [[BootRegistrationRegistry]] - `method` [EXTRACTED]
-- [[withBootTimeout()]] - `calls` [EXTRACTED]
+- [[PrismaService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/PrismaService

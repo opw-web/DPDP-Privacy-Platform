@@ -1,22 +1,24 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notices/notices.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/children/child-exemptions.controller.ts"
 type: "code"
-community: "RequirePermission"
-location: "L50"
+community: "CreateExemptionClaimDto"
+location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/CreateExemptionClaimDto
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_28]] - `calls` [INFERRED]
-- [[Body_13]] - `references` [EXTRACTED]
-- [[CreateNoticeDto]] - `references` [EXTRACTED]
-- [[NoticesController]] - `method` [EXTRACTED]
-- [[Post_12]] - `references` [EXTRACTED]
+- [[dot-create()_18]] - `calls` [INFERRED]
+- [[AccessTokenPayload]] - `references` [EXTRACTED]
+- [[Body_15]] - `references` [EXTRACTED]
+- [[ChildExemptionsController]] - `method` [EXTRACTED]
+- [[CreateExemptionClaimDto]] - `references` [EXTRACTED]
+- [[CurrentActor]] - `references` [EXTRACTED]
+- [[Post_15]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/CreateExemptionClaimDto

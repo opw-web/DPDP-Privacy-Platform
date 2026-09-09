@@ -1,22 +1,22 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
 type: "code"
-community: "PurposesController"
+community: "CreatePurposeDto"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PurposesController
+  - community/CreatePurposeDto
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_10]] - `calls` [INFERRED]
+- [[dot-create()_9]] - `calls` [INFERRED]
 - [[Body_8]] - `references` [EXTRACTED]
 - [[CreatePurposeDto]] - `references` [EXTRACTED]
-- [[Post_7]] - `references` [EXTRACTED]
+- [[Post_8]] - `references` [EXTRACTED]
 - [[PurposesController]] - `method` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PurposesController
+#graphify/code #graphify/EXTRACTED #community/CreatePurposeDto

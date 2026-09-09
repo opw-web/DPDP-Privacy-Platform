@@ -1,19 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/sdf-assessment.service.ts"
 type: "code"
-community: "compliance.service.ts"
-location: "L374"
+community: "CreateAlgorithmEntryDto"
+location: "L105"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/complianceservicets
+  - community/CreateAlgorithmEntryDto
 ---
 
 # .getById()
 
 ## Connections
-- [[dot-getById()_1]] - `calls` [INFERRED]
-- [[ComplianceService]] - `method` [EXTRACTED]
-- [[toPublicComplianceRule()]] - `calls` [EXTRACTED]
+- [[SdfAssessmentService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/complianceservicets
+#graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto

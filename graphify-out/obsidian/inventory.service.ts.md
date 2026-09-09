@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/inventory/inventory.service.ts"
 type: "code"
-community: "inventory.controller.ts"
+community: "inventory.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/inventorycontrollerts
+  - community/inventoryservicets
 ---
 
 # inventory.service.ts
@@ -23,4 +23,4 @@ tags:
 - [[inventory.module.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/inventorycontrollerts
+#graphify/code #graphify/EXTRACTED #community/inventoryservicets

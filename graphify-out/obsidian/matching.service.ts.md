@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/matching.service.ts"
 type: "code"
-community: "matching.service.ts"
+community: "ScopedTransactionClient"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/matchingservicets
+  - community/ScopedTransactionClient
 ---
 
 # matching.service.ts
@@ -50,4 +50,4 @@ tags:
 - [[supportingSignals()]] - `imports` [EXTRACTED]
 - [[sync-pipeline.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/matchingservicets
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

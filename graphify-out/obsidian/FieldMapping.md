@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/sync.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/step6-conflict-acceptance.e2e-spec.ts"
 type: "code"
-community: "PrismaService"
-location: "L181"
+community: "sync.e2e-spec.ts"
+location: "L165"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/synce2e-spects
 ---
 
 # FieldMapping
 
 ## Connections
-- [[sync.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[step6-conflict-acceptance.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

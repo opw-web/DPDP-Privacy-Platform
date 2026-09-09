@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/breaches/breaches.controller.ts"
 type: "code"
-community: ".record"
+community: "BreachesController"
 location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/BreachesController
 ---
 
 # .boardDetailed()
@@ -14,10 +14,10 @@ tags:
 ## Connections
 - [[dot-boardReport()]] - `calls` [INFERRED]
 - [[BreachesController]] - `method` [EXTRACTED]
-- [[Get_35]] - `references` [EXTRACTED]
-- [[Param_24]] - `references` [EXTRACTED]
+- [[Get_17]] - `references` [EXTRACTED]
+- [[Param_11]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[Res_7]] - `references` [EXTRACTED]
+- [[Res_5]] - `references` [EXTRACTED]
 - [[renderBoardDetailedPdf()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/BreachesController

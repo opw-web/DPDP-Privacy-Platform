@@ -1,34 +1,31 @@
 ---
 type: community
-members: 21
+members: 18
 ---
 
 # DataSourcesController
 
-**Members:** 21 nodes
+**Members:** 18 nodes
 
 ## Members
-- [[dot-constructor()_113]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts
-- [[dot-create()_27]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts
-- [[dot-discoverSchema()_2]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts
-- [[dot-get()_16]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts
-- [[dot-list()_35]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts
-- [[dot-list()_36]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts
+- [[dot-constructor()_86]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts
+- [[dot-create()_28]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts
+- [[dot-discoverSchema()_1]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts
+- [[dot-get()_17]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts
+- [[dot-list()_38]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts
+- [[dot-list()_39]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts
 - [[dot-listFields()]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts
 - [[dot-listFields()_1]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts
-- [[dot-remove()_1]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts
-- [[dot-testConnection()_2]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts
-- [[dot-update()_20]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts
+- [[dot-testConnection()_1]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts
+- [[dot-update()_19]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts
 - [[ApiTags_28]] - code
-- [[Body_19]] - code
+- [[Body_22]] - code
 - [[Controller_29]] - code
 - [[DataSourcesController]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts
-- [[Delete]] - code
-- [[Get_31]] - code
-- [[HttpCode_2]] - code
+- [[Get_29]] - code
 - [[Param_22]] - code
 - [[Patch_10]] - code
-- [[Post_20]] - code
+- [[Post_22]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -38,16 +35,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_DataSourcesService]]
-- 8 edges to [[_COMMUNITY_RequirePermission]]
+- 7 edges to [[_COMMUNITY_DataSourcesService]]
+- 7 edges to [[_COMMUNITY_RequirePermission]]
+- 2 edges to [[_COMMUNITY_dot-remove]]
 - 1 edge to [[_COMMUNITY_UpdateDataSourceDto]]
-- 1 edge to [[_COMMUNITY_data-sources.module.ts]]
-- 1 edge to [[_COMMUNITY_@prismaclient]]
+- 1 edge to [[_COMMUNITY_CreateDataSourceDto]]
+- 1 edge to [[_COMMUNITY_app.module.ts]]
+- 1 edge to [[_COMMUNITY_@nestjsswagger]]
 - 1 edge to [[_COMMUNITY_SyncService]]
 
 ## Top bridge nodes
-- [[dot-update()_20]] - degree 7, connects to 3 communities
-- [[DataSourcesController]] - degree 13, connects to 2 communities
-- [[dot-create()_27]] - degree 6, connects to 2 communities
-- [[dot-remove()_1]] - degree 6, connects to 2 communities
-- [[dot-discoverSchema()_2]] - degree 5, connects to 2 communities
+- [[DataSourcesController]] - degree 13, connects to 3 communities
+- [[dot-update()_19]] - degree 7, connects to 3 communities
+- [[dot-create()_28]] - degree 6, connects to 3 communities
+- [[dot-discoverSchema()_1]] - degree 5, connects to 2 communities
+- [[dot-get()_17]] - degree 5, connects to 2 communities

@@ -12,7 +12,7 @@ tags:
 # run()
 
 ## Connections
-- [[isThenable()_1]] - `calls` [EXTRACTED]
+- [[isThenable()]] - `calls` [EXTRACTED]
 - [[tenant-context.js]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/tenant-contextjs

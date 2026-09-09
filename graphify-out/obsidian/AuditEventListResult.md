@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/audit/audit-read.service.ts"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/AuditPage.tsx"
 type: "code"
-community: "audit-read.service.ts"
-location: "L55"
+community: "AuditPage.tsx"
+location: "L97"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-readservicets
+  - community/AuditPagetsx
 ---
 
 # AuditEventListResult
 
 ## Connections
-- [[audit-read.service.ts]] - `contains` [EXTRACTED]
+- [[AuditEventListItem]] - `references` [EXTRACTED]
+- [[AuditPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-readservicets
+#graphify/code #graphify/EXTRACTED #community/AuditPagetsx

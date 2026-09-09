@@ -1,17 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "guardians.service.ts"
+community: "CreateAlgorithmEntryDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/CreateAlgorithmEntryDto
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_2]] - `references` [EXTRACTED]
-- [[dot-verify()]] - `references` [EXTRACTED]
+- [[dot-completeAssessment()]] - `references` [EXTRACTED]
+- [[dot-createAlgorithm()]] - `references` [EXTRACTED]
+- [[dot-createAssessment()]] - `references` [EXTRACTED]
+- [[dot-updateAlgorithm()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto

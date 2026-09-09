@@ -1,20 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/consent-backfill.queue.ts"
+source_file: "dpdp-platform/backend/src/modules/principal-portal/me.controller.ts"
 type: "code"
-community: "SyncQueueService"
-location: "L70"
+community: "PrincipalsService"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/PrincipalsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[dot-register()]] - `calls` [INFERRED]
-- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
-- [[ConsentBackfillQueueService]] - `method` [EXTRACTED]
-- [[InjectQueue_1]] - `references` [EXTRACTED]
+- [[AccessReportService]] - `references` [EXTRACTED]
+- [[MeController]] - `method` [EXTRACTED]
+- [[MeService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/PrincipalsService

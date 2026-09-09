@@ -1,0 +1,286 @@
+---
+type: community
+members: 243
+---
+
+# @tanstack/react-query
+
+**Members:** 243 nodes
+
+## Members
+- [[@tanstackreact-query_1]] - concept - dpdp-platform/frontend/package.json
+- [[@testing-libraryreact_1]] - concept - dpdp-platform/frontend/package.json
+- [[@testing-libraryuser-event_1]] - concept - dpdp-platform/frontend/package.json
+- [[ALGORITHMS]] - code - dpdp-platform/frontend/src/fiduciary/pages/SdfPage.test.tsx
+- [[API_BASE]] - code - dpdp-platform/frontend/src/lib/api-client.ts
+- [[ASSESSMENTS]] - code - dpdp-platform/frontend/src/fiduciary/pages/SdfPage.test.tsx
+- [[ATTACHED_PURPOSE]] - code - dpdp-platform/frontend/src/fiduciary/pages/DataSourceNewPage.test.tsx
+- [[AUDIT_EVENT]] - code - dpdp-platform/frontend/src/fiduciary/pages/AuditPage.test.tsx
+- [[ApiClient]] - code - dpdp-platform/frontend/src/lib/api-client.ts
+- [[ApiClientConfig]] - code - dpdp-platform/frontend/src/lib/api-client.ts
+- [[AppShell()]] - code - dpdp-platform/frontend/src/components/shared/AppShell.tsx
+- [[AppShell.tsx]] - code - dpdp-platform/frontend/src/components/shared/AppShell.tsx
+- [[AttributedValue()]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.tsx
+- [[AuditPage.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/AuditPage.test.tsx
+- [[AuthStatus]] - code - dpdp-platform/frontend/src/lib/auth.ts
+- [[BASE_ORGANIZATION]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.test.tsx
+- [[BASE_SUMMARY]] - code - dpdp-platform/frontend/src/fiduciary/pages/DashboardPage.test.tsx
+- [[CREATED_DATA_SOURCE]] - code - dpdp-platform/frontend/src/fiduciary/pages/DataSourceNewPage.test.tsx
+- [[CREATED_REQUEST]] - code - dpdp-platform/frontend/src/fiduciary/pages/InformationRequestsPage.test.tsx
+- [[CYCLE_RULE]] - code - dpdp-platform/frontend/src/fiduciary/pages/SdfPage.test.tsx
+- [[ChildrenPage.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.test.tsx
+- [[CompleteMutation]] - code - dpdp-platform/frontend/src/fiduciary/pages/SdfPage.test.tsx
+- [[DATA_SOURCE]] - code - dpdp-platform/frontend/src/fiduciary/pages/DataSourceDetailPage.test.tsx
+- [[DEFAULT_PRINCIPALS]] - code - dpdp-platform/frontend/src/fiduciary/pages/InformationRequestsPage.test.tsx
+- [[DETAIL_RESPONSE]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.test.tsx
+- [[DashboardPage.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/DashboardPage.test.tsx
+- [[DataSourceDetailPage()]] - code - dpdp-platform/frontend/src/fiduciary/pages/DataSourceDetailPage.tsx
+- [[DataSourceDetailPage.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/DataSourceDetailPage.test.tsx
+- [[DataSourceNewPage.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/DataSourceNewPage.test.tsx
+- [[DetailStub()]] - code - dpdp-platform/frontend/src/fiduciary/pages/DataSourceNewPage.test.tsx
+- [[EMPLOYEES]] - code - dpdp-platform/frontend/src/fiduciary/pages/EmployeesPage.test.tsx
+- [[EMPLOYEES_1]] - code - dpdp-platform/frontend/src/router.test.tsx
+- [[EMPTY]] - code - dpdp-platform/frontend/src/components/shared/NotificationBell.test.tsx
+- [[EXISTING_DATA_SOURCE]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step1Connection.test.tsx
+- [[EmployeeAuthBoundary()]] - code - dpdp-platform/frontend/src/router.tsx
+- [[EmployeeSession_4]] - code - dpdp-platform/frontend/src/lib/auth.ts
+- [[EmployeeSummary]] - code - dpdp-platform/frontend/src/lib/auth.ts
+- [[EmployeesPage.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/EmployeesPage.test.tsx
+- [[EmptyState.test.tsx]] - code - dpdp-platform/frontend/src/components/shared/EmptyState.test.tsx
+- [[FARAWAY_PRINCIPAL]] - code - dpdp-platform/frontend/src/fiduciary/pages/InformationRequestsPage.test.tsx
+- [[FORBIDDEN_CLAIM_PATTERNS]] - code - dpdp-platform/frontend/src/fiduciary/pages/DashboardPage.test.tsx
+- [[FUTURE]] - code - dpdp-platform/frontend/src/router.test.tsx
+- [[GAPS]] - code - dpdp-platform/frontend/src/fiduciary/pages/SdfPage.test.tsx
+- [[InformationRequestsPage()]] - code - dpdp-platform/frontend/src/fiduciary/pages/InformationRequestsPage.tsx
+- [[InformationRequestsPage.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/InformationRequestsPage.test.tsx
+- [[JARGON_PATTERNS]] - code - dpdp-platform/frontend/src/principal/pages/MeHomePage.test.tsx
+- [[LIST_RESPONSE]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalsPage.test.tsx
+- [[LinkedRecordsPanel.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/LinkedRecordsPanel.test.tsx
+- [[Listener]] - code - dpdp-platform/frontend/src/lib/auth.ts
+- [[LoginOptions]] - code - dpdp-platform/frontend/src/fiduciary/pages/EmployeesPage.test.tsx
+- [[LoginPage()]] - code - dpdp-platform/frontend/src/fiduciary/pages/LoginPage.tsx
+- [[LoginPage.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/LoginPage.test.tsx
+- [[MOCK_PAYLOAD]] - code - dpdp-platform/frontend/src/principal/pages/MeDataPage.test.tsx
+- [[MOCK_RECIPIENTS]] - code - dpdp-platform/frontend/src/principal/pages/MeRecipientsPage.test.tsx
+- [[MarkAllReadResponse]] - code - dpdp-platform/frontend/src/lib/mvp2-api.ts
+- [[MeConsentsPage.test.tsx]] - code - dpdp-platform/frontend/src/principal/pages/MeConsentsPage.test.tsx
+- [[MeDataPage.test.tsx]] - code - dpdp-platform/frontend/src/principal/pages/MeDataPage.test.tsx
+- [[MeHomePage()]] - code - dpdp-platform/frontend/src/principal/pages/MeHomePage.tsx
+- [[MeHomePage.test.tsx]] - code - dpdp-platform/frontend/src/principal/pages/MeHomePage.test.tsx
+- [[MeMessage]] - code - dpdp-platform/frontend/src/principal/pages/MeMessagesPage.tsx
+- [[MeMessagesPage()]] - code - dpdp-platform/frontend/src/principal/pages/MeMessagesPage.tsx
+- [[MeMessagesPage.test.tsx]] - code - dpdp-platform/frontend/src/principal/pages/MeMessagesPage.test.tsx
+- [[MeMessagesPage.tsx]] - code - dpdp-platform/frontend/src/principal/pages/MeMessagesPage.tsx
+- [[MeNominationPage.test.tsx]] - code - dpdp-platform/frontend/src/principal/pages/MeNominationPage.test.tsx
+- [[MeProfileTimezone]] - code - dpdp-platform/frontend/src/principal/components/PortalShell.tsx
+- [[MeRecipientsPage.test.tsx]] - code - dpdp-platform/frontend/src/principal/pages/MeRecipientsPage.test.tsx
+- [[MeRequestDetailPage.test.tsx]] - code - dpdp-platform/frontend/src/principal/pages/MeRequestDetailPage.test.tsx
+- [[MeRequestsPage.test.tsx]] - code - dpdp-platform/frontend/src/principal/pages/MeRequestsPage.test.tsx
+- [[MeSourceDto]] - code - dpdp-platform/frontend/src/principal/pages/MeSourcesPage.tsx
+- [[MeSourcesPage()]] - code - dpdp-platform/frontend/src/principal/pages/MeSourcesPage.tsx
+- [[MeSourcesPage.test.tsx]] - code - dpdp-platform/frontend/src/principal/pages/MeSourcesPage.test.tsx
+- [[MeSourcesPage.tsx]] - code - dpdp-platform/frontend/src/principal/pages/MeSourcesPage.tsx
+- [[MockRoutes_2]] - code - dpdp-platform/frontend/src/fiduciary/components/LinkedRecordsPanel.test.tsx
+- [[MockRoutes_3]] - code - dpdp-platform/frontend/src/fiduciary/pages/InformationRequestsPage.test.tsx
+- [[MockRoutes_4]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.test.tsx
+- [[MockRoutes_5]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.test.tsx
+- [[NAV_ITEMS]] - code - dpdp-platform/frontend/src/components/shared/AppShell.tsx
+- [[NAV_ITEMS_1]] - code - dpdp-platform/frontend/src/principal/components/PortalShell.tsx
+- [[NotificationBell()]] - code - dpdp-platform/frontend/src/components/shared/NotificationBell.tsx
+- [[NotificationBell.test.tsx]] - code - dpdp-platform/frontend/src/components/shared/NotificationBell.test.tsx
+- [[NotificationBell.tsx]] - code - dpdp-platform/frontend/src/components/shared/NotificationBell.tsx
+- [[NotificationBellProps]] - code - dpdp-platform/frontend/src/components/shared/NotificationBell.tsx
+- [[NotificationDto_1]] - code - dpdp-platform/frontend/src/lib/mvp2-api.ts
+- [[NotificationListResponse]] - code - dpdp-platform/frontend/src/lib/mvp2-api.ts
+- [[ORDER_FULFILMENT_PURPOSE]] - code - dpdp-platform/frontend/src/fiduciary/pages/DataSourceDetailPage.test.tsx
+- [[ORGANIZATION_2]] - code - dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.test.tsx
+- [[ORGANIZATION_3]] - code - dpdp-platform/frontend/src/fiduciary/pages/AuditPage.test.tsx
+- [[ORGANIZATION_4]] - code - dpdp-platform/frontend/src/fiduciary/pages/EmployeesPage.test.tsx
+- [[ORGANIZATION_5]] - code - dpdp-platform/frontend/src/router.test.tsx
+- [[OrganizationSummary]] - code - dpdp-platform/frontend/src/components/shared/AppShell.tsx
+- [[PAYLOAD]] - code - dpdp-platform/frontend/src/principal/pages/MeConsentsPage.test.tsx
+- [[POPULATED_GAPS]] - code - dpdp-platform/frontend/src/fiduciary/pages/DashboardPage.test.tsx
+- [[PURPOSES]] - code - dpdp-platform/frontend/src/fiduciary/pages/PurposesPage.test.tsx
+- [[PatchEmployeeStatusBox]] - code - dpdp-platform/frontend/src/fiduciary/pages/EmployeesPage.test.tsx
+- [[PermissionGate.test.tsx]] - code - dpdp-platform/frontend/src/components/shared/PermissionGate.test.tsx
+- [[PortalShell.test.tsx]] - code - dpdp-platform/frontend/src/principal/components/PortalShell.test.tsx
+- [[PortalShell.tsx]] - code - dpdp-platform/frontend/src/principal/components/PortalShell.tsx
+- [[PrincipalDetailPage.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.test.tsx
+- [[PrincipalEvidencePage.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.test.tsx
+- [[PrincipalLoginPage.test.tsx]] - code - dpdp-platform/frontend/src/principal/pages/PrincipalLoginPage.test.tsx
+- [[PrincipalSession_1]] - code - dpdp-platform/frontend/src/lib/auth.ts
+- [[PrincipalsPage.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalsPage.test.tsx
+- [[PurposeForm.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/PurposeForm.test.tsx
+- [[PurposesPage.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/PurposesPage.test.tsx
+- [[RECIPIENTS_RESPONSE]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.test.tsx
+- [[ROLES_1]] - code - dpdp-platform/frontend/src/fiduciary/pages/EmployeesPage.test.tsx
+- [[ROLES_2]] - code - dpdp-platform/frontend/src/router.test.tsx
+- [[RawEmployeeMe]] - code - dpdp-platform/frontend/src/lib/auth.ts
+- [[RecipientsTab.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.test.tsx
+- [[RequestDetailPage.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/RequestDetailPage.test.tsx
+- [[RequestOptions]] - code - dpdp-platform/frontend/src/lib/api-client.ts
+- [[RequestsPage.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/RequestsPage.test.tsx
+- [[RetentionPage.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/RetentionPage.test.tsx
+- [[RouteHooks]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.test.tsx
+- [[Routes]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalsPage.test.tsx
+- [[SOURCE_RECORDS_RESPONSE]] - code - dpdp-platform/frontend/src/fiduciary/components/LinkedRecordsPanel.test.tsx
+- [[SOURCE_RECORDS_RESPONSE_1]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.test.tsx
+- [[SdfDeclarationCard.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.test.tsx
+- [[SdfDeclarationFields]] - code - dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.tsx
+- [[SdfPage.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/SdfPage.test.tsx
+- [[SettingsCompliancePage.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsCompliancePage.test.tsx
+- [[SettingsPage.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.test.tsx
+- [[Step1Connection.test.tsx]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step1Connection.test.tsx
+- [[TransferForm()]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/TransfersTab.tsx
+- [[ZERO_GAPS]] - code - dpdp-platform/frontend/src/fiduciary/pages/DashboardPage.test.tsx
+- [[api-client.test.ts]] - code - dpdp-platform/frontend/src/lib/api-client.test.ts
+- [[api-client.ts]] - code - dpdp-platform/frontend/src/lib/api-client.ts
+- [[assertNoComplianceClaim()]] - code - dpdp-platform/frontend/src/fiduciary/pages/DashboardPage.test.tsx
+- [[assertNoJargon()]] - code - dpdp-platform/frontend/src/principal/pages/MeHomePage.test.tsx
+- [[authHeaderOf()]] - code - dpdp-platform/frontend/src/lib/api-client.test.ts
+- [[bootstrapEmployeeSession()]] - code - dpdp-platform/frontend/src/lib/auth.ts
+- [[canCompleteAudit()]] - code - dpdp-platform/frontend/src/fiduciary/pages/SdfPage.tsx
+- [[createAuthStore()]] - code - dpdp-platform/frontend/src/lib/auth.ts
+- [[createTokenStore()]] - code - dpdp-platform/frontend/src/lib/api-client.ts
+- [[employeeAuthStore]] - code - dpdp-platform/frontend/src/lib/auth.ts
+- [[employeeLogin()]] - code - dpdp-platform/frontend/src/lib/auth.ts
+- [[employeeLogout()]] - code - dpdp-platform/frontend/src/lib/auth.ts
+- [[employeeTokenStore]] - code - dpdp-platform/frontend/src/lib/api-client.ts
+- [[evidence]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.test.tsx
+- [[fetchEmployeeMe()]] - code - dpdp-platform/frontend/src/lib/auth.ts
+- [[fillRequiredFields()]] - code - dpdp-platform/frontend/src/fiduciary/pages/InformationRequestsPage.test.tsx
+- [[fillRequiredTextFields()]] - code - dpdp-platform/frontend/src/fiduciary/components/PurposeForm.test.tsx
+- [[findAlgorithmPanel()]] - code - dpdp-platform/frontend/src/fiduciary/pages/SdfPage.test.tsx
+- [[initial]] - code - dpdp-platform/frontend/src/principal/pages/MeRequestDetailPage.test.tsx
+- [[installFetchMock()]] - code - dpdp-platform/frontend/src/router.test.tsx
+- [[json()]] - code - dpdp-platform/frontend/src/fiduciary/pages/RequestDetailPage.test.tsx
+- [[json()_1]] - code - dpdp-platform/frontend/src/fiduciary/pages/SdfPage.test.tsx
+- [[jsonResponse()_2]] - code - dpdp-platform/frontend/src/fiduciary/components/LinkedRecordsPanel.test.tsx
+- [[jsonResponse()_3]] - code - dpdp-platform/frontend/src/fiduciary/components/PurposeForm.test.tsx
+- [[jsonResponse()_4]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.test.tsx
+- [[jsonResponse()_5]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step1Connection.test.tsx
+- [[jsonResponse()_6]] - code - dpdp-platform/frontend/src/fiduciary/pages/AuditPage.test.tsx
+- [[jsonResponse()_7]] - code - dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.test.tsx
+- [[jsonResponse()_8]] - code - dpdp-platform/frontend/src/fiduciary/pages/DashboardPage.test.tsx
+- [[jsonResponse()_9]] - code - dpdp-platform/frontend/src/fiduciary/pages/DataSourceDetailPage.test.tsx
+- [[jsonResponse()_10]] - code - dpdp-platform/frontend/src/fiduciary/pages/DataSourceNewPage.test.tsx
+- [[jsonResponse()_11]] - code - dpdp-platform/frontend/src/fiduciary/pages/EmployeesPage.test.tsx
+- [[jsonResponse()_12]] - code - dpdp-platform/frontend/src/fiduciary/pages/InformationRequestsPage.test.tsx
+- [[jsonResponse()_13]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.test.tsx
+- [[jsonResponse()_14]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.test.tsx
+- [[jsonResponse()_15]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalsPage.test.tsx
+- [[jsonResponse()_16]] - code - dpdp-platform/frontend/src/fiduciary/pages/PurposesPage.test.tsx
+- [[jsonResponse()_17]] - code - dpdp-platform/frontend/src/fiduciary/pages/RetentionPage.test.tsx
+- [[jsonResponse()_18]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.test.tsx
+- [[jsonResponse()_19]] - code - dpdp-platform/frontend/src/lib/api-client.test.ts
+- [[jsonResponse()_20]] - code - dpdp-platform/frontend/src/principal/components/PortalShell.test.tsx
+- [[jsonResponse()_21]] - code - dpdp-platform/frontend/src/principal/pages/MeConsentsPage.test.tsx
+- [[jsonResponse()_22]] - code - dpdp-platform/frontend/src/principal/pages/MeDataPage.test.tsx
+- [[jsonResponse()_23]] - code - dpdp-platform/frontend/src/principal/pages/MeHomePage.test.tsx
+- [[jsonResponse()_24]] - code - dpdp-platform/frontend/src/principal/pages/MeRecipientsPage.test.tsx
+- [[jsonResponse()_25]] - code - dpdp-platform/frontend/src/principal/pages/MeSourcesPage.test.tsx
+- [[jsonResponse()_26]] - code - dpdp-platform/frontend/src/router.test.tsx
+- [[libauth.ts]] - code - dpdp-platform/frontend/src/lib/auth.ts
+- [[listNotifications()]] - code - dpdp-platform/frontend/src/lib/mvp2-api.ts
+- [[loadRouter()]] - code - dpdp-platform/frontend/src/router.test.tsx
+- [[loginAndRender()]] - code - dpdp-platform/frontend/src/fiduciary/components/LinkedRecordsPanel.test.tsx
+- [[loginAndRender()_1]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.test.tsx
+- [[loginAndRender()_2]] - code - dpdp-platform/frontend/src/fiduciary/pages/DashboardPage.test.tsx
+- [[loginAndRender()_3]] - code - dpdp-platform/frontend/src/fiduciary/pages/InformationRequestsPage.test.tsx
+- [[loginAndRender()_4]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalDetailPage.test.tsx
+- [[loginAndRender()_5]] - code - dpdp-platform/frontend/src/fiduciary/pages/PrincipalsPage.test.tsx
+- [[loginAndRenderDetailPage()]] - code - dpdp-platform/frontend/src/fiduciary/pages/DataSourceDetailPage.test.tsx
+- [[loginAndRenderThroughShell()]] - code - dpdp-platform/frontend/src/fiduciary/pages/AuditPage.test.tsx
+- [[loginAndRenderThroughShell()_1]] - code - dpdp-platform/frontend/src/fiduciary/pages/EmployeesPage.test.tsx
+- [[loginAndRenderThroughShell()_2]] - code - dpdp-platform/frontend/src/fiduciary/pages/PurposesPage.test.tsx
+- [[loginAndRenderThroughShell()_3]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.test.tsx
+- [[loginAndRenderWizard()]] - code - dpdp-platform/frontend/src/fiduciary/pages/DataSourceNewPage.test.tsx
+- [[loginAs()]] - code - dpdp-platform/frontend/src/components/shared/PermissionGate.test.tsx
+- [[makeFakeApiClient()]] - code - dpdp-platform/frontend/src/components/shared/NotificationBell.test.tsx
+- [[markAllNotificationsRead()]] - code - dpdp-platform/frontend/src/lib/mvp2-api.ts
+- [[markNotificationRead()]] - code - dpdp-platform/frontend/src/lib/mvp2-api.ts
+- [[messageKind()]] - code - dpdp-platform/frontend/src/principal/pages/MeMessagesPage.tsx
+- [[mockFetch()]] - code - dpdp-platform/frontend/src/fiduciary/pages/SdfPage.test.tsx
+- [[mockRoutesAndLogin()]] - code - dpdp-platform/frontend/src/fiduciary/pages/DashboardPage.test.tsx
+- [[mvp2-api.ts]] - code - dpdp-platform/frontend/src/lib/mvp2-api.ts
+- [[postBody()]] - code - dpdp-platform/frontend/src/fiduciary/pages/InformationRequestsPage.test.tsx
+- [[principalApiClient]] - code - dpdp-platform/frontend/src/lib/api-client.ts
+- [[principalAuthStore]] - code - dpdp-platform/frontend/src/lib/auth.ts
+- [[principalLogout()]] - code - dpdp-platform/frontend/src/lib/auth.ts
+- [[principalTokenStore]] - code - dpdp-platform/frontend/src/lib/api-client.ts
+- [[react-router-dom_1]] - concept - dpdp-platform/frontend/package.json
+- [[refreshEmployeeToken()]] - code - dpdp-platform/frontend/src/lib/auth.ts
+- [[renderApp()]] - code - dpdp-platform/frontend/src/router.test.tsx
+- [[renderAppAt()]] - code - dpdp-platform/frontend/src/router.test.tsx
+- [[renderBell()]] - code - dpdp-platform/frontend/src/components/shared/NotificationBell.test.tsx
+- [[renderCard()]] - code - dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.test.tsx
+- [[renderDashboard()]] - code - dpdp-platform/frontend/src/fiduciary/pages/DashboardPage.test.tsx
+- [[renderDetail()]] - code - dpdp-platform/frontend/src/fiduciary/pages/RequestDetailPage.test.tsx
+- [[renderDetailPage()]] - code - dpdp-platform/frontend/src/fiduciary/pages/DataSourceDetailPage.test.tsx
+- [[renderForm()]] - code - dpdp-platform/frontend/src/fiduciary/components/PurposeForm.test.tsx
+- [[renderLoginPage()]] - code - dpdp-platform/frontend/src/fiduciary/pages/LoginPage.test.tsx
+- [[renderMeDataPage()]] - code - dpdp-platform/frontend/src/principal/pages/MeDataPage.test.tsx
+- [[renderMeHomePage()]] - code - dpdp-platform/frontend/src/principal/pages/MeHomePage.test.tsx
+- [[renderMeRecipientsPage()]] - code - dpdp-platform/frontend/src/principal/pages/MeRecipientsPage.test.tsx
+- [[renderMeSourcesPage()]] - code - dpdp-platform/frontend/src/principal/pages/MeSourcesPage.test.tsx
+- [[renderPage()_1]] - code - dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.test.tsx
+- [[renderPage()_2]] - code - dpdp-platform/frontend/src/fiduciary/pages/InformationRequestsPage.test.tsx
+- [[renderPage()_3]] - code - dpdp-platform/frontend/src/fiduciary/pages/RequestsPage.test.tsx
+- [[renderPage()_4]] - code - dpdp-platform/frontend/src/fiduciary/pages/SdfPage.test.tsx
+- [[renderPage()_5]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsCompliancePage.test.tsx
+- [[renderPage()_6]] - code - dpdp-platform/frontend/src/principal/pages/MeConsentsPage.test.tsx
+- [[renderPage()_7]] - code - dpdp-platform/frontend/src/principal/pages/MeMessagesPage.test.tsx
+- [[renderPage()_8]] - code - dpdp-platform/frontend/src/principal/pages/MeNominationPage.test.tsx
+- [[renderPage()_9]] - code - dpdp-platform/frontend/src/principal/pages/MeRequestDetailPage.test.tsx
+- [[renderPage()_10]] - code - dpdp-platform/frontend/src/principal/pages/MeRequestsPage.test.tsx
+- [[renderPrincipalLoginPage()]] - code - dpdp-platform/frontend/src/principal/pages/PrincipalLoginPage.test.tsx
+- [[renderStep1()]] - code - dpdp-platform/frontend/src/fiduciary/components/wizard/Step1Connection.test.tsx
+- [[renderThroughPortalShell()]] - code - dpdp-platform/frontend/src/principal/components/PortalShell.test.tsx
+- [[renderWizard()]] - code - dpdp-platform/frontend/src/fiduciary/pages/DataSourceNewPage.test.tsx
+- [[request_1]] - code - dpdp-platform/frontend/src/principal/pages/MeRequestsPage.test.tsx
+- [[request()]] - code - dpdp-platform/frontend/src/fiduciary/pages/RequestDetailPage.test.tsx
+- [[response()_1]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsCompliancePage.test.tsx
+- [[router.test.tsx]] - code - dpdp-platform/frontend/src/router.test.tsx
+- [[rule]] - code - dpdp-platform/frontend/src/fiduciary/pages/SettingsCompliancePage.test.tsx
+- [[sanitizeRedirectTarget()]] - code - dpdp-platform/frontend/src/fiduciary/pages/LoginPage.tsx
+- [[submittedRequest]] - code - dpdp-platform/frontend/src/fiduciary/pages/RequestsPage.test.tsx
+- [[toEmployeeSession()]] - code - dpdp-platform/frontend/src/lib/auth.ts
+- [[toastError]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.test.tsx
+- [[toastSuccess]] - code - dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.test.tsx
+- [[unauthenticatedRefresh()]] - code - dpdp-platform/frontend/src/router.test.tsx
+- [[updated]] - code - dpdp-platform/frontend/src/principal/pages/MeRequestDetailPage.test.tsx
+- [[useEmployeeAuth()]] - code - dpdp-platform/frontend/src/lib/auth.ts
+- [[vitest_1]] - concept - dpdp-platform/frontend/package.json
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/tanstack/react-query
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 92 edges to [[_COMMUNITY_card.tsx]]
+- 92 edges to [[_COMMUNITY_react]]
+- 45 edges to [[_COMMUNITY_cn]]
+- 44 edges to [[_COMMUNITY_router.tsx]]
+- 38 edges to [[_COMMUNITY_data-sources-api.ts]]
+- 31 edges to [[_COMMUNITY_AuditPage.tsx]]
+- 18 edges to [[_COMMUNITY_DateTime.tsx]]
+- 17 edges to [[_COMMUNITY_EmployeesPage.tsx]]
+- 15 edges to [[_COMMUNITY_NoticeBuilderPage.tsx]]
+- 11 edges to [[_COMMUNITY_CandidateComparison.tsx]]
+- 10 edges to [[_COMMUNITY_MessagingCampaignBuilderPage.tsx]]
+- 9 edges to [[_COMMUNITY_BreachWizardPage.tsx]]
+- 5 edges to [[_COMMUNITY_frontendpackage.json]]
+- 5 edges to [[_COMMUNITY_DeadlinePill.tsx]]
+- 2 edges to [[_COMMUNITY_createApiClient]]
+- 1 edge to [[_COMMUNITY_childrentypes.ts]]
+- 1 edge to [[_COMMUNITY_AuditPage]]
+
+## Top bridge nodes
+- [[@tanstackreact-query_1]] - degree 109, connects to 13 communities
+- [[api-client.ts]] - degree 101, connects to 13 communities
+- [[react-router-dom_1]] - degree 77, connects to 12 communities
+- [[vitest_1]] - degree 58, connects to 12 communities
+- [[@testing-libraryreact_1]] - degree 52, connects to 10 communities

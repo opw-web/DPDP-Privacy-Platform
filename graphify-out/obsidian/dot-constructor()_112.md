@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/consents/consents.controller.ts"
+source_file: "dpdp-platform/backend/src/common/reference/reference.service.ts"
 type: "code"
-community: "ConsentsService"
-location: "L26"
+community: "ScopedTransactionClient"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ConsentsService
+  - community/ScopedTransactionClient
 ---
 
 # .constructor()
 
 ## Connections
-- [[ConsentsController]] - `method` [EXTRACTED]
-- [[ConsentsService]] - `references` [EXTRACTED]
+- [[ReferenceService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ConsentsService
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

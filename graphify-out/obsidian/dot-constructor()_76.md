@@ -1,20 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/retention-scan.queue.ts"
+source_file: "dpdp-platform/backend/src/modules/principals/principal-recipients.service.ts"
 type: "code"
-community: "SyncQueueService"
-location: "L75"
+community: "PrincipalsService"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/PrincipalsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[dot-register()]] - `calls` [INFERRED]
-- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
-- [[InjectQueue_4]] - `references` [EXTRACTED]
-- [[RetentionScanQueueService]] - `method` [EXTRACTED]
+- [[PrincipalRecipientsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/PrincipalsService

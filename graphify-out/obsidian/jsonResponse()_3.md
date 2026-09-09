@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/RetentionPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/PurposeForm.test.tsx"
 type: "code"
-community: "DateTime.tsx"
-location: "L7"
+community: "@tanstack/react-query"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DateTimetsx
+  - community/tanstack/react-query
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[RetentionPage.test.tsx]] - `contains` [EXTRACTED]
+- [[PurposeForm.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DateTimetsx
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

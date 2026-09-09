@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sync/sync.service.ts"
 type: "code"
-community: "sync.service.ts"
+community: "PrismaService"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/syncservicets
+  - community/PrismaService
 ---
 
 # TriggerSyncResult
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sync.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/syncservicets
+#graphify/code #graphify/EXTRACTED #community/PrismaService

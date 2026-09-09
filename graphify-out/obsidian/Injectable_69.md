@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "access-report-render.ts"
+community: "CreateRecipientDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-report-renderts
+  - community/CreateRecipientDto
 ---
 
 # Injectable
 
 ## Connections
-- [[PrincipalEvidenceService]] - `references` [EXTRACTED]
+- [[RecipientsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-report-renderts
+#graphify/code #graphify/EXTRACTED #community/CreateRecipientDto

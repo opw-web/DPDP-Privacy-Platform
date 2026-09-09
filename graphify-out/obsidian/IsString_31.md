@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "FlagFrivolousDto"
+community: "TemplatesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/FlagFrivolousDto
+  - community/TemplatesService
 ---
 
 # IsString
 
 ## Connections
-- [[FlagFrivolousDto]] - `references` [EXTRACTED]
+- [[UpdateTemplateDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/FlagFrivolousDto
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

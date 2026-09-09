@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/common/guards/jwt-principal.guard.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts"
 type: "code"
-community: "TokenService"
+community: "campaigns.service.ts"
 location: "L75"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TokenService
+  - community/campaignsservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[JwtPrincipalGuard]] - `method` [EXTRACTED]
-- [[TokenService]] - `references` [EXTRACTED]
+- [[UnknownTemplateVariableError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TokenService
+#graphify/code #graphify/EXTRACTED #community/campaignsservicets

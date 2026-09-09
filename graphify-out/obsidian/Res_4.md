@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "inventory.controller.ts"
+community: "EvidencePackController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/inventorycontrollerts
+  - community/EvidencePackController
 ---
 
 # Res
 
 ## Connections
-- [[dot-ropaCsv()]] - `references` [EXTRACTED]
+- [[dot-packZip()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/inventorycontrollerts
+#graphify/code #graphify/EXTRACTED #community/EvidencePackController

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/DashboardPage.tsx"
 type: "code"
-community: "react-router-dom"
+community: "card.tsx"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react-router-dom
+  - community/cardtsx
 ---
 
 # RecentAuditEvent
@@ -16,4 +16,4 @@ tags:
 - [[RecentAuditStrip.tsx]] - `imports` [EXTRACTED]
 - [[RecentAuditStripProps]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react-router-dom
+#graphify/code #graphify/EXTRACTED #community/cardtsx

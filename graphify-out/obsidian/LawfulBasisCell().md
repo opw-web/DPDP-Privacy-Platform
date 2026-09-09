@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/PurposesPage.tsx"
 type: "code"
-community: "SettingsPage.tsx"
+community: "cn"
 location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SettingsPagetsx
+  - community/cn
 ---
 
 # LawfulBasisCell()
@@ -15,4 +15,4 @@ tags:
 - [[PurposesPage.tsx]] - `contains` [EXTRACTED]
 - [[humanizeEnum()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SettingsPagetsx
+#graphify/code #graphify/EXTRACTED #community/cn

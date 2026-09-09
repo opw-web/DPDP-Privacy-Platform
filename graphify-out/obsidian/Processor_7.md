@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "breach-principal-notice-dispatch.processor.ts"
+community: "PreErasureNoticeService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breach-principal-notice-dispatchprocessorts
+  - community/PreErasureNoticeService
 ---
 
 # Processor
 
 ## Connections
-- [[CampaignSendProcessor]] - `references` [EXTRACTED]
+- [[PreErasureNoticeProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breach-principal-notice-dispatchprocessorts
+#graphify/code #graphify/EXTRACTED #community/PreErasureNoticeService

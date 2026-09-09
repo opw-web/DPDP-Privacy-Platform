@@ -18,7 +18,7 @@ tags:
 - [[accept()]] - `contains` [EXTRACTED]
 - [[client_1]] - `contains` [EXTRACTED]
 - [[common_1]] - `contains` [EXTRACTED]
-- [[extendWithTenantScoping()_1]] - `contains` [EXTRACTED]
+- [[extendWithTenantScoping()]] - `contains` [EXTRACTED]
 - [[tenant.extension.ts]] - `imports_from` [EXTRACTED]
 - [[tenant_extension_1]] - `contains` [EXTRACTED]
 

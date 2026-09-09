@@ -1,23 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/child-exemptions.service.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/connector.factory.ts"
 type: "code"
-community: "child-exemptions.service.ts"
-location: "L88"
+community: "rest-api.connector.ts"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/child-exemptionsservicets
+  - community/rest-apiconnectorts
 ---
 
 # .create()
 
 ## Connections
-- [[dot-assertClaimComplete()]] - `calls` [EXTRACTED]
-- [[dot-create()_29]] - `calls` [INFERRED]
-- [[dot-record()_1]] - `calls` [INFERRED]
-- [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[ChildExemptionsService]] - `method` [EXTRACTED]
-- [[CreateExemptionClaimDto]] - `references` [EXTRACTED]
-- [[toPublicExemptionClaim()]] - `calls` [EXTRACTED]
+- [[dot-buildConnector()]] - `calls` [INFERRED]
+- [[Connector]] - `references` [EXTRACTED]
+- [[ConnectorFactory]] - `method` [EXTRACTED]
+- [[RestApiConnector]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/child-exemptionsservicets
+#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts

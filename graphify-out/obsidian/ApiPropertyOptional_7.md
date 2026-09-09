@@ -11,6 +11,6 @@ tags:
 # ApiPropertyOptional
 
 ## Connections
-- [[CreateAlgorithmEntryDto]] - `references` [EXTRACTED]
+- [[CompleteSdfAssessmentDto]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto

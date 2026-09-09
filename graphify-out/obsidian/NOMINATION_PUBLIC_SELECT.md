@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principal-portal/me-rights.service.ts"
 type: "code"
-community: "me-rights.service.ts"
+community: "@nestjs/common"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/me-rightsservicets
+  - community/nestjs/common
 ---
 
 # NOMINATION_PUBLIC_SELECT
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[me-rights.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/me-rightsservicets
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

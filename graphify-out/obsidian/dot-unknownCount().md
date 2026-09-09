@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/children/age-status.controller.ts"
 type: "code"
-community: "age-status.service.ts"
+community: "AgeStatusService"
 location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/age-statusservicets
+  - community/AgeStatusService
 ---
 
 # .unknownCount()
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-countUnknown()]] - `calls` [INFERRED]
 - [[AgeStatusController]] - `method` [EXTRACTED]
-- [[Get_40]] - `references` [EXTRACTED]
+- [[Get_30]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/age-statusservicets
+#graphify/code #graphify/EXTRACTED #community/AgeStatusService

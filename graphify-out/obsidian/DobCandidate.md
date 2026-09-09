@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/age.service.ts"
 type: "code"
-community: "AuditService"
+community: "ScopedTransactionClient"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/ScopedTransactionClient
 ---
 
 # DobCandidate
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[age.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

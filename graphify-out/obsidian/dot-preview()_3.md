@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
 type: "code"
-community: "notices.service.ts"
-location: "L679"
+community: "RequirePermission"
+location: "L673"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/noticesservicets
+  - community/RequirePermission
 ---
 
 # .preview()
@@ -17,4 +17,4 @@ tags:
 - [[NoticesService]] - `method` [EXTRACTED]
 - [[isNoticeLanguageCode()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/noticesservicets
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

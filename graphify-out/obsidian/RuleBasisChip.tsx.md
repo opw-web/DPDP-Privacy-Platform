@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/RuleBasisChip.tsx"
 type: "code"
-community: "DateTime.tsx"
+community: "card.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DateTimetsx
+  - community/cardtsx
 ---
 
 # RuleBasisChip.tsx
@@ -35,4 +35,4 @@ tags:
 - [[tooltip.tsx]] - `imports_from` [EXTRACTED]
 - [[utils.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DateTimetsx
+#graphify/code #graphify/EXTRACTED #community/cardtsx

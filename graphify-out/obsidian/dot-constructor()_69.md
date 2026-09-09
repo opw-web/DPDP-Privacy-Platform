@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts"
+source_file: "dpdp-platform/backend/src/queues/sync.processor.ts"
 type: "code"
-community: "TemplatesService"
-location: "L18"
+community: "queues.module.ts"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/queuesmodulets
 ---
 
 # .constructor()
 
 ## Connections
-- [[TemplatesController]] - `method` [EXTRACTED]
-- [[TemplatesService]] - `references` [EXTRACTED]
+- [[SyncPipelineService]] - `references` [EXTRACTED]
+- [[SyncProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-assign()]] - `calls` [EXTRACTED]
-- [[dot-changeStatus()]] - `calls` [EXTRACTED]
+- [[dot-changeStatus()_1]] - `calls` [EXTRACTED]
 - [[dot-escalate()]] - `calls` [EXTRACTED]
 - [[dot-verifyIdentity()]] - `calls` [EXTRACTED]
 - [[RequestsService]] - `method` [EXTRACTED]

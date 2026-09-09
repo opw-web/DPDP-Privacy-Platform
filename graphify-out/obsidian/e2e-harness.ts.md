@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/test/support/e2e-harness.ts"
 type: "code"
-community: "PrismaService"
+community: "supertest"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/supertest
 ---
 
 # e2e-harness.ts
 
 ## Connections
 - [[@nestjscommon]] - `imports_from` [EXTRACTED]
-- [[@nestjstesting_1]] - `imports_from` [EXTRACTED]
+- [[@nestjstesting]] - `imports_from` [EXTRACTED]
 - [[AppModule]] - `imports` [EXTRACTED]
 - [[OrgWithEmployee]] - `contains` [EXTRACTED]
 - [[PERMISSIONS]] - `imports` [EXTRACTED]
@@ -29,8 +29,8 @@ tags:
 - [[cleanupOrgs()]] - `contains` [EXTRACTED]
 - [[compliance-rules.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[consents.e2e-spec.ts]] - `imports_from` [EXTRACTED]
-- [[createOrgWithEmployee()]] - `contains` [EXTRACTED]
-- [[ensurePermission()]] - `contains` [EXTRACTED]
+- [[createOrgWithEmployee()_1]] - `contains` [EXTRACTED]
+- [[ensurePermission()_1]] - `contains` [EXTRACTED]
 - [[evidence.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[information-requests.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[mvp2-rbac.e2e-spec.ts]] - `imports_from` [EXTRACTED]
@@ -48,4 +48,4 @@ tags:
 - [[templates.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[waitUntil()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/supertest

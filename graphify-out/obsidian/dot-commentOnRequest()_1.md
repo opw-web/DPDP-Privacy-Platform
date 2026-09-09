@@ -12,7 +12,7 @@ tags:
 # .commentOnRequest()
 
 ## Connections
-- [[dot-addNote()]] - `calls` [INFERRED]
+- [[dot-addNote()_1]] - `calls` [INFERRED]
 - [[dot-commentOnRequest()]] - `calls` [INFERRED]
 - [[dot-ownRequest()]] - `calls` [EXTRACTED]
 - [[MeRightsService]] - `method` [EXTRACTED]

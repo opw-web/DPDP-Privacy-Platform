@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principal-portal/me-rights.service.ts"
 type: "code"
-community: "me-rights.service.ts"
+community: "MeRightsService"
 location: "L177"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/me-rightsservicets
+  - community/MeRightsService
 ---
 
 # .upsertNomination()
@@ -17,4 +17,4 @@ tags:
 - [[MeRightsService]] - `method` [EXTRACTED]
 - [[UpdateMeNominationDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/me-rightsservicets
+#graphify/code #graphify/EXTRACTED #community/MeRightsService

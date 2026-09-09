@@ -15,7 +15,7 @@ tags:
 - [[dot-create()_7]] - `calls` [INFERRED]
 - [[Body_7]] - `references` [EXTRACTED]
 - [[CreateTransferDto]] - `references` [EXTRACTED]
-- [[Post_5]] - `references` [EXTRACTED]
+- [[Post_6]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[TransfersController]] - `method` [EXTRACTED]
 

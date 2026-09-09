@@ -12,11 +12,11 @@ tags:
 # .loadByReferenceOrThrow()
 
 ## Connections
-- [[dot-addNote()]] - `calls` [EXTRACTED]
+- [[dot-addNote()_1]] - `calls` [EXTRACTED]
 - [[dot-assign()]] - `calls` [EXTRACTED]
-- [[dot-changeStatus()]] - `calls` [EXTRACTED]
+- [[dot-changeStatus()_1]] - `calls` [EXTRACTED]
 - [[dot-escalate()]] - `calls` [EXTRACTED]
-- [[dot-flagFrivolous()]] - `calls` [EXTRACTED]
+- [[dot-flagFrivolous()_1]] - `calls` [EXTRACTED]
 - [[dot-getErasureCompletionHolders()]] - `calls` [EXTRACTED]
 - [[dot-verifyIdentity()]] - `calls` [EXTRACTED]
 - [[RequestsService]] - `method` [EXTRACTED]

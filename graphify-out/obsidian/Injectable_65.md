@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sharing.service.ts"
+community: "ScopedTransactionClient"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sharingservicets
+  - community/ScopedTransactionClient
 ---
 
 # Injectable
 
 ## Connections
-- [[SharingService]] - `references` [EXTRACTED]
+- [[AssemblyService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sharingservicets
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

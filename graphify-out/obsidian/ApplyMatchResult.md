@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/linking.service.ts"
 type: "code"
-community: "AuditService"
+community: "ScopedTransactionClient"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/ScopedTransactionClient
 ---
 
 # ApplyMatchResult
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[linking.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

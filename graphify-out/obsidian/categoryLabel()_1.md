@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/principal/pages/MeRecipientsPage.tsx"
+source_file: "dpdp-platform/frontend/src/principal/pages/MeDataPage.tsx"
 type: "code"
-community: "react-router-dom"
-location: "L31"
+community: "cn"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react-router-dom
+  - community/cn
 ---
 
 # categoryLabel()
 
 ## Connections
-- [[MeRecipientsPage()]] - `calls` [EXTRACTED]
-- [[MeRecipientsPage.tsx]] - `contains` [EXTRACTED]
+- [[MeDataPage()]] - `calls` [EXTRACTED]
+- [[MeDataPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react-router-dom
+#graphify/code #graphify/EXTRACTED #community/cn

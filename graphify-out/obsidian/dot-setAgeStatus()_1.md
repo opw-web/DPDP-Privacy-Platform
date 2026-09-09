@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/children/age-status.service.ts"
 type: "code"
-community: "age-status.service.ts"
+community: "AgeStatusService"
 location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/age-statusservicets
+  - community/AgeStatusService
 ---
 
 # .setAgeStatus()
@@ -17,4 +17,4 @@ tags:
 - [[AgeStatusService]] - `method` [EXTRACTED]
 - [[SetAgeStatusDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/age-statusservicets
+#graphify/code #graphify/EXTRACTED #community/AgeStatusService

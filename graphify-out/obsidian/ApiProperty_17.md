@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Public"
+community: "mapping-warning-response.dto.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public
+  - community/mapping-warning-responsedtots
 ---
 
 # ApiProperty
 
 ## Connections
-- [[MePrivacyContactDto]] - `references` [EXTRACTED]
+- [[MappingsResponseDto]] - `references` [EXTRACTED]
+- [[SourceFieldMappingResponseDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public
+#graphify/code #graphify/EXTRACTED #community/mapping-warning-responsedtots

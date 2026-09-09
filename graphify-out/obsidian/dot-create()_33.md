@@ -1,22 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/recipients.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/recipients.service.ts"
 type: "code"
-community: "recipients.service.ts"
-location: "L32"
+community: "CreateRecipientDto"
+location: "L106"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/CreateRecipientDto
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_34]] - `calls` [INFERRED]
-- [[Body_24]] - `references` [EXTRACTED]
+- [[dot-assertProcessorRule()]] - `calls` [EXTRACTED]
+- [[dot-create()_32]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
 - [[CreateRecipientDto]] - `references` [EXTRACTED]
-- [[Post_24]] - `references` [EXTRACTED]
-- [[RecipientsController]] - `method` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[RecipientsService]] - `method` [EXTRACTED]
+- [[duplicateNameMessage()_1]] - `calls` [EXTRACTED]
+- [[isUniqueConstraintViolation()_5]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/CreateRecipientDto

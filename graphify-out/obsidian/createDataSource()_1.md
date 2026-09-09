@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/sync.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/mappings.e2e-spec.ts"
 type: "code"
-community: "PrismaService"
-location: "L187"
+community: "sync.e2e-spec.ts"
+location: "L125"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/synce2e-spects
 ---
 
 # createDataSource()
 
 ## Connections
-- [[sync.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[tenant()]] - `calls` [EXTRACTED]
+- [[mappings.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

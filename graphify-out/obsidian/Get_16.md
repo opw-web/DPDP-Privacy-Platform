@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "PermissionsController"
+community: "TemplatesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PermissionsController
+  - community/TemplatesService
 ---
 
 # Get
 
 ## Connections
-- [[dot-list()_13]] - `references` [EXTRACTED]
+- [[dot-get()_6]] - `references` [EXTRACTED]
+- [[dot-list()_17]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PermissionsController
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

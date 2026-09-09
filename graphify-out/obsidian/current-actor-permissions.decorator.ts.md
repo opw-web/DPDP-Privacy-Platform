@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/decorators/current-actor-permissions.decorator.ts"
 type: "code"
-community: "RequirePermission"
+community: "audit-read.controller.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/audit-readcontrollerts
 ---
 
 # current-actor-permissions.decorator.ts
@@ -23,4 +23,4 @@ tags:
 - [[permissions.guard.ts]] - `imports_from` [EXTRACTED]
 - [[principals.controller.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/audit-readcontrollerts

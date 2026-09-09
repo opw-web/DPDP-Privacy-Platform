@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sync-lock.service.ts"
+community: "RequestsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sync-lockservicets
+  - community/RequestsService
 ---
 
 # Injectable
 
 ## Connections
-- [[SyncLockService]] - `references` [EXTRACTED]
+- [[RequestsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sync-lockservicets
+#graphify/code #graphify/EXTRACTED #community/RequestsService

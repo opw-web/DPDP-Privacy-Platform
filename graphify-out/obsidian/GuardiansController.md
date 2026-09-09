@@ -1,24 +1,24 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/children/guardians.controller.ts"
 type: "code"
-community: "guardians.service.ts"
+community: "guardians.controller.ts"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/guardianscontrollerts
 ---
 
 # GuardiansController
 
 ## Connections
-- [[dot-constructor()_14]] - `method` [EXTRACTED]
-- [[dot-create()_2]] - `method` [EXTRACTED]
-- [[dot-list()_3]] - `method` [EXTRACTED]
+- [[dot-constructor()_8]] - `method` [EXTRACTED]
+- [[dot-create()_1]] - `method` [EXTRACTED]
+- [[dot-list()_4]] - `method` [EXTRACTED]
 - [[dot-verify()]] - `method` [EXTRACTED]
-- [[ApiTags_3]] - `references` [EXTRACTED]
-- [[Controller_3]] - `references` [EXTRACTED]
+- [[ApiTags_4]] - `references` [EXTRACTED]
+- [[Controller_4]] - `references` [EXTRACTED]
 - [[children.module.ts]] - `imports` [EXTRACTED]
 - [[guardians.controller.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/guardianscontrollerts

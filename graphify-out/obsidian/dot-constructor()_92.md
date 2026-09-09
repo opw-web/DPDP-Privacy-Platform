@@ -1,19 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/campaign-send.processor.ts"
+source_file: "dpdp-platform/backend/src/common/prisma/prisma.service.ts"
 type: "code"
-community: "breach-principal-notice-dispatch.processor.ts"
-location: "L64"
+community: "PrismaService"
+location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/breach-principal-notice-dispatchprocessorts
+  - community/PrismaService
 ---
 
 # .constructor()
 
 ## Connections
-- [[CampaignSendProcessor]] - `method` [EXTRACTED]
-- [[CampaignsService]] - `references` [EXTRACTED]
-- [[NotificationsService]] - `references` [EXTRACTED]
+- [[PrismaService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/breach-principal-notice-dispatchprocessorts
+#graphify/code #graphify/EXTRACTED #community/PrismaService

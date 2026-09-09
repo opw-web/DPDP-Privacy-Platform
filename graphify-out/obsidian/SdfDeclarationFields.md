@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/SdfDeclarationCard.tsx"
 type: "code"
-community: "router.tsx"
+community: "@tanstack/react-query"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/tanstack/react-query
 ---
 
 # SdfDeclarationFields
@@ -15,4 +15,4 @@ tags:
 - [[SdfDeclarationCard.test.tsx]] - `imports` [EXTRACTED]
 - [[SdfDeclarationCard.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

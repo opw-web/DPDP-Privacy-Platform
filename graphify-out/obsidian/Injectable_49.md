@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SdfController"
+community: "ConsentsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SdfController
+  - community/ConsentsService
 ---
 
 # Injectable
 
 ## Connections
-- [[AlgorithmRegisterService]] - `references` [EXTRACTED]
+- [[ConsentsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SdfController
+#graphify/code #graphify/EXTRACTED #community/ConsentsService

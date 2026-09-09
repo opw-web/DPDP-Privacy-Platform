@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/sdf-cycle-scan.processor.ts"
 type: "code"
-community: "queues.module.ts"
+community: "SdfCycleScanService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/SdfCycleScanService
 ---
 
 # sdf-cycle-scan.processor.ts
@@ -23,4 +23,4 @@ tags:
 - [[sdf-cycle-scan.service.ts]] - `imports_from` [EXTRACTED]
 - [[sdf.module.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/SdfCycleScanService

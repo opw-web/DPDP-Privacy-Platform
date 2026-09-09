@@ -12,7 +12,7 @@ tags:
 # sync-error.spec.ts
 
 ## Connections
-- [[IdentifierOwnershipConflictError_1]] - `contains` [EXTRACTED]
+- [[IdentifierOwnershipConflictError]] - `contains` [EXTRACTED]
 - [[MissingRecordKeyError]] - `imports` [EXTRACTED]
 - [[NotFoundException]] - `contains` [EXTRACTED]
 - [[PageCapExceededError]] - `contains` [EXTRACTED]

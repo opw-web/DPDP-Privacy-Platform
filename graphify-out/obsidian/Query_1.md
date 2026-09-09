@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "guardians.service.ts"
+community: "audit-read.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/audit-readcontrollerts
 ---
 
 # Query
 
 ## Connections
-- [[dot-list()_3]] - `references` [EXTRACTED]
+- [[dot-accessLogCsv()_1]] - `references` [EXTRACTED]
+- [[dot-list()_6]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/audit-readcontrollerts

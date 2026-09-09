@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/guards/permissions.guard.ts"
 type: "code"
-community: "RequirePermission"
+community: "audit-read.controller.ts"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/audit-readcontrollerts
 ---
 
 # PermissionsRequest
@@ -15,4 +15,4 @@ tags:
 - [[current-actor-permissions.decorator.ts]] - `imports` [EXTRACTED]
 - [[permissions.guard.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/audit-readcontrollerts

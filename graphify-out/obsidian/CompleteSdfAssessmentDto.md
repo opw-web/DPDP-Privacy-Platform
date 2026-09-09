@@ -1,26 +1,26 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sdf/dto/complete-sdf-assessment.dto.ts"
 type: "code"
-community: "CompleteSdfAssessmentDto"
+community: "CreateAlgorithmEntryDto"
 location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CompleteSdfAssessmentDto
+  - community/CreateAlgorithmEntryDto
 ---
 
 # CompleteSdfAssessmentDto
 
 ## Connections
-- [[dot-complete()_2]] - `references` [EXTRACTED]
+- [[dot-complete()]] - `references` [EXTRACTED]
 - [[dot-completeAssessment()]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_25]] - `references` [EXTRACTED]
-- [[IsBoolean_13]] - `references` [EXTRACTED]
-- [[IsDateString_7]] - `references` [EXTRACTED]
-- [[IsOptional_27]] - `references` [EXTRACTED]
-- [[IsString_32]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_7]] - `references` [EXTRACTED]
+- [[IsBoolean_2]] - `references` [EXTRACTED]
+- [[IsDateString_2]] - `references` [EXTRACTED]
+- [[IsOptional_6]] - `references` [EXTRACTED]
+- [[IsString_6]] - `references` [EXTRACTED]
 - [[complete-sdf-assessment.dto.ts]] - `contains` [EXTRACTED]
 - [[sdf-assessment.service.ts]] - `imports` [EXTRACTED]
 - [[sdf.controller.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CompleteSdfAssessmentDto
+#graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto

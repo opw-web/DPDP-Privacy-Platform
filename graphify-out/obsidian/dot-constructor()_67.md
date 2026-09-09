@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.controller.ts"
+source_file: "dpdp-platform/backend/src/queues/campaign-send.queue.ts"
 type: "code"
-community: "AttachPurposesDto"
-location: "L34"
+community: "CampaignsService"
+location: "L67"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AttachPurposesDto
+  - community/CampaignsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[MappingsController]] - `method` [EXTRACTED]
-- [[MappingsService]] - `references` [EXTRACTED]
-- [[SourcePurposesService]] - `references` [EXTRACTED]
+- [[CampaignSendQueueService]] - `method` [EXTRACTED]
+- [[InjectQueue_8]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AttachPurposesDto
+#graphify/code #graphify/EXTRACTED #community/CampaignsService

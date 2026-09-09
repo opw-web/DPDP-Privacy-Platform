@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notices/languages.ts"
 type: "code"
-community: "notices.service.ts"
+community: "RequirePermission"
 location: "L42"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/noticesservicets
+  - community/RequirePermission
 ---
 
 # isNoticeLanguageCode()
@@ -19,4 +19,4 @@ tags:
 - [[me-rights.service.ts]] - `imports` [EXTRACTED]
 - [[notices.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/noticesservicets
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

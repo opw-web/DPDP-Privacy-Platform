@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/shared/Skeleton.tsx"
 type: "code"
-community: "react-router-dom"
+community: "cn"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react-router-dom
+  - community/cn
 ---
 
 # Skeleton()
@@ -40,4 +40,4 @@ tags:
 - [[StatCard.tsx]] - `imports` [EXTRACTED]
 - [[cn()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react-router-dom
+#graphify/code #graphify/EXTRACTED #community/cn

@@ -1,16 +1,17 @@
 ---
-source_file: ""
+source_file: "dpdp-platform/backend/tsconfig.json"
 type: "code"
-community: "AppModule"
+community: "compilerOptions"
+location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AppModule
+  - community/compilerOptions
 ---
 
-# Module
+# module
 
 ## Connections
-- [[AppModule]] - `references` [EXTRACTED]
+- [[compilerOptions_4]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AppModule
+#graphify/code #graphify/EXTRACTED #community/compilerOptions

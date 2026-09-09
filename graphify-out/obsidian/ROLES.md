@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/prisma/seed/roles.ts"
 type: "code"
-community: "AppModule"
+community: "seed.ts"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AppModule
+  - community/seedts
 ---
 
 # ROLES
@@ -15,4 +15,4 @@ tags:
 - [[roles.ts]] - `contains` [EXTRACTED]
 - [[seed.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AppModule
+#graphify/code #graphify/EXTRACTED #community/seedts

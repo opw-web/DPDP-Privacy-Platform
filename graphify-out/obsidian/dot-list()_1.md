@@ -1,18 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/legal-hold.service.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/notifications.service.ts"
 type: "code"
-community: "RetentionController"
-location: "L40"
+community: "@nestjs/common"
+location: "L149"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionController
+  - community/nestjs/common
 ---
 
 # .list()
 
 ## Connections
-- [[dot-listLegalHolds()]] - `calls` [INFERRED]
-- [[LegalHoldService]] - `method` [EXTRACTED]
+- [[dot-list()_41]] - `calls` [INFERRED]
+- [[dot-listMessages()_1]] - `calls` [INFERRED]
+- [[NotificationCallerActor]] - `references` [EXTRACTED]
+- [[NotificationsService]] - `method` [EXTRACTED]
+- [[ownershipWhere()]] - `calls` [EXTRACTED]
+- [[toPublicNotification()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionController
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

@@ -12,10 +12,10 @@ tags:
 # DeadlineScanProcessor
 
 ## Connections
-- [[dot-constructor()_60]] - `method` [EXTRACTED]
-- [[dot-process()_3]] - `method` [EXTRACTED]
+- [[dot-constructor()_9]] - `method` [EXTRACTED]
+- [[dot-process()]] - `method` [EXTRACTED]
 - [[dot-runScanCycle()]] - `method` [EXTRACTED]
-- [[Processor_3]] - `references` [EXTRACTED]
+- [[Processor]] - `references` [EXTRACTED]
 - [[deadline-scan.processor.ts]] - `contains` [EXTRACTED]
 - [[requests.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[requests.module.ts]] - `imports` [EXTRACTED]

@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/audience/audience.service.ts"
+source_file: "dpdp-platform/backend/src/common/guards/jwt-employee.guard.ts"
 type: "code"
-community: "compile-audience.ts"
-location: "L69"
+community: "main.ts"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/compile-audiencets
+  - community/maints
 ---
 
 # .constructor()
 
 ## Connections
-- [[AudienceService]] - `method` [EXTRACTED]
-- [[MaskingService]] - `references` [EXTRACTED]
+- [[JwtEmployeeGuard]] - `method` [EXTRACTED]
+- [[TokenService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/compile-audiencets
+#graphify/code #graphify/EXTRACTED #community/maints

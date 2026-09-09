@@ -1,18 +1,19 @@
 ---
-source_file: "docs/demo-runbook/build-standalone.py"
+source_file: "dpdp-platform/backend/prisma/seed-principals.ts"
 type: "code"
-community: "build-standalone.py"
-location: "L53"
+community: "seed.ts"
+location: "L238"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/build-standalonepy
+  - community/seedts
 ---
 
 # main()
 
 ## Connections
-- [[build()]] - `calls` [EXTRACTED]
-- [[build-standalone.py]] - `contains` [EXTRACTED]
+- [[PrismaService]] - `calls` [EXTRACTED]
+- [[runSeedPrincipals()]] - `calls` [EXTRACTED]
+- [[seed-principals.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/build-standalonepy
+#graphify/code #graphify/EXTRACTED #community/seedts

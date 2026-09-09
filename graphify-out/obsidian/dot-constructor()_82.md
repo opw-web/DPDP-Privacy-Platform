@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/test-support/mock-http-server.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/sharing.service.ts"
 type: "code"
-community: "step6-conflict-acceptance.e2e-spec.ts"
-location: "L26"
+community: "CreateSharingActivityDto"
+location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/step6-conflict-acceptancee2e-spects
+  - community/CreateSharingActivityDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[MockHttpServer]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[SharingService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects
+#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

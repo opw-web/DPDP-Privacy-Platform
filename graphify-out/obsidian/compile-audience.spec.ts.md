@@ -12,7 +12,7 @@ tags:
 # compile-audience.spec.ts
 
 ## Connections
-- [[AudienceFilter_1]] - `imports` [EXTRACTED]
+- [[AudienceFilter]] - `imports` [EXTRACTED]
 - [[AudienceFilterError]] - `imports` [EXTRACTED]
 - [[audience-filter.error.ts]] - `imports_from` [EXTRACTED]
 - [[audience-filter.types.ts]] - `imports_from` [EXTRACTED]

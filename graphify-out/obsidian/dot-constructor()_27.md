@@ -1,17 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/audit-chain.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sync/sync.service.ts"
 type: "code"
-community: "canonicalJson"
-location: "L48"
+community: "SyncService"
+location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/canonicalJson
+  - community/SyncService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditChainService]] - `method` [EXTRACTED]
+- [[DataSourcesService]] - `references` [EXTRACTED]
+- [[SyncQueueService]] - `references` [EXTRACTED]
+- [[SyncService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/canonicalJson
+#graphify/code #graphify/EXTRACTED #community/SyncService

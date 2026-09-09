@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/linking.service.ts"
 type: "code"
-community: "AuditService"
+community: "ScopedTransactionClient"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/ScopedTransactionClient
 ---
 
 # linking.service.ts
@@ -18,7 +18,7 @@ tags:
 - [[ApplyMatchResult]] - `contains` [EXTRACTED]
 - [[AssemblyService]] - `imports` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
-- [[IdentifierOwnershipConflictError]] - `contains` [EXTRACTED]
+- [[IdentifierOwnershipConflictError_1]] - `contains` [EXTRACTED]
 - [[LinkableNormalizedRecord]] - `contains` [EXTRACTED]
 - [[LinkingService]] - `contains` [EXTRACTED]
 - [[MatchResult]] - `imports` [EXTRACTED]
@@ -44,4 +44,4 @@ tags:
 - [[sync-pipeline.service.ts]] - `imports_from` [EXTRACTED]
 - [[verifiedCustomerIdValue()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

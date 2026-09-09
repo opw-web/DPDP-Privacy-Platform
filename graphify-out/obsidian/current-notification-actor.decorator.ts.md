@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notifications/decorators/current-notification-actor.decorator.ts"
 type: "code"
-community: "notifications.controller.ts"
+community: "@nestjs/common"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationscontrollerts
+  - community/nestjs/common
 ---
 
 # current-notification-actor.decorator.ts
@@ -18,4 +18,4 @@ tags:
 - [[jwt-any-actor.guard.ts]] - `imports_from` [EXTRACTED]
 - [[notifications.controller.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

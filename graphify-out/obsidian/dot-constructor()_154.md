@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/audit/audit-read.service.ts"
+source_file: "dpdp-platform/backend/src/common/crypto/crypto.service.ts"
 type: "code"
-community: "compile-audience.ts"
-location: "L102"
+community: "@nestjs/config"
+location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/compile-audiencets
+  - community/nestjs/config
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditReadService]] - `method` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
-- [[MaskingService]] - `references` [EXTRACTED]
+- [[CryptoService]] - `method` [EXTRACTED]
+- [[InvalidEncryptionKeyError]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/compile-audiencets
+#graphify/code #graphify/EXTRACTED #community/nestjs/config

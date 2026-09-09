@@ -1,46 +1,48 @@
 ---
 type: community
-members: 33
+members: 35
 ---
 
 # PrincipalsService
 
-**Members:** 33 nodes
+**Members:** 35 nodes
 
 ## Members
-- [[dot-constructor()_83]] - code - dpdp-platform/backend/src/modules/principals/principals.controller.ts
+- [[dot-buildConsentSection()]] - code - dpdp-platform/backend/src/modules/evidence/access-report.service.ts
+- [[dot-buildProcessingActivities()]] - code - dpdp-platform/backend/src/modules/evidence/access-report.service.ts
+- [[dot-buildReport()]] - code - dpdp-platform/backend/src/modules/evidence/access-report.service.ts
+- [[dot-buildRetentionSection()]] - code - dpdp-platform/backend/src/modules/evidence/access-report.service.ts
+- [[dot-constructor()_73]] - code - dpdp-platform/backend/src/modules/principal-portal/me.controller.ts
+- [[dot-constructor()_74]] - code - dpdp-platform/backend/src/modules/principal-portal/me.service.ts
+- [[dot-constructor()_75]] - code - dpdp-platform/backend/src/modules/principals/lineage.service.ts
+- [[dot-constructor()_76]] - code - dpdp-platform/backend/src/modules/principals/principal-recipients.service.ts
+- [[dot-constructor()_77]] - code - dpdp-platform/backend/src/modules/principals/principals.controller.ts
+- [[dot-constructor()_78]] - code - dpdp-platform/backend/src/modules/principals/principals.service.ts
+- [[dot-constructor()_79]] - code - dpdp-platform/backend/src/modules/requests/requests.controller.ts
+- [[dot-getData()]] - code - dpdp-platform/backend/src/modules/principal-portal/me.service.ts
 - [[dot-getDetail()]] - code - dpdp-platform/backend/src/modules/principals/principals.service.ts
+- [[dot-getLineage()]] - code - dpdp-platform/backend/src/modules/principals/lineage.service.ts
+- [[dot-getProfile()]] - code - dpdp-platform/backend/src/modules/principal-portal/me.service.ts
+- [[dot-getRecipients()]] - code - dpdp-platform/backend/src/modules/principal-portal/me.service.ts
+- [[dot-getResolvedFields()]] - code - dpdp-platform/backend/src/modules/principals/lineage.service.ts
 - [[dot-getSourceRecords()]] - code - dpdp-platform/backend/src/modules/principals/principals.service.ts
+- [[dot-getSources()]] - code - dpdp-platform/backend/src/modules/principal-portal/me.service.ts
 - [[dot-getUnmaskedProfile()]] - code - dpdp-platform/backend/src/modules/principals/principals.service.ts
-- [[dot-lineage()]] - code - dpdp-platform/backend/src/modules/principals/principals.controller.ts
-- [[dot-list()_20]] - code - dpdp-platform/backend/src/modules/principals/principals.controller.ts
-- [[dot-list()_21]] - code - dpdp-platform/backend/src/modules/principals/principals.service.ts
+- [[dot-listForPrincipal()]] - code - dpdp-platform/backend/src/modules/principals/principal-recipients.service.ts
 - [[dot-loadProfile()]] - code - dpdp-platform/backend/src/modules/principals/principals.service.ts
-- [[dot-recipients()_1]] - code - dpdp-platform/backend/src/modules/principals/principals.controller.ts
+- [[dot-loadPurposeNamesBySource()]] - code - dpdp-platform/backend/src/modules/principal-portal/me.service.ts
 - [[dot-recordPersonalDataViewed()]] - code - dpdp-platform/backend/src/common/audit/access-log.service.ts
 - [[dot-resolveFields()]] - code - dpdp-platform/backend/src/modules/principals/lineage.service.ts
-- [[dot-resolveFieldsInTransaction()]] - code - dpdp-platform/backend/src/modules/principals/principals.service.ts
-- [[dot-sourceRecords()]] - code - dpdp-platform/backend/src/modules/principals/principals.controller.ts
-- [[ApiTags_20]] - code
-- [[Controller_21]] - code
-- [[Get_23]] - code
-- [[Injectable_51]] - code
-- [[IsEnum_13]] - code
-- [[IsInt_7]] - code
-- [[IsOptional_29]] - code
-- [[IsString_34]] - code
-- [[ListPrincipalsDto]] - code - dpdp-platform/backend/src/modules/principals/dto/list-principals.dto.ts
-- [[Max_2]] - code
-- [[Min_7]] - code
-- [[Param_14]] - code
-- [[PrincipalsController]] - code - dpdp-platform/backend/src/modules/principals/principals.controller.ts
+- [[AccessReportService]] - code - dpdp-platform/backend/src/modules/evidence/access-report.service.ts
+- [[Injectable_42]] - code
+- [[Injectable_43]] - code
+- [[Injectable_44]] - code
+- [[Injectable_45]] - code
+- [[Injectable_46]] - code
+- [[LineageService]] - code - dpdp-platform/backend/src/modules/principals/lineage.service.ts
+- [[MeService]] - code - dpdp-platform/backend/src/modules/principal-portal/me.service.ts
+- [[PrincipalRecipientsService]] - code - dpdp-platform/backend/src/modules/principals/principal-recipients.service.ts
 - [[PrincipalsService]] - code - dpdp-platform/backend/src/modules/principals/principals.service.ts
-- [[Query_6]] - code
-- [[SourceRef]] - code - dpdp-platform/backend/src/modules/principals/field-provenance.ts
-- [[Transform_1]] - code
-- [[field-provenance.ts]] - code - dpdp-platform/backend/src/modules/principals/field-provenance.ts
-- [[pickDisplayName()]] - code - dpdp-platform/backend/src/modules/principals/field-provenance.ts
-- [[resolveProvenance()]] - code - dpdp-platform/backend/src/modules/principals/field-provenance.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -50,20 +52,23 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_RequirePermission]]
-- 11 edges to [[_COMMUNITY_principals.service.ts]]
-- 8 edges to [[_COMMUNITY_AccessReportService]]
-- 3 edges to [[_COMMUNITY_AuditService]]
-- 2 edges to [[_COMMUNITY_@nestjscommon]]
-- 2 edges to [[_COMMUNITY_compile-audience.ts]]
-- 1 edge to [[_COMMUNITY_@prismaclient]]
-- 1 edge to [[_COMMUNITY_PrincipalActor]]
-- 1 edge to [[_COMMUNITY_dot-record]]
-- 1 edge to [[_COMMUNITY_access-report-render.ts]]
+- 12 edges to [[_COMMUNITY_principals.service.ts]]
+- 9 edges to [[_COMMUNITY_Public]]
+- 9 edges to [[_COMMUNITY_AuditService]]
+- 8 edges to [[_COMMUNITY_principals.controller.ts]]
+- 5 edges to [[_COMMUNITY_app.module.ts]]
+- 2 edges to [[_COMMUNITY_MaskingService]]
+- 2 edges to [[_COMMUNITY_RequestsController]]
+- 2 edges to [[_COMMUNITY_ScopedTransactionClient]]
+- 2 edges to [[_COMMUNITY_dot-record]]
+- 1 edge to [[_COMMUNITY_RequestsService]]
+- 1 edge to [[_COMMUNITY_@nestjsswagger]]
+- 1 edge to [[_COMMUNITY_supertest]]
+- 1 edge to [[_COMMUNITY_PrincipalEvidenceController]]
 
 ## Top bridge nodes
-- [[dot-recordPersonalDataViewed()]] - degree 7, connects to 5 communities
-- [[PrincipalsService]] - degree 14, connects to 4 communities
-- [[ListPrincipalsDto]] - degree 10, connects to 2 communities
-- [[PrincipalsController]] - degree 10, connects to 2 communities
-- [[dot-loadProfile()]] - degree 7, connects to 2 communities
+- [[AccessReportService]] - degree 13, connects to 5 communities
+- [[LineageService]] - degree 13, connects to 4 communities
+- [[PrincipalRecipientsService]] - degree 11, connects to 4 communities
+- [[dot-buildReport()]] - degree 11, connects to 4 communities
+- [[dot-recordPersonalDataViewed()]] - degree 7, connects to 4 communities

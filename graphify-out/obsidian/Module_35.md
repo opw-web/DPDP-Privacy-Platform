@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "data-sources.module.ts"
+community: "sync.e2e-spec.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesmodulets
+  - community/synce2e-spects
 ---
 
 # Module
 
 ## Connections
-- [[IdentityModule]] - `references` [EXTRACTED]
+- [[AppModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesmodulets
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

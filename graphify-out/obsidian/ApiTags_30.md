@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "health.service.ts"
+community: "AgeStatusService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/healthservicets
+  - community/AgeStatusService
 ---
 
 # ApiTags
 
 ## Connections
-- [[HealthController]] - `references` [EXTRACTED]
+- [[AgeStatusController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/healthservicets
+#graphify/code #graphify/EXTRACTED #community/AgeStatusService

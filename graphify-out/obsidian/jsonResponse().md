@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/principal/pages/MeDataPage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/wizard/Step3Mapping.test.tsx"
 type: "code"
-community: "MeDataPage.tsx"
-location: "L7"
+community: "data-sources-api.ts"
+location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeDataPagetsx
+  - community/data-sources-apits
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[MeDataPage.test.tsx]] - `contains` [EXTRACTED]
+- [[Step3Mapping.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeDataPagetsx
+#graphify/code #graphify/EXTRACTED #community/data-sources-apits

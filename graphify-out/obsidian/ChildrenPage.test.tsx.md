@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/ChildrenPage.test.tsx"
 type: "code"
-community: "router.tsx"
+community: "@tanstack/react-query"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/tanstack/react-query
 ---
 
 # ChildrenPage.test.tsx
@@ -17,9 +17,9 @@ tags:
 - [[@testing-libraryuser-event_1]] - `imports_from` [EXTRACTED]
 - [[ChildrenPage()]] - `imports` [EXTRACTED]
 - [[ChildrenPage.tsx]] - `imports_from` [EXTRACTED]
-- [[jsonResponse()_11]] - `contains` [EXTRACTED]
+- [[jsonResponse()_7]] - `contains` [EXTRACTED]
 - [[react-router-dom_1]] - `imports_from` [EXTRACTED]
-- [[renderPage()_3]] - `contains` [EXTRACTED]
+- [[renderPage()_1]] - `contains` [EXTRACTED]
 - [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

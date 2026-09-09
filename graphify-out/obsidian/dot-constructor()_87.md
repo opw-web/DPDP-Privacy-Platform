@@ -1,20 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sdf/sdf-cycle-scan.service.ts"
+source_file: "dpdp-platform/backend/src/modules/breaches/breaches.controller.ts"
 type: "code"
-community: "SdfCycleScanService"
-location: "L44"
+community: "BreachService"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SdfCycleScanService
+  - community/BreachService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[ComplianceService]] - `references` [EXTRACTED]
-- [[NotificationsService]] - `references` [EXTRACTED]
-- [[SdfCycleScanService]] - `method` [EXTRACTED]
+- [[BreachService]] - `references` [EXTRACTED]
+- [[BreachesController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SdfCycleScanService
+#graphify/code #graphify/EXTRACTED #community/BreachService

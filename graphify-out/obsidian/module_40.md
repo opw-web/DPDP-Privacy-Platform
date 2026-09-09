@@ -1,17 +1,16 @@
 ---
-source_file: "dpdp-platform/backend/tsconfig.json"
+source_file: ""
 type: "code"
-community: "compilerOptions"
-location: "L3"
+community: "@nestjs/config"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/compilerOptions
+  - community/nestjs/config
 ---
 
-# module
+# Module
 
 ## Connections
-- [[compilerOptions_4]] - `contains` [EXTRACTED]
+- [[CryptoModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/compilerOptions
+#graphify/code #graphify/EXTRACTED #community/nestjs/config

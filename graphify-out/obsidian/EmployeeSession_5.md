@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/lib/auth.ts"
+source_file: "dpdp-platform/backend/test/audit-read.e2e-spec.ts"
 type: "code"
-community: "router.tsx"
+community: "AuditService"
 location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/AuditService
 ---
 
 # EmployeeSession
 
 ## Connections
-- [[EmployeeSummary]] - `inherits` [EXTRACTED]
-- [[libauth.ts]] - `contains` [EXTRACTED]
+- [[audit-read.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[ensurePermission()_13]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/AuditService

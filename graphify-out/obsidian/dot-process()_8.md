@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/retention-scan.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/breach-clock.processor.ts"
 type: "code"
-community: "queues.module.ts"
-location: "L24"
+community: "BreachService"
+location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/BreachService
 ---
 
 # .process()
 
 ## Connections
-- [[dot-runForAllOrganizations()_3]] - `calls` [INFERRED]
-- [[RetentionScanJobData]] - `references` [EXTRACTED]
-- [[RetentionScanProcessor]] - `method` [EXTRACTED]
+- [[dot-runClockCycle()]] - `calls` [EXTRACTED]
+- [[BreachClockProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/BreachService

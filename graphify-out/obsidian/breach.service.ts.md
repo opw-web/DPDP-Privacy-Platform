@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
 type: "code"
-community: ".record"
+community: "@nestjs/common"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/nestjs/common
 ---
 
 # breach.service.ts
@@ -33,7 +33,7 @@ tags:
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[PublicBreach]] - `imports` [EXTRACTED]
 - [[ReferenceService]] - `imports` [EXTRACTED]
-- [[TRANSITIONS_1]] - `contains` [EXTRACTED]
+- [[TRANSITIONS]] - `contains` [EXTRACTED]
 - [[UpdateBreachDto]] - `imports` [EXTRACTED]
 - [[affected-principals.dto.ts]] - `imports_from` [EXTRACTED]
 - [[asDate()]] - `contains` [EXTRACTED]
@@ -61,4 +61,4 @@ tags:
 - [[token.service.ts]] - `imports_from` [EXTRACTED]
 - [[update-breach.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

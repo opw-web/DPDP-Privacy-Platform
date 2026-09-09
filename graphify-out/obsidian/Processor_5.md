@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "BreachClockProcessor"
+community: "queues.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BreachClockProcessor
+  - community/queuesmodulets
 ---
 
 # Processor
 
 ## Connections
-- [[BreachClockProcessor]] - `references` [EXTRACTED]
+- [[RetentionScanProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BreachClockProcessor
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

@@ -1,19 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
+source_file: "dpdp-platform/backend/src/modules/requests/requests.controller.ts"
 type: "code"
-community: "compliance.service.ts"
-location: "L359"
+community: "ListRequestsDto"
+location: "L58"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/complianceservicets
+  - graphify/EXTRACTED
+  - community/ListRequestsDto
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_2]] - `calls` [INFERRED]
-- [[ComplianceService]] - `method` [EXTRACTED]
-- [[toPublicComplianceRule()]] - `indirect_call` [INFERRED]
+- [[dot-list()_15]] - `calls` [INFERRED]
+- [[Get_18]] - `references` [EXTRACTED]
+- [[ListRequestsDto]] - `references` [EXTRACTED]
+- [[Query_5]] - `references` [EXTRACTED]
+- [[RequestsController]] - `method` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/complianceservicets
+#graphify/code #graphify/EXTRACTED #community/ListRequestsDto

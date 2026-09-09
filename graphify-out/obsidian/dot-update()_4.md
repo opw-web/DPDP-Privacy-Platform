@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/transfers.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/transfers.controller.ts"
 type: "code"
 community: "CreateTransferDto"
-location: "L132"
+location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,11 +12,12 @@ tags:
 # .update()
 
 ## Connections
-- [[dot-assertEmployeeExists()]] - `calls` [EXTRACTED]
-- [[dot-assertRecipientExists()]] - `calls` [EXTRACTED]
-- [[dot-record()_1]] - `calls` [INFERRED]
-- [[dot-update()_3]] - `calls` [INFERRED]
-- [[TransfersService]] - `method` [EXTRACTED]
+- [[dot-update()_5]] - `calls` [INFERRED]
+- [[Body_7]] - `references` [EXTRACTED]
+- [[Param_6]] - `references` [EXTRACTED]
+- [[Patch_2]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[TransfersController]] - `method` [EXTRACTED]
 - [[UpdateTransferDto]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CreateTransferDto

@@ -1,16 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "guardians.service.ts"
+community: "Public"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/Public
 ---
 
 # Get
 
 ## Connections
-- [[dot-list()_3]] - `references` [EXTRACTED]
+- [[dot-getNomination()]] - `references` [EXTRACTED]
+- [[dot-getPublishedNotice()]] - `references` [EXTRACTED]
+- [[dot-getRequest()]] - `references` [EXTRACTED]
+- [[dot-listMessages()]] - `references` [EXTRACTED]
+- [[dot-listPublishedNotices()]] - `references` [EXTRACTED]
+- [[dot-listRequests()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/Public

@@ -16,9 +16,9 @@ tags:
 - [[dot-logout()_1]] - `calls` [INFERRED]
 - [[EmployeeAuthController]] - `method` [EXTRACTED]
 - [[HttpCode_4]] - `references` [EXTRACTED]
-- [[Post_23]] - `references` [EXTRACTED]
+- [[Post_25]] - `references` [EXTRACTED]
 - [[Public()]] - `references` [EXTRACTED]
 - [[Req_2]] - `references` [EXTRACTED]
-- [[Res_8]] - `references` [EXTRACTED]
+- [[Res_7]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/EmployeeAuthController

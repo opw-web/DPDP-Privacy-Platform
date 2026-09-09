@@ -12,9 +12,9 @@ tags:
 # ErasureSystemChecklistDto
 
 ## Connections
-- [[ApiProperty_43]] - `references` [EXTRACTED]
-- [[IsBoolean_20]] - `references` [EXTRACTED]
-- [[IsString_60]] - `references` [EXTRACTED]
+- [[ApiProperty_25]] - `references` [EXTRACTED]
+- [[IsBoolean_14]] - `references` [EXTRACTED]
+- [[IsString_35]] - `references` [EXTRACTED]
 - [[change-status.dto.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/ChangeStatusDto

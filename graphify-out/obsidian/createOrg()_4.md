@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/mappings.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/reference.e2e-spec.ts"
 type: "code"
-community: "step6-conflict-acceptance.e2e-spec.ts"
-location: "L49"
+community: "ScopedTransactionClient"
+location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/step6-conflict-acceptancee2e-spects
+  - community/ScopedTransactionClient
 ---
 
 # createOrg()
 
 ## Connections
-- [[createOrgWithBothPermissions()]] - `calls` [EXTRACTED]
-- [[mappings.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[reference.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

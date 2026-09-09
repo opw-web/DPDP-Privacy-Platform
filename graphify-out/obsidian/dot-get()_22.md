@@ -1,21 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/retention.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/recipients.service.ts"
 type: "code"
-community: "retention.service.ts"
-location: "L21"
+community: "CreateRecipientDto"
+location: "L67"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/CreateRecipientDto
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_23]] - `calls` [INFERRED]
-- [[Get_38]] - `references` [EXTRACTED]
-- [[Param_27]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[RetentionController_1]] - `method` [EXTRACTED]
+- [[dot-get()_21]] - `calls` [INFERRED]
+- [[RecipientsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/CreateRecipientDto

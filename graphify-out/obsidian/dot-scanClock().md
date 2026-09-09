@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
 type: "code"
-community: ".record"
+community: "BreachService"
 location: "L799"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/BreachService
 ---
 
 # .scanClock()
@@ -15,8 +15,8 @@ tags:
 - [[dot-reconcilePrincipalNoticeDispatches()]] - `calls` [EXTRACTED]
 - [[dot-record()_1]] - `calls` [INFERRED]
 - [[dot-runClockCycle()]] - `calls` [INFERRED]
-- [[dot-send()]] - `calls` [INFERRED]
-- [[dot-update()_21]] - `calls` [EXTRACTED]
+- [[dot-send()_2]] - `calls` [INFERRED]
+- [[dot-update()_20]] - `calls` [EXTRACTED]
 - [[BreachService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/BreachService

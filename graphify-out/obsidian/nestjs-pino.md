@@ -1,19 +1,17 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
-type: "concept"
-community: "configuration.ts"
+type: "code"
+community: "dependencies"
 location: "L44"
 tags:
-  - graphify/concept
+  - graphify/code
   - graphify/EXTRACTED
-  - community/configurationts
+  - community/dependencies
 ---
 
 # nestjs-pino
 
 ## Connections
-- [[app.module.ts]] - `imports_from` [EXTRACTED]
-- [[backendpackage.json]] - `imports` [EXTRACTED]
-- [[main.ts]] - `imports_from` [EXTRACTED]
+- [[dependencies_1]] - `contains` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/configurationts
+#graphify/code #graphify/EXTRACTED #community/dependencies

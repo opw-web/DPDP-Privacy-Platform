@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/prisma/seed/mvp2-demo.ts"
 type: "code"
-community: "argon2"
+community: "seed.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/argon2
+  - community/seedts
 ---
 
 # mvp2-demo.ts
@@ -19,13 +19,16 @@ tags:
 - [[DEMO_RETENTION_POLICY_NAME]] - `contains` [EXTRACTED]
 - [[Mvp2DemoSeedResult]] - `contains` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
+- [[canonical-field-label.ts]] - `imports_from` [EXTRACTED]
 - [[contentHash()]] - `contains` [EXTRACTED]
 - [[demo-org.ts]] - `imports_from` [EXTRACTED]
-- [[main()_4]] - `contains` [EXTRACTED]
+- [[humanizeCanonicalField()]] - `imports` [EXTRACTED]
+- [[isItemisableCanonicalField()]] - `imports` [EXTRACTED]
+- [[main()_1]] - `contains` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[resolveOrganizationId()]] - `contains` [EXTRACTED]
 - [[seed.ts]] - `imports_from` [EXTRACTED]
 - [[seedMvp2Demo()]] - `contains` [EXTRACTED]
 - [[seedNotices()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/argon2
+#graphify/code #graphify/EXTRACTED #community/seedts

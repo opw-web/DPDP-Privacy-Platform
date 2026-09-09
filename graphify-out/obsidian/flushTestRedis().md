@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/support/test-database.ts"
 type: "code"
-community: "sync-lock.service.ts"
+community: "test-database.ts"
 location: "L212"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sync-lockservicets
+  - community/test-databasets
 ---
 
 # flushTestRedis()
@@ -16,4 +16,4 @@ tags:
 - [[prepareTestEnvironment()]] - `calls` [EXTRACTED]
 - [[test-database.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sync-lockservicets
+#graphify/code #graphify/EXTRACTED #community/test-databasets

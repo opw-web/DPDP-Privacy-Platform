@@ -13,11 +13,11 @@ tags:
 
 ## Connections
 - [[dot-recordImportedConsent()_1]] - `calls` [INFERRED]
-- [[Body_18]] - `references` [EXTRACTED]
+- [[Body_21]] - `references` [EXTRACTED]
 - [[ConsentsController]] - `method` [EXTRACTED]
 - [[ImportConsentDto]] - `references` [EXTRACTED]
 - [[Param_21]] - `references` [EXTRACTED]
-- [[Post_19]] - `references` [EXTRACTED]
+- [[Post_21]] - `references` [EXTRACTED]
 - [[Req_1]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 

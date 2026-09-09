@@ -8,16 +8,16 @@ members: 12
 **Members:** 12 nodes
 
 ## Members
-- [[dot-constructor()_146]] - code - dpdp-platform/backend/src/modules/identity/unmerge.controller.ts
-- [[dot-unmerge()_1]] - code - dpdp-platform/backend/src/modules/identity/unmerge.controller.ts
-- [[ApiProperty_47]] - code
-- [[ApiTags_38]] - code
-- [[Body_27]] - code
-- [[Controller_39]] - code
-- [[IsString_67]] - code
-- [[MinLength_52]] - code
-- [[Param_29]] - code
-- [[Post_27]] - code
+- [[dot-constructor()_16]] - code - dpdp-platform/backend/src/modules/identity/unmerge.controller.ts
+- [[dot-unmerge()]] - code - dpdp-platform/backend/src/modules/identity/unmerge.controller.ts
+- [[ApiProperty_8]] - code
+- [[ApiTags_6]] - code
+- [[Body_4]] - code
+- [[Controller_6]] - code
+- [[IsString_10]] - code
+- [[MinLength_5]] - code
+- [[Param_4]] - code
+- [[Post_3]] - code
 - [[UnmergeController]] - code - dpdp-platform/backend/src/modules/identity/unmerge.controller.ts
 - [[UnmergeDto]] - code - dpdp-platform/backend/src/modules/identity/dto/unmerge.dto.ts
 
@@ -30,12 +30,12 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 5 edges to [[_COMMUNITY_RequirePermission]]
-- 2 edges to [[_COMMUNITY_AuditService]]
-- 1 edge to [[_COMMUNITY_@prismaclient]]
-- 1 edge to [[_COMMUNITY_@nestjscommon]]
+- 2 edges to [[_COMMUNITY_ScopedTransactionClient]]
+- 1 edge to [[_COMMUNITY_@nestjsswagger]]
+- 1 edge to [[_COMMUNITY_app.module.ts]]
 
 ## Top bridge nodes
-- [[dot-unmerge()_1]] - degree 9, connects to 2 communities
+- [[dot-unmerge()]] - degree 9, connects to 2 communities
 - [[UnmergeDto]] - degree 6, connects to 2 communities
 - [[UnmergeController]] - degree 6, connects to 2 communities
-- [[dot-constructor()_146]] - degree 2, connects to 1 community
+- [[dot-constructor()_16]] - degree 2, connects to 1 community

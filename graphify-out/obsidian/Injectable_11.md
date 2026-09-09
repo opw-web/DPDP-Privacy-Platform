@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ConsentBackfillService"
+community: "CreateAlgorithmEntryDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ConsentBackfillService
+  - community/CreateAlgorithmEntryDto
 ---
 
 # Injectable
 
 ## Connections
-- [[ConsentBackfillService]] - `references` [EXTRACTED]
+- [[SdfAssessmentService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ConsentBackfillService
+#graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto

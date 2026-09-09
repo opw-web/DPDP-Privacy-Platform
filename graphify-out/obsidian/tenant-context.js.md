@@ -14,9 +14,9 @@ tags:
 ## Connections
 - [[get()]] - `contains` [EXTRACTED]
 - [[getOrNull()]] - `contains` [EXTRACTED]
-- [[isThenable()_1]] - `contains` [EXTRACTED]
+- [[isThenable()]] - `contains` [EXTRACTED]
 - [[node_async_hooks_1]] - `contains` [EXTRACTED]
 - [[run()]] - `contains` [EXTRACTED]
-- [[storage_1]] - `contains` [EXTRACTED]
+- [[storage]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/tenant-contextjs

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/connectors/connector.interface.ts"
 type: "code"
-community: "data-sources.service.ts"
+community: "rest-api.connector.ts"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesservicets
+  - community/rest-apiconnectorts
 ---
 
 # .fetchRecords()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Connector]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets
+#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts

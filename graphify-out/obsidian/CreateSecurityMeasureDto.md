@@ -12,15 +12,15 @@ tags:
 # CreateSecurityMeasureDto
 
 ## Connections
+- [[dot-create()_36]] - `references` [EXTRACTED]
 - [[dot-create()_37]] - `references` [EXTRACTED]
-- [[dot-create()_38]] - `references` [EXTRACTED]
-- [[ApiProperty_46]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_51]] - `references` [EXTRACTED]
+- [[ApiProperty_49]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_50]] - `references` [EXTRACTED]
 - [[IsBoolean_25]] - `references` [EXTRACTED]
-- [[IsDateString_21]] - `references` [EXTRACTED]
-- [[IsIn_18]] - `references` [EXTRACTED]
-- [[IsOptional_50]] - `references` [EXTRACTED]
-- [[IsString_65]] - `references` [EXTRACTED]
+- [[IsDateString_20]] - `references` [EXTRACTED]
+- [[IsIn_16]] - `references` [EXTRACTED]
+- [[IsOptional_49]] - `references` [EXTRACTED]
+- [[IsString_66]] - `references` [EXTRACTED]
 - [[MinLength_50]] - `references` [EXTRACTED]
 - [[create-security-measure.dto.ts]] - `contains` [EXTRACTED]
 - [[security-measures.controller.ts]] - `imports` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/router.test.tsx"
 type: "code"
-community: "router.tsx"
+community: "@tanstack/react-query"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/tanstack/react-query
 ---
 
 # router.test.tsx
@@ -23,7 +23,7 @@ tags:
 - [[employeeLogin()]] - `imports` [EXTRACTED]
 - [[employeeLogout()]] - `imports` [EXTRACTED]
 - [[installFetchMock()]] - `contains` [EXTRACTED]
-- [[jsonResponse()_25]] - `contains` [EXTRACTED]
+- [[jsonResponse()_26]] - `contains` [EXTRACTED]
 - [[libauth.ts]] - `imports_from` [EXTRACTED]
 - [[loadRouter()]] - `contains` [EXTRACTED]
 - [[principalLogin()]] - `imports` [EXTRACTED]
@@ -36,4 +36,4 @@ tags:
 - [[unauthenticatedRefresh()]] - `contains` [EXTRACTED]
 - [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

@@ -12,7 +12,7 @@ tags:
 # MockRoutes
 
 ## Connections
-- [[AuditEventListItem_1]] - `references` [EXTRACTED]
+- [[AuditEventListItem]] - `references` [EXTRACTED]
 - [[AuditPage.test.tsx]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/AuditPagetsx

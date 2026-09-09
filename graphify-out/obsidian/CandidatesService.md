@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/candidates.service.ts"
 type: "code"
-community: "CandidatesService"
+community: "candidates.controller.ts"
 location: "L123"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CandidatesService
+  - community/candidatescontrollerts
 ---
 
 # CandidatesService
@@ -14,15 +14,15 @@ tags:
 ## Connections
 - [[dot-claimPendingCandidate()]] - `method` [EXTRACTED]
 - [[dot-confirm()_1]] - `method` [EXTRACTED]
-- [[dot-constructor()_84]] - `references` [EXTRACTED]
-- [[dot-constructor()_47]] - `method` [EXTRACTED]
-- [[dot-list()_23]] - `method` [EXTRACTED]
+- [[dot-constructor()_134]] - `references` [EXTRACTED]
+- [[dot-constructor()_115]] - `method` [EXTRACTED]
+- [[dot-list()_51]] - `method` [EXTRACTED]
 - [[dot-loadCandidate()]] - `method` [EXTRACTED]
 - [[dot-reject()_1]] - `method` [EXTRACTED]
-- [[Injectable_52]] - `references` [EXTRACTED]
+- [[Injectable_77]] - `references` [EXTRACTED]
 - [[candidates.controller.ts]] - `imports` [EXTRACTED]
 - [[candidates.service.ts]] - `contains` [EXTRACTED]
 - [[identity.module.ts]] - `imports` [EXTRACTED]
 - [[merge-unmerge.e2e-spec.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CandidatesService
+#graphify/code #graphify/EXTRACTED #community/candidatescontrollerts

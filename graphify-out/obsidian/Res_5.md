@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "RequestsController"
+community: "BreachesController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestsController
+  - community/BreachesController
 ---
 
 # Res
 
 ## Connections
-- [[dot-accessReport()_1]] - `references` [EXTRACTED]
+- [[dot-boardDetailed()]] - `references` [EXTRACTED]
+- [[dot-boardInitial()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestsController
+#graphify/code #graphify/EXTRACTED #community/BreachesController

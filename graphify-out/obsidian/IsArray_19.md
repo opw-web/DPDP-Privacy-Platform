@@ -11,6 +11,6 @@ tags:
 # IsArray
 
 ## Connections
-- [[CreateNoticeVersionDto]] - `references` [EXTRACTED]
+- [[CreateNoticeDto]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/noticesservicets

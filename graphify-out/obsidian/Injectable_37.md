@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "DataSourcesService"
+community: "queues.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesService
+  - community/queuesmodulets
 ---
 
 # Injectable
 
 ## Connections
-- [[DataSourcesService]] - `references` [EXTRACTED]
+- [[ConsentBackfillQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesService
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

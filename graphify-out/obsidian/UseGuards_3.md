@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalActor"
+community: ".markRead"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalActor
+  - community/markRead
 ---
 
 # UseGuards
 
 ## Connections
-- [[MeRightsController]] - `references` [EXTRACTED]
+- [[dot-list()_41]] - `references` [EXTRACTED]
+- [[dot-markAllRead()_1]] - `references` [EXTRACTED]
+- [[dot-markRead()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalActor
+#graphify/code #graphify/EXTRACTED #community/markRead

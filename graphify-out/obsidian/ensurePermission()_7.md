@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/merge-unmerge.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/purposes.e2e-spec.ts"
 type: "code"
-community: "merge-unmerge.e2e-spec.ts"
-location: "L55"
+community: "sync.e2e-spec.ts"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/merge-unmergee2e-spects
+  - community/synce2e-spects
 ---
 
 # ensurePermission()
 
 ## Connections
-- [[merge-unmerge.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[reviewerFor()]] - `calls` [EXTRACTED]
+- [[createOrgWithManager()]] - `calls` [EXTRACTED]
+- [[purposes.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/merge-unmergee2e-spects
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

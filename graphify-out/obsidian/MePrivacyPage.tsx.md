@@ -1,18 +1,19 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MePrivacyPage.tsx"
 type: "code"
-community: "react-router-dom"
+community: "card.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react-router-dom
+  - community/cardtsx
 ---
 
 # MePrivacyPage.tsx
 
 ## Connections
 - [[@tanstackreact-query_1]] - `imports_from` [EXTRACTED]
+- [[@uiwreact-md-editor_1]] - `imports_from` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
 - [[Card]] - `imports` [EXTRACTED]
 - [[CardContent]] - `imports` [EXTRACTED]
@@ -39,4 +40,4 @@ tags:
 - [[select.tsx]] - `imports_from` [EXTRACTED]
 - [[stringOrUndefined()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react-router-dom
+#graphify/code #graphify/EXTRACTED #community/cardtsx

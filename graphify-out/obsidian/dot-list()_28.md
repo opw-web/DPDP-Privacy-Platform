@@ -1,20 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/board/information-requests.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts"
 type: "code"
-community: "CreateInformationRequestDto"
-location: "L19"
+community: "CreateVoluntaryUndertakingDto"
+location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateInformationRequestDto
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # .list()
 
 ## Connections
 - [[dot-list()_29]] - `calls` [INFERRED]
-- [[Get_27]] - `references` [EXTRACTED]
-- [[InformationRequestsController]] - `method` [EXTRACTED]
+- [[Get_23]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
+- [[VoluntaryUndertakingsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

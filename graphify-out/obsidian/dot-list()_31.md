@@ -1,20 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/sharing.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/employees.service.ts"
 type: "code"
-community: "sharing.service.ts"
-location: "L15"
+community: "employees.controller.ts"
+location: "L42"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sharingservicets
+  - community/employeescontrollerts
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_32]] - `calls` [INFERRED]
-- [[Get_28]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[SharingController]] - `method` [EXTRACTED]
+- [[dot-list()_30]] - `calls` [INFERRED]
+- [[EmployeesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sharingservicets
+#graphify/code #graphify/EXTRACTED #community/employeescontrollerts

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principals/lineage.service.ts"
 type: "code"
-community: "AccessReportService"
+community: "PrincipalsService"
 location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessReportService
+  - community/PrincipalsService
 ---
 
 # .getResolvedFields()
@@ -19,4 +19,4 @@ tags:
 - [[dot-resolveFields()]] - `calls` [EXTRACTED]
 - [[LineageService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessReportService
+#graphify/code #graphify/EXTRACTED #community/PrincipalsService

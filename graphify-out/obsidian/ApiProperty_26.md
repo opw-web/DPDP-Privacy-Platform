@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "@prisma/client"
+community: "CreateExemptionClaimDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/CreateExemptionClaimDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[DataSourcePurposeResponseDto]] - `references` [EXTRACTED]
-- [[DataSourcePurposesResponseDto]] - `references` [EXTRACTED]
+- [[CreateExemptionClaimDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prisma/client
+#graphify/code #graphify/EXTRACTED #community/CreateExemptionClaimDto

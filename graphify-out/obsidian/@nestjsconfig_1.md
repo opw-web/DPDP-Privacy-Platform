@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "data-sources.module.ts"
+community: "@nestjs/config"
 location: "L29"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/data-sourcesmodulets
+  - community/nestjs/config
 ---
 
 # @nestjs/config
@@ -27,4 +27,4 @@ tags:
 - [[sync-lock.service.ts]] - `imports_from` [EXTRACTED]
 - [[token.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/data-sourcesmodulets
+#graphify/concept #graphify/EXTRACTED #community/nestjs/config

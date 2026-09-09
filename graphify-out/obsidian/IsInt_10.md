@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "retention.service.ts"
+community: "CreateRetentionPolicyDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/CreateRetentionPolicyDto
 ---
 
 # IsInt
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[UpdateRetentionPolicyDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/CreateRetentionPolicyDto

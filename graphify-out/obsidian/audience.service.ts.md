@@ -14,11 +14,11 @@ tags:
 ## Connections
 - [[@nestjscommon]] - `imports_from` [EXTRACTED]
 - [[@prismaclient_1]] - `imports_from` [EXTRACTED]
-- [[AudienceFilter_1]] - `imports` [EXTRACTED]
+- [[AudienceFilter]] - `imports` [EXTRACTED]
 - [[AudienceFilterError]] - `imports` [EXTRACTED]
 - [[AudiencePreviewResult]] - `contains` [EXTRACTED]
 - [[AudienceService]] - `contains` [EXTRACTED]
-- [[CHILD_LIKE_AGE_STATUSES_2]] - `contains` [EXTRACTED]
+- [[CHILD_LIKE_AGE_STATUSES_1]] - `contains` [EXTRACTED]
 - [[MaskingService]] - `imports` [EXTRACTED]
 - [[PreviewAudienceDto]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]

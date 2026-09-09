@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".record"
+community: ".markRead"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/markRead
 ---
 
 # ApiTags
 
 ## Connections
-- [[BreachesController]] - `references` [EXTRACTED]
+- [[NotificationsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/markRead

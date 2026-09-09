@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/principal-evidence.service.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/candidates.service.ts"
 type: "code"
-community: "access-report-render.ts"
-location: "L129"
+community: "ScopedTransactionClient"
+location: "L124"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-report-renderts
+  - community/ScopedTransactionClient
 ---
 
 # .constructor()
 
 ## Connections
-- [[AccessLogService]] - `references` [EXTRACTED]
 - [[AuditService]] - `references` [EXTRACTED]
-- [[PrincipalEvidenceService]] - `method` [EXTRACTED]
+- [[CandidatesService]] - `method` [EXTRACTED]
+- [[MergeService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-report-renderts
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

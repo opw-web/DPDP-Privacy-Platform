@@ -1,25 +1,24 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/requests/requests.service.ts"
+source_file: "dpdp-platform/backend/src/modules/purposes/purposes.service.ts"
 type: "code"
-community: "RequestsService"
-location: "L259"
+community: "CreatePurposeDto"
+location: "L141"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/RequestsService
+  - graphify/EXTRACTED
+  - community/CreatePurposeDto
 ---
 
 # .create()
 
 ## Connections
-- [[dot-computeDeadline()]] - `calls` [INFERRED]
-- [[dot-createRequest()_1]] - `calls` [INFERRED]
-- [[dot-next()]] - `calls` [INFERRED]
+- [[dot-create()_8]] - `calls` [INFERRED]
 - [[dot-record()_1]] - `calls` [INFERRED]
-- [[dot-resolveRule()]] - `calls` [INFERRED]
-- [[dot-scanOrgDeadlines()]] - `calls` [EXTRACTED]
-- [[dot-snapshotOnto()]] - `calls` [INFERRED]
-- [[dot-writeTransition()]] - `calls` [EXTRACTED]
-- [[RequestsService]] - `method` [EXTRACTED]
+- [[dot-validateBasis()]] - `calls` [EXTRACTED]
+- [[CreatePurposeDto]] - `references` [EXTRACTED]
+- [[PurposesService]] - `method` [EXTRACTED]
+- [[duplicateCodeMessage()]] - `calls` [EXTRACTED]
+- [[isUniqueConstraintViolation()_1]] - `calls` [EXTRACTED]
+- [[toPublicPurpose()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/RequestsService
+#graphify/code #graphify/EXTRACTED #community/CreatePurposeDto

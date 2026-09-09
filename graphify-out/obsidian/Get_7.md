@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "canonicalJson"
+community: "CreateTransferDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/canonicalJson
+  - community/CreateTransferDto
 ---
 
 # Get
 
 ## Connections
-- [[dot-exportCsv()_2]] - `references` [EXTRACTED]
-- [[dot-verifyChain()_1]] - `references` [EXTRACTED]
+- [[dot-get()_2]] - `references` [EXTRACTED]
+- [[dot-list()_7]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/canonicalJson
+#graphify/code #graphify/EXTRACTED #community/CreateTransferDto

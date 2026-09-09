@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".unmerge"
+community: ".record"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/unmerge
+  - community/record
 ---
 
 # MinLength
 
 ## Connections
-- [[UnmergeDto]] - `references` [EXTRACTED]
+- [[CreateComplianceRuleDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/unmerge
+#graphify/code #graphify/EXTRACTED #community/record

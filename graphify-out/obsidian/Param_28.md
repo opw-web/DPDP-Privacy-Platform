@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "security-measures.service.ts"
+community: "CreateRetentionPolicyDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/security-measuresservicets
+  - community/CreateRetentionPolicyDto
 ---
 
 # Param
 
 ## Connections
-- [[dot-get()_24]] - `references` [EXTRACTED]
-- [[dot-update()_27]] - `references` [EXTRACTED]
+- [[dot-get()_23]] - `references` [EXTRACTED]
+- [[dot-update()_23]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/security-measuresservicets
+#graphify/code #graphify/EXTRACTED #community/CreateRetentionPolicyDto

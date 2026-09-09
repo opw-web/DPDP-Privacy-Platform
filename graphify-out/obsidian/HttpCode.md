@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SyncService"
+community: ".remove"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncService
+  - community/remove
 ---
 
 # HttpCode
 
 ## Connections
-- [[dot-trigger()]] - `references` [EXTRACTED]
+- [[dot-remove()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncService
+#graphify/code #graphify/EXTRACTED #community/remove

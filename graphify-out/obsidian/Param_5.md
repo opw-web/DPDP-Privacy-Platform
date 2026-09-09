@@ -1,17 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateTransferDto"
+community: "MeRightsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTransferDto
+  - community/MeRightsService
 ---
 
 # Param
 
 ## Connections
-- [[dot-get()_2]] - `references` [EXTRACTED]
-- [[dot-update()_3]] - `references` [EXTRACTED]
+- [[dot-cancelRequest()]] - `references` [EXTRACTED]
+- [[dot-commentOnRequest()]] - `references` [EXTRACTED]
+- [[dot-getPublishedNotice()]] - `references` [EXTRACTED]
+- [[dot-getRequest()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTransferDto
+#graphify/code #graphify/EXTRACTED #community/MeRightsService

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RetentionController"
+community: "guardians.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionController
+  - community/guardianscontrollerts
 ---
 
 # Query
 
 ## Connections
-- [[dot-listTasks()]] - `references` [EXTRACTED]
+- [[dot-list()_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionController
+#graphify/code #graphify/EXTRACTED #community/guardianscontrollerts

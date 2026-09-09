@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "sharing.service.ts"
+community: "employees.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sharingservicets
+  - community/employeescontrollerts
 ---
 
 # Post
 
 ## Connections
-- [[dot-create()_25]] - `references` [EXTRACTED]
+- [[dot-create()_21]] - `references` [EXTRACTED]
+- [[dot-resetPassword()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sharingservicets
+#graphify/code #graphify/EXTRACTED #community/employeescontrollerts

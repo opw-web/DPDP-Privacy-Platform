@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/masking/masking.service.ts"
 type: "code"
-community: "compile-audience.ts"
+community: "MaskingService"
 location: "L241"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/compile-audiencets
+  - community/MaskingService
 ---
 
 # .maskIdentifier()
@@ -16,4 +16,4 @@ tags:
 - [[dot-maskValue()]] - `calls` [EXTRACTED]
 - [[MaskingService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/compile-audiencets
+#graphify/code #graphify/EXTRACTED #community/MaskingService

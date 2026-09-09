@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "CandidatesService"
+community: "employees.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CandidatesService
+  - community/employeescontrollerts
 ---
 
 # Get
 
 ## Connections
-- [[dot-list()_22]] - `references` [EXTRACTED]
+- [[dot-get()_11]] - `references` [EXTRACTED]
+- [[dot-list()_30]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CandidatesService
+#graphify/code #graphify/EXTRACTED #community/employeescontrollerts

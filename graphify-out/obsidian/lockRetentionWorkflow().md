@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/retention-transaction-lock.util.ts"
 type: "code"
-community: "erasure-task.service.ts"
+community: "PrismaService"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/PrismaService
 ---
 
 # lockRetentionWorkflow()
 
 ## Connections
 - [[dot-cancelOnContact()]] - `calls` [EXTRACTED]
-- [[dot-create()]] - `calls` [EXTRACTED]
+- [[dot-create()_16]] - `calls` [EXTRACTED]
 - [[dot-createInactivityTasks()]] - `calls` [EXTRACTED]
 - [[dot-createPurposeServedTasks()]] - `calls` [EXTRACTED]
 - [[dot-record()]] - `calls` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[retention-scan.service.ts]] - `imports` [EXTRACTED]
 - [[retention-transaction-lock.util.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/PrismaService

@@ -1,19 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/permissions.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/principals/principals.controller.ts"
 type: "code"
-community: "PermissionsController"
-location: "L19"
+community: "principals.controller.ts"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PermissionsController
+  - community/principalscontrollerts
 ---
 
 # .list()
 
 ## Connections
-- [[Get_16]] - `references` [EXTRACTED]
-- [[PermissionsController]] - `method` [EXTRACTED]
+- [[dot-list()_25]] - `calls` [INFERRED]
+- [[CurrentActorPermissions]] - `references` [EXTRACTED]
+- [[Get_12]] - `references` [EXTRACTED]
+- [[ListPrincipalsDto]] - `references` [EXTRACTED]
+- [[PrincipalsController]] - `method` [EXTRACTED]
+- [[Query_4]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PermissionsController
+#graphify/code #graphify/EXTRACTED #community/principalscontrollerts

@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/test/data-sources.e2e-spec.ts"
 type: "code"
-community: "step6-conflict-acceptance.e2e-spec.ts"
+community: "sync.e2e-spec.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/step6-conflict-acceptancee2e-spects
+  - community/synce2e-spects
 ---
 
 # data-sources.e2e-spec.ts
 
 ## Connections
 - [[@nestjscommon]] - `imports_from` [EXTRACTED]
-- [[@nestjstesting_1]] - `imports_from` [EXTRACTED]
+- [[@nestjstesting]] - `imports_from` [EXTRACTED]
 - [[AppModule]] - `imports` [EXTRACTED]
 - [[DataSourcesService]] - `imports` [EXTRACTED]
 - [[MockHttpServer]] - `imports` [EXTRACTED]
@@ -26,7 +26,7 @@ tags:
 - [[createManager()]] - `contains` [EXTRACTED]
 - [[createOrgWithRole()]] - `contains` [EXTRACTED]
 - [[data-sources.service.ts]] - `imports_from` [EXTRACTED]
-- [[ensurePermission()_4]] - `contains` [EXTRACTED]
+- [[ensurePermission()_2]] - `contains` [EXTRACTED]
 - [[getStoredCipher()]] - `contains` [EXTRACTED]
 - [[jsonHandler()]] - `imports` [EXTRACTED]
 - [[mock-http-server.ts]] - `imports_from` [EXTRACTED]
@@ -37,4 +37,4 @@ tags:
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 - [[validPayload()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

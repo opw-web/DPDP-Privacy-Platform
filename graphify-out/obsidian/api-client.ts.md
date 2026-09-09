@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/lib/api-client.ts"
 type: "code"
-community: "api-client.ts"
+community: "@tanstack/react-query"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/api-clientts
+  - community/tanstack/react-query
 ---
 
 # api-client.ts
@@ -114,4 +114,4 @@ tags:
 - [[principalTokenStore]] - `contains` [EXTRACTED]
 - [[router.test.tsx]] - `dynamic_import` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/api-clientts
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

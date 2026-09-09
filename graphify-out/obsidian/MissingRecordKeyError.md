@@ -12,7 +12,7 @@ tags:
 # MissingRecordKeyError
 
 ## Connections
-- [[dot-constructor()_104]] - `method` [EXTRACTED]
+- [[dot-constructor()_70]] - `method` [EXTRACTED]
 - [[dot-processRecord()]] - `calls` [EXTRACTED]
 - [[sync-error.spec.ts]] - `imports` [EXTRACTED]
 - [[sync-error.ts]] - `contains` [EXTRACTED]

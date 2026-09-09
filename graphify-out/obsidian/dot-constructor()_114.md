@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/principal-evidence.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/age.service.ts"
 type: "code"
-community: "access-report-render.ts"
-location: "L24"
+community: "ScopedTransactionClient"
+location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-report-renderts
+  - community/ScopedTransactionClient
 ---
 
 # .constructor()
 
 ## Connections
-- [[PrincipalEvidenceController]] - `method` [EXTRACTED]
-- [[PrincipalEvidenceService]] - `references` [EXTRACTED]
+- [[AgeService]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-report-renderts
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

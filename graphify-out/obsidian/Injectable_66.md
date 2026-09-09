@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "MeRightsService"
+community: "ScopedTransactionClient"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MeRightsService
+  - community/ScopedTransactionClient
 ---
 
 # Injectable
 
 ## Connections
-- [[MeRightsService]] - `references` [EXTRACTED]
+- [[LinkingService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MeRightsService
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

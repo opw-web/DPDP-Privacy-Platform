@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PreErasureNoticeService"
+community: "queues.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PreErasureNoticeService
+  - community/queuesmodulets
 ---
 
 # Injectable
 
 ## Connections
-- [[PreErasureNoticeService]] - `references` [EXTRACTED]
+- [[RetentionScanQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PreErasureNoticeService
+#graphify/code #graphify/EXTRACTED #community/queuesmodulets

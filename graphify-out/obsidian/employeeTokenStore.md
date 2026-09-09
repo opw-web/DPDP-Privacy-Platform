@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/lib/api-client.ts"
 type: "code"
-community: "data-sources-api.ts"
+community: "@tanstack/react-query"
 location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sources-apits
+  - community/tanstack/react-query
 ---
 
 # employeeTokenStore
@@ -22,4 +22,4 @@ tags:
 - [[data-sources-api.ts]] - `imports` [EXTRACTED]
 - [[libauth.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sources-apits
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

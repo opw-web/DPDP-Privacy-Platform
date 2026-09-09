@@ -1,25 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts"
 type: "code"
-community: "compliance.service.ts"
-location: "L469"
+community: "TemplatesService"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/complianceservicets
+  - community/TemplatesService
 ---
 
 # .update()
 
 ## Connections
-- [[dot-create()_12]] - `calls` [EXTRACTED]
-- [[dot-record()_1]] - `calls` [INFERRED]
-- [[dot-review()_1]] - `calls` [EXTRACTED]
-- [[dot-update()_2]] - `calls` [INFERRED]
-- [[dot-validateGrievanceCeiling()]] - `calls` [EXTRACTED]
-- [[ComplianceService]] - `method` [EXTRACTED]
-- [[UpdateComplianceRuleDto]] - `references` [EXTRACTED]
-- [[diffRules()]] - `calls` [EXTRACTED]
-- [[toPublicComplianceRule()]] - `calls` [EXTRACTED]
+- [[dot-update()_9]] - `calls` [INFERRED]
+- [[Body_9]] - `references` [EXTRACTED]
+- [[Param_10]] - `references` [EXTRACTED]
+- [[Patch_4]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[TemplatesController]] - `method` [EXTRACTED]
+- [[UpdateTemplateDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/complianceservicets
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

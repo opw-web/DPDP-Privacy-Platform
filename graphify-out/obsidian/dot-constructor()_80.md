@@ -1,20 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sdf/sdf.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/audience/audience-filter.error.ts"
 type: "code"
-community: "SdfController"
-location: "L28"
+community: "compile-audience.ts"
+location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SdfController
+  - community/compile-audiencets
 ---
 
 # .constructor()
 
 ## Connections
-- [[AlgorithmRegisterService]] - `references` [EXTRACTED]
-- [[SdfAssessmentService]] - `references` [EXTRACTED]
-- [[SdfController]] - `method` [EXTRACTED]
-- [[SdfGapsService]] - `references` [EXTRACTED]
+- [[AudienceFilterError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SdfController
+#graphify/code #graphify/EXTRACTED #community/compile-audiencets

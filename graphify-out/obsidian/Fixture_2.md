@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/inventory.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/principals.e2e-spec.ts"
 type: "code"
-community: "AppModule"
-location: "L22"
+community: "principals.service.ts"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AppModule
+  - community/principalsservicets
 ---
 
 # Fixture
 
 ## Connections
-- [[inventory.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[principals.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AppModule
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

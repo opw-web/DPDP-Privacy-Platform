@@ -1,21 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/recipients.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/source-purposes.service.ts"
 type: "code"
-community: "recipients.service.ts"
-location: "L26"
+community: "ReplaceMappingsDto"
+location: "L179"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/ReplaceMappingsDto
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_21]] - `calls` [INFERRED]
-- [[Get_37]] - `references` [EXTRACTED]
-- [[Param_26]] - `references` [EXTRACTED]
-- [[RecipientsController]] - `method` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-getPurposes()]] - `calls` [INFERRED]
+- [[dot-replace()_1]] - `calls` [EXTRACTED]
+- [[SourcePurposesService]] - `method` [EXTRACTED]
+- [[toPublicPurpose()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/ReplaceMappingsDto

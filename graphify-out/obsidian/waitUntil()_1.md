@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/sync.e2e-spec.ts"
 type: "code"
-community: "PrismaService"
+community: "sync.e2e-spec.ts"
 location: "L215"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/synce2e-spects
 ---
 
 # waitUntil()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sync.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts"
 type: "code"
-community: "@prisma/client"
+community: "AuditService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/AuditService
 ---
 
 # algorithm-register.service.ts
@@ -28,4 +28,4 @@ tags:
 - [[sdf.module.ts]] - `imports_from` [EXTRACTED]
 - [[update-algorithm-entry.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prisma/client
+#graphify/code #graphify/EXTRACTED #community/AuditService

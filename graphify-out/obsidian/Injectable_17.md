@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "canonicalJson"
+community: "InventoryService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/canonicalJson
+  - community/InventoryService
 ---
 
 # Injectable
 
 ## Connections
-- [[AuditChainService]] - `references` [EXTRACTED]
+- [[InventoryService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/canonicalJson
+#graphify/code #graphify/EXTRACTED #community/InventoryService

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/requests.e2e-spec.ts"
 type: "code"
-community: "requests.service.ts"
+community: "@prisma/client"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/requestsservicets
+  - community/prisma/client
 ---
 
 # requests.e2e-spec.ts
@@ -21,12 +21,12 @@ tags:
 - [[RequestsService]] - `imports` [EXTRACTED]
 - [[TenantContext]] - `imports` [EXTRACTED]
 - [[TenantStore]] - `imports` [EXTRACTED]
-- [[authed()_2]] - `contains` [EXTRACTED]
+- [[authed()_3]] - `contains` [EXTRACTED]
 - [[bootstrapTestApp()]] - `imports` [EXTRACTED]
 - [[cleanupOrgs()]] - `imports` [EXTRACTED]
 - [[createDpoEmployee()]] - `contains` [EXTRACTED]
-- [[createOrgWithEmployee()]] - `imports` [EXTRACTED]
-- [[createPrincipal()_8]] - `contains` [EXTRACTED]
+- [[createOrgWithEmployee()_1]] - `imports` [EXTRACTED]
+- [[createPrincipal()_10]] - `contains` [EXTRACTED]
 - [[createRequest()]] - `contains` [EXTRACTED]
 - [[deadline-scan.processor.ts]] - `imports_from` [EXTRACTED]
 - [[e2e-harness.ts]] - `imports_from` [EXTRACTED]
@@ -36,4 +36,4 @@ tags:
 - [[supertest]] - `imports_from` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/requestsservicets
+#graphify/code #graphify/EXTRACTED #community/prisma/client

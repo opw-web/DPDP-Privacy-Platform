@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/board/voluntary-undertakings.service.ts"
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
+community: "@prisma/client"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/prisma/client
 ---
 
 # voluntary-undertakings.service.ts
@@ -28,4 +28,4 @@ tags:
 - [[update-voluntary-undertaking.dto.ts]] - `imports_from` [EXTRACTED]
 - [[voluntary-undertakings.controller.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/prisma/client

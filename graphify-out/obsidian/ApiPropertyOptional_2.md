@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "guardians.service.ts"
+community: "@nestjs/common"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/nestjs/common
 ---
 
 # ApiPropertyOptional
 
 ## Connections
-- [[CreateGuardianDto]] - `references` [EXTRACTED]
+- [[NotificationDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/pre-erasure-notice.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/campaign-send.processor.ts"
 type: "code"
-community: "PreErasureNoticeService"
-location: "L24"
+community: "CampaignsService"
+location: "L72"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PreErasureNoticeService
+  - community/CampaignsService
 ---
 
 # .process()
 
 ## Connections
-- [[dot-runForAllOrganizations()_1]] - `calls` [INFERRED]
-- [[PreErasureNoticeJobData]] - `references` [EXTRACTED]
-- [[PreErasureNoticeProcessor]] - `method` [EXTRACTED]
+- [[dot-deliverRecipient()]] - `calls` [INFERRED]
+- [[CampaignSendJobData]] - `references` [EXTRACTED]
+- [[CampaignSendProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PreErasureNoticeService
+#graphify/code #graphify/EXTRACTED #community/CampaignsService

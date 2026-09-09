@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principal-portal/dto/update-me-nomination.dto.ts"
 type: "code"
-community: "me-rights.service.ts"
+community: "UpdateMeNominationDto"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/me-rightsservicets
+  - community/UpdateMeNominationDto
 ---
 
 # update-me-nomination.dto.ts
@@ -20,4 +20,4 @@ tags:
 - [[me-rights.controller.ts]] - `imports_from` [EXTRACTED]
 - [[me-rights.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/me-rightsservicets
+#graphify/code #graphify/EXTRACTED #community/UpdateMeNominationDto

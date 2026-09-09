@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-record()_1]] - `calls` [INFERRED]
-- [[dot-runForCurrentOrganization()_1]] - `calls` [EXTRACTED]
+- [[dot-runForCurrentOrganization()_2]] - `calls` [EXTRACTED]
 - [[PreErasureNoticeService]] - `method` [EXTRACTED]
 - [[buildCancellationReason()]] - `calls` [EXTRACTED]
 - [[lockRetentionWorkflow()]] - `calls` [EXTRACTED]

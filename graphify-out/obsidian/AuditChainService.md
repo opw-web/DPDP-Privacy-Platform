@@ -1,22 +1,22 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/audit-chain.service.ts"
 type: "code"
-community: "canonicalJson"
+community: "AuditChainService"
 location: "L47"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/canonicalJson
+  - community/AuditChainService
 ---
 
 # AuditChainService
 
 ## Connections
-- [[dot-constructor()_28]] - `references` [EXTRACTED]
-- [[dot-constructor()_29]] - `references` [EXTRACTED]
-- [[dot-constructor()_27]] - `method` [EXTRACTED]
+- [[dot-constructor()_137]] - `references` [EXTRACTED]
+- [[dot-constructor()_138]] - `references` [EXTRACTED]
+- [[dot-constructor()_136]] - `method` [EXTRACTED]
 - [[dot-verifyChain()]] - `method` [EXTRACTED]
-- [[Injectable_17]] - `references` [EXTRACTED]
+- [[Injectable_79]] - `references` [EXTRACTED]
 - [[audit-chain-verify.processor.ts]] - `imports` [EXTRACTED]
 - [[audit-chain.service.spec.ts]] - `imports` [EXTRACTED]
 - [[audit-chain.service.ts]] - `contains` [EXTRACTED]
@@ -24,4 +24,4 @@ tags:
 - [[evidence.module.ts]] - `imports` [EXTRACTED]
 - [[serviceWith()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/canonicalJson
+#graphify/code #graphify/EXTRACTED #community/AuditChainService

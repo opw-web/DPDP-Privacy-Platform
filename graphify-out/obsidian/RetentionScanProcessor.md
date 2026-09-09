@@ -12,9 +12,9 @@ tags:
 # RetentionScanProcessor
 
 ## Connections
-- [[dot-constructor()_101]] - `method` [EXTRACTED]
-- [[dot-process()_8]] - `method` [EXTRACTED]
-- [[Processor_8]] - `references` [EXTRACTED]
+- [[dot-constructor()_68]] - `method` [EXTRACTED]
+- [[dot-process()_5]] - `method` [EXTRACTED]
+- [[Processor_5]] - `references` [EXTRACTED]
 - [[retention-scan.processor.ts]] - `contains` [EXTRACTED]
 - [[retention.module.ts]] - `imports` [EXTRACTED]
 

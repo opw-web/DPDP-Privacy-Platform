@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "RetentionController"
+community: "UpdateComplianceRuleDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionController
+  - community/UpdateComplianceRuleDto
 ---
 
 # Post
 
 ## Connections
-- [[dot-cancel()_1]] - `references` [EXTRACTED]
-- [[dot-complete()_1]] - `references` [EXTRACTED]
-- [[dot-createLegalHold()]] - `references` [EXTRACTED]
+- [[dot-create()]] - `references` [EXTRACTED]
+- [[dot-review()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionController
+#graphify/code #graphify/EXTRACTED #community/UpdateComplianceRuleDto

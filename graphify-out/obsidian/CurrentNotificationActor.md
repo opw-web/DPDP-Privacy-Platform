@@ -1,21 +1,21 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notifications/decorators/current-notification-actor.decorator.ts"
 type: "code"
-community: "notifications.controller.ts"
+community: "@nestjs/common"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationscontrollerts
+  - community/nestjs/common
 ---
 
 # CurrentNotificationActor
 
 ## Connections
-- [[dot-list()_33]] - `references` [EXTRACTED]
-- [[dot-markAllRead()]] - `references` [EXTRACTED]
-- [[dot-markRead()]] - `references` [EXTRACTED]
+- [[dot-list()_41]] - `references` [EXTRACTED]
+- [[dot-markAllRead()_1]] - `references` [EXTRACTED]
+- [[dot-markRead()_1]] - `references` [EXTRACTED]
 - [[current-notification-actor.decorator.ts]] - `contains` [EXTRACTED]
 - [[notifications.controller.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

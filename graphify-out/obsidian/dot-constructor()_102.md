@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sdf-cycle-scan.processor.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
 type: "code"
-community: "queues.module.ts"
-location: "L21"
+community: "rest-api.connector.ts"
+location: "L142"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/rest-apiconnectorts
 ---
 
 # .constructor()
 
 ## Connections
-- [[SdfCycleScanProcessor]] - `method` [EXTRACTED]
-- [[SdfCycleScanService]] - `references` [EXTRACTED]
+- [[ReadOnlyHttpClient]] - `references` [EXTRACTED]
+- [[RestApiConnector]] - `method` [EXTRACTED]
+- [[UnsupportedPaginationStyleError]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts

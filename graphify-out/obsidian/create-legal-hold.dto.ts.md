@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/dto/create-legal-hold.dto.ts"
 type: "code"
-community: "@prisma/client"
+community: "retention/retention.controller.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/retention/retentioncontrollerts
 ---
 
 # create-legal-hold.dto.ts
@@ -20,4 +20,4 @@ tags:
 - [[legal-hold.service.ts]] - `imports_from` [EXTRACTED]
 - [[retentionretention.controller.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prisma/client
+#graphify/code #graphify/EXTRACTED #community/retention/retentioncontrollerts

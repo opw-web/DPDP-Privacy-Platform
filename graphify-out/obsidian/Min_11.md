@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateComplianceRuleDto"
+community: ".record"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateComplianceRuleDto
+  - community/record
 ---
 
 # Min
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[CreateComplianceRuleDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateComplianceRuleDto
+#graphify/code #graphify/EXTRACTED #community/record

@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/merge-unmerge.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/sync.e2e-spec.ts"
 type: "code"
-community: "merge-unmerge.e2e-spec.ts"
-location: "L46"
+community: "sync.e2e-spec.ts"
+location: "L78"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/merge-unmergee2e-spects
+  - community/synce2e-spects
 ---
 
 # organization()
 
 ## Connections
-- [[merge-unmerge.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[sync.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/merge-unmergee2e-spects
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

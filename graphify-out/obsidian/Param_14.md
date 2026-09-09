@@ -1,19 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalsService"
+community: "RequirePermission"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalsService
+  - community/RequirePermission
 ---
 
 # Param
 
 ## Connections
-- [[dot-detail()]] - `references` [EXTRACTED]
-- [[dot-lineage()]] - `references` [EXTRACTED]
-- [[dot-recipients()_1]] - `references` [EXTRACTED]
-- [[dot-sourceRecords()]] - `references` [EXTRACTED]
+- [[dot-createVersion()]] - `references` [EXTRACTED]
+- [[dot-get()_9]] - `references` [EXTRACTED]
+- [[dot-listEligibleFields()_1]] - `references` [EXTRACTED]
+- [[dot-preview()_2]] - `references` [EXTRACTED]
+- [[dot-publish()]] - `references` [EXTRACTED]
+- [[dot-upsertTranslation()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalsService
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

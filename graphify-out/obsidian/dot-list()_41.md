@@ -1,20 +1,24 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/breaches/breaches.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/notifications.controller.ts"
 type: "code"
-community: ".record"
-location: "L29"
+community: ".markRead"
+location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/markRead
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_40]] - `calls` [INFERRED]
-- [[BreachesController]] - `method` [EXTRACTED]
-- [[Get_35]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-list()_1]] - `calls` [INFERRED]
+- [[ApiOkResponse_3]] - `references` [EXTRACTED]
+- [[CurrentNotificationActor]] - `references` [EXTRACTED]
+- [[Get_32]] - `references` [EXTRACTED]
+- [[NotificationCallerActor]] - `references` [EXTRACTED]
+- [[NotificationsController]] - `method` [EXTRACTED]
+- [[Public()]] - `references` [EXTRACTED]
+- [[UseGuards_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/markRead

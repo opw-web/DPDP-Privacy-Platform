@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "employees.service.ts"
+community: "CreateSharingActivityDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeesservicets
+  - community/CreateSharingActivityDto
 ---
 
 # Get
 
 ## Connections
-- [[dot-get()_11]] - `references` [EXTRACTED]
-- [[dot-list()_26]] - `references` [EXTRACTED]
+- [[dot-get()_15]] - `references` [EXTRACTED]
+- [[dot-list()_35]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeesservicets
+#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

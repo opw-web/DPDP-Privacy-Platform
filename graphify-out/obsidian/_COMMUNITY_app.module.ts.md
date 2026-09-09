@@ -1,0 +1,195 @@
+---
+type: community
+members: 93
+---
+
+# app.module.ts
+
+**Members:** 93 nodes
+
+## Members
+- [[dot-configure()]] - code - dpdp-platform/backend/src/common/tenant/tenant.module.ts
+- [[AudienceModule]] - code - dpdp-platform/backend/src/modules/messaging/audience/audience.module.ts
+- [[AuditModule]] - code - dpdp-platform/backend/src/common/audit/audit.module.ts
+- [[AuditReadModule]] - code - dpdp-platform/backend/src/modules/audit/audit-read.module.ts
+- [[AuthModule]] - code - dpdp-platform/backend/src/modules/auth/auth.module.ts
+- [[BoardModule]] - code - dpdp-platform/backend/src/modules/board/board.module.ts
+- [[BreachesModule]] - code - dpdp-platform/backend/src/modules/breaches/breaches.module.ts
+- [[CampaignsModule]] - code - dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.module.ts
+- [[ChildrenModule]] - code - dpdp-platform/backend/src/modules/children/children.module.ts
+- [[ComplianceModule]] - code - dpdp-platform/backend/src/modules/compliance/compliance.module.ts
+- [[ConsentsModule]] - code - dpdp-platform/backend/src/modules/consents/consents.module.ts
+- [[DataSourcesModule]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.module.ts
+- [[EmployeesModule]] - code - dpdp-platform/backend/src/modules/employees/employees.module.ts
+- [[EvidenceModule]] - code - dpdp-platform/backend/src/modules/evidence/evidence.module.ts
+- [[IdentityModule]] - code - dpdp-platform/backend/src/modules/identity/identity.module.ts
+- [[InventoryModule]] - code - dpdp-platform/backend/src/modules/inventory/inventory.module.ts
+- [[MaskingModule]] - code - dpdp-platform/backend/src/common/masking/masking.module.ts
+- [[Module_2]] - code
+- [[Module_3]] - code
+- [[Module_4]] - code
+- [[Module_5]] - code
+- [[Module_6]] - code
+- [[Module_7]] - code
+- [[Module_8]] - code
+- [[Module_9]] - code
+- [[Module_10]] - code
+- [[Module_11]] - code
+- [[Module_12]] - code
+- [[Module_13]] - code
+- [[Module_14]] - code
+- [[Module_15]] - code
+- [[Module_16]] - code
+- [[Module_17]] - code
+- [[Module_18]] - code
+- [[Module_19]] - code
+- [[Module_20]] - code
+- [[Module_21]] - code
+- [[Module_22]] - code
+- [[Module_23]] - code
+- [[Module_24]] - code
+- [[Module_25]] - code
+- [[Module_26]] - code
+- [[Module_27]] - code
+- [[Module_28]] - code
+- [[Module_29]] - code
+- [[Module_30]] - code
+- [[Module_31]] - code
+- [[Module_32]] - code
+- [[Module_33]] - code
+- [[NormalizationModule]] - code - dpdp-platform/backend/src/modules/normalization/normalization.module.ts
+- [[NoticesModule]] - code - dpdp-platform/backend/src/modules/notices/notices.module.ts
+- [[NotificationsModule]] - code - dpdp-platform/backend/src/modules/notifications/notifications.module.ts
+- [[OrganizationsModule]] - code - dpdp-platform/backend/src/modules/organizations/organizations.module.ts
+- [[PrincipalPortalModule]] - code - dpdp-platform/backend/src/modules/principal-portal/principal-portal.module.ts
+- [[PrincipalsModule]] - code - dpdp-platform/backend/src/modules/principals/principals.module.ts
+- [[PurposesModule]] - code - dpdp-platform/backend/src/modules/purposes/purposes.module.ts
+- [[QueuesModule]] - code - dpdp-platform/backend/src/queues/queues.module.ts
+- [[ReferenceModule]] - code - dpdp-platform/backend/src/common/reference/reference.module.ts
+- [[RegistersModule]] - code - dpdp-platform/backend/src/modules/registers/registers.module.ts
+- [[RequestsModule]] - code - dpdp-platform/backend/src/modules/requests/requests.module.ts
+- [[RetentionModule]] - code - dpdp-platform/backend/src/modules/retention/retention.module.ts
+- [[SdfModule]] - code - dpdp-platform/backend/src/modules/sdf/sdf.module.ts
+- [[SyncModule]] - code - dpdp-platform/backend/src/modules/sync/sync.module.ts
+- [[TemplatesModule]] - code - dpdp-platform/backend/src/modules/messaging/templates/templates.module.ts
+- [[TenantModule]] - code - dpdp-platform/backend/src/common/tenant/tenant.module.ts
+- [[app.module.ts]] - code - dpdp-platform/backend/src/app.module.ts
+- [[audience.module.ts]] - code - dpdp-platform/backend/src/modules/messaging/audience/audience.module.ts
+- [[audit-read.module.ts]] - code - dpdp-platform/backend/src/modules/audit/audit-read.module.ts
+- [[audit.module.ts]] - code - dpdp-platform/backend/src/common/audit/audit.module.ts
+- [[auth.module.ts]] - code - dpdp-platform/backend/src/modules/auth/auth.module.ts
+- [[board.module.ts]] - code - dpdp-platform/backend/src/modules/board/board.module.ts
+- [[breaches.module.ts]] - code - dpdp-platform/backend/src/modules/breaches/breaches.module.ts
+- [[campaigns.module.ts]] - code - dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.module.ts
+- [[children.module.ts]] - code - dpdp-platform/backend/src/modules/children/children.module.ts
+- [[compliance.module.ts]] - code - dpdp-platform/backend/src/modules/compliance/compliance.module.ts
+- [[consents.module.ts]] - code - dpdp-platform/backend/src/modules/consents/consents.module.ts
+- [[data-sources.module.ts]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.module.ts
+- [[employees.module.ts]] - code - dpdp-platform/backend/src/modules/employees/employees.module.ts
+- [[evidence.module.ts]] - code - dpdp-platform/backend/src/modules/evidence/evidence.module.ts
+- [[identity.module.ts]] - code - dpdp-platform/backend/src/modules/identity/identity.module.ts
+- [[inventory.module.ts]] - code - dpdp-platform/backend/src/modules/inventory/inventory.module.ts
+- [[masking.module.ts]] - code - dpdp-platform/backend/src/common/masking/masking.module.ts
+- [[notices.module.ts]] - code - dpdp-platform/backend/src/modules/notices/notices.module.ts
+- [[organizations.module.ts]] - code - dpdp-platform/backend/src/modules/organizations/organizations.module.ts
+- [[principal-portal.module.ts]] - code - dpdp-platform/backend/src/modules/principal-portal/principal-portal.module.ts
+- [[principals.module.ts]] - code - dpdp-platform/backend/src/modules/principals/principals.module.ts
+- [[purposes.module.ts]] - code - dpdp-platform/backend/src/modules/purposes/purposes.module.ts
+- [[reference.module.ts]] - code - dpdp-platform/backend/src/common/reference/reference.module.ts
+- [[requests.module.ts]] - code - dpdp-platform/backend/src/modules/requests/requests.module.ts
+- [[sdf.module.ts]] - code - dpdp-platform/backend/src/modules/sdf/sdf.module.ts
+- [[sync.module.ts]] - code - dpdp-platform/backend/src/modules/sync/sync.module.ts
+- [[templates.module.ts]] - code - dpdp-platform/backend/src/modules/messaging/templates/templates.module.ts
+- [[tenant.module.ts]] - code - dpdp-platform/backend/src/common/tenant/tenant.module.ts
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/appmodulets
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 39 edges to [[_COMMUNITY_@nestjscommon]]
+- 39 edges to [[_COMMUNITY_queues.module.ts]]
+- 24 edges to [[_COMMUNITY_@nestjsswagger]]
+- 19 edges to [[_COMMUNITY_AuditService]]
+- 16 edges to [[_COMMUNITY_ScopedTransactionClient]]
+- 15 edges to [[_COMMUNITY_sync.e2e-spec.ts]]
+- 12 edges to [[_COMMUNITY_notifications.module.ts]]
+- 12 edges to [[_COMMUNITY_PrismaService]]
+- 7 edges to [[_COMMUNITY_Public]]
+- 7 edges to [[_COMMUNITY_token.service.ts]]
+- 6 edges to [[_COMMUNITY_RequirePermission]]
+- 6 edges to [[_COMMUNITY_principals.service.ts]]
+- 5 edges to [[_COMMUNITY_PrincipalsService]]
+- 5 edges to [[_COMMUNITY_data-sources.service.ts]]
+- 5 edges to [[_COMMUNITY_main.ts]]
+- 4 edges to [[_COMMUNITY_audit-read.controller.ts]]
+- 4 edges to [[_COMMUNITY_rest-api.connector.ts]]
+- 4 edges to [[_COMMUNITY_TokenService]]
+- 3 edges to [[_COMMUNITY_SyncService]]
+- 3 edges to [[_COMMUNITY_SdfController]]
+- 3 edges to [[_COMMUNITY_normalization.service.ts]]
+- 3 edges to [[_COMMUNITY_SdfCycleScanService]]
+- 3 edges to [[_COMMUNITY_employees.controller.ts]]
+- 3 edges to [[_COMMUNITY_CampaignsService]]
+- 3 edges to [[_COMMUNITY_ReplaceMappingsDto]]
+- 3 edges to [[_COMMUNITY_candidates.controller.ts]]
+- 3 edges to [[_COMMUNITY_@nestjsconfig]]
+- 3 edges to [[_COMMUNITY_@prismaclient]]
+- 2 edges to [[_COMMUNITY_UpdateOrganizationDto]]
+- 2 edges to [[_COMMUNITY_MaskingService]]
+- 2 edges to [[_COMMUNITY_guardians.controller.ts]]
+- 2 edges to [[_COMMUNITY_MeRightsService]]
+- 2 edges to [[_COMMUNITY_InventoryService]]
+- 2 edges to [[_COMMUNITY_principals.controller.ts]]
+- 2 edges to [[_COMMUNITY_TemplatesService]]
+- 2 edges to [[_COMMUNITY_CreateExemptionClaimDto]]
+- 2 edges to [[_COMMUNITY_CreateVoluntaryUndertakingDto]]
+- 2 edges to [[_COMMUNITY_ConsentBackfillService]]
+- 2 edges to [[_COMMUNITY_CreateInformationRequestDto]]
+- 2 edges to [[_COMMUNITY_ConsentsService]]
+- 2 edges to [[_COMMUNITY_BreachService]]
+- 2 edges to [[_COMMUNITY_AudienceService]]
+- 2 edges to [[_COMMUNITY_AgeStatusService]]
+- 2 edges to [[_COMMUNITY_test-database.ts]]
+- 2 edges to [[_COMMUNITY_UpdateRolePermissionsDto]]
+- 2 edges to [[_COMMUNITY_AuditChainService]]
+- 2 edges to [[_COMMUNITY_access-log-retention.processor.ts]]
+- 2 edges to [[_COMMUNITY_canonicalJson]]
+- 2 edges to [[_COMMUNITY_campaigns.service.ts]]
+- 1 edge to [[_COMMUNITY_PrincipalEvidenceController]]
+- 1 edge to [[_COMMUNITY_UpdateComplianceRuleDto]]
+- 1 edge to [[_COMMUNITY_DeadlineScanProcessor]]
+- 1 edge to [[_COMMUNITY_csvDocument]]
+- 1 edge to [[_COMMUNITY_CreateAlgorithmEntryDto]]
+- 1 edge to [[_COMMUNITY_dot-unmerge]]
+- 1 edge to [[_COMMUNITY_DataSourcesService]]
+- 1 edge to [[_COMMUNITY_RequestsService]]
+- 1 edge to [[_COMMUNITY_CreatePurposeDto]]
+- 1 edge to [[_COMMUNITY_BreachPrincipalNoticeDispatchProcessor]]
+- 1 edge to [[_COMMUNITY_PrismaModule]]
+- 1 edge to [[_COMMUNITY_PermissionsController]]
+- 1 edge to [[_COMMUNITY_EvidencePackController]]
+- 1 edge to [[_COMMUNITY_BreachesController]]
+- 1 edge to [[_COMMUNITY_RequestsController]]
+- 1 edge to [[_COMMUNITY_SyncPipelineService]]
+- 1 edge to [[_COMMUNITY_SetMyConsentDto]]
+- 1 edge to [[_COMMUNITY_DataSourcesController]]
+- 1 edge to [[_COMMUNITY_EmployeeAuthController]]
+- 1 edge to [[_COMMUNITY_PrincipalAuthController]]
+- 1 edge to [[_COMMUNITY_access-report-render.ts]]
+- 1 edge to [[_COMMUNITY_supertest]]
+- 1 edge to [[_COMMUNITY_inventory.service.ts]]
+- 1 edge to [[_COMMUNITY_backendpackage.json]]
+- 1 edge to [[_COMMUNITY_audit-read.service.ts]]
+- 1 edge to [[_COMMUNITY_compile-audience.ts]]
+- 1 edge to [[_COMMUNITY_notices.service.ts]]
+
+## Top bridge nodes
+- [[app.module.ts]] - degree 104, connects to 20 communities
+- [[evidence.module.ts]] - degree 30, connects to 11 communities
+- [[consents.module.ts]] - degree 30, connects to 9 communities
+- [[sdf.module.ts]] - degree 27, connects to 9 communities
+- [[data-sources.module.ts]] - degree 24, connects to 9 communities

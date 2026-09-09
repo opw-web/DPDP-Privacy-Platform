@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notifications/notifications.service.ts"
 type: "code"
-community: "notifications.service.ts"
+community: "@nestjs/common"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationsservicets
+  - community/nestjs/common
 ---
 
 # notifications.service.ts
@@ -45,4 +45,4 @@ tags:
 - [[sdf-cycle-scan.service.ts]] - `imports_from` [EXTRACTED]
 - [[toPublicNotification()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationsservicets
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

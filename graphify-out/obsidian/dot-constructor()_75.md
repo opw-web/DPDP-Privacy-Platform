@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/mvp2-schedules.ts"
+source_file: "dpdp-platform/backend/src/modules/principals/lineage.service.ts"
 type: "code"
-community: "SyncQueueService"
-location: "L53"
+community: "PrincipalsService"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/PrincipalsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[InjectQueue_3]] - `references` [EXTRACTED]
-- [[Mvp2ScheduleReconciliationService]] - `method` [EXTRACTED]
+- [[LineageService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/PrincipalsService

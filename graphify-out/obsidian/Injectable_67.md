@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "notifications.controller.ts"
+community: "ScopedTransactionClient"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationscontrollerts
+  - community/ScopedTransactionClient
 ---
 
 # Injectable
 
 ## Connections
-- [[JwtAnyActorGuard]] - `references` [EXTRACTED]
+- [[MatchingService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

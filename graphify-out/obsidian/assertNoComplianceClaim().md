@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/DashboardPage.test.tsx"
 type: "code"
-community: "EmployeesPage.tsx"
+community: "@tanstack/react-query"
 location: "L109"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeesPagetsx
+  - community/tanstack/react-query
 ---
 
 # assertNoComplianceClaim()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[DashboardPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeesPagetsx
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

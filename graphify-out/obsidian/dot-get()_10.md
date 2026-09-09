@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notices/notices.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
 type: "code"
 community: "RequirePermission"
-location: "L44"
+location: "L159"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,10 +12,10 @@ tags:
 # .get()
 
 ## Connections
-- [[dot-get()_17]] - `calls` [INFERRED]
-- [[Get_22]] - `references` [EXTRACTED]
-- [[NoticesController]] - `method` [EXTRACTED]
-- [[Param_13]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-get()_9]] - `calls` [INFERRED]
+- [[dot-publish()_1]] - `calls` [EXTRACTED]
+- [[dot-resolveItemisedFields()]] - `calls` [EXTRACTED]
+- [[dot-snapshotPurposeStatements()]] - `calls` [EXTRACTED]
+- [[NoticesService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/RequirePermission

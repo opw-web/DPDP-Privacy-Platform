@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CreatePurposeDto"
+community: "CreateTransferDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreatePurposeDto
+  - community/CreateTransferDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CreatePurposeDto]] - `references` [EXTRACTED]
+- [[CreateTransferDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreatePurposeDto
+#graphify/code #graphify/EXTRACTED #community/CreateTransferDto

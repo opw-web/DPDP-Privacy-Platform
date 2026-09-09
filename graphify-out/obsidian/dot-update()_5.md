@@ -1,23 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/transfers.service.ts"
 type: "code"
-community: "PurposesController"
-location: "L29"
+community: "CreateTransferDto"
+location: "L132"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PurposesController
+  - community/CreateTransferDto
 ---
 
 # .update()
 
 ## Connections
-- [[dot-update()_6]] - `calls` [INFERRED]
-- [[Body_8]] - `references` [EXTRACTED]
-- [[Param_7]] - `references` [EXTRACTED]
-- [[Patch_3]] - `references` [EXTRACTED]
-- [[PurposesController]] - `method` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[UpdatePurposeDto]] - `references` [EXTRACTED]
+- [[dot-assertEmployeeExists()]] - `calls` [EXTRACTED]
+- [[dot-assertRecipientExists()]] - `calls` [EXTRACTED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-update()_4]] - `calls` [INFERRED]
+- [[TransfersService]] - `method` [EXTRACTED]
+- [[UpdateTransferDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PurposesController
+#graphify/code #graphify/EXTRACTED #community/CreateTransferDto

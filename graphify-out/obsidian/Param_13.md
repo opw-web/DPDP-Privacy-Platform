@@ -11,11 +11,9 @@ tags:
 # Param
 
 ## Connections
-- [[dot-createVersion()]] - `references` [EXTRACTED]
-- [[dot-get()_10]] - `references` [EXTRACTED]
-- [[dot-listEligibleFields()]] - `references` [EXTRACTED]
-- [[dot-preview()_2]] - `references` [EXTRACTED]
-- [[dot-publish()]] - `references` [EXTRACTED]
-- [[dot-upsertTranslation()]] - `references` [EXTRACTED]
+- [[dot-approve()]] - `references` [EXTRACTED]
+- [[dot-get()_8]] - `references` [EXTRACTED]
+- [[dot-listRecipients()]] - `references` [EXTRACTED]
+- [[dot-send()_6]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/RequirePermission

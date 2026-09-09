@@ -12,14 +12,14 @@ tags:
 # UpdateTransferDto
 
 ## Connections
-- [[dot-update()_3]] - `references` [EXTRACTED]
 - [[dot-update()_4]] - `references` [EXTRACTED]
+- [[dot-update()_5]] - `references` [EXTRACTED]
 - [[ApiPropertyOptional_12]] - `references` [EXTRACTED]
-- [[IsArray_4]] - `references` [EXTRACTED]
+- [[IsArray_2]] - `references` [EXTRACTED]
 - [[IsBoolean_7]] - `references` [EXTRACTED]
-- [[IsDateString_5]] - `references` [EXTRACTED]
-- [[IsEnum_6]] - `references` [EXTRACTED]
-- [[IsString_15]] - `references` [EXTRACTED]
+- [[IsDateString_6]] - `references` [EXTRACTED]
+- [[IsEnum_5]] - `references` [EXTRACTED]
+- [[IsString_16]] - `references` [EXTRACTED]
 - [[MinLength_10]] - `references` [EXTRACTED]
 - [[ValidateIf]] - `references` [EXTRACTED]
 - [[transfers.controller.ts]] - `imports` [EXTRACTED]

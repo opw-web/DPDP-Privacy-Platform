@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/evidence/principal-evidence.service.ts"
 type: "code"
-community: "PrincipalAuthController"
-location: "L41"
+community: "AuditService"
+location: "L129"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalAuthController
+  - community/AuditService
 ---
 
 # .constructor()
 
 ## Connections
-- [[PrincipalAuthController]] - `method` [EXTRACTED]
-- [[PrincipalAuthService]] - `references` [EXTRACTED]
+- [[AccessLogService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[PrincipalEvidenceService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalAuthController
+#graphify/code #graphify/EXTRACTED #community/AuditService

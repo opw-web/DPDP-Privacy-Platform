@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sharing.service.ts"
+community: "ChangeStatusDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sharingservicets
+  - community/ChangeStatusDto
 ---
 
 # IsEnum
 
 ## Connections
-- [[CreateSharingActivityDto]] - `references` [EXTRACTED]
+- [[ChangeStatusDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sharingservicets
+#graphify/code #graphify/EXTRACTED #community/ChangeStatusDto

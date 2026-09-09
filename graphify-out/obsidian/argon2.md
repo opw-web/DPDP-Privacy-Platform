@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "argon2"
+community: "token.service.ts"
 location: "L34"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/argon2
+  - community/tokenservicets
 ---
 
 # argon2
@@ -45,4 +45,4 @@ tags:
 - [[step6-conflict-acceptance.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[sync.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/argon2
+#graphify/concept #graphify/EXTRACTED #community/tokenservicets

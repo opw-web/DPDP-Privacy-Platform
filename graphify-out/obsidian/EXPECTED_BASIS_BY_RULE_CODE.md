@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/compliance-rules.e2e-spec.ts"
 type: "code"
-community: "PrismaService"
+community: "supertest"
 location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/supertest
 ---
 
 # EXPECTED_BASIS_BY_RULE_CODE
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[compliance-rules.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/supertest

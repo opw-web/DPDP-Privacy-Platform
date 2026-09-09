@@ -1,22 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/child-exemptions.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
 type: "code"
-community: "child-exemptions.service.ts"
-location: "L17"
+community: "DataSourcesController"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/child-exemptionsservicets
+  - community/DataSourcesController
 ---
 
 # .list()
 
 ## Connections
 - [[dot-list()_39]] - `calls` [INFERRED]
-- [[ChildExemptionsController]] - `method` [EXTRACTED]
-- [[Get_34]] - `references` [EXTRACTED]
-- [[ListExemptionClaimsDto]] - `references` [EXTRACTED]
-- [[Query_8]] - `references` [EXTRACTED]
+- [[DataSourcesController]] - `method` [EXTRACTED]
+- [[Get_29]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/child-exemptionsservicets
+#graphify/code #graphify/EXTRACTED #community/DataSourcesController

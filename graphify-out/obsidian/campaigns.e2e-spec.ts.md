@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/campaigns.e2e-spec.ts"
 type: "code"
-community: "PrismaService"
+community: "supertest"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrismaService
+  - community/supertest
 ---
 
 # campaigns.e2e-spec.ts
@@ -28,10 +28,10 @@ tags:
 - [[createBreach()]] - `contains` [EXTRACTED]
 - [[createConsentPurpose()]] - `contains` [EXTRACTED]
 - [[createNotice()]] - `contains` [EXTRACTED]
-- [[createOrgWithEmployee()]] - `imports` [EXTRACTED]
+- [[createOrgWithEmployee()_1]] - `imports` [EXTRACTED]
 - [[createPrincipal()]] - `contains` [EXTRACTED]
 - [[e2e-harness.ts]] - `imports_from` [EXTRACTED]
-- [[ensurePermission()]] - `imports` [EXTRACTED]
+- [[ensurePermission()_1]] - `imports` [EXTRACTED]
 - [[getRecipients()]] - `contains` [EXTRACTED]
 - [[markAffected()]] - `contains` [EXTRACTED]
 - [[notifications.service.ts]] - `imports_from` [EXTRACTED]
@@ -42,4 +42,4 @@ tags:
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 - [[waitUntil()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrismaService
+#graphify/code #graphify/EXTRACTED #community/supertest

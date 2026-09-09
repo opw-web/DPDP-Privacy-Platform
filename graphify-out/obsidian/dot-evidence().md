@@ -1,22 +1,22 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/principal-evidence.controller.ts"
 type: "code"
-community: "access-report-render.ts"
+community: "PrincipalEvidenceController"
 location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-report-renderts
+  - community/PrincipalEvidenceController
 ---
 
 # .evidence()
 
 ## Connections
 - [[dot-buildEvidenceFile()]] - `calls` [INFERRED]
-- [[Get_32]] - `references` [EXTRACTED]
-- [[Param_23]] - `references` [EXTRACTED]
+- [[Get_1]] - `references` [EXTRACTED]
+- [[Param]] - `references` [EXTRACTED]
 - [[PrincipalEvidenceController]] - `method` [EXTRACTED]
 - [[PrincipalEvidenceFile]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-report-renderts
+#graphify/code #graphify/EXTRACTED #community/PrincipalEvidenceController

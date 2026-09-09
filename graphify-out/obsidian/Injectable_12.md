@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "evidence-pack.service.ts"
+community: "audit-read.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/evidence-packservicets
+  - community/audit-readcontrollerts
 ---
 
 # Injectable
 
 ## Connections
-- [[AuditExportService]] - `references` [EXTRACTED]
+- [[PermissionsGuard]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/evidence-packservicets
+#graphify/code #graphify/EXTRACTED #community/audit-readcontrollerts

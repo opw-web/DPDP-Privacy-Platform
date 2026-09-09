@@ -1,22 +1,24 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/security-measures.service.ts"
+source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
 type: "code"
-community: "security-measures.service.ts"
-location: "L126"
+community: ".record"
+location: "L389"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/security-measuresservicets
+  - community/record
 ---
 
 # .create()
 
 ## Connections
-- [[dot-assertDataSourceExists()]] - `calls` [EXTRACTED]
-- [[dot-assertEmployeeExists()_1]] - `calls` [EXTRACTED]
-- [[dot-create()_37]] - `calls` [INFERRED]
+- [[dot-create()]] - `calls` [INFERRED]
 - [[dot-record()_1]] - `calls` [INFERRED]
-- [[CreateSecurityMeasureDto]] - `references` [EXTRACTED]
-- [[SecurityMeasuresService]] - `method` [EXTRACTED]
+- [[dot-update()_27]] - `calls` [EXTRACTED]
+- [[dot-validateGrievanceCeiling()]] - `calls` [EXTRACTED]
+- [[ComplianceService]] - `method` [EXTRACTED]
+- [[CreateComplianceRuleDto]] - `references` [EXTRACTED]
+- [[diffRules()]] - `calls` [EXTRACTED]
+- [[toPublicComplianceRule()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/security-measuresservicets
+#graphify/code #graphify/EXTRACTED #community/record

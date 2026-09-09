@@ -12,13 +12,13 @@ tags:
 # SecurityMeasuresController
 
 ## Connections
-- [[dot-constructor()_143]] - `method` [EXTRACTED]
-- [[dot-create()_37]] - `method` [EXTRACTED]
-- [[dot-get()_24]] - `method` [EXTRACTED]
+- [[dot-constructor()_131]] - `method` [EXTRACTED]
+- [[dot-create()_36]] - `method` [EXTRACTED]
+- [[dot-get()_25]] - `method` [EXTRACTED]
 - [[dot-list()_48]] - `method` [EXTRACTED]
-- [[dot-update()_27]] - `method` [EXTRACTED]
-- [[ApiTags_37]] - `references` [EXTRACTED]
-- [[Controller_38]] - `references` [EXTRACTED]
+- [[dot-update()_25]] - `method` [EXTRACTED]
+- [[ApiTags_38]] - `references` [EXTRACTED]
+- [[Controller_39]] - `references` [EXTRACTED]
 - [[registers.module.ts]] - `imports` [EXTRACTED]
 - [[security-measures.controller.ts]] - `contains` [EXTRACTED]
 

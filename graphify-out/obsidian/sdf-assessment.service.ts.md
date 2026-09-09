@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sdf/sdf-assessment.service.ts"
 type: "code"
-community: "sdf-assessment.service.ts"
+community: "PrismaService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdf-assessmentservicets
+  - community/PrismaService
 ---
 
 # sdf-assessment.service.ts
@@ -22,7 +22,7 @@ tags:
 - [[PrismaService]] - `imports` [EXTRACTED]
 - [[PublicSdfAssessment]] - `contains` [EXTRACTED]
 - [[SDF_ASSESSMENT_PUBLIC_SELECT]] - `contains` [EXTRACTED]
-- [[SDF_CYCLE_APPLIES_TO]] - `contains` [EXTRACTED]
+- [[SDF_CYCLE_APPLIES_TO_1]] - `contains` [EXTRACTED]
 - [[SDF_RULE_13_CITATION]] - `contains` [EXTRACTED]
 - [[SdfAssessmentService]] - `contains` [EXTRACTED]
 - [[SdfReadiness]] - `contains` [EXTRACTED]
@@ -36,4 +36,4 @@ tags:
 - [[sdf.controller.ts]] - `imports_from` [EXTRACTED]
 - [[sdf.module.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdf-assessmentservicets
+#graphify/code #graphify/EXTRACTED #community/PrismaService

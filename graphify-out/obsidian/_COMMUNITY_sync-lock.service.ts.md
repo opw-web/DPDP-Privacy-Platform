@@ -1,31 +1,32 @@
 ---
 type: community
-members: 19
+members: 20
 ---
 
 # sync-lock.service.ts
 
-**Members:** 19 nodes
+**Members:** 20 nodes
 
 ## Members
 - [[dot-acquire()]] - code - dpdp-platform/backend/src/queues/sync-lock.service.ts
-- [[dot-constructor()_32]] - code - dpdp-platform/backend/src/queues/sync-lock.service.ts
-- [[dot-constructor()_33]] - code - dpdp-platform/backend/src/queues/sync.queue.ts
+- [[dot-constructor()_18]] - code - dpdp-platform/backend/src/queues/sync-lock.service.ts
+- [[dot-constructor()_19]] - code - dpdp-platform/backend/src/queues/sync.queue.ts
 - [[dot-isLocked()]] - code - dpdp-platform/backend/src/queues/sync-lock.service.ts
-- [[dot-onModuleDestroy()_1]] - code - dpdp-platform/backend/src/queues/sync-lock.service.ts
+- [[dot-onModuleDestroy()]] - code - dpdp-platform/backend/src/queues/sync-lock.service.ts
 - [[dot-release()]] - code - dpdp-platform/backend/src/queues/sync-lock.service.ts
-- [[InjectQueue]] - code
-- [[Injectable_21]] - code
+- [[dot-trigger()]] - code - dpdp-platform/backend/src/queues/sync.queue.ts
+- [[InjectQueue_1]] - code
+- [[Injectable_15]] - code
 - [[SYNC_LOCK_HEARTBEAT_INTERVAL_MS]] - code - dpdp-platform/backend/src/queues/sync-lock.service.ts
 - [[SYNC_LOCK_PREFIX]] - code - dpdp-platform/backend/src/queues/sync-lock.service.ts
 - [[SYNC_LOCK_TTL_MS]] - code - dpdp-platform/backend/src/queues/sync-lock.service.ts
 - [[SyncLockHandle]] - code - dpdp-platform/backend/src/queues/sync-lock.service.ts
 - [[SyncLockService]] - code - dpdp-platform/backend/src/queues/sync-lock.service.ts
-- [[flushTestRedis()]] - code - dpdp-platform/backend/test/support/test-database.ts
 - [[ioredis]] - concept - dpdp-platform/backend/package.json
 - [[lockKey()]] - code - dpdp-platform/backend/src/queues/sync-lock.service.ts
 - [[redis-connection.util.ts]] - code - dpdp-platform/backend/src/queues/redis-connection.util.ts
 - [[sync-lock.service.ts]] - code - dpdp-platform/backend/src/queues/sync-lock.service.ts
+- [[syncJobId()]] - code - dpdp-platform/backend/src/queues/sync.queue.ts
 - [[toRedisConnectionOptions()]] - code - dpdp-platform/backend/src/queues/redis-connection.util.ts
 
 ## Live Query (requires Dataview plugin)
@@ -36,22 +37,23 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_queues.module.ts]]
-- 3 edges to [[_COMMUNITY_AuditService]]
-- 2 edges to [[_COMMUNITY_configuration.ts]]
-- 2 edges to [[_COMMUNITY_PrismaService]]
+- 7 edges to [[_COMMUNITY_queues.module.ts]]
+- 3 edges to [[_COMMUNITY_sync.e2e-spec.ts]]
+- 2 edges to [[_COMMUNITY_ScopedTransactionClient]]
+- 2 edges to [[_COMMUNITY_SyncQueueService]]
 - 2 edges to [[_COMMUNITY_test-database.ts]]
-- 1 edge to [[_COMMUNITY_SyncQueueService]]
+- 1 edge to [[_COMMUNITY_normalization.service.ts]]
+- 1 edge to [[_COMMUNITY_access-log-retention.processor.ts]]
 - 1 edge to [[_COMMUNITY_SyncPipelineService]]
 - 1 edge to [[_COMMUNITY_SyncService]]
 - 1 edge to [[_COMMUNITY_@nestjscommon]]
-- 1 edge to [[_COMMUNITY_data-sources.module.ts]]
+- 1 edge to [[_COMMUNITY_notifications.module.ts]]
+- 1 edge to [[_COMMUNITY_@nestjsconfig]]
 - 1 edge to [[_COMMUNITY_backendpackage.json]]
-- 1 edge to [[_COMMUNITY_health.service.ts]]
 
 ## Top bridge nodes
-- [[sync-lock.service.ts]] - degree 17, connects to 6 communities
-- [[SyncLockService]] - degree 12, connects to 3 communities
+- [[sync-lock.service.ts]] - degree 17, connects to 7 communities
+- [[SyncLockService]] - degree 12, connects to 4 communities
 - [[ioredis]] - degree 5, connects to 2 communities
-- [[toRedisConnectionOptions()]] - degree 4, connects to 1 community
-- [[redis-connection.util.ts]] - degree 4, connects to 1 community
+- [[dot-trigger()]] - degree 4, connects to 2 communities
+- [[syncJobId()]] - degree 3, connects to 2 communities

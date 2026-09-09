@@ -11,6 +11,6 @@ tags:
 # Patch
 
 ## Connections
-- [[dot-update()_12]] - `references` [EXTRACTED]
+- [[dot-update()_11]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

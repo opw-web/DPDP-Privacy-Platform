@@ -12,7 +12,7 @@ tags:
 # .run()
 
 ## Connections
-- [[dot-process()_10]] - `calls` [INFERRED]
+- [[dot-process()_6]] - `calls` [INFERRED]
 - [[dot-runInTenantContext()]] - `calls` [EXTRACTED]
 - [[SyncPipelineService]] - `method` [EXTRACTED]
 

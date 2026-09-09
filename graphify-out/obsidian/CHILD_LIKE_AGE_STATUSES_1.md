@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/audience/audience.service.ts"
 type: "code"
-community: "campaigns.service.ts"
-location: "L47"
+community: "compile-audience.ts"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/campaignsservicets
+  - community/compile-audiencets
 ---
 
 # CHILD_LIKE_AGE_STATUSES
 
 ## Connections
-- [[campaigns.service.ts]] - `contains` [EXTRACTED]
+- [[audience.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/campaignsservicets
+#graphify/code #graphify/EXTRACTED #community/compile-audiencets

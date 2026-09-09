@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.service.ts"
 type: "code"
-community: "DataSourcesController"
-location: "L26"
+community: "ScopedTransactionClient"
+location: "L71"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesController
+  - community/ScopedTransactionClient
 ---
 
 # .constructor()
 
 ## Connections
-- [[DataSourcesController]] - `method` [EXTRACTED]
+- [[AssemblyService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
 - [[DataSourcesService]] - `references` [EXTRACTED]
+- [[MappingsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesController
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

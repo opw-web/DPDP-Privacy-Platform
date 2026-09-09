@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/prisma/seed/compliance-rules.ts"
 type: "code"
-community: "argon2"
+community: "PrismaService"
 location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/argon2
+  - community/PrismaService
 ---
 
 # COMPLIANCE_RULE_SEEDS
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[compliance-rules.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/argon2
+#graphify/code #graphify/EXTRACTED #community/PrismaService

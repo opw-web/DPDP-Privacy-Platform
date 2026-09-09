@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/NoticeBuilderPage.tsx"
 type: "code"
-community: "react"
-location: "L15"
+community: "NoticeBuilderPage.tsx"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/NoticeBuilderPagetsx
 ---
 
 # Purpose
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[NoticeBuilderPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/NoticeBuilderPagetsx

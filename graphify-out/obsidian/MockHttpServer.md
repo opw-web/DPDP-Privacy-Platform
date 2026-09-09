@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/connectors/test-support/mock-http-server.ts"
 type: "code"
-community: "step6-conflict-acceptance.e2e-spec.ts"
+community: "sync.e2e-spec.ts"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/step6-conflict-acceptancee2e-spects
+  - community/synce2e-spects
 ---
 
 # MockHttpServer
 
 ## Connections
 - [[dot-close()]] - `method` [EXTRACTED]
-- [[dot-constructor()_82]] - `method` [EXTRACTED]
+- [[dot-constructor()_34]] - `method` [EXTRACTED]
 - [[dot-listen()]] - `method` [EXTRACTED]
 - [[dot-setHandler()]] - `method` [EXTRACTED]
 - [[connector.factory.spec.ts]] - `imports` [EXTRACTED]
@@ -29,4 +29,4 @@ tags:
 - [[step6-conflict-acceptance.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[sync.e2e-spec.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

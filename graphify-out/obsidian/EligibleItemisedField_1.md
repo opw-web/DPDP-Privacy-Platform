@@ -2,7 +2,7 @@
 source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
 type: "code"
 community: "notices.service.ts"
-location: "L117"
+location: "L118"
 tags:
   - graphify/code
   - graphify/EXTRACTED

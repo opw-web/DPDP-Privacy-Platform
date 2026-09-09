@@ -53,7 +53,7 @@ tags:
 - [[Step3Mapping.tsx]] - `imports_from` [EXTRACTED]
 - [[TransfersTab.tsx]] - `imports_from` [EXTRACTED]
 - [[humanizeEnum()]] - `contains` [EXTRACTED]
-- [[titleCase()_1]] - `contains` [EXTRACTED]
+- [[titleCase()]] - `contains` [EXTRACTED]
 - [[toOptions()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/react

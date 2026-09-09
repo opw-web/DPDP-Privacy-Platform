@@ -1,19 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/canonical-field-label.ts"
 type: "code"
-community: "notices.service.ts"
-location: "L149"
+community: "seed.ts"
+location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/noticesservicets
+  - community/seedts
 ---
 
 # humanizeCanonicalField()
 
 ## Connections
-- [[dot-listEligibleFields()_1]] - `calls` [EXTRACTED]
+- [[dot-listEligibleFields()]] - `calls` [EXTRACTED]
 - [[dot-resolveItemisedFields()]] - `calls` [EXTRACTED]
-- [[notices.service.ts]] - `contains` [EXTRACTED]
+- [[canonical-field-label.ts]] - `contains` [EXTRACTED]
+- [[mvp2-demo.ts]] - `imports` [EXTRACTED]
+- [[notices.service.ts]] - `imports` [EXTRACTED]
+- [[seedNotices()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/noticesservicets
+#graphify/code #graphify/EXTRACTED #community/seedts

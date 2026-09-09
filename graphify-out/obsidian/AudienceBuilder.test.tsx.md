@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/messaging/AudienceBuilder.test.tsx"
 type: "code"
-community: "AudienceBuilder.tsx"
+community: "MessagingCampaignBuilderPage.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AudienceBuildertsx
+  - community/MessagingCampaignBuilderPagetsx
 ---
 
 # AudienceBuilder.test.tsx
@@ -20,4 +20,4 @@ tags:
 - [[suppressedPreviewCount()]] - `imports` [EXTRACTED]
 - [[vitest_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AudienceBuildertsx
+#graphify/code #graphify/EXTRACTED #community/MessagingCampaignBuilderPagetsx

@@ -10,11 +10,11 @@ members: 7
 ## Members
 - [[dot-assign()_1]] - code - dpdp-platform/backend/src/modules/requests/requests.controller.ts
 - [[ApiProperty_21]] - code
-- [[ApiPropertyOptional_27]] - code
+- [[ApiPropertyOptional_21]] - code
 - [[AssignRequestDto]] - code - dpdp-platform/backend/src/modules/requests/dto/assign-request.dto.ts
-- [[IsOptional_30]] - code
-- [[IsString_35]] - code
-- [[MinLength_24]] - code
+- [[IsOptional_23]] - code
+- [[IsString_28]] - code
+- [[MinLength_20]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -24,9 +24,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 2 edges to [[_COMMUNITY_@nestjsswagger]]
 - 2 edges to [[_COMMUNITY_RequestsController]]
-- 2 edges to [[_COMMUNITY_@prismaclient]]
-- 2 edges to [[_COMMUNITY_VerifyIdentityDto]]
+- 2 edges to [[_COMMUNITY_AddNoteDto]]
 - 1 edge to [[_COMMUNITY_RequestsService]]
 - 1 edge to [[_COMMUNITY_RequirePermission]]
 

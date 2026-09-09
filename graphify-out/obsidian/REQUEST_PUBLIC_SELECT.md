@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/requests/requests.service.ts"
 type: "code"
-community: "me-rights.service.ts"
+community: "@nestjs/common"
 location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/me-rightsservicets
+  - community/nestjs/common
 ---
 
 # REQUEST_PUBLIC_SELECT
@@ -15,4 +15,4 @@ tags:
 - [[me-rights.service.ts]] - `imports` [EXTRACTED]
 - [[requests.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/me-rightsservicets
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

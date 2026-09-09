@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/InformationRequestsPage.tsx"
 type: "code"
-community: "router.tsx"
+community: "@tanstack/react-query"
 location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/tanstack/react-query
 ---
 
 # InformationRequestsPage()
@@ -16,4 +16,4 @@ tags:
 - [[InformationRequestsPage.tsx]] - `contains` [EXTRACTED]
 - [[router.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

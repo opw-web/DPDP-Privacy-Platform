@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.module.ts"
 type: "code"
-community: "@nestjs/common"
+community: "app.module.ts"
 location: "L78"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/appmodulets
 ---
 
 # CampaignsModule
@@ -17,4 +17,4 @@ tags:
 - [[breaches.module.ts]] - `imports` [EXTRACTED]
 - [[campaigns.module.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/appmodulets

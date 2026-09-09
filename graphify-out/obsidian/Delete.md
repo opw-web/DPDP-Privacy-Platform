@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "DataSourcesController"
+community: ".remove"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesController
+  - community/remove
 ---
 
 # Delete
 
 ## Connections
-- [[dot-remove()_1]] - `references` [EXTRACTED]
+- [[dot-remove()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesController
+#graphify/code #graphify/EXTRACTED #community/remove

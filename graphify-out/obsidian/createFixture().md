@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/test/audit-read.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/inventory.e2e-spec.ts"
 type: "code"
-community: "consents.service.ts"
-location: "L122"
+community: "sync.e2e-spec.ts"
+location: "L87"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/consentsservicets
+  - community/synce2e-spects
 ---
 
 # createFixture()
 
 ## Connections
-- [[audit-read.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[seedEvent()]] - `calls` [EXTRACTED]
+- [[inventory.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/consentsservicets
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/common/reference/counter.ts"
 type: "code"
-community: "AuditService"
+community: "ScopedTransactionClient"
 location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/ScopedTransactionClient
 ---
 
 # allocateCounterValue()
 
 ## Connections
-- [[dot-create()_23]] - `calls` [EXTRACTED]
+- [[dot-create()_24]] - `calls` [EXTRACTED]
 - [[dot-next()]] - `calls` [EXTRACTED]
 - [[dot-nextPrincipalReferenceInTransaction()]] - `calls` [EXTRACTED]
 - [[dot-record()_1]] - `calls` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[information-requests.service.ts]] - `imports` [EXTRACTED]
 - [[reference.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

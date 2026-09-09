@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AccessReportService"
+community: "Public"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessReportService
+  - community/Public
 ---
 
 # Injectable
 
 ## Connections
-- [[MeService]] - `references` [EXTRACTED]
+- [[JwtPrincipalGuard]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessReportService
+#graphify/code #graphify/EXTRACTED #community/Public

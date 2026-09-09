@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/normalization/normalization.module.ts"
 type: "code"
-community: "data-sources.module.ts"
+community: "app.module.ts"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesmodulets
+  - community/appmodulets
 ---
 
 # NormalizationModule
 
 ## Connections
-- [[Module_36]] - `references` [EXTRACTED]
+- [[Module_21]] - `references` [EXTRACTED]
 - [[normalization.module.ts]] - `contains` [EXTRACTED]
 - [[sync.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesmodulets
+#graphify/code #graphify/EXTRACTED #community/appmodulets

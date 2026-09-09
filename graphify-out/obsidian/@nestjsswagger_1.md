@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/package.json"
 type: "concept"
-community: "@prisma/client"
+community: "@nestjs/swagger"
 location: "L32"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/prisma/client
+  - community/nestjs/swagger
 ---
 
 # @nestjs/swagger
@@ -132,4 +132,4 @@ tags:
 - [[verify-identity.dto.ts]] - `imports_from` [EXTRACTED]
 - [[voluntary-undertakings.controller.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/prisma/client
+#graphify/concept #graphify/EXTRACTED #community/nestjs/swagger

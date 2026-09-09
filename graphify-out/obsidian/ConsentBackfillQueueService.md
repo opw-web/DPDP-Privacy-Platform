@@ -12,8 +12,8 @@ tags:
 # ConsentBackfillQueueService
 
 ## Connections
-- [[dot-constructor()_73]] - `method` [EXTRACTED]
-- [[Injectable_60]] - `references` [EXTRACTED]
+- [[dot-constructor()_39]] - `method` [EXTRACTED]
+- [[Injectable_37]] - `references` [EXTRACTED]
 - [[consent-backfill.queue.ts]] - `contains` [EXTRACTED]
 - [[consents.module.ts]] - `imports` [EXTRACTED]
 - [[queues.module.ts]] - `imports` [EXTRACTED]

@@ -1,19 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RequirePermission"
+community: "CreateExemptionClaimDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/CreateExemptionClaimDto
 ---
 
 # Get
 
 ## Connections
-- [[dot-get()_10]] - `references` [EXTRACTED]
-- [[dot-list()_19]] - `references` [EXTRACTED]
-- [[dot-listEligibleFields()]] - `references` [EXTRACTED]
-- [[dot-preview()_2]] - `references` [EXTRACTED]
+- [[dot-list()_26]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/CreateExemptionClaimDto

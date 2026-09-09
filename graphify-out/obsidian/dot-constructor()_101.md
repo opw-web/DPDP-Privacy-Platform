@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/retention-scan.processor.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
 type: "code"
-community: "queues.module.ts"
-location: "L20"
+community: "rest-api.connector.ts"
+location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/rest-apiconnectorts
 ---
 
 # .constructor()
 
 ## Connections
-- [[RetentionScanProcessor]] - `method` [EXTRACTED]
-- [[RetentionScanService]] - `references` [EXTRACTED]
+- [[PageCapExceededError_1]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts

@@ -14,12 +14,12 @@ tags:
 ## Connections
 - [[ErasureTask]] - `contains` [EXTRACTED]
 - [[LegalHold]] - `contains` [EXTRACTED]
-- [[ProcessorChecklistEntry_1]] - `contains` [EXTRACTED]
+- [[ProcessorChecklistEntry]] - `contains` [EXTRACTED]
 - [[RETENTION_STATES]] - `contains` [EXTRACTED]
 - [[RetentionPage.tsx]] - `imports_from` [EXTRACTED]
 - [[RetentionState]] - `contains` [EXTRACTED]
 - [[RetentionTaskCard.tsx]] - `imports_from` [EXTRACTED]
-- [[SystemChecklistEntry_1]] - `contains` [EXTRACTED]
+- [[SystemChecklistEntry]] - `contains` [EXTRACTED]
 - [[retentionStateLabel()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/DateTimetsx

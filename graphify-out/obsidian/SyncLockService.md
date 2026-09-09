@@ -13,12 +13,12 @@ tags:
 
 ## Connections
 - [[dot-acquire()]] - `method` [EXTRACTED]
-- [[dot-constructor()_53]] - `references` [EXTRACTED]
-- [[dot-constructor()_33]] - `references` [EXTRACTED]
-- [[dot-constructor()_32]] - `method` [EXTRACTED]
+- [[dot-constructor()_111]] - `references` [EXTRACTED]
+- [[dot-constructor()_19]] - `references` [EXTRACTED]
+- [[dot-constructor()_18]] - `method` [EXTRACTED]
 - [[dot-isLocked()]] - `method` [EXTRACTED]
-- [[dot-onModuleDestroy()_1]] - `method` [EXTRACTED]
-- [[Injectable_21]] - `references` [EXTRACTED]
+- [[dot-onModuleDestroy()]] - `method` [EXTRACTED]
+- [[Injectable_15]] - `references` [EXTRACTED]
 - [[queues.module.ts]] - `imports` [EXTRACTED]
 - [[sync-lock.service.ts]] - `contains` [EXTRACTED]
 - [[sync-pipeline.service.ts]] - `imports` [EXTRACTED]

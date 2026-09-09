@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CampaignsService"
+community: "test-database.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampaignsService
+  - community/test-databasets
 ---
 
 # Injectable
 
 ## Connections
-- [[CampaignSendQueueService]] - `references` [EXTRACTED]
+- [[HealthService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampaignsService
+#graphify/code #graphify/EXTRACTED #community/test-databasets

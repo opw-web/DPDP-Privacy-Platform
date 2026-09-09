@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/frontend/src/principal/components/PortalShell.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.test.tsx"
 type: "code"
-community: "DateTime.tsx"
-location: "L8"
+community: "@tanstack/react-query"
+location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DateTimetsx
+  - community/tanstack/react-query
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[PortalShell.test.tsx]] - `contains` [EXTRACTED]
+- [[RecipientsTab.test.tsx]] - `contains` [EXTRACTED]
+- [[loginAndRender()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DateTimetsx
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/audience/audience.service.ts"
+source_file: "dpdp-platform/backend/src/modules/children/guardians.service.ts"
 type: "code"
-community: "compile-audience.ts"
-location: "L16"
+community: "AuditService"
+location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/compile-audiencets
+  - community/AuditService
 ---
 
 # CHILD_LIKE_AGE_STATUSES
 
 ## Connections
-- [[audience.service.ts]] - `contains` [EXTRACTED]
+- [[guardians.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/compile-audiencets
+#graphify/code #graphify/EXTRACTED #community/AuditService

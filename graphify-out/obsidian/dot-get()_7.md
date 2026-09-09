@@ -1,21 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/breaches/breaches.controller.ts"
 type: "code"
-community: "TemplatesService"
-location: "L28"
+community: "BreachesController"
+location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/BreachesController
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_8]] - `calls` [INFERRED]
+- [[dot-get()_18]] - `calls` [INFERRED]
+- [[BreachesController]] - `method` [EXTRACTED]
 - [[Get_17]] - `references` [EXTRACTED]
-- [[Param_9]] - `references` [EXTRACTED]
+- [[Param_11]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[TemplatesController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/BreachesController

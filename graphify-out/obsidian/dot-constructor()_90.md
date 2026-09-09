@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/audience/audience.service.ts"
 type: "code"
-community: "templates.service.ts"
-location: "L75"
+community: "AudienceService"
+location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatesservicets
+  - community/AudienceService
 ---
 
 # .constructor()
 
 ## Connections
-- [[UnknownTemplateVariableError]] - `method` [EXTRACTED]
+- [[AudienceService]] - `method` [EXTRACTED]
+- [[MaskingService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatesservicets
+#graphify/code #graphify/EXTRACTED #community/AudienceService

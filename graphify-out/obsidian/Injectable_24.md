@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "inventory.controller.ts"
+community: "SyncQueueService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/inventorycontrollerts
+  - community/SyncQueueService
 ---
 
 # Injectable
 
 ## Connections
-- [[InventoryService]] - `references` [EXTRACTED]
+- [[Mvp2ScheduleReconciliationService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/inventorycontrollerts
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

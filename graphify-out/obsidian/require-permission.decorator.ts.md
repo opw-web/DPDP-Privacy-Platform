@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/decorators/require-permission.decorator.ts"
 type: "code"
-community: "RequirePermission"
+community: "@nestjs/swagger"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequirePermission
+  - community/nestjs/swagger
 ---
 
 # require-permission.decorator.ts
@@ -53,4 +53,4 @@ tags:
 - [[unmerge.controller.ts]] - `imports_from` [EXTRACTED]
 - [[voluntary-undertakings.controller.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequirePermission
+#graphify/code #graphify/EXTRACTED #community/nestjs/swagger

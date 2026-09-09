@@ -1,22 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/guardians.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts"
 type: "code"
-community: "guardians.service.ts"
-location: "L167"
+community: "CreateAlgorithmEntryDto"
+location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/CreateAlgorithmEntryDto
 ---
 
 # .create()
 
 ## Connections
-- [[dot-assertPwdAppointmentValid()]] - `calls` [EXTRACTED]
-- [[dot-create()_2]] - `calls` [INFERRED]
+- [[dot-createAlgorithm()]] - `calls` [INFERRED]
 - [[dot-record()_1]] - `calls` [INFERRED]
-- [[dot-toResponse()]] - `calls` [EXTRACTED]
-- [[CreateGuardianDto]] - `references` [EXTRACTED]
-- [[GuardiansService]] - `method` [EXTRACTED]
+- [[AlgorithmRegisterService]] - `method` [EXTRACTED]
+- [[CreateAlgorithmEntryDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto

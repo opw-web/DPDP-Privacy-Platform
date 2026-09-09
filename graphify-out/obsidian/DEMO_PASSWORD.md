@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/prisma/seed/demo-org.ts"
 type: "code"
-community: "argon2"
+community: "seed.ts"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/argon2
+  - community/seedts
 ---
 
 # DEMO_PASSWORD
@@ -17,4 +17,4 @@ tags:
 - [[seed-principals.ts]] - `imports` [EXTRACTED]
 - [[seed.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/argon2
+#graphify/code #graphify/EXTRACTED #community/seedts

@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/audit-read.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/data-sources.e2e-spec.ts"
 type: "code"
-community: "consents.service.ts"
-location: "L58"
+community: "sync.e2e-spec.ts"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/consentsservicets
+  - community/synce2e-spects
 ---
 
 # ensurePermission()
 
 ## Connections
-- [[EmployeeSession]] - `calls` [EXTRACTED]
-- [[audit-read.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[createOrgWithRole()]] - `calls` [EXTRACTED]
+- [[data-sources.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/consentsservicets
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

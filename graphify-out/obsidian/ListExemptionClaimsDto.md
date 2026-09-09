@@ -1,24 +1,24 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/children/dto/list-exemption-claims.dto.ts"
 type: "code"
-community: "child-exemptions.service.ts"
+community: "CreateExemptionClaimDto"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/child-exemptionsservicets
+  - community/CreateExemptionClaimDto
 ---
 
 # ListExemptionClaimsDto
 
 ## Connections
-- [[dot-list()_38]] - `references` [EXTRACTED]
-- [[dot-list()_39]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_40]] - `references` [EXTRACTED]
-- [[IsOptional_42]] - `references` [EXTRACTED]
-- [[IsString_52]] - `references` [EXTRACTED]
+- [[dot-list()_26]] - `references` [EXTRACTED]
+- [[dot-list()_27]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_30]] - `references` [EXTRACTED]
+- [[IsOptional_32]] - `references` [EXTRACTED]
+- [[IsString_37]] - `references` [EXTRACTED]
 - [[child-exemptions.controller.ts]] - `imports` [EXTRACTED]
 - [[child-exemptions.service.ts]] - `imports` [EXTRACTED]
 - [[list-exemption-claims.dto.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/child-exemptionsservicets
+#graphify/code #graphify/EXTRACTED #community/CreateExemptionClaimDto

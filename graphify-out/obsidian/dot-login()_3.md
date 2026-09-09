@@ -14,9 +14,9 @@ tags:
 ## Connections
 - [[dot-login()_2]] - `calls` [INFERRED]
 - [[dot-setRefreshCookie()_1]] - `calls` [EXTRACTED]
-- [[Body_28]] - `references` [EXTRACTED]
+- [[Body_30]] - `references` [EXTRACTED]
 - [[HttpCode_5]] - `references` [EXTRACTED]
-- [[Post_28]] - `references` [EXTRACTED]
+- [[Post_30]] - `references` [EXTRACTED]
 - [[PrincipalAuthController]] - `method` [EXTRACTED]
 - [[PrincipalLoginDto]] - `references` [EXTRACTED]
 - [[Public()]] - `references` [EXTRACTED]

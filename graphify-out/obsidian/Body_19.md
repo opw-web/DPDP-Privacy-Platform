@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "DataSourcesController"
+community: "CreateSharingActivityDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesController
+  - community/CreateSharingActivityDto
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_27]] - `references` [EXTRACTED]
-- [[dot-update()_20]] - `references` [EXTRACTED]
+- [[dot-create()_26]] - `references` [EXTRACTED]
+- [[dot-update()_17]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesController
+#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

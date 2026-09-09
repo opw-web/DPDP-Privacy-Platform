@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sync-lock.service.ts"
+source_file: "dpdp-platform/backend/src/common/prisma/prisma.service.ts"
 type: "code"
-community: "sync-lock.service.ts"
-location: "L179"
+community: "PrismaService"
+location: "L82"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sync-lockservicets
+  - community/PrismaService
 ---
 
 # .onModuleDestroy()
 
 ## Connections
-- [[SyncLockService]] - `method` [EXTRACTED]
+- [[PrismaService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sync-lockservicets
+#graphify/code #graphify/EXTRACTED #community/PrismaService

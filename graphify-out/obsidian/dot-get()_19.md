@@ -1,21 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/breaches/breaches.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.service.ts"
 type: "code"
-community: ".record"
-location: "L60"
+community: "ReplaceMappingsDto"
+location: "L244"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/ReplaceMappingsDto
 ---
 
 # .get()
 
 ## Connections
-- [[dot-get()_18]] - `calls` [INFERRED]
-- [[BreachesController]] - `method` [EXTRACTED]
-- [[Get_35]] - `references` [EXTRACTED]
-- [[Param_24]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-getMappings()]] - `calls` [INFERRED]
+- [[MappingsService]] - `method` [EXTRACTED]
+- [[computeMappingWarnings()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/ReplaceMappingsDto

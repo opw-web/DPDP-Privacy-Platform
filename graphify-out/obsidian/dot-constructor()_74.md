@@ -1,20 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/deadline-scan.queue.ts"
+source_file: "dpdp-platform/backend/src/modules/principal-portal/me.service.ts"
 type: "code"
-community: "SyncQueueService"
-location: "L68"
+community: "PrincipalsService"
+location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/PrincipalsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[dot-register()]] - `calls` [INFERRED]
-- [[BootRegistrationRegistry]] - `references` [EXTRACTED]
-- [[DeadlineScanQueueService]] - `method` [EXTRACTED]
-- [[InjectQueue_2]] - `references` [EXTRACTED]
+- [[LineageService]] - `references` [EXTRACTED]
+- [[MeService]] - `method` [EXTRACTED]
+- [[PrincipalRecipientsService]] - `references` [EXTRACTED]
+- [[PrincipalsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/PrincipalsService

@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RetentionController"
+community: "Public"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionController
+  - community/Public
 ---
 
 # ApiProperty
 
 ## Connections
-- [[CompleteErasureTaskDto]] - `references` [EXTRACTED]
-- [[ProcessorChecklistTickDto]] - `references` [EXTRACTED]
-- [[SystemChecklistTickDto]] - `references` [EXTRACTED]
+- [[MePrivacyContactDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionController
+#graphify/code #graphify/EXTRACTED #community/Public

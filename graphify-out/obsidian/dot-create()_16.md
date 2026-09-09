@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/legal-hold.service.ts"
 type: "code"
 community: "RequirePermission"
-location: "L46"
+location: "L56"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,13 +12,12 @@ tags:
 # .create()
 
 ## Connections
-- [[dot-create()_24]] - `calls` [INFERRED]
+- [[dot-createLegalHold()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[Body_12]] - `references` [EXTRACTED]
-- [[CampaignsController]] - `method` [EXTRACTED]
-- [[CreateCampaignDto]] - `references` [EXTRACTED]
-- [[CurrentActor]] - `references` [EXTRACTED]
-- [[Post_11]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[CreateLegalHoldDto]] - `references` [EXTRACTED]
+- [[LegalHoldService]] - `method` [EXTRACTED]
+- [[legalHoldCovers()]] - `calls` [EXTRACTED]
+- [[lockRetentionWorkflow()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/RequirePermission

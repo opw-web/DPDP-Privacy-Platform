@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-create()_7]] - `calls` [EXTRACTED]
-- [[dot-update()_4]] - `calls` [EXTRACTED]
+- [[dot-update()_5]] - `calls` [EXTRACTED]
 - [[TransfersService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CreateTransferDto

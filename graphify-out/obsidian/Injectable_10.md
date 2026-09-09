@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PermissionsGuard"
+community: "notifications.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PermissionsGuard
+  - community/notificationsmodulets
 ---
 
 # Injectable
 
 ## Connections
-- [[PermissionsGuard]] - `references` [EXTRACTED]
+- [[SmtpProvider]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PermissionsGuard
+#graphify/code #graphify/EXTRACTED #community/notificationsmodulets

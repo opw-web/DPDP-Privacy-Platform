@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[dot-get()_4]] - `calls` [INFERRED]
-- [[dot-trigger()]] - `calls` [INFERRED]
 - [[dot-trigger()_1]] - `calls` [INFERRED]
+- [[dot-trigger()]] - `calls` [INFERRED]
 - [[SyncService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/SyncService

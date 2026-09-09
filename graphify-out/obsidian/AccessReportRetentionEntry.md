@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/access-report.service.ts"
 type: "code"
-community: "principals.service.ts"
+community: "AuditService"
 location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/principalsservicets
+  - community/AuditService
 ---
 
 # AccessReportRetentionEntry
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[access-report.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/principalsservicets
+#graphify/code #graphify/EXTRACTED #community/AuditService

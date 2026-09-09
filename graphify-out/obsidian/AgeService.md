@@ -1,23 +1,23 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/age.service.ts"
 type: "code"
-community: "AuditService"
+community: "ScopedTransactionClient"
 location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/ScopedTransactionClient
 ---
 
 # AgeService
 
 ## Connections
-- [[dot-constructor()_49]] - `references` [EXTRACTED]
-- [[dot-constructor()_50]] - `references` [EXTRACTED]
-- [[dot-constructor()_53]] - `references` [EXTRACTED]
-- [[dot-constructor()_46]] - `method` [EXTRACTED]
+- [[dot-constructor()_117]] - `references` [EXTRACTED]
+- [[dot-constructor()_118]] - `references` [EXTRACTED]
+- [[dot-constructor()_111]] - `references` [EXTRACTED]
+- [[dot-constructor()_114]] - `method` [EXTRACTED]
 - [[dot-derive()]] - `method` [EXTRACTED]
-- [[Injectable_30]] - `references` [EXTRACTED]
+- [[Injectable_64]] - `references` [EXTRACTED]
 - [[age.service.ts]] - `contains` [EXTRACTED]
 - [[assembly.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[children.e2e-spec.ts]] - `imports` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[merge.service.ts]] - `imports` [EXTRACTED]
 - [[sync-pipeline.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

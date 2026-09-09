@@ -1,19 +1,21 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/messaging/AudienceBuilder.tsx"
+source_file: "dpdp-platform/backend/src/modules/messaging/audience/audience-filter.types.ts"
 type: "code"
-community: "AudienceBuilder.tsx"
-location: "L9"
+community: "compile-audience.ts"
+location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AudienceBuildertsx
+  - community/compile-audiencets
 ---
 
 # AudienceFilter
 
 ## Connections
-- [[AudienceBuilder.tsx]] - `contains` [EXTRACTED]
-- [[CampaignDraft]] - `references` [EXTRACTED]
-- [[MessagingCampaignBuilderPage.tsx]] - `imports` [EXTRACTED]
+- [[audience-filter.types.ts]] - `contains` [EXTRACTED]
+- [[audience.service.ts]] - `imports` [EXTRACTED]
+- [[campaigns.service.ts]] - `imports` [EXTRACTED]
+- [[compile-audience.spec.ts]] - `imports` [EXTRACTED]
+- [[compile-audience.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AudienceBuildertsx
+#graphify/code #graphify/EXTRACTED #community/compile-audiencets

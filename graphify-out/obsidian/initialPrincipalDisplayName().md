@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/linking.service.ts"
 type: "code"
-community: "AuditService"
+community: "ScopedTransactionClient"
 location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/ScopedTransactionClient
 ---
 
 # initialPrincipalDisplayName()
 
 ## Connections
 - [[dot-applyMatch()]] - `calls` [EXTRACTED]
-- [[dot-unmerge()]] - `calls` [EXTRACTED]
+- [[dot-unmerge()_1]] - `calls` [EXTRACTED]
 - [[linking.service.ts]] - `contains` [EXTRACTED]
 - [[merge.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

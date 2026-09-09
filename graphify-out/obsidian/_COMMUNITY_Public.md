@@ -1,33 +1,42 @@
 ---
 type: community
-members: 30
+members: 38
 ---
 
 # Public
 
-**Members:** 30 nodes
+**Members:** 38 nodes
 
 ## Members
+- [[dot-accessReport()]] - code - dpdp-platform/backend/src/modules/principal-portal/me.controller.ts
+- [[dot-data()]] - code - dpdp-platform/backend/src/modules/principal-portal/me.controller.ts
+- [[dot-getNomination()]] - code - dpdp-platform/backend/src/modules/principal-portal/me-rights.controller.ts
 - [[dot-getPrivacyContact()]] - code - dpdp-platform/backend/src/modules/principal-portal/me.service.ts
+- [[dot-getRequest()]] - code - dpdp-platform/backend/src/modules/principal-portal/me-rights.controller.ts
+- [[dot-listMessages()]] - code - dpdp-platform/backend/src/modules/principal-portal/me-rights.controller.ts
+- [[dot-listRequests()]] - code - dpdp-platform/backend/src/modules/principal-portal/me-rights.controller.ts
 - [[dot-privacyContact()]] - code - dpdp-platform/backend/src/modules/principal-portal/me.controller.ts
-- [[AddMeRequestCommentDto]] - code - dpdp-platform/backend/src/modules/principal-portal/dto/add-me-request-comment.dto.ts
-- [[ApiProperty_16]] - code
-- [[ApiProperty_17]] - code
-- [[ApiProperty_18]] - code
-- [[IS_PUBLIC_KEY]] - code - dpdp-platform/backend/src/common/decorators/public.decorator.ts
-- [[Injectable_42]] - code
-- [[IsString_30]] - code
+- [[dot-profile()]] - code - dpdp-platform/backend/src/modules/principal-portal/me.controller.ts
+- [[dot-recipients()]] - code - dpdp-platform/backend/src/modules/principal-portal/me.controller.ts
+- [[dot-sources()]] - code - dpdp-platform/backend/src/modules/principal-portal/me.controller.ts
+- [[ApiExtraModels]] - code
+- [[ApiOkResponse]] - code
+- [[ApiProperty_1]] - code
+- [[ApiProperty_2]] - code
+- [[ApiTags_2]] - code
+- [[Controller_2]] - code
+- [[CurrentPrincipal]] - code - dpdp-platform/backend/src/common/decorators/current-principal.decorator.ts
+- [[Get_2]] - code
+- [[Get_3]] - code
+- [[Injectable_3]] - code
 - [[JwtPrincipalGuard]] - code - dpdp-platform/backend/src/common/guards/jwt-principal.guard.ts
+- [[MeController]] - code - dpdp-platform/backend/src/modules/principal-portal/me.controller.ts
 - [[MePrivacyContactDto]] - code - dpdp-platform/backend/src/modules/principal-portal/dto/me-privacy-contact.dto.ts
 - [[MeProfileTimezoneDto]] - code - dpdp-platform/backend/src/modules/principal-portal/dto/me-profile-timezone.dto.ts
-- [[MinLength_22]] - code
-- [[PRINCIPAL_ACCOUNT_PUBLIC_SELECT]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.service.ts
-- [[PrincipalLoginResult]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.service.ts
-- [[PrincipalRefreshResult]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.service.ts
+- [[PrincipalActor]] - code - dpdp-platform/backend/src/common/guards/jwt-principal.guard.ts
 - [[Public()]] - code - dpdp-platform/backend/src/common/decorators/public.decorator.ts
-- [[PublicPrincipalAccount]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.service.ts
-- [[REFRESH_TOKEN_TTL_MS]] - code - dpdp-platform/backend/src/modules/auth/token.service.ts
-- [[auth.module.ts]] - code - dpdp-platform/backend/src/modules/auth/auth.module.ts
+- [[Res_1]] - code
+- [[UseGuards]] - code
 - [[current-principal.decorator.ts]] - code - dpdp-platform/backend/src/common/decorators/current-principal.decorator.ts
 - [[jwt-principal.guard.ts]] - code - dpdp-platform/backend/src/common/guards/jwt-principal.guard.ts
 - [[me-consents.controller.ts]] - code - dpdp-platform/backend/src/modules/consents/me-consents.controller.ts
@@ -36,7 +45,6 @@ members: 30
 - [[me-rights.controller.ts]] - code - dpdp-platform/backend/src/modules/principal-portal/me-rights.controller.ts
 - [[me.controller.ts]] - code - dpdp-platform/backend/src/modules/principal-portal/me.controller.ts
 - [[principal-auth.controller.ts]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
-- [[principal-auth.service.ts]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.service.ts
 - [[public.decorator.ts]] - code - dpdp-platform/backend/src/common/decorators/public.decorator.ts
 
 ## Live Query (requires Dataview plugin)
@@ -47,35 +55,34 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 26 edges to [[_COMMUNITY_PrincipalActor]]
-- 19 edges to [[_COMMUNITY_@nestjscommon]]
-- 13 edges to [[_COMMUNITY_@prismaclient]]
-- 12 edges to [[_COMMUNITY_employee-auth.service.ts]]
-- 7 edges to [[_COMMUNITY_PrismaService]]
-- 7 edges to [[_COMMUNITY_TokenService]]
-- 6 edges to [[_COMMUNITY_PrincipalAuthController]]
-- 5 edges to [[_COMMUNITY_me-rights.service.ts]]
-- 5 edges to [[_COMMUNITY_notifications.controller.ts]]
-- 4 edges to [[_COMMUNITY_SetMyConsentDto]]
-- 4 edges to [[_COMMUNITY_principals.service.ts]]
-- 4 edges to [[_COMMUNITY_EmployeeAuthController]]
-- 4 edges to [[_COMMUNITY_RequirePermission]]
-- 3 edges to [[_COMMUNITY_AccessReportService]]
-- 3 edges to [[_COMMUNITY_health.service.ts]]
-- 2 edges to [[_COMMUNITY_configuration.ts]]
+- 22 edges to [[_COMMUNITY_MeRightsService]]
+- 11 edges to [[_COMMUNITY_@nestjscommon]]
+- 9 edges to [[_COMMUNITY_PrincipalsService]]
+- 8 edges to [[_COMMUNITY_TokenService]]
+- 8 edges to [[_COMMUNITY_SetMyConsentDto]]
+- 8 edges to [[_COMMUNITY_@nestjsswagger]]
+- 7 edges to [[_COMMUNITY_app.module.ts]]
+- 5 edges to [[_COMMUNITY_PrincipalAuthController]]
+- 4 edges to [[_COMMUNITY_token.service.ts]]
+- 4 edges to [[_COMMUNITY_PrismaService]]
+- 3 edges to [[_COMMUNITY_principals.service.ts]]
+- 3 edges to [[_COMMUNITY_EmployeeAuthController]]
+- 3 edges to [[_COMMUNITY_test-database.ts]]
+- 3 edges to [[_COMMUNITY_dot-markRead]]
+- 3 edges to [[_COMMUNITY_access-report-render.ts]]
+- 2 edges to [[_COMMUNITY_UpdateMeNominationDto]]
+- 2 edges to [[_COMMUNITY_sync.e2e-spec.ts]]
+- 2 edges to [[_COMMUNITY_CreateMeRequestDto]]
+- 2 edges to [[_COMMUNITY_main.ts]]
 - 2 edges to [[_COMMUNITY_AuditService]]
-- 2 edges to [[_COMMUNITY_access-report-render.ts]]
-- 1 edge to [[_COMMUNITY_MeRightsService]]
 - 1 edge to [[_COMMUNITY_ConsentsService]]
+- 1 edge to [[_COMMUNITY_access-log-retention.processor.ts]]
+- 1 edge to [[_COMMUNITY_@nestjsconfig]]
 - 1 edge to [[_COMMUNITY_notifications.module.ts]]
-- 1 edge to [[_COMMUNITY_consents.service.ts]]
-- 1 edge to [[_COMMUNITY_argon2]]
-- 1 edge to [[_COMMUNITY_data-sources.module.ts]]
-- 1 edge to [[_COMMUNITY_AppModule]]
 
 ## Top bridge nodes
-- [[principal-auth.service.ts]] - degree 28, connects to 9 communities
-- [[auth.module.ts]] - degree 21, connects to 8 communities
-- [[Public()]] - degree 28, connects to 7 communities
-- [[me.controller.ts]] - degree 22, connects to 7 communities
-- [[principal-auth.controller.ts]] - degree 18, connects to 7 communities
+- [[Public()]] - degree 28, connects to 9 communities
+- [[principal-auth.controller.ts]] - degree 18, connects to 9 communities
+- [[me.controller.ts]] - degree 22, connects to 8 communities
+- [[me-rights.controller.ts]] - degree 18, connects to 6 communities
+- [[me-consents.controller.ts]] - degree 15, connects to 6 communities

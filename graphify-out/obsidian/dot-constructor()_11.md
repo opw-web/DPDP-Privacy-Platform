@@ -1,19 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/retention/retention.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/notifications.service.ts"
 type: "code"
-community: "erasure-task.service.ts"
-location: "L27"
+community: "notifications.module.ts"
+location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/notificationsmodulets
 ---
 
 # .constructor()
 
 ## Connections
-- [[ErasureTaskService]] - `references` [EXTRACTED]
-- [[LegalHoldService]] - `references` [EXTRACTED]
-- [[RetentionController]] - `method` [EXTRACTED]
+- [[Inject]] - `references` [EXTRACTED]
+- [[NotificationProvider]] - `references` [EXTRACTED]
+- [[NotificationsService]] - `method` [EXTRACTED]
+- [[PortalProvider]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/notificationsmodulets

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/messaging/templates/whitelisted-variables.ts"
 type: "code"
-community: "templates.service.ts"
+community: "campaigns.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatesservicets
+  - community/campaignsservicets
 ---
 
 # whitelisted-variables.ts
@@ -24,4 +24,4 @@ tags:
 - [[templates.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[templates.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatesservicets
+#graphify/code #graphify/EXTRACTED #community/campaignsservicets

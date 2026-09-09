@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/purposes.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/sync.e2e-spec.ts"
 type: "code"
-community: "AppModule"
-location: "L28"
+community: "sync.e2e-spec.ts"
+location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AppModule
+  - community/synce2e-spects
 ---
 
 # ensurePermission()
 
 ## Connections
-- [[createOrgWithManager()]] - `calls` [EXTRACTED]
-- [[purposes.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[employeeWithPermissions()_1]] - `calls` [EXTRACTED]
+- [[sync.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AppModule
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

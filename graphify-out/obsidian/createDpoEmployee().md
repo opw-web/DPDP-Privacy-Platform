@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/requests.e2e-spec.ts"
 type: "code"
-community: "requests.service.ts"
+community: "@prisma/client"
 location: "L123"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/requestsservicets
+  - community/prisma/client
 ---
 
 # createDpoEmployee()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[requests.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/requestsservicets
+#graphify/code #graphify/EXTRACTED #community/prisma/client

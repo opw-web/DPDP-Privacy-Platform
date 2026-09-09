@@ -12,7 +12,7 @@ tags:
 # AuditEventRow.tsx
 
 ## Connections
-- [[AuditEventListItem_1]] - `contains` [EXTRACTED]
+- [[AuditEventListItem]] - `contains` [EXTRACTED]
 - [[AuditEventRow()]] - `contains` [EXTRACTED]
 - [[AuditEventRowProps]] - `contains` [EXTRACTED]
 - [[AuditPage.test.tsx]] - `imports_from` [EXTRACTED]

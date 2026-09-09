@@ -1,17 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/connector.interface.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
 type: "code"
-community: "data-sources.service.ts"
-location: "L8"
+community: "DataSourcesService"
+location: "L551"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesservicets
+  - community/DataSourcesService
 ---
 
 # .testConnection()
 
 ## Connections
-- [[Connector]] - `method` [EXTRACTED]
+- [[dot-buildConnector()]] - `calls` [EXTRACTED]
+- [[dot-testConnection()_1]] - `calls` [INFERRED]
+- [[dot-update()_3]] - `calls` [EXTRACTED]
+- [[DataSourcesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesservicets
+#graphify/code #graphify/EXTRACTED #community/DataSourcesService

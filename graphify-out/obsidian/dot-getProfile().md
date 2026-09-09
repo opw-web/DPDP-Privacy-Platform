@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principal-portal/me.service.ts"
 type: "code"
-community: "PrincipalActor"
+community: "PrincipalsService"
 location: "L124"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/PrincipalActor
+  - community/PrincipalsService
 ---
 
 # .getProfile()
@@ -16,4 +16,4 @@ tags:
 - [[dot-profile()]] - `calls` [INFERRED]
 - [[MeService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/PrincipalActor
+#graphify/code #graphify/INFERRED #community/PrincipalsService

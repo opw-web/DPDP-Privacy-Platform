@@ -1,23 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sdf/sdf-cycle-scan.service.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/pre-erasure-notice.service.ts"
 type: "code"
-community: "SdfCycleScanService"
-location: "L75"
+community: "PreErasureNoticeService"
+location: "L98"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SdfCycleScanService
+  - community/PreErasureNoticeService
 ---
 
 # .runForCurrentOrganization()
 
 ## Connections
-- [[dot-computeDeadline()]] - `calls` [INFERRED]
-- [[dot-record()_1]] - `calls` [INFERRED]
-- [[dot-resolveRule()]] - `calls` [INFERRED]
+- [[dot-cancelOnContact()]] - `calls` [EXTRACTED]
 - [[dot-runForAllOrganizations()_2]] - `calls` [EXTRACTED]
-- [[dot-sendWarningsIfDue()]] - `calls` [EXTRACTED]
-- [[SdfCycleScanService]] - `method` [EXTRACTED]
-- [[addByDeadlineUnit()]] - `calls` [EXTRACTED]
+- [[dot-sendDueNotices()]] - `calls` [EXTRACTED]
+- [[PreErasureNoticeService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SdfCycleScanService
+#graphify/code #graphify/EXTRACTED #community/PreErasureNoticeService

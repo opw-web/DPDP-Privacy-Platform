@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/principal-evidence.service.ts"
 type: "code"
-community: "access-report-render.ts"
+community: "PrincipalEvidenceController"
 location: "L135"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/access-report-renderts
+  - community/PrincipalEvidenceController
 ---
 
 # .buildEvidenceFile()
@@ -19,4 +19,4 @@ tags:
 - [[PrincipalEvidenceService]] - `method` [EXTRACTED]
 - [[splitNonDisclosureRequests()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/access-report-renderts
+#graphify/code #graphify/INFERRED #community/PrincipalEvidenceController

@@ -1,30 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.service.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/providers/smtp.provider.ts"
 type: "code"
-community: "CampaignsService"
-location: "L479"
+community: "notifications.module.ts"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampaignsService
+  - community/notificationsmodulets
 ---
 
 # .send()
 
 ## Connections
-- [[dot-create()_24]] - `calls` [EXTRACTED]
-- [[dot-deliverRecipient()]] - `calls` [EXTRACTED]
-- [[dot-dispatchPrincipalNoticeCampaign()]] - `calls` [INFERRED]
-- [[dot-enqueue()]] - `calls` [INFERRED]
-- [[dot-get()_8]] - `calls` [INFERRED]
-- [[dot-record()_1]] - `calls` [INFERRED]
-- [[dot-resolveRecipients()]] - `calls` [EXTRACTED]
-- [[dot-send()_4]] - `calls` [INFERRED]
-- [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[CampaignsService]] - `method` [EXTRACTED]
-- [[notFoundCampaign()]] - `calls` [EXTRACTED]
-- [[recordNonDisclosureSuppression()]] - `calls` [EXTRACTED]
-- [[renderOrganizationMessageTemplate()]] - `calls` [EXTRACTED]
-- [[toBadRequest()_1]] - `calls` [EXTRACTED]
+- [[dot-send()]] - `calls` [INFERRED]
+- [[NotificationSendInput]] - `references` [EXTRACTED]
+- [[NotificationSendResult]] - `references` [EXTRACTED]
+- [[SmtpProvider]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampaignsService
+#graphify/code #graphify/EXTRACTED #community/notificationsmodulets

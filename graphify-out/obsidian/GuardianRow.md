@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/children/guardians.service.ts"
 type: "code"
-community: "guardians.service.ts"
+community: "AuditService"
 location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/AuditService
 ---
 
 # GuardianRow
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[guardians.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/AuditService

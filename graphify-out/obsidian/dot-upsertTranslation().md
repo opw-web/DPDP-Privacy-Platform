@@ -17,8 +17,8 @@ tags:
 - [[Body_13]] - `references` [EXTRACTED]
 - [[CurrentActor]] - `references` [EXTRACTED]
 - [[NoticesController]] - `method` [EXTRACTED]
-- [[Param_13]] - `references` [EXTRACTED]
-- [[Put_2]] - `references` [EXTRACTED]
+- [[Param_14]] - `references` [EXTRACTED]
+- [[Put_1]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[UpsertTranslationDto]] - `references` [EXTRACTED]
 

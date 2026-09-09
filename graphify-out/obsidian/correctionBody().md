@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/pages/MeRequestsPage.tsx"
 type: "code"
-community: "react-router-dom"
+community: "router.tsx"
 location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react-router-dom
+  - community/routertsx
 ---
 
 # correctionBody()
@@ -15,4 +15,4 @@ tags:
 - [[MeRequestsPage()]] - `calls` [EXTRACTED]
 - [[MeRequestsPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react-router-dom
+#graphify/code #graphify/EXTRACTED #community/routertsx

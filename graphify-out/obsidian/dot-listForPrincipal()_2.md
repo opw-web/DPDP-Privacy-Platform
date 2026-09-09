@@ -12,7 +12,7 @@ tags:
 # .listForPrincipal()
 
 ## Connections
-- [[dot-list()_5]] - `calls` [INFERRED]
+- [[dot-list()_37]] - `calls` [INFERRED]
 - [[dot-listForPrincipal()_1]] - `calls` [INFERRED]
 - [[ConsentsService]] - `method` [EXTRACTED]
 

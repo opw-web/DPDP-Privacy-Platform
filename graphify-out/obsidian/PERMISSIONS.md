@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/prisma/seed/permissions.ts"
 type: "code"
-community: "AppModule"
+community: "sync.e2e-spec.ts"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AppModule
+  - community/synce2e-spects
 ---
 
 # PERMISSIONS
@@ -32,4 +32,4 @@ tags:
 - [[step6-conflict-acceptance.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[sync.e2e-spec.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AppModule
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

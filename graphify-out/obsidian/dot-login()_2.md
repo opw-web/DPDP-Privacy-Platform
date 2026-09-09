@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/principal-auth.service.ts"
 type: "code"
-community: "employee-auth.service.ts"
+community: "TokenService"
 location: "L129"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employee-authservicets
+  - community/TokenService
 ---
 
 # .login()
@@ -20,4 +20,4 @@ tags:
 - [[PrincipalAuthService]] - `method` [EXTRACTED]
 - [[getDummyHash()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employee-authservicets
+#graphify/code #graphify/EXTRACTED #community/TokenService

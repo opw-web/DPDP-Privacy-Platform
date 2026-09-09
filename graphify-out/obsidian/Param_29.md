@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: ".unmerge"
+community: "security-measures.service.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/unmerge
+  - community/security-measuresservicets
 ---
 
 # Param
 
 ## Connections
-- [[dot-unmerge()_1]] - `references` [EXTRACTED]
+- [[dot-get()_25]] - `references` [EXTRACTED]
+- [[dot-update()_25]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/unmerge
+#graphify/code #graphify/EXTRACTED #community/security-measuresservicets

@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/test/merge-unmerge.e2e-spec.ts"
 type: "code"
-community: "merge-unmerge.e2e-spec.ts"
+community: "token.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/merge-unmergee2e-spects
+  - community/tokenservicets
 ---
 
 # merge-unmerge.e2e-spec.ts
 
 ## Connections
 - [[@nestjscommon]] - `imports_from` [EXTRACTED]
-- [[@nestjstesting_1]] - `imports_from` [EXTRACTED]
+- [[@nestjstesting]] - `imports_from` [EXTRACTED]
 - [[AccessTokenPayload]] - `imports` [EXTRACTED]
 - [[AppModule]] - `imports` [EXTRACTED]
 - [[AssemblyService]] - `imports` [EXTRACTED]
@@ -34,11 +34,11 @@ tags:
 - [[attachIdentifier()]] - `contains` [EXTRACTED]
 - [[candidates.service.ts]] - `imports_from` [EXTRACTED]
 - [[dataSource()]] - `contains` [EXTRACTED]
-- [[ensurePermission()_7]] - `contains` [EXTRACTED]
+- [[ensurePermission()]] - `contains` [EXTRACTED]
 - [[linking.service.ts]] - `imports_from` [EXTRACTED]
 - [[matching.service.ts]] - `imports_from` [EXTRACTED]
 - [[merge.service.ts]] - `imports_from` [EXTRACTED]
-- [[organization()_2]] - `contains` [EXTRACTED]
+- [[organization()]] - `contains` [EXTRACTED]
 - [[principal()]] - `contains` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[rebuild()]] - `contains` [EXTRACTED]
@@ -46,8 +46,8 @@ tags:
 - [[seedpermissions.ts]] - `imports_from` [EXTRACTED]
 - [[sourceRecordAndNormalized()]] - `contains` [EXTRACTED]
 - [[supertest]] - `imports_from` [EXTRACTED]
-- [[tenant()_2]] - `contains` [EXTRACTED]
+- [[tenant()]] - `contains` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 - [[token.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/merge-unmergee2e-spects
+#graphify/code #graphify/EXTRACTED #community/tokenservicets

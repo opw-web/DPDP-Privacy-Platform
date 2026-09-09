@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/inventory/inventory.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts"
 type: "code"
-community: "inventory.controller.ts"
-location: "L78"
+community: "TemplatesService"
+location: "L72"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/inventorycontrollerts
+  - community/TemplatesService
 ---
 
 # .constructor()
 
 ## Connections
-- [[InventoryService]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[TemplatesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/inventorycontrollerts
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

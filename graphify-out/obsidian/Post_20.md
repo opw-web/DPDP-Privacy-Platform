@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "DataSourcesController"
+community: "SetMyConsentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesController
+  - community/SetMyConsentDto
 ---
 
 # Post
 
 ## Connections
-- [[dot-create()_27]] - `references` [EXTRACTED]
-- [[dot-discoverSchema()_2]] - `references` [EXTRACTED]
-- [[dot-testConnection()_2]] - `references` [EXTRACTED]
+- [[dot-setStatus()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesController
+#graphify/code #graphify/EXTRACTED #community/SetMyConsentDto

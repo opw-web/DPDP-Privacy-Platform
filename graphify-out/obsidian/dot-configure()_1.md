@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/app.module.ts"
 type: "code"
-community: "AppModule"
+community: "sync.e2e-spec.ts"
 location: "L127"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AppModule
+  - community/synce2e-spects
 ---
 
 # .configure()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[AppModule]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AppModule
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

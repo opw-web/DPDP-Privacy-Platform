@@ -1,17 +1,17 @@
 ---
-source_file: "demo-company-server/package.json"
+source_file: "dpdp-platform/backend/package.json"
 type: "code"
-community: "demo-company-server/package.json"
-location: "L12"
+community: "prisma"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/demo-company-server/packagejson
+  - community/prisma
 ---
 
 # seed
 
 ## Connections
-- [[scripts_2]] - `contains` [EXTRACTED]
+- [[prisma]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/demo-company-server/packagejson
+#graphify/code #graphify/EXTRACTED #community/prisma

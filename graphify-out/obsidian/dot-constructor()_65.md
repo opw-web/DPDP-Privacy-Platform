@@ -1,18 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.service.ts"
 type: "code"
-community: "compliance.service.ts"
-location: "L217"
+community: "CampaignsService"
+location: "L161"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/complianceservicets
+  - community/CampaignsService
 ---
 
 # .constructor()
 
 ## Connections
 - [[AuditService]] - `references` [EXTRACTED]
-- [[ComplianceService]] - `method` [EXTRACTED]
+- [[CampaignSendQueueService]] - `references` [EXTRACTED]
+- [[CampaignsService]] - `method` [EXTRACTED]
+- [[ConsentsService]] - `references` [EXTRACTED]
+- [[NoticesService]] - `references` [EXTRACTED]
+- [[ReferenceService]] - `references` [EXTRACTED]
+- [[TemplatesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/complianceservicets
+#graphify/code #graphify/EXTRACTED #community/CampaignsService

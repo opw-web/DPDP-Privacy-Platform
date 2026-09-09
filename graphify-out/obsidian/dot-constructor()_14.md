@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/guardians.controller.ts"
+source_file: "dpdp-platform/backend/src/common/guards/permissions.guard.ts"
 type: "code"
-community: "guardians.service.ts"
-location: "L15"
+community: "audit-read.controller.ts"
+location: "L81"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/audit-readcontrollerts
 ---
 
 # .constructor()
 
 ## Connections
-- [[GuardiansController]] - `method` [EXTRACTED]
-- [[GuardiansService]] - `references` [EXTRACTED]
+- [[PermissionsGuard]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/audit-readcontrollerts

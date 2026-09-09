@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "configuration.ts"
+community: "BreachPrincipalNoticeDispatchProcessor"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/configurationts
+  - community/BreachPrincipalNoticeDispatchProcessor
 ---
 
 # Processor
 
 ## Connections
-- [[AccessLogRetentionProcessor]] - `references` [EXTRACTED]
+- [[BreachPrincipalNoticeDispatchProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/configurationts
+#graphify/code #graphify/EXTRACTED #community/BreachPrincipalNoticeDispatchProcessor

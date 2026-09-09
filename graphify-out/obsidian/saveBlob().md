@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/requests/AccessReportPanel.tsx"
 type: "code"
-community: "RequestDetailPage.tsx"
+community: "card.tsx"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestDetailPagetsx
+  - community/cardtsx
 ---
 
 # saveBlob()
@@ -15,4 +15,4 @@ tags:
 - [[AccessReportPanel.tsx]] - `contains` [EXTRACTED]
 - [[generateAndDownload()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/cardtsx

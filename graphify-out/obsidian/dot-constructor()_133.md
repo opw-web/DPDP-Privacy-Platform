@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/breach-principal-notice-dispatch.queue.ts"
+source_file: "demo-company-server/src/seed/rng.ts"
 type: "code"
-community: ".record"
-location: "L29"
+community: "generateDataset"
+location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/generateDataset
 ---
 
 # .constructor()
 
 ## Connections
-- [[BreachPrincipalNoticeDispatchQueueService]] - `method` [EXTRACTED]
-- [[InjectQueue_8]] - `references` [EXTRACTED]
+- [[Rng]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/generateDataset

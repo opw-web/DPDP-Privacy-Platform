@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-list()_43]] - `calls` [INFERRED]
-- [[Get_36]] - `references` [EXTRACTED]
+- [[Get_34]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[RolesController]] - `method` [EXTRACTED]
 

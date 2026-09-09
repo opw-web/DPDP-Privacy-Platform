@@ -1,24 +1,28 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/child-exemptions.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/breaches/breach.service.ts"
 type: "code"
-community: "child-exemptions.service.ts"
-location: "L23"
+community: "BreachService"
+location: "L206"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/child-exemptionsservicets
+  - community/BreachService
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_30]] - `calls` [INFERRED]
+- [[dot-computeDeadline()]] - `calls` [INFERRED]
+- [[dot-create()_12]] - `calls` [INFERRED]
+- [[dot-next()]] - `calls` [INFERRED]
+- [[dot-previewAffected()]] - `calls` [EXTRACTED]
+- [[dot-public()]] - `calls` [EXTRACTED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-resolveRule()]] - `calls` [INFERRED]
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[Body_20]] - `references` [EXTRACTED]
-- [[ChildExemptionsController]] - `method` [EXTRACTED]
-- [[CreateExemptionClaimDto]] - `references` [EXTRACTED]
-- [[CurrentActor]] - `references` [EXTRACTED]
-- [[Post_21]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[BreachService]] - `method` [EXTRACTED]
+- [[CreateBreachDto]] - `references` [EXTRACTED]
+- [[PublicBreach]] - `references` [EXTRACTED]
+- [[asDate()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/child-exemptionsservicets
+#graphify/code #graphify/EXTRACTED #community/BreachService

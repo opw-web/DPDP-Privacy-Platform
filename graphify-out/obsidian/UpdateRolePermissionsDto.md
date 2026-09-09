@@ -14,10 +14,10 @@ tags:
 ## Connections
 - [[dot-replacePermissions()]] - `references` [EXTRACTED]
 - [[dot-replacePermissions()_1]] - `references` [EXTRACTED]
-- [[ApiProperty_40]] - `references` [EXTRACTED]
+- [[ApiProperty_45]] - `references` [EXTRACTED]
 - [[ArrayUnique_9]] - `references` [EXTRACTED]
 - [[IsArray_23]] - `references` [EXTRACTED]
-- [[IsString_58]] - `references` [EXTRACTED]
+- [[IsString_59]] - `references` [EXTRACTED]
 - [[roles.controller.ts]] - `imports` [EXTRACTED]
 - [[roles.service.ts]] - `imports` [EXTRACTED]
 - [[update-role-permissions.dto.ts]] - `contains` [EXTRACTED]

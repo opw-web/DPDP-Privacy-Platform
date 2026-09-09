@@ -1,20 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalsService"
+community: "CreateVoluntaryUndertakingDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalsService
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # Get
 
 ## Connections
-- [[dot-detail()]] - `references` [EXTRACTED]
-- [[dot-lineage()]] - `references` [EXTRACTED]
-- [[dot-list()_20]] - `references` [EXTRACTED]
-- [[dot-recipients()_1]] - `references` [EXTRACTED]
-- [[dot-sourceRecords()]] - `references` [EXTRACTED]
+- [[dot-getById()_4]] - `references` [EXTRACTED]
+- [[dot-list()_28]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalsService
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

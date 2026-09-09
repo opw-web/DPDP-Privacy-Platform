@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/compliance/compliance.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/providers/smtp.provider.ts"
 type: "code"
-community: "ComplianceController"
-location: "L18"
+community: "notifications.module.ts"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ComplianceController
+  - community/notificationsmodulets
 ---
 
 # .constructor()
 
 ## Connections
-- [[ComplianceController]] - `method` [EXTRACTED]
-- [[ComplianceService]] - `references` [EXTRACTED]
+- [[MailerService]] - `references` [EXTRACTED]
+- [[SmtpProvider]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ComplianceController
+#graphify/code #graphify/EXTRACTED #community/notificationsmodulets

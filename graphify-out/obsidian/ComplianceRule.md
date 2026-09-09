@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/RequestDetailPage.tsx"
 type: "code"
-community: "RequestDetailPage.tsx"
+community: "card.tsx"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestDetailPagetsx
+  - community/cardtsx
 ---
 
 # ComplianceRule
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[RequestDetailPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/cardtsx

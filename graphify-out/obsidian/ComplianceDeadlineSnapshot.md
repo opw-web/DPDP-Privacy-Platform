@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
 type: "code"
-community: "sdf-assessment.service.ts"
+community: "PrismaService"
 location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdf-assessmentservicets
+  - community/PrismaService
 ---
 
 # ComplianceDeadlineSnapshot
@@ -17,4 +17,4 @@ tags:
 - [[requests.service.ts]] - `imports` [EXTRACTED]
 - [[sdf-assessment.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdf-assessmentservicets
+#graphify/code #graphify/EXTRACTED #community/PrismaService

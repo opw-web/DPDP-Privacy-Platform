@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AuditService"
+community: "RequirePermission"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/RequirePermission
 ---
 
 # Injectable
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
+- [[LegalHoldService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

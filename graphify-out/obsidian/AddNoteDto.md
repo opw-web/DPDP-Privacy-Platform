@@ -12,11 +12,11 @@ tags:
 # AddNoteDto
 
 ## Connections
-- [[dot-addNote()_1]] - `references` [EXTRACTED]
 - [[dot-addNote()]] - `references` [EXTRACTED]
-- [[ApiProperty_6]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_8]] - `references` [EXTRACTED]
-- [[IsBoolean_4]] - `references` [EXTRACTED]
+- [[dot-addNote()_1]] - `references` [EXTRACTED]
+- [[ApiProperty_9]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_10]] - `references` [EXTRACTED]
+- [[IsBoolean_5]] - `references` [EXTRACTED]
 - [[IsOptional_10]] - `references` [EXTRACTED]
 - [[IsString_11]] - `references` [EXTRACTED]
 - [[MinLength_6]] - `references` [EXTRACTED]

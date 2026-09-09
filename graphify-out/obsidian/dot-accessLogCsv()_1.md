@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/audit/audit-read.controller.ts"
 type: "code"
-community: "audit-read.service.ts"
+community: "audit-read.controller.ts"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-readservicets
+  - community/audit-readcontrollerts
 ---
 
 # .accessLogCsv()
@@ -16,8 +16,8 @@ tags:
 - [[AccessLogExportDto]] - `references` [EXTRACTED]
 - [[AuditReadController]] - `method` [EXTRACTED]
 - [[Get_6]] - `references` [EXTRACTED]
-- [[Query_2]] - `references` [EXTRACTED]
+- [[Query_1]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[Res_1]] - `references` [EXTRACTED]
+- [[Res_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-readservicets
+#graphify/code #graphify/EXTRACTED #community/audit-readcontrollerts

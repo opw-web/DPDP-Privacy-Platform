@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "MappingsController"
+community: "PermissionsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MappingsController
+  - community/PermissionsController
 ---
 
 # ApiTags
 
 ## Connections
-- [[MappingsController]] - `references` [EXTRACTED]
+- [[PermissionsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MappingsController
+#graphify/code #graphify/EXTRACTED #community/PermissionsController

@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/audit-export.service.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.controller.ts"
 type: "code"
-community: "AuditService"
+community: "RequirePermission"
 location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/RequirePermission
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditExportService]] - `method` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
+- [[NoticesController]] - `method` [EXTRACTED]
+- [[NoticesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

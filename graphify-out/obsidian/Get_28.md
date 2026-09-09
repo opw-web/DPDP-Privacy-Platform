@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "sharing.service.ts"
+community: "ConsentsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sharingservicets
+  - community/ConsentsService
 ---
 
 # Get
 
 ## Connections
-- [[dot-get()_14]] - `references` [EXTRACTED]
-- [[dot-list()_31]] - `references` [EXTRACTED]
+- [[dot-getConsentStats()]] - `references` [EXTRACTED]
+- [[dot-listForPrincipal()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sharingservicets
+#graphify/code #graphify/EXTRACTED #community/ConsentsService

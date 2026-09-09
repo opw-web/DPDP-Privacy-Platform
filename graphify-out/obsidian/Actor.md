@@ -1,21 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: ".record"
+community: "BreachesController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/BreachesController
 ---
 
 # Actor
 
 ## Connections
 - [[dot-addAffected()_1]] - `references` [EXTRACTED]
-- [[dot-completeObligation()_1]] - `references` [EXTRACTED]
-- [[dot-create()_32]] - `references` [EXTRACTED]
+- [[dot-completeObligation()]] - `references` [EXTRACTED]
+- [[dot-create()_12]] - `references` [EXTRACTED]
 - [[dot-extension()]] - `references` [EXTRACTED]
 - [[dot-notify()]] - `references` [EXTRACTED]
-- [[dot-update()_22]] - `references` [EXTRACTED]
+- [[dot-update()_10]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/BreachesController

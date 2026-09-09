@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ReplaceMappingsDto"
+community: "SetMyConsentDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ReplaceMappingsDto
+  - community/SetMyConsentDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[ReplaceMappingsDto]] - `references` [EXTRACTED]
-- [[SourceFieldMappingDto]] - `references` [EXTRACTED]
+- [[SetMyConsentDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ReplaceMappingsDto
+#graphify/code #graphify/EXTRACTED #community/SetMyConsentDto

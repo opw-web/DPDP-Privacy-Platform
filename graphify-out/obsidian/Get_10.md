@@ -1,21 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalActor"
+community: "SdfController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalActor
+  - community/SdfController
 ---
 
 # Get
 
 ## Connections
-- [[dot-getNomination()]] - `references` [EXTRACTED]
-- [[dot-getPublishedNotice()]] - `references` [EXTRACTED]
-- [[dot-getRequest()]] - `references` [EXTRACTED]
-- [[dot-listMessages()]] - `references` [EXTRACTED]
-- [[dot-listPublishedNotices()]] - `references` [EXTRACTED]
-- [[dot-listRequests()]] - `references` [EXTRACTED]
+- [[dot-getGaps()_1]] - `references` [EXTRACTED]
+- [[dot-listAlgorithms()]] - `references` [EXTRACTED]
+- [[dot-listAssessments()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalActor
+#graphify/code #graphify/EXTRACTED #community/SdfController

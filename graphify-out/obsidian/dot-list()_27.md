@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/employees.service.ts"
+source_file: "dpdp-platform/backend/src/modules/children/child-exemptions.service.ts"
 type: "code"
-community: "employees.service.ts"
-location: "L42"
+community: "CreateExemptionClaimDto"
+location: "L79"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeesservicets
+  - community/CreateExemptionClaimDto
 ---
 
 # .list()
 
 ## Connections
 - [[dot-list()_26]] - `calls` [INFERRED]
-- [[EmployeesService]] - `method` [EXTRACTED]
+- [[ChildExemptionsService]] - `method` [EXTRACTED]
+- [[ListExemptionClaimsDto]] - `references` [EXTRACTED]
+- [[toPublicExemptionClaim()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/employeesservicets
+#graphify/code #graphify/EXTRACTED #community/CreateExemptionClaimDto

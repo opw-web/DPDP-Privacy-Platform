@@ -1,22 +1,29 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/registers/sharing.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.service.ts"
 type: "code"
-community: "sharing.service.ts"
-location: "L27"
+community: "CampaignsService"
+location: "L205"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sharingservicets
+  - community/CampaignsService
 ---
 
 # .create()
 
 ## Connections
-- [[dot-create()_26]] - `calls` [INFERRED]
-- [[Body_17]] - `references` [EXTRACTED]
-- [[CreateSharingActivityDto]] - `references` [EXTRACTED]
-- [[Post_17]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[SharingController]] - `method` [EXTRACTED]
+- [[dot-compileFilter()]] - `calls` [EXTRACTED]
+- [[dot-create()_13]] - `calls` [INFERRED]
+- [[dot-deliverRecipient()]] - `calls` [EXTRACTED]
+- [[dot-extractAndValidateVariables()_1]] - `calls` [EXTRACTED]
+- [[dot-get()_14]] - `calls` [INFERRED]
+- [[dot-getConsentStatus()]] - `calls` [INFERRED]
+- [[dot-getPublishedVersion()]] - `calls` [INFERRED]
+- [[dot-next()]] - `calls` [INFERRED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-send()_7]] - `calls` [EXTRACTED]
+- [[AccessTokenPayload]] - `references` [EXTRACTED]
+- [[CampaignsService]] - `method` [EXTRACTED]
+- [[CreateCampaignDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sharingservicets
+#graphify/code #graphify/EXTRACTED #community/CampaignsService

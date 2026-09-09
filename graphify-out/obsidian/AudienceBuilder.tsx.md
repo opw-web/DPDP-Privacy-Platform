@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/messaging/AudienceBuilder.tsx"
 type: "code"
-community: "AudienceBuilder.tsx"
+community: "MessagingCampaignBuilderPage.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AudienceBuildertsx
+  - community/MessagingCampaignBuilderPagetsx
 ---
 
 # AudienceBuilder.tsx
@@ -16,7 +16,7 @@ tags:
 - [[AudienceBuilder()]] - `contains` [EXTRACTED]
 - [[AudienceBuilder.test.tsx]] - `imports_from` [EXTRACTED]
 - [[AudienceField]] - `contains` [EXTRACTED]
-- [[AudienceFilter]] - `contains` [EXTRACTED]
+- [[AudienceFilter_1]] - `contains` [EXTRACTED]
 - [[AudiencePreview]] - `contains` [EXTRACTED]
 - [[AudienceRule]] - `contains` [EXTRACTED]
 - [[Button]] - `imports` [EXTRACTED]
@@ -26,7 +26,7 @@ tags:
 - [[CardHeader]] - `imports` [EXTRACTED]
 - [[CardTitle]] - `imports` [EXTRACTED]
 - [[DEFAULT_RULE]] - `contains` [EXTRACTED]
-- [[FIELD_LABELS_1]] - `contains` [EXTRACTED]
+- [[FIELD_LABELS_2]] - `contains` [EXTRACTED]
 - [[MessagingCampaignBuilderPage.tsx]] - `imports_from` [EXTRACTED]
 - [[api-client.ts]] - `imports_from` [EXTRACTED]
 - [[audienceRuleForField()]] - `contains` [EXTRACTED]
@@ -38,4 +38,4 @@ tags:
 - [[react_1]] - `imports_from` [EXTRACTED]
 - [[suppressedPreviewCount()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AudienceBuildertsx
+#graphify/code #graphify/EXTRACTED #community/MessagingCampaignBuilderPagetsx

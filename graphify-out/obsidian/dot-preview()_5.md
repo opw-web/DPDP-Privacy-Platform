@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/messaging/audience/audience.service.ts"
 type: "code"
-community: "compile-audience.ts"
+community: "AudienceService"
 location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/compile-audiencets
+  - community/AudienceService
 ---
 
 # .preview()
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-compile()]] - `calls` [EXTRACTED]
 - [[dot-maskIfNeeded()]] - `calls` [INFERRED]
-- [[dot-preview()_4]] - `calls` [INFERRED]
+- [[dot-preview()_1]] - `calls` [INFERRED]
 - [[AudienceService]] - `method` [EXTRACTED]
 - [[PreviewAudienceDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/compile-audiencets
+#graphify/code #graphify/EXTRACTED #community/AudienceService

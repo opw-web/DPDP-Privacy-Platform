@@ -12,13 +12,13 @@ tags:
 # SdfCycleScanService
 
 ## Connections
-- [[dot-constructor()_102]] - `references` [EXTRACTED]
-- [[dot-constructor()_87]] - `method` [EXTRACTED]
+- [[dot-constructor()_53]] - `references` [EXTRACTED]
+- [[dot-constructor()_153]] - `method` [EXTRACTED]
 - [[dot-findSdfManagerEmployeeIds()]] - `method` [EXTRACTED]
-- [[dot-runForAllOrganizations()_2]] - `method` [EXTRACTED]
-- [[dot-runForCurrentOrganization()_2]] - `method` [EXTRACTED]
+- [[dot-runForAllOrganizations()]] - `method` [EXTRACTED]
+- [[dot-runForCurrentOrganization()]] - `method` [EXTRACTED]
 - [[dot-sendWarningsIfDue()]] - `method` [EXTRACTED]
-- [[Injectable_54]] - `references` [EXTRACTED]
+- [[Injectable_31]] - `references` [EXTRACTED]
 - [[sdf-cycle-scan.processor.ts]] - `imports` [EXTRACTED]
 - [[sdf-cycle-scan.service.ts]] - `contains` [EXTRACTED]
 - [[sdf.e2e-spec.ts]] - `imports` [EXTRACTED]

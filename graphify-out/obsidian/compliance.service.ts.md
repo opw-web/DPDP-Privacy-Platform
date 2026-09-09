@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
 type: "code"
-community: "compliance.service.ts"
+community: "PrismaService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/complianceservicets
+  - community/PrismaService
 ---
 
 # compliance.service.ts
@@ -49,4 +49,4 @@ tags:
 - [[update-compliance-rule.dto.ts]] - `imports_from` [EXTRACTED]
 - [[worstCaseDeadlineDays()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/complianceservicets
+#graphify/code #graphify/EXTRACTED #community/PrismaService

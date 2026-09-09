@@ -1,20 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/test/normalization.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/identity-matching.e2e-spec.ts"
 type: "code"
-community: "AppModule"
-location: "L26"
+community: "ScopedTransactionClient"
+location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AppModule
+  - community/ScopedTransactionClient
 ---
 
 # tenant()
 
 ## Connections
-- [[createSourceRecord()]] - `calls` [EXTRACTED]
-- [[normalization.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[persist()]] - `calls` [EXTRACTED]
-- [[persistMappings()]] - `calls` [EXTRACTED]
+- [[apply()]] - `calls` [EXTRACTED]
+- [[identity-matching.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[principal()_2]] - `calls` [EXTRACTED]
+- [[record()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AppModule
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

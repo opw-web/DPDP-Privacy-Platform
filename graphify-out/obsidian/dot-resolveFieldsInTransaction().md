@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principals/principals.service.ts"
 type: "code"
-community: "PrincipalsService"
+community: "principals.service.ts"
 location: "L318"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalsService
+  - community/principalsservicets
 ---
 
 # .resolveFieldsInTransaction()
@@ -18,4 +18,4 @@ tags:
 - [[ScopedTransactionClient]] - `references` [EXTRACTED]
 - [[resolveProvenance()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalsService
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

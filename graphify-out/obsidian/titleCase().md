@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/normalization/normalizers/name.ts"
+source_file: "dpdp-platform/frontend/src/fiduciary/lib/enum-options.ts"
 type: "code"
-community: "normalization.service.ts"
-location: "L6"
+community: "react"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/normalizationservicets
+  - community/react
 ---
 
 # titleCase()
 
 ## Connections
-- [[name.ts]] - `contains` [EXTRACTED]
-- [[normalizeName()]] - `calls` [EXTRACTED]
+- [[enum-options.ts]] - `contains` [EXTRACTED]
+- [[humanizeEnum()]] - `calls` [EXTRACTED]
+- [[toOptions()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/normalizationservicets
+#graphify/code #graphify/EXTRACTED #community/react

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "data-sources.module.ts"
+community: "rest-api.connector.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesmodulets
+  - community/rest-apiconnectorts
 ---
 
 # Module
 
 ## Connections
-- [[SyncModule]] - `references` [EXTRACTED]
+- [[ConnectorsModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesmodulets
+#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts

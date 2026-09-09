@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts"
 type: "code"
-community: "templates.service.ts"
+community: "campaigns.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatesservicets
+  - community/campaignsservicets
 ---
 
 # template-renderer.ts
@@ -39,4 +39,4 @@ tags:
 - [[walkStatement()]] - `contains` [EXTRACTED]
 - [[whitelisted-variables.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatesservicets
+#graphify/code #graphify/EXTRACTED #community/campaignsservicets

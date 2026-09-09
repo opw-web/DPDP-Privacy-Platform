@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notices/notices.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/linking.service.ts"
 type: "code"
-community: "notices.service.ts"
-location: "L34"
+community: "ScopedTransactionClient"
+location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/noticesservicets
+  - community/ScopedTransactionClient
 ---
 
 # .constructor()
 
 ## Connections
-- [[NoticesController]] - `method` [EXTRACTED]
-- [[NoticesService]] - `references` [EXTRACTED]
+- [[IdentifierOwnershipConflictError_1]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/noticesservicets
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

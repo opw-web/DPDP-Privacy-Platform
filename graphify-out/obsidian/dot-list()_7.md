@@ -1,21 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/audit/audit-read.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/transfers.controller.ts"
 type: "code"
-community: "audit-read.service.ts"
-location: "L157"
+community: "CreateTransferDto"
+location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audit-readservicets
+  - community/CreateTransferDto
 ---
 
 # .list()
 
 ## Connections
-- [[dot-buildWhere()]] - `calls` [EXTRACTED]
-- [[dot-hasFullPersonalDataAccess()]] - `calls` [INFERRED]
-- [[dot-list()_6]] - `calls` [INFERRED]
-- [[AuditReadService]] - `method` [EXTRACTED]
-- [[ListAuditEventsDto]] - `references` [EXTRACTED]
+- [[dot-list()_8]] - `calls` [INFERRED]
+- [[Get_7]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[TransfersController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audit-readservicets
+#graphify/code #graphify/EXTRACTED #community/CreateTransferDto

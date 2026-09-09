@@ -12,8 +12,8 @@ tags:
 # .validateRequiredSubsetOfReferenced()
 
 ## Connections
-- [[dot-create()_14]] - `calls` [EXTRACTED]
-- [[dot-update()_11]] - `calls` [EXTRACTED]
+- [[dot-create()_11]] - `calls` [EXTRACTED]
+- [[dot-update()_9]] - `calls` [EXTRACTED]
 - [[TemplatesService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/TemplatesService

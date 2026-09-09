@@ -1,20 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
 type: "code"
-community: "TemplatesService"
-location: "L84"
+community: "RequirePermission"
+location: "L40"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/TemplatesService
+  - graphify/EXTRACTED
+  - community/RequirePermission
 ---
 
 # .get()
 
 ## Connections
-- [[dot-create()_24]] - `calls` [INFERRED]
-- [[dot-get()_7]] - `calls` [INFERRED]
-- [[dot-send()_5]] - `calls` [INFERRED]
-- [[TemplatesService]] - `method` [EXTRACTED]
+- [[dot-get()_13]] - `calls` [INFERRED]
+- [[CampaignsController]] - `method` [EXTRACTED]
+- [[Get_19]] - `references` [EXTRACTED]
+- [[Param_13]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sync/sync.module.ts"
 type: "code"
-community: "data-sources.module.ts"
+community: "app.module.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesmodulets
+  - community/appmodulets
 ---
 
 # sync.module.ts
@@ -35,4 +35,4 @@ tags:
 - [[sync.processor.ts]] - `imports_from` [EXTRACTED]
 - [[sync.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesmodulets
+#graphify/code #graphify/EXTRACTED #community/appmodulets

@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-preview()]] - `references` [EXTRACTED]
-- [[dot-preview()_1]] - `references` [EXTRACTED]
+- [[dot-preview()_4]] - `references` [EXTRACTED]
 - [[ApiPropertyOptional_24]] - `references` [EXTRACTED]
-- [[IsObject_4]] - `references` [EXTRACTED]
+- [[IsObject_2]] - `references` [EXTRACTED]
 - [[IsOptional_26]] - `references` [EXTRACTED]
 - [[preview-template.dto.ts]] - `contains` [EXTRACTED]
 - [[templates.controller.ts]] - `imports` [EXTRACTED]

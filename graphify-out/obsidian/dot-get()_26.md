@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/security-measures.service.ts"
 type: "code"
-community: "mappings.service.ts"
-location: "L244"
+community: "security-measures.service.ts"
+location: "L81"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mappingsservicets
+  - community/security-measuresservicets
 ---
 
 # .get()
 
 ## Connections
-- [[dot-getMappings()]] - `calls` [INFERRED]
-- [[MappingsService]] - `method` [EXTRACTED]
-- [[computeMappingWarnings()]] - `calls` [EXTRACTED]
+- [[dot-get()_25]] - `calls` [INFERRED]
+- [[SecurityMeasuresService]] - `method` [EXTRACTED]
+- [[groupByRuleReference()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mappingsservicets
+#graphify/code #graphify/EXTRACTED #community/security-measuresservicets

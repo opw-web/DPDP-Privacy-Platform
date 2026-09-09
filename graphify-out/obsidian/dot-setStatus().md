@@ -13,15 +13,15 @@ tags:
 
 ## Connections
 - [[dot-setMyConsentStatus()]] - `calls` [INFERRED]
-- [[Body_4]] - `references` [EXTRACTED]
+- [[Body_20]] - `references` [EXTRACTED]
 - [[CurrentPrincipal]] - `references` [EXTRACTED]
 - [[MeConsentsController]] - `method` [EXTRACTED]
-- [[Param_3]] - `references` [EXTRACTED]
-- [[Post_3]] - `references` [EXTRACTED]
+- [[Param_20]] - `references` [EXTRACTED]
+- [[Post_20]] - `references` [EXTRACTED]
 - [[PrincipalActor]] - `references` [EXTRACTED]
 - [[Public()]] - `references` [EXTRACTED]
 - [[Req]] - `references` [EXTRACTED]
 - [[SetMyConsentDto]] - `references` [EXTRACTED]
-- [[UseGuards]] - `references` [EXTRACTED]
+- [[UseGuards_2]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/SetMyConsentDto

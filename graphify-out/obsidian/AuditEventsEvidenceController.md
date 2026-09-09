@@ -1,23 +1,23 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/audit-events-evidence.controller.ts"
 type: "code"
-community: "canonicalJson"
+community: "AuditChainService"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/canonicalJson
+  - community/AuditChainService
 ---
 
 # AuditEventsEvidenceController
 
 ## Connections
-- [[dot-constructor()_28]] - `method` [EXTRACTED]
+- [[dot-constructor()_137]] - `method` [EXTRACTED]
 - [[dot-exportCsv()_2]] - `method` [EXTRACTED]
 - [[dot-verifyChain()_1]] - `method` [EXTRACTED]
-- [[ApiTags_7]] - `references` [EXTRACTED]
-- [[Controller_7]] - `references` [EXTRACTED]
+- [[ApiTags_40]] - `references` [EXTRACTED]
+- [[Controller_41]] - `references` [EXTRACTED]
 - [[audit-events-evidence.controller.ts]] - `contains` [EXTRACTED]
 - [[evidence.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/canonicalJson
+#graphify/code #graphify/EXTRACTED #community/AuditChainService

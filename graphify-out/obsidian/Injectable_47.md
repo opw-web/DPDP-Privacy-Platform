@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SyncQueueService"
+community: "CreateSharingActivityDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/CreateSharingActivityDto
 ---
 
 # Injectable
 
 ## Connections
-- [[ScheduleReconciliationService]] - `references` [EXTRACTED]
+- [[SharingService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

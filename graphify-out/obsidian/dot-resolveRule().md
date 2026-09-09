@@ -12,14 +12,14 @@ tags:
 # .resolveRule()
 
 ## Connections
+- [[dot-create()_29]] - `calls` [INFERRED]
 - [[dot-create()_31]] - `calls` [INFERRED]
-- [[dot-create()_9]] - `calls` [INFERRED]
 - [[dot-createFromTrigger()]] - `calls` [INFERRED]
 - [[dot-createInactivityTasks()]] - `calls` [INFERRED]
 - [[dot-getGaps()_2]] - `calls` [INFERRED]
 - [[dot-promoteFromFloor()]] - `calls` [INFERRED]
 - [[dot-resolveCycleDeadline()]] - `calls` [INFERRED]
-- [[dot-runForCurrentOrganization()_2]] - `calls` [INFERRED]
+- [[dot-runForCurrentOrganization()]] - `calls` [INFERRED]
 - [[ComplianceService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/RetentionScanService

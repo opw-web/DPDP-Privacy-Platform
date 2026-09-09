@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/sdf/types.ts"
 type: "code"
-community: "react-router-dom"
+community: "card.tsx"
 location: "L56"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react-router-dom
+  - community/cardtsx
 ---
 
 # ComplianceRuleSummary
@@ -19,4 +19,4 @@ tags:
 - [[SdfPage.tsx]] - `imports` [EXTRACTED]
 - [[sdftypes.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react-router-dom
+#graphify/code #graphify/EXTRACTED #community/cardtsx

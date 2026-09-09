@@ -1,37 +1,44 @@
 ---
 type: community
-members: 24
+members: 31
 ---
 
 # data-sources.service.ts
 
-**Members:** 24 nodes
+**Members:** 31 nodes
 
 ## Members
-- [[dot-constructor()_30]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts
-- [[dot-create()_5]] - code - dpdp-platform/backend/src/modules/connectors/connector.factory.ts
-- [[dot-discoverSchema()]] - code - dpdp-platform/backend/src/modules/connectors/connector.interface.ts
-- [[dot-fetchChanges()]] - code - dpdp-platform/backend/src/modules/connectors/connector.interface.ts
-- [[dot-fetchRecords()]] - code - dpdp-platform/backend/src/modules/connectors/connector.interface.ts
-- [[dot-testConnection()]] - code - dpdp-platform/backend/src/modules/connectors/connector.interface.ts
+- [[dot-assertGuardianConsentEligible()]] - code - dpdp-platform/backend/src/modules/children/guardians.service.ts
+- [[dot-constructor()_135]] - code - dpdp-platform/backend/src/modules/purposes/purposes.service.ts
+- [[dot-rescrubFieldSample()]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts
 - [[CONNECTOR_SOURCE_SELECT]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts
-- [[Connector]] - code - dpdp-platform/backend/src/modules/connectors/connector.interface.ts
-- [[ConnectorFactory]] - code - dpdp-platform/backend/src/modules/connectors/connector.factory.ts
-- [[ConnectorsModule]] - code - dpdp-platform/backend/src/modules/connectors/connectors.module.ts
 - [[DATA_SOURCE_FIELD_SELECT]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts
 - [[DATA_SOURCE_PUBLIC_SELECT]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts
-- [[DataSourceRowForConnector]] - code - dpdp-platform/backend/src/modules/connectors/connector.factory.ts
-- [[Injectable_20]] - code
-- [[Module]] - code
+- [[DataSourcePurposesResult_1]] - code - dpdp-platform/backend/src/modules/data-sources/source-purposes.service.ts
+- [[Injectable_78]] - code
+- [[MappingForWarningCheck]] - code - dpdp-platform/backend/src/modules/data-sources/mapping-warnings.ts
+- [[MappingWarning_1]] - code - dpdp-platform/backend/src/modules/data-sources/mapping-warnings.ts
+- [[MappingWarningPurposeSummary_1]] - code - dpdp-platform/backend/src/modules/data-sources/mapping-warnings.ts
+- [[PURPOSE_PUBLIC_SELECT]] - code - dpdp-platform/backend/src/modules/purposes/purposes.service.ts
 - [[PublicDataSource_1]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts
 - [[PublicDataSourceField_1]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts
+- [[PublicPurpose]] - code - dpdp-platform/backend/src/modules/purposes/purposes.service.ts
+- [[PublicSourceFieldMapping_1]] - code - dpdp-platform/backend/src/modules/data-sources/mappings.service.ts
+- [[PurposeRow]] - code - dpdp-platform/backend/src/modules/purposes/purposes.service.ts
+- [[PurposesService]] - code - dpdp-platform/backend/src/modules/purposes/purposes.service.ts
+- [[ReplaceMappingsResult_1]] - code - dpdp-platform/backend/src/modules/data-sources/mappings.service.ts
+- [[ReplacePurposesResult_1]] - code - dpdp-platform/backend/src/modules/data-sources/source-purposes.service.ts
+- [[SOURCE_FIELD_MAPPING_PUBLIC_SELECT]] - code - dpdp-platform/backend/src/modules/data-sources/mappings.service.ts
+- [[TenantScopedPrismaClient]] - code - dpdp-platform/backend/src/common/prisma/prisma.service.ts
 - [[TestConnectionResult_1]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts
-- [[connector.factory.spec.ts]] - code - dpdp-platform/backend/src/modules/connectors/connector.factory.spec.ts
-- [[connector.factory.ts]] - code - dpdp-platform/backend/src/modules/connectors/connector.factory.ts
-- [[connector.interface.ts]] - code - dpdp-platform/backend/src/modules/connectors/connector.interface.ts
-- [[connectors.module.spec.ts]] - code - dpdp-platform/backend/src/modules/connectors/connectors.module.spec.ts
-- [[connectors.module.ts]] - code - dpdp-platform/backend/src/modules/connectors/connectors.module.ts
+- [[buildService()]] - code - dpdp-platform/backend/src/modules/purposes/purposes.service.spec.ts
+- [[computeMappingWarnings()]] - code - dpdp-platform/backend/src/modules/data-sources/mapping-warnings.ts
 - [[data-sources.service.ts]] - code - dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts
+- [[mapping-warnings.ts]] - code - dpdp-platform/backend/src/modules/data-sources/mapping-warnings.ts
+- [[mappings.service.ts]] - code - dpdp-platform/backend/src/modules/data-sources/mappings.service.ts
+- [[purposes.service.spec.ts]] - code - dpdp-platform/backend/src/modules/purposes/purposes.service.spec.ts
+- [[purposes.service.ts]] - code - dpdp-platform/backend/src/modules/purposes/purposes.service.ts
+- [[source-purposes.service.ts]] - code - dpdp-platform/backend/src/modules/data-sources/source-purposes.service.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -41,24 +48,31 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_rest-api.connector.ts]]
-- 7 edges to [[_COMMUNITY_DataSourcesService]]
-- 7 edges to [[_COMMUNITY_AuditService]]
-- 6 edges to [[_COMMUNITY_data-sources.module.ts]]
-- 6 edges to [[_COMMUNITY_@prismaclient]]
+- 13 edges to [[_COMMUNITY_AuditService]]
+- 12 edges to [[_COMMUNITY_PrismaService]]
+- 12 edges to [[_COMMUNITY_ReplaceMappingsDto]]
+- 12 edges to [[_COMMUNITY_@nestjsswagger]]
+- 10 edges to [[_COMMUNITY_CreatePurposeDto]]
+- 10 edges to [[_COMMUNITY_ScopedTransactionClient]]
+- 5 edges to [[_COMMUNITY_DataSourcesService]]
+- 5 edges to [[_COMMUNITY_rest-api.connector.ts]]
+- 5 edges to [[_COMMUNITY_app.module.ts]]
 - 5 edges to [[_COMMUNITY_@nestjscommon]]
-- 3 edges to [[_COMMUNITY_step6-conflict-acceptance.e2e-spec.ts]]
-- 2 edges to [[_COMMUNITY_PrismaService]]
-- 2 edges to [[_COMMUNITY_SyncQueueService]]
+- 4 edges to [[_COMMUNITY_@prismaclient]]
+- 3 edges to [[_COMMUNITY_mapping-warning-response.dto.ts]]
+- 2 edges to [[_COMMUNITY_RequirePermission]]
+- 2 edges to [[_COMMUNITY_@nestjsconfig]]
 - 1 edge to [[_COMMUNITY_UpdateDataSourceDto]]
-- 1 edge to [[_COMMUNITY_AppModule]]
+- 1 edge to [[_COMMUNITY_CreateDataSourceDto]]
+- 1 edge to [[_COMMUNITY_SyncQueueService]]
+- 1 edge to [[_COMMUNITY_ConsentsService]]
+- 1 edge to [[_COMMUNITY_token.service.ts]]
+- 1 edge to [[_COMMUNITY_sync.e2e-spec.ts]]
 - 1 edge to [[_COMMUNITY_queues.module.ts]]
-- 1 edge to [[_COMMUNITY_mappings.service.ts]]
-- 1 edge to [[_COMMUNITY_sync.service.ts]]
 
 ## Top bridge nodes
-- [[data-sources.service.ts]] - degree 37, connects to 12 communities
-- [[dot-constructor()_30]] - degree 5, connects to 4 communities
-- [[connector.factory.ts]] - degree 13, connects to 3 communities
-- [[connector.factory.spec.ts]] - degree 8, connects to 3 communities
-- [[Connector]] - degree 11, connects to 2 communities
+- [[data-sources.service.ts]] - degree 37, connects to 15 communities
+- [[mappings.service.ts]] - degree 25, connects to 10 communities
+- [[purposes.service.ts]] - degree 23, connects to 10 communities
+- [[source-purposes.service.ts]] - degree 19, connects to 6 communities
+- [[purposes.service.spec.ts]] - degree 10, connects to 5 communities

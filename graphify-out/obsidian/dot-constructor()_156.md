@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/audience/audience-filter.error.ts"
+source_file: "dpdp-platform/backend/src/common/crypto/crypto.service.ts"
 type: "code"
-community: "compile-audience.ts"
-location: "L17"
+community: "@nestjs/config"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/compile-audiencets
+  - community/nestjs/config
 ---
 
 # .constructor()
 
 ## Connections
-- [[AudienceFilterError]] - `method` [EXTRACTED]
+- [[MalformedCiphertextError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/compile-audiencets
+#graphify/code #graphify/EXTRACTED #community/nestjs/config

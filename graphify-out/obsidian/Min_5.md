@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "DataSourcesService"
+community: "CreateDataSourceDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesService
+  - community/CreateDataSourceDto
 ---
 
 # Min
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[CreateDataSourceDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesService
+#graphify/code #graphify/EXTRACTED #community/CreateDataSourceDto

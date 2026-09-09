@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/mappings.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/registers.e2e-spec.ts"
 type: "code"
-community: "step6-conflict-acceptance.e2e-spec.ts"
-location: "L125"
+community: "sync.e2e-spec.ts"
+location: "L165"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/step6-conflict-acceptancee2e-spects
+  - community/synce2e-spects
 ---
 
 # createDataSource()
 
 ## Connections
-- [[mappings.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[authed()_1]] - `calls` [EXTRACTED]
+- [[registers.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

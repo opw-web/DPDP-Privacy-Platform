@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/requests/requests.service.ts"
 type: "code"
-community: "requests.service.ts"
+community: "@prisma/client"
 location: "L119"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/requestsservicets
+  - community/prisma/client
 ---
 
 # RequestRow
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[requests.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/requestsservicets
+#graphify/code #graphify/EXTRACTED #community/prisma/client

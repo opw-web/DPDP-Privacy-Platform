@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sdf/sdf-gaps.service.ts"
 type: "code"
-community: "sdf-assessment.service.ts"
+community: "PrismaService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdf-assessmentservicets
+  - community/PrismaService
 ---
 
 # sdf-gaps.service.ts
@@ -16,7 +16,7 @@ tags:
 - [[ComplianceService]] - `imports` [EXTRACTED]
 - [[LocalisationRequiredTransferGap]] - `contains` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
-- [[SDF_CYCLE_APPLIES_TO]] - `imports` [EXTRACTED]
+- [[SDF_CYCLE_APPLIES_TO_1]] - `imports` [EXTRACTED]
 - [[SdfGaps]] - `contains` [EXTRACTED]
 - [[SdfGapsService]] - `contains` [EXTRACTED]
 - [[UnreviewedAlgorithmGap]] - `contains` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[sdf.controller.ts]] - `imports_from` [EXTRACTED]
 - [[sdf.module.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdf-assessmentservicets
+#graphify/code #graphify/EXTRACTED #community/PrismaService

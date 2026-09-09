@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "data-sources.module.ts"
+community: "PrismaModule"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesmodulets
+  - community/PrismaModule
 ---
 
 # Module
 
 ## Connections
-- [[DataSourcesModule]] - `references` [EXTRACTED]
+- [[PrismaModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesmodulets
+#graphify/code #graphify/EXTRACTED #community/PrismaModule

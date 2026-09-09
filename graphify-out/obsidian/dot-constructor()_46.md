@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/age.service.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
 type: "code"
-community: "AuditService"
-location: "L53"
+community: "RequirePermission"
+location: "L147"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/RequirePermission
 ---
 
 # .constructor()
 
 ## Connections
-- [[AgeService]] - `method` [EXTRACTED]
 - [[AuditService]] - `references` [EXTRACTED]
+- [[NoticesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

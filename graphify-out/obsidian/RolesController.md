@@ -12,11 +12,11 @@ tags:
 # RolesController
 
 ## Connections
-- [[dot-constructor()_134]] - `method` [EXTRACTED]
+- [[dot-constructor()_109]] - `method` [EXTRACTED]
 - [[dot-list()_42]] - `method` [EXTRACTED]
 - [[dot-replacePermissions()]] - `method` [EXTRACTED]
-- [[ApiTags_33]] - `references` [EXTRACTED]
-- [[Controller_34]] - `references` [EXTRACTED]
+- [[ApiTags_34]] - `references` [EXTRACTED]
+- [[Controller_35]] - `references` [EXTRACTED]
 - [[employees.module.ts]] - `imports` [EXTRACTED]
 - [[roles.controller.ts]] - `contains` [EXTRACTED]
 

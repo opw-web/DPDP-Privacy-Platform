@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/components/ui/badge.tsx"
 type: "code"
-community: "CandidateComparison.tsx"
+community: "card.tsx"
 location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CandidateComparisontsx
+  - community/cardtsx
 ---
 
 # BadgeProps
@@ -20,4 +20,4 @@ tags:
 - [[RuleBasisChip.tsx]] - `imports` [EXTRACTED]
 - [[badge.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CandidateComparisontsx
+#graphify/code #graphify/EXTRACTED #community/cardtsx

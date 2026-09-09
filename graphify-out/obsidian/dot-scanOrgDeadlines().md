@@ -12,10 +12,10 @@ tags:
 # .scanOrgDeadlines()
 
 ## Connections
-- [[dot-create()_9]] - `calls` [EXTRACTED]
+- [[dot-create()_31]] - `calls` [EXTRACTED]
 - [[dot-record()_1]] - `calls` [INFERRED]
 - [[dot-runScanCycle()]] - `calls` [INFERRED]
-- [[dot-send()]] - `calls` [INFERRED]
+- [[dot-send()_2]] - `calls` [INFERRED]
 - [[RequestsService]] - `method` [EXTRACTED]
 - [[transitionTargets()]] - `calls` [EXTRACTED]
 

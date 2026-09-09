@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/evidence/access-report.service.ts"
 type: "code"
-community: "AccessReportService"
+community: "PrincipalsService"
 location: "L123"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/AccessReportService
+  - community/PrincipalsService
 ---
 
 # .buildReport()
@@ -24,4 +24,4 @@ tags:
 - [[AccessReportService]] - `method` [EXTRACTED]
 - [[splitNonDisclosureRequests()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/AccessReportService
+#graphify/code #graphify/INFERRED #community/PrincipalsService

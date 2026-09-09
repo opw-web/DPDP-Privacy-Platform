@@ -12,7 +12,7 @@ tags:
 # .listJobs()
 
 ## Connections
-- [[dot-list()_10]] - `calls` [INFERRED]
+- [[dot-list()_9]] - `calls` [INFERRED]
 - [[SyncService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/SyncService

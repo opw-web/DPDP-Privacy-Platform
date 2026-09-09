@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/breaches/dto/affected-principals.dto.ts"
 type: "code"
-community: ".record"
+community: "BreachesController"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/BreachesController
 ---
 
 # AffectedPrincipalsDto
@@ -17,14 +17,14 @@ tags:
 - [[dot-candidateWhere()]] - `references` [EXTRACTED]
 - [[dot-previewAffected()]] - `references` [EXTRACTED]
 - [[dot-previewAffected()_1]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_41]] - `references` [EXTRACTED]
-- [[IsArray_21]] - `references` [EXTRACTED]
-- [[IsBoolean_19]] - `references` [EXTRACTED]
-- [[IsObject_6]] - `references` [EXTRACTED]
-- [[IsOptional_43]] - `references` [EXTRACTED]
-- [[IsString_53]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_28]] - `references` [EXTRACTED]
+- [[IsArray_9]] - `references` [EXTRACTED]
+- [[IsBoolean_13]] - `references` [EXTRACTED]
+- [[IsObject_4]] - `references` [EXTRACTED]
+- [[IsOptional_30]] - `references` [EXTRACTED]
+- [[IsString_34]] - `references` [EXTRACTED]
 - [[affected-principals.dto.ts]] - `contains` [EXTRACTED]
 - [[breach.service.ts]] - `imports` [EXTRACTED]
 - [[breaches.controller.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/BreachesController

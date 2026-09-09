@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-cancelRequest()]] - `calls` [INFERRED]
-- [[dot-changeStatus()]] - `calls` [INFERRED]
+- [[dot-changeStatus()_1]] - `calls` [INFERRED]
 - [[dot-ownRequest()]] - `calls` [EXTRACTED]
 - [[MeRightsService]] - `method` [EXTRACTED]
 

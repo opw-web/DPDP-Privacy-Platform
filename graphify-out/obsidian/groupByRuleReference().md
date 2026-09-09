@@ -12,7 +12,7 @@ tags:
 # groupByRuleReference()
 
 ## Connections
-- [[dot-get()_25]] - `calls` [EXTRACTED]
+- [[dot-get()_26]] - `calls` [EXTRACTED]
 - [[dot-list()_49]] - `calls` [EXTRACTED]
 - [[security-measures.service.ts]] - `contains` [EXTRACTED]
 

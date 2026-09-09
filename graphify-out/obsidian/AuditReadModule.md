@@ -1,20 +1,20 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/audit/audit-read.module.ts"
 type: "code"
-community: "@nestjs/common"
+community: "app.module.ts"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/appmodulets
 ---
 
 # AuditReadModule
 
 ## Connections
-- [[Module_9]] - `references` [EXTRACTED]
+- [[Module_6]] - `references` [EXTRACTED]
 - [[app.module.ts]] - `imports` [EXTRACTED]
 - [[audit-read.module.ts]] - `contains` [EXTRACTED]
 - [[evidence.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/appmodulets

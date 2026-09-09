@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/test/merge-unmerge.e2e-spec.ts"
 type: "code"
-community: "merge-unmerge.e2e-spec.ts"
+community: "token.service.ts"
 location: "L224"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/merge-unmergee2e-spects
+  - community/tokenservicets
 ---
 
 # activeLink()
 
 ## Connections
 - [[merge-unmerge.e2e-spec.ts]] - `contains` [EXTRACTED]
-- [[tenant()_2]] - `calls` [EXTRACTED]
+- [[tenant()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/merge-unmergee2e-spects
+#graphify/code #graphify/EXTRACTED #community/tokenservicets

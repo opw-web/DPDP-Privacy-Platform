@@ -1,22 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sync/sync.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/algorithm-register.service.ts"
 type: "code"
-community: "SyncService"
-location: "L38"
+community: "SdfController"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncService
+  - community/SdfController
 ---
 
 # .list()
 
 ## Connections
-- [[dot-listJobs()]] - `calls` [INFERRED]
-- [[Get_13]] - `references` [EXTRACTED]
-- [[ListSyncJobsQueryDto]] - `references` [EXTRACTED]
-- [[Query_4]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[SyncJobsController]] - `method` [EXTRACTED]
+- [[dot-listAlgorithms()]] - `calls` [INFERRED]
+- [[AlgorithmRegisterService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncService
+#graphify/code #graphify/EXTRACTED #community/SdfController

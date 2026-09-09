@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "mailer.service.ts"
+community: "TokenService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mailerservicets
+  - community/TokenService
 ---
 
 # Injectable
 
 ## Connections
-- [[MailerService]] - `references` [EXTRACTED]
+- [[JwtAnyActorGuard]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mailerservicets
+#graphify/code #graphify/EXTRACTED #community/TokenService

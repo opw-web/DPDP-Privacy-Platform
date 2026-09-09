@@ -1,23 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principals/principals.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/campaigns/campaigns.controller.ts"
 type: "code"
-community: "PrincipalsService"
-location: "L21"
+community: "RequirePermission"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalsService
+  - community/RequirePermission
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_21]] - `calls` [INFERRED]
-- [[CurrentActorPermissions]] - `references` [EXTRACTED]
-- [[Get_23]] - `references` [EXTRACTED]
-- [[ListPrincipalsDto]] - `references` [EXTRACTED]
-- [[PrincipalsController]] - `method` [EXTRACTED]
-- [[Query_6]] - `references` [EXTRACTED]
+- [[dot-list()_34]] - `calls` [INFERRED]
+- [[CampaignsController]] - `method` [EXTRACTED]
+- [[Get_19]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalsService
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

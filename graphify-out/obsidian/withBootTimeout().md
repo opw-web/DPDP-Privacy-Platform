@@ -12,7 +12,7 @@ tags:
 # withBootTimeout()
 
 ## Connections
-- [[dot-onModuleInit()_1]] - `calls` [EXTRACTED]
+- [[dot-onModuleInit()]] - `calls` [EXTRACTED]
 - [[boot-registration.registry.ts]] - `imports` [EXTRACTED]
 - [[boot-timeout.util.ts]] - `contains` [EXTRACTED]
 - [[schedule-reconciliation.service.ts]] - `re_exports` [EXTRACTED]

@@ -11,6 +11,6 @@ tags:
 # Path
 
 ## Connections
-- [[embed_image()]] - `references` [EXTRACTED]
+- [[embed_image()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/build-standalonepy

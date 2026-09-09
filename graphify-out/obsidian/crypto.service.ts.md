@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/crypto/crypto.service.ts"
 type: "code"
-community: "data-sources.module.ts"
+community: "@nestjs/config"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/data-sourcesmodulets
+  - community/nestjs/config
 ---
 
 # crypto.service.ts
@@ -23,4 +23,4 @@ tags:
 - [[crypto.service.spec.ts]] - `imports_from` [EXTRACTED]
 - [[data-sources.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/data-sourcesmodulets
+#graphify/code #graphify/EXTRACTED #community/nestjs/config

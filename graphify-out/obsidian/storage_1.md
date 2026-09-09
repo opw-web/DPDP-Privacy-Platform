@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/common/tenant/tenant-context.js"
+source_file: "dpdp-platform/backend/src/common/tenant/tenant-context.ts"
 type: "code"
-community: "tenant-context.js"
-location: "L5"
+community: "PrismaService"
+location: "L47"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tenant-contextjs
+  - community/PrismaService
 ---
 
 # storage
 
 ## Connections
-- [[tenant-context.js]] - `contains` [EXTRACTED]
+- [[tenant-context.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tenant-contextjs
+#graphify/code #graphify/EXTRACTED #community/PrismaService

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/dummy-hash.util.ts"
 type: "code"
-community: "employee-auth.service.ts"
+community: "token.service.ts"
 location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employee-authservicets
+  - community/tokenservicets
 ---
 
 # getDummyHash()
@@ -18,4 +18,4 @@ tags:
 - [[employee-auth.service.ts]] - `imports` [EXTRACTED]
 - [[principal-auth.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employee-authservicets
+#graphify/code #graphify/EXTRACTED #community/tokenservicets

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principals/principal-recipients.service.ts"
 type: "code"
-community: "AccessReportService"
+community: "PrincipalsService"
 location: "L9"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/AccessReportService
+  - community/PrincipalsService
 ---
 
 # .listForPrincipal()
@@ -17,4 +17,4 @@ tags:
 - [[dot-recipients()_1]] - `calls` [INFERRED]
 - [[PrincipalRecipientsService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/AccessReportService
+#graphify/code #graphify/INFERRED #community/PrincipalsService

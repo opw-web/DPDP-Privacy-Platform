@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/children/guardians.service.ts"
 type: "code"
-community: "guardians.service.ts"
+community: "AuditService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardiansservicets
+  - community/AuditService
 ---
 
 # guardians.service.ts
@@ -17,7 +17,7 @@ tags:
 - [[APPOINTING_AUTHORITIES]] - `imports` [EXTRACTED]
 - [[AccessTokenPayload]] - `imports` [EXTRACTED]
 - [[AuditService]] - `imports` [EXTRACTED]
-- [[CHILD_LIKE_AGE_STATUSES]] - `contains` [EXTRACTED]
+- [[CHILD_LIKE_AGE_STATUSES_2]] - `contains` [EXTRACTED]
 - [[CreateGuardianDto]] - `imports` [EXTRACTED]
 - [[GUARDIAN_PUBLIC_SELECT]] - `contains` [EXTRACTED]
 - [[GuardianRow]] - `contains` [EXTRACTED]
@@ -45,4 +45,4 @@ tags:
 - [[token.service.ts]] - `imports_from` [EXTRACTED]
 - [[verify-guardian.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/EXTRACTED #community/AuditService

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principals/field-provenance.ts"
 type: "code"
-community: "PrincipalsService"
+community: "principals.service.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalsService
+  - community/principalsservicets
 ---
 
 # field-provenance.ts
@@ -18,4 +18,4 @@ tags:
 - [[principals.service.ts]] - `imports_from` [EXTRACTED]
 - [[resolveProvenance()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalsService
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

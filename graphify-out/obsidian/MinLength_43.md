@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".record"
+community: "access-log-retention.processor.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/record
+  - community/access-log-retentionprocessorts
 ---
 
 # MinLength
 
 ## Connections
-- [[ExtensionDto]] - `references` [EXTRACTED]
+- [[EnvironmentVariables]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/record
+#graphify/code #graphify/EXTRACTED #community/access-log-retentionprocessorts

@@ -1,18 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sync-lock.service.ts"
+source_file: "dpdp-platform/backend/src/queues/breach-principal-notice-dispatch.processor.ts"
 type: "code"
-community: "sync-lock.service.ts"
-location: "L94"
+community: "BreachPrincipalNoticeDispatchProcessor"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sync-lockservicets
+  - community/BreachPrincipalNoticeDispatchProcessor
 ---
 
 # .constructor()
 
 ## Connections
-- [[SyncLockService]] - `method` [EXTRACTED]
-- [[toRedisConnectionOptions()]] - `calls` [EXTRACTED]
+- [[BreachPrincipalNoticeDispatchProcessor]] - `method` [EXTRACTED]
+- [[BreachService]] - `references` [EXTRACTED]
+- [[CampaignSendJobData]] - `references` [EXTRACTED]
+- [[InjectQueue_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sync-lockservicets
+#graphify/code #graphify/EXTRACTED #community/BreachPrincipalNoticeDispatchProcessor

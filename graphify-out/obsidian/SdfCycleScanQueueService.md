@@ -12,8 +12,8 @@ tags:
 # SdfCycleScanQueueService
 
 ## Connections
-- [[dot-constructor()_78]] - `method` [EXTRACTED]
-- [[Injectable_63]] - `references` [EXTRACTED]
+- [[dot-constructor()_44]] - `method` [EXTRACTED]
+- [[Injectable_40]] - `references` [EXTRACTED]
 - [[queues.module.ts]] - `imports` [EXTRACTED]
 - [[sdf-cycle-scan.queue.ts]] - `contains` [EXTRACTED]
 - [[sdf.module.ts]] - `imports` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/candidates.service.ts"
 type: "code"
-community: "CandidatesService"
+community: "candidates.controller.ts"
 location: "L325"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CandidatesService
+  - community/candidatescontrollerts
 ---
 
 # .confirm()
@@ -19,4 +19,4 @@ tags:
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
 - [[CandidatesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CandidatesService
+#graphify/code #graphify/EXTRACTED #community/candidatescontrollerts

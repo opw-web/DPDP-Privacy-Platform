@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[AUDIENCE_FILTER_FIELDS]] - `contains` [EXTRACTED]
 - [[AUDIENCE_FILTER_OPERATORS]] - `contains` [EXTRACTED]
-- [[AudienceFilter_1]] - `contains` [EXTRACTED]
+- [[AudienceFilter]] - `contains` [EXTRACTED]
 - [[AudienceFilterField]] - `contains` [EXTRACTED]
 - [[AudienceFilterGroup]] - `contains` [EXTRACTED]
 - [[AudienceFilterNode]] - `contains` [EXTRACTED]

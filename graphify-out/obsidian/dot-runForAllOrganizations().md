@@ -1,19 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/consents/consent-backfill.service.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/sdf-cycle-scan.service.ts"
 type: "code"
-community: "ConsentBackfillService"
-location: "L50"
+community: "SdfCycleScanService"
+location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ConsentBackfillService
+  - community/SdfCycleScanService
 ---
 
 # .runForAllOrganizations()
 
 ## Connections
-- [[dot-process()]] - `calls` [INFERRED]
+- [[dot-process()_2]] - `calls` [INFERRED]
 - [[dot-runForCurrentOrganization()]] - `calls` [EXTRACTED]
-- [[ConsentBackfillService]] - `method` [EXTRACTED]
+- [[SdfCycleScanService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ConsentBackfillService
+#graphify/code #graphify/EXTRACTED #community/SdfCycleScanService

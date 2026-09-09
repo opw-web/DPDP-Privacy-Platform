@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "access-report-render.ts"
+community: "RequestsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/access-report-renderts
+  - community/RequestsController
 ---
 
 # Res
 
 ## Connections
-- [[dot-evidencePdf()]] - `references` [EXTRACTED]
+- [[dot-accessReport()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/access-report-renderts
+#graphify/code #graphify/EXTRACTED #community/RequestsController

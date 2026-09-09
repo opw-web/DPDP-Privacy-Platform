@@ -12,6 +12,6 @@ tags:
 
 ## Connections
 - [[dot-getById()_6]] - `references` [EXTRACTED]
-- [[dot-update()_16]] - `references` [EXTRACTED]
+- [[dot-update()_15]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto

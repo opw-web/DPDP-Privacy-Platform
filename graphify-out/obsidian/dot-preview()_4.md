@@ -1,23 +1,22 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/audience/audience.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts"
 type: "code"
-community: "compile-audience.ts"
-location: "L21"
+community: "campaigns.service.ts"
+location: "L284"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/compile-audiencets
+  - community/campaignsservicets
 ---
 
 # .preview()
 
 ## Connections
-- [[dot-preview()_5]] - `calls` [INFERRED]
-- [[AudienceController]] - `method` [EXTRACTED]
-- [[Body_30]] - `references` [EXTRACTED]
-- [[CurrentActorPermissions]] - `references` [EXTRACTED]
-- [[Post_30]] - `references` [EXTRACTED]
-- [[PreviewAudienceDto]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-preview()]] - `calls` [INFERRED]
+- [[PreviewTemplateDto]] - `references` [EXTRACTED]
+- [[RenderedTemplate]] - `references` [EXTRACTED]
+- [[TemplatesService]] - `method` [EXTRACTED]
+- [[renderOrganizationMessageTemplate()]] - `calls` [EXTRACTED]
+- [[toBadRequest()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/compile-audiencets
+#graphify/code #graphify/EXTRACTED #community/campaignsservicets

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdateTemplateDto"
+community: "principals.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateTemplateDto
+  - community/principalscontrollerts
 ---
 
 # IsOptional
 
 ## Connections
-- [[UpdateTemplateDto]] - `references` [EXTRACTED]
+- [[ListPrincipalsDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateTemplateDto
+#graphify/code #graphify/EXTRACTED #community/principalscontrollerts

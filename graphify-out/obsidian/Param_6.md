@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "SyncService"
+community: "CreateTransferDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncService
+  - community/CreateTransferDto
 ---
 
 # Param
 
 ## Connections
-- [[dot-get()_5]] - `references` [EXTRACTED]
-- [[dot-trigger()]] - `references` [EXTRACTED]
+- [[dot-get()_2]] - `references` [EXTRACTED]
+- [[dot-update()_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncService
+#graphify/code #graphify/EXTRACTED #community/CreateTransferDto

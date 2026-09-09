@@ -1,22 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/requests/requests.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/identity/candidates.controller.ts"
 type: "code"
-community: "ListRequestsDto"
-location: "L58"
+community: "candidates.controller.ts"
+location: "L47"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ListRequestsDto
+  - community/candidatescontrollerts
 ---
 
 # .list()
 
 ## Connections
 - [[dot-list()_51]] - `calls` [INFERRED]
-- [[Get_18]] - `references` [EXTRACTED]
-- [[ListRequestsDto]] - `references` [EXTRACTED]
+- [[CandidatesController]] - `method` [EXTRACTED]
+- [[CurrentActorPermissions]] - `references` [EXTRACTED]
+- [[Get_39]] - `references` [EXTRACTED]
+- [[ListMatchCandidatesQueryDto]] - `references` [EXTRACTED]
 - [[Query_9]] - `references` [EXTRACTED]
-- [[RequestsController]] - `method` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ListRequestsDto
+#graphify/code #graphify/EXTRACTED #community/candidatescontrollerts

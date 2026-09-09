@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[access-report-render.ts]] - `imports_from` [EXTRACTED]
 - [[breach-render.ts]] - `imports_from` [EXTRACTED]
-- [[pdfkit_2]] - `imports_from` [EXTRACTED]
+- [[pdfkit]] - `imports_from` [EXTRACTED]
 - [[principal-evidence-render.ts]] - `imports_from` [EXTRACTED]
 - [[renderPdf()]] - `contains` [EXTRACTED]
 - [[writePdfLetterhead()]] - `contains` [EXTRACTED]

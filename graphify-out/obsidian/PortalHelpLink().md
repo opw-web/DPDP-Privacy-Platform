@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/principal/components/PortalHelpLink.tsx"
 type: "code"
-community: "react-router-dom"
+community: "card.tsx"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react-router-dom
+  - community/cardtsx
 ---
 
 # PortalHelpLink()
@@ -16,4 +16,4 @@ tags:
 - [[PortalHelpLink.tsx]] - `contains` [EXTRACTED]
 - [[PortalPageHeader.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react-router-dom
+#graphify/code #graphify/EXTRACTED #community/cardtsx

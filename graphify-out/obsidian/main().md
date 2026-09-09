@@ -1,19 +1,19 @@
 ---
-source_file: "scripts/capture-guide-screenshots.mjs"
+source_file: "dpdp-platform/backend/prisma/seed.ts"
 type: "code"
-community: "capture-guide-screenshots.mjs"
-location: "L80"
+community: "seed.ts"
+location: "L141"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/capture-guide-screenshotsmjs
+  - community/seedts
 ---
 
 # main()
 
 ## Connections
-- [[capture-guide-screenshots.mjs]] - `contains` [EXTRACTED]
-- [[shoot()]] - `calls` [EXTRACTED]
-- [[signIn()]] - `calls` [EXTRACTED]
+- [[PrismaService]] - `calls` [EXTRACTED]
+- [[runSeed()]] - `calls` [EXTRACTED]
+- [[seed.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/capture-guide-screenshotsmjs
+#graphify/code #graphify/EXTRACTED #community/seedts

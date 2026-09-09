@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/connectors/test-support/mock-http-server.ts"
 type: "code"
-community: "step6-conflict-acceptance.e2e-spec.ts"
+community: "sync.e2e-spec.ts"
 location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/step6-conflict-acceptancee2e-spects
+  - community/synce2e-spects
 ---
 
 # jsonHandler()
@@ -19,4 +19,4 @@ tags:
 - [[startRecordsServer()]] - `calls` [EXTRACTED]
 - [[startRecordsServer()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

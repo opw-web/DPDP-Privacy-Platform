@@ -12,7 +12,7 @@ tags:
 # SyncJobData
 
 ## Connections
-- [[dot-process()_10]] - `references` [EXTRACTED]
+- [[dot-process()_6]] - `references` [EXTRACTED]
 - [[sync.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[sync.processor.ts]] - `imports` [EXTRACTED]
 - [[sync.queue.ts]] - `contains` [EXTRACTED]

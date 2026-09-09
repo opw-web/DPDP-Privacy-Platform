@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "DataSourcesController"
+community: ".markRead"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesController
+  - community/markRead
 ---
 
 # HttpCode
 
 ## Connections
-- [[dot-remove()_1]] - `references` [EXTRACTED]
+- [[dot-markAllRead()_1]] - `references` [EXTRACTED]
+- [[dot-markRead()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesController
+#graphify/code #graphify/EXTRACTED #community/markRead

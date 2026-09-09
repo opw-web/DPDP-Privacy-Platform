@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "CreateTransferDto"
+community: "SyncService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateTransferDto
+  - community/SyncService
 ---
 
 # ApiTags
 
 ## Connections
-- [[TransfersController]] - `references` [EXTRACTED]
+- [[SyncController]] - `references` [EXTRACTED]
+- [[SyncJobsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateTransferDto
+#graphify/code #graphify/EXTRACTED #community/SyncService

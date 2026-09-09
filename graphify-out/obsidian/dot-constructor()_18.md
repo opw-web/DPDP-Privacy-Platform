@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/consents/consent-backfill.service.ts"
+source_file: "dpdp-platform/backend/src/queues/sync-lock.service.ts"
 type: "code"
-community: "ConsentBackfillService"
-location: "L48"
+community: "sync-lock.service.ts"
+location: "L94"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ConsentBackfillService
+  - community/sync-lockservicets
 ---
 
 # .constructor()
 
 ## Connections
-- [[ConsentBackfillService]] - `method` [EXTRACTED]
+- [[SyncLockService]] - `method` [EXTRACTED]
+- [[toRedisConnectionOptions()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ConsentBackfillService
+#graphify/code #graphify/EXTRACTED #community/sync-lockservicets

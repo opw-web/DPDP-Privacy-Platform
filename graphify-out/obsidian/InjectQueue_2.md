@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SyncQueueService"
+community: "BreachPrincipalNoticeDispatchProcessor"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncQueueService
+  - community/BreachPrincipalNoticeDispatchProcessor
 ---
 
 # InjectQueue
 
 ## Connections
-- [[dot-constructor()_74]] - `references` [EXTRACTED]
+- [[dot-constructor()_32]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncQueueService
+#graphify/code #graphify/EXTRACTED #community/BreachPrincipalNoticeDispatchProcessor

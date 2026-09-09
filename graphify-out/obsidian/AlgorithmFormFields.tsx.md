@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/sdf/AlgorithmFormFields.tsx"
 type: "code"
-community: "react"
+community: "card.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/cardtsx
 ---
 
 # AlgorithmFormFields.tsx
@@ -16,7 +16,7 @@ tags:
 - [[AlgorithmFormFields()]] - `contains` [EXTRACTED]
 - [[AlgorithmFormValues]] - `contains` [EXTRACTED]
 - [[AlgorithmRegisterPanel.tsx]] - `imports_from` [EXTRACTED]
-- [[CheckboxOption_1]] - `imports` [EXTRACTED]
+- [[CheckboxOption]] - `imports` [EXTRACTED]
 - [[EMPTY_ALGORITHM_FORM]] - `contains` [EXTRACTED]
 - [[Input]] - `imports` [EXTRACTED]
 - [[Label_1]] - `imports` [EXTRACTED]
@@ -28,4 +28,4 @@ tags:
 - [[textarea.tsx]] - `imports_from` [EXTRACTED]
 - [[toAlgorithmFormValues()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/cardtsx

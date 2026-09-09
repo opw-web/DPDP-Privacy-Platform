@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/package.json"
+source_file: "demo-company-server/src/seed/generate.ts"
 type: "code"
-community: "backend/package.json"
-location: "L24"
+community: "generate.ts"
+location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/backend/packagejson
+  - community/generatets
 ---
 
-# seed
+# SEED
 
 ## Connections
-- [[prisma_1]] - `contains` [EXTRACTED]
+- [[dataset.test.ts]] - `imports` [EXTRACTED]
+- [[generate.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/backend/packagejson
+#graphify/code #graphify/EXTRACTED #community/generatets

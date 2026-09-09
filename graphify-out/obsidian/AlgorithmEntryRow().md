@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/sdf/AlgorithmRegisterPanel.tsx"
 type: "code"
-community: "react-router-dom"
+community: "card.tsx"
 location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react-router-dom
+  - community/cardtsx
 ---
 
 # AlgorithmEntryRow()
@@ -17,4 +17,4 @@ tags:
 - [[toAlgorithmFormValues()]] - `calls` [EXTRACTED]
 - [[toCreatePayload()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react-router-dom
+#graphify/code #graphify/EXTRACTED #community/cardtsx

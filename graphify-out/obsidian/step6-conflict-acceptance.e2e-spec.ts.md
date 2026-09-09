@@ -1,23 +1,23 @@
 ---
 source_file: "dpdp-platform/backend/test/step6-conflict-acceptance.e2e-spec.ts"
 type: "code"
-community: "step6-conflict-acceptance.e2e-spec.ts"
+community: "sync.e2e-spec.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/step6-conflict-acceptancee2e-spects
+  - community/synce2e-spects
 ---
 
 # step6-conflict-acceptance.e2e-spec.ts
 
 ## Connections
 - [[@nestjscommon]] - `imports_from` [EXTRACTED]
-- [[@nestjstesting_1]] - `imports_from` [EXTRACTED]
+- [[@nestjstesting]] - `imports_from` [EXTRACTED]
 - [[@prismaclient_1]] - `imports_from` [EXTRACTED]
 - [[AppModule]] - `imports` [EXTRACTED]
 - [[EmployeeSession_2]] - `contains` [EXTRACTED]
-- [[FieldMapping_1]] - `contains` [EXTRACTED]
+- [[FieldMapping]] - `contains` [EXTRACTED]
 - [[MockHttpServer]] - `imports` [EXTRACTED]
 - [[PERMISSIONS]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
@@ -29,8 +29,8 @@ tags:
 - [[authenticated()_1]] - `contains` [EXTRACTED]
 - [[bareDataSource()]] - `contains` [EXTRACTED]
 - [[createDataSource()_3]] - `contains` [EXTRACTED]
-- [[employeeWithPermissions()_1]] - `contains` [EXTRACTED]
-- [[ensurePermission()_6]] - `contains` [EXTRACTED]
+- [[employeeWithPermissions()]] - `contains` [EXTRACTED]
+- [[ensurePermission()_10]] - `contains` [EXTRACTED]
 - [[fixture_4]] - `contains` [EXTRACTED]
 - [[mock-http-server.ts]] - `imports_from` [EXTRACTED]
 - [[organization()_1]] - `contains` [EXTRACTED]
@@ -45,4 +45,4 @@ tags:
 - [[tenant()_1]] - `contains` [EXTRACTED]
 - [[tenant-context.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/step6-conflict-acceptancee2e-spects
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

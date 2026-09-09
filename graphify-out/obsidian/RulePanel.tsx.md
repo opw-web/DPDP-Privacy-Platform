@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/requests/RulePanel.tsx"
 type: "code"
-community: "RequestDetailPage.tsx"
+community: "card.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RequestDetailPagetsx
+  - community/cardtsx
 ---
 
 # RulePanel.tsx
@@ -23,4 +23,4 @@ tags:
 - [[humanizeEnum()]] - `imports` [EXTRACTED]
 - [[requeststypes.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RequestDetailPagetsx
+#graphify/code #graphify/EXTRACTED #community/cardtsx

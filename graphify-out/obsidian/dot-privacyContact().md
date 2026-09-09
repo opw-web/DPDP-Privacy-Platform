@@ -14,10 +14,10 @@ tags:
 ## Connections
 - [[dot-getPrivacyContact()]] - `calls` [INFERRED]
 - [[ApiOkResponse]] - `references` [EXTRACTED]
-- [[Get_9]] - `references` [EXTRACTED]
+- [[Get_2]] - `references` [EXTRACTED]
 - [[MeController]] - `method` [EXTRACTED]
 - [[MePrivacyContactDto]] - `references` [EXTRACTED]
 - [[Public()]] - `references` [EXTRACTED]
-- [[UseGuards_2]] - `references` [EXTRACTED]
+- [[UseGuards]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Public

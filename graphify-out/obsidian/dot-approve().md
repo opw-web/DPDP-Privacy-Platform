@@ -16,8 +16,8 @@ tags:
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
 - [[CampaignsController]] - `method` [EXTRACTED]
 - [[CurrentActor]] - `references` [EXTRACTED]
-- [[Param_12]] - `references` [EXTRACTED]
-- [[Post_11]] - `references` [EXTRACTED]
+- [[Param_13]] - `references` [EXTRACTED]
+- [[Post_12]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/RequirePermission

@@ -1,29 +1,28 @@
 ---
 type: community
-members: 20
+members: 19
 ---
 
 # PrincipalAuthController
 
-**Members:** 20 nodes
+**Members:** 19 nodes
 
 ## Members
 - [[dot-clearRefreshCookie()_1]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
-- [[dot-constructor()_147]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
 - [[dot-isProduction()_1]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
 - [[dot-login()_3]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
 - [[dot-logout()_3]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
 - [[dot-refresh()_3]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
 - [[dot-setRefreshCookie()_1]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
-- [[ApiProperty_49]] - code
-- [[ApiTags_39]] - code
-- [[Body_28]] - code
-- [[Controller_40]] - code
+- [[ApiProperty_51]] - code
+- [[ApiTags_41]] - code
+- [[Body_30]] - code
+- [[Controller_42]] - code
 - [[HttpCode_5]] - code
 - [[IsEmail_7]] - code
-- [[IsString_68]] - code
+- [[IsString_69]] - code
 - [[MinLength_53]] - code
-- [[Post_28]] - code
+- [[Post_30]] - code
 - [[PrincipalAuthController]] - code - dpdp-platform/backend/src/modules/auth/principal-auth.controller.ts
 - [[PrincipalLoginDto]] - code - dpdp-platform/backend/src/modules/auth/dto/principal-login.dto.ts
 - [[Req_3]] - code
@@ -37,13 +36,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_Public]]
-- 4 edges to [[_COMMUNITY_employee-auth.service.ts]]
-- 1 edge to [[_COMMUNITY_@prismaclient]]
-- 1 edge to [[_COMMUNITY_PrincipalActor]]
+- 5 edges to [[_COMMUNITY_Public]]
+- 5 edges to [[_COMMUNITY_TokenService]]
+- 1 edge to [[_COMMUNITY_@nestjsswagger]]
+- 1 edge to [[_COMMUNITY_app.module.ts]]
 
 ## Top bridge nodes
-- [[PrincipalAuthController]] - degree 12, connects to 2 communities
+- [[PrincipalAuthController]] - degree 12, connects to 3 communities
 - [[dot-login()_3]] - degree 10, connects to 2 communities
 - [[dot-refresh()_3]] - degree 9, connects to 2 communities
 - [[dot-logout()_3]] - degree 8, connects to 2 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/requests/requests.constants.ts"
 type: "code"
-community: "requests.service.ts"
+community: "@prisma/client"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/requestsservicets
+  - community/prisma/client
 ---
 
 # requests.constants.ts
@@ -21,10 +21,10 @@ tags:
 - [[ErasureStatutoryGround]] - `contains` [EXTRACTED]
 - [[REJECTION_REASON_MIN_LENGTH]] - `contains` [EXTRACTED]
 - [[TERMINAL_REQUEST_STATUSES]] - `contains` [EXTRACTED]
-- [[TRANSITIONS]] - `contains` [EXTRACTED]
+- [[TRANSITIONS_1]] - `contains` [EXTRACTED]
 - [[change-status.dto.ts]] - `imports_from` [EXTRACTED]
 - [[deadline-scan.processor.ts]] - `imports_from` [EXTRACTED]
 - [[requests.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 - [[requests.service.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/requestsservicets
+#graphify/code #graphify/EXTRACTED #community/prisma/client

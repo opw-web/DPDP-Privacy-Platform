@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/legal-hold-scope.util.ts"
 type: "code"
-community: "erasure-task.service.ts"
+community: "PrismaService"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/erasure-taskservicets
+  - community/PrismaService
 ---
 
 # LegalHoldScope
@@ -17,4 +17,4 @@ tags:
 - [[legal-hold.service.ts]] - `imports` [EXTRACTED]
 - [[retention-scan.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/erasure-taskservicets
+#graphify/code #graphify/EXTRACTED #community/PrismaService

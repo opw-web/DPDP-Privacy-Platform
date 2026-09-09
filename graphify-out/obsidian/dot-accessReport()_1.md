@@ -15,10 +15,10 @@ tags:
 - [[dot-buildReport()]] - `calls` [INFERRED]
 - [[dot-getByReference()_1]] - `calls` [INFERRED]
 - [[Get_18]] - `references` [EXTRACTED]
-- [[Param_11]] - `references` [EXTRACTED]
+- [[Param_12]] - `references` [EXTRACTED]
 - [[RequestsController]] - `method` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
-- [[Res_5]] - `references` [EXTRACTED]
+- [[Res_6]] - `references` [EXTRACTED]
 - [[renderAccessReportPdf()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/RequestsController

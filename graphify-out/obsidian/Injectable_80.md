@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RetentionScanService"
+community: "AuditService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionScanService
+  - community/AuditService
 ---
 
 # Injectable
 
 ## Connections
-- [[RetentionScanService]] - `references` [EXTRACTED]
+- [[AccessLogService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionScanService
+#graphify/code #graphify/EXTRACTED #community/AuditService

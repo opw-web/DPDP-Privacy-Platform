@@ -1,20 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/legal-hold.service.ts"
 type: "code"
-community: "CreateVoluntaryUndertakingDto"
-location: "L23"
+community: "RequirePermission"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateVoluntaryUndertakingDto
+  - community/RequirePermission
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_25]] - `calls` [INFERRED]
-- [[Get_25]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
-- [[VoluntaryUndertakingsController]] - `method` [EXTRACTED]
+- [[dot-listLegalHolds()]] - `calls` [INFERRED]
+- [[LegalHoldService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

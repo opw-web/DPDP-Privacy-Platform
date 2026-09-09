@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/SettingsRightsPage.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.tsx"
 type: "code"
 community: "react"
-location: "L12"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,7 @@ tags:
 # Organization
 
 ## Connections
-- [[SettingsRightsPage.tsx]] - `contains` [EXTRACTED]
+- [[SettingsPage.tsx]] - `contains` [EXTRACTED]
+- [[ThirdScheduleClass]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/react

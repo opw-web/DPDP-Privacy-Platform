@@ -1,23 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/employees/employees.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/employees/employees.service.ts"
 type: "code"
-community: "employees.service.ts"
-location: "L34"
+community: "employees.controller.ts"
+location: "L98"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employeesservicets
+  - community/employeescontrollerts
 ---
 
 # .update()
 
 ## Connections
-- [[dot-update()_15]] - `calls` [INFERRED]
-- [[Body_15]] - `references` [EXTRACTED]
-- [[EmployeesController]] - `method` [EXTRACTED]
-- [[Param_17]] - `references` [EXTRACTED]
-- [[Patch_7]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-record()_1]] - `calls` [INFERRED]
+- [[dot-resetPassword()_1]] - `calls` [EXTRACTED]
+- [[dot-update()_13]] - `calls` [INFERRED]
+- [[EmployeesService]] - `method` [EXTRACTED]
 - [[UpdateEmployeeDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employeesservicets
+#graphify/code #graphify/EXTRACTED #community/employeescontrollerts

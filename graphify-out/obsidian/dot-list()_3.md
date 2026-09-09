@@ -1,23 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/guardians.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/compliance/compliance.service.ts"
 type: "code"
-community: "guardians.service.ts"
-location: "L19"
+community: "UpdateComplianceRuleDto"
+location: "L359"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/guardiansservicets
+  - graphify/INFERRED
+  - community/UpdateComplianceRuleDto
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_4]] - `calls` [INFERRED]
-- [[CurrentActorPermissions]] - `references` [EXTRACTED]
-- [[Get_3]] - `references` [EXTRACTED]
-- [[GuardiansController]] - `method` [EXTRACTED]
-- [[ListGuardiansDto]] - `references` [EXTRACTED]
-- [[Query_1]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-list()_2]] - `calls` [INFERRED]
+- [[ComplianceService]] - `method` [EXTRACTED]
+- [[toPublicComplianceRule()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/guardiansservicets
+#graphify/code #graphify/INFERRED #community/UpdateComplianceRuleDto

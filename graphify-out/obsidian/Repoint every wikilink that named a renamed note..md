@@ -2,7 +2,7 @@
 source_file: "scripts/dedupe-vault-names.py"
 type: "rationale"
 community: "dedupe-vault-names.py"
-location: "L91"
+location: "L94"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

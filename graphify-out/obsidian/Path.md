@@ -11,7 +11,7 @@ tags:
 # Path
 
 ## Connections
-- [[main()_1]] - `calls` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
 - [[relink()]] - `references` [EXTRACTED]
 - [[rename_target()]] - `references` [EXTRACTED]
 - [[shorten()]] - `references` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/requests/requests.service.ts"
 type: "code"
-community: "requests.service.ts"
+community: "@prisma/client"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/requestsservicets
+  - community/prisma/client
 ---
 
 # requests.service.ts
@@ -27,7 +27,7 @@ tags:
 - [[DeadlineScanOrgResult]] - `contains` [EXTRACTED]
 - [[ERASURE_STATUTORY_GROUND_TEXT]] - `imports` [EXTRACTED]
 - [[ErasureChecklistSubmission]] - `imports` [EXTRACTED]
-- [[ErasureCompletionHolders]] - `contains` [EXTRACTED]
+- [[ErasureCompletionHolders_1]] - `contains` [EXTRACTED]
 - [[ErasureStatutoryGround]] - `imports` [EXTRACTED]
 - [[ErasureTaskService]] - `imports` [EXTRACTED]
 - [[EscalateRequestDto]] - `imports` [EXTRACTED]
@@ -35,7 +35,7 @@ tags:
 - [[ListRequestsDto]] - `imports` [EXTRACTED]
 - [[NotificationsService]] - `imports` [EXTRACTED]
 - [[PrismaService]] - `imports` [EXTRACTED]
-- [[ProcessorChecklistEntry]] - `imports` [EXTRACTED]
+- [[ProcessorChecklistEntry_1]] - `imports` [EXTRACTED]
 - [[PublicAssignedEmployee]] - `contains` [EXTRACTED]
 - [[PublicRequest]] - `contains` [EXTRACTED]
 - [[PublicRequestDetail]] - `contains` [EXTRACTED]
@@ -48,9 +48,9 @@ tags:
 - [[RequestStats]] - `contains` [EXTRACTED]
 - [[RequestsService]] - `contains` [EXTRACTED]
 - [[ScopedTransactionClient]] - `imports` [EXTRACTED]
-- [[SystemChecklistEntry]] - `imports` [EXTRACTED]
+- [[SystemChecklistEntry_1]] - `imports` [EXTRACTED]
 - [[TERMINAL_REQUEST_STATUSES]] - `imports` [EXTRACTED]
-- [[TRANSITIONS]] - `imports` [EXTRACTED]
+- [[TRANSITIONS_1]] - `imports` [EXTRACTED]
 - [[TenantContext]] - `imports` [EXTRACTED]
 - [[VerifyIdentityDto]] - `imports` [EXTRACTED]
 - [[add-note.dto.ts]] - `imports_from` [EXTRACTED]
@@ -77,4 +77,4 @@ tags:
 - [[transitionTargets()]] - `contains` [EXTRACTED]
 - [[verify-identity.dto.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/requestsservicets
+#graphify/code #graphify/EXTRACTED #community/prisma/client

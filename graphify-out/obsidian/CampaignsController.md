@@ -13,12 +13,12 @@ tags:
 
 ## Connections
 - [[dot-approve()]] - `method` [EXTRACTED]
-- [[dot-constructor()_98]] - `method` [EXTRACTED]
-- [[dot-create()_16]] - `method` [EXTRACTED]
-- [[dot-get()_9]] - `method` [EXTRACTED]
-- [[dot-list()_18]] - `method` [EXTRACTED]
+- [[dot-constructor()_64]] - `method` [EXTRACTED]
+- [[dot-create()_13]] - `method` [EXTRACTED]
+- [[dot-get()_8]] - `method` [EXTRACTED]
+- [[dot-list()_20]] - `method` [EXTRACTED]
 - [[dot-listRecipients()]] - `method` [EXTRACTED]
-- [[dot-send()_4]] - `method` [EXTRACTED]
+- [[dot-send()_6]] - `method` [EXTRACTED]
 - [[ApiTags_18]] - `references` [EXTRACTED]
 - [[Controller_19]] - `references` [EXTRACTED]
 - [[campaigns.controller.ts]] - `contains` [EXTRACTED]

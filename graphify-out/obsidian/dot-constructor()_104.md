@@ -1,17 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sync/sync-error.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/mappings.controller.ts"
 type: "code"
-community: "SyncPipelineService"
-location: "L70"
+community: "ReplaceMappingsDto"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncPipelineService
+  - community/ReplaceMappingsDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[MissingRecordKeyError]] - `method` [EXTRACTED]
+- [[MappingsController]] - `method` [EXTRACTED]
+- [[MappingsService]] - `references` [EXTRACTED]
+- [[SourcePurposesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncPipelineService
+#graphify/code #graphify/EXTRACTED #community/ReplaceMappingsDto

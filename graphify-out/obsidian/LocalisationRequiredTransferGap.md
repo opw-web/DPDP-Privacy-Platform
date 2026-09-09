@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sdf/sdf-gaps.service.ts"
 type: "code"
-community: "sdf-assessment.service.ts"
+community: "PrismaService"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdf-assessmentservicets
+  - community/PrismaService
 ---
 
 # LocalisationRequiredTransferGap
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sdf-gaps.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdf-assessmentservicets
+#graphify/code #graphify/EXTRACTED #community/PrismaService

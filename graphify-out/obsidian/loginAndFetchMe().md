@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/employee-auth.e2e-spec.ts"
 type: "code"
-community: "argon2"
+community: "sync.e2e-spec.ts"
 location: "L399"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/argon2
+  - community/synce2e-spects
 ---
 
 # loginAndFetchMe()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[employee-auth.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/argon2
+#graphify/code #graphify/EXTRACTED #community/synce2e-spects

@@ -1,23 +1,20 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/consents/me-consents.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/children/guardians.service.ts"
 type: "code"
-community: "SetMyConsentDto"
-location: "L36"
+community: "guardians.controller.ts"
+location: "L117"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SetMyConsentDto
+  - community/guardianscontrollerts
 ---
 
 # .list()
 
 ## Connections
-- [[dot-listForPrincipal()_2]] - `calls` [INFERRED]
-- [[CurrentPrincipal]] - `references` [EXTRACTED]
-- [[Get_5]] - `references` [EXTRACTED]
-- [[MeConsentsController]] - `method` [EXTRACTED]
-- [[PrincipalActor]] - `references` [EXTRACTED]
-- [[Public()]] - `references` [EXTRACTED]
-- [[UseGuards]] - `references` [EXTRACTED]
+- [[dot-list()_4]] - `calls` [INFERRED]
+- [[dot-toResponse()]] - `calls` [EXTRACTED]
+- [[GuardiansService]] - `method` [EXTRACTED]
+- [[ListGuardiansDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SetMyConsentDto
+#graphify/code #graphify/EXTRACTED #community/guardianscontrollerts

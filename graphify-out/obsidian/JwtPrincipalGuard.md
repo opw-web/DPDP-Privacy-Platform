@@ -12,9 +12,9 @@ tags:
 # JwtPrincipalGuard
 
 ## Connections
-- [[dot-canActivate()_2]] - `method` [EXTRACTED]
-- [[dot-constructor()_56]] - `method` [EXTRACTED]
-- [[Injectable_42]] - `references` [EXTRACTED]
+- [[dot-canActivate()_1]] - `method` [EXTRACTED]
+- [[dot-constructor()_121]] - `method` [EXTRACTED]
+- [[Injectable_3]] - `references` [EXTRACTED]
 - [[auth.module.ts]] - `imports` [EXTRACTED]
 - [[jwt-principal.guard.ts]] - `contains` [EXTRACTED]
 - [[me-consents.controller.ts]] - `imports` [EXTRACTED]

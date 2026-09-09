@@ -2,7 +2,7 @@
 source_file: "docs/demo-runbook/build-standalone.py"
 type: "code"
 community: "build-standalone.py"
-location: "L20"
+location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Match]] - `references` [EXTRACTED]
-- [[Path_1]] - `references` [EXTRACTED]
+- [[Path_1]] - `calls` [EXTRACTED]
 - [[build()]] - `calls` [EXTRACTED]
 - [[build-standalone.py]] - `contains` [EXTRACTED]
 

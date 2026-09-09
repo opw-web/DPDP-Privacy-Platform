@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/children/age-status.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/inventory/ropa-export.service.ts"
 type: "code"
-community: "age-status.service.ts"
-location: "L20"
+community: "AuditService"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/age-statusservicets
+  - community/AuditService
 ---
 
 # .constructor()
 
 ## Connections
-- [[AgeStatusController]] - `method` [EXTRACTED]
-- [[AgeStatusService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[RopaExportService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/age-statusservicets
+#graphify/code #graphify/EXTRACTED #community/AuditService

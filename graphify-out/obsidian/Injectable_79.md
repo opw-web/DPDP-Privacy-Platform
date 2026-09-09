@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "matching.service.ts"
+community: "AuditChainService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/matchingservicets
+  - community/AuditChainService
 ---
 
 # Injectable
 
 ## Connections
-- [[MatchingService]] - `references` [EXTRACTED]
+- [[AuditChainService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/matchingservicets
+#graphify/code #graphify/EXTRACTED #community/AuditChainService

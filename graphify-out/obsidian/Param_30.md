@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "age-status.service.ts"
+community: "candidates.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/age-statusservicets
+  - community/candidatescontrollerts
 ---
 
 # Param
 
 ## Connections
-- [[dot-setAgeStatus()]] - `references` [EXTRACTED]
+- [[dot-confirm()]] - `references` [EXTRACTED]
+- [[dot-reject()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/age-statusservicets
+#graphify/code #graphify/EXTRACTED #community/candidatescontrollerts

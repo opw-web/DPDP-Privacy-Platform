@@ -1,8 +1,8 @@
 ---
-source_file: "dpdp-platform/backend/src/common/guards/jwt-principal.guard.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/guards/jwt-any-actor.guard.ts"
 type: "code"
 community: "TokenService"
-location: "L80"
+location: "L56"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[dot-verifyAccessToken()]] - `calls` [INFERRED]
-- [[JwtPrincipalGuard]] - `method` [EXTRACTED]
+- [[JwtAnyActorGuard]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/TokenService

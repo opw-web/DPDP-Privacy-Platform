@@ -12,10 +12,10 @@ tags:
 # ScheduleReconciliationService
 
 ## Connections
-- [[dot-constructor()_77]] - `method` [EXTRACTED]
+- [[dot-constructor()_43]] - `method` [EXTRACTED]
 - [[dot-reconcile()_1]] - `method` [EXTRACTED]
 - [[dot-reconcileAtBoot()]] - `method` [EXTRACTED]
-- [[Injectable_47]] - `references` [EXTRACTED]
+- [[Injectable_25]] - `references` [EXTRACTED]
 - [[queues.module.ts]] - `imports` [EXTRACTED]
 - [[schedule-reconciliation.service.ts]] - `contains` [EXTRACTED]
 - [[sync.e2e-spec.ts]] - `imports` [EXTRACTED]

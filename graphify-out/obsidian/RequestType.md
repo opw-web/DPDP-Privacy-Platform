@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/principal/pages/MeRequestsPage.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/requests/types.ts"
 type: "code"
-community: "react-router-dom"
-location: "L17"
+community: "card.tsx"
+location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react-router-dom
+  - community/cardtsx
 ---
 
 # RequestType
 
 ## Connections
-- [[MeRequestsPage.tsx]] - `contains` [EXTRACTED]
+- [[requeststypes.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react-router-dom
+#graphify/code #graphify/EXTRACTED #community/cardtsx

@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/assembly.service.spec.ts"
 type: "code"
-community: "AuditService"
+community: "ScopedTransactionClient"
 location: "L296"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/ScopedTransactionClient
 ---
 
 # nameSources()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[assembly.service.spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/ScopedTransactionClient

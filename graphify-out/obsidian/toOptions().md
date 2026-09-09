@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[enum-options.ts]] - `contains` [EXTRACTED]
-- [[titleCase()_1]] - `calls` [EXTRACTED]
+- [[titleCase()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/react

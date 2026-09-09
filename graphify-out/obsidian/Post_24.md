@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "recipients.service.ts"
+community: ".markRead"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/markRead
 ---
 
 # Post
 
 ## Connections
-- [[dot-create()_33]] - `references` [EXTRACTED]
+- [[dot-markAllRead()_1]] - `references` [EXTRACTED]
+- [[dot-markRead()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/markRead

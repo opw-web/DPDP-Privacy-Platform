@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/prisma/seed.ts"
 type: "code"
-community: "argon2"
+community: "seed.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/argon2
+  - community/seedts
 ---
 
 # seed.ts
@@ -22,14 +22,14 @@ tags:
 - [[compliance-rules.ts]] - `imports_from` [EXTRACTED]
 - [[demo-org.ts]] - `imports_from` [EXTRACTED]
 - [[employee-auth.e2e-spec.ts]] - `imports_from` [EXTRACTED]
-- [[main()_3]] - `contains` [EXTRACTED]
+- [[main()]] - `contains` [EXTRACTED]
 - [[message-templates.ts]] - `imports_from` [EXTRACTED]
 - [[mvp2-demo.ts]] - `imports_from` [EXTRACTED]
 - [[prisma.service.ts]] - `imports_from` [EXTRACTED]
 - [[roles.ts]] - `imports_from` [EXTRACTED]
 - [[runSeed()]] - `contains` [EXTRACTED]
 - [[seedpermissions.ts]] - `imports_from` [EXTRACTED]
-- [[seedComplianceRules()]] - `imports` [EXTRACTED]
+- [[seedComplianceRules()_1]] - `imports` [EXTRACTED]
 - [[seedDemoEmployees()]] - `contains` [EXTRACTED]
 - [[seedMessageTemplates()]] - `imports` [EXTRACTED]
 - [[seedMvp2Demo()]] - `imports` [EXTRACTED]
@@ -37,4 +37,4 @@ tags:
 - [[seedPermissions()]] - `contains` [EXTRACTED]
 - [[seedRoles()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/argon2
+#graphify/code #graphify/EXTRACTED #community/seedts

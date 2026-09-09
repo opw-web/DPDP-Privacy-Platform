@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principals/principal-recipients.service.ts"
+source_file: "dpdp-platform/backend/src/queues/breach-principal-notice-dispatch.queue.ts"
 type: "code"
-community: "AccessReportService"
-location: "L7"
+community: "@nestjs/common"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessReportService
+  - community/nestjs/common
 ---
 
 # .constructor()
 
 ## Connections
-- [[PrincipalRecipientsService]] - `method` [EXTRACTED]
+- [[BreachPrincipalNoticeDispatchQueueService]] - `method` [EXTRACTED]
+- [[InjectQueue]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessReportService
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

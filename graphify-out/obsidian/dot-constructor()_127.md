@@ -1,19 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
+source_file: "dpdp-platform/backend/src/modules/auth/token.service.ts"
 type: "code"
-community: "rest-api.connector.ts"
-location: "L142"
+community: "TokenService"
+location: "L65"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rest-apiconnectorts
+  - community/TokenService
 ---
 
 # .constructor()
 
 ## Connections
-- [[ReadOnlyHttpClient]] - `references` [EXTRACTED]
-- [[RestApiConnector]] - `method` [EXTRACTED]
-- [[UnsupportedPaginationStyleError]] - `calls` [EXTRACTED]
+- [[TokenService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts
+#graphify/code #graphify/EXTRACTED #community/TokenService

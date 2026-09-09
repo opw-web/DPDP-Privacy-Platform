@@ -12,9 +12,9 @@ tags:
 # .verifyAccessToken()
 
 ## Connections
+- [[dot-canActivate()_3]] - `calls` [INFERRED]
 - [[dot-canActivate()_1]] - `calls` [INFERRED]
 - [[dot-canActivate()_2]] - `calls` [INFERRED]
-- [[dot-canActivate()_3]] - `calls` [INFERRED]
 - [[TokenService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/TokenService

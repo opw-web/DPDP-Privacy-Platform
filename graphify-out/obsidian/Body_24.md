@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "recipients.service.ts"
+community: "ReplaceMappingsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/recipientsservicets
+  - community/ReplaceMappingsDto
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_33]] - `references` [EXTRACTED]
-- [[dot-update()_23]] - `references` [EXTRACTED]
+- [[dot-replaceMappings()]] - `references` [EXTRACTED]
+- [[dot-replacePurposes()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/recipientsservicets
+#graphify/code #graphify/EXTRACTED #community/ReplaceMappingsDto

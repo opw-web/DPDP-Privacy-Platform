@@ -1,19 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principal-portal/me.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/purposes/purposes.controller.ts"
 type: "code"
-community: "PrincipalActor"
-location: "L50"
+community: "CreatePurposeDto"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalActor
+  - community/CreatePurposeDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[AccessReportService]] - `references` [EXTRACTED]
-- [[MeController]] - `method` [EXTRACTED]
-- [[MeService]] - `references` [EXTRACTED]
+- [[PurposesController]] - `method` [EXTRACTED]
+- [[PurposesService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalActor
+#graphify/code #graphify/EXTRACTED #community/CreatePurposeDto

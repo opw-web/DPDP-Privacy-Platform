@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "PrincipalActor"
+community: "MeRightsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalActor
+  - community/MeRightsService
 ---
 
 # Put
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-upsertNomination()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalActor
+#graphify/code #graphify/EXTRACTED #community/MeRightsService

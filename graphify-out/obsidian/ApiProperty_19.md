@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "FlagFrivolousDto"
+community: "UpdateBreachDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/FlagFrivolousDto
+  - community/UpdateBreachDto
 ---
 
 # ApiProperty
 
 ## Connections
-- [[FlagFrivolousDto]] - `references` [EXTRACTED]
+- [[ExtensionDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/FlagFrivolousDto
+#graphify/code #graphify/EXTRACTED #community/UpdateBreachDto

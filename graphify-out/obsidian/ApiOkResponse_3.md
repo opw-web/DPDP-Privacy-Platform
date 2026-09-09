@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "notifications.controller.ts"
+community: ".markRead"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/notificationscontrollerts
+  - community/markRead
 ---
 
 # ApiOkResponse
 
 ## Connections
-- [[dot-list()_33]] - `references` [EXTRACTED]
-- [[dot-markAllRead()]] - `references` [EXTRACTED]
-- [[dot-markRead()]] - `references` [EXTRACTED]
+- [[dot-list()_41]] - `references` [EXTRACTED]
+- [[dot-markAllRead()_1]] - `references` [EXTRACTED]
+- [[dot-markRead()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/notificationscontrollerts
+#graphify/code #graphify/EXTRACTED #community/markRead

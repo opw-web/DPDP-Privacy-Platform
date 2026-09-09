@@ -12,13 +12,13 @@ tags:
 # ListRequestsDto
 
 ## Connections
-- [[dot-list()_50]] - `references` [EXTRACTED]
-- [[dot-list()_51]] - `references` [EXTRACTED]
-- [[IsBoolean_28]] - `references` [EXTRACTED]
-- [[IsEnum_25]] - `references` [EXTRACTED]
-- [[IsOptional_52]] - `references` [EXTRACTED]
-- [[IsString_70]] - `references` [EXTRACTED]
-- [[Transform_2]] - `references` [EXTRACTED]
+- [[dot-list()_14]] - `references` [EXTRACTED]
+- [[dot-list()_15]] - `references` [EXTRACTED]
+- [[IsBoolean_11]] - `references` [EXTRACTED]
+- [[IsEnum_13]] - `references` [EXTRACTED]
+- [[IsOptional_20]] - `references` [EXTRACTED]
+- [[IsString_24]] - `references` [EXTRACTED]
+- [[Transform_1]] - `references` [EXTRACTED]
 - [[list-requests.dto.ts]] - `contains` [EXTRACTED]
 - [[requests.controller.ts]] - `imports` [EXTRACTED]
 - [[requests.service.ts]] - `imports` [EXTRACTED]

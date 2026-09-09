@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principal-portal/dto/create-me-request.dto.ts"
 type: "code"
-community: "me-rights.service.ts"
+community: "CreateMeRequestDto"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/me-rightsservicets
+  - community/CreateMeRequestDto
 ---
 
 # PRINCIPAL_REQUEST_TYPES
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[create-me-request.dto.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/me-rightsservicets
+#graphify/code #graphify/EXTRACTED #community/CreateMeRequestDto

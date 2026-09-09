@@ -1,24 +1,24 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/retention.controller.ts"
 type: "code"
-community: "RetentionController"
+community: "RequirePermission"
 location: "L71"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionController
+  - community/RequirePermission
 ---
 
 # .createLegalHold()
 
 ## Connections
-- [[dot-create()]] - `calls` [INFERRED]
+- [[dot-create()_16]] - `calls` [INFERRED]
 - [[AccessTokenPayload]] - `references` [EXTRACTED]
-- [[Body_1]] - `references` [EXTRACTED]
+- [[Body_14]] - `references` [EXTRACTED]
 - [[CreateLegalHoldDto]] - `references` [EXTRACTED]
 - [[CurrentActor]] - `references` [EXTRACTED]
-- [[Post]] - `references` [EXTRACTED]
+- [[Post_14]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[RetentionController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionController
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

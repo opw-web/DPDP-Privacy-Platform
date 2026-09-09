@@ -12,16 +12,16 @@ tags:
 # PrincipalsService
 
 ## Connections
-- [[dot-constructor()_4]] - `references` [EXTRACTED]
-- [[dot-constructor()_83]] - `references` [EXTRACTED]
-- [[dot-constructor()_72]] - `method` [EXTRACTED]
+- [[dot-constructor()_74]] - `references` [EXTRACTED]
+- [[dot-constructor()_77]] - `references` [EXTRACTED]
+- [[dot-constructor()_78]] - `method` [EXTRACTED]
 - [[dot-getDetail()]] - `method` [EXTRACTED]
 - [[dot-getSourceRecords()]] - `method` [EXTRACTED]
 - [[dot-getUnmaskedProfile()]] - `method` [EXTRACTED]
-- [[dot-list()_21]] - `method` [EXTRACTED]
+- [[dot-list()_25]] - `method` [EXTRACTED]
 - [[dot-loadProfile()]] - `method` [EXTRACTED]
 - [[dot-resolveFieldsInTransaction()]] - `method` [EXTRACTED]
-- [[Injectable_51]] - `references` [EXTRACTED]
+- [[Injectable_46]] - `references` [EXTRACTED]
 - [[me.service.ts]] - `imports` [EXTRACTED]
 - [[principals.controller.ts]] - `imports` [EXTRACTED]
 - [[principals.module.ts]] - `imports` [EXTRACTED]

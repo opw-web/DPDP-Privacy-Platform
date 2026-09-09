@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/identity/merge.service.ts"
 type: "code"
-community: "AuditService"
+community: "ScopedTransactionClient"
 location: "L82"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/AuditService
+  - community/ScopedTransactionClient
 ---
 
 # .mergeRecordIntoPrincipal()
@@ -19,4 +19,4 @@ tags:
 - [[MergeService]] - `method` [EXTRACTED]
 - [[ScopedTransactionClient]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/AuditService
+#graphify/code #graphify/INFERRED #community/ScopedTransactionClient

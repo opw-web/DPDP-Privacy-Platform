@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/access-log-retention.processor.ts"
 type: "code"
-community: "configuration.ts"
+community: "access-log-retention.processor.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/configurationts
+  - community/access-log-retentionprocessorts
 ---
 
 # access-log-retention.processor.ts
@@ -29,4 +29,4 @@ tags:
 - [[queues.module.ts]] - `imports_from` [EXTRACTED]
 - [[scheduled-jobs.e2e-spec.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/configurationts
+#graphify/code #graphify/EXTRACTED #community/access-log-retentionprocessorts

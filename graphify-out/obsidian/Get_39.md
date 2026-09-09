@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "security-measures.service.ts"
+community: "candidates.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/security-measuresservicets
+  - community/candidatescontrollerts
 ---
 
 # Get
 
 ## Connections
-- [[dot-get()_24]] - `references` [EXTRACTED]
-- [[dot-list()_48]] - `references` [EXTRACTED]
+- [[dot-list()_50]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/security-measuresservicets
+#graphify/code #graphify/EXTRACTED #community/candidatescontrollerts

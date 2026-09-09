@@ -1,17 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/principals/lineage.service.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/pre-erasure-notice.service.ts"
 type: "code"
-community: "AccessReportService"
-location: "L34"
+community: "@nestjs/common"
+location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AccessReportService
+  - community/nestjs/common
 ---
 
 # .constructor()
 
 ## Connections
-- [[LineageService]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[NotificationsService]] - `references` [EXTRACTED]
+- [[PreErasureNoticeService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AccessReportService
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

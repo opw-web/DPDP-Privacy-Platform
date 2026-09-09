@@ -1,22 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/templates.service.ts"
+source_file: "dpdp-platform/backend/src/modules/messaging/audience/audience.controller.ts"
 type: "code"
-community: "TemplatesService"
-location: "L284"
+community: "PreviewAudienceDto"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/PreviewAudienceDto
 ---
 
 # .preview()
 
 ## Connections
-- [[dot-preview()]] - `calls` [INFERRED]
-- [[PreviewTemplateDto]] - `references` [EXTRACTED]
-- [[RenderedTemplate]] - `references` [EXTRACTED]
-- [[TemplatesService]] - `method` [EXTRACTED]
-- [[renderOrganizationMessageTemplate()]] - `calls` [EXTRACTED]
-- [[toBadRequest()]] - `calls` [EXTRACTED]
+- [[dot-preview()_5]] - `calls` [INFERRED]
+- [[AudienceController]] - `method` [EXTRACTED]
+- [[Body_10]] - `references` [EXTRACTED]
+- [[CurrentActorPermissions]] - `references` [EXTRACTED]
+- [[Post_10]] - `references` [EXTRACTED]
+- [[PreviewAudienceDto]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/PreviewAudienceDto

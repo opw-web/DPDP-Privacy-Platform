@@ -1,19 +1,19 @@
 ---
 source_file: "dpdp-platform/backend/src/queues/breach-clock.processor.ts"
 type: "code"
-community: "BreachClockProcessor"
+community: "BreachService"
 location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BreachClockProcessor
+  - community/BreachService
 ---
 
 # .runClockCycle()
 
 ## Connections
-- [[dot-process()_5]] - `calls` [EXTRACTED]
+- [[dot-process()_8]] - `calls` [EXTRACTED]
 - [[dot-scanClock()]] - `calls` [INFERRED]
 - [[BreachClockProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BreachClockProcessor
+#graphify/code #graphify/EXTRACTED #community/BreachService

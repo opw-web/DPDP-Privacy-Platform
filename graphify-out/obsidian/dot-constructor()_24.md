@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/consents/me-consents.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/inventory/inventory.service.ts"
 type: "code"
-community: "SetMyConsentDto"
-location: "L31"
+community: "InventoryService"
+location: "L78"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SetMyConsentDto
+  - community/InventoryService
 ---
 
 # .constructor()
 
 ## Connections
-- [[ConsentsService]] - `references` [EXTRACTED]
-- [[MeConsentsController]] - `method` [EXTRACTED]
+- [[InventoryService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SetMyConsentDto
+#graphify/code #graphify/EXTRACTED #community/InventoryService

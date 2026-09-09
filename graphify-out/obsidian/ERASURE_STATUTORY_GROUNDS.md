@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/requests/requests.constants.ts"
 type: "code"
-community: "requests.service.ts"
+community: "@prisma/client"
 location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/requestsservicets
+  - community/prisma/client
 ---
 
 # ERASURE_STATUTORY_GROUNDS
@@ -15,4 +15,4 @@ tags:
 - [[change-status.dto.ts]] - `imports` [EXTRACTED]
 - [[requests.constants.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/requestsservicets
+#graphify/code #graphify/EXTRACTED #community/prisma/client

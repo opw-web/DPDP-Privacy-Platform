@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/inventory/csv-writer.spec.ts"
 type: "code"
-community: "evidence-pack.service.ts"
+community: "csv-writer.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/evidence-packservicets
+  - community/csv-writerts
 ---
 
 # csv-writer.spec.ts
@@ -19,4 +19,4 @@ tags:
 - [[csvRow()]] - `imports` [EXTRACTED]
 - [[parseCsv()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/evidence-packservicets
+#graphify/code #graphify/EXTRACTED #community/csv-writerts

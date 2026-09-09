@@ -12,11 +12,11 @@ tags:
 # ErasureProcessorChecklistDto
 
 ## Connections
-- [[ApiProperty_43]] - `references` [EXTRACTED]
-- [[ApiPropertyOptional_46]] - `references` [EXTRACTED]
-- [[IsBoolean_20]] - `references` [EXTRACTED]
-- [[IsOptional_47]] - `references` [EXTRACTED]
-- [[IsString_60]] - `references` [EXTRACTED]
+- [[ApiProperty_25]] - `references` [EXTRACTED]
+- [[ApiPropertyOptional_29]] - `references` [EXTRACTED]
+- [[IsBoolean_14]] - `references` [EXTRACTED]
+- [[IsOptional_31]] - `references` [EXTRACTED]
+- [[IsString_35]] - `references` [EXTRACTED]
 - [[change-status.dto.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/ChangeStatusDto

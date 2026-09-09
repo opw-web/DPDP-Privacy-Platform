@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/registers/RecipientsTab.tsx"
 type: "code"
-community: "router.tsx"
+community: "react"
 location: "L213"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/react
 ---
 
 # RecipientsTab()
@@ -17,4 +17,4 @@ tags:
 - [[RegistersPage.tsx]] - `imports` [EXTRACTED]
 - [[humanizeEnum()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/react

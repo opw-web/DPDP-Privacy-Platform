@@ -1,18 +1,21 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sync/sync.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/data-sources/data-sources.service.ts"
 type: "code"
-community: "SyncService"
-location: "L20"
+community: "SyncQueueService"
+location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SyncService
+  - community/SyncQueueService
 ---
 
 # .constructor()
 
 ## Connections
-- [[SyncController]] - `method` [EXTRACTED]
-- [[SyncService]] - `references` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[ConnectorFactory]] - `references` [EXTRACTED]
+- [[CryptoService]] - `references` [EXTRACTED]
+- [[DataSourcesService]] - `method` [EXTRACTED]
+- [[SyncQueueService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SyncService
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

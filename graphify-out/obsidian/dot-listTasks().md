@@ -1,21 +1,21 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/retention/retention.controller.ts"
 type: "code"
-community: "RetentionController"
+community: "RequirePermission"
 location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionController
+  - community/RequirePermission
 ---
 
 # .listTasks()
 
 ## Connections
-- [[dot-list()]] - `calls` [INFERRED]
-- [[Get_1]] - `references` [EXTRACTED]
-- [[Query]] - `references` [EXTRACTED]
+- [[dot-list()_23]] - `calls` [INFERRED]
+- [[Get_21]] - `references` [EXTRACTED]
+- [[Query_7]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[RetentionController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionController
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

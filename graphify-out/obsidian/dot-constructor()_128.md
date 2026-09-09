@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
+source_file: "dpdp-platform/backend/src/modules/notifications/guards/jwt-any-actor.guard.ts"
 type: "code"
-community: "rest-api.connector.ts"
-location: "L40"
+community: "TokenService"
+location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rest-apiconnectorts
+  - community/TokenService
 ---
 
 # .constructor()
 
 ## Connections
-- [[UnsupportedPaginationStyleError]] - `method` [EXTRACTED]
+- [[JwtAnyActorGuard]] - `method` [EXTRACTED]
+- [[TokenService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts
+#graphify/code #graphify/EXTRACTED #community/TokenService

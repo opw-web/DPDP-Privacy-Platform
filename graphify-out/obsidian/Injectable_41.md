@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AttachPurposesDto"
+community: "SyncPipelineService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AttachPurposesDto
+  - community/SyncPipelineService
 ---
 
 # Injectable
 
 ## Connections
-- [[SourcePurposesService]] - `references` [EXTRACTED]
+- [[SyncPipelineService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AttachPurposesDto
+#graphify/code #graphify/EXTRACTED #community/SyncPipelineService

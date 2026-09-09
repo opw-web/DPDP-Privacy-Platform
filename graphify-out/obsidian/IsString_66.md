@@ -11,6 +11,6 @@ tags:
 # IsString
 
 ## Connections
-- [[UpdateSecurityMeasureDto]] - `references` [EXTRACTED]
+- [[CreateSecurityMeasureDto]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/security-measuresservicets

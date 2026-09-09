@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/inventory/inventory.service.ts"
 type: "code"
-community: "inventory.controller.ts"
+community: "inventory.service.ts"
 location: "L59"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/inventorycontrollerts
+  - community/inventoryservicets
 ---
 
 # InventoryGap
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[inventory.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/inventorycontrollerts
+#graphify/code #graphify/EXTRACTED #community/inventoryservicets

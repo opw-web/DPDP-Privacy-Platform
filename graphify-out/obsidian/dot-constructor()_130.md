@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/notifications/providers/smtp.provider.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/retention.service.ts"
 type: "code"
-community: "mailer.service.ts"
-location: "L22"
+community: "CreateRetentionPolicyDto"
+location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mailerservicets
+  - community/CreateRetentionPolicyDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[MailerService]] - `references` [EXTRACTED]
-- [[SmtpProvider]] - `method` [EXTRACTED]
+- [[AuditService]] - `references` [EXTRACTED]
+- [[RetentionService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mailerservicets
+#graphify/code #graphify/EXTRACTED #community/CreateRetentionPolicyDto

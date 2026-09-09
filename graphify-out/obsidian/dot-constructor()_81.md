@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sdf/sdf-gaps.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/sharing.controller.ts"
 type: "code"
-community: "SdfController"
-location: "L34"
+community: "CreateSharingActivityDto"
+location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SdfController
+  - community/CreateSharingActivityDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[ComplianceService]] - `references` [EXTRACTED]
-- [[SdfGapsService]] - `method` [EXTRACTED]
+- [[SharingController]] - `method` [EXTRACTED]
+- [[SharingService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SdfController
+#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

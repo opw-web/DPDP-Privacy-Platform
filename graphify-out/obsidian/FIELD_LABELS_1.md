@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/messaging/AudienceBuilder.tsx"
+source_file: "dpdp-platform/frontend/src/principal/components/ValueCard.tsx"
 type: "code"
-community: "AudienceBuilder.tsx"
-location: "L11"
+community: "cn"
+location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AudienceBuildertsx
+  - community/cn
 ---
 
 # FIELD_LABELS
 
 ## Connections
-- [[AudienceBuilder.tsx]] - `contains` [EXTRACTED]
+- [[ValueCard.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AudienceBuildertsx
+#graphify/code #graphify/EXTRACTED #community/cn

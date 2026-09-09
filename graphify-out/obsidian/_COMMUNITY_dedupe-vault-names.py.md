@@ -15,7 +15,7 @@ members: 12
 - [[The name that keeps its spelling the first in sorted order. Sorting is what…]] - rationale - scripts/dedupe-vault-names.py
 - [[Trim any note whose name would blow the Windows path limit. The trimmed name…]] - rationale - scripts/dedupe-vault-names.py
 - [[dedupe-vault-names.py]] - code - scripts/dedupe-vault-names.py
-- [[main()_1]] - code - scripts/dedupe-vault-names.py
+- [[main()_4]] - code - scripts/dedupe-vault-names.py
 - [[relink()]] - code - scripts/dedupe-vault-names.py
 - [[rename_target()]] - code - scripts/dedupe-vault-names.py
 - [[shorten()]] - code - scripts/dedupe-vault-names.py

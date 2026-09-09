@@ -1,18 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/campaign-send.queue.ts"
+source_file: "dpdp-platform/backend/src/modules/connectors/rest-api.connector.ts"
 type: "code"
-community: "CampaignsService"
-location: "L67"
+community: "rest-api.connector.ts"
+location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampaignsService
+  - community/rest-apiconnectorts
 ---
 
 # .constructor()
 
 ## Connections
-- [[CampaignSendQueueService]] - `method` [EXTRACTED]
-- [[InjectQueue_7]] - `references` [EXTRACTED]
+- [[InvalidCursorError]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampaignsService
+#graphify/code #graphify/EXTRACTED #community/rest-apiconnectorts

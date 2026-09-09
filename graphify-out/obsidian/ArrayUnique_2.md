@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "UpdateTemplateDto"
+community: "TemplatesService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UpdateTemplateDto
+  - community/TemplatesService
 ---
 
 # ArrayUnique
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[UpdateTemplateDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UpdateTemplateDto
+#graphify/code #graphify/EXTRACTED #community/TemplatesService

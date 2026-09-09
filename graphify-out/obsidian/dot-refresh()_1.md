@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/auth/employee-auth.service.ts"
 type: "code"
-community: "employee-auth.service.ts"
+community: "TokenService"
 location: "L219"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/employee-authservicets
+  - community/TokenService
 ---
 
 # .refresh()
@@ -20,4 +20,4 @@ tags:
 - [[LoginRequestMeta]] - `references` [EXTRACTED]
 - [[rotateRefreshToken()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/employee-authservicets
+#graphify/code #graphify/EXTRACTED #community/TokenService

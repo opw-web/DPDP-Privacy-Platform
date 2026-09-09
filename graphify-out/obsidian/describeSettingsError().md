@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/pages/SettingsPage.tsx"
 type: "code"
-community: "SettingsPage.tsx"
+community: "react"
 location: "L55"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SettingsPagetsx
+  - community/react
 ---
 
 # describeSettingsError()
@@ -16,4 +16,4 @@ tags:
 - [[OrganizationDetailsSection()]] - `calls` [EXTRACTED]
 - [[SettingsPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SettingsPagetsx
+#graphify/code #graphify/EXTRACTED #community/react

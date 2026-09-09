@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/inventory/inventory.controller.ts"
 type: "code"
-community: "inventory.controller.ts"
+community: "InventoryService"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/inventorycontrollerts
+  - community/InventoryService
 ---
 
 # InventoryController
@@ -16,9 +16,9 @@ tags:
 - [[dot-gaps()]] - `method` [EXTRACTED]
 - [[dot-ropaCsv()]] - `method` [EXTRACTED]
 - [[dot-summary()]] - `method` [EXTRACTED]
-- [[ApiTags_10]] - `references` [EXTRACTED]
-- [[Controller_11]] - `references` [EXTRACTED]
+- [[ApiTags_8]] - `references` [EXTRACTED]
+- [[Controller_9]] - `references` [EXTRACTED]
 - [[inventory.controller.ts]] - `contains` [EXTRACTED]
 - [[inventory.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/inventorycontrollerts
+#graphify/code #graphify/EXTRACTED #community/InventoryService

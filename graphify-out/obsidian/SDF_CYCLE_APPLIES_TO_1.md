@@ -1,17 +1,19 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/components/sdf/types.ts"
+source_file: "dpdp-platform/backend/src/modules/sdf/sdf-assessment.service.ts"
 type: "code"
-community: "react-router-dom"
-location: "L73"
+community: "PrismaService"
+location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react-router-dom
+  - community/PrismaService
 ---
 
 # SDF_CYCLE_APPLIES_TO
 
 ## Connections
-- [[sdftypes.ts]] - `contains` [EXTRACTED]
+- [[sdf-assessment.service.ts]] - `contains` [EXTRACTED]
+- [[sdf-cycle-scan.service.ts]] - `imports` [EXTRACTED]
+- [[sdf-gaps.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react-router-dom
+#graphify/code #graphify/EXTRACTED #community/PrismaService

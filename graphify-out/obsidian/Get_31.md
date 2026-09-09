@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "DataSourcesController"
+community: "ReplaceMappingsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataSourcesController
+  - community/ReplaceMappingsDto
 ---
 
 # Get
 
 ## Connections
-- [[dot-get()_16]] - `references` [EXTRACTED]
-- [[dot-list()_35]] - `references` [EXTRACTED]
-- [[dot-listFields()]] - `references` [EXTRACTED]
+- [[dot-getMappings()]] - `references` [EXTRACTED]
+- [[dot-getPurposes()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataSourcesController
+#graphify/code #graphify/EXTRACTED #community/ReplaceMappingsDto

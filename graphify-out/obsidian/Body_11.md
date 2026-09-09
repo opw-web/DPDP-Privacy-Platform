@@ -1,18 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "TemplatesService"
+community: "BreachesController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TemplatesService
+  - community/BreachesController
 ---
 
 # Body
 
 ## Connections
-- [[dot-create()_13]] - `references` [EXTRACTED]
-- [[dot-preview()]] - `references` [EXTRACTED]
+- [[dot-addAffected()_1]] - `references` [EXTRACTED]
+- [[dot-completeObligation()]] - `references` [EXTRACTED]
+- [[dot-create()_12]] - `references` [EXTRACTED]
+- [[dot-extension()]] - `references` [EXTRACTED]
+- [[dot-previewAffected()_1]] - `references` [EXTRACTED]
 - [[dot-update()_10]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TemplatesService
+#graphify/code #graphify/EXTRACTED #community/BreachesController

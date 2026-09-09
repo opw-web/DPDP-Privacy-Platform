@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts"
+source_file: "dpdp-platform/backend/src/queues/breach-clock.processor.ts"
 type: "code"
-community: "templates.service.ts"
-location: "L87"
+community: "BreachService"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatesservicets
+  - community/BreachService
 ---
 
 # .constructor()
 
 ## Connections
-- [[MissingRequiredVariableError]] - `method` [EXTRACTED]
+- [[BreachClockProcessor]] - `method` [EXTRACTED]
+- [[BreachService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatesservicets
+#graphify/code #graphify/EXTRACTED #community/BreachService

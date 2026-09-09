@@ -1,23 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/candidates.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
 type: "code"
-community: "CandidatesService"
-location: "L47"
+community: "RequirePermission"
+location: "L152"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CandidatesService
+  - community/RequirePermission
 ---
 
 # .list()
 
 ## Connections
-- [[dot-list()_23]] - `calls` [INFERRED]
-- [[CandidatesController]] - `method` [EXTRACTED]
-- [[CurrentActorPermissions]] - `references` [EXTRACTED]
-- [[Get_24]] - `references` [EXTRACTED]
-- [[ListMatchCandidatesQueryDto]] - `references` [EXTRACTED]
-- [[Query_7]] - `references` [EXTRACTED]
-- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[dot-list()_21]] - `calls` [INFERRED]
+- [[NoticesService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CandidatesService
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

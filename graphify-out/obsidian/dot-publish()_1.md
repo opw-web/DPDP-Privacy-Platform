@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notices/notices.service.ts"
 type: "code"
-community: "notices.service.ts"
-location: "L498"
+community: "RequirePermission"
+location: "L492"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/noticesservicets
+  - community/RequirePermission
 ---
 
 # .publish()
 
 ## Connections
-- [[dot-get()_17]] - `calls` [EXTRACTED]
+- [[dot-get()_10]] - `calls` [EXTRACTED]
 - [[dot-getVersionOrThrow()]] - `calls` [EXTRACTED]
 - [[dot-publish()]] - `calls` [INFERRED]
 - [[dot-record()_1]] - `calls` [INFERRED]
@@ -20,4 +20,4 @@ tags:
 - [[NoticesService]] - `method` [EXTRACTED]
 - [[canonicalJson()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/noticesservicets
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

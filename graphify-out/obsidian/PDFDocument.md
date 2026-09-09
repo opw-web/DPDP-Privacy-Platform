@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-addPage()]] - `method` [EXTRACTED]
-- [[dot-constructor()_34]] - `method` [EXTRACTED]
+- [[dot-constructor()_20]] - `method` [EXTRACTED]
 - [[dot-end()]] - `method` [EXTRACTED]
 - [[dot-fillColor()]] - `method` [EXTRACTED]
 - [[dot-fontSize()]] - `method` [EXTRACTED]

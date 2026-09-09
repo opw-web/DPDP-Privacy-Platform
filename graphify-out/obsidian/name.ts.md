@@ -16,6 +16,6 @@ tags:
 - [[name.spec.ts]] - `imports_from` [EXTRACTED]
 - [[normalization.service.ts]] - `imports_from` [EXTRACTED]
 - [[normalizeName()]] - `contains` [EXTRACTED]
-- [[titleCase()]] - `contains` [EXTRACTED]
+- [[titleCase()_1]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/normalizationservicets

@@ -1,17 +1,17 @@
 ---
-source_file: "dpdp-platform/frontend/src/fiduciary/pages/PrincipalEvidencePage.test.tsx"
+source_file: "dpdp-platform/frontend/src/fiduciary/pages/RetentionPage.test.tsx"
 type: "code"
-community: "router.tsx"
-location: "L9"
+community: "@tanstack/react-query"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/tanstack/react-query
 ---
 
 # jsonResponse()
 
 ## Connections
-- [[PrincipalEvidencePage.test.tsx]] - `contains` [EXTRACTED]
+- [[RetentionPage.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

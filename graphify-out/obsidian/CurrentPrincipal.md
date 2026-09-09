@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/common/decorators/current-principal.decorator.ts"
 type: "code"
-community: "PrincipalActor"
+community: "Public"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrincipalActor
+  - community/Public
 ---
 
 # CurrentPrincipal
@@ -19,10 +19,10 @@ tags:
 - [[dot-data()]] - `references` [EXTRACTED]
 - [[dot-getNomination()]] - `references` [EXTRACTED]
 - [[dot-getRequest()]] - `references` [EXTRACTED]
-- [[dot-list()_5]] - `references` [EXTRACTED]
+- [[dot-list()_37]] - `references` [EXTRACTED]
 - [[dot-listMessages()]] - `references` [EXTRACTED]
 - [[dot-listRequests()]] - `references` [EXTRACTED]
-- [[dot-me()]] - `references` [EXTRACTED]
+- [[dot-me()_1]] - `references` [EXTRACTED]
 - [[dot-profile()]] - `references` [EXTRACTED]
 - [[dot-recipients()]] - `references` [EXTRACTED]
 - [[dot-setStatus()]] - `references` [EXTRACTED]
@@ -34,4 +34,4 @@ tags:
 - [[me.controller.ts]] - `imports` [EXTRACTED]
 - [[principal-auth.controller.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrincipalActor
+#graphify/code #graphify/EXTRACTED #community/Public

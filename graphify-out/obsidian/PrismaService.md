@@ -12,11 +12,11 @@ tags:
 # PrismaService
 
 ## Connections
-- [[dot-constructor()_26]] - `method` [EXTRACTED]
-- [[dot-onModuleDestroy()]] - `method` [EXTRACTED]
-- [[dot-onModuleInit()]] - `method` [EXTRACTED]
+- [[dot-constructor()_92]] - `method` [EXTRACTED]
+- [[dot-onModuleDestroy()_1]] - `method` [EXTRACTED]
+- [[dot-onModuleInit()_1]] - `method` [EXTRACTED]
 - [[dot-scoped()]] - `method` [EXTRACTED]
-- [[Injectable_16]] - `references` [EXTRACTED]
+- [[Injectable_52]] - `references` [EXTRACTED]
 - [[access-log-retention.processor.ts]] - `imports` [EXTRACTED]
 - [[access-log.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[access-report.service.ts]] - `imports` [EXTRACTED]
@@ -70,9 +70,9 @@ tags:
 - [[jwt-principal.guard.ts]] - `imports` [EXTRACTED]
 - [[legal-hold.service.ts]] - `imports` [EXTRACTED]
 - [[lineage.service.ts]] - `imports` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
-- [[main()_5]] - `calls` [EXTRACTED]
+- [[main()]] - `calls` [EXTRACTED]
+- [[main()_1]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 - [[main()_6]] - `calls` [EXTRACTED]
 - [[mappings.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[mappings.service.ts]] - `imports` [EXTRACTED]

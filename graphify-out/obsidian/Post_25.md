@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "retention.service.ts"
+community: "EmployeeAuthController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionservicets
+  - community/EmployeeAuthController
 ---
 
 # Post
 
 ## Connections
-- [[dot-create()_35]] - `references` [EXTRACTED]
+- [[dot-login()]] - `references` [EXTRACTED]
+- [[dot-logout()]] - `references` [EXTRACTED]
+- [[dot-refresh()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionservicets
+#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController

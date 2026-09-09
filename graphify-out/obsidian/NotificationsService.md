@@ -1,34 +1,34 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/notifications/notifications.service.ts"
 type: "code"
-community: "NotificationsService"
+community: "@nestjs/common"
 location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NotificationsService
+  - community/nestjs/common
 ---
 
 # NotificationsService
 
 ## Connections
 - [[dot-assertValidInput()]] - `method` [EXTRACTED]
-- [[dot-constructor()_131]] - `references` [EXTRACTED]
-- [[dot-constructor()_111]] - `references` [EXTRACTED]
-- [[dot-constructor()_110]] - `references` [EXTRACTED]
-- [[dot-constructor()_52]] - `references` [EXTRACTED]
-- [[dot-constructor()_63]] - `references` [EXTRACTED]
-- [[dot-constructor()_87]] - `references` [EXTRACTED]
-- [[dot-constructor()_29]] - `references` [EXTRACTED]
-- [[dot-constructor()_92]] - `references` [EXTRACTED]
-- [[dot-constructor()_61]] - `method` [EXTRACTED]
+- [[dot-constructor()_140]] - `references` [EXTRACTED]
+- [[dot-constructor()_106]] - `references` [EXTRACTED]
+- [[dot-constructor()_4]] - `references` [EXTRACTED]
+- [[dot-constructor()_149]] - `references` [EXTRACTED]
+- [[dot-constructor()_5]] - `references` [EXTRACTED]
+- [[dot-constructor()_153]] - `references` [EXTRACTED]
+- [[dot-constructor()_138]] - `references` [EXTRACTED]
+- [[dot-constructor()_66]] - `references` [EXTRACTED]
+- [[dot-constructor()_11]] - `method` [EXTRACTED]
 - [[dot-createPortalInTransaction()]] - `method` [EXTRACTED]
 - [[dot-deliverEmailBestEffort()]] - `method` [EXTRACTED]
-- [[dot-list()_34]] - `method` [EXTRACTED]
-- [[dot-markAllRead()_1]] - `method` [EXTRACTED]
-- [[dot-markRead()_1]] - `method` [EXTRACTED]
-- [[dot-send()]] - `method` [EXTRACTED]
-- [[Injectable_22]] - `references` [EXTRACTED]
+- [[dot-list()_1]] - `method` [EXTRACTED]
+- [[dot-markAllRead()]] - `method` [EXTRACTED]
+- [[dot-markRead()]] - `method` [EXTRACTED]
+- [[dot-send()_2]] - `method` [EXTRACTED]
+- [[Injectable_4]] - `references` [EXTRACTED]
 - [[audit-chain-verify.processor.ts]] - `imports` [EXTRACTED]
 - [[breach.service.ts]] - `imports` [EXTRACTED]
 - [[campaign-send.processor.ts]] - `imports` [EXTRACTED]
@@ -42,4 +42,4 @@ tags:
 - [[requests.service.ts]] - `imports` [EXTRACTED]
 - [[sdf-cycle-scan.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NotificationsService
+#graphify/code #graphify/EXTRACTED #community/nestjs/common

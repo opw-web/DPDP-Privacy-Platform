@@ -1,21 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/evidence-pack.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/transfers.service.ts"
 type: "code"
-community: "evidence-pack.service.ts"
-location: "L36"
+community: "CreateTransferDto"
+location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/evidence-packservicets
+  - community/CreateTransferDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditExportService]] - `references` [EXTRACTED]
-- [[AuditReadService]] - `references` [EXTRACTED]
 - [[AuditService]] - `references` [EXTRACTED]
-- [[EvidencePackService]] - `method` [EXTRACTED]
-- [[RopaExportService]] - `references` [EXTRACTED]
+- [[TransfersService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/evidence-packservicets
+#graphify/code #graphify/EXTRACTED #community/CreateTransferDto

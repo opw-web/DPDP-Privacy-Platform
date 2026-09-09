@@ -1,17 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/linking.service.ts"
+source_file: "dpdp-platform/backend/src/modules/retention/retention.controller.ts"
 type: "code"
-community: "AuditService"
-location: "L43"
+community: "RequirePermission"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/RequirePermission
 ---
 
 # .constructor()
 
 ## Connections
-- [[IdentifierOwnershipConflictError]] - `method` [EXTRACTED]
+- [[ErasureTaskService]] - `references` [EXTRACTED]
+- [[LegalHoldService]] - `references` [EXTRACTED]
+- [[RetentionController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/RequirePermission

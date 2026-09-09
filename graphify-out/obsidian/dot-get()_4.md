@@ -12,7 +12,7 @@ tags:
 # .get()
 
 ## Connections
-- [[dot-get()_16]] - `calls` [INFERRED]
+- [[dot-get()_17]] - `calls` [INFERRED]
 - [[dot-triggerSync()]] - `calls` [INFERRED]
 - [[DataSourcesService]] - `method` [EXTRACTED]
 

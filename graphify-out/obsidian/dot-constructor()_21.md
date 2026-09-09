@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/evidence/evidence-pack.controller.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/transfers.controller.ts"
 type: "code"
-community: "evidence-pack.service.ts"
+community: "CreateTransferDto"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/evidence-packservicets
+  - community/CreateTransferDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[EvidencePackController]] - `method` [EXTRACTED]
-- [[EvidencePackService]] - `references` [EXTRACTED]
+- [[TransfersController]] - `method` [EXTRACTED]
+- [[TransfersService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/evidence-packservicets
+#graphify/code #graphify/EXTRACTED #community/CreateTransferDto

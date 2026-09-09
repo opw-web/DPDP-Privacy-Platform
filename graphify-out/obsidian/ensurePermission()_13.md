@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/test/registers.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/audit-read.e2e-spec.ts"
 type: "code"
-community: "AppModule"
-location: "L35"
+community: "AuditService"
+location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AppModule
+  - community/AuditService
 ---
 
 # ensurePermission()
 
 ## Connections
-- [[createEmployeeWithPermissions()_1]] - `calls` [EXTRACTED]
-- [[registers.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[EmployeeSession_5]] - `calls` [EXTRACTED]
+- [[audit-read.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AppModule
+#graphify/code #graphify/EXTRACTED #community/AuditService

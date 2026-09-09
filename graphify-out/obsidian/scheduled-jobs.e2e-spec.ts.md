@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/test/scheduled-jobs.e2e-spec.ts"
 type: "code"
-community: "configuration.ts"
+community: "access-log-retention.processor.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/configurationts
+  - community/access-log-retentionprocessorts
 ---
 
 # scheduled-jobs.e2e-spec.ts
@@ -22,4 +22,4 @@ tags:
 - [[audit-chain-verify.processor.ts]] - `imports_from` [EXTRACTED]
 - [[mvp2-schedules.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/configurationts
+#graphify/code #graphify/EXTRACTED #community/access-log-retentionprocessorts

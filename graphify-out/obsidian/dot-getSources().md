@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/principal-portal/me.service.ts"
 type: "code"
-community: "AccessReportService"
+community: "PrincipalsService"
 location: "L185"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/AccessReportService
+  - community/PrincipalsService
 ---
 
 # .getSources()
@@ -16,4 +16,4 @@ tags:
 - [[dot-sources()]] - `calls` [INFERRED]
 - [[MeService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/AccessReportService
+#graphify/code #graphify/INFERRED #community/PrincipalsService

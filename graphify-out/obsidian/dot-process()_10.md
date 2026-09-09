@@ -1,20 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/sync.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/audit-chain-verify.processor.ts"
 type: "code"
-community: "queues.module.ts"
-location: "L50"
+community: "AuditChainService"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/queuesmodulets
+  - community/AuditChainService
 ---
 
 # .process()
 
 ## Connections
-- [[dot-run()]] - `calls` [INFERRED]
-- [[SyncJobData]] - `references` [EXTRACTED]
-- [[SyncProcessor]] - `method` [EXTRACTED]
-- [[SyncRunSummary]] - `references` [EXTRACTED]
+- [[dot-runVerificationCycle()]] - `calls` [EXTRACTED]
+- [[AuditChainVerifyProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/queuesmodulets
+#graphify/code #graphify/EXTRACTED #community/AuditChainService

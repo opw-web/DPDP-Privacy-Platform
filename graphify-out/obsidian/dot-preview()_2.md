@@ -13,10 +13,10 @@ tags:
 
 ## Connections
 - [[dot-preview()_3]] - `calls` [INFERRED]
-- [[Get_22]] - `references` [EXTRACTED]
+- [[Get_20]] - `references` [EXTRACTED]
 - [[NoticesController]] - `method` [EXTRACTED]
-- [[Param_13]] - `references` [EXTRACTED]
-- [[Query_5]] - `references` [EXTRACTED]
+- [[Param_14]] - `references` [EXTRACTED]
+- [[Query_6]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/RequirePermission

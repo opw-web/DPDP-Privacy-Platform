@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-getPrivacyContact()]] - `references` [EXTRACTED]
 - [[dot-privacyContact()]] - `references` [EXTRACTED]
-- [[ApiProperty_17]] - `references` [EXTRACTED]
+- [[ApiProperty_1]] - `references` [EXTRACTED]
 - [[me-privacy-contact.dto.ts]] - `contains` [EXTRACTED]
 - [[me.controller.ts]] - `imports` [EXTRACTED]
 - [[me.service.ts]] - `imports` [EXTRACTED]

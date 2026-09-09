@@ -1,18 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "inventory.controller.ts"
+community: "principals.controller.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/inventorycontrollerts
+  - community/principalscontrollerts
 ---
 
 # Get
 
 ## Connections
-- [[dot-gaps()]] - `references` [EXTRACTED]
-- [[dot-ropaCsv()]] - `references` [EXTRACTED]
-- [[dot-summary()]] - `references` [EXTRACTED]
+- [[dot-detail()]] - `references` [EXTRACTED]
+- [[dot-lineage()]] - `references` [EXTRACTED]
+- [[dot-list()_13]] - `references` [EXTRACTED]
+- [[dot-recipients()_1]] - `references` [EXTRACTED]
+- [[dot-sourceRecords()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/inventorycontrollerts
+#graphify/code #graphify/EXTRACTED #community/principalscontrollerts

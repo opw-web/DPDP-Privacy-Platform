@@ -11,6 +11,9 @@ tags:
 # Get
 
 ## Connections
-- [[dot-me()_2]] - `references` [EXTRACTED]
+- [[dot-get()_9]] - `references` [EXTRACTED]
+- [[dot-list()_21]] - `references` [EXTRACTED]
+- [[dot-listEligibleFields()_1]] - `references` [EXTRACTED]
+- [[dot-preview()_2]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/RequirePermission

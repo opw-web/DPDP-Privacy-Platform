@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/sdf/types.ts"
 type: "code"
-community: "react-router-dom"
+community: "card.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react-router-dom
+  - community/cardtsx
 ---
 
 # sdf/types.ts
@@ -19,7 +19,7 @@ tags:
 - [[AlgorithmRegisterPanel.tsx]] - `imports_from` [EXTRACTED]
 - [[ComplianceRuleSummary]] - `contains` [EXTRACTED]
 - [[RuleBasis]] - `imports` [EXTRACTED]
-- [[SDF_CYCLE_APPLIES_TO_1]] - `contains` [EXTRACTED]
+- [[SDF_CYCLE_APPLIES_TO]] - `contains` [EXTRACTED]
 - [[SdfGapsData]] - `contains` [EXTRACTED]
 - [[SdfGapsPage.tsx]] - `imports_from` [EXTRACTED]
 - [[SdfGapsSection.tsx]] - `imports_from` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[findSdfCycleRule()]] - `contains` [EXTRACTED]
 - [[mvp2-api.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react-router-dom
+#graphify/code #graphify/EXTRACTED #community/cardtsx

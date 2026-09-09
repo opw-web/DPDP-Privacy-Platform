@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sdf/sdf-assessment.service.ts"
 type: "code"
-community: "sdf-assessment.service.ts"
+community: "PrismaService"
 location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdf-assessmentservicets
+  - community/PrismaService
 ---
 
 # SdfReadiness
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sdf-assessment.service.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdf-assessmentservicets
+#graphify/code #graphify/EXTRACTED #community/PrismaService

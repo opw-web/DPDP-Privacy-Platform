@@ -1,18 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/src/queues/audit-chain-verify.processor.ts"
+source_file: "dpdp-platform/backend/src/queues/sdf-cycle-scan.processor.ts"
 type: "code"
-community: "canonicalJson"
-location: "L19"
+community: "SdfCycleScanService"
+location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/canonicalJson
+  - community/SdfCycleScanService
 ---
 
 # .process()
 
 ## Connections
-- [[dot-runVerificationCycle()]] - `calls` [EXTRACTED]
-- [[AuditChainVerifyProcessor]] - `method` [EXTRACTED]
+- [[dot-runForAllOrganizations()]] - `calls` [INFERRED]
+- [[SdfCycleScanJobData]] - `references` [EXTRACTED]
+- [[SdfCycleScanProcessor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/canonicalJson
+#graphify/code #graphify/EXTRACTED #community/SdfCycleScanService

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-getGaps()_2]] - `calls` [INFERRED]
-- [[Get_19]] - `references` [EXTRACTED]
+- [[Get_10]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 - [[SdfController]] - `method` [EXTRACTED]
 

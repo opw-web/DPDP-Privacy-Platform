@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "evidence-pack.service.ts"
+community: "UpdateComplianceRuleDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/evidence-packservicets
+  - community/UpdateComplianceRuleDto
 ---
 
 # Get
 
 ## Connections
-- [[dot-packZip()]] - `references` [EXTRACTED]
+- [[dot-getById()]] - `references` [EXTRACTED]
+- [[dot-list()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/evidence-packservicets
+#graphify/code #graphify/EXTRACTED #community/UpdateComplianceRuleDto

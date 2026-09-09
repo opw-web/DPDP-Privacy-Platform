@@ -12,9 +12,9 @@ tags:
 # NormalizationService
 
 ## Connections
-- [[dot-constructor()_53]] - `references` [EXTRACTED]
+- [[dot-constructor()_111]] - `references` [EXTRACTED]
 - [[dot-normalize()]] - `method` [EXTRACTED]
-- [[Injectable_57]] - `references` [EXTRACTED]
+- [[Injectable_61]] - `references` [EXTRACTED]
 - [[normalization.e2e-spec.ts]] - `imports` [EXTRACTED]
 - [[normalization.module.ts]] - `imports` [EXTRACTED]
 - [[normalization.service.spec.ts]] - `imports` [EXTRACTED]

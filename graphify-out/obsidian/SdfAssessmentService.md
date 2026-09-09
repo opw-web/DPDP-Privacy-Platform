@@ -1,27 +1,27 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/sdf/sdf-assessment.service.ts"
 type: "code"
-community: "sdf-assessment.service.ts"
+community: "CreateAlgorithmEntryDto"
 location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdf-assessmentservicets
+  - community/CreateAlgorithmEntryDto
 ---
 
 # SdfAssessmentService
 
 ## Connections
-- [[dot-complete()_2]] - `method` [EXTRACTED]
-- [[dot-constructor()_80]] - `references` [EXTRACTED]
-- [[dot-constructor()_2]] - `method` [EXTRACTED]
-- [[dot-create()_15]] - `method` [EXTRACTED]
-- [[dot-getById()]] - `method` [EXTRACTED]
+- [[dot-complete()]] - `method` [EXTRACTED]
+- [[dot-constructor()_29]] - `references` [EXTRACTED]
+- [[dot-constructor()_152]] - `method` [EXTRACTED]
+- [[dot-create()_4]] - `method` [EXTRACTED]
+- [[dot-getById()_2]] - `method` [EXTRACTED]
 - [[dot-listWithReadiness()]] - `method` [EXTRACTED]
 - [[dot-resolveCycleDeadline()]] - `method` [EXTRACTED]
-- [[Injectable_1]] - `references` [EXTRACTED]
+- [[Injectable_11]] - `references` [EXTRACTED]
 - [[sdf-assessment.service.ts]] - `contains` [EXTRACTED]
 - [[sdf.controller.ts]] - `imports` [EXTRACTED]
 - [[sdf.module.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdf-assessmentservicets
+#graphify/code #graphify/EXTRACTED #community/CreateAlgorithmEntryDto

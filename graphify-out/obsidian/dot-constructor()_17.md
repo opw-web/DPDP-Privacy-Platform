@@ -1,17 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/common/guards/permissions.guard.ts"
+source_file: "dpdp-platform/backend/src/modules/principal-portal/me-rights.controller.ts"
 type: "code"
-community: "PermissionsGuard"
-location: "L81"
+community: "MeRightsService"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PermissionsGuard
+  - community/MeRightsService
 ---
 
 # .constructor()
 
 ## Connections
-- [[PermissionsGuard]] - `method` [EXTRACTED]
+- [[MeRightsController]] - `method` [EXTRACTED]
+- [[MeRightsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PermissionsGuard
+#graphify/code #graphify/EXTRACTED #community/MeRightsService

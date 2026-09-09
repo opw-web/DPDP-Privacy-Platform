@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/lib/auth.ts"
 type: "code"
-community: "router.tsx"
+community: "@tanstack/react-query"
 location: "L126"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/routertsx
+  - community/tanstack/react-query
 ---
 
 # employeeLogin()
@@ -36,8 +36,8 @@ tags:
 - [[api-client.test.ts]] - `imports` [EXTRACTED]
 - [[fetchEmployeeMe()]] - `calls` [EXTRACTED]
 - [[libauth.ts]] - `contains` [EXTRACTED]
+- [[loginAndRender()]] - `calls` [EXTRACTED]
 - [[loginAndRender()_1]] - `calls` [EXTRACTED]
-- [[loginAndRender()_2]] - `calls` [EXTRACTED]
 - [[loginAndRender()_3]] - `calls` [EXTRACTED]
 - [[loginAndRender()_4]] - `calls` [EXTRACTED]
 - [[loginAndRender()_5]] - `calls` [EXTRACTED]
@@ -50,9 +50,9 @@ tags:
 - [[loginAndRenderWizard()]] - `calls` [EXTRACTED]
 - [[mockRoutesAndLogin()]] - `calls` [EXTRACTED]
 - [[renderDetail()]] - `calls` [EXTRACTED]
-- [[renderPage()_6]] - `calls` [EXTRACTED]
-- [[renderPage()_7]] - `calls` [EXTRACTED]
+- [[renderPage()_4]] - `calls` [EXTRACTED]
+- [[renderPage()_5]] - `calls` [EXTRACTED]
 - [[router.test.tsx]] - `imports` [EXTRACTED]
 - [[useEmployeeAuth()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/routertsx
+#graphify/code #graphify/EXTRACTED #community/tanstack/react-query

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PreErasureNoticeService"
+community: "CampaignsService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PreErasureNoticeService
+  - community/CampaignsService
 ---
 
 # Processor
 
 ## Connections
-- [[PreErasureNoticeProcessor]] - `references` [EXTRACTED]
+- [[CampaignSendProcessor]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PreErasureNoticeService
+#graphify/code #graphify/EXTRACTED #community/CampaignsService

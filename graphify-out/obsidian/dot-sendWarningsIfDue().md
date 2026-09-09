@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[dot-findSdfManagerEmployeeIds()]] - `calls` [EXTRACTED]
-- [[dot-runForCurrentOrganization()_2]] - `calls` [EXTRACTED]
-- [[dot-send()]] - `calls` [INFERRED]
+- [[dot-runForCurrentOrganization()]] - `calls` [EXTRACTED]
+- [[dot-send()_2]] - `calls` [INFERRED]
 - [[SdfCycleScanService]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/SdfCycleScanService

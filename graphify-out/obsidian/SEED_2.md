@@ -1,18 +1,17 @@
 ---
-source_file: "demo-company-server/src/seed/generate.ts"
+source_file: "demo-company-server/package.json"
 type: "code"
-community: "generate.ts"
-location: "L32"
+community: "demo-company-server/package.json"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/generatets
+  - community/demo-company-server/packagejson
 ---
 
-# SEED
+# seed
 
 ## Connections
-- [[dataset.test.ts]] - `imports` [EXTRACTED]
-- [[generate.ts]] - `contains` [EXTRACTED]
+- [[scripts_2]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/generatets
+#graphify/code #graphify/EXTRACTED #community/demo-company-server/packagejson

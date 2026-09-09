@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EmployeeAuthController"
+community: "AuditChainService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EmployeeAuthController
+  - community/AuditChainService
 ---
 
 # Res
 
 ## Connections
-- [[dot-login()]] - `references` [EXTRACTED]
-- [[dot-logout()]] - `references` [EXTRACTED]
-- [[dot-refresh()]] - `references` [EXTRACTED]
+- [[dot-exportCsv()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EmployeeAuthController
+#graphify/code #graphify/EXTRACTED #community/AuditChainService

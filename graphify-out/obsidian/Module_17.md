@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "@nestjs/common"
+community: "app.module.ts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/nestjs/common
+  - community/appmodulets
 ---
 
 # Module
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[InventoryModule]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/nestjs/common
+#graphify/code #graphify/EXTRACTED #community/appmodulets

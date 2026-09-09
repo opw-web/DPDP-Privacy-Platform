@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sdf-assessment.service.ts"
+community: "MaskingService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdf-assessmentservicets
+  - community/MaskingService
 ---
 
 # Injectable
 
 ## Connections
-- [[SdfAssessmentService]] - `references` [EXTRACTED]
+- [[MaskingService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdf-assessmentservicets
+#graphify/code #graphify/EXTRACTED #community/MaskingService

@@ -11,8 +11,8 @@ tags:
 # Post
 
 ## Connections
-- [[dot-create()_17]] - `references` [EXTRACTED]
-- [[dot-createVersion()]] - `references` [EXTRACTED]
-- [[dot-publish()]] - `references` [EXTRACTED]
+- [[dot-approve()]] - `references` [EXTRACTED]
+- [[dot-create()_13]] - `references` [EXTRACTED]
+- [[dot-send()_6]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/RequirePermission

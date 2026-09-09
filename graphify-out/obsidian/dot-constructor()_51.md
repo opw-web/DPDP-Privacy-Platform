@@ -1,18 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/inventory/ropa-export.service.ts"
+source_file: "dpdp-platform/backend/src/modules/board/voluntary-undertakings.controller.ts"
 type: "code"
-community: "AuditService"
-location: "L46"
+community: "CreateVoluntaryUndertakingDto"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/CreateVoluntaryUndertakingDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[AuditService]] - `references` [EXTRACTED]
-- [[RopaExportService]] - `method` [EXTRACTED]
+- [[VoluntaryUndertakingsController]] - `method` [EXTRACTED]
+- [[VoluntaryUndertakingsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/CreateVoluntaryUndertakingDto

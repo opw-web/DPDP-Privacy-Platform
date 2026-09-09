@@ -1,22 +1,23 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/board/information-requests.service.ts"
+source_file: "dpdp-platform/backend/src/modules/registers/sharing.controller.ts"
 type: "code"
-community: "CreateInformationRequestDto"
-location: "L178"
+community: "CreateSharingActivityDto"
+location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateInformationRequestDto
+  - community/CreateSharingActivityDto
 ---
 
 # .update()
 
 ## Connections
-- [[dot-assertAffectedPrincipals()]] - `calls` [EXTRACTED]
-- [[dot-assertDirectionHasAuthorisation()]] - `calls` [EXTRACTED]
-- [[dot-record()_1]] - `calls` [INFERRED]
-- [[dot-update()_16]] - `calls` [INFERRED]
-- [[InformationRequestsService]] - `method` [EXTRACTED]
-- [[UpdateInformationRequestDto]] - `references` [EXTRACTED]
+- [[dot-update()_18]] - `calls` [INFERRED]
+- [[Body_19]] - `references` [EXTRACTED]
+- [[Param_19]] - `references` [EXTRACTED]
+- [[Patch_9]] - `references` [EXTRACTED]
+- [[RequirePermission()]] - `references` [EXTRACTED]
+- [[SharingController]] - `method` [EXTRACTED]
+- [[UpdateSharingActivityDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateInformationRequestDto
+#graphify/code #graphify/EXTRACTED #community/CreateSharingActivityDto

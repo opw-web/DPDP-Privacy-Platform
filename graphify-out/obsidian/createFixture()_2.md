@@ -1,17 +1,19 @@
 ---
-source_file: "dpdp-platform/backend/test/inventory.e2e-spec.ts"
+source_file: "dpdp-platform/backend/test/principals.e2e-spec.ts"
 type: "code"
-community: "AppModule"
-location: "L87"
+community: "principals.service.ts"
+location: "L153"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AppModule
+  - community/principalsservicets
 ---
 
 # createFixture()
 
 ## Connections
-- [[inventory.e2e-spec.ts]] - `contains` [EXTRACTED]
+- [[createPrincipal()_8]] - `calls` [EXTRACTED]
+- [[createSource()_1]] - `calls` [EXTRACTED]
+- [[principals.e2e-spec.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AppModule
+#graphify/code #graphify/EXTRACTED #community/principalsservicets

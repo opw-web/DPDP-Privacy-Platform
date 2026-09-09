@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "normalization.service.ts"
+community: "ReplaceMappingsDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/normalizationservicets
+  - community/ReplaceMappingsDto
 ---
 
 # Injectable
 
 ## Connections
-- [[NormalizationService]] - `references` [EXTRACTED]
+- [[MappingsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/normalizationservicets
+#graphify/code #graphify/EXTRACTED #community/ReplaceMappingsDto

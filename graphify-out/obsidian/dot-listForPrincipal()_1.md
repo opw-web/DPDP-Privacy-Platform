@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-listForPrincipal()_2]] - `calls` [INFERRED]
 - [[ConsentsController]] - `method` [EXTRACTED]
-- [[Get_30]] - `references` [EXTRACTED]
+- [[Get_28]] - `references` [EXTRACTED]
 - [[Param_21]] - `references` [EXTRACTED]
 - [[RequirePermission()]] - `references` [EXTRACTED]
 

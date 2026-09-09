@@ -1,12 +1,12 @@
 ---
 source_file: "dpdp-platform/frontend/src/fiduciary/components/notices/NoticeComposer.tsx"
 type: "code"
-community: "react"
+community: "NoticeBuilderPage.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/react
+  - community/NoticeBuilderPagetsx
 ---
 
 # NoticeComposer.tsx
@@ -33,4 +33,4 @@ tags:
 - [[noticestypes.ts]] - `imports_from` [EXTRACTED]
 - [[react_1]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/react
+#graphify/code #graphify/EXTRACTED #community/NoticeBuilderPagetsx

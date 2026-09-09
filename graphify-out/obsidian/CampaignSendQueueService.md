@@ -12,10 +12,10 @@ tags:
 # CampaignSendQueueService
 
 ## Connections
-- [[dot-constructor()_99]] - `references` [EXTRACTED]
-- [[dot-constructor()_100]] - `method` [EXTRACTED]
+- [[dot-constructor()_65]] - `references` [EXTRACTED]
+- [[dot-constructor()_67]] - `method` [EXTRACTED]
 - [[dot-enqueue()]] - `method` [EXTRACTED]
-- [[Injectable_59]] - `references` [EXTRACTED]
+- [[Injectable_36]] - `references` [EXTRACTED]
 - [[campaign-send.queue.ts]] - `contains` [EXTRACTED]
 - [[campaigns.module.ts]] - `imports` [EXTRACTED]
 - [[campaigns.service.ts]] - `imports` [EXTRACTED]

@@ -1,18 +1,18 @@
 ---
 source_file: "dpdp-platform/backend/src/modules/messaging/templates/template-renderer.ts"
 type: "code"
-community: "templates.service.ts"
+community: "campaigns.service.ts"
 location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatesservicets
+  - community/campaignsservicets
 ---
 
 # TemplateRenderError
 
 ## Connections
-- [[dot-constructor()_89]] - `method` [EXTRACTED]
+- [[dot-constructor()_55]] - `method` [EXTRACTED]
 - [[DisallowedTemplateSyntaxError]] - `inherits` [EXTRACTED]
 - [[MissingOrganizationContactError]] - `inherits` [EXTRACTED]
 - [[MissingRequiredVariableError]] - `inherits` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[template-renderer.ts]] - `contains` [EXTRACTED]
 - [[templates.service.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatesservicets
+#graphify/code #graphify/EXTRACTED #community/campaignsservicets

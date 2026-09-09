@@ -1,21 +1,18 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/identity/linking.service.ts"
+source_file: "dpdp-platform/backend/src/modules/children/child-exemptions.controller.ts"
 type: "code"
-community: "AuditService"
-location: "L74"
+community: "CreateExemptionClaimDto"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuditService
+  - community/CreateExemptionClaimDto
 ---
 
 # .constructor()
 
 ## Connections
-- [[AgeService]] - `references` [EXTRACTED]
-- [[AssemblyService]] - `references` [EXTRACTED]
-- [[AuditService]] - `references` [EXTRACTED]
-- [[LinkingService]] - `method` [EXTRACTED]
-- [[ReferenceService]] - `references` [EXTRACTED]
+- [[ChildExemptionsController]] - `method` [EXTRACTED]
+- [[ChildExemptionsService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuditService
+#graphify/code #graphify/EXTRACTED #community/CreateExemptionClaimDto

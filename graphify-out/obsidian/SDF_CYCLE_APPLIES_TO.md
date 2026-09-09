@@ -1,19 +1,17 @@
 ---
-source_file: "dpdp-platform/backend/src/modules/sdf/sdf-assessment.service.ts"
+source_file: "dpdp-platform/frontend/src/fiduciary/components/sdf/types.ts"
 type: "code"
-community: "sdf-assessment.service.ts"
-location: "L17"
+community: "card.tsx"
+location: "L73"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sdf-assessmentservicets
+  - community/cardtsx
 ---
 
 # SDF_CYCLE_APPLIES_TO
 
 ## Connections
-- [[sdf-assessment.service.ts]] - `contains` [EXTRACTED]
-- [[sdf-cycle-scan.service.ts]] - `imports` [EXTRACTED]
-- [[sdf-gaps.service.ts]] - `imports` [EXTRACTED]
+- [[sdftypes.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sdf-assessmentservicets
+#graphify/code #graphify/EXTRACTED #community/cardtsx

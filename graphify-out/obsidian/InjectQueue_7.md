@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CampaignsService"
+community: "SyncQueueService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampaignsService
+  - community/SyncQueueService
 ---
 
 # InjectQueue
 
 ## Connections
-- [[dot-constructor()_100]] - `references` [EXTRACTED]
+- [[dot-constructor()_44]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampaignsService
+#graphify/code #graphify/EXTRACTED #community/SyncQueueService

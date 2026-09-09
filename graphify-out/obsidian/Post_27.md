@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".unmerge"
+community: "CreateRetentionPolicyDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/unmerge
+  - community/CreateRetentionPolicyDto
 ---
 
 # Post
 
 ## Connections
-- [[dot-unmerge()_1]] - `references` [EXTRACTED]
+- [[dot-create()_34]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/unmerge
+#graphify/code #graphify/EXTRACTED #community/CreateRetentionPolicyDto
